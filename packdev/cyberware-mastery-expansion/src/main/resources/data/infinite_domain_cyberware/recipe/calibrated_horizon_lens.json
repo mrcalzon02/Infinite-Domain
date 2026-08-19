@@ -1,0 +1,33 @@
+{
+  "type": "createcybernetics:engineering_table",
+  "accept_mirrored": true,
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinite_domain_cyberware:reclaimed_spectrum_array"
+    },
+    "B": {
+      "item": "createcybernetics:eyeupgrades_targeting"
+    },
+    "C": {
+      "item": "stellaris:desh_ingot"
+    },
+    "D": {
+      "item": "createcybernetics:component_synthnerves"
+    },
+    "E": {
+      "item": "cyber_ware_port:cybereye_upgrades_targeting"
+    }
+  },
+  "pattern": [
+    "  A  ",
+    " ABC ",
+    " BDB ",
+    " CEC ",
+    "  A  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinite_domain_cyberware:calibrated_horizon_lens"
+  }
+}

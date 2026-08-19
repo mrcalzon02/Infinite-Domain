@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " a ",
+                    "aba",
+                    "cdc"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:leather"
+                      },
+                "b":  {
+                          "item":  "minecraft:glass_pane"
+                      },
+                "c":  {
+                          "item":  "kubejs:paper_bundle"
+                      },
+                "d":  {
+                          "item":  "minecraft:coal_block"
+                      }
+            },
+    "result":  {
+                   "id":  "enviromine:gas_mask_basic_helmet",
+                   "count":  1
+               }
+}

@@ -1,0 +1,43 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "infinite_domain_darknet_worldgen"
+version = "1.8.0"
+displayName = "Infinite Domain: Darknet Worldgen Patch"
+authors = "Infinite Domain"
+description = '''
+Places Ice and Fire's native dragon caves safely, protects the Darknet from dragon griefing, supplies its dimension-only visual treatment, adds its native fauna and foliage, and provides the Darknet Broker economy.
+'''
+
+[[mixins]]
+config = "infinite_domain_darknet_worldgen.mixins.json"
+
+[[dependencies.infinite_domain_darknet_worldgen]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_darknet_worldgen]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_darknet_worldgen]]
+modId = "iceandfire"
+type = "required"
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.infinite_domain_darknet_worldgen]]
+modId = "cyberspace"
+type = "required"
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"

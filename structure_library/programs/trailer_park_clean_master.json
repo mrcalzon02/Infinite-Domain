@@ -1,0 +1,51 @@
+{
+  "structure_id": "infinite_domain:trailer_park_clean_master",
+  "archetype": "six-lot mobile-home park with branched road, management and shared services",
+  "orientation": {
+    "park_road_entry": "north",
+    "management_office": "northeast entrance frontage",
+    "communal_laundry_and_maintenance": "northwest entrance frontage",
+    "residential_lots": "three west and three east lots along the central road",
+    "mail_and_utilities": "south road terminus"
+  },
+  "shared_program": [
+    "narrow north-south asphalt park road with six gravel lot branches",
+    "management reception/check-in, manager office, records/mail room and washroom",
+    "communal laundry, resident storage and maintenance workshop",
+    "road-end mail shelter, refuse point and electrical transformer",
+    "private garden, patio, water and utility connections for every lot"
+  ],
+  "residential_program": [
+    "six independently accessible mobile homes",
+    "living seating, storage and complete galley kitchen in every home",
+    "separate central bathroom/washroom and entrance storage in every home",
+    "private rear bedroom with bed and cupboards in every home",
+    "visible chassis, paired wheels, entrance step, hookups and roof trim"
+  ],
+  "circulation": [
+    "county connection enters the central park road between both shared-service buildings",
+    "three paired gravel branches reach all six trailer steps",
+    "management and laundry have public and rear service thresholds",
+    "each trailer's entrance hall independently connects its living room, bathroom and bedroom",
+    "central road continues to the mail and utility service terminus"
+  ],
+  "damage_constraints": [
+    "confine residential failures to the northwest living-room roof and southeast bedroom roof",
+    "confine shared-service failure to the communal workshop roof",
+    "preserve management, laundry, road and all six lot approaches",
+    "preserve four complete trailers plus surviving zones in both damaged trailers",
+    "derive abandonment, dead gardens and hostile occupation from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the road hierarchy and all six private lots read clearly at ground level",
+      "every mobile home has usable living, kitchen, bathroom and bedroom space",
+      "management and communal service buildings communicate distinct purposes",
+      "gardens, patios, chassis, steps and hookups remain readable after placement",
+      "hostile occupation is dangerous without locking the central road or surviving homes",
+      "terrain feathering seats the unusually large site without a hard rectangular shelf"
+    ]
+  }
+}

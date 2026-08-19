@@ -1,0 +1,41 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "ABC",
+                    "DEF",
+                    "GHI"
+                ],
+    "key":  {
+                "A":  {
+                          "item":  "allthecompressed:blue_ice_1x"
+                      },
+                "B":  {
+                          "item":  "ae2lt:overload_crystal_block"
+                      },
+                "C":  {
+                          "item":  "allthecompressed:blue_ice_1x"
+                      },
+                "D":  {
+                          "item":  "ae2lt:overload_crystal_block"
+                      },
+                "E":  {
+                          "item":  "ae2lt:tianshu_supercomputer_casing"
+                      },
+                "F":  {
+                          "item":  "ae2lt:overload_crystal_block"
+                      },
+                "G":  {
+                          "item":  "allthecompressed:blue_ice_1x"
+                      },
+                "H":  {
+                          "item":  "ae2lt:overload_crystal_block"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:blue_ice_1x"
+                      }
+            },
+    "result":  {
+                   "id":  "ae2lt:phase_change_cooling_unit",
+                   "count":  1
+               }
+}

@@ -1,0 +1,198 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "4444444%%$444444",
+      "44444%%$44444444",
+      "444%%$4444444444",
+      "4%%$444444444444",
+      "%$44444444444444",
+      "4444444444444444",
+      "44444444444444%%",
+      "444444444444%%$4",
+      "4444444444%%$444",
+      "44444444%%$44444",
+      "444444%%$4444444",
+      "4444%%$444444444",
+      "44%%$44444444444",
+      "%%$4444444444444",
+      "$444444444444444",
+      "444444444444444%"
+    ],
+    [
+      ".............   ",
+      "...........)))))",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%",
+      "...........))%%%"
+    ],
+    [
+      "0000,00000005   ",
+      " 0         /////",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0!!!!!!   / %%%",
+      " *( 1      / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0       6 / %%%",
+      " 0 2 '     / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      "55555555555/ %%%"
+    ],
+    [
+      "0000-00000005   ",
+      " 0         /////",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0     3   / %%%",
+      " +         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0   &     / %%%",
+      " 0         / %%%",
+      "55555555555/ %%%"
+    ],
+    [
+      "0000000000005   ",
+      " 0         /////",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      "55555555555/ %%%"
+    ],
+    [
+      "0000000000005   ",
+      " 0         /////",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      " 0         / %%%",
+      "55555555555/ %%%"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:lever[face=wall,facing=south,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:quartz_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:smoker[facing=north,lit=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:smooth_stone"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:stripped_spruce_log"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:water_cauldron[level=2]"
+      },
+      {
+        "char": "3",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": "4",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "5",
+        "block": "the_wasteland_reworked:decayed_planks"
+      },
+      {
+        "char": "6",
+        "block": "the_wasteland_reworked:garbage_bag"
+      }
+    ]
+  }
+}

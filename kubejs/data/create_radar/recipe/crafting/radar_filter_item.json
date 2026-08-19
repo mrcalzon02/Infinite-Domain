@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "E":  {
+                          "item":  "create:electron_tube"
+                      },
+                "P":  {
+                          "item":  "kubejs:paper_bundle"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    " R ",
+                    "EPE",
+                    " R "
+                ],
+    "result":  {
+                   "id":  "create_radar:radar_filter_item"
+               },
+    "show_notification":  true
+}

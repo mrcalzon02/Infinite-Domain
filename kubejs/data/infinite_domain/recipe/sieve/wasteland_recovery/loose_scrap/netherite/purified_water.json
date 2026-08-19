@@ -1,0 +1,18 @@
+﻿{
+    "result_amount":  {
+                          "type":  "minecraft:binomial",
+                          "n":  3,
+                          "p":  0.025
+                      },
+    "result":  {
+                   "count":  1,
+                   "id":  "wastelands:purified_water"
+               },
+    "mesh":  {
+                 "item":  "exdeorum:netherite_mesh"
+             },
+    "type":  "exdeorum:sieve",
+    "ingredient":  {
+                       "item":  "wastelands:scrap_metal"
+                   }
+}

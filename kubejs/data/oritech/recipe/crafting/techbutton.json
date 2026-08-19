@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "b":  {
+                          "item":  "createbigcannons:steel_block"
+                      }
+            },
+    "pattern":  [
+                    "a  ",
+                    "b  "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "oritech:tech_button"
+               }
+}

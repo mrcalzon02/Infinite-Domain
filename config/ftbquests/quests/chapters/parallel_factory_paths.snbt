@@ -1,0 +1,493 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "parallel_factory_paths"
+	group: "4E65FAAC62D57D4A"
+	id: "1C7E40C69A25D8F6"
+	images: [ ]
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			id: "5D30000000000001"
+			shape: "octagon"
+			tasks: [{
+				id: "6D30000000000001"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D30000000000001"]
+			id: "5D30000000000002"
+			shape: "gear"
+			tasks: [
+				{
+					id: "6D30000000000002"
+					item: { count: 1, id: "create:mechanical_press" }
+					type: "item"
+				}
+				{
+					id: "6D30000000000003"
+					item: { count: 1, id: "create:mechanical_mixer" }
+					type: "item"
+				}
+				{
+					id: "6D30000000000004"
+					item: { count: 1, id: "create:basin" }
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5D30000000000002"]
+			id: "5D30000000000003"
+			shape: "gear"
+			tasks: [
+				{
+					count: 8L
+					id: "6D30000000000005"
+					item: { count: 1, id: "minecraft:tuff" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6D30000000000006"
+					item: { count: 1, id: "minecraft:calcite" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6D30000000000007"
+					item: { count: 1, id: "minecraft:deepslate" }
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"5D30000000000003"
+				"5210000000000002"
+			]
+			id: "5D30000000000004"
+			shape: "gear"
+			tasks: [
+				{
+					count: 4L
+					id: "6D30000000000008"
+					item: { count: 1, id: "create:asurine" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6D30000000000009"
+					item: { count: 1, id: "create:crimsite" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6D3000000000000A"
+					item: { count: 1, id: "create:ochrum" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6D3000000000000B"
+					item: { count: 1, id: "create:veridium" }
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5D30000000000004"]
+			id: "5D30000000000005"
+			shape: "gear"
+			tasks: [
+				{
+					count: 2L
+					id: "6D3000000000000C"
+					item: { count: 1, id: "create:crushing_wheel" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6D3000000000000D"
+					item: { count: 1, id: "minecraft:brown_mushroom" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6D3000000000000E"
+					item: { count: 1, id: "minecraft:bone_meal" }
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"5D30000000000005"
+				"5E00000000000010"
+			]
+			id: "5D30000000000006"
+			shape: "diamond"
+			tasks: [
+				{
+					count: 4L
+					id: "6D3000000000000F"
+					item: { count: 1, id: "create:powdered_obsidian" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6D30000000000010"
+					item: { count: 1, id: "minecraft:glowstone_dust" }
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"5D30000000000001"
+				"5210000000000002"
+			]
+			id: "5D30000000000007"
+			shape: "hexagon"
+			tasks: [
+				{
+					count: 27L
+					id: "6D30000000000011"
+					item: { count: 1, id: "immersiveengineering:cokebrick" }
+					type: "item"
+				}
+				{
+					id: "6D30000000000014"
+					item: { count: 1, id: "immersiveengineering:hammer" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5D30000000000007"]
+			id: "5D30000000000008"
+			shape: "hexagon"
+			tasks: [
+				{
+					count: 8L
+					id: "6D30000000000013"
+					item: { count: 1, id: "immersiveengineering:treated_wood_horizontal" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6D30000000000012"
+					item: { count: 1, id: "immersiveengineering:coal_coke" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5D3000000000000A"]
+			id: "5D30000000000009"
+			shape: "hexagon"
+			tasks: [
+				{
+					count: 8L
+					id: "6D30000000000015"
+					item: { count: 1, id: "immersiveengineering:conveyor_basic" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6D30000000000016"
+					item: { count: 1, id: "immersiveengineering:fluid_pipe" }
+					type: "item"
+				}
+				{
+					id: "6D30000000000017"
+					item: { count: 1, id: "immersiveengineering:pipe_valve" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"5D30000000000008"
+				"5310000000000002"
+			]
+			id: "5D3000000000000A"
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "6D3000000000002F"
+					item: { count: 1, id: "kubejs:industrial_engineering_core" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6D30000000000018"
+					item: { count: 1, id: "immersiveengineering:basic_engineering" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6D30000000000019"
+					item: { count: 1, id: "immersiveengineering:component_iron" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5D3000000000000A"]
+			id: "5D3000000000000B"
+			shape: "rsquare"
+			tasks: [{
+				id: "6D3000000000001A"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"5D3000000000000A"
+				"5410000000000002"
+			]
+			id: "5D3000000000000C"
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "6D3000000000001B"
+					item: { count: 1, id: "immersiveengineering:wirecoil_copper" }
+					type: "item"
+				}
+				{
+					id: "6D3000000000001C"
+					item: { count: 1, id: "immersiveengineering:connector_lv" }
+					type: "item"
+				}
+				{
+					id: "6D3000000000001D"
+					item: { count: 1, id: "immersiveengineering:capacitor_lv" }
+					type: "item"
+				}
+				{
+					id: "6D3000000000001E"
+					item: { count: 1, id: "immersiveengineering:voltmeter" }
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"5D30000000000009"
+				"5310000000000002"
+			]
+			id: "5D3000000000000D"
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "6D3000000000001F"
+					item: { count: 1, id: "immersiveengineering:squeezer" }
+					type: "item"
+				}
+				{
+					id: "6D30000000000020"
+					item: { count: 1, id: "immersiveengineering:fermenter" }
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5D3000000000000D"]
+			id: "5D3000000000000E"
+			shape: "rsquare"
+			tasks: [{
+				id: "6D30000000000021"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"5D3000000000000E"
+				"5410000000000002"
+			]
+			id: "5D3000000000000F"
+			shape: "rsquare"
+			tasks: [{
+				id: "6D30000000000022"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"5D3000000000000C"
+				"5510000000000002"
+			]
+			id: "5D30000000000010"
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "6D30000000000023"
+					item: { count: 1, id: "immersiveengineering:cloche" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6D30000000000024"
+					item: { count: 1, id: "immersiveengineering:seed" }
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"5D3000000000000F"
+				"5510000000000002"
+			]
+			id: "5D30000000000011"
+			shape: "rsquare"
+			tasks: [{
+				id: "6D30000000000025"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"5D3000000000000B"
+				"5510000000000002"
+			]
+			id: "5D30000000000012"
+			shape: "rsquare"
+			tasks: [{
+				id: "6D30000000000026"
+				type: "checkmark"
+			}]
+			x: 9.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"5D30000000000012"
+				"5610000000000002"
+			]
+			id: "5D30000000000013"
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "6D30000000000027"
+					item: { count: 1, id: "immersiveengineering:wirecoil_steel" }
+					type: "item"
+				}
+				{
+					id: "6D30000000000028"
+					item: { count: 1, id: "immersiveengineering:connector_hv" }
+					type: "item"
+				}
+				{
+					id: "6D30000000000029"
+					item: { count: 1, id: "immersiveengineering:transformer_hv" }
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"5D30000000000006"
+				"5D3000000000000D"
+			]
+			id: "5D30000000000014"
+			shape: "rsquare"
+			tasks: [{
+				id: "6D3000000000002A"
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"5D30000000000014"
+				"5D30000000000011"
+				"5D30000000000013"
+			]
+			id: "5D30000000000015"
+			shape: "octagon"
+			tasks: [{
+				id: "6D3000000000002B"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: [
+				"5D30000000000010"
+				"5D30000000000015"
+			]
+			id: "5D30000000000016"
+			rewards: [{
+				count: 2
+				id: "7D30000000000001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "octagon"
+			tasks: [
+				{
+					id: "6D3000000000002C"
+					item: { count: 1, id: "create:mechanical_press" }
+					type: "item"
+				}
+				{
+					id: "6D3000000000002D"
+					item: { count: 1, id: "immersiveengineering:voltmeter" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6D3000000000002E"
+					item: { count: 1, id: "immersiveengineering:fluid_pipe" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 20.0d
+		}
+	]
+}

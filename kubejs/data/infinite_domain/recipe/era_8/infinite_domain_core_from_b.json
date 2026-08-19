@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABC",
+    "DHE",
+    "FGI"
+  ],
+  "key": {
+    "A": {
+      "item": "kubejs:mechanical_foundation_core"
+    },
+    "B": {
+      "item": "kubejs:industrial_foundation_core"
+    },
+    "C": {
+      "item": "kubejs:chemical_foundation_core"
+    },
+    "D": {
+      "item": "kubejs:electrical_foundation_core"
+    },
+    "E": {
+      "item": "kubejs:automation_foundation_core"
+    },
+    "F": {
+      "item": "kubejs:atomic_foundation_core"
+    },
+    "G": {
+      "item": "kubejs:orbital_foundation_core"
+    },
+    "H": {
+      "item": "kubejs:era8_farming_contribution"
+    },
+    "I": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "id": "kubejs:infinite_domain_core",
+    "count": 1
+  }
+}

@@ -1,0 +1,559 @@
+#Extra mid-air jumps granted by XP levels (level 3 = 1, +1 per 2 levels).
+[multi_jump]
+	#Hard cap on extra jumps regardless of XP level. 0 disables multi-jump entirely.
+	# Default: 10
+	# Range: 0 ~ 64
+	maxExtraJumps = 10
+
+#Wand finds in structure chests — vanilla AND modded: any loot table whose path
+#starts with 'chests/' qualifies (village tables from ANY mod excluded;
+#patterns editable in data/spells_and_spellcrafting/loot_modifiers/
+#wand_in_chests.json). A find is Iron tier usually, Gold sometimes, never gemmed.
+[loot]
+	#Chance for one wand in each eligible chest. 0.0 disables loot wands.
+	#Note: per-chest, not per-structure — a mineshaft rolls many chests.
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	wandChance = 0.05
+	#Zone-scaled wand power: harder areas (strongholds, ancient cities, the
+	#Nether, bastions, the End) roll better material, gem sockets, and quality.
+	#false = FULL rollback to flat loot: every chest rolls as a level-1 zone
+	#(Iron/Gold only, no gem, no quality) — exactly the pre-quality behavior.
+	#Note: the JSON's gold_share knob governs the LEVEL-1 split only; higher
+	#zones use fixed tables (see WandLootRules).
+	zoneScaling = true
+
+#Spell power per dimension. Difficulty mods (Dungeon Difficulty and friends)
+#inflate mob health and armor by dimension while spell base_damage stays
+#flat, so a caster falls further behind the deeper the dimension - and
+#since those mods scale MINIONS too, the army keeps up while the wand does
+#not. These knobs restore the balance.
+#
+#Final damage = base_damage x wand multiplier x [spell_damage] x this.
+#Healing is deliberately NOT affected (player max health does not scale).
+#
+#Default 1.00 everywhere = no change, correct for a pack with no
+#difficulty-scaling mod. RECOMMENDED for a Dungeon-Difficulty-style pack
+#(measured to restore overworld time-to-kill parity):
+#  the_nether = 1.75, the_end = 2.25, overworld = 1.00
+[dimension_power]
+	#The calibration point. Leave at 1.00 unless you want to retune the
+	#whole mod's damage baseline.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	overworld = 1.0
+	#Recommended 1.75 with Dungeon Difficulty (its Nether mobs carry ~1.75x health).
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	the_nether = 1.0
+	#Recommended 2.25 with Dungeon Difficulty (its End mobs carry ~2.25x health).
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	the_end = 1.0
+	#Any other dimension, including modded ones.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	other = 1.0
+
+#Wand quality (rolled on found wands; rerolled at the Quality Equipment
+#Reforging Station for 1 Diamond when that mod is installed).
+[quality]
+	#Allow rerolling a wand's quality at the Reforging Station (1 Diamond per
+	#pull, uniform odds, CAN roll worse). false = the station ignores wands
+	#entirely (its normal GUI opens) and quality is fixed at find time.
+	stationReroll = true
+
+#Risen minion scaling. Applies to minions as they enter the world, so changes
+#affect existing minions on the next world load / stasis recall too.
+[minions]
+	#Max-health multiplier for all Risen minions. 1.0 = normal.
+	# Default: 1.0
+	# Range: 0.1 ~ 10.0
+	healthMultiplier = 1.0
+	#Multiplier on all damage dealt by Risen minions (melee, bolts, wither touch).
+	#1.0 = normal, 0.0 = pacifist minions.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	damageMultiplier = 1.0
+	#If the Super Bosses mod is installed: whether summoned Risen minions may
+	#roll its boss tiers. false (default) = minions are exempted (wild mobs
+	#still roll tiers); true = minions roll like any mob — enjoy your
+	#occasional unkillable SuperMega pet.
+	allowSuperbossTiers = false
+	#When a horde is recalled from stasis — or follows you through a portal —
+	#clear any frozen location-based difficulty scaling so the minions are
+	#re-scaled for where they arrive.
+	#Difficulty mods scale minions like any other mob but apply it ONCE and
+	#persist it, so without this an army dismissed in the End keeps End-tier
+	#health and damage forever, including back in the overworld — a free
+	#army-wide upgrade farmable by recalling once in a hard dimension.
+	#No effect if no such mod is installed.
+	rescaleOnRecall = true
+	#Whether raising a Risen minion from a mob kill requires the player to OWN a
+	#wand (any tier, anywhere in inventory — need not be held). true (default) =
+	#necromancy is gated on possessing a wand, so a player can't build a horde
+	#before engaging the magic system, and stashing the wand stops the free
+	#minion-kill perpetuation. false = the original behavior (rotten flesh + cap
+	#room is the only gate). Does not affect the summon spell, which always
+	#requires a held wand to cast.
+	requireWandToRaise = true
+	#Chance a newly named Risen Zombie takes its owner's username instead of a
+	#themed pool name (just for laughs - a zombie of you). 0.10 = ~1 in 10.
+	#0 disables; 1.0 = every zombie is you. Zombies only; other types always
+	#use their themed pools.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	zombieSelfNameChance = 0.1
+
+	#Skeleton: spectral bolt — a homing, ally-phasing projectile replacing arrows.
+	[minions.skeleton]
+		#Bolt damage before wand scaling. 0 disables the bolt (falls back to arrows).
+		# Default: 5.0
+		# Range: 0.0 ~ 40.0
+		boltDamage = 5.0
+		#Goal cooldown between shots, ON TOP of the ~20-tick bow draw
+		#(default 30 = a bolt roughly every 2.5 seconds).
+		# Default: 30
+		# Range: 10 ~ 100
+		boltIntervalTicks = 30
+		#Bolt speed in blocks per tick.
+		# Default: 1.4
+		# Range: 0.5 ~ 3.0
+		boltSpeedBps = 1.4
+		#Homing strength per tick (0 = dumbfire, 0.5 = near-unavoidable).
+		# Default: 0.15
+		# Range: 0.0 ~ 0.5
+		boltHoming = 0.15
+		#Bolt fizzles beyond this flight range (blocks).
+		# Default: 20.0
+		# Range: 8.0 ~ 32.0
+		boltRangeBlocks = 20.0
+		#Whether spectral bolts can hit players. Off = bolts phase through ALL players.
+		boltsHitPlayers = false
+
+	#Spider: small fast venom swarm.
+	[minions.spider]
+		#Body scale (1.0 = vanilla size).
+		# Default: 0.7
+		# Range: 0.4 ~ 1.0
+		scale = 0.7
+		#Movement speed multiplier.
+		# Default: 1.3
+		# Range: 1.0 ~ 2.0
+		speedMultiplier = 1.3
+		#Poison duration per hit, refreshed on every hit. 0 disables.
+		#Vanilla poison never kills — it floors at half a heart.
+		# Default: 6
+		# Range: 0 ~ 30
+		poisonSeconds = 6
+		#Poison amplifier (0 = Poison I).
+		# Default: 0
+		# Range: 0 ~ 2
+		poisonAmplifier = 0
+		#Flat bonus magic damage (wand-scaled) vs poison-immune targets (undead).
+		#0 disables.
+		# Default: 3.0
+		# Range: 0.0 ~ 10.0
+		undeadBonusDamage = 3.0
+
+	#Enderman: rooted tank — soaks damage, taunts hostiles off the owner.
+	[minions.enderman]
+		#Max-health multiplier (stacks with the global minion healthMultiplier).
+		# Default: 1.5
+		# Range: 1.0 ~ 4.0
+		healthMultiplier = 1.5
+		#Flat armor points added.
+		# Default: 8.0
+		# Range: 0.0 ~ 20.0
+		bonusArmor = 8.0
+		#Knockback resistance added (1.0 = immovable).
+		# Default: 0.8
+		# Range: 0.0 ~ 1.0
+		knockbackResistance = 0.8
+		#Rooted tank: never teleports, water-immune, and projectiles LAND on it
+		#instead of triggering the vanilla teleport-dodge.
+		rooted = true
+		#Hostiles within this radius that target the owner or an allied minion are
+		#taunted onto the enderman. 0 disables taunting.
+		# Default: 8.0
+		# Range: 0.0 ~ 16.0
+		tauntRadius = 8.0
+		#Ticks between taunt pulses.
+		# Default: 60
+		# Range: 20 ~ 200
+		tauntIntervalTicks = 60
+		#Per-mob cooldown before the same hostile can be taunted again (ticks).
+		# Default: 160
+		# Range: 40 ~ 600
+		tauntRetargetCooldownTicks = 160
+
+	#Wither Skeleton: the weight-2 elite.
+	[minions.wither_skeleton]
+		#Max-health multiplier (stacks with the global minion healthMultiplier).
+		# Default: 2.0
+		# Range: 1.0 ~ 4.0
+		healthMultiplier = 2.0
+		#Flat armor points added.
+		# Default: 4.0
+		# Range: 0.0 ~ 20.0
+		bonusArmor = 4.0
+		#Knockback resistance added.
+		# Default: 0.4
+		# Range: 0.0 ~ 1.0
+		knockbackResistance = 0.4
+		#Movement speed multiplier.
+		# Default: 1.12
+		# Range: 1.0 ~ 1.5
+		speedMultiplier = 1.12
+		#Wither effect amplifier on melee hit (1 = Wither II; vanilla inflicts I).
+		# Default: 1
+		# Range: 0 ~ 2
+		witherAmplifier = 1
+		#Wither effect duration per hit (seconds). 0 disables the extra wither
+		#(the vanilla-inherited Wither I still applies).
+		# Default: 10
+		# Range: 0 ~ 30
+		witherSeconds = 10
+		#Guarantee at least an iron sword (upgrades a stone/wood/gold sword in hand,
+		#keeping its enchantments).
+		ironSwordFloor = true
+
+#Per-spell damage multipliers. 1.00 = normal, 0.00 = the spell deals no damage.
+#Final damage = base_damage x wand multiplier x this value.
+[spell_damage]
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cloudkill = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cone_of_cold = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	fireball = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ice_storm = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	lightning_bolt = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	magic_missile = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	poison = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ray_of_frost = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	scorching_ray = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	vampiric_touch = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	wandering_plague = 1.0
+
+#Per-spell recast (cooldown) multipliers. 1.00 = normal, 0.50 = twice as fast,
+#2.00 = twice as slow, 0.00 = no cooldown. Summon spells scale their
+#per-minion recast by the same factor. Changes apply to new casts;
+#a cooldown already running keeps its original expiry.
+[spell_recast]
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	anti_gravity = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	baleful_polymorph = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	barkskin = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	blink = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	break_enchantment = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	bulls_strength = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	call_horde = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cause_fear = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cloudkill = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cone_of_cold = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cure_critical_wounds = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	cure_light_wounds = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	dismiss_horde = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	endure_elements = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	enlarge_self = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	enlarge_target = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	feather_fall = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	fireball = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	fly = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	fortitude = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	greater_hearthstone = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	greater_invisibility = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	gust = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	haste = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	heal_spell = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	hold_monster = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ice_storm = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	invisibility = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	light = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	lightning_bolt = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	mage_armor = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	mage_hand = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	magic_missile = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	mirror_image = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	poison = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	polymorph = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	prestidigitation = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	push = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	ray_of_frost = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	recall = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	regeneration = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	repair = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	scorching_ray = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	snare = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	stone_wall = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	summon_enderman = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	summon_skeleton = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	summon_spider = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	summon_wither_skeleton = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	summon_zombie = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	vampiric_touch = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	wall_of_fire = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	wandering_plague = 1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	web = 1.0
+
+#Wand-borne minion enchantments (Attuned Grimoire). One enable knob per enchant:
+#each toggles that enchant's per-minion-type effects across the whole army. A
+#disabled enchant can still be applied to a wand; it simply does nothing until
+#re-enabled.
+[wand_enchants]
+	#Gravity: zombie melee yanks the target in, skeleton bolts shove it back,
+	#spiders root, the enderman tank drags taunted mobs onto itself, and wither
+	#skeletons stun. true = active.
+	gravity = true
+	#Ferocity (damage): zombie bonus melee + execute, skeleton bolt damage,
+	#spider venom, enderman damage reflect, wither wither-touch + on-hit. true = active.
+	ferocity = true
+	#Ravening (sustain): per-type lifesteal — the army heals a small fraction of
+	#the damage it deals/soaks. Tuned well below incoming DPS. true = active.
+	ravening = true
+	#Contagion (debuff spread): zombie Weakness+Hunger, skeleton brittle-mark
+	#(marked targets take more from the whole army), spider Nausea, enderman
+	#Weakness on taunt, wither Wither splash. true = active.
+	contagion = true
+	#Warding (defense): zombie Undying (survives a lethal hit on a cooldown),
+	#spider evasion, enderman/owner Resistance aura, wither armor + reflect. true = active.
+	warding = true
+	#Whether wand-enchant crowd control (root/stun/yank/drag/shove) may affect
+	#NON-owner players. false (default) = minions never CC other players, so an
+	#army can't perma-lock a player in PvP; true = players are fair game.
+	affectPlayers = false
+	#Chance that a wand found in a chest comes pre-enchanted with a wand enchant.
+	#High by default because found wands are already rare. 0 disables pre-enchanting.
+	# Default: 0.75
+	# Range: 0.0 ~ 1.0
+	foundWandEnchantChance = 0.75
+	#Per-eligible-chest chance to also find a wand-enchant book, like any other
+	#enchanted book in loot. 0 disables enchant books in chests.
+	# Default: 0.04
+	# Range: 0.0 ~ 1.0
+	bookInChestChance = 0.04
+
+	#Per-effect balance magnitudes for the wand enchants. Values scale per enchant level
+	#where a key ends in PerLevel (final = base + perLevel x level); durations are in
+	#seconds, ranges in blocks. Tune freely; 0 neutralises that lever.
+	[wand_enchants.tuning]
+		# Default: 0.5
+		# Range: 0.0 ~ 5.0
+		gravityPullStrengthBase = 0.5
+		# Default: 0.2
+		# Range: 0.0 ~ 5.0
+		gravityPullStrengthPerLevel = 0.2
+		# Default: 0.6
+		# Range: 0.0 ~ 5.0
+		gravityPushStrengthBase = 0.6
+		# Default: 0.25
+		# Range: 0.0 ~ 5.0
+		gravityPushStrengthPerLevel = 0.25
+		# Default: 1.0
+		# Range: 0.0 ~ 30.0
+		gravityWebSecondsBase = 1.0
+		# Default: 0.5
+		# Range: 0.0 ~ 30.0
+		gravityWebSecondsPerLevel = 0.5
+		# Default: 0.1
+		# Range: 0.0 ~ 1.0
+		gravityWitherStunChanceBase = 0.1
+		# Default: 0.1
+		# Range: 0.0 ~ 1.0
+		gravityWitherStunChancePerLevel = 0.1
+		# Default: 1.5
+		# Range: 0.0 ~ 30.0
+		gravityWitherStunSeconds = 1.5
+		# Default: 16.0
+		# Range: 1.0 ~ 64.0
+		gravityPullRange = 16.0
+		# Default: 10.0
+		# Range: 1.0 ~ 64.0
+		gravityWebRange = 10.0
+		# Default: 6.0
+		# Range: 1.0 ~ 64.0
+		gravityPushRange = 6.0
+		# Default: 0.75
+		# Range: 0.0 ~ 50.0
+		ferocityBonusDamagePerLevel = 0.75
+		# Default: 0.35
+		# Range: 0.0 ~ 1.0
+		ferocityExecuteThreshold = 0.35
+		# Default: 2.0
+		# Range: 1.0 ~ 10.0
+		ferocityExecuteMultiplier = 2.0
+		# Default: 1.0
+		# Range: 0.0 ~ 5.0
+		ferocitySpiderPoisonAmpPerLevel = 1.0
+		# Default: 1.0
+		# Range: 0.0 ~ 5.0
+		ferocityWitherAmpPerLevel = 1.0
+		# Default: 0.1
+		# Range: 0.0 ~ 5.0
+		ferocityBoltDamagePercentPerLevel = 0.1
+		# Default: 0.05
+		# Range: 0.0 ~ 1.0
+		ferocityBoltHomingPerLevel = 0.05
+		# Default: 2.0
+		# Range: 0.0 ~ 50.0
+		ferocityReflectPerLevel = 2.0
+		# Default: 0.5
+		# Range: 0.0 ~ 50.0
+		raveningLeechPerLevel = 0.5
+		# Default: 0.05
+		# Range: 0.0 ~ 1.0
+		raveningSoakFractionPerLevel = 0.05
+		# Default: 1.0
+		# Range: 0.0 ~ 50.0
+		raveningSoakCapPerLevel = 1.0
+		# Default: 5.0
+		# Range: 0.0 ~ 60.0
+		contagionDebuffSeconds = 5.0
+		# Default: 0.08
+		# Range: 0.0 ~ 5.0
+		contagionBrittlePercentPerLevel = 0.08
+		# Default: 4.0
+		# Range: 0.0 ~ 60.0
+		contagionBrittleSeconds = 4.0
+		# Default: 3.0
+		# Range: 0.0 ~ 16.0
+		contagionSplashRadius = 3.0
+		# Default: 30.0
+		# Range: 0.0 ~ 600.0
+		wardingUndyingCooldownSeconds = 30.0
+		# Default: 4.0
+		# Range: 0.5 ~ 100.0
+		wardingUndyingLeaveHp = 4.0
+		# Default: 0.1
+		# Range: 0.0 ~ 1.0
+		wardingEvasionPerLevel = 0.1
+		# Default: 16.0
+		# Range: 1.0 ~ 64.0
+		wardingAuraRange = 16.0

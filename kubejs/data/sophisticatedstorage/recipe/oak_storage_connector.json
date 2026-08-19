@@ -1,0 +1,27 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "sophisticatedcore:item_enabled",
+                                    "itemRegistryName":  "sophisticatedstorage:oak_storage_connector"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "P":  {
+                          "item":  "allthecompressed:oak_planks_1x"
+                      },
+                "S":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    "SPS",
+                    "PSP",
+                    "SPS"
+                ],
+    "result":  {
+                   "count":  4,
+                   "id":  "sophisticatedstorage:oak_storage_connector"
+               }
+}

@@ -1,0 +1,30 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "sophisticatedcore:item_enabled",
+                                    "itemRegistryName":  "sophisticatedstorage:stack_downgrade_tier_3"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  {
+                          "item":  "sophisticatedstorage:upgrade_base"
+                      },
+                "F":  {
+                          "item":  "allthecompressed:flint_block"
+                      },
+                "S":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    "SFS",
+                    "FBF",
+                    "FSF"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "sophisticatedstorage:stack_downgrade_tier_3"
+               }
+}

@@ -1,0 +1,36 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "infinite_domain_space"
+version = "1.0.0"
+displayName = "Infinite Domain: Stellaris Space Industry"
+authors = "Infinite Domain"
+description = '''
+Adds the pack's data-driven aerospace component library and specialized Stellaris-compatible EVA ecosystem.
+'''
+
+[[mixins]]
+config = "infinite_domain_space.mixins.json"
+
+[[dependencies.infinite_domain_space]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_space]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_space]]
+modId = "stellaris"
+type = "required"
+versionRange = "[1.4.25,)"
+ordering = "AFTER"
+side = "BOTH"

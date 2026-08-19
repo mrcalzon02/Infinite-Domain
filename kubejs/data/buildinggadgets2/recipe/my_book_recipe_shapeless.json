@@ -1,0 +1,26 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "patchouli"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:lapis_block"
+                        },
+                        {
+                            "item":  "minecraft:clay_ball"
+                        },
+                        {
+                            "item":  "minecraft:book"
+                        }
+                    ],
+    "result":  {
+                   "id":  "patchouli:guide_book",
+                   "components":  {
+                                      "patchouli:book":  "buildinggadgets2:buildinggadgets2book"
+                                  }
+               }
+}

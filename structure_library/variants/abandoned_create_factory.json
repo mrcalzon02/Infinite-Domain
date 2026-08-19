@@ -1,0 +1,25 @@
+{
+  "variant_id": "infinite_domain:abandoned_create_factory",
+  "clean_master": "infinite_domain:create_factory_clean_master",
+  "damage_story": "A localized west-side collapse destroys one receiving bay and buries part of the raw-material cell while the offices, later production stages, powerhouse, catwalk and outbound docks survive.",
+  "damage_zone": "west receiving roof, first loading bay and raw-material storage",
+  "environment_layer": [
+    "continuous gravel and cracked masonry rubble beneath the failed receiving roof",
+    "fallen full-block steel and copper members across the damaged input lane",
+    "scrap and refuse concentrated beside the interrupted raw-material route",
+    "weathered staff road, receiving apron and outbound truck court"
+  ],
+  "occupation_layer": [
+    "industrial loot retained in the surviving maintenance room",
+    "pillagers occupying the protected upper engineering offices"
+  ],
+  "invariants": [
+    "north entrance, both office floors and office stair survive",
+    "office-to-production threshold and central manufacturing aisles remain navigable",
+    "mixing, pressing, assembly, maintenance and quality-control routes survive",
+    "powerhouse, production catwalk and independent catwalk stair survive",
+    "all three south outbound dock approaches remain accessible",
+    "damage remains localized to the west receiving failure"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

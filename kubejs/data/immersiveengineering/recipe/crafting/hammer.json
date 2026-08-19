@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "f":  {
+                          "tag":  "c:strings"
+                      },
+                "i":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "s":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    " if",
+                    " si",
+                    "s  "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "immersiveengineering:hammer"
+               }
+}

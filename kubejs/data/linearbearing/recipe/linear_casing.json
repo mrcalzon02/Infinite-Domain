@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "D":  {
+                          "item":  "allthecompressed:cobbled_deepslate_1x"
+                      },
+                "A":  {
+                          "item":  "create:andesite_alloy_block"
+                      }
+            },
+    "pattern":  [
+                    "A A",
+                    "D D",
+                    "DDD"
+                ],
+    "result":  {
+                   "count":  2,
+                   "id":  "linearbearing:linear_casing"
+               }
+}

@@ -1,0 +1,27 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "enderio"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "enderio:conduit_binder"
+                      },
+                "i":  {
+                          "item":  "minecraft:copper_block"
+                      }
+            },
+    "pattern":  [
+                    "iii",
+                    "ccc",
+                    "iii"
+                ],
+    "result":  {
+                   "count":  6,
+                   "id":  "oritech:fluid_pipe"
+               }
+}

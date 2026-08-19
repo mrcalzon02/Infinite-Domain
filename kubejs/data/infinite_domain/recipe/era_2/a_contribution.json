@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "tfmg:steel_ingot"
+    },
+    "B": {
+      "item": "tfmg:coal_coke"
+    },
+    "C": {
+      "item": "tfmg:blast_furnace_reinforcement"
+    },
+    "D": {
+      "item": "tfmg:steel_ingot"
+    },
+    "E": {
+      "item": "tfmg:steel_block"
+    }
+  },
+  "result": {
+    "id": "kubejs:era2_mining_contribution",
+    "count": 1
+  }
+}

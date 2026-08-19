@@ -1,0 +1,33 @@
+{
+  "type": "createcybernetics:engineering_table",
+  "accept_mirrored": true,
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinite_domain_cyberware:fouled_metabolic_mesh"
+    },
+    "B": {
+      "item": "createcybernetics:component_mesh"
+    },
+    "C": {
+      "item": "minecraft:iron_ingot"
+    },
+    "D": {
+      "item": "cyber_ware_port:component_plating"
+    },
+    "E": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "  A  ",
+    " ABC ",
+    " BDB ",
+    " CEC ",
+    "  A  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinite_domain_cyberware:fouled_nutrient_reclaimer"
+  }
+}

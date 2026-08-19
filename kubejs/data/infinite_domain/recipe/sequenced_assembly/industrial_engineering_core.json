@@ -1,0 +1,46 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "simulated:gyroscopic_mechanism"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "kubejs:industrial_engineering_core"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        { "item": "kubejs:incomplete_industrial_engineering_core" },
+        { "item": "create:precision_mechanism" }
+      ],
+      "results": [
+        { "id": "kubejs:incomplete_industrial_engineering_core" }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        { "item": "kubejs:incomplete_industrial_engineering_core" },
+        { "item": "tfmg:steel_mechanism" }
+      ],
+      "results": [
+        { "id": "kubejs:incomplete_industrial_engineering_core" }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        { "item": "kubejs:incomplete_industrial_engineering_core" }
+      ],
+      "results": [
+        { "id": "kubejs:incomplete_industrial_engineering_core" }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "kubejs:incomplete_industrial_engineering_core"
+  }
+}

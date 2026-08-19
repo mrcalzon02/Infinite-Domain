@@ -1,0 +1,52 @@
+{
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": false,
+  "pattern": [
+    "  NNN  ",
+    " FTTTF ",
+    "SACCLSS",
+    "SPMMLPS",
+    "SEEEELS",
+    " GGGGG ",
+    "   G   "
+  ],
+  "key": {
+    "N": {
+      "item": "stellaris:rocket_nose_cone"
+    },
+    "F": {
+      "item": "stellaris:rocket_fin"
+    },
+    "T": {
+      "item": "kubejs:thermal_protection_package"
+    },
+    "S": {
+      "item": "kubejs:fuselage_section"
+    },
+    "A": {
+      "item": "kubejs:avionics_bay"
+    },
+    "C": {
+      "item": "kubejs:flight_control_computer"
+    },
+    "P": {
+      "item": "kubejs:propellant_tank_section"
+    },
+    "M": {
+      "item": "kubejs:service_module"
+    },
+    "L": {
+      "item": "kubejs:life_support_module"
+    },
+    "E": {
+      "item": "stellaris:rocket_engine"
+    },
+    "G": {
+      "item": "kubejs:landing_gear_assembly"
+    }
+  },
+  "result": {
+    "id": "stellaris:rocket",
+    "count": 1
+  }
+}

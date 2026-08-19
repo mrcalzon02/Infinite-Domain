@@ -1,0 +1,688 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "era_06_high_energy_and_nuclear_engineering"
+	group: "346E9B7B176D7846"
+	id: "0FD581D87A58E08D"
+	images: [ ]
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5510000000000002"]
+			id: "5610000000000001"
+			shape: "octagon"
+			tasks: [{
+				id: "5620000000000001"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5610000000000001"]
+			id: "6611000000000001"
+			shape: "hexagon"
+			tasks: [{
+				id: "6621000000000001"
+				item: { count: 1, id: "more_ores_more_gems:uranium_pickaxe" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6611000000000001"]
+			id: "1610000000000001"
+			shape: "hexagon"
+			tasks: [{
+				count: 18L
+				id: "1620000000000001"
+				item: { count: 1, id: "kubejs:uranium_mineral_trace" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1610000000000001"]
+			id: "1610000000000002"
+			rewards: [{
+				id: "1630000000000002"
+				item: {
+					count: 1
+					id: "numismatics:sprocket"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 18L
+				id: "1620000000000002"
+				item: { count: 1, id: "kubejs:uranium_bearing_fines" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1610000000000002"]
+			id: "1610000000000003"
+			shape: "hexagon"
+			tasks: [{
+				count: 18L
+				id: "1620000000000003"
+				item: { count: 1, id: "kubejs:washed_uranium_concentrate" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1610000000000003"]
+			id: "1610000000000004"
+			shape: "hexagon"
+			tasks: [{
+				count: 8L
+				id: "1620000000000004"
+				item: { count: 1, id: "kubejs:purified_uranium_compound" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1610000000000004"]
+			id: "1610000000000005"
+			rewards: [{
+				id: "1630000000000005"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 8L
+				id: "1620000000000005"
+				item: { count: 1, id: "kubejs:green_fuel_pellet" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["1610000000000005"]
+			id: "1610000000000006"
+			shape: "hexagon"
+			tasks: [{
+				count: 8L
+				id: "1620000000000006"
+				item: { count: 1, id: "kubejs:fired_fuel_pellet" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["1610000000000006"]
+			id: "1610000000000007"
+			shape: "hexagon"
+			tasks: [{
+				count: 8L
+				id: "1620000000000007"
+				item: { count: 1, id: "createnuclear:uranium_rod" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["1610000000000007"]
+			id: "1610000000000008"
+			rewards: [{
+				count: 2
+				id: "1630000000000008"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "1620000000000008"
+				item: { count: 1, id: "kubejs:era6_mining_contribution" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["6611000000000001"]
+			id: "2610000000000001"
+			shape: "heart"
+			tasks: [{
+				id: "2620000000000001"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2610000000000001"]
+			id: "2610000000000002"
+			rewards: [{
+				id: "2630000000000002"
+				item: {
+					count: 1
+					id: "numismatics:sprocket"
+				}
+				type: "item"
+			}]
+			shape: "heart"
+			tasks: [{
+				count: 4L
+				id: "2620000000000002"
+				item: { count: 1, id: "createnuclear:black_anti_radiation_helmet" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2610000000000002"]
+			id: "2610000000000003"
+			shape: "heart"
+			tasks: [{
+				count: 64L
+				id: "2620000000000003"
+				item: { count: 1, id: "wastelands:purified_water" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2610000000000003"]
+			id: "2610000000000004"
+			shape: "heart"
+			tasks: [{
+				count: 16L
+				id: "2620000000000004"
+				item: { count: 1, id: "minecraft:golden_apple" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2610000000000004"]
+			id: "2610000000000005"
+			shape: "heart"
+			tasks: [{
+				id: "2620000000000005"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["2610000000000005"]
+			id: "2610000000000006"
+			shape: "heart"
+			tasks: [{
+				count: 64L
+				id: "2620000000000006"
+				item: { count: 1, id: "wastelands:canned_food" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["2610000000000006"]
+			id: "2610000000000007"
+			shape: "heart"
+			tasks: [{
+				count: 128L
+				id: "2620000000000007"
+				item: { count: 1, id: "minecraft:golden_carrot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["2610000000000007"]
+			id: "2610000000000008"
+			rewards: [{
+				count: 2
+				id: "2630000000000008"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "heart"
+			tasks: [{
+				id: "2620000000000008"
+				item: { count: 1, id: "kubejs:era6_farming_contribution" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["6611000000000001"]
+			id: "3610000000000001"
+			shape: "diamond"
+			tasks: [{
+				id: "3620000000000001"
+				item: { count: 1, id: "minecraft:recovery_compass" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3610000000000001"]
+			id: "3610000000000002"
+			rewards: [{
+				id: "3630000000000002"
+				item: {
+					count: 1
+					id: "numismatics:sprocket"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "3620000000000002"
+				item: { count: 1, id: "createnuclear:reactor_blueprint_item" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3610000000000002"]
+			id: "3610000000000003"
+			shape: "diamond"
+			tasks: [{
+				count: 32L
+				id: "3620000000000003"
+				item: { count: 1, id: "createnuclear:reactor_casing" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3610000000000003"]
+			id: "3610000000000004"
+			shape: "diamond"
+			tasks: [{
+				count: 8L
+				id: "3620000000000004"
+				item: { count: 1, id: "createnuclear:reactor_cooler" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3610000000000004"]
+			id: "3610000000000005"
+			rewards: [
+				{
+					id: "3630000000000005"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					command: "execute in minecraft:overworld run structure_map spore:lab 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70EF36CEE27D38B0"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "3620000000000005"
+				item: { count: 1, id: "createnuclear:reactor_controller" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["3610000000000005"]
+			id: "3610000000000006"
+			shape: "diamond"
+			tasks: [{
+				id: "3620000000000006"
+				structure: "spore:lab"
+				type: "structure"
+			}]
+			x: 6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["3610000000000006"]
+			id: "3610000000000007"
+			shape: "diamond"
+			tasks: [{
+				id: "3620000000000007"
+				item: { count: 1, id: "ae2lt:mysterious_cell" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["3610000000000007"]
+			id: "3610000000000008"
+			rewards: [{
+				count: 2
+				id: "3630000000000008"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "3620000000000008"
+				item: { count: 1, id: "kubejs:era6_exploration_contribution" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["1610000000000002"]
+			id: "4610000000000001"
+			shape: "gear"
+			tasks: [{
+				id: "4620000000000001"
+				item: { count: 1, id: "kubejs:empty_fuel_cladding" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1610000000000004"]
+			id: "4610000000000002"
+			shape: "gear"
+			tasks: [{
+				id: "4620000000000002"
+				item: { count: 1, id: "kubejs:fuel_pellet_stack" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1610000000000006"]
+			id: "4610000000000003"
+			rewards: [{
+				id: "4630000000000003"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "4620000000000003"
+				item: { count: 1, id: "createnuclear:graphite_rod" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["2610000000000002"]
+			id: "4610000000000004"
+			shape: "gear"
+			tasks: [{
+				id: "4620000000000004"
+				item: { count: 1, id: "createnuclear:black_anti_radiation_chestplate" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2610000000000004"]
+			id: "4610000000000005"
+			shape: "gear"
+			tasks: [{
+				id: "4620000000000005"
+				item: { count: 1, id: "ae2lt:module_radiation_protection" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2610000000000006"]
+			id: "4610000000000006"
+			shape: "gear"
+			tasks: [{
+				id: "4620000000000006"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["3610000000000002"]
+			id: "4610000000000007"
+			shape: "gear"
+			tasks: [{
+				id: "4620000000000007"
+				item: { count: 1, id: "oritech:reactor_controller" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3610000000000004"]
+			id: "4610000000000008"
+			shape: "gear"
+			tasks: [{
+				id: "4620000000000008"
+				item: { count: 1, id: "oritech:advanced_battery" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3610000000000006"]
+			id: "4610000000000009"
+			rewards: [{
+				id: "4630000000000009"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "4620000000000009"
+				item: { count: 1, id: "ae2lt:lightning_cell_component_i" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"1610000000000008"
+				"2610000000000008"
+				"3610000000000008"
+			]
+			dependency_requirement: "one_completed"
+			id: "5610000000000002"
+			min_required_dependencies: 1
+			rewards: [
+				{
+					id: "563000000000000A"
+					item: {
+						count: 1
+						id: "ae2lt:lightning_cell_component_i"
+					}
+					type: "item"
+				}
+				{
+					id: "563000000000000B"
+					item: {
+						count: 1
+						id: "cyber_ware_port:component_reactor"
+					}
+					type: "item"
+				}
+				{
+					id: "5630000000000014"
+					type: "xp"
+					xp: 1500
+				}
+			]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "5620000000000002"
+				item: { count: 1, id: "kubejs:atomic_foundation_core" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["2610000000000003"]
+			id: "7611000000000001"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				count: 16L
+				id: "7612000000000001"
+				item: { count: 1, id: "minecraft:kelp" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"7611000000000001"
+				"3610000000000005"
+			]
+			id: "7611000000000002"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				count: 4L
+				id: "7612000000000002"
+				item: { count: 1, id: "kubejs:kelp_chelating_pulp" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7611000000000002"]
+			id: "7611000000000003"
+			optional: true
+			rewards: [{
+				count: 8
+				id: "7613000000000003"
+				item: {
+					count: 1
+					id: "create:fluid_pipe"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "7612000000000003"
+				item: { count: 1, id: "kubejs:chelating_broth_bucket" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"1610000000000004"
+				"3610000000000005"
+				"7511000000000006"
+			]
+			id: "7611000000000004"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				count: 9L
+				id: "7612000000000004"
+				item: { count: 1, id: "kubejs:precipitated_tungsten_concentrate" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 11.0d
+		}
+		{
+			dependencies: [
+				"7611000000000003"
+				"7611000000000004"
+			]
+			id: "7611000000000005"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				count: 17L
+				id: "7612000000000005"
+				item: { count: 1, id: "kubejs:high_grade_tungsten_concentrate" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["7611000000000005"]
+			id: "7611000000000006"
+			optional: true
+			rewards: [{
+				count: 2
+				id: "7613000000000006"
+				item: {
+					count: 1
+					id: "create:filter"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				count: 17L
+				id: "7612000000000006"
+				item: { count: 1, id: "more_ores_more_gems:tungsten_nugget" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 17.0d
+		}
+	]
+}

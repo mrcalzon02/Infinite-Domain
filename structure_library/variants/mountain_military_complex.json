@@ -1,0 +1,25 @@
+{
+  "variant_id": "infinite_domain:mountain_military_complex",
+  "clean_master": "infinite_domain:mountain_military_complex_clean_master",
+  "damage_story": "A west motor-pool strike buries one vehicle bay while a separate southeast barracks collapse destroys the rear wash wing; pillagers occupy the surviving gate, command, infirmary, motor workshops and armory.",
+  "damage_zone": "west motor-pool bay/roof and southeast barracks rear wing/roof",
+  "environment_layer": [
+    "gravity-led concrete and gravel beneath the motor-pool roof failure",
+    "localized gravel and oxidized roofing beneath the barracks collapse",
+    "intact mountain retaining shoulders and reinforced perimeter",
+    "preserved central asphalt and helipad/parade circulation"
+  ],
+  "occupation_layer": [
+    "six pillager spawners distributed among gate, command ground, command upper, barracks, motor service and armory zones",
+    "military caches remain divided between command and secure armory",
+    "industrial supplies remain in the surviving rear motor workshops"
+  ],
+  "invariants": [
+    "guarded vehicle gate and all four watchtower bases/ladders survive",
+    "both command levels and communications bridge remain connected",
+    "infirmary, western dormitory and duty/mess functions remain reachable",
+    "two motor bays, all rear service rooms and the armory remain usable",
+    "damage remains localized to the two declared failure zones"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

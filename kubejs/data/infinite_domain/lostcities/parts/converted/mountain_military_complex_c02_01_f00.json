@@ -1,0 +1,219 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "))44444444&&%444",
+      "))444444&&%44444",
+      "))4444&&%4444444",
+      "))44&&%444444444",
+      "))&&%44444444444",
+      "))%4444444444444",
+      "))44444444444444",
+      "334444444444444&",
+      "))44444444444&&%",
+      "))444444444&&%44",
+      "))4444444&&%4444",
+      "))44444&&%444444",
+      "))444&&%44444444",
+      "))4&&%4444444444",
+      "))&%444444444444",
+      "&&&&&&&444444444"
+    ],
+    [
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000",
+      "   0000000000000"
+    ],
+    [
+      "   5 11 +* $ ,  ",
+      "   5 2       5  ",
+      "   5         5  ",
+      "   55555.5555555",
+      "   5           5",
+      "   5           5",
+      "   5 '   '     5",
+      "   5 (   (     5",
+      "   5           5",
+      "   5           ,",
+      "   5           5",
+      "   5 '   '     5",
+      "   5 (   (     5",
+      "   5           5",
+      "   5           5",
+      "   5           5"
+    ],
+    [
+      "   5         -  ",
+      "   5         5  ",
+      "   5         5  ",
+      "   55555/5555555",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   !           5",
+      "   !           -",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5"
+    ],
+    [
+      "   5         5  ",
+      "   5         5  ",
+      "   5         5  ",
+      "   5555555555555",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   !           5",
+      "   !           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5"
+    ],
+    [
+      "   5         5  ",
+      "   5         5  ",
+      "   5         5  ",
+      "   5555555555555",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5",
+      "   5           5"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:green_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:green_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:smoker[facing=south,lit=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spawner",
+        "tag": {
+          "id": "minecraft:mob_spawner",
+          "Delay": 240,
+          "MinSpawnDelay": 240,
+          "MaxSpawnDelay": 720,
+          "SpawnCount": 3,
+          "MaxNearbyEntities": 10,
+          "RequiredPlayerRange": 14,
+          "SpawnRange": 4,
+          "SpawnData": {
+            "entity": {
+              "id": "minecraft:pillager"
+            }
+          },
+          "SpawnPotentials": [
+            {
+              "weight": 1,
+              "data": {
+                "entity": {
+                  "id": "minecraft:pillager"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:white_concrete"
+      },
+      {
+        "char": "4",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "5",
+        "block": "tfmg:cinder_block"
+      }
+    ]
+  }
+}

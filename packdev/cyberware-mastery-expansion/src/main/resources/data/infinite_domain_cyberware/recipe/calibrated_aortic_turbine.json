@@ -1,0 +1,33 @@
+{
+  "type": "createcybernetics:engineering_table",
+  "accept_mirrored": true,
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinite_domain_cyberware:reclaimed_platelet_engine"
+    },
+    "B": {
+      "item": "createcybernetics:heartupgrades_platelets"
+    },
+    "C": {
+      "item": "stellaris:heavy_metal_plate"
+    },
+    "D": {
+      "item": "createcybernetics:component_synthnerves"
+    },
+    "E": {
+      "item": "cyber_ware_port:heart_upgrades_platelets"
+    }
+  },
+  "pattern": [
+    "  A  ",
+    " ABC ",
+    " BDB ",
+    " CEC ",
+    "  A  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinite_domain_cyberware:calibrated_aortic_turbine"
+  }
+}

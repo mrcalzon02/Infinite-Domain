@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "X":  {
+                          "item":  "bno:lead_block"
+                      },
+                "Y":  {
+                          "item":  "createnuclear:light_blue_cloth"
+                      },
+                "Z":  {
+                          "item":  "createnuclear:reinforced_glass"
+                      }
+            },
+    "pattern":  [
+                    "YXY",
+                    "XZX"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "createnuclear:light_blue_anti_radiation_helmet"
+               }
+}

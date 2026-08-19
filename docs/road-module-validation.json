@@ -1,0 +1,6469 @@
+{
+  "scope": "NBT-backed road topology, connector boundary, four-way rotation, elevation and condition-invariance validation.",
+  "families_checked": 12,
+  "modules_checked": 84,
+  "topologies": [
+    "alley",
+    "bend",
+    "bridge_approach",
+    "dead_end",
+    "driveway",
+    "four_way",
+    "highway",
+    "ramp",
+    "roundabout",
+    "straight",
+    "t"
+  ],
+  "conditions": [
+    "buried",
+    "burned",
+    "clean",
+    "cracked",
+    "cratered",
+    "flooded",
+    "overgrown"
+  ],
+  "static_road_contracts_passed": true,
+  "production_approvals": 0,
+  "runtime_status": "pending_in_game_adjacency_rotation_elevation_and_vehicle_walkthrough",
+  "failures": [],
+  "families": {
+    "infinite_domain:alley_straight": {
+      "topology": "alley",
+      "road_class": "alley",
+      "connectors": [
+        {
+          "direction": "east",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 351,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 351,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 384,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 345,
+          "drivable_cells": 96,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 358,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 376,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 353,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    },
+    "infinite_domain:bridge_approach": {
+      "topology": "bridge_approach",
+      "road_class": "main_road",
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 1815,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 1815,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 1980,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 1779,
+          "drivable_cells": 354,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 1825,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 1918,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 1820,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    },
+    "infinite_domain:driveway_straight": {
+      "topology": "driveway",
+      "road_class": "driveway",
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 351,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 351,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 384,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 345,
+          "drivable_cells": 96,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 360,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 382,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 353,
+          "drivable_cells": 99,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 3,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 3,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    },
+    "infinite_domain:highway_ramp": {
+      "topology": "ramp",
+      "road_class": "highway",
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 1591,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 1591,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 1745,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 1562,
+          "drivable_cells": 354,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 1599,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 1686,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 1596,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 4
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    },
+    "infinite_domain:highway_straight": {
+      "topology": "highway",
+      "road_class": "highway",
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 17,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 17,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 1311,
+          "drivable_cells": 561,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 1311,
+          "drivable_cells": 561,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 1569,
+          "drivable_cells": 561,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 1291,
+          "drivable_cells": 552,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 1319,
+          "drivable_cells": 561,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 1439,
+          "drivable_cells": 561,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 1319,
+          "drivable_cells": 561,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 17,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 17,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    },
+    "infinite_domain:local_bend": {
+      "topology": "bend",
+      "road_class": "local_road",
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 749,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 749,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 848,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 731,
+          "drivable_cells": 222,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 757,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 781,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 755,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    },
+    "infinite_domain:local_cross": {
+      "topology": "four_way",
+      "road_class": "local_road",
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 1251,
+          "drivable_cells": 413,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 1251,
+          "drivable_cells": 413,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 1434,
+          "drivable_cells": 413,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 1233,
+          "drivable_cells": 404,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 1261,
+          "drivable_cells": 413,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 1348,
+          "drivable_cells": 413,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 1257,
+          "drivable_cells": 413,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    },
+    "infinite_domain:local_dead_end": {
+      "topology": "dead_end",
+      "road_class": "local_road",
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 669,
+          "drivable_cells": 189,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 669,
+          "drivable_cells": 189,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 783,
+          "drivable_cells": 189,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 651,
+          "drivable_cells": 180,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 677,
+          "drivable_cells": 189,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 730,
+          "drivable_cells": 189,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 673,
+          "drivable_cells": 189,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    },
+    "infinite_domain:local_roundabout": {
+      "topology": "roundabout",
+      "road_class": "local_road",
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 1684,
+          "drivable_cells": 541,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 1684,
+          "drivable_cells": 541,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 1860,
+          "drivable_cells": 541,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 1672,
+          "drivable_cells": 535,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 1691,
+          "drivable_cells": 541,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 1744,
+          "drivable_cells": 541,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 1688,
+          "drivable_cells": 541,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    },
+    "infinite_domain:local_straight": {
+      "topology": "straight",
+      "road_class": "local_road",
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 747,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 747,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 846,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 729,
+          "drivable_cells": 222,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 755,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 820,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 751,
+          "drivable_cells": 231,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    },
+    "infinite_domain:local_t": {
+      "topology": "t",
+      "road_class": "local_road",
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 1000,
+          "drivable_cells": 322,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 1000,
+          "drivable_cells": 322,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 1183,
+          "drivable_cells": 322,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 982,
+          "drivable_cells": 313,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 1008,
+          "drivable_cells": 322,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 1058,
+          "drivable_cells": 322,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 1006,
+          "drivable_cells": 322,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 7,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 7,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    },
+    "infinite_domain:main_straight": {
+      "topology": "straight",
+      "road_class": "main_road",
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "issues": [],
+      "variants": {
+        "clean": {
+          "placed_blocks": 1011,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cracked": {
+          "placed_blocks": 1011,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "buried": {
+          "placed_blocks": 1176,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "cratered": {
+          "placed_blocks": 993,
+          "drivable_cells": 354,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "overgrown": {
+          "placed_blocks": 1019,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "flooded": {
+          "placed_blocks": 1114,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        },
+        "burned": {
+          "placed_blocks": 1016,
+          "drivable_cells": 363,
+          "rotations": [
+            {
+              "degrees": 0,
+              "connectors": [
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 90,
+              "connectors": [
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 180,
+              "connectors": [
+                {
+                  "direction": "south",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "north",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            },
+            {
+              "degrees": 270,
+              "connectors": [
+                {
+                  "direction": "west",
+                  "width": 11,
+                  "elevation": 0
+                },
+                {
+                  "direction": "east",
+                  "width": 11,
+                  "elevation": 0
+                }
+              ]
+            }
+          ],
+          "issues": []
+        }
+      }
+    }
+  }
+}

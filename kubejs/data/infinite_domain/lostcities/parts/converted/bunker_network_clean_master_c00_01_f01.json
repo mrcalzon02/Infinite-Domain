@@ -1,0 +1,182 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          !!!",
+      "  !          !  ",
+      "  !          !  ",
+      "  !          !  ",
+      "  !          !!!",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !"
+    ],
+    [
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          !!!",
+      "  !          !  ",
+      "  !          !  ",
+      "  !          !  ",
+      "  !          !!!",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !"
+    ],
+    [
+      "  !!!!!!!!!!!! !",
+      "  !!!!!!!!!!!! !",
+      "  !!!!!!!!!!!! !",
+      "  !!!!!!!!!!!! !",
+      "  !!!!!!!!!!!! !",
+      "  !!!!!!!!!!!!!!",
+      "  !!!!!!!!!!!!!!",
+      "  !!!!!!!!!!!!!!",
+      "  !!!!!!!!!!!!!!",
+      "  !!!!!!!!!!!!!!",
+      "  !!!!!!!!!!!! !",
+      "  !!!!!!!!!!!! !",
+      "  !!!!!!!!!!!! !",
+      "  !!!!!!!!!!!! !",
+      "  !!!!!!!!!!!! !",
+      "  !!!!!!!!!!!! !"
+    ],
+    [
+      "  222222222222 2",
+      "  222222222222 2",
+      "  222222222222 2",
+      "  222222222222 2",
+      "  222222222222 2",
+      "  22222222222222",
+      "  22222222222222",
+      "  22222222222222",
+      "  22222222222222",
+      "  22222222222222",
+      "  222222222222 2",
+      "  222222222222 2",
+      "  222222222222 2",
+      "  222222222222 2",
+      "  222222222222 2",
+      "  222222222222 2"
+    ],
+    [
+      "  !          ! !",
+      "  ! %   %    ! !",
+      "  ! &   &    ! !",
+      "  !          ! !",
+      "  ! %   %    ! !",
+      "  ! &   &    !!!",
+      "  !          '  ",
+      "  !          (  ",
+      "  !11111+1111!  ",
+      "  !          !!!",
+      "  ! .   .    ! !",
+      "  ! /   /    ! !",
+      "  !        $ ! !",
+      "  !          ! !",
+      "  ! -   - 000! !",
+      "  !       000! !"
+    ],
+    [
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          !!!",
+      "  !          )  ",
+      "  !          *  ",
+      "  !11111,1111!  ",
+      "  !          !!!",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !          ! !",
+      "  !       000! !",
+      "  !       000! !"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:brewing_stand[has_bottle_0=false,has_bottle_1=false,has_bottle_2=false]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:gray_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:gray_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:iron_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:iron_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:iron_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:iron_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:white_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:white_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:white_concrete"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "2",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "cyber_ware_port:brain_upgrades_matrix"
+    },
+    "F": {
+      "item": "cyber_ware_port:component_fiberoptics"
+    },
+    "M": {
+      "item": "cyber_ware_port:component_microelectric"
+    },
+    "Q": {
+      "item": "cyberspace:quantum_core"
+    },
+    "R": {
+      "item": "cyber_ware_port:component_reactor"
+    },
+    "W": {
+      "item": "gateway_of_doom:portal_ward_3"
+    }
+  },
+  "pattern": [
+    "FQF",
+    "RWR",
+    "MCM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "gateway_of_doom:devil_eye_violet"
+  }
+}

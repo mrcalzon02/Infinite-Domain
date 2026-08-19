@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "oritech:processing_unit"
+                      },
+                "e":  {
+                          "tag":  "c:plates/plastic"
+                      },
+                "m":  {
+                          "item":  "more_ores_more_gems:block_of_electrum"
+                      },
+                "s":  {
+                          "item":  "createbigcannons:steel_block"
+                      }
+            },
+    "pattern":  [
+                    " a ",
+                    "aea",
+                    "mss"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "oritech:target_designator"
+               }
+}

@@ -1,0 +1,191 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "&&%,,,,,,,,,,   ",
+      ",,,,,,,,,,,,,   ",
+      ",,,,,,,,,,,++   ",
+      ",,,,,,,,,,,++   ",
+      ",,,,,,,,,,,++   ",
+      ",,,,,,,,,,&%,   ",
+      ",,,,,,,&&%,,,   ",
+      ",,,,,&&%,,,++   ",
+      ",,,&&%,,,,,++   ",
+      ",&&%,,,,,,,++   ",
+      "&%,,,,,,,,,,,   ",
+      ",,,,,,,,,,,,,   ",
+      ",,,,,,,,,,,++   ",
+      ",,,,,,,,,,,++   ",
+      ",,,,,,,,,,&++   ",
+      ",,,,,,,,&&%,,   "
+    ],
+    [
+      "********  !     ",
+      "          !     ",
+      "          !++   ",
+      "          !++   ",
+      "........  !++   ",
+      "........  !     ",
+      "........  !     ",
+      "........  !++   ",
+      "........  !++   ",
+      "........  !++   ",
+      "........  !     ",
+      "........  !     ",
+      "........  !++   ",
+      "........  !++   ",
+      "........  !++   ",
+      "........  !     "
+    ],
+    [
+      "--------  !     ",
+      "          !     ",
+      "          !++   ",
+      "          !++   ",
+      "!!!!!!!!  !++   ",
+      "       !  !     ",
+      "       !  !     ",
+      "$$  $$ !  !++   ",
+      "$$  $$ !  !++   ",
+      "       !  !++   ",
+      "       !  !     ",
+      "       !  !     ",
+      "---(---!  !++   ",
+      "       !  !++   ",
+      "       !  !++   ",
+      "  '    !  !     "
+    ],
+    [
+      "--------  !     ",
+      "          !     ",
+      "          !++   ",
+      "          !++   ",
+      "!!!!!!!!  !++   ",
+      "       !  !     ",
+      "       !  !     ",
+      "$$  $$ !  !     ",
+      "$$  $$ !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "---)---!  !++   ",
+      "       !  !++   ",
+      "       !  !++   ",
+      "       !  !     "
+    ],
+    [
+      "--------  !     ",
+      "          !     ",
+      "          !     ",
+      "          !     ",
+      "!!!!!!!!  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "-------!  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     "
+    ],
+    [
+      "--------  !     ",
+      "          !     ",
+      "          !     ",
+      "          !     ",
+      "!!!!!!!!  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "-------!  !     ",
+      "       !  !     ",
+      "       !  !     ",
+      "       !  !     "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:crate"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:spawner",
+        "tag": {
+          "id": "minecraft:mob_spawner",
+          "Delay": 240,
+          "MinSpawnDelay": 240,
+          "MaxSpawnDelay": 720,
+          "SpawnCount": 3,
+          "MaxNearbyEntities": 10,
+          "RequiredPlayerRange": 14,
+          "SpawnRange": 4,
+          "SpawnData": {
+            "entity": {
+              "id": "minecraft:pillager"
+            }
+          },
+          "SpawnPotentials": [
+            {
+              "weight": 1,
+              "data": {
+                "entity": {
+                  "id": "minecraft:pillager"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "char": "(",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:stone"
+      },
+      {
+        "char": ",",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "-",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": ".",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "B": {
+      "item": "kubejs:extreme_environment_composite"
+    },
+    "C": {
+      "item": "kubejs:venus_superalloy"
+    },
+    "D": {
+      "item": "stellaris:space_suit_chestplate"
+    },
+    "E": {
+      "item": "tfmg:rubber_sheet"
+    }
+  },
+  "result": {
+    "id": "infinite_domain_space:venusian_chestplate",
+    "count": 1
+  }
+}

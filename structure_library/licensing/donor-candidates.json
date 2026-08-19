@@ -1,0 +1,101 @@
+{
+  "format_version": 1,
+  "evaluated_on": "2026-08-18",
+  "policy": "Research records are not provenance approvals for individual extracted assets. No candidate enters distributable or production content until its downloaded artifact and bundled license are verified.",
+  "candidates": [
+    {
+      "candidate_id": "abandoned_city_buildings_updated",
+      "project": "Abandoned city buildings: Updated",
+      "author": "Berezka",
+      "source_url": "https://www.curseforge.com/minecraft/mc-mods/abandoned-city-buildings-updated",
+      "project_id": 1413617,
+      "file_id": 7380016,
+      "declared_license": "MIT License",
+      "license_evidence_url": "https://www.curseforge.com/minecraft/mc-mods/abandoned-city-buildings-updated",
+      "available_target": "abandoned_city_buildings-1.0.0-neoforge-1.21.1.jar",
+      "file_page_url": "https://www.curseforge.com/minecraft/mc-mods/abandoned-city-buildings-updated/files/7380016",
+      "minecraft_version": "1.21.1",
+      "loader": "NeoForge",
+      "classification": "rejected_deleted_license_conflict",
+      "acquired_artifact_disposition": "deleted 2026-08-18 with its inventory and derived comparison; no asset was integrated",
+      "next_action": "none; do not reacquire unless the rights holder publishes unambiguous replacement license evidence"
+    },
+    {
+      "candidate_id": "abandoned_city_buildings_original",
+      "project": "Apocalypse structures: Abandoned city buildings",
+      "author": "That1LilGuy",
+      "source_url": "https://www.curseforge.com/minecraft/mc-mods/abandoned-post-apocalyptic-buildings",
+      "project_id": 1192082,
+      "file_id": 6596819,
+      "declared_license": "MIT License",
+      "file_page_url": "https://www.curseforge.com/minecraft/mc-mods/abandoned-post-apocalyptic-buildings/files/6596819",
+      "minecraft_version": "1.20.1",
+      "loader": "Forge",
+      "classification": "rejected_deleted_insufficient_bundled_license_evidence",
+      "acquired_artifact_disposition": "deleted 2026-08-18 with its inventory; none of its five structure payloads remain in the workspace",
+      "next_action": "none; do not reacquire unless a source archive with unambiguous bundled license evidence is published"
+    },
+    {
+      "candidate_id": "apocalypse_radio_towers",
+      "project": "Apocalypse Structures: Radio Towers and Airdrops",
+      "author": "That1LilGuy",
+      "source_url": "https://www.curseforge.com/minecraft/mc-mods/apocalypse-structures-radio-towers-and-airdrops",
+      "project_id": 1193033,
+      "declared_license": "MIT License",
+      "minecraft_version": "1.20.1",
+      "loader": "Forge",
+      "classification": "approved_candidate_version_conversion_required",
+      "next_action": "defer until the 1.21.1 donor is inventoried; assess whether its three towers add useful geometry beyond the inbuilt mast"
+    },
+    {
+      "candidate_id": "yulari_apocalypse_structures",
+      "project": "Apocalypse Structures",
+      "author": "Yulari",
+      "source_url": "https://www.curseforge.com/minecraft/mc-mods/apocalypse-structures",
+      "project_id": 1515485,
+      "declared_license": "All Rights Reserved",
+      "classification": "permission_required_reference_only",
+      "next_action": "exclude from acquisition and redistribution unless the author grants explicit permission"
+    },
+    {
+      "candidate_id": "nordic_apocalyptic_buildings_pack",
+      "project": "Apocalyptic Buildings Pack",
+      "author": "Nordic Studios",
+      "additional_credit": ["Mr_Markie", "per-schematic secondary authors where applicable"],
+      "source_url": "https://www.planetminecraft.com/project/1-16-5-apocalyptic-buildings-pack/",
+      "declared_permission": "Free project use with credit or project-page link",
+      "minecraft_version": "1.16.5",
+      "original_format": "35 schematics",
+      "classification": "approved_with_attribution_pending_per_asset_secondary_credit_review",
+      "next_action": "acquire only into quarantine; inventory every schematic and resolve secondary design attribution before redistribution"
+    },
+    {
+      "candidate_id": "nolando_apocalypse",
+      "project": "Nolando Apocalypse",
+      "author": "nolandooo",
+      "source_url": "https://www.curseforge.com/minecraft/mc-mods/nolando-apocalypse",
+      "declared_license": "All Rights Reserved",
+      "classification": "permission_required_reference_only",
+      "next_action": "do not import the mod; separately licensed Nordic originals must be sourced from Nordic's own page"
+    },
+    {
+      "candidate_id": "creative_lands_cc0",
+      "project": "Creative Lands",
+      "author": "Crysillion",
+      "source_url": "https://github.com/Crysillion/creativelands",
+      "license_evidence_url": "https://github.com/Crysillion/creativelands/blob/main/LICENSE",
+      "declared_license": "CC0-1.0",
+      "pinned_commit": "e47d755a90437a881afb3fd410e63cff8eba894c",
+      "minecraft_version": "1.16",
+      "original_format": "Terra config pack with structures",
+      "permissions": {
+        "commercial_use": true,
+        "modification": true,
+        "redistribution": true,
+        "attribution_required": false
+      },
+      "classification": "approved_source_ready_for_pinned_acquisition",
+      "next_action": "download the pinned repository archive, retain its LICENSE, inventory structure formats and block dependencies, then quarantine conversion candidates for review"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      ".............   ",
+      "....'....'...   ",
+      ".............   ",
+      "...........'.   ",
+      ".............   ",
+      ".............   ",
+      ".............   ",
+      ".............   ",
+      "..........''    ",
+      "........''%'    ",
+      "......''%...    ",
+      "....''%.....    ",
+      "..''%.......    ",
+      "''%.........    ",
+      "%...........    ",
+      "...........'    "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "  ,,,,,         ",
+      "  ,,,,,         ",
+      "  ,,,,,         ",
+      "**,,,,,***      ",
+      "'''*******      ",
+      "'''*******      ",
+      "'''*******      ",
+      "'''*******      ",
+      "'''*******      ",
+      "'''*******      ",
+      "'''*******      ",
+      "'''*******      "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "////(/////      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''$     /      ",
+      "''' &&&  /      ",
+      "'''     0/      ",
+      "'''      /      ",
+      "'''  +   /      ",
+      "'''      /      "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "////)/////      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''-     /      ",
+      "'''      /      ",
+      "'''     -/      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "/!!////!!/      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "/!!////!!/      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      ",
+      "'''      /      "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:spruce_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:spruce_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:stone_bricks"
+      },
+      {
+        "char": "-",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": ".",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "/",
+        "block": "the_wasteland_reworked:decayed_planks"
+      },
+      {
+        "char": "0",
+        "block": "the_wasteland_reworked:radio"
+      }
+    ]
+  }
+}

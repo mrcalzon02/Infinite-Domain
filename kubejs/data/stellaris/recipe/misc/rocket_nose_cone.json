@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " T ",
+    "TBT",
+    "SAS"
+  ],
+  "key": {
+    "T": {
+      "item": "kubejs:thermal_shield_tile"
+    },
+    "B": {
+      "item": "kubejs:pressure_bulkhead"
+    },
+    "S": {
+      "item": "kubejs:sensor_package"
+    },
+    "A": {
+      "item": "kubejs:aerospace_composite"
+    }
+  },
+  "result": {
+    "id": "stellaris:rocket_nose_cone",
+    "count": 1
+  }
+}

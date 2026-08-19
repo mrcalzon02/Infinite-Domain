@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "sophisticatedcore:item_enabled",
+                                    "itemRegistryName":  "sophisticatedstorage:compression_upgrade"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  {
+                          "item":  "sophisticatedstorage:upgrade_base"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "P":  {
+                          "item":  "minecraft:piston"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    " I ",
+                    "PBP",
+                    "RIR"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "sophisticatedstorage:compression_upgrade"
+               }
+}

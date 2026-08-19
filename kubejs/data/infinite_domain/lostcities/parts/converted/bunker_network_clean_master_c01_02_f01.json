@@ -1,0 +1,170 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "     !   !      ",
+      "     !   !      ",
+      "     !   !      ",
+      "!!!!!!!!!!!!!!! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!!!!!!!!!!!!!!! ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "     !   !      ",
+      "     !   !      ",
+      "     !   !      ",
+      "!!!!!!!!!!!!!!! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!!!!!!!!!!!!!!! ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "     !!!!!      ",
+      "     !!!!!      ",
+      "     !!!!!      ",
+      "!!!!!!!!!!!!!!! ",
+      "!!!!!!!!!!!!!!! ",
+      "!!!!!!!!!!!!!!! ",
+      "!!!!!!!!!!!!!!! ",
+      "!!!!!!!!!!!!!!! ",
+      "!!!!!!!!!!!!!!! ",
+      "!!!!!!!!!!!!!!! ",
+      "!!!!!!!!!!!!!!! ",
+      "!!!!!!!!!!!!!!! ",
+      "!!!!!!!!!!!!!!! ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "     /////      ",
+      "     /////      ",
+      "     /////      ",
+      "/////////////// ",
+      "/////////////// ",
+      "/////////////// ",
+      "/////////////// ",
+      "/////////////// ",
+      "/////////////// ",
+      "/////////////// ",
+      "/////////////// ",
+      "/////////////// ",
+      "/////////////// ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "     !   !      ",
+      "     !   !      ",
+      "     !   !      ",
+      "!!!!!!&'!!!!!!! ",
+      "!             ! ",
+      "! ---  ---  --- ",
+      "! ---  ---  --- ",
+      "!             ! ",
+      "!.....++......! ",
+      "!             ! ",
+      "! * %   $$ $$ ! ",
+      "!       $$ $$ ! ",
+      "!!!!!!!!!!!!!!! ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "     !   !      ",
+      "     !   !      ",
+      "     !   !      ",
+      "!!!!!!()!!!!!!! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!             ! ",
+      "!.....,,......! ",
+      "!             ! ",
+      "!       $$ $$ ! ",
+      "!       $$ $$ ! ",
+      "!!!!!!!!!!!!!!! ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:crate"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:furnace[facing=north,lit=false]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:iron_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:iron_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:iron_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:iron_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:smoker[facing=north,lit=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": ".",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "/",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

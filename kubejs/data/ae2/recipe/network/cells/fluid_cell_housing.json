@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "ae2:quartz_glass"
+                      },
+                "b":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "c":  {
+                          "item":  "minecraft:copper_block"
+                      }
+            },
+    "pattern":  [
+                    "aba",
+                    "b b",
+                    "ccc"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2:fluid_cell_housing"
+               }
+}

@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "b":  {
+                          "item":  "create:belt_connector"
+                      },
+                "m":  {
+                          "item":  "kubejs:industrial_engineering_core"
+                      }
+            },
+    "pattern":  [
+                    "bbb",
+                    "bmb",
+                    "bbb"
+                ],
+    "result":  {
+                   "count":  8,
+                   "id":  "immersiveengineering:conveyor_basic"
+               }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "QGQ",
+    "TCT",
+    "QGQ"
+  ],
+  "key": {
+    "Q": {
+      "item": "ae2:quartz_glass"
+    },
+    "G": {
+      "item": "create_new_age:generator_coil"
+    },
+    "T": {
+      "item": "powergrid:transformer_core"
+    },
+    "C": {
+      "item": "tfmg:steel_block"
+    }
+  },
+  "result": {
+    "id": "ae2:energy_acceptor",
+    "count": 1
+  }
+}

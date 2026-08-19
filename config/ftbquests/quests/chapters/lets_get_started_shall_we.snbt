@@ -1,0 +1,633 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "lets_get_started_shall_we"
+	group: "346E9B7B176D7846"
+	id: "1060266057D3D466"
+	images: [ ]
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6002100000000009"]
+			id: "3AFBE38263D3351E"
+			shape: "octagon"
+			tasks: [{
+				id: "29B274508EC16845"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3AFBE38263D3351E"]
+			id: "4B2A9ADF7B47B7EF"
+			optional: true
+			rewards: [{
+				id: "4E831245DB7109D7"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [{
+				entity: "minecraft:zombie"
+				id: "2F1F0A5F6F6B937B"
+				type: "kill"
+				value: 1L
+			}]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3AFBE38263D3351E"]
+			id: "0FFBED0140C896F0"
+			rewards: [{
+				count: 4
+				id: "5632D7A537535D74"
+				item: {
+					count: 1
+					id: "minecraft:stick"
+				}
+				type: "item"
+			}]
+			shape: "heart"
+			tasks: [
+				{
+					count: 8L
+					id: "2189C88C15DFA705"
+					item: { count: 1, id: "minecraft:stick" }
+					type: "item"
+				}
+				{
+					id: "54288BC3059B320A"
+					item: { count: 1, id: "minecraft:wheat_seeds" }
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3AFBE38263D3351E"]
+			id: "4D3BDA6807AB73A9"
+			rewards: [{
+				id: "506347216ADAEE04"
+				item: {
+					count: 1
+					id: "numismatics:spur"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 4L
+				id: "6A6114A6FEAD7A16"
+				item: { count: 1, id: "minecraft:bone" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4D3BDA6807AB73A9"]
+			id: "0D2120E425BA76F6"
+			rewards: [{
+				count: 2
+				id: "2880FF968F28C28F"
+				item: {
+					count: 1
+					id: "numismatics:spur"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "1F8DAF269BD7FC03"
+					item: { count: 1, id: "primitivestart:bone_pickaxe" }
+					type: "item"
+				}
+				{
+					id: "1DE591404E676634"
+					item: { count: 1, id: "primitivestart:bone_axe" }
+					type: "item"
+				}
+				{
+					id: "351FC96459B7ED26"
+					item: { count: 1, id: "primitivestart:bone_shovel" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1CE40D15564FEADC"]
+			id: "6B42333621782F13"
+			rewards: [{
+				id: "0144B0E6C923A593"
+				item: {
+					count: 1
+					id: "numismatics:spur"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "01820840AA983445"
+				item: { count: 1, id: "wastelands:scrap_metal" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6B42333621782F13"]
+			id: "71FEE0B9CC3C6CDE"
+			shape: "diamond"
+			tasks: [{
+				id: "4383137CF1AC78B9"
+				item: { count: 1, id: "wastelands:scrap_pile" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5000000000000001"]
+			id: "4CAC8CDFA63C7410"
+			shape: "hexagon"
+			tasks: [{
+				id: "037E8E206AC802CD"
+				item: { count: 1, id: "exdeorum:wooden_hammer" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4FBD65644FB8B833"]
+			id: "463D483C4FED56D3"
+			rewards: [{
+				count: 2
+				id: "3037E21D0C804D02"
+				item: {
+					count: 1
+					id: "numismatics:spur"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "2BA349941C170D38"
+				item: { count: 1, id: "allthecompressed:cobblestone_1x" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["71FEE0B9CC3C6CDE"]
+			id: "3E6BEAE3F78C8F4B"
+			shape: "diamond"
+			tasks: [{
+				id: "41970593062E659C"
+				item: { count: 1, id: "exdeorum:string_mesh" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["3E6BEAE3F78C8F4B"]
+			id: "1C55B64184822DE7"
+			shape: "diamond"
+			tasks: [{
+				id: "6C37E25608E263AC"
+				item: { count: 1, id: "exdeorum:oak_sieve" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["1C55B64184822DE7"]
+			id: "03D683A19D0589EE"
+			rewards: [{
+				id: "6547E1145EA4896D"
+				item: {
+					count: 1
+					id: "numismatics:bevel"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "249AC1652BA63BD4"
+				item: { count: 1, id: "the_wasteland_reworked:garbage_bag" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["2EC908A6609C17D6"]
+			id: "7C769C875E87672B"
+			rewards: [{
+				id: "1AEC3E322C680E20"
+				item: {
+					count: 1
+					id: "numismatics:sprocket"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 8L
+				id: "1CEB811B014A787B"
+				item: { count: 1, id: "allthecompressed:cobblestone_3x" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"7AEA71F2018293E3"
+				"6E9254D8E1EA2EF0"
+				"64B1D49B1BAE48D8"
+			]
+			dependency_requirement: "one_completed"
+			id: "37553E8B6284E8E2"
+			min_required_dependencies: 1
+			rewards: [
+				{
+					id: "7100000000000001"
+					type: "custom"
+				}
+				{
+					id: "4A8914D6FA51C44B"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "3DA662155CE87C90"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "3790AF4A55E0001F"
+				item: { count: 1, id: "minecraft:furnace" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["3AFBE38263D3351E"]
+			id: "1CE40D15564FEADC"
+			shape: "diamond"
+			tasks: [{
+				id: "729205D84C0BBF34"
+				type: "checkmark"
+			}]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["03D683A19D0589EE"]
+			id: "6FFD2EE5BCA2FE23"
+			rewards: [{
+				id: "469C109A4284B679"
+				item: {
+					count: 1
+					id: "numismatics:bevel"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "26EA4D6BD78BEAE0"
+				item: { count: 1, id: "wastelands:radioactive_waste" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["6FFD2EE5BCA2FE23"]
+			id: "7AEA71F2018293E3"
+			rewards: [{
+				id: "74F52D18B26A4378"
+				item: {
+					count: 1
+					id: "numismatics:sprocket"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "4D1ECC6E4295AB32"
+				item: { count: 1, id: "kubejs:scavenger_contribution" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["4CAC8CDFA63C7410"]
+			id: "4FBD65644FB8B833"
+			shape: "hexagon"
+			tasks: [{
+				count: 64L
+				id: "07472FCFB21C7969"
+				item: { count: 1, id: "minecraft:cobblestone" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["463D483C4FED56D3"]
+			id: "2EC908A6609C17D6"
+			rewards: [{
+				id: "56AE99CC6DB3986E"
+				item: {
+					count: 1
+					id: "numismatics:bevel"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "2C20EFA8BF8F8CD5"
+				item: { count: 1, id: "allthecompressed:cobblestone_2x" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["7C769C875E87672B"]
+			id: "6E9254D8E1EA2EF0"
+			rewards: [{
+				id: "69AC3B779FF9633F"
+				item: {
+					count: 1
+					id: "numismatics:sprocket"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "1515BE9812549CBD"
+				item: { count: 1, id: "kubejs:mason_contribution" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["0FFBED0140C896F0"]
+			id: "3708666FE05834A4"
+			shape: "heart"
+			tasks: [{
+				id: "6C8BE5023E29D04C"
+				item: { count: 1, id: "minecraft:water_bucket" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3708666FE05834A4"]
+			id: "6E32591D7E88B06E"
+			rewards: [{
+				id: "369794857ED6403E"
+				item: {
+					count: 1
+					id: "numismatics:spur"
+				}
+				type: "item"
+			}]
+			shape: "heart"
+			tasks: [{
+				id: "342E9087F1815C98"
+				item: { count: 1, id: "minecraft:clay" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6E32591D7E88B06E"]
+			id: "3C516B726E0141E2"
+			shape: "heart"
+			tasks: [{
+				count: 9L
+				id: "0B6EAC67565A8C33"
+				item: { count: 1, id: "minecraft:dirt" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3C516B726E0141E2"]
+			id: "217F49A41737D832"
+			shape: "heart"
+			tasks: [{
+				id: "50850FCB741AE8EE"
+				item: { count: 1, id: "minecraft:grass_block" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["217F49A41737D832"]
+			id: "6DFA244D31C0E2BF"
+			rewards: [{
+				id: "7A3C6F1A8E467A67"
+				item: {
+					count: 1
+					id: "numismatics:bevel"
+				}
+				type: "item"
+			}]
+			shape: "heart"
+			tasks: [{
+				id: "3B24F40693A3CA0C"
+				item: { count: 1, id: "minecraft:composter" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["6DFA244D31C0E2BF"]
+			id: "2C1F9877A3002405"
+			shape: "heart"
+			tasks: [
+				{
+					count: 8L
+					id: "7FD14E0E09E985A1"
+					item: { count: 1, id: "wastelands:canned_food" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2A89E318BAC0F5F4"
+					item: { count: 1, id: "wastelands:purified_water" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "386DB2C4650EEF7D"
+					item: { count: 1, id: "the_wasteland_reworked:bandage" }
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["2C1F9877A3002405"]
+			id: "64B1D49B1BAE48D8"
+			rewards: [{
+				id: "1ECC46B987A74339"
+				item: {
+					count: 1
+					id: "numismatics:sprocket"
+				}
+				type: "item"
+			}]
+			shape: "heart"
+			tasks: [{
+				id: "56DE7053040D799C"
+				item: { count: 1, id: "kubejs:habitation_contribution" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["0D2120E425BA76F6"]
+			id: "5000000000000001"
+			shape: "hexagon"
+			tasks: [{
+				id: "5000000000001001"
+				item: { count: 1, id: "minecraft:stone_pickaxe" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5000000000000001"]
+			id: "7011000000000001"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				count: 8L
+				id: "7012000000000001"
+				item: { count: 1, id: "minecraft:charcoal" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7011000000000001"]
+			id: "7011000000000002"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				count: 9L
+				id: "7012000000000002"
+				item: { count: 1, id: "kubejs:copper_mineral_trace" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7011000000000002"]
+			id: "7011000000000003"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				count: 9L
+				id: "7012000000000003"
+				item: { count: 1, id: "kubejs:copper_mineral_dust" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["7011000000000003"]
+			id: "7011000000000004"
+			optional: true
+			rewards: [{
+				count: 8
+				id: "7013000000000004"
+				item: {
+					count: 1
+					id: "minecraft:charcoal"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				count: 9L
+				id: "7012000000000004"
+				item: { count: 1, id: "create:copper_nugget" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["3AFBE38263D3351E"]
+			id: "6002100000000003"
+			optional: true
+			shape: "diamond"
+			tasks: [{
+				id: "6002200000000003"
+				type: "checkmark"
+			}]
+			x: -10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3AFBE38263D3351E"]
+			id: "6002100000000007"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				id: "6002200000000007"
+				type: "checkmark"
+			}]
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3AFBE38263D3351E"]
+			id: "6002100000000008"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				id: "6002200000000008"
+				type: "checkmark"
+			}]
+			x: 10.0d
+			y: 6.0d
+		}
+	]
+}

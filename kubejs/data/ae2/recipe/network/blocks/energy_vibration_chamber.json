@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "b":  {
+                          "item":  "minecraft:furnace"
+                      },
+                "c":  {
+                          "item":  "ae2:energy_acceptor"
+                      },
+                "d":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "e":  {
+                          "tag":  "c:gems/fluix"
+                      }
+            },
+    "pattern":  [
+                    "ded",
+                    "aba",
+                    "aca"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2:vibration_chamber"
+               }
+}

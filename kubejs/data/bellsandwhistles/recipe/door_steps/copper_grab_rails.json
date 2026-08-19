@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "group":  "misc",
+    "pattern":  [
+                    "#I#"
+                ],
+    "key":  {
+                "#":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "I":  {
+                          "item":  "minecraft:copper_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "bellsandwhistles:copper_door_step",
+                   "count":  8
+               }
+}

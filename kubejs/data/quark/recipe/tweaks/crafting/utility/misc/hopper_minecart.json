@@ -1,0 +1,26 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "zeta:flag",
+                                    "flag":  "minecart_upgrade"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "#":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "X":  {
+                          "item":  "minecraft:hopper"
+                      }
+            },
+    "pattern":  [
+                    "#X#",
+                    "###"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "minecraft:hopper_minecart"
+               }
+}

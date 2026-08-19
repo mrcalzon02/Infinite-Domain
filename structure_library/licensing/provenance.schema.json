@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://infinite-domain.invalid/schemas/structure-provenance.schema.json",
+  "type": "object",
+  "required": ["format_version", "policy", "records"],
+  "properties": {
+    "format_version": { "const": 1 },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "structure_id", "source_kind", "source_project", "source_author", "source_url",
+          "source_license", "license_classification", "required_attribution",
+          "commercial_use_allowed", "modification_allowed", "redistribution_allowed",
+          "original_minecraft_version", "original_format", "original_filename", "sha256",
+          "conversion_history", "our_modifications", "integration_status"
+        ],
+        "properties": {
+          "structure_id": { "type": "string", "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$" },
+          "source_kind": { "enum": ["project_generated", "imported", "extracted", "module"] },
+          "source_url": { "type": ["string", "null"] },
+          "license_classification": {
+            "enum": [
+              "approved_for_redistribution", "approved_with_attribution", "modification_only",
+              "permission_required", "reference_only", "rejected"
+            ]
+          },
+          "commercial_use_allowed": { "type": "boolean" },
+          "modification_allowed": { "type": "boolean" },
+          "redistribution_allowed": { "type": "boolean" },
+          "conversion_history": { "type": "array", "items": { "type": "string" } },
+          "our_modifications": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

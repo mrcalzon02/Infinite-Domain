@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "powergrid:circuit_board"
+    },
+    "B": {
+      "item": "powergrid:multimeter"
+    },
+    "C": {
+      "item": "powergrid:transformer_core"
+    },
+    "D": {
+      "item": "powergrid:portable_battery"
+    },
+    "E": {
+      "item": "powergrid:circuit_board"
+    }
+  },
+  "result": {
+    "id": "kubejs:era4_exploration_contribution",
+    "count": 1
+  }
+}

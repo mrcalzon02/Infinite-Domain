@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "tag":  "ae2:all_quartz_dust"
+                      },
+                "b":  {
+                          "item":  "more_ores_more_gems:gunpowder_block"
+                      }
+            },
+    "pattern":  [
+                    "ab",
+                    "ba"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2:tiny_tnt"
+               }
+}

@@ -1,0 +1,26 @@
+{
+  "variant_id": "infinite_domain:mountain_biohazard_lab",
+  "clean_master": "infinite_domain:mountain_biohazard_lab_clean_master",
+  "damage_story": "A western wet-lab and upper-analysis collapse is separate from an eastern specimen-chamber breach; raiders hold security and records while irradiated creatures infest the wet, containment and waste zones.",
+  "damage_zone": "west wet-lab/analysis frontage and east specimen chamber/roof",
+  "environment_layer": [
+    "gravity-led leaded concrete and gravel below the western laboratory failure",
+    "localized lead shielding and gravel beneath the specimen breach",
+    "intact north intake roof, west roof-service monitors and east exhaust stacks",
+    "preserved mountain retaining shoulders and east/south service approaches"
+  ],
+  "occupation_layer": [
+    "two pillager spawners controlling security and upper records",
+    "two irradiated spawners in wet-lab and specimen-containment zones",
+    "one zombie spawner in rear waste processing",
+    "biohazard and data loot remain separated by operational function"
+  ],
+  "invariants": [
+    "security intake, lockers and initial decontamination remain connected",
+    "clinical rooms, cold storage, both research stairs and surviving upper rooms remain reachable",
+    "quarantine rooms, controlled spine, waste plant and loading exit survive",
+    "rear utility annex and independent south emergency exit remain usable",
+    "damage remains localized to the two declared failure zones"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

@@ -1,0 +1,26 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "PPP",
+                    "PBP",
+                    "PPP"
+                ],
+    "key":  {
+                "P":  {
+                          "item":  "kubejs:paper_bundle"
+                      },
+                "B":  [
+                          {
+                              "item":  "minecraft:blue_dye"
+                          },
+                          {
+                              "item":  "minecraft:lapis_block"
+                          }
+                      ]
+            },
+    "result":  {
+                   "id":  "zvhouses:blueprint",
+                   "count":  1
+               }
+}

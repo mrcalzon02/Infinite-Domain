@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "minecraft:glowstone_dust"
+                      },
+                "i":  {
+                          "item":  "createbigcannons:steel_block"
+                      }
+            },
+    "pattern":  [
+                    "iii",
+                    "ccc",
+                    "iii"
+                ],
+    "result":  {
+                   "count":  6,
+                   "id":  "oritech:ceiling_light"
+               }
+}

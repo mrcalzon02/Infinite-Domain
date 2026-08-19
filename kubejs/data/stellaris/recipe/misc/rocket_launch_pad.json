@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "HTH",
+    "FCF",
+    "HTH"
+  ],
+  "key": {
+    "H": {
+      "item": "tfmg:heavy_plate"
+    },
+    "T": {
+      "item": "kubejs:structural_truss"
+    },
+    "F": {
+      "item": "kubejs:reinforced_frame"
+    },
+    "C": {
+      "item": "createnuclear:reactor_casing"
+    }
+  },
+  "result": {
+    "id": "stellaris:rocket_launch_pad",
+    "count": 4
+  }
+}

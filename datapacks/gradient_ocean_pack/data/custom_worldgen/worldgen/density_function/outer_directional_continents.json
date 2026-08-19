@@ -1,0 +1,14 @@
+{
+  "type": "isekai_api:lerp",
+  "t": "custom_worldgen:east_west_continent_mask",
+  "a": {
+    "type": "isekai_api:add",
+    "a": "custom_worldgen:small_continents",
+    "b": { "type": "isekai_api:constant", "value": -0.42 }
+  },
+  "b": {
+    "type": "isekai_api:add",
+    "a": "custom_worldgen:large_continents",
+    "b": { "type": "isekai_api:constant", "value": 0.08 }
+  }
+}

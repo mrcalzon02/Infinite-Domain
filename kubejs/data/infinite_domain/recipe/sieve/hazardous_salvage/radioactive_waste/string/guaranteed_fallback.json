@@ -1,0 +1,18 @@
+﻿{
+    "result_amount":  {
+                          "type":  "minecraft:binomial",
+                          "n":  1,
+                          "p":  1
+                      },
+    "result":  {
+                   "count":  1,
+                   "id":  "wastelands:scrap_metal"
+               },
+    "mesh":  {
+                 "item":  "exdeorum:string_mesh"
+             },
+    "type":  "exdeorum:sieve",
+    "ingredient":  {
+                       "item":  "wastelands:radioactive_waste"
+                   }
+}

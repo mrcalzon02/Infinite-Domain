@@ -1,0 +1,43 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "infinite_domain_nuclear_balance"
+version = "1.0.0"
+displayName = "Infinite Domain: Create Nuclear Balance"
+authors = "Infinite Domain"
+description = '''
+Separates Create Nuclear's stress-capacity balance from reactor heat and RPM.
+'''
+
+[[mixins]]
+config = "infinite_domain_nuclear_balance.mixins.json"
+
+[[dependencies.infinite_domain_nuclear_balance]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_nuclear_balance]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_nuclear_balance]]
+modId = "create"
+type = "required"
+versionRange = "[6.0.10,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.infinite_domain_nuclear_balance]]
+modId = "createnuclear"
+type = "required"
+versionRange = "[1.3.2-beta.3,)"
+ordering = "AFTER"
+side = "BOTH"

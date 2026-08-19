@@ -1,0 +1,22 @@
+{
+  "variant_id": "infinite_domain:abandoned_motel",
+  "clean_master": "infinite_domain:motel_clean_master",
+  "damage_story": "A localized rear southwest guest-wing failure destroys several rooms and part of the second floor while leaving the lobby, main stair and most corridor circulation readable.",
+  "damage_zone": "southwest guest wing",
+  "environment_layer": [
+    "collapsed gravel and masonry concentrated beneath the failed wing",
+    "neglected pool courtyard",
+    "weathered parking and service areas"
+  ],
+  "occupation_layer": [
+    "garbage accumulated in the central guest corridor",
+    "ghouls occupying a surviving second-floor room away from the lobby"
+  ],
+  "invariants": [
+    "front entrance, lobby, reception and main stair survive",
+    "the central corridor remains identifiable",
+    "multiple intact guest rooms retain sleeping and bathroom zones",
+    "rear fire escape remains available from the surviving second floor"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

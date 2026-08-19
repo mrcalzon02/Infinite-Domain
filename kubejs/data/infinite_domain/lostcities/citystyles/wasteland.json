@@ -1,0 +1,22 @@
+{
+  "inherit": "lostcities:citystyle_common",
+  "style": "lostcities:standard",
+  "stuff_tags": [
+    "rubble"
+  ],
+  "buildingsettings": {
+    "minfloors": 1,
+    "maxfloors": 4,
+    "mincellars": 0,
+    "maxcellars": 2,
+    "buildingchance": 0.22
+  },
+  "streetblocks": {
+    "width": 8,
+    "border": "y",
+    "wall": "w",
+    "street": "S",
+    "streetbase": "b",
+    "streetvariant": "B"
+  }
+}

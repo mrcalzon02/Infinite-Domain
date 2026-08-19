@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EAE",
+    "CNC",
+    "EAE"
+  ],
+  "key": {
+    "E": {
+      "item": "ae2:engineering_processor"
+    },
+    "A": {
+      "item": "oritech:advanced_battery"
+    },
+    "C": {
+      "item": "createnuclear:reactor_casing"
+    },
+    "N": {
+      "item": "create_new_age:nuclear_fuel"
+    }
+  },
+  "result": {
+    "id": "createnuclear:reactor_controller",
+    "count": 1
+  }
+}

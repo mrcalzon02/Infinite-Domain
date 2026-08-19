@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": { "item": "cyber_ware_port:component_fiberoptics" },
+    "P": { "item": "cyber_ware_port:component_plating" },
+    "S": { "item": "cyber_ware_port:component_storage" },
+    "W": { "item": "gateway_of_doom:portal_ward_1" }
+  },
+  "pattern": ["PFP", "SWS", "PFP"],
+  "result": { "id": "gateway_of_doom:portal_ward_2" }
+}

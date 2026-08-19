@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "WWW",
+                    "NIN",
+                    "WWW"
+                ],
+    "key":  {
+                "I":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "N":  {
+                          "tag":  "c:nuggets/steel"
+                      },
+                "W":  {
+                          "tag":  "minecraft:wool"
+                      }
+            },
+    "result":  {
+                   "id":  "stellaris:cable",
+                   "count":  6
+               }
+}

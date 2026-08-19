@@ -1,0 +1,234 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "<<<<//+<<<<<<<<<",
+      "<<//+<<<<<<<<<<<",
+      "//+<<<<<<<<<<<<<",
+      "+<<<<<<<<<<<<<<<",
+      "<<<<<<<<<<<<<<</",
+      "<<<<<<<<<<<<<//+",
+      "<<<<<<<<<<<////9",
+      "<<<<<<<<<//+<//9",
+      "<<<<<<<//+<<<//9",
+      "<<<<<//+<<<<<//9",
+      "<<<//+<<<<<<<///",
+      "<//+<<<<<<<<<<<<",
+      "/+<<<<<<<<<<<<<<",
+      "<<<<<<<<<<<<<<<<",
+      "<<<<<<<<<<<<<<//",
+      "<<<<<<<<<<<<//+<"
+    ],
+    [
+      "    666666666   ",
+      "    666666666   ",
+      "    666666666   ",
+      "    666666666   ",
+      "    600000006   ",
+      "    6&00000&6   ",
+      "    600000006   ",
+      "    600000006   ",
+      "    600000006:  ",
+      "    600000006   ",
+      "    600000006   ",
+      "    600000006   ",
+      "    6&00000&6   ",
+      "    666666666   ",
+      "    666666666   ",
+      "    666666666   "
+    ],
+    [
+      "    111111111   ",
+      "    1       1   ",
+      "    1 88  ) 1   ",
+      "    1       1   ",
+      "    1     7 1   ",
+      "    $ .-%   1   ",
+      "    111111411   ",
+      "    1   1   1   ",
+      "    1 ; 1   2   ",
+      "    1   2 > 1   ",
+      "    1 , 1   1   ",
+      "    =11111411   ",
+      "    1       1   ",
+      "    1 '  %  1   ",
+      "    1 (     1   ",
+      "    1     * 1   "
+    ],
+    [
+      "    11!!11111   ",
+      "    1       1   ",
+      "    1       1   ",
+      "    !       1   ",
+      "    !       1   ",
+      "    1       1   ",
+      "    111111511   ",
+      "    1   1   1   ",
+      "    1   1   3   ",
+      "    1   3   1   ",
+      "    1   1   1   ",
+      "    111111511   ",
+      "    1       1   ",
+      "    !       1   ",
+      "    !       1   ",
+      "    1       1   "
+    ],
+    [
+      "    11!!11111   ",
+      "    1       1   ",
+      "    1       1   ",
+      "    !       1   ",
+      "    !       1   ",
+      "    1       1   ",
+      "    111111111   ",
+      "    1   1   1   ",
+      "    1   1   1   ",
+      "    1   1   1   ",
+      "    1   1   1   ",
+      "    111111111   ",
+      "    1       1   ",
+      "    !       1   ",
+      "    !       1   ",
+      "    1       1   "
+    ],
+    [
+      "    111111111   ",
+      "    1       1   ",
+      "    1       1   ",
+      "    1       1   ",
+      "    1       1   ",
+      "    1       1   ",
+      "    111111111   ",
+      "    1   1   1   ",
+      "    1   1   1   ",
+      "    1   1   1   ",
+      "    1   1   1   ",
+      "    111111111   ",
+      "    1       1   ",
+      "    1       1   ",
+      "    1       1   ",
+      "    1       1   "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:connector_lv[facing=east]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:black_concrete"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:blue_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:blue_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:bookshelf"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:chest[facing=north,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_home"
+        }
+      },
+      {
+        "char": "+",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:composter[level=2]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:crafting_table"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:furnace[facing=north,lit=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:gray_concrete"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:light_blue_terracotta"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "8",
+        "block": "minecraft:spruce_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "9",
+        "block": "minecraft:stone_bricks"
+      },
+      {
+        "char": ":",
+        "block": "minecraft:stone_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": ";",
+        "block": "minecraft:water_cauldron[level=3]"
+      },
+      {
+        "char": "<",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "=",
+        "block": "tfmg:steel_pipe"
+      },
+      {
+        "char": ">",
+        "block": "the_wasteland_reworked:cardboard_box"
+      }
+    ]
+  }
+}

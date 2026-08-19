@@ -1,0 +1,66 @@
+{
+  "format_version": 1,
+  "selection_policy": {
+    "source_role": "damage_variant",
+    "production_status": "approved",
+    "architecture_family_key": "clean_master",
+    "rule": "An asset is eligible when explicitly included, or when its settlement type, category, and road connection each match the archetype filters.",
+    "quarantine_rule": "Candidate membership is auditable, but only evidence-backed production approvals are compiled into active Lost Cities selectors."
+  },
+  "archetypes": {
+    "highway_service_cluster": {
+      "lostcities_citystyle": "infinite_domain:wasteland_highway_service_cluster",
+      "settlement_types": ["highway_frontage"],
+      "categories": ["highway", "commercial", "industrial", "miscellaneous"],
+      "road_connections": ["highway", "main_road", "driveway"],
+      "explicit_include": []
+    },
+    "small_town": {
+      "lostcities_citystyle": "infinite_domain:wasteland_small_town",
+      "settlement_types": ["town_center", "rural"],
+      "categories": ["residential", "commercial", "civic", "agricultural", "utility_infrastructure", "miscellaneous"],
+      "road_connections": ["main_road", "local_road", "driveway", "pedestrian"],
+      "explicit_include": []
+    },
+    "industrial_district": {
+      "lostcities_citystyle": "infinite_domain:wasteland_industrial_district",
+      "settlement_types": ["industrial", "military"],
+      "categories": ["industrial", "utility_infrastructure", "railway", "military", "miscellaneous"],
+      "road_connections": ["main_road", "local_road", "driveway", "highway", "rail_siding"],
+      "explicit_include": []
+    },
+    "port_town": {
+      "lostcities_citystyle": "infinite_domain:wasteland_port_town",
+      "settlement_types": ["industrial", "railway"],
+      "categories": ["industrial", "utility_infrastructure", "railway"],
+      "road_connections": ["main_road", "local_road", "rail_siding"],
+      "explicit_include": [
+        "infinite_domain:warm_industrial_mountain_port",
+        "infinite_domain:cold_industrial_mountain_port",
+        "infinite_domain:freight_depot",
+        "infinite_domain:corporate_warehouse"
+      ]
+    },
+    "rail_town": {
+      "lostcities_citystyle": "infinite_domain:wasteland_rail_town",
+      "settlement_types": ["railway"],
+      "categories": ["railway", "industrial", "commercial", "utility_infrastructure"],
+      "road_connections": ["rail_siding", "main_road", "local_road", "pedestrian"],
+      "explicit_include": []
+    },
+    "suburb": {
+      "lostcities_citystyle": "infinite_domain:wasteland_suburb",
+      "settlement_types": ["residential"],
+      "categories": ["residential", "commercial", "civic"],
+      "road_connections": ["driveway", "local_road", "main_road", "pedestrian"],
+      "explicit_include": []
+    },
+    "city_district": {
+      "lostcities_citystyle": "infinite_domain:wasteland_city_district",
+      "settlement_types": ["town_center", "industrial", "residential"],
+      "categories": ["residential", "commercial", "civic", "industrial", "utility_infrastructure"],
+      "road_connections": ["main_road", "local_road", "pedestrian"],
+      "explicit_include": []
+    }
+  }
+}

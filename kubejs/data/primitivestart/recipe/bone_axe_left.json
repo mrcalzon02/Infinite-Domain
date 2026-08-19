@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "xx",
+                    "xy",
+                    " y"
+                ],
+    "key":  {
+                "x":  {
+                          "tag":  "primitivestart:bones"
+                      },
+                "y":  {
+                          "tag":  "primitivestart:sticks"
+                      }
+            },
+    "result":  {
+                   "id":  "primitivestart:bone_axe"
+               }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["AHA", "GCG", "ADA"],
+  "key": {
+    "A": { "item": "create:andesite_alloy" },
+    "H": { "item": "create:mechanical_harvester" },
+    "G": { "item": "minecraft:grass_block" },
+    "C": { "item": "farmersdelight:cooking_pot" },
+    "D": { "item": "farmersdelight:wheat_dough" }
+  },
+  "result": { "id": "kubejs:era1_farming_contribution", "count": 1 }
+}

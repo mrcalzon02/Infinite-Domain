@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "building",
+    "key":  {
+                "N":  {
+                          "item":  "minecraft:nether_star"
+                      },
+                "O":  {
+                          "item":  "allthecompressed:obsidian_1x"
+                      },
+                "S":  {
+                          "item":  "allthecompressed:soul_soil_1x"
+                      }
+            },
+    "pattern":  [
+                    "SOS",
+                    "ONO",
+                    "SOS"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "createnuclear:enriched_soul_soil"
+               }
+}

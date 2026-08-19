@@ -1,0 +1,33 @@
+{
+  "type": "createcybernetics:engineering_table",
+  "accept_mirrored": true,
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinite_domain_cyberware:calibrated_cortex_mesh"
+    },
+    "B": {
+      "item": "infinite_domain_cyberware:ghost_circuit_lattice"
+    },
+    "C": {
+      "item": "kubejs:darknet_session_injector_tier_5"
+    },
+    "D": {
+      "item": "kubejs:encrypted_credential_bundle"
+    },
+    "E": {
+      "item": "kubejs:darknet_temporal_core"
+    }
+  },
+  "pattern": [
+    "  A  ",
+    " ABC ",
+    " BDB ",
+    " CEC ",
+    "  A  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinite_domain_cyberware:darknet_ghost_coprocessor"
+  }
+}

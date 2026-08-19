@@ -1,0 +1,32 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "flag":  "faucet",
+                                       "condition":  "supplementaries:flag"
+                                   }
+                               ],
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "supplementaries:flag",
+                                    "flag":  "faucet"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " 1 ",
+                    "222",
+                    "  2"
+                ],
+    "key":  {
+                "1":  {
+                          "item":  "quark:stick_block"
+                      },
+                "2":  {
+                          "item":  "minecraft:iron_block"
+                      }
+            },
+    "result":  {
+                   "id":  "supplementaries:faucet",
+                   "count":  1
+               }
+}

@@ -1,0 +1,2638 @@
+{
+  "templates_scanned": 273,
+  "modded_block_types": 69,
+  "policy": "Vanilla stable blocks are the default. Modded functional, directional, connective, kinetic, fluid and block-entity blocks require an explicit purpose and verified state.",
+  "implicit_directional_states": [
+    {
+      "block": "ae2:drive",
+      "state": "ae2:drive",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "create:basin",
+      "state": "create:basin",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "create:cardboard_block",
+      "state": "create:cardboard_block",
+      "missing": [
+        "axis"
+      ]
+    },
+    {
+      "block": "create:controls",
+      "state": "create:controls",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "create:crushing_wheel",
+      "state": "create:crushing_wheel",
+      "missing": [
+        "axis"
+      ]
+    },
+    {
+      "block": "create:encased_fan",
+      "state": "create:encased_fan",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "create:mechanical_press",
+      "state": "create:mechanical_press",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "create:mechanical_saw",
+      "state": "create:mechanical_saw",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "create:red_nixie_tube",
+      "state": "create:red_nixie_tube",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "create:steam_engine",
+      "state": "create:steam_engine",
+      "missing": [
+        "face",
+        "facing"
+      ]
+    },
+    {
+      "block": "createnuclear:reactor_controller",
+      "state": "createnuclear:reactor_controller",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "farmersdelight:straw_bale",
+      "state": "farmersdelight:straw_bale",
+      "missing": [
+        "axis"
+      ]
+    },
+    {
+      "block": "supplementaries:item_shelf",
+      "state": "supplementaries:item_shelf",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:barricade",
+      "state": "the_wasteland_reworked:barricade",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:cardboard_box",
+      "state": "the_wasteland_reworked:cardboard_box",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:garbage_bag",
+      "state": "the_wasteland_reworked:garbage_bag",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:radiation_hazard_sign",
+      "state": "the_wasteland_reworked:radiation_hazard_sign",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:radio",
+      "state": "the_wasteland_reworked:radio",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:rusted_barrel",
+      "state": "the_wasteland_reworked:rusted_barrel",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:waste_barrel",
+      "state": "the_wasteland_reworked:waste_barrel",
+      "missing": [
+        "facing"
+      ]
+    }
+  ],
+  "connective_block_types": [
+    "tfmg:steel_pipe"
+  ],
+  "modded_usage": [
+    {
+      "block": "ae2:controller",
+      "placements": 1961,
+      "structures": [
+        "ae2_records_archive",
+        "masters/ae2_records_archive_clean_master",
+        "masters/ruined_cyberware_clinic_clean_master"
+      ],
+      "states": [
+        "ae2:controller"
+      ],
+      "selector_properties": [
+        "state",
+        "type"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "ae2:dense_energy_cell",
+      "placements": 1372,
+      "structures": [
+        "ae2_records_archive",
+        "masters/ae2_records_archive_clean_master"
+      ],
+      "states": [
+        "ae2:dense_energy_cell"
+      ],
+      "selector_properties": [
+        "fullness"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "ae2:drive",
+      "placements": 1170,
+      "structures": [
+        "ae2_records_archive",
+        "masters/ae2_records_archive_clean_master",
+        "masters/ruined_cyberware_clinic_clean_master",
+        "ruined_cyberware_clinic"
+      ],
+      "states": [
+        "ae2:drive"
+      ],
+      "selector_properties": [
+        "facing",
+        "spin"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "ae2:drive",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "ae2:quartz_glass",
+      "placements": 1056,
+      "structures": [
+        "ae2_records_archive",
+        "masters/ae2_records_archive_clean_master"
+      ],
+      "states": [
+        "ae2:quartz_glass"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "create:andesite_casing",
+      "placements": 144,
+      "structures": [
+        "abandoned_create_factory",
+        "masters/create_factory_clean_master",
+        "modules/industrial_process_line"
+      ],
+      "states": [
+        "create:andesite_casing"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "create:basin",
+      "placements": 3,
+      "structures": [
+        "abandoned_create_factory",
+        "masters/create_factory_clean_master",
+        "modules/industrial_process_line"
+      ],
+      "states": [
+        "create:basin"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "create:basin",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "create:brass_casing",
+      "placements": 147,
+      "structures": [
+        "abandoned_create_factory",
+        "masters/create_factory_clean_master",
+        "modules/industrial_process_line"
+      ],
+      "states": [
+        "create:brass_casing"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "create:cardboard_block",
+      "placements": 21,
+      "structures": [
+        "abandoned_create_factory",
+        "dilapidated_grocery",
+        "freight_depot",
+        "masters/create_factory_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "modules/industrial_process_line",
+        "ruined_gas_station"
+      ],
+      "states": [
+        "create:cardboard_block"
+      ],
+      "selector_properties": [
+        "axis"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "create:cardboard_block",
+          "missing": [
+            "axis"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "create:controls",
+      "placements": 6,
+      "structures": [
+        "abandoned_create_factory",
+        "bunker_network",
+        "masters/bunker_network_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/create_factory_clean_master",
+        "modules/industrial_powerhouse"
+      ],
+      "states": [
+        "create:controls"
+      ],
+      "selector_properties": [
+        "facing",
+        "open",
+        "virtual",
+        "waterlogged"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "create:controls",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "create:crushing_wheel",
+      "placements": 5,
+      "structures": [
+        "abandoned_create_factory",
+        "masters/create_factory_clean_master",
+        "modules/industrial_process_line"
+      ],
+      "states": [
+        "create:crushing_wheel"
+      ],
+      "selector_properties": [
+        "axis"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "create:crushing_wheel",
+          "missing": [
+            "axis"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "create:depot",
+      "placements": 19,
+      "structures": [
+        "abandoned_create_factory",
+        "decayed_logging_camp",
+        "masters/create_factory_clean_master",
+        "masters/decayed_logging_camp_clean_master",
+        "modules/industrial_process_line"
+      ],
+      "states": [
+        "create:depot"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "create:encased_fan",
+      "placements": 2,
+      "structures": [
+        "masters/create_factory_clean_master",
+        "modules/industrial_process_line"
+      ],
+      "states": [
+        "create:encased_fan"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "create:encased_fan",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "create:fluid_tank",
+      "placements": 6964,
+      "structures": [
+        "abandoned_create_factory",
+        "bunker_network",
+        "city_water_treatment_plant",
+        "district_heating_station",
+        "industrial_facility",
+        "masters/bunker_network_clean_master",
+        "masters/city_water_treatment_plant_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/district_heating_station_clean_master",
+        "masters/industrial_facility_clean_master",
+        "masters/municipal_incinerator_clean_master",
+        "masters/nuclear_research_annex_clean_master",
+        "masters/ruined_hospital_clean_master",
+        "modules/industrial_powerhouse",
+        "municipal_incinerator",
+        "nuclear_research_annex",
+        "ruined_hospital"
+      ],
+      "states": [
+        "create:fluid_tank"
+      ],
+      "selector_properties": [
+        "bottom",
+        "shape",
+        "top"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "create:framed_glass",
+      "placements": 49469,
+      "structures": [
+        "abandoned_bungalow",
+        "abandoned_create_factory",
+        "abandoned_culdesac",
+        "abandoned_motel",
+        "abandoned_oil_field",
+        "abandoned_orchard_cannery",
+        "abandoned_quarry",
+        "abandoned_truck_stop",
+        "ae2_records_archive",
+        "blown_apartment_complex",
+        "bombed_data_center",
+        "bombed_hotel",
+        "broken_solar_field",
+        "bunker_network",
+        "buried_bank_vault",
+        "city_electrical_substation",
+        "city_water_treatment_plant",
+        "cold_industrial_mountain_port",
+        "collapsed_airship_terminal",
+        "collapsed_mine_entrance",
+        "collapsed_subway_station",
+        "corporate_warehouse",
+        "cratered_downtown_intersection",
+        "decayed_farm",
+        "decayed_logging_camp",
+        "decayed_ranch",
+        "dilapidated_grocery",
+        "district_heating_station",
+        "emergency_relief_shelter",
+        "excavator_pit",
+        "freight_depot",
+        "hydroelectric_refuge_dam",
+        "industrial_facility",
+        "masters/abandoned_culdesac_clean_master",
+        "masters/abandoned_oil_field_clean_master",
+        "masters/abandoned_orchard_cannery_clean_master",
+        "masters/abandoned_quarry_clean_master",
+        "masters/abandoned_truck_stop_clean_master",
+        "masters/ae2_records_archive_clean_master",
+        "masters/blown_apartment_complex_clean_master",
+        "masters/bombed_data_center_clean_master",
+        "masters/bombed_hotel_clean_master",
+        "masters/broken_solar_field_clean_master",
+        "masters/bungalow_clean_master",
+        "masters/bunker_network_clean_master",
+        "masters/buried_bank_vault_clean_master",
+        "masters/city_electrical_substation_clean_master",
+        "masters/city_water_treatment_plant_clean_master",
+        "masters/cold_industrial_mountain_port_clean_master",
+        "masters/collapsed_airship_terminal_clean_master",
+        "masters/collapsed_mine_entrance_clean_master",
+        "masters/collapsed_subway_station_clean_master",
+        "masters/corporate_warehouse_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/decayed_farm_clean_master",
+        "masters/decayed_logging_camp_clean_master",
+        "masters/decayed_ranch_clean_master",
+        "masters/district_heating_station_clean_master",
+        "masters/emergency_relief_shelter_clean_master",
+        "masters/excavator_pit_clean_master",
+        "masters/fire_station_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/hydroelectric_refuge_dam_clean_master",
+        "masters/industrial_facility_clean_master",
+        "masters/military_checkpoint_clean_master",
+        "masters/motel_clean_master",
+        "masters/mountain_biohazard_lab_clean_master",
+        "masters/mountain_military_complex_clean_master",
+        "masters/nuclear_research_annex_clean_master",
+        "masters/pancaked_parking_structure_clean_master",
+        "masters/radio_mast_clean_master",
+        "masters/remote_sawmill_clean_master",
+        "masters/roadside_church_cemetery_clean_master",
+        "masters/ruined_bus_terminal_clean_master",
+        "masters/ruined_city_school_clean_master",
+        "masters/ruined_community_center_clean_master",
+        "masters/ruined_courthouse_clean_master",
+        "masters/ruined_cyberware_clinic_clean_master",
+        "masters/ruined_department_store_clean_master",
+        "masters/ruined_fuel_depot_clean_master",
+        "masters/ruined_hospital_clean_master",
+        "masters/ruined_mixed_use_block_clean_master",
+        "masters/ruined_office_tower_clean_master",
+        "masters/ruined_police_precinct_clean_master",
+        "masters/ruined_ranger_station_clean_master",
+        "masters/ruined_roadside_diner_clean_master",
+        "masters/ruined_rowhouse_block_clean_master",
+        "masters/ruined_shopping_mall_clean_master",
+        "masters/scrapyard_clean_master",
+        "masters/service_garage_clean_master",
+        "masters/shattered_greenhouse_nursery_clean_master",
+        "masters/shattered_luxury_condo_clean_master",
+        "masters/shattered_wind_farm_clean_master",
+        "masters/split_level_house_clean_master",
+        "masters/sunken_city_front_clean_master",
+        "masters/survivor_cache_clean_master",
+        "masters/tenement_courtyard_clean_master",
+        "masters/toppled_skyscraper_clean_master",
+        "masters/trade_outpost_clean_master",
+        "masters/trailer_park_clean_master",
+        "masters/warm_industrial_mountain_port_clean_master",
+        "masters/wasteland_fire_lookout_clean_master",
+        "masters/wasteland_water_tower_clean_master",
+        "masters/wasteland_weigh_station_clean_master",
+        "masters/wilderness_substation_clean_master",
+        "military_checkpoint",
+        "modules/industrial_dispatch_annex",
+        "modules/industrial_office_annex",
+        "modules/industrial_powerhouse",
+        "modules/industrial_storage_rack_bay",
+        "modules/industrial_truck_dock_bank",
+        "modules/market_square_well",
+        "modules/market_trade_lodge",
+        "modules/port_customs_warehouse",
+        "modules/port_tunnel_control",
+        "mountain_biohazard_lab",
+        "mountain_military_complex",
+        "nuclear_research_annex",
+        "pancaked_parking_structure",
+        "radio_mast",
+        "remote_sawmill",
+        "roadside_church_cemetery",
+        "ruined_bus_terminal",
+        "ruined_city_school",
+        "ruined_community_center",
+        "ruined_courthouse",
+        "ruined_cyberware_clinic",
+        "ruined_department_store",
+        "ruined_fire_station",
+        "ruined_fuel_depot",
+        "ruined_gas_station",
+        "ruined_hospital",
+        "ruined_mixed_use_block",
+        "ruined_office_tower",
+        "ruined_police_precinct",
+        "ruined_ranger_station",
+        "ruined_roadside_diner",
+        "ruined_rowhouse_block",
+        "ruined_shopping_mall",
+        "scrapyard",
+        "service_garage",
+        "shattered_greenhouse_nursery",
+        "shattered_luxury_condo",
+        "shattered_wind_farm",
+        "split_level_house",
+        "sunken_city_front",
+        "survivor_cache",
+        "tenement_courtyard",
+        "toppled_skyscraper",
+        "trade_outpost",
+        "trailer_park",
+        "warm_industrial_mountain_port",
+        "wasteland_fire_lookout",
+        "wasteland_water_tower",
+        "wasteland_weigh_station",
+        "wilderness_substation"
+      ],
+      "states": [
+        "create:framed_glass"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "create:mechanical_drill",
+      "placements": 3,
+      "structures": [
+        "masters/abandoned_quarry_clean_master"
+      ],
+      "states": [
+        "create:mechanical_drill[facing=down]"
+      ],
+      "selector_properties": [
+        "facing",
+        "waterlogged"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "create:mechanical_mixer",
+      "placements": 11,
+      "structures": [
+        "abandoned_create_factory",
+        "industrial_facility",
+        "masters/create_factory_clean_master",
+        "masters/industrial_facility_clean_master",
+        "modules/industrial_process_line"
+      ],
+      "states": [
+        "create:mechanical_mixer"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "create:mechanical_press",
+      "placements": 47,
+      "structures": [
+        "abandoned_create_factory",
+        "abandoned_orchard_cannery",
+        "crashed_cargo_airship",
+        "decayed_logging_camp",
+        "industrial_facility",
+        "masters/abandoned_orchard_cannery_clean_master",
+        "masters/crashed_cargo_airship_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/decayed_logging_camp_clean_master",
+        "masters/industrial_facility_clean_master",
+        "masters/municipal_incinerator_clean_master",
+        "masters/ruined_grain_elevator_clean_master",
+        "masters/scrapyard_clean_master",
+        "modules/industrial_process_line",
+        "municipal_incinerator",
+        "ruined_grain_elevator",
+        "scrapyard"
+      ],
+      "states": [
+        "create:mechanical_press",
+        "create:mechanical_press[facing=north]"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "create:mechanical_press",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "create:mechanical_pump",
+      "placements": 21,
+      "structures": [
+        "city_water_treatment_plant",
+        "district_heating_station",
+        "masters/city_water_treatment_plant_clean_master",
+        "masters/district_heating_station_clean_master",
+        "masters/ruined_fuel_depot_clean_master",
+        "masters/wasteland_water_tower_clean_master",
+        "ruined_fuel_depot",
+        "wasteland_water_tower"
+      ],
+      "states": [
+        "create:mechanical_pump[facing=south]"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "create:mechanical_saw",
+      "placements": 15,
+      "structures": [
+        "abandoned_create_factory",
+        "decayed_logging_camp",
+        "masters/create_factory_clean_master",
+        "masters/decayed_logging_camp_clean_master",
+        "masters/remote_sawmill_clean_master",
+        "modules/industrial_process_line",
+        "remote_sawmill"
+      ],
+      "states": [
+        "create:mechanical_saw",
+        "create:mechanical_saw[facing=east]"
+      ],
+      "selector_properties": [
+        "axis_along_first",
+        "facing",
+        "flipped"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "create:mechanical_saw",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "create:millstone",
+      "placements": 3,
+      "structures": [
+        "abandoned_create_factory",
+        "masters/create_factory_clean_master",
+        "modules/industrial_process_line"
+      ],
+      "states": [
+        "create:millstone"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "create:minecart_anchor",
+      "placements": 2,
+      "structures": [
+        "dilapidated_grocery",
+        "masters/grocery_clean_master"
+      ],
+      "states": [
+        "create:minecart_anchor"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "create:red_nixie_tube",
+      "placements": 86,
+      "structures": [
+        "abandoned_create_factory",
+        "bombed_data_center",
+        "collapsed_subway_station",
+        "masters/bombed_data_center_clean_master",
+        "masters/collapsed_subway_station_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/radio_mast_clean_master",
+        "modules/industrial_powerhouse",
+        "radio_mast"
+      ],
+      "states": [
+        "create:red_nixie_tube"
+      ],
+      "selector_properties": [
+        "double_face",
+        "facing",
+        "waterlogged"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "create:red_nixie_tube",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "create:steam_engine",
+      "placements": 12,
+      "structures": [
+        "abandoned_create_factory",
+        "masters/create_factory_clean_master",
+        "modules/industrial_powerhouse"
+      ],
+      "states": [
+        "create:steam_engine"
+      ],
+      "selector_properties": [
+        "face",
+        "facing",
+        "waterlogged"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "create:steam_engine",
+          "missing": [
+            "face",
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "createnuclear:reactor_casing",
+      "placements": 4592,
+      "structures": [
+        "masters/nuclear_research_annex_clean_master",
+        "nuclear_research_annex"
+      ],
+      "states": [
+        "createnuclear:reactor_casing"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "createnuclear:reactor_controller",
+      "placements": 1,
+      "structures": [
+        "masters/nuclear_research_annex_clean_master"
+      ],
+      "states": [
+        "createnuclear:reactor_controller"
+      ],
+      "selector_properties": [
+        "assembled",
+        "facing"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "createnuclear:reactor_controller",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "createnuclear:reactor_core",
+      "placements": 1214,
+      "structures": [
+        "masters/nuclear_research_annex_clean_master",
+        "nuclear_research_annex"
+      ],
+      "states": [
+        "createnuclear:reactor_core"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "createnuclear:reactor_frame",
+      "placements": 417,
+      "structures": [
+        "masters/nuclear_research_annex_clean_master",
+        "nuclear_research_annex"
+      ],
+      "states": [
+        "createnuclear:reactor_frame"
+      ],
+      "selector_properties": [
+        "part"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "createnuclear:reinforced_glass",
+      "placements": 1476,
+      "structures": [
+        "masters/nuclear_research_annex_clean_master",
+        "nuclear_research_annex"
+      ],
+      "states": [
+        "createnuclear:reinforced_glass"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "farmersdelight:cabbage_crate",
+      "placements": 8,
+      "structures": [
+        "dilapidated_grocery",
+        "masters/grocery_clean_master"
+      ],
+      "states": [
+        "farmersdelight:cabbage_crate"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "farmersdelight:carrot_crate",
+      "placements": 8,
+      "structures": [
+        "dilapidated_grocery",
+        "masters/grocery_clean_master"
+      ],
+      "states": [
+        "farmersdelight:carrot_crate"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "farmersdelight:onion_crate",
+      "placements": 8,
+      "structures": [
+        "dilapidated_grocery",
+        "masters/grocery_clean_master"
+      ],
+      "states": [
+        "farmersdelight:onion_crate"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "farmersdelight:potato_crate",
+      "placements": 8,
+      "structures": [
+        "dilapidated_grocery",
+        "masters/grocery_clean_master"
+      ],
+      "states": [
+        "farmersdelight:potato_crate"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "farmersdelight:stove",
+      "placements": 6,
+      "structures": [
+        "bombed_hotel",
+        "dilapidated_grocery",
+        "masters/bombed_hotel_clean_master",
+        "masters/grocery_clean_master",
+        "masters/ruined_roadside_diner_clean_master",
+        "ruined_roadside_diner"
+      ],
+      "states": [
+        "farmersdelight:stove[facing=north,lit=false]"
+      ],
+      "selector_properties": [
+        "facing",
+        "lit"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "farmersdelight:straw_bale",
+      "placements": 210,
+      "structures": [
+        "decayed_ranch",
+        "masters/decayed_ranch_clean_master"
+      ],
+      "states": [
+        "farmersdelight:straw_bale"
+      ],
+      "selector_properties": [
+        "axis"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "farmersdelight:straw_bale",
+          "missing": [
+            "axis"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "immersiveengineering:capacitor_hv",
+      "placements": 1965,
+      "structures": [
+        "ae2_records_archive",
+        "broken_solar_field",
+        "city_electrical_substation",
+        "masters/ae2_records_archive_clean_master",
+        "masters/broken_solar_field_clean_master",
+        "masters/city_electrical_substation_clean_master",
+        "masters/nuclear_research_annex_clean_master",
+        "nuclear_research_annex"
+      ],
+      "states": [
+        "immersiveengineering:capacitor_hv"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:capacitor_mv",
+      "placements": 2326,
+      "structures": [
+        "city_electrical_substation",
+        "district_heating_station",
+        "masters/city_electrical_substation_clean_master",
+        "masters/district_heating_station_clean_master",
+        "masters/shattered_wind_farm_clean_master",
+        "shattered_wind_farm"
+      ],
+      "states": [
+        "immersiveengineering:capacitor_mv"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:coil_hv",
+      "placements": 36,
+      "structures": [
+        "city_electrical_substation",
+        "masters/city_electrical_substation_clean_master",
+        "masters/wilderness_substation_clean_master",
+        "wilderness_substation"
+      ],
+      "states": [
+        "immersiveengineering:coil_hv"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:concrete_brick",
+      "placements": 1820,
+      "structures": [
+        "abandoned_create_factory",
+        "bunker_network",
+        "masters/bunker_network_clean_master",
+        "masters/create_factory_clean_master",
+        "modules/industrial_powerhouse"
+      ],
+      "states": [
+        "immersiveengineering:concrete_brick"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:concrete_brick_cracked",
+      "placements": 5769,
+      "structures": [
+        "abandoned_create_factory",
+        "bunker_network",
+        "cratered_downtown_intersection",
+        "hydroelectric_refuge_dam",
+        "masters/hydroelectric_refuge_dam_clean_master",
+        "masters/warm_industrial_mountain_port_clean_master",
+        "modules/harbor_loading_pier_warm",
+        "modules/port_customs_warehouse",
+        "pancaked_parking_structure",
+        "ruined_hospital",
+        "ruined_police_precinct",
+        "survivor_cache",
+        "warm_industrial_mountain_port"
+      ],
+      "states": [
+        "immersiveengineering:concrete_brick_cracked"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:concrete_leaded",
+      "placements": 4693,
+      "structures": [
+        "masters/mountain_biohazard_lab_clean_master",
+        "mountain_biohazard_lab"
+      ],
+      "states": [
+        "immersiveengineering:concrete_leaded"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:concrete_reinforced",
+      "placements": 125606,
+      "structures": [
+        "bombed_data_center",
+        "bunker_network",
+        "buried_bank_vault",
+        "city_water_treatment_plant",
+        "cold_industrial_mountain_port",
+        "collapsed_subway_station",
+        "cratered_downtown_intersection",
+        "elevated_rail_collapse",
+        "hydroelectric_refuge_dam",
+        "masters/bombed_data_center_clean_master",
+        "masters/bunker_network_clean_master",
+        "masters/buried_bank_vault_clean_master",
+        "masters/city_water_treatment_plant_clean_master",
+        "masters/cold_industrial_mountain_port_clean_master",
+        "masters/collapsed_subway_station_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/elevated_rail_collapse_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/hydroelectric_refuge_dam_clean_master",
+        "masters/mountain_biohazard_lab_clean_master",
+        "masters/mountain_military_complex_clean_master",
+        "masters/pancaked_parking_structure_clean_master",
+        "masters/radio_mast_clean_master",
+        "masters/scrapyard_clean_master",
+        "masters/sunken_city_front_clean_master",
+        "masters/sunken_highway_interchange_clean_master",
+        "masters/survivor_cache_clean_master",
+        "masters/toppled_skyscraper_clean_master",
+        "masters/warm_industrial_mountain_port_clean_master",
+        "masters/wasteland_fire_lookout_clean_master",
+        "modules/harbor_loading_pier_cold",
+        "modules/harbor_loading_pier_warm",
+        "modules/mountain_transport_tunnel_cold",
+        "modules/mountain_transport_tunnel_warm",
+        "mountain_biohazard_lab",
+        "mountain_military_complex",
+        "pancaked_parking_structure",
+        "radio_mast",
+        "ruined_gas_station",
+        "scrapyard",
+        "sunken_city_front",
+        "sunken_highway_interchange",
+        "survivor_cache",
+        "toppled_skyscraper",
+        "warm_industrial_mountain_port",
+        "wasteland_fire_lookout"
+      ],
+      "states": [
+        "immersiveengineering:concrete_reinforced"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:connector_lv",
+      "placements": 13,
+      "structures": [
+        "masters/trailer_park_clean_master",
+        "trailer_park"
+      ],
+      "states": [
+        "immersiveengineering:connector_lv[facing=east]",
+        "immersiveengineering:connector_lv[facing=up]",
+        "immersiveengineering:connector_lv[facing=west]"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:crate",
+      "placements": 3861,
+      "structures": [
+        "bombed_data_center",
+        "bunker_network",
+        "cratered_downtown_intersection",
+        "decayed_logging_camp",
+        "dilapidated_grocery",
+        "freight_depot",
+        "hydroelectric_refuge_dam",
+        "masters/bombed_data_center_clean_master",
+        "masters/bunker_network_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/decayed_logging_camp_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/hydroelectric_refuge_dam_clean_master",
+        "masters/mountain_biohazard_lab_clean_master",
+        "masters/mountain_military_complex_clean_master",
+        "masters/pancaked_parking_structure_clean_master",
+        "masters/ruined_courthouse_clean_master",
+        "masters/ruined_hospital_clean_master",
+        "masters/ruined_mixed_use_block_clean_master",
+        "masters/ruined_police_precinct_clean_master",
+        "masters/sunken_city_front_clean_master",
+        "masters/survivor_cache_clean_master",
+        "masters/toppled_skyscraper_clean_master",
+        "masters/trailer_park_clean_master",
+        "mountain_biohazard_lab",
+        "mountain_military_complex",
+        "pancaked_parking_structure",
+        "ruined_courthouse",
+        "ruined_gas_station",
+        "ruined_hospital",
+        "ruined_mixed_use_block",
+        "ruined_police_precinct",
+        "sunken_city_front",
+        "survivor_cache",
+        "toppled_skyscraper",
+        "trailer_park"
+      ],
+      "states": [
+        "immersiveengineering:crate"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:insulating_glass",
+      "placements": 176,
+      "structures": [
+        "masters/mountain_biohazard_lab_clean_master",
+        "mountain_biohazard_lab"
+      ],
+      "states": [
+        "immersiveengineering:insulating_glass"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:metal_barrel",
+      "placements": 30,
+      "structures": [
+        "bunker_network",
+        "decayed_farm",
+        "decayed_logging_camp",
+        "masters/bunker_network_clean_master",
+        "masters/decayed_farm_clean_master",
+        "masters/decayed_logging_camp_clean_master",
+        "masters/mountain_biohazard_lab_clean_master",
+        "masters/mountain_military_complex_clean_master",
+        "masters/service_garage_clean_master",
+        "masters/sunken_city_front_clean_master",
+        "masters/survivor_cache_clean_master",
+        "masters/trailer_park_clean_master",
+        "mountain_biohazard_lab",
+        "mountain_military_complex",
+        "service_garage",
+        "sunken_city_front",
+        "survivor_cache",
+        "trailer_park"
+      ],
+      "states": [
+        "immersiveengineering:metal_barrel"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:sheetmetal_lead",
+      "placements": 819,
+      "structures": [
+        "masters/mountain_biohazard_lab_clean_master",
+        "mountain_biohazard_lab"
+      ],
+      "states": [
+        "immersiveengineering:sheetmetal_lead"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:sheetmetal_steel",
+      "placements": 50344,
+      "structures": [
+        "abandoned_bungalow",
+        "abandoned_create_factory",
+        "abandoned_motel",
+        "abandoned_oil_field",
+        "abandoned_truck_stop",
+        "battle_tank",
+        "blown_apartment_complex",
+        "bombed_data_center",
+        "bombed_hotel",
+        "bunker_network",
+        "buried_bank_vault",
+        "cold_industrial_mountain_port",
+        "collapsed_airship_terminal",
+        "corporate_warehouse",
+        "crashed_cargo_airship",
+        "cratered_downtown_intersection",
+        "decayed_farm",
+        "delivery_van",
+        "dilapidated_grocery",
+        "district_heating_station",
+        "freight_depot",
+        "industrial_facility",
+        "masters/abandoned_oil_field_clean_master",
+        "masters/abandoned_truck_stop_clean_master",
+        "masters/battle_tank_clean_master",
+        "masters/blown_apartment_complex_clean_master",
+        "masters/bombed_data_center_clean_master",
+        "masters/bombed_hotel_clean_master",
+        "masters/bungalow_clean_master",
+        "masters/bunker_network_clean_master",
+        "masters/buried_bank_vault_clean_master",
+        "masters/cold_industrial_mountain_port_clean_master",
+        "masters/collapsed_airship_terminal_clean_master",
+        "masters/corporate_warehouse_clean_master",
+        "masters/crashed_cargo_airship_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/decayed_farm_clean_master",
+        "masters/delivery_van_clean_master",
+        "masters/district_heating_station_clean_master",
+        "masters/fire_station_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/industrial_facility_clean_master",
+        "masters/military_checkpoint_clean_master",
+        "masters/motel_clean_master",
+        "masters/mountain_biohazard_lab_clean_master",
+        "masters/municipal_incinerator_clean_master",
+        "masters/pancaked_parking_structure_clean_master",
+        "masters/radio_mast_clean_master",
+        "masters/ruined_city_school_clean_master",
+        "masters/ruined_community_center_clean_master",
+        "masters/ruined_department_store_clean_master",
+        "masters/ruined_fuel_depot_clean_master",
+        "masters/ruined_grain_elevator_clean_master",
+        "masters/ruined_hospital_clean_master",
+        "masters/ruined_mixed_use_block_clean_master",
+        "masters/ruined_office_tower_clean_master",
+        "masters/ruined_police_precinct_clean_master",
+        "masters/ruined_roadside_diner_clean_master",
+        "masters/ruined_shopping_mall_clean_master",
+        "masters/scrapyard_clean_master",
+        "masters/service_garage_clean_master",
+        "masters/shattered_luxury_condo_clean_master",
+        "masters/sunken_city_front_clean_master",
+        "masters/survivor_cache_clean_master",
+        "masters/tenement_courtyard_clean_master",
+        "masters/toppled_skyscraper_clean_master",
+        "masters/trailer_park_clean_master",
+        "masters/warm_industrial_mountain_port_clean_master",
+        "masters/wasteland_fire_lookout_clean_master",
+        "military_checkpoint",
+        "modules/fuel_tank_containment_cell",
+        "modules/industrial_powerhouse",
+        "modules/industrial_storage_rack_bay",
+        "modules/port_tunnel_control",
+        "mountain_biohazard_lab",
+        "municipal_incinerator",
+        "radio_mast",
+        "ruined_city_school",
+        "ruined_department_store",
+        "ruined_fire_station",
+        "ruined_fuel_depot",
+        "ruined_gas_station",
+        "ruined_grain_elevator",
+        "ruined_hospital",
+        "ruined_mixed_use_block",
+        "ruined_office_tower",
+        "ruined_police_precinct",
+        "ruined_roadside_diner",
+        "scrapyard",
+        "service_garage",
+        "shattered_luxury_condo",
+        "sunken_city_front",
+        "tenement_courtyard",
+        "toppled_skyscraper",
+        "trailer_park",
+        "warm_industrial_mountain_port",
+        "wasteland_fire_lookout"
+      ],
+      "states": [
+        "immersiveengineering:sheetmetal_steel"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "jaffabricate:pallet_full",
+      "placements": 3380,
+      "structures": [
+        "abandoned_create_factory",
+        "corporate_warehouse",
+        "crashed_cargo_airship",
+        "freight_depot",
+        "industrial_facility",
+        "masters/corporate_warehouse_clean_master",
+        "masters/crashed_cargo_airship_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/industrial_facility_clean_master",
+        "modules/industrial_process_line",
+        "modules/industrial_rail_loading_platform",
+        "modules/industrial_storage_rack_bay",
+        "ruined_gas_station"
+      ],
+      "states": [
+        "jaffabricate:pallet_full"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "oritech:big_solar_panel_block",
+      "placements": 724,
+      "structures": [
+        "broken_solar_field",
+        "masters/broken_solar_field_clean_master"
+      ],
+      "states": [
+        "oritech:big_solar_panel_block"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "oritech:cooler_block",
+      "placements": 24,
+      "structures": [
+        "dilapidated_grocery",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "ruined_gas_station"
+      ],
+      "states": [
+        "oritech:cooler_block"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "quark:apple_crate",
+      "placements": 180,
+      "structures": [
+        "abandoned_orchard_cannery",
+        "masters/abandoned_orchard_cannery_clean_master"
+      ],
+      "states": [
+        "quark:apple_crate"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "supplementaries:item_shelf",
+      "placements": 242,
+      "structures": [
+        "abandoned_bungalow",
+        "abandoned_create_factory",
+        "abandoned_culdesac",
+        "abandoned_motel",
+        "bombed_hotel",
+        "corporate_warehouse",
+        "decayed_ranch",
+        "dilapidated_grocery",
+        "emergency_relief_shelter",
+        "freight_depot",
+        "masters/abandoned_culdesac_clean_master",
+        "masters/bombed_hotel_clean_master",
+        "masters/bungalow_clean_master",
+        "masters/corporate_warehouse_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/decayed_ranch_clean_master",
+        "masters/emergency_relief_shelter_clean_master",
+        "masters/fire_station_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/motel_clean_master",
+        "masters/ruined_city_school_clean_master",
+        "masters/ruined_community_center_clean_master",
+        "masters/ruined_ranger_station_clean_master",
+        "masters/ruined_rowhouse_block_clean_master",
+        "masters/shattered_luxury_condo_clean_master",
+        "masters/split_level_house_clean_master",
+        "masters/survivor_cache_clean_master",
+        "masters/tenement_courtyard_clean_master",
+        "masters/wasteland_fire_lookout_clean_master",
+        "modules/industrial_dispatch_annex",
+        "modules/industrial_office_annex",
+        "ruined_city_school",
+        "ruined_fire_station",
+        "ruined_gas_station",
+        "ruined_ranger_station",
+        "ruined_rowhouse_block",
+        "shattered_luxury_condo",
+        "split_level_house",
+        "survivor_cache",
+        "tenement_courtyard",
+        "wasteland_fire_lookout"
+      ],
+      "states": [
+        "supplementaries:item_shelf"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "supplementaries:item_shelf",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "tfmg:asphalt",
+      "placements": 323233,
+      "structures": [
+        "abandoned_bungalow",
+        "abandoned_create_factory",
+        "abandoned_culdesac",
+        "abandoned_motel",
+        "abandoned_oil_field",
+        "abandoned_orchard_cannery",
+        "abandoned_quarry",
+        "abandoned_truck_stop",
+        "ae2_records_archive",
+        "battle_tank",
+        "blown_apartment_complex",
+        "bombed_data_center",
+        "bombed_hotel",
+        "broken_solar_field",
+        "bunker_network",
+        "buried_bank_vault",
+        "city_electrical_substation",
+        "city_water_treatment_plant",
+        "cold_industrial_mountain_port",
+        "collapsed_airship_terminal",
+        "collapsed_mine_entrance",
+        "corporate_warehouse",
+        "crashed_cargo_airship",
+        "cratered_downtown_intersection",
+        "decayed_farm",
+        "decayed_ranch",
+        "delivery_van",
+        "destroyed_refugee_convoy",
+        "dilapidated_grocery",
+        "district_heating_station",
+        "elevated_rail_collapse",
+        "emergency_relief_shelter",
+        "excavator_pit",
+        "freight_depot",
+        "hydroelectric_refuge_dam",
+        "industrial_facility",
+        "masters/abandoned_culdesac_clean_master",
+        "masters/abandoned_oil_field_clean_master",
+        "masters/abandoned_orchard_cannery_clean_master",
+        "masters/abandoned_quarry_clean_master",
+        "masters/abandoned_truck_stop_clean_master",
+        "masters/ae2_records_archive_clean_master",
+        "masters/battle_tank_clean_master",
+        "masters/blown_apartment_complex_clean_master",
+        "masters/bombed_data_center_clean_master",
+        "masters/bombed_hotel_clean_master",
+        "masters/broken_solar_field_clean_master",
+        "masters/bungalow_clean_master",
+        "masters/bunker_network_clean_master",
+        "masters/buried_bank_vault_clean_master",
+        "masters/city_electrical_substation_clean_master",
+        "masters/city_water_treatment_plant_clean_master",
+        "masters/cold_industrial_mountain_port_clean_master",
+        "masters/collapsed_airship_terminal_clean_master",
+        "masters/collapsed_mine_entrance_clean_master",
+        "masters/corporate_warehouse_clean_master",
+        "masters/crashed_cargo_airship_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/decayed_farm_clean_master",
+        "masters/decayed_ranch_clean_master",
+        "masters/delivery_van_clean_master",
+        "masters/destroyed_refugee_convoy_clean_master",
+        "masters/district_heating_station_clean_master",
+        "masters/elevated_rail_collapse_clean_master",
+        "masters/emergency_relief_shelter_clean_master",
+        "masters/excavator_pit_clean_master",
+        "masters/fire_station_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/hydroelectric_refuge_dam_clean_master",
+        "masters/industrial_facility_clean_master",
+        "masters/military_checkpoint_clean_master",
+        "masters/motel_clean_master",
+        "masters/mountain_biohazard_lab_clean_master",
+        "masters/mountain_military_complex_clean_master",
+        "masters/municipal_incinerator_clean_master",
+        "masters/nuclear_research_annex_clean_master",
+        "masters/pancaked_parking_structure_clean_master",
+        "masters/radio_mast_clean_master",
+        "masters/remote_sawmill_clean_master",
+        "masters/roadside_church_cemetery_clean_master",
+        "masters/ruined_bus_terminal_clean_master",
+        "masters/ruined_city_school_clean_master",
+        "masters/ruined_community_center_clean_master",
+        "masters/ruined_courthouse_clean_master",
+        "masters/ruined_cyberware_clinic_clean_master",
+        "masters/ruined_department_store_clean_master",
+        "masters/ruined_fuel_depot_clean_master",
+        "masters/ruined_grain_elevator_clean_master",
+        "masters/ruined_hospital_clean_master",
+        "masters/ruined_mixed_use_block_clean_master",
+        "masters/ruined_office_tower_clean_master",
+        "masters/ruined_police_precinct_clean_master",
+        "masters/ruined_ranger_station_clean_master",
+        "masters/ruined_roadside_diner_clean_master",
+        "masters/ruined_rowhouse_block_clean_master",
+        "masters/ruined_shopping_mall_clean_master",
+        "masters/scrapyard_clean_master",
+        "masters/service_garage_clean_master",
+        "masters/shattered_greenhouse_nursery_clean_master",
+        "masters/shattered_luxury_condo_clean_master",
+        "masters/shattered_wind_farm_clean_master",
+        "masters/split_level_house_clean_master",
+        "masters/sunken_city_front_clean_master",
+        "masters/sunken_highway_interchange_clean_master",
+        "masters/tenement_courtyard_clean_master",
+        "masters/toppled_skyscraper_clean_master",
+        "masters/trade_outpost_clean_master",
+        "masters/trailer_park_clean_master",
+        "masters/warm_industrial_mountain_port_clean_master",
+        "masters/wasteland_fire_lookout_clean_master",
+        "masters/wasteland_water_tower_clean_master",
+        "masters/wasteland_weigh_station_clean_master",
+        "masters/wilderness_substation_clean_master",
+        "masters/wrecked_sedan_clean_master",
+        "military_checkpoint",
+        "modules/harbor_loading_pier_cold",
+        "modules/harbor_loading_pier_warm",
+        "modules/industrial_dispatch_annex",
+        "modules/industrial_office_annex",
+        "modules/industrial_powerhouse",
+        "modules/industrial_process_line",
+        "modules/industrial_rail_loading_platform",
+        "modules/industrial_storage_rack_bay",
+        "modules/industrial_truck_dock_bank",
+        "modules/market_square_well",
+        "modules/market_stall_livestock",
+        "modules/market_stall_medicine",
+        "modules/market_stall_provisions",
+        "modules/market_stall_repair",
+        "modules/market_trade_lodge",
+        "modules/mountain_transport_tunnel_cold",
+        "modules/mountain_transport_tunnel_warm",
+        "mountain_biohazard_lab",
+        "mountain_military_complex",
+        "municipal_incinerator",
+        "nuclear_research_annex",
+        "pancaked_parking_structure",
+        "radio_mast",
+        "remote_sawmill",
+        "roadside_church_cemetery",
+        "ruined_bus_terminal",
+        "ruined_city_school",
+        "ruined_community_center",
+        "ruined_courthouse",
+        "ruined_cyberware_clinic",
+        "ruined_department_store",
+        "ruined_fire_station",
+        "ruined_fuel_depot",
+        "ruined_gas_station",
+        "ruined_grain_elevator",
+        "ruined_hospital",
+        "ruined_mixed_use_block",
+        "ruined_office_tower",
+        "ruined_police_precinct",
+        "ruined_ranger_station",
+        "ruined_roadside_diner",
+        "ruined_rowhouse_block",
+        "ruined_shopping_mall",
+        "scrapyard",
+        "service_garage",
+        "shattered_greenhouse_nursery",
+        "shattered_luxury_condo",
+        "shattered_wind_farm",
+        "split_level_house",
+        "sunken_city_front",
+        "sunken_highway_interchange",
+        "tenement_courtyard",
+        "toppled_skyscraper",
+        "trade_outpost",
+        "trailer_park",
+        "warm_industrial_mountain_port",
+        "wasteland_fire_lookout",
+        "wasteland_water_tower",
+        "wasteland_weigh_station",
+        "wilderness_substation",
+        "wrecked_sedan"
+      ],
+      "states": [
+        "tfmg:asphalt"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "tfmg:cinder_block",
+      "placements": 48808,
+      "structures": [
+        "abandoned_create_factory",
+        "abandoned_orchard_cannery",
+        "abandoned_truck_stop",
+        "ae2_records_archive",
+        "bombed_data_center",
+        "bombed_hotel",
+        "bunker_network",
+        "buried_bank_vault",
+        "city_water_treatment_plant",
+        "cold_industrial_mountain_port",
+        "collapsed_airship_terminal",
+        "collapsed_subway_station",
+        "corporate_warehouse",
+        "cratered_downtown_intersection",
+        "dilapidated_grocery",
+        "district_heating_station",
+        "emergency_relief_shelter",
+        "freight_depot",
+        "hydroelectric_refuge_dam",
+        "industrial_facility",
+        "masters/abandoned_orchard_cannery_clean_master",
+        "masters/abandoned_truck_stop_clean_master",
+        "masters/ae2_records_archive_clean_master",
+        "masters/bombed_data_center_clean_master",
+        "masters/bombed_hotel_clean_master",
+        "masters/bunker_network_clean_master",
+        "masters/buried_bank_vault_clean_master",
+        "masters/city_water_treatment_plant_clean_master",
+        "masters/cold_industrial_mountain_port_clean_master",
+        "masters/collapsed_airship_terminal_clean_master",
+        "masters/collapsed_subway_station_clean_master",
+        "masters/corporate_warehouse_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/district_heating_station_clean_master",
+        "masters/emergency_relief_shelter_clean_master",
+        "masters/fire_station_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/hydroelectric_refuge_dam_clean_master",
+        "masters/industrial_facility_clean_master",
+        "masters/military_checkpoint_clean_master",
+        "masters/mountain_military_complex_clean_master",
+        "masters/municipal_incinerator_clean_master",
+        "masters/pancaked_parking_structure_clean_master",
+        "masters/radio_mast_clean_master",
+        "masters/ruined_bus_terminal_clean_master",
+        "masters/ruined_city_school_clean_master",
+        "masters/ruined_community_center_clean_master",
+        "masters/ruined_department_store_clean_master",
+        "masters/ruined_hospital_clean_master",
+        "masters/ruined_police_precinct_clean_master",
+        "masters/ruined_roadside_diner_clean_master",
+        "masters/ruined_shopping_mall_clean_master",
+        "masters/scrapyard_clean_master",
+        "masters/service_garage_clean_master",
+        "masters/shattered_greenhouse_nursery_clean_master",
+        "masters/sunken_city_front_clean_master",
+        "masters/sunken_highway_interchange_clean_master",
+        "masters/survivor_cache_clean_master",
+        "masters/toppled_skyscraper_clean_master",
+        "masters/trailer_park_clean_master",
+        "masters/warm_industrial_mountain_port_clean_master",
+        "masters/wasteland_weigh_station_clean_master",
+        "military_checkpoint",
+        "modules/industrial_dispatch_annex",
+        "modules/industrial_office_annex",
+        "modules/industrial_powerhouse",
+        "modules/industrial_process_line",
+        "modules/industrial_storage_rack_bay",
+        "modules/industrial_truck_dock_bank",
+        "modules/port_customs_warehouse",
+        "mountain_military_complex",
+        "municipal_incinerator",
+        "pancaked_parking_structure",
+        "radio_mast",
+        "ruined_bus_terminal",
+        "ruined_city_school",
+        "ruined_community_center",
+        "ruined_department_store",
+        "ruined_fire_station",
+        "ruined_gas_station",
+        "ruined_hospital",
+        "ruined_police_precinct",
+        "ruined_roadside_diner",
+        "ruined_shopping_mall",
+        "scrapyard",
+        "service_garage",
+        "shattered_greenhouse_nursery",
+        "sunken_city_front",
+        "sunken_highway_interchange",
+        "survivor_cache",
+        "toppled_skyscraper",
+        "trailer_park",
+        "warm_industrial_mountain_port",
+        "wasteland_weigh_station"
+      ],
+      "states": [
+        "tfmg:cinder_block"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "tfmg:factory_floor",
+      "placements": 104199,
+      "structures": [
+        "abandoned_create_factory",
+        "abandoned_oil_field",
+        "abandoned_orchard_cannery",
+        "abandoned_quarry",
+        "abandoned_truck_stop",
+        "ae2_records_archive",
+        "bombed_data_center",
+        "broken_solar_field",
+        "bunker_network",
+        "city_electrical_substation",
+        "city_water_treatment_plant",
+        "cold_industrial_mountain_port",
+        "collapsed_airship_terminal",
+        "collapsed_mine_entrance",
+        "corporate_warehouse",
+        "cratered_downtown_intersection",
+        "dilapidated_grocery",
+        "district_heating_station",
+        "elevated_rail_collapse",
+        "emergency_relief_shelter",
+        "excavator_pit",
+        "freight_depot",
+        "hydroelectric_refuge_dam",
+        "industrial_facility",
+        "masters/abandoned_oil_field_clean_master",
+        "masters/abandoned_orchard_cannery_clean_master",
+        "masters/abandoned_quarry_clean_master",
+        "masters/abandoned_truck_stop_clean_master",
+        "masters/ae2_records_archive_clean_master",
+        "masters/bombed_data_center_clean_master",
+        "masters/broken_solar_field_clean_master",
+        "masters/bunker_network_clean_master",
+        "masters/city_electrical_substation_clean_master",
+        "masters/city_water_treatment_plant_clean_master",
+        "masters/cold_industrial_mountain_port_clean_master",
+        "masters/collapsed_airship_terminal_clean_master",
+        "masters/collapsed_mine_entrance_clean_master",
+        "masters/corporate_warehouse_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/district_heating_station_clean_master",
+        "masters/elevated_rail_collapse_clean_master",
+        "masters/emergency_relief_shelter_clean_master",
+        "masters/excavator_pit_clean_master",
+        "masters/fire_station_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/hydroelectric_refuge_dam_clean_master",
+        "masters/industrial_facility_clean_master",
+        "masters/military_checkpoint_clean_master",
+        "masters/mountain_biohazard_lab_clean_master",
+        "masters/mountain_military_complex_clean_master",
+        "masters/municipal_incinerator_clean_master",
+        "masters/nuclear_research_annex_clean_master",
+        "masters/pancaked_parking_structure_clean_master",
+        "masters/radio_mast_clean_master",
+        "masters/remote_sawmill_clean_master",
+        "masters/ruined_bus_terminal_clean_master",
+        "masters/ruined_city_school_clean_master",
+        "masters/ruined_community_center_clean_master",
+        "masters/ruined_cyberware_clinic_clean_master",
+        "masters/ruined_department_store_clean_master",
+        "masters/ruined_fuel_depot_clean_master",
+        "masters/ruined_grain_elevator_clean_master",
+        "masters/ruined_hospital_clean_master",
+        "masters/ruined_office_tower_clean_master",
+        "masters/ruined_police_precinct_clean_master",
+        "masters/ruined_shopping_mall_clean_master",
+        "masters/scrapyard_clean_master",
+        "masters/service_garage_clean_master",
+        "masters/shattered_greenhouse_nursery_clean_master",
+        "masters/shattered_wind_farm_clean_master",
+        "masters/sunken_city_front_clean_master",
+        "masters/survivor_cache_clean_master",
+        "masters/warm_industrial_mountain_port_clean_master",
+        "masters/wasteland_water_tower_clean_master",
+        "masters/wasteland_weigh_station_clean_master",
+        "masters/wilderness_substation_clean_master",
+        "military_checkpoint",
+        "modules/industrial_dispatch_annex",
+        "modules/industrial_office_annex",
+        "modules/industrial_powerhouse",
+        "modules/industrial_process_line",
+        "modules/industrial_rail_loading_platform",
+        "modules/industrial_storage_rack_bay",
+        "modules/industrial_truck_dock_bank",
+        "modules/port_customs_warehouse",
+        "modules/port_tunnel_control",
+        "mountain_biohazard_lab",
+        "mountain_military_complex",
+        "municipal_incinerator",
+        "nuclear_research_annex",
+        "pancaked_parking_structure",
+        "radio_mast",
+        "remote_sawmill",
+        "ruined_bus_terminal",
+        "ruined_city_school",
+        "ruined_community_center",
+        "ruined_cyberware_clinic",
+        "ruined_department_store",
+        "ruined_fire_station",
+        "ruined_fuel_depot",
+        "ruined_gas_station",
+        "ruined_grain_elevator",
+        "ruined_hospital",
+        "ruined_office_tower",
+        "ruined_police_precinct",
+        "ruined_shopping_mall",
+        "scrapyard",
+        "service_garage",
+        "shattered_greenhouse_nursery",
+        "shattered_wind_farm",
+        "sunken_city_front",
+        "survivor_cache",
+        "warm_industrial_mountain_port",
+        "wasteland_water_tower",
+        "wasteland_weigh_station",
+        "wilderness_substation"
+      ],
+      "states": [
+        "tfmg:factory_floor"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "tfmg:steel_block",
+      "placements": 9119,
+      "structures": [
+        "abandoned_create_factory",
+        "abandoned_oil_field",
+        "bombed_data_center",
+        "bunker_network",
+        "cold_industrial_mountain_port",
+        "corporate_warehouse",
+        "crashed_cargo_airship",
+        "cratered_downtown_intersection",
+        "district_heating_station",
+        "freight_depot",
+        "masters/abandoned_oil_field_clean_master",
+        "masters/bombed_data_center_clean_master",
+        "masters/bunker_network_clean_master",
+        "masters/cold_industrial_mountain_port_clean_master",
+        "masters/corporate_warehouse_clean_master",
+        "masters/crashed_cargo_airship_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/district_heating_station_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/mountain_biohazard_lab_clean_master",
+        "masters/municipal_incinerator_clean_master",
+        "masters/radio_mast_clean_master",
+        "masters/ruined_grain_elevator_clean_master",
+        "masters/warm_industrial_mountain_port_clean_master",
+        "modules/harbor_loading_pier_cold",
+        "modules/harbor_loading_pier_warm",
+        "modules/industrial_powerhouse",
+        "modules/industrial_process_line",
+        "modules/industrial_rail_loading_platform",
+        "modules/industrial_storage_rack_bay",
+        "modules/industrial_truck_dock_bank",
+        "modules/mountain_transport_tunnel_cold",
+        "modules/mountain_transport_tunnel_warm",
+        "modules/port_customs_warehouse",
+        "mountain_biohazard_lab",
+        "municipal_incinerator",
+        "radio_mast",
+        "ruined_fire_station",
+        "ruined_grain_elevator",
+        "warm_industrial_mountain_port"
+      ],
+      "states": [
+        "tfmg:steel_block"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "tfmg:steel_pipe",
+      "placements": 12,
+      "structures": [
+        "masters/trailer_park_clean_master",
+        "trailer_park"
+      ],
+      "states": [
+        "tfmg:steel_pipe"
+      ],
+      "selector_properties": [
+        "down",
+        "east",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "functional_or_machine": false,
+      "connective_material": true,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "the_wasteland_reworked:barricade",
+      "placements": 23,
+      "structures": [
+        "masters/military_checkpoint_clean_master",
+        "military_checkpoint"
+      ],
+      "states": [
+        "the_wasteland_reworked:barricade"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "the_wasteland_reworked:barricade",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:cardboard_box",
+      "placements": 105,
+      "structures": [
+        "corporate_warehouse",
+        "delivery_van",
+        "destroyed_refugee_convoy",
+        "dilapidated_grocery",
+        "masters/corporate_warehouse_clean_master",
+        "masters/delivery_van_clean_master",
+        "masters/destroyed_refugee_convoy_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/trailer_park_clean_master",
+        "modules/industrial_truck_dock_bank",
+        "ruined_gas_station",
+        "trailer_park"
+      ],
+      "states": [
+        "the_wasteland_reworked:cardboard_box"
+      ],
+      "selector_properties": [
+        "facing",
+        "open"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "the_wasteland_reworked:cardboard_box",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:cut_lead_plating",
+      "placements": 3035,
+      "structures": [
+        "bombed_data_center",
+        "cold_industrial_mountain_port",
+        "masters/bombed_data_center_clean_master",
+        "masters/cold_industrial_mountain_port_clean_master",
+        "masters/military_checkpoint_clean_master",
+        "masters/warm_industrial_mountain_port_clean_master",
+        "military_checkpoint",
+        "modules/port_tunnel_control",
+        "warm_industrial_mountain_port"
+      ],
+      "states": [
+        "the_wasteland_reworked:cut_lead_plating"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "the_wasteland_reworked:decayed_planks",
+      "placements": 8766,
+      "structures": [
+        "abandoned_bungalow",
+        "abandoned_culdesac",
+        "decayed_ranch",
+        "masters/abandoned_culdesac_clean_master",
+        "masters/bungalow_clean_master",
+        "masters/decayed_ranch_clean_master",
+        "masters/roadside_church_cemetery_clean_master",
+        "masters/ruined_ranger_station_clean_master",
+        "masters/ruined_rowhouse_block_clean_master",
+        "masters/split_level_house_clean_master",
+        "roadside_church_cemetery",
+        "ruined_ranger_station",
+        "ruined_rowhouse_block",
+        "split_level_house"
+      ],
+      "states": [
+        "the_wasteland_reworked:decayed_planks"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "the_wasteland_reworked:garbage_bag",
+      "placements": 22,
+      "structures": [
+        "abandoned_bungalow",
+        "abandoned_create_factory",
+        "abandoned_motel",
+        "abandoned_truck_stop",
+        "corporate_warehouse",
+        "dilapidated_grocery",
+        "emergency_relief_shelter",
+        "freight_depot",
+        "masters/corporate_warehouse_clean_master",
+        "masters/gas_station_clean_master",
+        "ruined_community_center",
+        "ruined_fire_station",
+        "ruined_gas_station",
+        "ruined_ranger_station",
+        "ruined_roadside_diner",
+        "scrapyard",
+        "split_level_house",
+        "trailer_park",
+        "wrecked_sedan"
+      ],
+      "states": [
+        "the_wasteland_reworked:garbage_bag"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "the_wasteland_reworked:garbage_bag",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:radiation_hazard_sign",
+      "placements": 10,
+      "structures": [
+        "masters/mountain_biohazard_lab_clean_master",
+        "mountain_biohazard_lab"
+      ],
+      "states": [
+        "the_wasteland_reworked:radiation_hazard_sign"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "the_wasteland_reworked:radiation_hazard_sign",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:radio",
+      "placements": 253,
+      "structures": [
+        "abandoned_bungalow",
+        "abandoned_create_factory",
+        "abandoned_culdesac",
+        "abandoned_motel",
+        "abandoned_oil_field",
+        "abandoned_orchard_cannery",
+        "abandoned_quarry",
+        "ae2_records_archive",
+        "battle_tank",
+        "bombed_data_center",
+        "bunker_network",
+        "city_electrical_substation",
+        "city_water_treatment_plant",
+        "collapsed_airship_terminal",
+        "collapsed_mine_entrance",
+        "corporate_warehouse",
+        "cratered_downtown_intersection",
+        "decayed_logging_camp",
+        "decayed_ranch",
+        "dilapidated_grocery",
+        "district_heating_station",
+        "emergency_relief_shelter",
+        "excavator_pit",
+        "freight_depot",
+        "hydroelectric_refuge_dam",
+        "industrial_facility",
+        "masters/abandoned_culdesac_clean_master",
+        "masters/abandoned_oil_field_clean_master",
+        "masters/abandoned_orchard_cannery_clean_master",
+        "masters/abandoned_quarry_clean_master",
+        "masters/ae2_records_archive_clean_master",
+        "masters/battle_tank_clean_master",
+        "masters/bombed_data_center_clean_master",
+        "masters/broken_solar_field_clean_master",
+        "masters/bungalow_clean_master",
+        "masters/bunker_network_clean_master",
+        "masters/city_electrical_substation_clean_master",
+        "masters/city_water_treatment_plant_clean_master",
+        "masters/collapsed_airship_terminal_clean_master",
+        "masters/collapsed_mine_entrance_clean_master",
+        "masters/corporate_warehouse_clean_master",
+        "masters/crashed_cargo_airship_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/decayed_logging_camp_clean_master",
+        "masters/decayed_ranch_clean_master",
+        "masters/district_heating_station_clean_master",
+        "masters/elevated_rail_collapse_clean_master",
+        "masters/emergency_relief_shelter_clean_master",
+        "masters/excavator_pit_clean_master",
+        "masters/fire_station_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/hydroelectric_refuge_dam_clean_master",
+        "masters/industrial_facility_clean_master",
+        "masters/military_checkpoint_clean_master",
+        "masters/motel_clean_master",
+        "masters/mountain_biohazard_lab_clean_master",
+        "masters/mountain_military_complex_clean_master",
+        "masters/municipal_incinerator_clean_master",
+        "masters/nuclear_research_annex_clean_master",
+        "masters/pancaked_parking_structure_clean_master",
+        "masters/radio_mast_clean_master",
+        "masters/remote_sawmill_clean_master",
+        "masters/ruined_bus_terminal_clean_master",
+        "masters/ruined_cyberware_clinic_clean_master",
+        "masters/ruined_department_store_clean_master",
+        "masters/ruined_fuel_depot_clean_master",
+        "masters/ruined_grain_elevator_clean_master",
+        "masters/ruined_hospital_clean_master",
+        "masters/ruined_mixed_use_block_clean_master",
+        "masters/ruined_office_tower_clean_master",
+        "masters/ruined_police_precinct_clean_master",
+        "masters/ruined_ranger_station_clean_master",
+        "masters/ruined_rowhouse_block_clean_master",
+        "masters/ruined_shopping_mall_clean_master",
+        "masters/scrapyard_clean_master",
+        "masters/shattered_greenhouse_nursery_clean_master",
+        "masters/shattered_luxury_condo_clean_master",
+        "masters/shattered_wind_farm_clean_master",
+        "masters/split_level_house_clean_master",
+        "masters/sunken_highway_interchange_clean_master",
+        "masters/survivor_cache_clean_master",
+        "masters/tenement_courtyard_clean_master",
+        "masters/toppled_skyscraper_clean_master",
+        "masters/trailer_park_clean_master",
+        "masters/wasteland_fire_lookout_clean_master",
+        "masters/wasteland_water_tower_clean_master",
+        "masters/wasteland_weigh_station_clean_master",
+        "masters/wilderness_substation_clean_master",
+        "military_checkpoint",
+        "modules/industrial_dispatch_annex",
+        "modules/industrial_office_annex",
+        "mountain_biohazard_lab",
+        "mountain_military_complex",
+        "municipal_incinerator",
+        "nuclear_research_annex",
+        "pancaked_parking_structure",
+        "radio_mast",
+        "remote_sawmill",
+        "ruined_bus_terminal",
+        "ruined_cyberware_clinic",
+        "ruined_department_store",
+        "ruined_fire_station",
+        "ruined_fuel_depot",
+        "ruined_gas_station",
+        "ruined_grain_elevator",
+        "ruined_hospital",
+        "ruined_mixed_use_block",
+        "ruined_office_tower",
+        "ruined_police_precinct",
+        "ruined_ranger_station",
+        "ruined_rowhouse_block",
+        "ruined_shopping_mall",
+        "scrapyard",
+        "shattered_greenhouse_nursery",
+        "shattered_luxury_condo",
+        "shattered_wind_farm",
+        "split_level_house",
+        "sunken_highway_interchange",
+        "survivor_cache",
+        "tenement_courtyard",
+        "toppled_skyscraper",
+        "trailer_park",
+        "wasteland_fire_lookout",
+        "wasteland_water_tower",
+        "wasteland_weigh_station",
+        "wilderness_substation"
+      ],
+      "states": [
+        "the_wasteland_reworked:radio"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "the_wasteland_reworked:radio",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:rusted_barrel",
+      "placements": 24,
+      "structures": [
+        "abandoned_truck_stop",
+        "battle_tank",
+        "decayed_logging_camp",
+        "masters/decayed_logging_camp_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/mountain_military_complex_clean_master",
+        "masters/scrapyard_clean_master",
+        "military_checkpoint",
+        "mountain_military_complex",
+        "ruined_gas_station",
+        "scrapyard"
+      ],
+      "states": [
+        "the_wasteland_reworked:rusted_barrel"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "the_wasteland_reworked:rusted_barrel",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:waste_barrel",
+      "placements": 7,
+      "structures": [
+        "masters/mountain_biohazard_lab_clean_master",
+        "mountain_biohazard_lab"
+      ],
+      "states": [
+        "the_wasteland_reworked:waste_barrel"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "the_wasteland_reworked:waste_barrel",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "wastelands:scrap_pile",
+      "placements": 824,
+      "structures": [
+        "abandoned_create_factory",
+        "abandoned_culdesac",
+        "abandoned_motel",
+        "bombed_data_center",
+        "bunker_network",
+        "corporate_warehouse",
+        "cratered_downtown_intersection",
+        "decayed_farm",
+        "decayed_logging_camp",
+        "delivery_van",
+        "destroyed_refugee_convoy",
+        "dilapidated_grocery",
+        "freight_depot",
+        "masters/scrapyard_clean_master",
+        "pancaked_parking_structure",
+        "radio_mast",
+        "ruined_courthouse",
+        "ruined_fire_station",
+        "ruined_gas_station",
+        "ruined_hospital",
+        "ruined_police_precinct",
+        "scrapyard",
+        "service_garage",
+        "sunken_city_front",
+        "trade_outpost",
+        "trailer_park",
+        "wasteland_weigh_station"
+      ],
+      "states": [
+        "wastelands:scrap_pile"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "zvhouses:spruce_countertop",
+      "placements": 902,
+      "structures": [
+        "abandoned_truck_stop",
+        "corporate_warehouse",
+        "cratered_downtown_intersection",
+        "dilapidated_grocery",
+        "freight_depot",
+        "masters/abandoned_truck_stop_clean_master",
+        "masters/corporate_warehouse_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/fire_station_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/ruined_bus_terminal_clean_master",
+        "masters/ruined_department_store_clean_master",
+        "masters/ruined_mixed_use_block_clean_master",
+        "masters/ruined_roadside_diner_clean_master",
+        "masters/ruined_shopping_mall_clean_master",
+        "masters/sunken_city_front_clean_master",
+        "modules/industrial_dispatch_annex",
+        "modules/industrial_office_annex",
+        "ruined_bus_terminal",
+        "ruined_department_store",
+        "ruined_fire_station",
+        "ruined_gas_station",
+        "ruined_mixed_use_block",
+        "ruined_roadside_diner",
+        "ruined_shopping_mall",
+        "sunken_city_front"
+      ],
+      "states": [
+        "zvhouses:spruce_countertop"
+      ],
+      "selector_properties": [
+        "leg_ne",
+        "leg_nw",
+        "leg_se",
+        "leg_sw"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "zvhouses:stone_brick_countertop",
+      "placements": 1617,
+      "structures": [
+        "abandoned_create_factory",
+        "bombed_hotel",
+        "bunker_network",
+        "buried_bank_vault",
+        "collapsed_airship_terminal",
+        "collapsed_subway_station",
+        "corporate_warehouse",
+        "cratered_downtown_intersection",
+        "dilapidated_grocery",
+        "elevated_rail_collapse",
+        "freight_depot",
+        "masters/bombed_hotel_clean_master",
+        "masters/bunker_network_clean_master",
+        "masters/buried_bank_vault_clean_master",
+        "masters/collapsed_airship_terminal_clean_master",
+        "masters/collapsed_subway_station_clean_master",
+        "masters/corporate_warehouse_clean_master",
+        "masters/cratered_downtown_intersection_clean_master",
+        "masters/create_factory_clean_master",
+        "masters/elevated_rail_collapse_clean_master",
+        "masters/fire_station_clean_master",
+        "masters/freight_depot_clean_master",
+        "masters/gas_station_clean_master",
+        "masters/grocery_clean_master",
+        "masters/ruined_city_school_clean_master",
+        "masters/ruined_hospital_clean_master",
+        "masters/ruined_mixed_use_block_clean_master",
+        "masters/ruined_office_tower_clean_master",
+        "masters/ruined_police_precinct_clean_master",
+        "masters/ruined_roadside_diner_clean_master",
+        "masters/sunken_city_front_clean_master",
+        "masters/survivor_cache_clean_master",
+        "modules/industrial_office_annex",
+        "modules/industrial_process_line",
+        "modules/industrial_truck_dock_bank",
+        "ruined_city_school",
+        "ruined_fire_station",
+        "ruined_gas_station",
+        "ruined_hospital",
+        "ruined_mixed_use_block",
+        "ruined_office_tower",
+        "ruined_police_precinct",
+        "ruined_roadside_diner",
+        "sunken_city_front",
+        "survivor_cache"
+      ],
+      "states": [
+        "zvhouses:stone_brick_countertop"
+      ],
+      "selector_properties": [
+        "leg_ne",
+        "leg_nw",
+        "leg_se",
+        "leg_sw"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    }
+  ]
+}

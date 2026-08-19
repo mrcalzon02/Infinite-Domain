@@ -1,0 +1,55 @@
+{
+  "structure_id": "infinite_domain:decayed_farm_clean_master",
+  "archetype": "family farm with roomed farmhouse, aisle barn, silo, machinery shed and irrigated fields",
+  "orientation": {
+    "county_road_and_house_entry": "north",
+    "farmhouse": "northwest",
+    "grain_silo": "north-central",
+    "aisle_barn": "northeast",
+    "crop_fields": "southwest",
+    "machinery_shed": "southeast"
+  },
+  "domestic_program": [
+    "front living and dining room",
+    "separate working kitchen",
+    "rear bedroom with personal storage",
+    "separate bathroom/washroom",
+    "pantry and mudroom beside the rear farmyard exit",
+    "pitched roof, front road approach and rear service connection"
+  ],
+  "agricultural_program": [
+    "north-south threshing aisle with wagon doors at both ends",
+    "separate tack and feed rooms",
+    "four side animal stalls with water",
+    "traversable twin haylofts and rear crossover bridge",
+    "independent riveted grain silo",
+    "machinery shed with repair bay, fuel and secure parts storage",
+    "three crop sections with irrigation and a muddy service lane"
+  ],
+  "circulation": [
+    "county road connects farmhouse front walk and central service yard",
+    "farmhouse rear mudroom exits toward silo, barn and fields",
+    "barn wagon aisle links both doors, tack/feed rooms and all four stalls",
+    "six-rise stair reaches both haylofts through the rear bridge",
+    "field-edge lane connects crops to the machinery shed and barnyard"
+  ],
+  "damage_constraints": [
+    "confine farmhouse failure to the northwest roof and living-room edge",
+    "confine barn failure to the northeast loft and roof",
+    "preserve bedroom, washroom, pantry, both house exits and rear mudroom",
+    "preserve barn wagon aisle, southwest loft, both wagon doors and machinery shed",
+    "derive field decay and hostile occupation from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "farmhouse rooms read as a plausible working rural home",
+      "barn aisle, four stalls, tack/feed rooms and hayloft work at player scale",
+      "silo, field rows and machinery shed communicate an agricultural workflow",
+      "the hayloft stair and rear crossover are safely traversable",
+      "zombie and husk pressure is dangerous without trapping mandatory routes",
+      "localized structural failures and terrain feathering read naturally in-world"
+    ]
+  }
+}

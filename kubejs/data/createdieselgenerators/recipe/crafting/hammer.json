@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "AIA",
+                    "ISI",
+                    "SIA"
+                ],
+    "key":  {
+                "S":  {
+                          "item":  "quark:stick_block"
+                      },
+                "A":  {
+                          "item":  "create:andesite_alloy_block"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      }
+            },
+    "result":  {
+                   "id":  "createdieselgenerators:hammer"
+               }
+}

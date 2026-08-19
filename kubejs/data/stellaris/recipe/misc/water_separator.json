@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MEM",
+    "PCP",
+    "VTV"
+  ],
+  "key": {
+    "M": {
+      "item": "kubejs:electrolysis_membrane"
+    },
+    "E": {
+      "item": "create_new_age:generator_coil"
+    },
+    "P": {
+      "item": "kubejs:aerospace_pump"
+    },
+    "C": {
+      "item": "kubejs:life_support_controller"
+    },
+    "V": {
+      "item": "kubejs:precision_valve"
+    },
+    "T": {
+      "item": "kubejs:reinforced_pressure_vessel"
+    }
+  },
+  "result": {
+    "id": "stellaris:water_separator",
+    "count": 1
+  }
+}

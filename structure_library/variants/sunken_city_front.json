@@ -1,0 +1,28 @@
+{
+  "variant_id": "infinite_domain:sunken_city_front",
+  "clean_master": "infinite_domain:sunken_city_front_clean_master",
+  "damage_story": "Avenue utilities and fill collapsed into an underground void, dropping the road three blocks, exposing the four premises' cellars and pulling different portions of each facade into the trench.",
+  "damage_zone": "central avenue, both sidewalk edges, four localized facade stacks and breached cellar fronts",
+  "environment_layer": [
+    "three-block roadbed subsidence with surviving lane markings",
+    "asymmetric coarse-dirt and gravel feathering down both sidewalk edges",
+    "partial road infill from five soil fans",
+    "four distinct vertical facade/floor failures",
+    "gravity-led rubble beneath exposed rooms and cellar breaches"
+  ],
+  "occupation_layer": [
+    "zombie spawner in the surviving cafe frontage",
+    "ghoul spawner in the pharmacy/clinic remnant",
+    "zombie spawner in the hardware office floors",
+    "ghoul spawner in the pharmacy residential floors",
+    "industrial and office loot retained in separate cellar zones"
+  ],
+  "invariants": [
+    "all four ground businesses remain traversable",
+    "at least one coherent upper suite survives on every floor",
+    "all four cellar and upper stair stacks survive",
+    "road-edge terrain descends from Y=4 to Y=1",
+    "failures remain localized rather than deleting entire buildings"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

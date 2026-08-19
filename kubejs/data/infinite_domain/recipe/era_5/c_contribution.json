@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "ae2:engineering_processor"
+    },
+    "B": {
+      "item": "ae2:certus_quartz_crystal"
+    },
+    "C": {
+      "item": "ae2:engineering_processor_press"
+    },
+    "D": {
+      "item": "ae2:item_storage_cell_1k"
+    },
+    "E": {
+      "item": "ae2:engineering_processor"
+    }
+  },
+  "result": {
+    "id": "kubejs:era5_exploration_contribution",
+    "count": 1
+  }
+}

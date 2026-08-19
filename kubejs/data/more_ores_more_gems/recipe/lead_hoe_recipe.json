@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "pattern":  [
+                    "aa",
+                    " b",
+                    " b"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:lead_ingot"
+                      },
+                "b":  {
+                          "item":  "minecraft:iron_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:lead_hoe",
+                   "count":  1
+               }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "infinite_domain:quartermaster",
+  "title": { "text": "Quartermaster Echo", "color": "green" },
+  "model": { "villager_data": { "type": "plains", "profession": "farmer", "level": 2 } },
+  "stages": [{
+    "title": "Lost Survivors Exchange",
+    "lore": [{ "type": "ftbechoes:text", "text": "Emergency stock for people who have mastered the advanced technique of remaining alive. Charles has authorized essentials, not miracles." }],
+    "not_ready": "The exchange cannot identify you as an active survivor yet.",
+    "ready": "Connection verified. Try not to spend every Echo on bread.",
+    "required_stage": "infinite_domain:era_0",
+    "shop_unlock": [
+      { "name": "Torch Bundle", "item": { "id": "minecraft:torch", "count": 16 }, "cost": 4 },
+      { "name": "Bread Ration", "item": { "id": "minecraft:bread", "count": 8 }, "cost": 8 },
+      { "name": "Purified Water Reserve", "item": { "id": "wastelands:purified_water", "count": 4 }, "cost": 8 },
+      { "name": "Canned Food Case", "item": { "id": "wastelands:canned_food", "count": 4 }, "cost": 12 },
+      { "name": "Bandage Roll", "item": { "id": "the_wasteland_reworked:bandage", "count": 4 }, "cost": 8 },
+      { "name": "Cordage Bundle", "item": { "id": "minecraft:string", "count": 8 }, "cost": 8 },
+      { "name": "Leather Repair Stock", "item": { "id": "minecraft:leather", "count": 4 }, "cost": 16 },
+      { "name": "Masonry Repair Pallet", "item": { "id": "minecraft:cobblestone", "count": 32 }, "cost": 8 },
+      { "name": "Lumber Repair Pallet", "item": { "id": "minecraft:oak_planks", "count": 32 }, "cost": 8 },
+      { "name": "Window Glass Crate", "item": { "id": "minecraft:glass", "count": 16 }, "cost": 8 },
+      { "name": "Charcoal Heating Reserve", "item": { "id": "minecraft:charcoal", "count": 16 }, "cost": 8 },
+      { "name": "Emergency Iron Pickaxe", "item": { "id": "minecraft:iron_pickaxe" }, "cost": 16, "max_claims": 4, "per_player_max_claims": true }
+    ],
+    "completion_reward": { "currency": 64, "description": "One Cog of emergency exchange credit" }
+  }]
+}

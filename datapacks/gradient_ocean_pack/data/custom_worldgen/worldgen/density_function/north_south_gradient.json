@@ -1,0 +1,23 @@
+{
+  "type": "isekai_api:clamp",
+  "min": 0.0,
+  "max": 1.0,
+  "f": {
+    "type": "isekai_api:add",
+    "a": {
+      "type": "isekai_api:constant",
+      "value": 0.5
+    },
+    "b": {
+      "type": "isekai_api:multiply",
+      "a": {
+        "type": "isekai_api:coordinate",
+        "axis": "z"
+      },
+      "b": {
+        "type": "isekai_api:constant",
+        "value": 0.0006666666666666667
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " I ",
+                    "SAI",
+                    " S "
+                ],
+    "key":  {
+                "S":  {
+                          "item":  "quark:stick_block"
+                      },
+                "A":  {
+                          "item":  "create:andesite_alloy_block"
+                      },
+                "I":  {
+                          "tag":  "c:plates/iron"
+                      }
+            },
+    "result":  {
+                   "id":  "createdieselgenerators:wire_cutters"
+               }
+}

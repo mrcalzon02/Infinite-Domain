@@ -1,0 +1,53 @@
+{
+  "structure_id": "infinite_domain:fire_station_clean_master",
+  "archetype": "three-bay municipal fire station with living quarters and hose tower",
+  "orientation": {
+    "main_road_and_apparatus_apron": "north",
+    "public_entrance": "north",
+    "staff_training_yard": "south",
+    "hose_tower_and_staff_exit": "south"
+  },
+  "ground_program": [
+    "three apparatus bays with two emergency vehicles and one service bay",
+    "public lobby and firefighter watch desk",
+    "dispatch office and controlled apparatus-hall connection",
+    "accessible restroom and staff service corridor",
+    "turnout-gear room, SCBA workshop and wash-down/decontamination room",
+    "rear training yard, equipment pads and hose-tower access"
+  ],
+  "upper_program": [
+    "dedicated enclosed stair and central landing",
+    "captain office and dispatch records room",
+    "kitchen and day room",
+    "four-bed dormitory",
+    "bathroom and linen/storage area"
+  ],
+  "circulation": [
+    "road apron directly into three independent apparatus bays",
+    "separate public walk and lobby entrance",
+    "lobby and dispatch through a controlled door to the apparatus hall",
+    "apparatus cross aisle to three rear support rooms",
+    "office stair to all upper living and administration rooms",
+    "rear staff route through the hose tower to the training yard"
+  ],
+  "damage_constraints": [
+    "preserve the public entrance, dispatch and complete office stair",
+    "retain two apparatus bays and their rear support rooms",
+    "retain the upper living floor and hose tower",
+    "concentrate failure in the west apparatus bay and its clerestory",
+    "shape rubble beneath the failed bay and expose fallen structural members",
+    "derive all abandoned variants from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "three apparatus doors, public entrance and hose tower read clearly from the road",
+      "apparatus vehicles and rear support rooms have usable player-scale circulation",
+      "dispatch, stair and upper living rooms have credible adjacencies",
+      "rear training yard and tower form a coherent staff service route",
+      "all four rotations preserve the road-facing apron and rear service grammar",
+      "damage preserves the original station function and follows structural gravity"
+    ]
+  }
+}

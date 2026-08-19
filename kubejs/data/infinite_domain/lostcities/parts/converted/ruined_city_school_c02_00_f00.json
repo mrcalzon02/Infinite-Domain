@@ -1,0 +1,186 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "111111111       ",
+      "*1111*1111*1111*",
+      "1111111111111111",
+      "1111111111111111",
+      "111111111111111*",
+      "1111111111111**%",
+      "11111111111**%11",
+      "111111111**%1111",
+      "1111111**%111111",
+      "11111**%11111111",
+      "111**%1111111111",
+      "1**%111111111111",
+      "*%11111111111111",
+      "1111111111111111",
+      "11111111111111**",
+      "111111111111**%1"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      ",,,,,,,,,   -   ",
+      ",,,,,,,,,       ",
+      ",,,,,,,,,       ",
+      ",,,,,,,,,3333333",
+      ",,,,,,,,,3333333",
+      ",,,,,,,,,3333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "&........   -   ",
+      "        .       ",
+      "+       .     + ",
+      "+       .$$$$$+$",
+      "+       .     + ",
+      "(........     2 ",
+      "2  //     !   2 ",
+      "2  0          2 ",
+      "2             2 ",
+      "2             2 ",
+      "2   0  0  0   2 ",
+      "2   /  /  /   2 "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "'........   -   ",
+      "        .       ",
+      "+       .     + ",
+      "+       .$$$$$+$",
+      "+       .     + ",
+      ")........     2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      ".........   -   ",
+      "        .       ",
+      "+       .     + ",
+      "+       .$$$$$+$",
+      "+       .     + ",
+      ".........     2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      ".........   -   ",
+      "        .       ",
+      "+       .     + ",
+      "+       .$$$$$+$",
+      "+       .     + ",
+      ".........     2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 ",
+      "2             2 "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "minecraft:bookshelf"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:polished_blackstone_bricks"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:smooth_stone"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "2",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "3",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

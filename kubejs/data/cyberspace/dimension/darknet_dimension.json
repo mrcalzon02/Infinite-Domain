@@ -1,0 +1,21 @@
+{
+  "type": "cyberspace:darknet_dimension",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "cyberspace:darknet_biome",
+      "lakes": false,
+      "features": true,
+      "layers": [
+        {
+          "height": 1,
+          "block": "kubejs:darknet_bedrock"
+        },
+        {
+          "height": 65,
+          "block": "cyberspace:darknetblock_1"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "T",
+                    "P"
+                ],
+    "key":  {
+                "T":  {
+                          "item":  "minecraft:cherry_trapdoor"
+                      },
+                "P":  {
+                          "item":  "allthecompressed:cherry_planks_1x"
+                      }
+            },
+    "result":  {
+                   "id":  "zvhouses:cherry_counter",
+                   "count":  1
+               }
+}

@@ -1,0 +1,186 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "..........((%...",
+      "........((%.....",
+      "......((%.......",
+      "....((%.........",
+      "..((%...........",
+      "((%.............",
+      "%...............",
+      "................",
+      "................",
+      "...........((...",
+      ".........((%....",
+      ".......((%......",
+      ".....((%........",
+      "...((%..........",
+      ".((%............",
+      "(%.............."
+    ],
+    [
+      "00000000000000  ",
+      "00000000000000  ",
+      "00000000000000  ",
+      "00000000000000  ",
+      "00000000000000  ",
+      "00000000000000  ",
+      "00000000000000  ",
+      "00000000000000  ",
+      "00000000000000  ",
+      "00000000000000**",
+      "00000000000000**",
+      "00000000000000**",
+      "00000000000000*2",
+      "00000000000000**",
+      "00000000000000**",
+      "00000000000000**"
+    ],
+    [
+      " +$    //,///)  ",
+      "1+$         ))) ",
+      "             )  ",
+      "             )  ",
+      "             &  ",
+      "             )  ",
+      "1+$  1+$  1+$)  ",
+      " +$   +$   +$)  ",
+      " +$   +$   +$)) ",
+      " +$   +$   +$)**",
+      " +$   +$   +$)* ",
+      " +$   +$   +$)* ",
+      " +$   +$   +$)* ",
+      "1+$  1+$  1+$)* ",
+      "             )* ",
+      "3   333   333)**"
+    ],
+    [
+      " +     //-////  ",
+      "1+          ))) ",
+      "             /  ",
+      "             /  ",
+      "             '  ",
+      "             /  ",
+      "1+   1+   1+ /  ",
+      " +    +    + /  ",
+      " +    +    +))) ",
+      " +    +    + /**",
+      " +    +    + /* ",
+      " +    +    + /* ",
+      " +    +    + /* ",
+      "1+   1+   1+ /* ",
+      "             /* ",
+      "            ))**"
+    ],
+    [
+      "       ///////  ",
+      "1           ))) ",
+      "             /  ",
+      "             /  ",
+      "                ",
+      "             /  ",
+      "1    1    1  /  ",
+      "             /  ",
+      "            ))) ",
+      "             /**",
+      "             /**",
+      "             /**",
+      "             /**",
+      "1    1    1  /**",
+      "             /**",
+      "            ))**"
+    ],
+    [
+      "       ///////  ",
+      "1           )!) ",
+      "             !  ",
+      "             /  ",
+      "             /  ",
+      "             /  ",
+      "1    1    1  /  ",
+      "             /  ",
+      "            )!) ",
+      "             !  ",
+      "             /  ",
+      "             /  ",
+      "             /  ",
+      "1    1    1  /  ",
+      "             /  ",
+      "            )!) "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "jaffabricate:pallet_full"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:oxidized_copper_grate"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:scaffolding"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "/",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "0",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:steel_block"
+      },
+      {
+        "char": "2",
+        "block": "the_wasteland_reworked:garbage_bag"
+      },
+      {
+        "char": "3",
+        "block": "zvhouses:stone_brick_countertop"
+      }
+    ]
+  }
+}

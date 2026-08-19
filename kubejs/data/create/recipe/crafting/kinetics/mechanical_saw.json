@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MMM",
+    "STS",
+    "ACA"
+  ],
+  "key": {
+    "M": {
+      "item": "createmetallurgy:graphite_ingot_mold"
+    },
+    "S": {
+      "item": "tfmg:steel_ingot"
+    },
+    "T": {
+      "item": "create:shaft"
+    },
+    "A": {
+      "item": "create:andesite_casing"
+    },
+    "C": {
+      "item": "create:cogwheel"
+    }
+  },
+  "result": {
+    "id": "create:mechanical_saw",
+    "count": 1
+  }
+}

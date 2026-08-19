@@ -1,0 +1,15 @@
+{
+    "type":  "minecraft:smithing_transform",
+    "template":  {
+                     "item":  "primitivestart:reinforcement_upgrade_smithing_template"
+                 },
+    "base":  {
+                 "item":  "primitivestart:bone_shovel"
+             },
+    "addition":  {
+                     "item":  "minecraft:raw_copper"
+                 },
+    "result":  {
+                   "id":  "primitivestart:reinforced_bone_shovel"
+               }
+}

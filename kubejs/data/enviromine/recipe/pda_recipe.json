@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "aca",
+                    "ada"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:iron_block"
+                      },
+                "b":  {
+                          "item":  "minecraft:gold_block"
+                      },
+                "c":  {
+                          "item":  "minecraft:glass_pane"
+                      },
+                "d":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "result":  {
+                   "id":  "enviromine:pda",
+                   "count":  1
+               }
+}

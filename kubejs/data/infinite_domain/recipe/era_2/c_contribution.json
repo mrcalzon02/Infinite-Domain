@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "createreautomated:node_fragment"
+    },
+    "B": {
+      "item": "createreautomated:node_fragment"
+    },
+    "C": {
+      "item": "createreautomated:extractor"
+    },
+    "D": {
+      "item": "tfmg:nickel_ore"
+    },
+    "E": {
+      "item": "createreautomated:node_fragment"
+    }
+  },
+  "result": {
+    "id": "kubejs:era2_exploration_contribution",
+    "count": 1
+  }
+}

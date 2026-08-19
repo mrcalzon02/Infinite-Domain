@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "b":  {
+                          "tag":  "immersiveengineering:connector_insulator"
+                      },
+                "e":  {
+                          "item":  "immersiveengineering:component_electronic"
+                      },
+                "i":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "m":  {
+                          "item":  "immersiveengineering:voltmeter"
+                      }
+            },
+    "pattern":  [
+                    " m ",
+                    " b ",
+                    "iei"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "immersiveengineering:current_transformer"
+               }
+}

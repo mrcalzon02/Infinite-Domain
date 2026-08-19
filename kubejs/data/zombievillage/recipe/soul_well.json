@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " S ",
+                    "SLS",
+                    " S "
+                ],
+    "key":  {
+                "S":  {
+                          "item":  "allthecompressed:stone_1x"
+                      },
+                "L":  {
+                          "item":  "minecraft:soul_lantern"
+                      }
+            },
+    "result":  {
+                   "id":  "zombievillage:soul_well",
+                   "count":  1
+               }
+}

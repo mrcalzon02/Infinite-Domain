@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "B": {
+      "item": "tfmg:rubber_sheet"
+    },
+    "C": {
+      "item": "kubejs:oxygen_regulator"
+    },
+    "D": {
+      "item": "minecraft:leather_leggings"
+    },
+    "E": {
+      "item": "tfmg:rubber_sheet"
+    }
+  },
+  "result": {
+    "id": "infinite_domain_space:emergency_leggings",
+    "count": 1
+  }
+}

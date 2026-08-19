@@ -1,0 +1,178 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "/////////////&&%",
+      "///////////&&%//",
+      "/////////&&%////",
+      "///////&&%//////",
+      "/////&&%////////",
+      "///&&%/////////&",
+      "/&&%////////////",
+      "&%//////////////",
+      "////////////////",
+      "//////////////&&",
+      "////////////&&%/",
+      "//////////&&%//&",
+      "////////&&%/////",
+      "//////&&%///////",
+      "////&&%/////////",
+      "//&&%///////////"
+    ],
+    [
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "111111111111    ",
+      "((((((((((((((  ",
+      "((((((((((((((  "
+    ],
+    [
+      "         . $    ",
+      "  ,  ,  ,  $    ",
+      "00+00+00+00$    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "      -    $    ",
+      "           $    ",
+      "00000)00000$    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "''''''''''''''  ",
+      "           ' '  "
+    ],
+    [
+      "           $    ",
+      "           $    ",
+      "00000*00000$    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "      -    $    ",
+      "00000*00000$    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "''''''''''''''  ",
+      "           ' '  "
+    ],
+    [
+      "           $    ",
+      "           $    ",
+      "00000000000$    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "000000-0000$    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "''''''''''''''  ",
+      "           ' '  "
+    ],
+    [
+      "           $    ",
+      "           $    ",
+      "00000000000$    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "000000 0000$    ",
+      "      -    $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "           $    ",
+      "''''''''''''''  ",
+      "    !!     ' '  "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:smooth_stone"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": "/",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "0",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

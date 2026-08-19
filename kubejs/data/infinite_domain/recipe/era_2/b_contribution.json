@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:hay_block"
+    },
+    "B": {
+      "item": "minecraft:wheat"
+    },
+    "C": {
+      "item": "minecraft:oak_log"
+    },
+    "D": {
+      "item": "minecraft:bread"
+    },
+    "E": {
+      "item": "minecraft:hay_block"
+    }
+  },
+  "result": {
+    "id": "kubejs:era2_farming_contribution",
+    "count": 1
+  }
+}

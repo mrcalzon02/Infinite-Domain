@@ -1,0 +1,45 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "zeta:flag",
+                                                       "flag":  "magnets"
+                                                   },
+                                                   {
+                                                       "type":  "zeta:flag",
+                                                       "flag":  "magnet_pre_end"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "redstone",
+    "key":  {
+                "B":  {
+                          "tag":  "c:dyes/blue"
+                      },
+                "C":  {
+                          "tag":  "c:cobblestones"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "P":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    "CIC",
+                    "BPR",
+                    "CIC"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "quark:magnet"
+               }
+}

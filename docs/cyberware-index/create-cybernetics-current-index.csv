@@ -1,0 +1,168 @@
+﻿registry_id,name,family,slot,humanity_cost,current_effect_and_constraints,optional_integration,has_scavenged_variant
+createcybernetics:basecyberware_linearframe,Linear Frame,Base replacement,Bone,15,Skeleton replacement and frame-upgrade prerequisite; 10 energy/tick; weakness and slowness when offline,,yes
+createcybernetics:bodypart_axolotlmarrow,Axolotl Marrow,Harvested wetware precursor,Bone,n/a,Harvested donor tissue used as a surgical/wetware precursor; no separate localized active effect,,no
+createcybernetics:bodypart_skeleton,Skeleton,Biological body part,Bone,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,no
+createcybernetics:boneupgrades_bonebattery,Marrow Battery,Cyberware upgrade,Bone,2,Stores energy | Stacks up to 3x | Stores 120k Energy,,yes
+createcybernetics:boneupgrades_boneflex,Citrate Enhancement,Cyberware upgrade,Bone,3,Negates damage taken from falling +3 blocks per stack | Stacks up to 3x,,yes
+createcybernetics:boneupgrades_bonelacing,Bonelacing,Cyberware upgrade,Bone,5,Adds 2 hearts of health to the user per stack | Stacks up to 3x,,yes
+createcybernetics:boneupgrades_capacitorframe,High Voltaic Capacitor Frame,Cyberware upgrade,Bone,10,"Negates EMP effects, and instead turns it into extra energy",,yes
+createcybernetics:boneupgrades_cyberskull,Titanium Skull,Cyberware upgrade,Bone,10,Negates elytra momentum damage | Requires Linear Frame,,no
+createcybernetics:boneupgrades_elytra,Deployable Elytra,Cyberware upgrade,Bone,10,An elytra fused to the user's spine | Requires Linear Frame | Costs 1-2 Energy,Caelus,yes
+createcybernetics:boneupgrades_piezo,Piezoelectric Energy Generator,Cyberware upgrade,Bone,3,Provides energy from movement at the risk of incurring occasional damage | Stacks up to 3x | Adds 2 Energy While Moving,,yes
+createcybernetics:boneupgrades_sandevistan,Sandevistan,Cyberware upgrade,Bone,10,Grants the user immense speed for a short time | 3s Hard Cooldown | 2m30s Soft Cooldown (damage risk),,yes
+createcybernetics:boneupgrades_spinalinjector,Spinal Injector,Cyberware upgrade,Bone,10,Allows the user to store and use up to 4 potions with extra duration | Press %s to open while installed | Requires Linear Frame,,yes
+createcybernetics:wetware_blastemaskeleton,Blastema Infused Skeleton,Wetware,Bone,8,"Grants regeneration to users, working better with fewer cybernetics | Any more than 8 implants prevents regeneration",,no
+createcybernetics:bodypart_brain,Brain,Biological body part,Brain,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,no
+createcybernetics:bodypart_sculkbrain,Sculked Brain,Biological body part,Brain,5,Sculk-altered surgical body part; biological replacement and wetware precursor; no separate localized active effect,,no
+createcybernetics:brainupgrades_chipwareslots,Chipware Slots,Cyberware upgrade,Brain,6,Allows the user to install Data Shards to upgrade basic skills | Requires Brain or Cerebral Processing Unit,,yes
+createcybernetics:brainupgrades_coaxialport,Coaxial Brain Port,Cyberware upgrade,Brain,5,Allows users to interface with server systems | Requires Brain or Cerebral Processing Unit,,yes
+createcybernetics:brainupgrades_consciousnesstransmitter,Needlecaster,Cyberware upgrade,Brain,5,Sends up to 14 experience levels to the user's new body when killed | Requires Brain or Cerebral Processing Unit,Respawn/continuity system,yes
+createcybernetics:brainupgrades_corticalstack,Cortical Stack,Cyberware upgrade,Brain,10,Stores experience in a Capsule when the user is killed | Requires Brain or Cerebral Processing Unit,Respawn/continuity system,yes
+createcybernetics:brainupgrades_cyberbrain,Cerebral Processing Unit,Cyberware upgrade,Brain,12,"Grants the user 3x experience, and prevents insomnia for 6 days | Replaces Humanity with Data Integrity. | Boot down in a bed to restore Data Integrity. | Costs 5 Energy | NO ENGRAM DETECTED",,no
+createcybernetics:brainupgrades_cyberdeck,Cyberdeck,Cyberware upgrade,Brain,8,Allows the user to remotely hack cybernetics | Requires Brain or Cerebral Processing Unit | Press %s to open cyberdeck slots | Press %s to open cyberdeck wheel,,yes
+createcybernetics:brainupgrades_enderjammer,Enderjammer,Cyberware upgrade,Brain,2,Prevents Endermen from teleporting in a 10 block radius around the user | Costs 5 Energy,,yes
+createcybernetics:brainupgrades_eyeofdefender,Eye of Defender,Cyberware upgrade,Brain,8,Teleports the user out of the way of projectiles | Requires Brain or Cerebral Processing Unit | Costs 5 Energy,,yes
+createcybernetics:brainupgrades_iceprotocol,ICE Defense Protocol,Cyberware upgrade,Brain,5,Provides a 75% chance to negate quickhacks,,yes
+createcybernetics:brainupgrades_idem,I.D.E.M.,Cyberware upgrade,Brain,6,(InterDimensional Escape Module) Allows the user to escape to another dimension for 15 seconds | Requires Brain or Cerebral Processing Unit | 15 Second Cooldown | Costs 50 Energy,,yes
+createcybernetics:brainupgrades_matrix,Threat Matrix,Cyberware upgrade,Brain,4,Highlights threats in a 25 block radius around the user | Requires Brain or Cerebral Processing Unit | Costs 3 Energy,,yes
+createcybernetics:brainupgrades_neuralcontextualizer,Neural Contextualizer,Cyberware upgrade,Brain,3,Automatically equips the required tool if it is in the user's inventory | Requires Brain or Cerebral Processing Unit | Costs 2 Energy,,yes
+createcybernetics:brainupgrades_neuralprocessor,Neural Processor,Cyberware upgrade,Brain,8,"Doubles XP intake, and attack speed, and allows interfacing with exosuits | Requires Brain",,yes
+createcybernetics:brainupgrades_spelljammer,SpellJammer,Cyberware upgrade,Brain,6,Prevents the casting of most spells in a 25 block radius | Requires Brain or Cerebral Processing Unit,Iron's Spells 'n Spellbooks,yes
+createcybernetics:wetware_wardenantlers,Warden Antlers,Wetware,Brain,6,Allows the user to see sounds,,no
+createcybernetics:armupgrades_arccannon,Electric Arc Cannon,Cyberware upgrade,Either arm,15,"Allows the user to fire lightning at the cost of high energy drain, and use of an arm | 5s Hard Cooldown | Costs 10 Energy ambiently, and 180,000 Energy per shot",,yes
+createcybernetics:armupgrades_armcannon,Arm Cannon,Cyberware upgrade,Either arm,7,Can launch various items and projectiles | Hard Cooldown (Varies Between Ammo) | Press %s to open loading GUI while installed | Press %s to open ammo wheel while installed | Costs 25 Energy per shot,,yes
+createcybernetics:armupgrades_claws,Retractable Claws,Cyberware upgrade,Either arm,5,Retractable combat claws | Requires Cyberarm,,yes
+createcybernetics:armupgrades_crafthands,Fine Manipulators,Cyberware upgrade,Either arm,5,Grants the user the ability to craft in a 3x3 grid without a Crafting Table | Requires Cyberarm | Costs 2 Energy,,yes
+createcybernetics:armupgrades_drillfist,Drillfist,Cyberware upgrade,Either arm,7,Allows the user to mine anything without a tool (at the cost of a useable hand) | Requires Cyberarm,,yes
+createcybernetics:armupgrades_firestarter,Firestarter,Cyberware upgrade,Either arm,1,Can ignite creatures and blocks | Requires Cyberarm | Costs 3 Energy,,yes
+createcybernetics:armupgrades_flywheel,Quickdraw Flywheel,Cyberware upgrade,Either arm,3,Rapidly draws bows and crossbows | Requires Cyberarm | Costs 2 Energy,,yes
+createcybernetics:armupgrades_mantisblade_copper,Copper Mantis Blade,Cyberware upgrade,Either arm,15,Increases unarmed melee damage when active | Requires Cyberarm | Costs 15 Energy when active | +2 Attack Damage | +0.6 Attack Speed | Latent Ability: Drains 10 stored energy from cybernetic targets on hit.,,yes
+createcybernetics:armupgrades_mantisblade_diamond,Diamond Mantis Blade,Cyberware upgrade,Either arm,15,Increases unarmed melee damage when active | Requires Cyberarm | Costs 15 Energy when active | +4 Attack Damage | +0.7 Attack Speed | Latent Ability: Damages target armor durability on hit.,,yes
+createcybernetics:armupgrades_mantisblade_gold,Gold Mantis Blade,Cyberware upgrade,Either arm,15,"Increases unarmed melee damage when active | Requires Cyberarm | Costs 15 Energy when active | +1 Attack Damage | +0.3 Attack Speed | Latent Ability: Increases loot from killed targets, but deals reduced damage.",,yes
+createcybernetics:armupgrades_mantisblade_iron,Iron Mantis Blade,Cyberware upgrade,Either arm,15,Increases unarmed melee damage when active | Requires Cyberarm | Costs 15 Energy when active | +3 Attack Damage | +0.6 Attack Speed | Latent Ability: Disables shields for 2 seconds after striking a blocking target.,,yes
+createcybernetics:armupgrades_mantisblade_netherite,Netherite Mantis Blade,Cyberware upgrade,Either arm,15,Increases unarmed melee damage when active | Requires Cyberarm | Costs 15 Energy when active | +5 Attack Damage | +0.8 Attack Speed | Latent Ability: Deals bonus damage to targets below half health.,,yes
+createcybernetics:armupgrades_mantisblade_titanium,Titanium Mantis Blade,Cyberware upgrade,Either arm,15,Increases unarmed melee damage when active | Requires Cyberarm | Costs 15 Energy when active | +3 Attack Damage | +0.8 Attack Speed,,yes
+createcybernetics:armupgrades_pneumaticwrist,Pneumatic Wrist,Cyberware upgrade,Either arm,3,Adds knockback to melee attacks and +2 Block Reach | Requires Cyberarm | Costs 3 Energy,,yes
+createcybernetics:armupgrades_reinforcedknuckles,Reinforced Knuckles,Cyberware upgrade,Either arm,4,Allows the user to mine stone level blocks without a tool | Requires Cyberarm,,yes
+createcybernetics:armupgrades_ripperclaw,Ripper Claw,Cyberware upgrade,Either arm,7,Grants the user higher margin of success when performing manual surgery | Requires Cyberarm,,no
+createcybernetics:legupgrades_anklebracers,Ankle Bracers,Cyberware upgrade,Either leg,5,Negates damage taken from falling up to 25 blocks when installed into both legs | Requires Cyberleg,,yes
+createcybernetics:legupgrades_jumpboost,Pneumatic Calves,Cyberware upgrade,Either leg,5,Allows the user to jump further and higher when sprinting or crouching when installed into both legs | Requires Cyberleg | Costs 3-5 Energy,,yes
+createcybernetics:legupgrades_metaldetector,Metal Detector,Cyberware upgrade,Either leg,3,Can detect magnetic blocks up to 15 blocks below the user | Requires Cyberleg | Costs 3 Energy,,yes
+createcybernetics:legupgrades_ocelotpaws,Ocelot Paws,Cyberware upgrade,Either leg,5,Makes player footsteps and jumps silent if installed into both legs | Requires Cyberleg,,yes
+createcybernetics:legupgrades_propellers,Calf Propellers,Cyberware upgrade,Either leg,3,Grants the user Dolphins Grace when swimming | Requires Cyberleg | Costs 5 Energy,,yes
+createcybernetics:legupgrades_spurs,Implanted Spurs,Cyberware upgrade,Either leg,2,Increases the speed of creatures the user is riding | Requires Cyberleg,,yes
+createcybernetics:basecyberware_cybereyes,Cybereyes,Base replacement,Eyes,5,Eye replacement and cybereye-module prerequisite; 5 energy/tick; loss of powered vision when offline,,yes
+createcybernetics:bodypart_eyeballs,Eyeballs,Biological body part,Eyes,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,no
+createcybernetics:bodypart_guardianretina,Guardian Retina,Harvested wetware precursor,Eyes,n/a,Harvested donor tissue used as a surgical/wetware precursor; no separate localized active effect,,no
+createcybernetics:eyeupgrades_biomonitor,Biomonitor,Cyberware upgrade,Eyes,3,Displays a projected indicator of vitals for any entity the user looks at | Requires Cybereyes & HUDjack | Costs 4 Energy,,yes
+createcybernetics:eyeupgrades_hudjack,HUDjack Module,Cyberware upgrade,Eyes,3,Adds a HUD to the user's vision | Requires Cybereyes | Costs 3 Energy,,yes
+createcybernetics:eyeupgrades_hudlens,HUDlens,Cyberware upgrade,Eyes,1,Adds a HUD to the user's vision | Requires Eyeballs | Costs 3 Energy,,yes
+createcybernetics:eyeupgrades_monovision,Monovision Optics,Cyberware upgrade,Eyes,8,Acts as both Cybereyes & HUDjack and negates blindness or darkness effects | Costs 8 Energy,,yes
+createcybernetics:eyeupgrades_multioptics1,Multioptics Var.1,Cyberware upgrade,Eyes,8,Cosmetic Cybereyes that negate blindness and darkness effects,,no
+createcybernetics:eyeupgrades_multioptics2,Multioptics Var.2,Cyberware upgrade,Eyes,8,Cosmetic Cybereyes that negate blindness and darkness effects,,no
+createcybernetics:eyeupgrades_multioptics3,Multioptics Var.3,Cyberware upgrade,Eyes,8,Cosmetic Cybereyes that negate blindness and darkness effects,,no
+createcybernetics:eyeupgrades_multioptics4,Multioptics Var.4,Cyberware upgrade,Eyes,8,Cosmetic Cybereyes that negate blindness and darkness effects,,no
+createcybernetics:eyeupgrades_navigationchip,Navigation Module,Cyberware upgrade,Eyes,3,Adds a minimap to the user's vision | Requires Cybereyes & HUDjack | Costs 3 Energy,JourneyMap,yes
+createcybernetics:eyeupgrades_nightvision,Low Light Module,Cyberware upgrade,Eyes,3,Provides clarity in the dark | Requires Cybereyes | Costs 5 Energy,,yes
+createcybernetics:eyeupgrades_targeting,Targeting Module,Cyberware upgrade,Eyes,3,Targets the last attacked creature | Requires Cybereyes & HUDjack | Costs 3 Energy,,yes
+createcybernetics:eyeupgrades_trajectorycalculator,Trajectory Calculator Module,Cyberware upgrade,Eyes,3,Displays a projected trajectory for a held projectile | Requires Cybereyes & HUDjack | Costs 2 Energy,,yes
+createcybernetics:eyeupgrades_underwatervision,Watervision Module,Cyberware upgrade,Eyes,3,Provides clarity underwater | Requires Cybereyes | Costs 3 Energy,,yes
+createcybernetics:eyeupgrades_zoom,Optic Zoom Module,Cyberware upgrade,Eyes,3,Allows the user to see distant objects | Requires Cybereyes | Costs 2 Energy,,yes
+createcybernetics:wetware_guardianeye,Guardian Eye,Wetware,Eyes,15,Allows the user to shoot Guardian Lasers | Hold Shift + Right-Click to use,,no
+createcybernetics:wetware_spidereyes,Spider Eyes,Wetware,Eyes,7,User gains The visual abilities of a spider,,no
+createcybernetics:bodypart_heart,Heart,Biological body part,Heart,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,no
+createcybernetics:heartupgrades_anomaly,The Arcane Anomaly,Cyberware upgrade,Heart,15,Turns excess energy into mana | Adds 75 energy,Iron's Spells 'n Spellbooks,no
+createcybernetics:heartupgrades_coupler,Cardiovascular Coupler,Cyberware upgrade,Heart,3,Generates energy from the beating of an organic heart | Requires Heart | Adds 6 Energy Per Heartbeat,,yes
+createcybernetics:heartupgrades_creeperheart,Creeperheart,Cyberware upgrade,Heart,5,Detonates the user when killed | Requires Heart,,yes
+createcybernetics:heartupgrades_cyberheart,Mechanical Heart,Cyberware upgrade,Heart,8,Negates weakness status effects | Costs 6 Energy,,yes
+createcybernetics:heartupgrades_defibrillator,Internal Defibrillator,Cyberware upgrade,Heart,8,Revives the user 1 time when killed | Requires Heart | Costs 50 Energy,,yes
+createcybernetics:heartupgrades_platelets,Platelet Dispatcher,Cyberware upgrade,Heart,6,Provides ambient regeneration when the user is at rest | Costs 5 Energy,,yes
+createcybernetics:heartupgrades_stemcell,Stem Cell Synthesizer,Cyberware upgrade,Heart,6,Provides regeneration when health drops below 5 | Costs 5 Energy,,yes
+createcybernetics:wetware_sculkheart,Sculk Heart,Wetware,Heart,8,"Creates a steady heartbeat rhythm, and gives nearby players the darkness effect",,no
+createcybernetics:basecyberware_leftarm,Left Cyberarm,Base replacement,Left arm,5,"Arm replacement and arm-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,yes
+createcybernetics:basecyberware_leftarm_copperplated,Copper Plated Left Cyberarm,Base replacement,Left arm,5,"Arm replacement and arm-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:basecyberware_leftarm_goldplated,Gold Plated Left Cyberarm,Base replacement,Left arm,5,"Arm replacement and arm-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:basecyberware_leftarm_ironplated,Iron Plated Left Cyberarm,Base replacement,Left arm,5,"Arm replacement and arm-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:bodypart_leftarm,Left Arm,Biological body part,Left arm,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,yes
+createcybernetics:bodypart_sculkleftarm,Sculked Left Arm,Biological body part,Left arm,5,Sculk-altered surgical body part; biological replacement and wetware precursor; no separate localized active effect,,no
+createcybernetics:wetware_webshooting_leftarm,Webshooting Left Arm,Wetware,Left arm,7,User gains the ability to shoot webbing to ensnare prey | Shift + Right-Click to use,,no
+createcybernetics:basecyberware_leftleg,Left Cyberleg,Base replacement,Left leg,5,"Leg replacement and leg-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,yes
+createcybernetics:basecyberware_leftleg_copperplated,Copper Plated Left Cyberleg,Base replacement,Left leg,5,"Leg replacement and leg-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:basecyberware_leftleg_goldplated,Gold Plated Left Cyberleg,Base replacement,Left leg,5,"Leg replacement and leg-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:basecyberware_leftleg_ironplated,Iron Plated Left Cyberleg,Base replacement,Left leg,5,"Leg replacement and leg-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:bodypart_leftleg,Left Leg,Biological body part,Left leg,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,yes
+createcybernetics:bodypart_sculkleftleg,Sculked Left Leg,Biological body part,Left leg,5,Sculk-altered surgical body part; biological replacement and wetware precursor; no separate localized active effect,,no
+createcybernetics:bodypart_gills,Fish Gills,Harvested wetware precursor,Lungs,n/a,Harvested donor tissue used as a surgical/wetware precursor; no separate localized active effect,,no
+createcybernetics:bodypart_lungs,Lungs,Biological body part,Lungs,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,no
+createcybernetics:bodypart_wardenesophagus,Warden Esophagus,Harvested wetware precursor,Lungs,n/a,Harvested donor tissue used as a surgical/wetware precursor; no separate localized active effect,,no
+createcybernetics:lungsupgrades_hyperoxygenation,Hyperoxygenation Boost,Cyberware upgrade,Lungs,3,Provides a boost to running speed | Stacks up to 3x | Requires Lungs or SynthLungs | Costs 3/6/9 Energy,,yes
+createcybernetics:lungsupgrades_oxygen,Internal Oxygen Tank,Cyberware upgrade,Lungs,5,Stores 1 extra minute of oxygen when the user is in breathable air | Stacks up to 3x | Requires Lungs or SynthLungs | Costs 7 Energy,,yes
+createcybernetics:lungsupgrades_synthlungs,SynthLungs,Cyberware upgrade,Lungs,5,Grants an extra 30 seconds of oxygen | Grants an extra 30 seconds of oxygen and improves Stamina regen | Costs 3 Energy,,yes
+createcybernetics:lungsupgrades_vampyres,Vampyres,Cyberware upgrade,Lungs,15,"Allows users to store two injectable compounds and inject them into a target while dealing bite damage | Costs 10 Energy dormantly, and 75 Energy to inject | Hold Right-Click for 2 seconds while targeting an entity to inject",,yes
+createcybernetics:wetware_firebreathinglungs,Dragon Lungs,Wetware,Lungs,15,Allows the user to shoot Dragon Fireballs | Shift + Right-Click to use,,no
+createcybernetics:wetware_sculklungs,Sculk Lungs,Wetware,Lungs,6,Allows the user to emit a sonic shriek attack | Hold Shift + Right-Click to use,,no
+createcybernetics:wetware_waterbreathinglungs,Waterbreathing Lungs,Wetware,Lungs,12,Allows the user to breathe underwater,,no
+createcybernetics:bodypart_muscle,Muscle Tissue,Biological body part,Muscle,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,no
+createcybernetics:bodypart_sculkmuscle,Sculked Muscle,Biological body part,Muscle,5,Sculk-altered surgical body part; biological replacement and wetware precursor; no separate localized active effect,,no
+createcybernetics:muscleupgrades_ballisticgel,Ballistic Gel,Cyberware upgrade,Muscle,7,"Insulates tissues and organs, providing a 1/3 chance to prevent explosion durability damage",,yes
+createcybernetics:muscleupgrades_synthmuscle,Myomer Muscle,Cyberware upgrade,Muscle,5,"Grants extra speed and strength, as well as marginally increasing size | Costs 3 Energy",,yes
+createcybernetics:muscleupgrades_wiredreflexes,Wired Reflexes,Cyberware upgrade,Muscle,4,Turns the user to face attackers | Costs 3 Energy,,yes
+createcybernetics:wetware_electrocytemuscle,Electrocyte Tissue,Wetware,Muscle,9,"Releases an electric burst on all nearby creatures when attacked, with a 2 minute cooldown",,no
+createcybernetics:wetware_gooeymuscle,Gooey Musculature,Wetware,Muscle,9,Negates small falls and greatly negates mace damage,,no
+createcybernetics:wetware_ravagertendons,Ravager Tendons,Wetware,Muscle,15,"Provides strength and durability to the user, as well as a massive increase in size",,no
+createcybernetics:bodypart_firegland,Igniphorus Gland,Harvested wetware precursor,Organs,n/a,Harvested donor tissue used as a surgical/wetware precursor; no separate localized active effect,,no
+createcybernetics:bodypart_gyroscopicbladder,Gyroscopic Bladder,Harvested wetware precursor,Organs,n/a,Harvested donor tissue used as a surgical/wetware precursor; no separate localized active effect,,no
+createcybernetics:bodypart_intestines,Intestines,Biological body part,Organs,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,no
+createcybernetics:bodypart_liver,Liver,Biological body part,Organs,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,no
+createcybernetics:bodypart_sculkintestines,Sculked Intestines,Biological body part,Organs,5,Sculk-altered surgical body part; biological replacement and wetware precursor; no separate localized active effect,,no
+createcybernetics:bodypart_sculkliver,Sculked Liver,Biological body part,Organs,5,Sculk-altered surgical body part; biological replacement and wetware precursor; no separate localized active effect,,no
+createcybernetics:bodypart_spinnerette,Spider's Spinneret,Harvested wetware precursor,Organs,n/a,Harvested donor tissue used as a surgical/wetware precursor; no separate localized active effect,,no
+createcybernetics:organsupgrade_densebattery,Dense Battery,Cyberware upgrade,Organs,8,Stores a large amount of energy from a Charging Block | Stores 1.2 Million Energy From Charging Block,,yes
+createcybernetics:organsupgrades_adrenaline,Adrenal Pump,Cyberware upgrade,Organs,5,Grants the user Speed and Strength when attacked | Costs 10 Energy,,yes
+createcybernetics:organsupgrades_battery,Internal Battery,Cyberware upgrade,Organs,3,Stores energy | Stacks up to 4x | Stores 120k Energy,,yes
+createcybernetics:organsupgrades_diamondwaferstack,Diamond Waferstack,Cyberware upgrade,Organs,1,Generates a slow trickle of energy | Stacks up to 3x | Adds 25 Energy Every 3 Seconds,,yes
+createcybernetics:organsupgrades_dualisticconverter,Dualistic Converter,Cyberware upgrade,Organs,8,Generates energy from conflicting Redstone and Lapis wavelengths | Adds 50 Energy From Science/Magic,,yes
+createcybernetics:organsupgrades_heatengine,Heat Engine,Cyberware upgrade,Organs,10,Generates energy from burning fuels | Press %s to open while installed | Adds 50 energy from fuel,,yes
+createcybernetics:organsupgrades_liverfilter,Liver Filter,Cyberware upgrade,Organs,3,Negates most negative status effects,,yes
+createcybernetics:organsupgrades_magiccatalyst,Magic Catalyst,Cyberware upgrade,Organs,15,Generates a large amount of energy from conflicting Redstone and Lapis wavelengths | Adds 100 Energy From Magic,,no
+createcybernetics:organsupgrades_manabattery,Mana Capacitor,Cyberware upgrade,Organs,5,Stores extra pools of mana | Stacks up to 3x | Stores 100 mana,Iron's Spells 'n Spellbooks,yes
+createcybernetics:organsupgrades_metabolic,Metabolic Converter,Cyberware upgrade,Organs,4,Generates energy from metabolic function | Requires Intestines | Adds 25 Energy While Metabolizing,,yes
+createcybernetics:organsupgrades_oregrinder,Oregrinder,Cyberware upgrade,Organs,10,Digests metals and stone to repair the chassis of a full body conversion | Incompatible with Wetware | Requires Titanium Skull | Costs 50 Energy when eating,,yes
+createcybernetics:wetware_aerostasisgyrobladder,Aerostatic Gyrobladder,Wetware,Organs,15,User gains some flight abilities | Double tap Spacebar to use,,no
+createcybernetics:wetware_grassfedstomach,Grassfed Stomach,Wetware,Organs,7,User gains the ability to eat grass and wheat,,no
+createcybernetics:wetware_tacticalinksac,Tactical Ink Sac,Wetware,Organs,8,User inflicts blindness on attackers,,no
+createcybernetics:wetware_webshootingintestines,Webshooting Intestines,Wetware,Organs,10,User gains the ability to shoot webbing to ensnare prey | Shift + Right-Click to use,,no
+createcybernetics:basecyberware_rightarm,Right Cyberarm,Base replacement,Right arm,5,"Arm replacement and arm-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,yes
+createcybernetics:basecyberware_rightarm_copperplated,Copper Plated Right Cyberarm,Base replacement,Right arm,5,"Arm replacement and arm-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:basecyberware_rightarm_goldplated,Gold Plated Right Cyberarm,Base replacement,Right arm,5,"Arm replacement and arm-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:basecyberware_rightarm_ironplated,Iron Plated Right Cyberarm,Base replacement,Right arm,5,"Arm replacement and arm-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:bodypart_rightarm,Right Arm,Biological body part,Right arm,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,yes
+createcybernetics:bodypart_sculkrightarm,Sculked Right Arm,Biological body part,Right arm,5,Sculk-altered surgical body part; biological replacement and wetware precursor; no separate localized active effect,,no
+createcybernetics:wetware_webshooting_rightarm,Webshooting Right Arm,Wetware,Right arm,7,User gains the ability to shoot webbing to ensnare prey | Shift + Right-Click to use,,no
+createcybernetics:basecyberware_rightleg,Right Cyberleg,Base replacement,Right leg,5,"Leg replacement and leg-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,yes
+createcybernetics:basecyberware_rightleg_copperplated,Copper Plated Right Cyberleg,Base replacement,Right leg,5,"Leg replacement and leg-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:basecyberware_rightleg_goldplated,Gold Plated Right Cyberleg,Base replacement,Right leg,5,"Leg replacement and leg-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:basecyberware_rightleg_ironplated,Iron Plated Right Cyberleg,Base replacement,Right leg,5,"Leg replacement and leg-upgrade prerequisite; 10 energy/tick; cyberlimb repair; 2,200 durability in its correct side",,no
+createcybernetics:bodypart_rightleg,Right Leg,Biological body part,Right leg,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,yes
+createcybernetics:bodypart_sculkrightleg,Sculked Right Leg,Biological body part,Right leg,5,Sculk-altered surgical body part; biological replacement and wetware precursor; no separate localized active effect,,no
+createcybernetics:bodypart_dragonscale,Ender Dragon Scale,Harvested wetware precursor,Skin,n/a,Harvested donor tissue used as a surgical/wetware precursor; no separate localized active effect,,no
+createcybernetics:bodypart_sculkskin,Sculked Skin,Biological body part,Skin,5,Sculk-altered surgical body part; biological replacement and wetware precursor; no separate localized active effect,,no
+createcybernetics:bodypart_skin,Dermal Tissue,Biological body part,Skin,0,Baseline biological replacement; functions as the default organ/body part and repairs biologically,,no
+createcybernetics:skinupgrades_arterialturbine,Arterial Turbine,Cyberware upgrade,Skin,3,Generates energy from user movement | Stacks up to 3x | Adds 3/10/25/50 Energy From Blood Pressure,,yes
+createcybernetics:skinupgrades_chromatophores,Synthetic Chromatophores,Cyberware upgrade,Skin,8,"Allows the user to camoflauge perfectly in any environment | Costs 5,000 Energy",,yes
+createcybernetics:skinupgrades_empthreading,EMP Threading,Cyberware upgrade,Skin,4,Provides a 3 second grace period from EMP | Costs 3 Energy,,no
+createcybernetics:skinupgrades_faceplate,Interchangeable Faceplate,Cyberware upgrade,Skin,8,Allows the user to wear different faces to change the displayed username,,yes
+createcybernetics:skinupgrades_immuno,Immunosuppressor,Cyberware upgrade,Skin,-25,"Reduces Cybernetic rejection, but makes the user weak against negative status effects",,yes
+createcybernetics:skinupgrades_manaskin,Mana Assimilator,Cyberware upgrade,Skin,5,"Absorbs mana and converts it into energy | Adds 35 energy from each spell that hits, and more from mana in the air",Iron's Spells 'n Spellbooks,yes
+createcybernetics:skinupgrades_metalplating,Metal Plating,Cyberware upgrade,Skin,4,Titanium plate skin replacement,,yes
+createcybernetics:skinupgrades_netheriteplating,Isothermal Plating,Cyberware upgrade,Skin,10,Grants the user immunity to fire and lava,,yes
+createcybernetics:skinupgrades_solarskin,SolarSkin,Cyberware upgrade,Skin,3,Generates energy when the user is in sunlight | Stacks up to 3x | Adds 15 Energy In Sunlight,,yes
+createcybernetics:skinupgrades_subdermalarmor,Subdermal Armor,Cyberware upgrade,Skin,6,Provides 1 armor levels | Stacks up to 3x,,yes
+createcybernetics:skinupgrades_subdermalspikes,Subdermal Spikes,Cyberware upgrade,Skin,7,Applies the Thorns effect when attacked,,yes
+createcybernetics:skinupgrades_sweat,Enhanced Sweat Glands,Cyberware upgrade,Skin,3,Releases large amounts of sweat to release heat | Costs 5 Energy,Cold Sweat,yes
+createcybernetics:skinupgrades_syntheticsetules,Synthetic Setules,Cyberware upgrade,Skin,4,Allows the user to climb walls like a spider,,yes
+createcybernetics:skinupgrades_synthskin,SynthSkin,Cyberware upgrade,Skin,1,Hides Cyberlimbs,,yes
+createcybernetics:skinupgrades_ultraviolent,UltraViolent Flashbang,Cyberware upgrade,Skin,9,"Releases a high energy flash of uv light to ignite undead in a 7x7 radius | Costs 10,000 Energy Per Flash | Toggle on, then crouch for 3 seconds to emit a UV flash | 1m Hard Cooldown",Vampirism,yes
+createcybernetics:wetware_blubber,Polar Bear Fat,Wetware,Skin,3,Insulates the user against the cold,,no
+createcybernetics:wetware_dragonskin,Ender Dragon Skin,Wetware,Skin,10,Grants immunity to dragon fire and increases armor,,no
+createcybernetics:wetware_polarbearfur,Polar Bear Fur,Wetware,Skin,12,Negates the freezing status effect,,no

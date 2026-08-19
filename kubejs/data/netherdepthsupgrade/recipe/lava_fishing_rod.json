@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "b":  {
+                          "item":  "allthecompressed:blaze_rod_block"
+                      },
+                "c":  {
+                          "item":  "minecraft:chain"
+                      },
+                "n":  {
+                          "item":  "minecraft:netherite_scrap"
+                      }
+            },
+    "pattern":  [
+                    " nb",
+                    "nbc",
+                    "b c"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "netherdepthsupgrade:lava_fishing_rod"
+               }
+}

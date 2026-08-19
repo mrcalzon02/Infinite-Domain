@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "ingredients":  [
+                        {
+                            "item":  "wastelands:filter_canister"
+                        },
+                        {
+                            "item":  "minecraft:honey_bottle"
+                        },
+                        {
+                            "item":  "minecraft:redstone_block"
+                        },
+                        {
+                            "item":  "minecraft:glow_berries"
+                        }
+                    ],
+    "result":  {
+                   "id":  "wastelands:rad_away",
+                   "count":  1
+               }
+}

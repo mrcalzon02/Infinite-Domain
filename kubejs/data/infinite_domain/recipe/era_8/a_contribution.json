@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:netherite_block"
+    },
+    "B": {
+      "item": "tfmg:steel_block"
+    },
+    "C": {
+      "item": "stellaris:desh_block"
+    },
+    "D": {
+      "item": "minecraft:netherite_block"
+    },
+    "E": {
+      "item": "minecraft:netherite_block"
+    }
+  },
+  "result": {
+    "id": "kubejs:era8_mining_contribution",
+    "count": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "b":  {
+                          "tag":  "oritech:plating"
+                      },
+                "c":  {
+                          "item":  "bno:nickel_block"
+                      },
+                "f":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "s":  {
+                          "item":  "oritech:motor"
+                      }
+            },
+    "pattern":  [
+                    "fff",
+                    "fcf",
+                    "sbs"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "oritech:pulverizer_block"
+               }
+}

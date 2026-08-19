@@ -1,0 +1,25 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "PR",
+                    "DN"
+                ],
+    "key":  {
+                "P":  {
+                          "item":  "createpropulsion:platinum_sheet"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "D":  {
+                          "item":  "minecraft:black_dye"
+                      },
+                "N":  {
+                          "item":  "createpropulsion:platinum_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "createpropulsion:cable",
+                   "count":  4
+               }
+}

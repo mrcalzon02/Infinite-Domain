@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:golden_apple"
+    },
+    "B": {
+      "item": "wastelands:purified_water"
+    },
+    "C": {
+      "item": "minecraft:golden_carrot"
+    },
+    "D": {
+      "item": "minecraft:golden_apple"
+    },
+    "E": {
+      "item": "minecraft:golden_apple"
+    }
+  },
+  "result": {
+    "id": "kubejs:era6_farming_contribution",
+    "count": 1
+  }
+}

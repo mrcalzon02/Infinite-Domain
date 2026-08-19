@@ -1,0 +1,116 @@
+{
+  "family": "extraction_sites",
+  "asset_pairs": 4,
+  "all_passed": true,
+  "failures": [],
+  "structures": {
+    "abandoned_quarry": {
+      "size": [
+        69,
+        30,
+        61
+      ],
+      "master_blocks": 32037,
+      "changed_semantic_cells": 1296,
+      "below_surface_air_cells": 5840,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 1,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 5,
+        "footprint_variants": 20
+      },
+      "passed": true,
+      "issues": []
+    },
+    "collapsed_mine_entrance": {
+      "size": [
+        55,
+        27,
+        49
+      ],
+      "master_blocks": 10882,
+      "changed_semantic_cells": 1633,
+      "below_surface_air_cells": 2490,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 5,
+        "footprint_variants": 14
+      },
+      "passed": true,
+      "issues": []
+    },
+    "excavator_pit": {
+      "size": [
+        73,
+        31,
+        63
+      ],
+      "master_blocks": 46337,
+      "changed_semantic_cells": 2315,
+      "below_surface_air_cells": 9953,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 294,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 19
+      },
+      "passed": true,
+      "issues": []
+    },
+    "abandoned_oil_field": {
+      "size": [
+        75,
+        25,
+        61
+      ],
+      "master_blocks": 10313,
+      "changed_semantic_cells": 1631,
+      "below_surface_air_cells": 0,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 3,
+        "footprint_variants": 11
+      },
+      "passed": true,
+      "issues": []
+    }
+  }
+}

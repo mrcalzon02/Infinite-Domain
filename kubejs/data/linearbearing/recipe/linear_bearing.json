@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "D":  {
+                          "item":  "allthecompressed:cobbled_deepslate_1x"
+                      },
+                "S":  {
+                          "item":  "minecraft:slime_ball"
+                      },
+                "P":  {
+                          "item":  "create:iron_sheet"
+                      },
+                "A":  {
+                          "item":  "create:andesite_alloy_block"
+                      }
+            },
+    "pattern":  [
+                    "ASA",
+                    "DPD",
+                    "DDD"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "linearbearing:linear_bearing"
+               }
+}

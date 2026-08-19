@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PWP",
+    "CMC",
+    "PWP"
+  ],
+  "key": {
+    "P": {
+      "item": "petrochem:steel_block"
+    },
+    "W": {
+      "item": "create_new_age:copper_wire_block"
+    },
+    "C": {
+      "item": "create:precision_mechanism"
+    },
+    "M": {
+      "item": "powergrid:circuit_board"
+    }
+  },
+  "result": {
+    "id": "powergrid:circuit_design_table",
+    "count": 1
+  }
+}

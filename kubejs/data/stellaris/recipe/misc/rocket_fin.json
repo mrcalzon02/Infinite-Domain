@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "SCS",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "C": {
+      "item": "kubejs:structural_composite"
+    }
+  },
+  "result": {
+    "id": "stellaris:rocket_fin",
+    "count": 2
+  }
+}

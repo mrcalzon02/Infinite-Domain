@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "R R",
+    "A A",
+    "T T"
+  ],
+  "key": {
+    "R": {
+      "item": "tfmg:rubber_sheet"
+    },
+    "A": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "T": {
+      "item": "create:sturdy_sheet"
+    }
+  },
+  "result": {
+    "id": "stellaris:space_suit_boots",
+    "count": 1
+  }
+}

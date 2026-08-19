@@ -1,0 +1,27 @@
+{
+  "id": "infinite_domain:containment_office",
+  "title": { "text": "Containment Office Echo", "color": "red" },
+  "model": { "villager_data": { "type": "swamp", "profession": "cleric", "level": 5 } },
+  "stages": [{
+    "title": "Containment and Recovery Exchange",
+    "lore": [{ "type": "ftbechoes:text", "text": "Protective and emergency stock. It reduces consequences; it does not convert an unsafe reactor into a misunderstood safe one." }],
+    "not_ready": "High-energy containment authorization is required.",
+    "ready": "Containment authorization confirmed.",
+    "required_stage": "infinite_domain:era_6",
+    "shop_unlock": [
+      { "name": "Hazmat Suit", "item": [{ "id": "the_wasteland_reworked:hazmat_suit_helmet" }, { "id": "the_wasteland_reworked:hazmat_suit_chestplate" }, { "id": "the_wasteland_reworked:hazmat_suit_leggings" }, { "id": "the_wasteland_reworked:hazmat_suit_boots" }], "cost": 160, "max_claims": 1, "per_player_max_claims": true },
+      { "name": "Gas Mask", "item": { "id": "spore:gas_mask" }, "cost": 64, "max_claims": 2, "per_player_max_claims": true },
+      { "name": "Gas Mask Filter Set", "item": { "id": "the_wasteland_reworked:gas_mask_filter", "count": 4 }, "cost": 32 },
+      { "name": "Radiation Recovery Dose", "item": { "id": "wastelands:rad_away", "count": 2 }, "cost": 40 },
+      { "name": "Anti-Radiation Pill Pack", "item": { "id": "the_wasteland_reworked:anti_rad", "count": 4 }, "cost": 48 },
+      { "name": "Boric Acid Reserve", "item": { "id": "the_wasteland_reworked:boric_acid", "count": 8 }, "cost": 32 },
+      { "name": "Lead Plating Stock", "item": { "id": "the_wasteland_reworked:lead_plating", "count": 16 }, "cost": 64 },
+      { "name": "Hazard Concrete Pallet", "item": { "id": "the_wasteland_reworked:hazard_concrete", "count": 32 }, "cost": 48 },
+      { "name": "Medical Bandage Case", "item": { "id": "the_wasteland_reworked:bandage", "count": 8 }, "cost": 24 },
+      { "name": "Decontamination Milk Case", "item": { "id": "minecraft:milk_bucket", "count": 4 }, "cost": 24 },
+      { "name": "Emergency Golden Apple", "item": { "id": "minecraft:golden_apple", "count": 2 }, "cost": 40 },
+      { "name": "Replacement Geiger Counter", "item": { "id": "wastelands:geiger_counter" }, "cost": 64, "max_claims": 2, "per_player_max_claims": true }
+    ],
+    "completion_reward": { "currency": 320, "description": "Five Cogs of containment exchange credit" }
+  }]
+}

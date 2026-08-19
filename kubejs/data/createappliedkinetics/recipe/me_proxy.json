@@ -1,0 +1,29 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "aba",
+                    "ced",
+                    "aba"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "b":  {
+                          "tag":  "c:glass_blocks"
+                      },
+                "c":  {
+                          "item":  "ae2:annihilation_core"
+                      },
+                "d":  {
+                          "item":  "ae2:formation_core"
+                      },
+                "e":  {
+                          "item":  "ae2:logic_processor"
+                      }
+            },
+    "result":  {
+                   "count":  1,
+                   "id":  "createappliedkinetics:me_proxy"
+               }
+}

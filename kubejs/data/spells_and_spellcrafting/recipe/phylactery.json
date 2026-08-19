@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "CDC",
+                    "DSD",
+                    "CDC"
+                ],
+    "key":  {
+                "C":  {
+                          "item":  "minecraft:crying_obsidian"
+                      },
+                "D":  {
+                          "item":  "minecraft:diamond_block"
+                      },
+                "S":  {
+                          "item":  "spells_and_spellcrafting:silverfish_carapace"
+                      }
+            },
+    "result":  {
+                   "id":  "spells_and_spellcrafting:phylactery",
+                   "count":  1
+               }
+}

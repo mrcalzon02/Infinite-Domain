@@ -1,0 +1,258 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "                ",
+      " BBBBBBBBBBBBBB)",
+      " BBBBBBBBBBBB))(",
+      " BBBBBBBBBB))(BB",
+      " BBBBBBBB))(BBBB",
+      " BBBBBB))(BBBBBB",
+      " BBBB))(BBBBBBBB",
+      " BB))(BBBBBBBBBB",
+      " ))(BBBBBBBBBBBB",
+      " (BBBBBBBBBBBBBB",
+      " BBBBBBBBBBBBBBB",
+      " BBBBBBBBBBBBB))",
+      " BBBBBBBBBBB))(B",
+      " BBBBBBBBB))(BBB",
+      " BBBBBBB))(BBBBB",
+      " BBBBB))(BBBBBBB"
+    ],
+    [
+      "      )))       ",
+      "      )))       ",
+      "    66)))66     ",
+      "    66)))66     ",
+      "   6666666666666",
+      "   6666666666666",
+      "   6666666666666",
+      "   6666666666666",
+      "   6666666666666",
+      "   6666666666666",
+      "   6666666666666",
+      "   6666666666666",
+      "   6666666666666",
+      "   6666666666666",
+      "   6666666666666",
+      "   6666666666666"
+    ],
+    [
+      "                ",
+      "                ",
+      "    <     <     ",
+      "    7       77  ",
+      "   ++<  <+++++++",
+      "   + <01<=     +",
+      "   +    D= $$$$+",
+      "   + 9   .    -+",
+      "   + 9 7 =97: >+",
+      "   +     =     +",
+      "   +==4=====4==+",
+      "   +     =     +",
+      "   + ' % .     +",
+      "   + &   = ? , +",
+      "   +     =     +",
+      "  @+++++++++++++"
+    ],
+    [
+      "                ",
+      "                ",
+      "    <     <     ",
+      "                ",
+      "   <!<  <CC<!!<C",
+      "   C <23<=     C",
+      "   C    A=     C",
+      "   !     /     !",
+      "   !     =     !",
+      "   C     =     C",
+      "   C==5=====5==C",
+      "   C     =     C",
+      "   !     /      ",
+      "   !     =      ",
+      "   C    A=    *C",
+      "  @CC!!CCCCC!!CC"
+    ],
+    [
+      "                ",
+      "                ",
+      "    <     <     ",
+      "                ",
+      "   <!<  <CC<!!<C",
+      "   C <  <=     C",
+      "   C     =     C",
+      "   !     =     !",
+      "   !     =     !",
+      "   C     =     C",
+      "   C===========C",
+      "   C     =     C",
+      "   !     =      ",
+      "   !     =      ",
+      "   C     =     C",
+      "  @CC!!CCCCC!!CC"
+    ],
+    [
+      "                ",
+      "                ",
+      "    <     <     ",
+      "    8       88  ",
+      "   CC;;;;CCCCCCC",
+      "   C ;;;;=     C",
+      "   C     =     C",
+      "   C     =     C",
+      "   C     =     C",
+      "   C     =     C",
+      "   C===========C",
+      "   C     =     C",
+      "   C     =     C",
+      "   C     =     C",
+      "   C     =     C",
+      "  @CCCCCCCCCCCCC"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:barrel[facing=up,open=false]",
+        "tag": {
+          "id": "minecraft:barrel",
+          "LootTable": "infinite_domain:chests/wasteland_home"
+        }
+      },
+      {
+        "char": "&",
+        "block": "minecraft:brown_bed[facing=north,occupied=false,part=foot]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:brown_bed[facing=north,occupied=false,part=head]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:lever[face=wall,facing=west,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:mossy_stone_bricks"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:quartz_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:smoker[facing=west,lit=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "8",
+        "block": "minecraft:spruce_slab[type=top,waterlogged=false]"
+      },
+      {
+        "char": "9",
+        "block": "minecraft:spruce_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": ":",
+        "block": "minecraft:spruce_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": ";",
+        "block": "minecraft:stripped_spruce_log[axis=x]"
+      },
+      {
+        "char": "<",
+        "block": "minecraft:stripped_spruce_log[axis=y]"
+      },
+      {
+        "char": "=",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": ">",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": "?",
+        "block": "minecraft:water_cauldron[level=2]"
+      },
+      {
+        "char": "@",
+        "block": "minecraft:weathered_copper"
+      },
+      {
+        "char": "A",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": "B",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "C",
+        "block": "the_wasteland_reworked:decayed_planks"
+      },
+      {
+        "char": "D",
+        "block": "the_wasteland_reworked:radio"
+      }
+    ]
+  }
+}

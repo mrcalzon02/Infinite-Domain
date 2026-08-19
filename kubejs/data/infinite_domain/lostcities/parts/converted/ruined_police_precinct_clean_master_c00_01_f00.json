@@ -1,0 +1,202 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "6666%%$666666666",
+      "66%%$66666666666",
+      "%%$6666666666666",
+      "$666666666666666",
+      "666666666666666%",
+      "6666666666666%%$",
+      "66666666666%%$66",
+      "666666666%%$6666",
+      "6666666%%$666666",
+      "66666%%$66666666",
+      "666%%$6666666666",
+      "6%%$666666666666",
+      "%$66666666666666",
+      "6666666666666666",
+      "66666666666666%%",
+      "666666666666%%$6"
+    ],
+    [
+      "    .11111111111",
+      "    .11111111111",
+      "    .11111111111",
+      "    ............",
+      "    ............",
+      "    ............",
+      "    ............",
+      "    ............",
+      "    ............",
+      "    ............",
+      "    ............",
+      "    ............",
+      "    ............",
+      "    ..........11",
+      "    ..........11",
+      "    ..........11"
+    ],
+    [
+      "    -           ",
+      "    -           ",
+      "    -           ",
+      "    ------2-----",
+      "    -     /     ",
+      "    -  44  44 7 ",
+      "    -  5   5    ",
+      "    -           ",
+      "    -           ",
+      "    -  44  44   ",
+      "    -  5   5    ",
+      "    -           ",
+      "    000000000 )*",
+      "    0        0  ",
+      "    0        '  ",
+      "    0  &     0  "
+    ],
+    [
+      "    -           ",
+      "    -           ",
+      "    -           ",
+      "    ------3-----",
+      "    -           ",
+      "    -     /     ",
+      "    !           ",
+      "    !           ",
+      "    -           ",
+      "    -           ",
+      "    -           ",
+      "    -           ",
+      "    000000000 +,",
+      "    0        0  ",
+      "    0        (  ",
+      "    0        0  "
+    ],
+    [
+      "    -           ",
+      "    -           ",
+      "    -           ",
+      "    ------------",
+      "    -           ",
+      "    -           ",
+      "    !     /     ",
+      "    !           ",
+      "    -           ",
+      "    -           ",
+      "    -           ",
+      "    -           ",
+      "    000000000   ",
+      "    0        0  ",
+      "    0        0  ",
+      "    0        !  "
+    ],
+    [
+      "    -           ",
+      "    -           ",
+      "    -           ",
+      "    ------------",
+      "    -           ",
+      "    -           ",
+      "    -           ",
+      "    -     /     ",
+      "    -           ",
+      "    -           ",
+      "    -           ",
+      "    -           ",
+      "    000000000   ",
+      "    0        0  ",
+      "    0        0  ",
+      "    0        !  "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:gray_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:iron_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:iron_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:iron_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:iron_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:iron_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:iron_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:light_gray_concrete"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:polished_andesite_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:polished_deepslate"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:smooth_stone"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "6",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "7",
+        "block": "the_wasteland_reworked:radio"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "stellaris:oxygen_tank"
+    },
+    "B": {
+      "item": "stellaris:oxygen_tank"
+    },
+    "C": {
+      "item": "stellaris:space_suit_helmet"
+    },
+    "D": {
+      "item": "minecraft:golden_carrot"
+    },
+    "E": {
+      "item": "stellaris:big_oxygen_tank"
+    }
+  },
+  "result": {
+    "id": "kubejs:era7_farming_contribution",
+    "count": 1
+  }
+}

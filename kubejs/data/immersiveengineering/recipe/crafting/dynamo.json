@@ -1,0 +1,26 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "immersiveengineering:component_iron"
+                      },
+                "i":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "l":  {
+                          "item":  "immersiveengineering:coil_lv"
+                      },
+                "r":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    "rcr",
+                    "ili"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "immersiveengineering:dynamo"
+               }
+}

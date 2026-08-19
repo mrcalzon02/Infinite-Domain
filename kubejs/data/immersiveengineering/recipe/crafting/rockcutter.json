@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "i":  {
+                          "item":  "minecraft:diamond_block"
+                      },
+                "p":  {
+                          "tag":  "c:plates/steel"
+                      }
+            },
+    "pattern":  [
+                    "ipi",
+                    "p p",
+                    "ipi"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "immersiveengineering:rockcutter"
+               }
+}

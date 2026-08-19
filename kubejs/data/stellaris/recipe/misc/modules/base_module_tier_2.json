@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "HHG",
+                    "HH ",
+                    "HHG"
+                ],
+    "key":  {
+                "H":  {
+                          "item":  "stellaris:steel_nugget"
+                      },
+                "G":  {
+                          "item":  "minecraft:gold_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "stellaris:base_module_tier_2",
+                   "count":  1
+               }
+}

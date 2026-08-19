@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OMO",
+    "CFC",
+    "OMO"
+  ],
+  "key": {
+    "O": {
+      "item": "oritech:machine_core_1"
+    },
+    "M": {
+      "item": "create_new_age:basic_motor"
+    },
+    "C": {
+      "item": "powergrid:circuit_board"
+    },
+    "F": {
+      "item": "ae2:formation_core"
+    }
+  },
+  "result": {
+    "id": "ae2:molecular_assembler",
+    "count": 1
+  }
+}

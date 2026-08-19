@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "tag":  "c:carbon_fibre"
+                      },
+                "i":  {
+                          "item":  "createbigcannons:steel_block"
+                      }
+            },
+    "pattern":  [
+                    "iii",
+                    "ccc",
+                    "iii"
+                ],
+    "result":  {
+                   "count":  6,
+                   "id":  "oritech:metal_girder_block"
+               }
+}

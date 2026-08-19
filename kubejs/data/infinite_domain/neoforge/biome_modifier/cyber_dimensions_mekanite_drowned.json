@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "cyberspace:cyberspace_biome",
+    "cyberspace:darknet_biome"
+  ],
+  "spawners": {
+    "type": "mekanite_mobs:mekanite_zombie_drowned",
+    "weight": 20,
+    "minCount": 3,
+    "maxCount": 8
+  }
+}

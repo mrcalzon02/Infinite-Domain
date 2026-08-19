@@ -1,0 +1,559 @@
+{
+  "templates_scanned": 273,
+  "property_bearing_block_types": 74,
+  "strict_property_values_checked": 440,
+  "explicit_domain_values_checked": 252,
+  "invalid": [],
+  "non_exhaustive_selector_uses": [
+    {
+      "block": "minecraft:brewing_stand",
+      "property": "has_bottle_0",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:brewing_stand",
+      "property": "has_bottle_1",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:brewing_stand",
+      "property": "has_bottle_2",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:composter",
+      "property": "level",
+      "value": "0"
+    },
+    {
+      "block": "minecraft:composter",
+      "property": "level",
+      "value": "2"
+    },
+    {
+      "block": "minecraft:composter",
+      "property": "level",
+      "value": "3"
+    },
+    {
+      "block": "minecraft:composter",
+      "property": "level",
+      "value": "5"
+    }
+  ],
+  "unrepresented_property_uses": [
+    {
+      "block": "minecraft:bell",
+      "property": "powered",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:blue_bed",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:blue_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:blue_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:blue_bed",
+      "property": "part",
+      "value": "head"
+    },
+    {
+      "block": "minecraft:brown_bed",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "minecraft:brown_bed",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:brown_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:brown_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:brown_bed",
+      "property": "part",
+      "value": "head"
+    },
+    {
+      "block": "minecraft:campfire",
+      "property": "signal_fire",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:campfire",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:chest",
+      "property": "facing",
+      "value": "east"
+    },
+    {
+      "block": "minecraft:chest",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "minecraft:chest",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:chest",
+      "property": "facing",
+      "value": "west"
+    },
+    {
+      "block": "minecraft:chest",
+      "property": "type",
+      "value": "single"
+    },
+    {
+      "block": "minecraft:chest",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:cyan_bed",
+      "property": "facing",
+      "value": "east"
+    },
+    {
+      "block": "minecraft:cyan_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:cyan_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:cyan_bed",
+      "property": "part",
+      "value": "head"
+    },
+    {
+      "block": "minecraft:dark_oak_door",
+      "property": "powered",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:dark_oak_slab",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:dark_oak_stairs",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:dark_prismarine_stairs",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:fire",
+      "property": "age",
+      "value": "0"
+    },
+    {
+      "block": "minecraft:gray_bed",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "minecraft:gray_bed",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:gray_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:gray_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:gray_bed",
+      "property": "part",
+      "value": "head"
+    },
+    {
+      "block": "minecraft:green_bed",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "minecraft:green_bed",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:green_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:green_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:green_bed",
+      "property": "part",
+      "value": "head"
+    },
+    {
+      "block": "minecraft:iron_door",
+      "property": "powered",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:iron_trapdoor",
+      "property": "powered",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:iron_trapdoor",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:ladder",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:lantern",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:lectern",
+      "property": "has_book",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:lectern",
+      "property": "powered",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:light_blue_bed",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:light_blue_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:light_blue_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:light_blue_bed",
+      "property": "part",
+      "value": "head"
+    },
+    {
+      "block": "minecraft:light_gray_bed",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:light_gray_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:light_gray_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:light_gray_bed",
+      "property": "part",
+      "value": "head"
+    },
+    {
+      "block": "minecraft:lightning_rod",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:oak_door",
+      "property": "powered",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:oak_leaves",
+      "property": "distance",
+      "value": "1"
+    },
+    {
+      "block": "minecraft:oak_leaves",
+      "property": "persistent",
+      "value": "true"
+    },
+    {
+      "block": "minecraft:oak_slab",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:oak_stairs",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:orange_bed",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:orange_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:orange_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:orange_bed",
+      "property": "part",
+      "value": "head"
+    },
+    {
+      "block": "minecraft:pink_bed",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:pink_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:pink_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:pink_bed",
+      "property": "part",
+      "value": "head"
+    },
+    {
+      "block": "minecraft:polished_andesite_stairs",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:quartz_stairs",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:rail",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:red_bed",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "minecraft:red_bed",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:red_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:red_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:red_bed",
+      "property": "part",
+      "value": "head"
+    },
+    {
+      "block": "minecraft:skeleton_skull",
+      "property": "rotation",
+      "value": "1"
+    },
+    {
+      "block": "minecraft:skeleton_skull",
+      "property": "rotation",
+      "value": "11"
+    },
+    {
+      "block": "minecraft:skeleton_skull",
+      "property": "rotation",
+      "value": "13"
+    },
+    {
+      "block": "minecraft:skeleton_skull",
+      "property": "rotation",
+      "value": "3"
+    },
+    {
+      "block": "minecraft:skeleton_skull",
+      "property": "rotation",
+      "value": "5"
+    },
+    {
+      "block": "minecraft:skeleton_skull",
+      "property": "rotation",
+      "value": "7"
+    },
+    {
+      "block": "minecraft:smooth_quartz_slab",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:smooth_stone_slab",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:spruce_door",
+      "property": "powered",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:spruce_leaves",
+      "property": "distance",
+      "value": "1"
+    },
+    {
+      "block": "minecraft:spruce_leaves",
+      "property": "persistent",
+      "value": "true"
+    },
+    {
+      "block": "minecraft:spruce_slab",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:spruce_stairs",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:stone_brick_stairs",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:stone_slab",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:target",
+      "property": "power",
+      "value": "0"
+    },
+    {
+      "block": "minecraft:water",
+      "property": "level",
+      "value": "0"
+    },
+    {
+      "block": "minecraft:weathered_cut_copper_slab",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:weathered_cut_copper_stairs",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:white_bed",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "minecraft:white_bed",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:white_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:white_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:white_bed",
+      "property": "part",
+      "value": "head"
+    },
+    {
+      "block": "minecraft:yellow_bed",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:yellow_bed",
+      "property": "occupied",
+      "value": "false"
+    },
+    {
+      "block": "minecraft:yellow_bed",
+      "property": "part",
+      "value": "foot"
+    },
+    {
+      "block": "minecraft:yellow_bed",
+      "property": "part",
+      "value": "head"
+    }
+  ],
+  "property_bearing_blocks_without_definition": [],
+  "unresolved_property_uses": [],
+  "unknown_block_ids": []
+}

@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "pattern":  [
+                    "aaa",
+                    " b ",
+                    " b "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:tungsten"
+                      },
+                "b":  {
+                          "item":  "more_ores_more_gems:titanium_stick"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:tungsten_metal_pickaxe",
+                   "count":  1
+               }
+}

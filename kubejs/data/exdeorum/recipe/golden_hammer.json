@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "m":  {
+                          "item":  "minecraft:gold_block"
+                      },
+                "s":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    " m ",
+                    " sm",
+                    "s  "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "exdeorum:golden_hammer"
+               }
+}

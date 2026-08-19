@@ -1,0 +1,27 @@
+{
+  "id": "infinite_domain:expedition_exchange",
+  "title": { "text": "Expedition Exchange Echo", "color": "blue" },
+  "model": { "villager_data": { "type": "snow", "profession": "cartographer", "level": 5 } },
+  "stages": [{
+    "title": "Orbital Expedition Exchange",
+    "lore": [{ "type": "ftbechoes:text", "text": "Replacement life-support and orbital construction stock. Please discover missing equipment before launch; vacuum is notably resistant to corrective guidance." }],
+    "not_ready": "Orbital Industry authorization is required.",
+    "ready": "Expedition authorization confirmed.",
+    "required_stage": "infinite_domain:era_7",
+    "shop_unlock": [
+      { "name": "Oxygen Tank", "item": { "id": "stellaris:oxygen_tank" }, "cost": 48 },
+      { "name": "Large Oxygen Tank", "item": { "id": "stellaris:big_oxygen_tank" }, "cost": 96, "max_claims": 4, "per_player_max_claims": true },
+      { "name": "Fluid Cell Pack", "item": { "id": "stellaris:fluid_cell", "count": 8 }, "cost": 32 },
+      { "name": "Orbital Battery Pair", "item": { "id": "stellaris:battery", "count": 2 }, "cost": 64 },
+      { "name": "Cable Bundle", "item": { "id": "stellaris:cable", "count": 16 }, "cost": 40 },
+      { "name": "Iron Plating Pallet", "item": { "id": "stellaris:iron_plating_block", "count": 16 }, "cost": 64 },
+      { "name": "Heavy Metal Plate Lot", "item": { "id": "stellaris:heavy_metal_plate", "count": 8 }, "cost": 64 },
+      { "name": "Desh Construction Stock", "item": { "id": "stellaris:desh_ingot", "count": 8 }, "cost": 64 },
+      { "name": "Desh Plating Pallet", "item": { "id": "stellaris:desh_plating_block", "count": 8 }, "cost": 96 },
+      { "name": "Cosmo Bread Ration", "item": { "id": "stellaris:cosmo_bread", "count": 8 }, "cost": 24 },
+      { "name": "Orbital Solar Panel", "item": { "id": "stellaris:solar_panel" }, "cost": 112, "max_claims": 4, "per_player_max_claims": true },
+      { "name": "Replacement Space Suit", "item": [{ "id": "stellaris:space_suit_helmet" }, { "id": "stellaris:space_suit_chestplate" }, { "id": "stellaris:space_suit_leggings" }, { "id": "stellaris:space_suit_boots" }], "cost": 192, "max_claims": 1, "per_player_max_claims": true }
+    ],
+    "completion_reward": { "currency": 384, "description": "Six Cogs of expedition exchange credit" }
+  }]
+}

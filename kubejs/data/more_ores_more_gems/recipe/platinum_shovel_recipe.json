@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "pattern":  [
+                    "a",
+                    "b",
+                    "b"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:platinum_ingot"
+                      },
+                "b":  {
+                          "item":  "more_ores_more_gems:titanium_stick"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:platinum_shovel",
+                   "count":  1
+               }
+}

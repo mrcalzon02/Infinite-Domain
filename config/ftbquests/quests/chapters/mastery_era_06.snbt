@@ -1,0 +1,144 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "mastery_era_06"
+	group: "7ADA55C0FFEE0001"
+	id: "7600000000000000"
+	images: [ ]
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5610000000000002"]
+			id: "6610000000000001"
+			shape: "octagon"
+			tasks: [{
+				id: "6650000000000001"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6610000000000001"]
+			id: "1640000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 134217727L
+				id: "1650000000000001"
+				item: { count: 1, id: "createnuclear:uranium_powder" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6610000000000001"]
+			id: "2640000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 134217727L
+				id: "2650000000000001"
+				item: { count: 1, id: "createnuclear:enriched_yellowcake" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6610000000000001"]
+			id: "3640000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 134217727L
+				id: "3650000000000001"
+				item: { count: 1, id: "createnuclear:lead_ingot" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6610000000000001"]
+			id: "4640000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 134217727L
+				id: "4650000000000001"
+				item: { count: 1, id: "oritech:plutonium_dust" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"1640000000000001"
+				"2640000000000001"
+				"3640000000000001"
+				"4640000000000001"
+			]
+			id: "6610000000000002"
+			rewards: [
+				{
+					id: "6660000000000001"
+					item: {
+						count: 1
+						id: "kubejs:era6_mastery_emblem"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "6660000000000002"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "6660000000000003"
+					type: "xp"
+					xp: 70000
+				}
+				{
+					id: "6660000000000004"
+					item: {
+						count: 1
+						id: "ae2:creative_energy_cell"
+					}
+					type: "item"
+				}
+				{
+					id: "6660000000000005"
+					item: {
+						count: 1
+						id: "cyber_ware_port:creative_battery"
+					}
+					type: "item"
+				}
+				{
+					id: "6660000000000006"
+					item: {
+						count: 1
+						id: "ae2lt:module_creative_flight"
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			size: 1.75d
+			x: 0.0d
+			y: 7.0d
+		}
+	]
+}

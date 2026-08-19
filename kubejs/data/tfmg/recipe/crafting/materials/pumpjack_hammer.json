@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "R":  {
+                          "item":  "tfmg:rebar"
+                      },
+                "S":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "T":  {
+                          "item":  "tfmg:steel_truss"
+                      }
+            },
+    "pattern":  [
+                    "RSR",
+                    "STS",
+                    " T "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "tfmg:pumpjack_hammer"
+               }
+}

@@ -1,0 +1,25 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "s s",
+                    "coc",
+                    "crc"
+                ],
+    "key":  {
+                "c":  {
+                          "tag":  "c:ingots/desh"
+                      },
+                "s":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "o":  {
+                          "item":  "stellaris:big_oxygen_tank"
+                      },
+                "r":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "result":  {
+                   "id":  "stellaris:jet_suit_chestplate"
+               }
+}

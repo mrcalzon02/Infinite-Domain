@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ODO",
+    "CTC",
+    "OEO"
+  ],
+  "key": {
+    "O": {
+      "item": "oritech:machine_core_1"
+    },
+    "D": {
+      "item": "create:display_link"
+    },
+    "C": {
+      "item": "powergrid:integrated_circuit"
+    },
+    "T": {
+      "item": "ae2:terminal"
+    },
+    "E": {
+      "item": "ae2:engineering_processor"
+    }
+  },
+  "result": {
+    "id": "ae2:crafting_terminal",
+    "count": 1
+  }
+}

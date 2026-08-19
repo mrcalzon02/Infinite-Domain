@@ -1,0 +1,15 @@
+[profiles]
+	# Infinite Domain uses Lost Cities as the Overworld settlement framework.
+	# The profile retains the Wasteland presentation while the datapack below
+	# replaces the stock city/world style selection.
+	selectedProfile = "wasteland"
+	selectedCustomJson = ""
+	specialBedBlock = "minecraft:diamond_block"
+	todoQueueSize = 20
+	forceSaplingGrowth = false
+	cacheCleanupSeconds = 300
+	avoidStructures = ["minecraft:mansion", "minecraft:monument", "minecraft:stronghold", "minecraft:ancient_city", "minecraft:pillager_outpost"]
+	avoidStructuresAdjacent = true
+	avoidVillages = true
+	avoidVillagesAdjacent = true
+	avoidFlattening = true

@@ -1,0 +1,49 @@
+{
+  "structure_id": "infinite_domain:hydroelectric_refuge_dam_clean_master",
+  "archetype": "water-retaining gravity dam with powerhouse, crest controls and twin planned refuge caverns",
+  "orientation": {
+    "downstream_powerhouse_and_tailraces": "north",
+    "gravity_dam_and_crest_controls": "center",
+    "impounded_reservoir": "south",
+    "west_refuge": "west abutment",
+    "east_refuge": "east abutment"
+  },
+  "hydraulic_workflow": [
+    "full impounded reservoir behind a curved reinforced gravity dam",
+    "four independently framed spillway throats and oxidized control gates",
+    "four concrete-clad penstocks descending to turbine-generator bays",
+    "four downstream tailraces returning water below the powerhouse",
+    "crest roadway and roomed gate-control/dispatch house",
+    "powerhouse operations, turbine hall, rear maintenance and elevated control gallery"
+  ],
+  "refuge_program": [
+    "separate downstream tunnel entrances and solid-log pressure thresholds",
+    "triage/medical rooms",
+    "multi-bed sleeping rooms",
+    "mess and water provision",
+    "sanitation areas",
+    "protected stores and refuge loot",
+    "memorial gathering areas",
+    "independent emergency tunnels",
+    "enclosed crest-access ladder shafts"
+  ],
+  "damage_constraints": [
+    "preserve the complete dam body, reservoir and all four spillway paths",
+    "confine powerhouse damage to the eastern bay and roof",
+    "confine the separate crest failure to the control-house southeast corner",
+    "preserve both complete refugee plans, entrances, exits and crest ladders",
+    "derive deaths, debris and hostile occupation only from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "reservoir water is visibly retained against the upstream dam face",
+      "spillways, penstocks, turbines and tailraces read as one hydraulic system",
+      "powerhouse and crest controls have player-scale circulation",
+      "both refuges read as planned shelters rather than bed-filled caves",
+      "all tunnel, emergency and crest-ladder routes work in game",
+      "terrain feathering seats both abutments and the reservoir shoreline into generated terrain"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "stellaris:desh_ingot"
+    },
+    "B": {
+      "item": "stellaris:moon_desh_ore"
+    },
+    "C": {
+      "item": "stellaris:desh_ingot"
+    },
+    "D": {
+      "item": "stellaris:mars_ostrum_ore"
+    },
+    "E": {
+      "item": "stellaris:desh_ingot"
+    }
+  },
+  "result": {
+    "id": "kubejs:era7_mining_contribution",
+    "count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "zeta:flag",
+                                    "flag":  "abacus"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_block"
+                      },
+                "S":  {
+                          "item":  "quark:stick_block"
+                      },
+                "W":  {
+                          "tag":  "minecraft:planks"
+                      }
+            },
+    "pattern":  [
+                    "WSW",
+                    "WIW",
+                    "WSW"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "quark:abacus"
+               }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OCO",
+    "MIM",
+    "OCO"
+  ],
+  "key": {
+    "O": {
+      "item": "oritech:machine_core_1"
+    },
+    "C": {
+      "item": "powergrid:integrated_circuit"
+    },
+    "M": {
+      "item": "create_new_age:basic_motor"
+    },
+    "I": {
+      "item": "ae2:interface"
+    }
+  },
+  "result": {
+    "id": "ae2:pattern_provider",
+    "count": 1
+  }
+}

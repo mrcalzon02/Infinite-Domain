@@ -1,0 +1,6149 @@
+{
+  "scope": "Static four-way footprint/entrance, family selector and terrain-placement contracts.",
+  "structures_checked": 84,
+  "families_checked": 30,
+  "static_contracts_passed": true,
+  "failures": [],
+  "runtime_rotation_status": "pending_in_game_blockstate_and_connector_walkthrough",
+  "runtime_terrain_status": "pending_in_game_representative_biome_placement",
+  "families": {
+    "roadside_debris": {
+      "members": [
+        "delivery_van",
+        "radio_mast",
+        "wrecked_sedan"
+      ],
+      "issues": []
+    },
+    "residential_ruins": {
+      "members": [
+        "abandoned_bungalow",
+        "split_level_house"
+      ],
+      "issues": []
+    },
+    "commercial_ruins": {
+      "members": [
+        "dilapidated_grocery",
+        "scrapyard",
+        "service_garage"
+      ],
+      "issues": []
+    },
+    "major_settlements": {
+      "members": [
+        "abandoned_culdesac",
+        "trailer_park"
+      ],
+      "issues": []
+    },
+    "military_remnants": {
+      "members": [
+        "battle_tank",
+        "military_checkpoint"
+      ],
+      "issues": []
+    },
+    "buried_sites": {
+      "members": [
+        "bunker_network",
+        "survivor_cache"
+      ],
+      "issues": []
+    },
+    "survivor_outposts": {
+      "members": [
+        "trade_outpost"
+      ],
+      "issues": []
+    },
+    "rural_ruins": {
+      "members": [
+        "decayed_farm"
+      ],
+      "issues": []
+    },
+    "industrial_infrastructure": {
+      "members": [
+        "industrial_facility"
+      ],
+      "issues": []
+    },
+    "mountain_military": {
+      "members": [
+        "mountain_biohazard_lab",
+        "mountain_military_complex"
+      ],
+      "issues": []
+    },
+    "forest_industry": {
+      "members": [
+        "corporate_warehouse",
+        "decayed_logging_camp"
+      ],
+      "issues": []
+    },
+    "lost_data_centers": {
+      "members": [
+        "bombed_data_center"
+      ],
+      "issues": []
+    },
+    "hydroelectric_landmarks": {
+      "members": [
+        "hydroelectric_refuge_dam"
+      ],
+      "issues": []
+    },
+    "ruined_city_blocks": {
+      "members": [
+        "blown_apartment_complex",
+        "pancaked_parking_structure",
+        "ruined_mixed_use_block"
+      ],
+      "issues": []
+    },
+    "ruined_city_streets": {
+      "members": [
+        "cratered_downtown_intersection",
+        "sunken_city_front"
+      ],
+      "issues": []
+    },
+    "ruined_city_landmarks": {
+      "members": [
+        "toppled_skyscraper"
+      ],
+      "issues": []
+    },
+    "expanded_city_civic": {
+      "members": [
+        "emergency_relief_shelter",
+        "ruined_courthouse",
+        "ruined_fire_station",
+        "ruined_hospital",
+        "ruined_police_precinct"
+      ],
+      "issues": []
+    },
+    "expanded_city_transit": {
+      "members": [
+        "elevated_rail_collapse",
+        "freight_depot",
+        "ruined_bus_terminal",
+        "sunken_highway_interchange"
+      ],
+      "issues": []
+    },
+    "expanded_city_subway": {
+      "members": [
+        "collapsed_subway_station"
+      ],
+      "issues": []
+    },
+    "expanded_city_commercial": {
+      "members": [
+        "bombed_hotel",
+        "buried_bank_vault",
+        "ruined_department_store",
+        "ruined_office_tower",
+        "ruined_shopping_mall"
+      ],
+      "issues": []
+    },
+    "expanded_city_residential": {
+      "members": [
+        "ruined_city_school",
+        "ruined_community_center",
+        "ruined_rowhouse_block",
+        "shattered_luxury_condo",
+        "tenement_courtyard"
+      ],
+      "issues": []
+    },
+    "expanded_city_utilities": {
+      "members": [
+        "city_electrical_substation",
+        "city_water_treatment_plant",
+        "district_heating_station",
+        "municipal_incinerator",
+        "ruined_fuel_depot"
+      ],
+      "issues": []
+    },
+    "expanded_city_themed": {
+      "members": [
+        "abandoned_create_factory",
+        "ae2_records_archive",
+        "collapsed_airship_terminal",
+        "nuclear_research_annex",
+        "ruined_cyberware_clinic"
+      ],
+      "issues": []
+    },
+    "expanded_wilderness_roadside": {
+      "members": [
+        "abandoned_motel",
+        "abandoned_truck_stop",
+        "ruined_gas_station",
+        "ruined_roadside_diner",
+        "wasteland_weigh_station"
+      ],
+      "issues": []
+    },
+    "expanded_wilderness_rural": {
+      "members": [
+        "abandoned_orchard_cannery",
+        "decayed_ranch",
+        "roadside_church_cemetery",
+        "ruined_grain_elevator",
+        "shattered_greenhouse_nursery"
+      ],
+      "issues": []
+    },
+    "expanded_wilderness_extraction": {
+      "members": [
+        "abandoned_oil_field",
+        "abandoned_quarry",
+        "collapsed_mine_entrance",
+        "excavator_pit",
+        "remote_sawmill"
+      ],
+      "issues": []
+    },
+    "expanded_wilderness_energy": {
+      "members": [
+        "broken_solar_field",
+        "shattered_wind_farm",
+        "wasteland_water_tower",
+        "wilderness_substation"
+      ],
+      "issues": []
+    },
+    "expanded_wilderness_survival": {
+      "members": [
+        "crashed_cargo_airship",
+        "destroyed_refugee_convoy",
+        "ruined_ranger_station",
+        "wasteland_fire_lookout"
+      ],
+      "issues": []
+    },
+    "warm_industrial_ports": {
+      "members": [
+        "warm_industrial_mountain_port"
+      ],
+      "issues": []
+    },
+    "cold_industrial_ports": {
+      "members": [
+        "cold_industrial_mountain_port"
+      ],
+      "issues": []
+    }
+  },
+  "structures": {
+    "abandoned_bungalow": {
+      "family": "residential_ruins",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            19,
+            18
+          ],
+          "lot": [
+            24,
+            24
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            18,
+            19
+          ],
+          "lot": [
+            24,
+            24
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            19,
+            18
+          ],
+          "lot": [
+            24,
+            24
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            18,
+            19
+          ],
+          "lot": [
+            24,
+            24
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "dilapidated_grocery": {
+      "family": "commercial_ruins",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            39,
+            33
+          ],
+          "lot": [
+            48,
+            44
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            33,
+            39
+          ],
+          "lot": [
+            44,
+            48
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            39,
+            33
+          ],
+          "lot": [
+            48,
+            44
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            33,
+            39
+          ],
+          "lot": [
+            44,
+            48
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_gas_station": {
+      "family": "expanded_wilderness_roadside",
+      "road_connection": "highway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            39,
+            45
+          ],
+          "lot": [
+            48,
+            56
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            45,
+            39
+          ],
+          "lot": [
+            56,
+            48
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            39,
+            45
+          ],
+          "lot": [
+            48,
+            56
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            45,
+            39
+          ],
+          "lot": [
+            56,
+            48
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": -7
+      },
+      "issues": []
+    },
+    "corporate_warehouse": {
+      "family": "forest_industry",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            49,
+            43
+          ],
+          "lot": [
+            64,
+            56
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            43,
+            49
+          ],
+          "lot": [
+            56,
+            64
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            49,
+            43
+          ],
+          "lot": [
+            64,
+            56
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            43,
+            49
+          ],
+          "lot": [
+            56,
+            64
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_fire_station": {
+      "family": "expanded_city_civic",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            43,
+            41
+          ],
+          "lot": [
+            48,
+            48
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            41,
+            43
+          ],
+          "lot": [
+            48,
+            48
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            43,
+            41
+          ],
+          "lot": [
+            48,
+            48
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            41,
+            43
+          ],
+          "lot": [
+            48,
+            48
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_hospital": {
+      "family": "expanded_city_civic",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            67,
+            59
+          ],
+          "lot": [
+            78,
+            70
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            59,
+            67
+          ],
+          "lot": [
+            70,
+            78
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            67,
+            59
+          ],
+          "lot": [
+            78,
+            70
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            59,
+            67
+          ],
+          "lot": [
+            70,
+            78
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_police_precinct": {
+      "family": "expanded_city_civic",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            57,
+            49
+          ],
+          "lot": [
+            68,
+            60
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            49,
+            57
+          ],
+          "lot": [
+            60,
+            68
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            57,
+            49
+          ],
+          "lot": [
+            68,
+            60
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            49,
+            57
+          ],
+          "lot": [
+            60,
+            68
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_courthouse": {
+      "family": "expanded_city_civic",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            59,
+            51
+          ],
+          "lot": [
+            70,
+            62
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            51,
+            59
+          ],
+          "lot": [
+            62,
+            70
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            59,
+            51
+          ],
+          "lot": [
+            70,
+            62
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            51,
+            59
+          ],
+          "lot": [
+            62,
+            70
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "abandoned_create_factory": {
+      "family": "expanded_city_themed",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            47,
+            37
+          ],
+          "lot": [
+            64,
+            48
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "west"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            37,
+            47
+          ],
+          "lot": [
+            48,
+            64
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "north"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            47,
+            37
+          ],
+          "lot": [
+            64,
+            48
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "east"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            37,
+            47
+          ],
+          "lot": [
+            48,
+            64
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "south"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "bunker_network": {
+      "family": "buried_sites",
+      "road_connection": "local_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            56,
+            56
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            56,
+            56
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            56,
+            56
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            56,
+            56
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "bury",
+      "start_height": {
+        "absolute": -17
+      },
+      "issues": []
+    },
+    "survivor_cache": {
+      "family": "buried_sites",
+      "road_connection": "pedestrian",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            27,
+            27
+          ],
+          "lot": [
+            32,
+            32
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            27,
+            27
+          ],
+          "lot": [
+            32,
+            32
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            27,
+            27
+          ],
+          "lot": [
+            32,
+            32
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            27,
+            27
+          ],
+          "lot": [
+            32,
+            32
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "bury",
+      "start_height": {
+        "absolute": -9
+      },
+      "issues": []
+    },
+    "trade_outpost": {
+      "family": "survivor_outposts",
+      "road_connection": "local_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            49,
+            49
+          ],
+          "lot": [
+            64,
+            64
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            49,
+            49
+          ],
+          "lot": [
+            64,
+            64
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            49,
+            49
+          ],
+          "lot": [
+            64,
+            64
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            49,
+            49
+          ],
+          "lot": [
+            64,
+            64
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "decayed_farm": {
+      "family": "rural_ruins",
+      "road_connection": "local_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            49,
+            45
+          ],
+          "lot": [
+            64,
+            56
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            45,
+            49
+          ],
+          "lot": [
+            56,
+            64
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            49,
+            45
+          ],
+          "lot": [
+            64,
+            56
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            45,
+            49
+          ],
+          "lot": [
+            56,
+            64
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "trailer_park": {
+      "family": "major_settlements",
+      "road_connection": "local_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            69,
+            77
+          ],
+          "lot": [
+            80,
+            88
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            77,
+            69
+          ],
+          "lot": [
+            88,
+            80
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            69,
+            77
+          ],
+          "lot": [
+            80,
+            88
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            77,
+            69
+          ],
+          "lot": [
+            88,
+            80
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "mountain_military_complex": {
+      "family": "mountain_military",
+      "road_connection": "local_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            61,
+            61
+          ],
+          "lot": [
+            72,
+            72
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            61,
+            61
+          ],
+          "lot": [
+            72,
+            72
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            61,
+            61
+          ],
+          "lot": [
+            72,
+            72
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            61,
+            61
+          ],
+          "lot": [
+            72,
+            72
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "mountain_biohazard_lab": {
+      "family": "mountain_military",
+      "road_connection": "local_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            55,
+            49
+          ],
+          "lot": [
+            64,
+            56
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east",
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            49,
+            55
+          ],
+          "lot": [
+            56,
+            64
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south",
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            55,
+            49
+          ],
+          "lot": [
+            64,
+            56
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west",
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            49,
+            55
+          ],
+          "lot": [
+            56,
+            64
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north",
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "decayed_logging_camp": {
+      "family": "forest_industry",
+      "road_connection": "local_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            61,
+            55
+          ],
+          "lot": [
+            72,
+            64
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east",
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            55,
+            61
+          ],
+          "lot": [
+            64,
+            72
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south",
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            61,
+            55
+          ],
+          "lot": [
+            72,
+            64
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west",
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            55,
+            61
+          ],
+          "lot": [
+            64,
+            72
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north",
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "bombed_data_center": {
+      "family": "lost_data_centers",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            61,
+            55
+          ],
+          "lot": [
+            72,
+            64
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east",
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            55,
+            61
+          ],
+          "lot": [
+            64,
+            72
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south",
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            61,
+            55
+          ],
+          "lot": [
+            72,
+            64
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west",
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            55,
+            61
+          ],
+          "lot": [
+            64,
+            72
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north",
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "hydroelectric_refuge_dam": {
+      "family": "hydroelectric_landmarks",
+      "road_connection": "local_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            65,
+            65
+          ],
+          "lot": [
+            80,
+            80
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east",
+            "west"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            65,
+            65
+          ],
+          "lot": [
+            80,
+            80
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south",
+            "north"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            65,
+            65
+          ],
+          "lot": [
+            80,
+            80
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west",
+            "east"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            65,
+            65
+          ],
+          "lot": [
+            80,
+            80
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north",
+            "south"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "toppled_skyscraper": {
+      "family": "ruined_city_landmarks",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            61,
+            53
+          ],
+          "lot": [
+            72,
+            64
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east",
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            53,
+            61
+          ],
+          "lot": [
+            64,
+            72
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south",
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            61,
+            53
+          ],
+          "lot": [
+            72,
+            64
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west",
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            53,
+            61
+          ],
+          "lot": [
+            64,
+            72
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north",
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "blown_apartment_complex": {
+      "family": "ruined_city_blocks",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            61,
+            53
+          ],
+          "lot": [
+            72,
+            64
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            53,
+            61
+          ],
+          "lot": [
+            64,
+            72
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            61,
+            53
+          ],
+          "lot": [
+            72,
+            64
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            53,
+            61
+          ],
+          "lot": [
+            64,
+            72
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_mixed_use_block": {
+      "family": "ruined_city_blocks",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            59,
+            47
+          ],
+          "lot": [
+            68,
+            56
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            47,
+            59
+          ],
+          "lot": [
+            56,
+            68
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            59,
+            47
+          ],
+          "lot": [
+            68,
+            56
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            47,
+            59
+          ],
+          "lot": [
+            56,
+            68
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "sunken_city_front": {
+      "family": "ruined_city_streets",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            61,
+            55
+          ],
+          "lot": [
+            72,
+            64
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "east",
+            "west"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            55,
+            61
+          ],
+          "lot": [
+            64,
+            72
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "south",
+            "north"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            61,
+            55
+          ],
+          "lot": [
+            72,
+            64
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "west",
+            "east"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            55,
+            61
+          ],
+          "lot": [
+            64,
+            72
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "north",
+            "south"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "pancaked_parking_structure": {
+      "family": "ruined_city_blocks",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            57,
+            51
+          ],
+          "lot": [
+            64,
+            60
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            51,
+            57
+          ],
+          "lot": [
+            60,
+            64
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            57,
+            51
+          ],
+          "lot": [
+            64,
+            60
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            51,
+            57
+          ],
+          "lot": [
+            60,
+            64
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "cratered_downtown_intersection": {
+      "family": "ruined_city_streets",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            65,
+            65
+          ],
+          "lot": [
+            76,
+            76
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "east",
+            "west"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            65,
+            65
+          ],
+          "lot": [
+            76,
+            76
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "south",
+            "north"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            65,
+            65
+          ],
+          "lot": [
+            76,
+            76
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "west",
+            "east"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            65,
+            65
+          ],
+          "lot": [
+            76,
+            76
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "north",
+            "south"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "abandoned_motel": {
+      "family": "expanded_wilderness_roadside",
+      "road_connection": "highway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            35,
+            37
+          ],
+          "lot": [
+            48,
+            48
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            37,
+            35
+          ],
+          "lot": [
+            48,
+            48
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            35,
+            37
+          ],
+          "lot": [
+            48,
+            48
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            37,
+            35
+          ],
+          "lot": [
+            48,
+            48
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "freight_depot": {
+      "family": "expanded_city_transit",
+      "road_connection": "rail_siding",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            47,
+            37
+          ],
+          "lot": [
+            64,
+            48
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            37,
+            47
+          ],
+          "lot": [
+            48,
+            64
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            47,
+            37
+          ],
+          "lot": [
+            64,
+            48
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            37,
+            47
+          ],
+          "lot": [
+            48,
+            64
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "radio_mast": {
+      "family": "roadside_debris",
+      "road_connection": "pedestrian",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            15,
+            15
+          ],
+          "lot": [
+            23,
+            23
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            15,
+            15
+          ],
+          "lot": [
+            23,
+            23
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            15,
+            15
+          ],
+          "lot": [
+            23,
+            23
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            15,
+            15
+          ],
+          "lot": [
+            23,
+            23
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "wrecked_sedan": {
+      "family": "roadside_debris",
+      "road_connection": "highway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            17,
+            11
+          ],
+          "lot": [
+            25,
+            19
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            11,
+            17
+          ],
+          "lot": [
+            19,
+            25
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            17,
+            11
+          ],
+          "lot": [
+            25,
+            19
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            11,
+            17
+          ],
+          "lot": [
+            19,
+            25
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "delivery_van": {
+      "family": "roadside_debris",
+      "road_connection": "highway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            21,
+            12
+          ],
+          "lot": [
+            29,
+            20
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            12,
+            21
+          ],
+          "lot": [
+            20,
+            29
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            21,
+            12
+          ],
+          "lot": [
+            29,
+            20
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            12,
+            21
+          ],
+          "lot": [
+            20,
+            29
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "battle_tank": {
+      "family": "military_remnants",
+      "road_connection": "local_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            25,
+            17
+          ],
+          "lot": [
+            33,
+            25
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            17,
+            25
+          ],
+          "lot": [
+            25,
+            33
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            25,
+            17
+          ],
+          "lot": [
+            33,
+            25
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            17,
+            25
+          ],
+          "lot": [
+            25,
+            33
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "service_garage": {
+      "family": "commercial_ruins",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            41,
+            33
+          ],
+          "lot": [
+            49,
+            41
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            33,
+            41
+          ],
+          "lot": [
+            41,
+            49
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            41,
+            33
+          ],
+          "lot": [
+            49,
+            41
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            33,
+            41
+          ],
+          "lot": [
+            41,
+            49
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "scrapyard": {
+      "family": "commercial_ruins",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            49,
+            43
+          ],
+          "lot": [
+            57,
+            51
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            43,
+            49
+          ],
+          "lot": [
+            51,
+            57
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            49,
+            43
+          ],
+          "lot": [
+            57,
+            51
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            43,
+            49
+          ],
+          "lot": [
+            51,
+            57
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "military_checkpoint": {
+      "family": "military_remnants",
+      "road_connection": "highway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            45,
+            31
+          ],
+          "lot": [
+            53,
+            39
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            31,
+            45
+          ],
+          "lot": [
+            39,
+            53
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            45,
+            31
+          ],
+          "lot": [
+            53,
+            39
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            31,
+            45
+          ],
+          "lot": [
+            39,
+            53
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_roadside_diner": {
+      "family": "expanded_wilderness_roadside",
+      "road_connection": "highway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            39,
+            33
+          ],
+          "lot": [
+            47,
+            41
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            33,
+            39
+          ],
+          "lot": [
+            41,
+            47
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            39,
+            33
+          ],
+          "lot": [
+            47,
+            41
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            33,
+            39
+          ],
+          "lot": [
+            41,
+            47
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "abandoned_truck_stop": {
+      "family": "expanded_wilderness_roadside",
+      "road_connection": "highway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            51,
+            47
+          ],
+          "lot": [
+            59,
+            55
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            47,
+            51
+          ],
+          "lot": [
+            55,
+            59
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            51,
+            47
+          ],
+          "lot": [
+            59,
+            55
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            47,
+            51
+          ],
+          "lot": [
+            55,
+            59
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "wasteland_weigh_station": {
+      "family": "expanded_wilderness_roadside",
+      "road_connection": "highway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            45,
+            37
+          ],
+          "lot": [
+            53,
+            45
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "east",
+            "west"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            37,
+            45
+          ],
+          "lot": [
+            45,
+            53
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "south",
+            "north"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            45,
+            37
+          ],
+          "lot": [
+            53,
+            45
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "west",
+            "east"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            37,
+            45
+          ],
+          "lot": [
+            45,
+            53
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "north",
+            "south"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "destroyed_refugee_convoy": {
+      "family": "expanded_wilderness_survival",
+      "road_connection": "highway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            43,
+            57
+          ],
+          "lot": [
+            51,
+            65
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            57,
+            43
+          ],
+          "lot": [
+            65,
+            51
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            43,
+            57
+          ],
+          "lot": [
+            51,
+            65
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            57,
+            43
+          ],
+          "lot": [
+            65,
+            51
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "split_level_house": {
+      "family": "residential_ruins",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            31,
+            27
+          ],
+          "lot": [
+            39,
+            35
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            27,
+            31
+          ],
+          "lot": [
+            35,
+            39
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            31,
+            27
+          ],
+          "lot": [
+            39,
+            35
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            27,
+            31
+          ],
+          "lot": [
+            35,
+            39
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "abandoned_culdesac": {
+      "family": "major_settlements",
+      "road_connection": "local_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            67,
+            67
+          ],
+          "lot": [
+            75,
+            75
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            67,
+            67
+          ],
+          "lot": [
+            75,
+            75
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            67,
+            67
+          ],
+          "lot": [
+            75,
+            75
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            67,
+            67
+          ],
+          "lot": [
+            75,
+            75
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "emergency_relief_shelter": {
+      "family": "expanded_city_civic",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            49,
+            43
+          ],
+          "lot": [
+            57,
+            51
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            43,
+            49
+          ],
+          "lot": [
+            51,
+            57
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            49,
+            43
+          ],
+          "lot": [
+            57,
+            51
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            43,
+            49
+          ],
+          "lot": [
+            51,
+            57
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "tenement_courtyard": {
+      "family": "expanded_city_residential",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            57,
+            53
+          ],
+          "lot": [
+            65,
+            61
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            53,
+            57
+          ],
+          "lot": [
+            61,
+            65
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            57,
+            53
+          ],
+          "lot": [
+            65,
+            61
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            53,
+            57
+          ],
+          "lot": [
+            61,
+            65
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_rowhouse_block": {
+      "family": "expanded_city_residential",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            61,
+            41
+          ],
+          "lot": [
+            69,
+            49
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            41,
+            61
+          ],
+          "lot": [
+            49,
+            69
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            61,
+            41
+          ],
+          "lot": [
+            69,
+            49
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            41,
+            61
+          ],
+          "lot": [
+            49,
+            69
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "shattered_luxury_condo": {
+      "family": "expanded_city_residential",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            51,
+            49
+          ],
+          "lot": [
+            59,
+            57
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            49,
+            51
+          ],
+          "lot": [
+            57,
+            59
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            51,
+            49
+          ],
+          "lot": [
+            59,
+            57
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            49,
+            51
+          ],
+          "lot": [
+            57,
+            59
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_city_school": {
+      "family": "expanded_city_residential",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            65,
+            55
+          ],
+          "lot": [
+            73,
+            63
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            55,
+            65
+          ],
+          "lot": [
+            63,
+            73
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            65,
+            55
+          ],
+          "lot": [
+            73,
+            63
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            55,
+            65
+          ],
+          "lot": [
+            63,
+            73
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_community_center": {
+      "family": "expanded_city_residential",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            51,
+            47
+          ],
+          "lot": [
+            59,
+            55
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            47,
+            51
+          ],
+          "lot": [
+            55,
+            59
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            51,
+            47
+          ],
+          "lot": [
+            59,
+            55
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            47,
+            51
+          ],
+          "lot": [
+            55,
+            59
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "decayed_ranch": {
+      "family": "expanded_wilderness_rural",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            49,
+            45
+          ],
+          "lot": [
+            57,
+            53
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            45,
+            49
+          ],
+          "lot": [
+            53,
+            57
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            49,
+            45
+          ],
+          "lot": [
+            57,
+            53
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            45,
+            49
+          ],
+          "lot": [
+            53,
+            57
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "roadside_church_cemetery": {
+      "family": "expanded_wilderness_rural",
+      "road_connection": "local_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            51,
+            49
+          ],
+          "lot": [
+            59,
+            57
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            49,
+            51
+          ],
+          "lot": [
+            57,
+            59
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            51,
+            49
+          ],
+          "lot": [
+            59,
+            57
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            49,
+            51
+          ],
+          "lot": [
+            57,
+            59
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_ranger_station": {
+      "family": "expanded_wilderness_survival",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            43,
+            41
+          ],
+          "lot": [
+            51,
+            49
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            41,
+            43
+          ],
+          "lot": [
+            49,
+            51
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            43,
+            41
+          ],
+          "lot": [
+            51,
+            49
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            41,
+            43
+          ],
+          "lot": [
+            49,
+            51
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "wasteland_fire_lookout": {
+      "family": "expanded_wilderness_survival",
+      "road_connection": "pedestrian",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            35,
+            35
+          ],
+          "lot": [
+            43,
+            43
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            35,
+            35
+          ],
+          "lot": [
+            43,
+            43
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            35,
+            35
+          ],
+          "lot": [
+            43,
+            43
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            35,
+            35
+          ],
+          "lot": [
+            43,
+            43
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_shopping_mall": {
+      "family": "expanded_city_commercial",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            73,
+            63
+          ],
+          "lot": [
+            81,
+            71
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            63,
+            73
+          ],
+          "lot": [
+            71,
+            81
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            73,
+            63
+          ],
+          "lot": [
+            81,
+            71
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            63,
+            73
+          ],
+          "lot": [
+            71,
+            81
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_department_store": {
+      "family": "expanded_city_commercial",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            59,
+            51
+          ],
+          "lot": [
+            67,
+            59
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            51,
+            59
+          ],
+          "lot": [
+            59,
+            67
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            59,
+            51
+          ],
+          "lot": [
+            67,
+            59
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            51,
+            59
+          ],
+          "lot": [
+            59,
+            67
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "bombed_hotel": {
+      "family": "expanded_city_commercial",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            53,
+            47
+          ],
+          "lot": [
+            61,
+            55
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            47,
+            53
+          ],
+          "lot": [
+            55,
+            61
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            53,
+            47
+          ],
+          "lot": [
+            61,
+            55
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            47,
+            53
+          ],
+          "lot": [
+            55,
+            61
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "buried_bank_vault": {
+      "family": "expanded_city_commercial",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            49,
+            45
+          ],
+          "lot": [
+            57,
+            53
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "west"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            45,
+            49
+          ],
+          "lot": [
+            53,
+            57
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "north"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            49,
+            45
+          ],
+          "lot": [
+            57,
+            53
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "east"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            45,
+            49
+          ],
+          "lot": [
+            53,
+            57
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "south"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": -7
+      },
+      "issues": []
+    },
+    "ruined_office_tower": {
+      "family": "expanded_city_commercial",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            51,
+            47
+          ],
+          "lot": [
+            59,
+            55
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            47,
+            51
+          ],
+          "lot": [
+            55,
+            59
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            51,
+            47
+          ],
+          "lot": [
+            59,
+            55
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            47,
+            51
+          ],
+          "lot": [
+            55,
+            59
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "collapsed_subway_station": {
+      "family": "expanded_city_subway",
+      "road_connection": "pedestrian",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            63,
+            45
+          ],
+          "lot": [
+            71,
+            53
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            45,
+            63
+          ],
+          "lot": [
+            53,
+            71
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            63,
+            45
+          ],
+          "lot": [
+            71,
+            53
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            45,
+            63
+          ],
+          "lot": [
+            53,
+            71
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "bury",
+      "start_height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 18
+        },
+        "max_inclusive": {
+          "absolute": 34
+        }
+      },
+      "issues": []
+    },
+    "ruined_bus_terminal": {
+      "family": "expanded_city_transit",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            61,
+            51
+          ],
+          "lot": [
+            69,
+            59
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            51,
+            61
+          ],
+          "lot": [
+            59,
+            69
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            61,
+            51
+          ],
+          "lot": [
+            69,
+            59
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            51,
+            61
+          ],
+          "lot": [
+            59,
+            69
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "elevated_rail_collapse": {
+      "family": "expanded_city_transit",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            67,
+            39
+          ],
+          "lot": [
+            75,
+            47
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            39,
+            67
+          ],
+          "lot": [
+            47,
+            75
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            67,
+            39
+          ],
+          "lot": [
+            75,
+            47
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            39,
+            67
+          ],
+          "lot": [
+            47,
+            75
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "sunken_highway_interchange": {
+      "family": "expanded_city_transit",
+      "road_connection": "highway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            73,
+            73
+          ],
+          "lot": [
+            81,
+            81
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south",
+            "east",
+            "west"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            73,
+            73
+          ],
+          "lot": [
+            81,
+            81
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west",
+            "south",
+            "north"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            73,
+            73
+          ],
+          "lot": [
+            81,
+            81
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north",
+            "west",
+            "east"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            73,
+            73
+          ],
+          "lot": [
+            81,
+            81
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east",
+            "north",
+            "south"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "collapsed_airship_terminal": {
+      "family": "expanded_city_themed",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            67,
+            57
+          ],
+          "lot": [
+            75,
+            65
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            57,
+            67
+          ],
+          "lot": [
+            65,
+            75
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            67,
+            57
+          ],
+          "lot": [
+            75,
+            65
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            57,
+            67
+          ],
+          "lot": [
+            65,
+            75
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "crashed_cargo_airship": {
+      "family": "expanded_wilderness_survival",
+      "road_connection": "none",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            71,
+            39
+          ],
+          "lot": [
+            79,
+            47
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            39,
+            71
+          ],
+          "lot": [
+            47,
+            79
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            71,
+            39
+          ],
+          "lot": [
+            79,
+            47
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            39,
+            71
+          ],
+          "lot": [
+            47,
+            79
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "warm_industrial_mountain_port": {
+      "family": "warm_industrial_ports",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            55,
+            55
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            55,
+            55
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            55,
+            55
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            55,
+            55
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "cold_industrial_mountain_port": {
+      "family": "cold_industrial_ports",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            55,
+            55
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            55,
+            55
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            55,
+            55
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            47,
+            47
+          ],
+          "lot": [
+            55,
+            55
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "abandoned_quarry": {
+      "family": "expanded_wilderness_extraction",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            69,
+            61
+          ],
+          "lot": [
+            77,
+            69
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            61,
+            69
+          ],
+          "lot": [
+            69,
+            77
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            69,
+            61
+          ],
+          "lot": [
+            77,
+            69
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            61,
+            69
+          ],
+          "lot": [
+            69,
+            77
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": -12
+      },
+      "issues": []
+    },
+    "collapsed_mine_entrance": {
+      "family": "expanded_wilderness_extraction",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            55,
+            49
+          ],
+          "lot": [
+            63,
+            57
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            49,
+            55
+          ],
+          "lot": [
+            57,
+            63
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            55,
+            49
+          ],
+          "lot": [
+            63,
+            57
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            49,
+            55
+          ],
+          "lot": [
+            57,
+            63
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": -8
+      },
+      "issues": []
+    },
+    "excavator_pit": {
+      "family": "expanded_wilderness_extraction",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            73,
+            63
+          ],
+          "lot": [
+            81,
+            71
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "east"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            63,
+            73
+          ],
+          "lot": [
+            71,
+            81
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            73,
+            63
+          ],
+          "lot": [
+            81,
+            71
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            63,
+            73
+          ],
+          "lot": [
+            71,
+            81
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "north"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": -10
+      },
+      "issues": []
+    },
+    "abandoned_oil_field": {
+      "family": "expanded_wilderness_extraction",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            75,
+            61
+          ],
+          "lot": [
+            83,
+            69
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            61,
+            75
+          ],
+          "lot": [
+            69,
+            83
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            75,
+            61
+          ],
+          "lot": [
+            83,
+            69
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            61,
+            75
+          ],
+          "lot": [
+            69,
+            83
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "abandoned_orchard_cannery": {
+      "family": "expanded_wilderness_rural",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            59,
+            51
+          ],
+          "lot": [
+            67,
+            59
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            51,
+            59
+          ],
+          "lot": [
+            59,
+            67
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            59,
+            51
+          ],
+          "lot": [
+            67,
+            59
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            51,
+            59
+          ],
+          "lot": [
+            59,
+            67
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_grain_elevator": {
+      "family": "expanded_wilderness_rural",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            55,
+            49
+          ],
+          "lot": [
+            63,
+            57
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            49,
+            55
+          ],
+          "lot": [
+            57,
+            63
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            55,
+            49
+          ],
+          "lot": [
+            63,
+            57
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            49,
+            55
+          ],
+          "lot": [
+            57,
+            63
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "shattered_greenhouse_nursery": {
+      "family": "expanded_wilderness_rural",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            61,
+            49
+          ],
+          "lot": [
+            69,
+            57
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            49,
+            61
+          ],
+          "lot": [
+            57,
+            69
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            61,
+            49
+          ],
+          "lot": [
+            69,
+            57
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            49,
+            61
+          ],
+          "lot": [
+            57,
+            69
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "remote_sawmill": {
+      "family": "expanded_wilderness_extraction",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            63,
+            53
+          ],
+          "lot": [
+            71,
+            61
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            53,
+            63
+          ],
+          "lot": [
+            61,
+            71
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            63,
+            53
+          ],
+          "lot": [
+            71,
+            61
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            53,
+            63
+          ],
+          "lot": [
+            61,
+            71
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "industrial_facility": {
+      "family": "industrial_infrastructure",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            69,
+            57
+          ],
+          "lot": [
+            77,
+            65
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            57,
+            69
+          ],
+          "lot": [
+            65,
+            77
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            69,
+            57
+          ],
+          "lot": [
+            77,
+            65
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            57,
+            69
+          ],
+          "lot": [
+            65,
+            77
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "city_electrical_substation": {
+      "family": "expanded_city_utilities",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            61,
+            51
+          ],
+          "lot": [
+            69,
+            59
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            51,
+            61
+          ],
+          "lot": [
+            59,
+            69
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            61,
+            51
+          ],
+          "lot": [
+            69,
+            59
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            51,
+            61
+          ],
+          "lot": [
+            59,
+            69
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "city_water_treatment_plant": {
+      "family": "expanded_city_utilities",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            75,
+            65
+          ],
+          "lot": [
+            83,
+            73
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            65,
+            75
+          ],
+          "lot": [
+            73,
+            83
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            75,
+            65
+          ],
+          "lot": [
+            83,
+            73
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            65,
+            75
+          ],
+          "lot": [
+            73,
+            83
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "district_heating_station": {
+      "family": "expanded_city_utilities",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            65,
+            55
+          ],
+          "lot": [
+            73,
+            63
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            55,
+            65
+          ],
+          "lot": [
+            63,
+            73
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            65,
+            55
+          ],
+          "lot": [
+            73,
+            63
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            55,
+            65
+          ],
+          "lot": [
+            63,
+            73
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "municipal_incinerator": {
+      "family": "expanded_city_utilities",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            71,
+            59
+          ],
+          "lot": [
+            79,
+            67
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            59,
+            71
+          ],
+          "lot": [
+            67,
+            79
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            71,
+            59
+          ],
+          "lot": [
+            79,
+            67
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            59,
+            71
+          ],
+          "lot": [
+            67,
+            79
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_fuel_depot": {
+      "family": "expanded_city_utilities",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            79,
+            65
+          ],
+          "lot": [
+            87,
+            73
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            65,
+            79
+          ],
+          "lot": [
+            73,
+            87
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            79,
+            65
+          ],
+          "lot": [
+            87,
+            73
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            65,
+            79
+          ],
+          "lot": [
+            73,
+            87
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ruined_cyberware_clinic": {
+      "family": "expanded_city_themed",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            59,
+            51
+          ],
+          "lot": [
+            67,
+            59
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            51,
+            59
+          ],
+          "lot": [
+            59,
+            67
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            59,
+            51
+          ],
+          "lot": [
+            67,
+            59
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            51,
+            59
+          ],
+          "lot": [
+            59,
+            67
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "ae2_records_archive": {
+      "family": "expanded_city_themed",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            63,
+            55
+          ],
+          "lot": [
+            71,
+            63
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            55,
+            63
+          ],
+          "lot": [
+            63,
+            71
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            63,
+            55
+          ],
+          "lot": [
+            71,
+            63
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            55,
+            63
+          ],
+          "lot": [
+            63,
+            71
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "nuclear_research_annex": {
+      "family": "expanded_city_themed",
+      "road_connection": "main_road",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            73,
+            63
+          ],
+          "lot": [
+            81,
+            71
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            63,
+            73
+          ],
+          "lot": [
+            71,
+            81
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            73,
+            63
+          ],
+          "lot": [
+            81,
+            71
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            63,
+            73
+          ],
+          "lot": [
+            71,
+            81
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "shattered_wind_farm": {
+      "family": "expanded_wilderness_energy",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            83,
+            71
+          ],
+          "lot": [
+            91,
+            79
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            71,
+            83
+          ],
+          "lot": [
+            79,
+            91
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            83,
+            71
+          ],
+          "lot": [
+            91,
+            79
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            71,
+            83
+          ],
+          "lot": [
+            79,
+            91
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "broken_solar_field": {
+      "family": "expanded_wilderness_energy",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            83,
+            69
+          ],
+          "lot": [
+            91,
+            77
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            69,
+            83
+          ],
+          "lot": [
+            77,
+            91
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            83,
+            69
+          ],
+          "lot": [
+            91,
+            77
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            69,
+            83
+          ],
+          "lot": [
+            77,
+            91
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "wilderness_substation": {
+      "family": "expanded_wilderness_energy",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            47,
+            43
+          ],
+          "lot": [
+            55,
+            51
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            43,
+            47
+          ],
+          "lot": [
+            51,
+            55
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            47,
+            43
+          ],
+          "lot": [
+            55,
+            51
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            43,
+            47
+          ],
+          "lot": [
+            51,
+            55
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "wasteland_water_tower": {
+      "family": "expanded_wilderness_energy",
+      "road_connection": "driveway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            45,
+            45
+          ],
+          "lot": [
+            53,
+            53
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            45,
+            45
+          ],
+          "lot": [
+            53,
+            53
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            45,
+            45
+          ],
+          "lot": [
+            53,
+            53
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": []
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            45,
+            45
+          ],
+          "lot": [
+            53,
+            53
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    }
+  }
+}

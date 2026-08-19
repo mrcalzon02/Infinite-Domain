@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "group":  "brewery:mugs",
+    "key":  {
+                "#":  {
+                          "item":  "allthecompressed:oak_planks_1x"
+                      },
+                "X":  {
+                          "item":  "minecraft:iron_block"
+                      }
+            },
+    "pattern":  [
+                    "# #",
+                    "#X#",
+                    "###"
+                ],
+    "result":  {
+                   "count":  2,
+                   "id":  "brewery:oak_mug"
+               }
+}

@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "purpose": "Human-reviewed production admission. Automatic validation never writes approvals.",
+  "required_checks": [
+    "player_scale_walkthrough",
+    "rotation_and_connectors",
+    "terrain_placement_and_feathering",
+    "runtime_lostcities_codec"
+  ],
+  "approvals": []
+}

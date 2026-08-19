@@ -1,0 +1,112 @@
+{
+  "family": "rural_processing",
+  "asset_pairs": 4,
+  "all_passed": true,
+  "failures": [],
+  "structures": {
+    "abandoned_orchard_cannery": {
+      "size": [
+        59,
+        24,
+        51
+      ],
+      "master_blocks": 23080,
+      "changed_semantic_cells": 2429,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 433,
+        "functional_fixtures": 9,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 10,
+        "footprint_variants": 14
+      },
+      "passed": true,
+      "issues": []
+    },
+    "ruined_grain_elevator": {
+      "size": [
+        55,
+        35,
+        49
+      ],
+      "master_blocks": 25031,
+      "changed_semantic_cells": 2741,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 4,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 22,
+        "footprint_variants": 16
+      },
+      "passed": true,
+      "issues": []
+    },
+    "shattered_greenhouse_nursery": {
+      "size": [
+        61,
+        21,
+        49
+      ],
+      "master_blocks": 11563,
+      "changed_semantic_cells": 2244,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 2201,
+        "functional_fixtures": 22,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 15
+      },
+      "passed": true,
+      "issues": []
+    },
+    "remote_sawmill": {
+      "size": [
+        63,
+        32,
+        53
+      ],
+      "master_blocks": 24429,
+      "changed_semantic_cells": 1622,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 32,
+        "functional_fixtures": 5,
+        "vertical_access_span": 27,
+        "dense_floor_levels": 7,
+        "footprint_variants": 28
+      },
+      "passed": true,
+      "issues": []
+    }
+  }
+}

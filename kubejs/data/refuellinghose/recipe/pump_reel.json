@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "ICI",
+                    "SPS",
+                    "IFI"
+                ],
+    "key":  {
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "C":  {
+                          "item":  "create:copper_casing"
+                      },
+                "S":  {
+                          "item":  "create:shaft"
+                      },
+                "P":  {
+                          "item":  "create:mechanical_pump"
+                      },
+                "F":  {
+                          "item":  "create:fluid_pipe"
+                      }
+            },
+    "result":  {
+                   "id":  "refuellinghose:pump_reel",
+                   "count":  1
+               }
+}

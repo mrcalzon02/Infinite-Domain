@@ -1,0 +1,29 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "redstone",
+    "pattern":  [
+                    "IPI",
+                    "AVA",
+                    "ICI"
+                ],
+    "key":  {
+                "A":  {
+                          "item":  "create:andesite_alloy_block"
+                      },
+                "C":  {
+                          "item":  "create:chute"
+                      },
+                "I":  {
+                          "item":  "create:industrial_iron_block"
+                      },
+                "P":  {
+                          "item":  "minecraft:ender_pearl"
+                      },
+                "V":  {
+                          "item":  "create:item_vault"
+                      }
+            },
+    "result":  {
+                   "id":  "createdeliveryrequired:p2p_link"
+               }
+}

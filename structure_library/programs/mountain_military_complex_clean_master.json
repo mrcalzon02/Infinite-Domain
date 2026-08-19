@@ -1,0 +1,52 @@
+{
+  "structure_id": "infinite_domain:mountain_military_complex_clean_master",
+  "archetype": "fortified mountain garrison with command, barracks, motor pool and armory",
+  "orientation": {
+    "guarded_vehicle_gate": "north",
+    "command_headquarters": "northwest interior",
+    "barracks_and_infirmary": "northeast interior",
+    "motor_pool": "southwest interior",
+    "armory_and_logistics": "southeast interior",
+    "parade_and_helipad_axis": "central"
+  },
+  "defensive_program": [
+    "full reinforced perimeter with rocky mountain retaining shoulders",
+    "seven-wide guarded vehicle entrance and paired inspection gatehouses",
+    "four enclosed corner watchtowers with complete ladder access",
+    "overhead gate bridge and internal asphalt patrol/service circulation"
+  ],
+  "operational_program": [
+    "two-storey command headquarters with security, operations, communications, archive, briefing, command and strategy rooms",
+    "accessible raised communications bridge and mast",
+    "barracks with duty/mess, infirmary, west dormitory and east wash/locker wing",
+    "three-bay tall motor pool with vehicles and rear repair, parts and fuel rooms",
+    "controlled armory vestibule, quartermaster stores, weapons room and ammunition vault",
+    "central parade/helipad marking and protected pedestrian connections"
+  ],
+  "circulation": [
+    "vehicle road passes through gate to the central cross-service road",
+    "all four primary buildings connect to the central road and parade axis",
+    "command stair links both headquarters floors and a ladder reaches the roof communications bridge",
+    "each watchtower has an accessible base and continuous ladder to its observation room",
+    "motor bay approaches and armory thresholds remain separate from residential circulation"
+  ],
+  "damage_constraints": [
+    "confine primary collapse to the west motor-pool bay and roof",
+    "confine secondary collapse to the southeast barracks roof and rear wing",
+    "preserve command, infirmary, western bunks, armory, two motor bays and all rear workshops",
+    "preserve the guarded gate, central roads and all four tower approaches",
+    "derive the pillager occupation from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the compound reads as a military installation rather than several unrelated boxes",
+      "command, barracks, motor and armory functions are recognizable at player scale",
+      "both command levels, communications bridge and all watchtowers are safely traversable",
+      "vehicles and motor-pool service workflow have usable clearances",
+      "pillager pressure remains dangerous without blocking mandatory routes",
+      "terrain feathering and retaining shoulders seat the perimeter into mountain terrain"
+    ]
+  }
+}

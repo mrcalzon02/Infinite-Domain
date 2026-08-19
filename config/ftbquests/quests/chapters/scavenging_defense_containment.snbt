@@ -1,0 +1,496 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "scavenging_defense_containment"
+	group: "4E65FAAC62D57D4A"
+	id: "2DFAD86142B7D28D"
+	images: [ ]
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "5D00000000000001"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map spore:cell 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "70E1A16091420909"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6D00000000000001"
+				item: { count: 1, id: "spore:gas_mask" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D00000000000001"]
+			id: "5D00000000000002"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map spore:mass_grave 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "70E11B1305E26062"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "6D00000000000002"
+				structure: "spore:cell"
+				type: "structure"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5D00000000000002"]
+			id: "5D00000000000003"
+			rewards: [
+				{
+					id: "7D00000000000003"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					command: "execute in minecraft:overworld run structure_map spore:church 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70EA05A83D2F52BD"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "6D00000000000003"
+				structure: "spore:mass_grave"
+				type: "structure"
+			}]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5D00000000000003"]
+			id: "5D00000000000004"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map spore:lodge 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "70EFD7570CC3C85B"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "6D00000000000004"
+				structure: "spore:church"
+				type: "structure"
+			}]
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5D00000000000004"]
+			id: "5D00000000000005"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map spore:lab 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "70EABEA74AA55D1F"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "6D00000000000005"
+				structure: "spore:lodge"
+				type: "structure"
+			}]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"5D00000000000005"
+				"4FC0C1C678C71891"
+			]
+			id: "5D00000000000006"
+			rewards: [
+				{
+					id: "7D00000000000006"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					command: "execute in minecraft:overworld run structure_map spore:celltower 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70E41D7C4DB83FCE"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "6D00000000000006"
+				structure: "spore:lab"
+				type: "structure"
+			}]
+			x: 2.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5D00000000000006"]
+			id: "5D00000000000007"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map spore:military_camp 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "70EA886E1FB01212"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "6D00000000000007"
+				structure: "spore:celltower"
+				type: "structure"
+			}]
+			x: -2.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5D00000000000007"]
+			id: "5D00000000000008"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map spore:hospital 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "70ED87D8EFB43E27"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "6D00000000000008"
+				structure: "spore:military_camp"
+				type: "structure"
+			}]
+			x: 2.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["5D00000000000008"]
+			id: "5D00000000000009"
+			rewards: [
+				{
+					id: "7D00000000000009"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					command: "execute in minecraft:overworld run structure_map spore:prison 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70E7B98CF3B84B49"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "6D00000000000009"
+				structure: "spore:hospital"
+				type: "structure"
+			}]
+			x: -2.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"5D00000000000009"
+				"5310000000000001"
+			]
+			id: "5D0000000000000A"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map spore:cathedral 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "70E8E38A1F2DADDD"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "6D0000000000000A"
+				structure: "spore:prison"
+				type: "structure"
+			}]
+			x: 2.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["5D0000000000000A"]
+			id: "5D0000000000000B"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map spore:biomass_tower 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "70EA39B135B1DCBA"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "6D0000000000000B"
+				structure: "spore:cathedral"
+				type: "structure"
+			}]
+			x: -2.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["5D0000000000000B"]
+			id: "5D0000000000000C"
+			rewards: [
+				{
+					id: "7D0000000000000C"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					command: "execute in minecraft:overworld run structure_map spore:mines 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70EB567E1E2B231D"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "6D0000000000000C"
+				structure: "spore:biomass_tower"
+				type: "structure"
+			}]
+			x: 2.0d
+			y: 22.0d
+		}
+		{
+			dependencies: [
+				"5D0000000000000C"
+				"5410000000000001"
+			]
+			id: "5D0000000000000D"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map spore:iceberg_mines 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "70E5BB74FDA85A33"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "6D0000000000000D"
+				structure: "spore:mines"
+				type: "structure"
+			}]
+			x: -2.0d
+			y: 24.0d
+		}
+		{
+			dependencies: ["5D0000000000000D"]
+			id: "5D0000000000000E"
+			shape: "diamond"
+			tasks: [{
+				id: "6D0000000000000E"
+				structure: "spore:iceberg_mines"
+				type: "structure"
+			}]
+			x: 2.0d
+			y: 26.0d
+		}
+		{
+			dependencies: ["5310000000000001"]
+			id: "5D0000000000000F"
+			rewards: [{
+				id: "7D0000000000000F"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				biome: "minecraft:snowy_taiga"
+				id: "6D0000000000000F"
+				type: "biome"
+			}]
+			x: -2.0d
+			y: 28.0d
+		}
+		{
+			dependencies: ["5D0000000000000F"]
+			id: "5D00000000000010"
+			shape: "diamond"
+			tasks: [{
+				biome: "minecraft:grove"
+				id: "6D00000000000010"
+				type: "biome"
+			}]
+			x: 2.0d
+			y: 30.0d
+		}
+		{
+			dependencies: ["5D00000000000010"]
+			id: "5D00000000000011"
+			shape: "diamond"
+			tasks: [{
+				biome: "minecraft:ice_spikes"
+				id: "6D00000000000011"
+				type: "biome"
+			}]
+			x: -2.0d
+			y: 32.0d
+		}
+		{
+			dependencies: ["5D00000000000011"]
+			id: "5D00000000000012"
+			rewards: [{
+				id: "7D00000000000012"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				biome: "minecraft:old_growth_spruce_taiga"
+				id: "6D00000000000012"
+				type: "biome"
+			}]
+			x: 2.0d
+			y: 34.0d
+		}
+		{
+			dependencies: ["5D00000000000012"]
+			id: "5D00000000000013"
+			shape: "diamond"
+			tasks: [{
+				biome: "minecraft:deep_cold_ocean"
+				id: "6D00000000000013"
+				type: "biome"
+			}]
+			x: -2.0d
+			y: 36.0d
+		}
+		{
+			dependencies: ["5410000000000001"]
+			id: "5D00000000000014"
+			shape: "diamond"
+			tasks: [{
+				biome: "minecraft:badlands"
+				id: "6D00000000000014"
+				type: "biome"
+			}]
+			x: 2.0d
+			y: 38.0d
+		}
+		{
+			dependencies: ["5D00000000000014"]
+			id: "5D00000000000015"
+			rewards: [{
+				id: "7D00000000000015"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				biome: "minecraft:desert"
+				id: "6D00000000000015"
+				type: "biome"
+			}]
+			x: -2.0d
+			y: 40.0d
+		}
+		{
+			dependencies: ["5D00000000000015"]
+			id: "5D00000000000016"
+			shape: "diamond"
+			tasks: [{
+				biome: "minecraft:savanna"
+				id: "6D00000000000016"
+				type: "biome"
+			}]
+			x: 2.0d
+			y: 42.0d
+		}
+		{
+			dependencies: ["5D00000000000016"]
+			id: "5D00000000000017"
+			shape: "diamond"
+			tasks: [{
+				biome: "minecraft:jungle"
+				id: "6D00000000000017"
+				type: "biome"
+			}]
+			x: -2.0d
+			y: 44.0d
+		}
+		{
+			dependencies: ["5D00000000000017"]
+			id: "5D00000000000018"
+			rewards: [{
+				id: "7D00000000000018"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				biome: "minecraft:mangrove_swamp"
+				id: "6D00000000000018"
+				type: "biome"
+			}]
+			x: 2.0d
+			y: 46.0d
+		}
+		{
+			dependencies: ["5D00000000000018"]
+			id: "5D00000000000019"
+			shape: "diamond"
+			tasks: [{
+				biome: "the_wasteland_reworked:sulfuric_valley"
+				id: "6D00000000000019"
+				type: "biome"
+			}]
+			x: -2.0d
+			y: 48.0d
+		}
+	]
+}

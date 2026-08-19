@@ -1,0 +1,160 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "early_livestock_exchange"
+	group: "6F2A9C4D8E1B7305"
+	id: "051D98EED36CF87B"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			can_repeat: true
+			dependencies: ["3AFBE38263D3351E"]
+			id: "227CBFC089E818C2"
+			repeat_cooldown: 1
+			rewards: [{
+				auto: "enabled"
+				id: "3276C8CC4F54BA9E"
+				item: {
+					count: 1
+					id: "minecraft:sheep_spawn_egg"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				consume_items: true
+				id: "5D71AFCE5946523D"
+				item: { count: 1, id: "numismatics:bevel" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["3AFBE38263D3351E"]
+			id: "29B0744D12BCCA8C"
+			repeat_cooldown: 1
+			rewards: [{
+				auto: "enabled"
+				id: "33968EE3FBE085D3"
+				item: {
+					count: 1
+					id: "minecraft:pig_spawn_egg"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				consume_items: true
+				count: 2L
+				id: "0BE33173CE982C92"
+				item: { count: 1, id: "numismatics:bevel" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["3AFBE38263D3351E"]
+			id: "0764B2D3F8A1CE95"
+			repeat_cooldown: 1
+			rewards: [{
+				auto: "enabled"
+				id: "1875C3E409B2DFA6"
+				item: {
+					count: 1
+					id: "minecraft:chicken_spawn_egg"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				consume_items: true
+				count: 2L
+				id: "2986D4F51AC3E0B7"
+				item: { count: 1, id: "numismatics:sprocket" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["3AFBE38263D3351E"]
+			id: "3A97E5062BD4F1C8"
+			repeat_cooldown: 1
+			rewards: [{
+				auto: "enabled"
+				id: "4BA8F6173CE502D9"
+				item: {
+					count: 1
+					id: "minecraft:rabbit_spawn_egg"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				consume_items: true
+				count: 3L
+				id: "5CB907284DF613EA"
+				item: { count: 1, id: "numismatics:sprocket" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["3AFBE38263D3351E"]
+			id: "6DCA18395E0724FB"
+			repeat_cooldown: 1
+			rewards: [{
+				auto: "enabled"
+				id: "7EDB294A6F18350C"
+				item: {
+					count: 1
+					id: "minecraft:cow_spawn_egg"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				consume_items: true
+				id: "396078C1C9C43F07"
+				item: { count: 1, id: "numismatics:cog" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["3AFBE38263D3351E"]
+			id: "5B0A949610E886A0"
+			repeat_cooldown: 1
+			rewards: [{
+				auto: "enabled"
+				id: "117C6B203B916219"
+				item: {
+					count: 1
+					id: "minecraft:goat_spawn_egg"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				consume_items: true
+				count: 2L
+				id: "48865B60F97CC5FD"
+				item: { count: 1, id: "numismatics:cog" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.0d
+		}
+	]
+}

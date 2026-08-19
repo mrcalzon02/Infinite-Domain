@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "infinitedomain.space.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "StellarisSuitCompatibilityMixin"
+  ],
+  "client": [
+    "DefaultWastelandWorldPresetMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

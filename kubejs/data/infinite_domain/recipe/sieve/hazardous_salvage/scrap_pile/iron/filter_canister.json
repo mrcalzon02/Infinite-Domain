@@ -1,0 +1,18 @@
+﻿{
+    "result_amount":  {
+                          "type":  "minecraft:binomial",
+                          "n":  1,
+                          "p":  0.006
+                      },
+    "result":  {
+                   "count":  1,
+                   "id":  "wastelands:filter_canister"
+               },
+    "mesh":  {
+                 "item":  "exdeorum:iron_mesh"
+             },
+    "type":  "exdeorum:sieve",
+    "ingredient":  {
+                       "item":  "wastelands:scrap_pile"
+                   }
+}

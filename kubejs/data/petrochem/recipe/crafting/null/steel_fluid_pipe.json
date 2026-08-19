@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "I":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "S":  {
+                          "tag":  "c:plates/steel"
+                      }
+            },
+    "pattern":  [
+                    "SIS"
+                ],
+    "result":  {
+                   "count":  6,
+                   "id":  "petrochem:steel_fluid_pipe"
+               }
+}

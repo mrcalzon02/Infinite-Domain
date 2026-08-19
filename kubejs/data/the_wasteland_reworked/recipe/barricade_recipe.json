@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " a ",
+                    "bbb",
+                    " a "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "the_wasteland_reworked:aluminium_ingot"
+                      },
+                "b":  {
+                          "tag":  "minecraft:planks"
+                      }
+            },
+    "result":  {
+                   "id":  "the_wasteland_reworked:barricade",
+                   "count":  8
+               }
+}

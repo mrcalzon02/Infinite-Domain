@@ -1,0 +1,60 @@
+{
+  "structure_id": "infinite_domain:create_factory_clean_master",
+  "archetype": "Create-era sequential fabrication plant with offices, powerhouse and docks",
+  "orientation": {
+    "main_road_and_staff_parking": "north",
+    "public_and_staff_entrance": "north",
+    "raw_material_receiving": "west",
+    "outbound_truck_docks": "south",
+    "powerhouse": "east"
+  },
+  "office_program": [
+    "reception and security check-in",
+    "production manager office",
+    "locker and break room",
+    "staff restroom",
+    "dedicated stair to upper engineering offices",
+    "upper technical records and glazed production overlook"
+  ],
+  "production_program": [
+    "two west receiving doors and palletized raw-material storage",
+    "crushing and milling cell",
+    "mixing, pressing and cutting cell",
+    "parallel assembly benches with packaging stations",
+    "maintenance room and separately connected quality-control room",
+    "east powerhouse with fluid tanks, steam engines and controls",
+    "traversable overhead production catwalk with independent stair",
+    "three south outbound docks and staging lanes"
+  ],
+  "circulation": [
+    "staff road and parking to the two-floor office annex",
+    "office access-control threshold into the production hall",
+    "west receiving through raw storage to sequential fabrication cells",
+    "continuous production cross aisles serving maintenance and quality control",
+    "service corridor connecting quality control, powerhouse and east dock",
+    "assembly staging to three independent outbound dock approaches",
+    "separate stairs serving offices and the production catwalk"
+  ],
+  "damage_constraints": [
+    "preserve both office floors and the complete office stair",
+    "retain mixing, pressing, assembly, maintenance and powerhouse access",
+    "retain the production catwalk and its independent stair",
+    "retain all three outbound dock approaches",
+    "concentrate failure at west receiving and the raw-material cell",
+    "shape rubble beneath failed roof and receiving members",
+    "derive every abandoned variant from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the site reads as a fabrication plant with sequential material flow",
+      "staff, receiving and outbound truck approaches remain distinct",
+      "all production cells and cross aisles have usable player-scale clearances",
+      "both office floors, maintenance, quality control and powerhouse are navigable",
+      "the catwalk is traversable and meaningfully overlooks the production line",
+      "sawtooth roof, clerestories, stacks and docks create a legible industrial silhouette",
+      "damage preserves the original manufacturing workflow and follows structural gravity"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "#":  {
+                          "tag":  "minecraft:soul_fire_base_blocks"
+                      },
+                "L":  {
+                          "tag":  "minecraft:logs"
+                      },
+                "S":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    " S ",
+                    "S#S",
+                    "LLL"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "minecraft:soul_campfire"
+               }
+}

@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "a",
+                    "b",
+                    "a"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "cyberspace:graphene_mesh"
+                      },
+                "b":  {
+                          "item":  "minecraft:emerald_block"
+                      }
+            },
+    "result":  {
+                   "id":  "cyberspace:synthetic_capsule",
+                   "count":  1
+               }
+}

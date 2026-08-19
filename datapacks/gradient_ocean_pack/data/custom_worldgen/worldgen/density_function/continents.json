@@ -1,0 +1,20 @@
+{
+  "type": "isekai_api:lerp",
+  "t": "custom_worldgen:central_continent_mask",
+  "a": "custom_worldgen:outer_directional_continents",
+  "b": {
+    "type": "isekai_api:max",
+    "a": {
+      "type": "isekai_api:add",
+      "a": "custom_worldgen:large_continents",
+      "b": {
+        "type": "isekai_api:constant",
+        "value": 0.28
+      }
+    },
+    "b": {
+      "type": "isekai_api:constant",
+      "value": 0.05
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "CC",
+                    "##",
+                    "##"
+                ],
+    "key":  {
+                "#":  {
+                          "tag":  "minecraft:planks"
+                      },
+                "C":  {
+                          "tag":  "primitivestart:copper_ingots"
+                      }
+            },
+    "result":  {
+                   "id":  "minecraft:smithing_table"
+               }
+}

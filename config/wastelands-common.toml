@@ -1,0 +1,117 @@
+[worldgen]
+	#Generate a protected underground bunker for the first player.
+	spawnBunker = false
+	#Place a bed inside the starter bunker.
+	spawnBunkerBed = false
+	#Prevent zombies from burning in daylight inside the Wasteland preset.
+	daylightZombies = true
+	#Average desert chunks per oasis. Higher values are rarer.
+	# Default: 220
+	# Range: 8 ~ 8192
+	oasisRarity = 220
+	#Average forest or mountain chunks per dead tree.
+	# Default: 10
+	# Range: 1 ~ 1024
+	deadTreeRarity = 10
+	#Average city/apocalypse chunks per local contamination site.
+	# Default: 110
+	# Range: 4 ~ 8192
+	contaminatedSiteRarity = 110
+
+[infrastructure]
+	#Generate seed-driven settlements, roads, signs, dead lamps and broken power lines.
+	enabled = false
+	#Macro-cell size in blocks. Every cell contains one settlement connected to neighbouring cells.
+	# Default: 448
+	# Range: 192 ~ 1024
+	roadCellSize = 448
+	#Road width in blocks. Odd values are recommended.
+	# Default: 5
+	# Range: 3 ~ 11
+	roadWidth = 5
+	#Maximum Perlin-driven lateral road curvature in blocks. Primary roads use a reduced fraction of this value.
+	# Default: 36
+	# Range: 0 ~ 128
+	roadCurveStrength = 36
+	#Maximum local terrain height difference accepted by a road cross-section. Larger differences are cut, filled, rerouted, or skipped.
+	# Default: 3
+	# Range: 1 ~ 8
+	roadMaxGrade = 3
+	#Maximum lateral distance used to move a road away from shorelines before considering a bridge.
+	# Default: 8
+	# Range: 0 ~ 12
+	roadWaterDetour = 8
+	#Maximum water span that may receive a raised bridge. Wider water bodies are not crossed.
+	# Default: 12
+	# Range: 4 ~ 16
+	roadBridgeMaxSpan = 12
+	#Approximate distance between non-working roadside lamps.
+	# Default: 54
+	# Range: 16 ~ 256
+	roadLampSpacing = 54
+	#Approximate distance between damaged utility poles.
+	# Default: 72
+	# Range: 24 ~ 384
+	powerPoleSpacing = 72
+	#Place destination signs near settlement approaches.
+	roadSigns = true
+	#Spawn a small survivor population in generated settlements.
+	settlementSurvivors = true
+	#Assign deterministic factions and faction-specific architecture to inhabited locations.
+	factionsEnabled = true
+	#Percentage chance for an ordinary settlement node to become an infected zombie village.
+	# Default: 16
+	# Range: 0 ~ 60
+	zombieVillageChance = 16
+	#Minimum infected population generated in a zombie village.
+	# Default: 5
+	# Range: 1 ~ 24
+	zombieVillageMinPopulation = 5
+	#Maximum infected population generated in a zombie village.
+	# Default: 9
+	# Range: 1 ~ 32
+	zombieVillageMaxPopulation = 9
+	#Percentage chance for an ordinary node to become a regional logistics centre.
+	# Default: 12
+	# Range: 0 ~ 50
+	logisticsCenterChance = 12
+	#Macro-cell spacing of protected megacities. One megacity is selected deterministically in each square region.
+	# Default: 5
+	# Range: 3 ~ 12
+	megacitySpacingCells = 5
+	#Approximate survivor population generated across the central districts of a protected megacity.
+	# Default: 12
+	# Range: 4 ~ 32
+	megacityPopulation = 12
+	#Maximum distance inside a macro-cell used to relocate settlements toward naturally level, dry terrain.
+	# Default: 128
+	# Range: 32 ~ 256
+	settlementSiteSearchRadius = 128
+	#Maximum preferred natural height variation across a compact settlement footprint before engineered grading is applied.
+	# Default: 6
+	# Range: 2 ~ 16
+	settlementMaxTerrainVariation = 6
+	#Maximum preferred natural height variation across a protected megacity footprint. The site search strongly rejects rougher terrain.
+	# Default: 10
+	# Range: 3 ~ 24
+	megacityMaxTerrainVariation = 10
+	#Maximum vertical cut or fill depth used when grading settlement platforms. Site selection avoids locations requiring more work.
+	# Default: 12
+	# Range: 4 ~ 32
+	settlementPlatformFillDepth = 12
+
+[radiation]
+	#Enable persistent player radiation in Wasteland biomes.
+	enabled = false
+	#Ticks between environmental radiation exposure checks.
+	# Default: 100
+	# Range: 20 ~ 2400
+	exposureInterval = 1200
+	#Ticks between natural radiation decay while sheltered or outside Wasteland.
+	# Default: 200
+	# Range: 20 ~ 12000
+	decayInterval = 200
+	#Radiation added per exposure check near radioactive waste.
+	# Default: 4
+	# Range: 1 ~ 25
+	wasteExposure = 4

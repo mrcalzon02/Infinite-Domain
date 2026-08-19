@@ -1,0 +1,47 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "infinite_domain_cyberware"
+version = "1.0.0"
+displayName = "Infinite Domain: Cyberware Mastery"
+authors = "Infinite Domain"
+description = '''
+Expands Create Cybernetics as the pack's authoritative implant system, with Cyber Ware Port donor salvage and Darknet integration.
+'''
+
+[[dependencies.infinite_domain_cyberware]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_cyberware]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_cyberware]]
+modId = "createcybernetics"
+type = "required"
+versionRange = "[0.5.1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.infinite_domain_cyberware]]
+modId = "cyber_ware_port"
+type = "required"
+versionRange = "[1.7.1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.infinite_domain_cyberware]]
+modId = "cyberchems"
+type = "required"
+versionRange = "[1.0.6,)"
+ordering = "AFTER"
+side = "BOTH"

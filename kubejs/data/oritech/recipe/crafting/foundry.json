@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "b":  {
+                          "item":  "minecraft:cauldron"
+                      },
+                "c":  {
+                          "item":  "oritech:motor"
+                      },
+                "f":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "s":  {
+                          "item":  "more_ores_more_gems:block_of_electrum"
+                      }
+            },
+    "pattern":  [
+                    "fff",
+                    "fcf",
+                    "sbs"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "oritech:foundry_block"
+               }
+}

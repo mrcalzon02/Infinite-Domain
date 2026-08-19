@@ -1,0 +1,207 @@
+﻿# Biome-Gated Content Audit
+
+Scanned 173 installed mod JARs plus the vanilla 1.21.1 client data.
+
+- Structure definitions: 262
+- Non-Minecraft structure definitions: 228
+- Biome modifier selector fields: 299
+- Modded biome definitions: 196
+- Biome-tag memberships: 1688
+- Resolved structure-to-biome memberships: 2883
+
+## Structure biome selectors
+
+- `#ae2:has_meteorites`
+- `#ae2lt:has_alien_starship`
+- `#ae2lt:has_firmament_starship`
+- `#createcybernetics:has_structure/lab`
+- `#createcybernetics:has_structure/ripper_clinic`
+- `#createcybernetics:has_structure/tattooist_hut`
+- `#dungeons_arise:has_structure/abandoned_temple_biomes`
+- `#dungeons_arise:has_structure/aviary_biomes`
+- `#dungeons_arise:has_structure/bandit_towers_biomes`
+- `#dungeons_arise:has_structure/bandit_village_biomes`
+- `#dungeons_arise:has_structure/bathhouse_biomes`
+- `#dungeons_arise:has_structure/ceryneian_hind_biomes`
+- `#dungeons_arise:has_structure/coliseum_biomes`
+- `#dungeons_arise:has_structure/fishing_hut_biomes`
+- `#dungeons_arise:has_structure/foundry_biomes`
+- `#dungeons_arise:has_structure/giant_mushroom_biomes`
+- `#dungeons_arise:has_structure/greenwood_pub_biomes`
+- `#dungeons_arise:has_structure/heavenly_challenger_biomes`
+- `#dungeons_arise:has_structure/heavenly_conqueror_biomes`
+- `#dungeons_arise:has_structure/heavenly_rider_biomes`
+- `#dungeons_arise:has_structure/illager_campsite_biomes`
+- `#dungeons_arise:has_structure/illager_corsair_biomes`
+- `#dungeons_arise:has_structure/illager_fort_biomes`
+- `#dungeons_arise:has_structure/illager_galley_biomes`
+- `#dungeons_arise:has_structure/illager_windmill_biomes`
+- `#dungeons_arise:has_structure/infested_temple_biomes`
+- `#dungeons_arise:has_structure/jungle_tree_house_biomes`
+- `#dungeons_arise:has_structure/keep_kayra_biomes`
+- `#dungeons_arise:has_structure/kisegi_sanctuary_biomes`
+- `#dungeons_arise:has_structure/lighthouse_biomes`
+- `#dungeons_arise:has_structure/mechanical_nest_biomes`
+- `#dungeons_arise:has_structure/merchant_campsite_biomes`
+- `#dungeons_arise:has_structure/mining_complex_biomes`
+- `#dungeons_arise:has_structure/mining_system_biomes`
+- `#dungeons_arise:has_structure/monastery_biomes`
+- `#dungeons_arise:has_structure/mushroom_house_biomes`
+- `#dungeons_arise:has_structure/mushroom_mines_biomes`
+- `#dungeons_arise:has_structure/mushroom_village_biomes`
+- `#dungeons_arise:has_structure/plague_asylum_biomes`
+- `#dungeons_arise:has_structure/scorched_mines_biomes`
+- `#dungeons_arise:has_structure/shiraz_palace_biomes`
+- `#dungeons_arise:has_structure/small_blimp_biomes`
+- `#dungeons_arise:has_structure/thornborn_towers_biomes`
+- `#dungeons_arise:has_structure/typhon_biomes`
+- `#dungeons_arise:has_structure/undead_pirate_ship_biomes`
+- `#dungeons_arise:has_structure/wishing_well_biomes`
+- `#dungeons_arise_seven_seas:has_structure/corsair_corvette_biomes`
+- `#dungeons_arise_seven_seas:has_structure/pirate_junk_biomes`
+- `#dungeons_arise_seven_seas:has_structure/small_yacht_biomes`
+- `#dungeons_arise_seven_seas:has_structure/unicorn_galleon_biomes`
+- `#dungeons_arise_seven_seas:has_structure/victory_frigate_biomes`
+- `#graveyard:has_structure/altar`
+- `#graveyard:has_structure/crypt`
+- `#graveyard:has_structure/dead_tree`
+- `#graveyard:has_structure/giant_mushroom`
+- `#graveyard:has_structure/haunted_house`
+- `#graveyard:has_structure/large_graveyard`
+- `#graveyard:has_structure/lich_prison`
+- `#graveyard:has_structure/medium_graveyard`
+- `#graveyard:has_structure/memorial_tree`
+- `#graveyard:has_structure/mushroom_grave`
+- `#graveyard:has_structure/ruins`
+- `#graveyard:has_structure/small_desert_grave`
+- `#graveyard:has_structure/small_desert_graveyard`
+- `#graveyard:has_structure/small_grave`
+- `#graveyard:has_structure/small_graveyard`
+- `#graveyard:has_structure/small_mountain_grave`
+- `#graveyard:has_structure/small_savanna_grave`
+- `#iceandfire:structure_gen/cyclops_cave`
+- `#iceandfire:structure_gen/fire`
+- `#iceandfire:structure_gen/gorgon_temple`
+- `#iceandfire:structure_gen/graveyard`
+- `#iceandfire:structure_gen/hydra_cave`
+- `#iceandfire:structure_gen/ice`
+- `#iceandfire:structure_gen/lightning`
+- `#iceandfire:structure_gen/mausoleum`
+- `#iceandfire:structure_gen/pixie_village`
+- `#iceandfire:structure_gen/siren_island`
+- `#minecraft:has_structure/ancient_city`
+- `#minecraft:has_structure/bastion_remnant`
+- `#minecraft:has_structure/buried_treasure`
+- `#minecraft:has_structure/desert_pyramid`
+- `#minecraft:has_structure/end_city`
+- `#minecraft:has_structure/igloo`
+- `#minecraft:has_structure/jungle_temple`
+- `#minecraft:has_structure/mineshaft`
+- `#minecraft:has_structure/mineshaft_mesa`
+- `#minecraft:has_structure/nether_fortress`
+- `#minecraft:has_structure/nether_fossil`
+- `#minecraft:has_structure/ocean_monument`
+- `#minecraft:has_structure/ocean_ruin_cold`
+- `#minecraft:has_structure/ocean_ruin_warm`
+- `#minecraft:has_structure/pillager_outpost`
+- `#minecraft:has_structure/ruined_portal_desert`
+- `#minecraft:has_structure/ruined_portal_jungle`
+- `#minecraft:has_structure/ruined_portal_mountain`
+- `#minecraft:has_structure/ruined_portal_nether`
+- `#minecraft:has_structure/ruined_portal_ocean`
+- `#minecraft:has_structure/ruined_portal_standard`
+- `#minecraft:has_structure/ruined_portal_swamp`
+- `#minecraft:has_structure/shipwreck`
+- `#minecraft:has_structure/shipwreck_beached`
+- `#minecraft:has_structure/stronghold`
+- `#minecraft:has_structure/swamp_hut`
+- `#minecraft:has_structure/trail_ruins`
+- `#minecraft:has_structure/trial_chambers`
+- `#minecraft:has_structure/village_desert`
+- `#minecraft:has_structure/village_plains`
+- `#minecraft:has_structure/village_savanna`
+- `#minecraft:has_structure/village_snowy`
+- `#minecraft:has_structure/village_taiga`
+- `#minecraft:has_structure/woodland_mansion`
+- `#minecraft:is_forest`
+- `#minecraft:is_jungle`
+- `#minecraft:is_nether`
+- `#minecraft:is_overworld`
+- `#minecraft:is_taiga`
+- `#shellbound_for_airship:has_structure/airship`
+- `#spore:cold_biome`
+- `#stellaris:has_structure/earth_biomes`
+- `#stellaris:has_structure/mercury_biomes`
+- `#stellaris:has_structure/meteor_biomes`
+- `#stellaris:has_structure/venus_biomes`
+- `#stellaris:mars_biomes`
+- `#stellaris:moon_biomes`
+- `#structures_arise:landbiomes`
+- `#structures_arise:oceans`
+- `#supplementaries:has_galleons`
+- `#supplementaries:has_road_signs`
+- `birch_forest`
+- `cherry_grove`
+- `cold_ocean;deep_cold_ocean;deep_frozen_ocean;deep_lukewarm_ocean;deep_ocean;frozen_ocean;lukewarm_ocean;ocean;warm_ocean`
+- `cold_ocean;deep_cold_ocean;deep_ocean;ocean`
+- `cyberspace:darknet_biome`
+- `dark_forest;swamp;taiga;snowy_taiga;mushroom_fields`
+- `dark_forest;taiga;savanna_plateau;plains;meadow`
+- `dark_forest;taiga;savanna_plateau;plains;snowy_taiga`
+- `deep_lukewarm_ocean`
+- `deep_lukewarm_ocean;lukewarm_ocean;warm_ocean`
+- `deep_lukewarm_ocean;lukewarm_ocean;warm_ocean;ocean;cold_ocean;deep_cold_ocean;deep_frozen_ocean;deep_ocean;frozen_ocean`
+- `desert;plains`
+- `forest;flower_forest;plains`
+- `forest;grove;plains;snowy_plains;snowy_taiga;stony_peaks;taiga`
+- `minecraft:badlands;minecraft:desert;minecraft:swamp;minecraft:dark_forest`
+- `minecraft:dark_forest`
+- `minecraft:dark_forest;minecraft:swamp;minecraft:old_growth_spruce_taiga;minecraft:flower_forest`
+- `minecraft:desert`
+- `minecraft:forest`
+- `minecraft:frozen_ocean`
+- `minecraft:jungle`
+- `minecraft:mushroom_fields`
+- `minecraft:plains`
+- `minecraft:plains;minecraft:forest;minecraft:birch_forest;minecraft:taiga;minecraft:savanna`
+- `minecraft:savanna`
+- `minecraft:savanna;minecraft:savanna_plateau;minecraft:windswept_savanna;minecraft:windswept_hills;minecraft:windswept_gravelly_hills`
+- `minecraft:taiga`
+- `minecraft:warped_forest`
+- `minecraft:windswept_hills;minecraft:plains;minecraft:meadow`
+- `plains;forest`
+- `plains;savanna;taiga;meadow;sunflower_plains;snowy_plains`
+- `plains;snowy_plains;sunflower_plains;birch_forest;cherry_grove;savanna;savanna_plateau;taiga;windswept_savanna;flower_forest;forest;old_growth_birch_forest;windswept_forest`
+- `plains;taiga;grove`
+- `savanna;savanna_plateau`
+- `snowy_taiga;taiga;grove`
+- `swamp`
+- `swamp;dark_forest;plains;taiga;flower_forest`
+- `the_wasteland_reworked:radioactive_wasteland`
+- `the_wasteland_reworked:radioactive_wasteland;the_wasteland_reworked:decayed_forest`
+- `the_wasteland_reworked:sulfuric_valley`
+
+The CSV files retain the source JAR and resource path for every result. Tags must be resolved recursively before choosing the final northern biome palette.
+
+## Highest-coverage vanilla biomes
+
+- `minecraft:plains`: 81 structures from 13 source mods
+- `minecraft:forest`: 72 structures from 15 source mods
+- `minecraft:dark_forest`: 70 structures from 14 source mods
+- `minecraft:taiga`: 70 structures from 14 source mods
+- `minecraft:grove`: 67 structures from 12 source mods
+- `minecraft:birch_forest`: 66 structures from 13 source mods
+- `minecraft:flower_forest`: 66 structures from 13 source mods
+- `minecraft:desert`: 65 structures from 13 source mods
+- `minecraft:snowy_taiga`: 65 structures from 14 source mods
+- `minecraft:sunflower_plains`: 65 structures from 11 source mods
+- `minecraft:old_growth_birch_forest`: 64 structures from 13 source mods
+- `minecraft:savanna`: 64 structures from 12 source mods
+- `minecraft:jungle`: 62 structures from 13 source mods
+- `minecraft:snowy_plains`: 61 structures from 13 source mods
+- `minecraft:bamboo_jungle`: 59 structures from 11 source mods
+- `minecraft:meadow`: 59 structures from 11 source mods
+- `minecraft:savanna_plateau`: 59 structures from 11 source mods
+- `minecraft:sparse_jungle`: 59 structures from 12 source mods
+- `minecraft:old_growth_pine_taiga`: 58 structures from 12 source mods
+- `minecraft:old_growth_spruce_taiga`: 58 structures from 13 source mods

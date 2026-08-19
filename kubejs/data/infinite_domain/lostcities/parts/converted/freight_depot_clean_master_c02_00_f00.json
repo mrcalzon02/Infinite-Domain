@@ -1,0 +1,234 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";,;;;;;;;;;;;;; ",
+      ",%;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; ",
+      ";;;;;;;;;;;;;;; "
+    ],
+    [
+      "                ",
+      "                ",
+      "   8    8       ",
+      "                ",
+      " ............   ",
+      " ............   ",
+      " ............   ",
+      "=............   ",
+      "=............   ",
+      "=............   ",
+      "=............   ",
+      "=............   ",
+      "=............   ",
+      "=............   ",
+      "=............   ",
+      "=............   "
+    ],
+    [
+      "                ",
+      "                ",
+      "   8    8       ",
+      "  55    555     ",
+      " <<<<()<<<<<<   ",
+      " <          <   ",
+      " < 55   ??? <   ",
+      "-< 7        <   ",
+      " <          <   ",
+      " <          <   ",
+      " <          <   ",
+      " <<3<<3<<<<<<   ",
+      " < /   <    <   ",
+      " < 55  <0 : <   ",
+      " < 7   <    <   ",
+      " &     1    <   "
+    ],
+    [
+      "                ",
+      "                ",
+      "   8    8       ",
+      "                ",
+      " 9!!9*+9!!!9<   ",
+      " <          <   ",
+      " <       >  !   ",
+      "$<          !   ",
+      " <          <   ",
+      " <          <   ",
+      " <          <   ",
+      " <<4<<4<<<<<<   ",
+      " <     <    !   ",
+      " < /   <    !   ",
+      " <     <    <   ",
+      " '     2    <   "
+    ],
+    [
+      "                ",
+      "                ",
+      "   8    8       ",
+      "                ",
+      " 9!!9  9!!!9<   ",
+      " <          <   ",
+      " <          !   ",
+      "$<          !   ",
+      " <          <   ",
+      " <          <   ",
+      " <          <   ",
+      " <<<<<<<<<<<<   ",
+      " <     <    !   ",
+      " <     <    !   ",
+      " < /   <    <   ",
+      "       <    <   "
+    ],
+    [
+      "                ",
+      "                ",
+      "   8    8       ",
+      "  66    666     ",
+      " <<<<<<<<<<<<   ",
+      " <          <   ",
+      " <          <   ",
+      "9<          <   ",
+      " <          <   ",
+      " <          <   ",
+      " <          <   ",
+      " <<<<<<<<<<<<   ",
+      " <     <    <   ",
+      " <     <    <   ",
+      " <     <    <   ",
+      " < /   <    <   "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:polished_andesite_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:smoker[facing=south,lit=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:spruce_slab[type=top,waterlogged=false]"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "8",
+        "block": "minecraft:stripped_dark_oak_log[axis=y]"
+      },
+      {
+        "char": "9",
+        "block": "minecraft:stripped_spruce_log[axis=y]"
+      },
+      {
+        "char": ":",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": ";",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "<",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "=",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": ">",
+        "block": "the_wasteland_reworked:radio"
+      },
+      {
+        "char": "?",
+        "block": "zvhouses:spruce_countertop"
+      }
+    ]
+  }
+}

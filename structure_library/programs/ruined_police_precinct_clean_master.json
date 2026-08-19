@@ -1,0 +1,49 @@
+{
+  "structure_id": "infinite_domain:ruined_police_precinct_clean_master",
+  "archetype": "L-plan civic police precinct with secure detention and motor pool",
+  "ground_program": [
+    "canopied public vestibule, waiting, report counter and victim interview",
+    "controlled east-west security spine",
+    "dispatch, communications and roll-call briefing",
+    "patrol ready room, lockers and controlled armory issue",
+    "booking and processing corridor serving four individual detention cells",
+    "evidence, interview and records rooms",
+    "rear staff exit and enclosed vehicle sally port",
+    "three-lane patrol garage with workshop and vehicle-evidence storage"
+  ],
+  "upper_program": [
+    "detective squads and records offices",
+    "command, administration and communications rooms",
+    "evidence archive, locker/break and training rooms over the secure wing",
+    "partial third-floor chief and emergency-operations suite",
+    "main stair reaching all occupied floors and independent secure stair to the first floor"
+  ],
+  "circulation": [
+    "public access is separated from patrol and detention by controlled doors",
+    "booking spine reaches all four cells without crossing the public lobby",
+    "evidence rooms connect to both booking and upper secure support",
+    "sally port connects booking, rear gate and garage",
+    "motor pool connects to patrol operations through a separate personnel door",
+    "two independent stairs serve the principal occupied floors"
+  ],
+  "damage_constraints": [
+    "concentrate blast failure in the northwest public/interview facade",
+    "remove each affected wall/floor row continuously from the exterior inward",
+    "shape a low gravity-led rubble fan across the northwest apron",
+    "preserve the public vestibule, both stairs, booking, cells, evidence and garage",
+    "retain navigable survivor routes on all three occupied levels",
+    "derive damage, occupation and loot only from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the complex reads as a precinct rather than a generic office cube",
+      "public, patrol, detention, evidence and garage security relationships work at player scale",
+      "all 51 declared thresholds and both stairs work in game",
+      "all four cells, sally port and three vehicle lanes remain usable",
+      "the northwest breach terminates slabs coherently and its rubble follows gravity",
+      "terrain feathering seats the road apron, rear gate and rubble into city grade"
+    ]
+  }
+}

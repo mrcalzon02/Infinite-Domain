@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "S":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    " I ",
+                    " I ",
+                    " S "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "cyber_ware_port:katana"
+               }
+}

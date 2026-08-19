@@ -1,0 +1,33 @@
+{
+  "type": "createcybernetics:engineering_table",
+  "accept_mirrored": true,
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "createcybernetics:brainupgrades_neuralprocessor"
+    },
+    "B": {
+      "item": "cyber_ware_port:component_fiberoptics"
+    },
+    "C": {
+      "item": "kubejs:darknet_data_cache"
+    },
+    "D": {
+      "item": "createcybernetics:component_wiring"
+    },
+    "E": {
+      "item": "stellaris:heavy_metal_plate"
+    }
+  },
+  "pattern": [
+    "  A  ",
+    " ABC ",
+    " BDB ",
+    " CEC ",
+    "  A  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinite_domain_cyberware:ghost_circuit_lattice"
+  }
+}

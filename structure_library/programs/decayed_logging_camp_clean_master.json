@@ -1,0 +1,48 @@
+{
+  "structure_id": "infinite_domain:decayed_logging_camp_clean_master",
+  "archetype": "forest timber camp with crew support, sawmill workflow, drying yard and vehicle maintenance",
+  "orientation": {
+    "forest_access_road": "north-to-south central spine",
+    "dispatch_and_administration": "northwest",
+    "bunkhouse_and_crew_support": "west",
+    "sawmill_production_hall": "northeast",
+    "maintenance_and_vehicle_garage": "southeast",
+    "log_decks_and_drying_yard": "central and southwest"
+  },
+  "timber_workflow": [
+    "crew check-in, radio dispatch, management and equipment issue",
+    "crew mess, kitchen, wash/locker facilities and two bunk rooms",
+    "raw-log deck and loader approach",
+    "log infeed and debarking cell",
+    "primary saw cell",
+    "edging, sorting and control cells",
+    "finished-lumber stacking and covered drying yard",
+    "vehicle repair, parts storage and separated fuel service"
+  ],
+  "circulation": [
+    "central gravel road separates crew traffic from the muddy loader loop",
+    "dispatch has public and yard-side thresholds",
+    "bunkhouse has a crew entrance and independent rear emergency exit",
+    "three broad sawmill openings align with production cells and a separate east service exit",
+    "a six-rise stair reaches the full rear service catwalk",
+    "garage repair bays connect to enclosed parts and fuel rooms plus an east service exit"
+  ],
+  "damage_constraints": [
+    "confine the sawmill failure to the east sorting bay and its roof monitors",
+    "confine the bunkhouse failure to the southwest bunk-room edge",
+    "preserve dispatch, mess/wash functions, primary saw workflow, catwalk, garage and timber yards",
+    "derive all damage and hostile occupation from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the site reads as a complete logging operation rather than unrelated sheds",
+      "dispatch, accommodation, production, drying and maintenance functions are recognizable",
+      "all production cells and the elevated catwalk have player-scale clearances",
+      "the loader loop, crew route and garage approaches do not conflict",
+      "localized damage remains readable without sealing required routes",
+      "terrain feathering seats the roads, yards and separated buildings into forest terrain"
+    ]
+  }
+}

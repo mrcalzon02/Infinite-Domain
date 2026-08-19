@@ -1,0 +1,2946 @@
+{
+  "mod": "mods/momg-1.1.9-release-neoforge-1.21.1.jar",
+  "scope": {
+    "ore_blocks": 134,
+    "gem_items": 46,
+    "gem_storage_blocks": 45,
+    "live_textures": 225
+  },
+  "authority": "approved generic gem-containment and metallic-container machinery masters; upstream mod art supplies non-spatial identity palettes only; resource-pack PNGs are derived outputs",
+  "runtime_resolution": {
+    "all_ore_blocks": 32,
+    "other_textures": 128
+  },
+  "model_contract": "all live models retain their upstream cube/cube_all/item-generated texture paths; no model or blockstate overrides",
+  "animation_contract": "all generic ore machinery is static; animated item/storage textures retain upstream frame order and mcmeta",
+  "generated_sources": [
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_materials/neutral_gem_faceting_master.png",
+      "sha256": "9cb1945d7e8cdedcd9b08b1ef9ca73bf8dd940559616b4a1ddabdb3722f5726c",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated material source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_materials/neutral_ore_relief_master.png",
+      "sha256": "75ff9162afd51ebcb419eb1768cdf470b01bdc210730b54ddbb4bab46216abd2",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated material source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_materials/neutral_storage_crystal_master.png",
+      "sha256": "afe54ec1a8becc576b7b19370d3fddf4933f396f9fee259c73ba5c54204722c1",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated material source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/autunite_master.png",
+      "sha256": "9475eedd834c406be15d346e2e2609b32a4db31aebfc7ba2dd036de217f042ac",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/beryl_master.png",
+      "sha256": "a5e53d44a74c780ef3dfad28b1109ac520dfd6fd86cd9c9ab5dbd3696cb32489",
+      "size": [
+        1024,
+        1536
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/carnelian_master.png",
+      "sha256": "31fb3cf96bebaf22294365a2b6e71230b5cc0a31e28fa27edb1bf02a953a4ab7",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/corundum_master.png",
+      "sha256": "97d532ec17615d3b237bdc43b640e397f3526d12f06e7ebd1a12a4775b44b34e",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/ekanite_master.png",
+      "sha256": "7fd6454a205903e4b95d8d38593a5c593e0a378fe301e3c57554af594d2857c1",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/fluorite_master.png",
+      "sha256": "a9109ede6433b315f496d0a022f2b99a294c322691daf36385f249524afcbdc1",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/jade_master.png",
+      "sha256": "7ee0ac3347e3a3306556a1b144ca324254774c18dddf88549200798ae3047429",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/olivine_master.png",
+      "sha256": "062b9585a0f71caaf086d2a4a7b87a360ccd6284642c13ec5bd0050862232643",
+      "size": [
+        1536,
+        1024
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/opal_master.png",
+      "sha256": "d62e31e4a94e091cfe55bc115099e7ad7c4a500e32f407802e229309edb735f7",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/quartz_master.png",
+      "sha256": "162d83378d399eb33971ad608d0ae87ac412aee33c24f95bcc0fd2ad494ef296",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/sunflare_master.png",
+      "sha256": "67b2ca9af3aab2fcf589d00b63761a9b12a17d4deefddef54a2f04c1fc29038d",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/topaz_master.png",
+      "sha256": "717290f7b030fb24ccfe0f254baacd1fe15f7f33c2e5acf2f7306e00ae9872ab",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generated_gem_families/ussingite_master.png",
+      "sha256": "da96c9685ff51998926050ff547a08f31e6c6bd34a5a62fcf3613abb6d2b3e38",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generated mineral-family source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/amethyst_ore_master.png",
+      "sha256": "ef11b17b40b5f9c19014f11340a76abcfa715a4c0c959dc90aba082d9c8ad7ff",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/ametrine_ore_master.png",
+      "sha256": "3ee83a186836c021ba59549d6ade353e8607def67081a98103abf0baf7061f35",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/aquamarine_ore_master.png",
+      "sha256": "fa62789e818cfff96d203d7ca0f93a45da082818ce39d02d4d2ab31142b534ff",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/autunite_ore_master.png",
+      "sha256": "4ce6cc6c99427539fbd2532e3a7cd1121348498ee517b56886dde1b019307cb0",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_black_opal_ore_master.png",
+      "sha256": "6826b99353ed9c3c3e51a58c239ad4ed678dd8278e4c2e38ca51533921a8cd52",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_deepslate_black_opal_ore_master.png",
+      "sha256": "b052e06253d40b72d568064fa36f11e7482623a0f83dfbe935a3f7d7e7677b11",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_deepslate_gray_opal_ore_master.png",
+      "sha256": "764ffd314e902e3497cd7f0f7067ab483bdb9a7e99d3ebbd547b597fdeccad98",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_deepslate_jade_ore_master.png",
+      "sha256": "bbc62964397129b69a3c173577fb7e98853c8ad69e507fc6d9c1060ec053d346",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_deepslate_of_sunflare_gem_master.png",
+      "sha256": "e5a89593960dd69c3beb38d9db9a57a44335a86c871323a1e78833ed1e2402d6",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_deepslate_tanzanite_ore_master.png",
+      "sha256": "53ca0a05fcd7be87177fec0848847b5fdc4d83b4a6559922b21fc1e6216a2f3b",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_deepslate_white_opal_ore_master.png",
+      "sha256": "346cdaeddfd4e15f4ee619404e0beed966eb79098a5b77f214506e39862319a0",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_deepslatewhitecrystalore_master.png",
+      "sha256": "39b226654a8041f875935f2cc83d75698cf953cb2ca74c7fb8884f955e9aa85f",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_emerald-ore_master.png",
+      "sha256": "229e5652beb6584353a42a563fbabedc607fa523f8d744ab8f7a38e266185064",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_gray_opal_ore_master.png",
+      "sha256": "dc81d9cab9d7f73d7b89c54d06fd5f20e3380a87bba49b7eab03c676739e99a6",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_jade_ore_master.png",
+      "sha256": "13d43f2ea7f2eaba7f4d1354f6822504065494d1229ac1d1053c329269b07404",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_peridot-ore_deepslate_master.png",
+      "sha256": "f900210d243e3499141ff97cb02b4beacef5e8c12b6b7031ab6ee03563c79b13",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_peridot-ore_master.png",
+      "sha256": "f370245b0b60581e456827f9fff57ed1b59ab1929eb7711aae4f331fe5d6fbb8",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_tanzanite_ore_master.png",
+      "sha256": "86627edc42b2f615c1c0b12275d2b5f8db0955b07732f21554ed761cc5ea508b",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_topaz-ore_master.png",
+      "sha256": "7032d59813dda3d173006f614a5320165c581c08a1024896f89bc1b232fa5a34",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_white_opal_ore_master.png",
+      "sha256": "edefadbe881e9152837e6892dd62ee13818c900fac90de0abcd3bd540dcb7ff8",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/blocksprite_whitecrystalore_master.png",
+      "sha256": "b267722ee3dd7f8a6b7a932edbdee54a6e2dd98825bd29897c4285fd08051e60",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/carnelianore_master.png",
+      "sha256": "7c2b2d9b2e20f977a3fcb4b5c5a40fc171803a5a9f501e5e6c8d35a468a5724d",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/citrine_ore_new_master.png",
+      "sha256": "4b0eb1a3d7029d20fe6805a900f877a2db4e0f35be2a68477514c5fed9823527",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_amethyst_ore_master.png",
+      "sha256": "af9d648fb903c9ac9daa9f6be33d14ec5c4378fba89e38e281661a7dfeb4c4df",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_ametrine_ore_master.png",
+      "sha256": "f018bb935c1ae6375ed9e9b64c940fc28b8930dd9c5ad4bcb028fda7da159379",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_aquamarine_ore_master.png",
+      "sha256": "c7ad33053d4e70455af4723bc7a994f37a8a9488975453dcd55364ae4bef1b37",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_autunite_ore_master.png",
+      "sha256": "a52276b217ca1b2ac57ce2f9c7d13b3de6e96a320d819e2715664b9a4a0fa43e",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_carnelian_ore_master.png",
+      "sha256": "baffd669275d646dfc0735caf09e9bda447fbb36cc924aea7aae02b2032f3707",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_ekanite_ore_master.png",
+      "sha256": "ee306488f16d7d4bed9b1188dee2e623d93ba80ef20d6c8d5ed66a2f2c1ebdc4",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_heliodor_ore_master.png",
+      "sha256": "e459a2613b5a1c3271fe1c87597a4ec18394bc293de06e32ac67a1abce72eea2",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_leucosapphire_ore_master.png",
+      "sha256": "0414880d3ad50fd3c4364f110899aabbda19f4a5f71fbaf96f9d186b5c6dd295",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_padparadscha_ore_master.png",
+      "sha256": "7516e4c4a2cc7a1eafa10c44296f4f89c02be99d3100cd7b9e0dc7cab8798649",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_pink_opal_ore_master.png",
+      "sha256": "6ae37f33b6004f1377ac14bdd2eaba9cbf86458c1892e7fd88854265910e2029",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_rainbow_mystic_ore_master.png",
+      "sha256": "9b7e3e73dabb159ccccc7625fa0b094761304d759b6a6c3fc2073a917e88b45a",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_rare_sapphire_ore_master.png",
+      "sha256": "997419dc5a2c0652ddd15f2fa85341bf34a30be3b0ec9fe104ff3528701dc2f1",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_topaz-ore_master.png",
+      "sha256": "acdaf5dd03f109599654f5571d5f9ca764fcd418ba0878f517a209a566081ee3",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslate_ussingite_ore_master.png",
+      "sha256": "b6e5ca53aec3234604d69125713d4784271e741a0e5a2cf66c2eb77c276012ce",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/deepslatesapphireore_master.png",
+      "sha256": "db1f53653a99c298d344c58c0e284696040841573b51fe7771401a1a4f04a3fa",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/ekanite_ore_master.png",
+      "sha256": "fd328c51cfa94930602ea1487c35d4358b05051b4838130884cbbfc4450627ef",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/fire_opal_ore_master.png",
+      "sha256": "29c613b00001e81896edaa869937fba9dc0325a197211b5c0957da3c79062c73",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/fluoritetier1ore_master.png",
+      "sha256": "5f9a3613c09c0b6f6d5b3b74b0a4e82938b1c8ac37771099ee944f3a1af95fd5",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/fluoritetier1oredeepslate_master.png",
+      "sha256": "f89bc85db5a32efd89fe4b1073439cf1a8c539594923aa3019998329cd4a4872",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/fluoritetier2ore_master.png",
+      "sha256": "f05a82dea28d9bd18eb616d15d9eac45c9b31e82946ba5f897eb59139a95e4f7",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/fluoritetier2oredeepslate_master.png",
+      "sha256": "11bb542c79862df626027128667269a8fcf960a626ddfa00aea8144f9dee8f0c",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/fluoritetier3ore_master.png",
+      "sha256": "a90689b720cc9365bb5021c915156ac29801458e95fb97f14a38e86bd4fd9ff2",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/fluoritetier3oredeepslate_master.png",
+      "sha256": "ab66b2e7f73dbee5f62076daad585a9f9aa9c9ddb844ae373b645792b3d13058",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/frost_opal_ore_master.png",
+      "sha256": "e5fcb98f4ba4d384d3603066f260c3ae1a2710354821a6f18f02d81adb3b8f7d",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/heliodor_ore_master.png",
+      "sha256": "cbe2788749f9730d068731cbda85ad9336e44371f3caf38e513fd49e80414125",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/leucosapphire_ore_master.png",
+      "sha256": "c62d346671da5791622312707697ee06f34e5dd83619e1262610a257a09b20e8",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/luminousgemore_master.png",
+      "sha256": "3acf1a15c1de186c781f4dac7824ee3f0c7a810ceab354e027065c75ef1f72f7",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/luminousgemoredeepslate_master.png",
+      "sha256": "3acf1a15c1de186c781f4dac7824ee3f0c7a810ceab354e027065c75ef1f72f7",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/nether_amethyst_ore_master.png",
+      "sha256": "ee65f38cdcde405fe1f47be188cf8d51becfbd24d9e70488a63ea577370a4793",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/nether_opal_quartz_ore_new_master.png",
+      "sha256": "f93158832f27c0218a805e64afe3b22bf2708dda05685de8817bfc9bc1316916",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/opal_quartz_ore_new_master.png",
+      "sha256": "cac74a01da9ac479bfe272cd65ccf21853665de116addb3cd7dd5cd01e71ff90",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/padparadscha_ore_master.png",
+      "sha256": "69d1b881956c1e80c55deb4eae80654a9645569426efefe80299d08e2c58b648",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/pink_opal_ore_master.png",
+      "sha256": "6ae37f33b6004f1377ac14bdd2eaba9cbf86458c1892e7fd88854265910e2029",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/rainbow_mystic_ore_master.png",
+      "sha256": "13986de413921c2d8fa20e030209696ae38151fa8d4f70e5956a624603ca56fb",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/rare_sapphire_ore_master.png",
+      "sha256": "c5ec041942d06281761c3074960e2c45db39c099345c1f6e0fae5f9bd83ffffc",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/ruby_ore_deepslate_master.png",
+      "sha256": "d3623db7192742db45bdce11b5619dd2cbab400635925bf2861d64beda4a67b1",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/ruby_ore_master.png",
+      "sha256": "44ee0d9a3ce84ba1487aee201e1407fd1763c7aa265f4403d7f14932c5555641",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/sapphireore_master.png",
+      "sha256": "34e18ef908aa8fb42739b9312de8b267a28ca480abe2c88c2a8ea7b7eca5270b",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/titanium_quartz_ore_master.png",
+      "sha256": "e7458d8fdd4272dd1b2ceaaad11076a5729e2ffb450c0c8d94ebde4d3a5ee513",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_gem_containment/recolored_masters/block/ussingite_ore_master.png",
+      "sha256": "118e98d91dcef4e56f3bebf1a9c55a5f6be927e3c013706e57b0f1650172968d",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-containment recolored gem source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/adamantiteore_master.png",
+      "sha256": "da5be0544e36406f510da2c8038ca2489a1622541090eadc21bdd00d4d93123e",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/antimony_ore_deepslate_master.png",
+      "sha256": "78ad74bfa48f7deedf6cc48089c2164524919e2e0fb45e960f863b642dc7eb8e",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/antimony_ore_master.png",
+      "sha256": "78ad74bfa48f7deedf6cc48089c2164524919e2e0fb45e960f863b642dc7eb8e",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/blocksprite_aetherium-ore_master.png",
+      "sha256": "33a4b65e8fc348829be9f6e500aaff710b104df98afdbebff1ca12862a4c16eb",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/blocksprite_deepslate_aetherium-ore_master.png",
+      "sha256": "33a4b65e8fc348829be9f6e500aaff710b104df98afdbebff1ca12862a4c16eb",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/blocksprite_deepslate_shadowite_ore_master.png",
+      "sha256": "c7a38f4338e024dbf4ec85c658997cb0ae4e174d9645f7a9794e1e2bef405220",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/blocksprite_deepslate_sliver_ore_master.png",
+      "sha256": "cec83c83cc4bdeea54f3fec631e3704798b5f906e96a51a26bd1f6906eb59a4e",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/blocksprite_end_stone_shadowite_ore_master.png",
+      "sha256": "d5132f1ef5939addc135c40245b8e82b69415d0acb3e4c41f3c6e388d9dc3613",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/blocksprite_nether-crimsonite-ore_master.png",
+      "sha256": "f7deb9aefaeef2afb7015b314e98878621f96eb3e44c4de469f4bccb6388147c",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/blocksprite_shadowite_ore_master.png",
+      "sha256": "d5132f1ef5939addc135c40245b8e82b69415d0acb3e4c41f3c6e388d9dc3613",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/blocksprite_sliver_ore_master.png",
+      "sha256": "36a55458e397d340e5224b28be7f547def791d4bb255e36c7d6460e6f075fe38",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/bromineore_master.png",
+      "sha256": "fb746388fa2bcd89abf52011dce63ff90f15fd6a894d82c903f9745a764dfe58",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/chondrit_ore_master.png",
+      "sha256": "072ae7095f0b1d23096fe6deca70187700abd440f14eeabd41cac9e6f80b3082",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/chromium_ore_master.png",
+      "sha256": "4a3e8cb2e35c53b83360130cbb91db61dfadeae2731ea6da2d204c0b2859f781",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/clay_thalassium_ore_master.png",
+      "sha256": "19c10dcc407c068df7249720cc61489961aab1799ae43f8ceafc77dd1e8b015f",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/cobalt_ore_master.png",
+      "sha256": "14af4530ecf68319f8dc3a657738de331d89c240943a00b3d25241c58f363a76",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/crimsonite_ore_master.png",
+      "sha256": "b0b072b34ba6f9b3f2054862e0865f9c002d09fed7e4c9ce1641b98b5c9940af",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deeplsate_thalassium_ore_master.png",
+      "sha256": "19c10dcc407c068df7249720cc61489961aab1799ae43f8ceafc77dd1e8b015f",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_chondrit_ore_master.png",
+      "sha256": "7337e4e85958f335ec25c87dfdab5bf2d110944601692b8ccec5d1b4f3a54aa6",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_chromium_ore_master.png",
+      "sha256": "4a3e8cb2e35c53b83360130cbb91db61dfadeae2731ea6da2d204c0b2859f781",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_citrine_ore_new_master.png",
+      "sha256": "932dfb1ac92e5f597f9524220adcc86702d8da63ad7a088f127623e7f82bcb4c",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_cobalt_ore_master.png",
+      "sha256": "69f745afee500afd377b5ab73da8cc8e350539f3d9cf18c9d242219379bf1bdb",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_crimsonite_ore_master.png",
+      "sha256": "b0b072b34ba6f9b3f2054862e0865f9c002d09fed7e4c9ce1641b98b5c9940af",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_indium_ore_master.png",
+      "sha256": "b66f14d3919fb6cf492810739a6aef7ff9cc2936492eb9eea01ba808c120e6e4",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_lead_ore_master.png",
+      "sha256": "369f9d1f1c4adba15696ba01bce06b6544ab49274c184f168f8bde0cfe29617f",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_lemonite_ore_master.png",
+      "sha256": "3b51e75f21fb59407bc8ffc11d317dbd4e99bea2f215739d470f134f1c0fe934",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_magnesium_ore_master.png",
+      "sha256": "611c198f0ab724ccb6fba55eed027ad1e9e4ac3cc1d8a15b4c77b6dad780caa1",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_monel_ore_master.png",
+      "sha256": "d35895aeda2a0201a28bbaccac716442e37c4587cd0a91ed98d87131a1ff3ee2",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_neptunium_ore_master.png",
+      "sha256": "8568587a58a986ebffcc9a46222c60b5cf0febcd7f0605388e9ef906850896db",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_nikel_ore_master.png",
+      "sha256": "c138616e9f026ee49a72ca79e5a0cf4ce5706a11a2361b7d6f27eeb67fcd4cd1",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_osmium_ore_master.png",
+      "sha256": "69ef27f94e4e317e081fb9d5314242725f232eede2d38b5d1aac143c4ca2a7f1",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_platium_ore_master.png",
+      "sha256": "7c2e2a7dbfe6a175904b9d59fd754206a1919a58dbe7f85135dfa04d2619b0d2",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_radium_dust_ore_master.png",
+      "sha256": "a017204f483c3e2d0776ec14f11f6b433a843af275932ba9162760b46af7347d",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_radium_ore_master.png",
+      "sha256": "344624232b97cceba709bd6ae5f6f74738be4333bc983186ed2365f5672903ed",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_rhodium_ore_master.png",
+      "sha256": "5de92077f4fdc788a6c9925ed7ae902117a7231263fae37e40f26b411cef0064",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_rose_gold_ore_master.png",
+      "sha256": "85b346d57b8fb5d1da428a269811c2de9f7abca297ec41fc6c552e899a18dc9d",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_thoriumore_master.png",
+      "sha256": "90b931fb72d75acd241ac71f73b55faff6e64dc5ccad9062f3e2e4b1585561df",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_tin_ore_master.png",
+      "sha256": "b098757c684ca7cd8584be93da272d47d32fac697914edb1ee3d1b39eac1dbe5",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslate_uranium_ore_master.png",
+      "sha256": "68b9a3cbed26c16b7d380f346826a9dd57c9567fbbae61a2a9994d16139ae475",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/deepslategunpowderore_master.png",
+      "sha256": "fc4bc88813e17341f55449f71558ea937693130b4689d6d54c7317af5b49044a",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/electrumore_master.png",
+      "sha256": "9077d6c243f0fba3b4937e94276ba02ede0352116493828131208c036534bae4",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/electrumoredeepslate_master.png",
+      "sha256": "9f21185a206e0a977172d473397b4e47ebc85e8d0eeff29bbc459f3266113ea9",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/gunpowderore_master.png",
+      "sha256": "b9badc450c95dd6f725d761f1e8fbe4b697ed20f47f2e3c3997f10dfb6524e96",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/indium_ore_master.png",
+      "sha256": "201100ac3b36738630be429a7ad4755690daa07c5333f1385a3c3851546f0d18",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/lead_ore_master.png",
+      "sha256": "721242748c477c65ea40e3e637f4193ee56615e33aeefa5e07fb8d2f1de04a36",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/lemonite_ore_master.png",
+      "sha256": "3b51e75f21fb59407bc8ffc11d317dbd4e99bea2f215739d470f134f1c0fe934",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/magma_volcagmium_ore_new_master.png",
+      "sha256": "c8daa53c673b08cc1f2bbb87a7441022ecd66e8f9468b1b2fd5feb38ebe08c28",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/magnesium_ore_master.png",
+      "sha256": "611c198f0ab724ccb6fba55eed027ad1e9e4ac3cc1d8a15b4c77b6dad780caa1",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/monel_ore_master.png",
+      "sha256": "d35895aeda2a0201a28bbaccac716442e37c4587cd0a91ed98d87131a1ff3ee2",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/neptunium_ore_master.png",
+      "sha256": "ea1a14495c366e4263ef7ea513ca9957b9029028214b2cd5c099bb1a005b07b3",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/nether_osmium_ore_master.png",
+      "sha256": "cb315d51121fc73369016a9d970d5b1ade795f262d9cea339e5c6fa9d5a541f6",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/nether_rose_gold_ore_master.png",
+      "sha256": "d0fd8053b82c96a039520ac23405af78486da6a4d38ff4af70d6db25a6c8e713",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/nether_titanium_ore_master.png",
+      "sha256": "8dc1672f0bb99bf3b6530bd7b799d7b82ce98906f9fa2272e5c01098e45bb98c",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/netherelectrumore_master.png",
+      "sha256": "35d6564f6fc722c89f170df4e7102d1159682608d2bb3868474f185eae3b49fb",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/nethersilverore_master.png",
+      "sha256": "30f0d3701e015aa9602dc84e69ecd7da0a1d924a2d067727aad7b5b54443988f",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/nikel_ore_master.png",
+      "sha256": "c138616e9f026ee49a72ca79e5a0cf4ce5706a11a2361b7d6f27eeb67fcd4cd1",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/osmium_ore_master.png",
+      "sha256": "69ef27f94e4e317e081fb9d5314242725f232eede2d38b5d1aac143c4ca2a7f1",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/platium_ore_master.png",
+      "sha256": "7c2e2a7dbfe6a175904b9d59fd754206a1919a58dbe7f85135dfa04d2619b0d2",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/radium_dust_ore_master.png",
+      "sha256": "344624232b97cceba709bd6ae5f6f74738be4333bc983186ed2365f5672903ed",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/radium_ore_master.png",
+      "sha256": "344624232b97cceba709bd6ae5f6f74738be4333bc983186ed2365f5672903ed",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/rhodium_ore_master.png",
+      "sha256": "5de92077f4fdc788a6c9925ed7ae902117a7231263fae37e40f26b411cef0064",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/rose_gold_ore_master.png",
+      "sha256": "85b346d57b8fb5d1da428a269811c2de9f7abca297ec41fc6c552e899a18dc9d",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/thalassium_ore_master.png",
+      "sha256": "19c10dcc407c068df7249720cc61489961aab1799ae43f8ceafc77dd1e8b015f",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/thoriumore_master.png",
+      "sha256": "90b931fb72d75acd241ac71f73b55faff6e64dc5ccad9062f3e2e4b1585561df",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/tin_ore_master.png",
+      "sha256": "316ee864051c259069f1fd2b7a389fff5fd785111e920fd23bf7910e9fa9caf8",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/titanium_ore_deepslate_master.png",
+      "sha256": "8dc1672f0bb99bf3b6530bd7b799d7b82ce98906f9fa2272e5c01098e45bb98c",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/titanium_ore_master.png",
+      "sha256": "f6db3f692cb8341a8930a11258bef9ca021bce91909f8eecc1a060858fd099f4",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/tungsten_ore_deepslate_master.png",
+      "sha256": "4e956fada616cd1b3814ded5c9adbf77b6a5a4309846e58d316fa9abb0ef811e",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/tungsten_ore_master.png",
+      "sha256": "4e956fada616cd1b3814ded5c9adbf77b6a5a4309846e58d316fa9abb0ef811e",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/uranium_ore.webp_master.png",
+      "sha256": "68b9a3cbed26c16b7d380f346826a9dd57c9567fbbae61a2a9994d16139ae475",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    },
+    {
+      "path": "ROOT_tools/more_ores_more_gems_authored_sources/generic_metal_ore_container/recolored_masters/block/volcagmium_ore_master.png",
+      "sha256": "c8daa53c673b08cc1f2bbb87a7441022ecd66e8f9468b1b2fd5feb38ebe08c28",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative generic-metal-container recolored ore source"
+    }
+  ],
+  "outputs": [
+    {
+      "texture": "more_ores_more_gems:block/637608873479978555",
+      "source_sha256": "2789315690da4d1764079220ec27e4d97ef44a21f4d59a1889cd54259057a867",
+      "output_sha256": "752b05fb0818e0d7e5a6bbd9c6bf2febbd285b745cc79ccca61a6abfb820555e",
+      "frames": 1,
+      "method": "authored compressed-crystal and corundum relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/adamantiteore",
+      "source_sha256": "da5be0544e36406f510da2c8038ca2489a1622541090eadc21bdd00d4d93123e",
+      "output_sha256": "1ceade403994279a1bd71c85506190e821fcc16f4ab2447ee664aec20268a8da",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/amethyst_ore",
+      "source_sha256": "ef11b17b40b5f9c19014f11340a76abcfa715a4c0c959dc90aba082d9c8ad7ff",
+      "output_sha256": "f0b1c741a8c294a6c743ea4d269918a68f90a4c56354fe3c9fd77c2b886573e0",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/ametrine_ore",
+      "source_sha256": "3ee83a186836c021ba59549d6ade353e8607def67081a98103abf0baf7061f35",
+      "output_sha256": "e926099b71e39fcc33690167afadcc80c32dbcd4e6169bfa9e5c99bbfc8a0c37",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/antimony_ore",
+      "source_sha256": "78ad74bfa48f7deedf6cc48089c2164524919e2e0fb45e960f863b642dc7eb8e",
+      "output_sha256": "0cd5ac1d939d4fa5392b68b267080a175b3c6bcb470a85b666ddadc6ed43b7aa",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/antimony_ore_deepslate",
+      "source_sha256": "78ad74bfa48f7deedf6cc48089c2164524919e2e0fb45e960f863b642dc7eb8e",
+      "output_sha256": "0cd5ac1d939d4fa5392b68b267080a175b3c6bcb470a85b666ddadc6ed43b7aa",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/aquamarine_ore",
+      "source_sha256": "fa62789e818cfff96d203d7ca0f93a45da082818ce39d02d4d2ab31142b534ff",
+      "output_sha256": "9be826e2e11f5e10ea77808c8df3d057dcce1f6a9cdb2182d7472b6fe7a6301e",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/autunite_234_block",
+      "source_sha256": "7f837095b23f733cb142c0f0828c68dd66aab5e6ca03edbd901f734e99bc780f",
+      "output_sha256": "c6c89e4a9e34d336af398171415382dc70427e365a60d59c6a1f891eff9ecf1a",
+      "frames": 1,
+      "method": "authored compressed-crystal and autunite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/autunite_235_block",
+      "source_sha256": "5642e398915a53d74889600830af55251d84e4b4c641122413c1808da2cd1023",
+      "output_sha256": "069d5e052720113cea50802d7394de22137b0dcf903bb89bae9700badb56d63c",
+      "frames": 1,
+      "method": "authored compressed-crystal and autunite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/autunite_238_block",
+      "source_sha256": "c9060017d4dd73fc3b8c40f9e0ef7040f129863264bac9823769e4f5087c9432",
+      "output_sha256": "3665ff17695e6da41629c0e3b9280e5900602885149e326c084ac906c88d040a",
+      "frames": 1,
+      "method": "authored compressed-crystal and autunite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/autunite_ore",
+      "source_sha256": "4ce6cc6c99427539fbd2532e3a7cd1121348498ee517b56886dde1b019307cb0",
+      "output_sha256": "b053895563bfee8b7b911408446208fd3fc03878b4f9b8f6e4d6890aa3ccf6c0",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_aquamarine",
+      "source_sha256": "b3ba4fb81e9bf053b29f3dd7a0807aa7eeac80763c970d5ead6d36f05c2424eb",
+      "output_sha256": "8ff9b105491b086ebf9958d7b03eceab958c9ea052e8503f2ed8a350041565b5",
+      "frames": 1,
+      "method": "authored compressed-crystal and beryl relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_amethyst_gem",
+      "source_sha256": "3f46d8a5f8e703371a91b710bfb380a6c9a147c3413a6eee07045c6bbd1674bb",
+      "output_sha256": "a573346ce4ca4f8757073b42bdacb1fc69de71084be9441896867b788c3b605a",
+      "frames": 1,
+      "method": "authored compressed-crystal and quartz relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_ametrine_gem",
+      "source_sha256": "6870dacd6074ba001625da2679b757cd1a07ee7245dcdb57bc95a7032030497f",
+      "output_sha256": "c1d2dd7687569bfc89dd2db4bcb2a764f8b3b4e27053f086b7586971baabdfa8",
+      "frames": 1,
+      "method": "authored compressed-crystal and quartz relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_black_opal_je3_be2",
+      "source_sha256": "bb6bde84f487e6007fcd542ac6e882095db757e41748f48eff441a362bef76a0",
+      "output_sha256": "47a28eb73115b54cbafae936931023d6c26cc411f9774bc49a142e50210dba2a",
+      "frames": 1,
+      "method": "authored compressed-crystal and opal relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_citrine_gem_1",
+      "source_sha256": "7d2df2fa6dc86f14b6f2335b808ba20dc1e6c5796656acb83e2795ee146b338b",
+      "output_sha256": "b869a25355c832a464328511877687a54122cc34127d687aba4ae7fe5fbab3f1",
+      "frames": 1,
+      "method": "authored compressed-crystal and quartz relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_ekanite",
+      "source_sha256": "934ff0d25448e246cfa2ff449b1faef152f6cbd1edda4310ae9f7d16db9b850d",
+      "output_sha256": "3e51c78c035ee49dfb44a6e44483790d6739e360e9bfb034e20ef0869ee4a2c6",
+      "frames": 1,
+      "method": "authored compressed-crystal and ekanite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_fire_opal",
+      "source_sha256": "6c9ead2339d2337854b3fea57d10f1af3077382e838b52c0fad8daae3a6227f4",
+      "output_sha256": "cbf421fb7583746078e2f833717bfce2ced2606e52d0ec67d5b6101a53fbb7b8",
+      "frames": 1,
+      "method": "authored compressed-crystal and opal relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_fluorite_phantom",
+      "source_sha256": "c9e8d8d24e450678c94c835600cc4beb44775e74c56ac89d604f8897d47c0e57",
+      "output_sha256": "d2c1a6293d649d42e77210e73626961c1e98a6ef3d48031cc3e6cc201ab06842",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_heliodor",
+      "source_sha256": "20c90693b4f489eee4b2b11563d2f208bb8a6152375c264cfe76ffaa0f4d052b",
+      "output_sha256": "60756dd60078c0bc73a829cee9087d4cb62f59e16e31d26f9c9015336482120f",
+      "frames": 1,
+      "method": "authored compressed-crystal and beryl relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_leucosapphire",
+      "source_sha256": "a404d726c1fd00442491f79be04bd541f85d3148e108408cae455917bf54c83f",
+      "output_sha256": "28b145db2bb9df207e89f1bd20952b5a3b267278239f4e05d01282212a7a5111",
+      "frames": 1,
+      "method": "authored compressed-crystal and corundum relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_opal_quartz",
+      "source_sha256": "c1de39f9e8c27ab6beac5db394abf5b1b42696c2a68abde46ba0ed45a7f53c9e",
+      "output_sha256": "5330b7496c4aea9edef8a7488bc7b962e009f4491c1caa22bc73e1e2b7863018",
+      "frames": 1,
+      "method": "authored compressed-crystal and opal relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_padparadscha",
+      "source_sha256": "9e55eba7de717047f9740deb8092b8e949324b38ef8d6cc9c2e0da472817b007",
+      "output_sha256": "2e8b72df6898b649c04500304e50c694157b1b23ce36bd7f8cd0b5c3f987cb73",
+      "frames": 1,
+      "method": "authored compressed-crystal and corundum relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_pink_opal",
+      "source_sha256": "99aa404b6b9f8c365678473e324933b5f357cf103c5210a778f430c2ea196e6f",
+      "output_sha256": "9a9875c2874ff858bfadef327cbeef2b1bd1f3ba00739e640285aa4b6759b017",
+      "frames": 1,
+      "method": "authored compressed-crystal and opal relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_rare_sapphire",
+      "source_sha256": "9f6fe08f404114dbe0b83cf7742fa7923a8da4baf7f7e7c1dc1e35b8959b0fe4",
+      "output_sha256": "98af9c076734e3683843486b5ea6d9be3b4398aff63e03d0f710c256cbed5b1e",
+      "frames": 1,
+      "method": "authored compressed-crystal and corundum relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_ruby_je3_be2",
+      "source_sha256": "b69bb0b5064a03ab0ed91a67b5efe5a33e4003ec985087ee2db77b4a43359afd",
+      "output_sha256": "cef2c93bfa32515081e35c8dd96fcd8430f01cc8b9142ad0fbf6a995c83d5d05",
+      "frames": 1,
+      "method": "authored compressed-crystal and corundum relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_tanzanite_je3_be2",
+      "source_sha256": "13cc359a32767e2f42eb6077882327b6a3a41ce84b07717fba9eceef7d94c0ad",
+      "output_sha256": "c83061050f138525dd7eff1a6fc5fdd79148b7036f4dbaded2cc18e4b0b74082",
+      "frames": 1,
+      "method": "authored compressed-crystal and corundum relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_titanium",
+      "source_sha256": "4c09deb350157173360fb01a7d76ed78b94d5fd71f2b5fa4d4583160bd58d133",
+      "output_sha256": "b291d470913fbb6c11e03b7dc94c56109588e2cdc16f221b2747e6f777e23349",
+      "frames": 1,
+      "method": "authored compressed-crystal and neutral crystal relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_titanium_quartz",
+      "source_sha256": "20d2962a7716d3ed24e12fa201bc6a0e8677a02ba26de5cf8646f5e3e832b922",
+      "output_sha256": "09000ccc0d94ec36e8fdeffc985a73a3be18bf9c67083fe96676860d7df02bbc",
+      "frames": 1,
+      "method": "authored compressed-crystal and quartz relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_ussingite",
+      "source_sha256": "cc5011cf84b7374264e1c79b095c6dbc94e36aaa6cc317f08350d56ceee7f4a7",
+      "output_sha256": "23d8f766e2d4c5a127a91fcabec1f6c3be0a23f23b025ea0f729c4c47a85e890",
+      "frames": 1,
+      "method": "authored compressed-crystal and ussingite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/block_of_white_opal_je3_be2",
+      "source_sha256": "2d8ad4507f2943799d583618b1e36780c89b1b0bd8909c152cb9845d5ea43dca",
+      "output_sha256": "57519aacddc751929e052eb67f3b720898eaef4d12be7a3d321564024f1d8310",
+      "frames": 1,
+      "method": "authored compressed-crystal and opal relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockfl_black",
+      "source_sha256": "f4d24d9b503e5fdd9f280cb1728d8864da01af6cbb26d5dcca73201ce75c3f0d",
+      "output_sha256": "57ded48d4ad515c86b0e9b3105bbbc0bb736c00c23e46e2a895199784d4b8160",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockfl_blood",
+      "source_sha256": "b649c7c8103033895e6ee5d0a5b1ca9b26b780bacbfc5e15dd800c71258cadba",
+      "output_sha256": "3ee8cb69c79f82cb10eaf68dba411f481f8e0f7a193e96a164fd3cf304f21610",
+      "frames": 2,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockfl_f",
+      "source_sha256": "d6c347206048495a9a7bb79d70e928ddf2ae729bd434e03cca2ff229e2a1f326",
+      "output_sha256": "6d96bf2ac1eb88a84d17b43f4fbbd4f85a2169bcd9ae178498a95d34e537c1bf",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockfl_green",
+      "source_sha256": "e94b8168bee65d7c535e4f7fb05bc1a863267fb6a5e8a701842429787fa9175c",
+      "output_sha256": "7926950f7da6b7e377569767aea87550083068b5166cb8a0bf9f159aa5287db8",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockfl_orange",
+      "source_sha256": "abf2821573746f668c33a33fe836e5b645fedcc7fd112255805c1489fbae8bcf",
+      "output_sha256": "7e781b86306ec5c9563f90eb85a6855754c8c61c25d58e9d3ee7d8052db20755",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockfl_orange_pink",
+      "source_sha256": "2bc181f4c63df52606649c60d011a53008fba1a00c46b4ab5215713723ee8495",
+      "output_sha256": "406e22810fab4beb176d657dbfa3ee34050e56d422eec1591bd44669583d473e",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockfl_pink",
+      "source_sha256": "03e019a284a9d2c301d9d7db65e9a8340a05d441d758f3b6896a938303938b02",
+      "output_sha256": "0754c39cd63b3c85f6845bafa5470ca89564bb427ab0de4d49f43444e519c739",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockfl_purple",
+      "source_sha256": "a468a4e709b9530ab82b178c01ff00800760e36b3a32eea2d8e1097b3d7bcf14",
+      "output_sha256": "a1093bc1dc87ba1d475fbdd626b245139a51bae68cf2a3fb327922b8a1d5ba35",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockfl_purple_green",
+      "source_sha256": "4dfb546be0f96dfe878a6fc7ff71dc8cb190a82c06ad7c561391e1fd0c1c9e80",
+      "output_sha256": "1f1d641c0e5e34e8ba4f45a3aa32a0079a789160553aec37ff52a8d66aff6ab4",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockfl_white",
+      "source_sha256": "72d4ab5115294dae261340c1365631cc230f71aabd04f292b8a74038072c965c",
+      "output_sha256": "fadb20d1182db6b7dba6c08d99e423adae05e708b4895fecabdd718107313559",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockfl_ytt",
+      "source_sha256": "54489df082615445ae96fc8a89c4fd36bb27992fe26ad6ee62f1152d97af411f",
+      "output_sha256": "94a8698a828631fba3e5924d221baefb4bc2965724925c2a07a59639f8d38f0d",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockofc",
+      "source_sha256": "957d17b1e04819e7f0ad37fff310fde0a5bb364bc0ffc6ee4687c6dca93b487f",
+      "output_sha256": "ed5eb0f28274034792310d0df2d3f4879d6b731791af9c2f596fdd070d50af82",
+      "frames": 1,
+      "method": "authored compressed-crystal and quartz relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockofluminousgem",
+      "source_sha256": "993a3354d935564ce3b8d1fa9361867f17278c1afed542259864d98f9440dacd",
+      "output_sha256": "8b4da10e92fcf181e3988f8a2194185cce2994cf4cb1b210284f6fd0e8aa6c18",
+      "frames": 1,
+      "method": "authored compressed-crystal and fluorite relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blockofsunflaregem",
+      "source_sha256": "33fe8a253070527ea64023e29cef31f105077eb1bec011596ae9c8e9bf16dcbd",
+      "output_sha256": "46df7e42de6f10227b97bde49b72f228261d9f45e3a7b9b8fd90ae5fc13d2154",
+      "frames": 1,
+      "method": "authored compressed-crystal and sunflare relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_aetherium-ore",
+      "source_sha256": "33a4b65e8fc348829be9f6e500aaff710b104df98afdbebff1ca12862a4c16eb",
+      "output_sha256": "bef9dcf833f4243166a843357efb9e794b5ae937e4e62ffda47deaccdab15240",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_black_opal_ore",
+      "source_sha256": "6826b99353ed9c3c3e51a58c239ad4ed678dd8278e4c2e38ca51533921a8cd52",
+      "output_sha256": "5acd667ee5568ce2a7cc6014101a78ff19b7cec269009f38fbb1ef24b3b0263f",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_block-of-jade",
+      "source_sha256": "8d1c9ee8be08d73b19a8be758e9f3d3513fb7715d79fdda56f560ff5b83a83b4",
+      "output_sha256": "5444cde47ba0f2c279da544bfd7f4aa81fcf3732e81b559f3ee78ee9c274a9fd",
+      "frames": 1,
+      "method": "authored compressed-crystal and jade relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_block-of-raw_titanium_quartz",
+      "source_sha256": "1e71dbf2e85d58b65e8dfd17e8eeaa7e62fb3e9c4b6c57d75c9d641a39eed7d9",
+      "output_sha256": "0cee71bcaf6a010897d64834a5fe1222db671043acceaff9510775675996328d",
+      "frames": 1,
+      "method": "authored compressed-crystal and quartz relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_deepslate_aetherium-ore",
+      "source_sha256": "33a4b65e8fc348829be9f6e500aaff710b104df98afdbebff1ca12862a4c16eb",
+      "output_sha256": "bef9dcf833f4243166a843357efb9e794b5ae937e4e62ffda47deaccdab15240",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_deepslate_black_opal_ore",
+      "source_sha256": "b052e06253d40b72d568064fa36f11e7482623a0f83dfbe935a3f7d7e7677b11",
+      "output_sha256": "09a490cb3d79ebc89df873b1edc109547ee8ff10feb43f19d42ee90b3137047d",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_deepslate_gray_opal_ore",
+      "source_sha256": "764ffd314e902e3497cd7f0f7067ab483bdb9a7e99d3ebbd547b597fdeccad98",
+      "output_sha256": "0eab0f20b9b442ca15edc3eb7b44f94a35f50aa281d74c235fc3beb52db9b650",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_deepslate_jade_ore",
+      "source_sha256": "bbc62964397129b69a3c173577fb7e98853c8ad69e507fc6d9c1060ec053d346",
+      "output_sha256": "c8898528f2587164bdccceeabe04bac277cc43831e8f61aaafe139bf515c4a67",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_deepslate_of_sunflare_gem",
+      "source_sha256": "e5a89593960dd69c3beb38d9db9a57a44335a86c871323a1e78833ed1e2402d6",
+      "output_sha256": "aff517b69214dbd714ea5fa7599060f191f08c6a61393a5f5c1b4e49c13ae434",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_deepslate_shadowite_ore",
+      "source_sha256": "c7a38f4338e024dbf4ec85c658997cb0ae4e174d9645f7a9794e1e2bef405220",
+      "output_sha256": "811ac6d0a1f955363cc30aa8d4f262fc7b54732292d9a520054245f4b3fda893",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_deepslate_sliver_ore",
+      "source_sha256": "cec83c83cc4bdeea54f3fec631e3704798b5f906e96a51a26bd1f6906eb59a4e",
+      "output_sha256": "7a0c445c600aba7ffee64acfa2d8d131b6eeb79efe0bc9b81d7f5e8ccc02fe42",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_deepslate_tanzanite_ore",
+      "source_sha256": "53ca0a05fcd7be87177fec0848847b5fdc4d83b4a6559922b21fc1e6216a2f3b",
+      "output_sha256": "ca2574ea3c096d56f7ebdae2312f1e9066bc6b2c0d6571f1252dfbb3ab543619",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_deepslate_white_opal_ore",
+      "source_sha256": "346cdaeddfd4e15f4ee619404e0beed966eb79098a5b77f214506e39862319a0",
+      "output_sha256": "87c4dda3d7d9e371645a6b9461e2fa19b3e96037aebe044077a1a9b49ff76f14",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_deepslatewhitecrystalore",
+      "source_sha256": "39b226654a8041f875935f2cc83d75698cf953cb2ca74c7fb8884f955e9aa85f",
+      "output_sha256": "5c85f24b68eac3342f1d9c928e85a9a331ad1b3b6648d0cdb3576eb9d5a7c437",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_emerald-ore",
+      "source_sha256": "229e5652beb6584353a42a563fbabedc607fa523f8d744ab8f7a38e266185064",
+      "output_sha256": "f751d7174b1394f9f8e1ecf89f2d384c8e9459c1ed92638e1d5321cc898ee0a5",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_end_stone_shadowite_ore",
+      "source_sha256": "d5132f1ef5939addc135c40245b8e82b69415d0acb3e4c41f3c6e388d9dc3613",
+      "output_sha256": "5ae560e69647bd888dc58da4315a0accf099477381b7379594ab2d718bc181a2",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_gray_opal_ore",
+      "source_sha256": "dc81d9cab9d7f73d7b89c54d06fd5f20e3380a87bba49b7eab03c676739e99a6",
+      "output_sha256": "02dece20906f21197cdced54e401c2666ca0266cb57e226a88bfa33dfd894bc3",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_jade_ore",
+      "source_sha256": "13d43f2ea7f2eaba7f4d1354f6822504065494d1229ac1d1053c329269b07404",
+      "output_sha256": "338fd0fde356d3fcff3893d929f6e97086b05004334ce7b6e45b604899df0a71",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_nether-crimsonite-ore",
+      "source_sha256": "f7deb9aefaeef2afb7015b314e98878621f96eb3e44c4de469f4bccb6388147c",
+      "output_sha256": "53d881c9c9e87e1b9e94c4e6a7e935da2ee5a739c7ac1f533ac5132c59e9e508",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_peridot-ore",
+      "source_sha256": "f370245b0b60581e456827f9fff57ed1b59ab1929eb7711aae4f331fe5d6fbb8",
+      "output_sha256": "1abb64e3235d37ed20a32fa0b8415bba05990a022db7a1bea746a411065d9ae2",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_peridot-ore_deepslate",
+      "source_sha256": "f900210d243e3499141ff97cb02b4beacef5e8c12b6b7031ab6ee03563c79b13",
+      "output_sha256": "05ac9577603d943ed0dc24703523c6fc4cdb208ffd1597872b00e521da9e91bf",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_shadowite_ore",
+      "source_sha256": "d5132f1ef5939addc135c40245b8e82b69415d0acb3e4c41f3c6e388d9dc3613",
+      "output_sha256": "5ae560e69647bd888dc58da4315a0accf099477381b7379594ab2d718bc181a2",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_sliver_ore",
+      "source_sha256": "36a55458e397d340e5224b28be7f547def791d4bb255e36c7d6460e6f075fe38",
+      "output_sha256": "ef85ce992832a163b27dd883a75da594683676452e1e8f0129ef492fbfabfcd3",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_tanzanite_ore",
+      "source_sha256": "86627edc42b2f615c1c0b12275d2b5f8db0955b07732f21554ed761cc5ea508b",
+      "output_sha256": "7f88c017c955950aafaed36c276dff14e4d17903dbf637ff7aa2e24cda6032a5",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_topaz-ore",
+      "source_sha256": "7032d59813dda3d173006f614a5320165c581c08a1024896f89bc1b232fa5a34",
+      "output_sha256": "9f4b11f6f62590503b6dfbe83a69d6c4ef42f85baa6ab2c18a9862e36036638e",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_white_opal_ore",
+      "source_sha256": "edefadbe881e9152837e6892dd62ee13818c900fac90de0abcd3bd540dcb7ff8",
+      "output_sha256": "fe66417b7a1f3dbde7cb395c47d91f2f5e8dc4cfc52da304d4ba9e3a59fb2026",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/blocksprite_whitecrystalore",
+      "source_sha256": "b267722ee3dd7f8a6b7a932edbdee54a6e2dd98825bd29897c4285fd08051e60",
+      "output_sha256": "20fe8de1a63869ea72ad44485982c3da78ff51f9b661915a841da7879f800681",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/bromineore",
+      "source_sha256": "fb746388fa2bcd89abf52011dce63ff90f15fd6a894d82c903f9745a764dfe58",
+      "output_sha256": "1fe89dd50305aa9250b778c60949796c20d820662be676be562554585bbf93f9",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/carnelian_block",
+      "source_sha256": "21f9fbfa685e5a8ea954d0163099392a9bf47088df0a8792fb892891e310f423",
+      "output_sha256": "443028fb038d13d453e338e195b0155a87c1af1d4d0c4b92d5cd50a7f7f4f5d8",
+      "frames": 1,
+      "method": "authored compressed-crystal and carnelian relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/carnelianore",
+      "source_sha256": "7c2b2d9b2e20f977a3fcb4b5c5a40fc171803a5a9f501e5e6c8d35a468a5724d",
+      "output_sha256": "6a129a387a43d266dd2353f9bd746e87c5bf3e0e2e3f19b44d8a7e583321791c",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/chondrit_ore",
+      "source_sha256": "072ae7095f0b1d23096fe6deca70187700abd440f14eeabd41cac9e6f80b3082",
+      "output_sha256": "bcb98be2609f23a99ee3eb47dd20e1b80d164cb6f00e655c94bd065b535ac685",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/chromium_ore",
+      "source_sha256": "4a3e8cb2e35c53b83360130cbb91db61dfadeae2731ea6da2d204c0b2859f781",
+      "output_sha256": "4a877da0d4ee8af91abb1299489b465d5817a8a260432748eab5e53d1242c370",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/citrine_ore_new",
+      "source_sha256": "4b0eb1a3d7029d20fe6805a900f877a2db4e0f35be2a68477514c5fed9823527",
+      "output_sha256": "9126987cfbcc4a89498d9e779af0ed464f26f558bd3f2de28268593eca0f2cef",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/clay_thalassium_ore",
+      "source_sha256": "19c10dcc407c068df7249720cc61489961aab1799ae43f8ceafc77dd1e8b015f",
+      "output_sha256": "2c0bb85e51f96049013bb0058db0ce0e2bfcc19fb5483ffc56afc27ca102ace3",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/cobalt_ore",
+      "source_sha256": "14af4530ecf68319f8dc3a657738de331d89c240943a00b3d25241c58f363a76",
+      "output_sha256": "bbbb6f080dc9044e34f024e4a49d2053b03d7d32f2c2f1bf8a1b76da4bbea1d4",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/crimsonite_ore",
+      "source_sha256": "b0b072b34ba6f9b3f2054862e0865f9c002d09fed7e4c9ce1641b98b5c9940af",
+      "output_sha256": "592bd4ec32ebad8e8b83d76b368cf689642a232a3770464a236fc21a1d3a5a80",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/dalle-2024-10-12-.5s8",
+      "source_sha256": "d78db9fa0dcfe03e9737262b4ddfd61596148a4373ad0add9b58572618daf92a",
+      "output_sha256": "748370766951ebf954b262ffcdd26d53aad655a5fde575513d712092bd613539",
+      "frames": 1,
+      "method": "authored compressed-crystal and quartz relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deeplsate_thalassium_ore",
+      "source_sha256": "19c10dcc407c068df7249720cc61489961aab1799ae43f8ceafc77dd1e8b015f",
+      "output_sha256": "2c0bb85e51f96049013bb0058db0ce0e2bfcc19fb5483ffc56afc27ca102ace3",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_amethyst_ore",
+      "source_sha256": "af9d648fb903c9ac9daa9f6be33d14ec5c4378fba89e38e281661a7dfeb4c4df",
+      "output_sha256": "8c69a18644df8f35ed13e61ccfca445674fc1476d9c0e69d1a1cb321825cca9d",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_ametrine_ore",
+      "source_sha256": "f018bb935c1ae6375ed9e9b64c940fc28b8930dd9c5ad4bcb028fda7da159379",
+      "output_sha256": "5c45fe930ec760a1bc3cb7f939878a85da18ffc995480860ae1cee3b5a1af0f5",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_aquamarine_ore",
+      "source_sha256": "c7ad33053d4e70455af4723bc7a994f37a8a9488975453dcd55364ae4bef1b37",
+      "output_sha256": "a35d237df04f8cc7d561cd02cba8df63096e63a0b0da53bfa5a21f236e06cb58",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_autunite_ore",
+      "source_sha256": "a52276b217ca1b2ac57ce2f9c7d13b3de6e96a320d819e2715664b9a4a0fa43e",
+      "output_sha256": "30ab593e2e1e4e0a7cd36b9409ce443a89bfec2f83fb27d39d1ebe2017c8e8cd",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_carnelian_ore",
+      "source_sha256": "baffd669275d646dfc0735caf09e9bda447fbb36cc924aea7aae02b2032f3707",
+      "output_sha256": "c4dd2a0977b789f1b6b5b264bcd53c8ed0aea6c856a3a72b6e5a11ebc04c3e64",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_chondrit_ore",
+      "source_sha256": "7337e4e85958f335ec25c87dfdab5bf2d110944601692b8ccec5d1b4f3a54aa6",
+      "output_sha256": "cfc75ed7270803078e4bf274d8525d58c695aa6845e13b02bc1493924ad96688",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_chromium_ore",
+      "source_sha256": "4a3e8cb2e35c53b83360130cbb91db61dfadeae2731ea6da2d204c0b2859f781",
+      "output_sha256": "4a877da0d4ee8af91abb1299489b465d5817a8a260432748eab5e53d1242c370",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_citrine_ore_new",
+      "source_sha256": "932dfb1ac92e5f597f9524220adcc86702d8da63ad7a088f127623e7f82bcb4c",
+      "output_sha256": "790e3f2ebcc3186d6aed44e8df325e864d666c826042fbccff4f0ce342c34719",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_cobalt_ore",
+      "source_sha256": "69f745afee500afd377b5ab73da8cc8e350539f3d9cf18c9d242219379bf1bdb",
+      "output_sha256": "638461d7e5de685afa828e9853cbf90734072058ee062783e72dfea9a98c120f",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_crimsonite_ore",
+      "source_sha256": "b0b072b34ba6f9b3f2054862e0865f9c002d09fed7e4c9ce1641b98b5c9940af",
+      "output_sha256": "592bd4ec32ebad8e8b83d76b368cf689642a232a3770464a236fc21a1d3a5a80",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_ekanite_ore",
+      "source_sha256": "ee306488f16d7d4bed9b1188dee2e623d93ba80ef20d6c8d5ed66a2f2c1ebdc4",
+      "output_sha256": "48c5b3654a160d5f9402889ac0440ada3797f945eff57b61258f7daad02db690",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_heliodor_ore",
+      "source_sha256": "e459a2613b5a1c3271fe1c87597a4ec18394bc293de06e32ac67a1abce72eea2",
+      "output_sha256": "f5f592583744d9cafa6268c2ca852a4a5ac8eae04b10cc915ef35562b941e1ac",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_indium_ore",
+      "source_sha256": "b66f14d3919fb6cf492810739a6aef7ff9cc2936492eb9eea01ba808c120e6e4",
+      "output_sha256": "3f1a0ac9c995375e141e03973451a8b45af9157de88e7ec6acf5aebcfdd27b5a",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_lead_ore",
+      "source_sha256": "369f9d1f1c4adba15696ba01bce06b6544ab49274c184f168f8bde0cfe29617f",
+      "output_sha256": "d7fbc9eb83a7c93c0f28cbc583314544cbf84454aa2d14a2568cf8246248f3fb",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_lemonite_ore",
+      "source_sha256": "3b51e75f21fb59407bc8ffc11d317dbd4e99bea2f215739d470f134f1c0fe934",
+      "output_sha256": "8c863b8a9cd180026072f6bd6c12835ba91d4d18a2dfc8b4be6abcaf99ea6255",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_leucosapphire_ore",
+      "source_sha256": "0414880d3ad50fd3c4364f110899aabbda19f4a5f71fbaf96f9d186b5c6dd295",
+      "output_sha256": "c63c76d97d182faaca6806ef28bda87924c8fc5065b0f9202659de2a0d0f1f67",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_magnesium_ore",
+      "source_sha256": "611c198f0ab724ccb6fba55eed027ad1e9e4ac3cc1d8a15b4c77b6dad780caa1",
+      "output_sha256": "0094b90889a702fa60ac900fa23d5996e59b42eaf007a1801725fc53b70f8a4a",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_monel_ore",
+      "source_sha256": "d35895aeda2a0201a28bbaccac716442e37c4587cd0a91ed98d87131a1ff3ee2",
+      "output_sha256": "40ecd4579b561da375e4da3ed9c4740402960af4c8931a542282cc5cd2e724bf",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_neptunium_ore",
+      "source_sha256": "8568587a58a986ebffcc9a46222c60b5cf0febcd7f0605388e9ef906850896db",
+      "output_sha256": "313399cffa2fed7284da089732bb61ced3f3cf293e920856dae98967ab9c116b",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_nikel_ore",
+      "source_sha256": "c138616e9f026ee49a72ca79e5a0cf4ce5706a11a2361b7d6f27eeb67fcd4cd1",
+      "output_sha256": "f3ce3fe2079a723021ea8b16aa1ee755420b12f85c0f0d6c7e58b7c2a160a778",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_osmium_ore",
+      "source_sha256": "69ef27f94e4e317e081fb9d5314242725f232eede2d38b5d1aac143c4ca2a7f1",
+      "output_sha256": "217cefb6382e7ee1fa9d50d5e19f3e6549aed0125c9381319de91545d6ea25ea",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_padparadscha_ore",
+      "source_sha256": "7516e4c4a2cc7a1eafa10c44296f4f89c02be99d3100cd7b9e0dc7cab8798649",
+      "output_sha256": "93613bd67f614571957c64ddfa2c8a70412d0cc148fcb41f0bd18c9c17a49dd3",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_pink_opal_ore",
+      "source_sha256": "6ae37f33b6004f1377ac14bdd2eaba9cbf86458c1892e7fd88854265910e2029",
+      "output_sha256": "5956fdf69e2b7111eda556ba29966af485b9045b40906e22876880c44acf6db3",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_platium_ore",
+      "source_sha256": "7c2e2a7dbfe6a175904b9d59fd754206a1919a58dbe7f85135dfa04d2619b0d2",
+      "output_sha256": "99c7311b0b4f197830948e6688c29346818f3144fe093fda72dac1be2dab41fc",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_radium_dust_ore",
+      "source_sha256": "a017204f483c3e2d0776ec14f11f6b433a843af275932ba9162760b46af7347d",
+      "output_sha256": "69c7bf413dde43b3ad2fe8adf5c564e84ee4bfc6febb5295a77608e4f5e5a527",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_radium_ore",
+      "source_sha256": "344624232b97cceba709bd6ae5f6f74738be4333bc983186ed2365f5672903ed",
+      "output_sha256": "470d306ab8e5e3c5195477143bdda49da48cfeda77decb1b77c8eff894a3b43b",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_rainbow_mystic_ore",
+      "source_sha256": "9b7e3e73dabb159ccccc7625fa0b094761304d759b6a6c3fc2073a917e88b45a",
+      "output_sha256": "39ac364f578c99185b60dab6d32a5366dd962995188d23296ca43c6631cad3f7",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_rare_sapphire_ore",
+      "source_sha256": "997419dc5a2c0652ddd15f2fa85341bf34a30be3b0ec9fe104ff3528701dc2f1",
+      "output_sha256": "ceadf25694513b8690a6427a8fb53fb8ace22fc90ed51bb5f83a600ec30adc6d",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_rhodium_ore",
+      "source_sha256": "5de92077f4fdc788a6c9925ed7ae902117a7231263fae37e40f26b411cef0064",
+      "output_sha256": "61f96ea391f130bb2d1deed16d2cf38adaa5957f0b4d88d37c0dcbed9faa13a0",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_rose_gold_ore",
+      "source_sha256": "85b346d57b8fb5d1da428a269811c2de9f7abca297ec41fc6c552e899a18dc9d",
+      "output_sha256": "3749f74f7fe225c63ac83b15dd8656549c5d6d03916b82b0d270fd5fdc64c225",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_thoriumore",
+      "source_sha256": "90b931fb72d75acd241ac71f73b55faff6e64dc5ccad9062f3e2e4b1585561df",
+      "output_sha256": "d2398d85f59b6d8220d398c6b148e89b3c6970170b2742ff0ae2a9ddd85b8da7",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_tin_ore",
+      "source_sha256": "b098757c684ca7cd8584be93da272d47d32fac697914edb1ee3d1b39eac1dbe5",
+      "output_sha256": "be746a071feae9007d9f833187bc28b964a94b2da356d0e34db49ec75a630198",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_topaz-ore",
+      "source_sha256": "acdaf5dd03f109599654f5571d5f9ca764fcd418ba0878f517a209a566081ee3",
+      "output_sha256": "969d57256edcd9f4bc2099cb6aa8f79143e1cbe90f7742780a0371d82ff9fda4",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_uranium_ore",
+      "source_sha256": "68b9a3cbed26c16b7d380f346826a9dd57c9567fbbae61a2a9994d16139ae475",
+      "output_sha256": "0b35465d296ba75169ba97ab345efd79df64cba307a52d4dbdb898c524e59bb6",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslate_ussingite_ore",
+      "source_sha256": "b6e5ca53aec3234604d69125713d4784271e741a0e5a2cf66c2eb77c276012ce",
+      "output_sha256": "eae94258bf91b92fc852678aed772079a2664ff96ec64a341e32972451ffa8cb",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslategunpowderore",
+      "source_sha256": "fc4bc88813e17341f55449f71558ea937693130b4689d6d54c7317af5b49044a",
+      "output_sha256": "3b6843fa6796113b9382f678ab1960cc09d46b3c1458d5b0ff102a32b0242641",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/deepslatesapphireore",
+      "source_sha256": "db1f53653a99c298d344c58c0e284696040841573b51fe7771401a1a4f04a3fa",
+      "output_sha256": "625d72e588b04b13e903065510c9d2b1e403d70df6f0710a3573669bd03f6656",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/dgfdgfdfd",
+      "source_sha256": "476b400799a116baef6b84b86358aca201b64280f5a1d9970b5c96057553dd08",
+      "output_sha256": "3869212140b1aa657bfc2dbfe1593f27a676c0f3c62a93bd67e91c3187c3c7f2",
+      "frames": 1,
+      "method": "authored compressed-crystal and topaz relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/ekanite_ore",
+      "source_sha256": "fd328c51cfa94930602ea1487c35d4358b05051b4838130884cbbfc4450627ef",
+      "output_sha256": "a8011dd7d7ac93c458e1f008fb0d4ea21bf668ee875f50b1f9ff8b39f4d2d145",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/electrumore",
+      "source_sha256": "9077d6c243f0fba3b4937e94276ba02ede0352116493828131208c036534bae4",
+      "output_sha256": "782a2fd758a04957d51505a7cb77265fd0a9804de323828341406e6b8b8e17f0",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/electrumoredeepslate",
+      "source_sha256": "9f21185a206e0a977172d473397b4e47ebc85e8d0eeff29bbc459f3266113ea9",
+      "output_sha256": "bb95e51225983131a07fe21055710f03698c2ee68fb0cabe086c06ab77a8c39f",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/fire_opal_ore",
+      "source_sha256": "29c613b00001e81896edaa869937fba9dc0325a197211b5c0957da3c79062c73",
+      "output_sha256": "f4ffe038a29edf20d0f6f27d7ab09fc99ca221f86bd071aa45cdee2d76a74b81",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/fluoritetier1ore",
+      "source_sha256": "5f9a3613c09c0b6f6d5b3b74b0a4e82938b1c8ac37771099ee944f3a1af95fd5",
+      "output_sha256": "76b9a0a6ff06c277ec6957c0d96c1972d418b03eeaed4f029ed479dc95ac4b9b",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/fluoritetier1oredeepslate",
+      "source_sha256": "f89bc85db5a32efd89fe4b1073439cf1a8c539594923aa3019998329cd4a4872",
+      "output_sha256": "f9312d4ffcd76820e93aa934c6c85c35997a2a1bdcb8df4dcc6020dcb3f650f1",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/fluoritetier2ore",
+      "source_sha256": "f05a82dea28d9bd18eb616d15d9eac45c9b31e82946ba5f897eb59139a95e4f7",
+      "output_sha256": "ca637c61e0e1e968920efb05e7e0b9076856657adf572813321137acad8bd3e3",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/fluoritetier2oredeepslate",
+      "source_sha256": "11bb542c79862df626027128667269a8fcf960a626ddfa00aea8144f9dee8f0c",
+      "output_sha256": "cde1e9c1dd6c50ce6c03f69c41bd2c2e7f3ec8034597c1ff221e242a884cf6d2",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/fluoritetier3ore",
+      "source_sha256": "a90689b720cc9365bb5021c915156ac29801458e95fb97f14a38e86bd4fd9ff2",
+      "output_sha256": "00215c91889d186226a143e6c9e0e546b8b75a7c641e5aaa51c4da2bc3159780",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/fluoritetier3oredeepslate",
+      "source_sha256": "ab66b2e7f73dbee5f62076daad585a9f9aa9c9ddb844ae373b645792b3d13058",
+      "output_sha256": "cc1ac7eb4fe638ff24f3123008eb2bb169cd0a85382292301e1c14ed59017d05",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/frost_opal_ore",
+      "source_sha256": "e5fcb98f4ba4d384d3603066f260c3ae1a2710354821a6f18f02d81adb3b8f7d",
+      "output_sha256": "28766c8ebb1042b2949a45f399af92c736362f129264341697efd6b52a8ced05",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/gray_opal_block",
+      "source_sha256": "ba7ca1c34e795de3caf80bc8e3a9aa687dfa9394daedba0e7482a65c1db5ffdd",
+      "output_sha256": "5ef61c5daf2d311d0b803d145e4063ed3f4255967b3b18ffd19216e0b3ea4d20",
+      "frames": 1,
+      "method": "authored compressed-crystal and opal relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/gunpowderore",
+      "source_sha256": "b9badc450c95dd6f725d761f1e8fbe4b697ed20f47f2e3c3997f10dfb6524e96",
+      "output_sha256": "bfd37e2146e7e40701a7802a6175e12e23d5c5f12ca1859a7911fcd06f7a8286",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/heliodor_ore",
+      "source_sha256": "cbe2788749f9730d068731cbda85ad9336e44371f3caf38e513fd49e80414125",
+      "output_sha256": "7168e9b4def5e44670ba19788260c4d2adf4d4f05fd1d5c81812a6a121e2966b",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/indium_ore",
+      "source_sha256": "201100ac3b36738630be429a7ad4755690daa07c5333f1385a3c3851546f0d18",
+      "output_sha256": "1cff9bf081057e601cb889fa7a94f3a1cff712f6f249b587a512ace3fb355ae3",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/lead_ore",
+      "source_sha256": "721242748c477c65ea40e3e637f4193ee56615e33aeefa5e07fb8d2f1de04a36",
+      "output_sha256": "827a2360640a28e929bb57fe0d9fedfe605989d020b5bccfbf9e76c3d5ead366",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/lemonite_ore",
+      "source_sha256": "3b51e75f21fb59407bc8ffc11d317dbd4e99bea2f215739d470f134f1c0fe934",
+      "output_sha256": "8c863b8a9cd180026072f6bd6c12835ba91d4d18a2dfc8b4be6abcaf99ea6255",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/leucosapphire_ore",
+      "source_sha256": "c62d346671da5791622312707697ee06f34e5dd83619e1262610a257a09b20e8",
+      "output_sha256": "19e566ef0020dd2b26fe9991fbddb8fd9209a2c3f44b1bb14f03556a47df4c9b",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/luminousgemore",
+      "source_sha256": "3acf1a15c1de186c781f4dac7824ee3f0c7a810ceab354e027065c75ef1f72f7",
+      "output_sha256": "f9220cd2efa48bb0dcabd21809fcf40cdcd1889749c1a54c97f9bb98c3a3fc05",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/luminousgemoredeepslate",
+      "source_sha256": "3acf1a15c1de186c781f4dac7824ee3f0c7a810ceab354e027065c75ef1f72f7",
+      "output_sha256": "f9220cd2efa48bb0dcabd21809fcf40cdcd1889749c1a54c97f9bb98c3a3fc05",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/magma_volcagmium_ore_new",
+      "source_sha256": "c8daa53c673b08cc1f2bbb87a7441022ecd66e8f9468b1b2fd5feb38ebe08c28",
+      "output_sha256": "054fe8a735853bb4a49a528efb5cb4405e900bb5ba1660130967690c0101e5b9",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/magnesium_ore",
+      "source_sha256": "611c198f0ab724ccb6fba55eed027ad1e9e4ac3cc1d8a15b4c77b6dad780caa1",
+      "output_sha256": "0094b90889a702fa60ac900fa23d5996e59b42eaf007a1801725fc53b70f8a4a",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/monel_ore",
+      "source_sha256": "d35895aeda2a0201a28bbaccac716442e37c4587cd0a91ed98d87131a1ff3ee2",
+      "output_sha256": "40ecd4579b561da375e4da3ed9c4740402960af4c8931a542282cc5cd2e724bf",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/neptunium_ore",
+      "source_sha256": "ea1a14495c366e4263ef7ea513ca9957b9029028214b2cd5c099bb1a005b07b3",
+      "output_sha256": "fc7d8bb9f75eddf2e3b6aef7f36188707ca18d487fc5128dc00793ef2bfb7f50",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/nether_amethyst_ore",
+      "source_sha256": "ee65f38cdcde405fe1f47be188cf8d51becfbd24d9e70488a63ea577370a4793",
+      "output_sha256": "50177e5ed9bb437e1adf4f1b2a4623f82994c06b35a6d0bdaf7e44e442d62ce4",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/nether_opal_quartz_ore_new",
+      "source_sha256": "f93158832f27c0218a805e64afe3b22bf2708dda05685de8817bfc9bc1316916",
+      "output_sha256": "d84891466d2f5ba91edf4706d254a6cea557f3168f63e21a613abef8ef2c6578",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/nether_osmium_ore",
+      "source_sha256": "cb315d51121fc73369016a9d970d5b1ade795f262d9cea339e5c6fa9d5a541f6",
+      "output_sha256": "dd4e3e3bd2f59c7af0d0f986a04a5820065e2a6567fdab956fd7d7cd19f5f2b9",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/nether_rose_gold_ore",
+      "source_sha256": "d0fd8053b82c96a039520ac23405af78486da6a4d38ff4af70d6db25a6c8e713",
+      "output_sha256": "6c77875bf2b4188ddc30a6838ad1bba555e80d9bd7bb274f37c44ac14b5eadd0",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/nether_titanium_ore",
+      "source_sha256": "8dc1672f0bb99bf3b6530bd7b799d7b82ce98906f9fa2272e5c01098e45bb98c",
+      "output_sha256": "a4b0a891720e68860954aed26175eadc67fa4b3e076787b10f13341eb22937ba",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/netherelectrumore",
+      "source_sha256": "35d6564f6fc722c89f170df4e7102d1159682608d2bb3868474f185eae3b49fb",
+      "output_sha256": "2c3e624b3e52f9cb9a9a287c34ae19f153b6aecc1484ee1c5ff9ee80e12e01c2",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/nethersilverore",
+      "source_sha256": "30f0d3701e015aa9602dc84e69ecd7da0a1d924a2d067727aad7b5b54443988f",
+      "output_sha256": "1c0a438e27bf6b81714ddccc7a91fb09f62985e2629ecf921b0c3a2bcc2762e8",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/nikel_ore",
+      "source_sha256": "c138616e9f026ee49a72ca79e5a0cf4ce5706a11a2361b7d6f27eeb67fcd4cd1",
+      "output_sha256": "f3ce3fe2079a723021ea8b16aa1ee755420b12f85c0f0d6c7e58b7c2a160a778",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/opal_quartz_ore_new",
+      "source_sha256": "cac74a01da9ac479bfe272cd65ccf21853665de116addb3cd7dd5cd01e71ff90",
+      "output_sha256": "9f514211be1c96e55d3bb6b0701202ffcfbe6dc77c78d252bbb882695014e1ac",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/osmium_ore",
+      "source_sha256": "69ef27f94e4e317e081fb9d5314242725f232eede2d38b5d1aac143c4ca2a7f1",
+      "output_sha256": "217cefb6382e7ee1fa9d50d5e19f3e6549aed0125c9381319de91545d6ea25ea",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/padparadscha_ore",
+      "source_sha256": "69d1b881956c1e80c55deb4eae80654a9645569426efefe80299d08e2c58b648",
+      "output_sha256": "ecc9e832054754a481a60ba1ac15972e8369c3d1f525eaf2126c6b23afa5a2fa",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/peridot_block",
+      "source_sha256": "5007813eb8c02df506d5ae36a7db791f6cf9fcb082965e83df8d938bc018161b",
+      "output_sha256": "e4ec7eb558942aa74ace0e597d582ec1d6cedeb8e1826336430d03b02dddcb3f",
+      "frames": 1,
+      "method": "authored compressed-crystal and olivine relief; non-spatial palette swatches only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:block/pink_opal_ore",
+      "source_sha256": "6ae37f33b6004f1377ac14bdd2eaba9cbf86458c1892e7fd88854265910e2029",
+      "output_sha256": "5956fdf69e2b7111eda556ba29966af485b9045b40906e22876880c44acf6db3",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/platium_ore",
+      "source_sha256": "7c2e2a7dbfe6a175904b9d59fd754206a1919a58dbe7f85135dfa04d2619b0d2",
+      "output_sha256": "99c7311b0b4f197830948e6688c29346818f3144fe093fda72dac1be2dab41fc",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/radium_dust_ore",
+      "source_sha256": "344624232b97cceba709bd6ae5f6f74738be4333bc983186ed2365f5672903ed",
+      "output_sha256": "470d306ab8e5e3c5195477143bdda49da48cfeda77decb1b77c8eff894a3b43b",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/radium_ore",
+      "source_sha256": "344624232b97cceba709bd6ae5f6f74738be4333bc983186ed2365f5672903ed",
+      "output_sha256": "470d306ab8e5e3c5195477143bdda49da48cfeda77decb1b77c8eff894a3b43b",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/rainbow_mystic_ore",
+      "source_sha256": "13986de413921c2d8fa20e030209696ae38151fa8d4f70e5956a624603ca56fb",
+      "output_sha256": "7cbd192ba47340663925ba07ed2e3c631db22e3fb64e3f75ea7174c621c722e0",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/rare_sapphire_ore",
+      "source_sha256": "c5ec041942d06281761c3074960e2c45db39c099345c1f6e0fae5f9bd83ffffc",
+      "output_sha256": "0251b38d68803c17292d94b8638640cd7870d49b3edb6b870e29ccf6c447917c",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/rhodium_ore",
+      "source_sha256": "5de92077f4fdc788a6c9925ed7ae902117a7231263fae37e40f26b411cef0064",
+      "output_sha256": "61f96ea391f130bb2d1deed16d2cf38adaa5957f0b4d88d37c0dcbed9faa13a0",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/rose_gold_ore",
+      "source_sha256": "85b346d57b8fb5d1da428a269811c2de9f7abca297ec41fc6c552e899a18dc9d",
+      "output_sha256": "3749f74f7fe225c63ac83b15dd8656549c5d6d03916b82b0d270fd5fdc64c225",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/ruby_ore",
+      "source_sha256": "44ee0d9a3ce84ba1487aee201e1407fd1763c7aa265f4403d7f14932c5555641",
+      "output_sha256": "68d6f1e1c48d6759ffba0ed5055eb72361c58323b7aa52e46d91eaece69f6e34",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/ruby_ore_deepslate",
+      "source_sha256": "d3623db7192742db45bdce11b5619dd2cbab400635925bf2861d64beda4a67b1",
+      "output_sha256": "cfc73d7cbe5d45380409e9addf14ef56c06efcc73d3a187b57ad01847765e4e0",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/sapphireore",
+      "source_sha256": "34e18ef908aa8fb42739b9312de8b267a28ca480abe2c88c2a8ea7b7eca5270b",
+      "output_sha256": "23a12241daf9bfccbd4264d3253d2c3a973574639bb9d48e30c8d6b26e8c8322",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/thalassium_ore",
+      "source_sha256": "19c10dcc407c068df7249720cc61489961aab1799ae43f8ceafc77dd1e8b015f",
+      "output_sha256": "2c0bb85e51f96049013bb0058db0ce0e2bfcc19fb5483ffc56afc27ca102ace3",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/thoriumore",
+      "source_sha256": "90b931fb72d75acd241ac71f73b55faff6e64dc5ccad9062f3e2e4b1585561df",
+      "output_sha256": "d2398d85f59b6d8220d398c6b148e89b3c6970170b2742ff0ae2a9ddd85b8da7",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/tin_ore",
+      "source_sha256": "316ee864051c259069f1fd2b7a389fff5fd785111e920fd23bf7910e9fa9caf8",
+      "output_sha256": "a097c603bb34d19f0757ee91da661b496fc14d005857dabf0e65ea56491d8f25",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/titanium_ore",
+      "source_sha256": "f6db3f692cb8341a8930a11258bef9ca021bce91909f8eecc1a060858fd099f4",
+      "output_sha256": "671369cfe094784b74d47e5d7bcb99cd75d5cc9f6c81a1cb77c7b0c8eb8efee1",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/titanium_ore_deepslate",
+      "source_sha256": "8dc1672f0bb99bf3b6530bd7b799d7b82ce98906f9fa2272e5c01098e45bb98c",
+      "output_sha256": "a4b0a891720e68860954aed26175eadc67fa4b3e076787b10f13341eb22937ba",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/titanium_quartz_ore",
+      "source_sha256": "e7458d8fdd4272dd1b2ceaaad11076a5729e2ffb450c0c8d94ebde4d3a5ee513",
+      "output_sha256": "66801cf9f00d51e99896c98c1bcab5735bd8adbccad37ec4b24dc8be66d1fe6e",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/tungsten_ore",
+      "source_sha256": "4e956fada616cd1b3814ded5c9adbf77b6a5a4309846e58d316fa9abb0ef811e",
+      "output_sha256": "060c2cf55233bdcac90a4d0383a437a479b4a2d25c1c2909ee418cdd11ac8c29",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/tungsten_ore_deepslate",
+      "source_sha256": "4e956fada616cd1b3814ded5c9adbf77b6a5a4309846e58d316fa9abb0ef811e",
+      "output_sha256": "060c2cf55233bdcac90a4d0383a437a479b4a2d25c1c2909ee418cdd11ac8c29",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/uranium_ore.webp",
+      "source_sha256": "68b9a3cbed26c16b7d380f346826a9dd57c9567fbbae61a2a9994d16139ae475",
+      "output_sha256": "0b35465d296ba75169ba97ab345efd79df64cba307a52d4dbdb898c524e59bb6",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/ussingite_ore",
+      "source_sha256": "118e98d91dcef4e56f3bebf1a9c55a5f6be927e3c013706e57b0f1650172968d",
+      "output_sha256": "e04984731f57a335a1c0190d0eb68d5daf15b17c0b03ce3e9f814c354aa88849",
+      "frames": 1,
+      "method": "approved generic gem containment machinery; contained gem recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:block/volcagmium_ore",
+      "source_sha256": "c8daa53c673b08cc1f2bbb87a7441022ecd66e8f9468b1b2fd5feb38ebe08c28",
+      "output_sha256": "054fe8a735853bb4a49a528efb5cb4405e900bb5ba1660130967690c0101e5b9",
+      "frames": 1,
+      "method": "approved generic metallic ore container; sample insert and hazard-paint recolor only; 32px runtime"
+    },
+    {
+      "texture": "more_ores_more_gems:item/1176891afb1b00287f652ce0b6ab95aa8e097a9e",
+      "source_sha256": "c39aa75beb790fb09e3eca8f90e8e3d2aced6fe0f6f14370416cb006488e699d",
+      "output_sha256": "9eaeb1f4c319f3a53200f23604aeb491cf15f78a375d547e9081b39619fb2606",
+      "frames": 1,
+      "method": "authored corundum family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/amethyst_gem",
+      "source_sha256": "e3a96fdd9e81d83a675ca790ed619dec2bcbddd1d32d04083b55ab91a776e2a1",
+      "output_sha256": "acd4fa02eba20ca21047dff452539405f669d9320a1e2e8af1d90af8a162b910",
+      "frames": 1,
+      "method": "authored quartz family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/ametrine_gem",
+      "source_sha256": "0c982030b7c6dce5783b64fee8f8b3b18dfb0a67a7baf5bd04f520ff4472feb8",
+      "output_sha256": "d8abf234e04cbfaedad57bffc987224e1f88502b4880575c8929b632eba512db",
+      "frames": 1,
+      "method": "authored quartz family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/aquamarine",
+      "source_sha256": "5d23bd76584f1064321d6df1955ff40afe611d3b6c50f3fa33b5f8691f077224",
+      "output_sha256": "44efa13ddeb4970ab4f733291f51b896b628650105092e975a83407633f25fa1",
+      "frames": 1,
+      "method": "authored beryl family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/autunite234",
+      "source_sha256": "3b055cf4b910526a20007919e926d79b8322d57a6e54bcd931f898a22498c35a",
+      "output_sha256": "cbc42be14b06c1f2ca0c1674600fbd96080b868238474750d6595b425d716728",
+      "frames": 6,
+      "method": "authored autunite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/autunite_gemstone",
+      "source_sha256": "dcdca05db26e7305b14c939f74f71a57b49b58f3ed982e5c261bc45096f17c16",
+      "output_sha256": "99de93bf1d8418ce61642193d5f10113af7257de622a4b2df661587a5d584d22",
+      "frames": 1,
+      "method": "authored autunite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/autunite_gemstone_epic",
+      "source_sha256": "1dc900421086cbcedaaa522ae4812472b4158de489e06dcb7d4799abe689d826",
+      "output_sha256": "8f78ba063fcbbd62774bb4f5c3a256721f96f4160ec7eb238e5918a6cdd59a11",
+      "frames": 1,
+      "method": "authored autunite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/black_opal",
+      "source_sha256": "b8b1e7e58c235732e2c22a3b20f73e69bb5604572b36504794e0fbdd2aa71579",
+      "output_sha256": "98e406f2dda09b255d9069995dbb45eed737e9d55fd8325d5a88092a3a0a4194",
+      "frames": 1,
+      "method": "authored opal family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/bloodflourite",
+      "source_sha256": "376e425623178a0f5aedea31ce654d6e61537e54bae9f8de6f0c80f05eb17b30",
+      "output_sha256": "4b7bad26517ee6cb004c4a91b6534659e4d26bf6e9097770e517edb54f77a55d",
+      "frames": 2,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/carnelian_gem",
+      "source_sha256": "f8f220047210932909d715db29998cceb0f63e5db16fbd65582e5bd6e94f3c9e",
+      "output_sha256": "7e882f30587928e2e1b9a6d7a1266bdde9106d7a97144b07abdcc09319c3eb8a",
+      "frames": 1,
+      "method": "authored carnelian family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/citrine_gem",
+      "source_sha256": "c994341a57d00c127ea95c16154715920249e7ebdda8e6770d97bbba7af80d1c",
+      "output_sha256": "244e780e128de1a02ca3fd8da3d420683dbbe6c37f83a059292806b856cd4291",
+      "frames": 1,
+      "method": "authored quartz family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/crystal",
+      "source_sha256": "b7405c03c20dfa8bad5c7ab8e00729dae4a270f305d4ef03712b89edac744d55",
+      "output_sha256": "4bf61517d9a685b70b3e6561f00d8d6fd8c49c08e43e8a630b6c377c0eb198ae",
+      "frames": 1,
+      "method": "authored quartz family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/crystal_gemstone",
+      "source_sha256": "3339413d8c3f9827c45623b4282fb4c34122a9d6944da1486a585a1ae5c2b83f",
+      "output_sha256": "1e64c59543ae0a23bf15942ee9b4f1108b5f3fee369edae032299249f91347fa",
+      "frames": 1,
+      "method": "authored quartz family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/ekanite_gem_fix",
+      "source_sha256": "d78a533b1dadc7217f26d557553bf563bd74ee764f68750cd2db16d1fd9eb630",
+      "output_sha256": "f199059fbc9a037cef9919c253ff05dbaa027c37799b1a89056a7b6bb978d344",
+      "frames": 1,
+      "method": "authored ekanite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/fire_opal",
+      "source_sha256": "0a61d97e7f1abd8048abb22ec285a1a094a90573d034a6ba60609f0c36d01490",
+      "output_sha256": "d14b1c9cc306bb7ab9776a5885c237f8573e49eb1460465a330d915438b49ba8",
+      "frames": 1,
+      "method": "authored opal family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/flourite_black",
+      "source_sha256": "84d7363c4d62fde2ccd9d09b08b8a5f90cda523985d4ef0282e10cb5e778c7e9",
+      "output_sha256": "1c96fc623eae7258f91902d9b8155c9ce1275764929e327143322bb8de3e64c9",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/flourite_clear",
+      "source_sha256": "050093521a2638bd34281a1c827e5961d775fd6d964c7b6e715f4f739ed0afc8",
+      "output_sha256": "8a8905150cb7ec430d8ca8405ed4e87402be8af00367c2b49e66df76beda2d17",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/flourite_green",
+      "source_sha256": "184bb54598574157629b788b0f420b6e3889b2996bee24acccdfca3beee20ef4",
+      "output_sha256": "6f79f31f5e5fb4f287c6414f14b00d4eaacebfdb5c66040cdf50614d7e555668",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/flourite_phantom",
+      "source_sha256": "d30945f8f5bb81b0cfcd4453980382948a11d35f3acd60027bdef74f4c6f753b",
+      "output_sha256": "169b19f6852dd2a17145d14c738a82a9216506c51b633b296dadd629a7393083",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/flourite_pink",
+      "source_sha256": "6071b6222077123ccfc72206106f3e92879256f14d5992a07a724fb6f2f61754",
+      "output_sha256": "d1150c0d2a08af3593b0534c512111f8bfd5e7435460e1af6e79aceb7e7b5713",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/flourite_yttrium",
+      "source_sha256": "a0d55314be36f70616d7babcf72b11c2878a4333755bbdef0bc14d5df94d4bb6",
+      "output_sha256": "a56ba92a58126dee60639dec21db0990a8c1d33ab18297dac68dcb5d04703580",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/fluorescent_fluorite",
+      "source_sha256": "3a5cdfebf08b62d62f1aef379f211dc253144e2baab764c088d72e8c89545094",
+      "output_sha256": "d13da45cffb4883ca87d8a7b972eced570e3b0fb00130fb1b5b5278df2e7cdfc",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/fluorite_orange",
+      "source_sha256": "471168d2468b6574f37384c18f47d1b0dbe438b363e4eebd9ad7dacd031bb320",
+      "output_sha256": "39384ef9bc12d2f397500ce42064bdbf2789cac6c05d963169963cdc949f9a57",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/fluorite_purple",
+      "source_sha256": "dcabbe80355e844da7334b0644a51c19cd8c23e5d88d56dbeb5dd986b45ca659",
+      "output_sha256": "54ba7e23f79f040cdbcba95e7467dd53bc9f704d39d3a25ffd98ab773de49dec",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/fluorite_zoning",
+      "source_sha256": "bb3a9270b783209b99e9ca1924762a382244e45f18147634c166d3b36e79af2f",
+      "output_sha256": "68ea8e9c74481b35433613a376679388d7c82146782badc04cf57b4f142cfe80",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/fluoritephantom",
+      "source_sha256": "d1a0537ce3726a2669f8f9db26483a1021f0fa6f82a8dca19280528ed2e7b7c4",
+      "output_sha256": "687321244e732d9bf094f0c0d5efaa81515541172ef82853aa3c4818becf7ae8",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/frostopal_new",
+      "source_sha256": "9f500d0dfccd69ae810457754cfe5932623cdf418a2343ded1db666014f1101e",
+      "output_sha256": "ca54e3546b94c9d1a4d5ce5b2c7178688d2556163a832b159bce2fdfe02c8de2",
+      "frames": 1,
+      "method": "authored opal family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/gem_rainbow_quartz_3",
+      "source_sha256": "0d97effb9a14e9a5f900005198e2cd01bda7e98cbb3187766ac2e6c1c04591e0",
+      "output_sha256": "2d519ff03e2ec4e82874e95b0348d5e660c8bbe9479de54224eccb186c6751a8",
+      "frames": 1,
+      "method": "authored quartz family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/gray_opal_item_2",
+      "source_sha256": "26f61ff948be94ce271dde2e06b25c6d2f60659f245599fe4aeceb8e1a14201b",
+      "output_sha256": "9182774cd406e3e973aaf086bbaf2b7ab483d2db72e9b605a33a6c0721eff6eb",
+      "frames": 1,
+      "method": "authored opal family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/heliodor",
+      "source_sha256": "9b98b8c9ba679e2131af09af23d0bf37fc41f7b2361a85a28c182a3a77ef52c3",
+      "output_sha256": "a7df91d9f3cfd4d00b5e35788c0b1372be03888518b9d488c294824b2879c141",
+      "frames": 1,
+      "method": "authored beryl family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/leucosapphire",
+      "source_sha256": "e83532400e7e05d22caf524afd7aa5e5bdc40844ee2bc8a75dc419d8683b0f59",
+      "output_sha256": "a214db4347288ef9f7699cea6604fee6d092635c6bbda237a1e0a47986e5504e",
+      "frames": 1,
+      "method": "authored corundum family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/luminousgemitem",
+      "source_sha256": "42cbc6ea752c098895ede73151a3a338e42175e823c81f795cd748cf3863feb4",
+      "output_sha256": "4867326c939edbcf360eb8976592a6361fe5a2cf841ad4205558a0bdf1ca869c",
+      "frames": 1,
+      "method": "authored fluorite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/olivin_item",
+      "source_sha256": "47d8a883680ba575cfed61ada1faaf36363e1b62b389aae880a9184e1b3ead0a",
+      "output_sha256": "10268052dfde8e8c93b03f6be07cea6bef68cb23cf6c1b9f247e9bf199f2fda9",
+      "frames": 1,
+      "method": "authored olivine family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/opal_quartz",
+      "source_sha256": "c919f80633e3a7d0f4932eb9eaae3bcfc09a125646e1386acf90f1215d481ff6",
+      "output_sha256": "c2025a4d44eb43efb7c42323572213613c8745e4d685db2f43b146534600cbd5",
+      "frames": 1,
+      "method": "authored quartz family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/padparadscha_gem",
+      "source_sha256": "0e2f2d94343d08521c9b95b143b5e0a3495d718f74845010444968e9c0ce0d44",
+      "output_sha256": "7090b0ca7841637e724032ed842294b66648547d5a7b4591ff96432526ce25c2",
+      "frames": 1,
+      "method": "authored corundum family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/peridot_item",
+      "source_sha256": "4765fba503b4c37f71ab28a124a0c4c42fcef147cc10f2424ce6bc8039caa23c",
+      "output_sha256": "a742acf00c81a733217267c3fdbbb87938d86670d5c1d4c1359f3ddfb882b908",
+      "frames": 1,
+      "method": "authored olivine family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/pink_opal",
+      "source_sha256": "d6656db6ff5f460604eb37fd67487d70628f186a8e051a671437cfc38f9cf29b",
+      "output_sha256": "2a1112a3435847057c6bf3a744b534aadf6baa6f6cc5ba523a430ac11fbc036f",
+      "frames": 1,
+      "method": "authored opal family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/polished-tanzanite_cute",
+      "source_sha256": "91d91cc80f106495ec0785d76f0563135fc2730500360c4902dfe766e1d605ea",
+      "output_sha256": "1658c8277d8ec4df8711b0944261b6c80cea505bd13686b687fcad62bdf6ff58",
+      "frames": 1,
+      "method": "authored corundum family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/raresapphire",
+      "source_sha256": "87758f18bd8a6a0bfbe11c6265eef45d18c5121dd8be08e8028fff1e7654580d",
+      "output_sha256": "3a25b3998cc88f79996420241ffd16daa2df42952179cfa3f16130721938f821",
+      "frames": 1,
+      "method": "authored corundum family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/ruby_item",
+      "source_sha256": "3ad94ba87b86cb2531a487baf3068b95e2182b3939c2edd6f42e6a0d3db6a053",
+      "output_sha256": "8d2f87d37213af8d3dbd19d1433f74d4f8556844fbf253b96c3fd7f9a99effd2",
+      "frames": 1,
+      "method": "authored corundum family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/sicklyweakgreen",
+      "source_sha256": "bfb3446923a5d650a546276af6edd3c81778443d475d6391fc75bdf4ecf3aad2",
+      "output_sha256": "143b57f87951652865333053e96a2b67a6a31281afb1a815e1002469d7682279",
+      "frames": 1,
+      "method": "authored jade family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/sunflaregem",
+      "source_sha256": "b46551feed14e88ca0f6e4841cf960c65d02f8eb1346b130b2197c164ac50659",
+      "output_sha256": "1216f764387cb39f031113765ddaca4af99354f6056af9d54c6b0990f901856d",
+      "frames": 1,
+      "method": "authored sunflare family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/titanium_quartz",
+      "source_sha256": "1582b7dfbea6be9f1a722fe2f9b18e0e05d04238f7444b9dd1224576fd9bf8f5",
+      "output_sha256": "7d6f9195df393ee6b867b5c9ec5d86a426c2ebd6307db0f85a6bc56b072f7d53",
+      "frames": 1,
+      "method": "authored quartz family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/topaz_1",
+      "source_sha256": "8ff470160a6ff0f4811d5dee59a9cafdb9a36c741475ad49097bcf285382cbd4",
+      "output_sha256": "8fe4ea218213b60a12dcd31c4c49c36e081b44671f0cd31185068d8ce5d3f572",
+      "frames": 1,
+      "method": "authored topaz family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/ussingite_gem_1",
+      "source_sha256": "a395bd7e7e53207a42e4b51a165bbe868b5c3cb725a77637e12706e708a1714b",
+      "output_sha256": "8c573ea42d2e18aad3318866c05486047b52be5f20b23d898b4aa66f8bb332c0",
+      "frames": 1,
+      "method": "authored ussingite family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    },
+    {
+      "texture": "more_ores_more_gems:item/white_opal_gem_1",
+      "source_sha256": "31ded50ab1f6c4156ef5af440188ff8e00f5f178bd5717ee28bb03c9de4a87de",
+      "output_sha256": "19e4b2e4f2b1f5b652d6d584db673555943dd8a94e91ca60662338da09a4c7b6",
+      "frames": 1,
+      "method": "authored opal family silhouette/lighting; non-spatial palette swatches and animation only; no upstream RGB overlay"
+    }
+  ],
+  "installer": "scripts/install_more_ores_more_gems_derived_textures.py"
+}

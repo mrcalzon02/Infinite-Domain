@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "H":  {
+                          "item":  "quark:stick_block"
+                      },
+                "M":  {
+                          "item":  "bno:silver_block"
+                      }
+            },
+    "pattern":  [
+                    "MM",
+                    "MH",
+                    " H"
+                ],
+    "result":  {
+                   "id":  "iceandfire:silver_axe"
+               },
+    "show_notification":  true
+}

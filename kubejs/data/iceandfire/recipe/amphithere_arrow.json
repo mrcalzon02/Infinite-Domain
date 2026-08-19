@@ -1,0 +1,25 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "#":  {
+                          "item":  "quark:stick_block"
+                      },
+                "X":  {
+                          "item":  "allthecompressed:flint_block"
+                      },
+                "Y":  {
+                          "item":  "iceandfire:amphithere_feather"
+                      }
+            },
+    "pattern":  [
+                    "X",
+                    "#",
+                    "Y"
+                ],
+    "result":  {
+                   "count":  4,
+                   "id":  "iceandfire:amphithere_arrow"
+               },
+    "show_notification":  true
+}

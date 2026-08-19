@@ -1,0 +1,42 @@
+{
+  "structure_id": "infinite_domain:blown_apartment_complex_clean_master",
+  "archetype": "four-storey courtyard apartment building with sixteen complete dwellings and dual stairs",
+  "orientation": {
+    "public_entry": "north",
+    "secondary_exit": "south",
+    "west_and_east_apartment_wings": "around central courtyard",
+    "north_and_south_stair_cores": "opposite ends of gallery ring",
+    "shared_resident_services": "ground north and south bands",
+    "roof_plant": "north-center"
+  },
+  "residential_program": [
+    "four independently accessible apartments on each of four floors",
+    "living seating and kitchen storage/cooking in every apartment",
+    "separated bedroom and bathroom/storage zones in every apartment",
+    "continuous courtyard-facing gallery linking all unit doors",
+    "north and south three-flight stair stacks",
+    "ground mail/records, laundry/storage and maintenance support",
+    "landscaped courtyard with water and seating",
+    "roof laundry/mechanical bulkhead and equipment"
+  ],
+  "damage_constraints": [
+    "localize the diagonal blast to the northeast apartment stack and adjacent courtyard wall",
+    "preserve three complete apartments on every floor",
+    "preserve both full stair stacks and the south gallery connection",
+    "preserve north public and south secondary exits",
+    "use gravity-led masonry and gravel debris without unstable connection-sensitive blocks",
+    "derive all damage and occupation only from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "all sixteen units read as apartments rather than repeated empty rooms",
+      "the courtyard gallery and both stair cores work at player scale",
+      "living, kitchen, bedroom and bathroom functions remain legible",
+      "the northeast blast exposes a vertical residential stack coherently",
+      "rubble falls toward the courtyard and street without sealing survivor routes",
+      "terrain feathering seats entrances, courtyard drainage and rubble into city grade"
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:motel_clean_master",
+  "archetype": "two-storey interior-corridor roadside motel",
+  "orientation": {
+    "road_and_primary_entrance": "north",
+    "rear_emergency_egress": "south",
+    "pool_courtyard": "northwest",
+    "parking": "northeast"
+  },
+  "capacity": {
+    "guest_rooms": 16,
+    "guest_rooms_per_floor": 8,
+    "floors": 2
+  },
+  "public_program": [
+    "recessed weather-protected entrance",
+    "waiting lobby",
+    "reception and check-in desk",
+    "public restroom"
+  ],
+  "staff_program": [
+    "manager office behind reception",
+    "luggage and records store",
+    "controlled door from lobby to guest wing",
+    "housekeeping and linen closets at both corridor ends on both floors",
+    "roof mechanical plant"
+  ],
+  "guest_room_program": [
+    "door from central corridor",
+    "entry zone",
+    "sleeping area",
+    "bedside storage",
+    "enclosed private bathroom with washing and toilet fixtures",
+    "exterior window"
+  ],
+  "circulation": [
+    "road to recessed lobby entrance",
+    "lobby to reception and public restroom",
+    "controlled lobby door to three-wide central guest corridor",
+    "internal lobby stair through a dedicated north landing spine to the second-floor corridor",
+    "central corridor through a dedicated south service spine to rear fire doors, landing and exterior stair",
+    "corridor access to every guest room and housekeeping closet"
+  ],
+  "damage_constraints": [
+    "retain an unbroken route from front entrance through lobby to at least one stair",
+    "retain at least one usable egress from each surviving floor",
+    "damage must follow one localized collapse zone rather than random holes",
+    "fixtures and debris must reflect the function of the affected room",
+    "keep the clean master immutable; abandoned variants derive from it"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "entrance and road relationship are legible",
+      "public, staff and guest zones are distinguishable",
+      "every guest room connects to the corridor and contains an enclosed bathroom",
+      "stairs and emergency egress are traversable",
+      "exterior amenities and service equipment support the motel function",
+      "abandoned damage does not erase the building's original use"
+    ]
+  }
+}

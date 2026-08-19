@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aaa",
+                    "aba",
+                    "aaa"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "b":  {
+                          "item":  "more_ores_more_gems:gunpowder_block"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:safe_gunpowder_block",
+                   "count":  1
+               }
+}

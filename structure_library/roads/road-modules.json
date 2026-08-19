@@ -1,0 +1,3523 @@
+{
+  "format_version": 1,
+  "purpose": "Topology-stable modular road corpus. The graph chooses topology; condition variants never add or remove edge connectors.",
+  "conditions": [
+    "clean",
+    "cracked",
+    "buried",
+    "cratered",
+    "overgrown",
+    "flooded",
+    "burned"
+  ],
+  "required_approval_checks": [
+    "player_and_vehicle_scale_walkthrough",
+    "adjacent_connector_alignment",
+    "four_way_rotation",
+    "ramp_and_bridge_elevation",
+    "representative_terrain_placement"
+  ],
+  "production_approvals": [],
+  "modules": [
+    {
+      "module_id": "infinite_domain:local_straight__clean",
+      "architecture_family": "infinite_domain:local_straight",
+      "condition": "clean",
+      "road_class": "local_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_straight__clean.nbt",
+      "source_sha256": "a353aad9f03fb992c892a9992ea7cb24f7fd3e6c78f9d62cd8e1be74d37c195f",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_straight__cracked",
+      "architecture_family": "infinite_domain:local_straight",
+      "condition": "cracked",
+      "road_class": "local_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_straight__cracked.nbt",
+      "source_sha256": "06c92f111921a22e98f31cad45b507fe80f10124c66ca1190b51c2cd374e0553",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_straight__buried",
+      "architecture_family": "infinite_domain:local_straight",
+      "condition": "buried",
+      "road_class": "local_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_straight__buried.nbt",
+      "source_sha256": "2226d1a5dc6be9219c90e86d3a27b0bfd8091275b4acaee0e5ae90ab37de82d1",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_straight__cratered",
+      "architecture_family": "infinite_domain:local_straight",
+      "condition": "cratered",
+      "road_class": "local_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_straight__cratered.nbt",
+      "source_sha256": "062654a443a6648b3a3cfe23fe13be6b5aeb6eca49bf97c1c33fb7d6bdd7f57f",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_straight__overgrown",
+      "architecture_family": "infinite_domain:local_straight",
+      "condition": "overgrown",
+      "road_class": "local_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_straight__overgrown.nbt",
+      "source_sha256": "3818970546bc029909d1e39b58c177399b28e3b69f976c2e5f968beaf7841deb",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_straight__flooded",
+      "architecture_family": "infinite_domain:local_straight",
+      "condition": "flooded",
+      "road_class": "local_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_straight__flooded.nbt",
+      "source_sha256": "242237477147bab5603e7c9e17cff418da74f711a968bd5d1d1c269246ebc990",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_straight__burned",
+      "architecture_family": "infinite_domain:local_straight",
+      "condition": "burned",
+      "road_class": "local_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_straight__burned.nbt",
+      "source_sha256": "72cbe28ce696471eb22f58d8fe89c133f0df83efb4ed486c31467bd4bb8b7df2",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_bend__clean",
+      "architecture_family": "infinite_domain:local_bend",
+      "condition": "clean",
+      "road_class": "local_road",
+      "topology": "bend",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_bend__clean.nbt",
+      "source_sha256": "26c25a728918a0f1d6c26e33946f6a8e499a23988c946a8795d79fb35eafee3b",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_bend__cracked",
+      "architecture_family": "infinite_domain:local_bend",
+      "condition": "cracked",
+      "road_class": "local_road",
+      "topology": "bend",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_bend__cracked.nbt",
+      "source_sha256": "83b4c72f95a1eeb812f22690df1805000e31914543f7dd72bbef33f8b70be6ac",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_bend__buried",
+      "architecture_family": "infinite_domain:local_bend",
+      "condition": "buried",
+      "road_class": "local_road",
+      "topology": "bend",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_bend__buried.nbt",
+      "source_sha256": "bf7c195894bd9ced3700d3196622112c4690207d674729b2bef593ceeec58fd2",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_bend__cratered",
+      "architecture_family": "infinite_domain:local_bend",
+      "condition": "cratered",
+      "road_class": "local_road",
+      "topology": "bend",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_bend__cratered.nbt",
+      "source_sha256": "248b39997e491f096712241f9860209c659f602b9b28d7ba1cd53be4ba89f781",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_bend__overgrown",
+      "architecture_family": "infinite_domain:local_bend",
+      "condition": "overgrown",
+      "road_class": "local_road",
+      "topology": "bend",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_bend__overgrown.nbt",
+      "source_sha256": "fb0a27da831dc1b9beb4cae8a17d705a6ec1829db15a32e630dbd2ef745535b1",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_bend__flooded",
+      "architecture_family": "infinite_domain:local_bend",
+      "condition": "flooded",
+      "road_class": "local_road",
+      "topology": "bend",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_bend__flooded.nbt",
+      "source_sha256": "1426457974c9d7b8345667d63a2a276d851fa4c31bbd47f89a9109c946cdb0ae",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_bend__burned",
+      "architecture_family": "infinite_domain:local_bend",
+      "condition": "burned",
+      "road_class": "local_road",
+      "topology": "bend",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_bend__burned.nbt",
+      "source_sha256": "e1e566838f83154bdb6a7c26fc06585e71f55755a6d37aee2de178fdb383883e",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_t__clean",
+      "architecture_family": "infinite_domain:local_t",
+      "condition": "clean",
+      "road_class": "local_road",
+      "topology": "t",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_t__clean.nbt",
+      "source_sha256": "f9b0b0bded4f60840e1b7ffc5d2db9045c38de25781decf05539f4f8d0fb1051",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_t__cracked",
+      "architecture_family": "infinite_domain:local_t",
+      "condition": "cracked",
+      "road_class": "local_road",
+      "topology": "t",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_t__cracked.nbt",
+      "source_sha256": "ff51e7983ccc377400e64d49ceb44383ec6c83f630a6aa2a271b7b157b30efa3",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_t__buried",
+      "architecture_family": "infinite_domain:local_t",
+      "condition": "buried",
+      "road_class": "local_road",
+      "topology": "t",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_t__buried.nbt",
+      "source_sha256": "bdaa7c7258a5db9f5942b3a65efb3b2e6f8509f8a3d0ee8703f9e718a41b1ad1",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_t__cratered",
+      "architecture_family": "infinite_domain:local_t",
+      "condition": "cratered",
+      "road_class": "local_road",
+      "topology": "t",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_t__cratered.nbt",
+      "source_sha256": "66346233160f67215bb09a73a9da6048667d6cec4e024e0a53a27c82db368c76",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_t__overgrown",
+      "architecture_family": "infinite_domain:local_t",
+      "condition": "overgrown",
+      "road_class": "local_road",
+      "topology": "t",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_t__overgrown.nbt",
+      "source_sha256": "59125f81874304afcef0801e9ef4d4e76b90f5fe019390ea37147f2d97f5ca50",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_t__flooded",
+      "architecture_family": "infinite_domain:local_t",
+      "condition": "flooded",
+      "road_class": "local_road",
+      "topology": "t",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_t__flooded.nbt",
+      "source_sha256": "ec99b717afb2a31490cb62f18848747d028822a8482fbf2aaeff1e8f6fe553dc",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_t__burned",
+      "architecture_family": "infinite_domain:local_t",
+      "condition": "burned",
+      "road_class": "local_road",
+      "topology": "t",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_t__burned.nbt",
+      "source_sha256": "6aa592cb04e62da6057e9bea77145a62b34f2d5f4daa1d3aee9b7fd20aa6b795",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_cross__clean",
+      "architecture_family": "infinite_domain:local_cross",
+      "condition": "clean",
+      "road_class": "local_road",
+      "topology": "four_way",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_cross__clean.nbt",
+      "source_sha256": "ef945ff73f6d28e2e3b50c082a5a206a9ec54b915cbbbad9a790454193575f6b",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_cross__cracked",
+      "architecture_family": "infinite_domain:local_cross",
+      "condition": "cracked",
+      "road_class": "local_road",
+      "topology": "four_way",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_cross__cracked.nbt",
+      "source_sha256": "082bd42d12a7bfc9b06ce1cc341ce9da167216a34fd7647b2ae67ae8fc5ff7a4",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_cross__buried",
+      "architecture_family": "infinite_domain:local_cross",
+      "condition": "buried",
+      "road_class": "local_road",
+      "topology": "four_way",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_cross__buried.nbt",
+      "source_sha256": "a3c061218bd0a2d5137f25aa17285e0ce66a6cbf2a05dd1c2cf9b132cde86bb9",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_cross__cratered",
+      "architecture_family": "infinite_domain:local_cross",
+      "condition": "cratered",
+      "road_class": "local_road",
+      "topology": "four_way",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_cross__cratered.nbt",
+      "source_sha256": "23b732d4e13490c713655f4e621e71bb2c26ca419e39374d8041ac08989491f8",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_cross__overgrown",
+      "architecture_family": "infinite_domain:local_cross",
+      "condition": "overgrown",
+      "road_class": "local_road",
+      "topology": "four_way",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_cross__overgrown.nbt",
+      "source_sha256": "2e1227857e6f2cad42c40b97877e8a77cde859be2f4aae5fd521f4b9ffa9dfd3",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_cross__flooded",
+      "architecture_family": "infinite_domain:local_cross",
+      "condition": "flooded",
+      "road_class": "local_road",
+      "topology": "four_way",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_cross__flooded.nbt",
+      "source_sha256": "6730e80718536c629d833d1c713aad0e8346f785bbec6a5dcf44bffe3d4997f4",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_cross__burned",
+      "architecture_family": "infinite_domain:local_cross",
+      "condition": "burned",
+      "road_class": "local_road",
+      "topology": "four_way",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_cross__burned.nbt",
+      "source_sha256": "431da6c7a6d5a9398b364dbeb69ff7fe657712e16c908964ba814ce70f985de0",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_roundabout__clean",
+      "architecture_family": "infinite_domain:local_roundabout",
+      "condition": "clean",
+      "road_class": "local_road",
+      "topology": "roundabout",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_roundabout__clean.nbt",
+      "source_sha256": "9f4391d811770ccf616093229d5415f80291faf18f5552006ea34b429ae7312a",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_roundabout__cracked",
+      "architecture_family": "infinite_domain:local_roundabout",
+      "condition": "cracked",
+      "road_class": "local_road",
+      "topology": "roundabout",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_roundabout__cracked.nbt",
+      "source_sha256": "07022f3ba0be81b61ae571b10470cf6c2296655fd00add00978b6f2b52276b6d",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_roundabout__buried",
+      "architecture_family": "infinite_domain:local_roundabout",
+      "condition": "buried",
+      "road_class": "local_road",
+      "topology": "roundabout",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_roundabout__buried.nbt",
+      "source_sha256": "79505495d5706c16bc87099ecdeb4f99ccf22e3fdf445e83866dcd6974136634",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_roundabout__cratered",
+      "architecture_family": "infinite_domain:local_roundabout",
+      "condition": "cratered",
+      "road_class": "local_road",
+      "topology": "roundabout",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_roundabout__cratered.nbt",
+      "source_sha256": "e9a48476b25355194158b340988a4ff3b0651037a63eca106e67ab2e1cb4ba34",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_roundabout__overgrown",
+      "architecture_family": "infinite_domain:local_roundabout",
+      "condition": "overgrown",
+      "road_class": "local_road",
+      "topology": "roundabout",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_roundabout__overgrown.nbt",
+      "source_sha256": "e8249b5b099d51dfef6b22ac4ff1e27595de59f1fc4056a5ddaedfca0de0aefd",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_roundabout__flooded",
+      "architecture_family": "infinite_domain:local_roundabout",
+      "condition": "flooded",
+      "road_class": "local_road",
+      "topology": "roundabout",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_roundabout__flooded.nbt",
+      "source_sha256": "29410040a1d39931cc45eaa9ee489a394488057a7f4dc24c2e84ac3668c12c3d",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_roundabout__burned",
+      "architecture_family": "infinite_domain:local_roundabout",
+      "condition": "burned",
+      "road_class": "local_road",
+      "topology": "roundabout",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "east",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 7,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_roundabout__burned.nbt",
+      "source_sha256": "fb0fc118f81c07af84e9778c7c327f99403f4899638827bfb555c49833c6c0ae",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_dead_end__clean",
+      "architecture_family": "infinite_domain:local_dead_end",
+      "condition": "clean",
+      "road_class": "local_road",
+      "topology": "dead_end",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_dead_end__clean.nbt",
+      "source_sha256": "f3bbee284e9e3ddb869a375867b66e47cbfe868711745bdc7c358766822950c7",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_dead_end__cracked",
+      "architecture_family": "infinite_domain:local_dead_end",
+      "condition": "cracked",
+      "road_class": "local_road",
+      "topology": "dead_end",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_dead_end__cracked.nbt",
+      "source_sha256": "13a6084d55b89629a52adb9722ce8a1211050a600cf7709a4e9bd003dce8ec96",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_dead_end__buried",
+      "architecture_family": "infinite_domain:local_dead_end",
+      "condition": "buried",
+      "road_class": "local_road",
+      "topology": "dead_end",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_dead_end__buried.nbt",
+      "source_sha256": "40a148255384d7365219985b8b609b3e7a94c6c797605715ab20bcff3b393b7e",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_dead_end__cratered",
+      "architecture_family": "infinite_domain:local_dead_end",
+      "condition": "cratered",
+      "road_class": "local_road",
+      "topology": "dead_end",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_dead_end__cratered.nbt",
+      "source_sha256": "e1381edd1057c5038ab895c4505816bbce5589158c5a43cea2feb7b0e52f5d5b",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_dead_end__overgrown",
+      "architecture_family": "infinite_domain:local_dead_end",
+      "condition": "overgrown",
+      "road_class": "local_road",
+      "topology": "dead_end",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_dead_end__overgrown.nbt",
+      "source_sha256": "9d11737d32e4ee2eaaccd7ec9b87c67e950264dcf0aab12923486fc8889af815",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_dead_end__flooded",
+      "architecture_family": "infinite_domain:local_dead_end",
+      "condition": "flooded",
+      "road_class": "local_road",
+      "topology": "dead_end",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_dead_end__flooded.nbt",
+      "source_sha256": "59dc8a22a7db271a7e644aed682741b314ec23a3049c7dd1408311fb00d0f120",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:local_dead_end__burned",
+      "architecture_family": "infinite_domain:local_dead_end",
+      "condition": "burned",
+      "road_class": "local_road",
+      "topology": "dead_end",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 7,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 7,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/local_dead_end__burned.nbt",
+      "source_sha256": "60e37d4812a8088a28c350a192f6732c4770aebc228b5a99bc4e952161d6357d",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:driveway_straight__clean",
+      "architecture_family": "infinite_domain:driveway_straight",
+      "condition": "clean",
+      "road_class": "driveway",
+      "topology": "driveway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/driveway_straight__clean.nbt",
+      "source_sha256": "fa516891a0940d866ee92c4c3e0322a30f6123df837a343fbc8f66c241ac07d6",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:driveway_straight__cracked",
+      "architecture_family": "infinite_domain:driveway_straight",
+      "condition": "cracked",
+      "road_class": "driveway",
+      "topology": "driveway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/driveway_straight__cracked.nbt",
+      "source_sha256": "e108e1e69db288359472479ba79392f9a75aa4ce22efe60a9993dd1709fa3bf1",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:driveway_straight__buried",
+      "architecture_family": "infinite_domain:driveway_straight",
+      "condition": "buried",
+      "road_class": "driveway",
+      "topology": "driveway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/driveway_straight__buried.nbt",
+      "source_sha256": "b20eee717fbf8ae0ac71a2a910883b0358af899e14dc808053056132c46c35f7",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:driveway_straight__cratered",
+      "architecture_family": "infinite_domain:driveway_straight",
+      "condition": "cratered",
+      "road_class": "driveway",
+      "topology": "driveway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/driveway_straight__cratered.nbt",
+      "source_sha256": "2254f9f9f1a7b08ca3b11b2bed7ac171aab899924b14f9e9e9506ce3a864fea8",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:driveway_straight__overgrown",
+      "architecture_family": "infinite_domain:driveway_straight",
+      "condition": "overgrown",
+      "road_class": "driveway",
+      "topology": "driveway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/driveway_straight__overgrown.nbt",
+      "source_sha256": "2aa913169958b9c28f478ef0575b49ac50e1188226a162c51db9b6a1c0627a3a",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:driveway_straight__flooded",
+      "architecture_family": "infinite_domain:driveway_straight",
+      "condition": "flooded",
+      "road_class": "driveway",
+      "topology": "driveway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/driveway_straight__flooded.nbt",
+      "source_sha256": "a9f7d11cc7435e9e32a8d7455efca53b85013efa2ee2af01d0affac01858b832",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:driveway_straight__burned",
+      "architecture_family": "infinite_domain:driveway_straight",
+      "condition": "burned",
+      "road_class": "driveway",
+      "topology": "driveway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/driveway_straight__burned.nbt",
+      "source_sha256": "45cadf7d2cec56621bfac3fc6b9e997afdc80569e51bc6b4f0b816b1e1d44dea",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:alley_straight__clean",
+      "architecture_family": "infinite_domain:alley_straight",
+      "condition": "clean",
+      "road_class": "alley",
+      "topology": "alley",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "east",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/alley_straight__clean.nbt",
+      "source_sha256": "2715c021d325be97f67fa5edeedd649c124d3411faa95731279d2d0309a89780",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:alley_straight__cracked",
+      "architecture_family": "infinite_domain:alley_straight",
+      "condition": "cracked",
+      "road_class": "alley",
+      "topology": "alley",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "east",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/alley_straight__cracked.nbt",
+      "source_sha256": "c1a42361872a0be2804acf271858fc1bcf40128ad155181753908c733c80a1e7",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:alley_straight__buried",
+      "architecture_family": "infinite_domain:alley_straight",
+      "condition": "buried",
+      "road_class": "alley",
+      "topology": "alley",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "east",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/alley_straight__buried.nbt",
+      "source_sha256": "9e3242c4cf2ec32b5388bec11b9e104982c31ec3917cc45ed70f959e990456d3",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:alley_straight__cratered",
+      "architecture_family": "infinite_domain:alley_straight",
+      "condition": "cratered",
+      "road_class": "alley",
+      "topology": "alley",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "east",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/alley_straight__cratered.nbt",
+      "source_sha256": "185b2b2e20bff1e7b02fc16698efda01f13749c7aa58af0a8b8c4f75295376f9",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:alley_straight__overgrown",
+      "architecture_family": "infinite_domain:alley_straight",
+      "condition": "overgrown",
+      "road_class": "alley",
+      "topology": "alley",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "east",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/alley_straight__overgrown.nbt",
+      "source_sha256": "faf4016f13fb1728de27678a307c9ae1cf09f4b9c19763878469c42d0815a433",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:alley_straight__flooded",
+      "architecture_family": "infinite_domain:alley_straight",
+      "condition": "flooded",
+      "road_class": "alley",
+      "topology": "alley",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "east",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/alley_straight__flooded.nbt",
+      "source_sha256": "0f04d58ec899f3f8ec094a3e210c2ba414fa950f59233b03d0f73b7634e7a179",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:alley_straight__burned",
+      "architecture_family": "infinite_domain:alley_straight",
+      "condition": "burned",
+      "road_class": "alley",
+      "topology": "alley",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 3,
+      "length": 33,
+      "lane_count": 1,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "east",
+          "width": 3,
+          "elevation": 0
+        },
+        {
+          "direction": "west",
+          "width": 3,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/alley_straight__burned.nbt",
+      "source_sha256": "f763b1aa3f10de3130e57115c146785af31789b085d25fabea746bd648421566",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:main_straight__clean",
+      "architecture_family": "infinite_domain:main_straight",
+      "condition": "clean",
+      "road_class": "main_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/main_straight__clean.nbt",
+      "source_sha256": "a6605f13dfb69f0cbcc26bfe8b9fa4fa884cb78b9a3baa8665af2909f8efdd12",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:main_straight__cracked",
+      "architecture_family": "infinite_domain:main_straight",
+      "condition": "cracked",
+      "road_class": "main_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/main_straight__cracked.nbt",
+      "source_sha256": "289ff810ab0ffdd23d7601ab8a14c999446d4e49a45f5109889c226b0918083c",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:main_straight__buried",
+      "architecture_family": "infinite_domain:main_straight",
+      "condition": "buried",
+      "road_class": "main_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/main_straight__buried.nbt",
+      "source_sha256": "013a8a4f731055c190b75612b293311dcf31920f3476e3b5fc47982cd8ab7845",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:main_straight__cratered",
+      "architecture_family": "infinite_domain:main_straight",
+      "condition": "cratered",
+      "road_class": "main_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/main_straight__cratered.nbt",
+      "source_sha256": "4913bacfb7a4db3fbf460fdc0567757687515d77518c17c78c05c9bd613d5a46",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:main_straight__overgrown",
+      "architecture_family": "infinite_domain:main_straight",
+      "condition": "overgrown",
+      "road_class": "main_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/main_straight__overgrown.nbt",
+      "source_sha256": "ff2e36b7966e7e4ff5ee559e3b522772193a419836b810cbac42250a118302f0",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:main_straight__flooded",
+      "architecture_family": "infinite_domain:main_straight",
+      "condition": "flooded",
+      "road_class": "main_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/main_straight__flooded.nbt",
+      "source_sha256": "c4db9d2ba194f688bdb6c226e62e789f10cd01aa1c953454b67315138728875a",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:main_straight__burned",
+      "architecture_family": "infinite_domain:main_straight",
+      "condition": "burned",
+      "road_class": "main_road",
+      "topology": "straight",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": true,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/main_straight__burned.nbt",
+      "source_sha256": "1d9f20ba9b5d59bf9adb24093b7245784b888003db70292ffc966191d21d9047",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_straight__clean",
+      "architecture_family": "infinite_domain:highway_straight",
+      "condition": "clean",
+      "road_class": "highway",
+      "topology": "highway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 17,
+      "length": 33,
+      "lane_count": 4,
+      "median": true,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 17,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 17,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_straight__clean.nbt",
+      "source_sha256": "e2d34ba9292037b2714954896c7ff0bb41bc6e6cc439115fb1a0fecfec84d884",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_straight__cracked",
+      "architecture_family": "infinite_domain:highway_straight",
+      "condition": "cracked",
+      "road_class": "highway",
+      "topology": "highway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 17,
+      "length": 33,
+      "lane_count": 4,
+      "median": true,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 17,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 17,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_straight__cracked.nbt",
+      "source_sha256": "8de9340885fafca62cc2a1dd6cb02e71616cdfbf5880f4f6a131df8f2cdef482",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_straight__buried",
+      "architecture_family": "infinite_domain:highway_straight",
+      "condition": "buried",
+      "road_class": "highway",
+      "topology": "highway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 17,
+      "length": 33,
+      "lane_count": 4,
+      "median": true,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 17,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 17,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_straight__buried.nbt",
+      "source_sha256": "479531a33782775152738bb5edb1199fbdf7abae84e131d3a13cab1160117592",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_straight__cratered",
+      "architecture_family": "infinite_domain:highway_straight",
+      "condition": "cratered",
+      "road_class": "highway",
+      "topology": "highway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 17,
+      "length": 33,
+      "lane_count": 4,
+      "median": true,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 17,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 17,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_straight__cratered.nbt",
+      "source_sha256": "be167d3888ded9bd5c6ab33376c93154d19b101f3ef3161198690f11995693d5",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_straight__overgrown",
+      "architecture_family": "infinite_domain:highway_straight",
+      "condition": "overgrown",
+      "road_class": "highway",
+      "topology": "highway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 17,
+      "length": 33,
+      "lane_count": 4,
+      "median": true,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 17,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 17,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_straight__overgrown.nbt",
+      "source_sha256": "d0ed5e495c60aff817aefe17aff32e5f9ee7602f181c1b9bfc1f14ce6aadd24e",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_straight__flooded",
+      "architecture_family": "infinite_domain:highway_straight",
+      "condition": "flooded",
+      "road_class": "highway",
+      "topology": "highway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 17,
+      "length": 33,
+      "lane_count": 4,
+      "median": true,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 17,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 17,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_straight__flooded.nbt",
+      "source_sha256": "431787f24c972b5436182ad76eba5605e29066d0358b21911c667d97bb01d6ff",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_straight__burned",
+      "architecture_family": "infinite_domain:highway_straight",
+      "condition": "burned",
+      "road_class": "highway",
+      "topology": "highway",
+      "size": [
+        33,
+        6,
+        33
+      ],
+      "width": 17,
+      "length": 33,
+      "lane_count": 4,
+      "median": true,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 17,
+          "elevation": 0
+        },
+        {
+          "direction": "south",
+          "width": 17,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_straight__burned.nbt",
+      "source_sha256": "2c093133a4e0463acabd47b2de0a6644c686be369bf0861a8dd3481f96545b1b",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_ramp__clean",
+      "architecture_family": "infinite_domain:highway_ramp",
+      "condition": "clean",
+      "road_class": "highway",
+      "topology": "ramp",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_ramp__clean.nbt",
+      "source_sha256": "be3fd64a7b3d30d2665063e6868df92447112ed1892fe18314c7420e2159e7b9",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_ramp__cracked",
+      "architecture_family": "infinite_domain:highway_ramp",
+      "condition": "cracked",
+      "road_class": "highway",
+      "topology": "ramp",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_ramp__cracked.nbt",
+      "source_sha256": "cd77a8235f2bc34f6823f6ffe9cbd1cff4ec1a13253a6cfd15ef0cc370827ff3",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_ramp__buried",
+      "architecture_family": "infinite_domain:highway_ramp",
+      "condition": "buried",
+      "road_class": "highway",
+      "topology": "ramp",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_ramp__buried.nbt",
+      "source_sha256": "86a707e99c0131f6b3163c1ed178768c5e1c92d04d776aeba654997d55d40af2",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_ramp__cratered",
+      "architecture_family": "infinite_domain:highway_ramp",
+      "condition": "cratered",
+      "road_class": "highway",
+      "topology": "ramp",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_ramp__cratered.nbt",
+      "source_sha256": "e2c5084e8cd91c224e883a6b02624e1b19c21d82776438c5e1bff6b6b5a71c92",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_ramp__overgrown",
+      "architecture_family": "infinite_domain:highway_ramp",
+      "condition": "overgrown",
+      "road_class": "highway",
+      "topology": "ramp",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_ramp__overgrown.nbt",
+      "source_sha256": "6d7401850344646c9ce5c442f5ffdaaaf813718b109b97f1dc102544ecb6cff4",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_ramp__flooded",
+      "architecture_family": "infinite_domain:highway_ramp",
+      "condition": "flooded",
+      "road_class": "highway",
+      "topology": "ramp",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_ramp__flooded.nbt",
+      "source_sha256": "c1eb347c745bac26632f63ecf45c3cdd149848e672cfe38082e010f99645dc00",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:highway_ramp__burned",
+      "architecture_family": "infinite_domain:highway_ramp",
+      "condition": "burned",
+      "road_class": "highway",
+      "topology": "ramp",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/highway_ramp__burned.nbt",
+      "source_sha256": "31322f4f97e2d66d3c2e2d02c0e49320529f17f984207a701222d6531d360b0a",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:bridge_approach__clean",
+      "architecture_family": "infinite_domain:bridge_approach",
+      "condition": "clean",
+      "road_class": "main_road",
+      "topology": "bridge_approach",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/bridge_approach__clean.nbt",
+      "source_sha256": "331f5dacb32087f713fc8407ecf9cc591128093eb259581e8ab3f5c69a2dfc3e",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:bridge_approach__cracked",
+      "architecture_family": "infinite_domain:bridge_approach",
+      "condition": "cracked",
+      "road_class": "main_road",
+      "topology": "bridge_approach",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/bridge_approach__cracked.nbt",
+      "source_sha256": "7e0be5c75806a7d53f866f71415bf606e7aea1b0f954060e10995934cdc7e30e",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:bridge_approach__buried",
+      "architecture_family": "infinite_domain:bridge_approach",
+      "condition": "buried",
+      "road_class": "main_road",
+      "topology": "bridge_approach",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/bridge_approach__buried.nbt",
+      "source_sha256": "73c6094dd3328687806a6e7fbfb0b9f8a6def61c041611f30d3d7be2d725ba63",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:bridge_approach__cratered",
+      "architecture_family": "infinite_domain:bridge_approach",
+      "condition": "cratered",
+      "road_class": "main_road",
+      "topology": "bridge_approach",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/bridge_approach__cratered.nbt",
+      "source_sha256": "f912c4b35ec8f6cfd741bf82ffcf2e37805d67a08c5823528dadd7d24b24bb2f",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:bridge_approach__overgrown",
+      "architecture_family": "infinite_domain:bridge_approach",
+      "condition": "overgrown",
+      "road_class": "main_road",
+      "topology": "bridge_approach",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/bridge_approach__overgrown.nbt",
+      "source_sha256": "d68dbcfa39ebd825efdfaf2ab7e9fccc74177df5198d4c85169ac3d6ec5ea193",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:bridge_approach__flooded",
+      "architecture_family": "infinite_domain:bridge_approach",
+      "condition": "flooded",
+      "road_class": "main_road",
+      "topology": "bridge_approach",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/bridge_approach__flooded.nbt",
+      "source_sha256": "ac7169d43072c8b3dce0a78d85048bdb8da62ada67070c8ef438e675ae8ea6c7",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    },
+    {
+      "module_id": "infinite_domain:bridge_approach__burned",
+      "architecture_family": "infinite_domain:bridge_approach",
+      "condition": "burned",
+      "road_class": "main_road",
+      "topology": "bridge_approach",
+      "size": [
+        33,
+        10,
+        33
+      ],
+      "width": 11,
+      "length": 33,
+      "lane_count": 2,
+      "median": false,
+      "sidewalk": false,
+      "connectors": [
+        {
+          "direction": "north",
+          "width": 11,
+          "elevation": 4
+        },
+        {
+          "direction": "south",
+          "width": 11,
+          "elevation": 0
+        }
+      ],
+      "rotation_support": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/road_modules/bridge_approach__burned.nbt",
+      "source_sha256": "e3fb1ecb673a3bb9105b5847063b45070932b692510b6c5a038e9e3d19f3c59e",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "source_provenance": "scripts/generate_road_module_corpus.py",
+      "production_status": "quarantined_pending_road_review"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "d":  {
+                          "item":  "minecraft:diamond_block"
+                      },
+                "g":  {
+                          "tag":  "c:glass_panes"
+                      },
+                "l":  {
+                          "item":  "minecraft:lapis_block"
+                      },
+                "r":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    "rlr",
+                    "dgd",
+                    "rlr"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "mininggadgets:upgrade_empty"
+               }
+}

@@ -1,0 +1,388 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "environmental_survival_engineering"
+	group: "4E65FAAC62D57D4A"
+	id: "1C7E40C69A25D8F5"
+	images: [ ]
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["3AFBE38263D3351E"]
+			id: "5D20000000000001"
+			shape: "octagon"
+			tasks: [{
+				id: "6D20000000000001"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D20000000000001"]
+			id: "5D20000000000002"
+			shape: "gear"
+			tasks: [{
+				id: "6D20000000000002"
+				item: { count: 1, id: "enviromine:gas_mask_basic_helmet" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5D20000000000002"]
+			id: "5D20000000000003"
+			rewards: [{
+				id: "7D20000000000001"
+				item: {
+					count: 1
+					id: "numismatics:sprocket"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				count: 4L
+				id: "6D20000000000003"
+				item: { count: 1, id: "enviromine:air_filter" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"5D20000000000003"
+				"5210000000000002"
+			]
+			id: "5D20000000000004"
+			shape: "gear"
+			tasks: [{
+				id: "6D20000000000004"
+				item: { count: 1, id: "enviromine:hard_hat_helmet" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5D20000000000004"]
+			id: "5D20000000000005"
+			shape: "gear"
+			tasks: [{
+				id: "6D20000000000005"
+				item: { count: 1, id: "enviromine:pda" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"5D20000000000003"
+				"5210000000000002"
+			]
+			id: "5D20000000000006"
+			rewards: [{
+				id: "7D20000000000002"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6D20000000000006"
+				item: { count: 1, id: "enviromine:gas_mask_helmet" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"5D20000000000006"
+				"5310000000000002"
+			]
+			id: "5D20000000000007"
+			shape: "gear"
+			tasks: [{
+				count: 16L
+				id: "6D20000000000007"
+				item: { count: 1, id: "enviromine:vent_pipe" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"5D20000000000007"
+				"5410000000000002"
+			]
+			id: "5D20000000000008"
+			shape: "gear"
+			tasks: [{
+				id: "6D20000000000008"
+				item: { count: 1, id: "enviromine:vent_intake" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5D20000000000008"]
+			id: "5D20000000000009"
+			shape: "gear"
+			tasks: [{
+				id: "6D20000000000009"
+				item: { count: 1, id: "enviromine:vent" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"5D20000000000005"
+				"5D20000000000009"
+			]
+			id: "5D2000000000000A"
+			rewards: [{
+				id: "7D20000000000003"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6D2000000000000A"
+				item: { count: 1, id: "enviromine:gas_mask_advanced_helmet" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["5D2000000000000A"]
+			id: "5D2000000000000B"
+			shape: "rsquare"
+			tasks: [{
+				id: "6D2000000000000B"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["5D2000000000000A"]
+			id: "5D2000000000000C"
+			shape: "diamond"
+			tasks: [{
+				biome: "the_wasteland_reworked:sulfuric_valley"
+				id: "6D2000000000000C"
+				type: "biome"
+			}]
+			x: -3.0d
+			y: 18.0d
+		}
+		{
+			dependencies: [
+				"5D2000000000000B"
+				"5E00000000000010"
+			]
+			id: "5D2000000000000D"
+			shape: "diamond"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "6D2000000000000D"
+				type: "dimension"
+			}]
+			x: 3.0d
+			y: 18.0d
+		}
+		{
+			dependencies: [
+				"5D2000000000000C"
+				"5D2000000000000D"
+			]
+			id: "5D2000000000000E"
+			rewards: [{
+				count: 2
+				id: "7D20000000000004"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "octagon"
+			tasks: [
+				{
+					id: "6D2000000000000E"
+					item: { count: 1, id: "enviromine:pda" }
+					type: "item"
+				}
+				{
+					id: "6D2000000000000F"
+					item: { count: 1, id: "enviromine:gas_mask_advanced_helmet" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["5D20000000000001"]
+			id: "5D2000000000000F"
+			shape: "octagon"
+			tasks: [{
+				id: "6D20000000000010"
+				type: "checkmark"
+			}]
+			x: -7.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5D2000000000000F"]
+			id: "5D20000000000010"
+			shape: "gear"
+			tasks: [{
+				count: 8L
+				id: "6D20000000000011"
+				item: { count: 1, id: "the_wasteland_reworked:rubber" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5D20000000000010"]
+			id: "5D20000000000011"
+			shape: "heart"
+			tasks: [{
+				count: 2L
+				id: "6D20000000000012"
+				item: { count: 1, id: "the_wasteland_reworked:radiation_resistance_pill" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5D20000000000011"]
+			id: "5D20000000000012"
+			rewards: [{
+				id: "7D20000000000005"
+				item: {
+					count: 1
+					id: "numismatics:sprocket"
+				}
+				type: "item"
+			}]
+			shape: "heart"
+			tasks: [{
+				count: 2L
+				id: "6D20000000000013"
+				item: { count: 1, id: "wastelands:rad_away" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5D20000000000012"]
+			id: "5D20000000000013"
+			shape: "gear"
+			tasks: [{
+				id: "6D20000000000014"
+				item: { count: 1, id: "wastelands:geiger_counter" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5D20000000000013"]
+			id: "5D20000000000014"
+			shape: "heart"
+			tasks: [{
+				count: 2L
+				id: "6D20000000000015"
+				item: { count: 1, id: "the_wasteland_reworked:radiation_immunity_pill" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"5D20000000000014"
+				"5210000000000002"
+			]
+			id: "5D20000000000015"
+			shape: "gear"
+			tasks: [
+				{
+					id: "6D20000000000016"
+					item: { count: 1, id: "the_wasteland_reworked:hazmat_suit_helmet" }
+					type: "item"
+				}
+				{
+					id: "6D20000000000017"
+					item: { count: 1, id: "the_wasteland_reworked:hazmat_suit_chestplate" }
+					type: "item"
+				}
+				{
+					id: "6D20000000000018"
+					item: { count: 1, id: "the_wasteland_reworked:hazmat_suit_leggings" }
+					type: "item"
+				}
+				{
+					id: "6D20000000000019"
+					item: { count: 1, id: "the_wasteland_reworked:hazmat_suit_boots" }
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["5D20000000000015"]
+			id: "5D20000000000016"
+			rewards: [{
+				id: "7D20000000000006"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				count: 8L
+				id: "6D2000000000001A"
+				item: { count: 1, id: "the_wasteland_reworked:lead_plating" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["5D20000000000016"]
+			id: "5D20000000000017"
+			shape: "rsquare"
+			tasks: [{
+				id: "6D2000000000001B"
+				type: "checkmark"
+			}]
+			x: -7.0d
+			y: 18.0d
+		}
+	]
+}

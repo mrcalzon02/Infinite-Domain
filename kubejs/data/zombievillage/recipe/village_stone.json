@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " D ",
+                    "DLD",
+                    " D "
+                ],
+    "key":  {
+                "D":  {
+                          "item":  "allthecompressed:dirt_1x"
+                      },
+                "L":  {
+                          "item":  "minecraft:soul_lantern"
+                      }
+            },
+    "result":  {
+                   "id":  "zombievillage:village_stone",
+                   "count":  1
+               }
+}

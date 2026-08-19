@@ -1,0 +1,40 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "infinite_domain_radiation"
+version = "1.0.0"
+displayName = "Infinite Domain: Unified Radiation"
+authors = "Infinite Domain"
+description = '''
+Unifies Wastelands, The Wasteland Reworked, Create: New Age and Create Nuclear radiation behind one persistent dose and detector model.
+'''
+
+[[dependencies.infinite_domain_radiation]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_radiation]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_radiation]]
+modId = "wastelands"
+type = "required"
+versionRange = "[2.4,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.infinite_domain_radiation]]
+modId = "the_wasteland_reworked"
+type = "required"
+versionRange = "[0.6,)"
+ordering = "AFTER"
+side = "BOTH"

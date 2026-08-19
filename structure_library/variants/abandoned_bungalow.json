@@ -1,0 +1,30 @@
+{
+  "variant_id": "infinite_domain:abandoned_bungalow",
+  "clean_master": "infinite_domain:bungalow_clean_master",
+  "transformation_order": ["damage", "environment", "occupation"],
+  "damage": {
+    "event": "localized storm or blast failure at the southeast roof corner",
+    "regions": [
+      {
+        "bounds": { "min": [13, 6, 13], "max": [17, 14, 17] },
+        "operation": "remove roof and upper-wall volume"
+      },
+      {
+        "bounds": { "min": [14, 1, 14], "max": [16, 2, 16] },
+        "operation": "collapsed gravel accumulation"
+      }
+    ],
+    "random_independent_deletion": false
+  },
+  "environment": {
+    "state": "abandoned dry wasteland",
+    "operations": ["dead vegetation around lot", "garbage at breach"]
+  },
+  "occupation": {
+    "state": "mutant_hostile",
+    "operations": ["single zombie spawner in rear bedroom"],
+    "modifies_existing_structure": true
+  },
+  "production_status": "quarantined",
+  "visual_approval": false
+}

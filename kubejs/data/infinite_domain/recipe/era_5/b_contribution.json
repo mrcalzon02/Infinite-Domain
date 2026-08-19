@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "create:mechanical_harvester"
+    },
+    "B": {
+      "item": "create:mechanical_harvester"
+    },
+    "C": {
+      "item": "oritech:bio_generator_block"
+    },
+    "D": {
+      "item": "minecraft:bread"
+    },
+    "E": {
+      "item": "create:mechanical_harvester"
+    }
+  },
+  "result": {
+    "id": "kubejs:era5_farming_contribution",
+    "count": 1
+  }
+}

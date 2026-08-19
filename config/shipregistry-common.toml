@@ -1,0 +1,10 @@
+#Maximum number of ship records each owner can have before new assemblies and fragments are dropped as items.
+# Default: 16
+# Range: > 1
+max_ships_per_owner = 16
+#Whether the registry should immediately open the naming screen after a player assembles a new ship.
+open_name_screen_on_first_assembly = true
+#How far away from an assembly point to look for a fallback owner when no direct player context is available.
+# Default: 16
+# Range: 1 ~ 128
+nearby_player_fallback_radius = 16

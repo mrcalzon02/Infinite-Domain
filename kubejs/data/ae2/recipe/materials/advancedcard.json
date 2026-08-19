@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:diamond_block"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "c":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "d":  {
+                          "item":  "ae2:calculation_processor"
+                      }
+            },
+    "pattern":  [
+                    "ab ",
+                    "cdb",
+                    "ab "
+                ],
+    "result":  {
+                   "count":  2,
+                   "id":  "ae2:advanced_card"
+               }
+}

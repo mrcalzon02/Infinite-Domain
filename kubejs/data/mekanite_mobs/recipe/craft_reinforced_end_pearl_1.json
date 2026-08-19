@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "bcb",
+                    "aba"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:ender_pearl"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:glass_1x"
+                      },
+                "c":  {
+                          "item":  "mekanite_mobs:electric_web"
+                      }
+            },
+    "result":  {
+                   "id":  "mekanite_mobs:reinforced_end_pearl",
+                   "count":  1
+               }
+}

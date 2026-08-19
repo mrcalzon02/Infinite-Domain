@@ -1,0 +1,182 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------"
+    ],
+    [
+      "                ",
+      "                ",
+      "--1---1---1-----",
+      "1---1---1-------",
+      "--1---1---------",
+      "1---1-----------",
+      "--1-------------",
+      "1--------------1",
+      "-------------1--",
+      "-----------1---1",
+      "---------1---1--",
+      "-------1---1---1",
+      "-----1---1---1--",
+      "---1---1---1----",
+      "-1---1---1------",
+      "---1---1--------"
+    ],
+    [
+      "                ",
+      "       .....    ",
+      "--1---1.....----",
+      "1---1--.....----",
+      "--1---1.....----",
+      "1---1--.....----",
+      "--1----.....----",
+      "1------.....---1",
+      "-------.....-1--",
+      "--..............",
+      "--..............",
+      "--..............",
+      "--..............",
+      "--..............",
+      "-1..............",
+      "--.............."
+    ],
+    [
+      "                ",
+      "                ",
+      "--1---1     ----",
+      "1---1-- %&  ----",
+      "--1---1     ----",
+      "1---1--     ----",
+      "--1----     ----",
+      "1------0)*00---1",
+      "-------     -1--",
+      "--              ",
+      "--              ",
+      "-- 2$        / !",
+      "--              ",
+      "--              ",
+      "-1              ",
+      "--              "
+    ],
+    [
+      "                ",
+      "                ",
+      "--1---1     ----",
+      "1---1-- '(  ----",
+      "--1---1     ----",
+      "1---1--     ----",
+      "--1----     ----",
+      "1------0+,00---1",
+      "-------     -1--",
+      "--              ",
+      "--              ",
+      "--              ",
+      "--              ",
+      "--              ",
+      "-1              ",
+      "--              "
+    ],
+    [
+      "                ",
+      "                ",
+      "--1---1     ----",
+      "1---1--     ----",
+      "--1---1     ----",
+      "1---1--     ----",
+      "--1----     ----",
+      "1------00000---1",
+      "-------     -1--",
+      "--              ",
+      "--              ",
+      "--              ",
+      "--              ",
+      "--              ",
+      "-1              ",
+      "--              "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:crafting_table"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:deepslate"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:polished_deepslate"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:smoker[facing=south,lit=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:stripped_dark_oak_log[axis=y]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:tuff"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:white_bed[facing=south,occupied=false,part=foot]"
+      }
+    ]
+  }
+}

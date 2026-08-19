@@ -1,0 +1,730 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "era_04_the_electrical_grid"
+	group: "346E9B7B176D7846"
+	id: "2EE181FAE3A636DA"
+	images: [ ]
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5310000000000002"]
+			id: "5410000000000001"
+			shape: "octagon"
+			tasks: [{
+				id: "5420000000000001"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5410000000000001"]
+			id: "6411000000000001"
+			shape: "hexagon"
+			tasks: [{
+				id: "6421000000000001"
+				item: { count: 1, id: "more_ores_more_gems:electrum_pickaxe" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6411000000000001"]
+			id: "1410000000000001"
+			shape: "hexagon"
+			tasks: [{
+				count: 32L
+				id: "1420000000000001"
+				item: { count: 1, id: "minecraft:copper_block" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1410000000000001"]
+			id: "1410000000000002"
+			rewards: [{
+				id: "1430000000000002"
+				item: {
+					count: 1
+					id: "numismatics:sprocket"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 64L
+				id: "1420000000000002"
+				item: { count: 1, id: "create_new_age:copper_wire" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1410000000000002"]
+			id: "1410000000000003"
+			shape: "hexagon"
+			tasks: [{
+				count: 32L
+				id: "1420000000000003"
+				item: { count: 1, id: "powergrid:insulated_copper_wire" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1410000000000003"]
+			id: "1410000000000004"
+			shape: "hexagon"
+			tasks: [{
+				count: 16L
+				id: "1420000000000004"
+				item: { count: 1, id: "powergrid:wire_connector" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1410000000000004"]
+			id: "1410000000000005"
+			rewards: [{
+				id: "1430000000000005"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				count: 8L
+				id: "1420000000000005"
+				item: { count: 1, id: "create_new_age:layered_magnet" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["1410000000000005"]
+			id: "1410000000000006"
+			shape: "hexagon"
+			tasks: [{
+				count: 16L
+				id: "1420000000000006"
+				item: { count: 1, id: "create_new_age:copper_circuit" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["1410000000000006"]
+			id: "1410000000000007"
+			shape: "hexagon"
+			tasks: [{
+				count: 16L
+				id: "1420000000000007"
+				item: { count: 1, id: "create_new_age:copper_wire_block" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["1410000000000007"]
+			id: "1410000000000008"
+			rewards: [{
+				count: 2
+				id: "1430000000000008"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "1420000000000008"
+				item: { count: 1, id: "kubejs:era4_mining_contribution" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["6411000000000001"]
+			id: "2410000000000001"
+			shape: "heart"
+			tasks: [{
+				count: 64L
+				id: "2420000000000001"
+				item: { count: 1, id: "minecraft:hay_block" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2410000000000001"]
+			id: "2410000000000002"
+			rewards: [{
+				id: "2430000000000002"
+				item: {
+					count: 1
+					id: "numismatics:sprocket"
+				}
+				type: "item"
+			}]
+			shape: "heart"
+			tasks: [{
+				count: 2L
+				id: "2420000000000002"
+				item: { count: 1, id: "oritech:bio_generator_block" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2410000000000002"]
+			id: "2410000000000003"
+			shape: "heart"
+			tasks: [{
+				count: 2L
+				id: "2420000000000003"
+				item: { count: 1, id: "create_new_age:basic_motor" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2410000000000003"]
+			id: "2410000000000004"
+			shape: "heart"
+			tasks: [{
+				count: 32L
+				id: "2420000000000004"
+				item: { count: 1, id: "minecraft:golden_carrot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2410000000000004"]
+			id: "2410000000000005"
+			rewards: [{
+				id: "2430000000000005"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "heart"
+			tasks: [{
+				count: 2L
+				id: "2420000000000005"
+				item: { count: 1, id: "create_new_age:heater" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["2410000000000005"]
+			id: "2410000000000006"
+			shape: "heart"
+			tasks: [{
+				count: 16L
+				id: "2420000000000006"
+				item: { count: 1, id: "minecraft:water_bucket" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["2410000000000006"]
+			id: "2410000000000007"
+			shape: "heart"
+			tasks: [{
+				count: 32L
+				id: "2420000000000007"
+				item: { count: 1, id: "wastelands:canned_food" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["2410000000000007"]
+			id: "2410000000000008"
+			rewards: [{
+				count: 2
+				id: "2430000000000008"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "heart"
+			tasks: [{
+				id: "2420000000000008"
+				item: { count: 1, id: "kubejs:era4_farming_contribution" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["6411000000000001"]
+			id: "3410000000000001"
+			shape: "diamond"
+			tasks: [{
+				id: "3420000000000001"
+				item: { count: 1, id: "powergrid:multimeter" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3410000000000001"]
+			id: "3410000000000002"
+			rewards: [
+				{
+					id: "3430000000000002"
+					item: {
+						count: 1
+						id: "numismatics:sprocket"
+					}
+					type: "item"
+				}
+				{
+					command: "execute in minecraft:overworld run structure_map create_structures_overhaul:lightningrodtower 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70EB5ACF664B397F"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				count: 8L
+				id: "3420000000000002"
+				item: { count: 1, id: "powergrid:circuit_board" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3410000000000002"]
+			id: "3410000000000003"
+			shape: "diamond"
+			tasks: [{
+				id: "3420000000000003"
+				structure: "create_structures_overhaul:lightningrodtower"
+				type: "structure"
+			}]
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3410000000000003"]
+			id: "3410000000000004"
+			shape: "diamond"
+			tasks: [{
+				count: 8L
+				id: "3420000000000004"
+				item: { count: 1, id: "powergrid:heavy_wire_connector" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3410000000000004"]
+			id: "3410000000000005"
+			rewards: [{
+				id: "3430000000000005"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				count: 4L
+				id: "3420000000000005"
+				item: { count: 1, id: "powergrid:transformer_core" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["3410000000000005"]
+			id: "3410000000000006"
+			shape: "diamond"
+			tasks: [{
+				count: 4L
+				id: "3420000000000006"
+				item: { count: 1, id: "powergrid:hv_switch" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["3410000000000006"]
+			id: "3410000000000007"
+			shape: "diamond"
+			tasks: [{
+				count: 4L
+				id: "3420000000000007"
+				item: { count: 1, id: "powergrid:portable_battery" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["3410000000000007"]
+			id: "3410000000000008"
+			rewards: [{
+				count: 2
+				id: "3430000000000008"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "3420000000000008"
+				item: { count: 1, id: "kubejs:era4_exploration_contribution" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["1410000000000002"]
+			id: "4410000000000001"
+			shape: "gear"
+			tasks: [{
+				id: "4420000000000001"
+				item: { count: 1, id: "create_new_age:generator_coil" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1410000000000004"]
+			id: "4410000000000002"
+			shape: "gear"
+			tasks: [{
+				id: "4420000000000002"
+				item: { count: 1, id: "create_new_age:advanced_energiser" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1410000000000006"]
+			id: "4410000000000003"
+			rewards: [{
+				id: "4430000000000003"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "4420000000000003"
+				item: { count: 1, id: "create_new_age:overcharged_iron_wire" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["2410000000000002"]
+			id: "4410000000000004"
+			shape: "gear"
+			tasks: [{
+				id: "4420000000000004"
+				item: { count: 1, id: "powergrid:battery" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2410000000000004"]
+			id: "4410000000000005"
+			shape: "gear"
+			tasks: [{
+				id: "4420000000000005"
+				type: "checkmark"
+			}]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2410000000000006"]
+			id: "4410000000000006"
+			shape: "gear"
+			tasks: [{
+				id: "4420000000000006"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["3410000000000002"]
+			id: "4410000000000007"
+			shape: "gear"
+			tasks: [{
+				id: "4420000000000007"
+				item: { count: 1, id: "powergrid:circuit_design_table" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3410000000000004"]
+			id: "4410000000000008"
+			shape: "gear"
+			tasks: [{
+				id: "4420000000000008"
+				item: { count: 1, id: "powergrid:mv_switch" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3410000000000006"]
+			id: "4410000000000009"
+			rewards: [{
+				id: "4430000000000009"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "4420000000000009"
+				item: { count: 1, id: "ae2:energy_acceptor" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"1410000000000008"
+				"2410000000000008"
+				"3410000000000008"
+			]
+			dependency_requirement: "one_completed"
+			id: "5410000000000002"
+			min_required_dependencies: 1
+			rewards: [
+				{
+					id: "543000000000000A"
+					item: {
+						count: 1
+						id: "ae2:energy_acceptor"
+					}
+					type: "item"
+				}
+				{
+					id: "543000000000000B"
+					item: {
+						count: 1
+						id: "ae2:energy_cell"
+					}
+					type: "item"
+				}
+				{
+					id: "543000000000000C"
+					item: {
+						count: 1
+						id: "ae2:terminal"
+					}
+					type: "item"
+				}
+				{
+					id: "543000000000000D"
+					item: {
+						count: 1
+						id: "ae2:drive"
+					}
+					type: "item"
+				}
+				{
+					id: "5430000000000014"
+					type: "xp"
+					xp: 1000
+				}
+			]
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "5420000000000002"
+				item: { count: 1, id: "kubejs:electrical_foundation_core" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 19.0d
+		}
+		{
+			dependencies: ["2410000000000001"]
+			id: "7411000000000001"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				count: 16L
+				id: "7412000000000001"
+				item: { count: 1, id: "minecraft:beetroot_seeds" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"7411000000000001"
+				"4410000000000002"
+			]
+			id: "7411000000000002"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				count: 4L
+				id: "7412000000000002"
+				item: { count: 1, id: "kubejs:pressed_seed_cake" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7411000000000002"]
+			id: "7411000000000003"
+			optional: true
+			rewards: [{
+				count: 8
+				id: "7413000000000003"
+				item: {
+					count: 1
+					id: "create:fluid_pipe"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "7412000000000003"
+				item: { count: 1, id: "kubejs:saponified_collector_bucket" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"1410000000000001"
+				"4410000000000002"
+				"7311000000000006"
+			]
+			id: "7411000000000004"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				count: 9L
+				id: "7412000000000004"
+				item: { count: 1, id: "kubejs:precipitated_electrum_concentrate" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 11.0d
+		}
+		{
+			dependencies: [
+				"7411000000000003"
+				"7411000000000004"
+			]
+			id: "7411000000000005"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				count: 15L
+				id: "7412000000000005"
+				item: { count: 1, id: "kubejs:high_grade_electrum_concentrate" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["7411000000000005"]
+			id: "7411000000000006"
+			optional: true
+			rewards: [{
+				count: 2
+				id: "7413000000000006"
+				item: {
+					count: 1
+					id: "create:filter"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				count: 15L
+				id: "7412000000000006"
+				item: { count: 1, id: "more_ores_more_gems:electrum_nugget" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 17.0d
+		}
+		{
+			dependencies: ["4410000000000004"]
+			id: "6002100000000004"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				id: "6002200000000004"
+				type: "checkmark"
+			}]
+			x: 18.0d
+			y: 8.0d
+		}
+	]
+}

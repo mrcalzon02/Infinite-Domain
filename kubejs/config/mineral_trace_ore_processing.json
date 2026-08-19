@@ -1,0 +1,240 @@
+{
+  "balance": {
+    "minimumTracesPerOre": 1,
+    "maximumTracesPerOre": 4,
+    "minimumDeepslateBonus": 3,
+    "maximumDeepslateBonus": 4,
+    "rawChunkChance": 0.05,
+    "tracesPerRawChunk": 7
+  },
+  "metals": [
+    {
+      "id": "copper",
+      "name": "Copper",
+      "traceTexture": "minecraft:item/raw_copper",
+      "dustTexture": "create:item/crushed_raw_copper",
+      "rawChunk": "minecraft:raw_copper",
+      "nugget": "create:copper_nugget",
+      "ingot": "minecraft:copper_ingot",
+      "crushed": ["create:crushed_raw_copper"],
+      "ores": [
+        "minecraft:copper_ore",
+        "minecraft:deepslate_copper_ore",
+        "bno:basalt_copper_ore",
+        "bno:nether_copper_ore",
+        "bno:soul_copper_ore"
+      ]
+    },
+    {
+      "id": "zinc",
+      "name": "Zinc",
+      "traceTexture": "create:item/raw_zinc",
+      "dustTexture": "create:item/crushed_raw_zinc",
+      "rawChunk": "create:raw_zinc",
+      "nugget": "create:zinc_nugget",
+      "ingot": "create:zinc_ingot",
+      "crushed": ["create:crushed_raw_zinc"],
+      "ores": [
+        "create:zinc_ore",
+        "create:deepslate_zinc_ore",
+        "bno:basalt_zinc_ore",
+        "bno:nether_zinc_ore",
+        "bno:soul_zinc_ore"
+      ]
+    },
+    {
+      "id": "iron",
+      "name": "Iron",
+      "traceTexture": "minecraft:item/raw_iron",
+      "dustTexture": "create:item/crushed_raw_iron",
+      "rawChunk": "minecraft:raw_iron",
+      "nugget": "minecraft:iron_nugget",
+      "ingot": "minecraft:iron_ingot",
+      "crushed": ["create:crushed_raw_iron"],
+      "ores": [
+        "minecraft:iron_ore",
+        "minecraft:deepslate_iron_ore",
+        "bno:basalt_iron_ore",
+        "bno:nether_iron_ore",
+        "bno:soul_iron_ore",
+        "stellaris:mars_iron_ore",
+        "stellaris:mercury_iron_ore",
+        "stellaris:moon_iron_ore"
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "Gold",
+      "traceTexture": "minecraft:item/raw_gold",
+      "dustTexture": "create:item/crushed_raw_gold",
+      "rawChunk": "minecraft:raw_gold",
+      "nugget": "minecraft:gold_nugget",
+      "ingot": "minecraft:gold_ingot",
+      "crushed": ["create:crushed_raw_gold"],
+      "ores": [
+        "minecraft:gold_ore",
+        "minecraft:deepslate_gold_ore",
+        "minecraft:nether_gold_ore",
+        "stellaris:venus_gold_ore"
+      ]
+    },
+    {
+      "id": "lead",
+      "name": "Lead",
+      "traceTexture": "tfmg:item/raw_lead",
+      "dustTexture": "create:item/crushed_raw_lead",
+      "rawChunk": "tfmg:raw_lead",
+      "nugget": "tfmg:lead_nugget",
+      "ingot": "tfmg:lead_ingot",
+      "crushed": ["create:crushed_raw_lead"],
+      "ores": [
+        "tfmg:lead_ore",
+        "tfmg:deepslate_lead_ore",
+        "immersiveengineering:ore_lead",
+        "immersiveengineering:deepslate_ore_lead",
+        "createnuclear:lead_ore",
+        "createnuclear:deepslate_lead_ore",
+        "more_ores_more_gems:lead_ore",
+        "more_ores_more_gems:deepslate_lead_ore",
+        "bno:basalt_lead_ore",
+        "bno:nether_lead_ore",
+        "bno:soul_lead_ore"
+      ]
+    },
+    {
+      "id": "nickel",
+      "name": "Nickel",
+      "traceTexture": "tfmg:item/raw_nickel",
+      "dustTexture": "create:item/crushed_raw_nickel",
+      "rawChunk": "tfmg:raw_nickel",
+      "nugget": "tfmg:nickel_nugget",
+      "ingot": "tfmg:nickel_ingot",
+      "crushed": ["create:crushed_raw_nickel"],
+      "ores": [
+        "tfmg:nickel_ore",
+        "tfmg:deepslate_nickel_ore",
+        "oritech:nickel_ore",
+        "oritech:deepslate_nickel_ore",
+        "immersiveengineering:ore_nickel",
+        "immersiveengineering:deepslate_ore_nickel",
+        "more_ores_more_gems:nickel_ore",
+        "more_ores_more_gems:deepslate_nickel_ore",
+        "bno:basalt_nickel_ore",
+        "bno:nether_nickel_ore",
+        "bno:soul_nickel_ore"
+      ]
+    },
+    {
+      "id": "tin",
+      "name": "Tin",
+      "traceTexture": "more_ores_more_gems:item/raw_tin",
+      "dustTexture": "create:item/crushed_raw_tin",
+      "rawChunk": "more_ores_more_gems:raw_tin",
+      "nugget": "bno:tin_nugget",
+      "ingot": "more_ores_more_gems:tin_ingot",
+      "crushed": ["create:crushed_raw_tin"],
+      "ores": [
+        "more_ores_more_gems:tin_ore",
+        "more_ores_more_gems:deepslate_tin_ore",
+        "bno:basalt_tin_ore",
+        "bno:nether_tin_ore",
+        "bno:soul_tin_ore"
+      ]
+    },
+    {
+      "id": "aluminum",
+      "name": "Aluminum",
+      "traceTexture": "immersiveengineering:item/metal_raw_aluminum",
+      "dustTexture": "immersiveengineering:item/metal_dust_aluminum",
+      "rawChunk": "immersiveengineering:raw_aluminum",
+      "nugget": "immersiveengineering:nugget_aluminum",
+      "ingot": "immersiveengineering:ingot_aluminum",
+      "crushed": ["create:crushed_raw_aluminum"],
+      "ores": [
+        "immersiveengineering:ore_aluminum",
+        "immersiveengineering:deepslate_ore_aluminum"
+      ]
+    },
+    {
+      "id": "silver",
+      "name": "Silver",
+      "traceTexture": "immersiveengineering:item/metal_raw_silver",
+      "dustTexture": "immersiveengineering:item/metal_dust_silver",
+      "rawChunk": "immersiveengineering:raw_silver",
+      "nugget": "immersiveengineering:nugget_silver",
+      "ingot": "immersiveengineering:ingot_silver",
+      "crushed": ["create:crushed_raw_silver"],
+      "ores": [
+        "immersiveengineering:ore_silver",
+        "immersiveengineering:deepslate_ore_silver",
+        "more_ores_more_gems:sliver_ore"
+      ]
+    },
+    {
+      "id": "electrum",
+      "name": "Electrum",
+      "traceTexture": "more_ores_more_gems:item/electrumraw",
+      "dustTexture": "create:item/crushed_raw_gold",
+      "rawChunk": "more_ores_more_gems:electrum_raw",
+      "nugget": "more_ores_more_gems:electrum_nugget",
+      "ingot": "more_ores_more_gems:electrum_ingot",
+      "crushed": [],
+      "ores": ["more_ores_more_gems:electrum_ore"]
+    },
+    {
+      "id": "titanium",
+      "name": "Titanium",
+      "traceTexture": "more_ores_more_gems:item/rawtitanium",
+      "dustTexture": "more_ores_more_gems:item/titanium_ingot",
+      "rawChunk": "more_ores_more_gems:raw_titanium",
+      "nugget": "more_ores_more_gems:titanium_nugget",
+      "ingot": "more_ores_more_gems:titanium_ingot",
+      "crushed": [],
+      "ores": ["more_ores_more_gems:titanium_ore"]
+    },
+    {
+      "id": "tungsten",
+      "name": "Tungsten",
+      "traceTexture": "more_ores_more_gems:item/rawtungsten",
+      "dustTexture": "more_ores_more_gems:item/tungsten",
+      "rawChunk": "more_ores_more_gems:raw_tungsten",
+      "nugget": "more_ores_more_gems:tungsten_nugget",
+      "ingot": "more_ores_more_gems:tungsten",
+      "crushed": ["createmetallurgy:crushed_raw_tungsten"],
+      "ores": [
+        "more_ores_more_gems:tungsten_ore",
+        "createmetallurgy:wolframite_ore"
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "Platinum",
+      "traceTexture": "more_ores_more_gems:item/raw_platinum",
+      "dustTexture": "more_ores_more_gems:item/platinum_ingot",
+      "rawChunk": "more_ores_more_gems:raw_platinum",
+      "nugget": "more_ores_more_gems:platinum_nugget",
+      "ingot": "more_ores_more_gems:platinum_ingot",
+      "crushed": [],
+      "ores": ["more_ores_more_gems:platinum_ore"]
+    },
+    {
+      "id": "uranium",
+      "name": "Uranium",
+      "processingClass": "nuclear",
+      "primitiveRecovery": false,
+      "traceTexture": "createnuclear:item/uranium_powder",
+      "dustTexture": "immersiveengineering:item/metal_dust_uranium",
+      "rawChunk": "createnuclear:raw_uranium",
+      "nugget": "immersiveengineering:nugget_uranium",
+      "ingot": "immersiveengineering:ingot_uranium",
+      "crushed": ["create:crushed_raw_uranium"],
+      "ores": [
+        "createnuclear:uranium_ore",
+        "createnuclear:deepslate_uranium_ore",
+        "immersiveengineering:ore_uranium",
+        "immersiveengineering:deepslate_ore_uranium",
+        "oritech:deepslate_uranium_ore"
+      ]
+    }
+  ]
+}

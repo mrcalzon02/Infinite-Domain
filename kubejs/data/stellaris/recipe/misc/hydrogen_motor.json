@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CHC",
+    "TIT",
+    "VGV"
+  ],
+  "key": {
+    "C": {
+      "item": "kubejs:cryogenic_valve"
+    },
+    "H": {
+      "item": "kubejs:hydrogen_engine_assembly"
+    },
+    "T": {
+      "item": "kubejs:turbopump"
+    },
+    "I": {
+      "item": "kubejs:ignition_controller"
+    },
+    "V": {
+      "item": "kubejs:venus_superalloy"
+    },
+    "G": {
+      "item": "kubejs:gimbal_actuator"
+    }
+  },
+  "result": {
+    "id": "stellaris:hydrogen_motor",
+    "count": 1
+  }
+}

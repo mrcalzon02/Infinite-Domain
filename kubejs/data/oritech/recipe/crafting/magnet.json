@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "i":  {
+                          "item":  "bno:nickel_block"
+                      }
+            },
+    "pattern":  [
+                    "iii",
+                    "ccc",
+                    "iii"
+                ],
+    "result":  {
+                   "count":  4,
+                   "id":  "oritech:magnetic_coil"
+               }
+}

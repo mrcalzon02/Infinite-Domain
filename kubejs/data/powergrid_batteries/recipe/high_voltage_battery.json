@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  {
+                          "item":  "powergrid_batteries:medium_battery"
+                      },
+                "G":  {
+                          "item":  "minecraft:gold_block"
+                      }
+            },
+    "pattern":  [
+                    "GGG",
+                    "GBG",
+                    "GGG"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "powergrid_batteries:high_voltage_battery"
+               }
+}

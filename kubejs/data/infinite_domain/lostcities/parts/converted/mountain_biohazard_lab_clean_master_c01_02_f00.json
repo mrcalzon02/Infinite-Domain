@@ -1,0 +1,210 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "6666666666666--(",
+      "66666666666--(66",
+      "666666666--(6666",
+      "6666666--(666666",
+      "66666--(66666666",
+      "666--(6666666666",
+      "6--(666666666666",
+      "-(66666666666666",
+      "6666666666666666",
+      "66666666666666--",
+      "-----6666666--(6",
+      "-----66666--(666",
+      "-----666--(66666",
+      "-----6--(6666666",
+      "------(666666666",
+      "-----66666666666"
+    ],
+    [
+      "7777777777777777",
+      "7777777777777777",
+      "7777777777777777",
+      "7777777777777777",
+      "7777777777777777",
+      "7777777777777777",
+      "//////////777777",
+      "//////////777777",
+      "//////////  7777",
+      "//////////  7777",
+      "//////////  7777",
+      "//////////  7777",
+      "//////////      ",
+      "//////////      ",
+      "//////////      ",
+      "                "
+    ],
+    [
+      "           $!   ",
+      "           $!   ",
+      "  %%%%     $!   ",
+      "  %%%%     $!   ",
+      "  %%%%  '  $!   ",
+      "           $!!!!",
+      "   !!!!!!! $!   ",
+      "23!      !$$!   ",
+      "  ! &&&& !  !   ",
+      "  ! &&&& !  !   ",
+      "  0 &&&& !  !   ",
+      "  ! &&&& !  !!!!",
+      "  !      !      ",
+      "  !   8  !      ",
+      ")*!!!!!!!!      ",
+      "                "
+    ],
+    [
+      "           $!   ",
+      "           $!   ",
+      "  %%%%     $!   ",
+      "  %%%%     $!   ",
+      "  %%%%     $!   ",
+      "           $!!!!",
+      "   !!!!!!! $!   ",
+      "45!      !$$!   ",
+      "  ! &&&& !  !   ",
+      "  ! &&&& !  !   ",
+      "  1 &&&& !  !   ",
+      "  ! &&&& !  !!!!",
+      "  !      !      ",
+      "  !      !      ",
+      "+,!!!!!!!!      ",
+      "                "
+    ],
+    [
+      "       .   $!   ",
+      "           $!   ",
+      "           $!   ",
+      "           $!   ",
+      "           $!   ",
+      "           $!!!!",
+      "   !!!!!!! $!   ",
+      "  !      !$$!   ",
+      "  ! &&&& !  !   ",
+      "  ! &&&& !  !   ",
+      "  ! &&&& !  !   ",
+      "  ! &&&& !  !!!!",
+      "  !      !      ",
+      "  !      !      ",
+      "!!!!!!!!!!      ",
+      "                "
+    ],
+    [
+      "           $!   ",
+      "       .   $!   ",
+      "           $!   ",
+      "           $!   ",
+      "           $!   ",
+      "           $!!!!",
+      "   !!!!!!! $!   ",
+      "  !      !$$!   ",
+      "  ! &&&& !  !   ",
+      "  ! &&&& !  !   ",
+      "  ! &&&& !  !   ",
+      "  ! &&&& !  !!!!",
+      "  !      !      ",
+      "  !      !      ",
+      "!!!!!!!!!!      ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:concrete_leaded"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      {
+        "char": "%",
+        "block": "immersiveengineering:sheetmetal_lead"
+      },
+      {
+        "char": "&",
+        "block": "immersiveengineering:sheetmetal_steel"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:chest[facing=west,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_biohazard"
+        }
+      },
+      {
+        "char": "(",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:polished_andesite_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:polished_deepslate"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "6",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "7",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "8",
+        "block": "the_wasteland_reworked:radio"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "structures": [
+    { "structure": "spore:biomass_tower", "weight": 1 },
+    { "structure": "spore:cathedral", "weight": 1 },
+    { "structure": "spore:cell", "weight": 3 },
+    { "structure": "spore:celltower", "weight": 2 },
+    { "structure": "spore:church", "weight": 2 },
+    { "structure": "spore:hospital", "weight": 1 },
+    { "structure": "spore:lab", "weight": 2 },
+    { "structure": "spore:lodge", "weight": 2 },
+    { "structure": "spore:mass_grave", "weight": 3 },
+    { "structure": "spore:military_camp", "weight": 2 },
+    { "structure": "spore:prison", "weight": 1 }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 42,
+    "separation": 16,
+    "salt": 87130501
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "e":  {
+                          "tag":  "c:ender_pearls"
+                      },
+                "o":  {
+                          "item":  "allthecompressed:obsidian_1x"
+                      },
+                "r":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "u":  {
+                          "item":  "mininggadgets:upgrade_empty"
+                      }
+            },
+    "pattern":  [
+                    "ror",
+                    "eue",
+                    "ror"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "mininggadgets:upgrade_void_junk"
+               }
+}

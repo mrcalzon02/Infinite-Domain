@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CBC",
+    "BHB",
+    "CTC"
+  ],
+  "key": {
+    "C": { "item": "allthecompressed:cobblestone_2x" },
+    "B": { "item": "minecraft:coal_block" },
+    "H": { "item": "exdeorum:wooden_hammer" },
+    "T": { "item": "primitivestart:bone_pickaxe" }
+  },
+  "result": {
+    "id": "kubejs:mason_contribution",
+    "count": 1
+  }
+}

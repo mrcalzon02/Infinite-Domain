@@ -1,0 +1,38 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "condition":  "supplementaries:flag",
+                                       "flag":  "turn_table"
+                                   }
+                               ],
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "supplementaries:flag",
+                                    "flag":  "turn_table"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "000",
+                    "343",
+                    "373"
+                ],
+    "key":  {
+                "0":  {
+                          "tag":  "minecraft:planks"
+                      },
+                "3":  {
+                          "item":  "allthecompressed:cobblestone_1x"
+                      },
+                "4":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "7":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "result":  {
+                   "id":  "supplementaries:turn_table",
+                   "count":  1
+               }
+}

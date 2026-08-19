@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OMO",
+    "RCR",
+    "PVP"
+  ],
+  "key": {
+    "O": {
+      "item": "kubejs:oxygen_cylinder"
+    },
+    "M": {
+      "item": "kubejs:oxygen_manifold"
+    },
+    "R": {
+      "item": "kubejs:oxygen_regulator"
+    },
+    "C": {
+      "item": "kubejs:life_support_controller"
+    },
+    "P": {
+      "item": "kubejs:aerospace_pump"
+    },
+    "V": {
+      "item": "kubejs:reinforced_pressure_vessel"
+    }
+  },
+  "result": {
+    "id": "stellaris:oxygen_distributor",
+    "count": 1
+  }
+}

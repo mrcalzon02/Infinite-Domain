@@ -1,0 +1,40 @@
+{
+  "structure_id": "infinite_domain:pancaked_parking_structure_clean_master",
+  "archetype": "five-deck municipal parking garage with vehicle ramp, dual stairs, security and maintenance",
+  "site_program": [
+    "separate signed inbound and outbound vehicle lanes beneath a street canopy",
+    "security/cashier office with controlled back room and radio point",
+    "ground maintenance shop with double service doors, tools and parts storage",
+    "five full parking decks with explicit open-air drive aisles and marked bays",
+    "four aligned half-step vehicle ramps connecting every deck",
+    "independent northwest and southeast enclosed pedestrian stair towers",
+    "roof parking, mechanical plant and lift/stair overruns"
+  ],
+  "parking_program": [
+    "repeated structural grid with open spandrel bays rather than solid walls",
+    "multiple varied cars on every enclosed deck and two cars on the roof",
+    "central drive aisles preserved around marked perimeter parking rows",
+    "vehicle ramp and both pedestrian cores kept clear of parked cars",
+    "service rooms occupy dedicated ground footprints rather than arbitrary deck corners"
+  ],
+  "damage_constraints": [
+    "concentrate column failure and progressive deck pancaking in the eastern half",
+    "retain the complete western parking spine on all five levels",
+    "retain the full four-flight vehicle ramp and northwest stair tower",
+    "show four former deck fields at distinct compressed elevations",
+    "place crushed vehicles and column remnants between fallen slabs",
+    "derive damage, occupation and loot only from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "entry and exit lanes read correctly from the street",
+      "vehicle ramp and both stair cores work at player scale",
+      "security, cashier and maintenance functions remain visually distinct",
+      "marked bays, vehicles and drive aisles form believable parking layouts",
+      "eastern collapse shows progressive floor pancaking rather than arbitrary horizontal slabs",
+      "terrain feathering seats garage aprons and rubble into ruined-city grade"
+    ]
+  }
+}

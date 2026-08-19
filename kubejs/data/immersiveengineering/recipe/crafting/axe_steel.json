@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "i":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "s":  {
+                          "tag":  "c:rods/treated_wood"
+                      }
+            },
+    "pattern":  [
+                    "ii",
+                    "is",
+                    " s"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "immersiveengineering:axe_steel"
+               }
+}

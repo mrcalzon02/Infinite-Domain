@@ -1,0 +1,27 @@
+{
+  "id": "infinite_domain:mechanist",
+  "title": { "text": "Mechanist Echo", "color": "gold" },
+  "model": { "villager_data": { "type": "savanna", "profession": "toolsmith", "level": 3 } },
+  "stages": [{
+    "title": "Mechanical Workshop Exchange",
+    "lore": [{ "type": "ftbechoes:text", "text": "Replacement motion components for an established mechanical workshop. If you require an entire factory, I regret to report that construction remains your responsibility." }],
+    "not_ready": "Complete Mechanical Reconstruction before requesting workshop stock.",
+    "ready": "Mechanical authorization confirmed.",
+    "required_stage": "infinite_domain:era_1",
+    "shop_unlock": [
+      { "name": "Shaft Stock", "item": { "id": "create:shaft", "count": 16 }, "cost": 8 },
+      { "name": "Cogwheel Stock", "item": { "id": "create:cogwheel", "count": 8 }, "cost": 8 },
+      { "name": "Large Cogwheel Stock", "item": { "id": "create:large_cogwheel", "count": 4 }, "cost": 8 },
+      { "name": "Conveyor Belt Stock", "item": { "id": "create:belt_connector", "count": 8 }, "cost": 16 },
+      { "name": "Andesite Alloy Stock", "item": { "id": "create:andesite_alloy", "count": 4 }, "cost": 16 },
+      { "name": "Gearbox Pair", "item": { "id": "create:gearbox", "count": 2 }, "cost": 16 },
+      { "name": "Chain Drive Stock", "item": { "id": "create:encased_chain_drive", "count": 8 }, "cost": 16 },
+      { "name": "Andesite Casing Stock", "item": { "id": "create:andesite_casing", "count": 8 }, "cost": 24 },
+      { "name": "Andesite Funnel Set", "item": { "id": "create:andesite_funnel", "count": 4 }, "cost": 16 },
+      { "name": "Chute Set", "item": { "id": "create:chute", "count": 8 }, "cost": 16 },
+      { "name": "Super Glue", "item": { "id": "create:super_glue" }, "cost": 32, "max_claims": 8, "per_player_max_claims": true },
+      { "name": "Replacement Wrench", "item": { "id": "create:wrench" }, "cost": 32, "max_claims": 4, "per_player_max_claims": true }
+    ],
+    "completion_reward": { "currency": 96, "description": "One Cog and two Sprockets of mechanical exchange credit" }
+  }]
+}

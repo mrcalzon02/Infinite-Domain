@@ -1,0 +1,23 @@
+{
+  "format_version": 1,
+  "canonical_root": "structure_library",
+  "authoritative_inbuilt_inventory": "docs/wasteland-site-manifest.json",
+  "metadata_catalog": "structure_library/catalog.json",
+  "provenance_manifest": "structure_library/licensing/provenance.json",
+  "clean_master_storage": "kubejs/data/infinite_domain/structure/wasteland/masters",
+  "generated_variant_storage": "kubejs/data/infinite_domain/structure/wasteland",
+  "programs": "structure_library/programs",
+  "variant_descriptions": "structure_library/variants",
+  "modules": "structure_library/modules/catalog.json",
+  "infrastructure": "structure_library/infrastructure/catalog.json",
+  "rendered_reviews": "structure_library/reviews",
+  "full_audit_renders": "structure_library/audit_renders",
+  "extracted_review_storage": "structure_library/extracted",
+  "counts": {
+    "inbuilt_variants_and_sources": 84,
+    "clean_masters": 84,
+    "provenance_records": 246,
+    "production_approved": 0
+  },
+  "integration_rule": "Only explicitly approved records may be referenced by production Lost Cities or custom worldgen selectors."
+}

@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "H":  {
+                          "item":  "allthecompressed:hay_block_1x"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "P":  {
+                          "tag":  "c:plates/iron"
+                      }
+            },
+    "pattern":  [
+                    "PHP",
+                    "PHP",
+                    "PIP"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "createbigcannons:smoke_shell"
+               }
+}

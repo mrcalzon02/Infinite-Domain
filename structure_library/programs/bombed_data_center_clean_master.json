@@ -1,0 +1,42 @@
+{
+  "structure_id": "infinite_domain:bombed_data_center_clean_master",
+  "archetype": "hardened two-hall data campus with security, network operations, power, cooling and loading",
+  "orientation": {
+    "public_security_and_administration": "northwest",
+    "twin_server_halls": "central",
+    "power_ups_and_generators": "east",
+    "receiving_suppression_and_cooling": "south",
+    "public_approach": "north",
+    "utility_drive": "east",
+    "loading_court": "south"
+  },
+  "operational_workflow": [
+    "public vestibule and guarded security screening",
+    "reception, visitor control, staff lockers and administration",
+    "network operations and incident communications",
+    "two separately fire-zoned server halls and controlled service spine",
+    "network-entry/meet-me room and protected media vault",
+    "switchgear, UPS/battery and generator rooms",
+    "receiving, spares, maintenance and fire-suppression control",
+    "cooling-water and air-handling plant with independent utility access"
+  ],
+  "damage_constraints": [
+    "localize the impact to the southeast server-hall/power boundary and adjacent yard",
+    "use a jagged tapered blast bowl and gravity-led debris rather than a cylindrical void",
+    "preserve public security, network operations, west server hall and western loading route",
+    "preserve the complete upper administration floor and its stair",
+    "derive all damage and occupation from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "security, server, utility and loading masses read as distinct operational volumes",
+      "server-rack aisles and hardened thresholds have player-scale clearance",
+      "public, utility and loading traffic remain visibly separated",
+      "the southeast impact reads as an external bomb strike rather than an arbitrary hole",
+      "surviving routes remain dangerous but usable",
+      "terrain feathering seats the impact bowl and service courts into surrounding terrain"
+    ]
+  }
+}

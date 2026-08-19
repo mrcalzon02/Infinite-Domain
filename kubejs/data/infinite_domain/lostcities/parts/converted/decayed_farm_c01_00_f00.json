@@ -1,0 +1,202 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "&+.&&&&&&&.&&&&&",
+      "&&&&+.&&&&&&&.&&",
+      "&&&&&&&+.&&&&&&&",
+      "&&.&&&&&&&+.&&&&",
+      "&&&&&.&&&&&&&+.&",
+      ".&&&&&&&.&&&&&&&",
+      "&&+.&&&&&&&.&&&&",
+      "&&&&&+.&&&&&&&.&",
+      ".&&&&&&&+.&&&&&&",
+      "&&&.&&&&&&&+.&&&",
+      "&&&&&&.&&&&&&&+.",
+      "+.&&&&&&&.&&&&&&",
+      "&&&+.&&&&&&&.&&&",
+      "&&&+++++++++++++",
+      "&.&+++++++++++++",
+      "&&&+++++++++++++"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "----         &&&",
+      "----         &&&",
+      "----         &&&",
+      "----   $$$   &&&",
+      "---- $$$ $$$ &&&",
+      "---- $     $ &&&",
+      "----$$     $$&&&",
+      "----$       $&&&",
+      "----$$     $$&&&",
+      "---- $     $ &&&",
+      "---- $$$ $$$ &&&",
+      "----   $$$   &&&",
+      "----         &&&"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "2222         )))",
+      "   2         )  ",
+      "*/ 2         )  ",
+      "   2   $'$   ) ,",
+      "   2 $$$ $$$ )  ",
+      "   2 $     $ )  ",
+      "6062$$     $$)44",
+      "   2$   %   $)  ",
+      "   2$$     $$)3 ",
+      "   2 $     $ ) 7",
+      "   2 $$$ $$$ )  ",
+      "   2   $$$   )55",
+      "   2         )  "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "!222         )))",
+      "   2         )  ",
+      "   2         )  ",
+      "   !   $($   )  ",
+      "   ! $$$ $$$ )  ",
+      "   2 $     $ )  ",
+      "6162$$     $$)44",
+      "   2$       $)  ",
+      "   2$$     $$)  ",
+      "   2 $     $ )3 ",
+      "   2 $$$ $$$ )  ",
+      "   2   $$$   )55",
+      "   2         )  "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "!222         )))",
+      "   2         )  ",
+      "   2         )  ",
+      "   !   $$$   )  ",
+      "   ! $$$ $$$ )  ",
+      "   2 $     $ )  ",
+      "6662$$     $$)44",
+      "   2$       $)  ",
+      "   2$$     $$)  ",
+      "   2 $     $ )  ",
+      "   2 $$$ $$$ )3 ",
+      "   2   $$$   )55",
+      "   2         )  "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "2222         )))",
+      "   2         )  ",
+      "   2         )  ",
+      "   2   $$$   )  ",
+      "   2 $$$ $$$ )  ",
+      "   2 $     $ )  ",
+      "6662$$     $$)44",
+      "   2$       $)  ",
+      "   2$$     $$)  ",
+      "   2 $     $ )  ",
+      "   2 $$$ $$$ )  ",
+      "   2   $$$   )3 ",
+      "   2         )  "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:sheetmetal_steel"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_planks"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:furnace[facing=south,lit=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:loom[facing=south]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:oak_planks"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:podzol"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:smoker[facing=south,lit=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:stripped_dark_oak_wood"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:stripped_oak_log[axis=y]"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:water_cauldron[level=3]"
+      }
+    ]
+  }
+}

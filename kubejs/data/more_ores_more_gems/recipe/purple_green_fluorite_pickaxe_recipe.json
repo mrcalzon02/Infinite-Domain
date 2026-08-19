@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "pattern":  [
+                    "aaa",
+                    " b ",
+                    " b "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:fluorite_purple_green"
+                      },
+                "b":  {
+                          "item":  "minecraft:iron_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:purple_green_fluorite_pickaxe",
+                   "count":  1
+               }
+}

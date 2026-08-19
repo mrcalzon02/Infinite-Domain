@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": { "item": "more_ores_more_gems:block_of_electrum" },
+    "C": { "item": "powergrid:integrated_circuit" },
+    "I": { "item": "allthecompressed:iron_block_2x" },
+    "P": { "item": "ae2:silicon_press" }
+  },
+  "pattern": [
+    "BCB",
+    "IPI",
+    "BCB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ae2:logic_processor_press"
+  }
+}

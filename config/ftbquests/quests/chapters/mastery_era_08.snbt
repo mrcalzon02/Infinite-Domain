@@ -1,0 +1,144 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "mastery_era_08"
+	group: "7ADA55C0FFEE0001"
+	id: "7800000000000000"
+	images: [ ]
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5810000000000002"]
+			id: "6810000000000001"
+			shape: "octagon"
+			tasks: [{
+				id: "6850000000000001"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6810000000000001"]
+			id: "1840000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 536870911L
+				id: "1850000000000001"
+				item: { count: 1, id: "allthecompressed:cobblestone_5x" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6810000000000001"]
+			id: "2840000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 536870911L
+				id: "2850000000000001"
+				item: { count: 1, id: "tfmg:steel_block" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6810000000000001"]
+			id: "3840000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 536870911L
+				id: "3850000000000001"
+				item: { count: 1, id: "stellaris:desh_block" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6810000000000001"]
+			id: "4840000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 536870911L
+				id: "4850000000000001"
+				item: { count: 1, id: "ae2:engineering_processor" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"1840000000000001"
+				"2840000000000001"
+				"3840000000000001"
+				"4840000000000001"
+			]
+			id: "6810000000000002"
+			rewards: [
+				{
+					id: "6860000000000001"
+					item: {
+						count: 1
+						id: "kubejs:era8_mastery_emblem"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "6860000000000002"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "6860000000000003"
+					type: "xp"
+					xp: 90000
+				}
+				{
+					id: "6860000000000004"
+					item: {
+						count: 1
+						id: "ae2lt:creative_pigmee_fumo"
+					}
+					type: "item"
+				}
+				{
+					id: "6860000000000005"
+					item: {
+						count: 1
+						id: "simulated:creative_physics_staff"
+					}
+					type: "item"
+				}
+				{
+					id: "6860000000000006"
+					item: {
+						count: 1
+						id: "iceandfire:creative_dragon_meal"
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			size: 1.75d
+			x: 0.0d
+			y: 7.0d
+		}
+	]
+}

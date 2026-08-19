@@ -1,0 +1,26 @@
+{
+  "variant_id": "infinite_domain:bunker_network",
+  "clean_master": "infinite_domain:bunker_network_clean_master",
+  "damage_story": "A northwest ceiling collapse buries part of the barracks and a machinery accident damages the far utility bay; pillagers subsequently fortify the surviving intake, command, medical, armory and detention zones.",
+  "damage_zone": "northwest operational barracks and far south protected utility bay",
+  "environment_layer": [
+    "gravity-shaped gravel and cracked reinforced-concrete fall beneath the barracks breach",
+    "localized machinery rubble in the damaged utility bay",
+    "scrap concentrated beside failed power equipment",
+    "intact reinforced connector tunnels between surviving modules"
+  ],
+  "occupation_layer": [
+    "six pillager spawners distributed across defensible zones on both levels",
+    "survival supplies retained in the infirmary",
+    "military stores retained in both armories",
+    "data loot retained in the protected archive"
+  ],
+  "invariants": [
+    "terrain-level entrance facility, north intake ladder and east emergency hatch survive",
+    "central command and complete inter-level stair remain navigable",
+    "infirmary, maintenance, armory and mess routes survive",
+    "lower detention, archive, armory and utility approaches remain connected",
+    "damage remains localized to two causally distinct failure zones"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

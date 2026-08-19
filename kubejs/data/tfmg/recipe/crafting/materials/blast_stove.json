@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FPF",
+    "PBP",
+    "FSF"
+  ],
+  "key": {
+    "F": {
+      "item": "tfmg:fireproof_bricks"
+    },
+    "P": {
+      "item": "create:mechanical_pump"
+    },
+    "B": {
+      "item": "create:blaze_burner"
+    },
+    "S": {
+      "item": "createmetallurgy:industrial_crucible"
+    }
+  },
+  "result": {
+    "id": "tfmg:blast_stove",
+    "count": 1
+  }
+}

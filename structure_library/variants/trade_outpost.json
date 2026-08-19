@@ -1,0 +1,25 @@
+{
+  "variant_id": "infinite_domain:trade_outpost",
+  "clean_master": "infinite_domain:trade_outpost_clean_master",
+  "damage_story": "A localized strike opens the east-southeast palisade and drops part of the livestock-supply canopy, but resident traders continue using the guarded gate, lodge, bunkhouse, well and enclosed paddocks.",
+  "damage_zone": "east-southeast palisade and southeast market canopy",
+  "environment_layer": [
+    "fallen full-log palisade members and gravel at the perimeter breach",
+    "localized blue-wool canopy collapse with rubble below",
+    "weathered asphalt approach and gravel internal circulation",
+    "intact animal feed, water and daily-service fixtures"
+  ],
+  "occupation_layer": [
+    "six persistent villagers distributed among trade and lodging functions",
+    "one persistent iron golem guarding the north service spine",
+    "two cows, two sheep, one pig and one chicken retained in the two paddocks"
+  ],
+  "invariants": [
+    "north wagon gate and both guard rooms survive",
+    "four market approaches and all lodge rooms remain reachable",
+    "well, bunkhouse and both paddock gates remain connected",
+    "both two-level paddock boundaries remain intact",
+    "damage remains localized to the two declared failure zones"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

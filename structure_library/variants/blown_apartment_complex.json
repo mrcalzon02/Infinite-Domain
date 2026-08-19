@@ -1,0 +1,26 @@
+{
+  "variant_id": "infinite_domain:blown_apartment_complex",
+  "clean_master": "infinite_domain:blown_apartment_complex_clean_master",
+  "damage_story": "A diagonal exterior blast tore through the northeast apartment stack and breached the courtyard wall while the west wing, southeast stack, both stairs and resident-service routes survived.",
+  "damage_zone": "northeast apartment stack, northeast roof edge and adjacent courtyard wall",
+  "environment_layer": [
+    "diagonal multi-floor facade and floor loss",
+    "localized upper-floor pancaking inside the destroyed stack",
+    "gravity-led brick and gravel fans toward street and courtyard",
+    "intact landscaped court, west wing and south circulation band"
+  ],
+  "occupation_layer": [
+    "two zombie spawners on surviving ground residential routes",
+    "one ghoul spawner in the west upper wing",
+    "one ghoul spawner in the surviving southeast upper apartment",
+    "home loot remains separated across surviving apartments"
+  ],
+  "invariants": [
+    "three complete apartments remain reachable on every floor",
+    "both three-flight stair stacks remain intact",
+    "north public and south secondary exits survive",
+    "courtyard and south gallery remain usable",
+    "damage remains localized to the declared northeast stack"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

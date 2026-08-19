@@ -1,0 +1,30 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "sophisticatedcore:item_enabled",
+                                    "itemRegistryName":  "sophisticatedstorage:auto_blasting_upgrade"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "S":  {
+                          "item":  "sophisticatedstorage:auto_smelting_upgrade"
+                      },
+                "T":  {
+                          "item":  "allthecompressed:smooth_stone_1x"
+                      }
+            },
+    "pattern":  [
+                    "III",
+                    "ISI",
+                    "TTT"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "sophisticatedstorage:auto_blasting_upgrade"
+               }
+}

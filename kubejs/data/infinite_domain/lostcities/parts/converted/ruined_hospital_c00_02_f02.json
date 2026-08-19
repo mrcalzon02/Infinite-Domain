@@ -1,0 +1,170 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .........  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .........  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  "
+    ],
+    [
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .       .  "
+    ],
+    [
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          ",
+      "     .          "
+    ],
+    [
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%",
+      "     &%%%%%%%%%%"
+    ],
+    [
+      "     .  -    .  ",
+      "     .       '  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     ....)....  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .  , +  .  ",
+      "     .  -    '  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     ....)....  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     .  ,$+  '  ",
+      "     .  -    .  "
+    ],
+    [
+      "     !       .  ",
+      "     .       (  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     ....*....  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     !       .  ",
+      "     !       (  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     ....*....  ",
+      "     .       .  ",
+      "     .       .  ",
+      "     !       (  ",
+      "     !       .  "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:chest[facing=east,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_home"
+        }
+      },
+      {
+        "char": "%",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:smooth_stone"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:water_cauldron[level=3]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:white_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:white_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:white_concrete"
+      }
+    ]
+  }
+}

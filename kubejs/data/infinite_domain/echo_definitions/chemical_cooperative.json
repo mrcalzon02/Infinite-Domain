@@ -1,0 +1,27 @@
+{
+  "id": "infinite_domain:chemical_cooperative",
+  "title": { "text": "Chemical Cooperative Echo", "color": "yellow" },
+  "model": { "villager_data": { "type": "desert", "profession": "cleric", "level": 4 } },
+  "stages": [{
+    "title": "Fuel and Chemical Exchange",
+    "lore": [{ "type": "ftbechoes:text", "text": "Controlled refinery support stock. Crude petroleum is deliberately absent; locate a deposit and operate the wellhead like a civilization with standards." }],
+    "not_ready": "Petrochemical authorization has not been established.",
+    "ready": "Chemical-handling authorization confirmed.",
+    "required_stage": "infinite_domain:era_3",
+    "shop_unlock": [
+      { "name": "Rubber Sheet Lot", "item": { "id": "tfmg:rubber_sheet", "count": 4 }, "cost": 24 },
+      { "name": "Plastic Sheet Lot", "item": { "id": "tfmg:plastic_sheet", "count": 4 }, "cost": 32 },
+      { "name": "Sulfur Dust Lot", "item": { "id": "petrochem:sulfur_dust", "count": 8 }, "cost": 24 },
+      { "name": "Salt Dust Lot", "item": { "id": "petrochem:salt_dust", "count": 8 }, "cost": 16 },
+      { "name": "Caustic Soda Lot", "item": { "id": "petrochem:caustic_soda", "count": 8 }, "cost": 24 },
+      { "name": "Lubricant Reserve", "item": { "id": "petrochem:lubricant_bucket" }, "cost": 40, "max_claims": 8, "per_player_max_claims": true },
+      { "name": "Emergency Gasoline", "item": { "id": "petrochem:gasoline_bucket" }, "cost": 64, "max_claims": 4, "per_player_max_claims": true },
+      { "name": "Plastic Bucket Set", "item": { "id": "petrochem:plastic_bucket", "count": 4 }, "cost": 16 },
+      { "name": "Steel Process Pipe Bundle", "item": { "id": "petrochem:steel_fluid_pipe", "count": 8 }, "cost": 32 },
+      { "name": "Steel Valve Set", "item": { "id": "petrochem:steel_fluid_valve", "count": 4 }, "cost": 32 },
+      { "name": "Glass Bottle Crate", "item": { "id": "minecraft:glass_bottle", "count": 16 }, "cost": 8 },
+      { "name": "Empty Bucket Set", "item": { "id": "minecraft:bucket", "count": 4 }, "cost": 16 }
+    ],
+    "completion_reward": { "currency": 160, "description": "Two Cogs and two Sprockets of chemical exchange credit" }
+  }]
+}

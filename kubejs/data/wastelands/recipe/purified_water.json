@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "ingredients":  [
+                        {
+                            "type":  "neoforge:components",
+                            "items":  "minecraft:potion",
+                            "components":  {
+                                                "minecraft:potion_contents":  {
+                                                                                   "potion":  "minecraft:water"
+                                                                               }
+                                            },
+                            "strict":  false
+                        },
+                        {
+                            "item":  "quark:charcoal_block"
+                        }
+                    ],
+    "result":  {
+                   "id":  "wastelands:purified_water",
+                   "count":  1
+               }
+}

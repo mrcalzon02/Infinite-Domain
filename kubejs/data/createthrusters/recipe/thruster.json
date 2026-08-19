@@ -1,0 +1,46 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "X X",
+                    "PBP",
+                    "SAS"
+                ],
+    "key":  {
+                "X":  {
+                          "type":  "neoforge:compound",
+                          "children":  [
+                                           {
+                                               "tag":  "c:storage_blocks/steel"
+                                           },
+                                           {
+                                               "item":  "create:industrial_iron_block"
+                                           }
+                                       ]
+                      },
+                "P":  {
+                          "item":  "create:fluid_pipe"
+                      },
+                "B":  {
+                          "item":  "create:blaze_burner"
+                      },
+                "S":  {
+                          "type":  "neoforge:compound",
+                          "children":  [
+                                           {
+                                               "tag":  "c:plates/steel"
+                                           },
+                                           {
+                                               "item":  "create:iron_sheet"
+                                           }
+                                       ]
+                      },
+                "A":  {
+                          "item":  "create:andesite_alloy_block"
+                      }
+            },
+    "result":  {
+                   "id":  "createthrusters:thruster",
+                   "count":  1
+               }
+}

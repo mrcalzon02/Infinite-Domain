@@ -1,0 +1,42 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "ABC",
+                    "DEF",
+                    "GHI"
+                ],
+    "key":  {
+                "A":  {
+                          "item":  "more_ores_more_gems:gunpowder_block"
+                      },
+                "B":  {
+                          "item":  "ae2lt:overload_crystal_dust"
+                      },
+                "C":  {
+                          "item":  "more_ores_more_gems:gunpowder_block"
+                      },
+                "D":  {
+                          "item":  "ae2lt:overload_crystal_dust"
+                      },
+                "E":  {
+                          "item":  "ae2lt:overload_singularity"
+                      },
+                "F":  {
+                          "item":  "ae2lt:overload_crystal_dust"
+                      },
+                "G":  {
+                          "item":  "more_ores_more_gems:gunpowder_block"
+                      },
+                "H":  {
+                          "item":  "ae2lt:overload_crystal_dust"
+                      },
+                "I":  {
+                          "item":  "more_ores_more_gems:gunpowder_block"
+                      }
+            },
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2lt:overload_tnt"
+               }
+}

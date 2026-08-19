@@ -1,0 +1,190 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "0000000''&0)))))",
+      "00000''&000)))))",
+      "000''&00000)))))",
+      "0''&0000000)))))",
+      "'&000000000)))/)",
+      "00000000000)))/)",
+      "00000000000)))/)",
+      "00000000000/////",
+      "0000000000')))/)",
+      "00000000''&)))/)",
+      "000000''&00)))/)",
+      "0000''&0000)))))",
+      "00''&000000)))))",
+      "''&00000000)))))",
+      "&0000000000)))))",
+      "00000000000)''''"
+    ],
+    [
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     ",
+      "22222222222     "
+    ],
+    [
+      "          $     ",
+      "          $     ",
+      "          $     ",
+      "          $     ",
+      "11111-1111$     ",
+      "1         $     ",
+      "1     *   $     ",
+      "1         $     ",
+      "1 3       $     ",
+      "+         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1   (     $     ",
+      "1         $     ",
+      "1       % $     ",
+      "1         $     "
+    ],
+    [
+      "          $     ",
+      "          $     ",
+      "          $     ",
+      "          $     ",
+      "11111.1111$     ",
+      "1         $     ",
+      "1         $     ",
+      "1     *   $     ",
+      "1         $     ",
+      ",         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     "
+    ],
+    [
+      "          $     ",
+      "          $     ",
+      "          $     ",
+      "          $     ",
+      "1111111111$     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1     *   !     ",
+      "1         !     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     "
+    ],
+    [
+      "          $     ",
+      "          $     ",
+      "          $     ",
+      "          $     ",
+      "1111111111$     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1         !     ",
+      "1     *   !     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     ",
+      "1         $     "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:chest[facing=west,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_military"
+        }
+      },
+      {
+        "char": "&",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:lectern[facing=south,has_book=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:polished_andesite_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:white_concrete"
+      },
+      {
+        "char": "0",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "2",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "3",
+        "block": "the_wasteland_reworked:radio"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "aba",
+                    " a "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:block_of_steel"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:steel_shield",
+                   "count":  1
+               }
+}

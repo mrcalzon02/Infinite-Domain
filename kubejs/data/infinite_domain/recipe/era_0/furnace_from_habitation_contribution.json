@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCC",
+    "CXC",
+    "CCC"
+  ],
+  "key": {
+    "C": { "item": "allthecompressed:cobblestone_3x" },
+    "X": { "item": "kubejs:habitation_contribution" }
+  },
+  "result": {
+    "id": "minecraft:furnace",
+    "count": 1
+  }
+}

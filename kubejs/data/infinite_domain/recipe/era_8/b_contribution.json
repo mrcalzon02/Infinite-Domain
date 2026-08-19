@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "B": {
+      "item": "minecraft:golden_carrot"
+    },
+    "C": {
+      "item": "stellaris:big_oxygen_tank"
+    },
+    "D": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "E": {
+      "item": "minecraft:heart_of_the_sea"
+    }
+  },
+  "result": {
+    "id": "kubejs:era8_farming_contribution",
+    "count": 1
+  }
+}

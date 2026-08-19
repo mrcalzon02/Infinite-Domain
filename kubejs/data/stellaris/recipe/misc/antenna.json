@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "rlr",
+                    "srs",
+                    "sss"
+                ],
+    "key":  {
+                "l":  {
+                          "item":  "minecraft:lightning_rod"
+                      },
+                "s":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "r":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "result":  {
+                   "id":  "stellaris:antenna",
+                   "count":  1
+               }
+}

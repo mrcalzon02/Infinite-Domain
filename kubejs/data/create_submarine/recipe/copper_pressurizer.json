@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "G":  {
+                          "item":  "allthecompressed:glass_1x"
+                      },
+                "C":  {
+                          "item":  "allthecompressed:copper_block_1x"
+                      }
+            },
+    "pattern":  [
+                    "GGG",
+                    "GCG",
+                    "GGG"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "create_submarine:copper_pressurizer"
+               }
+}

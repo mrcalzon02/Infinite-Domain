@@ -1,0 +1,25 @@
+{
+  "variant_id": "infinite_domain:ruined_gas_station",
+  "clean_master": "infinite_domain:gas_station_clean_master",
+  "damage_story": "A blast strikes the east pump lane, drops the southeast canopy bay and tears open the shop utility corner while leaving the storefront, checkout, stockroom, manager office and receiving route legible.",
+  "damage_zone": "east forecourt and southeast utility corner",
+  "environment_layer": [
+    "tapered masonry and gravel rubble beneath the failed shop corner",
+    "fallen canopy member across the east pump lane",
+    "scrap and refuse concentrated near the blast side",
+    "weathered highway apron, parking and service surfaces"
+  ],
+  "occupation_layer": [
+    "roadside loot retained in the surviving stockroom",
+    "pillagers occupying the protected manager-office area"
+  ],
+  "invariants": [
+    "highway apron, road sign and most pump lanes survive",
+    "the reinforced underground fuel-tank vault survives beneath the forecourt",
+    "front entrance and checkout remain readable",
+    "multiple sales-floor cross aisles remain navigable",
+    "stockroom, manager office and rear receiving exit remain accessible",
+    "damage remains localized to a causally related blast zone"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

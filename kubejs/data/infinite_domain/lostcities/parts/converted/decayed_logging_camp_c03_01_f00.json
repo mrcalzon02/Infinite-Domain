@@ -1,0 +1,198 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "***(****%****   ",
+      "*%***(****%**   ",
+      "***%***(****%   ",
+      "%****%***(***   ",
+      "**%****%***(*   ",
+      "****%****%***   ",
+      "*%****%****%*   ",
+      "***%****%****   ",
+      "(****%****%**   ",
+      "**(****%****%   ",
+      "%***(****%***   ",
+      "**%***(****%*   ",
+      "****%***(****   ",
+      "))))))))))(**   ",
+      "))))))))))**(   ",
+      "))))))))))%**   "
+    ],
+    [
+      ",,,,,,,(((      ",
+      ",,,,,,,,,,      ",
+      ",,,,,,,,,,      ",
+      ",,,,,,,,,,      ",
+      ",,,,,,,,,,      ",
+      ",,,,,,,,,,      ",
+      ",,,,,,,,,,      ",
+      ",,,,,,,,,,      ",
+      ",,,,,,,,,,5     ",
+      ",,,,,,,,,,      ",
+      ",,,,,,,,,,      ",
+      ",,,,,,,,,,      ",
+      "                ",
+      "           2    ",
+      "                ",
+      "                "
+    ],
+    [
+      " //////(((      ",
+      "      +  1      ",
+      "         1      ",
+      "    0    1      ",
+      "         1      ",
+      "3333-33331      ",
+      "         1      ",
+      "         1      ",
+      "  4   !  &      ",
+      "       $ 1      ",
+      "         1      ",
+      "1111111111      ",
+      "                ",
+      "           2    ",
+      "                ",
+      "                "
+    ],
+    [
+      "         1      ",
+      "         1      ",
+      "      +  1      ",
+      "         1      ",
+      "         1      ",
+      "3333.33331      ",
+      "         1      ",
+      "         1      ",
+      "         '      ",
+      "         1      ",
+      "         1      ",
+      "1111111111      ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "         1      ",
+      "         1      ",
+      "         1      ",
+      "      +  1      ",
+      "         1      ",
+      "3333333331      ",
+      "         1      ",
+      "         1      ",
+      "         1      ",
+      "         1      ",
+      "         1      ",
+      "1111111111      ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "         1      ",
+      "         1      ",
+      "         1      ",
+      "         1      ",
+      "      +  1      ",
+      "3333333331      ",
+      "         1      ",
+      "         1      ",
+      "         1      ",
+      "         1      ",
+      "         1      ",
+      "1111111111      ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:metal_barrel"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:chest[facing=west,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_industrial"
+        }
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:mud"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:podzol"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:polished_andesite_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:polished_deepslate"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:stonecutter[facing=north]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:stripped_dark_oak_wood"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:stripped_spruce_log[axis=y]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:water_cauldron[level=3]"
+      },
+      {
+        "char": "5",
+        "block": "wastelands:scrap_pile"
+      }
+    ]
+  }
+}

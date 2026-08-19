@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  {
+                          "item":  "create:andesite_alloy_block"
+                      },
+                "S":  {
+                          "item":  "quark:stick_block"
+                      },
+                "W":  {
+                          "tag":  "minecraft:wool"
+                      }
+            },
+    "pattern":  [
+                    "WS",
+                    "SA"
+                ],
+    "result":  {
+                   "count":  2,
+                   "id":  "create:white_sail"
+               }
+}

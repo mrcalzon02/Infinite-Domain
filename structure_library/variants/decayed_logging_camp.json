@@ -1,0 +1,26 @@
+{
+  "variant_id": "infinite_domain:decayed_logging_camp",
+  "clean_master": "infinite_domain:decayed_logging_camp_clean_master",
+  "damage_story": "The east sorting bay lost its upper wall and roof monitors while a separate southwest bunk-room collapse scattered debris into the crew yard; the central production route and service catwalk remain usable.",
+  "damage_zone": "east sorting bay/roof and southwest bunk-room edge",
+  "environment_layer": [
+    "gravity-led gravel and fallen timber beneath both localized failures",
+    "scattered scrap along loader and service approaches",
+    "intact dispatch and mess rooflines, central saw cells and garage",
+    "preserved access road, loader loop, drying sheds and timber stacks"
+  ],
+  "occupation_layer": [
+    "one ghoul spawner in the dispatch/records zone",
+    "one zombie spawner in the surviving bunk wing",
+    "one zombie spawner beside the central production cell",
+    "one ghoul spawner in the garage fuel/parts zone"
+  ],
+  "invariants": [
+    "crew arrival, dispatch and surviving accommodation remain connected",
+    "infeed, primary saw, rear support rooms and east service exit remain reachable",
+    "the complete service catwalk and stair remain usable",
+    "garage, drying yard and exterior handling routes survive",
+    "damage remains localized to the two declared failure zones"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

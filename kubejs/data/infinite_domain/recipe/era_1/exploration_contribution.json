@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["MCS", "APA", "RIR"],
+  "key": {
+    "M": { "item": "minecraft:map" },
+    "C": { "item": "minecraft:compass" },
+    "S": { "item": "minecraft:spyglass" },
+    "A": { "item": "create:andesite_alloy" },
+    "P": { "item": "create:portable_storage_interface" },
+    "R": { "item": "wastelands:scrap_pile" },
+    "I": { "item": "allthecompressed:iron_block_1x" }
+  },
+  "result": { "id": "kubejs:era1_exploration_contribution", "count": 1 }
+}

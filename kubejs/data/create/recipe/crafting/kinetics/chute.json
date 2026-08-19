@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  {
+                          "tag":  "c:plates/iron"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      }
+            },
+    "pattern":  [
+                    "A",
+                    "I",
+                    "A"
+                ],
+    "result":  {
+                   "count":  4,
+                   "id":  "create:chute"
+               }
+}

@@ -1,0 +1,29 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "ICI",
+                    "CPC",
+                    "BNB"
+                ],
+    "key":  {
+                "I":  {
+                          "item":  "create:sturdy_sheet"
+                      },
+                "C":  {
+                          "item":  "create:cogwheel"
+                      },
+                "P":  {
+                          "item":  "create:precision_mechanism"
+                      },
+                "B":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "N":  {
+                          "item":  "minecraft:netherite_block"
+                      }
+            },
+    "result":  {
+                   "id":  "compactgearbox:compact_gearbox",
+                   "count":  1
+               }
+}

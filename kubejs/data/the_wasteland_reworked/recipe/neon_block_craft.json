@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "aca",
+                    "aba"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "the_wasteland_reworked:aluminium_ingot"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:glass_1x"
+                      },
+                "c":  {
+                          "item":  "minecraft:glowstone_dust"
+                      }
+            },
+    "result":  {
+                   "id":  "the_wasteland_reworked:neon_block",
+                   "count":  4
+               }
+}

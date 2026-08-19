@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "T",
+                    "P"
+                ],
+    "key":  {
+                "T":  {
+                          "item":  "minecraft:mangrove_trapdoor"
+                      },
+                "P":  {
+                          "item":  "allthecompressed:mangrove_planks_1x"
+                      }
+            },
+    "result":  {
+                   "id":  "zvhouses:mangrove_counter",
+                   "count":  1
+               }
+}

@@ -1,0 +1,190 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "3333333333333333",
+      "3.3333.3333.3333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "33..%33333333333",
+      "..%3333333333333",
+      "%333333333333333",
+      "333333333333333.",
+      "3333333333333..%",
+      "33333333333..%33",
+      "333333333..%3333"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "0000000         ",
+      "0000000         ",
+      "0000000         ",
+      "0000000444444444",
+      "0000000444444444",
+      "4444444444444444",
+      "4444444444444444",
+      "4444444444444444",
+      "4444444444444444",
+      "4444444444444444",
+      "4444444444444444"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "&'22222         ",
+      "      2         ",
+      "      /        /",
+      "      /$$$$$$$$/",
+      "*+22222        $",
+      "               $",
+      "               $",
+      "        1   1  $",
+      "        1   1  $",
+      "        1   1  $",
+      "        1   1  $"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "()22222         ",
+      "      2         ",
+      "      /        /",
+      "      /$$!!$!!$/",
+      ",-22222        $",
+      "               $",
+      "               $",
+      "        1   1  !",
+      "        1   1  !",
+      "        1   1  $",
+      "        1   1  $"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "2222222         ",
+      "      2         ",
+      "      /        /",
+      "      /$$!!$!!$/",
+      "2222222        $",
+      "               $",
+      "               $",
+      "        1   1  !",
+      "        1   1  !",
+      "        1   1  $",
+      "        1   1  $"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "2222222         ",
+      "      2         ",
+      "      /        /",
+      "      /$$$$$$$$/",
+      "2222222        $",
+      "               $",
+      "               $",
+      "               $",
+      "               $",
+      "               $",
+      "               $"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:scaffolding"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:smooth_stone"
+      },
+      {
+        "char": "3",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "4",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

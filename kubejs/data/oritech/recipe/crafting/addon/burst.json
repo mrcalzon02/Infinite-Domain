@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "b":  {
+                          "tag":  "oritech:plating"
+                      },
+                "c":  {
+                          "item":  "oritech:metal_girder_block"
+                      },
+                "f":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "m":  {
+                          "item":  "more_ores_more_gems:block_of_electrum"
+                      },
+                "s":  {
+                          "item":  "createbigcannons:steel_block"
+                      }
+            },
+    "pattern":  [
+                    "fsf",
+                    "mcm",
+                    "bbb"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "oritech:machine_burst_addon"
+               }
+}

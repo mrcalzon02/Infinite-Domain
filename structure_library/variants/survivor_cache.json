@@ -1,0 +1,25 @@
+{
+  "variant_id": "infinite_domain:survivor_cache",
+  "clean_master": "infinite_domain:survivor_cache_clean_master",
+  "damage_story": "A blast tears open the shed's southwest roof and a smaller soil collapse buries the pantry edge; pillagers occupy the surviving surface post, sleeping room, infirmary and workshop.",
+  "damage_zone": "southwest surface-shed roof and northeast underground pantry edge",
+  "environment_layer": [
+    "gravel and broken masonry beneath the shed roof breach",
+    "localized soil and cracked concrete inside the damaged pantry edge",
+    "intact central shelter corridor and emergency-hatch approach",
+    "weathered gravel footpath and coarse-dirt camouflage apron"
+  ],
+  "occupation_layer": [
+    "four pillager spawners distributed across surface and underground rooms",
+    "survival caches retained in infirmary and pantry",
+    "military cache retained beside the workshop"
+  ],
+  "invariants": [
+    "north shed entrance and protected stair survive",
+    "west sleeping room and infirmary remain accessible",
+    "east pantry approach, workshop and emergency hatch remain connected",
+    "both exits and central cross-circulation remain navigable",
+    "damage remains localized to the two declared failure zones"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

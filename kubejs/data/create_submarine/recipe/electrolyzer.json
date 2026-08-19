@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "G":  {
+                          "item":  "allthecompressed:glass_1x"
+                      },
+                "S":  {
+                          "item":  "simulated:spring"
+                      },
+                "C":  {
+                          "item":  "allthecompressed:copper_block_1x"
+                      },
+                "E":  {
+                          "item":  "create:electron_tube"
+                      }
+            },
+    "pattern":  [
+                    "GSG",
+                    "CEC",
+                    "CCC"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "create_submarine:electrolyzer"
+               }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": { "item": "ae2:dense_energy_cell" },
+    "D": { "item": "cyberspace:data_hardware" },
+    "I": { "item": "kubejs:darknet_session_injector_tier_8" },
+    "Q": { "item": "cyberspace:quantum_core" },
+    "S": { "item": "ae2:spatial_cell_component_128" },
+    "T": { "item": "kubejs:darknet_temporal_core" },
+    "V": { "item": "cyberspace:virtual_machine_core" }
+  },
+  "pattern": [
+    "QSQ",
+    "VIV",
+    "DTC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ae2:spatial_anchor"
+  }
+}

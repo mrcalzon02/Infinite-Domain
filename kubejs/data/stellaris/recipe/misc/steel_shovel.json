@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "X",
+                    "#",
+                    "#"
+                ],
+    "key":  {
+                "X":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "#":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "result":  {
+                   "id":  "stellaris:steel_shovel"
+               }
+}

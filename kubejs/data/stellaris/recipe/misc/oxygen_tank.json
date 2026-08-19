@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " V ",
+    "SRS",
+    " V "
+  ],
+  "key": {
+    "V": {
+      "item": "kubejs:precision_valve"
+    },
+    "S": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "R": {
+      "item": "tfmg:rubber_sheet"
+    }
+  },
+  "result": {
+    "id": "stellaris:oxygen_tank",
+    "count": 1
+  }
+}

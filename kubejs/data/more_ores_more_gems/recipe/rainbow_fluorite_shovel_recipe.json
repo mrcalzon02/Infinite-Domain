@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "pattern":  [
+                    "a",
+                    "b",
+                    "b"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:flourite_rainbow_color"
+                      },
+                "b":  {
+                          "item":  "minecraft:diamond"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:rainbow_fluorite_shovel",
+                   "count":  1
+               }
+}

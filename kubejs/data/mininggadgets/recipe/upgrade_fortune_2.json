@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "g":  {
+                          "item":  "allthecompressed:gold_block_1x"
+                      },
+                "l":  {
+                          "item":  "allthecompressed:lapis_block_1x"
+                      },
+                "u":  {
+                          "item":  "mininggadgets:upgrade_fortune_1"
+                      }
+            },
+    "pattern":  [
+                    "lgl",
+                    "lul",
+                    "lgl"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "mininggadgets:upgrade_fortune_2"
+               }
+}

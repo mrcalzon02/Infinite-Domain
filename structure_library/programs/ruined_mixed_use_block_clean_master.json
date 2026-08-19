@@ -1,0 +1,47 @@
+{
+  "structure_id": "infinite_domain:ruined_mixed_use_block_clean_master",
+  "archetype": "four-storey mixed-use city block with four businesses, separate residential access and twelve apartments",
+  "orientation": {
+    "public_storefronts": "north main road",
+    "residential_lobby": "north-center",
+    "deliveries_and_secondary_exit": "south service alley",
+    "primary_stair": "north-center lobby",
+    "secondary_stair": "south-center service hall",
+    "roof_plant": "south-center"
+  },
+  "commercial_program": [
+    "diner with street seating, service counter, kitchen, cold store and wash station",
+    "pharmacy with sales floor, dispensing counter, medicine shelves and secured rear stock",
+    "hardware and repair shop with display aisles, workbench, parts storage and receiving",
+    "laundromat with customer machines, folding counter, utility room and supply store",
+    "separate rear delivery doors and two controlled service thresholds for every business"
+  ],
+  "residential_program": [
+    "independent street lobby with mail banks, duty desk and radio point",
+    "three apartment floors with four independently accessible corner dwellings per floor",
+    "living, cooking, bedroom and bathroom functions in every apartment",
+    "cross-corridor connecting every apartment to front and rear stairs",
+    "stacked street balconies and repeated windows communicating residential density",
+    "enclosed rooftop mechanical plant reached from the rear stair"
+  ],
+  "damage_constraints": [
+    "confine the primary collapse to the southeast laundromat and apartment stack",
+    "preserve the diner, pharmacy, lobby and functional front portion of the hardware shop",
+    "preserve three complete apartments on every residential floor",
+    "preserve both stair stacks and the central cross-corridor",
+    "direct gravity-led rubble toward the rear alley",
+    "derive damage, occupation and loot only from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "all four businesses read as different real premises rather than repeated rooms",
+      "the residential lobby is visibly separate from every storefront",
+      "all twelve apartments have legible domestic programs and usable private-room thresholds",
+      "both stair stacks and the roof plant work at player scale",
+      "the southeast collapse follows floor stacking and gravity rather than random deletion",
+      "terrain feathering seats storefronts, rear deliveries and rubble into city grade"
+    ]
+  }
+}

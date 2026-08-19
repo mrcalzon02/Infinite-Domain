@@ -1,0 +1,6105 @@
+{
+  "format_version": 1,
+  "structures": [
+    {
+      "structure_id": "infinite_domain:abandoned_bungalow",
+      "category": "residential",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/abandoned_bungalow.nbt",
+      "footprint": {
+        "width": 19,
+        "depth": 18
+      },
+      "height": 15,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 24,
+        "depth": 24
+      },
+      "settlement_types": [
+        "residential",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:bungalow_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:dilapidated_grocery",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/dilapidated_grocery.nbt",
+      "footprint": {
+        "width": 39,
+        "depth": 33
+      },
+      "height": 13,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 48,
+        "depth": 44
+      },
+      "settlement_types": [
+        "town_center",
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:grocery_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_gas_station",
+      "category": "highway",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_gas_station.nbt",
+      "footprint": {
+        "width": 39,
+        "depth": 45
+      },
+      "height": 28,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 48,
+        "depth": 56
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:gas_station_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:corporate_warehouse",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/corporate_warehouse.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 43
+      },
+      "height": 16,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 56
+      },
+      "settlement_types": [
+        "industrial",
+        "railway"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:corporate_warehouse_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_fire_station",
+      "category": "civic",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_fire_station.nbt",
+      "footprint": {
+        "width": 43,
+        "depth": 41
+      },
+      "height": 21,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 48,
+        "depth": 48
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:fire_station_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_hospital",
+      "category": "civic",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_hospital.nbt",
+      "footprint": {
+        "width": 67,
+        "depth": 59
+      },
+      "height": 36,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 78,
+        "depth": 70
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_hospital_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_police_precinct",
+      "category": "civic",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_police_precinct.nbt",
+      "footprint": {
+        "width": 57,
+        "depth": 49
+      },
+      "height": 25,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 68,
+        "depth": 60
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_police_precinct_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_courthouse",
+      "category": "civic",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_courthouse.nbt",
+      "footprint": {
+        "width": 59,
+        "depth": 51
+      },
+      "height": 29,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 70,
+        "depth": 62
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_courthouse_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_create_factory",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/abandoned_create_factory.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 37
+      },
+      "height": 27,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "west"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 48
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:create_factory_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:bunker_network",
+      "category": "military",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/bunker_network.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 47
+      },
+      "height": 26,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 56,
+        "depth": 56
+      },
+      "settlement_types": [
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:bunker_network_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:survivor_cache",
+      "category": "miscellaneous",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/survivor_cache.nbt",
+      "footprint": {
+        "width": 27,
+        "depth": 27
+      },
+      "height": 17,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 32,
+        "depth": 32
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:survivor_cache_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:trade_outpost",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/trade_outpost.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 49
+      },
+      "height": 18,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 64
+      },
+      "settlement_types": [
+        "rural",
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:trade_outpost_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:decayed_farm",
+      "category": "agricultural",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/decayed_farm.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 45
+      },
+      "height": 22,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 56
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:decayed_farm_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:trailer_park",
+      "category": "residential",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/trailer_park.nbt",
+      "footprint": {
+        "width": 69,
+        "depth": 77
+      },
+      "height": 15,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 80,
+        "depth": 88
+      },
+      "settlement_types": [
+        "residential",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:trailer_park_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:mountain_military_complex",
+      "category": "military",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/mountain_military_complex.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 61
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 72
+      },
+      "settlement_types": [
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:mountain_military_complex_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:mountain_biohazard_lab",
+      "category": "military",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/mountain_biohazard_lab.nbt",
+      "footprint": {
+        "width": 55,
+        "depth": 49
+      },
+      "height": 22,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "south"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 56
+      },
+      "settlement_types": [
+        "military",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:mountain_biohazard_lab_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:decayed_logging_camp",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/decayed_logging_camp.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 55
+      },
+      "height": 23,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "south"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 64
+      },
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:decayed_logging_camp_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:bombed_data_center",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/bombed_data_center.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 55
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 64
+      },
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:bombed_data_center_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:hydroelectric_refuge_dam",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/hydroelectric_refuge_dam.nbt",
+      "footprint": {
+        "width": 65,
+        "depth": 65
+      },
+      "height": 40,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "west"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 80,
+        "depth": 80
+      },
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:hydroelectric_refuge_dam_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:toppled_skyscraper",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/toppled_skyscraper.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 53
+      },
+      "height": 45,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 64
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:toppled_skyscraper_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:blown_apartment_complex",
+      "category": "residential",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/blown_apartment_complex.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 53
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 64
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:blown_apartment_complex_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_mixed_use_block",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_mixed_use_block.nbt",
+      "footprint": {
+        "width": 59,
+        "depth": 47
+      },
+      "height": 36,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 68,
+        "depth": 56
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_mixed_use_block_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:sunken_city_front",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/sunken_city_front.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 55
+      },
+      "height": 37,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east",
+        "west"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 64
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:sunken_city_front_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:pancaked_parking_structure",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/pancaked_parking_structure.nbt",
+      "footprint": {
+        "width": 57,
+        "depth": 51
+      },
+      "height": 35,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 60
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:pancaked_parking_structure_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:cratered_downtown_intersection",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/cratered_downtown_intersection.nbt",
+      "footprint": {
+        "width": 65,
+        "depth": 65
+      },
+      "height": 37,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east",
+        "west"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 76,
+        "depth": 76
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:cratered_downtown_intersection_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_motel",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/abandoned_motel.nbt",
+      "footprint": {
+        "width": 35,
+        "depth": 37
+      },
+      "height": 17,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 48,
+        "depth": 48
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:motel_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:freight_depot",
+      "category": "railway",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/freight_depot.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 37
+      },
+      "height": 27,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "rail_siding",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 48
+      },
+      "settlement_types": [
+        "railway",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:freight_depot_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:bungalow_clean_master",
+      "category": "residential",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/bungalow_clean_master.nbt",
+      "footprint": {
+        "width": 19,
+        "depth": 18
+      },
+      "height": 15,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 24,
+        "depth": 24
+      },
+      "settlement_types": [
+        "residential",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:abandoned_bungalow"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:motel_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/motel_clean_master.nbt",
+      "footprint": {
+        "width": 35,
+        "depth": 37
+      },
+      "height": 17,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 48,
+        "depth": 48
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:abandoned_motel"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:grocery_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/grocery_clean_master.nbt",
+      "footprint": {
+        "width": 39,
+        "depth": 33
+      },
+      "height": 13,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 48,
+        "depth": 44
+      },
+      "settlement_types": [
+        "town_center",
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:dilapidated_grocery"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:gas_station_clean_master",
+      "category": "highway",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/gas_station_clean_master.nbt",
+      "footprint": {
+        "width": 39,
+        "depth": 45
+      },
+      "height": 28,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 48,
+        "depth": 56
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_gas_station"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:freight_depot_clean_master",
+      "category": "railway",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/freight_depot_clean_master.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 37
+      },
+      "height": 27,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "rail_siding",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 48
+      },
+      "settlement_types": [
+        "railway",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:freight_depot"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:fire_station_clean_master",
+      "category": "civic",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/fire_station_clean_master.nbt",
+      "footprint": {
+        "width": 43,
+        "depth": 41
+      },
+      "height": 21,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 48,
+        "depth": 48
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_fire_station"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:corporate_warehouse_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/corporate_warehouse_clean_master.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 43
+      },
+      "height": 16,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 56
+      },
+      "settlement_types": [
+        "industrial",
+        "railway"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:corporate_warehouse"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:create_factory_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/create_factory_clean_master.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 37
+      },
+      "height": 27,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "west"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 48
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:abandoned_create_factory"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:bunker_network_clean_master",
+      "category": "military",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/bunker_network_clean_master.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 47
+      },
+      "height": 26,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 56,
+        "depth": 56
+      },
+      "settlement_types": [
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:bunker_network"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:survivor_cache_clean_master",
+      "category": "miscellaneous",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/survivor_cache_clean_master.nbt",
+      "footprint": {
+        "width": 27,
+        "depth": 27
+      },
+      "height": 17,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 32,
+        "depth": 32
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:survivor_cache"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:trade_outpost_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/trade_outpost_clean_master.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 49
+      },
+      "height": 18,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 64
+      },
+      "settlement_types": [
+        "rural",
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:trade_outpost"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:decayed_farm_clean_master",
+      "category": "agricultural",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/decayed_farm_clean_master.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 45
+      },
+      "height": 22,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 56
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:decayed_farm"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:trailer_park_clean_master",
+      "category": "residential",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/trailer_park_clean_master.nbt",
+      "footprint": {
+        "width": 69,
+        "depth": 77
+      },
+      "height": 15,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 80,
+        "depth": 88
+      },
+      "settlement_types": [
+        "residential",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:trailer_park"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:mountain_military_complex_clean_master",
+      "category": "military",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/mountain_military_complex_clean_master.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 61
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 72
+      },
+      "settlement_types": [
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:mountain_military_complex"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:mountain_biohazard_lab_clean_master",
+      "category": "military",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/mountain_biohazard_lab_clean_master.nbt",
+      "footprint": {
+        "width": 55,
+        "depth": 49
+      },
+      "height": 22,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "south"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 56
+      },
+      "settlement_types": [
+        "military",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:mountain_biohazard_lab"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:decayed_logging_camp_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/decayed_logging_camp_clean_master.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 55
+      },
+      "height": 23,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "south"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 64
+      },
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:decayed_logging_camp"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:bombed_data_center_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/bombed_data_center_clean_master.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 55
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 64
+      },
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:bombed_data_center"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:hydroelectric_refuge_dam_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/hydroelectric_refuge_dam_clean_master.nbt",
+      "footprint": {
+        "width": 65,
+        "depth": 65
+      },
+      "height": 40,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "west"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 80,
+        "depth": 80
+      },
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:hydroelectric_refuge_dam"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:toppled_skyscraper_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/toppled_skyscraper_clean_master.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 53
+      },
+      "height": 45,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 64
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:toppled_skyscraper"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:blown_apartment_complex_clean_master",
+      "category": "residential",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/blown_apartment_complex_clean_master.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 53
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 64
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:blown_apartment_complex"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_mixed_use_block_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_mixed_use_block_clean_master.nbt",
+      "footprint": {
+        "width": 59,
+        "depth": 47
+      },
+      "height": 36,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 68,
+        "depth": 56
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_mixed_use_block"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:sunken_city_front_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/sunken_city_front_clean_master.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 55
+      },
+      "height": 37,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east",
+        "west"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 72,
+        "depth": 64
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:sunken_city_front"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:pancaked_parking_structure_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/pancaked_parking_structure_clean_master.nbt",
+      "footprint": {
+        "width": 57,
+        "depth": 51
+      },
+      "height": 35,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 64,
+        "depth": 60
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:pancaked_parking_structure"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:cratered_downtown_intersection_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/cratered_downtown_intersection_clean_master.nbt",
+      "footprint": {
+        "width": 65,
+        "depth": 65
+      },
+      "height": 37,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east",
+        "west"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 76,
+        "depth": 76
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:cratered_downtown_intersection"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_hospital_clean_master",
+      "category": "civic",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_hospital_clean_master.nbt",
+      "footprint": {
+        "width": 67,
+        "depth": 59
+      },
+      "height": 36,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 78,
+        "depth": 70
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_hospital"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_police_precinct_clean_master",
+      "category": "civic",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_police_precinct_clean_master.nbt",
+      "footprint": {
+        "width": 57,
+        "depth": 49
+      },
+      "height": 25,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 68,
+        "depth": 60
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_police_precinct"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_courthouse_clean_master",
+      "category": "civic",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_courthouse_clean_master.nbt",
+      "footprint": {
+        "width": 59,
+        "depth": 51
+      },
+      "height": 29,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 70,
+        "depth": 62
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_courthouse"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:radio_mast",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/radio_mast.nbt",
+      "footprint": {
+        "width": 15,
+        "depth": 15
+      },
+      "height": 28,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 23,
+        "depth": 23
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:radio_mast_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:radio_mast_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/radio_mast_clean_master.nbt",
+      "footprint": {
+        "width": 15,
+        "depth": 15
+      },
+      "height": 28,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 23,
+        "depth": 23
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:radio_mast"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:wrecked_sedan",
+      "category": "highway",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/wrecked_sedan.nbt",
+      "footprint": {
+        "width": 17,
+        "depth": 11
+      },
+      "height": 8,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 25,
+        "depth": 19
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:wrecked_sedan_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:wrecked_sedan_clean_master",
+      "category": "highway",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/wrecked_sedan_clean_master.nbt",
+      "footprint": {
+        "width": 17,
+        "depth": 11
+      },
+      "height": 8,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 25,
+        "depth": 19
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:wrecked_sedan"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:delivery_van",
+      "category": "highway",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/delivery_van.nbt",
+      "footprint": {
+        "width": 21,
+        "depth": 12
+      },
+      "height": 10,
+      "main_entrance": "west",
+      "secondary_entrances": [],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 29,
+        "depth": 20
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:delivery_van_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:delivery_van_clean_master",
+      "category": "highway",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/delivery_van_clean_master.nbt",
+      "footprint": {
+        "width": 21,
+        "depth": 12
+      },
+      "height": 10,
+      "main_entrance": "west",
+      "secondary_entrances": [],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 29,
+        "depth": 20
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:delivery_van"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:battle_tank",
+      "category": "military",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/battle_tank.nbt",
+      "footprint": {
+        "width": 25,
+        "depth": 17
+      },
+      "height": 12,
+      "main_entrance": "west",
+      "secondary_entrances": [],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 33,
+        "depth": 25
+      },
+      "settlement_types": [
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:battle_tank_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:battle_tank_clean_master",
+      "category": "military",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/battle_tank_clean_master.nbt",
+      "footprint": {
+        "width": 25,
+        "depth": 17
+      },
+      "height": 12,
+      "main_entrance": "west",
+      "secondary_entrances": [],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 33,
+        "depth": 25
+      },
+      "settlement_types": [
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:battle_tank"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:service_garage",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/service_garage.nbt",
+      "footprint": {
+        "width": 41,
+        "depth": 33
+      },
+      "height": 15,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 49,
+        "depth": 41
+      },
+      "settlement_types": [
+        "highway_frontage",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:service_garage_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:service_garage_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/service_garage_clean_master.nbt",
+      "footprint": {
+        "width": 41,
+        "depth": 33
+      },
+      "height": 15,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 49,
+        "depth": 41
+      },
+      "settlement_types": [
+        "highway_frontage",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:service_garage"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:scrapyard",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/scrapyard.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 43
+      },
+      "height": 15,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 57,
+        "depth": 51
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:scrapyard_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:scrapyard_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/scrapyard_clean_master.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 43
+      },
+      "height": 15,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 57,
+        "depth": 51
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:scrapyard"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:military_checkpoint",
+      "category": "military",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/military_checkpoint.nbt",
+      "footprint": {
+        "width": 45,
+        "depth": 31
+      },
+      "height": 15,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 53,
+        "depth": 39
+      },
+      "settlement_types": [
+        "military",
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:military_checkpoint_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:military_checkpoint_clean_master",
+      "category": "military",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/military_checkpoint_clean_master.nbt",
+      "footprint": {
+        "width": 45,
+        "depth": 31
+      },
+      "height": 15,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 53,
+        "depth": 39
+      },
+      "settlement_types": [
+        "military",
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:military_checkpoint"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_roadside_diner",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_roadside_diner.nbt",
+      "footprint": {
+        "width": 39,
+        "depth": 33
+      },
+      "height": 14,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 47,
+        "depth": 41
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_roadside_diner_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_roadside_diner_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_roadside_diner_clean_master.nbt",
+      "footprint": {
+        "width": 39,
+        "depth": 33
+      },
+      "height": 14,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 47,
+        "depth": 41
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_roadside_diner"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_truck_stop",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/abandoned_truck_stop.nbt",
+      "footprint": {
+        "width": 51,
+        "depth": 47
+      },
+      "height": 17,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 59,
+        "depth": 55
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:abandoned_truck_stop_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_truck_stop_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/abandoned_truck_stop_clean_master.nbt",
+      "footprint": {
+        "width": 51,
+        "depth": 47
+      },
+      "height": 17,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 59,
+        "depth": 55
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:abandoned_truck_stop"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_weigh_station",
+      "category": "highway",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/wasteland_weigh_station.nbt",
+      "footprint": {
+        "width": 45,
+        "depth": 37
+      },
+      "height": 14,
+      "main_entrance": "south",
+      "secondary_entrances": [
+        "east",
+        "west"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 53,
+        "depth": 45
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:wasteland_weigh_station_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_weigh_station_clean_master",
+      "category": "highway",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/wasteland_weigh_station_clean_master.nbt",
+      "footprint": {
+        "width": 45,
+        "depth": 37
+      },
+      "height": 14,
+      "main_entrance": "south",
+      "secondary_entrances": [
+        "east",
+        "west"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 53,
+        "depth": 45
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:wasteland_weigh_station"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:destroyed_refugee_convoy",
+      "category": "highway",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/destroyed_refugee_convoy.nbt",
+      "footprint": {
+        "width": 43,
+        "depth": 57
+      },
+      "height": 13,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 51,
+        "depth": 65
+      },
+      "settlement_types": [
+        "highway_frontage",
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:destroyed_refugee_convoy_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:destroyed_refugee_convoy_clean_master",
+      "category": "highway",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/destroyed_refugee_convoy_clean_master.nbt",
+      "footprint": {
+        "width": 43,
+        "depth": 57
+      },
+      "height": 13,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 51,
+        "depth": 65
+      },
+      "settlement_types": [
+        "highway_frontage",
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:destroyed_refugee_convoy"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:split_level_house",
+      "category": "residential",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/split_level_house.nbt",
+      "footprint": {
+        "width": 31,
+        "depth": 27
+      },
+      "height": 19,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 39,
+        "depth": 35
+      },
+      "settlement_types": [
+        "residential",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:split_level_house_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:split_level_house_clean_master",
+      "category": "residential",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/split_level_house_clean_master.nbt",
+      "footprint": {
+        "width": 31,
+        "depth": 27
+      },
+      "height": 19,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 39,
+        "depth": 35
+      },
+      "settlement_types": [
+        "residential",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:split_level_house"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_culdesac",
+      "category": "residential",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/abandoned_culdesac.nbt",
+      "footprint": {
+        "width": 67,
+        "depth": 67
+      },
+      "height": 18,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 75,
+        "depth": 75
+      },
+      "settlement_types": [
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:abandoned_culdesac_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_culdesac_clean_master",
+      "category": "residential",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/abandoned_culdesac_clean_master.nbt",
+      "footprint": {
+        "width": 67,
+        "depth": 67
+      },
+      "height": 18,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 75,
+        "depth": 75
+      },
+      "settlement_types": [
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:abandoned_culdesac"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:emergency_relief_shelter",
+      "category": "civic",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/emergency_relief_shelter.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 43
+      },
+      "height": 18,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 57,
+        "depth": 51
+      },
+      "settlement_types": [
+        "town_center",
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:emergency_relief_shelter_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:emergency_relief_shelter_clean_master",
+      "category": "civic",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/emergency_relief_shelter_clean_master.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 43
+      },
+      "height": 18,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 57,
+        "depth": 51
+      },
+      "settlement_types": [
+        "town_center",
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:emergency_relief_shelter"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:tenement_courtyard",
+      "category": "residential",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/tenement_courtyard.nbt",
+      "footprint": {
+        "width": 57,
+        "depth": 53
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 65,
+        "depth": 61
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:tenement_courtyard_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:tenement_courtyard_clean_master",
+      "category": "residential",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/tenement_courtyard_clean_master.nbt",
+      "footprint": {
+        "width": 57,
+        "depth": 53
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 65,
+        "depth": 61
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:tenement_courtyard"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_rowhouse_block",
+      "category": "residential",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_rowhouse_block.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 41
+      },
+      "height": 27,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 69,
+        "depth": 49
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_rowhouse_block_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_rowhouse_block_clean_master",
+      "category": "residential",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_rowhouse_block_clean_master.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 41
+      },
+      "height": 27,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 69,
+        "depth": 49
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_rowhouse_block"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:shattered_luxury_condo",
+      "category": "residential",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/shattered_luxury_condo.nbt",
+      "footprint": {
+        "width": 51,
+        "depth": 49
+      },
+      "height": 37,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 59,
+        "depth": 57
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:shattered_luxury_condo_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:shattered_luxury_condo_clean_master",
+      "category": "residential",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/shattered_luxury_condo_clean_master.nbt",
+      "footprint": {
+        "width": 51,
+        "depth": 49
+      },
+      "height": 37,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 59,
+        "depth": 57
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:shattered_luxury_condo"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_city_school",
+      "category": "civic",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_city_school.nbt",
+      "footprint": {
+        "width": 65,
+        "depth": 55
+      },
+      "height": 27,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 73,
+        "depth": 63
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_city_school_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_city_school_clean_master",
+      "category": "civic",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_city_school_clean_master.nbt",
+      "footprint": {
+        "width": 65,
+        "depth": 55
+      },
+      "height": 27,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 73,
+        "depth": 63
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_city_school"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_community_center",
+      "category": "civic",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_community_center.nbt",
+      "footprint": {
+        "width": 51,
+        "depth": 47
+      },
+      "height": 21,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 59,
+        "depth": 55
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_community_center_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_community_center_clean_master",
+      "category": "civic",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_community_center_clean_master.nbt",
+      "footprint": {
+        "width": 51,
+        "depth": 47
+      },
+      "height": 21,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 59,
+        "depth": 55
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_community_center"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:decayed_ranch",
+      "category": "agricultural",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/decayed_ranch.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 45
+      },
+      "height": 19,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 57,
+        "depth": 53
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:decayed_ranch_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:decayed_ranch_clean_master",
+      "category": "agricultural",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/decayed_ranch_clean_master.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 45
+      },
+      "height": 19,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 57,
+        "depth": 53
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:decayed_ranch"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:roadside_church_cemetery",
+      "category": "civic",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/roadside_church_cemetery.nbt",
+      "footprint": {
+        "width": 51,
+        "depth": 49
+      },
+      "height": 29,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 59,
+        "depth": 57
+      },
+      "settlement_types": [
+        "rural",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:roadside_church_cemetery_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:roadside_church_cemetery_clean_master",
+      "category": "civic",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/roadside_church_cemetery_clean_master.nbt",
+      "footprint": {
+        "width": 51,
+        "depth": 49
+      },
+      "height": 29,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 59,
+        "depth": 57
+      },
+      "settlement_types": [
+        "rural",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:roadside_church_cemetery"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_ranger_station",
+      "category": "civic",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_ranger_station.nbt",
+      "footprint": {
+        "width": 43,
+        "depth": 41
+      },
+      "height": 19,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 51,
+        "depth": 49
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_ranger_station_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_ranger_station_clean_master",
+      "category": "civic",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_ranger_station_clean_master.nbt",
+      "footprint": {
+        "width": 43,
+        "depth": 41
+      },
+      "height": 19,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 51,
+        "depth": 49
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_ranger_station"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_fire_lookout",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/wasteland_fire_lookout.nbt",
+      "footprint": {
+        "width": 35,
+        "depth": 35
+      },
+      "height": 35,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 43,
+        "depth": 43
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:wasteland_fire_lookout_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_fire_lookout_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/wasteland_fire_lookout_clean_master.nbt",
+      "footprint": {
+        "width": 35,
+        "depth": 35
+      },
+      "height": 35,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 43,
+        "depth": 43
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:wasteland_fire_lookout"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_shopping_mall",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_shopping_mall.nbt",
+      "footprint": {
+        "width": 73,
+        "depth": 63
+      },
+      "height": 28,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 81,
+        "depth": 71
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_shopping_mall_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_shopping_mall_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_shopping_mall_clean_master.nbt",
+      "footprint": {
+        "width": 73,
+        "depth": 63
+      },
+      "height": 28,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 81,
+        "depth": 71
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_shopping_mall"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_department_store",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_department_store.nbt",
+      "footprint": {
+        "width": 59,
+        "depth": 51
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 67,
+        "depth": 59
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_department_store_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_department_store_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_department_store_clean_master.nbt",
+      "footprint": {
+        "width": 59,
+        "depth": 51
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 67,
+        "depth": 59
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "building",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_department_store"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:bombed_hotel",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/bombed_hotel.nbt",
+      "footprint": {
+        "width": 53,
+        "depth": 47
+      },
+      "height": 39,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 61,
+        "depth": 55
+      },
+      "settlement_types": [
+        "town_center",
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:bombed_hotel_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:bombed_hotel_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/bombed_hotel_clean_master.nbt",
+      "footprint": {
+        "width": 53,
+        "depth": 47
+      },
+      "height": 39,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 61,
+        "depth": 55
+      },
+      "settlement_types": [
+        "town_center",
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:bombed_hotel"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:buried_bank_vault",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/buried_bank_vault.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 45
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "west"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 57,
+        "depth": 53
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:buried_bank_vault_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:buried_bank_vault_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/buried_bank_vault_clean_master.nbt",
+      "footprint": {
+        "width": 49,
+        "depth": 45
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "west"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 57,
+        "depth": 53
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:buried_bank_vault"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_office_tower",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_office_tower.nbt",
+      "footprint": {
+        "width": 51,
+        "depth": 47
+      },
+      "height": 47,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 59,
+        "depth": 55
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_office_tower_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_office_tower_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_office_tower_clean_master.nbt",
+      "footprint": {
+        "width": 51,
+        "depth": 47
+      },
+      "height": 47,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 59,
+        "depth": 55
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_office_tower"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_subway_station",
+      "category": "railway",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/collapsed_subway_station.nbt",
+      "footprint": {
+        "width": 63,
+        "depth": 45
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 71,
+        "depth": 53
+      },
+      "settlement_types": [
+        "town_center",
+        "railway"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:collapsed_subway_station_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_subway_station_clean_master",
+      "category": "railway",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/collapsed_subway_station_clean_master.nbt",
+      "footprint": {
+        "width": 63,
+        "depth": 45
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 71,
+        "depth": 53
+      },
+      "settlement_types": [
+        "town_center",
+        "railway"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:collapsed_subway_station"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_bus_terminal",
+      "category": "highway",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_bus_terminal.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 51
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 69,
+        "depth": 59
+      },
+      "settlement_types": [
+        "town_center",
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_bus_terminal_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_bus_terminal_clean_master",
+      "category": "highway",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_bus_terminal_clean_master.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 51
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 69,
+        "depth": 59
+      },
+      "settlement_types": [
+        "town_center",
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_bus_terminal"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:elevated_rail_collapse",
+      "category": "railway",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/elevated_rail_collapse.nbt",
+      "footprint": {
+        "width": 67,
+        "depth": 39
+      },
+      "height": 30,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 75,
+        "depth": 47
+      },
+      "settlement_types": [
+        "town_center",
+        "railway"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:elevated_rail_collapse_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:elevated_rail_collapse_clean_master",
+      "category": "railway",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/elevated_rail_collapse_clean_master.nbt",
+      "footprint": {
+        "width": 67,
+        "depth": 39
+      },
+      "height": 30,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 75,
+        "depth": 47
+      },
+      "settlement_types": [
+        "town_center",
+        "railway"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:elevated_rail_collapse"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:sunken_highway_interchange",
+      "category": "highway",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/sunken_highway_interchange.nbt",
+      "footprint": {
+        "width": 73,
+        "depth": 73
+      },
+      "height": 25,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east",
+        "west"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 81,
+        "depth": 81
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:sunken_highway_interchange_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:sunken_highway_interchange_clean_master",
+      "category": "highway",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/sunken_highway_interchange_clean_master.nbt",
+      "footprint": {
+        "width": 73,
+        "depth": 73
+      },
+      "height": 25,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south",
+        "east",
+        "west"
+      ],
+      "road_connection": "highway",
+      "minimum_lot": {
+        "width": 81,
+        "depth": 81
+      },
+      "settlement_types": [
+        "highway_frontage"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:sunken_highway_interchange"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_airship_terminal",
+      "category": "miscellaneous",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/collapsed_airship_terminal.nbt",
+      "footprint": {
+        "width": 67,
+        "depth": 57
+      },
+      "height": 35,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 75,
+        "depth": 65
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:collapsed_airship_terminal_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_airship_terminal_clean_master",
+      "category": "miscellaneous",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/collapsed_airship_terminal_clean_master.nbt",
+      "footprint": {
+        "width": 67,
+        "depth": 57
+      },
+      "height": 35,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 75,
+        "depth": 65
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:collapsed_airship_terminal"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:crashed_cargo_airship",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/crashed_cargo_airship.nbt",
+      "footprint": {
+        "width": 71,
+        "depth": 39
+      },
+      "height": 29,
+      "main_entrance": "west",
+      "secondary_entrances": [],
+      "road_connection": "none",
+      "minimum_lot": {
+        "width": 79,
+        "depth": 47
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:crashed_cargo_airship_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:crashed_cargo_airship_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/crashed_cargo_airship_clean_master.nbt",
+      "footprint": {
+        "width": 71,
+        "depth": 39
+      },
+      "height": 29,
+      "main_entrance": "west",
+      "secondary_entrances": [],
+      "road_connection": "none",
+      "minimum_lot": {
+        "width": 79,
+        "depth": 47
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:crashed_cargo_airship"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:warm_industrial_mountain_port",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/warm_industrial_mountain_port.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 47
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 55,
+        "depth": 55
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:warm_industrial_mountain_port_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:warm_industrial_mountain_port_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/warm_industrial_mountain_port_clean_master.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 47
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 55,
+        "depth": 55
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:warm_industrial_mountain_port"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:cold_industrial_mountain_port",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/cold_industrial_mountain_port.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 47
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 55,
+        "depth": 55
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:cold_industrial_mountain_port_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:cold_industrial_mountain_port_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/cold_industrial_mountain_port_clean_master.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 47
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 55,
+        "depth": 55
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:cold_industrial_mountain_port"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_quarry",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/abandoned_quarry.nbt",
+      "footprint": {
+        "width": 69,
+        "depth": 61
+      },
+      "height": 30,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 77,
+        "depth": 69
+      },
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:abandoned_quarry_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_quarry_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/abandoned_quarry_clean_master.nbt",
+      "footprint": {
+        "width": 69,
+        "depth": 61
+      },
+      "height": 30,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 77,
+        "depth": 69
+      },
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:abandoned_quarry"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_mine_entrance",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/collapsed_mine_entrance.nbt",
+      "footprint": {
+        "width": 55,
+        "depth": 49
+      },
+      "height": 27,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 63,
+        "depth": 57
+      },
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:collapsed_mine_entrance_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_mine_entrance_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/collapsed_mine_entrance_clean_master.nbt",
+      "footprint": {
+        "width": 55,
+        "depth": 49
+      },
+      "height": 27,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 63,
+        "depth": 57
+      },
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:collapsed_mine_entrance"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:excavator_pit",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/excavator_pit.nbt",
+      "footprint": {
+        "width": 73,
+        "depth": 63
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 81,
+        "depth": 71
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:excavator_pit_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:excavator_pit_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/excavator_pit_clean_master.nbt",
+      "footprint": {
+        "width": 73,
+        "depth": 63
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 81,
+        "depth": 71
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:excavator_pit"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_oil_field",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/abandoned_oil_field.nbt",
+      "footprint": {
+        "width": 75,
+        "depth": 61
+      },
+      "height": 25,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 83,
+        "depth": 69
+      },
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:abandoned_oil_field_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_oil_field_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/abandoned_oil_field_clean_master.nbt",
+      "footprint": {
+        "width": 75,
+        "depth": 61
+      },
+      "height": 25,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 83,
+        "depth": 69
+      },
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:abandoned_oil_field"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_orchard_cannery",
+      "category": "agricultural",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/abandoned_orchard_cannery.nbt",
+      "footprint": {
+        "width": 59,
+        "depth": 51
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 67,
+        "depth": 59
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:abandoned_orchard_cannery_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_orchard_cannery_clean_master",
+      "category": "agricultural",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/abandoned_orchard_cannery_clean_master.nbt",
+      "footprint": {
+        "width": 59,
+        "depth": 51
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 67,
+        "depth": 59
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:abandoned_orchard_cannery"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_grain_elevator",
+      "category": "agricultural",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_grain_elevator.nbt",
+      "footprint": {
+        "width": 55,
+        "depth": 49
+      },
+      "height": 35,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 63,
+        "depth": 57
+      },
+      "settlement_types": [
+        "rural",
+        "railway"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_grain_elevator_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_grain_elevator_clean_master",
+      "category": "agricultural",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_grain_elevator_clean_master.nbt",
+      "footprint": {
+        "width": 55,
+        "depth": 49
+      },
+      "height": 35,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 63,
+        "depth": 57
+      },
+      "settlement_types": [
+        "rural",
+        "railway"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_grain_elevator"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:shattered_greenhouse_nursery",
+      "category": "agricultural",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/shattered_greenhouse_nursery.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 49
+      },
+      "height": 21,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 69,
+        "depth": 57
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:shattered_greenhouse_nursery_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:shattered_greenhouse_nursery_clean_master",
+      "category": "agricultural",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/shattered_greenhouse_nursery_clean_master.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 49
+      },
+      "height": 21,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 69,
+        "depth": 57
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:shattered_greenhouse_nursery"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:remote_sawmill",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/remote_sawmill.nbt",
+      "footprint": {
+        "width": 63,
+        "depth": 53
+      },
+      "height": 32,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 71,
+        "depth": 61
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:remote_sawmill_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:remote_sawmill_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/remote_sawmill_clean_master.nbt",
+      "footprint": {
+        "width": 63,
+        "depth": 53
+      },
+      "height": 32,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 71,
+        "depth": 61
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:remote_sawmill"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:industrial_facility",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/industrial_facility.nbt",
+      "footprint": {
+        "width": 69,
+        "depth": 57
+      },
+      "height": 29,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 77,
+        "depth": 65
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:industrial_facility_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:industrial_facility_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/industrial_facility_clean_master.nbt",
+      "footprint": {
+        "width": 69,
+        "depth": 57
+      },
+      "height": 29,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 77,
+        "depth": 65
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:industrial_facility"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:city_electrical_substation",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/city_electrical_substation.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 51
+      },
+      "height": 22,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 69,
+        "depth": 59
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:city_electrical_substation_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:city_electrical_substation_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/city_electrical_substation_clean_master.nbt",
+      "footprint": {
+        "width": 61,
+        "depth": 51
+      },
+      "height": 22,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 69,
+        "depth": 59
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:city_electrical_substation"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:city_water_treatment_plant",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/city_water_treatment_plant.nbt",
+      "footprint": {
+        "width": 75,
+        "depth": 65
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 83,
+        "depth": 73
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:city_water_treatment_plant_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:city_water_treatment_plant_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/city_water_treatment_plant_clean_master.nbt",
+      "footprint": {
+        "width": 75,
+        "depth": 65
+      },
+      "height": 24,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 83,
+        "depth": 73
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:city_water_treatment_plant"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:district_heating_station",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/district_heating_station.nbt",
+      "footprint": {
+        "width": 65,
+        "depth": 55
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 73,
+        "depth": 63
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:district_heating_station_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:district_heating_station_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/district_heating_station_clean_master.nbt",
+      "footprint": {
+        "width": 65,
+        "depth": 55
+      },
+      "height": 31,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 73,
+        "depth": 63
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:district_heating_station"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:municipal_incinerator",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/municipal_incinerator.nbt",
+      "footprint": {
+        "width": 71,
+        "depth": 59
+      },
+      "height": 33,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 79,
+        "depth": 67
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:municipal_incinerator_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:municipal_incinerator_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/municipal_incinerator_clean_master.nbt",
+      "footprint": {
+        "width": 71,
+        "depth": 59
+      },
+      "height": 33,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 79,
+        "depth": 67
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:municipal_incinerator"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_fuel_depot",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_fuel_depot.nbt",
+      "footprint": {
+        "width": 79,
+        "depth": 65
+      },
+      "height": 25,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 87,
+        "depth": 73
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_fuel_depot_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_fuel_depot_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_fuel_depot_clean_master.nbt",
+      "footprint": {
+        "width": 79,
+        "depth": 65
+      },
+      "height": 25,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 87,
+        "depth": 73
+      },
+      "settlement_types": [
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_fuel_depot"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ruined_cyberware_clinic",
+      "category": "civic",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ruined_cyberware_clinic.nbt",
+      "footprint": {
+        "width": 59,
+        "depth": 51
+      },
+      "height": 26,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 67,
+        "depth": 59
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ruined_cyberware_clinic_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_cyberware_clinic_clean_master",
+      "category": "civic",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_cyberware_clinic_clean_master.nbt",
+      "footprint": {
+        "width": 59,
+        "depth": 51
+      },
+      "height": 26,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 67,
+        "depth": 59
+      },
+      "settlement_types": [
+        "town_center"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ruined_cyberware_clinic"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:ae2_records_archive",
+      "category": "civic",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/ae2_records_archive.nbt",
+      "footprint": {
+        "width": 63,
+        "depth": 55
+      },
+      "height": 30,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 71,
+        "depth": 63
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:ae2_records_archive_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:ae2_records_archive_clean_master",
+      "category": "civic",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/ae2_records_archive_clean_master.nbt",
+      "footprint": {
+        "width": 63,
+        "depth": 55
+      },
+      "height": 30,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 71,
+        "depth": 63
+      },
+      "settlement_types": [
+        "town_center",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:ae2_records_archive"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:nuclear_research_annex",
+      "category": "industrial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/nuclear_research_annex.nbt",
+      "footprint": {
+        "width": 73,
+        "depth": 63
+      },
+      "height": 33,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 81,
+        "depth": 71
+      },
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:nuclear_research_annex_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:nuclear_research_annex_clean_master",
+      "category": "industrial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/nuclear_research_annex_clean_master.nbt",
+      "footprint": {
+        "width": 73,
+        "depth": 63
+      },
+      "height": 33,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 81,
+        "depth": 71
+      },
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:nuclear_research_annex"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:shattered_wind_farm",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/shattered_wind_farm.nbt",
+      "footprint": {
+        "width": 83,
+        "depth": 71
+      },
+      "height": 39,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 91,
+        "depth": 79
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:shattered_wind_farm_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:shattered_wind_farm_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/shattered_wind_farm_clean_master.nbt",
+      "footprint": {
+        "width": 83,
+        "depth": 71
+      },
+      "height": 39,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 91,
+        "depth": 79
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:shattered_wind_farm"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:broken_solar_field",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/broken_solar_field.nbt",
+      "footprint": {
+        "width": 83,
+        "depth": 69
+      },
+      "height": 17,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 91,
+        "depth": 77
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:broken_solar_field_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:broken_solar_field_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/broken_solar_field_clean_master.nbt",
+      "footprint": {
+        "width": 83,
+        "depth": 69
+      },
+      "height": 17,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 91,
+        "depth": 77
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:broken_solar_field"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:wilderness_substation",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/wilderness_substation.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 43
+      },
+      "height": 19,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 55,
+        "depth": 51
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:wilderness_substation_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:wilderness_substation_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/wilderness_substation_clean_master.nbt",
+      "footprint": {
+        "width": 47,
+        "depth": 43
+      },
+      "height": 19,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 55,
+        "depth": 51
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:wilderness_substation"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_water_tower",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/wasteland_water_tower.nbt",
+      "footprint": {
+        "width": 45,
+        "depth": 45
+      },
+      "height": 36,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 53,
+        "depth": 53
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated source",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "clean_master": "infinite_domain:wasteland_water_tower_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_water_tower_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/masters/wasteland_water_tower_clean_master.nbt",
+      "footprint": {
+        "width": 45,
+        "depth": 45
+      },
+      "height": 36,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 53,
+        "depth": 53
+      },
+      "settlement_types": [
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain project-generated clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:wasteland_water_tower"
+      ]
+    }
+  ]
+}

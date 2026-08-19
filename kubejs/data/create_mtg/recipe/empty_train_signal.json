@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "###",
+                    "BBB",
+                    "###"
+                ],
+    "key":  {
+                "#":  {
+                          "item":  "create:andesite_casing"
+                      },
+                "B":  {
+                          "item":  "create:andesite_alloy_block"
+                      }
+            },
+    "result":  {
+                   "id":  "create_mtg:empty_train_signal",
+                   "count":  3
+               }
+}

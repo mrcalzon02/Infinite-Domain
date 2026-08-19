@@ -1,0 +1,123 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "coffee_tea_economy"
+	group: "3F00D00000000001"
+	id: "1240CAEABAC9DC56"
+	images: [ ]
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4FC0C1C678C71891"]
+			id: "08F11D0000000001"
+			optional: true
+			tasks: [{
+				count: 8L
+				id: "08F12D0000000001"
+				item: { count: 1, id: "kubejs:coffee_cherries" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08F11D0000000001"]
+			id: "08F11D0000000002"
+			optional: true
+			tasks: [{
+				id: "08F12D0000000002"
+				item: { count: 1, id: "kubejs:black_coffee_mug" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08F11D0000000002"]
+			id: "08F11D0000000003"
+			optional: true
+			tasks: [{
+				count: 16L
+				id: "08F12D0000000003"
+				item: { count: 1, id: "kubejs:coffee_grounds" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08F11D0000000003"]
+			id: "08F11D0000000004"
+			optional: true
+			tasks: [{
+				id: "08F12D0000000004"
+				item: { count: 1, id: "kubejs:green_tea_cup" }
+				type: "item"
+			}]
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08F11D0000000004"]
+			id: "08F11D0000000005"
+			optional: true
+			tasks: [{
+				id: "08F12D0000000005"
+				item: { count: 1, id: "kubejs:espresso_mug" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08F11D0000000005"]
+			id: "08F11D0000000006"
+			optional: true
+			tasks: [{
+				count: 12L
+				id: "08F12D0000000006"
+				item: { count: 1, id: "kubejs:canned_coffee" }
+				type: "item"
+			}]
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08F11D0000000006"]
+			id: "08F11D0000000007"
+			optional: true
+			tasks: [{
+				id: "08F12D0000000007"
+				item: { count: 1, id: "kubejs:coffee_case" }
+				type: "item"
+			}]
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08F11D0000000007"]
+			id: "08F11D0000000008"
+			optional: true
+			tasks: [{
+				id: "08F12D0000000008"
+				item: { count: 1, id: "kubejs:tea_crate" }
+				type: "item"
+			}]
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08F11D0000000008"]
+			id: "08F11D0000000009"
+			optional: true
+			tasks: [{
+				id: "08F12D0000000009"
+				item: { count: 1, id: "kubejs:coffee_pallet" }
+				type: "item"
+			}]
+			x: 24.0d
+			y: 0.0d
+		}
+	]
+}

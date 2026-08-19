@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "b":  {
+                          "tag":  "c:glass_blocks/cheap"
+                      },
+                "c":  {
+                          "tag":  "c:dusts/fluix"
+                      }
+            },
+    "pattern":  [
+                    "aba",
+                    "bcb",
+                    "aba"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2:condenser"
+               }
+}

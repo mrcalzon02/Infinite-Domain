@@ -1,0 +1,190 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "////////////////",
+      "////////////////",
+      "////////////////",
+      "////////////////",
+      "%$//////////////",
+      "////////////////",
+      "//////////////%%",
+      "////////////%%$/",
+      "//////////%%$///",
+      "////////%%$/////",
+      "//////%%$///////",
+      "////%%$/////////",
+      "//%%$///////////",
+      "%$$///$////$////",
+      "                ",
+      "                "
+    ],
+    [
+      "         .....  ",
+      "         .....  ",
+      "         .....  ",
+      "         .....  ",
+      "                ",
+      " 2    2   111111",
+      "          111111",
+      "          111111",
+      "          111111",
+      "          111111",
+      "          111111",
+      "          111111",
+      "          111111",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "         .....  ",
+      "         .....  ",
+      "         ....3  ",
+      "         .....  ",
+      "                ",
+      "          *****(",
+      "          *    0",
+      "          *    0",
+      "          *+++ ,",
+      "          *+++ &",
+      "          *+!+ 0",
+      "          *+++ 0",
+      "          ******",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "         .....  ",
+      "         .....  ",
+      "         .....  ",
+      "         .....  ",
+      "                ",
+      "          *****)",
+      "          *    0",
+      "          *    0",
+      "          *+++ -",
+      "          *+++ '",
+      "          *+++ 0",
+      "          *+++ 0",
+      "          ******",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "          ******",
+      "          *    0",
+      "          *    0",
+      "          *+++ 0",
+      "          *+++ 0",
+      "          *+++ 0",
+      "          *+++ 0",
+      "          ******",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "          ******",
+      "          *    0",
+      "          *    0",
+      "          *    0",
+      "          *    0",
+      "          *    0",
+      "          *    0",
+      "          ******",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "minecraft:chest[facing=north,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_military"
+        }
+      },
+      {
+        "char": "$",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:iron_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:iron_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:iron_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:iron_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:scaffolding"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:yellow_concrete"
+      },
+      {
+        "char": "/",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "0",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "2",
+        "block": "the_wasteland_reworked:barricade"
+      },
+      {
+        "char": "3",
+        "block": "the_wasteland_reworked:rusted_barrel"
+      }
+    ]
+  }
+}

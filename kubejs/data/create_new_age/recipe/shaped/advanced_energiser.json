@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EPE",
+    "MGM",
+    "EPE"
+  ],
+  "key": {
+    "E": {
+      "item": "ae2:energy_acceptor"
+    },
+    "P": {
+      "item": "powergrid:portable_battery"
+    },
+    "M": {
+      "item": "create_new_age:basic_motor"
+    },
+    "G": {
+      "item": "create:precision_mechanism"
+    }
+  },
+  "result": {
+    "id": "create_new_age:advanced_energiser",
+    "count": 1
+  }
+}

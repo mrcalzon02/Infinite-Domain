@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "x",
+                    "y",
+                    "x"
+                ],
+    "key":  {
+                "x":  {
+                          "tag":  "primitivestart:raw_golds"
+                      },
+                "y":  {
+                          "tag":  "primitivestart:gold_ingots"
+                      }
+            },
+    "result":  {
+                   "id":  "primitivestart:plating_upgrade_smithing_template"
+               }
+}

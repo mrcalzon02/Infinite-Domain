@@ -1,0 +1,69 @@
+{
+  "structure_id": "infinite_domain:bunker_network_clean_master",
+  "archetype": "two-level modular civil-defense bunker network",
+  "orientation": {
+    "primary_roof_access": "north intake module",
+    "emergency_roof_access": "east service module",
+    "living_and_medical_wing": "west",
+    "maintenance_and_armory_wing": "east",
+    "mess_supply_and_utilities": "south",
+    "command_and_archive": "central"
+  },
+  "operational_level": [
+    "ladder access vestibule, airlock and security processing",
+    "central command and communications room with briefing pit",
+    "west barracks and separated infirmary",
+    "east maintenance workshop and controlled armory",
+    "south mess, kitchen and reserve stores",
+    "independent east emergency roof ladder",
+    "protected stair to the lower level"
+  ],
+  "surface_program": [
+    "terrain-level local-road apron and guarded concrete entrance facility",
+    "public-facing security lobby and controlled rear access room",
+    "surface duty office, radio post, equipment lockers and roof plant",
+    "protected ladder shaft descending directly into the bunker intake",
+    "separate east emergency hatch retained outside the primary facility"
+  ],
+  "protected_level": [
+    "backup command and records archive",
+    "three detention cells and interrogation room",
+    "secure armory and issue counter",
+    "isolated power, water and filtration plant",
+    "four-way reinforced connector spine"
+  ],
+  "circulation": [
+    "local road through the surface checkpoint and protected ladder into the intake airlock",
+    "central command to west living/medical and east service wings",
+    "central command to south mess and reserve stores",
+    "complete protected stair between operational and lower command levels",
+    "lower command to detention, armory and utility modules",
+    "east service wing to an independent emergency roof ladder"
+  ],
+  "occupation_constraints": [
+    "place pillager spawners by defensible operational zone rather than uniformly",
+    "occupy intake, command, infirmary, armory and detention areas",
+    "retain navigable routes between both levels and both roof exits",
+    "keep military, data and survival loot in purpose-appropriate secured rooms"
+  ],
+  "damage_constraints": [
+    "concentrate ceiling failure in the northwest barracks corner",
+    "confine secondary machinery damage to the far south utility bay",
+    "preserve infirmary, command, armories, protected stair and both roof exits",
+    "shape gravel and cracked-concrete rubble beneath failed ceiling members",
+    "derive the occupied damaged variant from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the build reads as connected bunker modules rather than one subdivided cube",
+      "both levels have distinct, inferable civil-defense functions",
+      "all forty-five declared thresholds, the surface facility and both exits work at player scale",
+      "detention, infirmary, armory and utilities have credible security relationships",
+      "pillager occupation creates dangerous zones without sealing required circulation",
+      "localized collapses follow gravity and preserve two viable escape directions",
+      "buried terrain adaptation leaves no exposed voids or floating shell"
+    ]
+  }
+}

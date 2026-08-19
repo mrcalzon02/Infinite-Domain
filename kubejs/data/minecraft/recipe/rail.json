@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "#":  {
+                          "item":  "quark:stick_block"
+                      },
+                "X":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      }
+            },
+    "pattern":  [
+                    "X X",
+                    "X#X",
+                    "X X"
+                ],
+    "result":  {
+                   "count":  16,
+                   "id":  "minecraft:rail"
+               }
+}

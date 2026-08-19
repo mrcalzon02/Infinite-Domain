@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WGW",
+    "PFP",
+    "WGW"
+  ],
+  "key": {
+    "W": {
+      "item": "create_new_age:copper_wire_block"
+    },
+    "G": {
+      "item": "powergrid:copper_coil"
+    },
+    "P": {
+      "item": "create:mechanical_press"
+    },
+    "F": {
+      "item": "ae2:fluix_block"
+    }
+  },
+  "result": {
+    "id": "ae2:inscriber",
+    "count": 1
+  }
+}

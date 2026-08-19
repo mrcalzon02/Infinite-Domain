@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "b":  {
+                          "item":  "minecraft:copper_block"
+                      }
+            },
+    "pattern":  [
+                    "aba",
+                    "a  ",
+                    "aba"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2:charger"
+               }
+}

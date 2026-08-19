@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "bcb",
+                    "aba"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:tnt"
+                      },
+                "b":  {
+                          "item":  "mekanite_mobs:reinforced_gunpowder"
+                      },
+                "c":  {
+                          "item":  "minecraft:iron_block"
+                      }
+            },
+    "result":  {
+                   "id":  "mekanite_mobs:reinforced_dynamite",
+                   "count":  1
+               }
+}

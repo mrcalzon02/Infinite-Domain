@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "  L",
+                    " S ",
+                    "S  "
+                ],
+    "key":  {
+                "S":  {
+                          "item":  "quark:stick_block"
+                      },
+                "L":  {
+                          "item":  "minecraft:coal_block"
+                      }
+            },
+    "result":  {
+                   "id":  "spells_and_spellcrafting:wand",
+                   "count":  1
+               }
+}

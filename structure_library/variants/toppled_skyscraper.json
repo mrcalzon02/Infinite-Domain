@@ -1,0 +1,26 @@
+{
+  "variant_id": "infinite_domain:toppled_skyscraper",
+  "clean_master": "infinite_domain:toppled_skyscraper_clean_master",
+  "damage_story": "The upper three tower zones sheared eastward across the avenue in three offset sections, leaving a publicly accessible podium and two office levels in the surviving stump.",
+  "damage_zone": "tower above the third structural floor, east podium edge and avenue impact path",
+  "environment_layer": [
+    "jagged variable-height shear plane above the stump",
+    "three descending, plan-offset horizontal tower sections",
+    "vertical former floor plates and long broken glazing bands",
+    "gravity-led impact berm and scattered reinforced-concrete fragments"
+  ],
+  "occupation_layer": [
+    "one zombie spawner in the podium service zone",
+    "one ghoul spawner on the second surviving office level",
+    "one ghoul spawner inside the fallen tower",
+    "office and data loot separated between stump and fallen section"
+  ],
+  "invariants": [
+    "public podium circulation remains usable",
+    "two complete office-level programs remain accessible in the stump",
+    "the west emergency ladder remains continuous through the stump",
+    "the horizontal sections preserve recognizable facade and former-floor rhythm",
+    "collapse remains aligned to the declared eastward fall path"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

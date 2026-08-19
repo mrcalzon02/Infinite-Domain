@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aaa",
+                    "bcb",
+                    "aaa"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:glass_1x"
+                      },
+                "c":  {
+                          "item":  "minecraft:flint_and_steel"
+                      }
+            },
+    "result":  {
+                   "id":  "the_wasteland_reworked:the_wasteland",
+                   "count":  1
+               }
+}

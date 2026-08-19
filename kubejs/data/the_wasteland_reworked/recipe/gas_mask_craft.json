@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aaa",
+                    "bcb",
+                    " d "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:leather"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:glass_1x"
+                      },
+                "c":  {
+                          "item":  "minecraft:iron_block"
+                      },
+                "d":  {
+                          "item":  "the_wasteland_reworked:gas_mask_filter"
+                      }
+            },
+    "result":  {
+                   "id":  "the_wasteland_reworked:gas_mask_helmet",
+                   "count":  1
+               }
+}

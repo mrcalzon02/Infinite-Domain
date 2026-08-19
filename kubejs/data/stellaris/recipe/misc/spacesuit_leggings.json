@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ALA",
+    "R R",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "L": {
+      "item": "kubejs:radiation_laminate"
+    },
+    "R": {
+      "item": "tfmg:rubber_sheet"
+    }
+  },
+  "result": {
+    "id": "stellaris:space_suit_leggings",
+    "count": 1
+  }
+}

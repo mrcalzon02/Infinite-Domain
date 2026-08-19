@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": { "item": "cyber_ware_port:dense_battery" },
+    "F": { "item": "cyber_ware_port:component_fullerene" },
+    "S": { "item": "cyber_ware_port:component_ssc" },
+    "W": { "item": "gateway_of_doom:portal_ward_3" }
+  },
+  "pattern": ["FSF", "BWB", "FSF"],
+  "result": { "id": "gateway_of_doom:portal_ward_4" }
+}

@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "H":  {
+                          "item":  "quark:stick_block"
+                      },
+                "M":  {
+                          "item":  "bno:silver_block"
+                      }
+            },
+    "pattern":  [
+                    "M",
+                    "H",
+                    "H"
+                ],
+    "result":  {
+                   "id":  "iceandfire:silver_shovel"
+               },
+    "show_notification":  true
+}

@@ -1,0 +1,311 @@
+generateDragonSkeletons = true
+# Default: 300
+# Range: > -2147483648
+generateDragonSkeletonChance = 300
+# Default: 180
+# Range: > -2147483648
+generateDragonDenChance = 180
+# Default: 360
+# Range: > -2147483648
+generateDragonRoostChance = 360
+# Default: 4
+# Range: > -2147483648
+dragonDenGoldAmount = 4
+spawnGlaciers = true
+# Default: 4
+# Range: > -2147483648
+glacierSpawnChance = 4
+# Default: 45
+# Range: > -2147483648
+oreToStoneRatioForDragonCaves = 45
+# Default: 7200
+# Range: > -2147483648
+dragonEggTime = 7200
+# Default: 0
+# Range: > -2147483648
+dragonGriefing = 0
+tamedDragonGriefing = true
+# Default: 4
+# Range: > -2147483648
+dragonFlapNoiseDistance = 4
+# Default: 4
+# Range: > -2147483648
+dragonFluteDistance = 4
+# Default: 500.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+dragonHealth = 500.0
+# Default: 17
+# Range: > -2147483648
+dragonAttackDamage = 17
+# Default: 2.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+dragonAttackDamageFire = 2.0
+# Default: 2.5
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+dragonAttackDamageIce = 2.5
+# Default: 3.5
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+dragonAttackDamageLightning = 3.5
+# Default: 256
+# Range: > -2147483648
+maxDragonFlight = 256
+# Default: 30
+# Range: > -2147483648
+dragonGoldSearchLength = 30
+canDragonsHealFromBiting = true
+canDragonsDespawn = true
+doDragonsSleep = true
+dragonDigWhenStuck = true
+# Default: 5
+# Range: > -2147483648
+dragonBreakBlockCooldown = 5
+dragonDropSkull = true
+dragonDropHeart = true
+dragonDropBlood = true
+# Default: 128
+# Range: > -2147483648
+dragonTargetSearchLength = 128
+# Default: 40
+# Range: > -2147483648
+dragonWanderFromHomeDistance = 40
+# Default: 3000
+# Range: > -2147483648
+dragonHungerTickRate = 3000
+spawnHippogryphs = true
+# Default: 2
+# Range: > -2147483648
+hippogryphSpawnRate = 2
+generateGorgonTemple = true
+# Default: 100.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+gorgonMaxHealth = 100.0
+# Default: 60
+# Range: > -2147483648
+spawnPixiesChance = 60
+# Default: 5
+# Range: > -2147483648
+pixieVillageSize = 5
+pixiesStealItems = true
+# Default: 100
+# Range: > -2147483648
+spawnWanderingCyclopsChance = 100
+# Default: 100
+# Range: > -2147483648
+spawnCyclopsCaveChance = 100
+# Default: 17
+# Range: > -2147483648
+cyclopesSheepSearchLength = 17
+# Default: 150.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+cyclopsMaxHealth = 150.0
+# Default: 15.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+cyclopsAttackStrength = 15.0
+# Default: 40.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+cyclopsBiteStrength = 40.0
+cyclopsGriefing = true
+# Default: 50.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+sirenMaxHealth = 50.0
+sirenShader = true
+# Default: 12000
+# Range: > -2147483648
+sirenMaxSingTime = 12000
+# Default: 2000
+# Range: > -2147483648
+sirenTimeBetweenSongs = 2000
+# Default: 400
+# Range: > -2147483648
+generateSirenChance = 400
+# Default: 40
+# Range: > -2147483648
+hippocampusSpawnChance = 40
+# Default: 64
+# Range: > -2147483648
+deathWormTargetSearchLength = 64
+# Default: 10.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+deathWormMaxHealth = 10.0
+# Default: 3.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+deathWormAttackStrength = 3.0
+deathWormAttackMonsters = true
+# Default: 30
+# Range: > -2147483648
+deathWormSpawnRate = 30
+# Default: 32
+# Range: > -2147483648
+cockatriceChickenSearchLength = 32
+# Default: 30
+# Range: > -2147483648
+cockatriceEggChance = 30
+# Default: 40.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+cockatriceMaxHealth = 40.0
+chickensLayRottenEggs = true
+spawnCockatrices = true
+# Default: 4
+# Range: > -2147483648
+cockatriceSpawnRate = 4
+# Default: 64
+# Range: > -2147483648
+stymphalianBirdTargetSearchLength = 64
+# Default: 25
+# Range: > -2147483648
+stymphalianBirdFeatherDropChance = 25
+# Default: 1.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+stymphalianBirdFeatherAttackStength = 1.0
+# Default: 40
+# Range: > -2147483648
+stymphalianBirdFlockLength = 40
+# Default: 80
+# Range: > -2147483648
+stymphalianBirdFlightHeight = 80
+stymphalianBirdsDataTagDrops = true
+stympahlianBirdAttackAnimals = false
+# Default: 100
+# Range: > -2147483648
+stymphalianBirdSpawnChance = 100
+spawnTrolls = true
+# Default: 40
+# Range: > -2147483648
+trollSpawnRate = 40
+trollsDropWeapon = true
+# Default: 50.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+trollMaxHealth = 50.0
+# Default: 10.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+trollAttackStrength = 10.0
+villagersFearDragons = true
+animalsFearDragons = true
+# Default: 2500
+# Range: > -2147483648
+myrmexPregnantTicks = 2500
+# Default: 3000
+# Range: > -2147483648
+myrmexEggTicks = 3000
+# Default: 35000
+# Range: > -2147483648
+myrmexLarvaTicks = 35000
+# Default: 150
+# Range: > -2147483648
+myrmexColonyGenChance = 150
+# Default: 80
+# Range: > -2147483648
+myrmexColonySize = 80
+# Default: 3.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+myrmexBaseAttackStrength = 3.0
+# Default: 50
+# Range: > -2147483648
+myrmexMaximumWanderRadius = 50
+myrmexHiveIgnoreDaytime = false
+spawnAmphitheres = true
+# Default: 50
+# Range: > -2147483648
+amphithereSpawnRate = 50
+# Default: 64
+# Range: > -2147483648
+amphithereVillagerSearchLength = 64
+# Default: 400
+# Range: > -2147483648
+amphithereTameTime = 400
+# Default: 1.75
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+amphithereFlightSpeed = 1.75
+# Default: 50.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+amphithereMaxHealth = 50.0
+# Default: 7.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+amphithereAttackStrength = 7.0
+# Default: 250
+# Range: > -2147483648
+seaSerpentSpawnChance = 250
+seaSerpentGriefing = true
+# Default: 20.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+seaSerpentBaseHealth = 20.0
+# Default: 4.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+seaSerpentAttackStrength = 4.0
+# Default: 25.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+dragonsteelBaseDamage = 25.0
+# Default: 12
+# Range: > -2147483648
+dragonsteelBaseArmor = 12
+# Default: 6.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+dragonsteelBaseArmorToughness = 6.0
+# Default: 8000
+# Range: > -2147483648
+dragonsteelBaseDurability = 8000
+# Default: 8000
+# Range: > -2147483648
+dragonsteelBaseDurabilityEquipment = 8000
+dragonMovedWronglyFix = false
+weezerTinkers = true
+# Default: 0.1
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+dragonBlockBreakingDropChance = 0.1
+completeDragonPathfinding = false
+generateMausoleums = true
+spawnLiches = true
+# Default: 2
+# Range: > -2147483648
+lichSpawnRate = 2
+# Default: 30
+# Range: > -2147483648
+lichSpawnChance = 30
+# Default: 250.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+hydraMaxHealth = 250.0
+# Default: 60
+# Range: > -2147483648
+generateHydraChance = 60
+explosiveDragonBreath = false
+# Default: 0.2
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+weezerTinkersDisarmChance = 0.2
+chunkLoadSummonCrystal = true
+# Default: 800.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+dangerousWorldGenDistanceLimit = 800.0
+# Default: 300.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+dangerousWorldGenSeparationLimit = 300.0
+# Default: 1.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+dragonFlightSpeedMod = 1.0
+# Default: 1.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+hippogryphFlightSpeedMod = 1.0
+# Default: 1.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+hippocampusSwimSpeedMod = 1.0
+generateGraveyards = true
+# Default: 30.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+ghostMaxHealth = 30.0
+# Default: 3.0
+# Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+ghostAttackStrength = 3.0
+ghostSpawnFromPlayerDeaths = true
+# Default: 3
+# Range: > -2147483648
+dragonPathfindingThreads = 3
+# Default: 5000
+# Range: > -2147483648
+maxDragonPathingNodes = 5000
+dragonWeaponFireAbility = true
+dragonWeaponIceAbility = true
+dragonWeaponLightningAbility = true
+# Default: 5
+# Range: > -2147483648
+villagerHouseWeight = 5
+allowAttributeOverriding = true
+pathfindingDebug = false

@@ -1,0 +1,214 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "                ",
+      " 6'6666'6666'66'",
+      " 666666666666''&",
+      " &666666666''&66",
+      " 66666666''&6666",
+      " 666666''&666666",
+      " 6666''&66666666",
+      " 66''&6666666666",
+      " ''&666666666666",
+      " &66666666666666",
+      " 666666666666666",
+      " 6666666666666''",
+      " 66666666666''&6",
+      " 666666666''&666",
+      " 6666666''&66666",
+      " &6666''&6666666"
+    ],
+    [
+      "                ",
+      "                ",
+      "  -             ",
+      "                ",
+      "                ",
+      "     88888888888",
+      "     88888888888",
+      "     88888888888",
+      "     88888888888",
+      "     88888888888",
+      "     88888888888",
+      "     88888888888",
+      "     88888888888",
+      "     88888888888",
+      "     88888888888",
+      "     88888888888"
+    ],
+    [
+      "                ",
+      "                ",
+      "  -,,,,,,,,,,,,,",
+      "  ,             ",
+      "  ,             ",
+      "  ,  $$$$$()$$$$",
+      "  ,  $          ",
+      "  ,  $          ",
+      "  ,  $ 33      9",
+      "  ,  $ 4        ",
+      "  ,  $          ",
+      "  ,  $7777177777",
+      "  ,  $     7    ",
+      "  ,  $     7    ",
+      "  ,  $.... /  5 ",
+      "  ,  $.... 7   %"
+    ],
+    [
+      "                ",
+      "                ",
+      "  -             ",
+      "                ",
+      "                ",
+      "     $!!$$*+$$$!",
+      "     $          ",
+      "     $          ",
+      "     $          ",
+      "     $          ",
+      "     $          ",
+      "     $7777277777",
+      "     !     7    ",
+      "     !     7    ",
+      "     $.... 0    ",
+      "     $.... 7    "
+    ],
+    [
+      "                ",
+      "                ",
+      "  -             ",
+      "                ",
+      "                ",
+      "     $!!$$$$$$$!",
+      "     $          ",
+      "     $          ",
+      "     $          ",
+      "     $          ",
+      "     $          ",
+      "     $7777777777",
+      "     !     7    ",
+      "     !     7    ",
+      "     $.... 7    ",
+      "     $.... 7    "
+    ],
+    [
+      "                ",
+      "                ",
+      "  -             ",
+      "                ",
+      "                ",
+      "     $$$$$$$$$$$",
+      "     $          ",
+      "     $          ",
+      "     $          ",
+      "     $          ",
+      "     $          ",
+      "     $7777777777",
+      "     $     7    ",
+      "     $     7    ",
+      "     $     7    ",
+      "     $     7    "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:chest[facing=north,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_industrial"
+        }
+      },
+      {
+        "char": "&",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:iron_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:iron_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:iron_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:iron_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:oxidized_copper_grate"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:polished_blackstone_bricks"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:scaffolding"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": "6",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "7",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "8",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "9",
+        "block": "the_wasteland_reworked:radio"
+      }
+    ]
+  }
+}

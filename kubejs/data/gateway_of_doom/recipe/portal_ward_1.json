@@ -1,0 +1,18 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B": { "item": "cyber_ware_port:component_box" },
+                "F": { "item": "cyber_ware_port:component_fiberoptics" },
+                "M": { "item": "cyber_ware_port:component_microelectric" },
+                "O": { "item": "minecraft:crying_obsidian" }
+            },
+    "pattern":  [
+                    "OMO",
+                    "FBF",
+                    "OMO"
+                ],
+    "result":  {
+                   "id":  "gateway_of_doom:portal_ward_1"
+               }
+}

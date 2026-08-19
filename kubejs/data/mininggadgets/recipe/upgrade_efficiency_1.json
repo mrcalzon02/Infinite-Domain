@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "r":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "u":  {
+                          "item":  "mininggadgets:upgrade_empty"
+                      }
+            },
+    "pattern":  [
+                    "rrr",
+                    "rur",
+                    "rrr"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "mininggadgets:upgrade_efficiency_1"
+               }
+}

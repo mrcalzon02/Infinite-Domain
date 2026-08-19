@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "###",
+                    "#Z#",
+                    "###"
+                ],
+    "key":  {
+                "#":  {
+                          "item":  "allthecompressed:oak_planks_1x"
+                      },
+                "Z":  {
+                          "item":  "graveyard:dark_iron_block"
+                      }
+            },
+    "result":  {
+                   "id":  "graveyard:oak_coffin"
+               }
+}

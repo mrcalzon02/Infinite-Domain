@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SVS",
+    "PCP",
+    "SVS"
+  ],
+  "key": {
+    "S": {
+      "item": "petrochem:steel_block"
+    },
+    "V": {
+      "item": "tfmg:steel_chemical_vat"
+    },
+    "P": {
+      "item": "create:mechanical_pump"
+    },
+    "C": {
+      "item": "create:precision_mechanism"
+    }
+  },
+  "result": {
+    "id": "petrochem:distillation_controller",
+    "count": 1
+  }
+}

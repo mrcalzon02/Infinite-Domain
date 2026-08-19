@@ -1,0 +1,194 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      " 333333333&&%333",
+      " %333333&&%33333",
+      " 33333&&%3333333",
+      " 333&&%333333333",
+      " 3&&%33333333333",
+      " &%3333333333333",
+      " 333333333333333",
+      " %3333333333333&",
+      " 333333333333&&%",
+      " 3%3333%333&%%33",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "    555555555555",
+      "    555555555555",
+      "    555555555555",
+      "    555555555555",
+      "    555555555555",
+      "    555555555555",
+      "    555555555555",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "    +44444/44444",
+      "    +          4",
+      "    +          4",
+      "    + $$$$$$$  -",
+      "    + , 1      4",
+      "    +          4",
+      "    +++'(+++++++",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "    +44444044444",
+      "    +          4",
+      "    +          4",
+      "    +       2  .",
+      "    +          4",
+      "    +          4",
+      "    +++)*+++++++",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "    +44444444444",
+      "    +          4",
+      "    +          4",
+      "    !          4",
+      "    !          4",
+      "    +          4",
+      "    ++++++++++++",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "    +44444444444",
+      "    +          4",
+      "    +          4",
+      "    !          4",
+      "    !          4",
+      "    +          4",
+      "    ++++++++++++",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:iron_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:iron_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:iron_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:iron_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:light_gray_concrete"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:smoker[facing=north,lit=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": "2",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": "3",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "4",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "5",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

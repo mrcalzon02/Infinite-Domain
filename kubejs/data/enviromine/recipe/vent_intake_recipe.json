@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "cdc",
+                    "cec"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:iron_block"
+                      },
+                "b":  {
+                          "item":  "minecraft:iron_bars"
+                      },
+                "c":  {
+                          "item":  "minecraft:blue_dye"
+                      },
+                "d":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "e":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      }
+            },
+    "result":  {
+                   "id":  "enviromine:vent_intake",
+                   "count":  1
+               }
+}

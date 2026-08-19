@@ -1,0 +1,48 @@
+{
+  "structure_id": "infinite_domain:mountain_biohazard_lab_clean_master",
+  "archetype": "pressure-zoned mountain research, quarantine and specimen-containment laboratory",
+  "orientation": {
+    "public_and_security_entry": "north",
+    "two-storey_research_wing": "west",
+    "quarantine_and_containment_wing": "east",
+    "utility_and_emergency_annex": "southwest",
+    "service_loading_exit": "east"
+  },
+  "containment_workflow": [
+    "security/reception and administrative intake",
+    "locker/changing room and first-stage decontamination",
+    "sample receiving, wet laboratory and clinical/infirmary rooms",
+    "sample preparation, cold storage and isolation support",
+    "upper analysis, microscopy, records/data, offices and observation control",
+    "staged containment-wing decontamination and controlled circulation spine",
+    "multiple quarantine rooms with insulating-glass observation",
+    "lead-lined specimen chamber with observation window and airlock",
+    "rear radioactive-waste processing and air-filtration plant"
+  ],
+  "circulation": [
+    "north intake branches through explicit pressure thresholds to west research and east containment",
+    "two independent six-rise stairs serve the complete research level",
+    "a controlled cross-connector joins research and containment without bypassing decontamination",
+    "rear utility annex links to research and has an independent south emergency exit",
+    "east loading exit serves waste and filtration without crossing public intake"
+  ],
+  "damage_constraints": [
+    "confine western collapse to the wet-lab and upper-analysis frontage",
+    "confine eastern breach to the specimen chamber and adjacent roof",
+    "preserve intake, clinical rooms, both stairs, quarantine and rear utilities",
+    "preserve waste processing, service loading and south emergency egress",
+    "derive mixed raider/infected occupation from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the stepped wings read as a controlled laboratory rather than one flat shell",
+      "intake, research, clinical, quarantine, containment and waste functions are recognizable",
+      "both research stairs and both independent exterior exits work at player scale",
+      "quarantine observation and specimen-chamber airlock have usable clearances",
+      "mixed hostile occupation remains dangerous without blocking mandatory pressure-zone routes",
+      "terrain feathering and retaining shoulders seat the laboratory into mountain terrain"
+    ]
+  }
+}

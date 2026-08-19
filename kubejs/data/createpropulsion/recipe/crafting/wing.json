@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "IBI",
+                    "BAB",
+                    "IBI"
+                ],
+    "key":  {
+                "I":  {
+                          "item":  "create:iron_sheet"
+                      },
+                "A":  {
+                          "item":  "create:andesite_alloy_block"
+                      },
+                "B":  {
+                          "item":  "minecraft:iron_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "createpropulsion:wing",
+                   "count":  4
+               }
+}

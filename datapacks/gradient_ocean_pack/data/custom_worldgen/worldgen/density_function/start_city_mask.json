@@ -1,0 +1,73 @@
+{
+  "type": "isekai_api:min",
+  "a": {
+    "type": "isekai_api:min",
+    "a": {
+      "type": "isekai_api:step",
+      "value": {
+        "type": "isekai_api:coordinate",
+        "axis": "x"
+      },
+      "threshold": -192.0,
+      "low": {
+        "type": "isekai_api:constant",
+        "value": 0.0
+      },
+      "high": {
+        "type": "isekai_api:constant",
+        "value": 1.0
+      }
+    },
+    "b": {
+      "type": "isekai_api:step",
+      "value": {
+        "type": "isekai_api:coordinate",
+        "axis": "x"
+      },
+      "threshold": 192.0,
+      "low": {
+        "type": "isekai_api:constant",
+        "value": 1.0
+      },
+      "high": {
+        "type": "isekai_api:constant",
+        "value": 0.0
+      }
+    }
+  },
+  "b": {
+    "type": "isekai_api:min",
+    "a": {
+      "type": "isekai_api:step",
+      "value": {
+        "type": "isekai_api:coordinate",
+        "axis": "z"
+      },
+      "threshold": -192.0,
+      "low": {
+        "type": "isekai_api:constant",
+        "value": 0.0
+      },
+      "high": {
+        "type": "isekai_api:constant",
+        "value": 1.0
+      }
+    },
+    "b": {
+      "type": "isekai_api:step",
+      "value": {
+        "type": "isekai_api:coordinate",
+        "axis": "z"
+      },
+      "threshold": 192.0,
+      "low": {
+        "type": "isekai_api:constant",
+        "value": 1.0
+      },
+      "high": {
+        "type": "isekai_api:constant",
+        "value": 0.0
+      }
+    }
+  }
+}
