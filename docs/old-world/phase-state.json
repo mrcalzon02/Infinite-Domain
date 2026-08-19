@@ -20,8 +20,19 @@
     },
     "1_narrative_infrastructure": {
       "status": "active",
-      "completed": ["64 proof item IDs frozen", "64 proof item registrations authored", "institution-specific item archetypes assigned"],
-      "remaining": ["author proof-item PNG textures", "bind deterministic proof loot to narrative variants", "implement institutional structure modules and damage grammar", "add lore text registry and validator", "complete one end-to-end generated test site with proof, locator and quest"]
+      "completed": [
+        "64 proof item IDs frozen",
+        "64 proof item registrations authored",
+        "institution-specific item archetypes assigned",
+        "VCF proof-item texture batch OWS-001 through OWS-008 authored at native 128x128 inventory resolution"
+      ],
+      "remaining": [
+        "author proof-item PNG textures for OWS-009 through OWS-064",
+        "bind deterministic proof loot to narrative variants",
+        "implement institutional structure modules and damage grammar",
+        "add lore text registry and validator",
+        "complete one end-to-end generated test site with proof, locator and quest"
+      ]
     },
     "2_common_structures":{"status":"pending"},
     "3_uncommon_structures":{"status":"pending"},
@@ -36,7 +47,7 @@
     "lineage_sources_selected":64,
     "proof_item_ids_defined":64,
     "proof_item_registrations_authored":64,
-    "proof_item_pngs_authored":0,
+    "proof_item_pngs_authored":8,
     "narrative_structure_variants_built":0
   }
 }
