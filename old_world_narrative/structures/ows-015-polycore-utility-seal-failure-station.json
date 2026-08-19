@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-015",
+  "structure_id": "infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station",
+  "source_structure": "infinite_domain:wasteland_water_tower_clean_master",
+  "collapse_phase": "Early anomaly",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "PolyCore magenta pump-house band and seal-service pylon identify the utility compound",
+    "interior_zoning_circulation": "intake, paired pumps, seal bench, replacement stock and records wall form a service loop",
+    "functional_machinery_props": "paired pumps, pipe manifold, tagged gasket stock and maintenance isolation zone",
+    "institutional_identity": "PolyCore color coding and decreasing inspection intervals cover the ordinary utility station",
+    "historical_damage_signature": "yellow isolation marks and stacked replacement crates show recurring seal failures without collapse",
+    "narrative_evidence_loot": "guaranteed failure report and LOR-008 interval board make the material crisis measurable"
+  },
+  "proof_item": "kubejs:polycore_seal_failure_report",
+  "lore_record": "kubejs:polycore_service_interval_board",
+  "loot_table": "infinite_domain:chests/old_world/ows_015_polycore_utility_seal_failure_station",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station 2",
+  "statistics": {
+    "size": [
+      45,
+      36,
+      45
+    ],
+    "placed_blocks": 9420,
+    "palette_states": 27,
+    "modded_blocks": 1841,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "landmark_or_outdoor_site",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 1,
+    "orphan_door_halves": 0,
+    "window_blocks": 4,
+    "functional_fixtures": 14,
+    "vertical_access_span": 5,
+    "dense_floor_levels": 8,
+    "footprint_variants": 24
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

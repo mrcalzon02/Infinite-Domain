@@ -16,11 +16,19 @@
       "quest_hook": "FOOD FOR A BILLION (support)",
       "unique_proof_item_seed": "vcf_culture_service_manifest",
       "revision_intensity": "High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:grocery_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_001_vcf_neighborhood_culture_service_depot",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_001_vcf_neighborhood_culture_service_depot.nbt"
     },
     {
       "id": "OWS-002",
@@ -185,11 +193,19 @@
       "quest_hook": "THEY WERE HERE FIRST (support)",
       "unique_proof_item_seed": "atlas_transfer_maintenance_card",
       "revision_intensity": "High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:corporate_warehouse_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_010_atlas_conveyor_transfer_hall.nbt"
     },
     {
       "id": "OWS-011",
@@ -275,11 +291,19 @@
       "quest_hook": "UNEXPECTED MAINTENANCE",
       "unique_proof_item_seed": "polycore_seal_failure_report",
       "revision_intensity": "High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:wasteland_water_tower_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_015_polycore_utility_seal_failure_station.nbt"
     },
     {
       "id": "OWS-016",

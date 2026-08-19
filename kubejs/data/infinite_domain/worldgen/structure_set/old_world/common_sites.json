@@ -1,14 +1,26 @@
 {
   "structures": [
     {
+      "structure": "infinite_domain:old_world/ows_001_vcf_neighborhood_culture_service_depot",
+      "weight": 1
+    },
+    {
       "structure": "infinite_domain:old_world/ows_009_atlas_roadside_repair_depot",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station",
       "weight": 1
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "spacing": 64,
-    "separation": 32,
+    "spacing": 48,
+    "separation": 24,
     "salt": 90310009
   }
 }

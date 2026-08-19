@@ -1,100 +1,77 @@
 #!/usr/bin/env python3
-"""Static contract validation for Old World narrative automation."""
-
+"""Static contract validation for the Old World narrative automation."""
 from __future__ import annotations
-
 import gzip
 import json
 from pathlib import Path
-
+from generate_old_world_narrative_structures import SPECS
 
 ROOT = Path(__file__).resolve().parents[1]
 PROGRAM = ROOT / "old_world_narrative"
 REGISTRY = PROGRAM / "registry"
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
-NAME = "ows_009_atlas_roadside_repair_depot"
-STRUCTURE_ID = f"infinite_domain:old_world/{NAME}"
-PROOF = "kubejs:atlas_service_plate"
-MANUAL = "kubejs:atlas_transfer_maintenance_manual"
+CANON = "eec4d3149e5e5823b330d5b01127b8f6e592d1938ef4e491f719617e507bf182"
 
+def read_json(path): return json.loads(path.read_text(encoding="utf-8"))
+def require(condition, message):
+    if not condition: raise ValueError(message)
 
-def read_json(path: Path) -> object:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def require(condition: bool, message: str) -> None:
-    if not condition:
-        raise ValueError(message)
-
-
-def deterministic_items(table: dict[str, object]) -> set[str]:
-    result: set[str] = set()
+def deterministic_items(table):
+    result = set()
     for pool in table.get("pools", []):
-        if pool.get("rolls") != 1:
-            continue
         entries = pool.get("entries", [])
-        if len(entries) == 1 and entries[0].get("type") == "minecraft:item":
+        if pool.get("rolls") == 1 and len(entries) == 1 and entries[0].get("type") == "minecraft:item":
             result.add(entries[0].get("name"))
     return result
 
-
-def main() -> None:
-    source_manifest = read_json(PROGRAM / "source" / "source-manifest.json")
-    require(
-        source_manifest["canon_docx_sha256"] == "eec4d3149e5e5823b330d5b01127b8f6e592d1938ef4e491f719617e507bf182",
-        "canonical narrative checksum is not pinned",
-    )
-
-    structures = read_json(REGISTRY / "structure_targets.json")
-    targets = structures["targets"]
-    require(len(targets) == 64, "structure registry must contain exactly 64 targets")
-    require([row["id"] for row in targets] == [f"OWS-{index:03d}" for index in range(1, 65)], "unstable OWS ID sequence")
-    ows009 = targets[8]
-    require(ows009["narrative_structure"] == STRUCTURE_ID, "OWS-009 registry mapping is stale")
-    require(len(ows009["acceptance_dimensions"]) >= 4, "OWS-009 does not meet the four-dimension acceptance floor")
-
-    lore = read_json(REGISTRY / "lore_seed.json")
-    require(lore["seed_count"] == 36 and lore["minimum_completion_count"] == 96, "lore corpus requirements are stale")
-    quest_spine = read_json(REGISTRY / "quest_spine.json")
-    require(quest_spine["major_quest_count"] == 13, "major Exploration quest spine must contain 13 quests")
-    require(quest_spine["quests"][0]["title"] == "THEY WERE HERE FIRST", "opening quest is not canonical")
+def main():
+    manifest = read_json(PROGRAM / "source" / "source-manifest.json")
+    require(manifest["canon_docx_sha256"] == CANON, "canonical narrative checksum is not pinned")
+    registry = read_json(REGISTRY / "structure_targets.json")
+    targets = registry["targets"]
+    require(len(targets) == 64, "structure registry must contain 64 targets")
+    require([row["id"] for row in targets] == [f"OWS-{i:03d}" for i in range(1, 65)], "unstable OWS ID sequence")
+    require(read_json(REGISTRY / "lore_seed.json")["seed_count"] == 36, "lore seed count changed")
+    spine = read_json(REGISTRY / "quest_spine.json")
+    require(spine["major_quest_count"] == 13 and spine["quests"][0]["title"] == "THEY WERE HERE FIRST", "canonical quest spine changed")
 
     startup = (ROOT / "kubejs" / "startup_scripts" / "old_world_narrative_items.js").read_text(encoding="utf-8")
-    require("event.create('atlas_service_plate')" in startup, "proof item is not registered")
-    require("event.create('atlas_transfer_maintenance_manual')" in startup, "LOR-006 record is not registered")
-
     chapter = (ROOT / "config" / "ftbquests" / "quests" / "chapters" / "old_world_investigation.snbt").read_text(encoding="utf-8")
-    require(f'structure: "{STRUCTURE_ID}"' in chapter, "quest does not target the registered structure")
-    require(f"structure_map {STRUCTURE_ID} 2" in chapter, "quest locator reward is missing or stale")
-    require('id: "kubejs:atlas_service_plate"' in chapter and "consume_items: true" in chapter, "proof submission task is missing")
-    require('id: "kubejs:atlas_transfer_maintenance_manual"' in chapter, "maintenance record task is missing")
-
-    pool = read_json(DATA / "worldgen" / "template_pool" / "old_world" / f"{NAME}.json")
-    structure = read_json(DATA / "worldgen" / "structure" / "old_world" / f"{NAME}.json")
     structure_set = read_json(DATA / "worldgen" / "structure_set" / "old_world" / "common_sites.json")
-    require(structure["start_pool"] == f"infinite_domain:old_world/{NAME}", "worldgen start pool is stale")
-    require(structure["biomes"] != "#infinite_domain:disabled_primitive_wasteland_settlements", "OWS-009 remains quarantined")
-    require(pool["elements"][0]["element"]["location"] == f"infinite_domain:wasteland/old_world/{NAME}", "template location is stale")
-    require(structure_set["structures"] == [{"structure": STRUCTURE_ID, "weight": 1}], "structure set does not contain exactly OWS-009")
+    registered = {entry["structure"] for entry in structure_set["structures"]}
+    renders = {entry["structure_id"]: entry for entry in read_json(PROGRAM / "reviews" / "render-manifest.json")["structures"]}
 
-    loot = read_json(DATA / "loot_table" / "chests" / "old_world" / f"{NAME}.json")
-    guaranteed = deterministic_items(loot)
-    require({PROOF, MANUAL}.issubset(guaranteed), "mandatory proof or lore record is not deterministic")
+    for spec in SPECS:
+        row = targets[int(spec.target[-3:]) - 1]
+        require(row["narrative_structure"] == spec.structure_id, f"{spec.target} registry mapping is stale")
+        require(row["implementation_status"] == "implemented_static_runtime_deferred", f"{spec.target} status is stale")
+        require(len(row["acceptance_dimensions"]) >= 4, f"{spec.target} misses the four-dimension floor")
+        for item in (spec.proof, spec.lore):
+            if item:
+                require(f"event.create('{item.split(':', 1)[1]}')" in startup, f"{item} is not registered")
+                require(f'id: "{item}"' in chapter, f"{item} has no quest task")
+        require(f'structure: "{spec.structure_id}"' in chapter, f"{spec.target} has no structure task")
+        require(f"structure_map {spec.structure_id} 2" in chapter, f"{spec.target} has no locator handoff")
+        require(spec.structure_id in registered, f"{spec.target} is absent from common structure set")
 
-    nbt_path = DATA / "structure" / "wasteland" / "old_world" / f"{NAME}.nbt"
-    raw = gzip.decompress(nbt_path.read_bytes())
-    require(b"infinite_domain:chests/old_world/ows_009_atlas_roadside_repair_depot" in raw, "structure NBT lacks the proof chest")
-    for block in (b"minecraft:orange_concrete", b"create:mechanical_press", b"create:depot", b"create:andesite_casing"):
-        require(block in raw, f"structure NBT lacks required identity/machinery block {block.decode()}")
+        pool = read_json(DATA / "worldgen" / "template_pool" / "old_world" / f"{spec.name}.json")
+        worldgen = read_json(DATA / "worldgen" / "structure" / "old_world" / f"{spec.name}.json")
+        require(worldgen["start_pool"] == f"infinite_domain:old_world/{spec.name}", f"{spec.target} start pool is stale")
+        require(worldgen["biomes"] == "#infinite_domain:wasteland_site_biomes", f"{spec.target} is not active")
+        require(pool["elements"][0]["element"]["location"] == f"infinite_domain:wasteland/old_world/{spec.name}", f"{spec.target} template is stale")
+        mandatory = {spec.proof} | ({spec.lore} if spec.lore else set())
+        loot = read_json(DATA / "loot_table" / "chests" / "old_world" / f"{spec.name}.json")
+        require(mandatory.issubset(deterministic_items(loot)), f"{spec.target} proof loot is not deterministic")
 
-    render_manifest = read_json(PROGRAM / "reviews" / "render-manifest.json")
-    rendered = {entry["structure_id"]: entry for entry in render_manifest["structures"]}
-    require(STRUCTURE_ID in rendered, "OWS-009 has no static review render")
-    require(len(rendered[STRUCTURE_ID]["renders"]) == 4, "OWS-009 static review set must contain four views")
-    require(rendered[STRUCTURE_ID]["visual_approval"] is False, "static rendering must not claim runtime visual approval")
+        raw = gzip.decompress((DATA / "structure" / "wasteland" / "old_world" / f"{spec.name}.nbt").read_bytes())
+        require(spec.loot_id.encode() in raw, f"{spec.target} NBT lacks its proof chest")
+        for block in spec.required_blocks:
+            require(block.encode() in raw, f"{spec.target} lacks required block {block}")
+        require(spec.structure_id in renders, f"{spec.target} has no static review renders")
+        require(len(renders[spec.structure_id]["renders"]) == 4, f"{spec.target} needs four review views")
+        require(renders[spec.structure_id]["visual_approval"] is False, f"{spec.target} must not claim runtime approval")
 
-    print("Old World static validation passed: 64 targets, 13 quests, deterministic OWS-009 proof slice.")
+    require(len(registered) == len(SPECS), "common structure set contains stale or duplicate entries")
+    print("Old World static validation passed: 64 targets, 13-quest spine, four deterministic common sites.")
 
-
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()

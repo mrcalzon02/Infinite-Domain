@@ -2,6 +2,22 @@
   "purpose": "Automated review images; successful rendering is not visual approval.",
   "structures": [
     {
+      "structure_id": "infinite_domain:old_world/ows_001_vcf_neighborhood_culture_service_depot",
+      "source_size": [
+        39,
+        13,
+        33
+      ],
+      "cutaway_y": 9,
+      "renders": {
+        "exterior_a": "old_world_narrative/reviews/old_world/ows_001_vcf_neighborhood_culture_service_depot/exterior_a.png",
+        "exterior_b": "old_world_narrative/reviews/old_world/ows_001_vcf_neighborhood_culture_service_depot/exterior_b.png",
+        "roof_off_cutaway": "old_world_narrative/reviews/old_world/ows_001_vcf_neighborhood_culture_service_depot/roof_off_cutaway.png",
+        "floor_slices": "old_world_narrative/reviews/old_world/ows_001_vcf_neighborhood_culture_service_depot/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
       "structure_id": "infinite_domain:old_world/ows_009_atlas_roadside_repair_depot",
       "source_size": [
         41,
@@ -14,6 +30,38 @@
         "exterior_b": "old_world_narrative/reviews/old_world/ows_009_atlas_roadside_repair_depot/exterior_b.png",
         "roof_off_cutaway": "old_world_narrative/reviews/old_world/ows_009_atlas_roadside_repair_depot/roof_off_cutaway.png",
         "floor_slices": "old_world_narrative/reviews/old_world/ows_009_atlas_roadside_repair_depot/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall",
+      "source_size": [
+        49,
+        16,
+        43
+      ],
+      "cutaway_y": 6,
+      "renders": {
+        "exterior_a": "old_world_narrative/reviews/old_world/ows_010_atlas_conveyor_transfer_hall/exterior_a.png",
+        "exterior_b": "old_world_narrative/reviews/old_world/ows_010_atlas_conveyor_transfer_hall/exterior_b.png",
+        "roof_off_cutaway": "old_world_narrative/reviews/old_world/ows_010_atlas_conveyor_transfer_hall/roof_off_cutaway.png",
+        "floor_slices": "old_world_narrative/reviews/old_world/ows_010_atlas_conveyor_transfer_hall/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station",
+      "source_size": [
+        45,
+        36,
+        45
+      ],
+      "cutaway_y": 10,
+      "renders": {
+        "exterior_a": "old_world_narrative/reviews/old_world/ows_015_polycore_utility_seal_failure_station/exterior_a.png",
+        "exterior_b": "old_world_narrative/reviews/old_world/ows_015_polycore_utility_seal_failure_station/exterior_b.png",
+        "roof_off_cutaway": "old_world_narrative/reviews/old_world/ows_015_polycore_utility_seal_failure_station/roof_off_cutaway.png",
+        "floor_slices": "old_world_narrative/reviews/old_world/ows_015_polycore_utility_seal_failure_station/floor_slices.png"
       },
       "visual_approval": false
     }

@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-010",
+  "structure_id": "infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall",
+  "source_structure": "infinite_domain:corporate_warehouse_clean_master",
+  "collapse_phase": "Pre-crisis to early anomaly",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Atlas orange dock crowns and a high-bay transfer glyph read from the truck court",
+    "interior_zoning_circulation": "receiving, four transfer lanes, cross-aisle and maintenance catwalk access remain distinct",
+    "functional_machinery_props": "depot/press cells, drive casings, sort benches and guarded service trench",
+    "institutional_identity": "numbered orange lanes and Atlas lockout stations standardize the hall",
+    "historical_damage_signature": "a cannibalized fourth lane and staged spare casings record shrinking maintenance capacity",
+    "narrative_evidence_loot": "guaranteed transfer-maintenance card bridges player Create knowledge to Old World industry"
+  },
+  "proof_item": "kubejs:atlas_transfer_maintenance_card",
+  "lore_record": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_010_atlas_conveyor_transfer_hall",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall 2",
+  "statistics": {
+    "size": [
+      49,
+      16,
+      43
+    ],
+    "placed_blocks": 17992,
+    "palette_states": 60,
+    "modded_blocks": 4165,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "programmed_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 16,
+    "orphan_door_halves": 0,
+    "window_blocks": 254,
+    "functional_fixtures": 50,
+    "vertical_access_span": 6,
+    "dense_floor_levels": 13,
+    "footprint_variants": 15
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

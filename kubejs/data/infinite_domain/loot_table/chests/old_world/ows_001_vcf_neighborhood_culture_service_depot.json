@@ -1,0 +1,48 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_001_vcf_neighborhood_culture_service_depot",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:vcf_culture_service_manifest"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:vcf_return_crate_log"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}
