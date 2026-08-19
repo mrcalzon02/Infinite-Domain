@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "institution": "Verdant Continuum Foods",
+  "status": "AUTHORED_PENDING_GENERATOR_EXECUTION_AND_RUNTIME_TEST",
+  "generation_entrypoint": "scripts/generate_old_world_sites.py",
+  "safety": {
+    "default_mode": "staged_no_natural_structure_set",
+    "runtime_test_mode": "--activate-test",
+    "runtime_test_site": "OWS-006",
+    "full_vcf_activation": "--activate-vcf",
+    "note": "Old World generation imports the accepted base structure generator as an API and does not call its base generate() routine, preventing narrative generation from resetting owner acceptance records."
+  },
+  "sites": [
+    {"site":"OWS-001","structure":"infinite_domain:old_world/vcf/ows_001_culture_service_depot","source":"infinite_domain:corporate_warehouse","proof":"kubejs:vcf_culture_service_manifest","changed_dimensions":["silhouette","interior_zoning","machinery_props","branding_signage","failure_signature","narrative_evidence"]},
+    {"site":"OWS-002","structure":"infinite_domain:old_world/vcf/ows_002_emergency_grow_annex","source":"infinite_domain:ruined_city_school","proof":"kubejs:emergency_grow_authorization","changed_dimensions":["silhouette","interior_zoning","machinery_props","branding_signage","failure_signature","narrative_evidence"]},
+    {"site":"OWS-003","structure":"infinite_domain:old_world/vcf/ows_003_culture_batch_warehouse","source":"infinite_domain:corporate_warehouse","proof":"kubejs:vcf_culture_batch_record","changed_dimensions":["silhouette","interior_zoning","machinery_props","branding_signage","failure_signature","narrative_evidence"]},
+    {"site":"OWS-004","structure":"infinite_domain:old_world/vcf/ows_004_mycological_vertical_farm_tower","source":"infinite_domain:toppled_skyscraper","proof":"kubejs:evercrop_cultivation_handbook","changed_dimensions":["silhouette","interior_zoning","machinery_props","branding_signage","failure_signature","narrative_evidence"],"quest_anchor":"FOOD FOR A BILLION"},
+    {"site":"OWS-005","structure":"infinite_domain:old_world/vcf/ows_005_packaging_quality_plant","source":"infinite_domain:abandoned_orchard_cannery","proof":"kubejs:vcf_packaging_quality_report","changed_dimensions":["silhouette","interior_zoning","machinery_props","branding_signage","failure_signature","narrative_evidence"]},
+    {"site":"OWS-006","structure":"infinite_domain:old_world/vcf/ows_006_pt9_symbiosis_pilot_lab","source":"infinite_domain:mountain_biohazard_lab","proof":"kubejs:pt9_symbiosis_report","changed_dimensions":["silhouette","interior_zoning","machinery_props","branding_signage","failure_signature","narrative_evidence"],"quest_anchor":"THE PERFECT CROP","darknet_return_candidate":true},
+    {"site":"OWS-007","structure":"infinite_domain:old_world/vcf/ows_007_ep7_agricultural_development_lab","source":"infinite_domain:nuclear_research_annex","proof":"kubejs:ep7_distribution_and_durability_record","changed_dimensions":["silhouette","interior_zoning","machinery_props","branding_signage","failure_signature","narrative_evidence"],"quest_anchor":"THE PERIMETER NEVER EXISTED","darknet_return_candidate":true},
+    {"site":"OWS-008","structure":"infinite_domain:old_world/vcf/ows_008_persistence_incident_lab","source":"infinite_domain:mountain_biohazard_lab","proof":"kubejs:vcf_persistence_incident_file","changed_dimensions":["silhouette","interior_zoning","machinery_props","branding_signage","failure_signature","narrative_evidence"],"darknet_return_candidate":true}
+  ]
+}

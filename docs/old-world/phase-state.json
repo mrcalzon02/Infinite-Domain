@@ -9,29 +9,24 @@
     "note": "Owner acceptance permits narrative lineage and asset development to proceed without representing runtime checks as complete."
   },
   "phases": {
-    "0_handoff_discovery": {
-      "status": "complete",
-      "deliverables": {
-        "frozen_source_catalog": "docs/old-world/owner-structure-acceptance.json",
-        "lineage_manifest": "docs/old-world/structure-lineage.json",
-        "item_registry": "kubejs/config/old_world_evidence.json",
-        "item_startup": "kubejs/startup_scripts/old_world_evidence_items.js"
-      }
-    },
+    "0_handoff_discovery": {"status":"complete"},
     "1_narrative_infrastructure": {
       "status": "active",
       "completed": [
         "64 proof item IDs frozen",
         "64 proof item registrations authored",
         "institution-specific item archetypes assigned",
-        "VCF proof-item texture batch OWS-001 through OWS-008 authored at native 128x128 inventory resolution"
+        "VCF proof-item texture batch OWS-001 through OWS-008 authored at native 128x128 inventory resolution",
+        "VCF OWS-001 through OWS-008 narrative descendant builders authored",
+        "VCF OWS-001 through OWS-008 deterministic proof loot tables authored",
+        "staged/test/full VCF worldgen activation modes authored with PT-9 as the isolated runtime test target"
       ],
       "remaining": [
+        "execute staged VCF generator and validate structural lint",
+        "run PT-9 controlled runtime generation/locator test",
         "author proof-item PNG textures for OWS-009 through OWS-064",
-        "bind deterministic proof loot to narrative variants",
-        "implement institutional structure modules and damage grammar",
-        "add lore text registry and validator",
-        "complete one end-to-end generated test site with proof, locator and quest"
+        "implement lore text registry and validator",
+        "add first Exploration quest handoff to PT-9 after locator validation"
       ]
     },
     "2_common_structures":{"status":"pending"},
@@ -48,6 +43,8 @@
     "proof_item_ids_defined":64,
     "proof_item_registrations_authored":64,
     "proof_item_pngs_authored":8,
+    "deterministic_proof_loot_tables_authored":8,
+    "narrative_structure_variants_authored":8,
     "narrative_structure_variants_built":0
   }
 }
