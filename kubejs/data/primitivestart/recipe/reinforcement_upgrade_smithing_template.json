@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "x",
+                    "y",
+                    "x"
+                ],
+    "key":  {
+                "x":  {
+                          "tag":  "primitivestart:raw_coppers"
+                      },
+                "y":  {
+                          "tag":  "primitivestart:copper_ingots"
+                      }
+            },
+    "result":  {
+                   "id":  "primitivestart:reinforcement_upgrade_smithing_template"
+               }
+}

@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "C":  {
+                          "tag":  "c:plates/copper"
+                      },
+                "N":  {
+                          "item":  "bno:zinc_ingot"
+                      },
+                "T":  {
+                          "item":  "allthecompressed:terracotta_1x"
+                      }
+            },
+    "pattern":  [
+                    "NTN",
+                    "TCT"
+                ],
+    "result":  {
+                   "count":  4,
+                   "id":  "create_new_age:heat_pipe"
+               }
+}

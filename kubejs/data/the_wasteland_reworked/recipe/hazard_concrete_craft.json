@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "ab",
+                    "ba"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "allthecompressed:yellow_concrete_1x"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:black_concrete_1x"
+                      }
+            },
+    "result":  {
+                   "id":  "the_wasteland_reworked:hazard_concrete",
+                   "count":  4
+               }
+}

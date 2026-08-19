@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "a",
+                    "b",
+                    "b"
+                ],
+    "key":  {
+                "a":  {
+                          "tag":  "minecraft:planks"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:glass_1x"
+                      }
+            },
+    "result":  {
+                   "id":  "the_wasteland_reworked:empty_test_tube",
+                   "count":  4
+               }
+}

@@ -1,0 +1,144 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "mastery_era_02"
+	group: "7ADA55C0FFEE0001"
+	id: "7200000000000000"
+	images: [ ]
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5210000000000002"]
+			id: "6210000000000001"
+			shape: "octagon"
+			tasks: [{
+				id: "6250000000000001"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6210000000000001"]
+			id: "1240000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 8388607L
+				id: "1250000000000001"
+				item: { count: 1, id: "tfmg:coal_coke" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6210000000000001"]
+			id: "2240000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 8388607L
+				id: "2250000000000001"
+				item: { count: 1, id: "tfmg:steel_ingot" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6210000000000001"]
+			id: "3240000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 8388607L
+				id: "3250000000000001"
+				item: { count: 1, id: "minecraft:wheat" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6210000000000001"]
+			id: "4240000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 8388607L
+				id: "4250000000000001"
+				item: { count: 1, id: "createreautomated:node_fragment" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"1240000000000001"
+				"2240000000000001"
+				"3240000000000001"
+				"4240000000000001"
+			]
+			id: "6210000000000002"
+			rewards: [
+				{
+					id: "6260000000000001"
+					item: {
+						count: 1
+						id: "kubejs:era2_mastery_emblem"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "6260000000000002"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "6260000000000003"
+					type: "xp"
+					xp: 30000
+				}
+				{
+					id: "6260000000000004"
+					item: {
+						count: 1
+						id: "tfmg:creative_generator"
+					}
+					type: "item"
+				}
+				{
+					id: "6260000000000005"
+					item: {
+						count: 1
+						id: "createbigcannons:creative_autocannon_ammo_container"
+					}
+					type: "item"
+				}
+				{
+					id: "6260000000000006"
+					item: {
+						count: 1
+						id: "aeronautics_utility_objects:creative_hydraulic_rod"
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			size: 1.75d
+			x: 0.0d
+			y: 7.0d
+		}
+	]
+}

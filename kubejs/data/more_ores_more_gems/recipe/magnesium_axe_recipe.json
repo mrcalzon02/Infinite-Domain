@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "pattern":  [
+                    "aa",
+                    "ab",
+                    " b"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:magnesium_ingot"
+                      },
+                "b":  {
+                          "item":  "minecraft:stick"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:magnesium_axe",
+                   "count":  1
+               }
+}

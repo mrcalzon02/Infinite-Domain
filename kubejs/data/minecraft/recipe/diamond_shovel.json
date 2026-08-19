@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "#":  {
+                          "item":  "quark:stick_block"
+                      },
+                "X":  {
+                          "item":  "minecraft:diamond_block"
+                      }
+            },
+    "pattern":  [
+                    "X",
+                    "#",
+                    "#"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "minecraft:diamond_shovel"
+               }
+}

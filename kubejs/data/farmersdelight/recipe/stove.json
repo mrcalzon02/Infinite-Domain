@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  {
+                          "item":  "allthecompressed:bricks_1x"
+                      },
+                "C":  {
+                          "item":  "minecraft:campfire"
+                      },
+                "i":  {
+                          "item":  "minecraft:iron_block"
+                      }
+            },
+    "pattern":  [
+                    "iii",
+                    "B B",
+                    "BCB"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "farmersdelight:stove"
+               }
+}

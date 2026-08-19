@@ -1,0 +1,14 @@
+{
+    "type":  "minecraft:smelting",
+    "group":  "sm_tungsten",
+    "category":  "misc",
+    "experience":  2,
+    "cookingtime":  1000,
+    "ingredient":  {
+                       "item":  "more_ores_more_gems:tungsten_ore"
+                   },
+    "result":  {
+                   "id":  "more_ores_more_gems:tungsten_nugget",
+                   "count":  1
+               }
+}

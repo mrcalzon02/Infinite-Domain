@@ -1,0 +1,1283 @@
+{
+  "scope": "Static/precomputed structure placement cost. This does not substitute for timed runtime pregeneration.",
+  "budgets": {
+    "placed_blocks": 180000,
+    "palette_states": 128,
+    "compressed_nbt_bytes": 2000000,
+    "footprint_chunks": 36
+  },
+  "structures_profiled": 84,
+  "static_budget_passed": true,
+  "failures": [],
+  "largest_by_placed_blocks": [
+    "hydroelectric_refuge_dam",
+    "collapsed_airship_terminal",
+    "ruined_shopping_mall",
+    "ruined_hospital",
+    "pancaked_parking_structure",
+    "cratered_downtown_intersection",
+    "blown_apartment_complex",
+    "toppled_skyscraper",
+    "municipal_incinerator",
+    "sunken_city_front"
+  ],
+  "largest_by_compressed_nbt": [
+    "hydroelectric_refuge_dam",
+    "collapsed_airship_terminal",
+    "ruined_shopping_mall",
+    "ruined_hospital",
+    "cratered_downtown_intersection",
+    "pancaked_parking_structure",
+    "blown_apartment_complex",
+    "sunken_city_front",
+    "toppled_skyscraper",
+    "municipal_incinerator"
+  ],
+  "family_density": {
+    "roadside_debris": {
+      "spacing_chunks": 18,
+      "separation_chunks": 8,
+      "theoretical_starts_per_1024_square_before_biome_filter": 12.642
+    },
+    "residential_ruins": {
+      "spacing_chunks": 32,
+      "separation_chunks": 13,
+      "theoretical_starts_per_1024_square_before_biome_filter": 4.0
+    },
+    "commercial_ruins": {
+      "spacing_chunks": 42,
+      "separation_chunks": 18,
+      "theoretical_starts_per_1024_square_before_biome_filter": 2.322
+    },
+    "major_settlements": {
+      "spacing_chunks": 56,
+      "separation_chunks": 24,
+      "theoretical_starts_per_1024_square_before_biome_filter": 1.306
+    },
+    "military_remnants": {
+      "spacing_chunks": 48,
+      "separation_chunks": 20,
+      "theoretical_starts_per_1024_square_before_biome_filter": 1.778
+    },
+    "buried_sites": {
+      "spacing_chunks": 52,
+      "separation_chunks": 22,
+      "theoretical_starts_per_1024_square_before_biome_filter": 1.515
+    },
+    "survivor_outposts": {
+      "spacing_chunks": 64,
+      "separation_chunks": 28,
+      "theoretical_starts_per_1024_square_before_biome_filter": 1.0
+    },
+    "rural_ruins": {
+      "spacing_chunks": 44,
+      "separation_chunks": 18,
+      "theoretical_starts_per_1024_square_before_biome_filter": 2.116
+    },
+    "industrial_infrastructure": {
+      "spacing_chunks": 58,
+      "separation_chunks": 24,
+      "theoretical_starts_per_1024_square_before_biome_filter": 1.218
+    },
+    "mountain_military": {
+      "spacing_chunks": 54,
+      "separation_chunks": 22,
+      "theoretical_starts_per_1024_square_before_biome_filter": 1.405
+    },
+    "forest_industry": {
+      "spacing_chunks": 46,
+      "separation_chunks": 19,
+      "theoretical_starts_per_1024_square_before_biome_filter": 1.936
+    },
+    "lost_data_centers": {
+      "spacing_chunks": 144,
+      "separation_chunks": 56,
+      "theoretical_starts_per_1024_square_before_biome_filter": 0.198
+    },
+    "hydroelectric_landmarks": {
+      "spacing_chunks": 192,
+      "separation_chunks": 72,
+      "theoretical_starts_per_1024_square_before_biome_filter": 0.111
+    },
+    "ruined_city_blocks": {
+      "spacing_chunks": 28,
+      "separation_chunks": 11,
+      "theoretical_starts_per_1024_square_before_biome_filter": 5.224
+    },
+    "ruined_city_streets": {
+      "spacing_chunks": 34,
+      "separation_chunks": 14,
+      "theoretical_starts_per_1024_square_before_biome_filter": 3.543
+    },
+    "ruined_city_landmarks": {
+      "spacing_chunks": 52,
+      "separation_chunks": 21,
+      "theoretical_starts_per_1024_square_before_biome_filter": 1.515
+    },
+    "expanded_city_civic": {
+      "spacing_chunks": 22,
+      "separation_chunks": 8,
+      "theoretical_starts_per_1024_square_before_biome_filter": 8.463
+    },
+    "expanded_city_transit": {
+      "spacing_chunks": 24,
+      "separation_chunks": 9,
+      "theoretical_starts_per_1024_square_before_biome_filter": 7.111
+    },
+    "expanded_city_subway": {
+      "spacing_chunks": 38,
+      "separation_chunks": 15,
+      "theoretical_starts_per_1024_square_before_biome_filter": 2.837
+    },
+    "expanded_city_commercial": {
+      "spacing_chunks": 22,
+      "separation_chunks": 8,
+      "theoretical_starts_per_1024_square_before_biome_filter": 8.463
+    },
+    "expanded_city_residential": {
+      "spacing_chunks": 22,
+      "separation_chunks": 8,
+      "theoretical_starts_per_1024_square_before_biome_filter": 8.463
+    },
+    "expanded_city_utilities": {
+      "spacing_chunks": 27,
+      "separation_chunks": 11,
+      "theoretical_starts_per_1024_square_before_biome_filter": 5.619
+    },
+    "expanded_city_themed": {
+      "spacing_chunks": 42,
+      "separation_chunks": 17,
+      "theoretical_starts_per_1024_square_before_biome_filter": 2.322
+    },
+    "expanded_wilderness_roadside": {
+      "spacing_chunks": 16,
+      "separation_chunks": 6,
+      "theoretical_starts_per_1024_square_before_biome_filter": 16.0
+    },
+    "expanded_wilderness_rural": {
+      "spacing_chunks": 32,
+      "separation_chunks": 12,
+      "theoretical_starts_per_1024_square_before_biome_filter": 4.0
+    },
+    "expanded_wilderness_extraction": {
+      "spacing_chunks": 36,
+      "separation_chunks": 14,
+      "theoretical_starts_per_1024_square_before_biome_filter": 3.16
+    },
+    "expanded_wilderness_energy": {
+      "spacing_chunks": 38,
+      "separation_chunks": 15,
+      "theoretical_starts_per_1024_square_before_biome_filter": 2.837
+    },
+    "expanded_wilderness_survival": {
+      "spacing_chunks": 34,
+      "separation_chunks": 13,
+      "theoretical_starts_per_1024_square_before_biome_filter": 3.543
+    },
+    "warm_industrial_ports": {
+      "spacing_chunks": 176,
+      "separation_chunks": 68,
+      "theoretical_starts_per_1024_square_before_biome_filter": 0.132
+    },
+    "cold_industrial_ports": {
+      "spacing_chunks": 176,
+      "separation_chunks": 68,
+      "theoretical_starts_per_1024_square_before_biome_filter": 0.132
+    }
+  },
+  "runtime_benchmark_status": "pending_in_game_representative_region_pregeneration",
+  "structures": {
+    "radio_mast": {
+      "size": [
+        15,
+        28,
+        15
+      ],
+      "placed_blocks": 573,
+      "palette_states": 21,
+      "compressed_nbt_bytes": 2386,
+      "footprint_chunks": 1,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "wrecked_sedan": {
+      "size": [
+        17,
+        8,
+        11
+      ],
+      "placed_blocks": 449,
+      "palette_states": 15,
+      "compressed_nbt_bytes": 1702,
+      "footprint_chunks": 2,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "delivery_van": {
+      "size": [
+        21,
+        10,
+        12
+      ],
+      "placed_blocks": 862,
+      "palette_states": 18,
+      "compressed_nbt_bytes": 3015,
+      "footprint_chunks": 2,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "battle_tank": {
+      "size": [
+        25,
+        12,
+        17
+      ],
+      "placed_blocks": 1521,
+      "palette_states": 17,
+      "compressed_nbt_bytes": 5024,
+      "footprint_chunks": 4,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "abandoned_bungalow": {
+      "size": [
+        19,
+        15,
+        18
+      ],
+      "placed_blocks": 1862,
+      "palette_states": 46,
+      "compressed_nbt_bytes": 6351,
+      "footprint_chunks": 4,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "split_level_house": {
+      "size": [
+        31,
+        19,
+        27
+      ],
+      "placed_blocks": 7078,
+      "palette_states": 42,
+      "compressed_nbt_bytes": 19352,
+      "footprint_chunks": 4,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "dilapidated_grocery": {
+      "size": [
+        39,
+        13,
+        33
+      ],
+      "placed_blocks": 9899,
+      "palette_states": 63,
+      "compressed_nbt_bytes": 27130,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "service_garage": {
+      "size": [
+        41,
+        15,
+        33
+      ],
+      "placed_blocks": 10837,
+      "palette_states": 32,
+      "compressed_nbt_bytes": 28453,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "scrapyard": {
+      "size": [
+        49,
+        15,
+        43
+      ],
+      "placed_blocks": 5825,
+      "palette_states": 34,
+      "compressed_nbt_bytes": 17412,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "military_checkpoint": {
+      "size": [
+        45,
+        15,
+        31
+      ],
+      "placed_blocks": 6499,
+      "palette_states": 35,
+      "compressed_nbt_bytes": 18437,
+      "footprint_chunks": 6,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "trailer_park": {
+      "size": [
+        69,
+        15,
+        77
+      ],
+      "placed_blocks": 29702,
+      "palette_states": 92,
+      "compressed_nbt_bytes": 84652,
+      "footprint_chunks": 25,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "abandoned_culdesac": {
+      "size": [
+        67,
+        18,
+        67
+      ],
+      "placed_blocks": 21495,
+      "palette_states": 40,
+      "compressed_nbt_bytes": 59002,
+      "footprint_chunks": 25,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "survivor_cache": {
+      "size": [
+        27,
+        17,
+        27
+      ],
+      "placed_blocks": 5207,
+      "palette_states": 47,
+      "compressed_nbt_bytes": 14948,
+      "footprint_chunks": 4,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "bunker_network": {
+      "size": [
+        47,
+        26,
+        47
+      ],
+      "placed_blocks": 17487,
+      "palette_states": 70,
+      "compressed_nbt_bytes": 49053,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "trade_outpost": {
+      "size": [
+        49,
+        18,
+        49
+      ],
+      "placed_blocks": 14075,
+      "palette_states": 62,
+      "compressed_nbt_bytes": 39529,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "decayed_farm": {
+      "size": [
+        49,
+        22,
+        45
+      ],
+      "placed_blocks": 16839,
+      "palette_states": 96,
+      "compressed_nbt_bytes": 48434,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "industrial_facility": {
+      "size": [
+        69,
+        29,
+        57
+      ],
+      "placed_blocks": 52031,
+      "palette_states": 31,
+      "compressed_nbt_bytes": 139949,
+      "footprint_chunks": 20,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "mountain_military_complex": {
+      "size": [
+        61,
+        24,
+        61
+      ],
+      "placed_blocks": 38382,
+      "palette_states": 72,
+      "compressed_nbt_bytes": 106509,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "mountain_biohazard_lab": {
+      "size": [
+        55,
+        22,
+        49
+      ],
+      "placed_blocks": 32182,
+      "palette_states": 64,
+      "compressed_nbt_bytes": 87852,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "decayed_logging_camp": {
+      "size": [
+        61,
+        23,
+        55
+      ],
+      "placed_blocks": 33522,
+      "palette_states": 68,
+      "compressed_nbt_bytes": 93146,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "corporate_warehouse": {
+      "size": [
+        49,
+        16,
+        43
+      ],
+      "placed_blocks": 19327,
+      "palette_states": 57,
+      "compressed_nbt_bytes": 53658,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "bombed_data_center": {
+      "size": [
+        61,
+        24,
+        55
+      ],
+      "placed_blocks": 37933,
+      "palette_states": 55,
+      "compressed_nbt_bytes": 104886,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "hydroelectric_refuge_dam": {
+      "size": [
+        65,
+        40,
+        65
+      ],
+      "placed_blocks": 161611,
+      "palette_states": 68,
+      "compressed_nbt_bytes": 443692,
+      "footprint_chunks": 25,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "toppled_skyscraper": {
+      "size": [
+        61,
+        45,
+        53
+      ],
+      "placed_blocks": 68558,
+      "palette_states": 50,
+      "compressed_nbt_bytes": 179034,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "blown_apartment_complex": {
+      "size": [
+        61,
+        31,
+        53
+      ],
+      "placed_blocks": 72216,
+      "palette_states": 62,
+      "compressed_nbt_bytes": 189961,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_mixed_use_block": {
+      "size": [
+        59,
+        36,
+        47
+      ],
+      "placed_blocks": 61856,
+      "palette_states": 70,
+      "compressed_nbt_bytes": 165418,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "sunken_city_front": {
+      "size": [
+        61,
+        37,
+        55
+      ],
+      "placed_blocks": 65606,
+      "palette_states": 63,
+      "compressed_nbt_bytes": 183167,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "pancaked_parking_structure": {
+      "size": [
+        57,
+        35,
+        51
+      ],
+      "placed_blocks": 76402,
+      "palette_states": 58,
+      "compressed_nbt_bytes": 200645,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "cratered_downtown_intersection": {
+      "size": [
+        65,
+        37,
+        65
+      ],
+      "placed_blocks": 75828,
+      "palette_states": 76,
+      "compressed_nbt_bytes": 211480,
+      "footprint_chunks": 25,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_hospital": {
+      "size": [
+        67,
+        36,
+        59
+      ],
+      "placed_blocks": 78038,
+      "palette_states": 63,
+      "compressed_nbt_bytes": 214787,
+      "footprint_chunks": 20,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_fire_station": {
+      "size": [
+        43,
+        21,
+        41
+      ],
+      "placed_blocks": 18575,
+      "palette_states": 73,
+      "compressed_nbt_bytes": 51024,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_police_precinct": {
+      "size": [
+        57,
+        25,
+        49
+      ],
+      "placed_blocks": 32267,
+      "palette_states": 59,
+      "compressed_nbt_bytes": 88231,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_courthouse": {
+      "size": [
+        59,
+        29,
+        51
+      ],
+      "placed_blocks": 44657,
+      "palette_states": 59,
+      "compressed_nbt_bytes": 116905,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "emergency_relief_shelter": {
+      "size": [
+        49,
+        18,
+        43
+      ],
+      "placed_blocks": 20694,
+      "palette_states": 46,
+      "compressed_nbt_bytes": 56238,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "collapsed_subway_station": {
+      "size": [
+        63,
+        24,
+        45
+      ],
+      "placed_blocks": 55402,
+      "palette_states": 24,
+      "compressed_nbt_bytes": 149346,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_bus_terminal": {
+      "size": [
+        61,
+        24,
+        51
+      ],
+      "placed_blocks": 36457,
+      "palette_states": 39,
+      "compressed_nbt_bytes": 96944,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "freight_depot": {
+      "size": [
+        47,
+        27,
+        37
+      ],
+      "placed_blocks": 17989,
+      "palette_states": 55,
+      "compressed_nbt_bytes": 48793,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "elevated_rail_collapse": {
+      "size": [
+        67,
+        30,
+        39
+      ],
+      "placed_blocks": 29903,
+      "palette_states": 19,
+      "compressed_nbt_bytes": 79434,
+      "footprint_chunks": 15,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "sunken_highway_interchange": {
+      "size": [
+        73,
+        25,
+        73
+      ],
+      "placed_blocks": 48266,
+      "palette_states": 15,
+      "compressed_nbt_bytes": 130117,
+      "footprint_chunks": 25,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_shopping_mall": {
+      "size": [
+        73,
+        28,
+        63
+      ],
+      "placed_blocks": 82891,
+      "palette_states": 44,
+      "compressed_nbt_bytes": 226015,
+      "footprint_chunks": 20,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_department_store": {
+      "size": [
+        59,
+        31,
+        51
+      ],
+      "placed_blocks": 63371,
+      "palette_states": 41,
+      "compressed_nbt_bytes": 164683,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "bombed_hotel": {
+      "size": [
+        53,
+        39,
+        47
+      ],
+      "placed_blocks": 56482,
+      "palette_states": 53,
+      "compressed_nbt_bytes": 146639,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "buried_bank_vault": {
+      "size": [
+        49,
+        31,
+        45
+      ],
+      "placed_blocks": 37211,
+      "palette_states": 36,
+      "compressed_nbt_bytes": 97881,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_office_tower": {
+      "size": [
+        51,
+        47,
+        47
+      ],
+      "placed_blocks": 61889,
+      "palette_states": 36,
+      "compressed_nbt_bytes": 159672,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "tenement_courtyard": {
+      "size": [
+        57,
+        31,
+        53
+      ],
+      "placed_blocks": 46719,
+      "palette_states": 38,
+      "compressed_nbt_bytes": 124676,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_rowhouse_block": {
+      "size": [
+        61,
+        27,
+        41
+      ],
+      "placed_blocks": 44778,
+      "palette_states": 34,
+      "compressed_nbt_bytes": 117642,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "shattered_luxury_condo": {
+      "size": [
+        51,
+        37,
+        49
+      ],
+      "placed_blocks": 46996,
+      "palette_states": 46,
+      "compressed_nbt_bytes": 122428,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_city_school": {
+      "size": [
+        65,
+        27,
+        55
+      ],
+      "placed_blocks": 53873,
+      "palette_states": 47,
+      "compressed_nbt_bytes": 142728,
+      "footprint_chunks": 20,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_community_center": {
+      "size": [
+        51,
+        21,
+        47
+      ],
+      "placed_blocks": 30757,
+      "palette_states": 57,
+      "compressed_nbt_bytes": 80363,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "city_electrical_substation": {
+      "size": [
+        61,
+        22,
+        51
+      ],
+      "placed_blocks": 18798,
+      "palette_states": 22,
+      "compressed_nbt_bytes": 49728,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "city_water_treatment_plant": {
+      "size": [
+        75,
+        24,
+        65
+      ],
+      "placed_blocks": 28389,
+      "palette_states": 26,
+      "compressed_nbt_bytes": 75543,
+      "footprint_chunks": 25,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "district_heating_station": {
+      "size": [
+        65,
+        31,
+        55
+      ],
+      "placed_blocks": 47689,
+      "palette_states": 29,
+      "compressed_nbt_bytes": 125138,
+      "footprint_chunks": 20,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "municipal_incinerator": {
+      "size": [
+        71,
+        33,
+        59
+      ],
+      "placed_blocks": 66428,
+      "palette_states": 30,
+      "compressed_nbt_bytes": 178649,
+      "footprint_chunks": 20,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_fuel_depot": {
+      "size": [
+        79,
+        25,
+        65
+      ],
+      "placed_blocks": 34321,
+      "palette_states": 21,
+      "compressed_nbt_bytes": 92067,
+      "footprint_chunks": 25,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_cyberware_clinic": {
+      "size": [
+        59,
+        26,
+        51
+      ],
+      "placed_blocks": 35082,
+      "palette_states": 36,
+      "compressed_nbt_bytes": 92031,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ae2_records_archive": {
+      "size": [
+        63,
+        30,
+        55
+      ],
+      "placed_blocks": 48251,
+      "palette_states": 29,
+      "compressed_nbt_bytes": 126890,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "abandoned_create_factory": {
+      "size": [
+        47,
+        27,
+        37
+      ],
+      "placed_blocks": 22940,
+      "palette_states": 66,
+      "compressed_nbt_bytes": 62601,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "collapsed_airship_terminal": {
+      "size": [
+        67,
+        35,
+        57
+      ],
+      "placed_blocks": 83640,
+      "palette_states": 33,
+      "compressed_nbt_bytes": 230322,
+      "footprint_chunks": 20,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "nuclear_research_annex": {
+      "size": [
+        73,
+        33,
+        63
+      ],
+      "placed_blocks": 50690,
+      "palette_states": 35,
+      "compressed_nbt_bytes": 135305,
+      "footprint_chunks": 20,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_roadside_diner": {
+      "size": [
+        39,
+        14,
+        33
+      ],
+      "placed_blocks": 10092,
+      "palette_states": 48,
+      "compressed_nbt_bytes": 27366,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "abandoned_motel": {
+      "size": [
+        35,
+        17,
+        37
+      ],
+      "placed_blocks": 12226,
+      "palette_states": 59,
+      "compressed_nbt_bytes": 34166,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_gas_station": {
+      "size": [
+        39,
+        28,
+        45
+      ],
+      "placed_blocks": 11751,
+      "palette_states": 59,
+      "compressed_nbt_bytes": 33219,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "abandoned_truck_stop": {
+      "size": [
+        51,
+        17,
+        47
+      ],
+      "placed_blocks": 13987,
+      "palette_states": 46,
+      "compressed_nbt_bytes": 38435,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "wasteland_weigh_station": {
+      "size": [
+        45,
+        14,
+        37
+      ],
+      "placed_blocks": 6822,
+      "palette_states": 30,
+      "compressed_nbt_bytes": 19192,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "decayed_ranch": {
+      "size": [
+        49,
+        19,
+        45
+      ],
+      "placed_blocks": 16916,
+      "palette_states": 36,
+      "compressed_nbt_bytes": 46321,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "abandoned_orchard_cannery": {
+      "size": [
+        59,
+        24,
+        51
+      ],
+      "placed_blocks": 27082,
+      "palette_states": 36,
+      "compressed_nbt_bytes": 71901,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_grain_elevator": {
+      "size": [
+        55,
+        35,
+        49
+      ],
+      "placed_blocks": 30339,
+      "palette_states": 25,
+      "compressed_nbt_bytes": 82035,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "shattered_greenhouse_nursery": {
+      "size": [
+        61,
+        21,
+        49
+      ],
+      "placed_blocks": 20975,
+      "palette_states": 32,
+      "compressed_nbt_bytes": 55923,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "roadside_church_cemetery": {
+      "size": [
+        51,
+        29,
+        49
+      ],
+      "placed_blocks": 25195,
+      "palette_states": 33,
+      "compressed_nbt_bytes": 68230,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "abandoned_quarry": {
+      "size": [
+        69,
+        30,
+        61
+      ],
+      "placed_blocks": 37835,
+      "palette_states": 29,
+      "compressed_nbt_bytes": 103092,
+      "footprint_chunks": 20,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "collapsed_mine_entrance": {
+      "size": [
+        55,
+        27,
+        49
+      ],
+      "placed_blocks": 14969,
+      "palette_states": 25,
+      "compressed_nbt_bytes": 39874,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "excavator_pit": {
+      "size": [
+        73,
+        31,
+        63
+      ],
+      "placed_blocks": 53105,
+      "palette_states": 19,
+      "compressed_nbt_bytes": 140732,
+      "footprint_chunks": 20,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "abandoned_oil_field": {
+      "size": [
+        75,
+        25,
+        61
+      ],
+      "placed_blocks": 21888,
+      "palette_states": 24,
+      "compressed_nbt_bytes": 57911,
+      "footprint_chunks": 20,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "remote_sawmill": {
+      "size": [
+        63,
+        32,
+        53
+      ],
+      "placed_blocks": 37138,
+      "palette_states": 31,
+      "compressed_nbt_bytes": 98184,
+      "footprint_chunks": 16,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "shattered_wind_farm": {
+      "size": [
+        83,
+        39,
+        71
+      ],
+      "placed_blocks": 40027,
+      "palette_states": 17,
+      "compressed_nbt_bytes": 104983,
+      "footprint_chunks": 30,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "broken_solar_field": {
+      "size": [
+        83,
+        17,
+        69
+      ],
+      "placed_blocks": 34625,
+      "palette_states": 18,
+      "compressed_nbt_bytes": 91306,
+      "footprint_chunks": 30,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "wilderness_substation": {
+      "size": [
+        47,
+        19,
+        43
+      ],
+      "placed_blocks": 11282,
+      "palette_states": 17,
+      "compressed_nbt_bytes": 30343,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "wasteland_water_tower": {
+      "size": [
+        45,
+        36,
+        45
+      ],
+      "placed_blocks": 13641,
+      "palette_states": 22,
+      "compressed_nbt_bytes": 36556,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "ruined_ranger_station": {
+      "size": [
+        43,
+        19,
+        41
+      ],
+      "placed_blocks": 16138,
+      "palette_states": 48,
+      "compressed_nbt_bytes": 43797,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "wasteland_fire_lookout": {
+      "size": [
+        35,
+        35,
+        35
+      ],
+      "placed_blocks": 10696,
+      "palette_states": 34,
+      "compressed_nbt_bytes": 28966,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "destroyed_refugee_convoy": {
+      "size": [
+        43,
+        13,
+        57
+      ],
+      "placed_blocks": 9355,
+      "palette_states": 22,
+      "compressed_nbt_bytes": 26463,
+      "footprint_chunks": 12,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "crashed_cargo_airship": {
+      "size": [
+        71,
+        29,
+        39
+      ],
+      "placed_blocks": 37959,
+      "palette_states": 19,
+      "compressed_nbt_bytes": 101567,
+      "footprint_chunks": 15,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "warm_industrial_mountain_port": {
+      "size": [
+        47,
+        31,
+        47
+      ],
+      "placed_blocks": 42023,
+      "palette_states": 31,
+      "compressed_nbt_bytes": 111323,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    },
+    "cold_industrial_mountain_port": {
+      "size": [
+        47,
+        31,
+        47
+      ],
+      "placed_blocks": 40980,
+      "palette_states": 31,
+      "compressed_nbt_bytes": 108506,
+      "footprint_chunks": 9,
+      "issues": [],
+      "static_budget_passed": true
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "sophisticatedcore:item_enabled",
+                                    "itemRegistryName":  "sophisticatedstorage:copper_to_iron_tier_upgrade"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_torch"
+                      }
+            },
+    "pattern":  [
+                    " I ",
+                    "IRI",
+                    " I "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "sophisticatedstorage:copper_to_iron_tier_upgrade"
+               }
+}

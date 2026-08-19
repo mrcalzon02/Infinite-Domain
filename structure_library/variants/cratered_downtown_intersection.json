@@ -1,0 +1,27 @@
+{
+  "variant_id": "infinite_domain:cratered_downtown_intersection",
+  "clean_master": "infinite_domain:cratered_downtown_intersection_clean_master",
+  "damage_story": "A central surface burst punched through the signalized crossing and utility switch chamber, drawing the inner structural corner of every surrounding building toward the crater while their outer stair spines remained standing.",
+  "damage_zone": "central road crossing, buried utility chamber and four inward-facing building corners",
+  "environment_layer": [
+    "nine-block-radius full-depth central void",
+    "fifteen-block-radius feathered crater annulus",
+    "exposed broken utility walls at all four cardinal edges",
+    "four distinct inward facade and floor shears",
+    "six gravity-led soil/gravel fans with scrap remnants"
+  ],
+  "occupation_layer": [
+    "zombie and ghoul spawners distributed across all four surviving corner buildings",
+    "office loot retained in the bank cellar",
+    "industrial loot retained in the electronics cellar",
+    "surviving outer rooms remain dangerous but navigable"
+  ],
+  "invariants": [
+    "central crater penetrates road and utility chamber",
+    "all four complete stair spines survive",
+    "at least one outer suite remains reachable on every floor",
+    "building identity remains legible after inner-corner collapse",
+    "damage remains centered on the declared crossing blast"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

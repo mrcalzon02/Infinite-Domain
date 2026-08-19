@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "III",
+                    "CPC",
+                    "III"
+                ],
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "C":  {
+                          "item":  "quark:charcoal_block"
+                      },
+                "P":  {
+                          "item":  "kubejs:paper_bundle"
+                      }
+            },
+    "result":  {
+                   "id":  "wastelands:filter_canister",
+                   "count":  1
+               }
+}

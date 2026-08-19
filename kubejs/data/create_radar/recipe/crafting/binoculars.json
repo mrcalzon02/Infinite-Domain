@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "C":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "G":  {
+                          "item":  "minecraft:glass_pane"
+                      },
+                "S":  {
+                          "item":  "minecraft:string"
+                      }
+            },
+    "pattern":  [
+                    "G G",
+                    "C C",
+                    " S "
+                ],
+    "result":  {
+                   "id":  "create_radar:binoculars"
+               },
+    "show_notification":  true
+}

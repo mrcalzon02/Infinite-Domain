@@ -1,0 +1,210 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "%%-3%%%%%%%3%%%%",
+      "%%%%%-3%%%%%%%3%",
+      "3%%%%%%%-3%%%%%%",
+      "%%%3%%%%%%%-3%%%",
+      "%%%%%%3%%%%%%%-3",
+      "-3%%%%%%%3%%%%%%",
+      "%%%-3%%%%%%%3%%%",
+      "%%%%%%-3%%%%%%%3",
+      "%3%%%%%%%-3%%%%%",
+      "%%%%3%%%%%%%-3%%",
+      "%%%%%%%3%%%%%%%-",
+      "%-3%%%%%%%3%%%%%",
+      "%%%%-3%%%%%%%3%%",
+      "--------------%%",
+      "--------------%%",
+      "--------------3%"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  ",
+      "%%%%%%%%%%%%%%  "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      ",,,,(),,,,,,,,  ",
+      "   6   6     ,  ",
+      "   6   6 ... ,  ",
+      " ! 6   6 ... ,  ",
+      "   &   & ... ,  ",
+      "   6   6 $   ,  ",
+      "6466646664666,  ",
+      "             ,  ",
+      "             ,  ",
+      "         8   ,  ",
+      "             ,  ",
+      "77/     17777,  ",
+      "             ,  "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      ",,,,*+,,,,,,,,  ",
+      "   6   6     ,  ",
+      "   6   6 ... ,  ",
+      "   6   6 ... ,  ",
+      "   '   ' ... ,  ",
+      "   6   6     ,  ",
+      "6566656665666,  ",
+      "             ,  ",
+      "             ,  ",
+      "             ,  ",
+      "             ,  ",
+      "770     27777,  ",
+      "             ,  "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      ",,,,,,,,,,,,,,  ",
+      "   6   6     ,  ",
+      "   6   6     ,  ",
+      "   6   6     ,  ",
+      "   6   6     ,  ",
+      "   6   6     ,  ",
+      "6666666666666,  ",
+      "             ,  ",
+      "             ,  ",
+      "             ,  ",
+      "             ,  ",
+      "777     77777,  ",
+      "             ,  "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      ",,,,,,,,,,,,,,  ",
+      "   6   6     ,  ",
+      "   6   6     ,  ",
+      "   6   6     ,  ",
+      "   6   6     ,  ",
+      "   6   6     ,  ",
+      "6666666666666,  ",
+      "             ,  ",
+      "             ,  ",
+      "             ,  ",
+      "             ,  ",
+      "             ,  ",
+      "             ,  "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:chest[facing=south,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_farm"
+        }
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:dark_oak_planks"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:hay_block"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:oak_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:oak_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:podzol"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:stripped_dark_oak_wood"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:stripped_oak_log[axis=y]"
+      },
+      {
+        "char": "8",
+        "block": "minecraft:water_cauldron[level=3]"
+      }
+    ]
+  }
+}

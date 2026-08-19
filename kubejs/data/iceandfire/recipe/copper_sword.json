@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "H":  {
+                          "item":  "quark:stick_block"
+                      },
+                "M":  {
+                          "item":  "minecraft:copper_block"
+                      }
+            },
+    "pattern":  [
+                    "M",
+                    "M",
+                    "H"
+                ],
+    "result":  {
+                   "id":  "iceandfire:copper_sword"
+               },
+    "show_notification":  true
+}

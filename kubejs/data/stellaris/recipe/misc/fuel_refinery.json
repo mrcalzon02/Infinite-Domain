@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PVP",
+    "CHC",
+    "ESE"
+  ],
+  "key": {
+    "P": {
+      "item": "kubejs:aerospace_pump"
+    },
+    "V": {
+      "item": "kubejs:high_pressure_valve"
+    },
+    "C": {
+      "item": "petrochem:distillation_controller"
+    },
+    "H": {
+      "item": "tfmg:steel_chemical_vat"
+    },
+    "E": {
+      "item": "powergrid:integrated_circuit"
+    },
+    "S": {
+      "item": "kubejs:sensor_package"
+    }
+  },
+  "result": {
+    "id": "stellaris:fuel_refinery",
+    "count": 1
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "condition":  "supplementaries:flag",
+                                       "flag":  "bubble_blower"
+                                   }
+                               ],
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "supplementaries:flag",
+                                    "flag":  "bubble_blower"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " 11",
+                    " 11",
+                    "0  "
+                ],
+    "key":  {
+                "0":  {
+                          "item":  "minecraft:iron_block"
+                      },
+                "1":  {
+                          "item":  "minecraft:iron_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "supplementaries:bubble_blower",
+                   "count":  1
+               }
+}

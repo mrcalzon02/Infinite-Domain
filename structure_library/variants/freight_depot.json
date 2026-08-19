@@ -1,0 +1,24 @@
+{
+  "variant_id": "infinite_domain:freight_depot",
+  "clean_master": "infinite_domain:freight_depot_clean_master",
+  "damage_story": "A blast and long-term corrosion drop the west sawtooth bay through bulk storage and the first rail-loading door while the dispatch annex, truck receiving and two eastern rail bays survive.",
+  "damage_zone": "west warehouse bay and first rail-loading platform span",
+  "environment_layer": [
+    "continuous gravel rubble mass beneath the failed roof",
+    "fallen full-block roof and crane members across the west storage zone",
+    "scrap and refuse concentrated at the interrupted first rail bay",
+    "weathered road, truck court, platform and track ballast"
+  ],
+  "occupation_layer": [
+    "industrial loot retained in east receiving",
+    "pillagers occupying the protected upper dispatch office"
+  ],
+  "invariants": [
+    "north public entrance, dispatch rooms and stair survive",
+    "office-to-warehouse connection remains navigable",
+    "east truck receiving and two rail-loading bays remain accessible",
+    "both through sidings retain east and west continuation points",
+    "damage remains localized to the west structural failure"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

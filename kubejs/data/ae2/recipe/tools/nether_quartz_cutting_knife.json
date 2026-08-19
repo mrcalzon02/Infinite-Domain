@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "quark:stick_block"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "c":  {
+                          "tag":  "c:gems/quartz"
+                      }
+            },
+    "pattern":  [
+                    "  a",
+                    "ba ",
+                    "cc "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2:nether_quartz_cutting_knife"
+               }
+}

@@ -1,0 +1,1086 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "the_rot_spore_threat_dossier"
+	group: "5F0A5E0000000001"
+	id: "5F0A5E0000000002"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "5F10000000000001"
+			rewards: [{
+				id: "7F00000000010001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:inf_human"
+				id: "6F00000000010001"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F10000000000001"]
+			id: "5F10000000000002"
+			rewards: [{
+				id: "7F00000000020001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				id: "6F00000000020001"
+				item: { count: 1, id: "spore:gas_mask" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F10000000000002"]
+			id: "5F10000000000003"
+			rewards: [{
+				id: "7F00000000030001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:inf_human"
+				id: "6F00000000030001"
+				type: "kill"
+				value: 6L
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F10000000000003"]
+			id: "5F10000000000004"
+			rewards: [{
+				id: "7F00000000040001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:inf_husk"
+				id: "6F00000000040001"
+				type: "kill"
+				value: 4L
+			}]
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5F10000000000004"]
+			id: "5F10000000000005"
+			rewards: [{
+				id: "7F00000000050001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:inf_drowned"
+				id: "6F00000000050001"
+				type: "kill"
+				value: 4L
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5F10000000000005"]
+			id: "5F10000000000006"
+			rewards: [{
+				id: "7F00000000060001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:inf_hazmat"
+				id: "6F00000000060001"
+				type: "kill"
+				value: 2L
+			}]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5F10000000000006"]
+			id: "5F10000000000007"
+			rewards: [
+				{
+					count: 4
+					id: "7F00000000070001"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "7F00000000070002"
+					item: {
+						count: 1
+						id: "ae2:charger"
+					}
+					type: "item"
+				}
+				{
+					id: "7F00000000070003"
+					item: {
+						count: 1
+						id: "createcybernetics:eyeupgrades_biomonitor"
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				consume_items: true
+				count: 4L
+				id: "6F00000000070001"
+				item: { count: 1, id: "kubejs:infected_tissue_sample" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5F10000000000007"]
+			id: "5F10000000000008"
+			rewards: [{
+				count: 2
+				id: "7F00000000080001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [
+				{
+					count: 32L
+					id: "6F00000000080001"
+					item: { count: 1, id: "spore:biomass" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6F00000000080002"
+					item: { count: 1, id: "spore:tumor" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6F00000000080003"
+					item: { count: 1, id: "spore:mutated_fiber" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5F10000000000008"]
+			id: "5F10000000000009"
+			rewards: [{
+				count: 2
+				id: "7F00000000090001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:knight"
+				id: "6F00000000090001"
+				type: "kill"
+				value: 4L
+			}]
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5F10000000000009"]
+			id: "5F1000000000000A"
+			rewards: [{
+				count: 2
+				id: "7F000000000A0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:spitter"
+				id: "6F000000000A0001"
+				type: "kill"
+				value: 4L
+			}]
+			x: 4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["5F1000000000000A"]
+			id: "5F1000000000000B"
+			rewards: [{
+				count: 2
+				id: "7F000000000B0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:howler"
+				id: "6F000000000B0001"
+				type: "kill"
+				value: 3L
+			}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["5F1000000000000B"]
+			id: "5F1000000000000C"
+			rewards: [{
+				count: 2
+				id: "7F000000000C0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:stalker"
+				id: "6F000000000C0001"
+				type: "kill"
+				value: 3L
+			}]
+			x: -4.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["5F1000000000000C"]
+			id: "5F1000000000000D"
+			rewards: [{
+				count: 2
+				id: "7F000000000D0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:brute"
+				id: "6F000000000D0001"
+				type: "kill"
+				value: 2L
+			}]
+			x: -4.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5F1000000000000D"]
+			id: "5F1000000000000E"
+			rewards: [{
+				count: 2
+				id: "7F000000000E0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:gorgon"
+				id: "6F000000000E0001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5F1000000000000E"]
+			id: "5F1000000000000F"
+			rewards: [
+				{
+					count: 4
+					id: "7F000000000F0001"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "7F000000000F0002"
+					item: {
+						count: 1
+						id: "ae2:item_storage_cell_1k"
+					}
+					type: "item"
+				}
+				{
+					id: "7F000000000F0003"
+					item: {
+						count: 1
+						id: "createcybernetics:eyeupgrades_targeting"
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				consume_items: true
+				count: 6L
+				id: "6F000000000F0001"
+				item: { count: 1, id: "kubejs:evolved_mutagen_sample" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5F1000000000000F"]
+			id: "5F10000000000010"
+			rewards: [{
+				count: 2
+				id: "7F00000000100001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [
+				{
+					count: 8L
+					id: "6F00000000100001"
+					item: { count: 1, id: "spore:ligaments" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6F00000000100002"
+					item: { count: 1, id: "spore:alveolic_sack" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6F00000000100003"
+					item: { count: 1, id: "spore:spike" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6F00000000100004"
+					item: { count: 1, id: "spore:wing_membrane" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["5F10000000000010"]
+			id: "5F10000000000011"
+			rewards: [{
+				count: 3
+				id: "7F00000000110001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:inquisitor"
+				id: "6F00000000110001"
+				type: "kill"
+				value: 2L
+			}]
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["5F10000000000011"]
+			id: "5F10000000000012"
+			rewards: [{
+				count: 3
+				id: "7F00000000120001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:wendigo"
+				id: "6F00000000120001"
+				type: "kill"
+				value: 2L
+			}]
+			x: -4.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["5F10000000000012"]
+			id: "5F10000000000013"
+			rewards: [{
+				count: 3
+				id: "7F00000000130001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:ogre"
+				id: "6F00000000130001"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["5F10000000000013"]
+			id: "5F10000000000014"
+			rewards: [{
+				count: 3
+				id: "7F00000000140001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:brot"
+				id: "6F00000000140001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["5F10000000000014"]
+			id: "5F10000000000015"
+			rewards: [
+				{
+					count: 4
+					id: "7F00000000150001"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "7F00000000150002"
+					item: {
+						count: 1
+						id: "ae2:item_storage_cell_4k"
+					}
+					type: "item"
+				}
+				{
+					id: "7F00000000150003"
+					item: {
+						count: 1
+						id: "createcybernetics:muscleupgrades_wiredreflexes"
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				consume_items: true
+				count: 4L
+				id: "6F00000000150001"
+				item: { count: 1, id: "kubejs:hyper_evolved_core_sample" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["5F10000000000015"]
+			id: "5F10000000000016"
+			rewards: [{
+				count: 2
+				id: "7F00000000160001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [
+				{
+					count: 8L
+					id: "6F00000000160001"
+					item: { count: 1, id: "spore:armor_plate" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6F00000000160002"
+					item: { count: 1, id: "spore:living_core" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6F00000000160003"
+					item: { count: 1, id: "spore:hardened_bind" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6F00000000160004"
+					item: { count: 1, id: "spore:spine_fragment" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["5F10000000000016"]
+			id: "5F10000000000017"
+			rewards: [{
+				count: 4
+				id: "7F00000000170001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:mound"
+				id: "6F00000000170001"
+				type: "kill"
+				value: 3L
+			}]
+			x: 0.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["5F10000000000017"]
+			id: "5F10000000000018"
+			rewards: [{
+				count: 4
+				id: "7F00000000180001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:vigil"
+				id: "6F00000000180001"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["5F10000000000018"]
+			id: "5F10000000000019"
+			rewards: [{
+				count: 4
+				id: "7F00000000190001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:reconstructor"
+				id: "6F00000000190001"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.0d
+			y: 24.0d
+		}
+		{
+			dependencies: ["5F10000000000019"]
+			id: "5F1000000000001A"
+			rewards: [{
+				count: 4
+				id: "7F000000001A0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:usurper"
+				id: "6F000000001A0001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: 24.0d
+		}
+		{
+			dependencies: ["5F1000000000001A"]
+			id: "5F1000000000001B"
+			rewards: [
+				{
+					count: 4
+					id: "7F000000001B0001"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "7F000000001B0002"
+					item: {
+						count: 1
+						id: "ae2:wireless_terminal"
+					}
+					type: "item"
+				}
+				{
+					id: "7F000000001B0003"
+					item: {
+						count: 1
+						id: "createcybernetics:brainupgrades_neuralprocessor"
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				consume_items: true
+				count: 4L
+				id: "6F000000001B0001"
+				item: { count: 1, id: "kubejs:organoid_neural_sample" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 24.0d
+		}
+		{
+			dependencies: ["5F1000000000001B"]
+			id: "5F1000000000001C"
+			rewards: [{
+				count: 2
+				id: "7F000000001C0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [
+				{
+					count: 8L
+					id: "6F000000001C0001"
+					item: { count: 1, id: "spore:organoid_membrane" }
+					type: "item"
+				}
+				{
+					id: "6F000000001C0002"
+					item: { count: 1, id: "spore:vigil_eye" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6F000000001C0003"
+					item: { count: 1, id: "spore:cerebrum" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 27.0d
+		}
+		{
+			dependencies: ["5F1000000000001C"]
+			id: "5F1000000000001D"
+			rewards: [{
+				count: 8
+				id: "7F000000001D0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:sieger"
+				id: "6F000000001D0001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: 27.0d
+		}
+		{
+			dependencies: ["5F1000000000001D"]
+			id: "5F1000000000001E"
+			rewards: [{
+				count: 8
+				id: "7F000000001E0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:howitzer"
+				id: "6F000000001E0001"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.0d
+			y: 27.0d
+		}
+		{
+			dependencies: ["5F1000000000001E"]
+			id: "5F1000000000001F"
+			rewards: [{
+				count: 8
+				id: "7F000000001F0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:hohlfresser"
+				id: "6F000000001F0001"
+				type: "kill"
+				value: 1L
+			}]
+			x: -4.0d
+			y: 30.0d
+		}
+		{
+			dependencies: ["5F1000000000001F"]
+			id: "5F10000000000020"
+			rewards: [{
+				count: 8
+				id: "7F00000000200001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:gazenbreacher"
+				id: "6F00000000200001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: 30.0d
+		}
+		{
+			dependencies: ["5F10000000000020"]
+			id: "5F10000000000021"
+			rewards: [{
+				count: 8
+				id: "7F00000000210001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:hindenburg"
+				id: "6F00000000210001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 4.0d
+			y: 30.0d
+		}
+		{
+			dependencies: ["5F10000000000021"]
+			id: "5F10000000000022"
+			rewards: [{
+				count: 8
+				id: "7F00000000220001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:leviathan"
+				id: "6F00000000220001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 4.0d
+			y: 33.0d
+		}
+		{
+			dependencies: ["5F10000000000022"]
+			id: "5F10000000000023"
+			rewards: [{
+				count: 8
+				id: "7F00000000230001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				entity: "spore:verfall"
+				id: "6F00000000230001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: 33.0d
+		}
+		{
+			dependencies: ["5F10000000000023"]
+			id: "5F10000000000024"
+			rewards: [
+				{
+					count: 4
+					id: "7F00000000240001"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "7F00000000240002"
+					item: {
+						count: 1
+						id: "ae2:dense_energy_cell"
+					}
+					type: "item"
+				}
+				{
+					id: "7F00000000240003"
+					item: {
+						count: 1
+						id: "createcybernetics:organsupgrade_densebattery"
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [{
+				consume_items: true
+				count: 5L
+				id: "6F00000000240001"
+				item: { count: 1, id: "kubejs:calamity_biomass_sample" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 33.0d
+		}
+		{
+			dependencies: ["5F10000000000024"]
+			id: "5F10000000000025"
+			rewards: [{
+				count: 2
+				id: "7F00000000250001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_critical"]
+			tasks: [
+				{
+					count: 2L
+					id: "6F00000000250001"
+					item: { count: 1, id: "spore:reforged_biomass_t" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "6F00000000250002"
+					item: { count: 1, id: "spore:reforged_biomass_w" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "6F00000000250003"
+					item: { count: 1, id: "spore:reforged_biomass_a" }
+					type: "item"
+				}
+				{
+					id: "6F00000000250004"
+					item: { count: 1, id: "spore:amalgamated_heart" }
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 36.0d
+		}
+		{
+			dependencies: ["5F10000000000025"]
+			id: "5F10000000000026"
+			rewards: [
+				{
+					count: 4
+					id: "7F00000000260001"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "7F00000000260002"
+					item: {
+						count: 1
+						id: "ae2:wireless_crafting_terminal"
+					}
+					type: "item"
+				}
+				{
+					id: "7F00000000260003"
+					item: {
+						count: 1
+						id: "createcybernetics:brainupgrades_iceprotocol"
+					}
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.5d
+			tags: ["terminal_critical"]
+			tasks: [
+				{
+					entity: "spore:proto"
+					id: "6F00000000260001"
+					type: "kill"
+					value: 1L
+				}
+				{
+					consume_items: true
+					id: "6F00000000260002"
+					item: { count: 1, id: "kubejs:hive_mind_cerebral_sample" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 36.0d
+		}
+	]
+}

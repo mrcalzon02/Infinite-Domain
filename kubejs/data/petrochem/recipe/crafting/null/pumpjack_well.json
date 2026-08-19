@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "HPH",
+    "TCT",
+    "SPS"
+  ],
+  "key": {
+    "H": {
+      "item": "createdieselgenerators:pumpjack_head"
+    },
+    "P": {
+      "item": "create:mechanical_pump"
+    },
+    "T": {
+      "item": "tfmg:steel_pipe"
+    },
+    "C": {
+      "item": "petrochem:steel_block"
+    },
+    "S": {
+      "item": "tfmg:heavy_plate"
+    }
+  },
+  "result": {
+    "id": "petrochem:pumpjack_well",
+    "count": 1
+  }
+}

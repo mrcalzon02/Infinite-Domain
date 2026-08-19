@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "III",
+                    "IPI",
+                    "III"
+                ],
+    "key":  {
+                "I":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "P":  {
+                          "item":  "stellaris:pipe_t2"
+                      }
+            },
+    "result":  {
+                   "id":  "stellaris:pipe_t3",
+                   "count":  1
+               }
+}

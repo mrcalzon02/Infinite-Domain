@@ -1,0 +1,174 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "  *       /   /0",
+      "  *///'////   /0",
+      "  *            0",
+      "  *            0",
+      "  *     . )    0",
+      "  *///'////   /0",
+      "  *       /   /0",
+      "  *   ,+  /   /0",
+      "  *       /   /0",
+      "  *       %   % ",
+      "  *  $$$$ /   /0",
+      "  *  $$$$ /   /0",
+      "  *  $$$$ /   / ",
+      "  *       /   / ",
+      "  **************",
+      "                "
+    ],
+    [
+      "  *       /   / ",
+      "  *///(////   //",
+      "  *             ",
+      "  !             ",
+      "  !             ",
+      "  *///(////   //",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  !       &   & ",
+      "  !  $$$$ /   / ",
+      "  *  $$$$ /   / ",
+      "  *  $$$$ /   / ",
+      "  *       /   / ",
+      "  ****!!****!!**",
+      "                "
+    ],
+    [
+      "  *       /   / ",
+      "  *////////   //",
+      "  *             ",
+      "  !             ",
+      "  !             ",
+      "  *////////   //",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  !       /   / ",
+      "  !  $$$$ /   / ",
+      "  *  $$$$ /   / ",
+      "  *  $$$$ /   / ",
+      "  *       /   / ",
+      "  ****!!****!!**",
+      "                "
+    ],
+    [
+      "  *       /   / ",
+      "  */////////////",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  */////////////",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  **************",
+      "                "
+    ],
+    [
+      "  *       / - / ",
+      "  */////////////",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  */////////////",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  *       /   / ",
+      "  **************",
+      "                "
+    ],
+    [
+      "  *             ",
+      "  *         -   ",
+      "  *             ",
+      "  *             ",
+      "  *             ",
+      "  *             ",
+      "  *             ",
+      "  *             ",
+      "  *             ",
+      "  *             ",
+      "  *             ",
+      "  *             ",
+      "  *             ",
+      "  *             ",
+      "  **************",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:crate"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:furnace[facing=east,lit=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:oak_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:oak_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:oak_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:smoker[facing=east,lit=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "0",
+        "block": "zvhouses:spruce_countertop"
+      }
+    ]
+  }
+}

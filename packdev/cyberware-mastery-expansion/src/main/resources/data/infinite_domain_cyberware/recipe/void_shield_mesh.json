@@ -1,0 +1,33 @@
+{
+  "type": "createcybernetics:engineering_table",
+  "accept_mirrored": true,
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinite_domain_cyberware:delaminated_dermis"
+    },
+    "B": {
+      "item": "createcybernetics:component_mesh"
+    },
+    "C": {
+      "item": "kubejs:darknet_session_injector_tier_7"
+    },
+    "D": {
+      "item": "stellaris:heavy_metal_plate"
+    },
+    "E": {
+      "item": "cyber_ware_port:component_fullerene"
+    }
+  },
+  "pattern": [
+    "  A  ",
+    " ABC ",
+    " BDB ",
+    " CEC ",
+    "  A  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinite_domain_cyberware:void_shield_mesh"
+  }
+}

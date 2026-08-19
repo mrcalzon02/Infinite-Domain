@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "immersiveengineering:component_electronic"
+                      },
+                "i":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "p":  {
+                          "tag":  "c:rods/steel"
+                      },
+                "w":  {
+                          "item":  "immersiveengineering:wirecoil_copper"
+                      }
+            },
+    "pattern":  [
+                    "pcp",
+                    "wiw",
+                    "pwp"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "immersiveengineering:electromagnet"
+               }
+}

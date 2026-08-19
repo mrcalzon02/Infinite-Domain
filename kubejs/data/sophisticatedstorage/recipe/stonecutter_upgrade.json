@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "sophisticatedcore:item_enabled",
+                                    "itemRegistryName":  "sophisticatedstorage:stonecutter_upgrade"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  {
+                          "item":  "sophisticatedstorage:upgrade_base"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "S":  {
+                          "item":  "minecraft:stonecutter"
+                      }
+            },
+    "pattern":  [
+                    " S ",
+                    "IBI",
+                    " R "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "sophisticatedstorage:stonecutter_upgrade"
+               }
+}

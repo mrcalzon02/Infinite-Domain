@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ODO",
+    "RER",
+    "ODO"
+  ],
+  "key": {
+    "O": {
+      "item": "oritech:machine_core_7"
+    },
+    "D": {
+      "item": "stellaris:desh_block"
+    },
+    "R": {
+      "item": "createnuclear:reactor_controller"
+    },
+    "E": {
+      "item": "ae2:engineering_processor"
+    }
+  },
+  "result": {
+    "id": "ae2:quantum_ring",
+    "count": 1
+  }
+}

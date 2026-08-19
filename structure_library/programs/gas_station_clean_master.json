@@ -1,0 +1,54 @@
+{
+  "structure_id": "infinite_domain:gas_station_clean_master",
+  "archetype": "highway filling station and convenience store",
+  "orientation": {
+    "highway_and_customer_entrance": "north",
+    "receiving_exit": "south",
+    "parking": "east",
+    "fuel_forecourt": "north"
+  },
+  "public_program": [
+    "weather-protected storefront entrance",
+    "sales floor with checkout sightline to the entrance and pumps",
+    "four short merchandise aisle runs with cross aisles",
+    "refrigerated cases along the east wall",
+    "public restroom accessible from the sales floor"
+  ],
+  "staff_program": [
+    "stock and receiving room with rear delivery exit",
+    "manager office",
+    "electrical and utility room",
+    "three pump islands beneath a freestanding canopy",
+    "two buried steel fuel tanks in a reinforced inspection vault",
+    "air and water service cabinet",
+    "refuse enclosure and roof mechanical plant"
+  ],
+  "circulation": [
+    "highway apron through the pump lanes to parking and storefront walk",
+    "customer doors to checkout and cross-aisle sales circulation",
+    "sales floor to public restroom",
+    "sales floor through controlled doors to stockroom, office and utility rooms",
+    "stockroom to independent rear receiving exit"
+  ],
+  "damage_constraints": [
+    "preserve the storefront entrance and checkout sightline",
+    "retain a route from sales floor to stockroom, manager office and rear exit",
+    "concentrate canopy failure in the east pump lane",
+    "concentrate building failure in the southeast utility corner",
+    "shape rubble beneath failed roof and wall members",
+    "derive all abandoned variants from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the property reads as a filling station from the highway",
+      "vehicle, pedestrian and delivery approaches are distinct",
+      "checkout, aisles, coolers and restroom have usable player-scale clearances",
+      "stockroom, office, utility and receiving functions have credible adjacencies",
+      "canopy, pumps, sign, service cabinet and roof plant form a coherent operational system",
+      "subterranean tank vault aligns beneath the pump forecourt and remains fully buried after placement",
+      "damage preserves the original business and follows structural gravity"
+    ]
+  }
+}

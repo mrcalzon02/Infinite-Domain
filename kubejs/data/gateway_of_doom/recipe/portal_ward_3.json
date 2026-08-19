@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": { "item": "cyber_ware_port:component_microelectric" },
+    "R": { "item": "cyber_ware_port:component_reactor" },
+    "T": { "item": "cyber_ware_port:component_titanium" },
+    "W": { "item": "gateway_of_doom:portal_ward_2" }
+  },
+  "pattern": ["TMT", "RWR", "TMT"],
+  "result": { "id": "gateway_of_doom:portal_ward_3" }
+}

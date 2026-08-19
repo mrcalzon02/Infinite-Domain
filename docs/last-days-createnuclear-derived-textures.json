@@ -1,0 +1,81 @@
+{
+  "authority": "full-resolution source art; runtime PNGs are derived outputs",
+  "installed_mod": "mods/createnuclear-1.3.2-beta.3-neoforge.jar",
+  "model_contract": {
+    "path_inside_mod": "assets/createnuclear/models/block/reactor/core/block.json",
+    "texture_bindings": {
+      "1": "createnuclear:block/reactor/core/reactor_core_casing",
+      "2": "createnuclear:block/reactor/core/reactor_core_center",
+      "3": "createnuclear:block/reactor/core/reactor_core_bars",
+      "particle": "createnuclear:block/reactor/core/reactor_core_center"
+    },
+    "model_override_added": false,
+    "uv_space": "16x16 normalized Minecraft block-model UVs"
+  },
+  "animation_contract": {
+    "texture": "createnuclear:block/reactor/core/reactor_core_center",
+    "frames": 6,
+    "frametime": 5,
+    "method": "one authored center surface with restrained brightness phases"
+  },
+  "sources": [
+    {
+      "path": "ROOT_tools/createnuclear_authored_sources/reactor_core_bars_material_master.png",
+      "sha256": "a3b4b983ebc00b0631a0632251b39ee216722f7cec606078d086a506bd8f4c68",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative_full_resolution_source_art"
+    },
+    {
+      "path": "ROOT_tools/createnuclear_authored_sources/reactor_core_casing_material_master.png",
+      "sha256": "cbc9a95b621de1711fdc6c0436844c69d1898b9feda86fbac8de6bf7dd135523",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative_full_resolution_source_art"
+    },
+    {
+      "path": "ROOT_tools/createnuclear_authored_sources/reactor_core_center_material_master.png",
+      "sha256": "96cf9f6cad0a247734a1ed0c6530dd99346cf9b36a5e6b8484f36ced812b349a",
+      "size": [
+        1254,
+        1254
+      ],
+      "role": "authoritative_full_resolution_source_art"
+    }
+  ],
+  "derived_outputs": [
+    {
+      "path": "resourcepacks/LAST_DAYS_INFINITE_DOMAIN_1_21_1/assets/createnuclear/textures/block/reactor/core/reactor_core_casing.png",
+      "sha256": "9dbfe4250b3c8d908acd419a006c56f4c5e473dc3053457d26e8b944778cfa1f",
+      "size": [
+        128,
+        128
+      ],
+      "derived_from": "ROOT_tools/createnuclear_authored_sources/reactor_core_casing_material_master.png"
+    },
+    {
+      "path": "resourcepacks/LAST_DAYS_INFINITE_DOMAIN_1_21_1/assets/createnuclear/textures/block/reactor/core/reactor_core_bars.png",
+      "sha256": "40379368db14e3377bb87d4803791793338c88ada25b4668922f6a092e32cea1",
+      "size": [
+        128,
+        128
+      ],
+      "derived_from": "ROOT_tools/createnuclear_authored_sources/reactor_core_bars_material_master.png"
+    },
+    {
+      "path": "resourcepacks/LAST_DAYS_INFINITE_DOMAIN_1_21_1/assets/createnuclear/textures/block/reactor/core/reactor_core_center.png",
+      "sha256": "09003a8de112a52ffe46e2afec10b3a344fcb9619ae3788527edccf5f73191f0",
+      "size": [
+        128,
+        768
+      ],
+      "derived_from": "ROOT_tools/createnuclear_authored_sources/reactor_core_center_material_master.png"
+    }
+  ],
+  "installer": "scripts/install_createnuclear_reactor_core_textures.py",
+  "model_aware_review": "scripts/render_createnuclear_reactor_core_face.py"
+}

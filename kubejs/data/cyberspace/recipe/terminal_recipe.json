@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "cdc",
+                    "aae"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "cyberspace:graphene_coated_iron_ingot"
+                      },
+                "b":  {
+                          "item":  "minecraft:redstone_torch"
+                      },
+                "c":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "d":  {
+                          "item":  "allthecompressed:glass_1x"
+                      },
+                "e":  {
+                          "item":  "minecraft:copper_block"
+                      }
+            },
+    "result":  {
+                   "id":  "cyberspace:terminal",
+                   "count":  1
+               }
+}

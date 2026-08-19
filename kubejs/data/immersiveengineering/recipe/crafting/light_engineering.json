@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "g":  {
+                          "item":  "immersiveengineering:component_iron"
+                      },
+                "i":  {
+                          "tag":  "c:sheetmetals/iron"
+                      },
+                "m":  {
+                          "item":  "kubejs:industrial_engineering_core"
+                      }
+            },
+    "pattern":  [
+                    "imi",
+                    "gcg",
+                    "igi"
+                ],
+    "result":  {
+                   "count":  4,
+                   "id":  "immersiveengineering:light_engineering"
+               }
+}

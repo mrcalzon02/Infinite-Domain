@@ -1,0 +1,48 @@
+{
+  "structure_id": "infinite_domain:ruined_hospital_clean_master",
+  "archetype": "four-storey U-plan regional hospital with clinical wings and rear services",
+  "ground_program": [
+    "separate ambulance emergency and public lobby entrances with canopies",
+    "triage, four treatment bays, trauma room and clean store",
+    "admissions, security, waiting and accessible sanitation",
+    "imaging, laboratory, pharmacy, surgery and recovery departments",
+    "paired observation, medical, recovery and isolation ward wings",
+    "accessible landscaped courtyard",
+    "rear supply, laundry, waste and receiving link"
+  ],
+  "upper_program": [
+    "first upper floor surgery, ICU and paired patient wards",
+    "second upper floor rehabilitation, administration and paired patient wards",
+    "third upper floor research, long-term care and paired patient wards",
+    "two independent full-height stair stacks",
+    "roof mechanical plant and marked helipad"
+  ],
+  "circulation": [
+    "continuous east-west clinical corridor on all four occupied floors",
+    "roomed front departments connected to both ward wings",
+    "ward rooms branching from dedicated wing corridors",
+    "ground-floor controlled route through courtyard to rear services",
+    "ambulance and public flows remain distinct at arrival",
+    "both stairs connect every occupied clinical floor"
+  ],
+  "damage_constraints": [
+    "concentrate blast failure in the northeast clinical stack and east ward edge",
+    "terminate walls and slabs at one coherent inward fracture boundary",
+    "shape a gravity-led rubble apron below the exterior breach",
+    "preserve emergency intake, public entrance, courtyard and rear services",
+    "preserve both stair stacks and surviving routes on every floor",
+    "derive damage, occupation and loot only from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the exterior reads as a hospital campus rather than a generic cuboid",
+      "emergency, public, ward, diagnostic and service departments are identifiable at player scale",
+      "all 135 declared thresholds and both stair stacks work in game",
+      "courtyard doors and rear-service circulation remain usable",
+      "the northeast fracture and rubble apron follow gravity without floating floor teeth",
+      "terrain feathering seats road aprons and rubble into ruined-city grade"
+    ]
+  }
+}

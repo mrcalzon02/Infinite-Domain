@@ -1,0 +1,42 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "ABC",
+                    "DEF",
+                    "GHI"
+                ],
+    "key":  {
+                "A":  {
+                          "item":  "allthecompressed:iron_block_3x"
+                      },
+                "B":  {
+                          "item":  "allthecompressed:quartz_block_1x"
+                      },
+                "C":  {
+                          "item":  "allthecompressed:iron_block_3x"
+                      },
+                "D":  {
+                          "item":  "allthecompressed:quartz_block_1x"
+                      },
+                "E":  {
+                          "item":  "ae2lt:overload_crystal"
+                      },
+                "F":  {
+                          "item":  "allthecompressed:quartz_block_1x"
+                      },
+                "G":  {
+                          "item":  "allthecompressed:iron_block_3x"
+                      },
+                "H":  {
+                          "item":  "allthecompressed:quartz_block_1x"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_3x"
+                      }
+            },
+    "result":  {
+                   "count":  2,
+                   "id":  "ae2lt:matter_warping_matrix_casing"
+               }
+}

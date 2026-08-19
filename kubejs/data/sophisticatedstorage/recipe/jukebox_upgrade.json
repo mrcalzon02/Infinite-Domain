@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "sophisticatedcore:item_enabled",
+                                    "itemRegistryName":  "sophisticatedstorage:jukebox_upgrade"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  {
+                          "item":  "sophisticatedstorage:upgrade_base"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "J":  {
+                          "item":  "minecraft:jukebox"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    " J ",
+                    "IBI",
+                    " R "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "sophisticatedstorage:jukebox_upgrade"
+               }
+}

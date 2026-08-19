@@ -1,0 +1,27 @@
+{
+  "id": "infinite_domain:cybernetics_exchange",
+  "title": { "text": "Cybernetics Salvage Exchange", "color": "aqua" },
+  "model": { "villager_data": { "type": "taiga", "profession": "toolsmith", "level": 5 } },
+  "stages": [{
+    "title": "Clinic Component Exchange",
+    "lore": [{ "type": "ftbechoes:text", "text": "Replacement components and degraded donor hardware for an established Create Cybernetics clinic. Finished implants remain a medical and engineering responsibility." }],
+    "not_ready": "Automated Industry and a certified surgery program are required.",
+    "ready": "Clinic supply authorization confirmed.",
+    "required_stage": "infinite_domain:era_5",
+    "shop_unlock": [
+      { "name": "Actuator Pair", "item": { "id": "createcybernetics:component_actuator", "count": 2 }, "cost": 32 },
+      { "name": "Fiberoptic Pair", "item": { "id": "createcybernetics:component_fiberoptics", "count": 2 }, "cost": 32 },
+      { "name": "Wiring Bundle", "item": { "id": "createcybernetics:component_wiring", "count": 4 }, "cost": 32 },
+      { "name": "Diode Pair", "item": { "id": "createcybernetics:component_diodes", "count": 2 }, "cost": 32 },
+      { "name": "Plating Pair", "item": { "id": "createcybernetics:component_plating", "count": 2 }, "cost": 40 },
+      { "name": "Synthetic Nerve Pair", "item": { "id": "createcybernetics:component_synthnerves", "count": 2 }, "cost": 48 },
+      { "name": "Frayed Neural Bus", "item": { "id": "infinite_domain_cyberware:frayed_neural_bus" }, "cost": 24 },
+      { "name": "Cracked Optic Array", "item": { "id": "infinite_domain_cyberware:cracked_optic_array" }, "cost": 24 },
+      { "name": "Arrhythmic Pump Core", "item": { "id": "infinite_domain_cyberware:arrhythmic_pump_core" }, "cost": 32 },
+      { "name": "Torn Myomer Bundle", "item": { "id": "infinite_domain_cyberware:torn_myomer_bundle" }, "cost": 32 },
+      { "name": "Warped Frame Strut", "item": { "id": "infinite_domain_cyberware:warped_frame_strut" }, "cost": 32 },
+      { "name": "Delaminated Dermis", "item": { "id": "infinite_domain_cyberware:delaminated_dermis" }, "cost": 32 }
+    ],
+    "completion_reward": { "currency": 192, "description": "Three Cogs of clinic exchange credit" }
+  }]
+}

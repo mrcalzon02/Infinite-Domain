@@ -1,0 +1,47 @@
+{
+  "structure_id": "infinite_domain:ruined_courthouse_clean_master",
+  "archetype": "two-storey civic courthouse with paired courtrooms and separate public/secure circulation",
+  "ground_program": [
+    "broad civic stair, six-column portico and screened public vestibule",
+    "clerk and public-record services west of the atrium",
+    "prosecutor and public-defender services east of the atrium",
+    "two fully furnished courtrooms with galleries, counsel tables, witness stands and judge dais",
+    "rear controlled corridor serving two holding cells",
+    "judges' chambers, evidence store, archive and rear staff entrance"
+  ],
+  "upper_program": [
+    "four front administrative suites",
+    "two hearing rooms around a central public hall",
+    "jury and judges' rooms",
+    "law library and secure archive",
+    "public atrium stair and separate secure rear stair",
+    "copper-roofed central clerestory"
+  ],
+  "circulation": [
+    "public visitors pass screening before reaching the central atrium and courtroom doors",
+    "holding, evidence and judges' rooms share a rear secure corridor",
+    "the public stair lands in the central upper hall",
+    "the rear secure stair links holding/evidence circulation directly to upper support rooms",
+    "both courtroom wings have two independent doors from the central hall"
+  ],
+  "damage_constraints": [
+    "concentrate blast failure in the east courtroom and upper hearing stack",
+    "remove affected rows continuously from the east facade inward",
+    "shape a low gravity-led rubble apron below the east breach",
+    "preserve the west courtroom, central atrium, holding cells, archive and both stairs",
+    "retain navigable survivor routes on both occupied floors",
+    "derive damage, occupation and loot only from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the portico and courtroom plan read unmistakably as a courthouse",
+      "public and secure circulation remain separated at player scale",
+      "all 47 declared thresholds and both stairs work in game",
+      "courtroom galleries, counsel areas, holding and archives are usable",
+      "the east breach terminates floors coherently and its rubble follows gravity",
+      "terrain feathering seats the civic stair and rubble apron into city grade"
+    ]
+  }
+}

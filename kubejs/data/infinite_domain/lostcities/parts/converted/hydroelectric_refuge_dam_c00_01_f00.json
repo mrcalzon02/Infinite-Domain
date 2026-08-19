@@ -1,0 +1,219 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------",
+      "----------------"
+    ],
+    [
+      "                ",
+      "                ",
+      "--4---4---4-----",
+      "4---4---4-------",
+      "--4---4---------",
+      "4---4-----------",
+      "--4-------------",
+      "4--------------4",
+      "-------------4--",
+      "-----------4---4",
+      "---------4---4--",
+      "-------4---4---4",
+      "-----4---4---4--",
+      "---4---4---4----",
+      "-4---4---4------",
+      "---4---4--------"
+    ],
+    [
+      "                ",
+      "       .....    ",
+      "--4---4.....----",
+      "4---4--.....----",
+      "--4---4.....----",
+      "4---4--.....----",
+      "--4----.....----",
+      "4------.....---4",
+      "-------.....-4--",
+      "--..............",
+      "--..............",
+      "--..............",
+      "--..............",
+      "--..............",
+      "-4..............",
+      "--.............."
+    ],
+    [
+      "                ",
+      "                ",
+      "--4---4     ----",
+      "4---4-- %&  ----",
+      "--4---4     ----",
+      "4---4--     ----",
+      "--4----     ----",
+      "4------3)*33---4",
+      "-------     -4--",
+      "--              ",
+      "--              ",
+      "-- 5$        1 !",
+      "--              ",
+      "--      2       ",
+      "-4            0 ",
+      "--  /           "
+    ],
+    [
+      "                ",
+      "                ",
+      "--4---4     ----",
+      "4---4-- '(  ----",
+      "--4---4     ----",
+      "4---4--     ----",
+      "--4----     ----",
+      "4------3+,33---4",
+      "-------     -4--",
+      "--              ",
+      "--              ",
+      "--              ",
+      "--              ",
+      "--              ",
+      "-4              ",
+      "--              "
+    ],
+    [
+      "                ",
+      "                ",
+      "--4---4     ----",
+      "4---4--     ----",
+      "--4---4     ----",
+      "4---4--     ----",
+      "--4----     ----",
+      "4------33333---4",
+      "-------     -4--",
+      "--              ",
+      "--              ",
+      "--              ",
+      "--              ",
+      "--              ",
+      "-4              ",
+      "--              "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:crafting_table"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:deepslate"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:polished_deepslate"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:skeleton_skull[rotation=3]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:skeleton_skull[rotation=7]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:smoker[facing=south,lit=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spawner",
+        "tag": {
+          "id": "minecraft:mob_spawner",
+          "Delay": 320,
+          "MinSpawnDelay": 240,
+          "MaxSpawnDelay": 720,
+          "SpawnCount": 2,
+          "MaxNearbyEntities": 6,
+          "RequiredPlayerRange": 14,
+          "SpawnRange": 4,
+          "SpawnData": {
+            "entity": {
+              "id": "minecraft:zombie"
+            }
+          },
+          "SpawnPotentials": [
+            {
+              "weight": 1,
+              "data": {
+                "entity": {
+                  "id": "minecraft:zombie"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "char": "3",
+        "block": "minecraft:stripped_dark_oak_log[axis=y]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:tuff"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:white_bed[facing=south,occupied=false,part=foot]"
+      }
+    ]
+  }
+}

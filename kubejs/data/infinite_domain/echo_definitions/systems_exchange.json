@@ -1,0 +1,27 @@
+{
+  "id": "infinite_domain:systems_exchange",
+  "title": { "text": "Systems Exchange Echo", "color": "light_purple" },
+  "model": { "villager_data": { "type": "jungle", "profession": "cartographer", "level": 5 } },
+  "stages": [{
+    "title": "Automated Systems Exchange",
+    "lore": [{ "type": "ftbechoes:text", "text": "Processors and logistics components for networks you have already learned to operate. Buying intelligence remains inconveniently different from possessing it." }],
+    "not_ready": "Automated Industry authorization is required.",
+    "ready": "Automation authorization confirmed.",
+    "required_stage": "infinite_domain:era_5",
+    "shop_unlock": [
+      { "name": "Certus Quartz Stock", "item": { "id": "ae2:certus_quartz_crystal", "count": 8 }, "cost": 24 },
+      { "name": "Fluix Crystal Stock", "item": { "id": "ae2:fluix_crystal", "count": 8 }, "cost": 32 },
+      { "name": "Fluix Cable Bundle", "item": { "id": "ae2:fluix_glass_cable", "count": 8 }, "cost": 32 },
+      { "name": "Logic Processor Pair", "item": { "id": "ae2:logic_processor", "count": 2 }, "cost": 40 },
+      { "name": "Calculation Processor Pair", "item": { "id": "ae2:calculation_processor", "count": 2 }, "cost": 48 },
+      { "name": "Engineering Processor", "item": { "id": "ae2:engineering_processor" }, "cost": 56 },
+      { "name": "Matter Transfer Core Pair", "item": [{ "id": "ae2:formation_core" }, { "id": "ae2:annihilation_core" }], "cost": 64 },
+      { "name": "Blank Pattern Pack", "item": { "id": "ae2:blank_pattern", "count": 8 }, "cost": 32 },
+      { "name": "Basic Upgrade Card Pair", "item": { "id": "ae2:basic_card", "count": 2 }, "cost": 32 },
+      { "name": "Speed Card Pair", "item": { "id": "ae2:speed_card", "count": 2 }, "cost": 48 },
+      { "name": "Machine Core Pair", "item": { "id": "oritech:machine_core_1", "count": 2 }, "cost": 48 },
+      { "name": "Item Pipe Bundle", "item": { "id": "oritech:item_pipe", "count": 16 }, "cost": 32 }
+    ],
+    "completion_reward": { "currency": 256, "description": "Four Cogs of systems exchange credit" }
+  }]
+}

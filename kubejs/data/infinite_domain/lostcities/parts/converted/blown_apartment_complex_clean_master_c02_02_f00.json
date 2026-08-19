@@ -1,0 +1,186 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "%%%%%%%333333333",
+      "%%%%%%%3333333))",
+      "%%%%%%%33333))%3",
+      "%%%%%%%333))%333",
+      "33333333))%33333",
+      "333333))%3333333",
+      "3333))%333333333",
+      "33))%33333333333",
+      "))%3333333333333",
+      "%333333333333333",
+      "333333333333333)",
+      "3333333333333))%",
+      "33333333333))%33",
+      "333333333))%3333",
+      "3333333))%333333",
+      "33333))%33333333"
+    ],
+    [
+      "****   ,,,,,,,,,",
+      "    -  ,,,,,,,,,",
+      "       ,,,,,,,,,",
+      "       ,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,"
+    ],
+    [
+      "       + 0      ",
+      "       + 0      ",
+      "       + 0 2    ",
+      "       + 0      ",
+      "++++++++ 0      ",
+      "         0111111",
+      "         0      ",
+      "         0      ",
+      "       ' '      ",
+      "         0     /",
+      "         0      ",
+      "  &      0      ",
+      "         0      ",
+      "         0      ",
+      "   .     ++     ",
+      "$$$$$$$$$++$$$$$"
+    ],
+    [
+      "       + 0      ",
+      "       + 0      ",
+      "       + 0      ",
+      "       + 0      ",
+      "++++++++ 0      ",
+      "         0111111",
+      "         0      ",
+      "         0      ",
+      "       ( (      ",
+      "         0      ",
+      "         0      ",
+      "         0      ",
+      "         0      ",
+      "   .     0      ",
+      "         ++     ",
+      "$$$$$$$$$++!!$$$"
+    ],
+    [
+      "       + 0      ",
+      "       + 0      ",
+      "       + 0      ",
+      "       + 0      ",
+      "++++++++ 0      ",
+      "         0111111",
+      "         0      ",
+      "         0      ",
+      "         0      ",
+      "         0      ",
+      "         0      ",
+      "         0      ",
+      "   .     0      ",
+      "         0      ",
+      "         ++     ",
+      "$$$$$$$$$++!!$$$"
+    ],
+    [
+      "       + 0      ",
+      "       + 0      ",
+      "       + 0      ",
+      "       + 0      ",
+      "++++++++ 0      ",
+      "         0111111",
+      "         0      ",
+      "         0      ",
+      "         0      ",
+      "         0      ",
+      "         0      ",
+      "   .     0      ",
+      "         0      ",
+      "         0      ",
+      "         ++     ",
+      "$$$$$$$$$++$$$$$"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:crafting_table"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:moss_block"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:oak_planks"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:oak_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:oak_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:oak_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:stripped_oak_wood"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:water_cauldron[level=3]"
+      },
+      {
+        "char": "3",
+        "block": "tfmg:asphalt"
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "format_version": 1,
+  "families": {
+    "roadside_mobility_security": [
+      {"asset":"radio_mast","master":"radio_mast_clean_master","category":"utility_infrastructure","entrance":"north","secondary":[],"road":"pedestrian","settlements":["rural"],"target":"scattered"},
+      {"asset":"wrecked_sedan","master":"wrecked_sedan_clean_master","category":"highway","entrance":"north","secondary":[],"road":"highway","settlements":["highway_frontage"],"target":"scattered"},
+      {"asset":"delivery_van","master":"delivery_van_clean_master","category":"highway","entrance":"west","secondary":[],"road":"highway","settlements":["highway_frontage"],"target":"scattered"},
+      {"asset":"battle_tank","master":"battle_tank_clean_master","category":"military","entrance":"west","secondary":[],"road":"local_road","settlements":["military"],"target":"scattered"},
+      {"asset":"service_garage","master":"service_garage_clean_master","category":"industrial","entrance":"north","secondary":["east"],"road":"main_road","settlements":["highway_frontage","industrial"],"target":"building"},
+      {"asset":"scrapyard","master":"scrapyard_clean_master","category":"industrial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["industrial"],"target":"multibuilding"},
+      {"asset":"military_checkpoint","master":"military_checkpoint_clean_master","category":"military","entrance":"north","secondary":["south"],"road":"highway","settlements":["military","highway_frontage"],"target":"multibuilding"},
+      {"asset":"ruined_roadside_diner","master":"ruined_roadside_diner_clean_master","category":"commercial","entrance":"north","secondary":["south"],"road":"highway","settlements":["highway_frontage"],"target":"building"},
+      {"asset":"abandoned_truck_stop","master":"abandoned_truck_stop_clean_master","category":"commercial","entrance":"north","secondary":["south"],"road":"highway","settlements":["highway_frontage"],"target":"multibuilding"},
+      {"asset":"wasteland_weigh_station","master":"wasteland_weigh_station_clean_master","category":"highway","entrance":"south","secondary":["east","west"],"road":"highway","settlements":["highway_frontage"],"target":"multibuilding"},
+      {"asset":"destroyed_refugee_convoy","master":"destroyed_refugee_convoy_clean_master","category":"highway","entrance":"north","secondary":["south"],"road":"highway","settlements":["highway_frontage","military"],"target":"scattered"}
+    ],
+    "habitation_and_community": [
+      {"asset":"split_level_house","master":"split_level_house_clean_master","category":"residential","entrance":"north","secondary":[],"road":"driveway","settlements":["residential","rural"],"target":"building"},
+      {"asset":"abandoned_culdesac","master":"abandoned_culdesac_clean_master","category":"residential","entrance":"north","secondary":[],"road":"local_road","settlements":["residential"],"target":"multibuilding"},
+      {"asset":"emergency_relief_shelter","master":"emergency_relief_shelter_clean_master","category":"civic","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center","military"],"target":"building"},
+      {"asset":"tenement_courtyard","master":"tenement_courtyard_clean_master","category":"residential","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center","residential"],"target":"multibuilding"},
+      {"asset":"ruined_rowhouse_block","master":"ruined_rowhouse_block_clean_master","category":"residential","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center","residential"],"target":"multibuilding"},
+      {"asset":"shattered_luxury_condo","master":"shattered_luxury_condo_clean_master","category":"residential","entrance":"north","secondary":[],"road":"main_road","settlements":["town_center","residential"],"target":"multibuilding"},
+      {"asset":"ruined_city_school","master":"ruined_city_school_clean_master","category":"civic","entrance":"north","secondary":["south","east"],"road":"main_road","settlements":["town_center","residential"],"target":"multibuilding"},
+      {"asset":"ruined_community_center","master":"ruined_community_center_clean_master","category":"civic","entrance":"north","secondary":["south","east"],"road":"main_road","settlements":["town_center","residential"],"target":"building"},
+      {"asset":"decayed_ranch","master":"decayed_ranch_clean_master","category":"agricultural","entrance":"north","secondary":["south"],"road":"driveway","settlements":["rural"],"target":"multibuilding"},
+      {"asset":"roadside_church_cemetery","master":"roadside_church_cemetery_clean_master","category":"civic","entrance":"north","secondary":[],"road":"local_road","settlements":["rural","residential"],"target":"multibuilding"},
+      {"asset":"ruined_ranger_station","master":"ruined_ranger_station_clean_master","category":"civic","entrance":"north","secondary":["south"],"road":"driveway","settlements":["rural"],"target":"multibuilding"},
+      {"asset":"wasteland_fire_lookout","master":"wasteland_fire_lookout_clean_master","category":"utility_infrastructure","entrance":"north","secondary":[],"road":"pedestrian","settlements":["rural"],"target":"scattered"}
+    ],
+    "urban_commercial": [
+      {"asset":"ruined_shopping_mall","master":"ruined_shopping_mall_clean_master","category":"commercial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center"],"target":"multibuilding"},
+      {"asset":"ruined_department_store","master":"ruined_department_store_clean_master","category":"commercial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center"],"target":"building"},
+      {"asset":"bombed_hotel","master":"bombed_hotel_clean_master","category":"commercial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center","highway_frontage"],"target":"multibuilding"},
+      {"asset":"buried_bank_vault","master":"buried_bank_vault_clean_master","category":"commercial","entrance":"north","secondary":["south","west"],"road":"main_road","settlements":["town_center"],"target":"multibuilding"},
+      {"asset":"ruined_office_tower","master":"ruined_office_tower_clean_master","category":"commercial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center"],"target":"multibuilding"}
+    ],
+    "transit_and_ports": [
+      {"asset":"collapsed_subway_station","master":"collapsed_subway_station_clean_master","category":"railway","entrance":"north","secondary":["south"],"road":"pedestrian","settlements":["town_center","railway"],"target":"multibuilding"},
+      {"asset":"ruined_bus_terminal","master":"ruined_bus_terminal_clean_master","category":"highway","entrance":"north","secondary":["south","east"],"road":"main_road","settlements":["town_center","highway_frontage"],"target":"multibuilding"},
+      {"asset":"elevated_rail_collapse","master":"elevated_rail_collapse_clean_master","category":"railway","entrance":"north","secondary":[],"road":"main_road","settlements":["town_center","railway"],"target":"multibuilding"},
+      {"asset":"sunken_highway_interchange","master":"sunken_highway_interchange_clean_master","category":"highway","entrance":"north","secondary":["south","east","west"],"road":"highway","settlements":["highway_frontage"],"target":"scattered"},
+      {"asset":"collapsed_airship_terminal","master":"collapsed_airship_terminal_clean_master","category":"miscellaneous","entrance":"north","secondary":["east"],"road":"main_road","settlements":["town_center","industrial"],"target":"multibuilding"},
+      {"asset":"crashed_cargo_airship","master":"crashed_cargo_airship_clean_master","category":"industrial","entrance":"west","secondary":[],"road":"none","settlements":["industrial"],"target":"scattered"},
+      {"asset":"warm_industrial_mountain_port","master":"warm_industrial_mountain_port_clean_master","category":"industrial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["industrial"],"target":"multibuilding"},
+      {"asset":"cold_industrial_mountain_port","master":"cold_industrial_mountain_port_clean_master","category":"industrial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["industrial"],"target":"multibuilding"}
+    ],
+    "rural_processing": [
+      {"asset":"abandoned_orchard_cannery","master":"abandoned_orchard_cannery_clean_master","category":"agricultural","entrance":"north","secondary":["south"],"road":"driveway","settlements":["rural","industrial"],"target":"multibuilding"},
+      {"asset":"ruined_grain_elevator","master":"ruined_grain_elevator_clean_master","category":"agricultural","entrance":"north","secondary":["south"],"road":"main_road","settlements":["rural","railway"],"target":"multibuilding"},
+      {"asset":"shattered_greenhouse_nursery","master":"shattered_greenhouse_nursery_clean_master","category":"agricultural","entrance":"north","secondary":["south"],"road":"driveway","settlements":["rural"],"target":"multibuilding"},
+      {"asset":"remote_sawmill","master":"remote_sawmill_clean_master","category":"industrial","entrance":"north","secondary":["south"],"road":"driveway","settlements":["rural","industrial"],"target":"multibuilding"}
+    ],
+    "extraction_sites": [
+      {"asset":"abandoned_quarry","master":"abandoned_quarry_clean_master","category":"industrial","entrance":"north","secondary":["east"],"road":"main_road","settlements":["industrial","rural"],"target":"multibuilding"},
+      {"asset":"collapsed_mine_entrance","master":"collapsed_mine_entrance_clean_master","category":"industrial","entrance":"north","secondary":[],"road":"driveway","settlements":["industrial","rural"],"target":"multibuilding"},
+      {"asset":"excavator_pit","master":"excavator_pit_clean_master","category":"industrial","entrance":"north","secondary":["east"],"road":"main_road","settlements":["industrial"],"target":"multibuilding"},
+      {"asset":"abandoned_oil_field","master":"abandoned_oil_field_clean_master","category":"industrial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["industrial","rural"],"target":"multibuilding"}
+    ],
+    "industrial_utility_technology": [
+      {"asset":"industrial_facility","master":"industrial_facility_clean_master","category":"industrial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["industrial"],"target":"multibuilding"},
+      {"asset":"city_electrical_substation","master":"city_electrical_substation_clean_master","category":"utility_infrastructure","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center","industrial"],"target":"multibuilding"},
+      {"asset":"city_water_treatment_plant","master":"city_water_treatment_plant_clean_master","category":"utility_infrastructure","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center","industrial"],"target":"multibuilding"},
+      {"asset":"district_heating_station","master":"district_heating_station_clean_master","category":"utility_infrastructure","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center","industrial"],"target":"multibuilding"},
+      {"asset":"municipal_incinerator","master":"municipal_incinerator_clean_master","category":"industrial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center","industrial"],"target":"multibuilding"},
+      {"asset":"ruined_fuel_depot","master":"ruined_fuel_depot_clean_master","category":"industrial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["industrial"],"target":"multibuilding"},
+      {"asset":"ruined_cyberware_clinic","master":"ruined_cyberware_clinic_clean_master","category":"civic","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center"],"target":"multibuilding"},
+      {"asset":"ae2_records_archive","master":"ae2_records_archive_clean_master","category":"civic","entrance":"north","secondary":["south"],"road":"main_road","settlements":["town_center","industrial"],"target":"multibuilding"},
+      {"asset":"nuclear_research_annex","master":"nuclear_research_annex_clean_master","category":"industrial","entrance":"north","secondary":["south"],"road":"main_road","settlements":["industrial","military"],"target":"multibuilding"},
+      {"asset":"shattered_wind_farm","master":"shattered_wind_farm_clean_master","category":"utility_infrastructure","entrance":"north","secondary":[],"road":"driveway","settlements":["rural","industrial"],"target":"scattered"},
+      {"asset":"broken_solar_field","master":"broken_solar_field_clean_master","category":"utility_infrastructure","entrance":"north","secondary":[],"road":"driveway","settlements":["rural","industrial"],"target":"scattered"},
+      {"asset":"wilderness_substation","master":"wilderness_substation_clean_master","category":"utility_infrastructure","entrance":"north","secondary":[],"road":"driveway","settlements":["rural","industrial"],"target":"multibuilding"},
+      {"asset":"wasteland_water_tower","master":"wasteland_water_tower_clean_master","category":"utility_infrastructure","entrance":"north","secondary":[],"road":"driveway","settlements":["rural"],"target":"multibuilding"}
+    ]
+  }
+}

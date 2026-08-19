@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "i":  {
+                          "item":  "immersiveengineering:nugget_electrum"
+                      },
+                "s":  {
+                          "item":  "more_ores_more_gems:electrum_ingot"
+                      }
+            },
+    "pattern":  [
+                    "sss",
+                    "sis",
+                    "sss"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "immersiveengineering:ingot_electrum"
+               }
+}

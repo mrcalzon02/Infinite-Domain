@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "ACA",
+    "ABA"
+  ],
+  "key": {
+    "A": {
+      "item": "allthecompressed:iron_block_4x"
+    },
+    "B": {
+      "item": "powergrid:integrated_circuit"
+    },
+    "C": {
+      "item": "kubejs:era4_exploration_contribution"
+    }
+  },
+  "result": {
+    "id": "kubejs:electrical_foundation_core",
+    "count": 1
+  }
+}

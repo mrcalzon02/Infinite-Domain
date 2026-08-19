@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": { "item": "cyberspace:data_hardware" },
+    "F": { "item": "cyber_ware_port:component_fiberoptics" },
+    "M": { "item": "cyber_ware_port:component_microelectric" },
+    "W": { "item": "gateway_of_doom:portal_ward_1" }
+  },
+  "pattern": ["FDF", "MWM", "FDF"],
+  "result": {
+    "count": 1,
+    "id": "gateway_of_doom:devil_eye_blue"
+  }
+}

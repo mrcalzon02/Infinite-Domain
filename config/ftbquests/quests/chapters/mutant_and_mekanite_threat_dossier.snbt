@@ -1,0 +1,720 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "mutant_and_mekanite_threat_dossier"
+	group: "5F0A5E0000000001"
+	id: "5F0A5E0000000003"
+	images: [ ]
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "5F20000000000001"
+			rewards: [
+				{
+					count: 2
+					id: "7F20000000010001"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "7F20000000010002"
+					item: {
+						count: 1
+						id: "the_wasteland_reworked:bandage"
+					}
+					type: "item"
+				}
+			]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mutantmonsters:mutant_zombie"
+				id: "6F20000000010001"
+				type: "kill"
+				value: 1L
+			}]
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F20000000000001"]
+			id: "5F20000000000002"
+			rewards: [{
+				count: 2
+				id: "7F20000000020001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mutantmonsters:mutant_zombie"
+				id: "6F20000000020001"
+				type: "kill"
+				value: 3L
+			}]
+			x: -18.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5F20000000000001"]
+			id: "5F20000000000003"
+			rewards: [{
+				count: 2
+				id: "7F20000000030001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mutantmonsters:mutant_skeleton"
+				id: "6F20000000030001"
+				type: "kill"
+				value: 1L
+			}]
+			x: -12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5F20000000000001"]
+			id: "5F20000000000004"
+			rewards: [{
+				count: 2
+				id: "7F20000000040001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mutantmonsters:mutant_creeper"
+				id: "6F20000000040001"
+				type: "kill"
+				value: 1L
+			}]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5F20000000000001"]
+			id: "5F20000000000005"
+			rewards: [{
+				count: 2
+				id: "7F20000000050001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mutantmonsters:mutant_enderman"
+				id: "6F20000000050001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5F20000000000002"]
+			id: "5F20000000000006"
+			rewards: [{
+				count: 2
+				id: "7F20000000060001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [
+				{
+					entity: "mutantmonsters:mutant_zombie"
+					id: "6F20000000060001"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "6F20000000060002"
+					item: { count: 1, id: "mutantmonsters:hulk_hammer" }
+					type: "item"
+				}
+			]
+			x: -18.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5F20000000000003"]
+			id: "5F20000000000007"
+			rewards: [{
+				count: 2
+				id: "7F20000000070001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mutantmonsters:mutant_skeleton"
+				id: "6F20000000070001"
+				type: "kill"
+				value: 2L
+			}]
+			x: -12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5F20000000000004"]
+			id: "5F20000000000008"
+			rewards: [{
+				count: 2
+				id: "7F20000000080001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mutantmonsters:mutant_creeper"
+				id: "6F20000000080001"
+				type: "kill"
+				value: 2L
+			}]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5F20000000000005"]
+			id: "5F20000000000009"
+			rewards: [{
+				count: 2
+				id: "7F20000000090001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mutantmonsters:mutant_enderman"
+				id: "6F20000000090001"
+				type: "kill"
+				value: 2L
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"5F20000000000006"
+				"5F20000000000007"
+				"5F20000000000008"
+				"5F20000000000009"
+			]
+			id: "5F2000000000000A"
+			rewards: [
+				{
+					count: 8
+					id: "7F200000000A0001"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "7F200000000A0002"
+					item: {
+						count: 1
+						id: "kubejs:era0_priority_cache"
+					}
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.5d
+			tags: ["terminal_warning"]
+			tasks: [
+				{
+					entity: "mutantmonsters:mutant_zombie"
+					id: "6F200000000A0001"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "mutantmonsters:mutant_skeleton"
+					id: "6F200000000A0002"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "mutantmonsters:mutant_creeper"
+					id: "6F200000000A0003"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "mutantmonsters:mutant_enderman"
+					id: "6F200000000A0004"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: -9.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5F2000000000000A"]
+			id: "5F2000000000000B"
+			rewards: [{
+				count: 4
+				id: "7F200000000B0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mutantmonsters:mutant_snow_golem"
+				id: "6F200000000B0001"
+				type: "kill"
+				value: 1L
+			}]
+			x: -13.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["5F2000000000000A"]
+			id: "5F2000000000000C"
+			rewards: [{
+				count: 4
+				id: "7F200000000C0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mutantmonsters:spider_pig"
+				id: "6F200000000C0001"
+				type: "kill"
+				value: 1L
+			}]
+			x: -5.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"5810000000000001"
+				"5D0000000000000F"
+			]
+			id: "5F2000000000000D"
+			rewards: [{
+				count: 6
+				id: "7F200000000D0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:drone"
+				id: "6F200000000D0001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"5810000000000001"
+				"5D00000000000015"
+			]
+			id: "5F2000000000000E"
+			rewards: [{
+				count: 6
+				id: "7F200000000E0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:mekanite_zombie_husk"
+				id: "6F200000000E0001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 20.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"5810000000000001"
+				"5D00000000000013"
+			]
+			id: "5F2000000000000F"
+			rewards: [{
+				count: 6
+				id: "7F200000000F0001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:mekanite_zombie_drowned"
+				id: "6F200000000F0001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 32.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F2000000000000D"]
+			id: "5F20000000000010"
+			rewards: [{
+				id: "7F20000000100001"
+				item: {
+					count: 1
+					id: "kubejs:era8_supply_bag"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:mekanite_zombie"
+				id: "6F20000000100001"
+				type: "kill"
+				value: 3L
+			}]
+			x: 8.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5F20000000000010"]
+			id: "5F20000000000011"
+			rewards: [{
+				count: 2
+				id: "7F20000000110001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:mekanite_skeleton"
+				id: "6F20000000110001"
+				type: "kill"
+				value: 3L
+			}]
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5F20000000000011"]
+			id: "5F20000000000012"
+			rewards: [{
+				count: 2
+				id: "7F20000000120001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:mekanite_witch"
+				id: "6F20000000120001"
+				type: "kill"
+				value: 2L
+			}]
+			x: 8.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5F20000000000012"]
+			id: "5F20000000000013"
+			rewards: [{
+				count: 2
+				id: "7F20000000130001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:mekanite_illusioner"
+				id: "6F20000000130001"
+				type: "kill"
+				value: 2L
+			}]
+			x: 8.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["5F20000000000013"]
+			id: "5F20000000000014"
+			rewards: [{
+				id: "7F20000000140001"
+				item: {
+					count: 1
+					id: "kubejs:era8_priority_cache"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:mekanite_ravager"
+				id: "6F20000000140001"
+				type: "kill"
+				value: 1L
+			}]
+			x: 8.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["5F2000000000000E"]
+			id: "5F20000000000015"
+			rewards: [{
+				id: "7F20000000150001"
+				item: {
+					count: 1
+					id: "kubejs:era8_supply_bag"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:mekanite_creeper"
+				id: "6F20000000150001"
+				type: "kill"
+				value: 3L
+			}]
+			x: 20.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5F20000000000015"]
+			id: "5F20000000000016"
+			rewards: [{
+				count: 2
+				id: "7F20000000160001"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:mekanite_spider"
+				id: "6F20000000160001"
+				type: "kill"
+				value: 4L
+			}]
+			x: 20.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5F20000000000016"]
+			id: "5F20000000000017"
+			rewards: [{
+				id: "7F20000000170001"
+				item: {
+					count: 1
+					id: "kubejs:era8_priority_cache"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:mekanite_vindicator"
+				id: "6F20000000170001"
+				type: "kill"
+				value: 3L
+			}]
+			x: 20.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5F20000000000010"]
+			id: "5F20000000000018"
+			rewards: [{
+				id: "7F20000000180001"
+				item: {
+					count: 1
+					id: "kubejs:era8_supply_bag"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [
+				{
+					entity: "mekanite_mobs:mekanite_slime"
+					id: "6F20000000180001"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "mekanite_mobs:mekanite_slime_medio"
+					id: "6F20000000180002"
+					type: "kill"
+					value: 2L
+				}
+				{
+					entity: "mekanite_mobs:mekanite_slime_small"
+					id: "6F20000000180003"
+					type: "kill"
+					value: 4L
+				}
+			]
+			x: 14.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"5F2000000000000D"
+				"5F2000000000000E"
+			]
+			id: "5F20000000000019"
+			rewards: [{
+				id: "7F20000000190001"
+				item: {
+					count: 1
+					id: "kubejs:era8_supply_bag"
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			tags: ["terminal_warning"]
+			tasks: [{
+				entity: "mekanite_mobs:mekanite_enderman"
+				id: "6F20000000190001"
+				type: "kill"
+				value: 2L
+			}]
+			x: 14.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"5F20000000000014"
+				"5F20000000000017"
+				"5F2000000000000F"
+				"5F20000000000018"
+				"5F20000000000019"
+			]
+			id: "5F2000000000001A"
+			rewards: [
+				{
+					count: 32
+					id: "7F200000001A0001"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "7F200000001A0002"
+					item: {
+						count: 1
+						id: "kubejs:era8_priority_cache"
+					}
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.5d
+			tags: ["terminal_warning"]
+			tasks: [
+				{
+					entity: "mekanite_mobs:mekanite_ravager"
+					id: "6F200000001A0001"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "mekanite_mobs:mekanite_vindicator"
+					id: "6F200000001A0002"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "mekanite_mobs:mekanite_enderman"
+					id: "6F200000001A0003"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "mekanite_mobs:mekanite_zombie_drowned"
+					id: "6F200000001A0004"
+					type: "kill"
+					value: 1L
+				}
+			]
+			x: 14.0d
+			y: 24.0d
+		}
+	]
+}

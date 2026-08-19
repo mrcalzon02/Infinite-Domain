@@ -1,0 +1,232 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "0000000000000000",
+      "00000000000000))",
+      "0000000000000000",
+      "0000000000))0000",
+      "00000000))(00000",
+      "000000))(0000000",
+      "0000))(000000000",
+      "00))(00000000000",
+      "))(0000000000000",
+      "(000000000000000",
+      "000000000000000)",
+      "0000000000000))(",
+      "00000000000))(00",
+      "000000000))(0000",
+      "0000000))(000000",
+      "00000))(00000000"
+    ],
+    [
+      "111111111111))11",
+      "111111111111111)",
+      "111111111111111)",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "1111111111111111",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "    !  %    ))  ",
+      "    !  %       )",
+      "    ,  %   *  ')",
+      "    !  %        ",
+      "    !  %%%%%%%%%",
+      ".!!!!!!!!!.!!!!!",
+      "    !           ",
+      "    !  2   2   2",
+      "    ,         + ",
+      "    !           ",
+      "    !           ",
+      "!!!!!!!!!!!!!!!!",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "    !  $        ",
+      "    !  $       )",
+      "    -  $       )",
+      "    !  $        ",
+      "    !  %%%%%%%%%",
+      "/!!!!!!!!!/!!!!!",
+      "    !           ",
+      "    !  &&  &&  &",
+      "    -  &&  &&  &",
+      "    !           ",
+      "    !           ",
+      "!!!!!!!!!!!!!!!!",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "    !  $        ",
+      "    !  $       )",
+      "    !  $       )",
+      "    !  $        ",
+      "    !  %%%%%%%%%",
+      "!!!!!!!!!!!!!!!!",
+      "    !           ",
+      "    !  &&  &&  &",
+      "    !  &&  &&  &",
+      "    !           ",
+      "    !           ",
+      "!!!!!!!!!!!!!!!!",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "    !  $        ",
+      "    !  $        ",
+      "    !  $        ",
+      "    !  $        ",
+      "    !  %%%%     ",
+      "!!!!!!!!!!!     ",
+      "    !           ",
+      "    !  &&  &&  &",
+      "    !  &&  &&  &",
+      "    !           ",
+      "    !           ",
+      "!!!!!!!!!!!!!!!!",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:concrete_leaded"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:insulating_glass"
+      },
+      {
+        "char": "%",
+        "block": "immersiveengineering:sheetmetal_lead"
+      },
+      {
+        "char": "&",
+        "block": "immersiveengineering:sheetmetal_steel"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:brewing_stand[has_bottle_0=false,has_bottle_1=false,has_bottle_2=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:spawner",
+        "tag": {
+          "id": "minecraft:mob_spawner",
+          "Delay": 200,
+          "MinSpawnDelay": 240,
+          "MaxSpawnDelay": 720,
+          "SpawnCount": 2,
+          "MaxNearbyEntities": 7,
+          "RequiredPlayerRange": 14,
+          "SpawnRange": 4,
+          "SpawnData": {
+            "entity": {
+              "id": "the_wasteland_reworked:irradiated"
+            }
+          },
+          "SpawnPotentials": [
+            {
+              "weight": 1,
+              "data": {
+                "entity": {
+                  "id": "the_wasteland_reworked:irradiated"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spawner",
+        "tag": {
+          "id": "minecraft:mob_spawner",
+          "Delay": 300,
+          "MinSpawnDelay": 240,
+          "MaxSpawnDelay": 720,
+          "SpawnCount": 2,
+          "MaxNearbyEntities": 7,
+          "RequiredPlayerRange": 14,
+          "SpawnRange": 4,
+          "SpawnData": {
+            "entity": {
+              "id": "minecraft:zombie"
+            }
+          },
+          "SpawnPotentials": [
+            {
+              "weight": 1,
+              "data": {
+                "entity": {
+                  "id": "minecraft:zombie"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "2",
+        "block": "the_wasteland_reworked:waste_barrel"
+      }
+    ]
+  }
+}

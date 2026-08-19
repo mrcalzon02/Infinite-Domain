@@ -1,0 +1,216 @@
+{
+  "family": "transit_and_ports",
+  "asset_pairs": 8,
+  "all_passed": true,
+  "failures": [],
+  "structures": {
+    "collapsed_subway_station": {
+      "size": [
+        63,
+        24,
+        45
+      ],
+      "master_blocks": 51195,
+      "changed_semantic_cells": 6728,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 176,
+        "functional_fixtures": 13,
+        "vertical_access_span": 17,
+        "dense_floor_levels": 15,
+        "footprint_variants": 15
+      },
+      "passed": true,
+      "issues": []
+    },
+    "ruined_bus_terminal": {
+      "size": [
+        61,
+        24,
+        51
+      ],
+      "master_blocks": 26840,
+      "changed_semantic_cells": 3935,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 10,
+        "orphan_door_halves": 0,
+        "window_blocks": 16,
+        "functional_fixtures": 2,
+        "vertical_access_span": 6,
+        "dense_floor_levels": 9,
+        "footprint_variants": 9
+      },
+      "passed": true,
+      "issues": []
+    },
+    "elevated_rail_collapse": {
+      "size": [
+        67,
+        30,
+        39
+      ],
+      "master_blocks": 14595,
+      "changed_semantic_cells": 10496,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 0,
+        "vertical_access_span": 17,
+        "dense_floor_levels": 18,
+        "footprint_variants": 10
+      },
+      "passed": true,
+      "issues": []
+    },
+    "sunken_highway_interchange": {
+      "size": [
+        73,
+        25,
+        73
+      ],
+      "master_blocks": 20278,
+      "changed_semantic_cells": 11853,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 12,
+        "footprint_variants": 15
+      },
+      "passed": true,
+      "issues": []
+    },
+    "collapsed_airship_terminal": {
+      "size": [
+        67,
+        35,
+        57
+      ],
+      "master_blocks": 54626,
+      "changed_semantic_cells": 13132,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 7,
+        "orphan_door_halves": 0,
+        "window_blocks": 4716,
+        "functional_fixtures": 2,
+        "vertical_access_span": 10,
+        "dense_floor_levels": 21,
+        "footprint_variants": 14
+      },
+      "passed": true,
+      "issues": []
+    },
+    "crashed_cargo_airship": {
+      "size": [
+        71,
+        29,
+        39
+      ],
+      "master_blocks": 16629,
+      "changed_semantic_cells": 8581,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 15,
+        "footprint_variants": 15
+      },
+      "passed": true,
+      "issues": []
+    },
+    "warm_industrial_mountain_port": {
+      "size": [
+        47,
+        31,
+        47
+      ],
+      "master_blocks": 34021,
+      "changed_semantic_cells": 5003,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 2,
+        "vertical_access_span": 3,
+        "dense_floor_levels": 27,
+        "footprint_variants": 27
+      },
+      "passed": true,
+      "issues": []
+    },
+    "cold_industrial_mountain_port": {
+      "size": [
+        47,
+        31,
+        47
+      ],
+      "master_blocks": 34021,
+      "changed_semantic_cells": 4154,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 2,
+        "vertical_access_span": 4,
+        "dense_floor_levels": 27,
+        "footprint_variants": 28
+      },
+      "passed": true,
+      "issues": []
+    }
+  }
+}

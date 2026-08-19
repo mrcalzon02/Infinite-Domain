@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PVP",
+    "STS",
+    "PVP"
+  ],
+  "key": {
+    "P": {
+      "item": "petrochem:steel_fluid_pipe"
+    },
+    "V": {
+      "item": "create:mechanical_pump"
+    },
+    "S": {
+      "item": "tfmg:steel_block"
+    },
+    "T": {
+      "item": "tfmg:steel_fluid_tank"
+    }
+  },
+  "result": {
+    "id": "tfmg:steel_chemical_vat",
+    "count": 1
+  }
+}

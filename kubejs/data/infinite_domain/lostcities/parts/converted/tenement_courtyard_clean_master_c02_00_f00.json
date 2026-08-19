@@ -1,0 +1,178 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "00000           ",
+      "'0000'0000'0000'",
+      "0000000000000000",
+      "0000000000000000",
+      "000000000000000'",
+      "0000000000000''%",
+      "00000000000''%00",
+      "000000000''%0000",
+      "0000000''%000000",
+      "00000''%00000000",
+      "000''%0000000000",
+      "0''%000000000000",
+      "'%00000000000000",
+      "0000000000000000",
+      "00000000000000''",
+      "000000000000''%0"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "        ,,,,,,,,",
+      "        ,,,,,,,,",
+      "        ,,,,,,,,",
+      "        ,,,,,,,,",
+      "        ,,,,,,,,",
+      "        ,,,,,,,,",
+      "        ,,,,,,,,",
+      "        ,,,,,,,,",
+      "        ,,,,,,,,"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "        $$$$$$$$",
+      "        $       ",
+      "        $       ",
+      "       )))&&&  !",
+      "       )))    1(",
+      "       )*)      ",
+      "       ))) -    ",
+      "       )))      ",
+      "       ))......."
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "        $$$$$$$$",
+      "        $       ",
+      "        $       ",
+      "        $       ",
+      "        $     / ",
+      "        +       ",
+      "        $       ",
+      "        $       ",
+      "        $......."
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "        $$$$$$$$",
+      "        $       ",
+      "        $       ",
+      "        $       ",
+      "        $       ",
+      "        $       ",
+      "        $       ",
+      "        $       ",
+      "        $......."
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "        $$$$$$$$",
+      "        $       ",
+      "        $       ",
+      "        $       ",
+      "        $       ",
+      "        $       ",
+      "        $       ",
+      "        $       ",
+      "        $......."
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:smoker[facing=north,lit=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:spruce_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "/",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": "0",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "1",
+        "block": "the_wasteland_reworked:radio"
+      }
+    ]
+  }
+}

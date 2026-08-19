@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "oritech:bio_generator_block"
+    },
+    "B": {
+      "item": "minecraft:hay_block"
+    },
+    "C": {
+      "item": "create_new_age:basic_motor"
+    },
+    "D": {
+      "item": "create_new_age:heater"
+    },
+    "E": {
+      "item": "wastelands:canned_food"
+    }
+  },
+  "result": {
+    "id": "kubejs:era4_farming_contribution",
+    "count": 1
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "outsidestyle": "lostcities:outside",
+  "settings": {
+    "railwayavoidance": "ignore",
+    "railpartheight6": 1
+  },
+  "multisettings": {
+    "areasize": 10,
+    "minimum": 1,
+    "maximum": 4,
+    "correctstylefactor": 0.9,
+    "attempts": 50
+  },
+  "scattered": {
+    "areasize": 8,
+    "chance": 0.0,
+    "weightnone": 100,
+    "list": []
+  },
+  "citybiomemultipliers": [
+    {
+      "multiplier": 0.0,
+      "biomes": {
+        "if_any": [
+          "#minecraft:is_ocean",
+          "#minecraft:is_river"
+        ]
+      }
+    },
+    {
+      "multiplier": 1.35,
+      "biomes": {
+        "if_any": [
+          "wastelands:city"
+        ]
+      }
+    },
+    {
+      "multiplier": 0.75,
+      "biomes": {
+        "if_any": [
+          "wastelands:apocalypse",
+          "wastelands:forest",
+          "the_wasteland_reworked:radioactive_wasteland",
+          "the_wasteland_reworked:decayed_forest"
+        ]
+      }
+    }
+  ],
+  "citystyles": [
+    {
+      "factor": 1.0,
+      "citystyle": "infinite_domain:wasteland"
+    }
+  ]
+}

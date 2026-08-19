@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "b":  {
+                          "item":  "allthecompressed:quartz_block_1x"
+                      },
+                "g":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "q":  {
+                          "item":  "minecraft:quartz"
+                      },
+                "u":  {
+                          "item":  "mininggadgets:upgrade_battery_1"
+                      }
+            },
+    "pattern":  [
+                    "qbq",
+                    "gug",
+                    "qbq"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "mininggadgets:upgrade_battery_2"
+               }
+}

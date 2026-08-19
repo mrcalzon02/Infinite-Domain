@@ -1,0 +1,25 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "#":  {
+                          "item":  "quark:stick_block"
+                      },
+                "X":  [
+                          {
+                              "item":  "minecraft:coal_block"
+                          },
+                          {
+                              "item":  "quark:charcoal_block"
+                          }
+                      ]
+            },
+    "pattern":  [
+                    "X",
+                    "#"
+                ],
+    "result":  {
+                   "count":  4,
+                   "id":  "minecraft:torch"
+               }
+}

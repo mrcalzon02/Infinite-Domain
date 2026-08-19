@@ -1,0 +1,26 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "ILI",
+                    "IHI",
+                    "SSS"
+                ],
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_block"
+                      },
+                "L":  {
+                          "item":  "minecraft:soul_lantern"
+                      },
+                "H":  {
+                          "item":  "minecraft:hopper"
+                      },
+                "S":  {
+                          "item":  "minecraft:stone_bricks"
+                      }
+            },
+    "result":  {
+                   "id":  "zombievillage:soul_interface",
+                   "count":  1
+               }
+}

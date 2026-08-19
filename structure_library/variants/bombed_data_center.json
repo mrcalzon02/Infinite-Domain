@@ -1,0 +1,25 @@
+{
+  "variant_id": "infinite_domain:bombed_data_center",
+  "clean_master": "infinite_domain:bombed_data_center_clean_master",
+  "damage_story": "A southeast bomb impact tore through the rear of Server Hall B, the generator boundary and the utility yard while the secured arrival, operations wing, Server Hall A and west receiving route survived.",
+  "damage_zone": "southeast server-hall/power boundary, mechanical roof and utility yard",
+  "environment_layer": [
+    "irregular tapered blast bowl with a shallow impact depression",
+    "gravity-led reinforced-concrete, deepslate and gravel debris",
+    "collapsed eastern roof monitors, stacks and utility plant",
+    "intact north arrival canopy, western data hall and western loading doors"
+  ],
+  "occupation_layer": [
+    "two pillager spawners controlling ground security and upper records",
+    "one zombie spawner in the surviving west server hall",
+    "two irradiated spawners around the breached east hall and power plant"
+  ],
+  "invariants": [
+    "security, administration and network operations remain connected",
+    "Server Hall A and the central service spine remain accessible",
+    "western receiving and loading remain connected to the surviving hall",
+    "the upper administration floor and stair remain usable",
+    "damage remains localized to the declared southeast impact zone"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

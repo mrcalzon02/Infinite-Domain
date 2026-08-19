@@ -1,0 +1,33 @@
+{
+  "type": "createcybernetics:engineering_table",
+  "accept_mirrored": true,
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinite_domain_cyberware:warped_lattice_splint"
+    },
+    "B": {
+      "item": "cyber_ware_port:bone_upgrades_bonelacing"
+    },
+    "C": {
+      "item": "cyberchems:roid_autoinjector"
+    },
+    "D": {
+      "item": "createcybernetics:component_plating"
+    },
+    "E": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "  A  ",
+    " ABC ",
+    " BDB ",
+    " CEC ",
+    "  A  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "infinite_domain_cyberware:reclaimed_capacitor_frame"
+  }
+}

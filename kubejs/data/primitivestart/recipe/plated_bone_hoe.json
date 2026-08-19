@@ -1,0 +1,15 @@
+{
+    "type":  "minecraft:smithing_transform",
+    "template":  {
+                     "item":  "primitivestart:plating_upgrade_smithing_template"
+                 },
+    "base":  {
+                 "item":  "primitivestart:reinforced_bone_hoe"
+             },
+    "addition":  {
+                     "item":  "minecraft:gold_ingot"
+                 },
+    "result":  {
+                   "id":  "primitivestart:plated_bone_hoe"
+               }
+}

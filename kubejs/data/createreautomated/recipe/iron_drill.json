@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  {
+                          "item":  "create:andesite_alloy_block"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      }
+            },
+    "pattern":  [
+                    " A ",
+                    "III",
+                    " I "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "createreautomated:iron_drill"
+               }
+}

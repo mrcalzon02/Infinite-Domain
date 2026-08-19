@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "A  ",
+                    " S ",
+                    "  Z"
+                ],
+    "key":  {
+                "A":  {
+                          "item":  "create:andesite_alloy_block"
+                      },
+                "S":  {
+                          "item":  "create:shaft"
+                      },
+                "Z":  {
+                          "item":  "bno:zinc_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "createdieselgenerators:engine_piston",
+                   "count":  2
+               }
+}

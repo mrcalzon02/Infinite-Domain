@@ -1,0 +1,27 @@
+{
+  "id": "infinite_domain:foundry_broker",
+  "title": { "text": "Foundry Broker Echo", "color": "dark_gray" },
+  "model": { "villager_data": { "type": "taiga", "profession": "armorer", "level": 4 } },
+  "stages": [{
+    "title": "Heavy Industry Exchange",
+    "lore": [{ "type": "ftbechoes:text", "text": "Maintenance stock for furnaces, rails, and foundries. These supplies repair industry; they do not absolve you from building it." }],
+    "not_ready": "The foundry exchange opens after the Heavy Industry foundation.",
+    "ready": "Heavy-industry authorization confirmed.",
+    "required_stage": "infinite_domain:era_2",
+    "shop_unlock": [
+      { "name": "Coal Coke Lot", "item": { "id": "tfmg:coal_coke", "count": 8 }, "cost": 16 },
+      { "name": "Coal Coke Block Pair", "item": { "id": "tfmg:coal_coke_block", "count": 2 }, "cost": 24 },
+      { "name": "Steel Ingot Lot", "item": { "id": "tfmg:steel_ingot", "count": 4 }, "cost": 32 },
+      { "name": "Cast Iron Sheet Lot", "item": { "id": "tfmg:cast_iron_sheet", "count": 8 }, "cost": 24 },
+      { "name": "Reinforcement Stock", "item": { "id": "tfmg:blast_furnace_reinforcement", "count": 4 }, "cost": 32 },
+      { "name": "Fireproof Brick Lot", "item": { "id": "tfmg:fireproof_bricks", "count": 16 }, "cost": 24 },
+      { "name": "Cinder Block Pallet", "item": { "id": "tfmg:cinder_block", "count": 32 }, "cost": 16 },
+      { "name": "Industrial Concrete Pallet", "item": { "id": "tfmg:concrete", "count": 32 }, "cost": 24 },
+      { "name": "Rail Bundle", "item": { "id": "minecraft:rail", "count": 32 }, "cost": 16 },
+      { "name": "Powered Rail Bundle", "item": { "id": "minecraft:powered_rail", "count": 16 }, "cost": 24 },
+      { "name": "Steel Pipe Bundle", "item": { "id": "tfmg:steel_pipe", "count": 8 }, "cost": 24 },
+      { "name": "Iron Bar Bundle", "item": { "id": "minecraft:iron_bars", "count": 32 }, "cost": 16 }
+    ],
+    "completion_reward": { "currency": 128, "description": "Two Cogs of industrial exchange credit" }
+  }]
+}

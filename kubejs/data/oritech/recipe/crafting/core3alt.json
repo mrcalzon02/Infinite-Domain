@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "s":  {
+                          "item":  "bno:nickel_block"
+                      }
+            },
+    "pattern":  [
+                    "sss",
+                    "scs",
+                    "sss"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "oritech:machine_core_3"
+               }
+}

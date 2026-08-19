@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": { "item": "ae2:energy_cell" },
+    "F": { "item": "cyber_ware_port:component_fiberoptics" },
+    "G": { "item": "cyberspace:graphene_coated_iron_ingot" },
+    "L": { "item": "ae2:logic_processor" },
+    "Q": { "item": "cyberspace:quantum_core" },
+    "V": { "item": "cyberspace:virtual_machine_core" }
+  },
+  "pattern": ["GLG", "QEQ", "FVF"],
+  "result": { "count": 1, "id": "kubejs:darknet_temporal_core" }
+}

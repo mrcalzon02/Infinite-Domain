@@ -1,0 +1,25 @@
+{
+  "variant_id": "infinite_domain:decayed_farm",
+  "clean_master": "infinite_domain:decayed_farm_clean_master",
+  "damage_story": "The farmhouse living-room roof and the barn's northeast loft failed in separate events; the dead fields, stranded equipment and infected occupants now surround an otherwise legible family-farm workflow.",
+  "damage_zone": "northwest farmhouse roof/living edge and northeast barn roof/loft",
+  "environment_layer": [
+    "gravity-led gravel beneath both localized roof failures",
+    "dead planting rows interrupt otherwise readable irrigated field geometry",
+    "scrap stranded along the field lane and machinery bay",
+    "intact county-road apron, service yard, silo and southwest barn loft"
+  ],
+  "occupation_layer": [
+    "one zombie spawner in the barn tack-room zone",
+    "one husk spawner among the dead fields",
+    "two cows, one sheep and one pig retained as persistent barn livestock"
+  ],
+  "invariants": [
+    "farmhouse kitchen, bedroom, washroom, pantry and both exits remain connected",
+    "barn aisle, southwest stalls, southwest loft and both wagon doors survive",
+    "silo and both machinery-shed rooms remain reachable",
+    "field-to-service-yard circulation remains legible",
+    "damage remains localized to the two declared structural failure zones"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

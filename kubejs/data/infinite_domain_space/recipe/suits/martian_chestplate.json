@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "B": {
+      "item": "kubejs:martian_catalyst"
+    },
+    "C": {
+      "item": "kubejs:aerospace_composite"
+    },
+    "D": {
+      "item": "stellaris:space_suit_chestplate"
+    },
+    "E": {
+      "item": "tfmg:rubber_sheet"
+    }
+  },
+  "result": {
+    "id": "infinite_domain_space:martian_chestplate",
+    "count": 1
+  }
+}

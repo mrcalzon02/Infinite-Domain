@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "aaa",
+                    " a "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:block_of_tungsten"
+                      },
+                "b":  {
+                          "item":  "more_ores_more_gems:blockof_titanium"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:tungsten_shield",
+                   "count":  1
+               }
+}

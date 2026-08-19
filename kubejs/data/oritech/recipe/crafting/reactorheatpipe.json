@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "more_ores_more_gems:block_of_electrum"
+                      },
+                "o":  {
+                          "item":  "minecraft:gold_block"
+                      }
+            },
+    "pattern":  [
+                    " o ",
+                    "oco",
+                    " o "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "oritech:reactor_heat_pipe"
+               }
+}

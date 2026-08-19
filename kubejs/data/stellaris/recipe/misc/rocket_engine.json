@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " T ",
+    "CEC",
+    "GNG"
+  ],
+  "key": {
+    "T": {
+      "item": "kubejs:turbopump"
+    },
+    "C": {
+      "item": "kubejs:combustion_chamber"
+    },
+    "E": {
+      "item": "kubejs:petroleum_engine_assembly"
+    },
+    "G": {
+      "item": "kubejs:gimbal_actuator"
+    },
+    "N": {
+      "item": "kubejs:engine_nozzle"
+    }
+  },
+  "result": {
+    "id": "stellaris:rocket_engine",
+    "count": 1
+  }
+}

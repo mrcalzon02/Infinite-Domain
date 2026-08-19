@@ -1,0 +1,138 @@
+{
+  "family": "urban_commercial",
+  "asset_pairs": 5,
+  "all_passed": true,
+  "failures": [],
+  "structures": {
+    "ruined_shopping_mall": {
+      "size": [
+        73,
+        28,
+        63
+      ],
+      "master_blocks": 69950,
+      "changed_semantic_cells": 12050,
+      "spawners": 2,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 26,
+        "orphan_door_halves": 0,
+        "window_blocks": 1997,
+        "functional_fixtures": 9,
+        "vertical_access_span": 7,
+        "dense_floor_levels": 16,
+        "footprint_variants": 19
+      },
+      "passed": true,
+      "issues": []
+    },
+    "ruined_department_store": {
+      "size": [
+        59,
+        31,
+        51
+      ],
+      "master_blocks": 55732,
+      "changed_semantic_cells": 6431,
+      "spawners": 2,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 11,
+        "orphan_door_halves": 0,
+        "window_blocks": 58,
+        "functional_fixtures": 2,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 19,
+        "footprint_variants": 15
+      },
+      "passed": true,
+      "issues": []
+    },
+    "bombed_hotel": {
+      "size": [
+        53,
+        39,
+        47
+      ],
+      "master_blocks": 44425,
+      "changed_semantic_cells": 8447,
+      "spawners": 2,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 22,
+        "orphan_door_halves": 0,
+        "window_blocks": 374,
+        "functional_fixtures": 74,
+        "vertical_access_span": 27,
+        "dense_floor_levels": 16,
+        "footprint_variants": 24
+      },
+      "passed": true,
+      "issues": []
+    },
+    "buried_bank_vault": {
+      "size": [
+        49,
+        31,
+        45
+      ],
+      "master_blocks": 31416,
+      "changed_semantic_cells": 4065,
+      "spawners": 1,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 10,
+        "orphan_door_halves": 0,
+        "window_blocks": 1640,
+        "functional_fixtures": 189,
+        "vertical_access_span": 7,
+        "dense_floor_levels": 16,
+        "footprint_variants": 17
+      },
+      "passed": true,
+      "issues": []
+    },
+    "ruined_office_tower": {
+      "size": [
+        51,
+        47,
+        47
+      ],
+      "master_blocks": 48560,
+      "changed_semantic_cells": 10862,
+      "spawners": 2,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 18,
+        "orphan_door_halves": 0,
+        "window_blocks": 949,
+        "functional_fixtures": 149,
+        "vertical_access_span": 34,
+        "dense_floor_levels": 18,
+        "footprint_variants": 23
+      },
+      "passed": true,
+      "issues": []
+    }
+  }
+}

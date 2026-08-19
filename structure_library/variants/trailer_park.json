@@ -1,0 +1,25 @@
+{
+  "variant_id": "infinite_domain:trailer_park",
+  "clean_master": "infinite_domain:trailer_park_clean_master",
+  "damage_story": "Separate failures tear into the northwest home's living-room roof, the southeast home's bedroom roof and the communal workshop, while the management office, laundry, central road and remaining residential programs survive decades of abandonment.",
+  "damage_zone": "northwest trailer living roof, southeast trailer bedroom roof and communal workshop roof",
+  "environment_layer": [
+    "localized gravity-led gravel under three roof failures",
+    "dead and neglected private gardens while lot geometry remains legible",
+    "garbage near the center lots and scrap beside road-end utilities",
+    "intact branched asphalt/gravel circulation and trailer utility hookups"
+  ],
+  "occupation_layer": [
+    "one ghoul spawner in the damaged communal workshop",
+    "two zombie spawners distributed between central and southern residential lots",
+    "loot remains divided between homes, management and maintenance services"
+  ],
+  "invariants": [
+    "management, laundry and road-end utilities remain connected",
+    "all six trailer entrances and lot approaches remain reachable",
+    "four trailers retain all residential zones",
+    "northwest bedroom/bath and southeast living/bath zones survive",
+    "damage remains confined to the three declared failure zones"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

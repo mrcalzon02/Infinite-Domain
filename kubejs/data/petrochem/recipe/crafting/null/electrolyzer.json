@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "C":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "M":  {
+                          "item":  "create:mechanical_mixer"
+                      },
+                "R":  {
+                          "item":  "create:copper_nugget"
+                      },
+                "S":  {
+                          "tag":  "c:plates/steel"
+                      },
+                "Z":  {
+                          "item":  "create:zinc_ingot"
+                      }
+            },
+    "pattern":  [
+                    " S ",
+                    "RMR",
+                    "ZSC"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "petrochem:electrolyzer"
+               }
+}

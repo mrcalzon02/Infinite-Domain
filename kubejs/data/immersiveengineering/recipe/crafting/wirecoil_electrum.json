@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "s":  {
+                          "item":  "quark:stick_block"
+                      },
+                "w":  {
+                          "tag":  "c:wires/electrum"
+                      }
+            },
+    "pattern":  [
+                    " w ",
+                    "wsw",
+                    " w "
+                ],
+    "result":  {
+                   "count":  4,
+                   "id":  "immersiveengineering:wirecoil_electrum"
+               }
+}

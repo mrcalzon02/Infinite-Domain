@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "petrochem:sulfur_dust"
+    },
+    "B": {
+      "item": "petrochem:oil_bucket"
+    },
+    "C": {
+      "item": "petrochem:steel_pump"
+    },
+    "D": {
+      "item": "petrochem:distillation_controller"
+    },
+    "E": {
+      "item": "petrochem:heavy_diesel_bucket"
+    }
+  },
+  "result": {
+    "id": "kubejs:era3_mining_contribution",
+    "count": 1
+  }
+}

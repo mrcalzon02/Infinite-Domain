@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " a ",
+                    "abc",
+                    " c "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:block_of_nickel"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "c":  {
+                          "item":  "more_ores_more_gems:block_of_platinum"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:castle_funk",
+                   "count":  1
+               }
+}

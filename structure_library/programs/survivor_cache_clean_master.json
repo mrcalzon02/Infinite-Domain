@@ -1,0 +1,58 @@
+{
+  "structure_id": "infinite_domain:survivor_cache_clean_master",
+  "archetype": "surface-concealed survivor shelter with independent emergency hatch",
+  "orientation": {
+    "pedestrian_approach": "north",
+    "camouflaged_surface_shed": "north-central",
+    "primary_stair": "central",
+    "emergency_hatch": "southeast",
+    "sleeping_and_medical_rooms": "west",
+    "pantry_and_workshop": "east"
+  },
+  "surface_program": [
+    "gravel footpath and unassuming utility-shed facade",
+    "front storage and equipment room",
+    "rear duty desk and radio post",
+    "controlled stair descent into the shelter",
+    "roof service plant and side windows"
+  ],
+  "shelter_program": [
+    "north intake and equipment staging",
+    "two-bunk sleeping room with personal storage",
+    "separate infirmary with bed, water and medicine fixtures",
+    "food pantry with organized crate storage",
+    "repair workshop with furnace, bench and parts shelf",
+    "independent southeast emergency ladder and flush hatch"
+  ],
+  "circulation": [
+    "pedestrian path through the shed and down the protected stair",
+    "intake cross-corridor to west living/medical and east supply/workshop rooms",
+    "internal thresholds connecting sleeping room to infirmary and pantry to workshop",
+    "workshop route to the independent emergency hatch"
+  ],
+  "occupation_constraints": [
+    "distribute pillager spawners between surface guard, sleeping room, infirmary and workshop",
+    "retain survival loot in medical and pantry rooms",
+    "retain military loot near the occupied workshop and emergency route",
+    "avoid blocking either exit or the central cross-corridor"
+  ],
+  "damage_constraints": [
+    "concentrate surface blast damage in the shed's southwest roof corner",
+    "confine the underground cave-in to the northeast pantry edge",
+    "preserve the primary stair, infirmary, workshop and emergency hatch",
+    "shape rubble below failed roof and soil-bearing members",
+    "derive the occupied cache from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the surface building reads as a plausible concealed utility shed",
+      "sleeping, medical, pantry and workshop rooms remain purpose-readable",
+      "the primary stair and emergency hatch both work at player scale",
+      "pillager occupation is dangerous without blocking either exit",
+      "the surface-relative placement keeps the shelter buried and shed visible",
+      "damage follows gravity while preserving the declared survivor routes"
+    ]
+  }
+}

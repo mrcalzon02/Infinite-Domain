@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "EAE",
+    "MCM",
+    "EAE"
+  ],
+  "key": {
+    "E": {
+      "item": "ae2:engineering_processor"
+    },
+    "A": {
+      "item": "create_new_age:advanced_motor"
+    },
+    "M": {
+      "item": "oritech:motor"
+    },
+    "C": {
+      "item": "powergrid:circuit_board"
+    }
+  },
+  "result": {
+    "id": "oritech:assembler_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  {
+                          "item":  "bno:aluminum_block"
+                      },
+                "T":  {
+                          "item":  "tfmg:thermite_powder"
+                      }
+            },
+    "pattern":  [
+                    " T ",
+                    "TAT",
+                    " T "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "tfmg:thermite_grenade"
+               }
+}

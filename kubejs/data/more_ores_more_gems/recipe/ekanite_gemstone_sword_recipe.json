@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "pattern":  [
+                    "a",
+                    "a",
+                    "b"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:ekanite"
+                      },
+                "b":  {
+                          "item":  "minecraft:diamond"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:ekanite_gemstone_sword",
+                   "count":  1
+               }
+}

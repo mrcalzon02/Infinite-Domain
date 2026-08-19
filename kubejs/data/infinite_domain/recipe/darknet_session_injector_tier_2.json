@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "cyberspace:graphene_coated_iron_ingot"
+    },
+    "P": {
+      "item": "kubejs:darknet_session_injector_tier_1"
+    },
+    "U": {
+      "item": "ae2:logic_processor"
+    }
+  },
+  "pattern": [
+    "GUG",
+    " P ",
+    "GUG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kubejs:darknet_session_injector_tier_2"
+  }
+}

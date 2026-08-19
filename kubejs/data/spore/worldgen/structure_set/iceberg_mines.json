@@ -1,0 +1,16 @@
+{
+    "placement":  {
+                      "type":  "minecraft:concentric_rings",
+                      "count":  3,
+                      "distance":  39,
+                      "preferred_biomes":  "minecraft:frozen_ocean",
+                      "salt":  73000039,
+                      "spread":  1
+                  },
+    "structures":  [
+                       {
+                           "structure":  "spore:iceberg_mines",
+                           "weight":  1
+                       }
+                   ]
+}

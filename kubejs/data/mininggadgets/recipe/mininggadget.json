@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "d":  {
+                          "item":  "minecraft:diamond_block"
+                      },
+                "g":  {
+                          "item":  "minecraft:gold_block"
+                      },
+                "i":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "r":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "u":  {
+                          "item":  "mininggadgets:upgrade_empty"
+                      }
+            },
+    "pattern":  [
+                    "dig",
+                    "dur",
+                    "dig"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "mininggadgets:mininggadget"
+               }
+}

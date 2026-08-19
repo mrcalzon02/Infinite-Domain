@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "infinitedomain.darknet.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "Darknetblock1Mixin",
+    "DragonUtilsMixin",
+    "IafDragonDestructionManagerMixin",
+    "LegacyGeneratedStructureMixin"
+  ],
+  "client": [
+    "EnumDragonTexturesMixin",
+    "EntityRenderDispatcherMixin",
+    "HumanoidArmorLayerMixin",
+    "LegacyDragonArmorFeatureMixin",
+    "LegacyDragonRendererMixin",
+    "LivingEntityRendererMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

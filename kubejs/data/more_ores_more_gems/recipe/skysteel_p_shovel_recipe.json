@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "pattern":  [
+                    "a",
+                    "b",
+                    "b"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:skysteel"
+                      },
+                "b":  {
+                          "item":  "stellaris:desh_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:skysteel_p_shovel",
+                   "count":  1
+               }
+}

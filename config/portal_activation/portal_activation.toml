@@ -1,0 +1,21 @@
+# Completely disable Nether portal activation
+disable_portal_activation = true
+
+# Required item or tag. Examples:
+# required_item = "minecraft:nether_star"
+# required_item = "#c:gems/diamond"
+required_item = ""
+
+# Consume the required item after successful activation
+consume_item = false
+
+# Only require the item once per player
+unlock_forever = false
+
+# Show a message when activation is denied
+show_message = true
+
+# Keep these checks enabled so activation is validated for every vanilla source
+prevent_lightning = true
+prevent_flint_and_steel = true
+prevent_fire_charge = true

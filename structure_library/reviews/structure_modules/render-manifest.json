@@ -1,0 +1,341 @@
+{
+  "purpose": "Automated review images; successful rendering is not visual approval.",
+  "structures": [
+    {
+      "structure_id": "infinite_domain:harbor_loading_pier_warm",
+      "source_size": [
+        21,
+        22,
+        20
+      ],
+      "cutaway_y": 13,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/harbor_loading_pier_warm/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/harbor_loading_pier_warm/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/harbor_loading_pier_warm/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/harbor_loading_pier_warm/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:harbor_loading_pier_cold",
+      "source_size": [
+        21,
+        22,
+        20
+      ],
+      "cutaway_y": 13,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/harbor_loading_pier_cold/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/harbor_loading_pier_cold/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/harbor_loading_pier_cold/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/harbor_loading_pier_cold/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:port_customs_warehouse",
+      "source_size": [
+        15,
+        14,
+        17
+      ],
+      "cutaway_y": 8,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/port_customs_warehouse/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/port_customs_warehouse/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/port_customs_warehouse/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/port_customs_warehouse/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:port_tunnel_control",
+      "source_size": [
+        14,
+        13,
+        16
+      ],
+      "cutaway_y": 8,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/port_tunnel_control/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/port_tunnel_control/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/port_tunnel_control/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/port_tunnel_control/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:mountain_transport_tunnel_warm",
+      "source_size": [
+        15,
+        14,
+        29
+      ],
+      "cutaway_y": 8,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/mountain_transport_tunnel_warm/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/mountain_transport_tunnel_warm/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/mountain_transport_tunnel_warm/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/mountain_transport_tunnel_warm/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:mountain_transport_tunnel_cold",
+      "source_size": [
+        15,
+        14,
+        29
+      ],
+      "cutaway_y": 8,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/mountain_transport_tunnel_cold/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/mountain_transport_tunnel_cold/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/mountain_transport_tunnel_cold/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/mountain_transport_tunnel_cold/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:fuel_tank_containment_cell",
+      "source_size": [
+        17,
+        13,
+        17
+      ],
+      "cutaway_y": 8,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/fuel_tank_containment_cell/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/fuel_tank_containment_cell/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/fuel_tank_containment_cell/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/fuel_tank_containment_cell/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:fuel_loading_rack",
+      "source_size": [
+        18,
+        12,
+        21
+      ],
+      "cutaway_y": 7,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/fuel_loading_rack/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/fuel_loading_rack/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/fuel_loading_rack/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/fuel_loading_rack/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:market_stall_provisions",
+      "source_size": [
+        10,
+        9,
+        9
+      ],
+      "cutaway_y": 5,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/market_stall_provisions/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/market_stall_provisions/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/market_stall_provisions/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/market_stall_provisions/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:market_stall_medicine",
+      "source_size": [
+        10,
+        9,
+        9
+      ],
+      "cutaway_y": 5,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/market_stall_medicine/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/market_stall_medicine/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/market_stall_medicine/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/market_stall_medicine/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:market_stall_repair",
+      "source_size": [
+        10,
+        9,
+        9
+      ],
+      "cutaway_y": 5,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/market_stall_repair/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/market_stall_repair/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/market_stall_repair/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/market_stall_repair/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:market_stall_livestock",
+      "source_size": [
+        10,
+        9,
+        9
+      ],
+      "cutaway_y": 5,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/market_stall_livestock/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/market_stall_livestock/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/market_stall_livestock/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/market_stall_livestock/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:market_trade_lodge",
+      "source_size": [
+        21,
+        18,
+        16
+      ],
+      "cutaway_y": 11,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/market_trade_lodge/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/market_trade_lodge/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/market_trade_lodge/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/market_trade_lodge/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:market_square_well",
+      "source_size": [
+        9,
+        5,
+        6
+      ],
+      "cutaway_y": 3,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/market_square_well/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/market_square_well/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/market_square_well/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/market_square_well/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:industrial_office_annex",
+      "source_size": [
+        18,
+        16,
+        22
+      ],
+      "cutaway_y": 9,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/industrial_office_annex/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/industrial_office_annex/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/industrial_office_annex/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/industrial_office_annex/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:industrial_truck_dock_bank",
+      "source_size": [
+        35,
+        16,
+        13
+      ],
+      "cutaway_y": 9,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/industrial_truck_dock_bank/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/industrial_truck_dock_bank/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/industrial_truck_dock_bank/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/industrial_truck_dock_bank/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:industrial_storage_rack_bay",
+      "source_size": [
+        26,
+        15,
+        23
+      ],
+      "cutaway_y": 9,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/industrial_storage_rack_bay/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/industrial_storage_rack_bay/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/industrial_storage_rack_bay/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/industrial_storage_rack_bay/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:industrial_rail_loading_platform",
+      "source_size": [
+        33,
+        13,
+        9
+      ],
+      "cutaway_y": 8,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/industrial_rail_loading_platform/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/industrial_rail_loading_platform/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/industrial_rail_loading_platform/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/industrial_rail_loading_platform/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:industrial_dispatch_annex",
+      "source_size": [
+        14,
+        14,
+        20
+      ],
+      "cutaway_y": 8,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/industrial_dispatch_annex/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/industrial_dispatch_annex/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/industrial_dispatch_annex/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/industrial_dispatch_annex/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:industrial_process_line",
+      "source_size": [
+        20,
+        11,
+        22
+      ],
+      "cutaway_y": 8,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/industrial_process_line/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/industrial_process_line/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/industrial_process_line/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/industrial_process_line/floor_slices.png"
+      },
+      "visual_approval": false
+    },
+    {
+      "structure_id": "infinite_domain:industrial_powerhouse",
+      "source_size": [
+        12,
+        27,
+        16
+      ],
+      "cutaway_y": 17,
+      "renders": {
+        "exterior_a": "structure_library/reviews/structure_modules/industrial_powerhouse/exterior_a.png",
+        "exterior_b": "structure_library/reviews/structure_modules/industrial_powerhouse/exterior_b.png",
+        "roof_off_cutaway": "structure_library/reviews/structure_modules/industrial_powerhouse/roof_off_cutaway.png",
+        "floor_slices": "structure_library/reviews/structure_modules/industrial_powerhouse/floor_slices.png"
+      },
+      "visual_approval": false
+    }
+  ]
+}

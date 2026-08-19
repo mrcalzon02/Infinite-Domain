@@ -1,0 +1,259 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "------3---111-13",
+      "13-------3111---",
+      "---13-----111---",
+      "------13--111--3",
+      "-3-------1111---",
+      "----3-----1113--",
+      "-------3--111--1",
+      "-13-------3-----",
+      "----13-------3--",
+      "---000-000-00-00",
+      "--30-000001-0000",
+      "---000000--00000",
+      "3--0000-00-000-0",
+      "--100-0000-0-000",
+      "---7777777-77777",
+      "3--00000-0-0000-"
+    ],
+    [
+      "   2222222222222",
+      "   2222222222222",
+      "   2222222222222",
+      "   2222222222222",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "   := /> <  */ +",
+      "   ;/9< := /+ ),",
+      "    ?: 8;/ ) '* ",
+      "   =8 >/ ?  %(/&",
+      "   > /? =8 +/ ,'",
+      "                ",
+      "   8; 9</:  (+ /"
+    ],
+    [
+      "   5   $ 6  . 6 ",
+      "   5     6    6 ",
+      "   5     6    6 ",
+      "   5555555555555",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "               4",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   5     6    6 ",
+      "   5     6    6 ",
+      "   5     6    6 ",
+      "   55!!5555!!555",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   5     6    6 ",
+      "   5     6    6 ",
+      "   5     6    6 ",
+      "   55!!5555!!555",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   5     6    6 ",
+      "   5     6    6 ",
+      "   5     6    6 ",
+      "   5555555555555",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:carrots[age=0]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:carrots[age=1]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:carrots[age=2]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:carrots[age=3]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:carrots[age=4]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:carrots[age=5]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:carrots[age=6]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:carrots[age=7]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:composter[level=3]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:dead_bush"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:farmland[moisture=7]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:oak_planks"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:podzol"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spawner",
+        "tag": {
+          "id": "minecraft:mob_spawner",
+          "Delay": 280,
+          "MinSpawnDelay": 240,
+          "MaxSpawnDelay": 720,
+          "SpawnCount": 2,
+          "MaxNearbyEntities": 6,
+          "RequiredPlayerRange": 14,
+          "SpawnRange": 4,
+          "SpawnData": {
+            "entity": {
+              "id": "minecraft:husk"
+            }
+          },
+          "SpawnPotentials": [
+            {
+              "weight": 1,
+              "data": {
+                "entity": {
+                  "id": "minecraft:husk"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:water[level=0]"
+      },
+      {
+        "char": "8",
+        "block": "minecraft:wheat[age=0]"
+      },
+      {
+        "char": "9",
+        "block": "minecraft:wheat[age=1]"
+      },
+      {
+        "char": ":",
+        "block": "minecraft:wheat[age=2]"
+      },
+      {
+        "char": ";",
+        "block": "minecraft:wheat[age=3]"
+      },
+      {
+        "char": "<",
+        "block": "minecraft:wheat[age=4]"
+      },
+      {
+        "char": "=",
+        "block": "minecraft:wheat[age=5]"
+      },
+      {
+        "char": ">",
+        "block": "minecraft:wheat[age=6]"
+      },
+      {
+        "char": "?",
+        "block": "minecraft:wheat[age=7]"
+      }
+    ]
+  }
+}

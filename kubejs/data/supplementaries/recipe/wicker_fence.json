@@ -1,0 +1,31 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "condition":  "supplementaries:flag",
+                                       "flag":  "wicker_fence"
+                                   }
+                               ],
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "supplementaries:flag",
+                                    "flag":  "wicker_fence"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "101",
+                    "101"
+                ],
+    "key":  {
+                "0":  {
+                          "item":  "quark:sugar_cane_block"
+                      },
+                "1":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "result":  {
+                   "id":  "supplementaries:wicker_fence",
+                   "count":  1
+               }
+}

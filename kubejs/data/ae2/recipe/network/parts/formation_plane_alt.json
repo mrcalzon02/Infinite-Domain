@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "b":  {
+                          "tag":  "ae2:all_fluix"
+                      },
+                "c":  {
+                          "item":  "ae2:formation_core"
+                      }
+            },
+    "pattern":  [
+                    "ab",
+                    "cb",
+                    "ab"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2:formation_plane"
+               }
+}

@@ -1,0 +1,182 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "                ",
+      "                ",
+      "                ",
+      "  11111111111111",
+      "  11111111111111",
+      "  11111111111111",
+      "  11111111111111",
+      "  11111111111111",
+      "  11111111111111",
+      "  11111111111111",
+      "  11111111111111",
+      "  11111111111111",
+      "  11111111111111",
+      "  11111111111111",
+      "  11111111111111",
+      "  11111111111111"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "  !!!!!!!!!!!!!!",
+      "  !             ",
+      "  !             ",
+      "  !  *$$        ",
+      "  !  $$$        ",
+      "  !  $$$        ",
+      "  !             ",
+      "  !             ",
+      "  !             ",
+      "  !             ",
+      "  !             ",
+      "  !!!-!!!!!!!!!!",
+      "  !             "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "  !!!!!!!!!!!!!!",
+      "  !             ",
+      "  !             ",
+      "  !   $$        ",
+      "  !  *$$        ",
+      "  !  $$$        ",
+      "  !             ",
+      "  !             ",
+      "  !             ",
+      "  !             ",
+      "  !             ",
+      "  !!!.!!!!!!!!!!",
+      "  !             "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "  !!!!!!!!!!!!!!",
+      "  !             ",
+      "  !             ",
+      "  !             ",
+      "  !             ",
+      "  !  *          ",
+      "  !             ",
+      "  !             ",
+      "  !             ",
+      "  !             ",
+      "  !             ",
+      "  !!!!!!!!!!!!!!",
+      "  !             "
+    ],
+    [
+      "////////////////",
+      "////////////////",
+      "////////////////",
+      "//''''''''''''''",
+      "//''''''''''''''",
+      "//''''''''''''''",
+      "//''''''''''''''",
+      "//''' ''''''''''",
+      "//''' ''''''''''",
+      "//'''*''''''''''",
+      "//''''''''''''''",
+      "0/''''''''''''''",
+      "//''''''''''''''",
+      "//''''''''''''''",
+      "//'!!!!!!!!!!!!!",
+      "//''''''''''''''"
+    ],
+    [
+      "                ",
+      "                ",
+      "  %     %     % ",
+      "  %%%%%%%%%%%%%%",
+      "  %         %   ",
+      "  %         %   ",
+      "  %  )      %2  ",
+      "  %         %2 (",
+      "  %     + & %2  ",
+      "  %         %2  ",
+      "  %         %2  ",
+      "0 %         ,   ",
+      "  %         %2  ",
+      "  %         %2  ",
+      "  %%%%%-%%%%%2  ",
+      "  %         %2  "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:crate"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:furnace[facing=east,lit=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:oak_planks"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:oak_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:oak_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:polished_andesite_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:smoker[facing=east,lit=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:stone_bricks"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:stripped_dark_oak_log[axis=y]"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "2",
+        "block": "zvhouses:spruce_countertop"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "f":  {
+                          "item":  "allthecompressed:fluix_block_1x"
+                      },
+                "i":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "q":  {
+                          "item":  "ae2:charged_certus_quartz_crystal"
+                      }
+            },
+    "pattern":  [
+                    "cfc",
+                    "cqc",
+                    "iii"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2:crystal_resonance_generator"
+               }
+}

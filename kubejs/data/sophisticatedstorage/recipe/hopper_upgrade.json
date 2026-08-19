@@ -1,0 +1,33 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "sophisticatedcore:item_enabled",
+                                    "itemRegistryName":  "sophisticatedstorage:hopper_upgrade"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  {
+                          "item":  "sophisticatedstorage:upgrade_base"
+                      },
+                "H":  {
+                          "item":  "minecraft:hopper"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    " H ",
+                    "IBI",
+                    "RRR"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "sophisticatedstorage:hopper_upgrade"
+               }
+}

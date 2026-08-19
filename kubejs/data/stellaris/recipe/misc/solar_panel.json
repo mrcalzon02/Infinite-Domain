@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GGG",
+    "CEC",
+    "AFA"
+  ],
+  "key": {
+    "G": {
+      "item": "ae2:quartz_glass"
+    },
+    "C": {
+      "item": "create_new_age:copper_circuit"
+    },
+    "E": {
+      "item": "powergrid:integrated_circuit"
+    },
+    "A": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "F": {
+      "item": "kubejs:reinforced_frame"
+    }
+  },
+  "result": {
+    "id": "stellaris:solar_panel",
+    "count": 1
+  }
+}

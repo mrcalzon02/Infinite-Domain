@@ -1,0 +1,40 @@
+{
+  "qa_world_build_time_local": "2026-08-19T02:26:11",
+  "latest_log_time_local": "2026-08-18T08:45:20",
+  "latest_log_postdates_qa_build": false,
+  "qa_world_opened_after_current_build": false,
+  "runtime_codec_status": "pending_world_launch",
+  "relevant_error_count": 0,
+  "relevant_errors": [],
+  "generated_region_count": 0,
+  "rotation_harness_region_evidence": {
+    "authoritative_structure_rotation_region_seen": false,
+    "road_rotation_region_seen": false,
+    "module_rotation_region_seen": false
+  },
+  "review_ledgers": {
+    "building-production-review.csv": {
+      "assets": 84,
+      "completed": 0,
+      "passed": 0,
+      "failed": 0,
+      "pending": 84
+    },
+    "module-production-review.csv": {
+      "assets": 21,
+      "completed": 0,
+      "passed": 0,
+      "failed": 0,
+      "pending": 21
+    },
+    "road-production-review.csv": {
+      "assets": 84,
+      "completed": 0,
+      "passed": 0,
+      "failed": 0,
+      "pending": 84
+    }
+  },
+  "runtime_review_complete": false,
+  "note": "Region presence proves a harness area was loaded, not that visual checks passed. Pass/fail evidence remains authoritative in the review ledgers."
+}

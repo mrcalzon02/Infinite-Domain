@@ -1,0 +1,27 @@
+{
+  "variant_id": "infinite_domain:pancaked_parking_structure",
+  "clean_master": "infinite_domain:pancaked_parking_structure_clean_master",
+  "damage_story": "A cascading eastern-column failure dropped four parking fields into a tightly compressed deck stack while the western bays, central vehicle ramp and northwest escape stair remained standing.",
+  "damage_zone": "eastern parking bays, southeast stair core and southeast ground apron",
+  "environment_layer": [
+    "four irregular former deck fields at Y=9, Y=12, Y=15 and Y=18",
+    "fractured column stubs trapped between collapsed decks",
+    "four compressed vehicle silhouettes in narrowing voids",
+    "gravity-led gravel and scrap piles beneath open collapse edges",
+    "intact western facade rhythm, ramp shaft and northwest core"
+  ],
+  "occupation_layer": [
+    "zombie spawner in the surviving ground drive aisle",
+    "ghoul spawner in the second western parking deck",
+    "zombie and ghoul spawners within two eastern collapse voids",
+    "industrial and roadside loot separated between maintenance and surviving upper parking"
+  ],
+  "invariants": [
+    "western drive aisle remains reachable on every deck",
+    "northwest four-flight stair stack remains complete",
+    "vehicle ramp approaches remain reachable on every deck",
+    "all four compressed deck elevations remain visible",
+    "collapse remains localized to the declared eastern zone"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

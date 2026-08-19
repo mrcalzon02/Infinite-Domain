@@ -1,0 +1,3796 @@
+{
+  "purpose": "Authoritative Stage A inventory reconciliation and audit disposition. Quarantine/rebuild disposition is audit completion, not architectural or production approval.",
+  "minecraft_version": "1.21.1",
+  "authoritative_inventory": "docs/wasteland-site-manifest.json structures",
+  "structures_expected": 84,
+  "structures_audited": 84,
+  "completed_audit_dispositions": 84,
+  "rebuilt_pending_in_world_review": 84,
+  "quarantined_requires_purpose_built_rebuild": 0,
+  "production_approved": 0,
+  "unknown_palette_blocks": [],
+  "global_issues": [],
+  "stage_a_inventory_gate_passed": true,
+  "structures": {
+    "radio_mast": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "roadside_debris"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        15,
+        28,
+        15
+      ],
+      "non_air_blocks": 478,
+      "palette_blocks": 19,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 6,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 3
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/radio_mast/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/radio_mast/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/radio_mast/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/radio_mast/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "wrecked_sedan": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "roadside_debris"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        17,
+        8,
+        11
+      ],
+      "non_air_blocks": 365,
+      "palette_blocks": 13,
+      "block_entities": 0,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 5,
+        "footprint_variants": 5
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/wrecked_sedan/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/wrecked_sedan/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/wrecked_sedan/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/wrecked_sedan/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "delivery_van": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "roadside_debris"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        21,
+        10,
+        12
+      ],
+      "non_air_blocks": 677,
+      "palette_blocks": 13,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 20,
+        "functional_fixtures": 11,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 5
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/delivery_van/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/delivery_van/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/delivery_van/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/delivery_van/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "battle_tank": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "military_remnants"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        25,
+        12,
+        17
+      ],
+      "non_air_blocks": 1166,
+      "palette_blocks": 15,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 3,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 8,
+        "footprint_variants": 9
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/battle_tank/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/battle_tank/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/battle_tank/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/battle_tank/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "abandoned_bungalow": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "residential_ruins"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        19,
+        15,
+        18
+      ],
+      "non_air_blocks": 1094,
+      "palette_blocks": 31,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 6,
+        "orphan_door_halves": 0,
+        "window_blocks": 26,
+        "functional_fixtures": 13,
+        "vertical_access_span": 10,
+        "dense_floor_levels": 11,
+        "footprint_variants": 12
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/abandoned_bungalow/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/abandoned_bungalow/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/abandoned_bungalow/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/abandoned_bungalow/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "split_level_house": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "residential_ruins"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        31,
+        19,
+        27
+      ],
+      "non_air_blocks": 3311,
+      "palette_blocks": 31,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 6,
+        "orphan_door_halves": 0,
+        "window_blocks": 136,
+        "functional_fixtures": 19,
+        "vertical_access_span": 8,
+        "dense_floor_levels": 10,
+        "footprint_variants": 14
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/split_level_house/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/split_level_house/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/split_level_house/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/split_level_house/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "dilapidated_grocery": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "commercial_ruins"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        39,
+        13,
+        33
+      ],
+      "non_air_blocks": 4504,
+      "palette_blocks": 45,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 11,
+        "orphan_door_halves": 0,
+        "window_blocks": 50,
+        "functional_fixtures": 15,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 8,
+        "footprint_variants": 11
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/dilapidated_grocery/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/dilapidated_grocery/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/dilapidated_grocery/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/dilapidated_grocery/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "service_garage": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "commercial_ruins"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        41,
+        15,
+        33
+      ],
+      "non_air_blocks": 4391,
+      "palette_blocks": 23,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 154,
+        "functional_fixtures": 6,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 13
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/service_garage/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/service_garage/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/service_garage/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/service_garage/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "scrapyard": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "commercial_ruins"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        49,
+        15,
+        43
+      ],
+      "non_air_blocks": 4172,
+      "palette_blocks": 27,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 16,
+        "functional_fixtures": 371,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 7
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/scrapyard/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/scrapyard/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/scrapyard/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/scrapyard/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "military_checkpoint": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "military_remnants"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        45,
+        15,
+        31
+      ],
+      "non_air_blocks": 3317,
+      "palette_blocks": 22,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 6,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 11
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/military_checkpoint/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/military_checkpoint/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/military_checkpoint/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/military_checkpoint/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "trailer_park": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "major_settlements"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        69,
+        15,
+        77
+      ],
+      "non_air_blocks": 11921,
+      "palette_blocks": 57,
+      "block_entities": 3,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 33,
+        "orphan_door_halves": 0,
+        "window_blocks": 122,
+        "functional_fixtures": 90,
+        "vertical_access_span": 12,
+        "dense_floor_levels": 6,
+        "footprint_variants": 14
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/trailer_park/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/trailer_park/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/trailer_park/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/trailer_park/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "abandoned_culdesac": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "major_settlements"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        67,
+        18,
+        67
+      ],
+      "non_air_blocks": 11433,
+      "palette_blocks": 29,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 12,
+        "orphan_door_halves": 0,
+        "window_blocks": 67,
+        "functional_fixtures": 49,
+        "vertical_access_span": 13,
+        "dense_floor_levels": 6,
+        "footprint_variants": 14
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/abandoned_culdesac/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/abandoned_culdesac/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/abandoned_culdesac/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/abandoned_culdesac/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "survivor_cache": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "buried_sites"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        27,
+        17,
+        27
+      ],
+      "non_air_blocks": 2459,
+      "palette_blocks": 33,
+      "block_entities": 4,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 8,
+        "orphan_door_halves": 0,
+        "window_blocks": 9,
+        "functional_fixtures": 17,
+        "vertical_access_span": 8,
+        "dense_floor_levels": 12,
+        "footprint_variants": 14
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/survivor_cache/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/survivor_cache/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/survivor_cache/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/survivor_cache/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "bunker_network": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "buried_sites"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        47,
+        26,
+        47
+      ],
+      "non_air_blocks": 8883,
+      "palette_blocks": 48,
+      "block_entities": 6,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 45,
+        "orphan_door_halves": 0,
+        "window_blocks": 20,
+        "functional_fixtures": 54,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 18,
+        "footprint_variants": 22
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/bunker_network/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/bunker_network/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/bunker_network/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/bunker_network/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "trade_outpost": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "survivor_outposts"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        49,
+        18,
+        49
+      ],
+      "non_air_blocks": 6592,
+      "palette_blocks": 42,
+      "block_entities": 0,
+      "entities": 13,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 16,
+        "orphan_door_halves": 0,
+        "window_blocks": 36,
+        "functional_fixtures": 23,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 8,
+        "footprint_variants": 16
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/trade_outpost/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/trade_outpost/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/trade_outpost/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/trade_outpost/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "decayed_farm": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "rural_ruins"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        49,
+        22,
+        45
+      ],
+      "non_air_blocks": 6916,
+      "palette_blocks": 47,
+      "block_entities": 2,
+      "entities": 4,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 27,
+        "orphan_door_halves": 0,
+        "window_blocks": 32,
+        "functional_fixtures": 21,
+        "vertical_access_span": 17,
+        "dense_floor_levels": 7,
+        "footprint_variants": 20
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/decayed_farm/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/decayed_farm/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/decayed_farm/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/decayed_farm/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "industrial_facility": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "industrial_infrastructure"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        69,
+        29,
+        57
+      ],
+      "non_air_blocks": 15698,
+      "palette_blocks": 24,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 14,
+        "orphan_door_halves": 0,
+        "window_blocks": 565,
+        "functional_fixtures": 9,
+        "vertical_access_span": 21,
+        "dense_floor_levels": 10,
+        "footprint_variants": 21
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/industrial_facility/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/industrial_facility/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/industrial_facility/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/industrial_facility/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "mountain_military_complex": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "mountain_military"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        61,
+        24,
+        61
+      ],
+      "non_air_blocks": 15474,
+      "palette_blocks": 43,
+      "block_entities": 6,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 30,
+        "orphan_door_halves": 0,
+        "window_blocks": 124,
+        "functional_fixtures": 27,
+        "vertical_access_span": 19,
+        "dense_floor_levels": 12,
+        "footprint_variants": 20
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/mountain_military_complex/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/mountain_military_complex/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/mountain_military_complex/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/mountain_military_complex/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "mountain_biohazard_lab": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "mountain_military"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        55,
+        22,
+        49
+      ],
+      "non_air_blocks": 11276,
+      "palette_blocks": 44,
+      "block_entities": 5,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 47,
+        "orphan_door_halves": 0,
+        "window_blocks": 142,
+        "functional_fixtures": 48,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 12,
+        "footprint_variants": 18
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/mountain_biohazard_lab/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/mountain_biohazard_lab/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/mountain_biohazard_lab/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/mountain_biohazard_lab/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "decayed_logging_camp": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "forest_industry"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        61,
+        23,
+        55
+      ],
+      "non_air_blocks": 12262,
+      "palette_blocks": 52,
+      "block_entities": 4,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 22,
+        "orphan_door_halves": 0,
+        "window_blocks": 52,
+        "functional_fixtures": 33,
+        "vertical_access_span": 19,
+        "dense_floor_levels": 8,
+        "footprint_variants": 21
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/decayed_logging_camp/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/decayed_logging_camp/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/decayed_logging_camp/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/decayed_logging_camp/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "corporate_warehouse": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "forest_industry"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        49,
+        16,
+        43
+      ],
+      "non_air_blocks": 8503,
+      "palette_blocks": 43,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 18,
+        "orphan_door_halves": 0,
+        "window_blocks": 240,
+        "functional_fixtures": 46,
+        "vertical_access_span": 6,
+        "dense_floor_levels": 11,
+        "footprint_variants": 15
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/corporate_warehouse/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/corporate_warehouse/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/corporate_warehouse/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/corporate_warehouse/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "bombed_data_center": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "lost_data_centers"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        61,
+        24,
+        55
+      ],
+      "non_air_blocks": 14502,
+      "palette_blocks": 40,
+      "block_entities": 5,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 36,
+        "orphan_door_halves": 0,
+        "window_blocks": 46,
+        "functional_fixtures": 94,
+        "vertical_access_span": 7,
+        "dense_floor_levels": 15,
+        "footprint_variants": 21
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/bombed_data_center/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/bombed_data_center/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/bombed_data_center/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/bombed_data_center/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "hydroelectric_refuge_dam": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "hydroelectric_landmarks"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        65,
+        40,
+        65
+      ],
+      "non_air_blocks": 64501,
+      "palette_blocks": 43,
+      "block_entities": 4,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 24,
+        "orphan_door_halves": 0,
+        "window_blocks": 44,
+        "functional_fixtures": 68,
+        "vertical_access_span": 27,
+        "dense_floor_levels": 27,
+        "footprint_variants": 30
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/hydroelectric_refuge_dam/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/hydroelectric_refuge_dam/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/hydroelectric_refuge_dam/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/hydroelectric_refuge_dam/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "toppled_skyscraper": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "ruined_city_landmarks"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        61,
+        45,
+        53
+      ],
+      "non_air_blocks": 14019,
+      "palette_blocks": 30,
+      "block_entities": 3,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 26,
+        "orphan_door_halves": 0,
+        "window_blocks": 276,
+        "functional_fixtures": 53,
+        "vertical_access_span": 20,
+        "dense_floor_levels": 15,
+        "footprint_variants": 21
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/toppled_skyscraper/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/toppled_skyscraper/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/toppled_skyscraper/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/toppled_skyscraper/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "blown_apartment_complex": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "ruined_city_blocks"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        61,
+        31,
+        53
+      ],
+      "non_air_blocks": 23456,
+      "palette_blocks": 36,
+      "block_entities": 4,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 64,
+        "orphan_door_halves": 0,
+        "window_blocks": 319,
+        "functional_fixtures": 169,
+        "vertical_access_span": 21,
+        "dense_floor_levels": 27,
+        "footprint_variants": 26
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/blown_apartment_complex/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/blown_apartment_complex/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/blown_apartment_complex/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/blown_apartment_complex/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_mixed_use_block": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "ruined_city_blocks"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        59,
+        36,
+        47
+      ],
+      "non_air_blocks": 22035,
+      "palette_blocks": 46,
+      "block_entities": 4,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 55,
+        "orphan_door_halves": 0,
+        "window_blocks": 463,
+        "functional_fixtures": 133,
+        "vertical_access_span": 26,
+        "dense_floor_levels": 26,
+        "footprint_variants": 29
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_mixed_use_block/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_mixed_use_block/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_mixed_use_block/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_mixed_use_block/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "sunken_city_front": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "ruined_city_streets"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        61,
+        37,
+        55
+      ],
+      "non_air_blocks": 26959,
+      "palette_blocks": 50,
+      "block_entities": 4,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 58,
+        "orphan_door_halves": 0,
+        "window_blocks": 909,
+        "functional_fixtures": 208,
+        "vertical_access_span": 25,
+        "dense_floor_levels": 28,
+        "footprint_variants": 32
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/sunken_city_front/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/sunken_city_front/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/sunken_city_front/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/sunken_city_front/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "pancaked_parking_structure": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "ruined_city_blocks"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        57,
+        35,
+        51
+      ],
+      "non_air_blocks": 19380,
+      "palette_blocks": 40,
+      "block_entities": 4,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 14,
+        "orphan_door_halves": 0,
+        "window_blocks": 157,
+        "functional_fixtures": 7,
+        "vertical_access_span": 26,
+        "dense_floor_levels": 18,
+        "footprint_variants": 24
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/pancaked_parking_structure/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/pancaked_parking_structure/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/pancaked_parking_structure/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/pancaked_parking_structure/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "cratered_downtown_intersection": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "ruined_city_streets"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        65,
+        37,
+        65
+      ],
+      "non_air_blocks": 30108,
+      "palette_blocks": 55,
+      "block_entities": 4,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 121,
+        "orphan_door_halves": 0,
+        "window_blocks": 772,
+        "functional_fixtures": 105,
+        "vertical_access_span": 26,
+        "dense_floor_levels": 27,
+        "footprint_variants": 30
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/cratered_downtown_intersection/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/cratered_downtown_intersection/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/cratered_downtown_intersection/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/cratered_downtown_intersection/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_hospital": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_civic"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        67,
+        36,
+        59
+      ],
+      "non_air_blocks": 25896,
+      "palette_blocks": 42,
+      "block_entities": 5,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 113,
+        "orphan_door_halves": 0,
+        "window_blocks": 272,
+        "functional_fixtures": 421,
+        "vertical_access_span": 19,
+        "dense_floor_levels": 22,
+        "footprint_variants": 31
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_hospital/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_hospital/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_hospital/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_hospital/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_fire_station": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_civic"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        43,
+        21,
+        41
+      ],
+      "non_air_blocks": 8201,
+      "palette_blocks": 51,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 20,
+        "orphan_door_halves": 0,
+        "window_blocks": 125,
+        "functional_fixtures": 47,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 14,
+        "footprint_variants": 19
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_fire_station/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_fire_station/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_fire_station/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_fire_station/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_police_precinct": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_civic"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        57,
+        25,
+        49
+      ],
+      "non_air_blocks": 13039,
+      "palette_blocks": 39,
+      "block_entities": 5,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 52,
+        "orphan_door_halves": 0,
+        "window_blocks": 88,
+        "functional_fixtures": 66,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 12,
+        "footprint_variants": 22
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_police_precinct/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_police_precinct/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_police_precinct/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_police_precinct/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_courthouse": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_civic"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        59,
+        29,
+        51
+      ],
+      "non_air_blocks": 15296,
+      "palette_blocks": 32,
+      "block_entities": 5,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 46,
+        "orphan_door_halves": 0,
+        "window_blocks": 172,
+        "functional_fixtures": 198,
+        "vertical_access_span": 9,
+        "dense_floor_levels": 11,
+        "footprint_variants": 19
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_courthouse/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_courthouse/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_courthouse/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_courthouse/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "emergency_relief_shelter": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_civic"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        49,
+        18,
+        43
+      ],
+      "non_air_blocks": 8611,
+      "palette_blocks": 26,
+      "block_entities": 2,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 16,
+        "orphan_door_halves": 0,
+        "window_blocks": 516,
+        "functional_fixtures": 45,
+        "vertical_access_span": 5,
+        "dense_floor_levels": 11,
+        "footprint_variants": 12
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/emergency_relief_shelter/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/emergency_relief_shelter/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/emergency_relief_shelter/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/emergency_relief_shelter/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "collapsed_subway_station": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_subway"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        63,
+        24,
+        45
+      ],
+      "non_air_blocks": 16238,
+      "palette_blocks": 19,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 176,
+        "functional_fixtures": 13,
+        "vertical_access_span": 17,
+        "dense_floor_levels": 15,
+        "footprint_variants": 15
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/collapsed_subway_station/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/collapsed_subway_station/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/collapsed_subway_station/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/collapsed_subway_station/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_bus_terminal": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_transit"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        61,
+        24,
+        51
+      ],
+      "non_air_blocks": 11992,
+      "palette_blocks": 25,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 10,
+        "orphan_door_halves": 0,
+        "window_blocks": 16,
+        "functional_fixtures": 2,
+        "vertical_access_span": 6,
+        "dense_floor_levels": 9,
+        "footprint_variants": 9
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_bus_terminal/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_bus_terminal/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_bus_terminal/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_bus_terminal/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "freight_depot": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_transit"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        47,
+        27,
+        37
+      ],
+      "non_air_blocks": 6954,
+      "palette_blocks": 44,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 9,
+        "orphan_door_halves": 0,
+        "window_blocks": 212,
+        "functional_fixtures": 44,
+        "vertical_access_span": 6,
+        "dense_floor_levels": 12,
+        "footprint_variants": 17
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/freight_depot/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/freight_depot/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/freight_depot/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/freight_depot/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "elevated_rail_collapse": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_transit"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        67,
+        30,
+        39
+      ],
+      "non_air_blocks": 17066,
+      "palette_blocks": 14,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 0,
+        "vertical_access_span": 17,
+        "dense_floor_levels": 18,
+        "footprint_variants": 10
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/elevated_rail_collapse/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/elevated_rail_collapse/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/elevated_rail_collapse/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/elevated_rail_collapse/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "sunken_highway_interchange": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_transit"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        73,
+        25,
+        73
+      ],
+      "non_air_blocks": 26835,
+      "palette_blocks": 13,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 12,
+        "footprint_variants": 15
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/sunken_highway_interchange/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/sunken_highway_interchange/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/sunken_highway_interchange/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/sunken_highway_interchange/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_shopping_mall": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_commercial"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        73,
+        28,
+        63
+      ],
+      "non_air_blocks": 28300,
+      "palette_blocks": 27,
+      "block_entities": 2,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 26,
+        "orphan_door_halves": 0,
+        "window_blocks": 1997,
+        "functional_fixtures": 9,
+        "vertical_access_span": 7,
+        "dense_floor_levels": 16,
+        "footprint_variants": 19
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_shopping_mall/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_shopping_mall/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_shopping_mall/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_shopping_mall/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_department_store": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_commercial"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        59,
+        31,
+        51
+      ],
+      "non_air_blocks": 21165,
+      "palette_blocks": 25,
+      "block_entities": 2,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 11,
+        "orphan_door_halves": 0,
+        "window_blocks": 58,
+        "functional_fixtures": 2,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 19,
+        "footprint_variants": 15
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_department_store/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_department_store/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_department_store/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_department_store/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "bombed_hotel": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_commercial"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        53,
+        39,
+        47
+      ],
+      "non_air_blocks": 18648,
+      "palette_blocks": 33,
+      "block_entities": 2,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 22,
+        "orphan_door_halves": 0,
+        "window_blocks": 374,
+        "functional_fixtures": 74,
+        "vertical_access_span": 27,
+        "dense_floor_levels": 16,
+        "footprint_variants": 24
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/bombed_hotel/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/bombed_hotel/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/bombed_hotel/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/bombed_hotel/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "buried_bank_vault": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_commercial"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        49,
+        31,
+        45
+      ],
+      "non_air_blocks": 14567,
+      "palette_blocks": 25,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 10,
+        "orphan_door_halves": 0,
+        "window_blocks": 1640,
+        "functional_fixtures": 189,
+        "vertical_access_span": 7,
+        "dense_floor_levels": 16,
+        "footprint_variants": 17
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/buried_bank_vault/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/buried_bank_vault/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/buried_bank_vault/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/buried_bank_vault/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_office_tower": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_commercial"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        51,
+        47,
+        47
+      ],
+      "non_air_blocks": 21399,
+      "palette_blocks": 24,
+      "block_entities": 2,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 18,
+        "orphan_door_halves": 0,
+        "window_blocks": 949,
+        "functional_fixtures": 149,
+        "vertical_access_span": 34,
+        "dense_floor_levels": 18,
+        "footprint_variants": 23
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_office_tower/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_office_tower/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_office_tower/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_office_tower/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "tenement_courtyard": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_residential"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        57,
+        31,
+        53
+      ],
+      "non_air_blocks": 17569,
+      "palette_blocks": 26,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 42,
+        "orphan_door_halves": 0,
+        "window_blocks": 138,
+        "functional_fixtures": 118,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 15,
+        "footprint_variants": 19
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/tenement_courtyard/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/tenement_courtyard/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/tenement_courtyard/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/tenement_courtyard/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_rowhouse_block": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_residential"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        61,
+        27,
+        41
+      ],
+      "non_air_blocks": 18076,
+      "palette_blocks": 27,
+      "block_entities": 2,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 22,
+        "orphan_door_halves": 0,
+        "window_blocks": 127,
+        "functional_fixtures": 133,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 24,
+        "footprint_variants": 18
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_rowhouse_block/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_rowhouse_block/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_rowhouse_block/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_rowhouse_block/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "shattered_luxury_condo": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_residential"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        51,
+        37,
+        49
+      ],
+      "non_air_blocks": 18480,
+      "palette_blocks": 30,
+      "block_entities": 2,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 18,
+        "orphan_door_halves": 0,
+        "window_blocks": 395,
+        "functional_fixtures": 74,
+        "vertical_access_span": 21,
+        "dense_floor_levels": 16,
+        "footprint_variants": 20
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/shattered_luxury_condo/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/shattered_luxury_condo/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/shattered_luxury_condo/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/shattered_luxury_condo/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_city_school": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_residential"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        65,
+        27,
+        55
+      ],
+      "non_air_blocks": 18450,
+      "palette_blocks": 32,
+      "block_entities": 2,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 28,
+        "orphan_door_halves": 0,
+        "window_blocks": 80,
+        "functional_fixtures": 27,
+        "vertical_access_span": 9,
+        "dense_floor_levels": 13,
+        "footprint_variants": 18
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_city_school/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_city_school/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_city_school/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_city_school/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_community_center": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_residential"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        51,
+        21,
+        47
+      ],
+      "non_air_blocks": 11044,
+      "palette_blocks": 27,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 11,
+        "orphan_door_halves": 0,
+        "window_blocks": 646,
+        "functional_fixtures": 72,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 10,
+        "footprint_variants": 16
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_community_center/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_community_center/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_community_center/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_community_center/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "city_electrical_substation": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_utilities"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        61,
+        22,
+        51
+      ],
+      "non_air_blocks": 9258,
+      "palette_blocks": 18,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 14
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/city_electrical_substation/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/city_electrical_substation/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/city_electrical_substation/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/city_electrical_substation/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "city_water_treatment_plant": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_utilities"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        75,
+        24,
+        65
+      ],
+      "non_air_blocks": 11798,
+      "palette_blocks": 19,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 12,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 9
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/city_water_treatment_plant/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/city_water_treatment_plant/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/city_water_treatment_plant/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/city_water_treatment_plant/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "district_heating_station": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_utilities"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        65,
+        31,
+        55
+      ],
+      "non_air_blocks": 13670,
+      "palette_blocks": 23,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 12,
+        "functional_fixtures": 15,
+        "vertical_access_span": 28,
+        "dense_floor_levels": 9,
+        "footprint_variants": 22
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/district_heating_station/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/district_heating_station/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/district_heating_station/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/district_heating_station/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "municipal_incinerator": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_utilities"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        71,
+        33,
+        59
+      ],
+      "non_air_blocks": 21212,
+      "palette_blocks": 22,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 13,
+        "vertical_access_span": 10,
+        "dense_floor_levels": 15,
+        "footprint_variants": 25
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/municipal_incinerator/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/municipal_incinerator/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/municipal_incinerator/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/municipal_incinerator/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_fuel_depot": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_utilities"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        79,
+        25,
+        65
+      ],
+      "non_air_blocks": 13853,
+      "palette_blocks": 17,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 12
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_fuel_depot/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_fuel_depot/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_fuel_depot/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_fuel_depot/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_cyberware_clinic": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_themed"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        59,
+        26,
+        51
+      ],
+      "non_air_blocks": 11795,
+      "palette_blocks": 23,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 11,
+        "orphan_door_halves": 0,
+        "window_blocks": 146,
+        "functional_fixtures": 17,
+        "vertical_access_span": 11,
+        "dense_floor_levels": 9,
+        "footprint_variants": 16
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_cyberware_clinic/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_cyberware_clinic/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_cyberware_clinic/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_cyberware_clinic/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ae2_records_archive": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_themed"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        63,
+        30,
+        55
+      ],
+      "non_air_blocks": 17813,
+      "palette_blocks": 24,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 6,
+        "orphan_door_halves": 0,
+        "window_blocks": 664,
+        "functional_fixtures": 73,
+        "vertical_access_span": 12,
+        "dense_floor_levels": 16,
+        "footprint_variants": 18
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ae2_records_archive/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ae2_records_archive/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ae2_records_archive/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ae2_records_archive/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "abandoned_create_factory": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_themed"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        47,
+        27,
+        37
+      ],
+      "non_air_blocks": 8226,
+      "palette_blocks": 55,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 12,
+        "orphan_door_halves": 0,
+        "window_blocks": 164,
+        "functional_fixtures": 55,
+        "vertical_access_span": 6,
+        "dense_floor_levels": 16,
+        "footprint_variants": 18
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/abandoned_create_factory/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/abandoned_create_factory/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/abandoned_create_factory/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/abandoned_create_factory/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "collapsed_airship_terminal": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_themed"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        67,
+        35,
+        57
+      ],
+      "non_air_blocks": 26402,
+      "palette_blocks": 24,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 7,
+        "orphan_door_halves": 0,
+        "window_blocks": 4716,
+        "functional_fixtures": 2,
+        "vertical_access_span": 10,
+        "dense_floor_levels": 21,
+        "footprint_variants": 14
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/collapsed_airship_terminal/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/collapsed_airship_terminal/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/collapsed_airship_terminal/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/collapsed_airship_terminal/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "nuclear_research_annex": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_city_themed"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        73,
+        33,
+        63
+      ],
+      "non_air_blocks": 18065,
+      "palette_blocks": 25,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 9,
+        "orphan_door_halves": 0,
+        "window_blocks": 771,
+        "functional_fixtures": 10,
+        "vertical_access_span": 7,
+        "dense_floor_levels": 11,
+        "footprint_variants": 16
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/nuclear_research_annex/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/nuclear_research_annex/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/nuclear_research_annex/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/nuclear_research_annex/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_roadside_diner": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_roadside"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        39,
+        14,
+        33
+      ],
+      "non_air_blocks": 4619,
+      "palette_blocks": 31,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 12,
+        "orphan_door_halves": 0,
+        "window_blocks": 90,
+        "functional_fixtures": 2,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 9,
+        "footprint_variants": 11
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_roadside_diner/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_roadside_diner/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_roadside_diner/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_roadside_diner/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "abandoned_motel": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_roadside"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        35,
+        17,
+        37
+      ],
+      "non_air_blocks": 6856,
+      "palette_blocks": 36,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 48,
+        "orphan_door_halves": 0,
+        "window_blocks": 57,
+        "functional_fixtures": 66,
+        "vertical_access_span": 6,
+        "dense_floor_levels": 14,
+        "footprint_variants": 14
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/abandoned_motel/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/abandoned_motel/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/abandoned_motel/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/abandoned_motel/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_gas_station": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_roadside"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        39,
+        28,
+        45
+      ],
+      "non_air_blocks": 5869,
+      "palette_blocks": 44,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 9,
+        "orphan_door_halves": 0,
+        "window_blocks": 64,
+        "functional_fixtures": 12,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 11,
+        "footprint_variants": 19
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_gas_station/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_gas_station/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_gas_station/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_gas_station/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "abandoned_truck_stop": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_roadside"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        51,
+        17,
+        47
+      ],
+      "non_air_blocks": 7208,
+      "palette_blocks": 29,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 9,
+        "orphan_door_halves": 0,
+        "window_blocks": 144,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 15
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/abandoned_truck_stop/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/abandoned_truck_stop/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/abandoned_truck_stop/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/abandoned_truck_stop/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "wasteland_weigh_station": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_roadside"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        45,
+        14,
+        37
+      ],
+      "non_air_blocks": 4080,
+      "palette_blocks": 23,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 16,
+        "functional_fixtures": 3,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 11
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/wasteland_weigh_station/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/wasteland_weigh_station/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/wasteland_weigh_station/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/wasteland_weigh_station/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "decayed_ranch": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_rural"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        49,
+        19,
+        45
+      ],
+      "non_air_blocks": 7621,
+      "palette_blocks": 25,
+      "block_entities": 1,
+      "entities": 2,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 16,
+        "functional_fixtures": 25,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 9,
+        "footprint_variants": 17
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/decayed_ranch/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/decayed_ranch/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/decayed_ranch/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/decayed_ranch/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "abandoned_orchard_cannery": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_rural"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        59,
+        24,
+        51
+      ],
+      "non_air_blocks": 11970,
+      "palette_blocks": 25,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 433,
+        "functional_fixtures": 9,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 10,
+        "footprint_variants": 14
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/abandoned_orchard_cannery/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/abandoned_orchard_cannery/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/abandoned_orchard_cannery/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/abandoned_orchard_cannery/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_grain_elevator": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_rural"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        55,
+        35,
+        49
+      ],
+      "non_air_blocks": 14179,
+      "palette_blocks": 21,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 4,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 22,
+        "footprint_variants": 16
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_grain_elevator/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_grain_elevator/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_grain_elevator/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_grain_elevator/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "shattered_greenhouse_nursery": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_rural"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        61,
+        21,
+        49
+      ],
+      "non_air_blocks": 9907,
+      "palette_blocks": 24,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 2201,
+        "functional_fixtures": 22,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 15
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/shattered_greenhouse_nursery/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/shattered_greenhouse_nursery/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/shattered_greenhouse_nursery/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/shattered_greenhouse_nursery/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "roadside_church_cemetery": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_rural"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        51,
+        29,
+        49
+      ],
+      "non_air_blocks": 10455,
+      "palette_blocks": 21,
+      "block_entities": 2,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 24,
+        "functional_fixtures": 2,
+        "vertical_access_span": 26,
+        "dense_floor_levels": 10,
+        "footprint_variants": 27
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/roadside_church_cemetery/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/roadside_church_cemetery/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/roadside_church_cemetery/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/roadside_church_cemetery/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "abandoned_quarry": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_extraction"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        69,
+        30,
+        61
+      ],
+      "non_air_blocks": 7095,
+      "palette_blocks": 22,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 1,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 5,
+        "footprint_variants": 20
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/abandoned_quarry/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/abandoned_quarry/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/abandoned_quarry/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/abandoned_quarry/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "collapsed_mine_entrance": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_extraction"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        55,
+        27,
+        49
+      ],
+      "non_air_blocks": 3954,
+      "palette_blocks": 20,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 5,
+        "footprint_variants": 14
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/collapsed_mine_entrance/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/collapsed_mine_entrance/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/collapsed_mine_entrance/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/collapsed_mine_entrance/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "excavator_pit": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_extraction"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        73,
+        31,
+        63
+      ],
+      "non_air_blocks": 8488,
+      "palette_blocks": 17,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 294,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 19
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/excavator_pit/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/excavator_pit/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/excavator_pit/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/excavator_pit/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "abandoned_oil_field": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_extraction"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        75,
+        25,
+        61
+      ],
+      "non_air_blocks": 9264,
+      "palette_blocks": 19,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 3,
+        "footprint_variants": 11
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/abandoned_oil_field/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/abandoned_oil_field/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/abandoned_oil_field/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/abandoned_oil_field/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "remote_sawmill": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_extraction"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        63,
+        32,
+        53
+      ],
+      "non_air_blocks": 10733,
+      "palette_blocks": 23,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 32,
+        "functional_fixtures": 5,
+        "vertical_access_span": 27,
+        "dense_floor_levels": 7,
+        "footprint_variants": 28
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/remote_sawmill/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/remote_sawmill/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/remote_sawmill/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/remote_sawmill/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "shattered_wind_farm": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_energy"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        83,
+        39,
+        71
+      ],
+      "non_air_blocks": 12871,
+      "palette_blocks": 15,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 2,
+        "footprint_variants": 14
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/shattered_wind_farm/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/shattered_wind_farm/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/shattered_wind_farm/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/shattered_wind_farm/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "broken_solar_field": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_energy"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        83,
+        17,
+        69
+      ],
+      "non_air_blocks": 9176,
+      "palette_blocks": 15,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 312,
+        "functional_fixtures": 0,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 3,
+        "footprint_variants": 7
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/broken_solar_field/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/broken_solar_field/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/broken_solar_field/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/broken_solar_field/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "wilderness_substation": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_energy"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        47,
+        19,
+        43
+      ],
+      "non_air_blocks": 4601,
+      "palette_blocks": 15,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 10
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/wilderness_substation/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/wilderness_substation/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/wilderness_substation/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/wilderness_substation/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "wasteland_water_tower": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_energy"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        45,
+        36,
+        45
+      ],
+      "non_air_blocks": 7492,
+      "palette_blocks": 19,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 3,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 10,
+        "footprint_variants": 25
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/wasteland_water_tower/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/wasteland_water_tower/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/wasteland_water_tower/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/wasteland_water_tower/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "ruined_ranger_station": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_survival"
+      ],
+      "profile": "programmed_building",
+      "size": [
+        43,
+        19,
+        41
+      ],
+      "non_air_blocks": 6864,
+      "palette_blocks": 26,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 7,
+        "orphan_door_halves": 0,
+        "window_blocks": 20,
+        "functional_fixtures": 153,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 9,
+        "footprint_variants": 14
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/ruined_ranger_station/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/ruined_ranger_station/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/ruined_ranger_station/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/ruined_ranger_station/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "wasteland_fire_lookout": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_survival"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        35,
+        35,
+        35
+      ],
+      "non_air_blocks": 5498,
+      "palette_blocks": 26,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 72,
+        "functional_fixtures": 10,
+        "vertical_access_span": 26,
+        "dense_floor_levels": 11,
+        "footprint_variants": 16
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/wasteland_fire_lookout/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/wasteland_fire_lookout/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/wasteland_fire_lookout/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/wasteland_fire_lookout/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "destroyed_refugee_convoy": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_survival"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        43,
+        13,
+        57
+      ],
+      "non_air_blocks": 5914,
+      "palette_blocks": 18,
+      "block_entities": 2,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 55,
+        "functional_fixtures": 17,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 9
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/destroyed_refugee_convoy/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/destroyed_refugee_convoy/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/destroyed_refugee_convoy/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/destroyed_refugee_convoy/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "crashed_cargo_airship": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "expanded_wilderness_survival"
+      ],
+      "profile": "landmark_or_outdoor_site",
+      "size": [
+        71,
+        29,
+        39
+      ],
+      "non_air_blocks": 15587,
+      "palette_blocks": 12,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 15,
+        "footprint_variants": 15
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/crashed_cargo_airship/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/crashed_cargo_airship/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/crashed_cargo_airship/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/crashed_cargo_airship/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "warm_industrial_mountain_port": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "warm_industrial_ports"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        47,
+        31,
+        47
+      ],
+      "non_air_blocks": 27103,
+      "palette_blocks": 21,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 2,
+        "vertical_access_span": 3,
+        "dense_floor_levels": 27,
+        "footprint_variants": 27
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/warm_industrial_mountain_port/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/warm_industrial_mountain_port/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/warm_industrial_mountain_port/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/warm_industrial_mountain_port/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    },
+    "cold_industrial_mountain_port": {
+      "audit_disposition": "rebuilt_pending_in_world_review",
+      "audit_complete": true,
+      "production_approved": false,
+      "families": [
+        "cold_industrial_ports"
+      ],
+      "profile": "multi_story_building",
+      "size": [
+        47,
+        31,
+        47
+      ],
+      "non_air_blocks": 26971,
+      "palette_blocks": 21,
+      "block_entities": 1,
+      "entities": 0,
+      "mechanical_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 2,
+        "vertical_access_span": 4,
+        "dense_floor_levels": 27,
+        "footprint_variants": 28
+      },
+      "worldgen_quarantined": true,
+      "render_evidence": {
+        "exterior_a": "structure_library/audit_renders/cold_industrial_mountain_port/exterior_a.png",
+        "exterior_b": "structure_library/audit_renders/cold_industrial_mountain_port/exterior_b.png",
+        "roof_off_cutaway": "structure_library/audit_renders/cold_industrial_mountain_port/roof_off_cutaway.png",
+        "floor_slices": "structure_library/audit_renders/cold_industrial_mountain_port/floor_slices.png"
+      },
+      "blocking_audit_issues": [],
+      "explicitly_deferred_checks": [
+        "canonical in-world player-scale walkthrough",
+        "four-way rotation and connector test",
+        "terrain-placement and feathering test"
+      ]
+    }
+  }
+}

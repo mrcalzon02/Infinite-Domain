@@ -1,0 +1,358 @@
+{
+  "family": "roadside_mobility_security",
+  "asset_pairs": 11,
+  "all_passed": true,
+  "failures": [],
+  "structures": {
+    "radio_mast": {
+      "size": [
+        15,
+        28,
+        15
+      ],
+      "master_blocks": 503,
+      "derivative_blocks": 573,
+      "changed_cells": 52,
+      "derivative_spawners": 1,
+      "identity_fixtures_present": [
+        "create:red_nixie_tube",
+        "minecraft:lightning_rod",
+        "the_wasteland_reworked:radio"
+      ],
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 6,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 3
+      },
+      "passed": true,
+      "issues": []
+    },
+    "wrecked_sedan": {
+      "size": [
+        17,
+        8,
+        11
+      ],
+      "master_blocks": 398,
+      "derivative_blocks": 449,
+      "changed_cells": 72,
+      "derivative_spawners": 0,
+      "identity_fixtures_present": [
+        "minecraft:blackstone",
+        "minecraft:light_blue_stained_glass"
+      ],
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 5,
+        "footprint_variants": 5
+      },
+      "passed": true,
+      "issues": []
+    },
+    "delivery_van": {
+      "size": [
+        21,
+        10,
+        12
+      ],
+      "master_blocks": 808,
+      "derivative_blocks": 862,
+      "changed_cells": 122,
+      "derivative_spawners": 1,
+      "identity_fixtures_present": [
+        "minecraft:iron_door",
+        "the_wasteland_reworked:cardboard_box"
+      ],
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 20,
+        "functional_fixtures": 11,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 5
+      },
+      "passed": true,
+      "issues": []
+    },
+    "battle_tank": {
+      "size": [
+        25,
+        12,
+        17
+      ],
+      "master_blocks": 1308,
+      "derivative_blocks": 1521,
+      "changed_cells": 292,
+      "derivative_spawners": 1,
+      "identity_fixtures_present": [
+        "minecraft:blackstone",
+        "minecraft:blast_furnace",
+        "minecraft:green_terracotta"
+      ],
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 3,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 8,
+        "footprint_variants": 9
+      },
+      "passed": true,
+      "issues": []
+    },
+    "service_garage": {
+      "size": [
+        41,
+        15,
+        33
+      ],
+      "master_blocks": 10155,
+      "derivative_blocks": 10837,
+      "changed_cells": 1061,
+      "derivative_spawners": 1,
+      "identity_fixtures_present": [
+        "immersiveengineering:metal_barrel",
+        "minecraft:anvil",
+        "minecraft:scaffolding"
+      ],
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 154,
+        "functional_fixtures": 6,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 13
+      },
+      "passed": true,
+      "issues": []
+    },
+    "scrapyard": {
+      "size": [
+        49,
+        15,
+        43
+      ],
+      "master_blocks": 4744,
+      "derivative_blocks": 5825,
+      "changed_cells": 463,
+      "derivative_spawners": 1,
+      "identity_fixtures_present": [
+        "create:mechanical_press",
+        "minecraft:oxidized_copper_grate",
+        "wastelands:scrap_pile"
+      ],
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 16,
+        "functional_fixtures": 371,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 7
+      },
+      "passed": true,
+      "issues": []
+    },
+    "military_checkpoint": {
+      "size": [
+        45,
+        15,
+        31
+      ],
+      "master_blocks": 5208,
+      "derivative_blocks": 6499,
+      "changed_cells": 730,
+      "derivative_spawners": 1,
+      "identity_fixtures_present": [
+        "minecraft:iron_door",
+        "the_wasteland_reworked:barricade",
+        "the_wasteland_reworked:radio"
+      ],
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 6,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 11
+      },
+      "passed": true,
+      "issues": []
+    },
+    "ruined_roadside_diner": {
+      "size": [
+        39,
+        14,
+        33
+      ],
+      "master_blocks": 8994,
+      "derivative_blocks": 10092,
+      "changed_cells": 921,
+      "derivative_spawners": 1,
+      "identity_fixtures_present": [
+        "farmersdelight:stove",
+        "minecraft:smoker",
+        "zvhouses:spruce_countertop"
+      ],
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 12,
+        "orphan_door_halves": 0,
+        "window_blocks": 90,
+        "functional_fixtures": 2,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 9,
+        "footprint_variants": 11
+      },
+      "passed": true,
+      "issues": []
+    },
+    "abandoned_truck_stop": {
+      "size": [
+        51,
+        17,
+        47
+      ],
+      "master_blocks": 12663,
+      "derivative_blocks": 13987,
+      "changed_cells": 1597,
+      "derivative_spawners": 1,
+      "identity_fixtures_present": [
+        "immersiveengineering:sheetmetal_steel",
+        "minecraft:scaffolding",
+        "minecraft:water_cauldron"
+      ],
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 9,
+        "orphan_door_halves": 0,
+        "window_blocks": 144,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 15
+      },
+      "passed": true,
+      "issues": []
+    },
+    "wasteland_weigh_station": {
+      "size": [
+        45,
+        14,
+        37
+      ],
+      "master_blocks": 5826,
+      "derivative_blocks": 6822,
+      "changed_cells": 987,
+      "derivative_spawners": 1,
+      "identity_fixtures_present": [
+        "minecraft:brewing_stand",
+        "minecraft:polished_blackstone",
+        "the_wasteland_reworked:radio"
+      ],
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 16,
+        "functional_fixtures": 3,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 11
+      },
+      "passed": true,
+      "issues": []
+    },
+    "destroyed_refugee_convoy": {
+      "size": [
+        43,
+        13,
+        57
+      ],
+      "master_blocks": 6165,
+      "derivative_blocks": 9355,
+      "changed_cells": 1739,
+      "derivative_spawners": 2,
+      "identity_fixtures_present": [
+        "minecraft:green_wool",
+        "minecraft:white_bed",
+        "the_wasteland_reworked:cardboard_box"
+      ],
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 55,
+        "functional_fixtures": 17,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 9
+      },
+      "passed": true,
+      "issues": []
+    }
+  }
+}

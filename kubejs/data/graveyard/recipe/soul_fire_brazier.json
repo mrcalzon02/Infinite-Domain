@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "   ",
+                    "#Y#",
+                    "###"
+                ],
+    "key":  {
+                "#":  {
+                          "item":  "graveyard:dark_iron_block"
+                      },
+                "Y":  {
+                          "item":  "allthecompressed:soul_soil_1x"
+                      }
+            },
+    "result":  {
+                   "id":  "graveyard:soul_fire_brazier",
+                   "count":  1
+               }
+}

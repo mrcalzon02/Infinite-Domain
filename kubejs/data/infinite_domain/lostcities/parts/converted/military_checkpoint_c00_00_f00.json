@@ -1,0 +1,190 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "                ",
+      " 0%0000%0000%00%",
+      " 000000000000%%$",
+      " $000000000%%$00",
+      " 00000000%%$0000",
+      " 000000%%$000000",
+      " 0000%%$00000000",
+      " 00%%$0000000000",
+      " %%$000000000000",
+      " $00000000000000",
+      " 000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0$00000000000000"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "     22222222222",
+      "     22222222222",
+      "     22222222222",
+      "     22222222222",
+      "     22222222222",
+      "     22222222222",
+      "  3  22222222222",
+      "        *       ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "     44444444444",
+      "     4      1   ",
+      "     4      1 ++",
+      "     4 ..   , ++",
+      "     4 /    1 ++",
+      "     4      1   ",
+      "     44444&'4444",
+      "        *       ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "     44444444444",
+      "     4      1   ",
+      "     4      1 ++",
+      "     4      - ++",
+      "     4      1 ++",
+      "     4      1   ",
+      "     44444()4444",
+      "        *       ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "     44444444444",
+      "     4      1   ",
+      "     4      1 ++",
+      "     4      1 ++",
+      "     4      1 ++",
+      "     4      1   ",
+      "     4!!44444444",
+      "        *       ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "     44444444444",
+      "     4      1   ",
+      "     4      1   ",
+      "     4      1   ",
+      "     4      1   ",
+      "     4      1   ",
+      "     4!!44444444",
+      "        *       ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:iron_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:iron_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:iron_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:iron_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:polished_blackstone_bricks"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:scaffolding"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "0",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "2",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "3",
+        "block": "the_wasteland_reworked:barricade"
+      },
+      {
+        "char": "4",
+        "block": "the_wasteland_reworked:cut_lead_plating"
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "structure_id": "infinite_domain:grocery_clean_master",
+  "archetype": "single-storey neighborhood supermarket",
+  "orientation": {
+    "road_and_customer_entrance": "north",
+    "receiving_and_staff_exits": "south",
+    "loading_dock": "southwest",
+    "parking": "north"
+  },
+  "public_program": [
+    "weather-protected entrance canopy",
+    "enclosed entrance vestibule with outer and inner doors",
+    "checkout lanes and customer-service counter",
+    "produce department",
+    "bakery and deli counter",
+    "four general-merchandise aisle runs with cross aisles",
+    "refrigerated cases",
+    "public restroom near the entrance"
+  ],
+  "staff_program": [
+    "controlled sales-floor doors into the back corridor",
+    "receiving room connected to the loading dock",
+    "central stockroom",
+    "staff work and break room",
+    "manager office",
+    "independent staff exit",
+    "roof mechanical plant"
+  ],
+  "circulation": [
+    "parking and sidewalk to outer vestibule doors",
+    "vestibule through inner doors to a broad sales-floor entry spine",
+    "entry spine to checkout lanes, departments, aisles and public restroom",
+    "sales floor through three controlled doors to the back corridor",
+    "back corridor to receiving, stockroom and staff-management rooms",
+    "receiving to rear loading dock",
+    "staff-management room to independent rear exit"
+  ],
+  "damage_constraints": [
+    "preserve the entrance vestibule and a readable route into the sales floor",
+    "retain at least two cross aisles and one path to the public restroom",
+    "keep at least one sales-to-back-of-house route and the staff rear exit",
+    "concentrate structural failure in one rear department rather than scattering holes",
+    "shape rubble under gravity and expose the source wall or roof members",
+    "derive all abandoned variants from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the building reads as a supermarket from the road",
+      "customer and delivery approaches are distinct",
+      "retail departments and checkout circulation remain navigable",
+      "back-of-house rooms have credible adjacencies and independent exits",
+      "roof and facade have believable commercial construction",
+      "damage preserves the original building function"
+    ]
+  }
+}

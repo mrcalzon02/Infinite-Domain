@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "minecraft:lapis_block"
+                      },
+                "s":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      }
+            },
+    "pattern":  [
+                    "sss",
+                    "scs",
+                    "sss"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "oritech:machine_core_2"
+               }
+}

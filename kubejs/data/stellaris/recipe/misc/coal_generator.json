@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "#L#",
+                    "#X#",
+                    "###"
+                ],
+    "key":  {
+                "#":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "X":  {
+                          "item":  "minecraft:blast_furnace"
+                      },
+                "L":  {
+                          "item":  "minecraft:lapis_block"
+                      }
+            },
+    "result":  {
+                   "id":  "stellaris:coal_generator"
+               }
+}

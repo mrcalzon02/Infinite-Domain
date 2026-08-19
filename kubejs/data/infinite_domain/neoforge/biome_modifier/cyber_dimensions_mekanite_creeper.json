@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "cyberspace:cyberspace_biome",
+    "cyberspace:darknet_biome"
+  ],
+  "spawners": {
+    "type": "mekanite_mobs:mekanite_creeper",
+    "weight": 23,
+    "minCount": 2,
+    "maxCount": 5
+  }
+}

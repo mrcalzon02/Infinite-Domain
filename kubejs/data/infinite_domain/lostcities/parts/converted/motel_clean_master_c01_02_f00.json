@@ -1,0 +1,162 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "-------------''$",
+      "-----------''$--",
+      "---------''$----",
+      "-------''$------",
+      "-----''$--------",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "))))))))))))))))",
+      "))))))))))))))))",
+      "   *            ",
+      "                ",
+      "   *            ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "  +    +    +  ,",
+      "%(((((((((((((((",
+      "  (*   (    (  (",
+      "                ",
+      "   *            ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "  +    +    +  ,",
+      "&,,,!!,,,!!,,,,,",
+      "  (*   (    (  (",
+      "                ",
+      "   *            ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "  +    +    +  ,",
+      " ,,,!!,,,!!,,,,,",
+      "  (*   (    (  (",
+      "                ",
+      "   *            ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "  +    +    +  ,",
+      ",,,,,,,,,,,,,,,,",
+      "  (*   (    (  (",
+      "                ",
+      "   *            ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:oak_planks"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:stripped_dark_oak_log[axis=y]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:stripped_oak_wood"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:yellow_terracotta"
+      },
+      {
+        "char": "-",
+        "block": "tfmg:asphalt"
+      }
+    ]
+  }
+}

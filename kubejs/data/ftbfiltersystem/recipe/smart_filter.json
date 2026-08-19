@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "P":  {
+                          "item":  "kubejs:paper_bundle"
+                      },
+                "T":  {
+                          "item":  "quark:stick_block"
+                      },
+                "S":  {
+                          "item":  "minecraft:string"
+                      }
+            },
+    "pattern":  [
+                    "TST",
+                    "SPS",
+                    "TST"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ftbfiltersystem:smart_filter"
+               }
+}

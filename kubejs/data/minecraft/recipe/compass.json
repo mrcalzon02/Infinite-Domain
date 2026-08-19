@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "#":  {
+                          "item":  "minecraft:iron_block"
+                      },
+                "X":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    " # ",
+                    "#X#",
+                    " # "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "minecraft:compass"
+               }
+}

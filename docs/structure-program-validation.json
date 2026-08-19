@@ -1,0 +1,2578 @@
+{
+  "purpose": "Building-program and circulation validation for heavily rebuilt clean masters.",
+  "valid": true,
+  "structures": {
+    "infinite_domain:motel_clean_master": {
+      "structure_id": "infinite_domain:motel_clean_master",
+      "archetype": "two-storey interior-corridor roadside motel",
+      "guest_rooms": 16,
+      "door_nodes_checked": 44,
+      "circulation": {
+        "floor_1": {
+          "targets": 18,
+          "reached": 18,
+          "missing": []
+        },
+        "floor_2": {
+          "targets": 18,
+          "reached": 18,
+          "missing": []
+        }
+      },
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks declared doors, complete beds and same-floor reachability. It does not replace in-game player-scale inspection."
+    },
+    "infinite_domain:grocery_clean_master": {
+      "structure_id": "infinite_domain:grocery_clean_master",
+      "archetype": "single-storey neighborhood supermarket",
+      "door_nodes_checked": 15,
+      "clean_master_circulation": {
+        "targets": 19,
+        "reached": 19,
+        "missing": []
+      },
+      "abandoned_survivor_routes": {
+        "targets": 4,
+        "reached": 4,
+        "missing": []
+      },
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks declared thresholds and same-floor reachability in both the clean master and required surviving routes in the damaged derivative. It does not replace in-game inspection."
+    },
+    "infinite_domain:gas_station_clean_master": {
+      "structure_id": "infinite_domain:gas_station_clean_master",
+      "archetype": "highway filling station and convenience store",
+      "door_nodes_checked": 10,
+      "clean_master_circulation": {
+        "targets": 15,
+        "reached": 15,
+        "missing": []
+      },
+      "ruined_survivor_routes": {
+        "targets": 6,
+        "reached": 6,
+        "missing": []
+      },
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks declared thresholds and same-floor reachability through the shop and service rooms in both the clean master and damaged derivative. It does not replace in-game inspection."
+    },
+    "infinite_domain:freight_depot_clean_master": {
+      "structure_id": "infinite_domain:freight_depot_clean_master",
+      "archetype": "rail freight depot with high-bay warehouse and dispatch offices",
+      "door_nodes_checked": 9,
+      "clean_master_ground_circulation": {
+        "targets": 15,
+        "reached": 15,
+        "missing": []
+      },
+      "clean_master_upper_office": {
+        "targets": 6,
+        "reached": 6,
+        "missing": [],
+        "stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "ruined_survivor_routes": {
+        "targets": 7,
+        "reached": 7,
+        "missing": []
+      },
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks declared thresholds, two office levels, the full stair flight and surviving rail/truck circulation. It does not replace in-game inspection."
+    },
+    "infinite_domain:fire_station_clean_master": {
+      "structure_id": "infinite_domain:fire_station_clean_master",
+      "archetype": "three-bay municipal fire station with living quarters and hose tower",
+      "door_nodes_checked": 20,
+      "clean_master_ground_circulation": {
+        "targets": 16,
+        "reached": 16,
+        "missing": []
+      },
+      "clean_master_upper_living_floor": {
+        "targets": 8,
+        "reached": 8,
+        "missing": [],
+        "stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "ruined_survivor_ground_routes": {
+        "targets": 8,
+        "reached": 8,
+        "missing": []
+      },
+      "ruined_survivor_upper_routes": {
+        "targets": 4,
+        "reached": 4,
+        "missing": []
+      },
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks public, apparatus, support, living-floor and rear-tower routes plus the complete stair. It does not replace in-game inspection."
+    },
+    "infinite_domain:corporate_warehouse_clean_master": {
+      "structure_id": "infinite_domain:corporate_warehouse_clean_master",
+      "archetype": "road distribution center with corporate offices and truck docks",
+      "door_nodes_checked": 18,
+      "clean_master_ground_circulation": {
+        "targets": 19,
+        "reached": 19,
+        "missing": []
+      },
+      "clean_master_upper_office": {
+        "targets": 6,
+        "reached": 6,
+        "missing": [],
+        "stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "ruined_survivor_ground_routes": {
+        "targets": 10,
+        "reached": 10,
+        "missing": []
+      },
+      "ruined_survivor_upper_routes": {
+        "targets": 4,
+        "reached": 4,
+        "missing": []
+      },
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks both corporate floors, quality/maintenance rooms, rack aisles, staging, dock approaches and the east staff exit. It does not replace in-game inspection."
+    },
+    "infinite_domain:create_factory_clean_master": {
+      "structure_id": "infinite_domain:create_factory_clean_master",
+      "archetype": "Create-era sequential fabrication plant with offices, powerhouse and docks",
+      "door_nodes_checked": 12,
+      "clean_master_ground_circulation": {
+        "targets": 20,
+        "reached": 20,
+        "missing": []
+      },
+      "clean_master_upper_office": {
+        "targets": 6,
+        "reached": 6,
+        "missing": [],
+        "stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "clean_master_production_catwalk": {
+        "targets": 4,
+        "reached": 4,
+        "missing": [],
+        "stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "ruined_survivor_ground_routes": {
+        "targets": 12,
+        "reached": 12,
+        "missing": []
+      },
+      "ruined_survivor_upper_routes": {
+        "targets": 4,
+        "reached": 4,
+        "missing": []
+      },
+      "ruined_survivor_catwalk_routes": {
+        "targets": 3,
+        "reached": 3,
+        "missing": []
+      },
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks sequential production approaches, both office floors, maintenance/quality rooms, powerhouse, three docks, two complete stairs and the surviving ruin routes. It does not replace in-game inspection."
+    },
+    "infinite_domain:bunker_network_clean_master": {
+      "structure_id": "infinite_domain:bunker_network_clean_master",
+      "archetype": "two-level modular civil-defense bunker network",
+      "door_nodes_checked": 45,
+      "clean_master_surface_entrance": {
+        "targets": 8,
+        "reached": 8,
+        "missing": []
+      },
+      "clean_master_operational_level": {
+        "targets": 14,
+        "reached": 14,
+        "missing": []
+      },
+      "clean_master_protected_level": {
+        "targets": 10,
+        "reached": 10,
+        "missing": []
+      },
+      "vertical_access": {
+        "stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "north_ladder_levels": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "east_ladder_levels": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      },
+      "occupied_survivor_operational_routes": {
+        "targets": 10,
+        "reached": 10,
+        "missing": []
+      },
+      "occupied_survivor_surface_routes": {
+        "targets": 8,
+        "reached": 8,
+        "missing": []
+      },
+      "occupied_survivor_protected_routes": {
+        "targets": 8,
+        "reached": 8,
+        "missing": []
+      },
+      "pillager_spawners": 6,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks the surface entrance facility, both bunker levels, forty-five declared door thresholds, the complete inter-level stair, two exit ladders, distributed occupation and required routes through the damaged derivative. It does not replace in-game inspection."
+    },
+    "infinite_domain:survivor_cache_clean_master": {
+      "structure_id": "infinite_domain:survivor_cache_clean_master",
+      "archetype": "surface-concealed survivor shelter with independent emergency hatch",
+      "door_nodes_checked": 8,
+      "clean_master_surface_shed": {
+        "targets": 6,
+        "reached": 6,
+        "missing": []
+      },
+      "clean_master_underground_shelter": {
+        "targets": 10,
+        "reached": 10,
+        "missing": []
+      },
+      "vertical_access": {
+        "stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "emergency_ladder_levels": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "occupied_survivor_surface_routes": {
+        "targets": 6,
+        "reached": 6,
+        "missing": []
+      },
+      "occupied_survivor_shelter_routes": {
+        "targets": 10,
+        "reached": 10,
+        "missing": []
+      },
+      "pillager_spawners": 4,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks the surface shed, roomed underground shelter, complete stair, independent emergency hatch, pillager occupation and all required damaged-variant routes. It does not replace in-game inspection."
+    },
+    "infinite_domain:trade_outpost_clean_master": {
+      "structure_id": "infinite_domain:trade_outpost_clean_master",
+      "archetype": "palisaded caravan trade outpost with market, lodging and stocked paddocks",
+      "door_nodes_checked": 15,
+      "clean_master_settlement_program": {
+        "targets": 21,
+        "reached": 21,
+        "missing": []
+      },
+      "paddock_boundary_cells_checked": 176,
+      "paddock_boundary_gaps": [],
+      "livestock": {
+        "minecraft:cow": 2,
+        "minecraft:sheep": 2,
+        "minecraft:pig": 1,
+        "minecraft:chicken": 1
+      },
+      "damaged_survivor_routes": {
+        "targets": 21,
+        "reached": 21,
+        "missing": []
+      },
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks gatehouse, four distinct market stalls, lodge rooms, well, bunkhouse, both fully enclosed paddocks, mixed livestock and all required routes through the damaged inhabited derivative. It does not replace in-game inspection."
+    },
+    "infinite_domain:decayed_farm_clean_master": {
+      "structure_id": "infinite_domain:decayed_farm_clean_master",
+      "archetype": "family farm with roomed farmhouse, aisle barn, silo, machinery shed and irrigated fields",
+      "door_nodes_checked": 27,
+      "clean_master_ground_program": {
+        "targets": 26,
+        "reached": 26,
+        "missing": []
+      },
+      "clean_master_hayloft": {
+        "targets": 6,
+        "reached": 6,
+        "missing": []
+      },
+      "vertical_access": {
+        "hayloft_stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "livestock": {
+        "minecraft:cow": 2,
+        "minecraft:sheep": 1,
+        "minecraft:pig": 1
+      },
+      "decayed_survivor_ground_routes": {
+        "targets": 19,
+        "reached": 19,
+        "missing": []
+      },
+      "decayed_survivor_loft_routes": {
+        "targets": 3,
+        "reached": 3,
+        "missing": []
+      },
+      "hostile_spawners": 2,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks the farmhouse room plan, silo, complete barn ground program, traversable hayloft, field-to-machinery workflow, livestock, distributed danger and declared routes through the decayed derivative. It does not replace in-game inspection."
+    },
+    "infinite_domain:trailer_park_clean_master": {
+      "structure_id": "infinite_domain:trailer_park_clean_master",
+      "archetype": "six-lot mobile-home park with branched road, management and shared services",
+      "door_nodes_checked": 34,
+      "clean_master_park_program": {
+        "targets": 36,
+        "reached": 36,
+        "missing": []
+      },
+      "individual_trailer_programs": {
+        "1": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "2": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "3": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "4": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "5": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "6": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        }
+      },
+      "abandoned_survivor_routes": {
+        "targets": 34,
+        "reached": 34,
+        "missing": []
+      },
+      "hostile_spawners": 3,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks management, shared laundry/maintenance, road-end utilities, all six independent living/kitchen-bath-bedroom programs and declared routes through the abandoned derivative. It does not replace in-game inspection."
+    },
+    "infinite_domain:mountain_military_complex_clean_master": {
+      "structure_id": "infinite_domain:mountain_military_complex_clean_master",
+      "archetype": "fortified mountain garrison with command, barracks, motor pool and armory",
+      "door_nodes_checked": 30,
+      "clean_master_ground_program": {
+        "targets": 31,
+        "reached": 31,
+        "missing": []
+      },
+      "clean_master_command_level": {
+        "targets": 4,
+        "reached": 4,
+        "missing": []
+      },
+      "vertical_access": {
+        "command_stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "communications_ladder_levels": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "watchtower_ladder_levels": {
+          "nw": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "ne": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "sw": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "se": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        }
+      },
+      "occupied_survivor_ground_routes": {
+        "targets": 28,
+        "reached": 28,
+        "missing": []
+      },
+      "occupied_survivor_command_routes": {
+        "targets": 4,
+        "reached": 4,
+        "missing": []
+      },
+      "pillager_spawners": 6,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks the guarded gate, tower bases/ladders, two command levels, barracks functions, three motor bays, rear service rooms, secure armory, all vertical access and declared routes through the damaged occupied derivative. It does not replace in-game inspection."
+    },
+    "infinite_domain:mountain_biohazard_lab_clean_master": {
+      "structure_id": "infinite_domain:mountain_biohazard_lab_clean_master",
+      "archetype": "pressure-zoned mountain research, quarantine and specimen-containment laboratory",
+      "door_nodes_checked": 47,
+      "clean_master_ground_program": {
+        "targets": 26,
+        "reached": 26,
+        "missing": []
+      },
+      "clean_master_research_level": {
+        "targets": 8,
+        "reached": 8,
+        "missing": []
+      },
+      "vertical_access": {
+        "research_stair_rises_present": {
+          "west_emergency": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "east_primary": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      },
+      "breached_survivor_ground_routes": {
+        "targets": 24,
+        "reached": 24,
+        "missing": []
+      },
+      "breached_survivor_research_routes": {
+        "targets": 7,
+        "reached": 7,
+        "missing": []
+      },
+      "hostile_spawners": 5,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks sequential intake/decon, west clinical/research rooms, dual research-floor stairs, quarantine cells, specimen containment, waste/filtration, rear utilities and declared routes through the breached derivative. It does not replace in-game inspection."
+    },
+    "infinite_domain:decayed_logging_camp_clean_master": {
+      "structure_id": "infinite_domain:decayed_logging_camp_clean_master",
+      "archetype": "forest timber camp with crew support, sawmill workflow, drying yard and vehicle maintenance",
+      "door_nodes_checked": 22,
+      "clean_master_ground_program": {
+        "targets": 32,
+        "reached": 32,
+        "missing": []
+      },
+      "clean_master_service_catwalk": {
+        "targets": 3,
+        "reached": 3,
+        "missing": []
+      },
+      "vertical_access": {
+        "service_stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "abandoned_survivor_ground_routes": {
+        "targets": 29,
+        "reached": 29,
+        "missing": []
+      },
+      "abandoned_survivor_catwalk_routes": {
+        "targets": 3,
+        "reached": 3,
+        "missing": []
+      },
+      "hostile_spawners": 4,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks dispatch, crew accommodation, the complete timber-production sequence, garage support, outside handling yards, catwalk access and declared routes through the abandoned derivative. It does not replace in-game inspection."
+    },
+    "infinite_domain:bombed_data_center_clean_master": {
+      "structure_id": "infinite_domain:bombed_data_center_clean_master",
+      "archetype": "hardened two-hall data campus with security, network operations, power, cooling and loading",
+      "door_nodes_checked": 42,
+      "clean_master_ground_program": {
+        "targets": 28,
+        "reached": 28,
+        "missing": []
+      },
+      "clean_master_upper_administration": {
+        "targets": 6,
+        "reached": 6,
+        "missing": []
+      },
+      "vertical_access": {
+        "administration_stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "bombed_survivor_ground_routes": {
+        "targets": 17,
+        "reached": 17,
+        "missing": []
+      },
+      "bombed_survivor_upper_routes": {
+        "targets": 6,
+        "reached": 6,
+        "missing": []
+      },
+      "hostile_spawners": 5,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks secure arrival, administration, network operations, twin data halls, power/UPS/generators, receiving, suppression, cooling, vertical access and declared survivor routes through the bombed derivative. It does not replace in-game inspection."
+    },
+    "infinite_domain:hydroelectric_refuge_dam_clean_master": {
+      "structure_id": "infinite_domain:hydroelectric_refuge_dam_clean_master",
+      "archetype": "water-retaining gravity dam with powerhouse, crest controls and twin planned refuge caverns",
+      "door_nodes_checked": 27,
+      "clean_master_powerhouse": {
+        "targets": 16,
+        "reached": 16,
+        "missing": []
+      },
+      "clean_master_gallery": {
+        "targets": 5,
+        "reached": 5,
+        "missing": []
+      },
+      "clean_master_crest_control": {
+        "targets": 6,
+        "reached": 6,
+        "missing": []
+      },
+      "clean_master_refuges": {
+        "west": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "east": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        }
+      },
+      "vertical_access": {
+        "powerhouse_stair_rises_present": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "refuge_crest_ladders": {
+          "west": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ],
+          "east": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27
+          ]
+        }
+      },
+      "abandoned_survivor_powerhouse": {
+        "targets": 14,
+        "reached": 14,
+        "missing": []
+      },
+      "abandoned_survivor_control": {
+        "targets": 3,
+        "reached": 3,
+        "missing": []
+      },
+      "abandoned_survivor_refuges": {
+        "west": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "east": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        }
+      },
+      "reservoir_water_blocks": 18168,
+      "hostile_spawners": 4,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks hydraulic mass, powerhouse operations, elevated gallery, crest controls, both multi-room refuges, emergency exits, crest ladders and declared routes through the abandoned derivative. It does not replace shoreline and terrain inspection in game."
+    },
+    "infinite_domain:toppled_skyscraper_clean_master": {
+      "structure_id": "infinite_domain:toppled_skyscraper_clean_master",
+      "archetype": "six-level corporate office tower with public/service podium, twin emergency cores and roof crown",
+      "door_nodes_checked": 43,
+      "clean_master_podium": {
+        "targets": 13,
+        "reached": 13,
+        "missing": []
+      },
+      "clean_master_office_levels": {
+        "1": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "2": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "3": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "4": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        }
+      },
+      "clean_master_crown": {
+        "targets": 4,
+        "reached": 4,
+        "missing": []
+      },
+      "vertical_access": {
+        "emergency_ladders": {
+          "west": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42
+          ],
+          "east": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42
+          ]
+        }
+      },
+      "toppled_survivor_podium": {
+        "targets": 10,
+        "reached": 10,
+        "missing": []
+      },
+      "toppled_survivor_stump_levels": {
+        "1": {
+          "targets": 5,
+          "reached": 5,
+          "missing": []
+        },
+        "2": {
+          "targets": 5,
+          "reached": 5,
+          "missing": []
+        }
+      },
+      "toppled_survivor_west_ladder": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "hostile_spawners": 3,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks the podium, four complete office levels, crown, both full-height emergency cores and declared accessible stump routes after toppling. The fractured horizontal tower is additionally gated by rendered and in-game review."
+    },
+    "infinite_domain:blown_apartment_complex_clean_master": {
+      "structure_id": "infinite_domain:blown_apartment_complex_clean_master",
+      "archetype": "four-storey courtyard apartment building with sixteen complete dwellings and dual stairs",
+      "door_nodes_checked": 69,
+      "clean_master_floors": {
+        "1": {
+          "targets": 24,
+          "reached": 24,
+          "missing": []
+        },
+        "2": {
+          "targets": 24,
+          "reached": 24,
+          "missing": []
+        },
+        "3": {
+          "targets": 24,
+          "reached": 24,
+          "missing": []
+        },
+        "4": {
+          "targets": 24,
+          "reached": 24,
+          "missing": []
+        }
+      },
+      "clean_master_shared_services": {
+        "targets": 6,
+        "reached": 6,
+        "missing": []
+      },
+      "vertical_access": {
+        "clean_master_stair_stacks": {
+          "north": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "south": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        },
+        "blown_survivor_stair_stacks": {
+          "north": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "south": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        }
+      },
+      "blown_survivor_floors": {
+        "1": {
+          "targets": 17,
+          "reached": 17,
+          "missing": []
+        },
+        "2": {
+          "targets": 17,
+          "reached": 17,
+          "missing": []
+        },
+        "3": {
+          "targets": 17,
+          "reached": 17,
+          "missing": []
+        },
+        "4": {
+          "targets": 17,
+          "reached": 17,
+          "missing": []
+        }
+      },
+      "hostile_spawners": 4,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks five functional zones in each of sixteen apartments, the courtyard gallery, shared services, dual stacked stairs and three surviving apartments on every blown-open floor. It does not replace in-game courtyard and collapse inspection."
+    },
+    "infinite_domain:ruined_mixed_use_block_clean_master": {
+      "structure_id": "infinite_domain:ruined_mixed_use_block_clean_master",
+      "archetype": "four-storey mixed-use city block with four businesses, separate residential access and twelve apartments",
+      "door_nodes_checked": 58,
+      "clean_master_ground_programs": {
+        "diner": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "pharmacy": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "residential_lobby": {
+          "targets": 6,
+          "reached": 6,
+          "missing": []
+        },
+        "hardware_repair": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "laundromat": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        }
+      },
+      "clean_master_residential_floors": {
+        "1": {
+          "targets": 31,
+          "reached": 31,
+          "missing": []
+        },
+        "2": {
+          "targets": 31,
+          "reached": 31,
+          "missing": []
+        },
+        "3": {
+          "targets": 31,
+          "reached": 31,
+          "missing": []
+        }
+      },
+      "clean_master_roof_plant": {
+        "targets": 5,
+        "reached": 5,
+        "missing": []
+      },
+      "vertical_access": {
+        "clean_master_stair_stacks": {
+          "front": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "rear": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28
+          ]
+        },
+        "ruined_survivor_stair_stacks": {
+          "front": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "rear": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28
+          ]
+        }
+      },
+      "ruined_survivor_ground_programs": {
+        "diner": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "pharmacy": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "residential_lobby": {
+          "targets": 6,
+          "reached": 6,
+          "missing": []
+        },
+        "hardware_repair": {
+          "targets": 5,
+          "reached": 5,
+          "missing": []
+        }
+      },
+      "ruined_survivor_residential_floors": {
+        "1": {
+          "targets": 24,
+          "reached": 24,
+          "missing": []
+        },
+        "2": {
+          "targets": 24,
+          "reached": 24,
+          "missing": []
+        },
+        "3": {
+          "targets": 24,
+          "reached": 24,
+          "missing": []
+        }
+      },
+      "hostile_spawners": 4,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks four distinct businesses, the residential lobby, twelve apartments, two stair stacks, roof plant and declared survivor routes after the southeast corner collapse. It does not replace rendered and in-game inspection."
+    },
+    "infinite_domain:sunken_city_front_clean_master": {
+      "structure_id": "infinite_domain:sunken_city_front_clean_master",
+      "archetype": "four-building avenue frontage with furnished cellars, mixed ground uses and apartment/office floors",
+      "door_nodes_checked": 60,
+      "clean_master_ground_programs": {
+        "cafe_apartments": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "hardware_offices": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "pharmacy_clinic": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "post_bank_offices": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        }
+      },
+      "clean_master_cellars": {
+        "cafe_apartments": {
+          "targets": 3,
+          "reached": 3,
+          "missing": []
+        },
+        "hardware_offices": {
+          "targets": 3,
+          "reached": 3,
+          "missing": []
+        },
+        "pharmacy_clinic": {
+          "targets": 3,
+          "reached": 3,
+          "missing": []
+        },
+        "post_bank_offices": {
+          "targets": 3,
+          "reached": 3,
+          "missing": []
+        }
+      },
+      "clean_master_upper_floors": {
+        "cafe_apartments:1": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "cafe_apartments:2": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "hardware_offices:1": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "hardware_offices:2": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "hardware_offices:3": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "pharmacy_clinic:1": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "pharmacy_clinic:2": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "pharmacy_clinic:3": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "post_bank_offices:1": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        },
+        "post_bank_offices:2": {
+          "targets": 8,
+          "reached": 8,
+          "missing": []
+        }
+      },
+      "sunken_survivor_ground_programs": {
+        "cafe_apartments": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "hardware_offices": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "pharmacy_clinic": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "post_bank_offices": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        }
+      },
+      "sunken_survivor_upper_floors": {
+        "cafe_apartments:1": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "cafe_apartments:2": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "hardware_offices:1": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "hardware_offices:2": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "hardware_offices:3": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "pharmacy_clinic:1": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "pharmacy_clinic:2": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "pharmacy_clinic:3": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "post_bank_offices:1": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        },
+        "post_bank_offices:2": {
+          "targets": 4,
+          "reached": 4,
+          "missing": []
+        }
+      },
+      "vertical_access": {
+        "clean_master": {
+          "cafe_apartments": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "upper": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          },
+          "hardware_offices": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "upper": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "pharmacy_clinic": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "upper": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "post_bank_offices": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "upper": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          }
+        },
+        "sunken_derivative": {
+          "cafe_apartments": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "upper": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          },
+          "hardware_offices": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "upper": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "pharmacy_clinic": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "upper": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          },
+          "post_bank_offices": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "upper": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ]
+          }
+        }
+      },
+      "subsidence_edge_heights": {
+        "21": 4,
+        "22": 4,
+        "23": 3,
+        "24": 2,
+        "25": 1,
+        "35": 1,
+        "36": 1,
+        "37": 3,
+        "38": 4,
+        "39": 4
+      },
+      "hostile_spawners": 4,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks four different street premises, their furnished cellars, all upper suites, every stair stack, three-block road subsidence and distributed occupation. Rendered and in-game review remain required for collapse readability and terrain feathering."
+    },
+    "infinite_domain:pancaked_parking_structure_clean_master": {
+      "structure_id": "infinite_domain:pancaked_parking_structure_clean_master",
+      "archetype": "five-deck municipal parking garage with vehicle ramp, dual stairs, security and maintenance",
+      "door_nodes_checked": 19,
+      "clean_master_ground_services": {
+        "targets": 11,
+        "reached": 11,
+        "missing": []
+      },
+      "clean_master_parking_decks": {
+        "1": {
+          "targets": 10,
+          "reached": 10,
+          "missing": []
+        },
+        "2": {
+          "targets": 10,
+          "reached": 10,
+          "missing": []
+        },
+        "3": {
+          "targets": 10,
+          "reached": 10,
+          "missing": []
+        },
+        "4": {
+          "targets": 10,
+          "reached": 10,
+          "missing": []
+        },
+        "5": {
+          "targets": 11,
+          "reached": 11,
+          "missing": []
+        }
+      },
+      "vertical_access": {
+        "clean_master_stairs": {
+          "northwest": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28
+          ],
+          "southeast": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28
+          ]
+        },
+        "surviving_northwest_stairs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28
+        ],
+        "vehicle_ramp_points": 56,
+        "missing_vehicle_ramp_points": []
+      },
+      "parked_vehicle_blocks": 312,
+      "pancaked_survivor_decks": {
+        "1": {
+          "targets": 6,
+          "reached": 6,
+          "missing": []
+        },
+        "2": {
+          "targets": 6,
+          "reached": 6,
+          "missing": []
+        },
+        "3": {
+          "targets": 6,
+          "reached": 6,
+          "missing": []
+        },
+        "4": {
+          "targets": 6,
+          "reached": 6,
+          "missing": []
+        },
+        "5": {
+          "targets": 6,
+          "reached": 6,
+          "missing": []
+        }
+      },
+      "fallen_deck_levels": [
+        9,
+        12,
+        15,
+        18
+      ],
+      "hostile_spawners": 4,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks entry control, security, maintenance, five complete decks, dual pedestrian cores, a four-flight vehicle ramp, parked vehicles and the surviving western circulation after eastern deck pancaking. Rendered and in-game collapse inspection remain required."
+    },
+    "infinite_domain:cratered_downtown_intersection_clean_master": {
+      "structure_id": "infinite_domain:cratered_downtown_intersection_clean_master",
+      "archetype": "signalized mixed-use downtown crossing with four corner buildings and underground utilities",
+      "door_nodes_checked": 121,
+      "clean_master_ground_programs": {
+        "bank_offices": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "pharmacy_housing": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "diner_apartments": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        },
+        "electronics_offices": {
+          "targets": 7,
+          "reached": 7,
+          "missing": []
+        }
+      },
+      "clean_master_upper_floors": {
+        "bank_offices:1": {
+          "targets": 9,
+          "reached": 9,
+          "missing": []
+        },
+        "bank_offices:2": {
+          "targets": 9,
+          "reached": 9,
+          "missing": []
+        },
+        "pharmacy_housing:1": {
+          "targets": 9,
+          "reached": 9,
+          "missing": []
+        },
+        "pharmacy_housing:2": {
+          "targets": 9,
+          "reached": 9,
+          "missing": []
+        },
+        "pharmacy_housing:3": {
+          "targets": 9,
+          "reached": 9,
+          "missing": []
+        },
+        "diner_apartments:1": {
+          "targets": 9,
+          "reached": 9,
+          "missing": []
+        },
+        "diner_apartments:2": {
+          "targets": 9,
+          "reached": 9,
+          "missing": []
+        },
+        "electronics_offices:1": {
+          "targets": 9,
+          "reached": 9,
+          "missing": []
+        },
+        "electronics_offices:2": {
+          "targets": 9,
+          "reached": 9,
+          "missing": []
+        },
+        "electronics_offices:3": {
+          "targets": 9,
+          "reached": 9,
+          "missing": []
+        }
+      },
+      "clean_master_vertical_access": {
+        "stairs": {
+          "bank_offices": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "upper": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ]
+          },
+          "pharmacy_housing": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "upper": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
+            ]
+          },
+          "diner_apartments": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "upper": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ]
+          },
+          "electronics_offices": {
+            "cellar": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "upper": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
+            ]
+          }
+        },
+        "utility_ladders": {
+          "north": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "south": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "west": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "east": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      },
+      "clean_master_utility_network": {
+        "targets": 5,
+        "reached": 5,
+        "missing": []
+      },
+      "cratered_survivor_levels": {
+        "bank_offices:0": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "bank_offices:1": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "bank_offices:2": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "pharmacy_housing:0": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "pharmacy_housing:1": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "pharmacy_housing:2": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "pharmacy_housing:3": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "diner_apartments:0": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "diner_apartments:1": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "diner_apartments:2": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "electronics_offices:0": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "electronics_offices:1": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "electronics_offices:2": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        },
+        "electronics_offices:3": {
+          "targets": 2,
+          "reached": 2,
+          "missing": []
+        }
+      },
+      "cratered_survivor_stairs": {
+        "bank_offices": {
+          "cellar": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "upper": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ]
+        },
+        "pharmacy_housing": {
+          "cellar": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "upper": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25
+          ]
+        },
+        "diner_apartments": {
+          "cellar": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "upper": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ]
+        },
+        "electronics_offices": {
+          "cellar": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "upper": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25
+          ]
+        }
+      },
+      "central_crater_penetrates_utilities": true,
+      "hostile_spawners": 4,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks four distinct corner buildings, all room thresholds, ten upper floors, four cellar/upper stair spines, the underground utility cross, four surface hatches and surviving outer suites after crater formation. Rendered and in-game blast geometry review remain required."
+    },
+    "infinite_domain:ruined_hospital_clean_master": {
+      "structure_id": "infinite_domain:ruined_hospital_clean_master",
+      "archetype": "four-storey U-plan hospital with emergency, diagnostics, surgery, wards, support and roof plant",
+      "door_nodes_checked": 135,
+      "clean_master_ground_program": {
+        "targets": 20,
+        "reached": 20,
+        "missing": []
+      },
+      "clean_master_upper_floors": {
+        "1": {
+          "targets": 19,
+          "reached": 19,
+          "missing": []
+        },
+        "2": {
+          "targets": 19,
+          "reached": 19,
+          "missing": []
+        },
+        "3": {
+          "targets": 19,
+          "reached": 19,
+          "missing": []
+        }
+      },
+      "vertical_access": {
+        "clean_master_stairs": {
+          "west": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "east": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        },
+        "ruined_survivor_stairs": {
+          "west": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "east": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        }
+      },
+      "clinical_fixture_counts": {
+        "bed_blocks": 108,
+        "brewing_stands": 10,
+        "courtyard_water_blocks": 49,
+        "courtyard_landscape_blocks": 159
+      },
+      "ruined_survivor_ground": {
+        "targets": 14,
+        "reached": 14,
+        "missing": []
+      },
+      "ruined_survivor_floors": {
+        "1": {
+          "targets": 12,
+          "reached": 12,
+          "missing": []
+        },
+        "2": {
+          "targets": 12,
+          "reached": 12,
+          "missing": []
+        },
+        "3": {
+          "targets": 12,
+          "reached": 12,
+          "missing": []
+        }
+      },
+      "hostile_spawners": 5,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks ambulance/public intake, ground clinical departments, three upper clinical floors, ward corridors, both stairs, courtyard/service connections, clinical fixture density and routes surviving the northeast collapse. Rendered and in-game hospital workflow review remain required."
+    },
+    "infinite_domain:ruined_police_precinct_clean_master": {
+      "structure_id": "infinite_domain:ruined_police_precinct_clean_master",
+      "archetype": "L-plan police precinct with public, patrol, detention, evidence, command and motor-pool programs",
+      "door_nodes_checked": 51,
+      "clean_master_ground_program": {
+        "targets": 32,
+        "reached": 32,
+        "missing": []
+      },
+      "clean_master_first_floor": {
+        "targets": 18,
+        "reached": 18,
+        "missing": []
+      },
+      "clean_master_command_floor": {
+        "targets": 7,
+        "reached": 7,
+        "missing": []
+      },
+      "vertical_access": {
+        "clean_main_stairs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "clean_secure_stairs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "ruined_main_stairs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "ruined_secure_stairs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "program_counts": {
+        "detention_bed_blocks": 8,
+        "crate_blocks": 77
+      },
+      "ruined_survivor_ground": {
+        "targets": 16,
+        "reached": 16,
+        "missing": []
+      },
+      "ruined_survivor_first_floor": {
+        "targets": 11,
+        "reached": 11,
+        "missing": []
+      },
+      "ruined_survivor_command_floor": {
+        "targets": 5,
+        "reached": 5,
+        "missing": []
+      },
+      "hostile_spawners": 5,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks public/secure arrival, operations, booking, four cells, evidence, sally port, three garage lanes, two upper programs, both stairs and routes surviving the front-west blast. Rendered and in-game police workflow review remain required."
+    },
+    "infinite_domain:ruined_courthouse_clean_master": {
+      "structure_id": "infinite_domain:ruined_courthouse_clean_master",
+      "archetype": "two-storey courthouse with paired courtrooms, hearing rooms and separate public/secure circulation",
+      "door_nodes_checked": 47,
+      "clean_master_ground_program": {
+        "targets": 27,
+        "reached": 27,
+        "missing": []
+      },
+      "clean_master_upper_program": {
+        "targets": 24,
+        "reached": 24,
+        "missing": []
+      },
+      "vertical_access": {
+        "clean_public_stairs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "clean_secure_stairs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ruined_public_stairs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ruined_secure_stairs": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "program_counts": {
+        "holding_bed_blocks": 4,
+        "courtroom_seat_blocks": 201
+      },
+      "ruined_survivor_ground": {
+        "targets": 21,
+        "reached": 21,
+        "missing": []
+      },
+      "ruined_survivor_upper": {
+        "targets": 19,
+        "reached": 19,
+        "missing": []
+      },
+      "hostile_spawners": 5,
+      "valid": true,
+      "issues": [],
+      "note": "Program validation checks portico/public services, both courtrooms, holding/chambers/evidence, two upper hearing rooms, rear support, both stairs and routes surviving the east-courtroom blast. Rendered and in-game courthouse workflow review remain required."
+    }
+  }
+}

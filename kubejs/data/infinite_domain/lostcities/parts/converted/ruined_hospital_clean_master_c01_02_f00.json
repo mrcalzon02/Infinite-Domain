@@ -1,0 +1,186 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "((((((((((((((((",
+      "(((((((((((((((("
+    ],
+    [
+      "&&&&&&&&&&&$$$--",
+      "&&&&&&&&&&&$$$--",
+      "&&&&&&&&&&&$$$--",
+      "&&&&&&&&&&&$$$--",
+      "&&&&&&&&&&&$$$--",
+      "&&&&&&&&&&&$$$--",
+      "&&&&&&&&&&&$$$--",
+      "&&&&&&&&&&&$$$$$",
+      "&&&&&&&&&&&$$$$$",
+      "&&&&&&&&&&&$$$$$",
+      "&&&&&&&&&&&$$$$$",
+      "&&&&&&&&&&&$$$$$",
+      "&&&&&&&&&&333333",
+      "&&&&&&&&&&333333",
+      "&&&&&&&&&&333333",
+      "&&&&&&&&&&333333"
+    ],
+    [
+      " 1  0     1     ",
+      " +        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1111)11111     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1  / .   1     ",
+      " +  0     1     ",
+      " 1        1 %   ",
+      " 1        1     ",
+      " 1111)11111     ",
+      " 1        222222",
+      " 1        2     ",
+      " +  / .     !!!!",
+      " 1  0       !!!!"
+    ],
+    [
+      " 1        1     ",
+      " ,        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1111*11111     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " ,        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1111*11111     ",
+      " 1        222222",
+      " 1        2     ",
+      " ,          !!!!",
+      " 1          !!!!"
+    ],
+    [
+      "'1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1111111111     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1111111111     ",
+      " 1        222222",
+      " 1        2     ",
+      " 1          !!!!",
+      " 1          !!!!"
+    ],
+    [
+      " 1        1     ",
+      "'1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1111111111     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1        1     ",
+      " 1111111111     ",
+      " 1        222222",
+      " 1        2     ",
+      " 1              ",
+      " 1              "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:crate"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:moss_block"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:oak_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:polished_andesite_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:smooth_stone"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:water"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:water_cauldron[level=3]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:white_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:white_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:white_concrete"
+      },
+      {
+        "char": "2",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "3",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

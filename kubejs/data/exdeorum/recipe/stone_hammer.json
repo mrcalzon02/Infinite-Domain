@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "m":  {
+                          "tag":  "minecraft:stone_crafting_materials"
+                      },
+                "s":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    " m ",
+                    " sm",
+                    "s  "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "exdeorum:stone_hammer"
+               }
+}

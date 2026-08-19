@@ -1,0 +1,230 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "============++&=",
+      "==========++&===",
+      "+++888++++&=====",
+      "+++888++&=======",
+      "+++888++========",
+      "+++888++========",
+      "&&&&&+++========",
+      "&&&&&===========",
+      "&&&&&==========+",
+      "&&&&&========++&",
+      "&&&&&======++&==",
+      "&&&&&====++&====",
+      "=======++&======",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "        6,,,,,,,",
+      "        6%,,,,,%",
+      "        6,,,,,,,",
+      "        6,,,,,,,",
+      "       96,,,,,,,",
+      "        6,,,,,,,",
+      "        6,,,,,,,",
+      "   )    6,,,++++",
+      "        6%,,++++",
+      ";       6666++++",
+      ")<      6666++++",
+      "        6666++++",
+      "        66666666",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "        /     7 ",
+      "        / *($   ",
+      "        //////2/",
+      "        /   /   ",
+      "        4 : /   ",
+      "        /   0 > ",
+      "        / ' /   ",
+      "        ////++++",
+      "        /   ++++",
+      "        / -/++++",
+      "        / . ++++",
+      "        /   ++++",
+      "        ////////",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "        /       ",
+      "        /       ",
+      "        //////3/",
+      "        /   /   ",
+      "        5   /   ",
+      "        /   1   ",
+      "        /   /   ",
+      "        ////++++",
+      "        /   ++++",
+      "        /   ++++",
+      "        /   ++++",
+      "        /   ++++",
+      "        //!!////",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "        /       ",
+      "        /       ",
+      "        ////////",
+      "        /   /   ",
+      "        /   /   ",
+      "        /   /   ",
+      "        /   /   ",
+      "        ////////",
+      "        /       ",
+      "        /       ",
+      "        /       ",
+      "        /       ",
+      "        //!!////",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "        /       ",
+      "        /       ",
+      "        ////////",
+      "        /   /   ",
+      "        /       ",
+      "        /       ",
+      "        /       ",
+      "        ///     ",
+      "        /       ",
+      "        /       ",
+      "        /       ",
+      "        /       ",
+      "        ///     ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:black_concrete"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:composter[level=2]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:crafting_table"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dead_bush"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:furnace[facing=north,lit=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:gray_concrete"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:pink_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:pink_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:pink_terracotta"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "8",
+        "block": "minecraft:stone_bricks"
+      },
+      {
+        "char": "9",
+        "block": "minecraft:stone_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": ":",
+        "block": "minecraft:water_cauldron[level=3]"
+      },
+      {
+        "char": ";",
+        "block": "minecraft:wheat[age=1]"
+      },
+      {
+        "char": "<",
+        "block": "minecraft:wheat[age=3]"
+      },
+      {
+        "char": "=",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": ">",
+        "block": "the_wasteland_reworked:cardboard_box"
+      }
+    ]
+  }
+}

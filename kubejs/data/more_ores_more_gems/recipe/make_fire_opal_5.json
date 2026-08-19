@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " a ",
+                    "aba",
+                    " a "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:blaze_powder"
+                      },
+                "b":  {
+                          "item":  "more_ores_more_gems:block_of_pink_opal"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:fire_opal_gemstone",
+                   "count":  1
+               }
+}

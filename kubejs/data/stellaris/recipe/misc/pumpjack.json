@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TRT",
+    "PMP",
+    "FSF"
+  ],
+  "key": {
+    "T": {
+      "item": "tfmg:steel_truss"
+    },
+    "R": {
+      "item": "kubejs:reinforced_frame"
+    },
+    "P": {
+      "item": "petrochem:pumpjack_well"
+    },
+    "M": {
+      "item": "kubejs:aerospace_pump"
+    },
+    "F": {
+      "item": "tfmg:steel_frame"
+    },
+    "S": {
+      "item": "kubejs:sensor_package"
+    }
+  },
+  "result": {
+    "id": "stellaris:pumpjack",
+    "count": 1
+  }
+}

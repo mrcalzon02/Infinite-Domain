@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  {
+                          "item":  "bno:aluminum_block"
+                      },
+                "B":  {
+                          "item":  "tfmg:aluminum_bars"
+                      }
+            },
+    "pattern":  [
+                    "BAB",
+                    "BAB",
+                    "BAB"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "tfmg:centrifuge"
+               }
+}

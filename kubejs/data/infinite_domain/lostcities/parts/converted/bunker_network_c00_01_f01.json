@@ -1,0 +1,219 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $$$",
+      "  $          $  ",
+      "  $          $  ",
+      "  $          $  ",
+      "  $          $$$",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $"
+    ],
+    [
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $$$",
+      "  $          $  ",
+      "  $          $  ",
+      "  $          $  ",
+      "  $          $$$",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $"
+    ],
+    [
+      "  $$$$$$$$$$$$ $",
+      "  $$$$$$$$$$$$ $",
+      "  $$$$$$$$$$$$ $",
+      "  $$$$$$$$$$$$ $",
+      "  $$$$$$$$$$$$ $",
+      "  $$$$$$$$$$$$$$",
+      "  $$$$$$$$$$$$$$",
+      "  $$$$$$$$$$$$$$",
+      "  $$$$$$$$$$$$$$",
+      "  $$$$$$$$$$$$$$",
+      "  $$$$$$$$$$$$ $",
+      "  $$$$$$$$$$$$ $",
+      "  $$$$$$$$$$$$ $",
+      "  $$$$$$$$$$$$ $",
+      "  $$$$$$$$$$$$ $",
+      "  $$$$$$$$$$$$ $"
+    ],
+    [
+      "  444444444444 4",
+      "  444444444444 4",
+      "  444444444444 4",
+      "  444444444444 4",
+      "  444444444444 4",
+      "  44444444444444",
+      "  44444444444444",
+      "  44444444444444",
+      "  44444444444444",
+      "  44444444444444",
+      "  444444444444 4",
+      "  444444444444 4",
+      "  444444444444 4",
+      "  444444444444 4",
+      "  444444444444 4",
+      "  444444444444 4"
+    ],
+    [
+      "  '''''''''  $ $",
+      "  '''''''''  $ $",
+      "  '''''''''  $ $",
+      "  '''''''''  $ $",
+      "  '''''''''  $ $",
+      "  '''''''''  $$$",
+      "  !'''''''!  (  ",
+      "  $          )  ",
+      "  $33333-3333$  ",
+      "  $          $$$",
+      "  $ 0   0    $ $",
+      "  $ 1   1    $ $",
+      "  $       ,% $ $",
+      "  $          $ $",
+      "  $ /   / 2&2$ $",
+      "  $       222$ $"
+    ],
+    [
+      "  ''''''!''  $ $",
+      "  ''''''''   $ $",
+      "  '''''''''  $ $",
+      "  '''''''''  $ $",
+      "  ''''''''   $ $",
+      "  '!'''''    $$$",
+      "  $'''''     *  ",
+      "  $          +  ",
+      "  $33333.3333$  ",
+      "  $          $$$",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $          $ $",
+      "  $       222$ $",
+      "  $       222$ $"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:concrete_brick_cracked"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:brewing_stand[has_bottle_0=false,has_bottle_1=false,has_bottle_2=false]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:chest[facing=west,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_cache"
+        }
+      },
+      {
+        "char": "'",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:iron_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:iron_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:iron_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:iron_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spawner",
+        "tag": {
+          "id": "minecraft:mob_spawner",
+          "Delay": 220,
+          "MinSpawnDelay": 240,
+          "MaxSpawnDelay": 720,
+          "SpawnCount": 2,
+          "MaxNearbyEntities": 12,
+          "RequiredPlayerRange": 14,
+          "SpawnRange": 4,
+          "SpawnData": {
+            "entity": {
+              "id": "minecraft:pillager"
+            }
+          },
+          "SpawnPotentials": [
+            {
+              "weight": 1,
+              "data": {
+                "entity": {
+                  "id": "minecraft:pillager"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:white_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:white_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:white_concrete"
+      },
+      {
+        "char": "3",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "4",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

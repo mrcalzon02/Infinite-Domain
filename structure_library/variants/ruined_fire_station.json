@@ -1,0 +1,24 @@
+{
+  "variant_id": "infinite_domain:ruined_fire_station",
+  "clean_master": "infinite_domain:fire_station_clean_master",
+  "damage_story": "A blast drops the west apparatus-bay roof and clerestory toward the road apron while dispatch, the upper living floor, two apparatus bays, rear support rooms and hose tower remain standing.",
+  "damage_zone": "west apparatus bay, clerestory and first apron opening",
+  "environment_layer": [
+    "continuous gravel and masonry rubble beneath the failed bay",
+    "fallen full-block roof members across the first apparatus lane",
+    "scrap and refuse concentrated near the damaged apron opening",
+    "weathered apparatus apron and rear training yard"
+  ],
+  "occupation_layer": [
+    "industrial emergency loot retained in the surviving workshop",
+    "pillagers occupying the protected upper rear living area"
+  ],
+  "invariants": [
+    "public lobby, watch desk, dispatch and office stair survive",
+    "second and third apparatus lanes remain accessible",
+    "workshop and decontamination routes survive",
+    "upper living program and rear hose-tower exit remain navigable",
+    "damage remains localized to the west structural failure"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

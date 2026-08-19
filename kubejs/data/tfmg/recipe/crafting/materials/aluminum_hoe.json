@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "C":  {
+                          "item":  "bno:aluminum_block"
+                      },
+                "S":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    "CC ",
+                    "S  ",
+                    "S  "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "tfmg:aluminum_hoe"
+               }
+}

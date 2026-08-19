@@ -1,0 +1,242 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "***.............",
+      "*.1*******1....*",
+      "****.1*****....*",
+      "*******.1**....*",
+      "**1*******.....*",
+      "*****1*****....*",
+      "1*******1**....*",
+      "**.1*******....*",
+      "*****.1***//...*",
+      "--*-*-----//...*",
+      "--*------*//...*",
+      "*-*----*--//...1",
+      "--*--*----//...*",
+      "--**------//...*",
+      "@@*@@@@@@@//...1",
+      "--*---*---//...*"
+    ],
+    [
+      "0000         ***",
+      "0000         ***",
+      "0000         ***",
+      "0000         ***",
+      "             ***",
+      "             ***",
+      "             ***",
+      "             ***",
+      "             ***",
+      "%  4,25 36   ***",
+      " ', 83 94,      ",
+      ",( 69 7, 8      ",
+      "&  7 ,8 69      ",
+      " $ ,36 47       ",
+      "               =",
+      ")  2 8, 94     ="
+    ],
+    [
+      " ! <         +  ",
+      "   <         + A",
+      "   <         +  ",
+      ":<<<         +  ",
+      "             +>>",
+      "             +  ",
+      "             +  ",
+      "             +  ",
+      "             +  ",
+      "             +++",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "               ?",
+      "               ?"
+    ],
+    [
+      "   <         +  ",
+      "   <         +  ",
+      "   <         +  ",
+      ";<<<         +  ",
+      "             +>>",
+      "             +  ",
+      "             +  ",
+      "             +  ",
+      "             +  ",
+      "             +++",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "               ?",
+      "               ?"
+    ],
+    [
+      "   <         +  ",
+      "   <         +  ",
+      "   <         +  ",
+      "<<<<         +  ",
+      "             +>>",
+      "             +  ",
+      "             +  ",
+      "             +  ",
+      "             +  ",
+      "             +++",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "               ?",
+      "               ?"
+    ],
+    [
+      "   <         +  ",
+      "   <         +  ",
+      "   <         +  ",
+      "<<<<         +  ",
+      "             +  ",
+      "             +  ",
+      "             +  ",
+      "             +  ",
+      "             +  ",
+      "             +++",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "               ?",
+      "               ?"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:carrots[age=0]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:carrots[age=1]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:carrots[age=4]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:carrots[age=5]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:carrots[age=6]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:carrots[age=7]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:dark_oak_planks"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:dead_bush"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:farmland[moisture=7]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:mud"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:oak_planks"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:podzol"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:potatoes[age=0]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:potatoes[age=1]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:potatoes[age=2]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:potatoes[age=3]"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:potatoes[age=4]"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:potatoes[age=5]"
+      },
+      {
+        "char": "8",
+        "block": "minecraft:potatoes[age=6]"
+      },
+      {
+        "char": "9",
+        "block": "minecraft:potatoes[age=7]"
+      },
+      {
+        "char": ":",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ";",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "<",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "=",
+        "block": "minecraft:stone_bricks"
+      },
+      {
+        "char": ">",
+        "block": "minecraft:stripped_oak_log[axis=y]"
+      },
+      {
+        "char": "?",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "@",
+        "block": "minecraft:water[level=0]"
+      },
+      {
+        "char": "A",
+        "block": "minecraft:water_cauldron[level=3]"
+      }
+    ]
+  }
+}

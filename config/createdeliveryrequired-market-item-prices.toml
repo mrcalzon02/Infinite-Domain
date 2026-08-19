@@ -1,0 +1,41 @@
+# Create Aeronautics: Delivery Required market item price config
+# Every listed trade id maps to its base price in spurs.
+# Item ids use namespace:path, fluids use fluid:namespace:path, and Create potion fluids use potion:namespace:path.
+# Add modded entries here explicitly; recipes are not used for price calculation.
+# Entries not listed here are not priced by goggles and are not automatically assigned a value.
+#
+# Infinite Domain policy: this is a deliberately mundane IMPORT allowlist.
+# Specialist parts belong to staged Echo shops. Dimension, boss, enchanting,
+# installable cyberware, and foundation-sensitive resources must never appear here.
+# The twelve entries below are damaged, non-installable salvage components only.
+
+[item_prices]
+"minecraft:coal" = 2
+"minecraft:charcoal" = 1
+"minecraft:copper_ingot" = 6
+"minecraft:iron_ingot" = 10
+"minecraft:gold_ingot" = 15
+"minecraft:clay_ball" = 2
+"minecraft:brick" = 3
+"minecraft:slime_ball" = 8
+"minecraft:leather" = 4
+"minecraft:string" = 2
+"minecraft:feather" = 2
+"minecraft:gunpowder" = 10
+"minecraft:wheat" = 2
+"minecraft:bread" = 3
+"minecraft:paper" = 2
+"minecraft:sugar" = 2
+"minecraft:glass" = 2
+"infinite_domain_cyberware:frayed_neural_bus" = 2
+"infinite_domain_cyberware:cracked_optic_array" = 2
+"infinite_domain_cyberware:arrhythmic_pump_core" = 2
+"infinite_domain_cyberware:punctured_air_cell" = 2
+"infinite_domain_cyberware:fouled_metabolic_mesh" = 2
+"infinite_domain_cyberware:seized_rightarm_cluster" = 2
+"infinite_domain_cyberware:seized_leftarm_cluster" = 2
+"infinite_domain_cyberware:bent_rightleg_pair" = 2
+"infinite_domain_cyberware:bent_leftleg_pair" = 2
+"infinite_domain_cyberware:torn_myomer_bundle" = 2
+"infinite_domain_cyberware:warped_frame_strut" = 2
+"infinite_domain_cyberware:delaminated_dermis" = 2

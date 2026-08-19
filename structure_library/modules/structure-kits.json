@@ -1,0 +1,651 @@
+{
+  "format_version": 1,
+  "purpose": "Reusable components extracted from validated Infinite Domain clean masters; complete landmarks remain available but settlement assembly can select modules by lot and context.",
+  "required_approval_checks": [
+    "visual_module_boundary_review",
+    "connector_and_rotation_test",
+    "assembly_with_adjacent_modules",
+    "terrain_and_coastline_placement"
+  ],
+  "known_source_limitations": [
+    "No separate fish-market clean master exists; marketplace stalls are shared with port-town commercial assembly.",
+    "Fuel tank and loading modules derive from the validated fuel-depot clean master rather than the monolithic port landmark."
+  ],
+  "production_approvals": [],
+  "modules": [
+    {
+      "module_id": "infinite_domain:harbor_loading_pier_warm",
+      "kit": "port_dock",
+      "role": "wharf_pier_crane_cargo_staging",
+      "source_clean_master": "infinite_domain:warm_industrial_mountain_port_clean_master",
+      "source_bounds_inclusive": [
+        4,
+        2,
+        0,
+        24,
+        23,
+        19
+      ],
+      "size": [
+        21,
+        22,
+        20
+      ],
+      "connectors": [
+        "water_north",
+        "service_south",
+        "cargo_east"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/harbor_loading_pier_warm.nbt",
+      "source_sha256": "1dbc1c32e50f9d647cc5fdba7d97afc42945ac429f9e08d85b133d5703a26596",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:harbor_loading_pier_cold",
+      "kit": "port_dock",
+      "role": "wharf_pier_crane_cargo_staging",
+      "source_clean_master": "infinite_domain:cold_industrial_mountain_port_clean_master",
+      "source_bounds_inclusive": [
+        4,
+        2,
+        0,
+        24,
+        23,
+        19
+      ],
+      "size": [
+        21,
+        22,
+        20
+      ],
+      "connectors": [
+        "water_north",
+        "service_south",
+        "cargo_east"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/harbor_loading_pier_cold.nbt",
+      "source_sha256": "58b9a2e25081f5444f7b27a7ee60b352fc4015d06d677221f564483e9e5c3068",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:port_customs_warehouse",
+      "kit": "port_dock",
+      "role": "warehouse_customs_dock_office",
+      "source_clean_master": "infinite_domain:warm_industrial_mountain_port_clean_master",
+      "source_bounds_inclusive": [
+        1,
+        4,
+        19,
+        15,
+        17,
+        35
+      ],
+      "size": [
+        15,
+        14,
+        17
+      ],
+      "connectors": [
+        "service_north",
+        "yard_east"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/port_customs_warehouse.nbt",
+      "source_sha256": "a743944000cbe844114cbde4debad1126af867c9a0eebc7a9ab89fcc346413e5",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:port_tunnel_control",
+      "kit": "port_dock",
+      "role": "dockmaster_tunnel_control",
+      "source_clean_master": "infinite_domain:warm_industrial_mountain_port_clean_master",
+      "source_bounds_inclusive": [
+        32,
+        4,
+        20,
+        45,
+        16,
+        35
+      ],
+      "size": [
+        14,
+        13,
+        16
+      ],
+      "connectors": [
+        "yard_north",
+        "tunnel_west"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/port_tunnel_control.nbt",
+      "source_sha256": "9a217647f6f59817d131535d7df780434f2d86ab4defe8e8de540d23c21226b8",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:mountain_transport_tunnel_warm",
+      "kit": "port_dock",
+      "role": "road_rail_mountain_connector",
+      "source_clean_master": "infinite_domain:warm_industrial_mountain_port_clean_master",
+      "source_bounds_inclusive": [
+        16,
+        2,
+        18,
+        30,
+        15,
+        46
+      ],
+      "size": [
+        15,
+        14,
+        29
+      ],
+      "connectors": [
+        "harbor_north",
+        "wasteland_south"
+      ],
+      "placement_context": "terrain_embedded",
+      "terrain_adaptation_requirement": "bury_or_mountain_mask",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/mountain_transport_tunnel_warm.nbt",
+      "source_sha256": "444dac92cf261ccf382a77221ae1b09fa8cbfa16aeb37acb9b8644deef2e7b4a",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:mountain_transport_tunnel_cold",
+      "kit": "port_dock",
+      "role": "road_rail_mountain_connector",
+      "source_clean_master": "infinite_domain:cold_industrial_mountain_port_clean_master",
+      "source_bounds_inclusive": [
+        16,
+        2,
+        18,
+        30,
+        15,
+        46
+      ],
+      "size": [
+        15,
+        14,
+        29
+      ],
+      "connectors": [
+        "harbor_north",
+        "wasteland_south"
+      ],
+      "placement_context": "terrain_embedded",
+      "terrain_adaptation_requirement": "bury_or_mountain_mask",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/mountain_transport_tunnel_cold.nbt",
+      "source_sha256": "5c7f5dcd5824b3dcda67eb4d9d98743f368361fd87ff859852bfe27f4a78f2dc",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:fuel_tank_containment_cell",
+      "kit": "port_dock",
+      "role": "fuel_tank",
+      "source_clean_master": "infinite_domain:ruined_fuel_depot_clean_master",
+      "source_bounds_inclusive": [
+        8,
+        1,
+        12,
+        24,
+        13,
+        28
+      ],
+      "size": [
+        17,
+        13,
+        17
+      ],
+      "connectors": [
+        "pipe_any",
+        "service_any"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/fuel_tank_containment_cell.nbt",
+      "source_sha256": "4a9e32b9a06e88887a0d03447925214caf5df4e40ff2b667566bd4a76a63b665",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:fuel_loading_rack",
+      "kit": "port_dock",
+      "role": "fuel_loading_service",
+      "source_clean_master": "infinite_domain:ruined_fuel_depot_clean_master",
+      "source_bounds_inclusive": [
+        61,
+        1,
+        38,
+        78,
+        12,
+        58
+      ],
+      "size": [
+        18,
+        12,
+        21
+      ],
+      "connectors": [
+        "service_north",
+        "tank_west"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/fuel_loading_rack.nbt",
+      "source_sha256": "a8c87ec26ef75ca3b87aa15905482f165342b9878a1b8ec168c0417ad1870e2c",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:market_stall_provisions",
+      "kit": "marketplace",
+      "role": "specialist_stall_provisions",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "source_bounds_inclusive": [
+        4,
+        0,
+        10,
+        13,
+        8,
+        18
+      ],
+      "size": [
+        10,
+        9,
+        9
+      ],
+      "connectors": [
+        "aisle_east"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/market_stall_provisions.nbt",
+      "source_sha256": "477ab63144b235481797d2dd8331702b025d617b7830aecb50479d1f7bb009b7",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:market_stall_medicine",
+      "kit": "marketplace",
+      "role": "specialist_stall_medicine",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "source_bounds_inclusive": [
+        35,
+        0,
+        10,
+        44,
+        8,
+        18
+      ],
+      "size": [
+        10,
+        9,
+        9
+      ],
+      "connectors": [
+        "aisle_west"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/market_stall_medicine.nbt",
+      "source_sha256": "516646713fb23f8993ad03aba3652e56a025bb748aafcca070d178bba39eda11",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:market_stall_repair",
+      "kit": "marketplace",
+      "role": "specialist_stall_repair",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "source_bounds_inclusive": [
+        4,
+        0,
+        23,
+        13,
+        8,
+        31
+      ],
+      "size": [
+        10,
+        9,
+        9
+      ],
+      "connectors": [
+        "aisle_east"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/market_stall_repair.nbt",
+      "source_sha256": "a1086b38621b618c34c41eec39ac2ff68048f876befe3123884c4638685fd527",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:market_stall_livestock",
+      "kit": "marketplace",
+      "role": "specialist_stall_livestock_feed",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "source_bounds_inclusive": [
+        35,
+        0,
+        23,
+        44,
+        8,
+        31
+      ],
+      "size": [
+        10,
+        9,
+        9
+      ],
+      "connectors": [
+        "aisle_west"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/market_stall_livestock.nbt",
+      "source_sha256": "722d266900d1ae612f0f8a6fe7dc27e7d34ca91033a5972ed727d1fdb57ed65e",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:market_trade_lodge",
+      "kit": "marketplace",
+      "role": "covered_market_storage_office",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "source_bounds_inclusive": [
+        14,
+        0,
+        15,
+        34,
+        17,
+        30
+      ],
+      "size": [
+        21,
+        18,
+        16
+      ],
+      "connectors": [
+        "public_north",
+        "service_south"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/market_trade_lodge.nbt",
+      "source_sha256": "220c70178e8e18cd99648620fa2fd7619e226a5000e830d40af8f46ec737dd3b",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:market_square_well",
+      "kit": "marketplace",
+      "role": "public_square_service",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "source_bounds_inclusive": [
+        20,
+        0,
+        29,
+        28,
+        4,
+        34
+      ],
+      "size": [
+        9,
+        5,
+        6
+      ],
+      "connectors": [
+        "aisle_north",
+        "aisle_south",
+        "aisle_east",
+        "aisle_west"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/market_square_well.nbt",
+      "source_sha256": "2cc4346e65ec98f51eaf04d916581fd768bb5d59acbb22426f428bbcec1c3be4",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:industrial_office_annex",
+      "kit": "industrial",
+      "role": "administration_staff_services",
+      "source_clean_master": "infinite_domain:corporate_warehouse_clean_master",
+      "source_bounds_inclusive": [
+        2,
+        0,
+        2,
+        19,
+        15,
+        23
+      ],
+      "size": [
+        18,
+        16,
+        22
+      ],
+      "connectors": [
+        "public_north",
+        "plant_east"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/industrial_office_annex.nbt",
+      "source_sha256": "da4d39619ba1b7ade1cf89c4acd7f7bd09ec9ce4bf823579c787a9f8602f9c31",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:industrial_truck_dock_bank",
+      "kit": "industrial",
+      "role": "truck_loading_staging",
+      "source_clean_master": "infinite_domain:corporate_warehouse_clean_master",
+      "source_bounds_inclusive": [
+        14,
+        0,
+        30,
+        48,
+        15,
+        42
+      ],
+      "size": [
+        35,
+        16,
+        13
+      ],
+      "connectors": [
+        "warehouse_north",
+        "truck_south"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/industrial_truck_dock_bank.nbt",
+      "source_sha256": "63d07fd419171e53d355725c9d9c9ad5011e9627be7b7e2462a0c18bf0125a51",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:industrial_storage_rack_bay",
+      "kit": "industrial",
+      "role": "warehouse_storage_quality_maintenance",
+      "source_clean_master": "infinite_domain:corporate_warehouse_clean_master",
+      "source_bounds_inclusive": [
+        20,
+        0,
+        8,
+        45,
+        14,
+        30
+      ],
+      "size": [
+        26,
+        15,
+        23
+      ],
+      "connectors": [
+        "receiving_north",
+        "dispatch_south",
+        "office_west"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/industrial_storage_rack_bay.nbt",
+      "source_sha256": "a2b6bb129fd11b4df00189ad4c7f0fa2d050e53a7d9ed251d9e1991dcfb87957",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:industrial_rail_loading_platform",
+      "kit": "industrial",
+      "role": "rail_loading_siding",
+      "source_clean_master": "infinite_domain:freight_depot_clean_master",
+      "source_bounds_inclusive": [
+        2,
+        0,
+        28,
+        34,
+        12,
+        36
+      ],
+      "size": [
+        33,
+        13,
+        9
+      ],
+      "connectors": [
+        "warehouse_north",
+        "rail_east",
+        "rail_west"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/industrial_rail_loading_platform.nbt",
+      "source_sha256": "5969805b111a3eee813bbe0f84c02de7ff3a59efc870b70c3e10b0962065dabd",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:industrial_dispatch_annex",
+      "kit": "industrial",
+      "role": "freight_dispatch_driver_services",
+      "source_clean_master": "infinite_domain:freight_depot_clean_master",
+      "source_bounds_inclusive": [
+        32,
+        0,
+        2,
+        45,
+        13,
+        21
+      ],
+      "size": [
+        14,
+        14,
+        20
+      ],
+      "connectors": [
+        "public_north",
+        "warehouse_west",
+        "truck_south"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/industrial_dispatch_annex.nbt",
+      "source_sha256": "dac1673cade221aaf46775fdbee7e9dd5728e282eee340f6308d2d74e8a3baa8",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:industrial_process_line",
+      "kit": "industrial",
+      "role": "sequential_factory_process",
+      "source_clean_master": "infinite_domain:create_factory_clean_master",
+      "source_bounds_inclusive": [
+        11,
+        0,
+        8,
+        30,
+        10,
+        29
+      ],
+      "size": [
+        20,
+        11,
+        22
+      ],
+      "connectors": [
+        "raw_west",
+        "output_south",
+        "service_east"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/industrial_process_line.nbt",
+      "source_sha256": "0f17878b79abe8771c50161cd70316ece3fc9b8d377612338f0dcd2f72d31322",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    },
+    {
+      "module_id": "infinite_domain:industrial_powerhouse",
+      "kit": "industrial",
+      "role": "utility_power_steam_controls",
+      "source_clean_master": "infinite_domain:create_factory_clean_master",
+      "source_bounds_inclusive": [
+        34,
+        0,
+        19,
+        45,
+        26,
+        34
+      ],
+      "size": [
+        12,
+        27,
+        16
+      ],
+      "connectors": [
+        "plant_west",
+        "service_north"
+      ],
+      "placement_context": "surface_module",
+      "terrain_adaptation_requirement": "contextual_lot_feathering",
+      "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/industrial_powerhouse.nbt",
+      "source_sha256": "a6e0476d4846c8e4bddf55430c0c189982e7d242f0ec19195e3c6df730a9ccc5",
+      "source_license": "Infinite Domain original work; distributable with the modpack",
+      "extraction_tool": "scripts/extract_modular_structure_kits.py",
+      "production_status": "quarantined_pending_module_review"
+    }
+  ]
+}

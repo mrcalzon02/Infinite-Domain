@@ -1,0 +1,3702 @@
+{
+  "purpose": "NBT-to-Lost-Cities conversion report. Conversion success is not production or visual approval.",
+  "format": "16x16 local-palette parts, fixed six-block floor bands, per-cell buildings and multibuilding assembly",
+  "structures": [
+    {
+      "structure_id": "infinite_domain:abandoned_bungalow",
+      "source_role": "damage_variant",
+      "source_size": [
+        19,
+        15,
+        18
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 12,
+      "largest_local_palette": 37,
+      "multibuilding": "infinite_domain:converted/abandoned_bungalow",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:dilapidated_grocery",
+      "source_role": "damage_variant",
+      "source_size": [
+        39,
+        13,
+        33
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 27,
+      "largest_local_palette": 30,
+      "multibuilding": "infinite_domain:converted/dilapidated_grocery",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_gas_station",
+      "source_role": "damage_variant",
+      "source_size": [
+        39,
+        28,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 45,
+      "largest_local_palette": 26,
+      "multibuilding": "infinite_domain:converted/ruined_gas_station",
+      "scattered": "infinite_domain:converted/ruined_gas_station",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:corporate_warehouse",
+      "source_role": "damage_variant",
+      "source_size": [
+        49,
+        16,
+        43
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 36,
+      "largest_local_palette": 26,
+      "multibuilding": "infinite_domain:converted/corporate_warehouse",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_fire_station",
+      "source_role": "damage_variant",
+      "source_size": [
+        43,
+        21,
+        41
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 36,
+      "largest_local_palette": 24,
+      "multibuilding": "infinite_domain:converted/ruined_fire_station",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_hospital",
+      "source_role": "damage_variant",
+      "source_size": [
+        67,
+        36,
+        59
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 21,
+      "multibuilding": "infinite_domain:converted/ruined_hospital",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_police_precinct",
+      "source_role": "damage_variant",
+      "source_size": [
+        57,
+        25,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 25,
+      "multibuilding": "infinite_domain:converted/ruined_police_precinct",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_courthouse",
+      "source_role": "damage_variant",
+      "source_size": [
+        59,
+        29,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 22,
+      "multibuilding": "infinite_domain:converted/ruined_courthouse",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_create_factory",
+      "source_role": "damage_variant",
+      "source_size": [
+        47,
+        27,
+        37
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 45,
+      "largest_local_palette": 26,
+      "multibuilding": "infinite_domain:converted/abandoned_create_factory",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:bunker_network",
+      "source_role": "damage_variant",
+      "source_size": [
+        47,
+        26,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 45,
+      "largest_local_palette": 21,
+      "multibuilding": "infinite_domain:converted/bunker_network",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:survivor_cache",
+      "source_role": "damage_variant",
+      "source_size": [
+        27,
+        17,
+        27
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 12,
+      "largest_local_palette": 17,
+      "multibuilding": "infinite_domain:converted/survivor_cache",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:trade_outpost",
+      "source_role": "damage_variant",
+      "source_size": [
+        49,
+        18,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 48,
+      "largest_local_palette": 27,
+      "multibuilding": "infinite_domain:converted/trade_outpost",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:decayed_farm",
+      "source_role": "damage_variant",
+      "source_size": [
+        49,
+        22,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 48,
+      "largest_local_palette": 31,
+      "multibuilding": "infinite_domain:converted/decayed_farm",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:trailer_park",
+      "source_role": "damage_variant",
+      "source_size": [
+        69,
+        15,
+        77
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 75,
+      "largest_local_palette": 31,
+      "multibuilding": "infinite_domain:converted/trailer_park",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:mountain_military_complex",
+      "source_role": "damage_variant",
+      "source_size": [
+        61,
+        24,
+        61
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 23,
+      "multibuilding": "infinite_domain:converted/mountain_military_complex",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:mountain_biohazard_lab",
+      "source_role": "damage_variant",
+      "source_size": [
+        55,
+        22,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 25,
+      "multibuilding": "infinite_domain:converted/mountain_biohazard_lab",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:decayed_logging_camp",
+      "source_role": "damage_variant",
+      "source_size": [
+        61,
+        23,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 21,
+      "multibuilding": "infinite_domain:converted/decayed_logging_camp",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:bombed_data_center",
+      "source_role": "damage_variant",
+      "source_size": [
+        61,
+        24,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 23,
+      "multibuilding": "infinite_domain:converted/bombed_data_center",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:hydroelectric_refuge_dam",
+      "source_role": "damage_variant",
+      "source_size": [
+        65,
+        40,
+        65
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 175,
+      "largest_local_palette": 24,
+      "multibuilding": "infinite_domain:converted/hydroelectric_refuge_dam",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:toppled_skyscraper",
+      "source_role": "damage_variant",
+      "source_size": [
+        61,
+        45,
+        53
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 8,
+      "parts_written": 128,
+      "largest_local_palette": 19,
+      "multibuilding": "infinite_domain:converted/toppled_skyscraper",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:blown_apartment_complex",
+      "source_role": "damage_variant",
+      "source_size": [
+        61,
+        31,
+        53
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 21,
+      "multibuilding": "infinite_domain:converted/blown_apartment_complex",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_mixed_use_block",
+      "source_role": "damage_variant",
+      "source_size": [
+        59,
+        36,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 72,
+      "largest_local_palette": 19,
+      "multibuilding": "infinite_domain:converted/ruined_mixed_use_block",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:sunken_city_front",
+      "source_role": "damage_variant",
+      "source_size": [
+        61,
+        37,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 112,
+      "largest_local_palette": 17,
+      "multibuilding": "infinite_domain:converted/sunken_city_front",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:pancaked_parking_structure",
+      "source_role": "damage_variant",
+      "source_size": [
+        57,
+        35,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 16,
+      "multibuilding": "infinite_domain:converted/pancaked_parking_structure",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:cratered_downtown_intersection",
+      "source_role": "damage_variant",
+      "source_size": [
+        65,
+        37,
+        65
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 175,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/cratered_downtown_intersection",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_motel",
+      "source_role": "damage_variant",
+      "source_size": [
+        35,
+        17,
+        37
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 27,
+      "largest_local_palette": 31,
+      "multibuilding": "infinite_domain:converted/abandoned_motel",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:freight_depot",
+      "source_role": "damage_variant",
+      "source_size": [
+        47,
+        27,
+        37
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 45,
+      "largest_local_palette": 29,
+      "multibuilding": "infinite_domain:converted/freight_depot",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:bungalow_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        19,
+        15,
+        18
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 12,
+      "largest_local_palette": 34,
+      "multibuilding": "infinite_domain:converted/bungalow_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:motel_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        35,
+        17,
+        37
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 27,
+      "largest_local_palette": 31,
+      "multibuilding": "infinite_domain:converted/motel_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:grocery_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        39,
+        13,
+        33
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 27,
+      "largest_local_palette": 30,
+      "multibuilding": "infinite_domain:converted/grocery_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:gas_station_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        39,
+        28,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 45,
+      "largest_local_palette": 24,
+      "multibuilding": "infinite_domain:converted/gas_station_clean_master",
+      "scattered": "infinite_domain:converted/gas_station_clean_master",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:freight_depot_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        47,
+        27,
+        37
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 45,
+      "largest_local_palette": 29,
+      "multibuilding": "infinite_domain:converted/freight_depot_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:fire_station_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        43,
+        21,
+        41
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 36,
+      "largest_local_palette": 22,
+      "multibuilding": "infinite_domain:converted/fire_station_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:corporate_warehouse_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        49,
+        16,
+        43
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 36,
+      "largest_local_palette": 26,
+      "multibuilding": "infinite_domain:converted/corporate_warehouse_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:create_factory_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        47,
+        27,
+        37
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 45,
+      "largest_local_palette": 26,
+      "multibuilding": "infinite_domain:converted/create_factory_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:bunker_network_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        47,
+        26,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 45,
+      "largest_local_palette": 21,
+      "multibuilding": "infinite_domain:converted/bunker_network_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:survivor_cache_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        27,
+        17,
+        27
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 12,
+      "largest_local_palette": 19,
+      "multibuilding": "infinite_domain:converted/survivor_cache_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:trade_outpost_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        49,
+        18,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 48,
+      "largest_local_palette": 27,
+      "multibuilding": "infinite_domain:converted/trade_outpost_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:decayed_farm_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        49,
+        22,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 48,
+      "largest_local_palette": 31,
+      "multibuilding": "infinite_domain:converted/decayed_farm_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:trailer_park_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        69,
+        15,
+        77
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 75,
+      "largest_local_palette": 31,
+      "multibuilding": "infinite_domain:converted/trailer_park_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:mountain_military_complex_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        61,
+        24,
+        61
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 23,
+      "multibuilding": "infinite_domain:converted/mountain_military_complex_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:mountain_biohazard_lab_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        55,
+        22,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 24,
+      "multibuilding": "infinite_domain:converted/mountain_biohazard_lab_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:decayed_logging_camp_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        61,
+        23,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 20,
+      "multibuilding": "infinite_domain:converted/decayed_logging_camp_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:bombed_data_center_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        61,
+        24,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 23,
+      "multibuilding": "infinite_domain:converted/bombed_data_center_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:hydroelectric_refuge_dam_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        65,
+        40,
+        65
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 175,
+      "largest_local_palette": 20,
+      "multibuilding": "infinite_domain:converted/hydroelectric_refuge_dam_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:toppled_skyscraper_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        61,
+        45,
+        53
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 8,
+      "parts_written": 128,
+      "largest_local_palette": 19,
+      "multibuilding": "infinite_domain:converted/toppled_skyscraper_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:blown_apartment_complex_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        61,
+        31,
+        53
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 21,
+      "multibuilding": "infinite_domain:converted/blown_apartment_complex_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_mixed_use_block_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        59,
+        36,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 72,
+      "largest_local_palette": 18,
+      "multibuilding": "infinite_domain:converted/ruined_mixed_use_block_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:sunken_city_front_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        61,
+        37,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 112,
+      "largest_local_palette": 16,
+      "multibuilding": "infinite_domain:converted/sunken_city_front_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:pancaked_parking_structure_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        57,
+        35,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 16,
+      "multibuilding": "infinite_domain:converted/pancaked_parking_structure_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:cratered_downtown_intersection_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        65,
+        37,
+        65
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 175,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/cratered_downtown_intersection_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_hospital_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        67,
+        36,
+        59
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 20,
+      "multibuilding": "infinite_domain:converted/ruined_hospital_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_police_precinct_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        57,
+        25,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 23,
+      "multibuilding": "infinite_domain:converted/ruined_police_precinct_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_courthouse_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        59,
+        29,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 21,
+      "multibuilding": "infinite_domain:converted/ruined_courthouse_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:radio_mast",
+      "source_role": "damage_variant",
+      "source_size": [
+        15,
+        28,
+        15
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        1,
+        1
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 5,
+      "largest_local_palette": 16,
+      "multibuilding": "infinite_domain:converted/radio_mast",
+      "scattered": "infinite_domain:converted/radio_mast",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:radio_mast_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        15,
+        28,
+        15
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        1,
+        1
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 5,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/radio_mast_clean_master",
+      "scattered": "infinite_domain:converted/radio_mast_clean_master",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:wrecked_sedan",
+      "source_role": "damage_variant",
+      "source_size": [
+        17,
+        8,
+        11
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        1
+      ],
+      "floor_height": 6,
+      "floor_bands": 2,
+      "parts_written": 4,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/wrecked_sedan",
+      "scattered": "infinite_domain:converted/wrecked_sedan",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:wrecked_sedan_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        17,
+        8,
+        11
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        1
+      ],
+      "floor_height": 6,
+      "floor_bands": 2,
+      "parts_written": 4,
+      "largest_local_palette": 13,
+      "multibuilding": "infinite_domain:converted/wrecked_sedan_clean_master",
+      "scattered": "infinite_domain:converted/wrecked_sedan_clean_master",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:delivery_van",
+      "source_role": "damage_variant",
+      "source_size": [
+        21,
+        10,
+        12
+      ],
+      "road_facing": "west",
+      "chunk_footprint": [
+        2,
+        1
+      ],
+      "floor_height": 6,
+      "floor_bands": 2,
+      "parts_written": 4,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/delivery_van",
+      "scattered": "infinite_domain:converted/delivery_van",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:delivery_van_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        21,
+        10,
+        12
+      ],
+      "road_facing": "west",
+      "chunk_footprint": [
+        2,
+        1
+      ],
+      "floor_height": 6,
+      "floor_bands": 2,
+      "parts_written": 4,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/delivery_van_clean_master",
+      "scattered": "infinite_domain:converted/delivery_van_clean_master",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:battle_tank",
+      "source_role": "damage_variant",
+      "source_size": [
+        25,
+        12,
+        17
+      ],
+      "road_facing": "west",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 2,
+      "parts_written": 8,
+      "largest_local_palette": 9,
+      "multibuilding": "infinite_domain:converted/battle_tank",
+      "scattered": "infinite_domain:converted/battle_tank",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:battle_tank_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        25,
+        12,
+        17
+      ],
+      "road_facing": "west",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 2,
+      "parts_written": 8,
+      "largest_local_palette": 8,
+      "multibuilding": "infinite_domain:converted/battle_tank_clean_master",
+      "scattered": "infinite_domain:converted/battle_tank_clean_master",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:service_garage",
+      "source_role": "damage_variant",
+      "source_size": [
+        41,
+        15,
+        33
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 27,
+      "largest_local_palette": 15,
+      "multibuilding": "infinite_domain:converted/service_garage",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:service_garage_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        41,
+        15,
+        33
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 27,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/service_garage_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:scrapyard",
+      "source_role": "damage_variant",
+      "source_size": [
+        49,
+        15,
+        43
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 36,
+      "largest_local_palette": 23,
+      "multibuilding": "infinite_domain:converted/scrapyard",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:scrapyard_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        49,
+        15,
+        43
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 36,
+      "largest_local_palette": 23,
+      "multibuilding": "infinite_domain:converted/scrapyard_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:military_checkpoint",
+      "source_role": "damage_variant",
+      "source_size": [
+        45,
+        15,
+        31
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 18,
+      "largest_local_palette": 18,
+      "multibuilding": "infinite_domain:converted/military_checkpoint",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:military_checkpoint_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        45,
+        15,
+        31
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 18,
+      "largest_local_palette": 18,
+      "multibuilding": "infinite_domain:converted/military_checkpoint_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_roadside_diner",
+      "source_role": "damage_variant",
+      "source_size": [
+        39,
+        14,
+        33
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 27,
+      "largest_local_palette": 24,
+      "multibuilding": "infinite_domain:converted/ruined_roadside_diner",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_roadside_diner_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        39,
+        14,
+        33
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 27,
+      "largest_local_palette": 24,
+      "multibuilding": "infinite_domain:converted/ruined_roadside_diner_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_truck_stop",
+      "source_role": "damage_variant",
+      "source_size": [
+        51,
+        17,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 36,
+      "largest_local_palette": 20,
+      "multibuilding": "infinite_domain:converted/abandoned_truck_stop",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_truck_stop_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        51,
+        17,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 36,
+      "largest_local_palette": 18,
+      "multibuilding": "infinite_domain:converted/abandoned_truck_stop_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_weigh_station",
+      "source_role": "damage_variant",
+      "source_size": [
+        45,
+        14,
+        37
+      ],
+      "road_facing": "south",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 27,
+      "largest_local_palette": 21,
+      "multibuilding": "infinite_domain:converted/wasteland_weigh_station",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_weigh_station_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        45,
+        14,
+        37
+      ],
+      "road_facing": "south",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 27,
+      "largest_local_palette": 20,
+      "multibuilding": "infinite_domain:converted/wasteland_weigh_station_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:destroyed_refugee_convoy",
+      "source_role": "damage_variant",
+      "source_size": [
+        43,
+        13,
+        57
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 36,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/destroyed_refugee_convoy",
+      "scattered": "infinite_domain:converted/destroyed_refugee_convoy",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:destroyed_refugee_convoy_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        43,
+        13,
+        57
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 36,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/destroyed_refugee_convoy_clean_master",
+      "scattered": "infinite_domain:converted/destroyed_refugee_convoy_clean_master",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:split_level_house",
+      "source_role": "damage_variant",
+      "source_size": [
+        31,
+        19,
+        27
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 16,
+      "largest_local_palette": 16,
+      "multibuilding": "infinite_domain:converted/split_level_house",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:split_level_house_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        31,
+        19,
+        27
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 16,
+      "largest_local_palette": 15,
+      "multibuilding": "infinite_domain:converted/split_level_house_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_culdesac",
+      "source_role": "damage_variant",
+      "source_size": [
+        67,
+        18,
+        67
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 75,
+      "largest_local_palette": 20,
+      "multibuilding": "infinite_domain:converted/abandoned_culdesac",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_culdesac_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        67,
+        18,
+        67
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 75,
+      "largest_local_palette": 23,
+      "multibuilding": "infinite_domain:converted/abandoned_culdesac_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:emergency_relief_shelter",
+      "source_role": "damage_variant",
+      "source_size": [
+        49,
+        18,
+        43
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 36,
+      "largest_local_palette": 22,
+      "multibuilding": "infinite_domain:converted/emergency_relief_shelter",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:emergency_relief_shelter_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        49,
+        18,
+        43
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 36,
+      "largest_local_palette": 22,
+      "multibuilding": "infinite_domain:converted/emergency_relief_shelter_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:tenement_courtyard",
+      "source_role": "damage_variant",
+      "source_size": [
+        57,
+        31,
+        53
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 24,
+      "multibuilding": "infinite_domain:converted/tenement_courtyard",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:tenement_courtyard_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        57,
+        31,
+        53
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 24,
+      "multibuilding": "infinite_domain:converted/tenement_courtyard_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_rowhouse_block",
+      "source_role": "damage_variant",
+      "source_size": [
+        61,
+        27,
+        41
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 60,
+      "largest_local_palette": 18,
+      "multibuilding": "infinite_domain:converted/ruined_rowhouse_block",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_rowhouse_block_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        61,
+        27,
+        41
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 60,
+      "largest_local_palette": 18,
+      "multibuilding": "infinite_domain:converted/ruined_rowhouse_block_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:shattered_luxury_condo",
+      "source_role": "damage_variant",
+      "source_size": [
+        51,
+        37,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 112,
+      "largest_local_palette": 19,
+      "multibuilding": "infinite_domain:converted/shattered_luxury_condo",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:shattered_luxury_condo_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        51,
+        37,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 112,
+      "largest_local_palette": 18,
+      "multibuilding": "infinite_domain:converted/shattered_luxury_condo_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_city_school",
+      "source_role": "damage_variant",
+      "source_size": [
+        65,
+        27,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 100,
+      "largest_local_palette": 19,
+      "multibuilding": "infinite_domain:converted/ruined_city_school",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_city_school_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        65,
+        27,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 100,
+      "largest_local_palette": 18,
+      "multibuilding": "infinite_domain:converted/ruined_city_school_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_community_center",
+      "source_role": "damage_variant",
+      "source_size": [
+        51,
+        21,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 48,
+      "largest_local_palette": 19,
+      "multibuilding": "infinite_domain:converted/ruined_community_center",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_community_center_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        51,
+        21,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 48,
+      "largest_local_palette": 19,
+      "multibuilding": "infinite_domain:converted/ruined_community_center_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:decayed_ranch",
+      "source_role": "damage_variant",
+      "source_size": [
+        49,
+        19,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 48,
+      "largest_local_palette": 15,
+      "multibuilding": "infinite_domain:converted/decayed_ranch",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:decayed_ranch_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        49,
+        19,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 48,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/decayed_ranch_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:roadside_church_cemetery",
+      "source_role": "damage_variant",
+      "source_size": [
+        51,
+        29,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/roadside_church_cemetery",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:roadside_church_cemetery_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        51,
+        29,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/roadside_church_cemetery_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_ranger_station",
+      "source_role": "damage_variant",
+      "source_size": [
+        43,
+        19,
+        41
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 36,
+      "largest_local_palette": 20,
+      "multibuilding": "infinite_domain:converted/ruined_ranger_station",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_ranger_station_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        43,
+        19,
+        41
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 36,
+      "largest_local_palette": 20,
+      "multibuilding": "infinite_domain:converted/ruined_ranger_station_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_fire_lookout",
+      "source_role": "damage_variant",
+      "source_size": [
+        35,
+        35,
+        35
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 54,
+      "largest_local_palette": 11,
+      "multibuilding": "infinite_domain:converted/wasteland_fire_lookout",
+      "scattered": "infinite_domain:converted/wasteland_fire_lookout",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_fire_lookout_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        35,
+        35,
+        35
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 54,
+      "largest_local_palette": 11,
+      "multibuilding": "infinite_domain:converted/wasteland_fire_lookout_clean_master",
+      "scattered": "infinite_domain:converted/wasteland_fire_lookout_clean_master",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_shopping_mall",
+      "source_role": "damage_variant",
+      "source_size": [
+        73,
+        28,
+        63
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 100,
+      "largest_local_palette": 17,
+      "multibuilding": "infinite_domain:converted/ruined_shopping_mall",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_shopping_mall_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        73,
+        28,
+        63
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 100,
+      "largest_local_palette": 17,
+      "multibuilding": "infinite_domain:converted/ruined_shopping_mall_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_department_store",
+      "source_role": "damage_variant",
+      "source_size": [
+        59,
+        31,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 18,
+      "multibuilding": "infinite_domain:converted/ruined_department_store",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_department_store_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        59,
+        31,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 18,
+      "multibuilding": "infinite_domain:converted/ruined_department_store_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:bombed_hotel",
+      "source_role": "damage_variant",
+      "source_size": [
+        53,
+        39,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 84,
+      "largest_local_palette": 16,
+      "multibuilding": "infinite_domain:converted/bombed_hotel",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:bombed_hotel_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        53,
+        39,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 84,
+      "largest_local_palette": 15,
+      "multibuilding": "infinite_domain:converted/bombed_hotel_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:buried_bank_vault",
+      "source_role": "damage_variant",
+      "source_size": [
+        49,
+        31,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 72,
+      "largest_local_palette": 13,
+      "multibuilding": "infinite_domain:converted/buried_bank_vault",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:buried_bank_vault_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        49,
+        31,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 72,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/buried_bank_vault_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_office_tower",
+      "source_role": "damage_variant",
+      "source_size": [
+        51,
+        47,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 8,
+      "parts_written": 96,
+      "largest_local_palette": 16,
+      "multibuilding": "infinite_domain:converted/ruined_office_tower",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_office_tower_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        51,
+        47,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 8,
+      "parts_written": 96,
+      "largest_local_palette": 16,
+      "multibuilding": "infinite_domain:converted/ruined_office_tower_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_subway_station",
+      "source_role": "damage_variant",
+      "source_size": [
+        63,
+        24,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 48,
+      "largest_local_palette": 11,
+      "multibuilding": "infinite_domain:converted/collapsed_subway_station",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_subway_station_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        63,
+        24,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 48,
+      "largest_local_palette": 11,
+      "multibuilding": "infinite_domain:converted/collapsed_subway_station_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_bus_terminal",
+      "source_role": "damage_variant",
+      "source_size": [
+        61,
+        24,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 17,
+      "multibuilding": "infinite_domain:converted/ruined_bus_terminal",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_bus_terminal_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        61,
+        24,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 17,
+      "multibuilding": "infinite_domain:converted/ruined_bus_terminal_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:elevated_rail_collapse",
+      "source_role": "damage_variant",
+      "source_size": [
+        67,
+        30,
+        39
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 75,
+      "largest_local_palette": 10,
+      "multibuilding": "infinite_domain:converted/elevated_rail_collapse",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:elevated_rail_collapse_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        67,
+        30,
+        39
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 75,
+      "largest_local_palette": 11,
+      "multibuilding": "infinite_domain:converted/elevated_rail_collapse_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:sunken_highway_interchange",
+      "source_role": "damage_variant",
+      "source_size": [
+        73,
+        25,
+        73
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 125,
+      "largest_local_palette": 10,
+      "multibuilding": "infinite_domain:converted/sunken_highway_interchange",
+      "scattered": "infinite_domain:converted/sunken_highway_interchange",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:sunken_highway_interchange_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        73,
+        25,
+        73
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 125,
+      "largest_local_palette": 9,
+      "multibuilding": "infinite_domain:converted/sunken_highway_interchange_clean_master",
+      "scattered": "infinite_domain:converted/sunken_highway_interchange_clean_master",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_airship_terminal",
+      "source_role": "damage_variant",
+      "source_size": [
+        67,
+        35,
+        57
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 16,
+      "multibuilding": "infinite_domain:converted/collapsed_airship_terminal",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_airship_terminal_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        67,
+        35,
+        57
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 16,
+      "multibuilding": "infinite_domain:converted/collapsed_airship_terminal_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:crashed_cargo_airship",
+      "source_role": "damage_variant",
+      "source_size": [
+        71,
+        29,
+        39
+      ],
+      "road_facing": "west",
+      "chunk_footprint": [
+        5,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 75,
+      "largest_local_palette": 8,
+      "multibuilding": "infinite_domain:converted/crashed_cargo_airship",
+      "scattered": "infinite_domain:converted/crashed_cargo_airship",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:crashed_cargo_airship_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        71,
+        29,
+        39
+      ],
+      "road_facing": "west",
+      "chunk_footprint": [
+        5,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 75,
+      "largest_local_palette": 8,
+      "multibuilding": "infinite_domain:converted/crashed_cargo_airship_clean_master",
+      "scattered": "infinite_domain:converted/crashed_cargo_airship_clean_master",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:warm_industrial_mountain_port",
+      "source_role": "damage_variant",
+      "source_size": [
+        47,
+        31,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 54,
+      "largest_local_palette": 15,
+      "multibuilding": "infinite_domain:converted/warm_industrial_mountain_port",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:warm_industrial_mountain_port_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        47,
+        31,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 54,
+      "largest_local_palette": 17,
+      "multibuilding": "infinite_domain:converted/warm_industrial_mountain_port_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:cold_industrial_mountain_port",
+      "source_role": "damage_variant",
+      "source_size": [
+        47,
+        31,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 54,
+      "largest_local_palette": 17,
+      "multibuilding": "infinite_domain:converted/cold_industrial_mountain_port",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:cold_industrial_mountain_port_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        47,
+        31,
+        47
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 54,
+      "largest_local_palette": 17,
+      "multibuilding": "infinite_domain:converted/cold_industrial_mountain_port_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_quarry",
+      "source_role": "damage_variant",
+      "source_size": [
+        69,
+        30,
+        61
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 100,
+      "largest_local_palette": 10,
+      "multibuilding": "infinite_domain:converted/abandoned_quarry",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_quarry_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        69,
+        30,
+        61
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 100,
+      "largest_local_palette": 9,
+      "multibuilding": "infinite_domain:converted/abandoned_quarry_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_mine_entrance",
+      "source_role": "damage_variant",
+      "source_size": [
+        55,
+        27,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 9,
+      "multibuilding": "infinite_domain:converted/collapsed_mine_entrance",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_mine_entrance_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        55,
+        27,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 8,
+      "multibuilding": "infinite_domain:converted/collapsed_mine_entrance_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:excavator_pit",
+      "source_role": "damage_variant",
+      "source_size": [
+        73,
+        31,
+        63
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 7,
+      "multibuilding": "infinite_domain:converted/excavator_pit",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:excavator_pit_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        73,
+        31,
+        63
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 7,
+      "multibuilding": "infinite_domain:converted/excavator_pit_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_oil_field",
+      "source_role": "damage_variant",
+      "source_size": [
+        75,
+        25,
+        61
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 100,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/abandoned_oil_field",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_oil_field_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        75,
+        25,
+        61
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 100,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/abandoned_oil_field_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_orchard_cannery",
+      "source_role": "damage_variant",
+      "source_size": [
+        59,
+        24,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 13,
+      "multibuilding": "infinite_domain:converted/abandoned_orchard_cannery",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_orchard_cannery_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        59,
+        24,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 13,
+      "multibuilding": "infinite_domain:converted/abandoned_orchard_cannery_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_grain_elevator",
+      "source_role": "damage_variant",
+      "source_size": [
+        55,
+        35,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 13,
+      "multibuilding": "infinite_domain:converted/ruined_grain_elevator",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_grain_elevator_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        55,
+        35,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/ruined_grain_elevator_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:shattered_greenhouse_nursery",
+      "source_role": "damage_variant",
+      "source_size": [
+        61,
+        21,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 15,
+      "multibuilding": "infinite_domain:converted/shattered_greenhouse_nursery",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:shattered_greenhouse_nursery_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        61,
+        21,
+        49
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 15,
+      "multibuilding": "infinite_domain:converted/shattered_greenhouse_nursery_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:remote_sawmill",
+      "source_role": "damage_variant",
+      "source_size": [
+        63,
+        32,
+        53
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 9,
+      "multibuilding": "infinite_domain:converted/remote_sawmill",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:remote_sawmill_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        63,
+        32,
+        53
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 96,
+      "largest_local_palette": 9,
+      "multibuilding": "infinite_domain:converted/remote_sawmill_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:industrial_facility",
+      "source_role": "damage_variant",
+      "source_size": [
+        69,
+        29,
+        57
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 100,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/industrial_facility",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:industrial_facility_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        69,
+        29,
+        57
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 100,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/industrial_facility_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:city_electrical_substation",
+      "source_role": "damage_variant",
+      "source_size": [
+        61,
+        22,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 11,
+      "multibuilding": "infinite_domain:converted/city_electrical_substation",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:city_electrical_substation_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        61,
+        22,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 64,
+      "largest_local_palette": 10,
+      "multibuilding": "infinite_domain:converted/city_electrical_substation_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:city_water_treatment_plant",
+      "source_role": "damage_variant",
+      "source_size": [
+        75,
+        24,
+        65
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 100,
+      "largest_local_palette": 15,
+      "multibuilding": "infinite_domain:converted/city_water_treatment_plant",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:city_water_treatment_plant_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        75,
+        24,
+        65
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 100,
+      "largest_local_palette": 15,
+      "multibuilding": "infinite_domain:converted/city_water_treatment_plant_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:district_heating_station",
+      "source_role": "damage_variant",
+      "source_size": [
+        65,
+        31,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 15,
+      "multibuilding": "infinite_domain:converted/district_heating_station",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:district_heating_station_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        65,
+        31,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/district_heating_station_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:municipal_incinerator",
+      "source_role": "damage_variant",
+      "source_size": [
+        71,
+        33,
+        59
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/municipal_incinerator",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:municipal_incinerator_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        71,
+        33,
+        59
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 16,
+      "multibuilding": "infinite_domain:converted/municipal_incinerator_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_fuel_depot",
+      "source_role": "damage_variant",
+      "source_size": [
+        79,
+        25,
+        65
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 125,
+      "largest_local_palette": 13,
+      "multibuilding": "infinite_domain:converted/ruined_fuel_depot",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_fuel_depot_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        79,
+        25,
+        65
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 125,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/ruined_fuel_depot_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_cyberware_clinic",
+      "source_role": "damage_variant",
+      "source_size": [
+        59,
+        26,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 17,
+      "multibuilding": "infinite_domain:converted/ruined_cyberware_clinic",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_cyberware_clinic_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        59,
+        26,
+        51
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 17,
+      "multibuilding": "infinite_domain:converted/ruined_cyberware_clinic_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ae2_records_archive",
+      "source_role": "damage_variant",
+      "source_size": [
+        63,
+        30,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/ae2_records_archive",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:ae2_records_archive_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        63,
+        30,
+        55
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        4,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 5,
+      "parts_written": 80,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/ae2_records_archive_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:nuclear_research_annex",
+      "source_role": "damage_variant",
+      "source_size": [
+        73,
+        33,
+        63
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 11,
+      "multibuilding": "infinite_domain:converted/nuclear_research_annex",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:nuclear_research_annex_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        73,
+        33,
+        63
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        5,
+        4
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 120,
+      "largest_local_palette": 10,
+      "multibuilding": "infinite_domain:converted/nuclear_research_annex_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:shattered_wind_farm",
+      "source_role": "damage_variant",
+      "source_size": [
+        83,
+        39,
+        71
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        6,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 210,
+      "largest_local_palette": 11,
+      "multibuilding": "infinite_domain:converted/shattered_wind_farm",
+      "scattered": "infinite_domain:converted/shattered_wind_farm",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:shattered_wind_farm_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        83,
+        39,
+        71
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        6,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 210,
+      "largest_local_palette": 11,
+      "multibuilding": "infinite_domain:converted/shattered_wind_farm_clean_master",
+      "scattered": "infinite_domain:converted/shattered_wind_farm_clean_master",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:broken_solar_field",
+      "source_role": "damage_variant",
+      "source_size": [
+        83,
+        17,
+        69
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        6,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 90,
+      "largest_local_palette": 13,
+      "multibuilding": "infinite_domain:converted/broken_solar_field",
+      "scattered": "infinite_domain:converted/broken_solar_field",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:broken_solar_field_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        83,
+        17,
+        69
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        6,
+        5
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 90,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/broken_solar_field_clean_master",
+      "scattered": "infinite_domain:converted/broken_solar_field_clean_master",
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:wilderness_substation",
+      "source_role": "damage_variant",
+      "source_size": [
+        47,
+        19,
+        43
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 36,
+      "largest_local_palette": 8,
+      "multibuilding": "infinite_domain:converted/wilderness_substation",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:wilderness_substation_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        47,
+        19,
+        43
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 4,
+      "parts_written": 36,
+      "largest_local_palette": 8,
+      "multibuilding": "infinite_domain:converted/wilderness_substation_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_water_tower",
+      "source_role": "damage_variant",
+      "source_size": [
+        45,
+        36,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 54,
+      "largest_local_palette": 11,
+      "multibuilding": "infinite_domain:converted/wasteland_water_tower",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_water_tower_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        45,
+        36,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 54,
+      "largest_local_palette": 10,
+      "multibuilding": "infinite_domain:converted/wasteland_water_tower_clean_master",
+      "scattered": null,
+      "production_status": "quarantined",
+      "runtime_codec_validation": "pending game launch"
+    }
+  ]
+}

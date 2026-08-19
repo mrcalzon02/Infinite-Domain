@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "pattern":  [
+                    "aaa",
+                    " b ",
+                    " b "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:opalized_quartz"
+                      },
+                "b":  {
+                          "item":  "more_ores_more_gems:electrum_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:opal_quartz_pickaxe",
+                   "count":  1
+               }
+}

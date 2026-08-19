@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["ADA", "ICI", "AFA"],
+  "key": {
+    "A": { "item": "create:andesite_alloy" },
+    "D": { "item": "create:mechanical_drill" },
+    "I": { "item": "allthecompressed:iron_block_1x" },
+    "C": { "item": "create:crushed_raw_iron" },
+    "F": { "item": "minecraft:coal_block" }
+  },
+  "result": { "id": "kubejs:era1_mining_contribution", "count": 1 }
+}

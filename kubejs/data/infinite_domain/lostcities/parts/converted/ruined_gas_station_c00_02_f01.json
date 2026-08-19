@@ -1,0 +1,251 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "9999999999--(999",
+      "99999999--(99999",
+      "999999--(9999999",
+      "9999--(999999999",
+      "99--(99999999999",
+      "--(9999999999999",
+      "(999999999999999",
+      "999999999999999-",
+      "9999999999999--(",
+      "99999999999--(99",
+      "999999999--(9999",
+      "9999999--(999999",
+      "99999--(99999999",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   ;;;;;;;;;;;;;",
+      "   ;;;;;;;;;;;;;",
+      "   ;;;;;;;;;;;;;",
+      "   ;;;;;;;;;;;;;",
+      "   ;;;;;;;;;;;;;",
+      "   ;;;;;;;;;;;;;",
+      "   ;;;;;;;;;;;;;",
+      "   ;;;;;;;;;;;;;",
+      "   ;;;;;;;;;;;;;",
+      "   ;;;;;;;;;;;;;",
+      "    ///////     ",
+      "    ///////     ",
+      "    7/////7     ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   .    <       ",
+      "   .:::3::::::3:",
+      "  ..      :     ",
+      "   .%%  $$: 55 &",
+      "   .%%  $$1 6   ",
+      "   .%%  $$:     ",
+      "   .%%  $$:    0",
+      "  ..    ' :     ",
+      "   . &    :     ",
+      "   .::)*::.:::::",
+      "   .      .     ",
+      "                ",
+      "    7     7     ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   :            ",
+      "   ::::4::::::4:",
+      "  ..      :     ",
+      "   !%%  $$:     ",
+      "   !%%  $$2     ",
+      "   :%%  $$:     ",
+      "   :%%  $$:     ",
+      "  ..      :     ",
+      "   .      :    8",
+      "   .::+,::.:!!::",
+      "   .      .     ",
+      "                ",
+      "    7     7     ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   :            ",
+      "   :::::::::::::",
+      "  ..      :     ",
+      "   !      :     ",
+      "   !      :     ",
+      "   :      :     ",
+      "   :      :     ",
+      "  ..      :     ",
+      "   .      :     ",
+      "   .::  ::.:!!::",
+      "   .      .     ",
+      "                ",
+      "    7     7     ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:crate"
+      },
+      {
+        "char": "%",
+        "block": "jaffabricate:pallet_full"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:chest[facing=south,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_roadside"
+        }
+      },
+      {
+        "char": "(",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:smooth_stone"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spawner",
+        "tag": {
+          "id": "minecraft:mob_spawner",
+          "Delay": 200,
+          "MinSpawnDelay": 240,
+          "MaxSpawnDelay": 720,
+          "SpawnCount": 2,
+          "MaxNearbyEntities": 5,
+          "RequiredPlayerRange": 14,
+          "SpawnRange": 4,
+          "SpawnData": {
+            "entity": {
+              "id": "minecraft:pillager"
+            }
+          },
+          "SpawnPotentials": [
+            {
+              "weight": 1,
+              "data": {
+                "entity": {
+                  "id": "minecraft:pillager"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:stripped_dark_oak_log[axis=y]"
+      },
+      {
+        "char": "8",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": "9",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": ":",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": ";",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "<",
+        "block": "the_wasteland_reworked:cardboard_box"
+      }
+    ]
+  }
+}

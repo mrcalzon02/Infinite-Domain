@@ -1,0 +1,198 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "22    22        ",
+      "++++++++++++++++",
+      "   5       3   3",
+      "   5       3   3",
+      "   5       3   3",
+      "   5       3   3",
+      "   5       3 - 3",
+      "   5       3   3",
+      "   5       3   3",
+      "   5       3   3",
+      "5555       3   3",
+      "   5       3   3"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "++++++++++++++++",
+      "           3   3",
+      "           3   3",
+      "           3   3",
+      "           3   3",
+      "           3   3",
+      "           3 - 3",
+      "           3   3",
+      "           3   3",
+      "           3   3",
+      "           3   3"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "++++++++++++++++",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "             -  ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "................",
+      "................",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,, ,,",
+      ",,,,,,,,,,,,, ,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,",
+      ",,,,,,,,,,,,,,,,"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "11    11        ",
+      "++++++++++++++++",
+      "   5       3   3",
+      "   5       3 - 3",
+      "   5 $     3   3",
+      "   5 %     3   3",
+      "   5  &    3   3",
+      "   5       3   3",
+      "   /       3   3",
+      "   5       3   3",
+      "5555       '   )",
+      "   5       3   3"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "!!4++4!!4+++++++",
+      "   5       3   3",
+      "   5       3   3",
+      "   5       3 - 3",
+      "   5       3   3",
+      "   5       3   3",
+      "   5       3   3",
+      "   0       3   3",
+      "   5       3   3",
+      "5555       (   *",
+      "   5       3   3"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:brown_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:brown_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:chest[facing=west,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_home"
+        }
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:dark_oak_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:oak_planks"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:oak_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:smooth_stone_slab[type=top,waterlogged=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_slab[type=top,waterlogged=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:stripped_oak_wood"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:stripped_spruce_log[axis=y]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:stripped_spruce_wood"
+      }
+    ]
+  }
+}

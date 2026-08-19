@@ -1,0 +1,56 @@
+{
+  "structure_id": "infinite_domain:freight_depot_clean_master",
+  "archetype": "rail freight depot with high-bay warehouse and dispatch offices",
+  "orientation": {
+    "road_and_public_entrance": "north",
+    "rail_loading_platform": "south",
+    "truck_loading_court": "east",
+    "through_rail_connectors": ["east", "west"]
+  },
+  "public_and_office_program": [
+    "recessed driver and visitor entrance",
+    "reception and driver check-in",
+    "ground-floor dispatch room",
+    "staff breakroom and restroom",
+    "dedicated stair to upper administration",
+    "manager office, records room and rail-dispatch observation area"
+  ],
+  "warehouse_program": [
+    "high-bay floor beneath three sawtooth roof and clerestory bays",
+    "west bulk-storage racks",
+    "central inspection and packing benches",
+    "east truck-receiving and staging zone",
+    "overhead travelling crane",
+    "three south rail-loading apertures and two east truck docks",
+    "two continuous east-west rail sidings"
+  ],
+  "circulation": [
+    "north road apron to public check-in and dispatch",
+    "dispatch through a controlled west door to warehouse receiving",
+    "three-wide warehouse cross and longitudinal aisles linking all process zones",
+    "warehouse to three rail doors and the raised rail platform",
+    "warehouse receiving to two east truck docks",
+    "dedicated stair to both upper office suites",
+    "independent north warehouse staff exit"
+  ],
+  "damage_constraints": [
+    "preserve the office annex, stair and office-to-warehouse connection",
+    "retain east truck receiving and at least two rail-loading bays",
+    "retain both through rail connectors",
+    "concentrate collapse in the west sawtooth bay and first rail door",
+    "shape rubble beneath the failed roof and expose fallen crane or roof members",
+    "derive all abandoned variants from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the building reads as a freight depot from road and rail approaches",
+      "road, truck and rail traffic systems remain distinct",
+      "warehouse storage, packing and receiving zones have usable clearances",
+      "the two office floors and dedicated stair are navigable at player scale",
+      "sawtooth roof, loading platform, docks and crane form a credible industrial system",
+      "damage preserves the original freight workflow and follows structural gravity"
+    ]
+  }
+}

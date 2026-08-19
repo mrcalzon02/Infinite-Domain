@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["IAI", "AXA", "IAI"],
+  "key": {
+    "I": { "item": "allthecompressed:iron_block_1x" },
+    "A": { "item": "create:andesite_alloy" },
+    "X": { "item": "kubejs:era1_farming_contribution" }
+  },
+  "result": { "id": "kubejs:mechanical_foundation_core", "count": 1 }
+}

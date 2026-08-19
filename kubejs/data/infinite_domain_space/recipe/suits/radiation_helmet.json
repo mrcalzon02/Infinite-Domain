@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "B": {
+      "item": "kubejs:radiation_laminate"
+    },
+    "C": {
+      "item": "createnuclear:graphite_rod"
+    },
+    "D": {
+      "item": "stellaris:space_suit_helmet"
+    },
+    "E": {
+      "item": "tfmg:rubber_sheet"
+    }
+  },
+  "result": {
+    "id": "infinite_domain_space:radiation_helmet",
+    "count": 1
+  }
+}

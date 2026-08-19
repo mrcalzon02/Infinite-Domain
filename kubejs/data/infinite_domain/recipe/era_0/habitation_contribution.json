@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BGB",
+    "CPC",
+    "TFT"
+  ],
+  "key": {
+    "B": { "item": "minecraft:white_bed" },
+    "G": { "item": "minecraft:grass_block" },
+    "C": { "item": "minecraft:clay" },
+    "P": { "item": "minecraft:composter" },
+    "T": { "item": "minecraft:torch" },
+    "F": { "item": "wastelands:canned_food" }
+  },
+  "result": {
+    "id": "kubejs:habitation_contribution",
+    "count": 1
+  }
+}

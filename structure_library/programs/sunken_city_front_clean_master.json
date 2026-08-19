@@ -1,0 +1,43 @@
+{
+  "structure_id": "infinite_domain:sunken_city_front_clean_master",
+  "archetype": "four-building avenue frontage with furnished cellars, mixed ground uses and apartment/office floors",
+  "city_grade": {
+    "intact_road_y": 4,
+    "cellar_floor_y": 1,
+    "sidewalks": "five-block stone walks on both sides of a nine-block avenue",
+    "frontages": "two independently massed buildings on each side of the street"
+  },
+  "building_programs": [
+    "west-north cafe with dining room, service counter, kitchen, store cellar and two apartment floors",
+    "west-south hardware shop with retail aisles, repair workshop, receiving cellar and three office floors",
+    "east-north pharmacy and clinic with dispensary, exam support, medical cellar and three residential floors",
+    "east-south post and bank hall with public counter, sorting desks, records, secure store cellar and two office floors"
+  ],
+  "circulation": [
+    "independent street and rear-service doors for every premise",
+    "separate public, staff and rear secure rooms on every ground floor",
+    "four furnished cellars reached by dedicated four-rise stairs",
+    "rear upper corridors serving two independently roomed suites per floor",
+    "four complete stacked stairs linking ground and every upper floor"
+  ],
+  "damage_constraints": [
+    "lower the avenue from city grade Y=4 to roadbed Y=1",
+    "feather both sidewalks with broken soil and gravel ramps rather than vertical cuts",
+    "expose and locally breach real cellar street walls",
+    "confine facade/floor failures to four different declared zones",
+    "preserve every stair stack, every ground business and at least one coherent upper suite per floor",
+    "derive subsidence, rubble, occupation and loot only from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "all four buildings read as different premises rather than paired boxes",
+      "street, service, cellar and upper-floor circulation work at player scale",
+      "the avenue is visibly three blocks below surviving city grade",
+      "soil and broken sidewalks feather naturally into the road trench",
+      "collapsed floors, exposed cellars and dirt intrusion follow gravity",
+      "survivor spaces remain dangerous but navigable"
+    ]
+  }
+}

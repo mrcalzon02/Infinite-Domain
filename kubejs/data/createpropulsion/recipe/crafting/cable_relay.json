@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "NCN",
+                    "CDC",
+                    "NCN"
+                ],
+    "key":  {
+                "N":  {
+                          "item":  "createpropulsion:platinum_ingot"
+                      },
+                "C":  {
+                          "item":  "createpropulsion:cable"
+                      },
+                "D":  {
+                          "item":  "createpropulsion:platinum_casing"
+                      }
+            },
+    "result":  {
+                   "id":  "createpropulsion:cable_relay",
+                   "count":  1
+               }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 20,
+    "xz_spread": 6,
+    "y_spread": 2,
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              { "data": { "Name": "kubejs:darknet_signal_grass" }, "weight": 9 },
+              { "data": { "Name": "kubejs:darknet_packet_fern" }, "weight": 4 },
+              { "data": { "Name": "kubejs:darknet_cipher_bloom" }, "weight": 1 },
+              { "data": { "Name": "kubejs:darknet_blackroot_shrub" }, "weight": 3 }
+            ]
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": { "type": "minecraft:matching_blocks", "blocks": "minecraft:air" }
+        }
+      ]
+    }
+  }
+}

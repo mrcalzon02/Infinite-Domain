@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "d":  {
+                          "item":  "minecraft:diamond_block"
+                      },
+                "g":  {
+                          "item":  "allthecompressed:glass_1x"
+                      },
+                "l":  {
+                          "item":  "minecraft:lapis_block"
+                      },
+                "u":  {
+                          "item":  "mininggadgets:upgrade_empty"
+                      }
+            },
+    "pattern":  [
+                    "lgl",
+                    "dud",
+                    "lgl"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "mininggadgets:upgrade_range_1"
+               }
+}

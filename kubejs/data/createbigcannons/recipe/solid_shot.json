@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "S":  {
+                          "tag":  "minecraft:wooden_slabs"
+                      },
+                "i":  {
+                          "item":  "minecraft:iron_ingot"
+                      }
+            },
+    "pattern":  [
+                    "iIi",
+                    "III",
+                    " S "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "createbigcannons:solid_shot"
+               }
+}

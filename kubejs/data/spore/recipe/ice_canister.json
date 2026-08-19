@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "###",
+                    "#R#",
+                    "###"
+                ],
+    "key":  {
+                "R":  {
+                          "item":  "allthecompressed:blue_ice_1x"
+                      },
+                "#":  {
+                          "item":  "minecraft:iron_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "spore:ice_canister"
+               }
+}

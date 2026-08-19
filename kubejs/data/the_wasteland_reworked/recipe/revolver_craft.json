@@ -1,0 +1,26 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "ab",
+                    "cd"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:flint_and_steel"
+                      },
+                "b":  {
+                          "item":  "the_wasteland_reworked:metallic_pipe"
+                      },
+                "c":  {
+                          "tag":  "minecraft:planks"
+                      },
+                "d":  {
+                          "item":  "the_wasteland_reworked:aluminium_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "the_wasteland_reworked:revolver",
+                   "count":  1
+               }
+}

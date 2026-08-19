@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aaa",
+                    "aba",
+                    "aaa"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:block_of_uranium_dust"
+                      },
+                "b":  {
+                          "item":  "more_ores_more_gems:gunpowder_block"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:uranium_radioactive_tnt",
+                   "count":  1
+               }
+}

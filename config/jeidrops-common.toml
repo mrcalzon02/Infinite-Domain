@@ -1,0 +1,22 @@
+[scan]
+	#Automatically scan block drops after a world/server loads and after datapack reloads.
+	#Manual /jeidrops rescan still works when this is false.
+	autoScan = false
+	#Delay before the first automatic scan after server/world start.
+	#20 ticks = 1 second. Default: 400 ticks = 20 seconds.
+	# Default: 400
+	# Range: 0 ~ 12000
+	initialAutoScanDelayTicks = 400
+	#Delay before the automatic forced rescan after /reload or datapack sync.
+	#20 ticks = 1 second. Default: 40 ticks = 2 seconds.
+	# Default: 40
+	# Range: 0 ~ 12000
+	reloadAutoScanDelayTicks = 40
+
+[cache]
+	#Maximum JEI Drops cache JSON size to write/load, in MiB.
+	#This is a safety cap against broken packs or runaway cache generation.
+	#Default: 100 MiB. Set higher if your pack legitimately needs it.
+	# Default: 100
+	# Range: 1 ~ 2048
+	maxCacheFileSizeMiB = 100

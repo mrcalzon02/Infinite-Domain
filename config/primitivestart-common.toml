@@ -1,0 +1,14 @@
+#Item ID to drop as bone (e.g., 'minecraft:bone')
+boneDropItem = "minecraft:bone"
+#Enable plucking chickens with shears for feathers
+enablePlucking = true
+#Enable extra stick drops from breaking leaves
+enableStickDrops = true
+#Enable animals dropping extra bones on death
+enableBoneDrops = true
+#Chance (0-100) for sticks to drop from leaves
+stickDropChance = 15
+#Prevent breaking logs without an axe (logs break but drop nothing)
+requireAxeForLogs = true
+#Item ID to drop when plucking chickens (e.g., 'minecraft:feather')
+featherDropItem = "minecraft:feather"

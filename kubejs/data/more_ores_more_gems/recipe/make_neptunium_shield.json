@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "aaa",
+                    " a "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:block_of_neptunium"
+                      },
+                "b":  {
+                          "item":  "more_ores_more_gems:block_of_shadowite"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:neptunium_shadowite_shield",
+                   "count":  1
+               }
+}

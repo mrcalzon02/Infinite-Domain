@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " ab",
+                    "a b",
+                    " ab"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:block_of_skysteel"
+                      },
+                "b":  {
+                          "item":  "minecraft:string"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:skysteel_bow",
+                   "count":  1
+               }
+}

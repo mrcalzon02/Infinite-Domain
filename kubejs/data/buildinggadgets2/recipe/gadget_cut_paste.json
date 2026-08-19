@@ -1,0 +1,28 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "group":  "buildinggadgets2",
+    "key":  {
+                "i":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "l":  {
+                          "item":  "minecraft:lapis_block"
+                      },
+                "r":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "s":  {
+                          "item":  "minecraft:shears"
+                      }
+            },
+    "pattern":  [
+                    "iri",
+                    "srs",
+                    "ili"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "buildinggadgets2:gadget_cut_paste"
+               }
+}

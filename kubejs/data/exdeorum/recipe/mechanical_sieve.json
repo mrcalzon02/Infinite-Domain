@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "#":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "G":  {
+                          "item":  "allthecompressed:glass_1x"
+                      },
+                "H":  {
+                          "item":  "minecraft:hopper"
+                      },
+                "I":  {
+                          "item":  "minecraft:iron_bars"
+                      }
+            },
+    "pattern":  [
+                    "#G#",
+                    "IHI",
+                    "I I"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "exdeorum:mechanical_sieve"
+               }
+}

@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " ab",
+                    " ca",
+                    "c  "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:bone"
+                      },
+                "b":  {
+                          "item":  "rpg_companions_tiny_dragons:dragon_skull"
+                      },
+                "c":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "result":  {
+                   "id":  "rpg_companions_tiny_dragons:dragon_trainers_staff",
+                   "count":  1
+               }
+}

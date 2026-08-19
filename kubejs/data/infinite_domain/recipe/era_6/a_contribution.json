@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "createnuclear:uranium_rod"
+    },
+    "B": {
+      "item": "kubejs:uranium_mineral_trace"
+    },
+    "C": {
+      "item": "kubejs:washed_uranium_concentrate"
+    },
+    "D": {
+      "item": "kubejs:green_fuel_pellet"
+    },
+    "E": {
+      "item": "createnuclear:uranium_rod"
+    }
+  },
+  "result": {
+    "id": "kubejs:era6_mining_contribution",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "aba"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "the_wasteland_reworked:decayed_planks"
+                      },
+                "b":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "result":  {
+                   "id":  "the_wasteland_reworked:decayed_fence",
+                   "count":  3
+               }
+}

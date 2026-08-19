@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "RAR",
+    "LML",
+    "RAR"
+  ],
+  "key": {
+    "R": {
+      "item": "createnuclear:reactor_casing"
+    },
+    "A": {
+      "item": "oritech:advanced_battery"
+    },
+    "L": {
+      "item": "create_new_age:layered_magnet"
+    },
+    "M": {
+      "item": "ae2lt:overload_module_base"
+    }
+  },
+  "result": {
+    "id": "ae2lt:module_radiation_protection",
+    "count": 1
+  }
+}

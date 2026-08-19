@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aaa",
+                    "aba",
+                    "cac"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:iron_block"
+                      },
+                "b":  {
+                          "item":  "minecraft:glass_pane"
+                      },
+                "c":  {
+                          "item":  "enviromine:air_filter"
+                      }
+            },
+    "result":  {
+                   "id":  "enviromine:gas_mask_helmet",
+                   "count":  1
+               }
+}

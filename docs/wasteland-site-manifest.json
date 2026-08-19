@@ -1,0 +1,2877 @@
+{
+  "minecraft_version": "1.21.1",
+  "namespace": "infinite_domain:wasteland",
+  "biome_tag": "#infinite_domain:wasteland_site_biomes",
+  "families": {
+    "roadside_debris": {
+      "members": [
+        "radio_mast",
+        "wrecked_sedan",
+        "delivery_van"
+      ],
+      "spacing_chunks": 18,
+      "separation_chunks": 8
+    },
+    "residential_ruins": {
+      "members": [
+        "abandoned_bungalow",
+        "split_level_house"
+      ],
+      "spacing_chunks": 32,
+      "separation_chunks": 13
+    },
+    "commercial_ruins": {
+      "members": [
+        "dilapidated_grocery",
+        "service_garage",
+        "scrapyard"
+      ],
+      "spacing_chunks": 42,
+      "separation_chunks": 18
+    },
+    "major_settlements": {
+      "members": [
+        "trailer_park",
+        "abandoned_culdesac"
+      ],
+      "spacing_chunks": 56,
+      "separation_chunks": 24
+    },
+    "military_remnants": {
+      "members": [
+        "battle_tank",
+        "military_checkpoint"
+      ],
+      "spacing_chunks": 48,
+      "separation_chunks": 20
+    },
+    "buried_sites": {
+      "members": [
+        "survivor_cache",
+        "bunker_network"
+      ],
+      "spacing_chunks": 52,
+      "separation_chunks": 22
+    },
+    "survivor_outposts": {
+      "members": [
+        "trade_outpost"
+      ],
+      "spacing_chunks": 64,
+      "separation_chunks": 28
+    },
+    "rural_ruins": {
+      "members": [
+        "decayed_farm"
+      ],
+      "spacing_chunks": 44,
+      "separation_chunks": 18
+    },
+    "industrial_infrastructure": {
+      "members": [
+        "industrial_facility"
+      ],
+      "spacing_chunks": 58,
+      "separation_chunks": 24
+    },
+    "mountain_military": {
+      "members": [
+        "mountain_military_complex",
+        "mountain_biohazard_lab"
+      ],
+      "spacing_chunks": 54,
+      "separation_chunks": 22
+    },
+    "forest_industry": {
+      "members": [
+        "decayed_logging_camp",
+        "corporate_warehouse"
+      ],
+      "spacing_chunks": 46,
+      "separation_chunks": 19
+    },
+    "lost_data_centers": {
+      "members": [
+        "bombed_data_center"
+      ],
+      "spacing_chunks": 144,
+      "separation_chunks": 56
+    },
+    "hydroelectric_landmarks": {
+      "members": [
+        "hydroelectric_refuge_dam"
+      ],
+      "spacing_chunks": 192,
+      "separation_chunks": 72
+    },
+    "ruined_city_blocks": {
+      "members": [
+        "blown_apartment_complex",
+        "ruined_mixed_use_block",
+        "pancaked_parking_structure"
+      ],
+      "spacing_chunks": 28,
+      "separation_chunks": 11
+    },
+    "ruined_city_streets": {
+      "members": [
+        "sunken_city_front",
+        "cratered_downtown_intersection"
+      ],
+      "spacing_chunks": 34,
+      "separation_chunks": 14
+    },
+    "ruined_city_landmarks": {
+      "members": [
+        "toppled_skyscraper"
+      ],
+      "spacing_chunks": 52,
+      "separation_chunks": 21
+    },
+    "expanded_city_civic": {
+      "members": [
+        "ruined_hospital",
+        "ruined_fire_station",
+        "ruined_police_precinct",
+        "ruined_courthouse",
+        "emergency_relief_shelter"
+      ],
+      "spacing_chunks": 22,
+      "separation_chunks": 8
+    },
+    "expanded_city_transit": {
+      "members": [
+        "ruined_bus_terminal",
+        "freight_depot",
+        "elevated_rail_collapse",
+        "sunken_highway_interchange"
+      ],
+      "spacing_chunks": 24,
+      "separation_chunks": 9
+    },
+    "expanded_city_subway": {
+      "members": [
+        "collapsed_subway_station"
+      ],
+      "spacing_chunks": 38,
+      "separation_chunks": 15
+    },
+    "expanded_city_commercial": {
+      "members": [
+        "ruined_shopping_mall",
+        "ruined_department_store",
+        "bombed_hotel",
+        "buried_bank_vault",
+        "ruined_office_tower"
+      ],
+      "spacing_chunks": 22,
+      "separation_chunks": 8
+    },
+    "expanded_city_residential": {
+      "members": [
+        "tenement_courtyard",
+        "ruined_rowhouse_block",
+        "shattered_luxury_condo",
+        "ruined_city_school",
+        "ruined_community_center"
+      ],
+      "spacing_chunks": 22,
+      "separation_chunks": 8
+    },
+    "expanded_city_utilities": {
+      "members": [
+        "city_electrical_substation",
+        "city_water_treatment_plant",
+        "district_heating_station",
+        "municipal_incinerator",
+        "ruined_fuel_depot"
+      ],
+      "spacing_chunks": 27,
+      "separation_chunks": 11
+    },
+    "expanded_city_themed": {
+      "members": [
+        "ruined_cyberware_clinic",
+        "ae2_records_archive",
+        "abandoned_create_factory",
+        "collapsed_airship_terminal",
+        "nuclear_research_annex"
+      ],
+      "spacing_chunks": 42,
+      "separation_chunks": 17
+    },
+    "expanded_wilderness_roadside": {
+      "members": [
+        "ruined_roadside_diner",
+        "abandoned_motel",
+        "ruined_gas_station",
+        "abandoned_truck_stop",
+        "wasteland_weigh_station"
+      ],
+      "spacing_chunks": 16,
+      "separation_chunks": 6
+    },
+    "expanded_wilderness_rural": {
+      "members": [
+        "decayed_ranch",
+        "abandoned_orchard_cannery",
+        "ruined_grain_elevator",
+        "shattered_greenhouse_nursery",
+        "roadside_church_cemetery"
+      ],
+      "spacing_chunks": 32,
+      "separation_chunks": 12
+    },
+    "expanded_wilderness_extraction": {
+      "members": [
+        "abandoned_quarry",
+        "collapsed_mine_entrance",
+        "excavator_pit",
+        "abandoned_oil_field",
+        "remote_sawmill"
+      ],
+      "spacing_chunks": 36,
+      "separation_chunks": 14
+    },
+    "expanded_wilderness_energy": {
+      "members": [
+        "shattered_wind_farm",
+        "broken_solar_field",
+        "wilderness_substation",
+        "wasteland_water_tower"
+      ],
+      "spacing_chunks": 38,
+      "separation_chunks": 15
+    },
+    "expanded_wilderness_survival": {
+      "members": [
+        "ruined_ranger_station",
+        "wasteland_fire_lookout",
+        "destroyed_refugee_convoy",
+        "crashed_cargo_airship"
+      ],
+      "spacing_chunks": 34,
+      "separation_chunks": 13
+    },
+    "warm_industrial_ports": {
+      "members": [
+        "warm_industrial_mountain_port"
+      ],
+      "spacing_chunks": 176,
+      "separation_chunks": 68
+    },
+    "cold_industrial_ports": {
+      "members": [
+        "cold_industrial_mountain_port"
+      ],
+      "spacing_chunks": 176,
+      "separation_chunks": 68
+    }
+  },
+  "structures": {
+    "radio_mast": {
+      "locate_command": "/locate structure infinite_domain:wasteland/radio_mast",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        15,
+        28,
+        15
+      ],
+      "placed_blocks": 573,
+      "palette_states": 21,
+      "modded_blocks": 368,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 6,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 3
+      }
+    },
+    "wrecked_sedan": {
+      "locate_command": "/locate structure infinite_domain:wasteland/wrecked_sedan",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        17,
+        8,
+        11
+      ],
+      "placed_blocks": 449,
+      "palette_states": 15,
+      "modded_blocks": 180,
+      "spawners": 0,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 5,
+        "footprint_variants": 5
+      }
+    },
+    "delivery_van": {
+      "locate_command": "/locate structure infinite_domain:wasteland/delivery_van",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        21,
+        10,
+        12
+      ],
+      "placed_blocks": 862,
+      "palette_states": 18,
+      "modded_blocks": 266,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 20,
+        "functional_fixtures": 11,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 5
+      }
+    },
+    "battle_tank": {
+      "locate_command": "/locate structure infinite_domain:wasteland/battle_tank",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        25,
+        12,
+        17
+      ],
+      "placed_blocks": 1521,
+      "palette_states": 17,
+      "modded_blocks": 333,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 3,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 8,
+        "footprint_variants": 9
+      }
+    },
+    "abandoned_bungalow": {
+      "locate_command": "/locate structure infinite_domain:wasteland/abandoned_bungalow",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        19,
+        15,
+        18
+      ],
+      "placed_blocks": 1862,
+      "palette_states": 46,
+      "modded_blocks": 458,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 6,
+        "orphan_door_halves": 0,
+        "window_blocks": 26,
+        "functional_fixtures": 13,
+        "vertical_access_span": 10,
+        "dense_floor_levels": 11,
+        "footprint_variants": 12
+      }
+    },
+    "split_level_house": {
+      "locate_command": "/locate structure infinite_domain:wasteland/split_level_house",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        31,
+        19,
+        27
+      ],
+      "placed_blocks": 7078,
+      "palette_states": 42,
+      "modded_blocks": 1029,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 6,
+        "orphan_door_halves": 0,
+        "window_blocks": 136,
+        "functional_fixtures": 19,
+        "vertical_access_span": 8,
+        "dense_floor_levels": 10,
+        "footprint_variants": 14
+      }
+    },
+    "dilapidated_grocery": {
+      "locate_command": "/locate structure infinite_domain:wasteland/dilapidated_grocery",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        39,
+        13,
+        33
+      ],
+      "placed_blocks": 9899,
+      "palette_states": 63,
+      "modded_blocks": 1986,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 11,
+        "orphan_door_halves": 0,
+        "window_blocks": 50,
+        "functional_fixtures": 15,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 8,
+        "footprint_variants": 11
+      }
+    },
+    "service_garage": {
+      "locate_command": "/locate structure infinite_domain:wasteland/service_garage",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        41,
+        15,
+        33
+      ],
+      "placed_blocks": 10837,
+      "palette_states": 32,
+      "modded_blocks": 2421,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 154,
+        "functional_fixtures": 6,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 13
+      }
+    },
+    "scrapyard": {
+      "locate_command": "/locate structure infinite_domain:wasteland/scrapyard",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        49,
+        15,
+        43
+      ],
+      "placed_blocks": 5825,
+      "palette_states": 34,
+      "modded_blocks": 2535,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 16,
+        "functional_fixtures": 371,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 7
+      }
+    },
+    "military_checkpoint": {
+      "locate_command": "/locate structure infinite_domain:wasteland/military_checkpoint",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        45,
+        15,
+        31
+      ],
+      "placed_blocks": 6499,
+      "palette_states": 35,
+      "modded_blocks": 1908,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 6,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 11
+      }
+    },
+    "trailer_park": {
+      "locate_command": "/locate structure infinite_domain:wasteland/trailer_park",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        69,
+        15,
+        77
+      ],
+      "placed_blocks": 29702,
+      "palette_states": 92,
+      "modded_blocks": 4637,
+      "spawners": 3,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 33,
+        "orphan_door_halves": 0,
+        "window_blocks": 122,
+        "functional_fixtures": 90,
+        "vertical_access_span": 12,
+        "dense_floor_levels": 6,
+        "footprint_variants": 14
+      }
+    },
+    "abandoned_culdesac": {
+      "locate_command": "/locate structure infinite_domain:wasteland/abandoned_culdesac",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        67,
+        18,
+        67
+      ],
+      "placed_blocks": 21495,
+      "palette_states": 40,
+      "modded_blocks": 4149,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 12,
+        "orphan_door_halves": 0,
+        "window_blocks": 67,
+        "functional_fixtures": 49,
+        "vertical_access_span": 13,
+        "dense_floor_levels": 6,
+        "footprint_variants": 14
+      }
+    },
+    "survivor_cache": {
+      "locate_command": "/locate structure infinite_domain:wasteland/survivor_cache",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "bury",
+      "size": [
+        27,
+        17,
+        27
+      ],
+      "placed_blocks": 5207,
+      "palette_states": 47,
+      "modded_blocks": 1837,
+      "spawners": 4,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 8,
+        "orphan_door_halves": 0,
+        "window_blocks": 9,
+        "functional_fixtures": 17,
+        "vertical_access_span": 8,
+        "dense_floor_levels": 12,
+        "footprint_variants": 14
+      }
+    },
+    "bunker_network": {
+      "locate_command": "/locate structure infinite_domain:wasteland/bunker_network",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "bury",
+      "size": [
+        47,
+        26,
+        47
+      ],
+      "placed_blocks": 17487,
+      "palette_states": 70,
+      "modded_blocks": 7786,
+      "spawners": 6,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 45,
+        "orphan_door_halves": 0,
+        "window_blocks": 20,
+        "functional_fixtures": 54,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 18,
+        "footprint_variants": 22
+      }
+    },
+    "trade_outpost": {
+      "locate_command": "/locate structure infinite_domain:wasteland/trade_outpost",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        49,
+        18,
+        49
+      ],
+      "placed_blocks": 14075,
+      "palette_states": 62,
+      "modded_blocks": 1609,
+      "spawners": 0,
+      "entities": 13,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 16,
+        "orphan_door_halves": 0,
+        "window_blocks": 36,
+        "functional_fixtures": 23,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 8,
+        "footprint_variants": 16
+      }
+    },
+    "decayed_farm": {
+      "locate_command": "/locate structure infinite_domain:wasteland/decayed_farm",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        49,
+        22,
+        45
+      ],
+      "placed_blocks": 16839,
+      "palette_states": 96,
+      "modded_blocks": 529,
+      "spawners": 2,
+      "entities": 4,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 27,
+        "orphan_door_halves": 0,
+        "window_blocks": 32,
+        "functional_fixtures": 21,
+        "vertical_access_span": 17,
+        "dense_floor_levels": 7,
+        "footprint_variants": 20
+      }
+    },
+    "industrial_facility": {
+      "locate_command": "/locate structure infinite_domain:wasteland/industrial_facility",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        69,
+        29,
+        57
+      ],
+      "placed_blocks": 52031,
+      "palette_states": 30,
+      "modded_blocks": 8672,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 14,
+        "orphan_door_halves": 0,
+        "window_blocks": 565,
+        "functional_fixtures": 9,
+        "vertical_access_span": 21,
+        "dense_floor_levels": 10,
+        "footprint_variants": 21
+      }
+    },
+    "mountain_military_complex": {
+      "locate_command": "/locate structure infinite_domain:wasteland/mountain_military_complex",
+      "intended_biomes": "#infinite_domain:wasteland_mountain_military_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        61,
+        24,
+        61
+      ],
+      "placed_blocks": 38382,
+      "palette_states": 72,
+      "modded_blocks": 10509,
+      "spawners": 6,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 30,
+        "orphan_door_halves": 0,
+        "window_blocks": 124,
+        "functional_fixtures": 27,
+        "vertical_access_span": 19,
+        "dense_floor_levels": 12,
+        "footprint_variants": 20
+      }
+    },
+    "mountain_biohazard_lab": {
+      "locate_command": "/locate structure infinite_domain:wasteland/mountain_biohazard_lab",
+      "intended_biomes": "#infinite_domain:wasteland_mountain_military_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        55,
+        22,
+        49
+      ],
+      "placed_blocks": 32182,
+      "palette_states": 64,
+      "modded_blocks": 7744,
+      "spawners": 5,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 47,
+        "orphan_door_halves": 0,
+        "window_blocks": 142,
+        "functional_fixtures": 48,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 12,
+        "footprint_variants": 18
+      }
+    },
+    "decayed_logging_camp": {
+      "locate_command": "/locate structure infinite_domain:wasteland/decayed_logging_camp",
+      "intended_biomes": "#infinite_domain:wasteland_forest_industry_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        61,
+        23,
+        55
+      ],
+      "placed_blocks": 33522,
+      "palette_states": 68,
+      "modded_blocks": 187,
+      "spawners": 4,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 22,
+        "orphan_door_halves": 0,
+        "window_blocks": 52,
+        "functional_fixtures": 33,
+        "vertical_access_span": 19,
+        "dense_floor_levels": 8,
+        "footprint_variants": 21
+      }
+    },
+    "corporate_warehouse": {
+      "locate_command": "/locate structure infinite_domain:wasteland/corporate_warehouse",
+      "intended_biomes": "#infinite_domain:wasteland_forest_industry_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        49,
+        16,
+        43
+      ],
+      "placed_blocks": 19327,
+      "palette_states": 57,
+      "modded_blocks": 4189,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 18,
+        "orphan_door_halves": 0,
+        "window_blocks": 240,
+        "functional_fixtures": 46,
+        "vertical_access_span": 6,
+        "dense_floor_levels": 11,
+        "footprint_variants": 15
+      }
+    },
+    "bombed_data_center": {
+      "locate_command": "/locate structure infinite_domain:wasteland/bombed_data_center",
+      "intended_biomes": "#infinite_domain:wasteland_data_center_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        61,
+        24,
+        55
+      ],
+      "placed_blocks": 37933,
+      "palette_states": 55,
+      "modded_blocks": 6880,
+      "spawners": 5,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 36,
+        "orphan_door_halves": 0,
+        "window_blocks": 46,
+        "functional_fixtures": 94,
+        "vertical_access_span": 7,
+        "dense_floor_levels": 15,
+        "footprint_variants": 21
+      }
+    },
+    "hydroelectric_refuge_dam": {
+      "locate_command": "/locate structure infinite_domain:wasteland/hydroelectric_refuge_dam",
+      "intended_biomes": "#infinite_domain:wasteland_hydroelectric_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        65,
+        40,
+        65
+      ],
+      "placed_blocks": 161611,
+      "palette_states": 68,
+      "modded_blocks": 7830,
+      "spawners": 4,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 24,
+        "orphan_door_halves": 0,
+        "window_blocks": 44,
+        "functional_fixtures": 68,
+        "vertical_access_span": 27,
+        "dense_floor_levels": 27,
+        "footprint_variants": 30
+      }
+    },
+    "toppled_skyscraper": {
+      "locate_command": "/locate structure infinite_domain:wasteland/toppled_skyscraper",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        61,
+        45,
+        53
+      ],
+      "placed_blocks": 68558,
+      "palette_states": 50,
+      "modded_blocks": 7190,
+      "spawners": 3,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 26,
+        "orphan_door_halves": 0,
+        "window_blocks": 276,
+        "functional_fixtures": 53,
+        "vertical_access_span": 20,
+        "dense_floor_levels": 15,
+        "footprint_variants": 21
+      }
+    },
+    "blown_apartment_complex": {
+      "locate_command": "/locate structure infinite_domain:wasteland/blown_apartment_complex",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        61,
+        31,
+        53
+      ],
+      "placed_blocks": 72216,
+      "palette_states": 62,
+      "modded_blocks": 2812,
+      "spawners": 4,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 64,
+        "orphan_door_halves": 0,
+        "window_blocks": 319,
+        "functional_fixtures": 169,
+        "vertical_access_span": 21,
+        "dense_floor_levels": 27,
+        "footprint_variants": 26
+      }
+    },
+    "ruined_mixed_use_block": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_mixed_use_block",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        59,
+        36,
+        47
+      ],
+      "placed_blocks": 61856,
+      "palette_states": 70,
+      "modded_blocks": 3218,
+      "spawners": 4,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 55,
+        "orphan_door_halves": 0,
+        "window_blocks": 463,
+        "functional_fixtures": 133,
+        "vertical_access_span": 26,
+        "dense_floor_levels": 26,
+        "footprint_variants": 29
+      }
+    },
+    "sunken_city_front": {
+      "locate_command": "/locate structure infinite_domain:wasteland/sunken_city_front",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        61,
+        37,
+        55
+      ],
+      "placed_blocks": 65606,
+      "palette_states": 63,
+      "modded_blocks": 7607,
+      "spawners": 4,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 58,
+        "orphan_door_halves": 0,
+        "window_blocks": 909,
+        "functional_fixtures": 208,
+        "vertical_access_span": 25,
+        "dense_floor_levels": 28,
+        "footprint_variants": 32
+      }
+    },
+    "pancaked_parking_structure": {
+      "locate_command": "/locate structure infinite_domain:wasteland/pancaked_parking_structure",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        57,
+        35,
+        51
+      ],
+      "placed_blocks": 76402,
+      "palette_states": 58,
+      "modded_blocks": 6351,
+      "spawners": 4,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 14,
+        "orphan_door_halves": 0,
+        "window_blocks": 157,
+        "functional_fixtures": 7,
+        "vertical_access_span": 26,
+        "dense_floor_levels": 18,
+        "footprint_variants": 24
+      }
+    },
+    "cratered_downtown_intersection": {
+      "locate_command": "/locate structure infinite_domain:wasteland/cratered_downtown_intersection",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        65,
+        37,
+        65
+      ],
+      "placed_blocks": 75828,
+      "palette_states": 76,
+      "modded_blocks": 11074,
+      "spawners": 4,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 121,
+        "orphan_door_halves": 0,
+        "window_blocks": 772,
+        "functional_fixtures": 105,
+        "vertical_access_span": 26,
+        "dense_floor_levels": 27,
+        "footprint_variants": 30
+      }
+    },
+    "ruined_hospital": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_hospital",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        67,
+        36,
+        59
+      ],
+      "placed_blocks": 78038,
+      "palette_states": 63,
+      "modded_blocks": 2662,
+      "spawners": 5,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 113,
+        "orphan_door_halves": 0,
+        "window_blocks": 272,
+        "functional_fixtures": 421,
+        "vertical_access_span": 19,
+        "dense_floor_levels": 22,
+        "footprint_variants": 31
+      }
+    },
+    "ruined_fire_station": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_fire_station",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        43,
+        21,
+        41
+      ],
+      "placed_blocks": 18575,
+      "palette_states": 73,
+      "modded_blocks": 3616,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 20,
+        "orphan_door_halves": 0,
+        "window_blocks": 125,
+        "functional_fixtures": 47,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 14,
+        "footprint_variants": 19
+      }
+    },
+    "ruined_police_precinct": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_police_precinct",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        57,
+        25,
+        49
+      ],
+      "placed_blocks": 32267,
+      "palette_states": 59,
+      "modded_blocks": 3918,
+      "spawners": 5,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 52,
+        "orphan_door_halves": 0,
+        "window_blocks": 88,
+        "functional_fixtures": 66,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 12,
+        "footprint_variants": 22
+      }
+    },
+    "ruined_courthouse": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_courthouse",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        59,
+        29,
+        51
+      ],
+      "placed_blocks": 44657,
+      "palette_states": 59,
+      "modded_blocks": 2640,
+      "spawners": 5,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 46,
+        "orphan_door_halves": 0,
+        "window_blocks": 172,
+        "functional_fixtures": 198,
+        "vertical_access_span": 9,
+        "dense_floor_levels": 11,
+        "footprint_variants": 19
+      }
+    },
+    "emergency_relief_shelter": {
+      "locate_command": "/locate structure infinite_domain:wasteland/emergency_relief_shelter",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        49,
+        18,
+        43
+      ],
+      "placed_blocks": 20694,
+      "palette_states": 46,
+      "modded_blocks": 3686,
+      "spawners": 2,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 16,
+        "orphan_door_halves": 0,
+        "window_blocks": 516,
+        "functional_fixtures": 45,
+        "vertical_access_span": 5,
+        "dense_floor_levels": 11,
+        "footprint_variants": 12
+      }
+    },
+    "collapsed_subway_station": {
+      "locate_command": "/locate structure infinite_domain:wasteland/collapsed_subway_station",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "bury",
+      "size": [
+        63,
+        24,
+        45
+      ],
+      "placed_blocks": 55402,
+      "palette_states": 24,
+      "modded_blocks": 6802,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 176,
+        "functional_fixtures": 13,
+        "vertical_access_span": 17,
+        "dense_floor_levels": 15,
+        "footprint_variants": 15
+      }
+    },
+    "ruined_bus_terminal": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_bus_terminal",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        61,
+        24,
+        51
+      ],
+      "placed_blocks": 36457,
+      "palette_states": 39,
+      "modded_blocks": 4203,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 10,
+        "orphan_door_halves": 0,
+        "window_blocks": 16,
+        "functional_fixtures": 2,
+        "vertical_access_span": 6,
+        "dense_floor_levels": 9,
+        "footprint_variants": 9
+      }
+    },
+    "freight_depot": {
+      "locate_command": "/locate structure infinite_domain:wasteland/freight_depot",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        47,
+        27,
+        37
+      ],
+      "placed_blocks": 17989,
+      "palette_states": 55,
+      "modded_blocks": 3062,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 9,
+        "orphan_door_halves": 0,
+        "window_blocks": 212,
+        "functional_fixtures": 44,
+        "vertical_access_span": 6,
+        "dense_floor_levels": 12,
+        "footprint_variants": 17
+      }
+    },
+    "elevated_rail_collapse": {
+      "locate_command": "/locate structure infinite_domain:wasteland/elevated_rail_collapse",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        67,
+        30,
+        39
+      ],
+      "placed_blocks": 29903,
+      "palette_states": 19,
+      "modded_blocks": 9675,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 0,
+        "vertical_access_span": 17,
+        "dense_floor_levels": 18,
+        "footprint_variants": 10
+      }
+    },
+    "sunken_highway_interchange": {
+      "locate_command": "/locate structure infinite_domain:wasteland/sunken_highway_interchange",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        73,
+        25,
+        73
+      ],
+      "placed_blocks": 48266,
+      "palette_states": 15,
+      "modded_blocks": 11593,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 12,
+        "footprint_variants": 15
+      }
+    },
+    "ruined_shopping_mall": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_shopping_mall",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        73,
+        28,
+        63
+      ],
+      "placed_blocks": 82891,
+      "palette_states": 44,
+      "modded_blocks": 8665,
+      "spawners": 2,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 26,
+        "orphan_door_halves": 0,
+        "window_blocks": 1997,
+        "functional_fixtures": 9,
+        "vertical_access_span": 7,
+        "dense_floor_levels": 16,
+        "footprint_variants": 19
+      }
+    },
+    "ruined_department_store": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_department_store",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        59,
+        31,
+        51
+      ],
+      "placed_blocks": 63371,
+      "palette_states": 41,
+      "modded_blocks": 7732,
+      "spawners": 2,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 11,
+        "orphan_door_halves": 0,
+        "window_blocks": 58,
+        "functional_fixtures": 2,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 19,
+        "footprint_variants": 15
+      }
+    },
+    "bombed_hotel": {
+      "locate_command": "/locate structure infinite_domain:wasteland/bombed_hotel",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        53,
+        39,
+        47
+      ],
+      "placed_blocks": 56482,
+      "palette_states": 53,
+      "modded_blocks": 2600,
+      "spawners": 2,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 22,
+        "orphan_door_halves": 0,
+        "window_blocks": 374,
+        "functional_fixtures": 74,
+        "vertical_access_span": 27,
+        "dense_floor_levels": 16,
+        "footprint_variants": 24
+      }
+    },
+    "buried_bank_vault": {
+      "locate_command": "/locate structure infinite_domain:wasteland/buried_bank_vault",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        49,
+        31,
+        45
+      ],
+      "placed_blocks": 37211,
+      "palette_states": 36,
+      "modded_blocks": 6110,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 10,
+        "orphan_door_halves": 0,
+        "window_blocks": 1640,
+        "functional_fixtures": 189,
+        "vertical_access_span": 7,
+        "dense_floor_levels": 16,
+        "footprint_variants": 17
+      }
+    },
+    "ruined_office_tower": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_office_tower",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        51,
+        47,
+        47
+      ],
+      "placed_blocks": 61889,
+      "palette_states": 36,
+      "modded_blocks": 5997,
+      "spawners": 2,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 18,
+        "orphan_door_halves": 0,
+        "window_blocks": 949,
+        "functional_fixtures": 149,
+        "vertical_access_span": 34,
+        "dense_floor_levels": 18,
+        "footprint_variants": 23
+      }
+    },
+    "tenement_courtyard": {
+      "locate_command": "/locate structure infinite_domain:wasteland/tenement_courtyard",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        57,
+        31,
+        53
+      ],
+      "placed_blocks": 46719,
+      "palette_states": 38,
+      "modded_blocks": 2723,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 42,
+        "orphan_door_halves": 0,
+        "window_blocks": 138,
+        "functional_fixtures": 118,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 15,
+        "footprint_variants": 19
+      }
+    },
+    "ruined_rowhouse_block": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_rowhouse_block",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        61,
+        27,
+        41
+      ],
+      "placed_blocks": 44778,
+      "palette_states": 34,
+      "modded_blocks": 3225,
+      "spawners": 2,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 22,
+        "orphan_door_halves": 0,
+        "window_blocks": 127,
+        "functional_fixtures": 133,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 24,
+        "footprint_variants": 18
+      }
+    },
+    "shattered_luxury_condo": {
+      "locate_command": "/locate structure infinite_domain:wasteland/shattered_luxury_condo",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        51,
+        37,
+        49
+      ],
+      "placed_blocks": 46996,
+      "palette_states": 46,
+      "modded_blocks": 2425,
+      "spawners": 2,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 18,
+        "orphan_door_halves": 0,
+        "window_blocks": 395,
+        "functional_fixtures": 74,
+        "vertical_access_span": 21,
+        "dense_floor_levels": 16,
+        "footprint_variants": 20
+      }
+    },
+    "ruined_city_school": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_city_school",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        65,
+        27,
+        55
+      ],
+      "placed_blocks": 53873,
+      "palette_states": 47,
+      "modded_blocks": 6868,
+      "spawners": 2,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 28,
+        "orphan_door_halves": 0,
+        "window_blocks": 80,
+        "functional_fixtures": 27,
+        "vertical_access_span": 9,
+        "dense_floor_levels": 13,
+        "footprint_variants": 18
+      }
+    },
+    "ruined_community_center": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_community_center",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        51,
+        21,
+        47
+      ],
+      "placed_blocks": 30757,
+      "palette_states": 57,
+      "modded_blocks": 3148,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 11,
+        "orphan_door_halves": 0,
+        "window_blocks": 646,
+        "functional_fixtures": 72,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 10,
+        "footprint_variants": 16
+      }
+    },
+    "city_electrical_substation": {
+      "locate_command": "/locate structure infinite_domain:wasteland/city_electrical_substation",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        61,
+        22,
+        51
+      ],
+      "placed_blocks": 18798,
+      "palette_states": 21,
+      "modded_blocks": 2921,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 14
+      }
+    },
+    "city_water_treatment_plant": {
+      "locate_command": "/locate structure infinite_domain:wasteland/city_water_treatment_plant",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        75,
+        24,
+        65
+      ],
+      "placed_blocks": 28389,
+      "palette_states": 26,
+      "modded_blocks": 7231,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 12,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 9
+      }
+    },
+    "district_heating_station": {
+      "locate_command": "/locate structure infinite_domain:wasteland/district_heating_station",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        65,
+        31,
+        55
+      ],
+      "placed_blocks": 47689,
+      "palette_states": 29,
+      "modded_blocks": 5963,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 12,
+        "functional_fixtures": 15,
+        "vertical_access_span": 28,
+        "dense_floor_levels": 9,
+        "footprint_variants": 22
+      }
+    },
+    "municipal_incinerator": {
+      "locate_command": "/locate structure infinite_domain:wasteland/municipal_incinerator",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        71,
+        33,
+        59
+      ],
+      "placed_blocks": 66428,
+      "palette_states": 29,
+      "modded_blocks": 9624,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 13,
+        "vertical_access_span": 10,
+        "dense_floor_levels": 15,
+        "footprint_variants": 25
+      }
+    },
+    "ruined_fuel_depot": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_fuel_depot",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        79,
+        25,
+        65
+      ],
+      "placed_blocks": 34321,
+      "palette_states": 21,
+      "modded_blocks": 6880,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 12
+      }
+    },
+    "ruined_cyberware_clinic": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_cyberware_clinic",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        59,
+        26,
+        51
+      ],
+      "placed_blocks": 35082,
+      "palette_states": 36,
+      "modded_blocks": 3593,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 11,
+        "orphan_door_halves": 0,
+        "window_blocks": 146,
+        "functional_fixtures": 17,
+        "vertical_access_span": 11,
+        "dense_floor_levels": 9,
+        "footprint_variants": 16
+      }
+    },
+    "ae2_records_archive": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ae2_records_archive",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        63,
+        30,
+        55
+      ],
+      "placed_blocks": 48251,
+      "palette_states": 29,
+      "modded_blocks": 6500,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 6,
+        "orphan_door_halves": 0,
+        "window_blocks": 664,
+        "functional_fixtures": 73,
+        "vertical_access_span": 12,
+        "dense_floor_levels": 16,
+        "footprint_variants": 18
+      }
+    },
+    "abandoned_create_factory": {
+      "locate_command": "/locate structure infinite_domain:wasteland/abandoned_create_factory",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        47,
+        27,
+        37
+      ],
+      "placed_blocks": 22940,
+      "palette_states": 66,
+      "modded_blocks": 4631,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 12,
+        "orphan_door_halves": 0,
+        "window_blocks": 164,
+        "functional_fixtures": 55,
+        "vertical_access_span": 6,
+        "dense_floor_levels": 16,
+        "footprint_variants": 18
+      }
+    },
+    "collapsed_airship_terminal": {
+      "locate_command": "/locate structure infinite_domain:wasteland/collapsed_airship_terminal",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        67,
+        35,
+        57
+      ],
+      "placed_blocks": 83640,
+      "palette_states": 33,
+      "modded_blocks": 11122,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 7,
+        "orphan_door_halves": 0,
+        "window_blocks": 4716,
+        "functional_fixtures": 2,
+        "vertical_access_span": 10,
+        "dense_floor_levels": 21,
+        "footprint_variants": 14
+      }
+    },
+    "nuclear_research_annex": {
+      "locate_command": "/locate structure infinite_domain:wasteland/nuclear_research_annex",
+      "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        73,
+        33,
+        63
+      ],
+      "placed_blocks": 50690,
+      "palette_states": 35,
+      "modded_blocks": 8765,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 9,
+        "orphan_door_halves": 0,
+        "window_blocks": 771,
+        "functional_fixtures": 10,
+        "vertical_access_span": 7,
+        "dense_floor_levels": 11,
+        "footprint_variants": 16
+      }
+    },
+    "ruined_roadside_diner": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_roadside_diner",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        39,
+        14,
+        33
+      ],
+      "placed_blocks": 10092,
+      "palette_states": 48,
+      "modded_blocks": 1382,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 12,
+        "orphan_door_halves": 0,
+        "window_blocks": 90,
+        "functional_fixtures": 2,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 9,
+        "footprint_variants": 11
+      }
+    },
+    "abandoned_motel": {
+      "locate_command": "/locate structure infinite_domain:wasteland/abandoned_motel",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        35,
+        17,
+        37
+      ],
+      "placed_blocks": 12226,
+      "palette_states": 59,
+      "modded_blocks": 1187,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 48,
+        "orphan_door_halves": 0,
+        "window_blocks": 57,
+        "functional_fixtures": 66,
+        "vertical_access_span": 6,
+        "dense_floor_levels": 14,
+        "footprint_variants": 14
+      }
+    },
+    "ruined_gas_station": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_gas_station",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        39,
+        28,
+        45
+      ],
+      "placed_blocks": 11751,
+      "palette_states": 59,
+      "modded_blocks": 3441,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 9,
+        "orphan_door_halves": 0,
+        "window_blocks": 64,
+        "functional_fixtures": 12,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 11,
+        "footprint_variants": 19
+      }
+    },
+    "abandoned_truck_stop": {
+      "locate_command": "/locate structure infinite_domain:wasteland/abandoned_truck_stop",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        51,
+        17,
+        47
+      ],
+      "placed_blocks": 13987,
+      "palette_states": 46,
+      "modded_blocks": 2934,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 9,
+        "orphan_door_halves": 0,
+        "window_blocks": 144,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 15
+      }
+    },
+    "wasteland_weigh_station": {
+      "locate_command": "/locate structure infinite_domain:wasteland/wasteland_weigh_station",
+      "intended_biomes": "#infinite_domain:wasteland_site_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        45,
+        14,
+        37
+      ],
+      "placed_blocks": 6822,
+      "palette_states": 30,
+      "modded_blocks": 2053,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 16,
+        "functional_fixtures": 3,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 11
+      }
+    },
+    "decayed_ranch": {
+      "locate_command": "/locate structure infinite_domain:wasteland/decayed_ranch",
+      "intended_biomes": "#infinite_domain:wasteland_rural_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        49,
+        19,
+        45
+      ],
+      "placed_blocks": 16916,
+      "palette_states": 36,
+      "modded_blocks": 2599,
+      "spawners": 1,
+      "entities": 2,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 16,
+        "functional_fixtures": 25,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 9,
+        "footprint_variants": 17
+      }
+    },
+    "abandoned_orchard_cannery": {
+      "locate_command": "/locate structure infinite_domain:wasteland/abandoned_orchard_cannery",
+      "intended_biomes": "#infinite_domain:wasteland_rural_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        59,
+        24,
+        51
+      ],
+      "placed_blocks": 27082,
+      "palette_states": 36,
+      "modded_blocks": 3933,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 433,
+        "functional_fixtures": 9,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 10,
+        "footprint_variants": 14
+      }
+    },
+    "ruined_grain_elevator": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_grain_elevator",
+      "intended_biomes": "#infinite_domain:wasteland_rural_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        55,
+        35,
+        49
+      ],
+      "placed_blocks": 30339,
+      "palette_states": 25,
+      "modded_blocks": 4066,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 4,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 22,
+        "footprint_variants": 16
+      }
+    },
+    "shattered_greenhouse_nursery": {
+      "locate_command": "/locate structure infinite_domain:wasteland/shattered_greenhouse_nursery",
+      "intended_biomes": "#infinite_domain:wasteland_rural_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        61,
+        21,
+        49
+      ],
+      "placed_blocks": 20975,
+      "palette_states": 32,
+      "modded_blocks": 4876,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 2201,
+        "functional_fixtures": 22,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 15
+      }
+    },
+    "roadside_church_cemetery": {
+      "locate_command": "/locate structure infinite_domain:wasteland/roadside_church_cemetery",
+      "intended_biomes": "#infinite_domain:wasteland_rural_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        51,
+        29,
+        49
+      ],
+      "placed_blocks": 25195,
+      "palette_states": 33,
+      "modded_blocks": 1760,
+      "spawners": 2,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 4,
+        "orphan_door_halves": 0,
+        "window_blocks": 24,
+        "functional_fixtures": 2,
+        "vertical_access_span": 26,
+        "dense_floor_levels": 10,
+        "footprint_variants": 27
+      }
+    },
+    "abandoned_quarry": {
+      "locate_command": "/locate structure infinite_domain:wasteland/abandoned_quarry",
+      "intended_biomes": "#infinite_domain:wasteland_extraction_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        69,
+        30,
+        61
+      ],
+      "placed_blocks": 37835,
+      "palette_states": 28,
+      "modded_blocks": 674,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 1,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 5,
+        "footprint_variants": 20
+      }
+    },
+    "collapsed_mine_entrance": {
+      "locate_command": "/locate structure infinite_domain:wasteland/collapsed_mine_entrance",
+      "intended_biomes": "#infinite_domain:wasteland_extraction_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        55,
+        27,
+        49
+      ],
+      "placed_blocks": 14969,
+      "palette_states": 25,
+      "modded_blocks": 548,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 5,
+        "footprint_variants": 14
+      }
+    },
+    "excavator_pit": {
+      "locate_command": "/locate structure infinite_domain:wasteland/excavator_pit",
+      "intended_biomes": "#infinite_domain:wasteland_extraction_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        73,
+        31,
+        63
+      ],
+      "placed_blocks": 53105,
+      "palette_states": 19,
+      "modded_blocks": 981,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 294,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 7,
+        "footprint_variants": 19
+      }
+    },
+    "abandoned_oil_field": {
+      "locate_command": "/locate structure infinite_domain:wasteland/abandoned_oil_field",
+      "intended_biomes": "#infinite_domain:wasteland_extraction_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        75,
+        25,
+        61
+      ],
+      "placed_blocks": 21888,
+      "palette_states": 24,
+      "modded_blocks": 4471,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 3,
+        "footprint_variants": 11
+      }
+    },
+    "remote_sawmill": {
+      "locate_command": "/locate structure infinite_domain:wasteland/remote_sawmill",
+      "intended_biomes": "#infinite_domain:wasteland_extraction_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        63,
+        32,
+        53
+      ],
+      "placed_blocks": 37138,
+      "palette_states": 30,
+      "modded_blocks": 3616,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 32,
+        "functional_fixtures": 5,
+        "vertical_access_span": 27,
+        "dense_floor_levels": 7,
+        "footprint_variants": 28
+      }
+    },
+    "shattered_wind_farm": {
+      "locate_command": "/locate structure infinite_domain:wasteland/shattered_wind_farm",
+      "intended_biomes": "#infinite_domain:wasteland_energy_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        83,
+        39,
+        71
+      ],
+      "placed_blocks": 40027,
+      "palette_states": 17,
+      "modded_blocks": 5669,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 2,
+        "footprint_variants": 14
+      }
+    },
+    "broken_solar_field": {
+      "locate_command": "/locate structure infinite_domain:wasteland/broken_solar_field",
+      "intended_biomes": "#infinite_domain:wasteland_energy_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        83,
+        17,
+        69
+      ],
+      "placed_blocks": 34625,
+      "palette_states": 18,
+      "modded_blocks": 5391,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 312,
+        "functional_fixtures": 0,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 3,
+        "footprint_variants": 7
+      }
+    },
+    "wilderness_substation": {
+      "locate_command": "/locate structure infinite_domain:wasteland/wilderness_substation",
+      "intended_biomes": "#infinite_domain:wasteland_energy_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        47,
+        19,
+        43
+      ],
+      "placed_blocks": 11282,
+      "palette_states": 17,
+      "modded_blocks": 1769,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 1,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 4,
+        "footprint_variants": 10
+      }
+    },
+    "wasteland_water_tower": {
+      "locate_command": "/locate structure infinite_domain:wasteland/wasteland_water_tower",
+      "intended_biomes": "#infinite_domain:wasteland_energy_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        45,
+        36,
+        45
+      ],
+      "placed_blocks": 13641,
+      "palette_states": 22,
+      "modded_blocks": 1891,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 1,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 3,
+        "vertical_access_span": 14,
+        "dense_floor_levels": 10,
+        "footprint_variants": 25
+      }
+    },
+    "ruined_ranger_station": {
+      "locate_command": "/locate structure infinite_domain:wasteland/ruined_ranger_station",
+      "intended_biomes": "#infinite_domain:wasteland_survival_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        43,
+        19,
+        41
+      ],
+      "placed_blocks": 16138,
+      "palette_states": 48,
+      "modded_blocks": 2271,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "programmed_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 7,
+        "orphan_door_halves": 0,
+        "window_blocks": 20,
+        "functional_fixtures": 153,
+        "vertical_access_span": 16,
+        "dense_floor_levels": 9,
+        "footprint_variants": 14
+      }
+    },
+    "wasteland_fire_lookout": {
+      "locate_command": "/locate structure infinite_domain:wasteland/wasteland_fire_lookout",
+      "intended_biomes": "#infinite_domain:wasteland_survival_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        35,
+        35,
+        35
+      ],
+      "placed_blocks": 10696,
+      "palette_states": 34,
+      "modded_blocks": 1296,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 72,
+        "functional_fixtures": 10,
+        "vertical_access_span": 26,
+        "dense_floor_levels": 11,
+        "footprint_variants": 16
+      }
+    },
+    "destroyed_refugee_convoy": {
+      "locate_command": "/locate structure infinite_domain:wasteland/destroyed_refugee_convoy",
+      "intended_biomes": "#infinite_domain:wasteland_survival_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        43,
+        13,
+        57
+      ],
+      "placed_blocks": 9355,
+      "palette_states": 22,
+      "modded_blocks": 1849,
+      "spawners": 2,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 0,
+        "orphan_door_halves": 0,
+        "window_blocks": 55,
+        "functional_fixtures": 17,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 6,
+        "footprint_variants": 9
+      }
+    },
+    "crashed_cargo_airship": {
+      "locate_command": "/locate structure infinite_domain:wasteland/crashed_cargo_airship",
+      "intended_biomes": "#infinite_domain:wasteland_survival_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        71,
+        29,
+        39
+      ],
+      "placed_blocks": 37959,
+      "palette_states": 19,
+      "modded_blocks": 6898,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "landmark_or_outdoor_site",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 2,
+        "orphan_door_halves": 0,
+        "window_blocks": 0,
+        "functional_fixtures": 4,
+        "vertical_access_span": 0,
+        "dense_floor_levels": 15,
+        "footprint_variants": 15
+      }
+    },
+    "warm_industrial_mountain_port": {
+      "locate_command": "/locate structure infinite_domain:wasteland/warm_industrial_mountain_port",
+      "intended_biomes": "#infinite_domain:wasteland_warm_port_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        47,
+        31,
+        47
+      ],
+      "placed_blocks": 42023,
+      "palette_states": 31,
+      "modded_blocks": 4449,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 8,
+        "functional_fixtures": 2,
+        "vertical_access_span": 3,
+        "dense_floor_levels": 27,
+        "footprint_variants": 27
+      }
+    },
+    "cold_industrial_mountain_port": {
+      "locate_command": "/locate structure infinite_domain:wasteland/cold_industrial_mountain_port",
+      "intended_biomes": "#infinite_domain:wasteland_cold_port_biomes",
+      "production_biomes": "#infinite_domain:disabled_primitive_wasteland_settlements",
+      "production_approved": false,
+      "terrain_adaptation": "beard_box",
+      "size": [
+        47,
+        31,
+        47
+      ],
+      "placed_blocks": 40980,
+      "palette_states": 31,
+      "modded_blocks": 4073,
+      "spawners": 1,
+      "entities": 0,
+      "structural_lint": {
+        "profile": "multi_story_building",
+        "structural_lint_passed": true,
+        "visual_review": "required",
+        "quality_approved": false,
+        "issues": [],
+        "working_doors": 5,
+        "orphan_door_halves": 0,
+        "window_blocks": 4,
+        "functional_fixtures": 2,
+        "vertical_access_span": 4,
+        "dense_floor_levels": 27,
+        "footprint_variants": 28
+      }
+    }
+  }
+}

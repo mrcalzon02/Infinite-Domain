@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aaa",
+                    "aba",
+                    "aaa"
+                ],
+    "key":  {
+                "a":  {
+                          "tag":  "minecraft:planks"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:glass_1x"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:gemologist_desk",
+                   "count":  1
+               }
+}

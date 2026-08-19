@@ -1,0 +1,461 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "gear"
+	filename: "feeding_the_domain"
+	group: "3F00D00000000001"
+	id: "2034B9BBF53C750D"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4FC0C1C678C71891"]
+			id: "7B2B0CE2A9CEAD24"
+			optional: true
+			rewards: [{
+				id: "0B5EA0DE7BFF1240"
+				type: "xp"
+				xp: 200
+			}]
+			tasks: [{
+				count: 8L
+				id: "2CCAE806E03DE05A"
+				item: { count: 1, id: "kubejs:dried_herbs" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7B2B0CE2A9CEAD24"]
+			id: "7CF96E34F433B244"
+			optional: true
+			rewards: [{
+				id: "774EB5B71827C747"
+				type: "xp"
+				xp: 200
+			}]
+			tasks: [{
+				count: 8L
+				id: "0D7C8090ECA13BD4"
+				item: { count: 1, id: "kubejs:ground_spice" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7CF96E34F433B244"]
+			id: "60C6255859EF43EB"
+			optional: true
+			rewards: [{
+				id: "7F895B738294AB00"
+				type: "xp"
+				xp: 200
+			}]
+			tasks: [{
+				count: 8L
+				id: "7BC04F362EC404EE"
+				item: { count: 1, id: "kubejs:prepared_seasoning" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"60C6255859EF43EB"
+				"5210000000000002"
+			]
+			id: "62B68B083A9340FD"
+			optional: true
+			rewards: [{
+				id: "309E4626464FEC71"
+				type: "xp"
+				xp: 300
+			}]
+			tasks: [{
+				count: 4L
+				id: "58BCC462E66E9DA6"
+				item: { count: 1, id: "kubejs:apple_fruit_pulp" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["62B68B083A9340FD"]
+			id: "0025674D5053D8CD"
+			optional: true
+			rewards: [{
+				id: "1E282BA6CA4F632C"
+				type: "xp"
+				xp: 300
+			}]
+			tasks: [{
+				count: 4L
+				id: "75E7E13E2DC4F3EC"
+				item: { count: 1, id: "kubejs:apple_juice_concentrate" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0025674D5053D8CD"]
+			id: "5B113F3538B71374"
+			optional: true
+			rewards: [{
+				id: "6D356CF098450B2D"
+				type: "xp"
+				xp: 300
+			}]
+			tasks: [{
+				count: 4L
+				id: "251C8C9117A8D96F"
+				item: { count: 1, id: "kubejs:bottled_apple_juice" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"5B113F3538B71374"
+				"5310000000000002"
+			]
+			id: "3CE261E9EC4CF123"
+			optional: true
+			rewards: [{
+				id: "07E925CE0869D9A1"
+				type: "xp"
+				xp: 400
+			}]
+			tasks: [{
+				count: 4L
+				id: "1EBDA77AB454F9F6"
+				item: { count: 1, id: "kubejs:concentrated_soup_base" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["3CE261E9EC4CF123"]
+			id: "1BD60D82F5AB7FB3"
+			optional: true
+			rewards: [{
+				id: "2D052408E5B25E3F"
+				type: "xp"
+				xp: 400
+			}]
+			tasks: [{
+				id: "3756B175DD3A9163"
+				item: { count: 1, id: "kubejs:fermentation_culture" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["1BD60D82F5AB7FB3"]
+			id: "36DCF312DDFCF7DD"
+			optional: true
+			rewards: [{
+				id: "3CA7B10399682E98"
+				type: "xp"
+				xp: 400
+			}]
+			tasks: [{
+				count: 8L
+				id: "11A8FA7EE004F5CB"
+				item: { count: 1, id: "kubejs:prepared_meal" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"36DCF312DDFCF7DD"
+				"5410000000000002"
+			]
+			id: "6220EA917425C59A"
+			optional: true
+			rewards: [{
+				id: "113E69A3B47E9E63"
+				type: "xp"
+				xp: 500
+			}]
+			tasks: [{
+				count: 16L
+				id: "0ABF068D63A6B66B"
+				item: { count: 1, id: "kubejs:empty_beverage_can" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["6220EA917425C59A"]
+			id: "5CAA77912D413E80"
+			optional: true
+			rewards: [{
+				id: "3E996157A535F2BC"
+				type: "xp"
+				xp: 500
+			}]
+			tasks: [{
+				count: 8L
+				id: "2111F4C97BBF0E35"
+				item: { count: 1, id: "kubejs:empty_food_can" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["5CAA77912D413E80"]
+			id: "066534B9EED187AC"
+			optional: true
+			rewards: [{
+				id: "0980276A7C53AE9C"
+				type: "xp"
+				xp: 500
+			}]
+			tasks: [{
+				count: 8L
+				id: "6FD21500FBC94956"
+				item: { count: 1, id: "kubejs:canned_stew" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 15.0d
+		}
+		{
+			dependencies: [
+				"066534B9EED187AC"
+				"5510000000000002"
+			]
+			id: "271FC2FC3F6540D6"
+			optional: true
+			rewards: [{
+				id: "1987B27B85EDF227"
+				type: "xp"
+				xp: 600
+			}]
+			tasks: [{
+				count: 6L
+				id: "007486054BA24453"
+				item: { count: 1, id: "kubejs:apple_soda_can" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["271FC2FC3F6540D6"]
+			id: "17E87207E385EF52"
+			optional: true
+			rewards: [{
+				id: "16D470EAD6DCA6E4"
+				type: "xp"
+				xp: 600
+			}]
+			tasks: [{
+				count: 2L
+				id: "357A00814BD746C1"
+				item: { count: 1, id: "kubejs:berry_soda_six_pack" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["17E87207E385EF52"]
+			id: "52233AEAB76458BB"
+			optional: true
+			rewards: [{
+				id: "2999EA93AFD4C32F"
+				type: "xp"
+				xp: 600
+			}]
+			tasks: [{
+				id: "2DA0E36D828CBBCD"
+				item: { count: 1, id: "kubejs:orange_soda_case" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"52233AEAB76458BB"
+				"5610000000000002"
+			]
+			id: "077D16DFAD15DC23"
+			optional: true
+			rewards: [{
+				id: "1CA94A7DEF94C330"
+				type: "xp"
+				xp: 700
+			}]
+			tasks: [{
+				count: 8L
+				id: "46918445DAFD7395"
+				item: { count: 1, id: "kubejs:electrolyte_blend" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 25.0d
+		}
+		{
+			dependencies: ["077D16DFAD15DC23"]
+			id: "2C3D3B6833E06D5A"
+			optional: true
+			rewards: [{
+				id: "381D5269A6F47D12"
+				type: "xp"
+				xp: 700
+			}]
+			tasks: [{
+				count: 4L
+				id: "3D4B176543DE1737"
+				item: { count: 1, id: "kubejs:stimulant_extract" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 25.0d
+		}
+		{
+			dependencies: ["2C3D3B6833E06D5A"]
+			id: "52F44BCFA17D8586"
+			optional: true
+			rewards: [{
+				id: "08E9CA96B5533402"
+				type: "xp"
+				xp: 700
+			}]
+			tasks: [{
+				count: 12L
+				id: "31B34601C506F033"
+				item: { count: 1, id: "kubejs:energy_drink_can" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 25.0d
+		}
+		{
+			dependencies: [
+				"52F44BCFA17D8586"
+				"5710000000000002"
+			]
+			id: "04D44ABE4F6F2CB8"
+			optional: true
+			rewards: [{
+				id: "4623474DD76F6C41"
+				type: "xp"
+				xp: 800
+			}]
+			tasks: [{
+				id: "4EE77D928423CB01"
+				item: { count: 1, id: "kubejs:beverage_crate" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 30.0d
+		}
+		{
+			dependencies: ["04D44ABE4F6F2CB8"]
+			id: "67DA49934330E1EF"
+			optional: true
+			rewards: [{
+				id: "752793C8E62A49B0"
+				type: "xp"
+				xp: 800
+			}]
+			tasks: [{
+				count: 8L
+				id: "4E8FDE70AD658DD9"
+				item: { count: 1, id: "kubejs:field_ration" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 30.0d
+		}
+		{
+			dependencies: ["67DA49934330E1EF"]
+			id: "4F9A7C40B90A12EA"
+			optional: true
+			rewards: [{
+				id: "13F0C4002DD23AFC"
+				type: "xp"
+				xp: 800
+			}]
+			tasks: [{
+				count: 2L
+				id: "74FF20ED335201DB"
+				item: { count: 1, id: "kubejs:ration_case" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 30.0d
+		}
+		{
+			dependencies: [
+				"4F9A7C40B90A12EA"
+				"5810000000000002"
+			]
+			id: "6D81BAB21AF3A8A5"
+			optional: true
+			rewards: [{
+				id: "608CBA2378D489D3"
+				type: "xp"
+				xp: 900
+			}]
+			tasks: [{
+				id: "503E40BB4B7343E2"
+				item: { count: 1, id: "kubejs:ration_pallet" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 35.0d
+		}
+		{
+			dependencies: ["6D81BAB21AF3A8A5"]
+			id: "50503724FC646207"
+			optional: true
+			rewards: [{
+				id: "583BC1E866883221"
+				type: "xp"
+				xp: 900
+			}]
+			tasks: [{
+				count: 4L
+				id: "0FBE351C40EE9B74"
+				item: { count: 1, id: "kubejs:energy_case" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 35.0d
+		}
+		{
+			dependencies: ["50503724FC646207"]
+			id: "6058218448311BFE"
+			optional: true
+			rewards: [{
+				id: "5AF89A6E22C9F81E"
+				type: "xp"
+				xp: 900
+			}]
+			tasks: [{
+				count: 2L
+				id: "7D340AAE9D924252"
+				item: { count: 1, id: "kubejs:beverage_pallet" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 35.0d
+		}
+	]
+}

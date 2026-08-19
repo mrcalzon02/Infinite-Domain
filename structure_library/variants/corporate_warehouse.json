@@ -1,0 +1,24 @@
+{
+  "variant_id": "infinite_domain:corporate_warehouse",
+  "clean_master": "infinite_domain:corporate_warehouse_clean_master",
+  "damage_story": "A bomb strike drops the southeast roof and fourth loading dock into the trailer court while the corporate offices, most rack aisles, maintenance route and three western docks survive.",
+  "damage_zone": "southeast high-bay roof, rear staging and fourth truck dock",
+  "environment_layer": [
+    "continuous gravel and masonry rubble beneath the failed roof corner",
+    "fallen full-block roof and dock members across the fourth staging lane",
+    "scrap and refuse concentrated in the damaged trailer-court corner",
+    "weathered employee parking, truck apron and utility court"
+  ],
+  "occupation_layer": [
+    "industrial loot retained in the surviving western staging lane",
+    "pillagers occupying the protected upper corporate offices"
+  ],
+  "invariants": [
+    "public entrance, both office floors and office stair survive",
+    "quality-control access and central warehouse cross aisle remain navigable",
+    "three western truck docks retain staging approaches",
+    "maintenance room and independent east exit survive",
+    "damage remains localized to the southeast structural failure"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

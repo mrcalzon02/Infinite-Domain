@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "sts",
+                    "sbs",
+                    "sts"
+                ],
+    "key":  {
+                "s":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "b":  {
+                          "item":  "minecraft:bucket"
+                      },
+                "t":  {
+                          "item":  "stellaris:tharsite_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "stellaris:fluid_cell",
+                   "count":  1
+               }
+}

@@ -1,0 +1,26 @@
+{
+  "variant_id": "infinite_domain:ruined_courthouse",
+  "clean_master": "infinite_domain:ruined_courthouse_clean_master",
+  "damage_story": "A bomb opened the east courtroom and hearing-room stack from the facade inward, while the portico, central public atrium, west courtroom, rear holding/archive corridor and both stair systems remained standing.",
+  "damage_zone": "east courtroom, upper hearing room and exterior apron",
+  "environment_layer": [
+    "continuous east-facade fracture across both occupied floors",
+    "terminated courtroom slabs and partitions at the failure edge",
+    "irregular gravel and tuff-brick rubble apron below the breach",
+    "intact west courtroom, rear secure corridor and roof clerestory"
+  ],
+  "occupation_layer": [
+    "five zombie, ghoul and pillager spawners distributed across public, courtroom, holding and archive zones",
+    "data loot retained in the ground evidence room",
+    "office loot retained in an upper judges' chamber",
+    "pillagers occupy holding/archive positions while undead occupy public galleries"
+  ],
+  "invariants": [
+    "portico, screened public entrance and central atrium survive",
+    "west ground courtroom and west upper hearing room survive",
+    "both public and secure stairs survive",
+    "holding cells, rear chambers, evidence and archive routes survive",
+    "damage remains localized to the declared east courtroom stack"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

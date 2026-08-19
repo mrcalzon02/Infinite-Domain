@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "BMB",
+    "LCL",
+    "ATA"
+  ],
+  "key": {
+    "B": {
+      "item": "kubejs:pressure_bulkhead"
+    },
+    "M": {
+      "item": "kubejs:oxygen_manifold"
+    },
+    "L": {
+      "item": "kubejs:radiation_laminate"
+    },
+    "C": {
+      "item": "kubejs:life_support_controller"
+    },
+    "A": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "T": {
+      "item": "stellaris:oxygen_tank"
+    }
+  },
+  "result": {
+    "id": "stellaris:space_suit_chestplate",
+    "count": 1
+  }
+}

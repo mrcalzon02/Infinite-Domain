@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " B ",
+                    "BCB",
+                    " B "
+                ],
+    "key":  {
+                "B":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "C":  {
+                          "item":  "create_chimneys:chimney"
+                      }
+            },
+    "result":  {
+                   "id":  "create_chimneys:chimney_iron",
+                   "count":  1
+               }
+}

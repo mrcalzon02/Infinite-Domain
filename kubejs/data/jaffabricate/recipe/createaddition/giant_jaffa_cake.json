@@ -1,0 +1,89 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createaddition"
+    }
+  ],
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "createaddition:cake_base_baked"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "jaffabricate:giant_jaffa_cake"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "jaffabricate:incomplete_giant_jaffa_cake"
+        },
+        {
+          "item": "jaffabricate:orange_jelly"
+        }
+      ],
+      "results": [
+        {
+          "id": "jaffabricate:incomplete_giant_jaffa_cake"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "jaffabricate:incomplete_giant_jaffa_cake"
+        },
+        {
+          "item": "jaffabricate:orange_jelly"
+        }
+      ],
+      "results": [
+        {
+          "id": "jaffabricate:incomplete_giant_jaffa_cake"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "jaffabricate:incomplete_giant_jaffa_cake"
+        },
+        {
+          "item": "jaffabricate:orange_jelly"
+        }
+      ],
+      "results": [
+        {
+          "id": "jaffabricate:incomplete_giant_jaffa_cake"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "jaffabricate:bare_jaffa_cake"
+        },
+        {
+          "type": "neoforge:single",
+          "amount": 1000,
+          "fluid": "create:chocolate"
+        }
+      ],
+      "results": [
+        {
+          "id": "jaffabricate:incomplete_giant_jaffa_cake"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "jaffabricate:incomplete_giant_jaffa_cake"
+  }
+}

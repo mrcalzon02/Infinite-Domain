@@ -1,0 +1,26 @@
+{
+  "structures": [
+    {
+      "structure": "infinite_domain:wasteland/ruined_ranger_station",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/wasteland_fire_lookout",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/destroyed_refugee_convoy",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/crashed_cargo_airship",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 34,
+    "separation": 13,
+    "salt": 87130427
+  }
+}

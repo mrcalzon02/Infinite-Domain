@@ -1,0 +1,214 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      " 999((&999999999",
+      " 9((&99999999999",
+      " (&9999999999999",
+      " 999999999999999",
+      " 99999999999999(",
+      " &99999999999((&",
+      " 9999999999((&99",
+      " 99999999((&9999",
+      " 999999((&999999",
+      " 9999((&99999999",
+      " 99((&9999999999",
+      " &(&999999999999",
+      " &99999999999999",
+      " 999999999999999",
+      " 9999999999999((",
+      " 99999999999((&9"
+    ],
+    [
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333",
+      "    333333333333"
+    ],
+    [
+      "  ....   5      ",
+      "    %    5      ",
+      "    %    /      ",
+      "    % *  5      ",
+      "    % )  57 ,   ",
+      "    %    5     $",
+      "    %    5      ",
+      "    %           ",
+      "    %           ",
+      "    % '''  $$$$$",
+      "    %     :- 6  ",
+      "    %           ",
+      "  .... 4        ",
+      "  ....          ",
+      "  ...55555555515",
+      "  ....   5      "
+    ],
+    [
+      "    %    5      ",
+      "    %    5      ",
+      "    %    0      ",
+      "    %    5      ",
+      "    %    5      ",
+      "    %    5  +   ",
+      "    %    5      ",
+      "    %           ",
+      "    %           ",
+      "    %          8",
+      "    %     8     ",
+      "    %           ",
+      "    %           ",
+      "    %           ",
+      "    %55555555525",
+      "    %    5      "
+    ],
+    [
+      "    %    5      ",
+      "    %    5      ",
+      "    %    5      ",
+      "    %    5      ",
+      "    %    5      ",
+      "    %    5      ",
+      "    %    5      ",
+      "    !           ",
+      "    !           ",
+      "    %           ",
+      "    %           ",
+      "    %           ",
+      "    %           ",
+      "    %           ",
+      "    %55555555555",
+      "    %    5      "
+    ],
+    [
+      "    %    5      ",
+      "    %    5      ",
+      "    %    5      ",
+      "    %    5      ",
+      "    %    5      ",
+      "    %    5      ",
+      "    %    5      ",
+      "    !           ",
+      "    !           ",
+      "    %           ",
+      "    %           ",
+      "    %           ",
+      "    %           ",
+      "    !           ",
+      "    !55555555555",
+      "    %    5      "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:gray_bed[facing=north,occupied=false,part=foot]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:gray_bed[facing=north,occupied=false,part=head]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:lever[face=wall,facing=south,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:quartz_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:smoker[facing=north,lit=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:smooth_stone_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:water_cauldron[level=2]"
+      },
+      {
+        "char": "8",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": "9",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": ":",
+        "block": "the_wasteland_reworked:radio"
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+# Infinite Domain source repository scope
+#
+# Preserve project-owned pack data and custom code. Never redistribute third-party
+# binaries or local player/runtime state through this repository.
+
+# Third-party mod binaries are excluded. Only the six project-built artifacts use
+# the infinite-domain-* prefix and are explicitly retained for pack parity.
+/mods/*
+!/mods/infinite-domain-*.jar
+
+# Local launch/runtime state
+/.cache/
+/.codex/
+/.mixin.out/
+/.pg-native/
+/.sable/
+/.curseclient
+/.qmenu_opened.marker
+/backups/
+/crash-reports/
+/downloads/
+/dynamic-data-pack-cache/
+/dynamic-resource-pack-cache/
+/ldlib2/
+/local/
+/logs/
+/moonlight-global-datapacks/
+/nodes/
+/saves/
+/screenshots/
+/shaderpacks/
+/tmp/
+/usercache.json
+/usernamecache.json
+/fabricloader.log
+/hs_err_pid*.log
+/command_history.txt
+/options.txt
+/ponders_watched.json
+/config/jei/world/
+
+# A nested scratch checkout of the same GitHub repository is not project content.
+/Infinite-Domain/
+
+# Generated build products and dependency caches. Custom mod sources remain tracked.
+**/.gradle/
+**/build/
+**/bin/
+**/out/
+**/__pycache__/
+**/*.pyc
+
+# The combined resource-pack layer contains compatibility assets whose upstream
+# redistribution rights require a separate file-by-file clearance pass.
+/resourcepacks/
+
+# Generated/reference review payloads are reproducible and may contain upstream art.
+/docs/texture-audit/
+/structure_library/sources/
+/structure_library/extracted/creativelands_cc0/
+/structure_library/reviews/creativelands_cc0/
+
+# Local authoring/recovery payloads are intentionally kept off the distributable repo.
+/ROOT_tools/

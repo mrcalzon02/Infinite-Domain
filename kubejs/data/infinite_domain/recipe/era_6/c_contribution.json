@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "createnuclear:reactor_blueprint_item"
+    },
+    "B": {
+      "item": "minecraft:recovery_compass"
+    },
+    "C": {
+      "item": "createnuclear:reactor_casing"
+    },
+    "D": {
+      "item": "createnuclear:reactor_controller"
+    },
+    "E": {
+      "item": "ae2lt:mysterious_cell"
+    }
+  },
+  "result": {
+    "id": "kubejs:era6_exploration_contribution",
+    "count": 1
+  }
+}

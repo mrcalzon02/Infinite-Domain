@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  {
+                          "item":  "powergrid_batteries:small_battery"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      }
+            },
+    "pattern":  [
+                    "III",
+                    "IBI",
+                    "III"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "powergrid_batteries:medium_battery"
+               }
+}

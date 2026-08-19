@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "TAT",
+    "CFC",
+    "PDP"
+  ],
+  "key": {
+    "T": {
+      "item": "kubejs:telemetry_array"
+    },
+    "A": {
+      "item": "stellaris:antenna"
+    },
+    "C": {
+      "item": "kubejs:avionics_controller"
+    },
+    "F": {
+      "item": "kubejs:flight_control_computer"
+    },
+    "P": {
+      "item": "kubejs:power_distribution_unit"
+    },
+    "D": {
+      "item": "ae2:dense_energy_cell"
+    }
+  },
+  "result": {
+    "id": "stellaris:rocket_station",
+    "count": 1
+  }
+}

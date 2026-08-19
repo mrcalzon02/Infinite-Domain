@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "XLX",
+                    "XZX",
+                    "XXX"
+                ],
+    "key":  {
+                "X":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "Z":  {
+                          "item":  "minecraft:bucket"
+                      },
+                "L":  {
+                          "item":  "minecraft:lapis_block"
+                      }
+            },
+    "result":  {
+                   "id":  "stellaris:vacuumator"
+               }
+}

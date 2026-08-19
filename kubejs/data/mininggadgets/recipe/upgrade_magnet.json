@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "g":  {
+                          "item":  "minecraft:gold_block"
+                      },
+                "i":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "r":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "u":  {
+                          "item":  "mininggadgets:upgrade_empty"
+                      }
+            },
+    "pattern":  [
+                    "rgr",
+                    "iui",
+                    "rgr"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "mininggadgets:upgrade_magnet"
+               }
+}

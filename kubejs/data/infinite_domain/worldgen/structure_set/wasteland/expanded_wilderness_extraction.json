@@ -1,0 +1,30 @@
+{
+  "structures": [
+    {
+      "structure": "infinite_domain:wasteland/abandoned_quarry",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/collapsed_mine_entrance",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/excavator_pit",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_oil_field",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/remote_sawmill",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 36,
+    "separation": 14,
+    "salt": 87130425
+  }
+}

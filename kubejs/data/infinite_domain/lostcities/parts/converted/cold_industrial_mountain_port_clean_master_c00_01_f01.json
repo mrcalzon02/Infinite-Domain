@@ -1,0 +1,190 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "     '''''&&&&& ",
+      "     '''''&&&&& ",
+      "     '''''&&&&& ",
+      "          &&&&& ",
+      "%%3333 *+  3333%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3 00        3%",
+      "%%3 1         3%",
+      "%%3        2  3%",
+      "%%3           3%",
+      "%%333333.333333%",
+      "%%3      3    3%",
+      "%%3      3    3%",
+      "%%3      ( $  3%",
+      "%%3      3    3%"
+    ],
+    [
+      "     '''''&&&&& ",
+      "     '''''&&&&& ",
+      "     '''''&&&&& ",
+      "          &&&&& ",
+      "%%3333 ,-  3333%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3        2  3%",
+      "%%333333/333333%",
+      "%%3      3    3%",
+      "%%3      3    3%",
+      "%%3      )    3%",
+      "%%3      3    3%"
+    ],
+    [
+      "     '''''&&&&& ",
+      "     '''''&&&&& ",
+      "     '''''&&&&& ",
+      "          &&&&& ",
+      "%%3  3     3!!3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3333333332333%",
+      "%%3      3    3%",
+      "%%3      3    3%",
+      "%%3      3    3%",
+      "%%3      3    3%"
+    ],
+    [
+      "     '''''&&&&& ",
+      "     '''''&&&&& ",
+      "     '''''&&&&& ",
+      "          &&&&& ",
+      "%%3  3     3!!3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%333333333 333%",
+      "%%3      3 2  3%",
+      "%%3      3    3%",
+      "%%3      3    3%",
+      "%%3      3    3%"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "%%3333     3333%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3        2  3%",
+      "%%3           3%",
+      "%%3           3%"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "%%3333333333333%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%",
+      "%%3           3%"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:chest[facing=north,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_industrial"
+        }
+      },
+      {
+        "char": "%",
+        "block": "minecraft:deepslate"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:light_blue_concrete"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:red_concrete"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:spruce_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "3",
+        "block": "tfmg:cinder_block"
+      }
+    ]
+  }
+}

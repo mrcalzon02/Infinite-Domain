@@ -1,0 +1,878 @@
+{
+  "review_standard": "Parsing, conversion and structural lint are not architectural approval.",
+  "reviews": {
+    "infinite_domain:bungalow_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "19x18 source footprint and north road-facing entrance",
+        "covered porch concept",
+        "living, kitchen/dining, bedroom and bathroom relationships",
+        "usable interior doors and room-specific fixtures"
+      ],
+      "implemented_heavy_rebuild": [
+        "genuine pitched roof within the source footprint",
+        "recessed entrance with articulated porch supports and steps",
+        "framed and recessed room-specific windows",
+        "foundation course, drainage and rear utility details",
+        "retained functional interior program and circulation"
+      ],
+      "next_pass": ["walk and inspect the clean master in the QA world before approval"]
+    },
+    "infinite_domain:abandoned_bungalow": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the heavily rebuilt clean master with the coherent southeast-corner damage layer retained. In-world review is still required."
+    },
+    "infinite_domain:motel_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "two-storey interior-corridor roadside motel archetype",
+        "16 guest rooms arranged in paired rows off a three-wide central hallway",
+        "separate lobby, reception, manager, public restroom, luggage and housekeeping functions",
+        "main stair and independent rear emergency egress in dedicated non-guest circulation spines",
+        "arrival canopy, parking, pool and rooftop mechanical equipment"
+      ],
+      "rendered_review": [
+        "two floors and individual room bays are legible on both long facades",
+        "lobby and drop-off threshold read as a distinct public volume",
+        "roof parapet and plant read as commercial construction",
+        "roof-off and floor views show the central corridor and repeated enclosed rooms"
+      ],
+      "remaining_checks": [
+        "walk every corridor, room door, bathroom door and stair in the QA world",
+        "confirm the compact pool and parking proportions at Minecraft player scale",
+        "confirm the exterior fire stair cannot be obstructed by block-state connections"
+      ]
+    },
+    "infinite_domain:abandoned_motel": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the clean motel master. Damage is confined to the southwest guest wing, retains lobby and egress logic, and uses a tapered rubble fan with exposed fallen beams rather than a gravel cube."
+    },
+    "infinite_domain:grocery_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "single-storey neighborhood supermarket archetype",
+        "separate customer entrance and rear delivery approaches",
+        "vestibule, checkout, produce, bakery, aisles, refrigeration and public restroom",
+        "receiving, stockroom, staff room, manager office and independent staff exit",
+        "commercial parapet roof, skylights, rooftop plant and rear loading canopy"
+      ],
+      "rendered_review": [
+        "front canopy, glazing and sign blade make the retail entrance legible from the road",
+        "rear loading canopy, dock, receiving doors and staff exit articulate the service facade",
+        "roof-off view distinguishes sales departments from the back-of-house strip",
+        "aisle runs retain front, middle and rear cross circulation"
+      ],
+      "automatic_review": [
+        "15 required lower-door nodes present",
+        "19 of 19 clean-master program targets reachable",
+        "4 of 4 required routes survive in the damaged derivative"
+      ],
+      "remaining_checks": [
+        "walk the vestibule, checkout gaps, every cross aisle and public restroom in the QA world",
+        "confirm shelving, pallets and counters have usable player-scale clearances",
+        "inspect the loading dock and rooftop silhouettes at normal render distance"
+      ]
+    },
+    "infinite_domain:dilapidated_grocery": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the grocery clean master. A stepped rear-west roof and receiving-wall failure damages the bakery/loading zone while preserving the front retail identity, central stock route and eastern staff exit. Rubble is gravity-shaped with sparse masonry on a gravel mass."
+    },
+    "infinite_domain:gas_station_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "highway filling station and convenience-store archetype",
+        "separate fuel forecourt, customer parking and rear receiving approach",
+        "checkout, sales aisles, coolers and public restroom",
+        "stockroom, manager office, utility room and independent receiving exit",
+        "freestanding canopy, three pump islands, two buried fuel tanks, road sign, service cabinet and roof plant"
+      ],
+      "automatic_review": [
+        "10 required lower-door nodes present",
+        "15 of 15 clean-master program targets reachable",
+        "6 of 6 required routes survive in the ruined derivative"
+      ],
+      "remaining_checks": [
+        "inspect the forecourt, pump clearances and pedestrian approach in the QA world",
+        "walk every sales-floor cross aisle and back-room threshold",
+        "confirm the canopy, sign and storefront silhouettes read correctly at highway distance",
+        "verify the restroom and utility fixtures at Minecraft player scale",
+        "confirm the -7 placement offset leaves the reinforced tank vault buried and the forecourt flush with terrain"
+      ]
+    },
+    "infinite_domain:ruined_gas_station": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the gas-station clean master. A localized east-side blast drops one canopy bay and opens the southeast utility corner while preserving the front retail identity, stockroom, manager office and rear receiving route."
+    },
+    "infinite_domain:freight_depot_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "rail freight depot with high-bay warehouse and two-storey dispatch annex",
+        "separate north road, east truck-court and south rail approaches",
+        "bulk storage, inspection and packing, truck receiving and rail loading zones",
+        "three rail-loading bays, two truck docks and two through sidings",
+        "dedicated administration stair, manager office, records room and dispatch observation area",
+        "three-bay sawtooth roof, clerestories and overhead travelling crane"
+      ],
+      "automatic_review": [
+        "9 required lower-door nodes present",
+        "15 of 15 ground-floor program targets reachable",
+        "6 of 6 upper-office targets reachable with all six stair rises present",
+        "7 of 7 required routes survive in the damaged derivative"
+      ],
+      "remaining_checks": [
+        "walk warehouse cross aisles, packing benches and receiving clearances in the QA world",
+        "walk the full office stair and both upper suites",
+        "confirm truck docks, rail doors and platform heights at player scale",
+        "test both rail continuation edges and all four structure rotations",
+        "inspect the sawtooth roof and loading silhouette from road and rail distances"
+      ]
+    },
+    "infinite_domain:freight_depot": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the freight-depot clean master. The west sawtooth bay and first rail-loading span have collapsed through bulk storage, while dispatch, both office floors, east truck receiving, two rail bays and both through sidings survive."
+    },
+    "infinite_domain:fire_station_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "three-bay municipal fire station with separate public entrance",
+        "apparatus hall with emergency vehicles and rear support strip",
+        "turnout room, workshop/SCBA and wash-down/decontamination functions",
+        "lobby, watch desk, dispatch, restroom and controlled hall connection",
+        "upper captain office, records, kitchen/day room, dormitory and bathroom",
+        "clerestory apparatus roof, hose-drying tower and rear training yard"
+      ],
+      "automatic_review": [
+        "20 required lower-door nodes present",
+        "15 of 15 ground-floor program targets reachable",
+        "8 of 8 upper-living-floor targets reachable with all six stair rises present",
+        "8 of 8 ground and 4 of 4 upper routes survive in the damaged derivative"
+      ],
+      "remaining_checks": [
+        "drive and walk all three apparatus lanes in the QA world",
+        "inspect turnout, workshop and decontamination room clearances",
+        "walk the full stair and every upper living-room threshold",
+        "confirm the rear hose-tower exit and training yard at player scale",
+        "test road/apron alignment in all four rotations"
+      ]
+    },
+    "infinite_domain:ruined_fire_station": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the fire-station clean master. The west apparatus bay and clerestory collapse toward the apron while the public/dispatch wing, complete stair, upper living floor, two apparatus lanes, rear support rooms and hose tower remain navigable."
+    },
+    "infinite_domain:corporate_warehouse_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "road distribution center distinct from the rail freight depot",
+        "separate employee/public parking, truck court and east utility approach",
+        "two corporate floors with reception, security, administration, manager, records and break functions",
+        "quality-control and maintenance rooms supporting the high bay",
+        "five pallet-rack runs, cross aisles, rear staging and four truck docks",
+        "roof monitors, dock canopy, transformer plant and refuse enclosure"
+      ],
+      "automatic_review": [
+        "18 required lower-door nodes present",
+        "19 of 19 ground-floor program targets reachable",
+        "6 of 6 upper-office targets reachable with all six stair rises present",
+        "10 of 10 ground and 4 of 4 upper routes survive in the damaged derivative"
+      ],
+      "remaining_checks": [
+        "walk every rack aisle and cross aisle in the QA world",
+        "inspect staging benches and all four dock approaches at player scale",
+        "walk both corporate floors, quality control, maintenance and east exit",
+        "confirm employee and truck approaches remain distinct in all rotations",
+        "inspect roof-monitor, dock-canopy and utility silhouettes at normal distance"
+      ]
+    },
+    "infinite_domain:corporate_warehouse": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the corporate-warehouse clean master. The southeast roof and fourth dock collapse into the trailer court while both office floors, quality control, central rack circulation, maintenance, east exit and three western docks survive."
+    },
+    "infinite_domain:create_factory_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "Create-era fabrication plant with explicit receiving-to-production-to-shipping workflow",
+        "separate staff parking, west receiving apron, south truck court and east powerhouse",
+        "two office floors with reception, security, management, staff and engineering functions",
+        "crushing/milling, mixing, pressing/cutting and assembly production stages",
+        "maintenance and quality-control rooms joined by a dedicated service corridor",
+        "traversable production catwalk, sawtooth roof, clerestories, stacks and three outbound docks"
+      ],
+      "automatic_review": [
+        "12 required lower-door nodes present",
+        "19 of 19 ground-floor program targets reachable",
+        "6 of 6 upper-office targets reachable with all six office-stair rises present",
+        "4 of 4 production-catwalk targets reachable with all seven catwalk-stair rises present",
+        "12 of 12 ground, 4 of 4 upper and 3 of 3 catwalk routes survive in the damaged derivative"
+      ],
+      "remaining_checks": [
+        "walk the complete receiving-to-production-to-shipping route in the QA world",
+        "inspect every production cell, service room and powerhouse aisle at player scale",
+        "walk both office floors and both independent stairs",
+        "confirm the catwalk is safe, continuous and gives useful production-floor sightlines",
+        "test all three docks and each exterior circulation system in all rotations",
+        "inspect sawtooth roof, clerestory, stack and ruin silhouettes at normal distance"
+      ]
+    },
+    "infinite_domain:abandoned_create_factory": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the Create-factory clean master. The west receiving roof and raw-material cell collapse while both office floors, later production stages, service rooms, powerhouse, catwalk and all three outbound docks remain navigable."
+    },
+    "infinite_domain:bunker_network_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "modular two-level civil-defense network rather than one subdivided underground cube",
+        "terrain-level guarded entrance facility plus north intake/security, central command, west living/medical, east service/armory and south support programs",
+        "lower archive, detention, secure armory and isolated power/water/filtration modules",
+        "forty-five explicit door thresholds joining the surface facility and controlled security zones",
+        "complete inter-level stair and two independent roof-exit ladders",
+        "distributed pillager occupation in the damaged derivative"
+      ],
+      "automatic_review": [
+        "45 required lower-door nodes present",
+        "8 of 8 surface-entrance program targets reachable",
+        "14 of 14 operational-level program targets reachable",
+        "10 of 10 protected-level program targets reachable",
+        "all eight inter-level stair rises and both seven-level roof ladders present",
+        "8 of 8 surface, 10 of 10 operational and 8 of 8 protected routes survive in the occupied derivative",
+        "six pillager spawners distributed across both levels"
+      ],
+      "remaining_checks": [
+        "walk every security threshold, module connector and both bunker levels in the QA world",
+        "climb the main and emergency roof ladders and traverse the complete stair",
+        "inspect barracks, infirmary, cells, armories and utility clearances at player scale",
+        "verify each pillager zone is dangerous without producing unavoidable spawn-locking",
+        "test buried placement at multiple terrain elevations and inspect terrain feathering",
+        "confirm both localized damage zones read correctly under in-game lighting"
+      ]
+    },
+    "infinite_domain:bunker_network": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the bunker-network clean master. A northwest barracks ceiling failure and far-south utility accident leave command, infirmary, armories, detention, both roof exits and the inter-level stair accessible while six pillager zones occupy the surviving complex."
+    },
+    "infinite_domain:survivor_cache_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "surface-relative concealed utility shed with gravel pedestrian approach",
+        "front storage, rear duty/radio post and protected primary stair",
+        "underground intake, sleeping room, infirmary, pantry and workshop",
+        "independent southeast emergency hatch",
+        "clear cross-circulation linking all five shelter functions",
+        "distributed pillager occupation in the damaged derivative"
+      ],
+      "automatic_review": [
+        "8 required lower-door nodes present",
+        "6 of 6 surface-shed program targets reachable",
+        "10 of 10 underground-shelter program targets reachable",
+        "all eight stair rises and all seven emergency-ladder levels present",
+        "6 of 6 surface and 10 of 10 shelter routes survive in the occupied derivative",
+        "four pillager spawners distributed across surface and underground rooms"
+      ],
+      "remaining_checks": [
+        "walk the gravel approach, shed, complete stair and all shelter rooms in the QA world",
+        "climb the emergency ladder and verify the flush hatch is usable",
+        "inspect bunks, infirmary, pantry and workshop clearances at player scale",
+        "verify pillager pressure remains dangerous without trapping the player",
+        "test surface-relative placement and terrain feathering at multiple elevations",
+        "confirm both localized damage zones read correctly under in-game lighting"
+      ]
+    },
+    "infinite_domain:survivor_cache": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the survivor-cache clean master. A southwest shed-roof breach and northeast pantry cave-in leave both exits, the sleeping room, infirmary, pantry approach and workshop connected while four pillager zones occupy the site."
+    },
+    "infinite_domain:trade_outpost_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "octagonal full-log palisade with five-wide wagon gate, paired guard towers and overhead bridge",
+        "clear internal ring path, market cross-lane and north-south service spine",
+        "four distinct inward-facing canvas stalls for provisions, medicine, repairs and livestock supplies",
+        "roomed central trade lodge with public, records, secure-storage and workshop functions",
+        "resident bunkhouse with sleeping, mess and supply functions",
+        "working well and two independently gated, fully enclosed mixed-livestock paddocks"
+      ],
+      "automatic_review": [
+        "15 required lower-door nodes present",
+        "21 of 21 clean-master settlement program targets reachable",
+        "all 176 checked two-level paddock boundary cells occupied by stable blocks or doors",
+        "two cows, two sheep, one pig and one chicken present",
+        "21 of 21 settlement routes survive in the damaged inhabited derivative"
+      ],
+      "remaining_checks": [
+        "walk the wagon gate, four market stalls, lodge, well, bunkhouse and both paddocks in the QA world",
+        "inspect tower, bridge, lodge and bunkhouse clearances at player scale",
+        "confirm each stall's merchandise program reads without labels",
+        "verify all animals remain contained and villagers do not immediately escape",
+        "test the local-road connector and terrain feathering in uneven wasteland terrain",
+        "confirm the east-southeast breach and collapsed canopy read as localized damage"
+      ]
+    },
+    "infinite_domain:trade_outpost": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the trade-outpost clean master. An east-southeast palisade breach and southeast canopy collapse preserve the guarded gate, four market approaches, roomed lodge, well, bunkhouse, both enclosed paddocks and all livestock."
+    },
+    "infinite_domain:decayed_farm_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "pitched-roof farmhouse with living/dining, kitchen, bedroom, washroom, pantry and mudroom functions",
+        "tall gabled aisle barn with two wagon doors, tack/feed rooms, four stalls and twin haylofts",
+        "six-rise hayloft stair and rear crossover bridge",
+        "independent grain silo and roomed machinery/repair shed",
+        "three irrigated crop sections joined to a deliberate field and service-yard circulation system",
+        "mixed persistent barn livestock and distributed danger in the derivative"
+      ],
+      "automatic_review": [
+        "27 required lower-door nodes present",
+        "27 of 27 ground program targets reachable",
+        "6 of 6 hayloft targets reachable with all six stair rises present",
+        "two cows, one sheep and one pig present",
+        "19 of 19 ground and 3 of 3 southwest-loft routes survive in the decayed derivative",
+        "two hostile spawners distributed between barn and fields"
+      ],
+      "remaining_checks": [
+        "walk every farmhouse room, both exits and the farmyard service route in the QA world",
+        "walk the complete barn aisle, all four stalls, the stair and both lofts",
+        "inspect silo doorway and machinery-shed clearances at player scale",
+        "confirm field, irrigation and machinery relationships read from ground level",
+        "verify hostile spawning remains dangerous without blocking required routes",
+        "test terrain feathering and both structural failure silhouettes in uneven wasteland terrain"
+      ]
+    },
+    "infinite_domain:decayed_farm": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the farm clean master. A northwest farmhouse-roof failure and northeast barn-loft collapse preserve the domestic rear rooms, both house exits, barn aisle, southwest loft, silo, machinery shed and field-service circulation while zombie and husk zones occupy the site."
+    },
+    "infinite_domain:trailer_park_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "six individually planned and independently accessible mobile homes",
+        "living/kitchen, central bathroom/entry and rear bedroom/cupboard zones in every home",
+        "narrow central road with six gravel branches rather than a full-site asphalt pad",
+        "roomed management office and separate communal laundry/maintenance building",
+        "private gardens, patios, water, electrical hookups, trailer chassis and wheels",
+        "road-end mail shelter, refuse point and transformer"
+      ],
+      "automatic_review": [
+        "34 required lower-door nodes present",
+        "36 of 36 clean-master park program targets reachable",
+        "all six trailers independently pass 4 of 4 residential-zone targets",
+        "34 of 34 mandatory routes survive in the abandoned derivative",
+        "three hostile spawners distributed away from the central road"
+      ],
+      "remaining_checks": [
+        "walk the complete central road and all six lot branches in the QA world",
+        "enter every trailer and inspect all residential zones at player scale",
+        "inspect management, laundry, workshop, mail and utility functions",
+        "confirm patios, gardens, steps, chassis and hookups remain visually legible",
+        "verify hostile pressure does not trap players inside a surviving trailer",
+        "test terrain feathering and the three localized damage silhouettes on uneven terrain"
+      ]
+    },
+    "infinite_domain:trailer_park": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the trailer-park clean master. Damage to the northwest living roof, southeast bedroom roof and communal workshop preserves management, laundry, the complete road, all six entrances, four complete homes and the declared surviving zones of both damaged homes."
+    },
+    "infinite_domain:mountain_military_complex_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "reinforced perimeter, mountain retaining shoulders, guarded vehicle gate and four accessible watchtowers",
+        "two-storey command headquarters and raised communications bridge",
+        "roomed barracks with duty/mess, infirmary, dormitory and wash/locker programs",
+        "three-bay motor pool with visible vehicles and rear repair/parts/fuel rooms",
+        "secure roomed armory and logistics bunker",
+        "central asphalt, parade and helipad circulation"
+      ],
+      "automatic_review": [
+        "30 required lower-door nodes present",
+        "31 of 31 ground program targets reachable",
+        "4 of 4 command-level targets reachable",
+        "all six command stair rises, ten communications-ladder levels and four twelve-level watchtower ladders present",
+        "28 of 28 ground and 4 of 4 command routes survive in the occupied derivative",
+        "six pillager spawners distributed by defensible military function"
+      ],
+      "remaining_checks": [
+        "walk the guarded road, central cross-road and every primary building in the QA world",
+        "climb the command stair, communications bridge and all four watchtowers",
+        "inspect command, barracks, motor and armory rooms at player scale",
+        "test motor-bay doors, vehicle clearances and rear service workflow",
+        "verify pillager occupation remains dangerous without spawn-locking critical routes",
+        "test terrain feathering, retaining shoulders and both collapse silhouettes in mountain terrain"
+      ]
+    },
+    "infinite_domain:mountain_military_complex": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the mountain-garrison clean master. A west motor-pool collapse and southeast barracks failure preserve command, infirmary, western bunks, two motor bays, all rear workshops, armory, guarded gate, central roads and four tower routes while six pillager zones occupy the site."
+    },
+    "infinite_domain:mountain_biohazard_lab_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "stepped public, two-storey research, containment and rear utility wings",
+        "security/reception, lockers and sequential decontamination intake",
+        "sample receiving, wet lab, clinical, preparation, cold-store and isolation rooms",
+        "upper analysis, records/data, offices, staff and observation functions",
+        "quarantine cells, lead-lined specimen chamber, waste processing and filtration",
+        "two research stairs plus east service and south emergency exits"
+      ],
+      "automatic_review": [
+        "47 required lower-door nodes present",
+        "26 of 26 ground program targets reachable",
+        "8 of 8 research-level targets reachable",
+        "both independent six-rise research stairs present",
+        "24 of 24 ground and 7 of 7 research routes survive in the breached derivative",
+        "five hostile spawners distributed between raider and infected functions"
+      ],
+      "remaining_checks": [
+        "walk the complete intake-to-containment pressure workflow in the QA world",
+        "inspect all clinical, research, quarantine, specimen and waste rooms at player scale",
+        "walk both research stairs and both independent exterior exits",
+        "verify quarantine glazing and specimen airlock remain usable",
+        "verify mixed hostile zones are dangerous without locking critical thresholds",
+        "test terrain feathering, retaining shoulders, roof plant and both breach silhouettes"
+      ]
+    },
+    "infinite_domain:mountain_biohazard_lab": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the pressure-zoned lab clean master. A western wet-lab/analysis collapse and eastern specimen breach preserve intake, clinical rooms, both research stairs, quarantine, utilities, waste processing and both service exits while raiders and infected occupy distinct operational zones."
+    },
+    "infinite_domain:decayed_logging_camp_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "separate dispatch, bunkhouse, sawmill, garage and drying-yard volumes",
+        "crew check-in, mess, wash/locker and two bunk-room programs",
+        "log infeed, debarking, primary saw, edging, sorting and rear support workflow",
+        "six-rise stair and full service catwalk overlooking all production cells",
+        "roomed vehicle repair, parts and fuel functions",
+        "central access road, loader loop, log decks and covered lumber drying"
+      ],
+      "automatic_review": [
+        "22 required lower-door nodes present",
+        "32 of 32 clean-master ground program targets reachable",
+        "3 of 3 service-catwalk targets reachable and all six stair rises present",
+        "29 of 29 ground and 3 of 3 catwalk routes survive in the abandoned derivative",
+        "four hostile spawners distributed by operational zone"
+      ],
+      "remaining_checks": [
+        "walk the complete timber workflow and both crew buildings in the QA world",
+        "inspect all three saw cells, rear support rooms and catwalk at player scale",
+        "test garage bays, parts/fuel thresholds and vehicle clearances",
+        "confirm roads, log decks and drying stacks create a readable material flow",
+        "verify hostile pressure does not block surviving routes",
+        "test terrain feathering and both localized collapse silhouettes in forest terrain"
+      ]
+    },
+    "infinite_domain:decayed_logging_camp": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the logging-camp clean master. An east sorting-bay/roof failure and separate southwest bunk-room collapse preserve dispatch, crew support, the central timber workflow, service catwalk, garage, yards and declared exterior routes while four hostile zones occupy the site."
+    },
+    "infinite_domain:bombed_data_center_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "separate public/security, twin server-hall, power and rear-service masses",
+        "security screening, network operations, administration and staff support",
+        "two fire-zoned server halls, controlled spine, network-entry room and media vault",
+        "switchgear, UPS/battery, generators and transformer service",
+        "receiving, spares, maintenance, suppression and cooling functions",
+        "separate north public, east utility and south loading approaches"
+      ],
+      "automatic_review": [
+        "42 required lower-door nodes present",
+        "28 of 28 clean-master ground targets reachable",
+        "6 of 6 upper-administration targets reachable and all six stair rises present",
+        "17 of 17 ground and 6 of 6 upper routes survive in the bombed derivative",
+        "five hostile spawners divided among raider and irradiated zones"
+      ],
+      "remaining_checks": [
+        "walk security, operations, both server halls and all utility rooms",
+        "inspect rack aisles, hardened paired thresholds and upper offices at player scale",
+        "verify public, utility and loading approaches remain visually distinct",
+        "confirm the southeast bomb strike and debris read as physically coherent",
+        "verify hostile zones do not lock surviving mandatory routes",
+        "test terrain feathering around the impact bowl and service courts"
+      ]
+    },
+    "infinite_domain:bombed_data_center": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the hardened data-center clean master. A jagged southeast impact destroys the rear of Server Hall B, generator boundary and utility yard while preserving secured arrival, operations, Server Hall A, upper administration and western loading access."
+    },
+    "infinite_domain:hydroelectric_refuge_dam_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "full retained reservoir, curved gravity dam and broad service crest",
+        "four spillways, penstocks, turbine-generator bays and tailraces",
+        "roomed crest gate-control and dispatch house",
+        "powerhouse operations, turbine hall, maintenance and elevated gallery",
+        "two independently planned abutment refuges with complete survival functions",
+        "separate tunnel entrances, emergency exits and enclosed crest ladders"
+      ],
+      "automatic_review": [
+        "27 required lower-door nodes present",
+        "16 of 16 powerhouse, 5 of 5 gallery and 6 of 6 crest-control targets reachable",
+        "8 of 8 program targets reachable in each independent refuge",
+        "all six powerhouse stair rises and both twenty-five-level crest ladders present",
+        "14 powerhouse, 3 crest-control and all 16 refuge routes survive in the derivative",
+        "18168 retained reservoir-water blocks and four distributed hostile spawners"
+      ],
+      "remaining_checks": [
+        "inspect upstream water retention, downstream discharge and shoreline joins in game",
+        "walk the powerhouse, gallery, crest controls and every hydraulic threshold",
+        "walk both complete refuge programs, emergency tunnels and ladders",
+        "confirm shelter furnishing and remains communicate the failed-refuge story",
+        "verify hostile zones do not lock mandatory routes",
+        "test beard-box terrain feathering at both abutments and the water boundary"
+      ]
+    },
+    "infinite_domain:hydroelectric_refuge_dam": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the hydraulic clean master. An east powerhouse bay/roof failure and separate crest-control collapse preserve the full dam and reservoir, three principal turbine routes, both planned refuges, emergency exits and crest ladders while remains and hostile zones tell the failed-shelter story."
+    },
+    "infinite_domain:toppled_skyscraper_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "roomed public and service podium",
+        "four complete corridor-and-suite office levels",
+        "rear service zones and two independent emergency ladder cores",
+        "communications and mechanical crown",
+        "repeated facade rhythm without undifferentiated empty floors",
+        "clear north public and south/east service approaches"
+      ],
+      "automatic_review": [
+        "43 required lower-door nodes present",
+        "13 of 13 podium targets reachable",
+        "8 of 8 program targets reachable on each of four office levels",
+        "4 of 4 crown targets reachable",
+        "both independent thirty-three-level emergency ladders present",
+        "10 podium and five targets on each of two stump levels survive with a continuous west ladder"
+      ],
+      "remaining_checks": [
+        "walk the full podium, every clean office level and crown",
+        "climb both emergency cores and inspect every floor landing",
+        "verify the stump remains usable after the shear",
+        "confirm the fallen sections read as rotated tower floors rather than boxes",
+        "inspect fractured ends, facade bands and impact berm at street scale",
+        "test terrain feathering across the podium and avenue impact path"
+      ]
+    },
+    "infinite_domain:toppled_skyscraper": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the six-level tower clean master. A variable-height shear leaves an accessible podium and two office levels while three descending offset sections carry the upper tower east across the avenue with vertical former floors, broken glazing and gravity-led impact debris."
+    },
+    "infinite_domain:blown_apartment_complex_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "four complete apartments on each of four floors",
+        "living, kitchen, bedroom, bathroom and storage functions in every unit",
+        "continuous courtyard gallery with north and south cores",
+        "two complete three-flight stair stacks",
+        "ground mail/laundry/maintenance services and two exterior exits",
+        "landscaped courtyard and roomed roof plant"
+      ],
+      "automatic_review": [
+        "69 required lower-door nodes present",
+        "24 of 24 program targets reachable on every clean-master floor",
+        "6 of 6 shared ground-service targets reachable",
+        "both complete three-flight stair stacks present",
+        "17 of 17 declared survivor targets reachable on every blown-open floor",
+        "both stair stacks survive with four distributed hostile spawners"
+      ],
+      "remaining_checks": [
+        "walk all sixteen apartments and their private-room thresholds",
+        "walk the complete courtyard gallery and both stair stacks",
+        "inspect mail, laundry, maintenance, courtyard and roof plant",
+        "confirm the northeast blast exposes units without reading as random deletion",
+        "verify hostile zones do not trap residents' surviving routes",
+        "test terrain feathering, courtyard grade and rubble fans in city terrain"
+      ]
+    },
+    "infinite_domain:blown_apartment_complex": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the sixteen-unit courtyard clean master. A diagonal northeast-stack blast and localized floor collapse preserve three complete apartments per floor, both stairs, both exterior exits, the west wing, southeast stack and the south gallery route."
+    },
+    "infinite_domain:ruined_mixed_use_block_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "four distinct street businesses with separate storefront and rear-service circulation",
+        "independent residential lobby and mail spine",
+        "four complete corner apartments on each of three residential floors",
+        "front and rear stacked stairs with continuous cross-corridors",
+        "repeated storefront glazing, apartment windows, balconies and commercial cornice",
+        "enclosed rooftop mechanical plant"
+      ],
+      "automatic_review": [
+        "58 required lower-door nodes present",
+        "all declared diner, pharmacy, lobby, hardware and laundromat program points reachable",
+        "31 of 31 residential program and circulation targets reachable on every clean-master floor",
+        "both complete stair stacks and roof-plant access present",
+        "diner, pharmacy, lobby and hardware survivor programs remain reachable",
+        "24 of 24 declared survivor targets reachable on every ruined residential floor with four hostile spawners"
+      ],
+      "remaining_checks": [
+        "walk all four businesses from storefront through their two rear service thresholds",
+        "walk the residential lobby, both stair stacks and all twelve apartments",
+        "inspect the roof plant and both rear delivery approaches",
+        "confirm every business and apartment function is visually legible at player scale",
+        "confirm the southeast collapse reads as progressive structural failure rather than random deletion",
+        "test terrain feathering across the main-road frontage, rear alley and rubble fans"
+      ]
+    },
+    "infinite_domain:ruined_mixed_use_block": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the four-business, twelve-apartment clean master. A southeast rear-quarter collapse removes the laundromat and apartment stack while preserving both stairs, three complete apartments per floor, the residential lobby and the other street businesses."
+    },
+    "infinite_domain:sunken_city_front_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "four independently massed and programmed avenue buildings",
+        "cafe apartments, hardware offices, pharmacy clinic housing and post/bank offices",
+        "furnished cellar below every premise",
+        "separate street, staff, rear-service and secure-room circulation",
+        "two independently roomed upper suites per floor",
+        "four complete cellar and upper stair stacks",
+        "return windows, piers, lintels, canopies, balconies and rooftop plant"
+      ],
+      "automatic_review": [
+        "60 required lower-door nodes present",
+        "7 of 7 declared ground-program targets reachable in each of four premises",
+        "3 of 3 cellar targets reachable beneath each premise",
+        "8 of 8 targets reachable on all ten clean upper floors",
+        "all four complete cellar and upper stair stacks present",
+        "7 of 7 ground targets and 4 of 4 suite targets survive in every declared damaged zone",
+        "subsidence edge spans city grade Y=4 to roadbed Y=1 with four distributed hostile spawners"
+      ],
+      "remaining_checks": [
+        "walk all four premises from street through staff rooms to rear exits",
+        "descend all four cellar stairs and inspect exposed trench walls",
+        "walk both upper suites and the stair landing on every floor",
+        "confirm the four premises remain visually distinct at street scale",
+        "confirm road subsidence, soil feathering and facade failures follow gravity",
+        "test the structure in uneven ruined-city terrain for buried entrances or floating rubble"
+      ]
+    },
+    "infinite_domain:sunken_city_front": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from a four-premise intact avenue frontage. The central road drops three blocks, both sidewalk edges feather into the trench, real cellar walls become exposed and four localized facade failures retain all businesses, stairs and one coherent suite per upper floor."
+    },
+    "infinite_domain:pancaked_parking_structure_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "five complete parking decks with explicit authored air and drive aisles",
+        "signed inbound/outbound lanes and street canopy",
+        "security/cashier office and ground maintenance shop",
+        "four-flight vehicle ramp stack",
+        "independent northwest and southeast stair towers",
+        "marked bays and varied parked vehicles on every level",
+        "roof parking and mechanical/lift plant"
+      ],
+      "automatic_review": [
+        "19 required lower-door nodes present",
+        "11 of 11 ground entry/service targets reachable",
+        "10 of 10 targets reachable on enclosed decks and 11 of 11 on the roof",
+        "both complete four-flight stair stacks present",
+        "all 56 declared vehicle-ramp points present",
+        "312 visible parked-vehicle body blocks",
+        "6 of 6 survivor targets reachable on every pancaked deck",
+        "fallen deck fields confirmed at Y=9, Y=12, Y=15 and Y=18 with four hostile spawners"
+      ],
+      "remaining_checks": [
+        "drive/walk the inbound lane through every ramp to roof parking",
+        "walk both stair towers and every landing",
+        "inspect security, cashier and maintenance rooms at player scale",
+        "verify cars, bay markings and drive aisles do not create accidental traps",
+        "confirm eastern floors read as progressively pancaked parking decks",
+        "test terrain feathering around the street apron and southeast rubble fan"
+      ]
+    },
+    "infinite_domain:pancaked_parking_structure": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the five-deck municipal garage clean master. Four eastern deck fields pancake to distinct elevations with crushed vehicles and column remnants while all western decks, the central vehicle ramp and northwest stair remain navigable."
+    },
+    "infinite_domain:cratered_downtown_intersection_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "signalized two-road crossing with four crosswalks and sidewalks",
+        "underground utility cross, central switch chamber and four surface hatches",
+        "bank offices with roomed vault",
+        "pharmacy clinic housing with balconies and rooftop greenhouse",
+        "diner apartments with awning and roof terrace",
+        "electronics offices with loading canopy and rooftop equipment",
+        "four independent cellar and upper stair spines"
+      ],
+      "automatic_review": [
+        "121 required lower-door nodes present",
+        "7 of 7 ground-program targets reachable in each corner building",
+        "9 of 9 targets reachable on all ten upper floors",
+        "all four cellar and upper stair spines complete",
+        "5 of 5 underground utility-network targets reachable",
+        "all four five-level surface utility ladders present",
+        "2 of 2 outer survivor targets reachable on fourteen damaged building levels",
+        "central crater fully penetrates road and utility chamber with four hostile spawners"
+      ],
+      "remaining_checks": [
+        "walk all four businesses, roomed vault and upper suites",
+        "climb all four stair spines and utility hatch ladders",
+        "inspect traffic signals, crosswalks, sidewalks and both road axes",
+        "confirm each building identity remains legible from street and rooftop",
+        "confirm crater walls expose utility remnants and pull all four inner corners inward",
+        "test terrain feathering around roads, crater annulus and rubble fans"
+      ]
+    },
+    "infinite_domain:cratered_downtown_intersection": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the four-corner mixed-use crossing clean master. A central blast penetrates the road and buried switch chamber, feathers a broad crater annulus and shears each inward building corner while preserving every outer stair and suite route."
+    },
+    "infinite_domain:ruined_hospital_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "separate ambulance emergency and public lobby entrances",
+        "triage, treatment bays, trauma, diagnostics, pharmacy, surgery and recovery",
+        "paired roomed ward wings on four occupied floors",
+        "accessible sheltered courtyard and rear service link",
+        "two independent full-height stair stacks",
+        "roof mechanical plant and marked helipad"
+      ],
+      "automatic_review": [
+        "135 required lower-door nodes present",
+        "20 of 20 ground-program targets reachable",
+        "19 of 19 targets reachable on each of three upper clinical floors",
+        "both complete three-flight stair stacks present in clean and damaged assets",
+        "108 bed blocks, 10 clinical fixtures, 49 courtyard-water blocks and 159 landscape blocks",
+        "14 of 14 ground survivor targets and 12 of 12 targets on each damaged upper floor reachable",
+        "five purpose-distributed hostile spawners present"
+      ],
+      "remaining_checks": [
+        "walk ambulance intake through emergency, treatment and trauma",
+        "walk public intake through admissions, diagnostics and surgery",
+        "inspect every ward-room branch and both stair stacks at player scale",
+        "confirm courtyard and rear-service doors remain usable",
+        "confirm hospital identity, floor rhythm and roof plant read from city streets",
+        "confirm northeast fracture and rubble apron follow gravity in game",
+        "test terrain feathering on uneven ruined-city lots"
+      ]
+    },
+    "infinite_domain:ruined_hospital": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the four-storey U-plan hospital clean master. A continuous northeast breach removes the affected clinical stack and east ward edge, terminates slabs at a coherent fracture and deposits a gravity-shaped rubble apron while preserving both entrances, both stairs, the courtyard and surviving departments."
+    },
+    "infinite_domain:ruined_police_precinct_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "canopied public vestibule and controlled security spine",
+        "dispatch, briefing, patrol ready and armory issue rooms",
+        "booking spine with four individual detention cells",
+        "evidence, interview, records and rear staff rooms",
+        "enclosed vehicle sally port and three-lane motor pool",
+        "detective, administrative, training and command floors",
+        "main all-floor stair and independent secure stair"
+      ],
+      "automatic_review": [
+        "51 required lower-door nodes present",
+        "32 of 32 ground-program targets reachable",
+        "18 of 18 first-floor targets reachable",
+        "7 of 7 command-floor targets reachable",
+        "both stair systems complete in clean and damaged assets",
+        "four complete detention beds and 77 secure-storage blocks present",
+        "16 of 16 ground, 11 of 11 first-floor and 5 of 5 command-floor survivor targets reachable",
+        "five purpose-distributed hostile spawners present"
+      ],
+      "remaining_checks": [
+        "walk public intake through reporting and controlled operations",
+        "walk booking through every cell, interview and evidence room",
+        "test the rear staff exit, sally port and all three garage lanes",
+        "climb both stairs and inspect detective, training and command rooms",
+        "confirm precinct identity and secure zoning read at player scale",
+        "confirm northwest fracture and rubble fan follow gravity in game",
+        "test terrain feathering around the road apron and rear vehicle gate"
+      ]
+    },
+    "infinite_domain:ruined_police_precinct": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the L-plan police precinct clean master. A northwest public-facade blast creates one continuous inward fracture and low rubble fan while preserving the vestibule, both stairs, booking/cells, evidence rooms, sally port, motor pool and all surviving upper programs."
+    },
+    "infinite_domain:ruined_courthouse_clean_master": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "preserve": [
+        "broad civic stair and six-column portico",
+        "screening, clerk records and legal-service rooms",
+        "two ground courtrooms with galleries, counsel, witness and judge areas",
+        "rear holding cells, judges' chambers, evidence and archive",
+        "two upper hearing rooms, administrative suites and law library",
+        "separate public and secure stair systems",
+        "copper-roofed central clerestory"
+      ],
+      "automatic_review": [
+        "47 required lower-door nodes present",
+        "27 of 27 ground-program targets reachable",
+        "24 of 24 upper-program targets reachable",
+        "both complete eight-rise stairs present in clean and damaged assets",
+        "two complete holding-cell beds and 201 courtroom/hearing seat blocks present",
+        "21 of 21 damaged ground targets and 19 of 19 damaged upper targets reachable",
+        "five purpose-distributed hostile spawners present"
+      ],
+      "remaining_checks": [
+        "walk the portico through screening and all public-service rooms",
+        "inspect both ground courtrooms at player scale",
+        "walk the secure holding, chamber, evidence and archive corridor",
+        "climb both stairs and inspect hearing rooms, offices and law library",
+        "confirm public and secure circulation do not accidentally merge",
+        "confirm east fracture and rubble apron follow gravity in game",
+        "test terrain feathering around the civic stair and east debris field"
+      ]
+    },
+    "infinite_domain:ruined_courthouse": {
+      "decision": "candidate_for_in_world_review",
+      "approved": false,
+      "notes": "Regenerated from the two-storey civic courthouse clean master. An east courtroom/hearing-stack blast creates one continuous inward fracture and rubble apron while preserving the portico, central atrium, west courtrooms, rear secure rooms and both stairs."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "ae2:quartz_glass"
+                      },
+                "b":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "c":  {
+                          "item":  "ae2:cell_component_1k"
+                      },
+                "d":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "e":  {
+                          "item":  "minecraft:copper_block"
+                      }
+            },
+    "pattern":  [
+                    "aba",
+                    "bcb",
+                    "ded"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2:item_storage_cell_1k"
+               }
+}

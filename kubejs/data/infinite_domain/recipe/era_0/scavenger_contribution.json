@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PBP",
+    "SRS",
+    "CEC"
+  ],
+  "key": {
+    "P": { "item": "kubejs:paper_bundle" },
+    "B": { "item": "the_wasteland_reworked:garbage_bag" },
+    "S": { "item": "wastelands:scrap_pile" },
+    "R": { "item": "the_wasteland_reworked:scrap_metal" },
+    "C": { "item": "the_wasteland_reworked:empty_can" },
+    "E": { "item": "wastelands:filter_canister" }
+  },
+  "result": {
+    "id": "kubejs:scavenger_contribution",
+    "count": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "infinite_domain:grid_supply",
+  "title": { "text": "Grid Supply Echo", "color": "aqua" },
+  "model": { "villager_data": { "type": "snow", "profession": "librarian", "level": 4 } },
+  "stages": [{
+    "title": "Electrical Grid Exchange",
+    "lore": [{ "type": "ftbechoes:text", "text": "Conductors, connectors, and replacement controls. Electricity is invisible; this does not make improvised wiring clever." }],
+    "not_ready": "A stable civic grid is required before electrical stock is released.",
+    "ready": "Grid authorization confirmed.",
+    "required_stage": "infinite_domain:era_4",
+    "shop_unlock": [
+      { "name": "Copper Wire Reel", "item": { "id": "create_new_age:copper_wire", "count": 16 }, "cost": 24 },
+      { "name": "Insulated Wire Reel", "item": { "id": "powergrid:insulated_copper_wire", "count": 8 }, "cost": 32 },
+      { "name": "Copper Cord Bundle", "item": { "id": "powergrid:copper_cord", "count": 8 }, "cost": 24 },
+      { "name": "Wire Connector Lot", "item": { "id": "powergrid:wire_connector", "count": 4 }, "cost": 24 },
+      { "name": "Socket Set", "item": { "id": "powergrid:socket", "count": 8 }, "cost": 24 },
+      { "name": "Fuse Holder Set", "item": { "id": "powergrid:fuse_holder", "count": 4 }, "cost": 24 },
+      { "name": "Light Bulb Crate", "item": { "id": "powergrid:light_bulb", "count": 8 }, "cost": 16 },
+      { "name": "Redstone Relay Set", "item": { "id": "powergrid:redstone_relay", "count": 4 }, "cost": 32 },
+      { "name": "Circuit Board Pair", "item": { "id": "powergrid:circuit_board", "count": 2 }, "cost": 40 },
+      { "name": "Battery Reserve", "item": { "id": "powergrid:battery", "count": 2 }, "cost": 48, "max_claims": 8, "per_player_max_claims": true },
+      { "name": "Redstone Control Stock", "item": { "id": "minecraft:redstone", "count": 32 }, "cost": 24 },
+      { "name": "ME Energy Acceptor", "item": { "id": "ae2:energy_acceptor" }, "cost": 64, "max_claims": 2, "per_player_max_claims": true }
+    ],
+    "completion_reward": { "currency": 192, "description": "Three Cogs of grid exchange credit" }
+  }]
+}

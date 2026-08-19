@@ -1,0 +1,61 @@
+{
+  "shared_motif": "five-rayed coordinate glyph",
+  "structures": {
+    "moon_meridian_monolith": {
+      "dimension_biomes": "#stellaris:moon_biomes",
+      "spacing_chunks": 54,
+      "separation_chunks": 20,
+      "locate_command": "/locate structure infinite_domain:alien/moon_meridian_monolith",
+      "relic": "kubejs:meridian_core",
+      "size": [
+        21,
+        30,
+        21
+      ],
+      "placed_blocks": 945,
+      "palette_states": 12
+    },
+    "martian_signal_cairn": {
+      "dimension_biomes": "#stellaris:mars_biomes",
+      "spacing_chunks": 34,
+      "separation_chunks": 12,
+      "locate_command": "/locate structure infinite_domain:alien/martian_signal_cairn",
+      "relic": "kubejs:martian_signal_prism",
+      "size": [
+        17,
+        18,
+        17
+      ],
+      "placed_blocks": 722,
+      "palette_states": 9
+    },
+    "venusian_pressure_shrine": {
+      "dimension_biomes": "#stellaris:venus_biomes",
+      "spacing_chunks": 48,
+      "separation_chunks": 18,
+      "locate_command": "/locate structure infinite_domain:alien/venusian_pressure_shrine",
+      "relic": "kubejs:venusian_pressure_seal",
+      "size": [
+        23,
+        19,
+        23
+      ],
+      "placed_blocks": 2949,
+      "palette_states": 19
+    },
+    "burrower_nest": {
+      "dimension_biomes": "#stellaris:mars_biomes",
+      "spacing_chunks": 40,
+      "separation_chunks": 16,
+      "locate_command": "/locate structure infinite_domain:alien/burrower_nest",
+      "relic": "kubejs:burrower_carapace",
+      "size": [
+        27,
+        11,
+        27
+      ],
+      "placed_blocks": 2271,
+      "palette_states": 8
+    }
+  }
+}

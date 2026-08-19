@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " a ",
+                    "aba",
+                    " a "
+                ],
+    "key":  {
+                "a":  {
+                          "tag":  "enviromine:vent_pipe"
+                      },
+                "b":  {
+                          "item":  "minecraft:iron_block"
+                      }
+            },
+    "result":  {
+                   "id":  "enviromine:vent_pipe_o",
+                   "count":  4
+               }
+}

@@ -1,0 +1,25 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "RB",
+                    "SC"
+                ],
+    "key":  {
+                "R":  {
+                          "item":  "minecraft:rotten_flesh"
+                      },
+                "B":  {
+                          "item":  "minecraft:bone"
+                      },
+                "S":  {
+                          "item":  "minecraft:string"
+                      },
+                "C":  {
+                          "item":  "minecraft:coal_block"
+                      }
+            },
+    "result":  {
+                   "id":  "spells_and_spellcrafting:guidebook",
+                   "count":  1
+               }
+}

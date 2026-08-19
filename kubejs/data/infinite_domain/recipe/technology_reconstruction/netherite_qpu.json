@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": { "item": "oritech:machine_core_3" },
+    "E": { "item": "ae2:engineering_processor" },
+    "I": { "item": "allthecompressed:iron_block_3x" },
+    "N": { "item": "minecraft:netherite_block" },
+    "P": { "item": "ae2:engineering_processor_press" },
+    "R": { "item": "powergrid:integrated_circuit" }
+  },
+  "pattern": [
+    "RNR",
+    "ICI",
+    "EPE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createcybernetics:netherite_qpu"
+  }
+}

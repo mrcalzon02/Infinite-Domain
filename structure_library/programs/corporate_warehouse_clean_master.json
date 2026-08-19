@@ -1,0 +1,55 @@
+{
+  "structure_id": "infinite_domain:corporate_warehouse_clean_master",
+  "archetype": "road distribution center with corporate offices and truck docks",
+  "orientation": {
+    "main_road_and_employee_parking": "north",
+    "public_corporate_entrance": "north",
+    "truck_docks_and_trailer_court": "south",
+    "staff_exit_and_utilities": "east"
+  },
+  "corporate_program": [
+    "reception and security check-in",
+    "conference and open administration rooms",
+    "manager office and accessible restroom",
+    "dedicated stair to upper open office and executive area",
+    "upper records and staff break rooms",
+    "controlled quality-room connection to the warehouse"
+  ],
+  "warehouse_program": [
+    "five long double-sided pallet-rack runs with central cross aisle",
+    "quality-control room at the office threshold",
+    "northeast maintenance and electrical room",
+    "rear inbound/outbound staging and package-sort benches",
+    "four independent truck docks with raised platform and canopy",
+    "east staff exit, transformer plant and refuse enclosure",
+    "two glazed roof monitors and rooftop service plant"
+  ],
+  "circulation": [
+    "public road and parking to corporate entrance",
+    "ground offices through access control to quality room and warehouse",
+    "rack lanes joined by a broad central cross aisle and rear staging aisle",
+    "staging to four truck-dock approaches and trailer court",
+    "maintenance room and independent east staff exit from the high bay",
+    "dedicated office stair connecting both corporate levels"
+  ],
+  "damage_constraints": [
+    "preserve both corporate floors, stair and warehouse access-control route",
+    "retain most rack aisles, maintenance access and east staff exit",
+    "retain at least three truck docks and their staging approaches",
+    "concentrate failure in the southeast roof and fourth-dock corner",
+    "shape rubble beneath failed roof and dock members",
+    "derive all abandoned variants from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the site reads as a truck distribution center rather than a rail depot",
+      "public/employee and truck/service traffic systems remain distinct",
+      "rack aisles, staging benches and dock approaches have usable clearances",
+      "both corporate floors and the quality/maintenance rooms are navigable",
+      "roof monitors, dock canopy, transformer and refuse areas form a credible service system",
+      "damage preserves the original distribution workflow and follows structural gravity"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "e":  {
+                          "item":  "more_ores_more_gems:block_of_electrum"
+                      },
+                "g":  {
+                          "item":  "immersiveengineering:component_steel"
+                      },
+                "i":  {
+                          "tag":  "c:sheetmetals/steel"
+                      },
+                "m":  {
+                          "item":  "kubejs:industrial_engineering_core"
+                      }
+            },
+    "pattern":  [
+                    "imi",
+                    "geg",
+                    "igi"
+                ],
+    "result":  {
+                   "count":  4,
+                   "id":  "immersiveengineering:heavy_engineering"
+               }
+}

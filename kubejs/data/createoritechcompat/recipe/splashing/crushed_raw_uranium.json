@@ -1,0 +1,18 @@
+﻿{
+    "type":  "create:splashing",
+    "ingredients":  [
+                        {
+                            "item":  "create:crushed_raw_uranium"
+                        }
+                    ],
+    "results":  [
+                    {
+                        "count":  1,
+                        "id":  "oritech:raw_uranium"
+                    },
+                    {
+                        "chance":  0.1,
+                        "id":  "oritech:small_plutonium_dust"
+                    }
+                ]
+}

@@ -1,0 +1,327 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "cyberware_ascension"
+	group: "569AB980347C1123"
+	id: "381AB56C38F92B73"
+	images: [ ]
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5D00000000000009"]
+			id: "5B00000000000001"
+			shape: "diamond"
+			tasks: [{
+				id: "6B00000000000001"
+				structure: "spore:hospital"
+				type: "structure"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5B00000000000001"]
+			id: "5B00000000000002"
+			shape: "gear"
+			tasks: [{
+				id: "6B00000000000002"
+				item: { count: 1, id: "cyber_ware_port:cyberware_workbench" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5B00000000000002"]
+			id: "5B00000000000003"
+			rewards: [{
+				id: "7B00000000000003"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6B00000000000003"
+				item: { count: 1, id: "cyber_ware_port:scanner" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5B00000000000003"]
+			id: "5B00000000000004"
+			shape: "gear"
+			tasks: [{
+				count: 8L
+				id: "6B00000000000004"
+				item: { count: 1, id: "cyber_ware_port:neuropozyne" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"5B00000000000004"
+				"5310000000000001"
+			]
+			id: "5B00000000000005"
+			shape: "gear"
+			tasks: [{
+				id: "6B00000000000005"
+				item: { count: 1, id: "createcybernetics:surgery_table" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5B00000000000005"]
+			id: "5B00000000000006"
+			rewards: [{
+				id: "7B00000000000006"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				count: 4L
+				id: "6B00000000000006"
+				item: { count: 1, id: "cyber_ware_port:component_box" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5B00000000000006"]
+			id: "5B00000000000007"
+			shape: "gear"
+			tasks: [{
+				id: "6B00000000000007"
+				item: { count: 1, id: "createcybernetics:basecyberware_leftarm_ironplated" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"5B00000000000007"
+				"5410000000000001"
+			]
+			id: "5B00000000000008"
+			shape: "gear"
+			tasks: [{
+				id: "6B00000000000008"
+				item: { count: 1, id: "createcybernetics:eyeupgrades_biomonitor" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["5B00000000000008"]
+			id: "5B00000000000009"
+			rewards: [{
+				id: "7B00000000000009"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6B00000000000009"
+				item: { count: 1, id: "createcybernetics:organsupgrades_liverfilter" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"5B00000000000009"
+				"5510000000000001"
+			]
+			id: "5B0000000000000A"
+			shape: "gear"
+			tasks: [{
+				id: "6B0000000000000A"
+				item: { count: 1, id: "createcybernetics:organsupgrades_battery" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["5B0000000000000A"]
+			id: "5B0000000000000B"
+			shape: "gear"
+			tasks: [
+				{
+					id: "6B0000000000000B"
+					item: { count: 1, id: "createcybernetics:engineering_table" }
+					type: "item"
+				}
+				{
+					id: "6B000000000010B1"
+					item: { count: 1, id: "createcybernetics:robosurgeon" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 20.0d
+		}
+		{
+			dependencies: [
+				"5B0000000000000B"
+				"5610000000000001"
+			]
+			id: "5B0000000000000C"
+			rewards: [{
+				id: "7B0000000000000C"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6B0000000000000C"
+				item: { count: 1, id: "createcybernetics:brainupgrades_neuralprocessor" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["5B0000000000000C"]
+			id: "5B0000000000000D"
+			shape: "gear"
+			tasks: [{
+				id: "6B0000000000000D"
+				item: { count: 1, id: "createcybernetics:armupgrades_drillfist" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 24.0d
+		}
+		{
+			dependencies: [
+				"5B0000000000000D"
+				"5710000000000001"
+			]
+			id: "5B0000000000000E"
+			shape: "gear"
+			tasks: [{
+				id: "6B0000000000000E"
+				item: { count: 1, id: "ae2lt:module_radiation_protection" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 26.0d
+		}
+		{
+			dependencies: [
+				"5B0000000000000E"
+				"5810000000000001"
+			]
+			id: "5B0000000000000F"
+			rewards: [{
+				id: "7B0000000000000F"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6B0000000000000F"
+				item: { count: 1, id: "createcybernetics:netherite_qpu" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 28.0d
+		}
+		{
+			dependencies: ["5B0000000000000F"]
+			id: "5B00000000000010"
+			shape: "gear"
+			tasks: [{
+				id: "6B00000000000010"
+				item: { count: 1, id: "cyberspace:virtual_machine_core" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 30.0d
+		}
+		{
+			dependencies: ["5B00000000000010"]
+			id: "5B00000000000011"
+			shape: "diamond"
+			tasks: [{
+				dimension: "cyberspace:cyberspace_dimension"
+				id: "6B00000000000011"
+				type: "dimension"
+			}]
+			x: -2.0d
+			y: 32.0d
+		}
+		{
+			dependencies: ["5B00000000000011"]
+			id: "5B00000000000012"
+			rewards: [{
+				id: "7B00000000000012"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6B00000000000012"
+				item: { count: 1, id: "infinite_domain_cyberware:calibrated_cortex_mesh" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 34.0d
+		}
+		{
+			dependencies: ["5B00000000000012"]
+			id: "5B00000000000013"
+			shape: "gear"
+			tasks: [{
+				id: "6B00000000000013"
+				item: { count: 1, id: "infinite_domain_cyberware:ghost_circuit_lattice" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 36.0d
+		}
+		{
+			dependencies: ["5B00000000000013"]
+			id: "5B00000000000014"
+			shape: "gear"
+			tasks: [{
+				id: "6B00000000000014"
+				item: { count: 1, id: "infinite_domain_cyberware:datavore_control_core" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 38.0d
+		}
+	]
+}

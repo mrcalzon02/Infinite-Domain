@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "quark:stick_block"
+                      },
+                "b":  {
+                          "item":  "minecraft:copper_block"
+                      }
+            },
+    "pattern":  [
+                    "aaa",
+                    "  a",
+                    "  b"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2:crank"
+               }
+}

@@ -1,0 +1,30 @@
+{
+  "structures": [
+    {
+      "structure": "infinite_domain:wasteland/ruined_roadside_diner",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_motel",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_gas_station",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_truck_stop",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/wasteland_weigh_station",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 16,
+    "separation": 6,
+    "salt": 87130423
+  }
+}

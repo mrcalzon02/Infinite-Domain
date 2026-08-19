@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " a ",
+                    "aba",
+                    " a "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "cyberspace:graphene_mesh"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      }
+            },
+    "result":  {
+                   "id":  "cyberspace:graphene_coated_iron_ingot",
+                   "count":  2
+               }
+}

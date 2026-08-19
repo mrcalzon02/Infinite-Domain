@@ -1,0 +1,50 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "infinite_domain_echo_economy"
+version = "1.0.0"
+displayName = "Infinite Domain: Echo Numismatics Economy"
+authors = "Infinite Domain"
+description = '''
+Connects FTB Echoes shops to Create: Numismatics physical coins using the default denomination exchange rates.
+'''
+
+[[mixins]]
+config = "infinite_domain_echo_economy.mixins.json"
+
+[[dependencies.infinite_domain_echo_economy]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_echo_economy]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_echo_economy]]
+modId = "ftblibrary"
+type = "required"
+versionRange = "[2101.1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.infinite_domain_echo_economy]]
+modId = "ftbechoes"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.infinite_domain_echo_economy]]
+modId = "numismatics"
+type = "required"
+versionRange = "[1.0,)"
+ordering = "AFTER"
+side = "BOTH"

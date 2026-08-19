@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "D":  {
+                          "item":  "minecraft:diamond_block"
+                      },
+                "I":  {
+                          "item":  "createreautomated:iron_drill"
+                      },
+                "P":  {
+                          "item":  "create:precision_mechanism"
+                      }
+            },
+    "pattern":  [
+                    " P ",
+                    "DID",
+                    " D "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "createreautomated:diamond_drill"
+               }
+}

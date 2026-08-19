@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " ab",
+                    "acd",
+                    " ab"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "the_wasteland_reworked:aluminium_ingot"
+                      },
+                "b":  {
+                          "item":  "the_wasteland_reworked:aluminium_ingot"
+                      },
+                "c":  {
+                          "item":  "minecraft:string"
+                      },
+                "d":  {
+                          "item":  "minecraft:white_wool"
+                      }
+            },
+    "result":  {
+                   "id":  "the_wasteland_reworked:gas_mask_filter",
+                   "count":  1
+               }
+}

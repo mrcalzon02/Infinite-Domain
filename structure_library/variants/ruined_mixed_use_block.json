@@ -1,0 +1,27 @@
+{
+  "variant_id": "infinite_domain:ruined_mixed_use_block",
+  "clean_master": "infinite_domain:ruined_mixed_use_block_clean_master",
+  "damage_story": "A rear-quarter blast and progressive collapse destroyed the southeast laundromat and its apartment stack while the central cores, three dwellings per floor and the other street businesses remained usable.",
+  "damage_zone": "southeast commercial bay, southeast apartment stack and rear service alley",
+  "environment_layer": [
+    "irregular multi-floor loss concentrated toward the rear alley",
+    "localized middle-floor pancaking in the southeast residential stack",
+    "gravity-led gravel and masonry piles beneath the failed corner",
+    "surviving glazed storefront rhythm, balconies and rooftop plant"
+  ],
+  "occupation_layer": [
+    "one ghoul spawner in the diner public zone",
+    "one zombie spawner in the damaged laundromat frontage",
+    "one zombie spawner in the southwest residential stack",
+    "one ghoul spawner in the surviving northeast upper apartment",
+    "market and home loot remain separated by functional zone"
+  ],
+  "invariants": [
+    "diner, pharmacy, residential lobby and front hardware functions remain reachable",
+    "three complete apartments remain reachable on every residential floor",
+    "front and rear stair stacks remain intact",
+    "roof plant remains reachable from the rear core",
+    "damage remains localized to the declared southeast stack"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

@@ -1,0 +1,194 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "4444))(444444444",
+      "44))(44444444444",
+      "))(4444444444444",
+      "(444444444444444",
+      "444444444444444)",
+      "4444444444444))(",
+      "44444444444))(44",
+      "444444444))(4444",
+      "4444444))(444444",
+      "44444))(44444444",
+      "444))(4444444444",
+      "4))(444444444444",
+      ")(44444444444444",
+      "4444444444444444",
+      "44444444444444))",
+      "444444444444))(4"
+    ],
+    [
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,"
+    ],
+    [
+      "    $22222/22222",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2 3",
+      "    $  %     2  ",
+      "    $  &     -  ",
+      "    $        2  ",
+      "    $   '    2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $11111111111",
+      "    $        2  ",
+      "    $        2  ",
+      "    $  +     2  ",
+      "    $  *     2  ",
+      "    $        2  "
+    ],
+    [
+      "    $22222022222",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    !        2  ",
+      "    !        .  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $11111111111",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    !        2  "
+    ],
+    [
+      "    $22222222222",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    !        2  ",
+      "    !        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $11111111111",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    !        2  "
+    ],
+    [
+      "    $22222222222",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $11111111111",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  ",
+      "    $        2  "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:brown_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:brown_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:chest[facing=east,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_home"
+        }
+      },
+      {
+        "char": "(",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:gray_bed[facing=north,occupied=false,part=foot]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:gray_bed[facing=north,occupied=false,part=head]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:oak_planks"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:stripped_oak_wood"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:water_cauldron[level=3]"
+      },
+      {
+        "char": "4",
+        "block": "tfmg:asphalt"
+      }
+    ]
+  }
+}

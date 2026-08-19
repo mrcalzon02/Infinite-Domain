@@ -1,0 +1,214 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "666666666666666 ",
+      "666666666666666 ",
+      "666666666666666 ",
+      "666666666666666 ",
+      "66--*6666666666 ",
+      "--*666666666666 ",
+      "*66666666666666 ",
+      "666666666666666 ",
+      "6666666666666-- ",
+      "66666666666--*6 ",
+      "666666666--*666 ",
+      "6666666--*66666 ",
+      "66666--*6666666 ",
+      "666--*666666666 ",
+      "6--*66666666666 ",
+      "-*6666666666666 "
+    ],
+    [
+      "888//////////   ",
+      "888//////////   ",
+      "888//////////   ",
+      "888//////////   ",
+      "8888888888888   ",
+      "8888888888888   ",
+      "8888888888888   ",
+      "8888888888888   ",
+      "8888888888888   ",
+      "8888888888888   ",
+      "8888888888888   ",
+      "8888888888888   ",
+      "8888888888888   ",
+      "8888888888888   ",
+      "8888888888888   ",
+      "8888888888888   "
+    ],
+    [
+      "   )    0   )   ",
+      "   +    7 4 )   ",
+      "  9)  ( 7   )   ",
+      "   )    7   )   ",
+      "   7777777777   ",
+      "   7        7   ",
+      "   7 $$  $$ 7   ",
+      "   7 $$  $$ 7   ",
+      ":: 7 $$  $$ 7   ",
+      ":: 7        7   ",
+      ":: 7        7   ",
+      "   +        7   ",
+      "   7 $$  $$ 7   ",
+      "7727 $$  $$ 7   ",
+      "'  7 $$  $$ 7   ",
+      "'  7&&&&&&&&7   "
+    ],
+    [
+      "   )    1   )   ",
+      "   ,    7   )   ",
+      "  9)    7   )   ",
+      "   )    7   )   ",
+      "   7777777777   ",
+      "   7        7   ",
+      "   7 $$  $$ 7   ",
+      "   7 $$  $$ 7   ",
+      "   7 $$  $$ 7   ",
+      " 5 7        7   ",
+      "   7        7   ",
+      "   ,        7   ",
+      "   7 $$  $$ 7   ",
+      "7737 $$  $$ 7   ",
+      "   7 $$  $$ 7   ",
+      "   7 .  !  %7   "
+    ],
+    [
+      "   )    7   )   ",
+      "        7   )   ",
+      "  9)    7   )   ",
+      "   )    7   )   ",
+      "   7777777777   ",
+      "   7        7   ",
+      "   7 $$  $$ 7   ",
+      "   7 $$  $$ 7   ",
+      "   7 $$  $$ 7   ",
+      "   7        7   ",
+      "   7        7   ",
+      "            7   ",
+      "   7 $$  $$ 7   ",
+      "7777 $$  $$ 7   ",
+      "   7 $$  $$ 7   ",
+      "   7        7   "
+    ],
+    [
+      "   )    7   )   ",
+      "   )    7   )   ",
+      "  9)    7   )   ",
+      "   )    7   )   ",
+      "   7777777777   ",
+      "   7        7   ",
+      "   7 $$  $$ 7   ",
+      "   7 $$  $$ 7   ",
+      "   7 $$  $$ 7   ",
+      "   7        7   ",
+      "   7        7   ",
+      "   7        7   ",
+      "   7 $$  $$ 7   ",
+      "7777 $$  $$ 7   ",
+      "   7 $$  $$ 7   ",
+      "   7        7   "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:controls"
+      },
+      {
+        "char": "$",
+        "block": "create:fluid_tank"
+      },
+      {
+        "char": "%",
+        "block": "create:red_nixie_tube"
+      },
+      {
+        "char": "&",
+        "block": "immersiveengineering:sheetmetal_steel"
+      },
+      {
+        "char": "'",
+        "block": "jaffabricate:pallet_full"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:lever[face=wall,facing=south,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": "5",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": "6",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "7",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "8",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "9",
+        "block": "tfmg:steel_block"
+      },
+      {
+        "char": ":",
+        "block": "zvhouses:stone_brick_countertop"
+      }
+    ]
+  }
+}

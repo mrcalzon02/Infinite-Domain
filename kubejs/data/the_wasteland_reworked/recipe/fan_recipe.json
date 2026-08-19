@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " a ",
+                    "aba",
+                    " a "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "the_wasteland_reworked:aluminium_ingot"
+                      },
+                "b":  {
+                          "item":  "the_wasteland_reworked:aluminium_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "the_wasteland_reworked:fan",
+                   "count":  1
+               }
+}

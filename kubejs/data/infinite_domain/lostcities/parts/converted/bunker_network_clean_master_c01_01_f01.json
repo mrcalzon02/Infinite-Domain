@@ -1,0 +1,186 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "!!!!!!!!!!!!!!!!",
+      "               !",
+      "               !",
+      "               !",
+      "               !",
+      "!              !",
+      " /             !",
+      "               !",
+      "               !",
+      "!              !",
+      "               !",
+      "               !",
+      "               !",
+      "               !",
+      "               !",
+      "!!!!!!!!!!!!!!!!"
+    ],
+    [
+      "!!!!!!!!!!!!!!!!",
+      "               !",
+      "               !",
+      "               !",
+      "               !",
+      "!              !",
+      "               !",
+      " /             !",
+      "               !",
+      "!              !",
+      "               !",
+      "               !",
+      "               !",
+      "               !",
+      "               !",
+      "!!!!!!!!!!!!!!!!"
+    ],
+    [
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!",
+      "! !!!!!!!!!!!!!!",
+      "! !!!!!!!!!!!!!!",
+      "!/!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!!!!!!!!!!"
+    ],
+    [
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3 33333333333333",
+      "3 33333333333333",
+      "3/..333333333333",
+      "33..333333333333",
+      "33..333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333",
+      "3333333333333333"
+    ],
+    [
+      "!!!!!!)*!!!!!!!!",
+      "               !",
+      "   11    11    !",
+      "   2     2     !",
+      "               !",
+      "!              !",
+      "%   0000000    %",
+      "&   0000000    &",
+      "    0000000 $  !",
+      "!   0000000    !",
+      "               !",
+      "            -  !",
+      "   11    11    !",
+      "   2     2     !",
+      "               !",
+      "!!!!!!)*!!!!!!!!"
+    ],
+    [
+      "!!!!!!+,!!!!!!!!",
+      "               !",
+      "               !",
+      "               !",
+      "               !",
+      "!              !",
+      "'              '",
+      "(    11111     (",
+      "     11111     !",
+      "!              !",
+      "               !",
+      "               !",
+      "               !",
+      "               !",
+      "               !",
+      "!!!!!!+,!!!!!!!!"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:cartography_table"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:iron_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:iron_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:iron_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:iron_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:iron_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:iron_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:iron_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:iron_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:lectern[facing=west,has_book=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:polished_andesite_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:polished_deepslate"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "3",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

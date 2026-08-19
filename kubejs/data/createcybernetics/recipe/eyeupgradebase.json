@@ -1,0 +1,39 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:not",
+                                    "value":  {
+                                                  "type":  "neoforge:mod_loaded",
+                                                  "modid":  "create"
+                                              }
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "T":  {
+                          "item":  "createcybernetics:titanium_block"
+                      },
+                "S":  {
+                          "item":  "createcybernetics:titaniumsheet"
+                      },
+                "E":  {
+                          "item":  "createcybernetics:component_led"
+                      },
+                "G":  {
+                          "item":  "minecraft:gold_ingot"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    "GRG",
+                    "SES",
+                    "STS"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "createcybernetics:eyeupgradebase"
+               }
+}

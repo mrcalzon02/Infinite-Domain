@@ -1,0 +1,294 @@
+{
+  "scope": "Exact clean-master crop, stabilized palette, connector declaration, licensing and representative kit-role validation.",
+  "kits_checked": 3,
+  "modules_checked": 21,
+  "source_clean_masters": 7,
+  "modules_by_kit": {
+    "industrial": 7,
+    "marketplace": 6,
+    "port_dock": 8
+  },
+  "static_module_contracts_passed": true,
+  "production_approvals": 0,
+  "runtime_status": "pending_in_game_boundary_rotation_and_multi_module_assembly",
+  "known_source_limitations": [
+    "No separate fish-market clean master exists; marketplace stalls are shared with port-town commercial assembly.",
+    "Fuel tank and loading modules derive from the validated fuel-depot clean master rather than the monolithic port landmark."
+  ],
+  "failures": [],
+  "modules": {
+    "infinite_domain:harbor_loading_pier_warm": {
+      "kit": "port_dock",
+      "role": "wharf_pier_crane_cargo_staging",
+      "source_clean_master": "infinite_domain:warm_industrial_mountain_port_clean_master",
+      "size": [
+        21,
+        22,
+        20
+      ],
+      "placed_records_including_air": 2316,
+      "palette_blocks": 9,
+      "issues": []
+    },
+    "infinite_domain:harbor_loading_pier_cold": {
+      "kit": "port_dock",
+      "role": "wharf_pier_crane_cargo_staging",
+      "source_clean_master": "infinite_domain:cold_industrial_mountain_port_clean_master",
+      "size": [
+        21,
+        22,
+        20
+      ],
+      "placed_records_including_air": 2316,
+      "palette_blocks": 9,
+      "issues": []
+    },
+    "infinite_domain:port_customs_warehouse": {
+      "kit": "port_dock",
+      "role": "warehouse_customs_dock_office",
+      "source_clean_master": "infinite_domain:warm_industrial_mountain_port_clean_master",
+      "size": [
+        15,
+        14,
+        17
+      ],
+      "placed_records_including_air": 3315,
+      "palette_blocks": 13,
+      "issues": []
+    },
+    "infinite_domain:port_tunnel_control": {
+      "kit": "port_dock",
+      "role": "dockmaster_tunnel_control",
+      "source_clean_master": "infinite_domain:warm_industrial_mountain_port_clean_master",
+      "size": [
+        14,
+        13,
+        16
+      ],
+      "placed_records_including_air": 2870,
+      "palette_blocks": 10,
+      "issues": []
+    },
+    "infinite_domain:mountain_transport_tunnel_warm": {
+      "kit": "port_dock",
+      "role": "road_rail_mountain_connector",
+      "source_clean_master": "infinite_domain:warm_industrial_mountain_port_clean_master",
+      "size": [
+        15,
+        14,
+        29
+      ],
+      "placed_records_including_air": 6056,
+      "palette_blocks": 6,
+      "issues": []
+    },
+    "infinite_domain:mountain_transport_tunnel_cold": {
+      "kit": "port_dock",
+      "role": "road_rail_mountain_connector",
+      "source_clean_master": "infinite_domain:cold_industrial_mountain_port_clean_master",
+      "size": [
+        15,
+        14,
+        29
+      ],
+      "placed_records_including_air": 6056,
+      "palette_blocks": 6,
+      "issues": []
+    },
+    "infinite_domain:fuel_tank_containment_cell": {
+      "kit": "port_dock",
+      "role": "fuel_tank",
+      "source_clean_master": "infinite_domain:ruined_fuel_depot_clean_master",
+      "size": [
+        17,
+        13,
+        17
+      ],
+      "placed_records_including_air": 880,
+      "palette_blocks": 3,
+      "issues": []
+    },
+    "infinite_domain:fuel_loading_rack": {
+      "kit": "port_dock",
+      "role": "fuel_loading_service",
+      "source_clean_master": "infinite_domain:ruined_fuel_depot_clean_master",
+      "size": [
+        18,
+        12,
+        21
+      ],
+      "placed_records_including_air": 1191,
+      "palette_blocks": 3,
+      "issues": []
+    },
+    "infinite_domain:market_stall_provisions": {
+      "kit": "marketplace",
+      "role": "specialist_stall_provisions",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "size": [
+        10,
+        9,
+        9
+      ],
+      "placed_records_including_air": 420,
+      "palette_blocks": 8,
+      "issues": []
+    },
+    "infinite_domain:market_stall_medicine": {
+      "kit": "marketplace",
+      "role": "specialist_stall_medicine",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "size": [
+        10,
+        9,
+        9
+      ],
+      "placed_records_including_air": 420,
+      "palette_blocks": 8,
+      "issues": []
+    },
+    "infinite_domain:market_stall_repair": {
+      "kit": "marketplace",
+      "role": "specialist_stall_repair",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "size": [
+        10,
+        9,
+        9
+      ],
+      "placed_records_including_air": 420,
+      "palette_blocks": 8,
+      "issues": []
+    },
+    "infinite_domain:market_stall_livestock": {
+      "kit": "marketplace",
+      "role": "specialist_stall_livestock_feed",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "size": [
+        10,
+        9,
+        9
+      ],
+      "placed_records_including_air": 420,
+      "palette_blocks": 8,
+      "issues": []
+    },
+    "infinite_domain:market_trade_lodge": {
+      "kit": "marketplace",
+      "role": "covered_market_storage_office",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "size": [
+        21,
+        18,
+        16
+      ],
+      "placed_records_including_air": 3626,
+      "palette_blocks": 20,
+      "issues": []
+    },
+    "infinite_domain:market_square_well": {
+      "kit": "marketplace",
+      "role": "public_square_service",
+      "source_clean_master": "infinite_domain:trade_outpost_clean_master",
+      "size": [
+        9,
+        5,
+        6
+      ],
+      "placed_records_including_air": 234,
+      "palette_blocks": 11,
+      "issues": []
+    },
+    "infinite_domain:industrial_office_annex": {
+      "kit": "industrial",
+      "role": "administration_staff_services",
+      "source_clean_master": "infinite_domain:corporate_warehouse_clean_master",
+      "size": [
+        18,
+        16,
+        22
+      ],
+      "placed_records_including_air": 4486,
+      "palette_blocks": 32,
+      "issues": []
+    },
+    "infinite_domain:industrial_truck_dock_bank": {
+      "kit": "industrial",
+      "role": "truck_loading_staging",
+      "source_clean_master": "infinite_domain:corporate_warehouse_clean_master",
+      "size": [
+        35,
+        16,
+        13
+      ],
+      "placed_records_including_air": 3822,
+      "palette_blocks": 14,
+      "issues": []
+    },
+    "infinite_domain:industrial_storage_rack_bay": {
+      "kit": "industrial",
+      "role": "warehouse_storage_quality_maintenance",
+      "source_clean_master": "infinite_domain:corporate_warehouse_clean_master",
+      "size": [
+        26,
+        15,
+        23
+      ],
+      "placed_records_including_air": 8701,
+      "palette_blocks": 17,
+      "issues": []
+    },
+    "infinite_domain:industrial_rail_loading_platform": {
+      "kit": "industrial",
+      "role": "rail_loading_siding",
+      "source_clean_master": "infinite_domain:freight_depot_clean_master",
+      "size": [
+        33,
+        13,
+        9
+      ],
+      "placed_records_including_air": 1682,
+      "palette_blocks": 13,
+      "issues": []
+    },
+    "infinite_domain:industrial_dispatch_annex": {
+      "kit": "industrial",
+      "role": "freight_dispatch_driver_services",
+      "source_clean_master": "infinite_domain:freight_depot_clean_master",
+      "size": [
+        14,
+        14,
+        20
+      ],
+      "placed_records_including_air": 3031,
+      "palette_blocks": 29,
+      "issues": []
+    },
+    "infinite_domain:industrial_process_line": {
+      "kit": "industrial",
+      "role": "sequential_factory_process",
+      "source_clean_master": "infinite_domain:create_factory_clean_master",
+      "size": [
+        20,
+        11,
+        22
+      ],
+      "placed_records_including_air": 4840,
+      "palette_blocks": 22,
+      "issues": []
+    },
+    "infinite_domain:industrial_powerhouse": {
+      "kit": "industrial",
+      "role": "utility_power_steam_controls",
+      "source_clean_master": "infinite_domain:create_factory_clean_master",
+      "size": [
+        12,
+        27,
+        16
+      ],
+      "placed_records_including_air": 3216,
+      "palette_blocks": 24,
+      "issues": []
+    }
+  }
+}

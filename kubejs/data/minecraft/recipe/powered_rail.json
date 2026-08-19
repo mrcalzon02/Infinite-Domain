@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "#":  {
+                          "item":  "quark:stick_block"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "X":  {
+                          "item":  "minecraft:gold_block"
+                      }
+            },
+    "pattern":  [
+                    "X X",
+                    "X#X",
+                    "XRX"
+                ],
+    "result":  {
+                   "count":  6,
+                   "id":  "minecraft:powered_rail"
+               }
+}

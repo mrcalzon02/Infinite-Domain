@@ -1,0 +1,215 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "               4",
+      "               4",
+      "               4",
+      "               4",
+      "               4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4"
+    ],
+    [
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4",
+      "---------------4"
+    ],
+    [
+      "  22202222022224",
+      "  2 %  2 %  2  4",
+      "  2 $ !2 $ !2  4",
+      "  2    2    2  4",
+      "  22202222022224",
+      "             224",
+      "             (!4",
+      "             224",
+      "& 22202222022224",
+      "  2    2    2  4",
+      "  2 * !2 */!2  4",
+      " ,2 +  2 +  2  4",
+      "  2    2    2  4",
+      "  22202222022224",
+      "  2    2    2  4",
+      "  2 3 .2 3 .2  4"
+    ],
+    [
+      "  22212222122224",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  22212222122224",
+      "             224",
+      "             )24",
+      "             224",
+      "' 22212222122224",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  22212222122224",
+      "  2    2    2  4",
+      "  2    2    2  4"
+    ],
+    [
+      "  22222222222224",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  22222222222224",
+      "             224",
+      "             224",
+      "             224",
+      "  22222222222224",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  22222222222224",
+      "  2    2    2  4",
+      "  2    2    2  4"
+    ],
+    [
+      "  22222222222224",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  22222222222224",
+      "             224",
+      "             224",
+      "             224",
+      "  22222222222224",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  2    2    2  4",
+      "  22222222222224",
+      "  2    2    2  4",
+      "  2    2    2  4"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:brown_bed[facing=north,occupied=false,part=foot]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:brown_bed[facing=north,occupied=false,part=head]"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:gray_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:gray_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:loom"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:oak_planks"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:quartz_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spawner",
+        "tag": {
+          "id": "minecraft:mob_spawner",
+          "Delay": 200,
+          "MinSpawnDelay": 240,
+          "MaxSpawnDelay": 720,
+          "SpawnCount": 2,
+          "MaxNearbyEntities": 6,
+          "RequiredPlayerRange": 14,
+          "SpawnRange": 4,
+          "SpawnData": {
+            "entity": {
+              "id": "the_wasteland_reworked:ghoul"
+            }
+          },
+          "SpawnPotentials": [
+            {
+              "weight": 1,
+              "data": {
+                "entity": {
+                  "id": "the_wasteland_reworked:ghoul"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:stripped_oak_wood"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:yellow_terracotta"
+      }
+    ]
+  }
+}

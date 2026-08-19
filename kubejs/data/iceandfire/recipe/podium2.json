@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "SPS",
+                    " P ",
+                    "SPS"
+                ],
+    "key":  {
+                "S":  {
+                          "item":  "minecraft:birch_slab"
+                      },
+                "P":  {
+                          "item":  "allthecompressed:birch_planks_1x"
+                      }
+            },
+    "result":  {
+                   "id":  "iceandfire:podium_birch"
+               }
+}

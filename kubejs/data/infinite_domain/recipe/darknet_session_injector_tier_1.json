@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "kubejs:darknet_temporal_core"
+    },
+    "F": {
+      "item": "ae2:fluix_crystal"
+    },
+    "G": {
+      "item": "cyberspace:graphene_coated_iron_ingot"
+    },
+    "L": {
+      "item": "ae2:logic_processor"
+    },
+    "E": {
+      "item": "ae2:energy_cell"
+    }
+  },
+  "pattern": [
+    "FLF",
+    "GCG",
+    "FEF"
+  ],
+  "result": {
+    "count": 4,
+    "id": "kubejs:darknet_session_injector_tier_1"
+  }
+}

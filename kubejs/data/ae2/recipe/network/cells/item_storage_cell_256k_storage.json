@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ODO",
+    "RCR",
+    "ODO"
+  ],
+  "key": {
+    "O": {
+      "item": "oritech:machine_core_7"
+    },
+    "D": {
+      "item": "stellaris:desh_block"
+    },
+    "R": {
+      "item": "createnuclear:reactor_controller"
+    },
+    "C": {
+      "item": "ae2:cell_component_256k"
+    }
+  },
+  "result": {
+    "id": "ae2:item_storage_cell_256k",
+    "count": 1
+  }
+}

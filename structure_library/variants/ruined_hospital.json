@@ -1,0 +1,26 @@
+{
+  "variant_id": "infinite_domain:ruined_hospital",
+  "clean_master": "infinite_domain:ruined_hospital_clean_master",
+  "damage_story": "A northeast blast tore through surgery, administration and the east ward edge, leaving a continuous inward fracture and gravity-led rubble apron while the emergency department, courtyard, services and both stair cores survived.",
+  "damage_zone": "northeast front clinical stack and outer east ward edge",
+  "environment_layer": [
+    "continuous jagged breach cut from the east facade inward",
+    "terminated slabs and partitions at the fracture boundary",
+    "irregular gravel and cracked-concrete rubble mound below the breach",
+    "intact sheltered courtyard and rear service route"
+  ],
+  "occupation_layer": [
+    "five zombie, ghoul and mutant-zombie spawners distributed by surviving department",
+    "biohazard loot retained near clinical support",
+    "residential supplies retained in a surviving ward",
+    "office data retained in upper administration"
+  ],
+  "invariants": [
+    "ambulance and public entrances survive",
+    "both complete stair stacks survive",
+    "surviving ground departments and all three upper floors remain navigable",
+    "courtyard and rear-service connections survive",
+    "damage remains localized to the declared northeast failure zone"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

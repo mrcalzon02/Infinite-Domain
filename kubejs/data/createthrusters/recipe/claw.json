@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "I I",
+                    "ICI",
+                    " A "
+                ],
+    "key":  {
+                "I":  {
+                          "item":  "allthecompressed:iron_block_3x"
+                      },
+                "C":  {
+                          "item":  "create:cogwheel"
+                      },
+                "A":  {
+                          "item":  "create:andesite_casing"
+                      }
+            },
+    "result":  {
+                   "id":  "createthrusters:claw",
+                   "count":  1
+               }
+}

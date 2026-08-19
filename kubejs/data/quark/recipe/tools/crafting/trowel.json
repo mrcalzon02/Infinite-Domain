@@ -1,0 +1,26 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "zeta:flag",
+                                    "flag":  "trowel"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "I":  {
+                          "item":  "minecraft:iron_block"
+                      },
+                "S":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    "S  ",
+                    " II"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "quark:trowel"
+               }
+}

@@ -1,0 +1,29 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "#":  {
+                          "item":  "quark:stick_block"
+                      },
+                "S":  {
+                          "tag":  "minecraft:soul_fire_base_blocks"
+                      },
+                "X":  [
+                          {
+                              "item":  "minecraft:coal_block"
+                          },
+                          {
+                              "item":  "quark:charcoal_block"
+                          }
+                      ]
+            },
+    "pattern":  [
+                    "X",
+                    "#",
+                    "S"
+                ],
+    "result":  {
+                   "count":  4,
+                   "id":  "minecraft:soul_torch"
+               }
+}

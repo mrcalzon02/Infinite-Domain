@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "G":  {
+                          "item":  "allthecompressed:glass_1x"
+                      },
+                "O":  {
+                          "item":  "allthecompressed:obsidian_1x"
+                      },
+                "S":  {
+                          "item":  "minecraft:nether_star"
+                      }
+            },
+    "pattern":  [
+                    "GGG",
+                    "GSG",
+                    "OOO"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "minecraft:beacon"
+               }
+}

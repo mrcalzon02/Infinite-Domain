@@ -1,0 +1,25 @@
+{
+  "variant_id": "infinite_domain:hydroelectric_refuge_dam",
+  "clean_master": "infinite_domain:hydroelectric_refuge_dam_clean_master",
+  "damage_story": "The dam and reservoir survived, but an eastern powerhouse roof/bay failure and a separate crest-control collapse accompanied the deaths of the refugees sheltering in both abutments.",
+  "damage_zone": "east powerhouse bay/roof and southeast crest-control corner",
+  "environment_layer": [
+    "gravity-led powerhouse concrete and gravel debris",
+    "localized control-house roof rubble on the crest",
+    "intact reservoir, dam body, spillways and three primary turbine routes",
+    "preserved abutment tunnel entrances and emergency exits"
+  ],
+  "occupation_layer": [
+    "two zombie spawners distributed between the refuge intake zones",
+    "two irradiated spawners in the powerhouse",
+    "skeletal remains distributed across triage, bunks, stores and memorial routes"
+  ],
+  "invariants": [
+    "reservoir water and reinforced dam remain intact",
+    "three powerhouse bay routes and the surviving gallery remain accessible",
+    "the western half of crest control remains usable",
+    "both refuge programs, pressure thresholds, emergency exits and ladders survive",
+    "damage remains localized to the two declared failures"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

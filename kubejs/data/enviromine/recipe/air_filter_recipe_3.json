@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "aca",
+                    "ada"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "b":  {
+                          "tag":  "minecraft:wool"
+                      },
+                "c":  {
+                          "item":  "minecraft:coal_block"
+                      },
+                "d":  {
+                          "item":  "kubejs:paper_bundle"
+                      }
+            },
+    "result":  {
+                   "id":  "enviromine:air_filter",
+                   "count":  4
+               }
+}

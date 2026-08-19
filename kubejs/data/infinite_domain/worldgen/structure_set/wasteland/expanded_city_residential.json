@@ -1,0 +1,30 @@
+{
+  "structures": [
+    {
+      "structure": "infinite_domain:wasteland/tenement_courtyard",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_rowhouse_block",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/shattered_luxury_condo",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_city_school",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_community_center",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 22,
+    "separation": 8,
+    "salt": 87130420
+  }
+}

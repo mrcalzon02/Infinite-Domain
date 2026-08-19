@@ -1,0 +1,16 @@
+{
+    "placement":  {
+                      "type":  "minecraft:concentric_rings",
+                      "count":  3,
+                      "distance":  36,
+                      "preferred_biomes":  "#spore:cold_biome",
+                      "salt":  73000036,
+                      "spread":  1
+                  },
+    "structures":  [
+                       {
+                           "structure":  "spore:mines",
+                           "weight":  1
+                       }
+                   ]
+}

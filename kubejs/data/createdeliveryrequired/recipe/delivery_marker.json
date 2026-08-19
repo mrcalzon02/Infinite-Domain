@@ -1,0 +1,29 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " P ",
+                    "FBI",
+                    " S "
+                ],
+    "key":  {
+                "B":  {
+                          "tag":  "c:plates/brass"
+                      },
+                "F":  {
+                          "item":  "minecraft:feather"
+                      },
+                "I":  {
+                          "item":  "minecraft:ink_sac"
+                      },
+                "P":  {
+                          "item":  "kubejs:paper_bundle"
+                      },
+                "S":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "result":  {
+                   "id":  "createdeliveryrequired:delivery_marker"
+               }
+}

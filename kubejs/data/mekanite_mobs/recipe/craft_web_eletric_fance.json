@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aaa",
+                    "bbb",
+                    "aaa"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:iron_block"
+                      },
+                "b":  {
+                          "item":  "mekanite_mobs:electric_web"
+                      }
+            },
+    "result":  {
+                   "id":  "mekanite_mobs:electric_web_fence",
+                   "count":  3
+               }
+}

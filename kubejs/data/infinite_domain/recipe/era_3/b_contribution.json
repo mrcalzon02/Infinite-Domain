@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "tfmg:rubber_sheet"
+    },
+    "B": {
+      "item": "createdieselgenerators:plant_oil_bucket"
+    },
+    "C": {
+      "item": "minecraft:sugar"
+    },
+    "D": {
+      "item": "tfmg:plastic_sheet"
+    },
+    "E": {
+      "item": "minecraft:slime_ball"
+    }
+  },
+  "result": {
+    "id": "kubejs:era3_farming_contribution",
+    "count": 1
+  }
+}

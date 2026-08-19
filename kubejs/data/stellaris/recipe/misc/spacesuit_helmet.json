@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ATA",
+    "RSR",
+    " O "
+  ],
+  "key": {
+    "A": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "T": {
+      "item": "kubejs:thermal_shield_tile"
+    },
+    "R": {
+      "item": "tfmg:rubber_sheet"
+    },
+    "S": {
+      "item": "kubejs:sensor_package"
+    },
+    "O": {
+      "item": "kubejs:oxygen_regulator"
+    }
+  },
+  "result": {
+    "id": "stellaris:space_suit_helmet",
+    "count": 1
+  }
+}

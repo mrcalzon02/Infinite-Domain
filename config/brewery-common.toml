@@ -1,0 +1,41 @@
+[alcohol]
+	#BAC gained from drinking one Beer Mug.
+	# Default: 0.05
+	# Range: 0.0 ~ 10.0
+	beerBac = 0.05
+	#BAC gained from drinking one Cider Mug.
+	# Default: 0.05
+	# Range: 0.0 ~ 10.0
+	ciderBac = 0.05
+	#BAC gained from drinking one Mead Mug.
+	# Default: 0.05
+	# Range: 0.0 ~ 10.0
+	meadBac = 0.05
+	#BAC gained from drinking one Wine Glass.
+	# Default: 0.1
+	# Range: 0.0 ~ 10.0
+	wineGlassBac = 0.1
+	#BAC gained from drinking one Wine Bottle.
+	# Default: 0.2
+	# Range: 0.0 ~ 10.0
+	wineBottleBac = 0.2
+	#BAC depleted per second.
+	# Default: 4.2E-4
+	# Range: 0.0 ~ 1.0
+	bacDecayPerSecond = 4.2E-4
+	#BAC required before Slowness is applied.
+	# Default: 0.2
+	# Range: 0.0 ~ 10.0
+	slownessThreshold = 0.2
+	#BAC required before Nausea is applied.
+	# Default: 0.4
+	# Range: 0.0 ~ 10.0
+	nauseaThreshold = 0.4
+	#BAC required before Darkness is applied.
+	# Default: 0.6
+	# Range: 0.0 ~ 10.0
+	darknessThreshold = 0.6
+	#BAC required before Poison is applied.
+	# Default: 0.8
+	# Range: 0.0 ~ 10.0
+	poisonThreshold = 0.8

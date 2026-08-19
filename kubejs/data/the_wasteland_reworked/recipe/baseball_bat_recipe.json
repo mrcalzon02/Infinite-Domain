@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " aa",
+                    " aa",
+                    "b  "
+                ],
+    "key":  {
+                "a":  {
+                          "tag":  "minecraft:planks"
+                      },
+                "b":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "result":  {
+                   "id":  "the_wasteland_reworked:baseball_bat",
+                   "count":  1
+               }
+}

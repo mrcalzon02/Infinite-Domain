@@ -1,0 +1,20 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  {
+                          "item":  "allthecompressed:smooth_stone_1x"
+                      },
+                "B":  {
+                          "tag":  "minecraft:planks"
+                      }
+            },
+    "pattern":  [
+                    "AA",
+                    "BB"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "someassemblyrequired:sandwiching_station"
+               }
+}

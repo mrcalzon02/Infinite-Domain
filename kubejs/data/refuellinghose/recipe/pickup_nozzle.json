@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " C ",
+                    "IFI",
+                    " N "
+                ],
+    "key":  {
+                "C":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "F":  {
+                          "item":  "create:fluid_pipe"
+                      },
+                "N":  {
+                          "item":  "minecraft:iron_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "refuellinghose:pickup_nozzle",
+                   "count":  1
+               }
+}

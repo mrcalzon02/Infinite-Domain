@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "QDQ",
+    "RPR",
+    "QDQ"
+  ],
+  "key": {
+    "Q": {
+      "item": "ae2:quantum_ring"
+    },
+    "D": {
+      "item": "stellaris:desh_block"
+    },
+    "R": {
+      "item": "createnuclear:reactor_controller"
+    },
+    "P": {
+      "item": "oritech:processing_unit"
+    }
+  },
+  "result": {
+    "id": "oritech:accelerator_controller",
+    "count": 1
+  }
+}

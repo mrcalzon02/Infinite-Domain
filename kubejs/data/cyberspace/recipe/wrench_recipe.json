@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    " a ",
+                    " ba",
+                    "c  "
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:iron_ingot"
+                      },
+                "b":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "c":  {
+                          "item":  "cyberspace:graphene_coated_iron_ingot"
+                      }
+            },
+    "result":  {
+                   "id":  "cyberspace:wrench",
+                   "count":  1
+               }
+}

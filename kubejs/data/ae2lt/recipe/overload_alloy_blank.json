@@ -1,0 +1,39 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "ABC",
+                    "DEF",
+                    "GHA"
+                ],
+    "key":  {
+                "A":  {
+                          "item":  "minecraft:ender_eye"
+                      },
+                "B":  {
+                          "item":  "minecraft:amethyst_shard"
+                      },
+                "C":  {
+                          "item":  "minecraft:diamond_block"
+                      },
+                "D":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "E":  {
+                          "item":  "allthecompressed:iron_block_3x"
+                      },
+                "F":  {
+                          "item":  "minecraft:gold_block"
+                      },
+                "G":  {
+                          "item":  "minecraft:diamond_block"
+                      },
+                "H":  {
+                          "item":  "minecraft:amethyst_shard"
+                      }
+            },
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2lt:overload_alloy_blank"
+               }
+}

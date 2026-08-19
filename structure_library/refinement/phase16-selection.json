@@ -1,0 +1,1262 @@
+{
+  "format_version": 1,
+  "purpose": "Phase 16 retention/module selection. This is not production approval.",
+  "source_catalog": "structure_library/reviews/creativelands_cc0/catalog.json",
+  "existing_inbuilt_rebuild_queue": "structure_library/rebuild-phases.json",
+  "queue_rule": "External references inform but do not displace the inbuilt gas-station/freight-depot rebuild queue.",
+  "counts": {
+    "module_quarry": 33,
+    "reference_only": 45
+  },
+  "production_approved": 0,
+  "selections": [
+    {
+      "structure_id": "creativelands_cc0:decorations/large_rocks/large_rock__1",
+      "source_category": "decorations",
+      "dimensions": [
+        8,
+        4,
+        7
+      ],
+      "blocks": 97,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/large_rocks/large_rock__2",
+      "source_category": "decorations",
+      "dimensions": [
+        7,
+        6,
+        7
+      ],
+      "blocks": 76,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/large_rocks/large_rock__3",
+      "source_category": "decorations",
+      "dimensions": [
+        8,
+        4,
+        7
+      ],
+      "blocks": 91,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/large_rocks/large_rock__4",
+      "source_category": "decorations",
+      "dimensions": [
+        8,
+        6,
+        8
+      ],
+      "blocks": 91,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/large_rocks/large_rock__5",
+      "source_category": "decorations",
+      "dimensions": [
+        7,
+        6,
+        7
+      ],
+      "blocks": 89,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/large_rocks/large_rock__6",
+      "source_category": "decorations",
+      "dimensions": [
+        7,
+        3,
+        7
+      ],
+      "blocks": 71,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__1",
+      "source_category": "decorations",
+      "dimensions": [
+        5,
+        4,
+        6
+      ],
+      "blocks": 46,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__10",
+      "source_category": "decorations",
+      "dimensions": [
+        4,
+        5,
+        4
+      ],
+      "blocks": 33,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__11",
+      "source_category": "decorations",
+      "dimensions": [
+        4,
+        4,
+        4
+      ],
+      "blocks": 36,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__12",
+      "source_category": "decorations",
+      "dimensions": [
+        4,
+        3,
+        4
+      ],
+      "blocks": 27,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__2",
+      "source_category": "decorations",
+      "dimensions": [
+        5,
+        6,
+        6
+      ],
+      "blocks": 53,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__3",
+      "source_category": "decorations",
+      "dimensions": [
+        6,
+        5,
+        6
+      ],
+      "blocks": 64,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__4",
+      "source_category": "decorations",
+      "dimensions": [
+        6,
+        5,
+        6
+      ],
+      "blocks": 70,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__5",
+      "source_category": "decorations",
+      "dimensions": [
+        6,
+        5,
+        6
+      ],
+      "blocks": 76,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__6",
+      "source_category": "decorations",
+      "dimensions": [
+        6,
+        3,
+        6
+      ],
+      "blocks": 46,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__7",
+      "source_category": "decorations",
+      "dimensions": [
+        3,
+        3,
+        3
+      ],
+      "blocks": 21,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__8",
+      "source_category": "decorations",
+      "dimensions": [
+        4,
+        4,
+        3
+      ],
+      "blocks": 27,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/medium_rocks/medium_rock__9",
+      "source_category": "decorations",
+      "dimensions": [
+        4,
+        4,
+        4
+      ],
+      "blocks": 36,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/small_rocks/small_rock__1",
+      "source_category": "decorations",
+      "dimensions": [
+        2,
+        5,
+        2
+      ],
+      "blocks": 12,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/small_rocks/small_rock__2",
+      "source_category": "decorations",
+      "dimensions": [
+        2,
+        3,
+        2
+      ],
+      "blocks": 7,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/small_rocks/small_rock__3",
+      "source_category": "decorations",
+      "dimensions": [
+        2,
+        3,
+        2
+      ],
+      "blocks": 7,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/small_rocks/small_rock__4",
+      "source_category": "decorations",
+      "dimensions": [
+        2,
+        3,
+        2
+      ],
+      "blocks": 6,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/small_rocks/small_rock__5",
+      "source_category": "decorations",
+      "dimensions": [
+        2,
+        3,
+        2
+      ],
+      "blocks": 8,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:decorations/small_rocks/small_rock__6",
+      "source_category": "decorations",
+      "dimensions": [
+        2,
+        3,
+        2
+      ],
+      "blocks": 8,
+      "disposition": "module_quarry",
+      "priority": 4,
+      "reason": "terrain-detail geometry; classify footprint and terrain connector before module admission",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruins/ruin1",
+      "source_category": "ruins",
+      "dimensions": [
+        9,
+        7,
+        9
+      ],
+      "blocks": 329,
+      "disposition": "module_quarry",
+      "priority": 5,
+      "reason": "masonry damage and overgrowth vocabulary; do not treat as a complete building",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruins/ruin2",
+      "source_category": "ruins",
+      "dimensions": [
+        8,
+        7,
+        8
+      ],
+      "blocks": 245,
+      "disposition": "module_quarry",
+      "priority": 5,
+      "reason": "masonry damage and overgrowth vocabulary; do not treat as a complete building",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruins/ruin3",
+      "source_category": "ruins",
+      "dimensions": [
+        11,
+        10,
+        12
+      ],
+      "blocks": 799,
+      "disposition": "module_quarry",
+      "priority": 5,
+      "reason": "masonry damage and overgrowth vocabulary; do not treat as a complete building",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruins/ruin4",
+      "source_category": "ruins",
+      "dimensions": [
+        10,
+        14,
+        12
+      ],
+      "blocks": 751,
+      "disposition": "module_quarry",
+      "priority": 5,
+      "reason": "masonry damage and overgrowth vocabulary; do not treat as a complete building",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruins/ruin5",
+      "source_category": "ruins",
+      "dimensions": [
+        13,
+        23,
+        13
+      ],
+      "blocks": 814,
+      "disposition": "module_quarry",
+      "priority": 5,
+      "reason": "masonry damage and overgrowth vocabulary; do not treat as a complete building",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruins/ruin6",
+      "source_category": "ruins",
+      "dimensions": [
+        15,
+        32,
+        11
+      ],
+      "blocks": 2834,
+      "disposition": "module_quarry",
+      "priority": 5,
+      "reason": "masonry damage and overgrowth vocabulary; do not treat as a complete building",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruins/ruinbush1",
+      "source_category": "ruins",
+      "dimensions": [
+        6,
+        3,
+        5
+      ],
+      "blocks": 24,
+      "disposition": "module_quarry",
+      "priority": 5,
+      "reason": "masonry damage and overgrowth vocabulary; do not treat as a complete building",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruins/ruinbush2",
+      "source_category": "ruins",
+      "dimensions": [
+        4,
+        2,
+        4
+      ],
+      "blocks": 13,
+      "disposition": "module_quarry",
+      "priority": 5,
+      "reason": "masonry damage and overgrowth vocabulary; do not treat as a complete building",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruins/ruinlamp",
+      "source_category": "ruins",
+      "dimensions": [
+        3,
+        7,
+        3
+      ],
+      "blocks": 27,
+      "disposition": "module_quarry",
+      "priority": 5,
+      "reason": "masonry damage and overgrowth vocabulary; do not treat as a complete building",
+      "normalization_status": "not_scheduled",
+      "module_status": "candidate_not_extracted",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:houses/mansion",
+      "source_category": "houses",
+      "dimensions": [
+        60,
+        35,
+        79
+      ],
+      "blocks": 156465,
+      "disposition": "reference_only",
+      "priority": 90,
+      "reason": "layout reference only: useful interior zoning, but not aligned enough with the wasteland urban/industrial program to justify normalization",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:houses/village_house_desert",
+      "source_category": "houses",
+      "dimensions": [
+        14,
+        10,
+        11
+      ],
+      "blocks": 1511,
+      "disposition": "reference_only",
+      "priority": 91,
+      "reason": "generic residential reference with insufficient value to displace purpose-built inbuilt rebuilding",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:houses/village_house_oak1",
+      "source_category": "houses",
+      "dimensions": [
+        15,
+        12,
+        11
+      ],
+      "blocks": 1886,
+      "disposition": "reference_only",
+      "priority": 91,
+      "reason": "generic residential reference with insufficient value to displace purpose-built inbuilt rebuilding",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:houses/village_house_oak2",
+      "source_category": "houses",
+      "dimensions": [
+        15,
+        12,
+        11
+      ],
+      "blocks": 1886,
+      "disposition": "reference_only",
+      "priority": 91,
+      "reason": "generic residential reference with insufficient value to displace purpose-built inbuilt rebuilding",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:houses/village_house_oak3",
+      "source_category": "houses",
+      "dimensions": [
+        15,
+        12,
+        11
+      ],
+      "blocks": 1886,
+      "disposition": "reference_only",
+      "priority": 91,
+      "reason": "generic residential reference with insufficient value to displace purpose-built inbuilt rebuilding",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x1/plains_1x1_1",
+      "source_category": "structures/village",
+      "dimensions": [
+        9,
+        9,
+        9
+      ],
+      "blocks": 636,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x1/plains_1x1_2",
+      "source_category": "structures/village",
+      "dimensions": [
+        9,
+        10,
+        9
+      ],
+      "blocks": 684,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x1/plains_1x1_3",
+      "source_category": "structures/village",
+      "dimensions": [
+        9,
+        9,
+        9
+      ],
+      "blocks": 603,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x1/plains_1x1_4",
+      "source_category": "structures/village",
+      "dimensions": [
+        9,
+        10,
+        9
+      ],
+      "blocks": 684,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x1/plains_1x1_5",
+      "source_category": "structures/village",
+      "dimensions": [
+        9,
+        11,
+        9
+      ],
+      "blocks": 781,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x1/plains_1x1_6",
+      "source_category": "structures/village",
+      "dimensions": [
+        9,
+        9,
+        9
+      ],
+      "blocks": 603,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x1/plains_1x1_7",
+      "source_category": "structures/village",
+      "dimensions": [
+        9,
+        9,
+        9
+      ],
+      "blocks": 603,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x1/plains_1x1_8",
+      "source_category": "structures/village",
+      "dimensions": [
+        9,
+        8,
+        9
+      ],
+      "blocks": 522,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x2/plains_1x2_1",
+      "source_category": "structures/village",
+      "dimensions": [
+        17,
+        15,
+        9
+      ],
+      "blocks": 2129,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x2/plains_1x2_2",
+      "source_category": "structures/village",
+      "dimensions": [
+        17,
+        23,
+        9
+      ],
+      "blocks": 3353,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x2/plains_1x2_3",
+      "source_category": "structures/village",
+      "dimensions": [
+        16,
+        8,
+        9
+      ],
+      "blocks": 998,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/1x2/plains_1x2_4",
+      "source_category": "structures/village",
+      "dimensions": [
+        17,
+        12,
+        9
+      ],
+      "blocks": 1746,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/2x1/plains_2x1_1",
+      "source_category": "structures/village",
+      "dimensions": [
+        9,
+        13,
+        17
+      ],
+      "blocks": 1764,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/2x1/plains_2x1_2",
+      "source_category": "structures/village",
+      "dimensions": [
+        10,
+        10,
+        16
+      ],
+      "blocks": 1317,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/houses/2x1/plains_2x1_3",
+      "source_category": "structures/village",
+      "dimensions": [
+        10,
+        12,
+        17
+      ],
+      "blocks": 1731,
+      "disposition": "reference_only",
+      "priority": 92,
+      "reason": "generic village shell; retain only as low-priority reference rather than normalization input",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/giant_portal_1",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        11,
+        17,
+        16
+      ],
+      "blocks": 450,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/giant_portal_2",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        11,
+        16,
+        16
+      ],
+      "blocks": 418,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/giant_portal_3",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        16,
+        16,
+        16
+      ],
+      "blocks": 513,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/portal_10",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        12,
+        6,
+        10
+      ],
+      "blocks": 179,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/portal_2",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        9,
+        12,
+        9
+      ],
+      "blocks": 207,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/portal_3",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        8,
+        8,
+        9
+      ],
+      "blocks": 199,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/portal_4",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        8,
+        7,
+        9
+      ],
+      "blocks": 197,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/portal_5",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        10,
+        9,
+        7
+      ],
+      "blocks": 213,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/portal_6",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        5,
+        7,
+        7
+      ],
+      "blocks": 64,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/portal_7",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        9,
+        7,
+        9
+      ],
+      "blocks": 132,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/portal_8",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        14,
+        9,
+        9
+      ],
+      "blocks": 217,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:ruined_portal/portal_9",
+      "source_category": "ruined_portal",
+      "dimensions": [
+        10,
+        8,
+        9
+      ],
+      "blocks": 90,
+      "disposition": "reference_only",
+      "priority": 96,
+      "reason": "Nether-specific geometry does not justify a module-extraction pass for the wasteland program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/swamp/swamp_1",
+      "source_category": "structures/swamp",
+      "dimensions": [
+        12,
+        15,
+        12
+      ],
+      "blocks": 587,
+      "disposition": "reference_only",
+      "priority": 97,
+      "reason": "generic stilt geometry offers insufficient value for purpose-specific rebuilding",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/swamp/swamp_2",
+      "source_category": "structures/swamp",
+      "dimensions": [
+        11,
+        15,
+        11
+      ],
+      "blocks": 535,
+      "disposition": "reference_only",
+      "priority": 97,
+      "reason": "generic stilt geometry offers insufficient value for purpose-specific rebuilding",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/swamp/swamp_3",
+      "source_category": "structures/swamp",
+      "dimensions": [
+        11,
+        14,
+        12
+      ],
+      "blocks": 443,
+      "disposition": "reference_only",
+      "priority": 97,
+      "reason": "generic stilt geometry offers insufficient value for purpose-specific rebuilding",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/desert",
+      "source_category": "structures",
+      "dimensions": [
+        27,
+        34,
+        27
+      ],
+      "blocks": 7929,
+      "disposition": "reference_only",
+      "priority": 99,
+      "reason": "vanilla-fantasy, monolithic, connector-only or otherwise outside the wasteland architectural program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/dungeon/dungeon1",
+      "source_category": "structures/dungeon",
+      "dimensions": [
+        13,
+        7,
+        13
+      ],
+      "blocks": 1139,
+      "disposition": "reference_only",
+      "priority": 99,
+      "reason": "vanilla-fantasy, monolithic, connector-only or otherwise outside the wasteland architectural program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/dungeon/dungeon2",
+      "source_category": "structures/dungeon",
+      "dimensions": [
+        13,
+        7,
+        13
+      ],
+      "blocks": 1139,
+      "disposition": "reference_only",
+      "priority": 99,
+      "reason": "vanilla-fantasy, monolithic, connector-only or otherwise outside the wasteland architectural program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/dungeon/dungeon3",
+      "source_category": "structures/dungeon",
+      "dimensions": [
+        13,
+        7,
+        13
+      ],
+      "blocks": 1139,
+      "disposition": "reference_only",
+      "priority": 99,
+      "reason": "vanilla-fantasy, monolithic, connector-only or otherwise outside the wasteland architectural program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/igloo",
+      "source_category": "structures",
+      "dimensions": [
+        9,
+        28,
+        12
+      ],
+      "blocks": 1128,
+      "disposition": "reference_only",
+      "priority": 99,
+      "reason": "vanilla-fantasy, monolithic, connector-only or otherwise outside the wasteland architectural program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/jungle1",
+      "source_category": "structures",
+      "dimensions": [
+        23,
+        23,
+        27
+      ],
+      "blocks": 14283,
+      "disposition": "reference_only",
+      "priority": 99,
+      "reason": "vanilla-fantasy, monolithic, connector-only or otherwise outside the wasteland architectural program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/monument",
+      "source_category": "structures",
+      "dimensions": [
+        63,
+        27,
+        60
+      ],
+      "blocks": 30125,
+      "disposition": "reference_only",
+      "priority": 99,
+      "reason": "vanilla-fantasy, monolithic, connector-only or otherwise outside the wasteland architectural program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/outpost",
+      "source_category": "structures",
+      "dimensions": [
+        21,
+        31,
+        21
+      ],
+      "blocks": 13591,
+      "disposition": "reference_only",
+      "priority": 99,
+      "reason": "vanilla-fantasy, monolithic, connector-only or otherwise outside the wasteland architectural program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/stronghold",
+      "source_category": "structures",
+      "dimensions": [
+        26,
+        6,
+        17
+      ],
+      "blocks": 2531,
+      "disposition": "reference_only",
+      "priority": 99,
+      "reason": "vanilla-fantasy, monolithic, connector-only or otherwise outside the wasteland architectural program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    },
+    {
+      "structure_id": "creativelands_cc0:structures/village/village2",
+      "source_category": "structures/village",
+      "dimensions": [
+        6,
+        7,
+        7
+      ],
+      "blocks": 171,
+      "disposition": "reference_only",
+      "priority": 99,
+      "reason": "vanilla-fantasy, monolithic, connector-only or otherwise outside the wasteland architectural program",
+      "normalization_status": "not_scheduled",
+      "module_status": "not_applicable",
+      "production_approved": false
+    }
+  ]
+}

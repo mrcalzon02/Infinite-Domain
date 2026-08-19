@@ -1,0 +1,48 @@
+{
+  "structure_id": "infinite_domain:trade_outpost_clean_master",
+  "archetype": "palisaded caravan trade outpost with market, lodging and stocked paddocks",
+  "orientation": {
+    "road_and_wagon_gate": "north",
+    "guard_towers": "northwest and northeast",
+    "market_stalls": "west and east of the central service spine",
+    "trade_lodge": "center",
+    "well_and_bunkhouse": "south-central",
+    "livestock_paddocks": "southwest and southeast"
+  },
+  "settlement_program": [
+    "octagonal full-log palisade with a five-wide wagon gate and overhead guard bridge",
+    "two furnished guard towers with bell, map station, stores and defensive cache",
+    "internal perimeter path, cross-market lane and north-south service spine",
+    "four inward-facing canvas stalls for provisions, medicine, repair goods and livestock supplies",
+    "central trade lodge with public hall, records office, secure stores and workshop",
+    "resident bunkhouse with sleeping, mess and supply functions",
+    "working stone well, refuse point and service storage",
+    "two independently gated full-log paddocks with feed, water and mixed livestock"
+  ],
+  "circulation": [
+    "road through the guarded wagon gate to the market cross-lane",
+    "market lane connects all four stalls and the central lodge entrance",
+    "lodge public hall connects controlled rear rooms and rear service exit",
+    "service spine joins lodge, well, bunkhouse and both paddock gates",
+    "internal ring path provides a secondary route around the whole settlement"
+  ],
+  "damage_constraints": [
+    "confine the primary palisade breach to the east-southeast perimeter",
+    "confine secondary canopy failure to the southeast market stall",
+    "preserve the main gate, lodge, bunkhouse, well and both animal enclosures",
+    "preserve all declared settlement routes and mixed livestock",
+    "derive the inhabited ruin from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the palisade and gatehouse read as a coherent defensible settlement",
+      "each market stall communicates a distinct trade purpose",
+      "lodge, guard and bunkhouse interiors work at player scale",
+      "both paddocks contain animals after template placement",
+      "the damaged stall and perimeter breach preserve the intended circulation",
+      "terrain feathering seats the road, palisade and paddock edges naturally"
+    ]
+  }
+}

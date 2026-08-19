@@ -1,0 +1,19 @@
+﻿{
+    "type":  "create:crushing",
+    "ingredients":  [
+                        {
+                            "item":  "oritech:uranium_crystal"
+                        }
+                    ],
+    "processing_time":  250,
+    "results":  [
+                    {
+                        "count":  5,
+                        "id":  "create:crushed_raw_uranium"
+                    },
+                    {
+                        "chance":  0.1,
+                        "id":  "oritech:small_plutonium_dust"
+                    }
+                ]
+}

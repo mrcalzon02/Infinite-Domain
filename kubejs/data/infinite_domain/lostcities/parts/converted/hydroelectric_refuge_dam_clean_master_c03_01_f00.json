@@ -1,0 +1,198 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000",
+      "0000000000000000"
+    ],
+    [
+      "6               ",
+      "6               ",
+      "6000400040000000",
+      "6040004000000000",
+      "6000400000000000",
+      "6040000000000000",
+      "6000000000000004",
+      "6000000000000400",
+      "6000000000040004",
+      "6000000004000400",
+      "0000000400040004",
+      "0000040004000400",
+      "0004000400040000",
+      "0400040004000000",
+      "0004000400000000",
+      "0400040000000000"
+    ],
+    [
+      "!               ",
+      "!    11111      ",
+      "!000411111000000",
+      "!040011111000000",
+      "&000411111000000",
+      "!040011111000000",
+      "!000011111000004",
+      "!000011111000400",
+      "!000011111040004",
+      "1111111111111110",
+      "1111111111111114",
+      "1111111111111110",
+      "1111111111111110",
+      "1111111111111110",
+      "1111111111111110",
+      "1111111111111110"
+    ],
+    [
+      "!               ",
+      "!               ",
+      "!0004     000000",
+      "!0400 ()  000000",
+      "'0004     000000",
+      "!0400     000000",
+      "!0000     000004",
+      "!00003,-33000400",
+      "!0000     040004",
+      "               0",
+      "               4",
+      " 5%        2 $ 0",
+      "               0",
+      "               0",
+      "               0",
+      "               0"
+    ],
+    [
+      "!               ",
+      "!               ",
+      "!0004     000000",
+      "!0400 *+  000000",
+      "!0004     000000",
+      "!0400     000000",
+      "!0000     000004",
+      "!00003./33000400",
+      "!0000     040004",
+      "               0",
+      "               4",
+      "               0",
+      "               0",
+      "               0",
+      "               0",
+      "               0"
+    ],
+    [
+      "!               ",
+      "!               ",
+      "!0004     000000",
+      "!0400     000000",
+      "!0004     000000",
+      "!0400     000000",
+      "!0000     000004",
+      "!000033333000400",
+      "!0000     040004",
+      "               0",
+      "               4",
+      "               0",
+      "               0",
+      "               0",
+      "               0",
+      "               0"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:concrete_brick_cracked"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:crafting_table"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:dark_oak_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:deepslate"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:polished_deepslate"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:smoker[facing=south,lit=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:stripped_dark_oak_log[axis=y]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:tuff"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:white_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "6",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

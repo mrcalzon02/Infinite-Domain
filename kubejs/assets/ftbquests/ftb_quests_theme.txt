@@ -1,0 +1,99 @@
+[*]
+# Infinite Domain field-terminal shell. The background artwork is deliberately
+# darkest in the center so quest nodes and Charles's records remain readable.
+background: infinite_domain:textures/gui/quests/terminal_background.png; color=#FFFFFFFF
+chapter_panel_background: color:#F2030805; border=#FF1E713B; padding=1
+key_reference_background: color:#F8050C08; border=#FF2A914D; padding=2
+selected_chapter_highlight_1: #A62D9C50
+selected_chapter_highlight_2: #5C67F58A
+
+text_color: #67F58A
+hover_text_color: #B6FFC8
+disabled_text_color: #477554
+
+widget_border: #1E713B
+widget_background: #E6050C08
+symbol_in: #67F58A
+symbol_out: #163E25
+
+button: color:#E6050C08; border=#FF1E713B; padding=1
+panel: color:#F2030805; border=#FF164B2A; padding=1
+disabled_button: color:#EE030604; border=#FF183923; padding=1
+hover_button: color:#F20B1A10; border=#FF67F58A; padding=1
+context_menu: color:#FA030806; border=#FF2A914D; border_round_edges=true; padding=2
+scroll_bar_background: color:#EE020503; border=#FF164B2A
+scroll_bar: color:#FF164B2A; border=#FF67F58A; padding=1
+container_slot: color:#E6030805; border=#FF1E713B; padding=-1
+text_box: color:#FF010302; border=#FF2A914D; padding=2
+
+check_icon: builtin
+add_icon: builtin
+alert_icon: ftbquests:textures/gui/alert.png; tint=#FFFFC857
+support_icon: ftblibrary:textures/icons/support.png; tint=#FF67F58A
+wiki_icon: ftbquests:textures/gui/info.png; tint=#FF67F58A
+wiki_url: -
+pin_icon_on: ftbquests:textures/gui/pin.png; tint=#FFFFC857
+pin_icon_off: ftbquests:textures/gui/pin.png; tint=#FF477554
+editor_icon_on: ftbquests:textures/gui/editor.png; tint=#FF67F58A
+editor_icon_off: ftbquests:textures/gui/editor_white.png; tint=#FF477554
+hidden_icon: ftbquests:textures/gui/hidden.png; tint=#FF477554
+link_icon: ftbquests:textures/gui/link.png; tint=#FF67F58A
+save_icon: ftbquests:textures/gui/save.png; tint=#FF67F58A
+settings_icon: ftbquests:textures/gui/settings.png; tint=#FF67F58A
+prefs_icon: ftblibrary:icons/player; tint=#FF67F58A
+close_icon: ftbquests:textures/gui/close.png; tint=#FFFF595E
+emergency_items_icon: ftbquests:textures/gui/emergency_items.png; tint=#FFFFC857
+guide_icon: ftbquests:textures/gui/guide.png; tint=#FF67F58A
+modpack_icon: ftbquests:textures/item/book.png; tint=#FF67F58A
+reward_table_icon: ftblibrary:icons/money_bag; tint=#FFFFC857
+shop_icon: ftbquests:textures/gui/shop.png; tint=#FFFFC857
+collect_rewards_icon: ftbquests:textures/gui/collect_rewards.png; tint=#FFFFC857
+lock_icon: ftbquests:textures/gui/quest_locked.png; tint=#FF477554
+delete_icon: ftblibrary:icons/remove; tint=#FFFF595E
+reload_icon: ftblibrary:icons/refresh; tint=#FF67F58A
+download_icon: ftblibrary:icons/down; tint=#FF67F58A
+edit_icon: ftblibrary:icons/settings; tint=#FF67F58A
+move_up_icon: ftblibrary:icons/up; tint=#FF67F58A
+move_down_icon: ftblibrary:icons/down; tint=#FF67F58A
+left_arrow: ftblibrary:icons/left; tint=#FF67F58A
+right_arrow: ftblibrary:icons/right; tint=#FF67F58A
+
+full_screen_quest: 0
+tasks_text_color: #61D9FF
+rewards_text_color: #FFC857
+quest_view_background: color:#FA020604; border=#FF2A914D; border_round_edges=true; padding=2
+quest_view_border: #2A914D
+quest_view_title: #B6FFC8
+quest_completed_color: #D453FF78
+quest_started_color: #D461D9FF
+quest_not_started_color: #C867F58A
+quest_locked_color: #B3477554
+dependency_line_texture: ftbquests:textures/gui/dependency.png
+dependency_line_completed_color: #53FF78
+dependency_line_uncompleted_color: #477554
+dependency_line_unavailable_color: #493A27
+dependency_line_requires_color: #61D9FF
+dependency_line_required_for_color: #FFC857
+dependency_line_selected_speed: 1.0
+dependency_line_unselected_speed: 0.0
+dependency_line_thickness: 0.20
+quest_spacing: 1.0
+pinned_quest_size: 0.75
+
+checkmark_task_active: ftblibrary:icons/accept; tint=#FF67F58A
+checkmark_task_inactive: ftblibrary:icons/accept_gray; tint=#FF477554
+
+[#terminal_warning]
+quest_not_started_color: #E0FFC857
+quest_started_color: #F0FFD978
+dependency_line_uncompleted_color: #B88A38
+
+[#terminal_critical]
+quest_not_started_color: #E0FF595E
+quest_started_color: #F0FF7B7F
+dependency_line_uncompleted_color: #A83B40
+
+[#terminal_classified]
+quest_not_started_color: #C9BE6CFF
+quest_started_color: #E1D39BFF
+dependency_line_uncompleted_color: #7546A8

@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "a":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "b":  {
+                          "item":  "ae2:fluix_glass_cable"
+                      },
+                "c":  {
+                          "item":  "ae2:quartz_glass"
+                      },
+                "d":  {
+                          "item":  "allthecompressed:fluix_block_1x"
+                      }
+            },
+    "pattern":  [
+                    "aba",
+                    "cdc",
+                    "aba"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "ae2:growth_accelerator"
+               }
+}

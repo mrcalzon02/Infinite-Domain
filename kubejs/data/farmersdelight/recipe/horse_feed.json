@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "ingredients":  [
+                        [
+                            {
+                                "item":  "allthecompressed:hay_block_1x"
+                            },
+                            {
+                                "item":  "farmersdelight:rice_bale"
+                            }
+                        ],
+                        {
+                            "item":  "minecraft:apple"
+                        },
+                        {
+                            "item":  "minecraft:apple"
+                        },
+                        {
+                            "item":  "minecraft:golden_carrot"
+                        }
+                    ],
+    "result":  {
+                   "count":  1,
+                   "id":  "farmersdelight:horse_feed"
+               }
+}

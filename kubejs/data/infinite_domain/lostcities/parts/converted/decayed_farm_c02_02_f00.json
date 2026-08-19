@@ -1,0 +1,174 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "&&&&&)&&&&&&&')&",
+      ")&&&&&&&)&&&&&&&",
+      "&&')&&&&&&&)&&&&",
+      "&&&&&')&&&&&&&)&",
+      ")&&&&&&&')&&&&&&",
+      "&&&)&&&&&&&')&&&",
+      "&&&&&&)&&&&&&&')",
+      "')&&&&&&&)&&&&&&",
+      "&&&')&&&&&&&)&&&",
+      "&&&&&&')&&&&&&&)",
+      "&)&&&&&&&')&&&&&",
+      "&&&&)&&&&&&&')&&",
+      "&&&&&&&)&&&&&&&'",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "--------------- ",
+      "--------------- ",
+      "--------------- ",
+      "--------------- ",
+      "--------------- ",
+      "--------------- ",
+      "--------------- ",
+      "--------------- ",
+      "--------------- ",
+      "--------------- ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "          .   . ",
+      "          .   . ",
+      " * (      . % . ",
+      "          .   . ",
+      "          +   . ",
+      "  /       .   + ",
+      " $        .   . ",
+      "          .   . ",
+      "          .   . ",
+      "............... ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          ,   . ",
+      "          .   , ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "............!!. ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "............!!. ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "          .   . ",
+      "............... ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:metal_barrel"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:chest[facing=west,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_industrial"
+        }
+      },
+      {
+        "char": "&",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:grindstone[face=floor,facing=north]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:podzol"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:smithing_table"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:stone_bricks"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "/",
+        "block": "wastelands:scrap_pile"
+      }
+    ]
+  }
+}

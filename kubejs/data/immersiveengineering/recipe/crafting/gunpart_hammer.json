@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "f":  {
+                          "item":  "allthecompressed:flint_block"
+                      },
+                "i":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "s":  {
+                          "tag":  "c:rods/steel"
+                      }
+            },
+    "pattern":  [
+                    "iif",
+                    " s "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "immersiveengineering:gunpart_hammer"
+               }
+}

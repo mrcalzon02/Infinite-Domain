@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "aba",
+                    "cdc",
+                    "ece"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "b":  {
+                          "item":  "enviromine:hard_hat_helmet"
+                      },
+                "c":  {
+                          "item":  "minecraft:diamond_block"
+                      },
+                "d":  {
+                          "item":  "minecraft:glass_pane"
+                      },
+                "e":  {
+                          "item":  "enviromine:air_filter"
+                      }
+            },
+    "result":  {
+                   "id":  "enviromine:gas_mask_advanced_helmet",
+                   "count":  1
+               }
+}

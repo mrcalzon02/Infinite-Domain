@@ -1,0 +1,54 @@
+{
+  "installedBuild": {
+    "mod": "createnuclear",
+    "version": "1.3.2-beta.3",
+    "minecraft": "1.21.1",
+    "reactorSlots": 57
+  },
+  "reactorOutput": {
+    "originalStressCapacityPerRpm": 10240.0,
+    "stressCapacityPerRpm": 1024.0,
+    "maximumOutputScale": 0.1,
+    "preserveHeatAndRpm": true
+  },
+  "era": 6,
+  "organicInputs": {
+    "extractionReagent": "kubejs:chelating_broth",
+    "pelletBinder": "kubejs:saponified_collector",
+    "graphiteBinder": "kubejs:tannic_pulp"
+  },
+  "uranium": {
+    "trace": "kubejs:uranium_mineral_trace",
+    "fines": "kubejs:uranium_bearing_fines",
+    "washedConcentrate": "kubejs:washed_uranium_concentrate",
+    "slurry": "kubejs:leached_uranium_slurry",
+    "purifiedCompound": "kubejs:purified_uranium_compound",
+    "tailings": "kubejs:stabilized_uranium_tailings",
+    "fuelPowder": "kubejs:fuel_grade_uranium_powder",
+    "greenPellet": "kubejs:green_fuel_pellet",
+    "firedPellet": "kubejs:fired_fuel_pellet",
+    "pelletStack": "kubejs:fuel_pellet_stack",
+    "emptyCladding": "kubejs:empty_fuel_cladding",
+    "incompleteRod": "kubejs:incomplete_standard_fuel_rod",
+    "finishedRod": "createnuclear:uranium_rod",
+    "tracesPerBatch": 9,
+    "purifiedCompoundPerBatch": 4,
+    "pelletsPerRod": 8
+  },
+  "graphite": {
+    "carbonFines": "kubejs:carbon_fines",
+    "washedCarbon": "kubejs:washed_carbon",
+    "refinedCarbon": "kubejs:refined_reactor_carbon",
+    "boundGraphite": "kubejs:bound_graphite_mix",
+    "greenBlank": "kubejs:green_graphite_blank",
+    "bakedBlank": "kubejs:baked_graphite_blank",
+    "purifiedBlank": "kubejs:purified_graphite_blank",
+    "component": "kubejs:nuclear_graphite_component",
+    "finishedRod": "createnuclear:graphite_rod"
+  },
+  "wasteFluid": "kubejs:spent_nuclear_process_solution",
+  "designBoundary": {
+    "phaseOne": "KubeJS owns materials, recipes, bypass removal, quests, and JEI-visible processing.",
+    "phaseTwo": "A compiled patch is required to replace exact rod checks and signed heat with component profiles."
+  }
+}

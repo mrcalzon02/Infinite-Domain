@@ -1,0 +1,552 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "gear"
+	filename: "stellaris_space_industrialization"
+	group: "7C5A000000000001"
+	id: "7C50000000000001"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5710000000000001"]
+			icon: {
+				id: "infinite_domain_space:emergency_helmet"
+			}
+			id: "7C51000000000001"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000001"
+				item: { count: 1, id: "infinite_domain_space:emergency_helmet" }
+				type: "item"
+			}]
+			x: -16.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7C51000000000001"]
+			icon: {
+				id: "kubejs:reinforced_frame"
+			}
+			id: "7C51000000000002"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000002"
+				item: { count: 1, id: "kubejs:reinforced_frame" }
+				type: "item"
+			}]
+			x: -16.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7C51000000000002"]
+			icon: {
+				id: "stellaris:rocket_launch_pad"
+			}
+			id: "7C51000000000003"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000003"
+				item: { count: 1, id: "stellaris:rocket_launch_pad" }
+				type: "item"
+			}]
+			x: -16.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7C51000000000003"]
+			icon: {
+				id: "stellaris:rocket"
+			}
+			id: "7C51000000000004"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000004"
+				item: { count: 1, id: "stellaris:rocket" }
+				type: "item"
+			}]
+			x: -16.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5710000000000001"]
+			icon: {
+				id: "kubejs:structural_truss"
+			}
+			id: "7C51000000000005"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000005"
+				item: { count: 1, id: "kubejs:structural_truss" }
+				type: "item"
+			}]
+			x: -12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7C51000000000005"]
+			icon: {
+				id: "kubejs:avionics_bay"
+			}
+			id: "7C51000000000006"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000006"
+				item: { count: 1, id: "kubejs:avionics_bay" }
+				type: "item"
+			}]
+			x: -12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7C51000000000006"]
+			icon: {
+				id: "kubejs:petroleum_engine_assembly"
+			}
+			id: "7C51000000000007"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000007"
+				item: { count: 1, id: "kubejs:petroleum_engine_assembly" }
+				type: "item"
+			}]
+			x: -12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7C51000000000007"]
+			icon: {
+				id: "kubejs:fuselage_section"
+			}
+			id: "7C51000000000008"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000008"
+				item: { count: 1, id: "kubejs:fuselage_section" }
+				type: "item"
+			}]
+			x: -12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5710000000000001"]
+			icon: {
+				id: "kubejs:electrolysis_membrane"
+			}
+			id: "7C51000000000009"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000009"
+				item: { count: 1, id: "kubejs:electrolysis_membrane" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7C51000000000009"]
+			icon: {
+				id: "kubejs:oxygen_cylinder"
+			}
+			id: "7C5100000000000A"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000000A"
+				item: { count: 1, id: "kubejs:oxygen_cylinder" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7C5100000000000A"]
+			icon: {
+				id: "kubejs:closed_loop_life_support"
+			}
+			id: "7C5100000000000B"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000000B"
+				item: { count: 1, id: "kubejs:closed_loop_life_support" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7C5100000000000B"]
+			icon: {
+				id: "stellaris:oxygen_distributor"
+			}
+			id: "7C5100000000000C"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000000C"
+				item: { count: 1, id: "stellaris:oxygen_distributor" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5710000000000001"]
+			icon: {
+				id: "kubejs:propellant_manifold"
+			}
+			id: "7C5100000000000D"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000000D"
+				item: { count: 1, id: "kubejs:propellant_manifold" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7C5100000000000D"]
+			icon: {
+				id: "kubejs:petroleum_engine_assembly"
+			}
+			id: "7C5100000000000E"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000000E"
+				item: { count: 1, id: "kubejs:petroleum_engine_assembly" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7C5100000000000E"]
+			icon: {
+				id: "kubejs:methalox_engine_assembly"
+			}
+			id: "7C5100000000000F"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000000F"
+				item: { count: 1, id: "kubejs:methalox_engine_assembly" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7C5100000000000F"]
+			icon: {
+				id: "kubejs:hydrogen_engine_assembly"
+			}
+			id: "7C51000000000010"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000010"
+				item: { count: 1, id: "kubejs:hydrogen_engine_assembly" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5710000000000001"]
+			icon: {
+				id: "kubejs:moon_ilmenite_ore"
+			}
+			id: "7C51000000000011"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000011"
+				item: { count: 1, id: "kubejs:moon_ilmenite_ore" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7C51000000000011"]
+			icon: {
+				id: "kubejs:titanium_concentrate"
+			}
+			id: "7C51000000000012"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000012"
+				item: { count: 1, id: "kubejs:titanium_concentrate" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7C51000000000012"]
+			icon: {
+				id: "kubejs:rare_earth_concentrate"
+			}
+			id: "7C51000000000013"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000013"
+				item: { count: 1, id: "kubejs:rare_earth_concentrate" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7C51000000000013"]
+			icon: {
+				id: "kubejs:lunar_material_pallet"
+			}
+			id: "7C51000000000014"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000014"
+				item: { count: 1, id: "kubejs:lunar_material_pallet" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5710000000000001"]
+			icon: {
+				id: "kubejs:mars_perchlorate_ore"
+			}
+			id: "7C51000000000015"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000015"
+				item: { count: 1, id: "kubejs:mars_perchlorate_ore" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7C51000000000015"]
+			icon: {
+				id: "kubejs:martian_catalyst"
+			}
+			id: "7C51000000000016"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000016"
+				item: { count: 1, id: "kubejs:martian_catalyst" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7C51000000000016"]
+			icon: {
+				id: "kubejs:mars_transfer_package"
+			}
+			id: "7C51000000000017"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000017"
+				item: { count: 1, id: "kubejs:mars_transfer_package" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7C51000000000017"]
+			icon: {
+				id: "kubejs:martian_chemical_pallet"
+			}
+			id: "7C51000000000018"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000018"
+				item: { count: 1, id: "kubejs:martian_chemical_pallet" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5710000000000001"]
+			icon: {
+				id: "infinite_domain_space:surveyor_helmet"
+			}
+			id: "7C51000000000019"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000019"
+				item: { count: 1, id: "infinite_domain_space:surveyor_helmet" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7C51000000000019"]
+			icon: {
+				id: "infinite_domain_space:lunar_prospector_helmet"
+			}
+			id: "7C5100000000001A"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000001A"
+				item: { count: 1, id: "infinite_domain_space:lunar_prospector_helmet" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7C5100000000001A"]
+			icon: {
+				id: "infinite_domain_space:radiation_helmet"
+			}
+			id: "7C5100000000001B"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000001B"
+				item: { count: 1, id: "infinite_domain_space:radiation_helmet" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7C5100000000001B"]
+			icon: {
+				id: "infinite_domain_space:extended_helmet"
+			}
+			id: "7C5100000000001C"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000001C"
+				item: { count: 1, id: "infinite_domain_space:extended_helmet" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5710000000000001"]
+			icon: {
+				id: "kubejs:venus_tungsten_ore"
+			}
+			id: "7C5100000000001D"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000001D"
+				item: { count: 1, id: "kubejs:venus_tungsten_ore" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7C5100000000001D"]
+			icon: {
+				id: "kubejs:venus_superalloy"
+			}
+			id: "7C5100000000001E"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000001E"
+				item: { count: 1, id: "kubejs:venus_superalloy" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7C5100000000001E"]
+			icon: {
+				id: "infinite_domain_space:venusian_helmet"
+			}
+			id: "7C5100000000001F"
+			shape: "gear"
+			tasks: [{
+				id: "7C5200000000001F"
+				item: { count: 1, id: "infinite_domain_space:venusian_helmet" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7C5100000000001F"]
+			icon: {
+				id: "kubejs:venus_return_package"
+			}
+			id: "7C51000000000020"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000020"
+				item: { count: 1, id: "kubejs:venus_return_package" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5710000000000001"]
+			icon: {
+				id: "kubejs:meridian_core"
+			}
+			id: "7C51000000000021"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000021"
+				item: { count: 1, id: "kubejs:meridian_core" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7C51000000000021"]
+			icon: {
+				id: "kubejs:martian_signal_prism"
+			}
+			id: "7C51000000000022"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000022"
+				item: { count: 1, id: "kubejs:martian_signal_prism" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7C51000000000022"]
+			icon: {
+				id: "kubejs:venusian_pressure_seal"
+			}
+			id: "7C51000000000023"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000023"
+				item: { count: 1, id: "kubejs:venusian_pressure_seal" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7C51000000000023"]
+			icon: {
+				id: "kubejs:burrower_carapace"
+			}
+			id: "7C51000000000024"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000024"
+				item: { count: 1, id: "kubejs:burrower_carapace" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 8.0d
+		}
+	]
+}

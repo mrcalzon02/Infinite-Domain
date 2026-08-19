@@ -1,0 +1,26 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "IGI",
+                    "gRg",
+                    "III"
+                ],
+    "key":  {
+                "I":  {
+                          "item":  "allthecompressed:iron_block_2x"
+                      },
+                "G":  {
+                          "item":  "minecraft:glass_pane"
+                      },
+                "R":  {
+                          "item":  "allthecompressed:redstone_block_1x"
+                      },
+                "g":  {
+                          "item":  "minecraft:gold_block"
+                      }
+            },
+    "result":  {
+                   "id":  "cyber_ware_port:charger",
+                   "count":  1
+               }
+}

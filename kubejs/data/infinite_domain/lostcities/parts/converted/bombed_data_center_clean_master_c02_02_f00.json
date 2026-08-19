@@ -1,0 +1,214 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "6666666666666666",
+      "66666666666666//",
+      "666666666666//)6",
+      "6666666666//)666",
+      "66666666//)66666",
+      "666666//)6666666",
+      "6666//)666666666",
+      "66//)66666666666",
+      "//)6666666666666",
+      ")666666666666666",
+      "666666666666666/",
+      "6666666666666//)",
+      "66666666666//)66",
+      "666666666//)6666",
+      "6666666//)666666",
+      "66666//)66666666"
+    ],
+    [
+      "8888888888888888",
+      "8888888888888888",
+      "8888888888888888",
+      "8888888888888888",
+      "8888888888888888",
+      "8888888888888888",
+      "8888888888888888",
+      "8888888888888888",
+      "8888888888888888",
+      "2222222222222222",
+      "2222222222222222",
+      "2222222222222222",
+      "2222222222222222",
+      "2222222222222222",
+      "2222222222222222",
+      "2222222222222222"
+    ],
+    [
+      " 9   4 ''  '' $7",
+      " 9   9 ''  '' 37",
+      " 9   9        37",
+      " 9   9        ++",
+      " 9   9 ''  '' $7",
+      " 9   9 ''  '' $7",
+      " 9   9        $7",
+      " 9   9        37",
+      "$$$-$$$$$$-$$$37",
+      "111-111111-11111",
+      "    7          7",
+      "%%  7 &&&&&&&  7",
+      "%%  7 &&&&&&&  7",
+      "%%  7 &&&&&&&  7",
+      "(%  4 &&&&&&&  4",
+      "%%* 7 &&&&&&&  7"
+    ],
+    [
+      " 9   5 ''  '' $7",
+      " 9   9 ''  '' 37",
+      " 9   9        37",
+      " 9   9        ,,",
+      " 9   9 ''  '' $7",
+      " 9   9 ''  '' $7",
+      " 9   9        $7",
+      " 9   9        37",
+      "$$$.$$$$$$.$$$37",
+      "111.111111.11111",
+      "    7          7",
+      "%%  7 &&&&&&&  7",
+      "%%  7 &&&&0&&  7",
+      "%%  7 &&&&&&&  7",
+      "%%  5 &&&&&&&  5",
+      "%%  7 &&&&&&&  7"
+    ],
+    [
+      " 9   9 ''  '' $7",
+      " 9   9 ''  '' 37",
+      " 9   9        37",
+      " 9   9        $7",
+      " 9   9 ''  '' $7",
+      " 9   9 ''  '' $7",
+      " 9   9        $7",
+      " 9   9        37",
+      "$$$$$$$$$$$$$$37",
+      "1111111111111111",
+      "    7          7",
+      "%%  7 &&&&&&&  7",
+      "%%  7 &&&&&&&  7",
+      "%%  7 &&&&&&&  7",
+      "%%  7 &&&&&&&  7",
+      "%%  7 &&&&&&&  7"
+    ],
+    [
+      " 9   9 !'  !' $7",
+      " 9   9 ''  '' 37",
+      " 9   9        37",
+      " 9   9        $7",
+      " 9   9 !'  !' $7",
+      " 9   9 ''  '' $7",
+      " 9   9        $7",
+      " 9   9        37",
+      "$$$$$$$$$$$$$$37",
+      "1111111111111111",
+      "    7          7",
+      "    7 &&&&&&&  7",
+      "    7 &&&&&&&  7",
+      "    7 &&&&&&&  7",
+      "    7 &&&&&&&  7",
+      "    7 &&&&&&&  7"
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:red_nixie_tube"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      {
+        "char": "%",
+        "block": "immersiveengineering:crate"
+      },
+      {
+        "char": "&",
+        "block": "immersiveengineering:sheetmetal_steel"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:black_concrete"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:chest[facing=east,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_data"
+        }
+      },
+      {
+        "char": ")",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:crafting_table"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:dark_oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:dark_oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:lever[face=wall,facing=south,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:mud_bricks"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:polished_deepslate"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "6",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "7",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "8",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "9",
+        "block": "the_wasteland_reworked:cut_lead_plating"
+      }
+    ]
+  }
+}

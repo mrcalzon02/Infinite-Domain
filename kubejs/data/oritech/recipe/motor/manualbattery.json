@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "more_ores_more_gems:block_of_electrum"
+                      },
+                "s":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "w":  {
+                          "tag":  "c:plates/plastic"
+                      }
+            },
+    "pattern":  [
+                    " s ",
+                    "wcw",
+                    "wcw"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "oritech:basic_battery"
+               }
+}

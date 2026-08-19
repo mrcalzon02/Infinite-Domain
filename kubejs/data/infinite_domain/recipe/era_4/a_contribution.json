@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "create_new_age:copper_wire_block"
+    },
+    "B": {
+      "item": "minecraft:copper_block"
+    },
+    "C": {
+      "item": "powergrid:insulated_copper_wire"
+    },
+    "D": {
+      "item": "create_new_age:layered_magnet"
+    },
+    "E": {
+      "item": "create_new_age:copper_wire_block"
+    }
+  },
+  "result": {
+    "id": "kubejs:era4_mining_contribution",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "p":  {
+                          "item":  "minecraft:compass"
+                      },
+                "s":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    " p ",
+                    "scs"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "immersiveengineering:voltmeter"
+               }
+}

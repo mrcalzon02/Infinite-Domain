@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "#":  {
+                          "item":  "minecraft:copper_block"
+                      },
+                "I":  {
+                          "item":  "quark:stick_block"
+                      },
+                "X":  {
+                          "item":  "minecraft:feather"
+                      }
+            },
+    "pattern":  [
+                    "X",
+                    "#",
+                    "I"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "minecraft:brush"
+               }
+}

@@ -1,0 +1,247 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "**';;;;;;;;;;;;;",
+      "';;;;;;;;;;;;;;;",
+      ";;;;;;;;;;;;;;;*",
+      ";;;;;;;;;;;;;**'",
+      ";;;;;;;;;;;**';;",
+      ";;;;;;;;;**';;;;",
+      ";;;;;;;**';;;;;;",
+      ";;;;;**';;;;;;;;",
+      ";;;**';;;;;;;;;;",
+      ";**';;;;;;;;;;;;",
+      "*';;;;;;;;;;;;;;",
+      ";;;;;;;;;;;;;;;;",
+      "***777**;;;;;;**",
+      "***777**;;;;**';",
+      "***777**;;**';;;",
+      "***777****';;;;;"
+    ],
+    [
+      "        44444444",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "        44444444",
+      "        44444444",
+      "        44444444",
+      "        44444444",
+      "        4+++++++",
+      "        4%+++++%",
+      "        4+++++++",
+      "        4+++++++",
+      "       84+++++++",
+      "        4+++++++"
+    ],
+    [
+      "        ::::::::",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "        ,,,,,,,,",
+      "        ,       ",
+      "        , 66  & ",
+      "        ,       ",
+      "        ,     5 ",
+      "        , )($   ",
+      "        ,,,,,,0,",
+      "        ,   ,   ",
+      " -      2 9 ,   ",
+      "        ,   . < "
+    ],
+    [
+      "        ::!!::::",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "        ,,!!,,,,",
+      "        ,       ",
+      "        ,       ",
+      "        ,       ",
+      "        ,       ",
+      "        ,       ",
+      "        ,,,,,,1,",
+      "        ,   ,   ",
+      "        3   ,   ",
+      "        ,   /   "
+    ],
+    [
+      "        ::!!::::",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "        ,,!!,,,,",
+      "        ,       ",
+      "        ,       ",
+      "        ,       ",
+      "        ,       ",
+      "        ,       ",
+      "        ,,,,,,,,",
+      "        ,   ,   ",
+      "        ,   ,   ",
+      "        ,   ,   "
+    ],
+    [
+      "        ::::::::",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "        ,,,,,,,,",
+      "        ,       ",
+      "        ,       ",
+      "        ,       ",
+      "        ,       ",
+      "        ,       ",
+      "        ,,,,,,,,",
+      "        ,   ,   ",
+      "        ,   ,   ",
+      "        ,   ,   "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:black_concrete"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:bookshelf"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:crafting_table"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:furnace[facing=north,lit=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:gray_concrete"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:orange_terracotta"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spawner",
+        "tag": {
+          "id": "minecraft:mob_spawner",
+          "Delay": 260,
+          "MinSpawnDelay": 240,
+          "MaxSpawnDelay": 720,
+          "SpawnCount": 2,
+          "MaxNearbyEntities": 6,
+          "RequiredPlayerRange": 14,
+          "SpawnRange": 4,
+          "SpawnData": {
+            "entity": {
+              "id": "minecraft:zombie"
+            }
+          },
+          "SpawnPotentials": [
+            {
+              "weight": 1,
+              "data": {
+                "entity": {
+                  "id": "minecraft:zombie"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=west,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_door[facing=west,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:spruce_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:stone_bricks"
+      },
+      {
+        "char": "8",
+        "block": "minecraft:stone_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "9",
+        "block": "minecraft:water_cauldron[level=3]"
+      },
+      {
+        "char": ":",
+        "block": "minecraft:white_terracotta"
+      },
+      {
+        "char": ";",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "<",
+        "block": "the_wasteland_reworked:cardboard_box"
+      }
+    ]
+  }
+}

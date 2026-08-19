@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FRF",
+    "CBC",
+    "FRF"
+  ],
+  "key": {
+    "F": {
+      "item": "tfmg:fireproof_bricks"
+    },
+    "R": {
+      "item": "create:mechanical_press"
+    },
+    "C": {
+      "item": "create:copper_casing"
+    },
+    "B": {
+      "item": "create:basin"
+    }
+  },
+  "result": {
+    "id": "createmetallurgy:industrial_crucible",
+    "count": 1
+  }
+}

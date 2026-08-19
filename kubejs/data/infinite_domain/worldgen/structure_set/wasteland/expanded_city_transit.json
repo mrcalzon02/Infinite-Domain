@@ -1,0 +1,26 @@
+{
+  "structures": [
+    {
+      "structure": "infinite_domain:wasteland/ruined_bus_terminal",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/freight_depot",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/elevated_rail_collapse",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/sunken_highway_interchange",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 24,
+    "separation": 9,
+    "salt": 87130418
+  }
+}

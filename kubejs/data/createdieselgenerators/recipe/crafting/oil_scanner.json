@@ -1,0 +1,26 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "ACA",
+                    "SIS",
+                    " I "
+                ],
+    "key":  {
+                "A":  {
+                          "item":  "create:andesite_alloy_block"
+                      },
+                "S":  {
+                          "tag":  "c:plates/iron"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:iron_block_1x"
+                      },
+                "C":  {
+                          "item":  "minecraft:clock"
+                      }
+            },
+    "result":  {
+                   "id":  "createdieselgenerators:oil_scanner",
+                   "count":  1
+               }
+}

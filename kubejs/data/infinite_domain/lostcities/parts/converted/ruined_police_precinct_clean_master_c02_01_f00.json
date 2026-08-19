@@ -1,0 +1,210 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "6666666666))(666",
+      "66666666))(66666",
+      "666666))(6666666",
+      "6666))(666666666",
+      "66))(66666666666",
+      "))(6666666666666",
+      "(666666666666666",
+      "666666666666666)",
+      "6666666666666))(",
+      "66666666666))(66",
+      "666666666))(6666",
+      "6666666))(666666",
+      "66666))(66666666",
+      "666))(6666666666",
+      "6))(666666666666",
+      ")(66666666666666"
+    ],
+    [
+      "3333333388888888",
+      "3333333388888888",
+      "3333333388888888",
+      "////////88888888",
+      "////////88888888",
+      "////////88888888",
+      "////////88888888",
+      "////////88888888",
+      "////////88888888",
+      "////////88888888",
+      "////////88888888",
+      "////////88888888",
+      "////////18888888",
+      "6666666618888888",
+      "6666666618888888",
+      "6666666618888888"
+    ],
+    [
+      "        7       ",
+      "        7       ",
+      "        7       ",
+      "..4.....7  &&&& ",
+      "  0     7  &&&& ",
+      "        7  &&&& ",
+      "        *  &&&& ",
+      "     2  +  &&&& ",
+      "        7  &&&& ",
+      "%%% $$$ 7  &&&& ",
+      "%%% $$' 7       ",
+      "        7       ",
+      "........1       ",
+      "        1       ",
+      "        17774777",
+      "        1       "
+    ],
+    [
+      "        7       ",
+      "        7       ",
+      "        7       ",
+      "..5.....7  &&&& ",
+      "        7  &&&& ",
+      "  0     7  &&&& ",
+      "        ,  &&&& ",
+      "        -  &&&& ",
+      "        7  &&&& ",
+      "%%% $$$ 7  &&&& ",
+      "%%% $$$ 7       ",
+      "        7       ",
+      "........1       ",
+      "        1       ",
+      "        17775777",
+      "        1       "
+    ],
+    [
+      "        7       ",
+      "        7       ",
+      "        7       ",
+      "........7       ",
+      "        7   !!  ",
+      "        7   !!  ",
+      "  0         !!  ",
+      "            !!  ",
+      "        7       ",
+      "%%% $$$ 7       ",
+      "%%% $$$ 7       ",
+      "        7       ",
+      "........1       ",
+      "        1       ",
+      "        17777777",
+      "        1       "
+    ],
+    [
+      "        7       ",
+      "        7       ",
+      "        7       ",
+      "........7       ",
+      "        7       ",
+      "        7       ",
+      "        7       ",
+      "  0     7       ",
+      "        7       ",
+      "%%%     7       ",
+      "%%%     7       ",
+      "        7       ",
+      "........7       ",
+      "        7       ",
+      "        77777777",
+      "        7       "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:crate"
+      },
+      {
+        "char": "%",
+        "block": "immersiveengineering:sheetmetal_steel"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:blue_concrete"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:chest[facing=west,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_military"
+        }
+      },
+      {
+        "char": "(",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:iron_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:iron_door[facing=east,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:iron_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:iron_door[facing=east,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:light_gray_concrete"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:polished_andesite_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:polished_deepslate"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:smithing_table"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:smooth_stone"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "6",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "7",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "8",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

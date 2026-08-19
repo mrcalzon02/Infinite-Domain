@@ -1,0 +1,45 @@
+{
+  "structure_id": "infinite_domain:cratered_downtown_intersection_clean_master",
+  "archetype": "signalized mixed-use downtown crossing with four corner buildings and underground utilities",
+  "intersection_program": [
+    "two eleven-block urban roads with lane markings",
+    "paired stone sidewalks and four marked pedestrian crossings",
+    "four deterministic full-block traffic-signal pylons",
+    "underground north-south and east-west utility tunnels",
+    "central utility switch chamber with equipment",
+    "four sidewalk ladder hatches into the utility network"
+  ],
+  "corner_programs": [
+    "northwest bank with public counter, offices, roomed vault, cellar and office floors",
+    "northeast pharmacy/clinic with dispensary, exam support, cellar, housing floors, balconies and rooftop greenhouse",
+    "southwest diner with dining, kitchen, storage cellar, apartment floors, street awning and roof terrace",
+    "southeast electronics retailer with repair benches, server/records rooms, office floors, loading canopy and rooftop equipment"
+  ],
+  "circulation": [
+    "two road-facing entrances into each corner building",
+    "central cross-corridor with four independently accessible rooms on every occupied floor",
+    "four complete cellar stairs and upper stair stacks",
+    "surface utility access from four different sidewalks",
+    "outer rooms and stairs positioned outside the declared crater-collapse zones"
+  ],
+  "damage_constraints": [
+    "penetrate the road surface and central utility chamber with a deep circular crater",
+    "feather the outer crater annulus using coarse dirt and gravel",
+    "pull each building's inner corner toward the blast while preserving outer rooms",
+    "retain broken cardinal utility walls at the crater edge",
+    "preserve every cellar/upper stair spine and at least one outer suite per floor",
+    "derive blast damage, occupation and loot only from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "all four corner buildings read as different mixed-use premises",
+      "crosswalks, signals and road geometry read as a real urban intersection",
+      "all building stairs, room thresholds and utility hatches work at player scale",
+      "the crater visibly penetrates both road and underground switch chamber",
+      "four inward facade failures follow the crater rather than random deletion",
+      "terrain feathering seats crater rim, roads and rubble into ruined-city grade"
+    ]
+  }
+}

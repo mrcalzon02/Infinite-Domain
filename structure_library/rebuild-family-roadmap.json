@@ -1,0 +1,218 @@
+{
+  "format_version": 1,
+  "purpose": "Replace 57 independent rebuild runs with seven reusable builder families and three consolidated global checkpoints.",
+  "baseline": {
+    "authoritative_assets": 84,
+    "rebuilt_candidates": 27,
+    "remaining_assets": 57,
+    "production_approvals": 0
+  },
+  "progress": {
+    "completed_checkpoint_waves": ["A", "B", "C"],
+    "completed_families": ["roadside_mobility_security", "habitation_and_community", "urban_commercial", "transit_and_ports", "rural_processing", "extraction_sites", "industrial_utility_technology"],
+    "rebuilt_candidates": 84,
+    "remaining_assets": 0,
+    "catalog_records": 168,
+    "production_approvals": 0
+  },
+  "rules": [
+    "Every named asset still receives its own immutable clean master and its own coherent damaged/occupied derivative.",
+    "Reuse applies to authored room modules, circulation patterns, facade systems, terrain feathering, damage operators, validators and batch tooling; it must not produce renamed identical clones.",
+    "Complete all members of a family before running that family's targeted validation and render batch.",
+    "Do not rebuild the QA world, regenerate all renders or convert the complete Lost Cities corpus between individual family members.",
+    "Run the expensive full corpus, provenance, conversion, all-render, audit and QA-world gates only at the end of checkpoint waves A, B and C.",
+    "Keep production approvals at zero until explicit in-world review is completed."
+  ],
+  "families": [
+    {
+      "phase": 24,
+      "family_id": "roadside_mobility_security",
+      "checkpoint_wave": "A",
+      "assets": [
+        "radio_mast",
+        "wrecked_sedan",
+        "delivery_van",
+        "battle_tank",
+        "service_garage",
+        "scrapyard",
+        "military_checkpoint",
+        "ruined_roadside_diner",
+        "abandoned_truck_stop",
+        "wasteland_weigh_station",
+        "destroyed_refugee_convoy"
+      ],
+      "shared_systems": [
+        "road and shoulder connectors",
+        "vehicle chassis/cab/cargo modules",
+        "service bay and inspection-lane modules",
+        "guard post, radio and checkpoint modules",
+        "roadside signage, canopy and forecourt modules",
+        "collision, ambush and localized roadside damage operators"
+      ],
+      "identity_gate": "Each vehicle, service business, checkpoint and convoy scene must retain a distinct silhouette, program and damage story."
+    },
+    {
+      "phase": 25,
+      "family_id": "habitation_and_community",
+      "checkpoint_wave": "A",
+      "assets": [
+        "split_level_house",
+        "abandoned_culdesac",
+        "emergency_relief_shelter",
+        "tenement_courtyard",
+        "ruined_rowhouse_block",
+        "shattered_luxury_condo",
+        "ruined_city_school",
+        "ruined_community_center",
+        "decayed_ranch",
+        "roadside_church_cemetery",
+        "ruined_ranger_station",
+        "wasteland_fire_lookout"
+      ],
+      "shared_systems": [
+        "domestic room and bathroom modules",
+        "apartment/rowhouse repeatable dwelling bays",
+        "institutional hall, classroom, dormitory and meeting-room modules",
+        "porch, courtyard, playground, paddock and cemetery site modules",
+        "residential and institutional stair cores",
+        "fire, subsidence, abandonment and partial-roof-collapse operators"
+      ],
+      "identity_gate": "Domestic, multifamily, school, church, shelter and ranger functions must remain inferable from layout rather than palette alone."
+    },
+    {
+      "phase": 26,
+      "family_id": "urban_commercial",
+      "checkpoint_wave": "B",
+      "assets": [
+        "ruined_shopping_mall",
+        "ruined_department_store",
+        "bombed_hotel",
+        "buried_bank_vault",
+        "ruined_office_tower"
+      ],
+      "shared_systems": [
+        "retail storefront, stockroom and loading modules",
+        "hotel room/corridor/service modules",
+        "office suite, records and meeting modules",
+        "bank lobby, controlled vault and secure cellar modules",
+        "urban stair/elevator cores and rooftop plant",
+        "atrium collapse, facade shear and buried-cellar damage operators"
+      ],
+      "identity_gate": "Retail, hospitality, banking and office buildings must have different public/staff/security circulation and roof silhouettes."
+    },
+    {
+      "phase": 27,
+      "family_id": "transit_and_ports",
+      "checkpoint_wave": "B",
+      "assets": [
+        "collapsed_subway_station",
+        "ruined_bus_terminal",
+        "elevated_rail_collapse",
+        "sunken_highway_interchange",
+        "collapsed_airship_terminal",
+        "crashed_cargo_airship",
+        "warm_industrial_mountain_port",
+        "cold_industrial_mountain_port"
+      ],
+      "shared_systems": [
+        "platform, concourse, ticketing and baggage modules",
+        "road, rail, bridge and tunnel connector modules",
+        "airship hull, berth and cargo-handling modules",
+        "quay, warehouse, crane-base and mountain-tunnel modules",
+        "public, service and freight circulation layers",
+        "span failure, subsidence, impact and shoreline feathering operators"
+      ],
+      "identity_gate": "Every mode must visibly connect its vehicle path, passenger/freight program and terrain interface. Warm/cold ports may share geometry but require climate-specific material/environment layers."
+    },
+    {
+      "phase": 28,
+      "family_id": "rural_processing",
+      "checkpoint_wave": "B",
+      "assets": [
+        "abandoned_orchard_cannery",
+        "ruined_grain_elevator",
+        "shattered_greenhouse_nursery",
+        "remote_sawmill"
+      ],
+      "shared_systems": [
+        "raw intake, processing, packing and dispatch modules",
+        "barn, mill, greenhouse and storage-bay modules",
+        "truck/rail loading and yard circulation",
+        "worker office, locker and maintenance rooms",
+        "crop, log and grain material-flow validators",
+        "machinery accident, roof failure and yard-overgrowth operators"
+      ],
+      "identity_gate": "Each site must expose a different raw-material-to-product workflow rather than merely changing machinery blocks."
+    },
+    {
+      "phase": 29,
+      "family_id": "extraction_sites",
+      "checkpoint_wave": "B",
+      "assets": [
+        "abandoned_quarry",
+        "collapsed_mine_entrance",
+        "excavator_pit",
+        "abandoned_oil_field"
+      ],
+      "shared_systems": [
+        "terrain-cut pit, bench and spoil modules",
+        "mine portal, tunnel and headworks modules",
+        "excavator, conveyor and loading modules",
+        "pumpjack, separator and tank-pad modules",
+        "worker shelter and maintenance modules",
+        "cave-in, slope failure, spill and equipment-collapse operators"
+      ],
+      "identity_gate": "Excavation geometry, access route and extracted-material handling must be specific to quarry, mine, pit and oil field."
+    },
+    {
+      "phase": 30,
+      "family_id": "industrial_utility_technology",
+      "checkpoint_wave": "C",
+      "assets": [
+        "industrial_facility",
+        "city_electrical_substation",
+        "city_water_treatment_plant",
+        "district_heating_station",
+        "municipal_incinerator",
+        "ruined_fuel_depot",
+        "ruined_cyberware_clinic",
+        "ae2_records_archive",
+        "nuclear_research_annex",
+        "shattered_wind_farm",
+        "broken_solar_field",
+        "wilderness_substation",
+        "wasteland_water_tower"
+      ],
+      "shared_systems": [
+        "process hall, control room, workshop and loading modules",
+        "tank, basin, boiler, furnace and containment modules",
+        "transformer-yard, cable-route and distribution modules",
+        "laboratory, clean-room, archive and secure-record modules",
+        "wind, solar and elevated-storage field modules",
+        "process-flow and utility-network validators",
+        "blast, fire, spill, containment-breach and equipment-failure operators"
+      ],
+      "identity_gate": "Each facility must expose its own input-process-output or generation-distribution workflow; technology-themed sites require real clinical/archive/research security zoning."
+    }
+  ],
+  "checkpoint_waves": [
+    {
+      "wave": "A",
+      "families": ["roadside_mobility_security", "habitation_and_community"],
+      "asset_count": 23,
+      "global_pipeline_runs": 1
+    },
+    {
+      "wave": "B",
+      "families": ["urban_commercial", "transit_and_ports", "rural_processing", "extraction_sites"],
+      "asset_count": 21,
+      "global_pipeline_runs": 1
+    },
+    {
+      "wave": "C",
+      "families": ["industrial_utility_technology"],
+      "asset_count": 13,
+      "global_pipeline_runs": 1
+    }
+  ]
+}

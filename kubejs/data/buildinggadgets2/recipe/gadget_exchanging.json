@@ -1,0 +1,31 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "group":  "buildinggadgets2",
+    "key":  {
+                "a":  {
+                          "item":  "ae2:annihilation_core"
+                      },
+                "e":  {
+                          "item":  "ae2:engineering_processor"
+                      },
+                "f":  {
+                          "item":  "ae2:formation_core"
+                      },
+                "i":  {
+                          "item":  "allthecompressed:iron_block_3x"
+                      },
+                "p":  {
+                          "item":  "ae2:dense_energy_cell"
+                      }
+            },
+    "pattern":  [
+                    "ifi",
+                    "aea",
+                    "ipi"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "buildinggadgets2:gadget_exchanging"
+               }
+}

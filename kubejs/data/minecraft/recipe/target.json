@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "redstone",
+    "key":  {
+                "H":  {
+                          "item":  "allthecompressed:hay_block_1x"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    " R ",
+                    "RHR",
+                    " R "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "minecraft:target"
+               }
+}

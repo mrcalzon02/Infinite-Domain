@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      },
+                "S":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "T":  {
+                          "item":  "minecraft:name_tag"
+                      }
+            },
+    "pattern":  [
+                    " S ",
+                    "STS",
+                    "RSR"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "createmetallurgy:labeling_station"
+               }
+}

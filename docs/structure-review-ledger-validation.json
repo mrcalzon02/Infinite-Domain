@@ -1,0 +1,53 @@
+{
+  "purpose": "Resumable manual evidence ledgers. Validation never promotes an asset or edits production approvals.",
+  "allowed_statuses": [
+    "fail",
+    "pass",
+    "pending"
+  ],
+  "static_ledger_contracts_passed": true,
+  "automatic_approval_mutation": false,
+  "failures": [],
+  "ledgers": {
+    "building-production-review.csv": {
+      "assets": 84,
+      "completed_reviews": 0,
+      "all_checks_passed": 0,
+      "one_or_more_checks_failed": 0,
+      "pending_assets": 84,
+      "check_columns": [
+        "player_scale_walkthrough",
+        "rotation_and_connectors",
+        "terrain_placement_and_feathering",
+        "runtime_lostcities_codec"
+      ]
+    },
+    "road-production-review.csv": {
+      "assets": 84,
+      "completed_reviews": 0,
+      "all_checks_passed": 0,
+      "one_or_more_checks_failed": 0,
+      "pending_assets": 84,
+      "check_columns": [
+        "player_and_vehicle_scale_walkthrough",
+        "adjacent_connector_alignment",
+        "four_way_rotation",
+        "ramp_and_bridge_elevation",
+        "representative_terrain_placement"
+      ]
+    },
+    "module-production-review.csv": {
+      "assets": 21,
+      "completed_reviews": 0,
+      "all_checks_passed": 0,
+      "one_or_more_checks_failed": 0,
+      "pending_assets": 21,
+      "check_columns": [
+        "visual_module_boundary_review",
+        "connector_and_rotation_test",
+        "assembly_with_adjacent_modules",
+        "terrain_and_coastline_placement"
+      ]
+    }
+  }
+}

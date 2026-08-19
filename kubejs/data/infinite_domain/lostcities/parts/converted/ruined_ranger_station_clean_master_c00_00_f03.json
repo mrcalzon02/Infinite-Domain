@@ -1,0 +1,36 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "           !    ",
+      "           !$$$$",
+      "           !    ",
+      "           !    ",
+      "           !    ",
+      "           !    ",
+      "           !    ",
+      "           !    ",
+      "           !    ",
+      "           !    "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "minecraft:dark_oak_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "$",
+        "block": "the_wasteland_reworked:decayed_planks"
+      }
+    ]
+  }
+}

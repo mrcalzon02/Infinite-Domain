@@ -1,0 +1,203 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "//////////      ",
+      "//////////      ",
+      "//////////      ",
+      "//////////      ",
+      "//////////      ",
+      "//////////      ",
+      "//////////      ",
+      "//////////      ",
+      "//////////      ",
+      "//////////      ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "  %% (((($      ",
+      "     (((($      ",
+      "         $      ",
+      ".+.......$      ",
+      "         $      ",
+      "  0000   $      ",
+      "' 00*0&  $      ",
+      "  0000 ) $      ",
+      "         $      ",
+      "$$$$$$$$$$      ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "  %% (((($      ",
+      "     (((($      ",
+      "         $      ",
+      ".,.......$      ",
+      "         $      ",
+      "         $      ",
+      "     -   $      ",
+      "       ) $      ",
+      "         $      ",
+      "$$$$$$$$$$      ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "       ! $      ",
+      "         $      ",
+      "         $      ",
+      ".........$      ",
+      "         $      ",
+      "         $      ",
+      "         $      ",
+      "       ) $      ",
+      "         $      ",
+      "$$$$$$$$$$      ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "         $      ",
+      "         $      ",
+      "         $      ",
+      ".........$      ",
+      "         $      ",
+      "         $      ",
+      "         $      ",
+      "       ) $      ",
+      "         $      ",
+      "$$$$$$$$$$      ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:concrete_brick_cracked"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      {
+        "char": "%",
+        "block": "immersiveengineering:crate"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:chest[facing=east,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_military"
+        }
+      },
+      {
+        "char": "'",
+        "block": "minecraft:furnace[facing=north,lit=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:ladder[facing=west,waterlogged=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:spawner",
+        "tag": {
+          "id": "minecraft:mob_spawner",
+          "Delay": 260,
+          "MinSpawnDelay": 240,
+          "MaxSpawnDelay": 720,
+          "SpawnCount": 3,
+          "MaxNearbyEntities": 9,
+          "RequiredPlayerRange": 14,
+          "SpawnRange": 4,
+          "SpawnData": {
+            "entity": {
+              "id": "minecraft:pillager"
+            }
+          },
+          "SpawnPotentials": [
+            {
+              "weight": 1,
+              "data": {
+                "entity": {
+                  "id": "minecraft:pillager"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": ".",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "/",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "0",
+        "block": "zvhouses:stone_brick_countertop"
+      }
+    ]
+  }
+}

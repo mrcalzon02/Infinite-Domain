@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "DGD",
+    "RPR",
+    "DGD"
+  ],
+  "key": {
+    "D": {
+      "item": "ae2:dense_energy_cell"
+    },
+    "G": {
+      "item": "create_new_age:generator_coil"
+    },
+    "R": {
+      "item": "createnuclear:reactor_controller"
+    },
+    "P": {
+      "item": "oritech:processing_unit"
+    }
+  },
+  "result": {
+    "id": "oritech:reactor_controller",
+    "count": 1
+  }
+}

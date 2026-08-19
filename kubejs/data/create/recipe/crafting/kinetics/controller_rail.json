@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "A":  {
+                          "item":  "minecraft:gold_block"
+                      },
+                "E":  {
+                          "item":  "create:electron_tube"
+                      },
+                "S":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    "A A",
+                    "ASA",
+                    "AEA"
+                ],
+    "result":  {
+                   "count":  6,
+                   "id":  "create:controller_rail"
+               }
+}

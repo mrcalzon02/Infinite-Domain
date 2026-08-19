@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "###",
+                    "#Z#",
+                    "###"
+                ],
+    "key":  {
+                "#":  {
+                          "item":  "allthecompressed:cherry_planks_1x"
+                      },
+                "Z":  {
+                          "item":  "graveyard:dark_iron_block"
+                      }
+            },
+    "result":  {
+                   "id":  "graveyard:cherry_coffin"
+               }
+}

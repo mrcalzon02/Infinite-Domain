@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "key":  {
+                "F":  {
+                          "item":  "iceandfire:amphithere_feather"
+                      },
+                "O":  {
+                          "item":  "allthecompressed:obsidian_1x"
+                      },
+                "S":  {
+                          "item":  "quark:stick_block"
+                      },
+                "X":  {
+                          "tag":  "minecraft:planks"
+                      }
+            },
+    "pattern":  [
+                    "OXO",
+                    "FXF",
+                    "OSO"
+                ],
+    "result":  {
+                   "id":  "iceandfire:amphithere_macuahuitl"
+               },
+    "show_notification":  true
+}

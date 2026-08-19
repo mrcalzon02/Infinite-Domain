@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "c":  {
+                          "item":  "oritech:magnetic_coil"
+                      },
+                "s":  {
+                          "item":  "bno:nickel_block"
+                      },
+                "w":  {
+                          "item":  "createbigcannons:steel_block"
+                      }
+            },
+    "pattern":  [
+                    " s ",
+                    "wcw",
+                    "wcw"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "oritech:motor"
+               }
+}

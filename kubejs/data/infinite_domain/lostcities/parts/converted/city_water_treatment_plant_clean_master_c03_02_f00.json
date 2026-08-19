@@ -1,0 +1,178 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "''&/////////////",
+      "&///////////////",
+      "///////////////'",
+      "/////////////''&",
+      "///////////''&//",
+      "/////////''&////",
+      "///////''&//////",
+      "/////''&////////",
+      "///''&//////////",
+      "/''&////////////",
+      "'&//////////////",
+      "////////////////",
+      "//////////////''",
+      "////////////''&/",
+      "//////////''&///",
+      "////////''&/////"
+    ],
+    [
+      "                ",
+      "       111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "$$$$$$$111111111",
+      "       111111111"
+    ],
+    [
+      "                ",
+      "       %%%%%%()%",
+      "$$$$$$$%        ",
+      ".......%        ",
+      ".......%        ",
+      ".......%  !!   !",
+      ".......%  !!   !",
+      ".......%  !!   !",
+      ".......%  !!   !",
+      ".......%        ",
+      ".......%        ",
+      ".......%0000,000",
+      ".......%        ",
+      ".......%        ",
+      "$$$$$$$%        ",
+      "       %        "
+    ],
+    [
+      "                ",
+      "       %%%%%%*+%",
+      "$$$$$$$%        ",
+      ".......%        ",
+      ".......%        ",
+      ".......%  !!   !",
+      ".......%  !!   !",
+      ".......%  !!   !",
+      ".......%  !!   !",
+      ".......%        ",
+      ".......%        ",
+      ".......%0000-000",
+      ".......%        ",
+      ".......%        ",
+      "$$$$$$$%        ",
+      "       %        "
+    ],
+    [
+      "                ",
+      "       %%%%%%%%%",
+      "$$$$$$$%        ",
+      "       %        ",
+      "       %        ",
+      "       %  !!   !",
+      "       %  !!   !",
+      "       %  !!   !",
+      "       %  !!   !",
+      "       %        ",
+      "       %        ",
+      "       %00000000",
+      "       %        ",
+      "       %        ",
+      "$$$$$$$%        ",
+      "       %        "
+    ],
+    [
+      "                ",
+      "       %%%%%%%%%",
+      "       %        ",
+      "       %        ",
+      "       %        ",
+      "       %  !!   !",
+      "       %  !!   !",
+      "       %  !!   !",
+      "       %  !!   !",
+      "       %        ",
+      "       %        ",
+      "       %00000000",
+      "       %        ",
+      "       %        ",
+      "       %        ",
+      "       %        "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:fluid_tank"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:bricks"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:iron_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:iron_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:iron_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:iron_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:water"
+      },
+      {
+        "char": "/",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "0",
+        "block": "tfmg:cinder_block"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:factory_floor"
+      }
+    ]
+  }
+}

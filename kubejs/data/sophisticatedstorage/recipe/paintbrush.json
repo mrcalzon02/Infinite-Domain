@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "S":  {
+                          "item":  "quark:stick_block"
+                      },
+                "W":  {
+                          "tag":  "minecraft:wool"
+                      }
+            },
+    "pattern":  [
+                    " W ",
+                    " SW",
+                    "S  "
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "sophisticatedstorage:paintbrush"
+               }
+}

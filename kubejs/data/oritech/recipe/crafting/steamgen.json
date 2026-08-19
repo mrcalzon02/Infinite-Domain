@@ -1,0 +1,27 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "b":  {
+                          "item":  "oritech:basic_generator_block"
+                      },
+                "c":  {
+                          "item":  "oritech:magnetic_coil"
+                      },
+                "f":  {
+                          "item":  "more_ores_more_gems:block_of_electrum"
+                      },
+                "s":  {
+                          "item":  "minecraft:copper_block"
+                      }
+            },
+    "pattern":  [
+                    "fff",
+                    "fcf",
+                    "sbs"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "oritech:steam_engine_block"
+               }
+}

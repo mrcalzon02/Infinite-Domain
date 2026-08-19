@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "oritech:machine_core_4"
+    },
+    "B": {
+      "item": "oritech:pulverizer_block"
+    },
+    "C": {
+      "item": "oritech:centrifuge_block"
+    },
+    "D": {
+      "item": "oritech:machine_core_3"
+    },
+    "E": {
+      "item": "oritech:machine_core_4"
+    }
+  },
+  "result": {
+    "id": "kubejs:era5_mining_contribution",
+    "count": 1
+  }
+}

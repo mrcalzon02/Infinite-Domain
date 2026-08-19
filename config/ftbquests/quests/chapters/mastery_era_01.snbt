@@ -1,0 +1,144 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "mastery_era_01"
+	group: "7ADA55C0FFEE0001"
+	id: "7100000000000000"
+	images: [ ]
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4FC0C1C678C71891"]
+			id: "6110000000000001"
+			shape: "octagon"
+			tasks: [{
+				id: "6150000000000001"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6110000000000001"]
+			id: "1140000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 4194303L
+				id: "1150000000000001"
+				item: { count: 1, id: "minecraft:andesite" }
+				type: "item"
+			}]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6110000000000001"]
+			id: "2140000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 4194303L
+				id: "2150000000000001"
+				item: { count: 1, id: "create:andesite_alloy" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6110000000000001"]
+			id: "3140000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 4194303L
+				id: "3150000000000001"
+				item: { count: 1, id: "minecraft:wheat" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6110000000000001"]
+			id: "4140000000000001"
+			shape: "rsquare"
+			size: 1.25d
+			tasks: [{
+				consume_items: true
+				count: 4194303L
+				id: "4150000000000001"
+				item: { count: 1, id: "wastelands:scrap_pile" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"1140000000000001"
+				"2140000000000001"
+				"3140000000000001"
+				"4140000000000001"
+			]
+			id: "6110000000000002"
+			rewards: [
+				{
+					id: "6160000000000001"
+					item: {
+						count: 1
+						id: "kubejs:era1_mastery_emblem"
+					}
+					type: "item"
+				}
+				{
+					count: 64
+					id: "6160000000000002"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+				{
+					id: "6160000000000003"
+					type: "xp"
+					xp: 20000
+				}
+				{
+					id: "6160000000000004"
+					item: {
+						count: 1
+						id: "create:creative_motor"
+					}
+					type: "item"
+				}
+				{
+					id: "6160000000000005"
+					item: {
+						count: 1
+						id: "createthrusters:oxidized_creative_blaze_cake"
+					}
+					type: "item"
+				}
+				{
+					id: "6160000000000006"
+					item: {
+						count: 1
+						id: "mininggadgets:upgrade_battery_creative"
+					}
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			size: 1.75d
+			x: 0.0d
+			y: 7.0d
+		}
+	]
+}

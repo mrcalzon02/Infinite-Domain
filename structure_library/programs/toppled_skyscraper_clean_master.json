@@ -1,0 +1,40 @@
+{
+  "structure_id": "infinite_domain:toppled_skyscraper_clean_master",
+  "archetype": "six-level corporate office tower with public/service podium, twin emergency cores and roof crown",
+  "orientation": {
+    "public_arrival": "north",
+    "loading_and_building_services": "south and east",
+    "office_tower": "west/central",
+    "reserved_fall_avenue": "east",
+    "communications_and_mechanical_crown": "roof"
+  },
+  "building_program": [
+    "public lobby, reception and security",
+    "mail, cafe and shared podium services",
+    "rear loading, maintenance and building plant",
+    "four complete office levels with central corridor, paired suites and rear service core",
+    "records, meeting and staff-support functions on every office level",
+    "two independent full-height emergency ladder shafts",
+    "roof communications, control and mechanical crown"
+  ],
+  "damage_constraints": [
+    "retain an accessible podium and two complete occupied office levels in the stump",
+    "preserve one continuous emergency ladder through the complete stump",
+    "represent the upper tower as three offset fractured horizontal segments",
+    "show former floor plates standing vertically inside the fallen shaft",
+    "use full-block concrete/gravel debris without bars, fences or metal girders",
+    "derive all collapse, occupation and loot from the immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": ["exterior_a", "exterior_b", "roof_off_cutaway", "floor_slices"],
+    "required_manual_checks": [
+      "the intact tower reads as a vertically serviced office building rather than stacked empty shells",
+      "podium public and rear-service functions remain distinct",
+      "both emergency cores and every surviving floor work at player scale",
+      "the horizontal mass reads as the tower's upper floors rather than a neighboring warehouse",
+      "the shear plane, offset segments and impact berm follow a coherent fall direction",
+      "terrain feathering seats the podium, avenue impact and rubble into city terrain"
+    ]
+  }
+}

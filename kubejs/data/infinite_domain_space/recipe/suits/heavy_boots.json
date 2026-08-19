@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "kubejs:aerospace_aluminum_sheet"
+    },
+    "B": {
+      "item": "tfmg:heavy_plate"
+    },
+    "C": {
+      "item": "kubejs:reinforced_frame"
+    },
+    "D": {
+      "item": "stellaris:space_suit_boots"
+    },
+    "E": {
+      "item": "tfmg:rubber_sheet"
+    }
+  },
+  "result": {
+    "id": "infinite_domain_space:heavy_boots",
+    "count": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  {
+                          "item":  "minecraft:iron_bars"
+                      },
+                "C":  {
+                          "item":  "createbigcannons:cast_iron_block"
+                      },
+                "P":  {
+                          "item":  "tfmg:cast_iron_pipe"
+                      }
+            },
+    "pattern":  [
+                    "BPB",
+                    "BPB",
+                    "CPC"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "tfmg:exhaust"
+               }
+}

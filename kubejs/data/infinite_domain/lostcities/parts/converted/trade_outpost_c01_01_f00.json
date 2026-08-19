@@ -1,0 +1,234 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "=======)))======",
+      "=====)))))======",
+      "===))&=)))======",
+      "=))&===)))======",
+      "))))))))))))))))",
+      "))))))))))))))))",
+      "))))))))))))))))",
+      "=======)))==))&=",
+      "=======)))))&===",
+      "=======)))&=====",
+      "======))))======",
+      "====))&)))======",
+      "==))&==)))======",
+      "))&====)))======",
+      "&======)))======",
+      "=======)))=====)"
+    ],
+    [
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "++++++++++++++++",
+      "                ",
+      "      ;;;;;     "
+    ],
+    [
+      "7777777/07777777",
+      "                ",
+      "                ",
+      "  88       88   ",
+      "  9        9    ",
+      " $              ",
+      "                ",
+      "<<<3<<<<<<<<<3<<",
+      "        <       ",
+      " :      <   , ' ",
+      " 88 *   -       ",
+      "        <     (%",
+      "        <       ",
+      "7777777347777777",
+      "                ",
+      "                "
+    ],
+    [
+      "7777777127777777",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "<<<5<<<<<<<<<5<<",
+      "        <       ",
+      "        <       ",
+      "        .       ",
+      "        <       ",
+      "        <       ",
+      "7777777567777777",
+      "                ",
+      "                "
+    ],
+    [
+      "7!!77!!7777!!77!",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "<<<<<<<<<<<<<<<<",
+      "        <       ",
+      "        <       ",
+      "        <       ",
+      "        <       ",
+      "        <       ",
+      "7777777777777777",
+      "                ",
+      "                "
+    ],
+    [
+      "7!!77!!7777!!77!",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "<<<<<<<<<<<<<<<<",
+      "        <       ",
+      "        <       ",
+      "        <       ",
+      "        <       ",
+      "        <       ",
+      "7777777777777777",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:chest[facing=east,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_market"
+        }
+      },
+      {
+        "char": "%",
+        "block": "minecraft:chest[facing=west,type=single,waterlogged=false]",
+        "tag": {
+          "id": "minecraft:chest",
+          "LootTable": "infinite_domain:chests/wasteland_industrial"
+        }
+      },
+      {
+        "char": "&",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:crafting_table"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:furnace[facing=west,lit=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:lectern[facing=south,has_book=false,powered=false]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:oak_planks"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:smithing_table"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "7",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "8",
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+      },
+      {
+        "char": "9",
+        "block": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": ":",
+        "block": "minecraft:spruce_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": ";",
+        "block": "minecraft:stone_bricks"
+      },
+      {
+        "char": "<",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "=",
+        "block": "tfmg:asphalt"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://infinite-domain.invalid/schemas/structure-metadata.schema.json",
+  "type": "object",
+  "required": ["format_version", "structures"],
+  "properties": {
+    "format_version": { "const": 1 },
+    "structures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "structure_id", "category", "source_role", "source_template", "footprint",
+          "height", "main_entrance", "secondary_entrances", "road_connection",
+          "minimum_lot", "settlement_types", "supports_intact", "supports_damage_variants",
+          "supports_occupation_variants", "refinement_intensity", "source_license",
+          "conversion_target", "production_status"
+        ],
+        "properties": {
+          "structure_id": { "type": "string", "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$" },
+          "category": { "enum": ["residential", "commercial", "civic", "industrial", "agricultural", "highway", "railway", "utility_infrastructure", "military", "miscellaneous"] },
+          "source_role": { "enum": ["rough_source", "clean_master", "damage_variant", "occupation_variant"] },
+          "source_template": { "type": "string" },
+          "footprint": { "type": "object", "required": ["width", "depth"], "properties": { "width": { "type": "integer", "minimum": 1 }, "depth": { "type": "integer", "minimum": 1 } } },
+          "height": { "type": "integer", "minimum": 1 },
+          "main_entrance": { "enum": ["north", "south", "east", "west"] },
+          "secondary_entrances": { "type": "array", "items": { "enum": ["north", "south", "east", "west"] } },
+          "road_connection": { "enum": ["none", "pedestrian", "driveway", "local_road", "main_road", "highway", "rail_siding"] },
+          "minimum_lot": { "type": "object", "required": ["width", "depth"], "properties": { "width": { "type": "integer", "minimum": 1 }, "depth": { "type": "integer", "minimum": 1 } } },
+          "settlement_types": { "type": "array", "minItems": 1, "items": { "enum": ["highway_frontage", "town_center", "residential", "industrial", "railway", "rural", "military"] } },
+          "supports_intact": { "type": "boolean" },
+          "supports_damage_variants": { "type": "boolean" },
+          "supports_occupation_variants": { "type": "boolean" },
+          "refinement_intensity": { "enum": ["repair", "light", "standard", "heavy", "rebuild"] },
+          "source_license": { "type": "object", "required": ["origin", "license", "redistributable"] },
+          "conversion_target": { "enum": ["part", "building", "multibuilding", "scattered"] },
+          "production_status": { "enum": ["quarantined", "automatic_validation", "visual_review", "approved", "rejected"] }
+        }
+      }
+    }
+  }
+}

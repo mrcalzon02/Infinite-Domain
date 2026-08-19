@@ -1,0 +1,27 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "condition":  "supplementaries:flag",
+                                       "flag":  "fodder"
+                                   }
+                               ],
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "supplementaries:flag",
+                                    "flag":  "fodder"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        {
+                            "item":  "allthecompressed:hay_block_1x"
+                        },
+                        {
+                            "item":  "supplementaries:flax_block"
+                        }
+                    ],
+    "result":  {
+                   "id":  "supplementaries:fodder",
+                   "count":  2
+               }
+}

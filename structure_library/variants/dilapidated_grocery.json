@@ -1,0 +1,24 @@
+{
+  "variant_id": "infinite_domain:dilapidated_grocery",
+  "clean_master": "infinite_domain:grocery_clean_master",
+  "damage_story": "A localized rear-west roof and receiving-wall collapse buries part of the bakery and loading area while the entrance, checkout zone, most aisles, stockroom route and eastern staff exit survive.",
+  "damage_zone": "southwest bakery and receiving corner",
+  "environment_layer": [
+    "tapered brick and gravel rubble beneath the failed roof",
+    "fallen roof member across the damaged department",
+    "broken west display glazing",
+    "scattered refuse concentrated along interrupted shopping routes"
+  ],
+  "occupation_layer": [
+    "market loot retained in the surviving stockroom",
+    "ghouls occupying the protected central stockroom"
+  ],
+  "invariants": [
+    "front canopy and vestibule survive",
+    "checkout and central entry spine remain readable",
+    "multiple aisle and department routes survive",
+    "central stockroom and eastern staff exit remain accessible",
+    "damage remains localized to the rear-west failure zone"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

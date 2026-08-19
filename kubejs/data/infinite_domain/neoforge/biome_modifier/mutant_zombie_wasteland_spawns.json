@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#infinite_domain:mutant_spawn_fallback_wastelands",
+  "spawners": {
+    "type": "mutantmonsters:mutant_zombie",
+    "weight": 25,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

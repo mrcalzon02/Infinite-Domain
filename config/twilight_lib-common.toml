@@ -1,0 +1,128 @@
+#Twilight Lib Configuration
+#Changes require server restart
+[features]
+	#Enable/disable entire cosmetic systems
+	#Enable particle trails for supporters
+	enable_trails = true
+	#Enable cosmetic addons (ears, tails, wings, etc.)
+	enable_addons = true
+	#Enable special effects (respawn effects, etc.)
+	enable_effects = true
+	#Enable player morphing system
+	enable_morphs = true
+	#Hide chest addon when wearing chest armor
+	hide_chest_in_armor = false
+	#Hide chest addon when wearing custom rendered chest armor
+	hide_chest_in_custom_armor = true
+	#Force load all addons
+	force_load_all_addons = false
+
+[performance]
+	# Default: 150
+	# Range: 10 ~ 500
+	max_cached_addon_models = 150
+	# Default: 3
+	# Range: 1 ~ 20
+	trail_update_frequency = 3
+	# Default: 10
+	# Range: 1 ~ 100
+	max_supporter_json_size = 10
+	# Default: 10000
+	# Range: 100 ~ 50000
+	max_entity_cache_size = 10000
+	# Default: 100000
+	# Range: 1000 ~ 1000000
+	max_supporters = 100000
+	# Default: 1000
+	# Range: 100 ~ 10000
+	max_nbt_list_size = 1000
+
+[input_validation]
+	# Default: 16
+	# Range: 6 ~ 128
+	max_hex_color_length = 16
+	# Default: 64
+	# Range: 8 ~ 256
+	max_cosmetic_id_length = 64
+
+[network_and_caching]
+	supporter_backup_url = "https://raw.githubusercontent.com/mcjojo3/twilight-database/main/supporters.json"
+	# Default: 5000
+	# Range: 1000 ~ 30000
+	supporter_connect_timeout_ms = 5000
+	# Default: 5000
+	# Range: 1000 ~ 30000
+	supporter_read_timeout_ms = 5000
+	# Default: 60
+	# Range: 5 ~ 1440
+	supporter_cache_duration_minutes = 60
+	# Default: 3
+	# Range: 0 ~ 10
+	supporter_fetch_max_retries = 3
+	# Default: 2000
+	# Range: 500 ~ 10000
+	supporter_fetch_retry_delay_ms = 2000
+	# Default: 6000
+	# Range: 1200 ~ 72000
+	morph_cache_cleanup_interval_ticks = 6000
+	# Default: 40
+	# Range: 10 ~ 100
+	login_sync_delay_ticks = 40
+
+[client_performance]
+	# Default: 3
+	# Range: 0 ~ 10
+	ambient_particles_per_tick = 3
+	# Default: 4
+	# Range: 1 ~ 20
+	footprint_update_frequency = 4
+	# Default: 60
+	# Range: 20 ~ 200
+	footprint_lifetime_ticks = 60
+	# Default: 5
+	# Range: 0 ~ 40
+	spawn_effect_delay_ticks = 5
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	translucent_addon_alpha = 0.5
+	# Default: 0
+	# Range: 0 ~ 512
+	trail_render_distance = 0
+	# Default: 0
+	# Range: 0 ~ 1000
+	max_effect_particles_per_player = 0
+	enable_footprint_trails = true
+	enable_particle_trails = true
+	# Default: 0.8
+	# Range: 0.1 ~ 2.0
+	custom_particle_size = 0.8
+	# Default: 10
+	# Range: 1 ~ 100
+	custom_particle_lifetime = 10
+	# Default: -0.2
+	# Range: -1.0 ~ 1.0
+	custom_particle_gravity = -0.2
+
+[gameplay_and_balance]
+	# Default: 5.0
+	# Range: 1.0 ~ 10.0
+	mining_water_slowdown_multiplier = 5.0
+	# Default: 5.0
+	# Range: 1.0 ~ 10.0
+	mining_flight_slowdown_multiplier = 5.0
+
+[debug]
+	verbose_logging = false
+	log_cosmetic_loads = false
+	log_supporter_fetches = false
+
+[morph_physics]
+	# Default: 0.85
+	# Range: 0.0 ~ 1.0
+	eye_height_multiplier = 0.85
+	# Default: 0.1
+	# Range: 0.01 ~ 1.0
+	min_morph_scale = 0.1
+	# Default: 10.0
+	# Range: 1.0 ~ 50.0
+	max_morph_scale = 10.0

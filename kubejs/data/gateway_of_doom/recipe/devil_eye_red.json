@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": { "item": "cyber_ware_port:component_microelectric" },
+    "R": { "item": "cyber_ware_port:component_reactor" },
+    "S": { "item": "cyber_ware_port:component_storage" },
+    "T": { "item": "cyber_ware_port:component_titanium" },
+    "V": { "item": "cyberspace:virtual_machine_core" },
+    "W": { "item": "gateway_of_doom:portal_ward_2" }
+  },
+  "pattern": ["TVT", "RWR", "SMS"],
+  "result": {
+    "count": 1,
+    "id": "gateway_of_doom:devil_eye_red"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "AEA"
+  ],
+  "key": {
+    "A": {
+      "item": "createdieselgenerators:diesel_bucket"
+    },
+    "B": {
+      "item": "minecraft:map"
+    },
+    "C": {
+      "item": "createdieselgenerators:diesel_engine"
+    },
+    "D": {
+      "item": "petrochem:kerosene_bucket"
+    },
+    "E": {
+      "item": "petrochem:diesel_bucket"
+    }
+  },
+  "result": {
+    "id": "kubejs:era3_exploration_contribution",
+    "count": 1
+  }
+}

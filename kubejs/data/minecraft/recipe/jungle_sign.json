@@ -1,0 +1,22 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "group":  "wooden_sign",
+    "key":  {
+                "#":  {
+                          "item":  "allthecompressed:jungle_planks_1x"
+                      },
+                "X":  {
+                          "item":  "quark:stick_block"
+                      }
+            },
+    "pattern":  [
+                    "###",
+                    "###",
+                    " X "
+                ],
+    "result":  {
+                   "count":  3,
+                   "id":  "minecraft:jungle_sign"
+               }
+}

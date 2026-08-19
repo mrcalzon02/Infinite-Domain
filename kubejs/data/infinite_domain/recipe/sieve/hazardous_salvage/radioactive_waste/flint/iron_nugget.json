@@ -1,0 +1,18 @@
+﻿{
+    "result_amount":  {
+                          "type":  "minecraft:binomial",
+                          "n":  2,
+                          "p":  0.04
+                      },
+    "result":  {
+                   "count":  1,
+                   "id":  "minecraft:iron_nugget"
+               },
+    "mesh":  {
+                 "item":  "exdeorum:flint_mesh"
+             },
+    "type":  "exdeorum:sieve",
+    "ingredient":  {
+                       "item":  "wastelands:radioactive_waste"
+                   }
+}

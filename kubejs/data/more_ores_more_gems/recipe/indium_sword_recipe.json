@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "equipment",
+    "pattern":  [
+                    "a",
+                    "a",
+                    "b"
+                ],
+    "key":  {
+                "a":  {
+                          "item":  "more_ores_more_gems:indium_ingot"
+                      },
+                "b":  {
+                          "item":  "minecraft:diamond"
+                      }
+            },
+    "result":  {
+                   "id":  "more_ores_more_gems:indium_sword",
+                   "count":  1
+               }
+}

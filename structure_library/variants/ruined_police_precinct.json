@@ -1,0 +1,26 @@
+{
+  "variant_id": "infinite_domain:ruined_police_precinct",
+  "clean_master": "infinite_domain:ruined_police_precinct_clean_master",
+  "damage_story": "A blast entered the northwest public/interview facade and stripped the affected rooms back to a continuous fracture edge, while the central vestibule, operations spine, detention wing, evidence rooms, sally port and motor pool remained defensible.",
+  "damage_zone": "northwest public and interview frontage",
+  "environment_layer": [
+    "continuous exterior-inward fracture across the northwest corner",
+    "terminated wall and floor edges instead of floating fragments",
+    "irregular gravel and cracked-concrete rubble fan across the front apron",
+    "intact secure rear court and garage lanes"
+  ],
+  "occupation_layer": [
+    "five zombie, ghoul, pillager and mutant-zombie spawners distributed by surviving zone",
+    "data loot retained in evidence storage",
+    "military loot retained in the secure vehicle-evidence bay",
+    "pillagers occupy armory/command positions while undead occupy public and detention areas"
+  ],
+  "invariants": [
+    "central public vestibule and controlled spine survive",
+    "both stair systems survive",
+    "booking, four cells, evidence rooms and rear staff route survive",
+    "sally port and three garage lanes survive",
+    "damage remains localized to the declared northwest failure zone"
+  ],
+  "production_status": "quarantined_pending_manual_review"
+}

@@ -1,0 +1,21 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  {
+                          "item":  "powergrid_batteries:high_voltage_battery"
+                      },
+                "N":  {
+                          "item":  "minecraft:netherite_block"
+                      }
+            },
+    "pattern":  [
+                    "NNN",
+                    "NBN",
+                    "NNN"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "powergrid_batteries:substation_battery"
+               }
+}

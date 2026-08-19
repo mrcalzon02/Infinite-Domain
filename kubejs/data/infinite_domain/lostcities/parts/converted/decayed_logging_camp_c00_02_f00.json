@@ -1,0 +1,194 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      ",,,%,,,',,,,%,,,",
+      "%,,,,%,,,',,,,%,",
+      ",,%,,,,%,,,',,,,",
+      ",,,,%,,,,%,,,',,",
+      ",%,,,,%,,,,%,,,'",
+      ",,,%,,,,%,,,,%,,",
+      "',,,,%,,,,%,,,,%",
+      ",,',,,,%,,,,%,,,",
+      "%,,,',,,,%,,,,%,",
+      ",,%,,,',,,,%,,,,",
+      ",,,,%,,,',,,,%,,",
+      ",%,,,,%,,,',,,,%",
+      ",,,%,,,,%,,,',,,",
+      "%,,,,%,,,,%,,,',",
+      ",,%,,,,%,,,,%,,,",
+      ",,,,%,,,,%,,,,%,"
+    ],
+    [
+      "   3333333333333",
+      "   3333333333333",
+      "   3''3333333333",
+      "   3''3333333333",
+      "   3333333333333",
+      "   3333''3333333",
+      "   3333''3333333",
+      "   3333333333333",
+      "   333333''33333",
+      "   333333''33333",
+      "   3333333333333",
+      "   3333333333333",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   &4444/4444444",
+      "   &         4  ",
+      "   &''   !   4 *",
+      "   &''   $   4 +",
+      "   &         4  ",
+      "   &   ''    -  ",
+      "   &   ''    4  ",
+      "   & (       4 (",
+      "   & )   ''  4 )",
+      "   &     ''  4  ",
+      "   &         4  ",
+      "   &&&&&&&&/0&&&",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   &444414444444",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &   ''    .  ",
+      "   &   ''    4  ",
+      "   &         4  ",
+      "   &     5   4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &&&&&&&&12&&&",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   &444444444444",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &   ''    4  ",
+      "   &   ''    4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &&&&&&&&&&&&&",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   &444444444444",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &         4  ",
+      "   &&&&&&&&&&&&&",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "minecraft:brown_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:brown_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": "%",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "&",
+        "block": "minecraft:dark_oak_planks"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:gray_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:gray_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:green_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:green_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:podzol"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "4",
+        "block": "minecraft:stripped_dark_oak_wood"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:weathered_cut_copper"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "#R",
+                    "# ",
+                    "# "
+                ],
+    "key":  {
+                "#":  {
+                          "item":  "createbigcannons:steel_block"
+                      },
+                "R":  {
+                          "item":  "minecraft:gray_wool"
+                      }
+            },
+    "result":  {
+                   "id":  "stellaris:flag"
+               }
+}

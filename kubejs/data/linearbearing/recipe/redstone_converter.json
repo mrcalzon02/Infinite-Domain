@@ -1,0 +1,30 @@
+{
+    "type":  "minecraft:crafting_shaped",
+    "category":  "redstone",
+    "key":  {
+                "S":  {
+                          "item":  "create:shaft"
+                      },
+                "E":  {
+                          "item":  "create:iron_sheet"
+                      },
+                "B":  {
+                          "item":  "create:andesite_casing"
+                      },
+                "I":  {
+                          "item":  "allthecompressed:cobblestone_1x"
+                      },
+                "R":  {
+                          "item":  "minecraft:redstone_block"
+                      }
+            },
+    "pattern":  [
+                    " E ",
+                    "IRI",
+                    "BSB"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "linearbearing:redstone_converter"
+               }
+}
