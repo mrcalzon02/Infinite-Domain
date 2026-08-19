@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "program": "Infinite Domain Old World Narrative",
+  "updated": "2026-08-19",
+  "prerequisite_handoff": {
+    "status": "SATISFIED_BY_PROJECT_OWNER_INSPECTION_DIRECTIVE",
+    "accepted_source_structures": 84,
+    "runtime_validation": "PENDING_AND_EXPLICITLY_SEPARATE",
+    "note": "Owner acceptance permits narrative lineage and asset development to proceed without representing runtime checks as complete."
+  },
+  "phases": {
+    "0_handoff_discovery": {
+      "status": "complete",
+      "deliverables": {
+        "frozen_source_catalog": "docs/old-world/owner-structure-acceptance.json",
+        "lineage_manifest": "docs/old-world/structure-lineage.json",
+        "item_registry": "kubejs/config/old_world_evidence.json",
+        "item_startup": "kubejs/startup_scripts/old_world_evidence_items.js"
+      }
+    },
+    "1_narrative_infrastructure": {
+      "status": "active",
+      "completed": ["64 proof item IDs frozen", "64 proof item registrations authored", "institution-specific item archetypes assigned"],
+      "remaining": ["author proof-item PNG textures", "bind deterministic proof loot to narrative variants", "implement institutional structure modules and damage grammar", "add lore text registry and validator", "complete one end-to-end generated test site with proof, locator and quest"]
+    },
+    "2_common_structures":{"status":"pending"},
+    "3_uncommon_structures":{"status":"pending"},
+    "4_rare_landmarks":{"status":"pending"},
+    "5_lore_corpus":{"status":"pending"},
+    "6_exploration_quest_spine":{"status":"pending"},
+    "7_darknet_archaeology":{"status":"pending"},
+    "8_space_transition":{"status":"pending"}
+  },
+  "counts": {
+    "revision_rows":64,
+    "lineage_sources_selected":64,
+    "proof_item_ids_defined":64,
+    "proof_item_registrations_authored":64,
+    "proof_item_pngs_authored":0,
+    "narrative_structure_variants_built":0
+  }
+}
