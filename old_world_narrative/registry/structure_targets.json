@@ -94,11 +94,19 @@
       "quest_hook": "FOOD FOR A BILLION",
       "unique_proof_item_seed": "evercrop_cultivation_handbook",
       "revision_intensity": "Very High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:ruined_office_tower_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_004_vcf_mycological_vertical_farm_tower",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_004_vcf_mycological_vertical_farm_tower.nbt"
     },
     {
       "id": "OWS-005",
@@ -130,11 +138,19 @@
       "quest_hook": "THE PERFECT CROP",
       "unique_proof_item_seed": "pt9_symbiosis_report",
       "revision_intensity": "Very High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:ruined_cyberware_clinic_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory.nbt"
     },
     {
       "id": "OWS-007",
@@ -253,11 +269,19 @@
       "quest_hook": "THEY WERE HERE FIRST (side branch)",
       "unique_proof_item_seed": "atlas_bulk_process_manual",
       "revision_intensity": "Very High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:abandoned_quarry_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_012_atlas_bulk_crushing_preparation_plant.nbt"
     },
     {
       "id": "OWS-013",

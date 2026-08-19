@@ -42,6 +42,20 @@ SPECS = (
         "institutional_identity": "VCF batch colors and global-license routing turn food processing into culture logistics",
         "historical_damage_signature": "minor gasket quarantine zones and rerouted batches show the early material anomaly",
         "narrative_evidence_loot": "guaranteed batch record and LOR-005 licensing brief connect dormancy to worldwide distribution"}),
+    Spec("OWS-004", "ows_004_vcf_mycological_vertical_farm_tower", "infinite_domain:ruined_office_tower_clean_master", "ruined_office_tower", "kubejs:evercrop_cultivation_handbook", "kubejs:evercrop_cultivation_handbook", "Pre-crisis to active containment", ("minecraft:lime_concrete", "minecraft:mycelium", "minecraft:brown_mushroom", "create:fluid_tank", "create:depot"), {
+        "silhouette_exterior_identity": "VCF green cultivation bands and a luminous rooftop greenhouse replace corporate office branding",
+        "interior_zoning_circulation": "public demonstration podium, four cultivation floors, nutrient risers, harvest transfer and packaging remain legible",
+        "functional_machinery_props": "mycelial grow rows, nutrient tanks, harvest depots and packaging stock operate floor by floor",
+        "institutional_identity": "clean VCF green/white public optimism contrasts with controlled yellow production zones",
+        "historical_damage_signature": "the upper cultivation floor is sealed for active containment while lower floors remain productive",
+        "narrative_evidence_loot": "guaranteed LOR-001 handbook is primary physical proof of industrial fungal agriculture"}, "uncommon_sites"),
+    Spec("OWS-006", "ows_006_vcf_pt9_symbiosis_pilot_laboratory", "infinite_domain:ruined_cyberware_clinic_clean_master", "ruined_cyberware_clinic", "kubejs:pt9_symbiosis_report", "kubejs:pt9_symbiosis_report", "Early anomaly", ("minecraft:lime_concrete", "create:framed_glass", "minecraft:brewing_stand", "tfmg:plastic_block", "minecraft:yellow_concrete"), {
+        "silhouette_exterior_identity": "VCF green pilot-lab blade and sterile white frontage replace clinic identity",
+        "interior_zoning_circulation": "sample intake, three symbiosis chambers, bacterial controls, polymer observation and secure records are separated",
+        "functional_machinery_props": "sealed culture chambers, reagent stations, polymer coupons and comparative control benches",
+        "institutional_identity": "VCF test numbering and green/cyan bioscience zoning frame PT-9 as a useful product",
+        "historical_damage_signature": "one yellow-isolated polymer observation bay records degradation before researchers understood the consequence",
+        "narrative_evidence_loot": "guaranteed LOR-003 report names PT-9 and records both bacterial protection and polymer degradation"}, "rare_sites"),
     Spec("OWS-009", "ows_009_atlas_roadside_repair_depot", "infinite_domain:service_garage_clean_master", "service_garage", "kubejs:atlas_service_plate", "kubejs:atlas_transfer_maintenance_manual", "Phase A — pre-crisis / normal operation", ("minecraft:orange_concrete", "create:mechanical_press", "create:depot", "create:andesite_casing"), {
         "silhouette_exterior_identity": "orange Atlas facade band and roofline service blade",
         "interior_zoning_circulation": "three marked service stages with preserved work and customer routes",
@@ -55,6 +69,13 @@ SPECS = (
         "institutional_identity": "numbered orange lanes and Atlas lockout stations standardize the hall",
         "historical_damage_signature": "a cannibalized fourth lane and staged spare casings record shrinking maintenance capacity",
         "narrative_evidence_loot": "guaranteed transfer-maintenance card bridges player Create knowledge to Old World industry"}),
+    Spec("OWS-012", "ows_012_atlas_bulk_crushing_preparation_plant", "infinite_domain:abandoned_quarry_clean_master", "abandoned_quarry", "kubejs:atlas_bulk_process_manual", None, "Early anomaly", ("minecraft:orange_concrete", "create:crushing_wheel", "create:millstone", "create:mechanical_mixer", "create:encased_fan"), {
+        "silhouette_exterior_identity": "Atlas orange crusher crowns and service-house band mark the quarry rim from a distance",
+        "interior_zoning_circulation": "bench haul route, bulk feed, crushing, milling, mixing, dust extraction and service dispatch form a continuous process",
+        "functional_machinery_props": "crushing wheels, millstones, mixer basin, dust fans, feed casings and maintenance stock",
+        "institutional_identity": "Atlas lane numbering and orange lockout fields standardize a sophisticated bulk plant",
+        "historical_damage_signature": "one isolated crusher cell and cannibalized casing bank show rapidly growing maintenance cost",
+        "narrative_evidence_loot": "guaranteed bulk-process manual documents sophisticated throughput and worsening service intervals"}, "uncommon_sites"),
     Spec("OWS-015", "ows_015_polycore_utility_seal_failure_station", "infinite_domain:wasteland_water_tower_clean_master", "wasteland_water_tower", "kubejs:polycore_seal_failure_report", "kubejs:polycore_service_interval_board", "Early anomaly", ("minecraft:magenta_concrete", "create:mechanical_pump", "create:fluid_pipe", "minecraft:yellow_concrete"), {
         "silhouette_exterior_identity": "PolyCore magenta pump-house band and seal-service pylon identify the utility compound",
         "interior_zoning_circulation": "intake, paired pumps, seal bench, replacement stock and records wall form a service loop",
@@ -108,6 +129,38 @@ def build_003():
     t.fill((48, 2, 34), (53, 3, 38), "immersiveengineering:crate"); t.chest(50, 2, 15, BY_TARGET["OWS-003"].loot_id, "west")
     return t
 
+def build_004():
+    t = base.ruined_office_tower_clean_master()
+    t.fill((10, 13, 11), (40, 15, 11), "minecraft:lime_concrete"); t.fill((10, 13, 37), (40, 15, 37), "minecraft:lime_concrete")
+    t.fill((17, 7, 4), (33, 9, 4), "minecraft:white_concrete"); t.fill((20, 8, 3), (30, 11, 3), "minecraft:lime_concrete")
+    for floor_index, y in enumerate((14, 21, 28, 35)):
+        for x1, x2 in ((12, 20), (30, 38)):
+            for z in (15, 19, 28, 32):
+                t.fill((x1, y, z), (x2, y, z + 1), "minecraft:mycelium")
+                for x in range(x1 + 1, x2, 2): t.set(x, y + 1, z, "minecraft:brown_mushroom")
+        t.fill((12, y + 1, 24), (14, y + 3, 25), "create:fluid_tank")
+        for x in (30, 33, 36): t.set(x, y + 1, 24, "create:depot")
+        t.fill((39, y, 24), (39, y + 4, 31), "minecraft:lime_concrete")
+        if floor_index == 3: t.fill((28, y, 12), (39, y, 36), "minecraft:yellow_concrete")
+    t.fill((32, 2, 33), (44, 4, 39), "immersiveengineering:crate"); t.fill((7, 2, 33), (20, 2, 39), "create:cardboard_block")
+    t.clear((15, 43, 15), (26, 45, 25)); t.fill((16, 43, 16), (25, 43, 24), "minecraft:mycelium")
+    t.chest(20, 2, 12, BY_TARGET["OWS-004"].loot_id, "west")
+    return t
+
+def build_006():
+    t = base.ruined_cyberware_clinic_clean_master()
+    t.fill((5, 10, 10), (53, 12, 10), "minecraft:white_concrete"); t.fill((11, 11, 9), (47, 14, 9), "minecraft:lime_concrete")
+    t.clear((7, 2, 13), (32, 8, 23))
+    for index, x in enumerate((8, 16, 24), 1):
+        t.fill((x, 2, 14), (x + 5, 7, 21), "create:framed_glass"); t.clear((x + 1, 3, 15), (x + 4, 6, 20))
+        t.fill((x + 1, 2, 16), (x + 4, 2, 19), "farmersdelight:rich_soil")
+        t.set(x + 2, 3, 17, "minecraft:brown_mushroom"); t.set(x + 3, 3, 18, "minecraft:red_mushroom")
+        t.set(x + 1, 3, 20, "minecraft:brewing_stand", has_bottle_0="false", has_bottle_1="false", has_bottle_2="false")
+        t.fill((x, 1, 24), (x + index + 1, 1, 28), "minecraft:yellow_concrete")
+    t.fill((39, 2, 12), (50, 4, 17), "tfmg:plastic_block"); t.fill((39, 2, 20), (50, 5, 22), "minecraft:scaffolding")
+    t.fill((22, 12, 25), (50, 14, 25), "minecraft:lime_concrete"); t.chest(28, 2, 14, BY_TARGET["OWS-006"].loot_id, "west")
+    return t
+
 def build_009():
     t = base.service_garage_clean_master(); t.fill((4, 8, 7), (36, 9, 7), "minecraft:orange_concrete"); t.fill((13, 12, 6), (27, 14, 6), "minecraft:orange_concrete"); t.fill((18, 12, 5), (22, 14, 5), "minecraft:polished_blackstone")
     t.set(17, 13, 5, "minecraft:polished_blackstone"); t.set(23, 13, 5, "minecraft:polished_blackstone"); t.set(20, 11, 5, "minecraft:polished_blackstone")
@@ -122,6 +175,20 @@ def build_010():
     for x in (19, 25, 31, 37):
         t.fill((x, 1, 11), (x + 3, 1, 29), "minecraft:orange_concrete"); t.set(x + 1, 2, 14, "create:depot"); t.set(x + 1, 3, 15, "create:mechanical_press", facing="north"); t.fill((x, 2, 24), (x + 2, 3, 24), "create:andesite_casing")
     t.fill((38, 2, 11), (43, 4, 18), "minecraft:scaffolding"); t.fill((38, 1, 19), (44, 1, 23), "minecraft:yellow_concrete"); t.fill((40, 2, 20), (43, 3, 22), "create:andesite_casing"); t.chest(41, 2, 13, BY_TARGET["OWS-010"].loot_id, "west")
+    return t
+
+def build_012():
+    t = base.abandoned_quarry_clean_master()
+    t.fill((4, 21, 15), (17, 23, 15), "minecraft:orange_concrete"); t.fill((5, 20, 14), (16, 22, 14), "minecraft:polished_blackstone")
+    t.fill((47, 13, 8), (62, 14, 18), "create:andesite_casing")
+    for x in (49, 54, 59):
+        t.set(x, 15, 11, "create:crushing_wheel"); t.set(x + 1, 15, 13, "create:crushing_wheel")
+        t.set(x, 15, 16, "create:millstone")
+    t.set(52, 15, 20, "create:basin"); t.set(52, 17, 20, "create:mechanical_mixer")
+    for x in (48, 56, 61): t.set(x, 15, 22, "create:encased_fan")
+    t.fill((45, 12, 24), (63, 12, 28), "minecraft:orange_concrete"); t.fill((56, 13, 24), (63, 16, 28), "minecraft:yellow_concrete")
+    t.fill((38, 7, 45), (54, 9, 50), "jaffabricate:pallet_full"); t.fill((6, 14, 25), (14, 17, 28), "create:andesite_casing")
+    t.chest(12, 14, 26, BY_TARGET["OWS-012"].loot_id, "west")
     return t
 
 def build_015():
@@ -144,10 +211,10 @@ def build_016():
     t.fill((6, 2, 16), (12, 4, 19), "immersiveengineering:crate"); t.chest(11, 2, 17, BY_TARGET["OWS-016"].loot_id, "west")
     return t
 
-BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-009": build_009, "OWS-010": build_010, "OWS-015": build_015, "OWS-016": build_016}
+BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016}
 
 def loot_table(spec):
-    items = [spec.proof] + ([spec.lore] if spec.lore else [])
+    items = list(dict.fromkeys([spec.proof] + ([spec.lore] if spec.lore else [])))
     pools = [{"rolls": 1, "entries": [{"type": "minecraft:item", "name": item}]} for item in items]
     extra = [{"type": "minecraft:item", "name": "create:andesite_alloy", "weight": 8}]
     if spec.target == "OWS-009": extra += [{"type": "minecraft:item", "name": "create:shaft", "weight": 10}, {"type": "minecraft:item", "name": "create:cogwheel", "weight": 8}]
@@ -172,7 +239,7 @@ def generate(spec):
 
 def main():
     for spec in SPECS: generate(spec)
-    for set_name, spacing, separation, salt in (("common_sites", 48, 24, 90310009), ("uncommon_sites", 96, 48, 90310016)):
+    for set_name, spacing, separation, salt in (("common_sites", 48, 24, 90310009), ("uncommon_sites", 96, 48, 90310016), ("rare_sites", 160, 80, 90310006)):
         members = [spec for spec in SPECS if spec.set_name == set_name]
         base.write_json(DATA / "worldgen" / "structure_set" / "old_world" / f"{set_name}.json", {"structures": [{"structure": spec.structure_id, "weight": 1} for spec in members], "placement": {"type": "minecraft:random_spread", "spacing": spacing, "separation": separation, "salt": salt}})
     print(f"Generated {len(SPECS)} approved Old World sites with deterministic proof loot.")

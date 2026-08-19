@@ -16,7 +16,8 @@ DESTINATION_QUESTS = {
     "OWS-001": "4F57000000000011", "OWS-002": "4F57000000000013",
     "OWS-003": "4F57000000000015", "OWS-009": "4F57000000000002",
     "OWS-010": "4F57000000000004", "OWS-015": "4F57000000000021",
-    "OWS-016": "4F57000000000023",
+    "OWS-016": "4F57000000000023", "OWS-004": "4F57000000000030",
+    "OWS-006": "4F57000000000032", "OWS-012": "4F57000000000040",
 }
 
 def read_json(path): return json.loads(path.read_text(encoding="utf-8"))
@@ -46,7 +47,7 @@ def main():
     chapter = (ROOT / "config" / "ftbquests" / "quests" / "chapters" / "old_world_investigation.snbt").read_text(encoding="utf-8")
     structure_sets = {
         name: read_json(DATA / "worldgen" / "structure_set" / "old_world" / f"{name}.json")
-        for name in ("common_sites", "uncommon_sites")
+        for name in ("common_sites", "uncommon_sites", "rare_sites")
     }
     registered_by_set = {
         name: {entry["structure"] for entry in value["structures"]}
@@ -68,7 +69,7 @@ def main():
         require(f"structure_map {spec.structure_id} 2" in chapter, f"{spec.target} has no locator handoff")
         expected_reward = "70E" + hashlib.sha256(DESTINATION_QUESTS[spec.target].encode()).hexdigest()[:13].upper()
         require(f'id: "{expected_reward}"' in chapter, f"{spec.target} locator reward ID is not stable")
-        require(spec.structure_id in registered, f"{spec.target} is absent from common structure set")
+        require(spec.structure_id in registered, f"{spec.target} is absent from the structure sets")
         require(spec.structure_id in registered_by_set[spec.set_name], f"{spec.target} is in the wrong rarity set")
 
         pool = read_json(DATA / "worldgen" / "template_pool" / "old_world" / f"{spec.name}.json")
@@ -88,8 +89,11 @@ def main():
         require(len(renders[spec.structure_id]["renders"]) == 4, f"{spec.target} needs four review views")
         require(renders[spec.structure_id]["visual_approval"] is False, f"{spec.target} must not claim runtime approval")
 
-    require(len(registered) == len(SPECS), "common structure set contains stale or duplicate entries")
-    require(not (registered_by_set["common_sites"] & registered_by_set["uncommon_sites"]), "structure rarity sets overlap")
+    require(len(registered) == len(SPECS), "structure sets contain stale or duplicate entries")
+    set_names = tuple(registered_by_set)
+    for index, left in enumerate(set_names):
+        for right in set_names[index + 1:]:
+            require(not (registered_by_set[left] & registered_by_set[right]), f"structure rarity sets overlap: {left} and {right}")
     print(f"Old World static validation passed: 64 targets, 13-quest spine, {len(SPECS)} deterministic sites.")
 
 if __name__ == "__main__": main()

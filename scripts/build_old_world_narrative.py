@@ -74,6 +74,16 @@ IMPLEMENTED_TARGETS = {
         "name": "ows_003_vcf_cold_chain_culture_nursery",
         "dimensions": ["silhouette_exterior_identity", "interior_zoning_circulation", "functional_machinery_props", "institutional_identity", "historical_damage_signature", "narrative_evidence_loot"],
     },
+    "OWS-004": {
+        "source": "infinite_domain:ruined_office_tower_clean_master",
+        "name": "ows_004_vcf_mycological_vertical_farm_tower",
+        "dimensions": ["silhouette_exterior_identity", "interior_zoning_circulation", "functional_machinery_props", "institutional_identity", "historical_damage_signature", "narrative_evidence_loot"],
+    },
+    "OWS-006": {
+        "source": "infinite_domain:ruined_cyberware_clinic_clean_master",
+        "name": "ows_006_vcf_pt9_symbiosis_pilot_laboratory",
+        "dimensions": ["silhouette_exterior_identity", "interior_zoning_circulation", "functional_machinery_props", "institutional_identity", "historical_damage_signature", "narrative_evidence_loot"],
+    },
     "OWS-009": {
         "source": "infinite_domain:service_garage_clean_master",
         "name": "ows_009_atlas_roadside_repair_depot",
@@ -82,6 +92,11 @@ IMPLEMENTED_TARGETS = {
     "OWS-010": {
         "source": "infinite_domain:corporate_warehouse_clean_master",
         "name": "ows_010_atlas_conveyor_transfer_hall",
+        "dimensions": ["silhouette_exterior_identity", "interior_zoning_circulation", "functional_machinery_props", "institutional_identity", "historical_damage_signature", "narrative_evidence_loot"],
+    },
+    "OWS-012": {
+        "source": "infinite_domain:abandoned_quarry_clean_master",
+        "name": "ows_012_atlas_bulk_crushing_preparation_plant",
         "dimensions": ["silhouette_exterior_identity", "interior_zoning_circulation", "functional_machinery_props", "institutional_identity", "historical_damage_signature", "narrative_evidence_loot"],
     },
     "OWS-015": {
@@ -222,7 +237,7 @@ def build_registries() -> None:
             "static_implemented": list(IMPLEMENTED_TARGETS),
             "static_render_reviewed": list(IMPLEMENTED_TARGETS),
             "runtime_verified": [],
-            "current_wave": "second_common_and_uncommon_support_wave",
+            "current_wave": "quest_critical_food_symbiosis_and_bulk_processing_wave",
             "deferred_runtime_checks": [
                 "fresh-world structure placement",
                 "structure-map acquisition and destination",
@@ -230,7 +245,7 @@ def build_registries() -> None:
                 "guaranteed proof chest acquisition",
                 "multiplayer proof and quest behavior",
             ],
-            "next_targets": ["OWS-004", "OWS-006", "OWS-012"],
+            "next_targets": ["OWS-005", "OWS-007", "OWS-013"],
         },
     )
 
@@ -274,6 +289,20 @@ StartupEvents.registry('item', event => {
         .tooltip('§aLOR-005 // worldwide Evercrop distribution')
         .tooltip('§7The cultures crossed every perimeter before the crisis had a name')
 
+    event.create('evercrop_cultivation_handbook')
+        .displayName('EVERCROP Industrial Cultivation Handbook')
+        .texture('minecraft:item/written_book').rarity('rare').glow(true).maxStackSize(1)
+        .tooltip('§aOWS-004 / LOR-001 // Mycological Vertical Farm Tower')
+        .tooltip('§7Benign optimism, extraordinary yield, and a production system built for billions')
+        .tooltip('§8Quest-critical proof — return this evidence to Charles')
+
+    event.create('pt9_symbiosis_report')
+        .displayName('VCF PT-9 Symbiosis Report')
+        .texture('create:item/clipboard').rarity('epic').glow(true).maxStackSize(1)
+        .tooltip('§aOWS-006 / LOR-003 // PT-9 pilot laboratory')
+        .tooltip('§7Bacterial protection confirmed; polymer degradation entered as an unresolved observation')
+        .tooltip('§8Quest-critical proof — return this evidence to Charles')
+
     event.create('atlas_service_plate')
         .displayName('Atlas Kinetic Service Plate')
         .texture('create:item/precision_mechanism')
@@ -298,6 +327,13 @@ StartupEvents.registry('item', event => {
         .texture('create:item/schedule').rarity('uncommon').glow(true).maxStackSize(1)
         .tooltip('§6OWS-010 // Conveyor Transfer Hall')
         .tooltip('§7Lane tolerances and lockout intervals match the machines you now build')
+        .tooltip('§8Quest proof — return this evidence to Charles')
+
+    event.create('atlas_bulk_process_manual')
+        .displayName('Atlas Bulk Crushing and Preparation Manual')
+        .texture('create:item/schedule').rarity('rare').glow(true).maxStackSize(1)
+        .tooltip('§6OWS-012 // quarry bulk-preparation plant')
+        .tooltip('§7Crushing, milling, mixing, dust control, and service intervals at industrial scale')
         .tooltip('§8Quest proof — return this evidence to Charles')
 
     event.create('polycore_seal_failure_report')
@@ -459,6 +495,7 @@ WAVE_QUESTS = '''
 			dependencies: ["4F57000000000004"]
 			icon: "kubejs:atlas_transfer_maintenance_card"
 			id: "4F57000000000005"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E2812D71B74803" permission_level: 2 silent: true type: "command" }]
 			shape: "octagon"
 			tasks: [{ consume_items: true id: "4F57800000000006" item: { count: 1, id: "kubejs:atlas_transfer_maintenance_card" } type: "item" }]
 			x: 6.0d
@@ -549,6 +586,7 @@ WAVE_QUESTS = '''
 			dependencies: ["4F57000000000015"]
 			icon: "kubejs:vcf_culture_batch_record"
 			id: "4F57000000000016"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_004_vcf_mycological_vertical_farm_tower 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E844D07AE3C4B6" permission_level: 2 silent: true type: "command" }]
 			shape: "octagon"
 			tasks: [
 				{ consume_items: true id: "4F57800000000017" item: { count: 1, id: "kubejs:vcf_culture_batch_record" } type: "item" }
@@ -575,6 +613,55 @@ WAVE_QUESTS = '''
 			]
 			x: 18.0d
 			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000016"]
+			id: "4F57000000000030"
+			tasks: [{ id: "4F57800000000030" structure: "infinite_domain:old_world/ows_004_vcf_mycological_vertical_farm_tower" type: "structure" }]
+			x: -18.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["4F57000000000030"]
+			icon: "kubejs:evercrop_cultivation_handbook"
+			id: "4F57000000000031"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70EB8196EC79CFD0" permission_level: 2 silent: true type: "command" }]
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000031" item: { count: 1, id: "kubejs:evercrop_cultivation_handbook" } type: "item" }]
+			x: -21.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["4F57000000000031"]
+			id: "4F57000000000032"
+			tasks: [{ id: "4F57800000000032" structure: "infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory" type: "structure" }]
+			x: -21.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["4F57000000000032"]
+			icon: "kubejs:pt9_symbiosis_report"
+			id: "4F57000000000033"
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000033" item: { count: 1, id: "kubejs:pt9_symbiosis_report" } type: "item" }]
+			x: -24.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["4F57000000000005"]
+			id: "4F57000000000040"
+			tasks: [{ id: "4F57800000000040" structure: "infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant" type: "structure" }]
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000040"]
+			icon: "kubejs:atlas_bulk_process_manual"
+			id: "4F57000000000041"
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000041" item: { count: 1, id: "kubejs:atlas_bulk_process_manual" } type: "item" }]
+			x: 6.0d
+			y: 12.0d
 		}
 '''
 
@@ -625,6 +712,24 @@ WAVE_LANG = [
     '\tquest.4F57000000000024.quest_desc: ["Recover the exposure authorization and Test 04. The same biological degradation repeated under controlled conditions. Unexpected maintenance had become a reproducible scientific fact."]',
     '\ttask.4F57800000000025.title: "Return the Exposure Authorization"',
     '\ttask.4F57800000000026.title: "Recover LOR-009"',
+    '\tquest.4F57000000000030.title: "Mycological Vertical Farm Tower"',
+    '\tquest.4F57000000000030.quest_desc: ["Enter the VCF tower and read it floor by floor: nutrient service below, cultivation above, then harvest, packaging and clean public-facing space."]',
+    '\ttask.4F57800000000030.title: "Enter OWS-004"',
+    '\tquest.4F57000000000031.title: "FOOD FOR A BILLION"',
+    '\tquest.4F57000000000031.quest_desc: ["Recover LOR-001, the Evercrop cultivation handbook. The tower was not a prototype; it was a repeatable industrial recipe for feeding a dense city."]',
+    '\ttask.4F57800000000031.title: "Return LOR-001 to Charles"',
+    '\tquest.4F57000000000032.title: "PT-9 Symbiosis Pilot Laboratory"',
+    '\tquest.4F57000000000032.quest_desc: ["Enter the pilot laboratory. Compare the culture chambers, bacterial-control rooms and polymer observation stations before disturbing the report."]',
+    '\ttask.4F57800000000032.title: "Enter OWS-006"',
+    '\tquest.4F57000000000033.title: "THE PERFECT CROP"',
+    '\tquest.4F57000000000033.quest_desc: ["Recover LOR-003. PT-9 documented beneficial bacteria protecting the crop while another observation showed polymer degradation. The same symbiosis that made Evercrop resilient may have made containment impossible. — Charles"]',
+    '\ttask.4F57800000000033.title: "Return LOR-003 to Charles"',
+    '\tquest.4F57000000000040.title: "Bulk Crushing & Preparation Plant"',
+    '\tquest.4F57000000000040.quest_desc: ["Enter the Atlas preparation plant. Crushers, mixers, feed lanes and dust handling turn the roadside transfer evidence into industrial-scale throughput."]',
+    '\ttask.4F57800000000040.title: "Enter OWS-012"',
+    '\tquest.4F57000000000041.title: "The Cost of Throughput"',
+    '\tquest.4F57000000000041.quest_desc: ["Recover the bulk-process manual. Atlas documented service failures as routine production constraints; scale came from maintaining the whole system, not merely making machines faster."]',
+    '\ttask.4F57800000000041.title: "Return the Atlas Bulk-Process Manual"',
 ]
 
 

@@ -85,6 +85,7 @@
 			dependencies: ["4F57000000000004"]
 			icon: "kubejs:atlas_transfer_maintenance_card"
 			id: "4F57000000000005"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E2812D71B74803" permission_level: 2 silent: true type: "command" }]
 			shape: "octagon"
 			tasks: [{ consume_items: true id: "4F57800000000006" item: { count: 1, id: "kubejs:atlas_transfer_maintenance_card" } type: "item" }]
 			x: 6.0d
@@ -175,6 +176,7 @@
 			dependencies: ["4F57000000000015"]
 			icon: "kubejs:vcf_culture_batch_record"
 			id: "4F57000000000016"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_004_vcf_mycological_vertical_farm_tower 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E844D07AE3C4B6" permission_level: 2 silent: true type: "command" }]
 			shape: "octagon"
 			tasks: [
 				{ consume_items: true id: "4F57800000000017" item: { count: 1, id: "kubejs:vcf_culture_batch_record" } type: "item" }
@@ -201,6 +203,55 @@
 			]
 			x: 18.0d
 			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000016"]
+			id: "4F57000000000030"
+			tasks: [{ id: "4F57800000000030" structure: "infinite_domain:old_world/ows_004_vcf_mycological_vertical_farm_tower" type: "structure" }]
+			x: -18.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["4F57000000000030"]
+			icon: "kubejs:evercrop_cultivation_handbook"
+			id: "4F57000000000031"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70EB8196EC79CFD0" permission_level: 2 silent: true type: "command" }]
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000031" item: { count: 1, id: "kubejs:evercrop_cultivation_handbook" } type: "item" }]
+			x: -21.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["4F57000000000031"]
+			id: "4F57000000000032"
+			tasks: [{ id: "4F57800000000032" structure: "infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory" type: "structure" }]
+			x: -21.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["4F57000000000032"]
+			icon: "kubejs:pt9_symbiosis_report"
+			id: "4F57000000000033"
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000033" item: { count: 1, id: "kubejs:pt9_symbiosis_report" } type: "item" }]
+			x: -24.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["4F57000000000005"]
+			id: "4F57000000000040"
+			tasks: [{ id: "4F57800000000040" structure: "infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant" type: "structure" }]
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000040"]
+			icon: "kubejs:atlas_bulk_process_manual"
+			id: "4F57000000000041"
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000041" item: { count: 1, id: "kubejs:atlas_bulk_process_manual" } type: "item" }]
+			x: 6.0d
+			y: 12.0d
 		}
 	]
 }

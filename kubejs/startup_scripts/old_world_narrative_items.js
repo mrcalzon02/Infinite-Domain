@@ -34,6 +34,20 @@ StartupEvents.registry('item', event => {
         .tooltip('§aLOR-005 // worldwide Evercrop distribution')
         .tooltip('§7The cultures crossed every perimeter before the crisis had a name')
 
+    event.create('evercrop_cultivation_handbook')
+        .displayName('EVERCROP Industrial Cultivation Handbook')
+        .texture('minecraft:item/written_book').rarity('rare').glow(true).maxStackSize(1)
+        .tooltip('§aOWS-004 / LOR-001 // Mycological Vertical Farm Tower')
+        .tooltip('§7Benign optimism, extraordinary yield, and a production system built for billions')
+        .tooltip('§8Quest-critical proof — return this evidence to Charles')
+
+    event.create('pt9_symbiosis_report')
+        .displayName('VCF PT-9 Symbiosis Report')
+        .texture('create:item/clipboard').rarity('epic').glow(true).maxStackSize(1)
+        .tooltip('§aOWS-006 / LOR-003 // PT-9 pilot laboratory')
+        .tooltip('§7Bacterial protection confirmed; polymer degradation entered as an unresolved observation')
+        .tooltip('§8Quest-critical proof — return this evidence to Charles')
+
     event.create('atlas_service_plate')
         .displayName('Atlas Kinetic Service Plate')
         .texture('create:item/precision_mechanism')
@@ -58,6 +72,13 @@ StartupEvents.registry('item', event => {
         .texture('create:item/schedule').rarity('uncommon').glow(true).maxStackSize(1)
         .tooltip('§6OWS-010 // Conveyor Transfer Hall')
         .tooltip('§7Lane tolerances and lockout intervals match the machines you now build')
+        .tooltip('§8Quest proof — return this evidence to Charles')
+
+    event.create('atlas_bulk_process_manual')
+        .displayName('Atlas Bulk Crushing and Preparation Manual')
+        .texture('create:item/schedule').rarity('rare').glow(true).maxStackSize(1)
+        .tooltip('§6OWS-012 // quarry bulk-preparation plant')
+        .tooltip('§7Crushing, milling, mixing, dust control, and service intervals at industrial scale')
         .tooltip('§8Quest proof — return this evidence to Charles')
 
     event.create('polycore_seal_failure_report')
