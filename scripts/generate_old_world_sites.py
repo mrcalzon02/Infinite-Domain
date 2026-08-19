@@ -87,7 +87,7 @@ def generate(mode: str = "staged") -> None:
     for name, builder in VCF.BUILDERS.items():
         template = builder()
         G.stabilize_door_pairs(template)
-        lint = G.lint_structure_template(name, template)
+        lint = G.assess_fidelity(name, template)
         if not lint["structural_lint_passed"]:
             raise ValueError(f"{name} failed structural lint: {'; '.join(lint['issues'])}")
         statistics[name] = template.save(f"old_world/vcf/{name}")
