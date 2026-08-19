@@ -1,0 +1,30 @@
+{
+  "format_version": 1,
+  "canon_sha256": "eec4d3149e5e5823b330d5b01127b8f6e592d1938ef4e491f719617e507bf182",
+  "structure_handoff": {
+    "catalog_count": 84,
+    "reviewed_and_approved_by_user": true,
+    "approval_date": "2026-08-19"
+  },
+  "targets_total": 64,
+  "static_implemented": [
+    "OWS-009"
+  ],
+  "static_render_reviewed": [
+    "OWS-009"
+  ],
+  "runtime_verified": [],
+  "current_wave": "representative_common_structure",
+  "deferred_runtime_checks": [
+    "fresh-world structure placement",
+    "structure-map acquisition and destination",
+    "FTB structure-task completion",
+    "guaranteed proof chest acquisition",
+    "multiplayer proof and quest behavior"
+  ],
+  "next_targets": [
+    "OWS-001",
+    "OWS-010",
+    "OWS-015"
+  ]
+}

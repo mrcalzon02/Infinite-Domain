@@ -1,0 +1,76 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "diamond"
+	filename: "old_world_investigation"
+	group: "4F574E0000000001"
+	icon: "kubejs:atlas_service_plate"
+	id: "4F574E0000000002"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "4F57000000000001"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_009_atlas_roadside_repair_depot 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "70E823B42224CCBE"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "4F57800000000001"
+				item: { count: 1, id: "create:wrench" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4F57000000000001"]
+			id: "4F57000000000002"
+			tasks: [{
+				id: "4F57800000000002"
+				structure: "infinite_domain:old_world/ows_009_atlas_roadside_repair_depot"
+				type: "structure"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4F57000000000002"]
+			icon: "kubejs:atlas_service_plate"
+			id: "4F57000000000003"
+			rewards: [
+				{
+					id: "4F57900000000002"
+					item: { count: 4, id: "numismatics:cog" }
+					type: "item"
+				}
+				{
+					id: "4F57900000000003"
+					item: { count: 1, id: "create:precision_mechanism" }
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: true
+					id: "4F57800000000003"
+					item: { count: 1, id: "kubejs:atlas_service_plate" }
+					type: "item"
+				}
+				{
+					id: "4F57800000000004"
+					item: { count: 1, id: "kubejs:atlas_transfer_maintenance_manual" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+	]
+}
