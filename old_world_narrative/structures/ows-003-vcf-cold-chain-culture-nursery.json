@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-003",
+  "structure_id": "infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery",
+  "source_structure": "infinite_domain:abandoned_orchard_cannery_clean_master",
+  "collapse_phase": "Early anomaly",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "VCF green cold-chain bands and cyan loading marks replace cannery branding",
+    "interior_zoning_circulation": "receiving, cold vault, dormancy nursery, batch inspection and dispatch remain sequential",
+    "functional_machinery_props": "cooler banks, sealed nursery cells, batch benches and shipping racks",
+    "institutional_identity": "VCF batch colors and global-license routing turn food processing into culture logistics",
+    "historical_damage_signature": "minor gasket quarantine zones and rerouted batches show the early material anomaly",
+    "narrative_evidence_loot": "guaranteed batch record and LOR-005 licensing brief connect dormancy to worldwide distribution"
+  },
+  "proof_item": "kubejs:vcf_culture_batch_record",
+  "lore_record": "kubejs:vcf_global_licensing_brief",
+  "loot_table": "infinite_domain:chests/old_world/ows_003_vcf_cold_chain_culture_nursery",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery 2",
+  "statistics": {
+    "size": [
+      59,
+      24,
+      51
+    ],
+    "placed_blocks": 23215,
+    "palette_states": 42,
+    "modded_blocks": 4701,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "programmed_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 6,
+    "orphan_door_halves": 0,
+    "window_blocks": 1111,
+    "functional_fixtures": 11,
+    "vertical_access_span": 0,
+    "dense_floor_levels": 11,
+    "footprint_variants": 17
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

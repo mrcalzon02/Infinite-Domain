@@ -109,6 +109,7 @@
 			dependencies: ["4F57000000000011"]
 			icon: "kubejs:vcf_culture_service_manifest"
 			id: "4F57000000000012"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_002_vcf_emergency_community_grow_hall 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E24C220612D966" permission_level: 2 silent: true type: "command" }]
 			shape: "octagon"
 			tasks: [
 				{ consume_items: true id: "4F57800000000012" item: { count: 1, id: "kubejs:vcf_culture_service_manifest" } type: "item" }
@@ -137,12 +138,68 @@
 			dependencies: ["4F57000000000021"]
 			icon: "kubejs:polycore_seal_failure_report"
 			id: "4F57000000000022"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E2EF3B1EB9AB6E" permission_level: 2 silent: true type: "command" }]
 			shape: "octagon"
 			tasks: [
 				{ consume_items: true id: "4F57800000000022" item: { count: 1, id: "kubejs:polycore_seal_failure_report" } type: "item" }
 				{ id: "4F57800000000023" item: { count: 1, id: "kubejs:polycore_service_interval_board" } type: "item" }
 			]
 			x: 12.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000012"]
+			id: "4F57000000000013"
+			tasks: [{ id: "4F57800000000014" structure: "infinite_domain:old_world/ows_002_vcf_emergency_community_grow_hall" type: "structure" }]
+			x: -9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4F57000000000013"]
+			icon: "kubejs:emergency_grow_authorization"
+			id: "4F57000000000014"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E8DC3599B8FE47" permission_level: 2 silent: true type: "command" }]
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000015" item: { count: 1, id: "kubejs:emergency_grow_authorization" } type: "item" }]
+			x: -12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4F57000000000014"]
+			id: "4F57000000000015"
+			tasks: [{ id: "4F57800000000016" structure: "infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery" type: "structure" }]
+			x: -12.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000015"]
+			icon: "kubejs:vcf_culture_batch_record"
+			id: "4F57000000000016"
+			shape: "octagon"
+			tasks: [
+				{ consume_items: true id: "4F57800000000017" item: { count: 1, id: "kubejs:vcf_culture_batch_record" } type: "item" }
+				{ id: "4F57800000000018" item: { count: 1, id: "kubejs:vcf_global_licensing_brief" } type: "item" }
+			]
+			x: -15.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000022"]
+			id: "4F57000000000023"
+			tasks: [{ id: "4F57800000000024" structure: "infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array" type: "structure" }]
+			x: 15.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000023"]
+			icon: "kubejs:polycore_elastomer_exposure_test"
+			id: "4F57000000000024"
+			shape: "octagon"
+			tasks: [
+				{ consume_items: true id: "4F57800000000025" item: { count: 1, id: "kubejs:polycore_elastomer_exposure_test" } type: "item" }
+				{ id: "4F57800000000026" item: { count: 1, id: "kubejs:polycore_exposure_test_04" } type: "item" }
+			]
+			x: 18.0d
 			y: 9.0d
 		}
 	]

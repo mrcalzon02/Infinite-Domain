@@ -42,11 +42,19 @@
       "quest_hook": "FOOD FOR A BILLION (support)",
       "unique_proof_item_seed": "emergency_grow_authorization",
       "revision_intensity": "High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:ruined_community_center_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_002_vcf_emergency_community_grow_hall",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_002_vcf_emergency_community_grow_hall.nbt"
     },
     {
       "id": "OWS-003",
@@ -60,11 +68,19 @@
       "quest_hook": "THE PERFECT CROP (support)",
       "unique_proof_item_seed": "vcf_culture_batch_record",
       "revision_intensity": "High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:abandoned_orchard_cannery_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_003_vcf_cold_chain_culture_nursery.nbt"
     },
     {
       "id": "OWS-004",
@@ -317,11 +333,19 @@
       "quest_hook": "UNEXPECTED MAINTENANCE (support)",
       "unique_proof_item_seed": "polycore_elastomer_exposure_test",
       "revision_intensity": "Very High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:mountain_biohazard_lab_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_016_polycore_elastomer_exposure_array.nbt"
     },
     {
       "id": "OWS-017",

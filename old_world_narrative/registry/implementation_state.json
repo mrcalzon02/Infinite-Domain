@@ -9,18 +9,24 @@
   "targets_total": 64,
   "static_implemented": [
     "OWS-001",
+    "OWS-002",
+    "OWS-003",
     "OWS-009",
     "OWS-010",
-    "OWS-015"
+    "OWS-015",
+    "OWS-016"
   ],
   "static_render_reviewed": [
     "OWS-001",
+    "OWS-002",
+    "OWS-003",
     "OWS-009",
     "OWS-010",
-    "OWS-015"
+    "OWS-015",
+    "OWS-016"
   ],
   "runtime_verified": [],
-  "current_wave": "first_common_structure_wave",
+  "current_wave": "second_common_and_uncommon_support_wave",
   "deferred_runtime_checks": [
     "fresh-world structure placement",
     "structure-map acquisition and destination",
@@ -29,8 +35,8 @@
     "multiplayer proof and quest behavior"
   ],
   "next_targets": [
-    "OWS-002",
-    "OWS-003",
-    "OWS-016"
+    "OWS-004",
+    "OWS-006",
+    "OWS-012"
   ]
 }

@@ -2,6 +2,7 @@
 """Static contract validation for the Old World narrative automation."""
 from __future__ import annotations
 import gzip
+import hashlib
 import json
 from pathlib import Path
 from generate_old_world_narrative_structures import SPECS
@@ -11,6 +12,12 @@ PROGRAM = ROOT / "old_world_narrative"
 REGISTRY = PROGRAM / "registry"
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
 CANON = "eec4d3149e5e5823b330d5b01127b8f6e592d1938ef4e491f719617e507bf182"
+DESTINATION_QUESTS = {
+    "OWS-001": "4F57000000000011", "OWS-002": "4F57000000000013",
+    "OWS-003": "4F57000000000015", "OWS-009": "4F57000000000002",
+    "OWS-010": "4F57000000000004", "OWS-015": "4F57000000000021",
+    "OWS-016": "4F57000000000023",
+}
 
 def read_json(path): return json.loads(path.read_text(encoding="utf-8"))
 def require(condition, message):
@@ -37,8 +44,15 @@ def main():
 
     startup = (ROOT / "kubejs" / "startup_scripts" / "old_world_narrative_items.js").read_text(encoding="utf-8")
     chapter = (ROOT / "config" / "ftbquests" / "quests" / "chapters" / "old_world_investigation.snbt").read_text(encoding="utf-8")
-    structure_set = read_json(DATA / "worldgen" / "structure_set" / "old_world" / "common_sites.json")
-    registered = {entry["structure"] for entry in structure_set["structures"]}
+    structure_sets = {
+        name: read_json(DATA / "worldgen" / "structure_set" / "old_world" / f"{name}.json")
+        for name in ("common_sites", "uncommon_sites")
+    }
+    registered_by_set = {
+        name: {entry["structure"] for entry in value["structures"]}
+        for name, value in structure_sets.items()
+    }
+    registered = set().union(*registered_by_set.values())
     renders = {entry["structure_id"]: entry for entry in read_json(PROGRAM / "reviews" / "render-manifest.json")["structures"]}
 
     for spec in SPECS:
@@ -52,7 +66,10 @@ def main():
                 require(f'id: "{item}"' in chapter, f"{item} has no quest task")
         require(f'structure: "{spec.structure_id}"' in chapter, f"{spec.target} has no structure task")
         require(f"structure_map {spec.structure_id} 2" in chapter, f"{spec.target} has no locator handoff")
+        expected_reward = "70E" + hashlib.sha256(DESTINATION_QUESTS[spec.target].encode()).hexdigest()[:13].upper()
+        require(f'id: "{expected_reward}"' in chapter, f"{spec.target} locator reward ID is not stable")
         require(spec.structure_id in registered, f"{spec.target} is absent from common structure set")
+        require(spec.structure_id in registered_by_set[spec.set_name], f"{spec.target} is in the wrong rarity set")
 
         pool = read_json(DATA / "worldgen" / "template_pool" / "old_world" / f"{spec.name}.json")
         worldgen = read_json(DATA / "worldgen" / "structure" / "old_world" / f"{spec.name}.json")
@@ -72,6 +89,7 @@ def main():
         require(renders[spec.structure_id]["visual_approval"] is False, f"{spec.target} must not claim runtime approval")
 
     require(len(registered) == len(SPECS), "common structure set contains stale or duplicate entries")
-    print("Old World static validation passed: 64 targets, 13-quest spine, four deterministic common sites.")
+    require(not (registered_by_set["common_sites"] & registered_by_set["uncommon_sites"]), "structure rarity sets overlap")
+    print(f"Old World static validation passed: 64 targets, 13-quest spine, {len(SPECS)} deterministic sites.")
 
 if __name__ == "__main__": main()

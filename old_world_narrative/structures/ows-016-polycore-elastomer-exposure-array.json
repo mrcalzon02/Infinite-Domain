@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-016",
+  "structure_id": "infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array",
+  "source_structure": "infinite_domain:mountain_biohazard_lab_clean_master",
+  "collapse_phase": "Early anomaly",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "PolyCore magenta pressure-zone cap and numbered test-wing blade distinguish the laboratory",
+    "interior_zoning_circulation": "sample intake, four parallel exposure chambers, clean observation route and failed-material archive are separated",
+    "functional_machinery_props": "sealed glass chambers, timed control banks, polymer samples and isolation stores",
+    "institutional_identity": "PolyCore test numbering and magenta/white zone control make the repeated experiment legible",
+    "historical_damage_signature": "progressively larger yellow isolation fields across chambers record reproducible biological degradation",
+    "narrative_evidence_loot": "guaranteed test authorization and LOR-009 document the same elastomer failure four times"
+  },
+  "proof_item": "kubejs:polycore_elastomer_exposure_test",
+  "lore_record": "kubejs:polycore_exposure_test_04",
+  "loot_table": "infinite_domain:chests/old_world/ows_016_polycore_elastomer_exposure_array",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array 2",
+  "statistics": {
+    "size": [
+      55,
+      22,
+      49
+    ],
+    "placed_blocks": 30743,
+    "palette_states": 67,
+    "modded_blocks": 8489,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 36,
+    "orphan_door_halves": 0,
+    "window_blocks": 694,
+    "functional_fixtures": 39,
+    "vertical_access_span": 16,
+    "dense_floor_levels": 14,
+    "footprint_variants": 19
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

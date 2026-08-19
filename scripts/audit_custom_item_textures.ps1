@@ -3,19 +3,23 @@ $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 $instanceRoot = Split-Path -Parent $PSScriptRoot
-$startupFile = Join-Path $instanceRoot 'kubejs\startup_scripts\main.js'
+$startupDir = Join-Path $instanceRoot 'kubejs\startup_scripts'
 $modsDir = Join-Path $instanceRoot 'mods'
 $minecraftRoot = Split-Path -Parent (Split-Path -Parent $instanceRoot)
 $clientJar = Join-Path $minecraftRoot 'Install\versions\1.21.1\1.21.1.jar'
 
-if (-not (Test-Path -LiteralPath $startupFile)) {
-    throw "Missing KubeJS item registry: $startupFile"
+if (-not (Test-Path -LiteralPath $startupDir)) {
+    throw "Missing KubeJS startup directory: $startupDir"
 }
 if (-not (Test-Path -LiteralPath $clientJar)) {
     throw "Missing Minecraft 1.21.1 client archive: $clientJar"
 }
 
-$source = Get-Content -LiteralPath $startupFile -Raw
+$startupFiles = @(Get-ChildItem -LiteralPath $startupDir -Filter '*.js' -File | Sort-Object Name)
+if ($startupFiles.Count -eq 0) {
+    throw "No KubeJS startup scripts found in: $startupDir"
+}
+$source = ($startupFiles | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw }) -join "`n"
 
 # Count every runtime registration form used by this pack: direct creates,
 # table-driven era items, and the mastery-emblem loop.

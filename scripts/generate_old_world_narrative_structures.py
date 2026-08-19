@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate the approved, locatable Old World narrative structure wave."""
 from __future__ import annotations
+import gzip
 from dataclasses import dataclass
 from pathlib import Path
 import generate_wasteland_sites as base
@@ -13,6 +14,7 @@ class Spec:
     target: str; name: str; source_id: str; source_profile: str
     proof: str; lore: str | None; phase: str
     required_blocks: tuple[str, ...]; dimensions: dict[str, str]
+    set_name: str = "common_sites"
     @property
     def structure_id(self): return f"infinite_domain:old_world/{self.name}"
     @property
@@ -26,6 +28,20 @@ SPECS = (
         "institutional_identity": "VCF green/white wayfinding and controlled issue-return workflow",
         "historical_damage_signature": "one quarantined cooler bay and backed-up return lane show the first supply anomaly",
         "narrative_evidence_loot": "guaranteed culture-service manifest and return-crate log establish mundane Evercrop ubiquity"}),
+    Spec("OWS-002", "ows_002_vcf_emergency_community_grow_hall", "infinite_domain:ruined_community_center_clean_master", "ruined_community_center", "kubejs:emergency_grow_authorization", None, "Early containment", ("minecraft:lime_concrete", "minecraft:wheat", "create:fluid_pipe", "immersiveengineering:crate"), {
+        "silhouette_exterior_identity": "municipal relief chevrons and a VCF green hall crown identify emergency food service",
+        "interior_zoning_circulation": "intake, culture-kit issue, two-tier grow rows, harvest aisle and relief dispatch form a public workflow",
+        "functional_machinery_props": "irrigated cultivation racks, culture crates, wash point and palletized relief stock",
+        "institutional_identity": "municipal white/yellow relief markings are visibly overlaid by VCF green culture logistics",
+        "historical_damage_signature": "one isolated rack and overflow dispatch lane show early containment pressure without ruin",
+        "narrative_evidence_loot": "guaranteed emergency grow authorization proves governments deployed Evercrop for food security"}),
+    Spec("OWS-003", "ows_003_vcf_cold_chain_culture_nursery", "infinite_domain:abandoned_orchard_cannery_clean_master", "abandoned_orchard_cannery", "kubejs:vcf_culture_batch_record", "kubejs:vcf_global_licensing_brief", "Early anomaly", ("minecraft:lime_concrete", "oritech:cooler_block", "create:framed_glass", "minecraft:yellow_concrete"), {
+        "silhouette_exterior_identity": "VCF green cold-chain bands and cyan loading marks replace cannery branding",
+        "interior_zoning_circulation": "receiving, cold vault, dormancy nursery, batch inspection and dispatch remain sequential",
+        "functional_machinery_props": "cooler banks, sealed nursery cells, batch benches and shipping racks",
+        "institutional_identity": "VCF batch colors and global-license routing turn food processing into culture logistics",
+        "historical_damage_signature": "minor gasket quarantine zones and rerouted batches show the early material anomaly",
+        "narrative_evidence_loot": "guaranteed batch record and LOR-005 licensing brief connect dormancy to worldwide distribution"}),
     Spec("OWS-009", "ows_009_atlas_roadside_repair_depot", "infinite_domain:service_garage_clean_master", "service_garage", "kubejs:atlas_service_plate", "kubejs:atlas_transfer_maintenance_manual", "Phase A — pre-crisis / normal operation", ("minecraft:orange_concrete", "create:mechanical_press", "create:depot", "create:andesite_casing"), {
         "silhouette_exterior_identity": "orange Atlas facade band and roofline service blade",
         "interior_zoning_circulation": "three marked service stages with preserved work and customer routes",
@@ -46,14 +62,50 @@ SPECS = (
         "institutional_identity": "PolyCore color coding and decreasing inspection intervals cover the ordinary utility station",
         "historical_damage_signature": "yellow isolation marks and stacked replacement crates show recurring seal failures without collapse",
         "narrative_evidence_loot": "guaranteed failure report and LOR-008 interval board make the material crisis measurable"}),
+    Spec("OWS-016", "ows_016_polycore_elastomer_exposure_array", "infinite_domain:mountain_biohazard_lab_clean_master", "mountain_biohazard_lab", "kubejs:polycore_elastomer_exposure_test", "kubejs:polycore_exposure_test_04", "Early anomaly", ("minecraft:magenta_concrete", "immersiveengineering:insulating_glass", "tfmg:plastic_block", "minecraft:yellow_concrete"), {
+        "silhouette_exterior_identity": "PolyCore magenta pressure-zone cap and numbered test-wing blade distinguish the laboratory",
+        "interior_zoning_circulation": "sample intake, four parallel exposure chambers, clean observation route and failed-material archive are separated",
+        "functional_machinery_props": "sealed glass chambers, timed control banks, polymer samples and isolation stores",
+        "institutional_identity": "PolyCore test numbering and magenta/white zone control make the repeated experiment legible",
+        "historical_damage_signature": "progressively larger yellow isolation fields across chambers record reproducible biological degradation",
+        "narrative_evidence_loot": "guaranteed test authorization and LOR-009 document the same elastomer failure four times"}, "uncommon_sites"),
 )
+
+BY_TARGET = {spec.target: spec for spec in SPECS}
 
 def build_001():
     t = base.grocery_clean_master()
     t.fill((14, 8, 7), (24, 11, 7), "minecraft:white_concrete"); t.fill((16, 9, 6), (22, 10, 6), "minecraft:lime_concrete"); t.fill((14, 6, 2), (24, 6, 5), "minecraft:lime_concrete")
     for x in (5, 9, 13, 17, 21, 25): t.set(x, 2, 20, "oritech:cooler_block")
     t.fill((5, 2, 24), (12, 3, 27), "immersiveengineering:crate"); t.fill((16, 2, 25), (22, 3, 27), "minecraft:lime_concrete"); t.fill((25, 2, 24), (29, 2, 27), "jaffabricate:pallet_full")
-    t.fill((29, 1, 14), (35, 1, 18), "minecraft:yellow_concrete"); t.fill((33, 2, 14), (35, 4, 18), "minecraft:iron_bars"); t.chest(27, 2, 26, SPECS[0].loot_id, "west")
+    t.fill((29, 1, 14), (35, 1, 18), "minecraft:yellow_concrete"); t.fill((33, 2, 14), (35, 4, 18), "minecraft:iron_bars"); t.chest(27, 2, 26, BY_TARGET["OWS-001"].loot_id, "west")
+    return t
+
+def build_002():
+    t = base.ruined_community_center_clean_master()
+    t.fill((18, 7, 4), (32, 9, 4), "minecraft:white_concrete"); t.fill((21, 8, 3), (29, 10, 3), "minecraft:lime_concrete")
+    t.fill((4, 12, 7), (46, 14, 7), "minecraft:lime_concrete"); t.fill((22, 1, 15), (46, 1, 41), "minecraft:white_concrete")
+    for z in (18, 25, 32):
+        t.fill((25, 2, z), (43, 2, z + 1), "farmersdelight:rich_soil")
+        t.fill((25, 3, z), (43, 3, z + 1), "minecraft:wheat", age="7")
+        t.fill((25, 5, z), (43, 5, z + 1), "farmersdelight:rich_soil")
+        t.fill((25, 6, z), (43, 6, z + 1), "minecraft:wheat", age="7")
+        for x in (24, 44): t.fill((x, 2, z), (x, 6, z + 1), "minecraft:scaffolding")
+    t.fill((23, 2, 21), (45, 2, 21), "create:fluid_pipe"); t.set(34, 2, 21, "create:mechanical_pump", facing="east")
+    t.fill((6, 2, 29), (18, 4, 33), "immersiveengineering:crate"); t.fill((6, 1, 36), (18, 1, 40), "minecraft:yellow_concrete")
+    t.fill((7, 2, 37), (17, 3, 39), "farmersdelight:cabbage_crate"); t.chest(17, 2, 12, BY_TARGET["OWS-002"].loot_id, "west")
+    return t
+
+def build_003():
+    t = base.abandoned_orchard_cannery_clean_master()
+    t.fill((26, 9, 8), (55, 11, 8), "minecraft:white_concrete"); t.fill((30, 10, 7), (51, 12, 7), "minecraft:lime_concrete")
+    t.fill((26, 15, 22), (55, 17, 22), "minecraft:lime_concrete"); t.fill((27, 1, 24), (45, 1, 31), "minecraft:light_blue_concrete")
+    t.fill((27, 2, 24), (45, 7, 31), "create:framed_glass"); t.clear((28, 3, 25), (44, 6, 30))
+    for x in (29, 33, 37, 41):
+        t.fill((x, 2, 25), (x + 1, 2, 29), "oritech:cooler_block")
+        t.fill((x, 3, 27), (x + 1, 4, 28), "immersiveengineering:crate")
+    t.fill((47, 2, 25), (53, 5, 31), "minecraft:scaffolding"); t.fill((46, 1, 32), (55, 1, 39), "minecraft:yellow_concrete")
+    t.fill((48, 2, 34), (53, 3, 38), "immersiveengineering:crate"); t.chest(50, 2, 15, BY_TARGET["OWS-003"].loot_id, "west")
     return t
 
 def build_009():
@@ -62,23 +114,37 @@ def build_009():
     for x in (7, 16, 25): t.fill((x, 1, 10), (x + 5, 1, 11), "minecraft:yellow_concrete")
     for x in (9, 18): t.set(x, 2, 17, "create:depot"); t.set(x, 3, 16, "create:mechanical_press", facing="north")
     t.fill((26, 2, 14), (29, 3, 14), "create:andesite_casing"); t.fill((26, 2, 20), (29, 3, 20), "create:andesite_casing"); t.set(27, 2, 17, "minecraft:anvil"); t.set(28, 2, 17, "immersiveengineering:metal_barrel")
-    t.fill((32, 2, 23), (35, 5, 23), "minecraft:scaffolding"); t.fill((32, 2, 27), (35, 5, 27), "minecraft:scaffolding"); t.fill((33, 2, 25), (35, 4, 25), "create:andesite_casing"); t.fill((5, 2, 27), (12, 2, 28), "minecraft:orange_concrete"); t.fill((6, 3, 27), (11, 4, 27), "minecraft:polished_blackstone"); t.chest(34, 2, 25, SPECS[1].loot_id, "west")
+    t.fill((32, 2, 23), (35, 5, 23), "minecraft:scaffolding"); t.fill((32, 2, 27), (35, 5, 27), "minecraft:scaffolding"); t.fill((33, 2, 25), (35, 4, 25), "create:andesite_casing"); t.fill((5, 2, 27), (12, 2, 28), "minecraft:orange_concrete"); t.fill((6, 3, 27), (11, 4, 27), "minecraft:polished_blackstone"); t.chest(34, 2, 25, BY_TARGET["OWS-009"].loot_id, "west")
     return t
 
 def build_010():
     t = base.corporate_warehouse_clean_master(); t.fill((15, 12, 8), (45, 14, 8), "minecraft:orange_concrete"); t.fill((17, 10, 35), (45, 11, 36), "minecraft:orange_concrete")
     for x in (19, 25, 31, 37):
         t.fill((x, 1, 11), (x + 3, 1, 29), "minecraft:orange_concrete"); t.set(x + 1, 2, 14, "create:depot"); t.set(x + 1, 3, 15, "create:mechanical_press", facing="north"); t.fill((x, 2, 24), (x + 2, 3, 24), "create:andesite_casing")
-    t.fill((38, 2, 11), (43, 4, 18), "minecraft:scaffolding"); t.fill((38, 1, 19), (44, 1, 23), "minecraft:yellow_concrete"); t.fill((40, 2, 20), (43, 3, 22), "create:andesite_casing"); t.chest(41, 2, 13, SPECS[2].loot_id, "west")
+    t.fill((38, 2, 11), (43, 4, 18), "minecraft:scaffolding"); t.fill((38, 1, 19), (44, 1, 23), "minecraft:yellow_concrete"); t.fill((40, 2, 20), (43, 3, 22), "create:andesite_casing"); t.chest(41, 2, 13, BY_TARGET["OWS-010"].loot_id, "west")
     return t
 
 def build_015():
     t = base.wasteland_water_tower_clean_master(); t.fill((5, 8, 12), (18, 10, 12), "minecraft:magenta_concrete"); t.fill((7, 11, 11), (16, 13, 11), "minecraft:magenta_concrete"); t.fill((6, 1, 22), (17, 1, 28), "minecraft:yellow_concrete"); t.fill((7, 2, 23), (16, 2, 23), "create:fluid_pipe")
     for x in (8, 13): t.set(x, 2, 25, "create:mechanical_pump", facing="south")
-    t.fill((6, 2, 17), (9, 3, 19), "immersiveengineering:crate"); t.fill((14, 2, 17), (17, 3, 19), "minecraft:magenta_concrete"); t.fill((14, 4, 17), (17, 5, 17), "minecraft:black_concrete"); t.chest(15, 2, 18, SPECS[3].loot_id, "west")
+    t.fill((6, 2, 17), (9, 3, 19), "immersiveengineering:crate"); t.fill((14, 2, 17), (17, 3, 19), "minecraft:magenta_concrete"); t.fill((14, 4, 17), (17, 5, 17), "minecraft:black_concrete"); t.chest(15, 2, 18, BY_TARGET["OWS-015"].loot_id, "west")
     return t
 
-BUILDERS = {"OWS-001": build_001, "OWS-009": build_009, "OWS-010": build_010, "OWS-015": build_015}
+def build_016():
+    t = base.mountain_biohazard_lab_clean_master()
+    t.fill((19, 9, 3), (35, 11, 3), "minecraft:white_concrete"); t.fill((22, 10, 2), (32, 13, 2), "minecraft:magenta_concrete")
+    t.fill((28, 13, 13), (51, 15, 13), "minecraft:magenta_concrete"); t.clear((29, 2, 17), (50, 8, 34))
+    for index, x in enumerate((30, 35, 40, 45), 1):
+        t.fill((x, 2, 19), (x + 3, 7, 27), "immersiveengineering:insulating_glass")
+        t.clear((x + 1, 3, 20), (x + 2, 6, 26))
+        t.fill((x + 1, 2, 21), (x + 2, 2, 25), "tfmg:plastic_block")
+        t.fill((x, 1, 29), (x + index - 1, 1, 33), "minecraft:yellow_concrete")
+        t.fill((x, 2, 30), (x + 2, 3, 32), "minecraft:magenta_concrete")
+    t.fill((29, 2, 16), (50, 2, 16), "minecraft:white_concrete"); t.fill((29, 2, 35), (50, 2, 35), "minecraft:white_concrete")
+    t.fill((6, 2, 16), (12, 4, 19), "immersiveengineering:crate"); t.chest(11, 2, 17, BY_TARGET["OWS-016"].loot_id, "west")
+    return t
+
+BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-009": build_009, "OWS-010": build_010, "OWS-015": build_015, "OWS-016": build_016}
 
 def loot_table(spec):
     items = [spec.proof] + ([spec.lore] if spec.lore else [])
@@ -92,7 +158,13 @@ def loot_table(spec):
 def generate(spec):
     template = BUILDERS[spec.target](); base.stabilize_door_pairs(template); metrics = base.assess_fidelity(spec.source_profile, template)
     if not metrics["structural_lint_passed"]: raise ValueError(f"{spec.target} failed structural lint: " + "; ".join(metrics["issues"]))
+    nbt_path = DATA / "structure" / "wasteland" / "old_world" / f"{spec.name}.nbt"
+    previous_nbt = nbt_path.read_bytes() if nbt_path.is_file() else None
     statistics = template.save(f"old_world/{spec.name}")
+    if previous_nbt is not None:
+        generated_nbt = nbt_path.read_bytes()
+        if gzip.decompress(previous_nbt) == gzip.decompress(generated_nbt):
+            nbt_path.write_bytes(previous_nbt)
     base.write_json(DATA / "worldgen" / "template_pool" / "old_world" / f"{spec.name}.json", {"fallback": "minecraft:empty", "elements": [{"weight": 1, "element": {"location": f"infinite_domain:wasteland/old_world/{spec.name}", "processors": "minecraft:empty", "projection": "rigid", "element_type": "minecraft:single_pool_element"}}]})
     base.write_json(DATA / "worldgen" / "structure" / "old_world" / f"{spec.name}.json", {"type": "minecraft:jigsaw", "biomes": "#infinite_domain:wasteland_site_biomes", "step": "surface_structures", "spawn_overrides": {}, "terrain_adaptation": "beard_box", "start_pool": f"infinite_domain:old_world/{spec.name}", "size": 1, "start_height": {"absolute": 0}, "max_distance_from_center": 80, "use_expansion_hack": False, "liquid_settings": "ignore_waterlogging", "project_start_to_heightmap": "WORLD_SURFACE_WG"})
     base.write_json(DATA / "loot_table" / "chests" / "old_world" / f"{spec.name}.json", loot_table(spec))
@@ -100,7 +172,9 @@ def generate(spec):
 
 def main():
     for spec in SPECS: generate(spec)
-    base.write_json(DATA / "worldgen" / "structure_set" / "old_world" / "common_sites.json", {"structures": [{"structure": spec.structure_id, "weight": 1} for spec in SPECS], "placement": {"type": "minecraft:random_spread", "spacing": 48, "separation": 24, "salt": 90310009}})
-    print("Generated four approved common Old World sites with deterministic proof loot.")
+    for set_name, spacing, separation, salt in (("common_sites", 48, 24, 90310009), ("uncommon_sites", 96, 48, 90310016)):
+        members = [spec for spec in SPECS if spec.set_name == set_name]
+        base.write_json(DATA / "worldgen" / "structure_set" / "old_world" / f"{set_name}.json", {"structures": [{"structure": spec.structure_id, "weight": 1} for spec in members], "placement": {"type": "minecraft:random_spread", "spacing": spacing, "separation": separation, "salt": salt}})
+    print(f"Generated {len(SPECS)} approved Old World sites with deterministic proof loot.")
 
 if __name__ == "__main__": main()

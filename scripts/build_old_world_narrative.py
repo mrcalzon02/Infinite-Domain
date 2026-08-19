@@ -64,6 +64,16 @@ IMPLEMENTED_TARGETS = {
         "name": "ows_001_vcf_neighborhood_culture_service_depot",
         "dimensions": ["silhouette_exterior_identity", "interior_zoning_circulation", "functional_machinery_props", "institutional_identity", "historical_damage_signature", "narrative_evidence_loot"],
     },
+    "OWS-002": {
+        "source": "infinite_domain:ruined_community_center_clean_master",
+        "name": "ows_002_vcf_emergency_community_grow_hall",
+        "dimensions": ["silhouette_exterior_identity", "interior_zoning_circulation", "functional_machinery_props", "institutional_identity", "historical_damage_signature", "narrative_evidence_loot"],
+    },
+    "OWS-003": {
+        "source": "infinite_domain:abandoned_orchard_cannery_clean_master",
+        "name": "ows_003_vcf_cold_chain_culture_nursery",
+        "dimensions": ["silhouette_exterior_identity", "interior_zoning_circulation", "functional_machinery_props", "institutional_identity", "historical_damage_signature", "narrative_evidence_loot"],
+    },
     "OWS-009": {
         "source": "infinite_domain:service_garage_clean_master",
         "name": "ows_009_atlas_roadside_repair_depot",
@@ -77,6 +87,11 @@ IMPLEMENTED_TARGETS = {
     "OWS-015": {
         "source": "infinite_domain:wasteland_water_tower_clean_master",
         "name": "ows_015_polycore_utility_seal_failure_station",
+        "dimensions": ["silhouette_exterior_identity", "interior_zoning_circulation", "functional_machinery_props", "institutional_identity", "historical_damage_signature", "narrative_evidence_loot"],
+    },
+    "OWS-016": {
+        "source": "infinite_domain:mountain_biohazard_lab_clean_master",
+        "name": "ows_016_polycore_elastomer_exposure_array",
         "dimensions": ["silhouette_exterior_identity", "interior_zoning_circulation", "functional_machinery_props", "institutional_identity", "historical_damage_signature", "narrative_evidence_loot"],
     },
 }
@@ -207,7 +222,7 @@ def build_registries() -> None:
             "static_implemented": list(IMPLEMENTED_TARGETS),
             "static_render_reviewed": list(IMPLEMENTED_TARGETS),
             "runtime_verified": [],
-            "current_wave": "first_common_structure_wave",
+            "current_wave": "second_common_and_uncommon_support_wave",
             "deferred_runtime_checks": [
                 "fresh-world structure placement",
                 "structure-map acquisition and destination",
@@ -215,7 +230,7 @@ def build_registries() -> None:
                 "guaranteed proof chest acquisition",
                 "multiplayer proof and quest behavior",
             ],
-            "next_targets": ["OWS-002", "OWS-003", "OWS-016"],
+            "next_targets": ["OWS-004", "OWS-006", "OWS-012"],
         },
     )
 
@@ -238,6 +253,26 @@ StartupEvents.registry('item', event => {
         .texture('minecraft:item/written_book').rarity('uncommon').maxStackSize(1)
         .tooltip('§aVCF Culture Services // early anomaly record')
         .tooltip('§7Spoiled seals and delayed returns begin appearing on an otherwise ordinary route')
+
+    event.create('emergency_grow_authorization')
+        .displayName('Municipal Emergency Grow Authorization')
+        .texture('minecraft:item/map').rarity('uncommon').glow(true).maxStackSize(1)
+        .tooltip('§aOWS-002 // VCF emergency community grow hall')
+        .tooltip('§7Authorizes public relief cultivation using VCF Evercrop culture kits')
+        .tooltip('§8Quest proof — return this evidence to Charles')
+
+    event.create('vcf_culture_batch_record')
+        .displayName('VCF Dormant Culture Batch Record')
+        .texture('create:item/clipboard').rarity('rare').glow(true).maxStackSize(1)
+        .tooltip('§aOWS-003 // cold-chain culture nursery')
+        .tooltip('§7Tracks culture dormancy, seal inspection, quarantine, and global dispatch')
+        .tooltip('§8Quest proof — return this evidence to Charles')
+
+    event.create('vcf_global_licensing_brief')
+        .displayName('VCF Global Licensing Brief')
+        .texture('minecraft:item/written_book').rarity('rare').maxStackSize(1)
+        .tooltip('§aLOR-005 // worldwide Evercrop distribution')
+        .tooltip('§7The cultures crossed every perimeter before the crisis had a name')
 
     event.create('atlas_service_plate')
         .displayName('Atlas Kinetic Service Plate')
@@ -277,6 +312,19 @@ StartupEvents.registry('item', event => {
         .texture('create:item/clipboard').rarity('rare').maxStackSize(1)
         .tooltip('§dLOR-008 // shrinking service intervals')
         .tooltip('§7Twelve months. Six. Three. Weekly. Then blank.')
+
+    event.create('polycore_elastomer_exposure_test')
+        .displayName('PolyCore Elastomer Exposure Authorization')
+        .texture('create:item/clipboard').rarity('rare').glow(true).maxStackSize(1)
+        .tooltip('§dOWS-016 // parallel exposure array')
+        .tooltip('§7Four controlled chambers; four repetitions of the same biological degradation')
+        .tooltip('§8Quest proof — return this evidence to Charles')
+
+    event.create('polycore_exposure_test_04')
+        .displayName('PolyCore Elastomer Exposure Test 04')
+        .texture('minecraft:item/written_book').rarity('rare').maxStackSize(1)
+        .tooltip('§dLOR-009 // repeat biological degradation')
+        .tooltip('§7The fourth controlled repetition ended the argument about measurement error')
 })
 """,
     )
@@ -435,6 +483,7 @@ WAVE_QUESTS = '''
 			dependencies: ["4F57000000000011"]
 			icon: "kubejs:vcf_culture_service_manifest"
 			id: "4F57000000000012"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_002_vcf_emergency_community_grow_hall 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E24C220612D966" permission_level: 2 silent: true type: "command" }]
 			shape: "octagon"
 			tasks: [
 				{ consume_items: true id: "4F57800000000012" item: { count: 1, id: "kubejs:vcf_culture_service_manifest" } type: "item" }
@@ -463,12 +512,68 @@ WAVE_QUESTS = '''
 			dependencies: ["4F57000000000021"]
 			icon: "kubejs:polycore_seal_failure_report"
 			id: "4F57000000000022"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E2EF3B1EB9AB6E" permission_level: 2 silent: true type: "command" }]
 			shape: "octagon"
 			tasks: [
 				{ consume_items: true id: "4F57800000000022" item: { count: 1, id: "kubejs:polycore_seal_failure_report" } type: "item" }
 				{ id: "4F57800000000023" item: { count: 1, id: "kubejs:polycore_service_interval_board" } type: "item" }
 			]
 			x: 12.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000012"]
+			id: "4F57000000000013"
+			tasks: [{ id: "4F57800000000014" structure: "infinite_domain:old_world/ows_002_vcf_emergency_community_grow_hall" type: "structure" }]
+			x: -9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4F57000000000013"]
+			icon: "kubejs:emergency_grow_authorization"
+			id: "4F57000000000014"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E8DC3599B8FE47" permission_level: 2 silent: true type: "command" }]
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000015" item: { count: 1, id: "kubejs:emergency_grow_authorization" } type: "item" }]
+			x: -12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4F57000000000014"]
+			id: "4F57000000000015"
+			tasks: [{ id: "4F57800000000016" structure: "infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery" type: "structure" }]
+			x: -12.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000015"]
+			icon: "kubejs:vcf_culture_batch_record"
+			id: "4F57000000000016"
+			shape: "octagon"
+			tasks: [
+				{ consume_items: true id: "4F57800000000017" item: { count: 1, id: "kubejs:vcf_culture_batch_record" } type: "item" }
+				{ id: "4F57800000000018" item: { count: 1, id: "kubejs:vcf_global_licensing_brief" } type: "item" }
+			]
+			x: -15.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000022"]
+			id: "4F57000000000023"
+			tasks: [{ id: "4F57800000000024" structure: "infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array" type: "structure" }]
+			x: 15.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000023"]
+			icon: "kubejs:polycore_elastomer_exposure_test"
+			id: "4F57000000000024"
+			shape: "octagon"
+			tasks: [
+				{ consume_items: true id: "4F57800000000025" item: { count: 1, id: "kubejs:polycore_elastomer_exposure_test" } type: "item" }
+				{ id: "4F57800000000026" item: { count: 1, id: "kubejs:polycore_exposure_test_04" } type: "item" }
+			]
+			x: 18.0d
 			y: 9.0d
 		}
 '''
@@ -500,6 +605,26 @@ WAVE_LANG = [
     '\tquest.4F57000000000022.quest_desc: ["Twelve months. Six. Three. Weekly. Then blank. PolyCore knew the material was failing everywhere before anyone called it a catastrophe. — Charles"]',
     '\ttask.4F57800000000022.title: "Return the PolyCore Failure Report"',
     '\ttask.4F57800000000023.title: "Recover LOR-008"',
+    '\tquest.4F57000000000013.title: "Emergency Community Grow Hall"',
+    '\tquest.4F57000000000013.quest_desc: ["Enter the converted municipal hall. VCF racks and culture kits were deployed as public relief infrastructure during early containment."]',
+    '\ttask.4F57800000000014.title: "Enter OWS-002"',
+    '\tquest.4F57000000000014.title: "Authorized Emergency Abundance"',
+    '\tquest.4F57000000000014.quest_desc: ["Recover the signed grow authorization. This was policy, not an isolated experiment: governments used Evercrop when ordinary food logistics began to fail."]',
+    '\ttask.4F57800000000015.title: "Return the Emergency Grow Authorization"',
+    '\tquest.4F57000000000015.title: "Cold-Chain Culture Nursery"',
+    '\tquest.4F57000000000015.quest_desc: ["Follow the batch route into VCF cold storage. Dormant cultures moved from nursery vault to inspection to worldwide dispatch."]',
+    '\ttask.4F57800000000016.title: "Enter OWS-003"',
+    '\tquest.4F57000000000016.title: "The Crop Was Already Everywhere"',
+    '\tquest.4F57000000000016.quest_desc: ["The batch record connects dormancy to logistics. LOR-005 lists global license regions; there was no clean perimeter left to defend. Keep that conclusion provisional until more institutions corroborate it. — Charles"]',
+    '\ttask.4F57800000000017.title: "Return the VCF Culture Batch Record"',
+    '\ttask.4F57800000000018.title: "Recover LOR-005"',
+    '\tquest.4F57000000000023.title: "Elastomer Exposure Array"',
+    '\tquest.4F57000000000023.quest_desc: ["Enter the PolyCore laboratory and compare its four parallel chambers. The experiment was built to eliminate excuses."]',
+    '\ttask.4F57800000000024.title: "Enter OWS-016"',
+    '\tquest.4F57000000000024.title: "Four Times Is a Result"',
+    '\tquest.4F57000000000024.quest_desc: ["Recover the exposure authorization and Test 04. The same biological degradation repeated under controlled conditions. Unexpected maintenance had become a reproducible scientific fact."]',
+    '\ttask.4F57800000000025.title: "Return the Exposure Authorization"',
+    '\ttask.4F57800000000026.title: "Recover LOR-009"',
 ]
 
 
@@ -528,7 +653,7 @@ def main() -> None:
     build_registries()
     build_startup_items()
     build_chapter_wave()
-    print("Built Old World registries and four-site common narrative wave.")
+    print(f"Built Old World registries and {len(IMPLEMENTED_TARGETS)}-site narrative wave.")
 
 
 if __name__ == "__main__":
