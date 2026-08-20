@@ -1,5 +1,5 @@
 [SYSTEM REPORT] Old World static build failure diagnostic
-source_sha=9969228b62735e038fdb85a98587d2e92d159694
+source_sha=ba356eca64b5136cce906e7d0f7452b377b16a64
 
 === Compile Old World Python entrypoints ===
 === Rebuild package registries safely ===
@@ -12,10 +12,10 @@ Rendered 64 structures with four review views each; manifest tracks 64
 === Synchronize render-aware implementation state ===
 === Validate Old World static contracts ===
 Traceback (most recent call last):
-  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/validate_old_world_narrative.py", line 319, in <module>
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/validate_old_world_narrative.py", line 328, in <module>
     main()
-  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/validate_old_world_narrative.py", line 141, in main
-    require([entry["target_id"] for entry in catalog_sites] == expected_targets, "prepared quest catalog target order is unstable")
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/validate_old_world_narrative.py", line 298, in main
+    require(block.encode() in raw, f"{spec.target} lacks required block {block}")
   File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/validate_old_world_narrative.py", line 60, in require
     raise ValueError(message)
-ValueError: prepared quest catalog target order is unstable
+ValueError: OWS-024 lacks required block minecraft:iron_bars
