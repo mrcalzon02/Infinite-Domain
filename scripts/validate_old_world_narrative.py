@@ -138,7 +138,16 @@ def main() -> None:
                 major_hooks[target].append(f"{quest['id']}:{quest['title']}")
 
     catalog_sites = quest_catalog["sites"]
-    require([entry["target_id"] for entry in catalog_sites] == expected_targets, "prepared quest catalog target order is unstable")
+    expected_catalog_order = [
+        target
+        for institution in institution_order
+        for target in institution_sites[institution]
+    ]
+    require(
+        [entry["target_id"] for entry in catalog_sites] == expected_catalog_order,
+        "prepared quest catalog institution-grouped order is unstable",
+    )
+    require(set(expected_catalog_order) == set(expected_targets) and len(expected_catalog_order) == 64, "prepared quest catalog order does not cover all OWS targets exactly once")
     catalog_by_target = {entry["target_id"]: entry for entry in catalog_sites}
     require(len(catalog_by_target) == 64, "prepared quest catalog contains duplicate target entries")
 
