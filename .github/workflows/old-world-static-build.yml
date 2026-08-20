@@ -13,7 +13,11 @@ on:
       - '.github/workflows/old-world-static-build.yml'
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: old-world-static-build-main
+  cancel-in-progress: true
 
 jobs:
   build-old-world:
@@ -71,3 +75,25 @@ jobs:
             old_world_narrative/registry/
             config/ftbquests/quests/chapters/old_world_investigation.snbt
             config/ftbquests/quests/lang/en_us.snbt
+
+      - name: Commit validated generated outputs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- \
+            kubejs/data/infinite_domain/structure/wasteland/old_world/ \
+            kubejs/data/infinite_domain/worldgen/structure/old_world/ \
+            kubejs/data/infinite_domain/worldgen/structure_set/old_world/ \
+            kubejs/data/infinite_domain/worldgen/template_pool/old_world/ \
+            kubejs/data/infinite_domain/loot_table/chests/old_world/ \
+            old_world_narrative/structures/ \
+            old_world_narrative/reviews/ \
+            old_world_narrative/registry/ \
+            config/ftbquests/quests/chapters/old_world_investigation.snbt \
+            config/ftbquests/quests/lang/en_us.snbt
+          if git diff --cached --quiet; then
+            echo 'No generated changes to commit.'
+          else
+            git commit -m 'Generate validated Old World static artifacts'
+            git push origin HEAD:main
+          fi
