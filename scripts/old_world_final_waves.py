@@ -411,6 +411,7 @@ def build_062():
     t.fill((1, 1, 1), (4, 6, 5), "minecraft:blue_concrete")
     t.clear((2, 2, 2), (3, 5, 4))
     t.fill((1, 6, 1), (4, 7, 5), "minecraft:white_concrete")
+    t.fill((1, 1, 6), (4, 2, 7), "minecraft:black_concrete")
     t.fill((2, 2, 3), (3, 4, 3), "ae2:drive")
     for x, z in ((5, 5), (9, 5), (5, 9), (9, 9)):
         t.set(x, 3, z, "minecraft:observer", facing="up", powered="false")
@@ -429,6 +430,7 @@ def build_063():
         t.set(x + 2, 3, 16, "create:mechanical_press", facing="north")
         t.fill((x + 1, 2, 21), (x + 4, 4, 23), "create:andesite_casing")
         t.fill((x + 1, 2, 25), (x + 4, 5, 27), "create:fluid_tank")
+    t.fill((6, 1, 29), (42, 1, 30), "minecraft:black_concrete")
     t.fill((6, 1, 31), (42, 1, 34), "minecraft:red_concrete")
     t.fill((8, 2, 32), (40, 4, 34), "immersiveengineering:crate")
     t.chest(38, 2, 33, "infinite_domain:chests/old_world/ows_063_asterion_spacecraft_assembly_facility", "west")
