@@ -28,7 +28,17 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_001_vcf_neighborhood_culture_service_depot.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_001_vcf_neighborhood_culture_service_depot.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_001_vcf_neighborhood_culture_service_depot 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-002",
@@ -54,7 +64,17 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_002_vcf_emergency_community_grow_hall.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_002_vcf_emergency_community_grow_hall.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_002_vcf_emergency_community_grow_hall 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-003",
@@ -80,7 +100,21 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_003_vcf_cold_chain_culture_nursery.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_003_vcf_cold_chain_culture_nursery.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      },
+      "darknet_return_hook": {
+        "status": "reserved_for_later_darknet_phase",
+        "purpose": "Re-open the cold-chain routing archive after Darknet access exposes hidden global batch destinations."
+      }
     },
     {
       "id": "OWS-004",
@@ -106,7 +140,17 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_004_vcf_mycological_vertical_farm_tower.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_004_vcf_mycological_vertical_farm_tower.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_004_vcf_mycological_vertical_farm_tower 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-005",
@@ -132,7 +176,17 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_005_vcf_harvest_packaging_annex.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_005_vcf_harvest_packaging_annex.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_005_vcf_harvest_packaging_annex 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-006",
@@ -157,8 +211,22 @@
         "historical_damage_signature",
         "narrative_evidence_loot"
       ],
-      "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory.nbt"
+      "runtime_validation": "pending_controlled_test",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory.nbt",
+      "worldgen_activation": "controlled_pt9_probe",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory 2",
+        "status": "controlled_probe_ready"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": false
+      },
+      "darknet_return_hook": {
+        "status": "reserved_for_later_darknet_phase",
+        "purpose": "Recover encrypted PT-9 comparison telemetry from the sealed pilot-lab records bank."
+      }
     },
     {
       "id": "OWS-007",
@@ -184,7 +252,17 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_007_vcf_ep7_agricultural_development_laboratory 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-008",
@@ -210,7 +288,21 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_008_vcf_emergency_persistence_investigation_lab 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      },
+      "darknet_return_hook": {
+        "status": "reserved_for_later_darknet_phase",
+        "purpose": "Unlock the persistence-incident clean-room cache and compare suppressed breach chronology."
+      }
     },
     {
       "id": "OWS-009",
@@ -232,10 +324,21 @@
         "interior_zoning_circulation",
         "functional_machinery_props",
         "institutional_identity",
-        "narrative_evidence_loot"
+        "narrative_evidence_loot",
+        "historical_damage_signature"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_009_atlas_roadside_repair_depot.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_009_atlas_roadside_repair_depot.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_009_atlas_roadside_repair_depot 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-010",
@@ -261,7 +364,17 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_010_atlas_conveyor_transfer_hall.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_010_atlas_conveyor_transfer_hall.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-011",
@@ -287,7 +400,17 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_011_atlas_municipal_machine_service_shop.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_011_atlas_municipal_machine_service_shop.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_011_atlas_municipal_machine_service_shop 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-012",
@@ -313,7 +436,17 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_012_atlas_bulk_crushing_preparation_plant.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_012_atlas_bulk_crushing_preparation_plant.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-013",
@@ -339,7 +472,21 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_013_atlas_automated_assembly_hall.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_013_atlas_automated_assembly_hall.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_013_atlas_automated_assembly_hall 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      },
+      "darknet_return_hook": {
+        "status": "reserved_for_later_darknet_phase",
+        "purpose": "Interrogate manual-bypass controller history for the automation failures hidden from ordinary maintenance staff."
+      }
     },
     {
       "id": "OWS-014",
@@ -365,7 +512,21 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_014_atlas_industrial_controls_integration_center.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_014_atlas_industrial_controls_integration_center.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_014_atlas_industrial_controls_integration_center 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      },
+      "darknet_return_hook": {
+        "status": "reserved_for_later_darknet_phase",
+        "purpose": "Use Darknet credentials against the controls archive to expose Atlas/Helion/Blackglass integration records."
+      }
     },
     {
       "id": "OWS-015",
@@ -391,7 +552,17 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_015_polycore_utility_seal_failure_station.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_015_polycore_utility_seal_failure_station.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-016",
@@ -417,7 +588,17 @@
         "narrative_evidence_loot"
       ],
       "runtime_validation": "deferred",
-      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_016_polycore_elastomer_exposure_array.nbt"
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_016_polycore_elastomer_exposure_array.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-017",

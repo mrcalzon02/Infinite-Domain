@@ -44,7 +44,7 @@
     "OWS-016"
   ],
   "runtime_verified": [],
-  "current_wave": "atlas_service_assembly_controls_wave",
+  "current_wave": "atlas_static_closure_and_pt9_controlled_runtime_probe",
   "deferred_runtime_checks": [
     "fresh-world structure placement",
     "structure-map acquisition and destination",
@@ -58,5 +58,16 @@
     "OWS-019",
     "OWS-020",
     "OWS-021"
+  ],
+  "controlled_worldgen_targets": [
+    "OWS-006"
+  ],
+  "production_worldgen_status": "staged_pending_runtime_validation",
+  "darknet_return_targets_reserved": [
+    "OWS-003",
+    "OWS-006",
+    "OWS-008",
+    "OWS-013",
+    "OWS-014"
   ]
 }
