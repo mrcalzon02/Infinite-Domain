@@ -321,6 +321,7 @@ def build_047():
     t = base.mountain_biohazard_lab_clean_master()
     t.fill((19, 9, 3), (35, 11, 3), "minecraft:white_concrete")
     t.fill((28, 13, 13), (51, 15, 13), "immersiveengineering:concrete_reinforced")
+    t.fill((28, 1, 17), (51, 1, 20), "minecraft:yellow_concrete")
     t.clear((29, 2, 17), (50, 8, 34))
     t.fill((29, 2, 18), (50, 8, 18), "immersiveengineering:concrete_reinforced")
     t.fill((29, 2, 34), (50, 8, 34), "immersiveengineering:concrete_reinforced")
