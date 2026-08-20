@@ -196,6 +196,143 @@ ATLAS_EXTENSION = (
     ),
 )
 
+AEVUM_EXTENSION = (
+    core.Spec(
+        "OWS-029",
+        "ows_029_aevum_longevity_treatment_center",
+        "infinite_domain:bombed_hotel_clean_master",
+        "bombed_hotel",
+        "kubejs:aevum_longevity_brief",
+        "kubejs:aevum_longevity_brief",
+        "Pre-crisis",
+        (
+            "minecraft:purple_concrete",
+            "minecraft:white_concrete",
+            "minecraft:smooth_quartz",
+            "create:framed_glass",
+            "create:fluid_tank",
+            "minecraft:brewing_stand",
+        ),
+        {
+            "silhouette_exterior_identity": "Aevum purple and white treatment-center bands convert the hotel-derived tower into an upscale longevity clinic without erasing its comfortable pre-crisis hospitality scale",
+            "interior_zoning_circulation": "reception, consultation suites, repeated treatment rooms, long-term monitoring stations and recovery lounges create a deliberate elective-care sequence",
+            "functional_machinery_props": "quartz treatment couches, privacy glass, biologic tanks, preparation stations and monitoring counters make recurring longevity therapy physically legible",
+            "institutional_identity": "Aevum branding is polished and aspirational, presenting extended healthy lifespan as an ordinary premium service rather than a secret experiment",
+            "historical_damage_signature": "the center remains intact and orderly; the historical signature is normalized long-duration treatment infrastructure rather than crisis damage",
+            "narrative_evidence_loot": "guaranteed Aevum longevity brief establishes that healthy lifespan extension was real, socially desirable and already integrated into normal life",
+        },
+        "uncommon_sites",
+    ),
+    core.Spec(
+        "OWS-030",
+        "ows_030_aevum_apl_hospital_recovery_ward",
+        "infinite_domain:ruined_hospital_clean_master",
+        "ruined_hospital",
+        "kubejs:apl_clinical_record",
+        "kubejs:apl_clinical_record",
+        "Early containment",
+        (
+            "minecraft:purple_concrete",
+            "minecraft:white_concrete",
+            "create:fluid_tank",
+            "oritech:cooler_block",
+            "minecraft:brewing_stand",
+            "immersiveengineering:crate",
+            "minecraft:yellow_concrete",
+        ),
+        {
+            "silhouette_exterior_identity": "Aevum purple recovery-wing markings overlay the intact hospital facade while municipal clinical identity remains visible",
+            "interior_zoning_circulation": "advanced recovery bays, biologic preparation, monitored step-down beds, supply control and conventional hospital circulation remain readable together",
+            "functional_machinery_props": "fluid tanks, treatment preparation stations, refrigerated biologics and bedside stock demonstrate medicine that genuinely works but depends on material supply",
+            "institutional_identity": "Aevum treatment coding is integrated into ordinary hospital operations rather than isolated as a private laboratory service",
+            "historical_damage_signature": "yellow shortage lanes and replacement-stock staging appear beside still-functional advanced care, showing containment pressure before clinical collapse",
+            "narrative_evidence_loot": "guaranteed APL clinical record proves the regenerative treatment produced real recoveries while documenting the first supply interruptions",
+        },
+        "uncommon_sites",
+    ),
+    core.Spec(
+        "OWS-031",
+        "ows_031_aevum_biologic_pharmacy_cold_store",
+        "infinite_domain:grocery_clean_master",
+        "grocery",
+        "kubejs:aevum_supply_dependence_log",
+        "kubejs:aevum_supply_dependence_log",
+        "Active containment",
+        (
+            "minecraft:purple_concrete",
+            "minecraft:white_concrete",
+            "oritech:cooler_block",
+            "immersiveengineering:crate",
+            "create:cardboard_block",
+            "minecraft:yellow_concrete",
+        ),
+        {
+            "silhouette_exterior_identity": "Aevum purple pharmacy bands and white medical wayfinding replace ordinary retail identity while retaining a neighborhood distribution footprint",
+            "interior_zoning_circulation": "prescription intake, refrigerated biologic vaults, controlled issue counters, rationed reserve stock and patient pickup form a compact medical supply chain",
+            "functional_machinery_props": "dense cooler banks, sealed crates, packaged biologics and controlled dispensing stock make cold-chain dependence unavoidable",
+            "institutional_identity": "Aevum clinical branding is overlaid by emergency allocation markings as treatment supply moves from ordinary prescription service to rationing",
+            "historical_damage_signature": "expanding yellow reserve zones and shrinking accessible cold stock show active containment forcing treatment prioritization rather than immediate abandonment",
+            "narrative_evidence_loot": "guaranteed supply dependence log records that thousands of patients could not safely stop APL therapy simply because infrastructure was failing",
+        },
+        "common_sites",
+    ),
+    core.Spec(
+        "OWS-032",
+        "ows_032_aevum_apl3_research_campus",
+        "infinite_domain:mountain_biohazard_lab_clean_master",
+        "mountain_biohazard_lab",
+        "kubejs:apl3_research_summary",
+        "kubejs:apl3_research_summary",
+        "Early anomaly -> Active containment",
+        (
+            "minecraft:purple_concrete",
+            "minecraft:white_concrete",
+            "create:framed_glass",
+            "create:fluid_tank",
+            "minecraft:brewing_stand",
+            "oritech:cooler_block",
+            "minecraft:lime_concrete",
+            "minecraft:yellow_concrete",
+        ),
+        {
+            "silhouette_exterior_identity": "Aevum purple clinical-research bands and white laboratory crowns distinguish the secure campus while a limited green dependency stripe marks agricultural feedstock handling",
+            "interior_zoning_circulation": "clinical sample intake, peptide preparation, four APL research cells, cold biologic archive, Evercrop-derived input handling and incident review are separated",
+            "functional_machinery_props": "sealed glass cells, reagent stations, biologic tanks, coolers and marked agricultural-input stores demonstrate a real translational research workflow",
+            "institutional_identity": "Aevum clinical branding remains dominant while VCF-green dependency markings make the APL/Evercrop relationship visible without implying the therapy was fraudulent",
+            "historical_damage_signature": "later cells acquire yellow isolation and supply-diversion zones as a successful medical program becomes entangled with the growing biological containment crisis",
+            "narrative_evidence_loot": "guaranteed APL-3 research summary reveals the treatment's origin, genuine effectiveness and dependence on the same agricultural biotechnology network now destabilizing civilization",
+        },
+        "rare_sites",
+    ),
+    core.Spec(
+        "OWS-033",
+        "ows_033_aevum_evacuation_dependency_ward",
+        "infinite_domain:ruined_hospital_clean_master",
+        "ruined_hospital",
+        "kubejs:orlov_dependency_memorandum",
+        "kubejs:orlov_dependency_memorandum",
+        "Late containment",
+        (
+            "minecraft:purple_concrete",
+            "minecraft:white_concrete",
+            "oritech:cooler_block",
+            "immersiveengineering:crate",
+            "minecraft:yellow_concrete",
+            "minecraft:red_concrete",
+            "minecraft:white_wool",
+        ),
+        {
+            "silhouette_exterior_identity": "Aevum recovery markings remain visible on an intact hospital wing now overwritten by emergency evacuation and triage colors",
+            "interior_zoning_circulation": "dependent patients, triage beds, dwindling biologic issue points, evacuation holding areas and a blocked departure route turn normal recovery circulation into a humanitarian dilemma",
+            "functional_machinery_props": "remaining cooler banks, ration crates, treatment cots and emergency staging show why patients could not simply be moved or taken off therapy",
+            "institutional_identity": "Aevum medical identity survives underneath civilian emergency overlays, keeping the site focused on patient dependence rather than corporate villainy",
+            "historical_damage_signature": "red triage zones, nearly empty cold storage and crowded white-cot holding areas show late-containment evacuation failing for medical rather than purely military reasons",
+            "narrative_evidence_loot": "guaranteed Orlov dependency memorandum explains why continued APL production and delayed evacuation carried real human consequences",
+        },
+        "rare_sites",
+    ),
+)
+
 
 def build_005():
     t = base.abandoned_orchard_cannery_clean_master()
@@ -327,6 +464,92 @@ def build_014():
     return t
 
 
+def build_029():
+    t = base.bombed_hotel_clean_master()
+    t.fill((17, 8, 4), (35, 9, 4), "minecraft:white_concrete")
+    t.fill((21, 9, 3), (31, 12, 3), "minecraft:purple_concrete")
+    for y in (14, 21, 28):
+        for x in (14, 22, 30, 38):
+            t.fill((x, y, 16), (x + 4, y, 19), "minecraft:smooth_quartz")
+            t.fill((x, y + 1, 20), (x + 4, y + 3, 20), "create:framed_glass")
+            t.set(x + 1, y + 1, 17, "minecraft:brewing_stand", has_bottle_0="false", has_bottle_1="false", has_bottle_2="false")
+    t.fill((6, 2, 28), (10, 5, 31), "create:fluid_tank")
+    t.fill((12, 1, 28), (39, 1, 31), "minecraft:purple_concrete")
+    t.fill((13, 2, 29), (38, 3, 30), "minecraft:white_concrete")
+    t.chest(44, 2, 35, "infinite_domain:chests/old_world/ows_029_aevum_longevity_treatment_center", "west")
+    return t
+
+
+def build_030():
+    t = base.ruined_hospital_clean_master()
+    t.fill((15, 9, 7), (51, 11, 7), "minecraft:white_concrete")
+    t.fill((23, 10, 6), (43, 13, 6), "minecraft:purple_concrete")
+    for x in (8, 16, 24, 32):
+        t.fill((x, 2, 14), (x + 5, 2, 20), "minecraft:smooth_quartz")
+        t.set(x + 1, 3, 16, "minecraft:brewing_stand", has_bottle_0="false", has_bottle_1="false", has_bottle_2="false")
+        t.fill((x + 4, 3, 17), (x + 5, 5, 19), "create:fluid_tank")
+    for x in (44, 49, 54):
+        t.fill((x, 2, 15), (x + 2, 5, 20), "oritech:cooler_block")
+    t.fill((42, 1, 22), (61, 1, 27), "minecraft:yellow_concrete")
+    t.fill((44, 2, 23), (59, 4, 26), "immersiveengineering:crate")
+    t.chest(58, 2, 18, "infinite_domain:chests/old_world/ows_030_aevum_apl_hospital_recovery_ward", "west")
+    return t
+
+
+def build_031():
+    t = base.grocery_clean_master()
+    t.fill((14, 8, 7), (24, 11, 7), "minecraft:white_concrete")
+    t.fill((16, 9, 6), (22, 10, 6), "minecraft:purple_concrete")
+    for x in (5, 9, 13, 17, 21, 25):
+        t.fill((x, 2, 20), (x + 1, 5, 22), "oritech:cooler_block")
+    t.fill((5, 1, 24), (29, 1, 27), "minecraft:yellow_concrete")
+    t.fill((6, 2, 25), (14, 4, 27), "immersiveengineering:crate")
+    t.fill((16, 2, 25), (22, 3, 27), "create:cardboard_block")
+    t.fill((24, 2, 24), (29, 4, 27), "minecraft:purple_concrete")
+    t.chest(27, 2, 26, "infinite_domain:chests/old_world/ows_031_aevum_biologic_pharmacy_cold_store", "west")
+    return t
+
+
+def build_032():
+    t = base.mountain_biohazard_lab_clean_master()
+    t.fill((19, 9, 3), (35, 11, 3), "minecraft:white_concrete")
+    t.fill((22, 10, 2), (32, 13, 2), "minecraft:purple_concrete")
+    t.clear((7, 2, 14), (49, 8, 27))
+    for index, x in enumerate((8, 18, 28, 38), 1):
+        t.fill((x, 2, 15), (x + 7, 7, 23), "create:framed_glass")
+        t.clear((x + 1, 3, 16), (x + 6, 6, 22))
+        t.fill((x + 1, 2, 17), (x + 6, 2, 21), "minecraft:smooth_quartz")
+        t.set(x + 2, 3, 18, "minecraft:brewing_stand", has_bottle_0="false", has_bottle_1="false", has_bottle_2="false")
+        t.fill((x + 4, 3, 19), (x + 5, 5, 21), "create:fluid_tank")
+        t.fill((x, 1, 25), (x + index + 2, 1, 27), "minecraft:yellow_concrete")
+    t.fill((7, 1, 30), (24, 1, 34), "minecraft:lime_concrete")
+    t.fill((8, 2, 31), (14, 4, 33), "immersiveengineering:crate")
+    for x in (30, 35, 40, 45):
+        t.fill((x, 2, 31), (x + 2, 5, 34), "oritech:cooler_block")
+    t.chest(47, 2, 32, "infinite_domain:chests/old_world/ows_032_aevum_apl3_research_campus", "west")
+    return t
+
+
+def build_033():
+    t = base.ruined_hospital_clean_master()
+    t.fill((15, 9, 7), (51, 11, 7), "minecraft:white_concrete")
+    t.fill((23, 10, 6), (43, 13, 6), "minecraft:purple_concrete")
+    t.fill((5, 1, 28), (61, 1, 37), "minecraft:yellow_concrete")
+    for row, z in enumerate((29, 33)):
+        for col, x in enumerate((7, 15, 23, 31, 39, 47)):
+            t.fill((x, 2, z), (x + 4, 2, z + 2), "minecraft:white_wool")
+            if (row + col) % 3 == 0:
+                t.fill((x, 1, z), (x + 4, 1, z + 2), "minecraft:red_concrete")
+    for x in (50, 54, 58):
+        t.fill((x, 2, 40), (x + 2, 5, 44), "oritech:cooler_block")
+    t.fill((45, 1, 46), (63, 1, 53), "minecraft:red_concrete")
+    t.fill((47, 2, 47), (61, 4, 50), "immersiveengineering:crate")
+    t.fill((5, 1, 47), (36, 1, 53), "minecraft:yellow_concrete")
+    t.fill((7, 2, 48), (34, 4, 52), "minecraft:white_wool")
+    t.chest(58, 2, 51, "infinite_domain:chests/old_world/ows_033_aevum_evacuation_dependency_ward", "west")
+    return t
+
+
 # OWS-009 was already a materially distinct Atlas service depot, but its spec
 # omitted the sixth dimension. Preserve its pre-crisis character by making the
 # ordinary repaired-bay baseline explicit and physically enforceable.
@@ -359,7 +582,7 @@ spec_009 = core.Spec(
     _core_spec_009.set_name,
 )
 
-EXTENSIONS = VCF_COMPLETION + ATLAS_EXTENSION
+EXTENSIONS = VCF_COMPLETION + ATLAS_EXTENSION + AEVUM_EXTENSION
 core.SPECS = tuple(
     sorted(
         tuple(spec_009 if spec.target == "OWS-009" else spec for spec in core.SPECS) + EXTENSIONS,
@@ -375,6 +598,11 @@ core.BUILDERS.update({
     "OWS-011": build_011,
     "OWS-013": build_013,
     "OWS-014": build_014,
+    "OWS-029": build_029,
+    "OWS-030": build_030,
+    "OWS-031": build_031,
+    "OWS-032": build_032,
+    "OWS-033": build_033,
 })
 
 Spec = core.Spec
@@ -462,7 +690,7 @@ def sync_registry() -> None:
         state["controlled_worldgen_targets"] = list(CONTROLLED_WORLDGEN_TARGETS)
         state["production_worldgen_status"] = "staged_pending_runtime_validation"
         state["darknet_return_targets_reserved"] = sorted(DARKNET_RETURN_TARGETS)
-        state["current_wave"] = "atlas_static_closure_and_pt9_controlled_runtime_probe"
+        state["current_wave"] = "aevum_functional_coverage_and_pt9_controlled_runtime_probe"
         implemented_set = set(implemented)
         state["next_targets"] = [
             row["id"] for row in targets
