@@ -97,6 +97,13 @@ SPECS = (
         "institutional_identity": "PolyCore magenta/white zone coding and numbered barrier cells present composite substitution as an organized emergency research program",
         "historical_damage_signature": "later cells carry widening yellow isolation fields, breached laminate coupons and repair stock as active containment defeats successively stronger barriers",
         "narrative_evidence_loot": "guaranteed composite failure file proves the material crisis had escalated beyond ordinary elastomers into engineered barrier systems"}, "uncommon_sites"),
+    Spec("OWS-018", "ows_018_polycore_ceramic_isolation_test_center", "infinite_domain:nuclear_research_annex_clean_master", "nuclear_research_annex", "kubejs:polycore_ceramic_isolation_result", None, "Active containment", ("minecraft:magenta_concrete", "immersiveengineering:insulating_glass", "minecraft:polished_diorite", "minecraft:quartz_block", "immersiveengineering:sheetmetal_steel", "minecraft:yellow_concrete"), {
+        "silhouette_exterior_identity": "PolyCore magenta retrofit bands and a white ceramic-isolation crown distinguish the annex while preserving its containment silhouette",
+        "interior_zoning_circulation": "three bench-scale isolation cells progress from ceramic to ceramic-metal hybrid trials before the route reaches the full-scale containment chamber and records store",
+        "functional_machinery_props": "insulating-glass observation cells, mineral barrier coupons, steel backing plates, retrofit stock and the retained containment plant support comparative isolation testing",
+        "institutional_identity": "PolyCore magenta/white zone coding and numbered ceramic test bays make the emergency substitution program legible without rebuilding the donor architecture",
+        "historical_damage_signature": "successive cells show larger isolation fields and localized breaches while the full-scale ring carries a patched ceramic-metal shell, demonstrating delay rather than immunity",
+        "narrative_evidence_loot": "guaranteed ceramic isolation result records that non-polymer barriers extended service life but still failed after environmental contamination"}, "rare_sites"),
 )
 
 BY_TARGET = {spec.target: spec for spec in SPECS}
@@ -246,7 +253,50 @@ def build_017():
     t.chest(62, 2, 33, BY_TARGET["OWS-017"].loot_id, "west")
     return t
 
-BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017}
+def build_018():
+    t = base.nuclear_research_annex_clean_master()
+    # Keep the annex massing and circulation; overlay only the emergency PolyCore identity.
+    t.fill((5, 13, 10), (38, 15, 10), "minecraft:white_concrete")
+    t.fill((12, 14, 9), (31, 17, 9), "minecraft:magenta_concrete")
+    t.fill((5, 11, 36), (43, 13, 36), "minecraft:magenta_concrete")
+    # Rework the three existing laboratory benches into increasingly expensive isolation trials.
+    for index, x in enumerate((8, 21, 32), 1):
+        t.fill((x, 2, 24), (x + 6, 8, 32), "immersiveengineering:insulating_glass")
+        t.clear((x + 1, 3, 25), (x + 5, 7, 31))
+        t.fill((x + 1, 2, 25), (x + 5, 2, 31), "minecraft:polished_diorite")
+        t.fill((x + 2, 3, 27), (x + 4, 5, 29), "minecraft:quartz_block")
+        if index >= 2:
+            t.fill((x + 1, 3, 30), (x + 5, 4, 30), "immersiveengineering:sheetmetal_steel")
+        t.fill((x, 1, 33), (x + index + 2, 1, 36), "minecraft:yellow_concrete")
+        t.fill((x + 1, 2, 34), (x + 4, 3, 35), "minecraft:magenta_concrete")
+        if index == 2:
+            t.clear((x + 4, 4, 30), (x + 5, 6, 31))
+        elif index == 3:
+            t.clear((x + 3, 3, 29), (x + 5, 7, 32))
+            t.fill((x + 1, 2, 37), (x + 5, 3, 39), "immersiveengineering:crate")
+    # The donor reactor ring becomes the full-scale ceramic/metal isolation trial.
+    cx, cz, radius = 56, 38, 13
+    for y in range(2, 11):
+        for dx in range(-radius, radius + 1):
+            for dz in range(-radius, radius + 1):
+                d2 = dx * dx + dz * dz
+                if 130 <= d2 <= 169:
+                    block = "minecraft:polished_diorite" if (dx + dz + y) % 4 else "immersiveengineering:sheetmetal_steel"
+                    t.set(cx + dx, y, cz + dz, block)
+    for x, z in ((56, 25), (56, 51), (43, 38), (69, 38)):
+        t.fill((x, 4, z), (x, 10, z), "minecraft:magenta_concrete")
+    # A localized late breach makes the result unambiguous: ceramic buys time, not immunity.
+    t.clear((64, 4, 43), (69, 9, 48))
+    t.fill((62, 1, 42), (69, 1, 49), "minecraft:yellow_concrete")
+    t.fill((64, 2, 45), (68, 3, 49), "immersiveengineering:crate")
+    # Retain the rear support wing as retrofit stock and records storage.
+    t.fill((8, 2, 41), (18, 4, 53), "minecraft:polished_diorite")
+    t.fill((10, 5, 43), (16, 6, 51), "immersiveengineering:sheetmetal_steel")
+    t.fill((36, 1, 50), (42, 1, 56), "minecraft:yellow_concrete")
+    t.chest(40, 2, 55, BY_TARGET["OWS-018"].loot_id, "west")
+    return t
+
+BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017, "OWS-018": build_018}
 
 def loot_table(spec):
     items = list(dict.fromkeys([spec.proof] + ([spec.lore] if spec.lore else [])))
