@@ -337,7 +337,7 @@ _core_spec_009 = next(spec for spec in core.SPECS if spec.target == "OWS-009")
 def build_009():
     t = _core_build_009()
     # Ordinary pre-crisis wear: repaired guard rail plus swapped casing stock.
-    t.fill((5, 2, 12), (5, 4, 13), "minecraft:iron_bars")
+    t.fill((5, 2, 12), (5, 4, 13), "minecraft:oxidized_copper_grate")
     t.fill((6, 1, 12), (8, 1, 13), "minecraft:black_concrete")
     t.fill((7, 2, 12), (8, 3, 13), "create:andesite_casing")
     return t
@@ -351,7 +351,7 @@ spec_009 = core.Spec(
     _core_spec_009.proof,
     _core_spec_009.lore,
     _core_spec_009.phase,
-    tuple(dict.fromkeys(_core_spec_009.required_blocks + ("minecraft:iron_bars",))),
+    tuple(dict.fromkeys(_core_spec_009.required_blocks + ("minecraft:oxidized_copper_grate",))),
     {
         **_core_spec_009.dimensions,
         "historical_damage_signature": "ordinary pre-crisis service wear is preserved as a repaired bay guard, replacement casing stock and intact calibration baseline rather than crisis ruin",
