@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-051",
+  "structure_id": "infinite_domain:old_world/ows_051_continuity_science_atmospheric_monitoring_station_19k",
+  "source_structure": "infinite_domain:wasteland_fire_lookout_clean_master",
+  "collapse_phase": "Late containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "the remote lookout becomes a Continuity science tower through white/cyan sensor markings and a dark instrument crown while retaining its long-range observation silhouette",
+    "interior_zoning_circulation": "ground support, instrument access, vertical monitoring route, upper analysis cabin and protected record point follow the existing tower circulation",
+    "functional_machinery_props": "observer arrays, data storage and marked sampling positions turn a lookout into a plausible atmospheric monitoring station",
+    "institutional_identity": "Continuity science uses restrained white/cyan technical markings rather than corporate branding, emphasizing cross-disciplinary field work",
+    "historical_damage_signature": "yellow contamination-distance marks accumulate at a station that is otherwise intact, emphasizing the terrifying range of detection rather than structural collapse",
+    "narrative_evidence_loot": "guaranteed nineteen-kilometer detection record proves viable atmospheric detection far outside the presumed local containment perimeter"
+  },
+  "proof_item": "kubejs:nineteen_kilometer_detection_record",
+  "lore_record": "kubejs:nineteen_kilometer_detection_record",
+  "loot_table": "infinite_domain:chests/old_world/ows_051_continuity_science_atmospheric_monitoring_station_19k",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_051_continuity_science_atmospheric_monitoring_station_19k 2",
+  "statistics": {
+    "size": [
+      35,
+      35,
+      35
+    ],
+    "placed_blocks": 7267,
+    "palette_states": 40,
+    "modded_blocks": 1421,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 2,
+    "orphan_door_halves": 0,
+    "window_blocks": 76,
+    "functional_fixtures": 7,
+    "vertical_access_span": 26,
+    "dense_floor_levels": 11,
+    "footprint_variants": 15
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

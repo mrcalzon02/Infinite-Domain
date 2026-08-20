@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-024",
+  "structure_id": "infinite_domain:old_world/ows_024_pleroma_intermodal_container_yard",
+  "source_structure": "infinite_domain:warm_industrial_mountain_port_clean_master",
+  "collapse_phase": "Active containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "stacked multicolor container masses and cyan Pleroma routing overlays dominate the port yard without erasing its harbor and mountain interfaces",
+    "interior_zoning_circulation": "container stacks occupy the cargo field while a separate inspection lane and blocked outbound strip create a visible quarantine overlay on the normal port workflow",
+    "functional_machinery_props": "stacked container volumes, inspection crates, fenced checkpoints and staged cargo make the intermodal handoff function immediately legible",
+    "institutional_identity": "Pleroma cyan inspection markings recur across otherwise generic containers, showing how pervasive the carrier had become across modes and regions",
+    "historical_damage_signature": "yellow inspection lanes, improvised barriers and backed-up outbound cargo show active containment being imposed on a system built for continuous movement",
+    "narrative_evidence_loot": "guaranteed container inspection record supports BOTH SIDES OF THE WALL by showing quarantine controls layered over still-global freight movement"
+  },
+  "proof_item": "kubejs:pleroma_container_inspection_record",
+  "lore_record": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_024_pleroma_intermodal_container_yard",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_024_pleroma_intermodal_container_yard 2",
+  "statistics": {
+    "size": [
+      47,
+      31,
+      47
+    ],
+    "placed_blocks": 34432,
+    "palette_states": 34,
+    "modded_blocks": 5304,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 5,
+    "orphan_door_halves": 0,
+    "window_blocks": 12,
+    "functional_fixtures": 3,
+    "vertical_access_span": 4,
+    "dense_floor_levels": 27,
+    "footprint_variants": 27
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

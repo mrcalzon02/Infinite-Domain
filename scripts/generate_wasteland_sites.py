@@ -319,6 +319,41 @@ def window(t: Template, x: int, y: int, z: int, *, axis: str = "x", broken: bool
         t.fill((x, y, z), (x, y + 1, z + 1), glass)
 
 
+def wall_sign(
+    t: Template,
+    x: int,
+    y: int,
+    z: int,
+    facing: str,
+    *lines: str,
+    wood: str = "oak",
+    color: str = "black",
+) -> None:
+    """Place a modern text-bearing wall sign with stable 1.21.1 block-entity NBT.
+
+    Heavy Old World rebuilds use this for institutional identity, wayfinding,
+    process labels and collapse overprints. Callers own wording and placement.
+    """
+    if facing not in {"north", "east", "south", "west"}:
+        raise ValueError(f"Unsupported wall-sign facing: {facing}")
+    messages = [json.dumps({"text": str(line)}, separators=(",", ":")) for line in lines[:4]]
+    messages.extend(['{"text":""}'] * (4 - len(messages)))
+    blank = NbtList(TAG_STRING, ['{"text":""}'] * 4)
+    t.set(
+        x,
+        y,
+        z,
+        f"minecraft:{wood}_wall_sign",
+        {
+            "id": "minecraft:sign",
+            "front_text": {"color": color, "messages": NbtList(TAG_STRING, messages)},
+            "back_text": {"color": color, "messages": blank},
+        },
+        facing=facing,
+        waterlogged="false",
+    )
+
+
 def gable_roof_x(t: Template, x1: int, x2: int, z1: int, z2: int, base_y: int, gable: str, roof_block: str, ridge: str) -> None:
     """Reusable east/west sloped roof with end walls and one-block overhang."""
     rises = (x2 - x1) // 2

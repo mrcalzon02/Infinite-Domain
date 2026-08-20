@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-025",
+  "structure_id": "infinite_domain:old_world/ows_025_pleroma_automated_market_fulfillment_center",
+  "source_structure": "infinite_domain:dilapidated_grocery",
+  "collapse_phase": "Early containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Pleroma cyan/white fulfillment markings overwrite the damaged market frontage while leaving the donor grocery silhouette recognizable",
+    "interior_zoning_circulation": "consumer shelves and receiving areas are converted into repeated sort stations feeding a broad emergency ration allocation strip and rear reserve stock",
+    "functional_machinery_props": "depot/press sort stations, cartons, ration crates and marked allocation lanes turn ordinary retail fulfillment into emergency distribution",
+    "institutional_identity": "Pleroma routing remains corporate and systematic even as the public-facing market is repurposed for ration issuance",
+    "historical_damage_signature": "the pre-existing rear structural damage remains, but the more important story is operational: consumer flow has been replaced by controlled ration staging",
+    "narrative_evidence_loot": "guaranteed ration conversion notice records the moment ordinary abundance was formally converted into civilian emergency allocation"
+  },
+  "proof_item": "kubejs:pleroma_ration_conversion_notice",
+  "lore_record": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_025_pleroma_automated_market_fulfillment_center",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_025_pleroma_automated_market_fulfillment_center 2",
+  "statistics": {
+    "size": [
+      39,
+      13,
+      33
+    ],
+    "placed_blocks": 9926,
+    "palette_states": 68,
+    "modded_blocks": 2324,
+    "spawners": 1,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "programmed_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 8,
+    "orphan_door_halves": 0,
+    "window_blocks": 48,
+    "functional_fixtures": 17,
+    "vertical_access_span": 0,
+    "dense_floor_levels": 8,
+    "footprint_variants": 11
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

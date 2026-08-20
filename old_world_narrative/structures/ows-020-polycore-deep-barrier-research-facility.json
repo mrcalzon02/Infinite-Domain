@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-020",
+  "structure_id": "infinite_domain:old_world/ows_020_polycore_deep_barrier_research_facility",
+  "source_structure": "infinite_domain:mountain_biohazard_lab_clean_master",
+  "collapse_phase": "Late containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "PolyCore magenta identity is subordinated to a conspicuous deep-barrier steel/mineral retrofit, making the secure laboratory read as a last-generation containment site",
+    "interior_zoning_circulation": "the donor circulation now terminates in nested metallic and mineral barriers surrounding an observation cell, with utilities isolated into a separate service zone",
+    "functional_machinery_props": "steel seals, mineralized walls, insulating observation glass, segregated fluid tanks and service pumps make the facility's barrier strategy mechanically legible",
+    "institutional_identity": "PolyCore zone coding and redundant barrier layers present a deliberate final containment doctrine rather than another ordinary exposure laboratory",
+    "historical_damage_signature": "the outer barriers remain mostly intact while mycelium and fungal growth are already established inside the innermost observation volume, physically proving that stronger walls only delayed failure",
+    "narrative_evidence_loot": "guaranteed Kel material integrity summary records the conclusion that no practical barrier material could restore a meaningful clean perimeter once environmental contamination was established"
+  },
+  "proof_item": "kubejs:kel_material_integrity_summary",
+  "lore_record": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_020_polycore_deep_barrier_research_facility",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_020_polycore_deep_barrier_research_facility 2",
+  "statistics": {
+    "size": [
+      55,
+      22,
+      49
+    ],
+    "placed_blocks": 30746,
+    "palette_states": 72,
+    "modded_blocks": 7981,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 34,
+    "orphan_door_halves": 0,
+    "window_blocks": 266,
+    "functional_fixtures": 52,
+    "vertical_access_span": 16,
+    "dense_floor_levels": 14,
+    "footprint_variants": 20
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

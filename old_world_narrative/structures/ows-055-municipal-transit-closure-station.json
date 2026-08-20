@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-055",
+  "structure_id": "infinite_domain:old_world/ows_055_municipal_transit_closure_station",
+  "source_structure": "infinite_domain:ruined_bus_terminal_clean_master",
+  "collapse_phase": "Late containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "municipal white transit markings survive beneath red closure bands across the terminal and boarding bays",
+    "interior_zoning_circulation": "ticket hall, waiting area, closed platforms, emergency reroute desk, stranded baggage and blocked vehicle exits remain readable",
+    "functional_machinery_props": "barriers, closure gates, abandoned baggage stock and emergency supply crates convert a normal terminal into a controlled shutdown site",
+    "institutional_identity": "municipal transit identity remains visible underneath emergency red/yellow overlays, emphasizing service withdrawal rather than military seizure",
+    "historical_damage_signature": "entire boarding bays are physically blocked while the main building remains standing, showing infrastructure being deliberately shut before destruction",
+    "narrative_evidence_loot": "guaranteed transit emergency closure notice documents the moment public mobility ceased to be treated as sustainable during late containment"
+  },
+  "proof_item": "kubejs:transit_emergency_closure_notice",
+  "lore_record": "kubejs:transit_emergency_closure_notice",
+  "loot_table": "infinite_domain:chests/old_world/ows_055_municipal_transit_closure_station",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_055_municipal_transit_closure_station 2",
+  "statistics": {
+    "size": [
+      61,
+      24,
+      51
+    ],
+    "placed_blocks": 27752,
+    "palette_states": 43,
+    "modded_blocks": 4364,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 10,
+    "orphan_door_halves": 0,
+    "window_blocks": 16,
+    "functional_fixtures": 2,
+    "vertical_access_span": 14,
+    "dense_floor_levels": 8,
+    "footprint_variants": 12
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

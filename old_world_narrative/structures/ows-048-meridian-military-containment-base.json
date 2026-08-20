@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-048",
+  "structure_id": "infinite_domain:old_world/ows_048_meridian_military_containment_base",
+  "source_structure": "infinite_domain:mountain_military_complex_clean_master",
+  "collapse_phase": "Late containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "the fortified mountain garrison gains large red containment sectors and yellow controlled-movement corridors without losing its military compound silhouette",
+    "interior_zoning_circulation": "command, protected logistics, containment staging, equipment issue, restricted perimeter and troop movement remain separate enough to read operationally",
+    "functional_machinery_props": "reinforced positions, barrier corridors, emergency crates and staged engineering stock show military power being redirected toward containment logistics",
+    "institutional_identity": "Meridian military red/orange command markings dominate while Emergency Authority yellow survives at controlled civilian interfaces",
+    "historical_damage_signature": "sealed internal sectors and duplicated perimeter lines show the base increasingly defending itself from the same environment it was ordered to contain",
+    "narrative_evidence_loot": "guaranteed containment command directive records the military transition from supporting civil quarantine to commanding regional containment operations"
+  },
+  "proof_item": "kubejs:containment_command_directive",
+  "lore_record": "kubejs:containment_command_directive",
+  "loot_table": "infinite_domain:chests/old_world/ows_048_meridian_military_containment_base",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_048_meridian_military_containment_base 2",
+  "statistics": {
+    "size": [
+      61,
+      24,
+      61
+    ],
+    "placed_blocks": 35725,
+    "palette_states": 74,
+    "modded_blocks": 11447,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "programmed_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 30,
+    "orphan_door_halves": 0,
+    "window_blocks": 120,
+    "functional_fixtures": 21,
+    "vertical_access_span": 19,
+    "dense_floor_levels": 13,
+    "footprint_variants": 21
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

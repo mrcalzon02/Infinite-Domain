@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-060",
+  "structure_id": "infinite_domain:old_world/ows_060_asterion_launch_support_warehouse",
+  "source_structure": "infinite_domain:corporate_warehouse_clean_master",
+  "collapse_phase": "Late containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Asterion blue-and-white aerospace logistics bands convert the corporate warehouse into a recognizable launch-support depot",
+    "interior_zoning_circulation": "precision receiving, flight hardware storage, life-support stores, mission-kit packing and secure outbound staging remain separated",
+    "functional_machinery_props": "crated components, casing stock, sealed mission packages and marked outbound hardware show a launch program consuming industrial supply at emergency tempo",
+    "institutional_identity": "Asterion blue/white aerospace markings establish a distinct institution whose work continues alongside terrestrial collapse",
+    "historical_damage_signature": "yellow priority lanes and partially emptied high-value stores show launch support accelerating during late containment rather than shutting down",
+    "narrative_evidence_loot": "guaranteed launch support manifest proves the space program remained materially active while regional infrastructure was failing"
+  },
+  "proof_item": "kubejs:asterion_launch_support_manifest",
+  "lore_record": "kubejs:asterion_launch_support_manifest",
+  "loot_table": "infinite_domain:chests/old_world/ows_060_asterion_launch_support_warehouse",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_060_asterion_launch_support_warehouse 2",
+  "statistics": {
+    "size": [
+      49,
+      16,
+      43
+    ],
+    "placed_blocks": 18061,
+    "palette_states": 60,
+    "modded_blocks": 4791,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "programmed_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 16,
+    "orphan_door_halves": 0,
+    "window_blocks": 254,
+    "functional_fixtures": 46,
+    "vertical_access_span": 6,
+    "dense_floor_levels": 13,
+    "footprint_variants": 15
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

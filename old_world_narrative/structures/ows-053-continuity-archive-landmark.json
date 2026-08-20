@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-053",
+  "structure_id": "infinite_domain:old_world/ows_053_continuity_archive_landmark",
+  "source_structure": "infinite_domain:ae2_records_archive_clean_master",
+  "collapse_phase": "Late containment -> Firebreak",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "the hardened records campus becomes a Continuity landmark through a large white/cyan archive crown and visibly reinforced secure core",
+    "interior_zoning_circulation": "evidence intake, cross-disciplinary stacks, central archive core, protected analysis, emergency duplication and sealed Firebreak-era records remain distinct",
+    "functional_machinery_props": "dense data drives, controllers, reinforced archive zones and duplicated storage physically express Continuity's attempt to preserve a systemic picture of the catastrophe",
+    "institutional_identity": "Continuity white/cyan markings unify records from previously separate institutions without erasing their source colors inside the archive",
+    "historical_damage_signature": "red sealed archive sectors and duplicated data stores show late-containment researchers assuming facilities and networks would soon be lost",
+    "narrative_evidence_loot": "guaranteed distributed reservoir summary records the conclusion that contamination existed across many environmental and infrastructural reservoirs rather than one breach point"
+  },
+  "proof_item": "kubejs:distributed_reservoir_summary",
+  "lore_record": "kubejs:distributed_reservoir_summary",
+  "loot_table": "infinite_domain:chests/old_world/ows_053_continuity_archive_landmark",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_053_continuity_archive_landmark 2",
+  "statistics": {
+    "size": [
+      63,
+      30,
+      55
+    ],
+    "placed_blocks": 40115,
+    "palette_states": 34,
+    "modded_blocks": 7636,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 6,
+    "orphan_door_halves": 0,
+    "window_blocks": 733,
+    "functional_fixtures": 74,
+    "vertical_access_span": 12,
+    "dense_floor_levels": 16,
+    "footprint_variants": 21
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

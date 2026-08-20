@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-050",
+  "structure_id": "infinite_domain:old_world/ows_050_meridian_firebreak_crater_command_site",
+  "source_structure": "infinite_domain:cratered_downtown_intersection_clean_master",
+  "collapse_phase": "Firebreak -> Post-collapse",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "a cratered urban intersection is converted into a command landmark with reinforced observation points and orange/red Firebreak markings around the blast edge",
+    "interior_zoning_circulation": "crater perimeter, command pocket, observation lane, protected records point and abandoned emergency stock create a readable after-action site",
+    "functional_machinery_props": "reinforced command blocks, staged crates, marked blast sectors and surviving communications positions make the Firebreak event materially reconstructable",
+    "institutional_identity": "Meridian command colors survive only in fragments around a landscape-scale destructive intervention, visually subordinated to the crater itself",
+    "historical_damage_signature": "the central command area is literally organized around a large cleared impact zone, turning post-operation destruction into the site's defining architecture",
+    "narrative_evidence_loot": "guaranteed Site Six after-action record ties the crater to a specific Firebreak operation and preserves the military assessment of its failure or limited success"
+  },
+  "proof_item": "kubejs:firebreak_site_six_after_action",
+  "lore_record": "kubejs:firebreak_site_six_after_action",
+  "loot_table": "infinite_domain:chests/old_world/ows_050_meridian_firebreak_crater_command_site",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_050_meridian_firebreak_crater_command_site 2",
+  "statistics": {
+    "size": [
+      65,
+      37,
+      65
+    ],
+    "placed_blocks": 75809,
+    "palette_states": 73,
+    "modded_blocks": 12111,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "landmark_or_outdoor_site",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 121,
+    "orphan_door_halves": 0,
+    "window_blocks": 820,
+    "functional_fixtures": 110,
+    "vertical_access_span": 26,
+    "dense_floor_levels": 27,
+    "footprint_variants": 26
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-034",
+  "structure_id": "infinite_domain:old_world/ows_034_helion_neighborhood_electrical_substation",
+  "source_structure": "infinite_domain:city_electrical_substation_clean_master",
+  "collapse_phase": "Early anomaly",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Helion light-blue and white service markings overlay the neighborhood substation without obscuring its transformer and feeder silhouette",
+    "interior_zoning_circulation": "incoming power, transformer banks, switchyard, service staging, control house and city feeders remain legible as a maintenance sequence",
+    "functional_machinery_props": "high-voltage coils, capacitor banks, temporary replacement components and service crates show ordinary electrical infrastructure under repair",
+    "institutional_identity": "Helion cyan-white electrical coding repeats across transformer and control zones, presenting the grid operator as a mundane civic utility",
+    "historical_damage_signature": "localized yellow isolation around failed insulation and temporary capacitor replacements shows the first material-driven maintenance escalation without grid collapse",
+    "narrative_evidence_loot": "guaranteed insulation service log connects small polymer insulation failures to increasingly frequent neighborhood grid work"
+  },
+  "proof_item": "kubejs:helion_insulation_service_log",
+  "lore_record": "kubejs:helion_insulation_service_log",
+  "loot_table": "infinite_domain:chests/old_world/ows_034_helion_neighborhood_electrical_substation",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_034_helion_neighborhood_electrical_substation 2",
+  "statistics": {
+    "size": [
+      61,
+      22,
+      51
+    ],
+    "placed_blocks": 9702,
+    "palette_states": 25,
+    "modded_blocks": 3089,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "landmark_or_outdoor_site",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 2,
+    "orphan_door_halves": 0,
+    "window_blocks": 4,
+    "functional_fixtures": 2,
+    "vertical_access_span": 0,
+    "dense_floor_levels": 3,
+    "footprint_variants": 14
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-032",
+  "structure_id": "infinite_domain:old_world/ows_032_aevum_apl3_research_campus",
+  "source_structure": "infinite_domain:mountain_biohazard_lab_clean_master",
+  "collapse_phase": "Early anomaly -> Active containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Aevum purple clinical-research bands and white laboratory crowns distinguish the secure campus while a limited green dependency stripe marks agricultural feedstock handling",
+    "interior_zoning_circulation": "clinical sample intake, peptide preparation, four APL research cells, cold biologic archive, Evercrop-derived input handling and incident review are separated",
+    "functional_machinery_props": "sealed glass cells, reagent stations, biologic tanks, coolers and marked agricultural-input stores demonstrate a real translational research workflow",
+    "institutional_identity": "Aevum clinical branding remains dominant while VCF-green dependency markings make the APL/Evercrop relationship visible without implying the therapy was fraudulent",
+    "historical_damage_signature": "later cells acquire yellow isolation and supply-diversion zones as a successful medical program becomes entangled with the growing biological containment crisis",
+    "narrative_evidence_loot": "guaranteed APL-3 research summary reveals the treatment's origin, genuine effectiveness and dependence on the same agricultural biotechnology network now destabilizing civilization"
+  },
+  "proof_item": "kubejs:apl3_research_summary",
+  "lore_record": "kubejs:apl3_research_summary",
+  "loot_table": "infinite_domain:chests/old_world/ows_032_aevum_apl3_research_campus",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_032_aevum_apl3_research_campus 2",
+  "statistics": {
+    "size": [
+      55,
+      22,
+      49
+    ],
+    "placed_blocks": 30720,
+    "palette_states": 69,
+    "modded_blocks": 8694,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 30,
+    "orphan_door_halves": 0,
+    "window_blocks": 1010,
+    "functional_fixtures": 36,
+    "vertical_access_span": 16,
+    "dense_floor_levels": 13,
+    "footprint_variants": 20
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

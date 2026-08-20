@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-019",
+  "structure_id": "infinite_domain:old_world/ows_019_polycore_emergency_material_substitution_center",
+  "source_structure": "infinite_domain:corporate_warehouse_clean_master",
+  "collapse_phase": "Late containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "PolyCore magenta emergency-dispatch bands and a white logistics crown turn the corporate warehouse into a late-containment substitution center",
+    "interior_zoning_circulation": "mixed material intake lanes feed five substitution stock rows, a field-kit packing area and a marked emergency dispatch court while the office wing remains the request-and-records node",
+    "functional_machinery_props": "polymer remnants, ceramic stock, steel sheets, emergency crates and cardboard field kits show a center assembling replacement packages for many industries at once",
+    "institutional_identity": "PolyCore magenta/white routing lanes and repeated mixed-material bays present an organized cross-industry continuity program rather than ordinary warehousing",
+    "historical_damage_signature": "the old polymer lane is increasingly isolated while ceramic and metal stocks dominate the later rows and the outbound court is choked with staged emergency kits",
+    "narrative_evidence_loot": "guaranteed emergency substitution directive documents the attempt to keep utilities, hospitals and industry operating by replacing failing material classes faster than they degraded"
+  },
+  "proof_item": "kubejs:polycore_emergency_substitution_directive",
+  "lore_record": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_019_polycore_emergency_material_substitution_center",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_019_polycore_emergency_material_substitution_center 2",
+  "statistics": {
+    "size": [
+      49,
+      16,
+      43
+    ],
+    "placed_blocks": 18435,
+    "palette_states": 61,
+    "modded_blocks": 5042,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "programmed_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 15,
+    "orphan_door_halves": 0,
+    "window_blocks": 254,
+    "functional_fixtures": 46,
+    "vertical_access_span": 6,
+    "dense_floor_levels": 13,
+    "footprint_variants": 15
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

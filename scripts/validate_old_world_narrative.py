@@ -5,6 +5,7 @@ from __future__ import annotations
 import gzip
 import hashlib
 import json
+import generate_wasteland_sites as structure_base
 from pathlib import Path
 
 from generate_old_world_narrative_structures import (
@@ -295,7 +296,11 @@ def main() -> None:
         raw = gzip.decompress((DATA / "structure" / "wasteland" / "old_world" / f"{spec.name}.nbt").read_bytes())
         require(spec.loot_id.encode() in raw, f"{spec.target} NBT lacks its proof chest")
         for block in spec.required_blocks:
-            require(block.encode() in raw, f"{spec.target} lacks required block {block}")
+            serialized_block = structure_base.STRUCTURE_BLOCK_REPLACEMENTS.get(block, block)
+            require(
+                serialized_block.encode() in raw,
+                f"{spec.target} lacks required serialized block {serialized_block} (declared {block})",
+            )
 
         require(spec.structure_id in renders, f"{spec.target} has no static review renders")
         require(len(renders[spec.structure_id]["renders"]) == 4, f"{spec.target} needs four review views")

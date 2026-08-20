@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-058",
+  "structure_id": "infinite_domain:old_world/ows_058_municipal_library_refuge_center",
+  "source_structure": "infinite_domain:ruined_community_center_clean_master",
+  "collapse_phase": "Late containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "the civic building remains recognizable while municipal refuge markings and a large public-information zone replace its ordinary community program",
+    "interior_zoning_circulation": "information desk, reading/reference area, sleeping hall, relief issue, family waiting and municipal notices create a combined library-refuge workflow",
+    "functional_machinery_props": "bookshelves, cots, relief crates and dense information boards show a civic information institution becoming a survival coordination point",
+    "institutional_identity": "municipal identity is expressed through public information and service organization rather than fortified control",
+    "historical_damage_signature": "reference and meeting spaces are progressively consumed by bedding and relief stock as late containment displaces normal civic life",
+    "narrative_evidence_loot": "guaranteed refuge information board log reconstructs changing closures, aid locations and contradictory public guidance during the final civilian phase"
+  },
+  "proof_item": "kubejs:refuge_information_board_log",
+  "lore_record": "kubejs:refuge_information_board_log",
+  "loot_table": "infinite_domain:chests/old_world/ows_058_municipal_library_refuge_center",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_058_municipal_library_refuge_center 2",
+  "statistics": {
+    "size": [
+      51,
+      21,
+      47
+    ],
+    "placed_blocks": 27054,
+    "palette_states": 61,
+    "modded_blocks": 3808,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 12,
+    "orphan_door_halves": 0,
+    "window_blocks": 658,
+    "functional_fixtures": 478,
+    "vertical_access_span": 16,
+    "dense_floor_levels": 10,
+    "footprint_variants": 16
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-047",
+  "structure_id": "infinite_domain:old_world/ows_047_joint_research_deep_containment_laboratory",
+  "source_structure": "infinite_domain:mountain_biohazard_lab_clean_master",
+  "collapse_phase": "Active containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "joint-agency white markings are subordinated to reinforced deep-containment shells and red/yellow isolation bands around the secure laboratory",
+    "interior_zoning_circulation": "sample intake, outer barrier, inner barrier, observation chamber, independent utilities and incident archive require deliberate nested boundary crossings",
+    "functional_machinery_props": "reinforced shells, steel inner walls, sealed observation glass and isolated support stock make the laboratory's containment doctrine physically legible",
+    "institutional_identity": "mixed institutional colors are intentionally minimized in favor of joint-research containment numbering, showing multiple organizations pooling resources",
+    "historical_damage_signature": "fungal growth appears inside an apparently intact inner chamber while outer barriers remain standing, making containment failure spatial rather than rhetorical",
+    "narrative_evidence_loot": "guaranteed deep containment incident record documents contamination discovered beyond multiple intact engineered barriers"
+  },
+  "proof_item": "kubejs:deep_containment_incident_record",
+  "lore_record": "kubejs:deep_containment_incident_record",
+  "loot_table": "infinite_domain:chests/old_world/ows_047_joint_research_deep_containment_laboratory",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_047_joint_research_deep_containment_laboratory 2",
+  "statistics": {
+    "size": [
+      55,
+      22,
+      49
+    ],
+    "placed_blocks": 30699,
+    "palette_states": 68,
+    "modded_blocks": 8646,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 36,
+    "orphan_door_halves": 0,
+    "window_blocks": 275,
+    "functional_fixtures": 40,
+    "vertical_access_span": 16,
+    "dense_floor_levels": 12,
+    "footprint_variants": 18
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}
