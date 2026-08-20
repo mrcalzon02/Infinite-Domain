@@ -111,6 +111,13 @@ SPECS = (
         "institutional_identity": "PolyCore magenta/white routing lanes and repeated mixed-material bays present an organized cross-industry continuity program rather than ordinary warehousing",
         "historical_damage_signature": "the old polymer lane is increasingly isolated while ceramic and metal stocks dominate the later rows and the outbound court is choked with staged emergency kits",
         "narrative_evidence_loot": "guaranteed emergency substitution directive documents the attempt to keep utilities, hospitals and industry operating by replacing failing material classes faster than they degraded"}, "rare_sites"),
+    Spec("OWS-020", "ows_020_polycore_deep_barrier_research_facility", "infinite_domain:mountain_biohazard_lab_clean_master", "mountain_biohazard_lab", "kubejs:kel_material_integrity_summary", None, "Late containment", ("minecraft:magenta_concrete", "immersiveengineering:sheetmetal_steel", "minecraft:polished_diorite", "immersiveengineering:insulating_glass", "create:fluid_tank", "minecraft:mycelium", "minecraft:yellow_concrete"), {
+        "silhouette_exterior_identity": "PolyCore magenta identity is subordinated to a conspicuous deep-barrier steel/mineral retrofit, making the secure laboratory read as a last-generation containment site",
+        "interior_zoning_circulation": "the donor circulation now terminates in nested metallic and mineral barriers surrounding an observation cell, with utilities isolated into a separate service zone",
+        "functional_machinery_props": "steel seals, mineralized walls, insulating observation glass, segregated fluid tanks and service pumps make the facility's barrier strategy mechanically legible",
+        "institutional_identity": "PolyCore zone coding and redundant barrier layers present a deliberate final containment doctrine rather than another ordinary exposure laboratory",
+        "historical_damage_signature": "the outer barriers remain mostly intact while mycelium and fungal growth are already established inside the innermost observation volume, physically proving that stronger walls only delayed failure",
+        "narrative_evidence_loot": "guaranteed Kel material integrity summary records the conclusion that no practical barrier material could restore a meaningful clean perimeter once environmental contamination was established"}, "rare_sites"),
 )
 
 BY_TARGET = {spec.target: spec for spec in SPECS}
@@ -333,7 +340,43 @@ def build_019():
     t.chest(43, 2, 15, BY_TARGET["OWS-019"].loot_id, "west")
     return t
 
-BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017, "OWS-018": build_018, "OWS-019": build_019}
+def build_020():
+    t = base.mountain_biohazard_lab_clean_master()
+    # Preserve the donor shell and circulation while making the late-containment retrofit legible.
+    t.fill((19, 9, 3), (35, 11, 3), "minecraft:white_concrete")
+    t.fill((22, 10, 2), (32, 13, 2), "minecraft:magenta_concrete")
+    t.fill((27, 13, 13), (52, 15, 13), "immersiveengineering:sheetmetal_steel")
+    t.clear((28, 2, 17), (51, 9, 35))
+    # Outer metallic barrier and mineralized floor.
+    t.fill((29, 2, 18), (50, 8, 18), "immersiveengineering:sheetmetal_steel")
+    t.fill((29, 2, 34), (50, 8, 34), "immersiveengineering:sheetmetal_steel")
+    t.fill((29, 2, 18), (29, 8, 34), "immersiveengineering:sheetmetal_steel")
+    t.fill((50, 2, 18), (50, 8, 34), "immersiveengineering:sheetmetal_steel")
+    t.fill((29, 1, 18), (50, 1, 34), "minecraft:polished_diorite")
+    t.clear((38, 2, 18), (40, 5, 18))
+    # Inner mineral barrier creates a second apparently intact perimeter.
+    t.fill((33, 2, 22), (46, 7, 22), "minecraft:polished_diorite")
+    t.fill((33, 2, 30), (46, 7, 30), "minecraft:polished_diorite")
+    t.fill((33, 2, 22), (33, 7, 30), "minecraft:polished_diorite")
+    t.fill((46, 2, 22), (46, 7, 30), "minecraft:polished_diorite")
+    t.clear((38, 2, 22), (40, 5, 22))
+    # The contamination is already inside both barriers, which is the actual evidence.
+    t.fill((35, 2, 24), (44, 6, 29), "immersiveengineering:insulating_glass")
+    t.clear((36, 3, 25), (43, 5, 28))
+    t.fill((36, 2, 25), (43, 2, 28), "minecraft:mycelium")
+    for x, z in ((37, 26), (39, 27), (41, 26), (42, 28)):
+        t.set(x, 3, z, "minecraft:brown_mushroom")
+    # Utilities are physically segregated so a failed pipe cannot be mistaken for the ingress route.
+    t.fill((6, 2, 22), (16, 4, 26), "create:fluid_tank")
+    t.fill((6, 2, 29), (18, 2, 29), "create:fluid_pipe")
+    for x in (8, 14):
+        t.set(x, 2, 31, "create:mechanical_pump", facing="south")
+    t.fill((5, 1, 27), (19, 1, 34), "minecraft:yellow_concrete")
+    t.fill((8, 2, 33), (17, 4, 34), "immersiveengineering:crate")
+    t.chest(11, 2, 17, BY_TARGET["OWS-020"].loot_id, "west")
+    return t
+
+BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017, "OWS-018": build_018, "OWS-019": build_019, "OWS-020": build_020}
 
 def loot_table(spec):
     items = list(dict.fromkeys([spec.proof] + ([spec.lore] if spec.lore else [])))
