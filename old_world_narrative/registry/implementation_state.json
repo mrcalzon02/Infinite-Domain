@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "canon_sha256": "eec4d3149e5e5823b330d5b01127b8f6e592d1938ef4e491f719617e507bf182",
+  "structure_handoff": {
+    "catalog_count": 84,
+    "reviewed_and_approved_by_user": true,
+    "approval_date": "2026-08-19"
+  },
+  "targets_total": 64,
+  "static_implemented": [
+    "OWS-001",
+    "OWS-002",
+    "OWS-003",
+    "OWS-004",
+    "OWS-006",
+    "OWS-009",
+    "OWS-010",
+    "OWS-012",
+    "OWS-015",
+    "OWS-016"
+  ],
+  "static_render_reviewed": [
+    "OWS-001",
+    "OWS-002",
+    "OWS-003",
+    "OWS-004",
+    "OWS-006",
+    "OWS-009",
+    "OWS-010",
+    "OWS-012",
+    "OWS-015",
+    "OWS-016"
+  ],
+  "runtime_verified": [],
+  "current_wave": "quest_critical_food_symbiosis_and_bulk_processing_wave",
+  "deferred_runtime_checks": [
+    "fresh-world structure placement",
+    "structure-map acquisition and destination",
+    "FTB structure-task completion",
+    "guaranteed proof chest acquisition",
+    "multiplayer proof and quest behavior"
+  ],
+  "next_targets": [
+    "OWS-005",
+    "OWS-007",
+    "OWS-013"
+  ]
+}

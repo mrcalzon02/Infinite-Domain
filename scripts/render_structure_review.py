@@ -24,6 +24,8 @@ ROAD_CATALOG = ROOT / "structure_library" / "roads" / "road-modules.json"
 ROAD_OUTPUT = ROOT / "structure_library" / "reviews" / "road_modules"
 MODULE_CATALOG = ROOT / "structure_library" / "modules" / "structure-kits.json"
 MODULE_OUTPUT = ROOT / "structure_library" / "reviews" / "structure_modules"
+OLD_WORLD_REGISTRY = ROOT / "old_world_narrative" / "registry" / "structure_targets.json"
+OLD_WORLD_OUTPUT = ROOT / "old_world_narrative" / "reviews"
 CUTAWAY_OVERRIDES = {
     "infinite_domain:gas_station_clean_master": 14,
     "infinite_domain:ruined_gas_station": 14,
@@ -238,8 +240,9 @@ def main() -> None:
     parser.add_argument("--creativelands", action="store_true", help="Render deterministic Creative Lands CC0 review NBT")
     parser.add_argument("--roads", action="store_true", help="Render the quarantined modular road corpus")
     parser.add_argument("--modules", action="store_true", help="Render the quarantined port/market/industrial module kits")
+    parser.add_argument("--old-world", action="store_true", help="Render statically implemented Old World narrative variants")
     args = parser.parse_args()
-    if sum((args.inbuilt, args.creativelands, args.roads, args.modules)) > 1:
+    if sum((args.inbuilt, args.creativelands, args.roads, args.modules, args.old_world)) > 1:
         raise SystemExit("Choose only one corpus mode")
     if args.inbuilt:
         if args.structure_ids or args.all:
@@ -292,6 +295,21 @@ def main() -> None:
             for record in module_catalog["modules"]
         ]
         output_root = MODULE_OUTPUT
+    elif args.old_world:
+        if args.structure_ids or args.all:
+            raise SystemExit("Use --old-world by itself")
+        targets = json.loads(OLD_WORLD_REGISTRY.read_text(encoding="utf-8"))["targets"]
+        selected = [
+            {
+                "structure_id": record["narrative_structure"],
+                "source_template": record["narrative_source_template"],
+            }
+            for record in targets
+            if record.get("implementation_status", "").startswith("implemented_")
+            and record.get("narrative_structure")
+            and record.get("narrative_source_template")
+        ]
+        output_root = OLD_WORLD_OUTPUT
     else:
         catalog = json.loads(CATALOG.read_text(encoding="utf-8"))["structures"]
         if args.all and args.structure_ids:

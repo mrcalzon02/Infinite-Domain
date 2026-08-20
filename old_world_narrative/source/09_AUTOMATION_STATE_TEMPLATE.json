@@ -1,0 +1,54 @@
+{
+  "automation_target": "old_world_narrative_world_integration",
+  "target_version": 1,
+  "prerequisite": {
+    "name": "wasteland_city_basic_structure_review_revision_program",
+    "status": "WAIT_FOR_EXISTING_PROCESS_TO_REPORT_COMPLETE",
+    "handoff_catalog": null
+  },
+  "discovered_surfaces": {
+    "structures": null,
+    "worldgen": null,
+    "quests": null,
+    "loot": null,
+    "texts_books": null,
+    "localization": null,
+    "resource_assets": null,
+    "locator_maps": null,
+    "spore_integration": null
+  },
+  "counts": {
+    "structure_targets": 64,
+    "structures_shipped": 0,
+    "long_form_series_required": 8,
+    "long_form_series_shipped": 0,
+    "short_records_required": 96,
+    "short_records_shipped": 0,
+    "sign_strings_required": 160,
+    "sign_strings_shipped": 0,
+    "graffiti_strings_required": 48,
+    "graffiti_strings_shipped": 0,
+    "proof_items_required": 64,
+    "proof_items_shipped": 0,
+    "major_exploration_quests_required": 13,
+    "major_exploration_quests_shipped": 0,
+    "darknet_return_sites_required": 5,
+    "darknet_return_sites_shipped": 0
+  },
+  "phases": {
+    "0_handoff_discovery": "pending",
+    "1_narrative_infrastructure": "pending",
+    "2_common_structures": "pending",
+    "3_uncommon_structures": "pending",
+    "4_rare_landmarks": "pending",
+    "5_lore_corpus": "pending",
+    "6_exploration_quest_spine": "pending",
+    "7_darknet_archaeology": "pending",
+    "8_space_transition": "pending"
+  },
+  "structure_lineage_manifest": [],
+  "known_blockers": [],
+  "known_limitations": [],
+  "deferred_polish": [],
+  "last_successful_validation": null
+}

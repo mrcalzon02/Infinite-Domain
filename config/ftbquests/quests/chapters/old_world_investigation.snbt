@@ -1,0 +1,257 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "diamond"
+	filename: "old_world_investigation"
+	group: "4F574E0000000001"
+	icon: "kubejs:atlas_service_plate"
+	id: "4F574E0000000002"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "4F57000000000001"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_009_atlas_roadside_repair_depot 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "70E823B42224CCBE"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "4F57800000000001"
+				item: { count: 1, id: "create:wrench" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4F57000000000001"]
+			id: "4F57000000000002"
+			tasks: [{
+				id: "4F57800000000002"
+				structure: "infinite_domain:old_world/ows_009_atlas_roadside_repair_depot"
+				type: "structure"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4F57000000000002"]
+			icon: "kubejs:atlas_service_plate"
+			id: "4F57000000000003"
+			rewards: [
+				{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E14257335F6B58" permission_level: 2 silent: true type: "command" }
+				{
+					id: "4F57900000000002"
+					item: { count: 4, id: "numismatics:cog" }
+					type: "item"
+				}
+				{
+					id: "4F57900000000003"
+					item: { count: 1, id: "create:precision_mechanism" }
+					type: "item"
+				}
+			]
+			shape: "octagon"
+			tasks: [
+				{
+					consume_items: true
+					id: "4F57800000000003"
+					item: { count: 1, id: "kubejs:atlas_service_plate" }
+					type: "item"
+				}
+				{
+					id: "4F57800000000004"
+					item: { count: 1, id: "kubejs:atlas_transfer_maintenance_manual" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+
+		{
+			dependencies: ["4F57000000000003"]
+			id: "4F57000000000004"
+			tasks: [{ id: "4F57800000000005" structure: "infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall" type: "structure" }]
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4F57000000000004"]
+			icon: "kubejs:atlas_transfer_maintenance_card"
+			id: "4F57000000000005"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E2812D71B74803" permission_level: 2 silent: true type: "command" }]
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000006" item: { count: 1, id: "kubejs:atlas_transfer_maintenance_card" } type: "item" }]
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			id: "4F57000000000010"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_001_vcf_neighborhood_culture_service_depot 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E2F9EA683282B8" permission_level: 2 silent: true type: "command" }]
+			shape: "gear"
+			tasks: [{ id: "4F57800000000010" item: { count: 1, id: "minecraft:bread" } type: "item" }]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4F57000000000010"]
+			id: "4F57000000000011"
+			tasks: [{ id: "4F57800000000011" structure: "infinite_domain:old_world/ows_001_vcf_neighborhood_culture_service_depot" type: "structure" }]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4F57000000000011"]
+			icon: "kubejs:vcf_culture_service_manifest"
+			id: "4F57000000000012"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_002_vcf_emergency_community_grow_hall 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E24C220612D966" permission_level: 2 silent: true type: "command" }]
+			shape: "octagon"
+			tasks: [
+				{ consume_items: true id: "4F57800000000012" item: { count: 1, id: "kubejs:vcf_culture_service_manifest" } type: "item" }
+				{ id: "4F57800000000013" item: { count: 1, id: "kubejs:vcf_return_crate_log" } type: "item" }
+			]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4F57000000000005"]
+			id: "4F57000000000020"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E3C732AD87E538" permission_level: 2 silent: true type: "command" }]
+			shape: "gear"
+			tasks: [{ id: "4F57800000000020" item: { count: 1, id: "create:fluid_pipe" } type: "item" }]
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4F57000000000020"]
+			id: "4F57000000000021"
+			tasks: [{ id: "4F57800000000021" structure: "infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station" type: "structure" }]
+			x: 9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000021"]
+			icon: "kubejs:polycore_seal_failure_report"
+			id: "4F57000000000022"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E2EF3B1EB9AB6E" permission_level: 2 silent: true type: "command" }]
+			shape: "octagon"
+			tasks: [
+				{ consume_items: true id: "4F57800000000022" item: { count: 1, id: "kubejs:polycore_seal_failure_report" } type: "item" }
+				{ id: "4F57800000000023" item: { count: 1, id: "kubejs:polycore_service_interval_board" } type: "item" }
+			]
+			x: 12.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000012"]
+			id: "4F57000000000013"
+			tasks: [{ id: "4F57800000000014" structure: "infinite_domain:old_world/ows_002_vcf_emergency_community_grow_hall" type: "structure" }]
+			x: -9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4F57000000000013"]
+			icon: "kubejs:emergency_grow_authorization"
+			id: "4F57000000000014"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E8DC3599B8FE47" permission_level: 2 silent: true type: "command" }]
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000015" item: { count: 1, id: "kubejs:emergency_grow_authorization" } type: "item" }]
+			x: -12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["4F57000000000014"]
+			id: "4F57000000000015"
+			tasks: [{ id: "4F57800000000016" structure: "infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery" type: "structure" }]
+			x: -12.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000015"]
+			icon: "kubejs:vcf_culture_batch_record"
+			id: "4F57000000000016"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_004_vcf_mycological_vertical_farm_tower 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70E844D07AE3C4B6" permission_level: 2 silent: true type: "command" }]
+			shape: "octagon"
+			tasks: [
+				{ consume_items: true id: "4F57800000000017" item: { count: 1, id: "kubejs:vcf_culture_batch_record" } type: "item" }
+				{ id: "4F57800000000018" item: { count: 1, id: "kubejs:vcf_global_licensing_brief" } type: "item" }
+			]
+			x: -15.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000022"]
+			id: "4F57000000000023"
+			tasks: [{ id: "4F57800000000024" structure: "infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array" type: "structure" }]
+			x: 15.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000023"]
+			icon: "kubejs:polycore_elastomer_exposure_test"
+			id: "4F57000000000024"
+			shape: "octagon"
+			tasks: [
+				{ consume_items: true id: "4F57800000000025" item: { count: 1, id: "kubejs:polycore_elastomer_exposure_test" } type: "item" }
+				{ id: "4F57800000000026" item: { count: 1, id: "kubejs:polycore_exposure_test_04" } type: "item" }
+			]
+			x: 18.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000016"]
+			id: "4F57000000000030"
+			tasks: [{ id: "4F57800000000030" structure: "infinite_domain:old_world/ows_004_vcf_mycological_vertical_farm_tower" type: "structure" }]
+			x: -18.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["4F57000000000030"]
+			icon: "kubejs:evercrop_cultivation_handbook"
+			id: "4F57000000000031"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory 2" feedback_message: "infinite_domain.reward.explorer_map" id: "70EB8196EC79CFD0" permission_level: 2 silent: true type: "command" }]
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000031" item: { count: 1, id: "kubejs:evercrop_cultivation_handbook" } type: "item" }]
+			x: -21.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["4F57000000000031"]
+			id: "4F57000000000032"
+			tasks: [{ id: "4F57800000000032" structure: "infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory" type: "structure" }]
+			x: -21.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["4F57000000000032"]
+			icon: "kubejs:pt9_symbiosis_report"
+			id: "4F57000000000033"
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000033" item: { count: 1, id: "kubejs:pt9_symbiosis_report" } type: "item" }]
+			x: -24.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["4F57000000000005"]
+			id: "4F57000000000040"
+			tasks: [{ id: "4F57800000000040" structure: "infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant" type: "structure" }]
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4F57000000000040"]
+			icon: "kubejs:atlas_bulk_process_manual"
+			id: "4F57000000000041"
+			shape: "octagon"
+			tasks: [{ consume_items: true id: "4F57800000000041" item: { count: 1, id: "kubejs:atlas_bulk_process_manual" } type: "item" }]
+			x: 6.0d
+			y: 12.0d
+		}
+	]
+}

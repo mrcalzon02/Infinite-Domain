@@ -1,0 +1,124 @@
+{
+  "format_version": 1,
+  "major_quest_count": 13,
+  "quests": [
+    {
+      "id": "OWQ-01",
+      "title": "THEY WERE HERE FIRST",
+      "prerequisite": "early Create/automation",
+      "target_structures": [
+        "OWS-009",
+        "OWS-010",
+        "OWS-012"
+      ]
+    },
+    {
+      "id": "OWQ-02",
+      "title": "FOOD FOR A BILLION",
+      "prerequisite": "farming/early industry",
+      "target_structures": [
+        "OWS-004"
+      ]
+    },
+    {
+      "id": "OWQ-03",
+      "title": "THE PERFECT CROP",
+      "prerequisite": "Food for a Billion",
+      "target_structures": [
+        "OWS-006",
+        "OWS-007"
+      ]
+    },
+    {
+      "id": "OWQ-04",
+      "title": "UNEXPECTED MAINTENANCE",
+      "prerequisite": "early industrial recovery",
+      "target_structures": [
+        "OWS-015",
+        "OWS-016",
+        "OWS-034",
+        "OWS-056"
+      ]
+    },
+    {
+      "id": "OWQ-05",
+      "title": "BOTH SIDES OF THE WALL",
+      "prerequisite": "midgame exploration",
+      "target_structures": [
+        "OWS-045"
+      ]
+    },
+    {
+      "id": "OWQ-06",
+      "title": "CONTINUITY",
+      "prerequisite": "Both Sides of the Wall",
+      "target_structures": [
+        "OWS-052"
+      ]
+    },
+    {
+      "id": "OWQ-07",
+      "title": "THE PERIMETER NEVER EXISTED",
+      "prerequisite": "multiple evidence families",
+      "target_structures": [
+        "OWS-053"
+      ]
+    },
+    {
+      "id": "OWQ-08",
+      "title": "A CURE FOR AGE",
+      "prerequisite": "advanced chemistry/medicine",
+      "target_structures": [
+        "OWS-029",
+        "OWS-030",
+        "OWS-032"
+      ]
+    },
+    {
+      "id": "OWQ-09",
+      "title": "THE GREY BLOOM",
+      "prerequisite": "Perfect Crop plus containment evidence",
+      "target_structures": [
+        "OWS-008",
+        "OWS-047"
+      ]
+    },
+    {
+      "id": "OWQ-10",
+      "title": "FIREBREAK",
+      "prerequisite": "nuclear era",
+      "target_structures": [
+        "OWS-048",
+        "OWS-049",
+        "OWS-050"
+      ]
+    },
+    {
+      "id": "OWQ-11",
+      "title": "STOP BURNING IT",
+      "prerequisite": "Firebreak",
+      "target_structures": [
+        "OWS-051",
+        "OWS-052"
+      ]
+    },
+    {
+      "id": "OWQ-12",
+      "title": "NINETEEN KILOMETERS",
+      "prerequisite": "Stop Burning It",
+      "target_structures": [
+        "OWS-051"
+      ]
+    },
+    {
+      "id": "OWQ-13",
+      "title": "THE FIREBREAK WARS",
+      "prerequisite": "Darknet capability",
+      "target_structures": [
+        "OWS-041",
+        "OWS-042",
+        "OWS-043"
+      ]
+    }
+  ]
+}

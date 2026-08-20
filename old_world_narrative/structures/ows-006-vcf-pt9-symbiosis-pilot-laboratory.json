@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-006",
+  "structure_id": "infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
+  "source_structure": "infinite_domain:ruined_cyberware_clinic_clean_master",
+  "collapse_phase": "Early anomaly",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "VCF green pilot-lab blade and sterile white frontage replace clinic identity",
+    "interior_zoning_circulation": "sample intake, three symbiosis chambers, bacterial controls, polymer observation and secure records are separated",
+    "functional_machinery_props": "sealed culture chambers, reagent stations, polymer coupons and comparative control benches",
+    "institutional_identity": "VCF test numbering and green/cyan bioscience zoning frame PT-9 as a useful product",
+    "historical_damage_signature": "one yellow-isolated polymer observation bay records degradation before researchers understood the consequence",
+    "narrative_evidence_loot": "guaranteed LOR-003 report names PT-9 and records both bacterial protection and polymer degradation"
+  },
+  "proof_item": "kubejs:pt9_symbiosis_report",
+  "lore_record": "kubejs:pt9_symbiosis_report",
+  "loot_table": "infinite_domain:chests/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory 2",
+  "statistics": {
+    "size": [
+      59,
+      26,
+      51
+    ],
+    "placed_blocks": 31783,
+    "palette_states": 43,
+    "modded_blocks": 4751,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 14,
+    "orphan_door_halves": 0,
+    "window_blocks": 733,
+    "functional_fixtures": 24,
+    "vertical_access_span": 11,
+    "dense_floor_levels": 10,
+    "footprint_variants": 20
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

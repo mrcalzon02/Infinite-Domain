@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-012",
+  "structure_id": "infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant",
+  "source_structure": "infinite_domain:abandoned_quarry_clean_master",
+  "collapse_phase": "Early anomaly",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Atlas orange crusher crowns and service-house band mark the quarry rim from a distance",
+    "interior_zoning_circulation": "bench haul route, bulk feed, crushing, milling, mixing, dust extraction and service dispatch form a continuous process",
+    "functional_machinery_props": "crushing wheels, millstones, mixer basin, dust fans, feed casings and maintenance stock",
+    "institutional_identity": "Atlas lane numbering and orange lockout fields standardize a sophisticated bulk plant",
+    "historical_damage_signature": "one isolated crusher cell and cannibalized casing bank show rapidly growing maintenance cost",
+    "narrative_evidence_loot": "guaranteed bulk-process manual documents sophisticated throughput and worsening service intervals"
+  },
+  "proof_item": "kubejs:atlas_bulk_process_manual",
+  "lore_record": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_012_atlas_bulk_crushing_preparation_plant",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant 2",
+  "statistics": {
+    "size": [
+      69,
+      30,
+      61
+    ],
+    "placed_blocks": 32147,
+    "palette_states": 36,
+    "modded_blocks": 1492,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "landmark_or_outdoor_site",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 2,
+    "orphan_door_halves": 0,
+    "window_blocks": 8,
+    "functional_fixtures": 6,
+    "vertical_access_span": 14,
+    "dense_floor_levels": 5,
+    "footprint_variants": 23
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}
