@@ -5,6 +5,11 @@ The preserved ten-site implementation lives in old_world_narrative_core.py.
 This file is the only executable structure-generation entrypoint and extends
 that core with later narrative waves. Imported modules are implementation
 components, not independent mutation paths.
+
+Static implementation and natural-world placement are intentionally separate.
+Only targets named in CONTROLLED_WORLDGEN_TARGETS are entered into a structure
+set. All other generated structure definitions, pools, NBT, loot and registry
+rows remain staged until runtime validation explicitly promotes them.
 """
 from __future__ import annotations
 
@@ -15,8 +20,21 @@ import old_world_narrative_core as core
 
 base = core.base
 ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / "kubejs" / "data" / "infinite_domain"
 PROGRAM = ROOT / "old_world_narrative"
 REGISTRY = PROGRAM / "registry"
+
+# PT-9 is the first controlled runtime-generation target. This is not runtime
+# approval: it only makes OWS-006 discoverable for deliberate fresh-world tests.
+CONTROLLED_WORLDGEN_TARGETS = ("OWS-006",)
+DARKNET_RETURN_TARGETS = {
+    "OWS-003": "Re-open the cold-chain routing archive after Darknet access exposes hidden global batch destinations.",
+    "OWS-006": "Recover encrypted PT-9 comparison telemetry from the sealed pilot-lab records bank.",
+    "OWS-008": "Unlock the persistence-incident clean-room cache and compare suppressed breach chronology.",
+    "OWS-013": "Interrogate manual-bypass controller history for the automation failures hidden from ordinary maintenance staff.",
+    "OWS-014": "Use Darknet credentials against the controls archive to expose Atlas/Helion/Blackglass integration records.",
+}
+ATLAS_TARGETS = {f"OWS-{index:03d}" for index in range(9, 15)}
 
 VCF_COMPLETION = (
     core.Spec(
@@ -183,20 +201,16 @@ def build_005():
     t = base.abandoned_orchard_cannery_clean_master()
     t.fill((6, 9, 8), (55, 11, 8), "minecraft:white_concrete")
     t.fill((12, 10, 7), (49, 13, 7), "minecraft:lime_concrete")
-    # PT-9 sanitation lane: cyan wash path feeding packaging inspection.
     t.fill((7, 1, 13), (23, 1, 20), "minecraft:light_blue_concrete")
     t.fill((8, 2, 15), (22, 2, 15), "create:fluid_pipe")
     t.fill((8, 2, 17), (11, 6, 19), "create:fluid_tank")
-    # Inspection and packaging line.
     for x in (27, 34, 41, 48):
         t.set(x, 2, 16, "create:depot")
         t.set(x, 3, 17, "create:mechanical_press", facing="north")
         t.fill((x - 1, 2, 21), (x + 2, 4, 23), "create:cardboard_block")
-    # Cold hold and outgoing consumer-food stock.
     for x in (29, 35, 41, 47):
         t.fill((x, 2, 28), (x + 2, 5, 31), "oritech:cooler_block")
     t.fill((8, 2, 28), (20, 4, 34), "jaffabricate:pallet_full")
-    # Rejected packaging lots accumulate behind a quarantine stripe as the anomaly begins.
     t.fill((45, 1, 33), (56, 1, 39), "minecraft:yellow_concrete")
     t.fill((47, 2, 34), (55, 4, 38), "create:cardboard_block")
     t.chest(52, 2, 36, "infinite_domain:chests/old_world/ows_005_vcf_harvest_packaging_annex", "west")
@@ -207,7 +221,6 @@ def build_007():
     t = base.nuclear_research_annex_clean_master()
     t.fill((5, 10, 10), (38, 12, 10), "minecraft:white_concrete")
     t.fill((12, 11, 9), (31, 14, 9), "minecraft:lime_concrete")
-    # Parallel durability and environmental-stress chambers.
     for index, x in enumerate((8, 16, 24, 32), 1):
         t.fill((x, 2, 16), (x + 5, 8, 24), "create:framed_glass")
         t.clear((x + 1, 3, 17), (x + 4, 7, 23))
@@ -217,7 +230,6 @@ def build_007():
         else:
             t.fill((x + 2, 2, 19), (x + 3, 2, 21), "minecraft:mycelium")
             t.set(x + 2, 3, 20, "minecraft:brown_mushroom")
-    # Storage and reseeding deliberately test long-duration viability.
     for x in (45, 50, 55):
         t.fill((x, 2, 28), (x + 2, 6, 32), "oritech:cooler_block")
         t.fill((x, 2, 35), (x + 2, 4, 38), "immersiveengineering:crate")
@@ -233,17 +245,14 @@ def build_008():
     t = base.mountain_biohazard_lab_clean_master()
     t.fill((19, 9, 3), (35, 11, 3), "minecraft:white_concrete")
     t.fill((22, 10, 2), (32, 13, 2), "minecraft:lime_concrete")
-    # Repeated sterilization cells and clean-zone checkpoints.
     for index, x in enumerate((7, 18, 29, 40), 1):
         t.fill((x, 2, 14), (x + 7, 8, 23), "create:framed_glass")
         t.clear((x + 1, 3, 15), (x + 6, 7, 22))
         t.fill((x + 1, 2, 25), (x + 6, 2, 27), "minecraft:yellow_concrete")
         t.fill((x + 2, 3, 26), (x + 5, 3, 26), "create:fluid_pipe")
-        # Contamination returns farther into each successive supposedly clean room.
         seam = x + min(index + 1, 6)
         t.fill((seam, 2, 20), (seam, 2, 22), "minecraft:mycelium")
         t.set(seam, 3, 21, "minecraft:brown_mushroom")
-    # Service-joint investigation corridor and incident archive.
     t.fill((7, 1, 30), (49, 1, 34), "minecraft:yellow_concrete")
     t.fill((8, 2, 31), (48, 2, 31), "create:fluid_pipe")
     for x in (10, 22, 34, 46):
@@ -318,13 +327,51 @@ def build_014():
     return t
 
 
+# OWS-009 was already a materially distinct Atlas service depot, but its spec
+# omitted the sixth dimension. Preserve its pre-crisis character by making the
+# ordinary repaired-bay baseline explicit and physically enforceable.
+_core_build_009 = core.BUILDERS["OWS-009"]
+_core_spec_009 = next(spec for spec in core.SPECS if spec.target == "OWS-009")
+
+
+def build_009():
+    t = _core_build_009()
+    # Ordinary pre-crisis wear: repaired guard rail plus swapped casing stock.
+    t.fill((5, 2, 12), (5, 4, 13), "minecraft:iron_bars")
+    t.fill((6, 1, 12), (8, 1, 13), "minecraft:black_concrete")
+    t.fill((7, 2, 12), (8, 3, 13), "create:andesite_casing")
+    return t
+
+
+spec_009 = core.Spec(
+    _core_spec_009.target,
+    _core_spec_009.name,
+    _core_spec_009.source_id,
+    _core_spec_009.source_profile,
+    _core_spec_009.proof,
+    _core_spec_009.lore,
+    _core_spec_009.phase,
+    tuple(dict.fromkeys(_core_spec_009.required_blocks + ("minecraft:iron_bars",))),
+    {
+        **_core_spec_009.dimensions,
+        "historical_damage_signature": "ordinary pre-crisis service wear is preserved as a repaired bay guard, replacement casing stock and intact calibration baseline rather than crisis ruin",
+    },
+    _core_spec_009.set_name,
+)
+
 EXTENSIONS = VCF_COMPLETION + ATLAS_EXTENSION
-core.SPECS = tuple(sorted(core.SPECS + EXTENSIONS, key=lambda spec: int(spec.target[-3:])))
-core.BY_TARGET.update({spec.target: spec for spec in EXTENSIONS})
+core.SPECS = tuple(
+    sorted(
+        tuple(spec_009 if spec.target == "OWS-009" else spec for spec in core.SPECS) + EXTENSIONS,
+        key=lambda spec: int(spec.target[-3:]),
+    )
+)
+core.BY_TARGET.update({spec.target: spec for spec in core.SPECS})
 core.BUILDERS.update({
     "OWS-005": build_005,
     "OWS-007": build_007,
     "OWS-008": build_008,
+    "OWS-009": build_009,
     "OWS-011": build_011,
     "OWS-013": build_013,
     "OWS-014": build_014,
@@ -336,13 +383,38 @@ BY_TARGET = core.BY_TARGET
 BUILDERS = core.BUILDERS
 
 
-def _sync_registry() -> None:
+def _write_controlled_worldgen_activation() -> None:
+    structure_set_dir = DATA / "worldgen" / "structure_set" / "old_world"
+    structure_set_dir.mkdir(parents=True, exist_ok=True)
+    for stale in structure_set_dir.glob("*.json"):
+        stale.unlink()
+
+    members = [BY_TARGET[target] for target in CONTROLLED_WORLDGEN_TARGETS]
+    base.write_json(
+        structure_set_dir / "controlled_pt9_probe.json",
+        {
+            "structures": [
+                {"structure": spec.structure_id, "weight": 1}
+                for spec in members
+            ],
+            "placement": {
+                "type": "minecraft:random_spread",
+                "spacing": 160,
+                "separation": 80,
+                "salt": 90310609,
+            },
+        },
+    )
+
+
+def sync_registry() -> None:
     targets_path = REGISTRY / "structure_targets.json"
     if not targets_path.is_file():
         return
     document = json.loads(targets_path.read_text(encoding="utf-8"))
     targets = document["targets"]
     for spec in SPECS:
+        is_probe = spec.target in CONTROLLED_WORLDGEN_TARGETS
         row = targets[int(spec.target[-3:]) - 1]
         row.update({
             "implementation_status": "implemented_static_runtime_deferred",
@@ -350,8 +422,26 @@ def _sync_registry() -> None:
             "narrative_structure": spec.structure_id,
             "narrative_source_template": f"kubejs/data/infinite_domain/structure/wasteland/old_world/{spec.name}.nbt",
             "acceptance_dimensions": list(spec.dimensions),
-            "runtime_validation": "deferred",
+            "runtime_validation": "pending_controlled_test" if is_probe else "deferred",
+            "worldgen_activation": "controlled_pt9_probe" if is_probe else "staged_not_in_structure_set",
+            "locator": {
+                "command": f"/structure_map {spec.structure_id} 2",
+                "status": "controlled_probe_ready" if is_probe else "prepared_requires_worldgen_activation",
+            },
+            "exploration_hook": {
+                "mode": "additive_old_world_investigation",
+                "status": "prepared_static",
+                "requires_worldgen_activation": not is_probe,
+            },
         })
+        if spec.target in DARKNET_RETURN_TARGETS:
+            row["darknet_return_hook"] = {
+                "status": "reserved_for_later_darknet_phase",
+                "purpose": DARKNET_RETURN_TARGETS[spec.target],
+            }
+        else:
+            row.pop("darknet_return_hook", None)
+
     targets_path.write_text(json.dumps(document, indent=2) + "\n", encoding="utf-8", newline="\n")
 
     state_path = REGISTRY / "implementation_state.json"
@@ -369,7 +459,10 @@ def _sync_registry() -> None:
         state["static_render_reviewed"] = sorted(
             spec.target for spec in SPECS if spec.structure_id in rendered
         )
-        state["current_wave"] = "vcf_family_closure_and_atlas_controls_wave"
+        state["controlled_worldgen_targets"] = list(CONTROLLED_WORLDGEN_TARGETS)
+        state["production_worldgen_status"] = "staged_pending_runtime_validation"
+        state["darknet_return_targets_reserved"] = sorted(DARKNET_RETURN_TARGETS)
+        state["current_wave"] = "atlas_static_closure_and_pt9_controlled_runtime_probe"
         implemented_set = set(implemented)
         state["next_targets"] = [
             row["id"] for row in targets
@@ -379,9 +472,14 @@ def _sync_registry() -> None:
 
 
 def main() -> None:
-    core.main()
-    _sync_registry()
-    print("Extended authoritative Old World generator through the complete VCF and Atlas families.")
+    for spec in SPECS:
+        core.generate(spec)
+    _write_controlled_worldgen_activation()
+    sync_registry()
+    print(
+        f"Generated {len(SPECS)} static Old World sites; "
+        f"controlled worldgen target(s): {', '.join(CONTROLLED_WORLDGEN_TARGETS)}."
+    )
 
 
 if __name__ == "__main__":
