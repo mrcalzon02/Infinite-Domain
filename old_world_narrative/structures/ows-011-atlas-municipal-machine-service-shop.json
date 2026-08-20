@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-011",
+  "structure_id": "infinite_domain:old_world/ows_011_atlas_municipal_machine_service_shop",
+  "source_structure": "infinite_domain:fire_station_clean_master",
+  "collapse_phase": "Early containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Atlas orange service bands and municipal emergency chevrons convert the civic apparatus frontage into a machine-response depot",
+    "interior_zoning_circulation": "three service bays, triage lane, teardown bench, parts issue, emergency work-order wall and staff route remain distinct",
+    "functional_machinery_props": "casing stacks, anvils, stripped mechanisms, service crates and cannibalized repair stock fill the apparatus program",
+    "institutional_identity": "Atlas orange equipment coding overlays municipal yellow/white emergency markings rather than replacing the civic identity",
+    "historical_damage_signature": "the third bay has been cannibalized for parts and isolated as service intervals collapse across municipal equipment",
+    "narrative_evidence_loot": "guaranteed emergency service log records the maintenance backlog accelerating from inconvenience into civic-system failure"
+  },
+  "proof_item": "kubejs:atlas_emergency_service_log",
+  "lore_record": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_011_atlas_municipal_machine_service_shop",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_011_atlas_municipal_machine_service_shop 2",
+  "statistics": {
+    "size": [
+      43,
+      21,
+      41
+    ],
+    "placed_blocks": 16848,
+    "palette_states": 73,
+    "modded_blocks": 3823,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 20,
+    "orphan_door_halves": 0,
+    "window_blocks": 142,
+    "functional_fixtures": 46,
+    "vertical_access_span": 16,
+    "dense_floor_levels": 14,
+    "footprint_variants": 19
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

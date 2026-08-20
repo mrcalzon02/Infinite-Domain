@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-013",
+  "structure_id": "infinite_domain:old_world/ows_013_atlas_automated_assembly_hall",
+  "source_structure": "infinite_domain:create_factory_clean_master",
+  "collapse_phase": "Active containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Atlas orange production bands, numbered cell crowns and a marked manual-control spine turn the fabrication plant into a standardized assembly hall",
+    "interior_zoning_circulation": "feed staging, four assembly cells, inspection/rework, manual-bypass corridor and outbound handling form a readable production sequence",
+    "functional_machinery_props": "press/depot stations, drive casings, calibration stock and dedicated bypass pedestals make automated handling physically legible",
+    "institutional_identity": "Atlas numbered orange cells and black/yellow lockout stations standardize both normal automation and emergency intervention",
+    "historical_damage_signature": "the final cell runs under a conspicuous manual bypass with stripped automation and staged replacement casings during active containment",
+    "narrative_evidence_loot": "guaranteed manual-bypass notice shows Old World automation remaining productive only through increasingly desperate human intervention"
+  },
+  "proof_item": "kubejs:atlas_manual_bypass_notice",
+  "lore_record": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_013_atlas_automated_assembly_hall",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_013_atlas_automated_assembly_hall 2",
+  "statistics": {
+    "size": [
+      47,
+      27,
+      37
+    ],
+    "placed_blocks": 20775,
+    "palette_states": 70,
+    "modded_blocks": 4641,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 11,
+    "orphan_door_halves": 0,
+    "window_blocks": 208,
+    "functional_fixtures": 57,
+    "vertical_access_span": 6,
+    "dense_floor_levels": 17,
+    "footprint_variants": 19
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

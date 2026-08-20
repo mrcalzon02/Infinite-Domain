@@ -251,11 +251,19 @@
       "quest_hook": "UNEXPECTED MAINTENANCE (support)",
       "unique_proof_item_seed": "atlas_emergency_service_log",
       "revision_intensity": "High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:fire_station_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_011_atlas_municipal_machine_service_shop",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_011_atlas_municipal_machine_service_shop.nbt"
     },
     {
       "id": "OWS-012",
@@ -295,11 +303,19 @@
       "quest_hook": "UNEXPECTED MAINTENANCE (support)",
       "unique_proof_item_seed": "atlas_manual_bypass_notice",
       "revision_intensity": "Very High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:create_factory_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_013_atlas_automated_assembly_hall",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_013_atlas_automated_assembly_hall.nbt"
     },
     {
       "id": "OWS-014",
@@ -313,11 +329,19 @@
       "quest_hook": "Darknet return support",
       "unique_proof_item_seed": "atlas_controls_archive_module",
       "revision_intensity": "Very High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:ae2_records_archive_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_014_atlas_industrial_controls_integration_center",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_014_atlas_industrial_controls_integration_center.nbt"
     },
     {
       "id": "OWS-015",
