@@ -286,11 +286,14 @@ FINAL_EXTENSION = (
             "immersiveengineering:concrete_reinforced",
             "immersiveengineering:crate",
             "ae2:drive",
+            "create:fluid_pipe",
+            "create:mechanical_pump",
+            "the_wasteland_reworked:radio",
         ),
         {
             "silhouette_exterior_identity": "the large airship-terminal lineage is repurposed into an Asterion launch landmark with blue/white terminal identity, hardened berths and an unmistakable launch-support field",
             "interior_zoning_circulation": "arrival, mission processing, crew staging, cargo handling, launch-control archive, hardened departure route and abandoned emergency sectors remain distinct",
-            "functional_machinery_props": "reinforced launch aprons, mission crates, data archives, service stock and protected control points make the complex function as a terrestrial gateway to off-world infrastructure",
+            "functional_machinery_props": "reinforced launch aprons, fuel/service manifolds, mission crates, data archives and protected control hardware make the complex function as a terrestrial gateway to off-world infrastructure",
             "institutional_identity": "Asterion blue/white identity dominates the landmark while red Firebreak emergency fields document the collapse occurring around an institution still trying to launch",
             "historical_damage_signature": "closed passenger areas, fortified launch access and abandoned emergency staging preserve the transition from active launch center to post-collapse archaeological landmark",
             "narrative_evidence_loot": "guaranteed primary launch archive closes the Old World physical sequence by preserving launch records, emergency decisions and the final relationship between surface collapse and off-world continuity",
@@ -449,7 +452,10 @@ def build_064():
     for x in (9, 17, 25, 33):
         t.fill((x, 2, 38), (x + 5, 5, 43), "immersiveengineering:crate")
     t.fill((37, 2, 12), (44, 6, 18), "ae2:drive")
+    t.set(39, 2, 19, "the_wasteland_reworked:radio")
     t.fill((37, 2, 21), (44, 5, 25), "minecraft:black_concrete")
+    t.fill((49, 3, 18), (61, 3, 18), "create:fluid_pipe")
+    t.set(55, 3, 19, "create:mechanical_pump", facing="south")
     t.chest(42, 2, 16, "infinite_domain:chests/old_world/ows_064_asterion_primary_meridian_launch_complex", "west")
     return t
 
