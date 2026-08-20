@@ -1,0 +1,17 @@
+[SYSTEM REPORT] Old World static build failure diagnostic
+source_sha=a0bef6a67252327e1f5210d70cd6b0e2f79f8935
+
+=== Compile Old World Python entrypoints ===
+=== Rebuild package registries safely ===
+Built Old World registries and 64-site narrative wave.
+Built Old World package registries with 64 static structure mappings, 64 staged site surveys, and canonical proof-registry separation.
+=== Generate authoritative Old World structures ===
+Traceback (most recent call last):
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/generate_old_world_narrative_structures.py", line 716, in <module>
+    main()
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/generate_old_world_narrative_structures.py", line 706, in main
+    core.generate(spec)
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/old_world_narrative_core.py", line 599, in generate
+    if not metrics["structural_lint_passed"]: raise ValueError(f"{spec.target} failed structural lint: " + "; ".join(metrics["issues"]))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: OWS-064 failed structural lint: fewer than two purpose-specific fixtures
