@@ -104,6 +104,13 @@ SPECS = (
         "institutional_identity": "PolyCore magenta/white zone coding and numbered ceramic test bays make the emergency substitution program legible without rebuilding the donor architecture",
         "historical_damage_signature": "successive cells show larger isolation fields and localized breaches while the full-scale ring carries a patched ceramic-metal shell, demonstrating delay rather than immunity",
         "narrative_evidence_loot": "guaranteed ceramic isolation result records that non-polymer barriers extended service life but still failed after environmental contamination"}, "rare_sites"),
+    Spec("OWS-019", "ows_019_polycore_emergency_material_substitution_center", "infinite_domain:corporate_warehouse_clean_master", "corporate_warehouse", "kubejs:polycore_emergency_substitution_directive", None, "Late containment", ("minecraft:magenta_concrete", "tfmg:plastic_block", "minecraft:polished_diorite", "immersiveengineering:sheetmetal_steel", "immersiveengineering:crate", "minecraft:yellow_concrete"), {
+        "silhouette_exterior_identity": "PolyCore magenta emergency-dispatch bands and a white logistics crown turn the corporate warehouse into a late-containment substitution center",
+        "interior_zoning_circulation": "mixed material intake lanes feed five substitution stock rows, a field-kit packing area and a marked emergency dispatch court while the office wing remains the request-and-records node",
+        "functional_machinery_props": "polymer remnants, ceramic stock, steel sheets, emergency crates and cardboard field kits show a center assembling replacement packages for many industries at once",
+        "institutional_identity": "PolyCore magenta/white routing lanes and repeated mixed-material bays present an organized cross-industry continuity program rather than ordinary warehousing",
+        "historical_damage_signature": "the old polymer lane is increasingly isolated while ceramic and metal stocks dominate the later rows and the outbound court is choked with staged emergency kits",
+        "narrative_evidence_loot": "guaranteed emergency substitution directive documents the attempt to keep utilities, hospitals and industry operating by replacing failing material classes faster than they degraded"}, "rare_sites"),
 )
 
 BY_TARGET = {spec.target: spec for spec in SPECS}
@@ -296,7 +303,37 @@ def build_018():
     t.chest(40, 2, 55, BY_TARGET["OWS-018"].loot_id, "west")
     return t
 
-BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017, "OWS-018": build_018}
+def build_019():
+    t = base.corporate_warehouse_clean_master()
+    # Preserve the warehouse traffic plan; convert its stock program to emergency substitutions.
+    t.fill((15, 12, 8), (45, 14, 8), "minecraft:white_concrete")
+    t.fill((19, 13, 7), (41, 15, 7), "minecraft:magenta_concrete")
+    t.fill((16, 10, 35), (46, 11, 36), "minecraft:magenta_concrete")
+    materials = (
+        "tfmg:plastic_block",
+        "minecraft:polished_diorite",
+        "immersiveengineering:sheetmetal_steel",
+        "minecraft:polished_diorite",
+        "immersiveengineering:sheetmetal_steel",
+    )
+    for index, (x, material) in enumerate(zip((17, 23, 29, 35, 41), materials), 1):
+        t.fill((x, 1, 12), (x + 3, 1, 29), "minecraft:white_concrete")
+        t.fill((x, 2, 14), (x + 3, 4, 20), material)
+        t.fill((x, 2, 23), (x + 3, 4, 28), "immersiveengineering:crate")
+        t.fill((x, 1, 30), (x + index, 1, 33), "minecraft:yellow_concrete")
+    # Packing and dispatch retain the donor's circulation but show continuity work at emergency tempo.
+    t.fill((5, 2, 23), (13, 4, 30), "immersiveengineering:crate")
+    t.fill((6, 2, 32), (14, 3, 36), "create:cardboard_block")
+    t.fill((16, 1, 36), (45, 1, 40), "minecraft:yellow_concrete")
+    for x in (18, 26, 34, 42):
+        t.fill((x, 2, 37), (x + 3, 3, 39), "immersiveengineering:crate")
+    # The original polymer lane is separately quarantined as substitutions move mineral and metallic.
+    t.fill((17, 1, 19), (21, 1, 25), "minecraft:yellow_concrete")
+    t.fill((18, 2, 20), (20, 4, 24), "tfmg:plastic_block")
+    t.chest(43, 2, 15, BY_TARGET["OWS-019"].loot_id, "west")
+    return t
+
+BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017, "OWS-018": build_018, "OWS-019": build_019}
 
 def loot_table(spec):
     items = list(dict.fromkeys([spec.proof] + ([spec.lore] if spec.lore else [])))
