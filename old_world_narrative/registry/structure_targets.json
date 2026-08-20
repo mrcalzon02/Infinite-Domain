@@ -612,11 +612,29 @@
       "quest_hook": "BOTH SIDES OF THE WALL (support)",
       "unique_proof_item_seed": "polycore_composite_failure_file",
       "revision_intensity": "Very High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:industrial_facility_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_017_polycore_composite_barrier_laboratory",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_017_polycore_composite_barrier_laboratory.nbt",
+      "worldgen_activation": "staged_not_in_structure_set",
+      "locator": {
+        "command": "/structure_map infinite_domain:old_world/ows_017_polycore_composite_barrier_laboratory 2",
+        "status": "prepared_requires_worldgen_activation"
+      },
+      "exploration_hook": {
+        "mode": "additive_old_world_investigation",
+        "status": "prepared_static",
+        "requires_worldgen_activation": true
+      }
     },
     {
       "id": "OWS-018",
