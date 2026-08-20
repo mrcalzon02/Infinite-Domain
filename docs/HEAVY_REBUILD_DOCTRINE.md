@@ -2,7 +2,7 @@
 
 **Repository status:** AUTHORITATIVE HEAVY REBUILD DOCTRINE  
 **Applies to:** Old World quest-location schematic reconstruction and quality revision  
-**Execution rule:** Read and obey this doctrine before performing any heavy schematic rebuild pass.
+**Execution rule:** Read and obey this doctrine before performing any heavy schematic rebuild pass. Heavy rebuilds MUST include the multi-stage 3D interpretation and visual-review gates defined below; a mechanically valid NBT/schematic is not visually approved merely because it loads.
 
 ## Purpose
 
@@ -71,10 +71,18 @@ Separately, it may be:
 - rough;
 - rebuild required;
 - architectural pass;
+- visual massing review pending;
+- visual massing reviewed;
 - interior pass;
+- intact-state visual review pending;
+- intact-state visual reviewed;
 - narrative pass;
 - encounter pass;
+- damage-state visual review pending;
+- damage-state visual reviewed;
 - detailing pass;
+- final multi-angle review pending;
+- final multi-angle reviewed;
 - schematic revision complete;
 - peak-quality approved.
 
@@ -83,6 +91,32 @@ A mechanically working structure is not automatically an architecturally finishe
 A beautiful structure with broken quest logic is also not finished.
 
 Both tracks must eventually converge.
+
+## I-A. Visual review is a separate quality gate
+
+A generated preview is not decoration and it is not merely evidence that a renderer works.
+
+The 3D interpretation review exists to expose defects that text inspection, NBT inspection, coordinate inspection, and block counts routinely miss, including:
+
+- childish or weak silhouette;
+- incorrect scale;
+- oversized empty masses;
+- poor roof composition;
+- flat facades;
+- broken structural rhythm;
+- implausible floor heights;
+- bad entrance hierarchy;
+- meaningless symmetry;
+- unreadable corporate identity;
+- implausible damage;
+- visual clutter;
+- missing site infrastructure;
+- hero spaces that do not read from the intended approach;
+- rooms or wings that are obviously malformed when seen as a whole.
+
+Therefore visual review status must remain distinct from functional validation.
+
+A schematic may be `mechanically_validated` while still being `visual_review_failed` or `schematic_revision_required`.
 
 ---
 
@@ -182,6 +216,21 @@ Examples:
 - a strong final evidence room.
 
 Everything else remains negotiable.
+
+### Existing visual baseline
+
+Before demolition or heavy modification, create a simple 3D interpretation of the existing rough schematic when tooling permits.
+
+This baseline is not an approval render. It exists to preserve a visual record of:
+
+- the original massing;
+- retained ideas;
+- obvious defects;
+- original entrance orientation;
+- original damage language;
+- relative scale.
+
+For major or quest-critical structures, retain at least one baseline contact sheet or equivalent review artifact so the rebuild can be compared against what it replaced.
 
 ---
 
@@ -395,6 +444,88 @@ Then deliberately make the resulting facility more heterogeneous because Continu
 
 ---
 
+# V-A. Mandatory 3D Interpretation and Review System
+
+Heavy rebuilds must produce **primitive but spatially truthful 3D review views** at multiple points in the rebuild process.
+
+The review renderer does not need to be a full Minecraft runtime renderer.
+
+A lightweight schematic/NBT interpreter, voxel renderer, mesh preview, orthographic renderer, isometric renderer, or primitive 3D viewport is acceptable provided it preserves the structure's real geometry well enough to judge massing, scale, damage, and spatial composition.
+
+The visual review system is a development instrument.
+
+It must not be silently removed because a later pipeline can inspect NBT programmatically.
+
+## Minimum review outputs
+
+For small structures, provide at least four useful exterior angles.
+
+For medium, large, rare, landmark, and quest-critical structures, provide at least six useful views, normally including:
+
+- front-left three-quarter view;
+- front-right or rear-right three-quarter view;
+- opposing rear three-quarter view;
+- elevated roof/top-oblique view;
+- principal entrance/player-approach view;
+- one interior, cutaway, section, exploded-floor, or transparent-shell view where the renderer supports it.
+
+Additional side elevations or interior views should be added when the geometry cannot be understood from the minimum set.
+
+## Contact sheets
+
+Whenever possible, combine the review angles into a single labeled contact sheet as well as retaining individual views.
+
+The contact sheet should identify:
+
+- structure ID;
+- review gate;
+- revision number or commit/working identifier;
+- damage state;
+- camera orientation;
+- approximate structure dimensions or visible bounds.
+
+## Fixed-camera comparison
+
+When comparing rebuild revisions or damage states, reuse the same camera positions whenever possible.
+
+This is important.
+
+The reviewer should be able to compare two images and immediately determine what changed rather than mentally compensating for a different camera angle.
+
+## Modded-block fallback
+
+If the primitive renderer cannot display a modded block correctly, do not abandon the review.
+
+Use a deterministic fallback color/material category or proxy geometry and record the unresolved render substitution.
+
+The preview is intended to evaluate spatial interpretation first.
+
+A rendering limitation is not permission to skip the gate.
+
+## Preview fidelity rule
+
+The final-state visual preview must be generated from, or be demonstrably synchronized with, the actual authoritative schematic/NBT geometry.
+
+Do not approve a concept render that looks excellent while the actual exported NBT differs substantially.
+
+Conceptual reconstructed states may be used for historical comparison, but the final current-ruin state must correspond to the implementation that will ship.
+
+## Review means revision
+
+Producing the image is not the gate.
+
+Reviewing the image is the gate.
+
+At every visual gate, record visible defects and either:
+
+- correct them and rerender;
+- explicitly justify why they are intentional;
+- or leave the structure in `visual_review_failed` / `schematic_revision_required` state.
+
+A render that visibly demonstrates a major problem cannot be marked passed merely because the render exists.
+
+---
+
 # VI. Translating Reality Into Minecraft's One-Meter Grid
 
 Minecraft's approximate one-block-per-meter spatial scale requires deliberate exaggeration.
@@ -527,6 +658,28 @@ Secure window-poor masses, generator yards, cooling equipment, communications in
 Huge clear-span buildings, hangars, tracking equipment, control buildings, service towers.
 
 A rectangular box should survive the massing pass only when a rectangular box genuinely suits the building—and even then its surrounding infrastructure must explain it.
+
+## VII-A. Visual Gate A — Massing and scale review
+
+Immediately after the massing pass and before expensive interior detailing, generate the first mandatory rebuild preview.
+
+This gate should show the rebuilt shell, major wings, roof forms, entrances, primary exterior infrastructure, and overall bounds with minimal visual noise.
+
+Review for:
+
+- whether the building reads as its intended real-world function;
+- whether its scale is credible in Minecraft's one-meter grid;
+- whether the silhouette is sufficiently distinctive;
+- whether additions and setbacks feel intentional;
+- whether the principal entrance is legible;
+- whether the roof is composed rather than forgotten;
+- whether the structure is too box-like, too small, too tall, too squat, or too uniformly symmetric;
+- whether the building occupies the site believably;
+- whether the planned hero space has enough architectural mass to matter.
+
+If the structure looks primitive at this stage, do not proceed to microscopic detailing in the hope that detail will save it.
+
+Revise the massing and rerender.
 
 ---
 
@@ -1127,6 +1280,30 @@ It is that they were willing to follow the evidence farther than other instituti
 
 Their last facilities should feel like places inhabited by people who knew exactly how bad the situation had become and continued working anyway.
 
+## XV-A. Visual Gate B — Intact / operational interpretation review
+
+Before irreversible ruin, collapse, fungal overgrowth, debris, and centuries-of-decay passes obscure the architecture, produce a second visual review showing the facility substantially intact.
+
+This review represents the best reconstruction of how the building read during normal operation or immediately before major crisis damage.
+
+It should include the developed architecture, principal interiors where viewable, corporate identity, service systems, and hero spaces.
+
+This gate exists because a bad intact building cannot be rescued by believable rubble.
+
+Review for:
+
+- whether the facility now genuinely looks capable of performing its stated function;
+- whether the organization's identity is readable without relying entirely on signs or logos;
+- whether front-of-house and back-of-house architecture are distinguishable;
+- whether machinery and service infrastructure have plausible spatial relationships;
+- whether the building has excessive empty volume;
+- whether facade, window, roof, and structural systems agree with the rooms behind them;
+- whether circulation reads as institutional architecture rather than a dungeon corridor;
+- whether hero spaces are visually memorable;
+- whether any obvious childish construction remains.
+
+Do not proceed into the final damage state until major intact-state problems have been corrected.
+
 ---
 
 # XVI. Collapse-State Layering
@@ -1239,6 +1416,56 @@ Broken glass.
 Missing structural sections.
 
 But retain enough evidence to reconstruct Layers 1–5.
+
+## XVI-A. Mandatory visual damage-state set
+
+The heavy rebuild process must restore the earlier practice of showing the structure in **multiple damage / historical states**.
+
+For medium, large, rare, landmark, and quest-critical structures, the visual-review set should normally include the same principal camera angles for at least the following interpretive states:
+
+### D0 — Intact / normal operation
+
+The facility as designed or in stable commercial/institutional operation.
+
+### D1 — Crisis retrofit / late operation
+
+The same building after quarantine, emergency logistics, survival adaptations, military/government intervention, or other crisis changes have accumulated.
+
+### D2 — Collapse / immediate failure
+
+The building at or shortly after the event that ended meaningful operation.
+
+### D3 — Current ruin / worldgen state
+
+The authoritative version encountered by the player after long-term decay.
+
+Not every historical state must exist as a separately shipped NBT structure.
+
+D0–D2 may be generated as temporary review variants, reconstructed layers, or renderer-side interpretations when appropriate.
+
+**D3 must match the authoritative final schematic geometry.**
+
+For a small structure where four states would add little value, D0 and D3 are the minimum unless the location's story specifically depends on an intermediate crisis state.
+
+## XVI-B. Visual Gate C — Damage-state comparison
+
+Create a labeled contact sheet or equivalent comparison that places the same camera angles across D0/D1/D2/D3 wherever practical.
+
+The purpose is to prove that damage is historical transformation rather than random erosion.
+
+Review for:
+
+- whether the building remains recognizable through the damage sequence;
+- whether each state logically follows the previous state;
+- whether collapse obeys gravity and structural cause-and-effect;
+- whether debris appears where material plausibly fell;
+- whether crisis retrofits are visible beneath later decay;
+- whether damage destroys too much of the architectural story;
+- whether the final ruin is visually richer than simply subtracting blocks;
+- whether important player routes and quest spaces remain legible;
+- whether the final state still communicates what the structure was.
+
+If D3 merely looks like D0 with random holes and vines, the damage-state review fails.
 
 ---
 
@@ -2119,6 +2346,38 @@ This is the final 10–15% of the build.
 
 It must never be used to disguise failure in the first 85%.
 
+## XLV-A. Visual Gate D — Final multi-angle / 360-degree review
+
+After final microdetail but before peak-quality approval, render the actual final schematic again from all required review angles.
+
+For medium and larger structures, the final review should approximate a 360-degree inspection through multiple overlapping three-quarter views plus an elevated roof view and at least one player-approach view.
+
+Where tooling permits, also provide:
+
+- a rotatable primitive viewport;
+- an animated turntable;
+- or a sufficiently dense sequence of still angles to function as a practical 360-degree inspection.
+
+The final review must inspect:
+
+- all four sides;
+- roof composition;
+- ground/site transition;
+- major entrances;
+- exterior damage continuity;
+- visible hero spaces;
+- corporate identity;
+- visual noise and over-detailing;
+- obvious untextured or placeholder regions;
+- accidental repetition;
+- clipping or floating geometry;
+- malformed stairs, rails, roofs, walls, and structural supports;
+- whether the final ruin still looks like a high-quality building rather than a decorated voxel box.
+
+If the final multi-angle view exposes a serious defect, reopen the relevant rebuild pass, correct it, and rerender.
+
+Peak-quality approval is not allowed to precede this gate.
+
 ---
 
 # XLVI. Rebuild Execution Sequence
@@ -2128,6 +2387,8 @@ For every schematic, Codex should follow this order.
 ## Pass 1 — Audit
 
 Understand the existing structure and mechanics.
+
+Create the optional/required baseline preview described in Phase 0.
 
 ## Pass 2 — Functional definition
 
@@ -2148,6 +2409,10 @@ Expand to believable Minecraft dimensions.
 ## Pass 6 — Massing
 
 Rebuild silhouette and building volumes.
+
+## Visual Gate A — Massing preview
+
+Render multiple exterior angles, review scale and silhouette, correct visible macro defects, and rerender until passed.
 
 ## Pass 7 — Structural system
 
@@ -2173,6 +2438,10 @@ Install machinery, utilities, storage, technical infrastructure.
 
 Apply organization-specific architectural language.
 
+## Visual Gate B — Intact-state preview
+
+Render the substantially intact/operational interpretation from multiple angles and relevant interior/cutaway views. Correct architecture before damage can hide it.
+
 ## Pass 13 — Historical layering
 
 Show normal operation through crisis and collapse.
@@ -2197,13 +2466,23 @@ Guarantee and appropriately position required evidence.
 
 Apply physically coherent collapse.
 
+## Visual Gate C — Damage-state comparison
+
+Produce D0/D1/D2/D3 comparison views using fixed cameras wherever practical. Correct damage logic and preservation of architectural readability before continuing.
+
 ## Pass 19 — Microdetail
 
 Perform final visual polish.
 
+## Visual Gate D — Final multi-angle review
+
+Render the final authoritative schematic in the primitive 3D review system, inspect all sides/roof/approach and relevant interior views, record findings, and correct/rerender any major defects.
+
 ## Pass 20 — Validation
 
 Verify gameplay and technical correctness.
+
+The visual gates do not replace runtime validation, and runtime validation does not replace the visual gates.
 
 ---
 
@@ -2259,6 +2538,24 @@ A spectacular facade cannot compensate for a nonsense interior.
 
 A brilliant interior cannot compensate for broken quest proof.
 
+## Mandatory visual-review gate — non-scored but blocking
+
+The 100-point rubric is not sufficient by itself.
+
+For a heavy rebuild to receive peak-quality approval, all required visual review gates must also be complete and passed.
+
+At minimum the review record must demonstrate:
+
+- massing review completed;
+- intact/operational review completed;
+- appropriate damage-state comparison completed;
+- final multi-angle review completed;
+- visible findings recorded;
+- significant findings corrected or explicitly justified;
+- final preview synchronized with the final schematic/NBT.
+
+A 95/100 structure with no visual review artifacts is **not peak-quality approved**.
+
 ---
 
 # XLVIII. Automatic Rejection Conditions
@@ -2284,7 +2581,14 @@ Reject the quality pass immediately if any of the following remain:
 - impossible player circulation;
 - worldgen-breaking dimensions;
 - structural IDs or quest hooks lost during rebuilding;
-- ruin damage that makes the building's original purpose impossible to interpret.
+- ruin damage that makes the building's original purpose impossible to interpret;
+- missing required 3D interpretation review;
+- only one flattering camera angle supplied for a structure requiring multi-angle review;
+- final preview generated from geometry that does not match the authoritative schematic;
+- damage states shown from inconsistent cameras when fixed-camera comparison was reasonably available;
+- obvious visual defects identified by the review but left uncorrected without justification;
+- a final review consisting only of text claims with no actual preview artifact when rendering capability is available;
+- skipped damage-state review on a narrative structure whose story depends on visible historical transformation.
 
 ---
 
@@ -2308,9 +2612,14 @@ Before marking the schematic complete verify:
 - only authorized vanilla mobs are configured;
 - no unavoidable progression-breaking explosion risk exists;
 - FTB structure/quest detection remains compatible;
-- structure-specific proof remains recoverable.
+- structure-specific proof remains recoverable;
+- final review renderer successfully interprets the authoritative geometry or documents any proxy substitutions;
+- final preview dimensions/bounds agree with the exported schematic;
+- review images do not reveal floating, clipped, missing, or grossly malformed geometry overlooked by static checks.
 
 A visual rebuild is not allowed to break progression.
+
+A mechanically valid structure is not allowed to bypass visual quality review.
 
 ---
 
@@ -2334,6 +2643,18 @@ When finishing each schematic, provide a concise report containing:
 **Loot tables used:**  
 **Quest evidence location:**  
 **Functional validation:**  
+**Visual baseline artifact:**  
+**Visual Gate A massing artifact:**  
+**Visual Gate A findings/corrections:**  
+**Visual Gate B intact-state artifact:**  
+**Visual Gate B findings/corrections:**  
+**Damage states rendered:**  
+**Visual Gate C comparison artifact:**  
+**Visual Gate C findings/corrections:**  
+**Visual Gate D final multi-angle artifact:**  
+**Visual Gate D findings/corrections:**  
+**Known renderer substitutions/limitations:**  
+**Final preview synchronized with authoritative NBT:** yes/no  
 **Quality score:**  
 **Remaining limitations:**
 
@@ -2342,6 +2663,33 @@ Do not merely report:
 > "Improved structure detail."
 
 Explain what was actually rebuilt.
+
+Do not merely report:
+
+> "Preview generated."
+
+Explain what the preview exposed, what was changed because of it, and whether the rerender passed.
+
+## Review artifact retention
+
+Each heavy rebuild must retain enough review output for another developer or the operator to understand what was visually approved.
+
+Preferred organization is a structure-specific review-artifact directory or equivalent build-artifact location, for example:
+
+`structure_reviews/OWS-###/<revision>/`
+
+Useful artifact names include:
+
+- `baseline_contact_sheet.png`
+- `gate_a_massing.png`
+- `gate_b_intact.png`
+- `gate_c_damage_states.png`
+- `gate_d_final.png`
+- `visual_review.md`
+
+The exact storage location may follow repository/build-artifact policy, but the artifacts must be surfaced to the reviewer and referenced by the rebuild report.
+
+Do not flood Git history with redundant intermediate binaries if an established artifact store exists; however, the review capability itself and the final approval evidence must not disappear for convenience.
 
 ---
 
@@ -2382,3 +2730,5 @@ Not more decoration.
 The finished structure should make the player stop for a moment and look around.
 
 At peak quality, the player should understand what a place was before they understand exactly why it died.
+
+And before that structure is called peak quality, the development process must have actually **looked at it as a three-dimensional object from enough angles and enough historical states to know that claim is true**.
