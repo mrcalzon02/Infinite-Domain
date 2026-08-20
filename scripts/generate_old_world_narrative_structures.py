@@ -18,6 +18,86 @@ ROOT = Path(__file__).resolve().parents[1]
 PROGRAM = ROOT / "old_world_narrative"
 REGISTRY = PROGRAM / "registry"
 
+VCF_COMPLETION = (
+    core.Spec(
+        "OWS-005",
+        "ows_005_vcf_harvest_packaging_annex",
+        "infinite_domain:abandoned_orchard_cannery_clean_master",
+        "abandoned_orchard_cannery",
+        "kubejs:vcf_packaging_quality_report",
+        None,
+        "Early anomaly",
+        (
+            "minecraft:lime_concrete",
+            "minecraft:light_blue_concrete",
+            "oritech:cooler_block",
+            "create:depot",
+            "create:mechanical_press",
+            "create:cardboard_block",
+        ),
+        {
+            "silhouette_exterior_identity": "VCF green packaging bands and a cold-chain loading crown replace cannery identity while retaining the industrial food silhouette",
+            "interior_zoning_circulation": "harvest receiving, PT-9 sanitation, inspection, packing, cold hold and dispatch form a continuous consumer-food workflow",
+            "functional_machinery_props": "wash piping, cooler banks, inspection depots, presses, carton staging and palletized output make the annex operationally legible",
+            "institutional_identity": "VCF green/white production coding and cyan sanitation lanes sell PT-9 cleanliness as part of ordinary food quality assurance",
+            "historical_damage_signature": "a growing yellow quarantine around rejected packaging lots records the first quality anomaly without turning the plant into a ruin",
+            "narrative_evidence_loot": "guaranteed packaging quality report proves Evercrop and PT-9 were embedded in routine consumer food production before the crisis",
+        },
+        "uncommon_sites",
+    ),
+    core.Spec(
+        "OWS-007",
+        "ows_007_vcf_ep7_agricultural_development_laboratory",
+        "infinite_domain:nuclear_research_annex_clean_master",
+        "nuclear_research_annex",
+        "kubejs:ep7_distribution_and_durability_record",
+        None,
+        "Pre-crisis",
+        (
+            "minecraft:lime_concrete",
+            "create:framed_glass",
+            "farmersdelight:rich_soil",
+            "minecraft:mycelium",
+            "oritech:cooler_block",
+        ),
+        {
+            "silhouette_exterior_identity": "VCF green research bands and glass crop-test crowns convert the annex into a polished agricultural development campus",
+            "interior_zoning_circulation": "seed intake, durability chambers, spore-survival rooms, storage trials, reseeding plots and food-quality review are deliberately separated",
+            "functional_machinery_props": "sealed grow cells, controlled soil beds, mycelial test strips, cooler banks and stored reseeding stock support repeatable commercial trials",
+            "institutional_identity": "VCF green/white presentation and clean numbered test cells frame extreme persistence and distribution traits as product advantages",
+            "historical_damage_signature": "the site is intentionally pre-crisis and largely intact; its disturbing signature is the escalating stress conditions built into successful test zones",
+            "narrative_evidence_loot": "guaranteed EP-7 distribution and durability record establishes that survival, storage and reseeding persistence were engineered and celebrated",
+        },
+        "rare_sites",
+    ),
+    core.Spec(
+        "OWS-008",
+        "ows_008_vcf_emergency_persistence_investigation_lab",
+        "infinite_domain:mountain_biohazard_lab_clean_master",
+        "mountain_biohazard_lab",
+        "kubejs:vcf_persistence_incident_file",
+        None,
+        "Active containment",
+        (
+            "minecraft:lime_concrete",
+            "minecraft:yellow_concrete",
+            "create:framed_glass",
+            "create:fluid_pipe",
+            "minecraft:mycelium",
+            "minecraft:brown_mushroom",
+        ),
+        {
+            "silhouette_exterior_identity": "VCF green emergency-lab markings are overpainted by yellow containment bands and repeated clean-zone numbering",
+            "interior_zoning_circulation": "dirty intake, sterilization sequence, clean-room checks, service-joint inspection, persistence testing and incident archive require repeated boundary crossings",
+            "functional_machinery_props": "wash piping, sealed observation rooms, sample benches and deliberately exposed service joints reproduce failed decontamination pathways",
+            "institutional_identity": "VCF bioscience branding survives beneath increasingly dominant containment colors, showing a commercial lab becoming an emergency investigation site",
+            "historical_damage_signature": "mycelial contamination reappears along service seams after multiple sterilization zones, turning procedural failure itself into the physical story",
+            "narrative_evidence_loot": "guaranteed persistence incident file documents repeated clean-room breaches and establishes that procedure changes could not restore containment",
+        },
+        "rare_sites",
+    ),
+)
+
 ATLAS_EXTENSION = (
     core.Spec(
         "OWS-011",
@@ -99,9 +179,82 @@ ATLAS_EXTENSION = (
 )
 
 
+def build_005():
+    t = base.abandoned_orchard_cannery_clean_master()
+    t.fill((6, 9, 8), (55, 11, 8), "minecraft:white_concrete")
+    t.fill((12, 10, 7), (49, 13, 7), "minecraft:lime_concrete")
+    # PT-9 sanitation lane: cyan wash path feeding packaging inspection.
+    t.fill((7, 1, 13), (23, 1, 20), "minecraft:light_blue_concrete")
+    t.fill((8, 2, 15), (22, 2, 15), "create:fluid_pipe")
+    t.fill((8, 2, 17), (11, 6, 19), "create:fluid_tank")
+    # Inspection and packaging line.
+    for x in (27, 34, 41, 48):
+        t.set(x, 2, 16, "create:depot")
+        t.set(x, 3, 17, "create:mechanical_press", facing="north")
+        t.fill((x - 1, 2, 21), (x + 2, 4, 23), "create:cardboard_block")
+    # Cold hold and outgoing consumer-food stock.
+    for x in (29, 35, 41, 47):
+        t.fill((x, 2, 28), (x + 2, 5, 31), "oritech:cooler_block")
+    t.fill((8, 2, 28), (20, 4, 34), "jaffabricate:pallet_full")
+    # Rejected packaging lots accumulate behind a quarantine stripe as the anomaly begins.
+    t.fill((45, 1, 33), (56, 1, 39), "minecraft:yellow_concrete")
+    t.fill((47, 2, 34), (55, 4, 38), "create:cardboard_block")
+    t.chest(52, 2, 36, "infinite_domain:chests/old_world/ows_005_vcf_harvest_packaging_annex", "west")
+    return t
+
+
+def build_007():
+    t = base.nuclear_research_annex_clean_master()
+    t.fill((5, 10, 10), (38, 12, 10), "minecraft:white_concrete")
+    t.fill((12, 11, 9), (31, 14, 9), "minecraft:lime_concrete")
+    # Parallel durability and environmental-stress chambers.
+    for index, x in enumerate((8, 16, 24, 32), 1):
+        t.fill((x, 2, 16), (x + 5, 8, 24), "create:framed_glass")
+        t.clear((x + 1, 3, 17), (x + 4, 7, 23))
+        t.fill((x + 1, 2, 18), (x + 4, 2, 22), "farmersdelight:rich_soil")
+        if index % 2:
+            t.fill((x + 2, 3, 19), (x + 3, 3, 21), "minecraft:wheat", age="7")
+        else:
+            t.fill((x + 2, 2, 19), (x + 3, 2, 21), "minecraft:mycelium")
+            t.set(x + 2, 3, 20, "minecraft:brown_mushroom")
+    # Storage and reseeding deliberately test long-duration viability.
+    for x in (45, 50, 55):
+        t.fill((x, 2, 28), (x + 2, 6, 32), "oritech:cooler_block")
+        t.fill((x, 2, 35), (x + 2, 4, 38), "immersiveengineering:crate")
+    t.fill((10, 1, 42), (31, 1, 53), "minecraft:lime_concrete")
+    for x in range(12, 30, 4):
+        t.fill((x, 2, 44), (x + 2, 2, 51), "farmersdelight:rich_soil")
+        t.fill((x + 1, 3, 46), (x + 1, 3, 49), "minecraft:wheat", age="7")
+    t.chest(58, 2, 36, "infinite_domain:chests/old_world/ows_007_vcf_ep7_agricultural_development_laboratory", "west")
+    return t
+
+
+def build_008():
+    t = base.mountain_biohazard_lab_clean_master()
+    t.fill((19, 9, 3), (35, 11, 3), "minecraft:white_concrete")
+    t.fill((22, 10, 2), (32, 13, 2), "minecraft:lime_concrete")
+    # Repeated sterilization cells and clean-zone checkpoints.
+    for index, x in enumerate((7, 18, 29, 40), 1):
+        t.fill((x, 2, 14), (x + 7, 8, 23), "create:framed_glass")
+        t.clear((x + 1, 3, 15), (x + 6, 7, 22))
+        t.fill((x + 1, 2, 25), (x + 6, 2, 27), "minecraft:yellow_concrete")
+        t.fill((x + 2, 3, 26), (x + 5, 3, 26), "create:fluid_pipe")
+        # Contamination returns farther into each successive supposedly clean room.
+        seam = x + min(index + 1, 6)
+        t.fill((seam, 2, 20), (seam, 2, 22), "minecraft:mycelium")
+        t.set(seam, 3, 21, "minecraft:brown_mushroom")
+    # Service-joint investigation corridor and incident archive.
+    t.fill((7, 1, 30), (49, 1, 34), "minecraft:yellow_concrete")
+    t.fill((8, 2, 31), (48, 2, 31), "create:fluid_pipe")
+    for x in (10, 22, 34, 46):
+        t.fill((x, 2, 35), (x + 2, 4, 38), "minecraft:lime_concrete")
+        t.fill((x, 2, 40), (x + 2, 4, 43), "immersiveengineering:crate")
+    t.chest(47, 2, 41, "infinite_domain:chests/old_world/ows_008_vcf_emergency_persistence_investigation_lab", "west")
+    return t
+
+
 def build_011():
     t = base.fire_station_clean_master()
-    # Municipal shell remains recognizable; Atlas takes over the apparatus/service program.
     t.fill((4, 8, 7), (38, 10, 7), "minecraft:orange_concrete")
     t.fill((9, 11, 6), (33, 13, 6), "minecraft:white_concrete")
     t.fill((14, 12, 5), (28, 14, 5), "minecraft:orange_concrete")
@@ -111,7 +264,6 @@ def build_011():
         t.set(x + 2, 2, 23, "minecraft:anvil")
         t.fill((x + 5, 2, 20), (x + 7, 3, 22), "immersiveengineering:crate")
         t.fill((x + 1, 2, 25), (x + 6, 2, 26), "minecraft:orange_concrete")
-    # The last bay is no longer a complete repair line: it is being stripped to keep the others alive.
     t.fill((28, 1, 24), (38, 1, 31), "minecraft:yellow_concrete")
     t.fill((29, 2, 25), (37, 5, 25), "minecraft:scaffolding")
     t.fill((31, 2, 27), (37, 4, 30), "create:andesite_casing")
@@ -133,7 +285,6 @@ def build_013():
         t.fill((x + 1, 1, 29), (x + 5, 1, 31), "minecraft:yellow_concrete")
         t.fill((x + 2, 2, 30), (x + 4, 3, 30), "minecraft:polished_blackstone")
         t.set(x + 3, 3, 29, "minecraft:lever", face="wall", facing="north", powered="false")
-    # Cell four is explicitly in emergency manual mode and has been cannibalized for replacement drive parts.
     t.fill((34, 1, 12), (43, 1, 28), "minecraft:yellow_concrete")
     t.fill((36, 2, 20), (43, 5, 23), "minecraft:scaffolding")
     t.fill((37, 2, 25), (42, 4, 27), "create:andesite_casing")
@@ -144,25 +295,21 @@ def build_013():
 
 def build_014():
     t = base.ae2_records_archive_clean_master()
-    # The archive becomes a live industrial-control integration campus.
     t.fill((6, 9, 10), (57, 11, 10), "minecraft:orange_concrete")
     t.fill((18, 22, 25), (58, 24, 25), "minecraft:light_blue_concrete")
     t.fill((34, 25, 33), (46, 27, 33), "minecraft:black_concrete")
-    # Prototype Atlas control cells occupy the intake wing without erasing the secure archive route.
     for x in (8, 15, 22):
         t.fill((x, 2, 14), (x + 3, 3, 16), "create:andesite_casing")
         t.set(x + 1, 2, 18, "create:depot")
         t.fill((x, 1, 20), (x + 3, 1, 22), "minecraft:orange_concrete")
         t.fill((x + 1, 2, 23), (x + 2, 3, 23), "minecraft:polished_blackstone")
         t.set(x + 1, 3, 22, "minecraft:lever", face="wall", facing="north", powered="false")
-    # Cross-vendor retrofit language: cyan power path, black secured data path, Atlas orange integration spine.
     t.fill((39, 13, 27), (57, 13, 28), "minecraft:orange_concrete")
     t.fill((41, 14, 30), (56, 14, 31), "minecraft:light_blue_concrete")
     t.fill((41, 14, 46), (56, 14, 47), "minecraft:black_concrete")
     t.fill((45, 14, 34), (55, 17, 36), "ae2:drive")
     t.fill((47, 14, 39), (53, 17, 42), "ae2:controller")
     t.fill((46, 14, 18), (55, 17, 20), "immersiveengineering:capacitor_hv")
-    # Late-containment isolation and redundant manual switching show the system being kept alive by retrofit.
     t.fill((34, 13, 43), (58, 13, 49), "minecraft:yellow_concrete")
     for x in (37, 43, 49, 55):
         t.fill((x, 14, 44), (x + 2, 15, 44), "minecraft:polished_blackstone")
@@ -171,15 +318,18 @@ def build_014():
     return t
 
 
-core.SPECS = core.SPECS + ATLAS_EXTENSION
-core.BY_TARGET.update({spec.target: spec for spec in ATLAS_EXTENSION})
+EXTENSIONS = VCF_COMPLETION + ATLAS_EXTENSION
+core.SPECS = tuple(sorted(core.SPECS + EXTENSIONS, key=lambda spec: int(spec.target[-3:])))
+core.BY_TARGET.update({spec.target: spec for spec in EXTENSIONS})
 core.BUILDERS.update({
+    "OWS-005": build_005,
+    "OWS-007": build_007,
+    "OWS-008": build_008,
     "OWS-011": build_011,
     "OWS-013": build_013,
     "OWS-014": build_014,
 })
 
-# Public compatibility exports for validators and tooling.
 Spec = core.Spec
 SPECS = core.SPECS
 BY_TARGET = core.BY_TARGET
@@ -219,7 +369,7 @@ def _sync_registry() -> None:
         state["static_render_reviewed"] = sorted(
             spec.target for spec in SPECS if spec.structure_id in rendered
         )
-        state["current_wave"] = "atlas_service_assembly_controls_wave"
+        state["current_wave"] = "vcf_family_closure_and_atlas_controls_wave"
         implemented_set = set(implemented)
         state["next_targets"] = [
             row["id"] for row in targets
@@ -231,7 +381,7 @@ def _sync_registry() -> None:
 def main() -> None:
     core.main()
     _sync_registry()
-    print("Extended authoritative Old World generator through Atlas OWS-014.")
+    print("Extended authoritative Old World generator through the complete VCF and Atlas families.")
 
 
 if __name__ == "__main__":
