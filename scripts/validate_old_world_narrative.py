@@ -18,6 +18,9 @@ PROGRAM = ROOT / "old_world_narrative"
 REGISTRY = PROGRAM / "registry"
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
 ITEM_TEXTURES = ROOT / "kubejs" / "assets" / "kubejs" / "textures" / "item"
+PREPARED_SITE_QUESTS = PROGRAM / "quests" / "prepared_site_surveys.snbt"
+PREPARED_SITE_LANG = PROGRAM / "quests" / "prepared_site_surveys_lang.snbt"
+SITE_QUEST_CATALOG = REGISTRY / "site_quest_catalog.json"
 CANON = "eec4d3149e5e5823b330d5b01127b8f6e592d1938ef4e491f719617e507bf182"
 DIMENSIONS = {
     "silhouette_exterior_identity",
@@ -39,21 +42,26 @@ DESTINATION_QUESTS = {
     "OWS-015": "4F57000000000021",
     "OWS-016": "4F57000000000023",
 }
+SITE_QUEST_BASE = int("4F58000000000000", 16)
+SITE_STRUCTURE_TASK_BASE = int("4F58100000000000", 16)
+SITE_PROOF_TASK_BASE = int("4F58200000000000", 16)
+SITE_LEAD_QUEST_ID = "4F58F00000000000"
+SITE_LEAD_TASK_ID = "4F58F10000000000"
 ATLAS_TARGETS = {f"OWS-{index:03d}" for index in range(9, 15)}
 VCF_TARGETS = {f"OWS-{index:03d}" for index in range(1, 9)}
 
 
-def read_json(path):
+def read_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def require(condition, message):
+def require(condition: bool, message: str) -> None:
     if not condition:
         raise ValueError(message)
 
 
-def deterministic_items(table):
-    result = set()
+def deterministic_items(table: dict) -> set[str]:
+    result: set[str] = set()
     for pool in table.get("pools", []):
         entries = pool.get("entries", [])
         if pool.get("rolls") == 1 and len(entries) == 1 and entries[0].get("type") == "minecraft:item":
@@ -61,26 +69,90 @@ def deterministic_items(table):
     return result
 
 
-def main():
+def ftb_id(base: int, target: str) -> str:
+    return f"{base + int(target[-3:]):016X}"
+
+
+def prepared_map_reward_id(target: str) -> str:
+    return "71E" + hashlib.sha256(f"old-world-site-map:{target}".encode()).hexdigest()[:13].upper()
+
+
+def main() -> None:
+    expected_targets = [f"OWS-{i:03d}" for i in range(1, 65)]
+    spec_targets = [spec.target for spec in SPECS]
+    require(len(SPECS) == 64, f"authoritative generator must expose 64 specs, found {len(SPECS)}")
+    require(spec_targets == expected_targets, "authoritative generator must expose the stable OWS-001 through OWS-064 sequence")
+    require(len(set(spec_targets)) == 64, "authoritative generator contains duplicate OWS targets")
+
     manifest = read_json(PROGRAM / "source" / "source-manifest.json")
     require(manifest["canon_docx_sha256"] == CANON, "canonical narrative checksum is not pinned")
 
     registry = read_json(REGISTRY / "structure_targets.json")
     targets = registry["targets"]
     require(len(targets) == 64, "structure registry must contain 64 targets")
-    require([row["id"] for row in targets] == [f"OWS-{i:03d}" for i in range(1, 65)], "unstable OWS ID sequence")
+    require([row["id"] for row in targets] == expected_targets, "unstable OWS ID sequence")
     require(read_json(REGISTRY / "lore_seed.json")["seed_count"] == 36, "lore seed count changed")
     spine = read_json(REGISTRY / "quest_spine.json")
     require(spine["major_quest_count"] == 13 and spine["quests"][0]["title"] == "THEY WERE HERE FIRST", "canonical quest spine changed")
 
     proof_registry = read_json(ROOT / "kubejs" / "config" / "old_world_evidence.json")
-    proof_ids = {f"kubejs:{entry['id']}" for entry in proof_registry["items"]}
+    proof_rows = proof_registry["items"]
+    proof_ids = {f"kubejs:{entry['id']}" for entry in proof_rows}
+    evidence_by_site = {entry["site"]: entry for entry in proof_rows}
     require(len(proof_ids) == 64, "canonical proof registry must contain 64 unique IDs")
+    require(set(evidence_by_site) == set(expected_targets), "canonical evidence registry must cover every OWS site exactly once")
     proof_startup = (ROOT / "kubejs" / "startup_scripts" / "old_world_evidence_items.js").read_text(encoding="utf-8")
     require("oldWorldEvidence.items.forEach" in proof_startup, "canonical proof startup no longer consumes the JSON registry")
     supplemental_startup = (ROOT / "kubejs" / "startup_scripts" / "old_world_narrative_items.js").read_text(encoding="utf-8")
 
     chapter = (ROOT / "config" / "ftbquests" / "quests" / "chapters" / "old_world_investigation.snbt").read_text(encoding="utf-8")
+    require(SITE_LEAD_QUEST_ID not in chapter, "activation-gated survey root leaked into the live FTB chapter")
+
+    require(SITE_QUEST_CATALOG.is_file(), "64-site prepared quest catalog was not generated")
+    require(PREPARED_SITE_QUESTS.is_file(), "prepared site survey SNBT was not generated")
+    require(PREPARED_SITE_LANG.is_file(), "prepared site survey language SNBT was not generated")
+    quest_catalog = read_json(SITE_QUEST_CATALOG)
+    prepared_quests = PREPARED_SITE_QUESTS.read_text(encoding="utf-8")
+    prepared_lang = PREPARED_SITE_LANG.read_text(encoding="utf-8")
+    require(quest_catalog["status"] == "fully_authored_activation_gated", "prepared quest catalog status is stale")
+    require(quest_catalog["site_count"] == 64, "prepared quest catalog must contain 64 site entries")
+    require(quest_catalog["lead_quest_id"] == SITE_LEAD_QUEST_ID, "prepared quest lead ID is unstable")
+    require(f'id: "{SITE_LEAD_QUEST_ID}"' in prepared_quests, "prepared survey root quest is missing")
+    require(f'id: "{SITE_LEAD_TASK_ID}"' in prepared_quests, "prepared survey root task is missing")
+
+    institution_order: list[str] = []
+    institution_sites: dict[str, list[str]] = {}
+    for target in expected_targets:
+        institution = evidence_by_site[target]["institution"]
+        if institution not in institution_sites:
+            institution_order.append(institution)
+            institution_sites[institution] = []
+        institution_sites[institution].append(target)
+    require(quest_catalog["institution_count"] == len(institution_order), "prepared quest institution count is stale")
+    require(quest_catalog["institutions"] == institution_order, "prepared quest institution order is unstable")
+
+    major_hooks: dict[str, list[str]] = {target: [] for target in expected_targets}
+    for quest in spine["quests"]:
+        for target in quest["target_structures"]:
+            if target in major_hooks:
+                major_hooks[target].append(f"{quest['id']}:{quest['title']}")
+
+    catalog_sites = quest_catalog["sites"]
+    require([entry["target_id"] for entry in catalog_sites] == expected_targets, "prepared quest catalog target order is unstable")
+    catalog_by_target = {entry["target_id"]: entry for entry in catalog_sites}
+    require(len(catalog_by_target) == 64, "prepared quest catalog contains duplicate target entries")
+
+    first_sites = {sites[0] for sites in institution_sites.values()}
+    for target in sorted(first_sites):
+        spec = SPECS[int(target[-3:]) - 1]
+        require(
+            f"structure_map {spec.structure_id} 2" in prepared_quests,
+            f"{target} institution lead locator is missing from the prepared survey root",
+        )
+        require(
+            f'id: "{prepared_map_reward_id(target)}"' in prepared_quests,
+            f"{target} institution lead locator reward ID is unstable",
+        )
 
     structure_set_dir = DATA / "worldgen" / "structure_set" / "old_world"
     structure_set_paths = sorted(structure_set_dir.glob("*.json"))
@@ -114,15 +186,56 @@ def main():
     integrated_count = 0
     for spec in SPECS:
         row = targets[int(spec.target[-3:]) - 1]
+        evidence = evidence_by_site[spec.target]
+        quest_entry = catalog_by_target[spec.target]
+        institution_sites_for_spec = institution_sites[evidence["institution"]]
+        institution_index = institution_sites_for_spec.index(spec.target)
+        predecessor = institution_sites_for_spec[institution_index - 1] if institution_index else None
+        next_target = institution_sites_for_spec[institution_index + 1] if institution_index + 1 < len(institution_sites_for_spec) else None
+        expected_quest_id = ftb_id(SITE_QUEST_BASE, spec.target)
+        expected_structure_task = ftb_id(SITE_STRUCTURE_TASK_BASE, spec.target)
+        expected_proof_task = ftb_id(SITE_PROOF_TASK_BASE, spec.target)
+        expected_dependency = ftb_id(SITE_QUEST_BASE, predecessor) if predecessor else SITE_LEAD_QUEST_ID
+        is_probe = spec.target in CONTROLLED_WORLDGEN_TARGETS
+
         require(row["narrative_structure"] == spec.structure_id, f"{spec.target} registry mapping is stale")
         require(row["implementation_status"] == "implemented_static_runtime_deferred", f"{spec.target} status is stale")
+        require(row.get("functional_status") == "static_source_implemented", f"{spec.target} functional status must remain source-level until runtime validation")
+        require(row.get("quality_status") == "schematic_revision_pending", f"{spec.target} schematic revision debt is not recorded")
         require(set(row["acceptance_dimensions"]) == DIMENSIONS, f"{spec.target} must implement all six revision dimensions")
         require(set(spec.dimensions) == DIMENSIONS, f"{spec.target} spec does not carry all six revision dimensions")
         require(registered_item(spec.proof), f"{spec.proof} is not registered")
         if spec.lore:
             require(registered_item(spec.lore), f"{spec.lore} is not registered")
 
-        is_probe = spec.target in CONTROLLED_WORLDGEN_TARGETS
+        require(quest_entry["institution"] == evidence["institution"], f"{spec.target} prepared quest institution is stale")
+        require(quest_entry["quest_id"] == expected_quest_id, f"{spec.target} prepared quest ID is unstable")
+        require(quest_entry["structure_task_id"] == expected_structure_task, f"{spec.target} structure task ID is unstable")
+        require(quest_entry["proof_task_id"] == expected_proof_task, f"{spec.target} proof task ID is unstable")
+        require(quest_entry["dependency_quest_id"] == expected_dependency, f"{spec.target} dependency quest ID is stale")
+        require(quest_entry["predecessor_target"] == predecessor, f"{spec.target} institution predecessor is stale")
+        require(quest_entry["next_target"] == next_target, f"{spec.target} institution successor is stale")
+        require(quest_entry["structure_id"] == spec.structure_id, f"{spec.target} prepared structure task target is stale")
+        require(quest_entry["proof_item"] == spec.proof, f"{spec.target} prepared proof task target is stale")
+        require(quest_entry["locator_command"] == f"/structure_map {spec.structure_id} 2", f"{spec.target} prepared locator command is stale")
+        require(quest_entry["locator_reward_id"] == prepared_map_reward_id(spec.target), f"{spec.target} prepared locator reward ID is unstable")
+        require(quest_entry["locator_reward_source"] == (SITE_LEAD_QUEST_ID if predecessor is None else expected_dependency), f"{spec.target} prepared locator reward source is stale")
+        require(quest_entry["major_quest_hooks"] == major_hooks[spec.target], f"{spec.target} major quest hooks are stale")
+        require(quest_entry["requires_worldgen_activation"] is (not is_probe), f"{spec.target} prepared quest activation guard is stale")
+        require(quest_entry["darknet_return_reserved"] is (spec.target in DARKNET_RETURN_TARGETS), f"{spec.target} prepared Darknet reservation is stale")
+        require(quest_entry["activation_state"] == ("controlled_probe_ready" if is_probe else "authored_staged_not_live"), f"{spec.target} prepared activation state is stale")
+
+        require(f'id: "{expected_quest_id}"' in prepared_quests, f"{spec.target} prepared quest block is missing")
+        require(f'id: "{expected_structure_task}" structure: "{spec.structure_id}"' in prepared_quests, f"{spec.target} prepared structure task is missing")
+        require(f'id: "{expected_proof_task}" item: {{ count: 1, id: "{spec.proof}" }}' in prepared_quests, f"{spec.target} prepared proof task is missing")
+        require(f'quest.{expected_quest_id}.title:' in prepared_lang, f"{spec.target} prepared quest language is missing")
+        require(f'task.{expected_structure_task}.title:' in prepared_lang, f"{spec.target} prepared structure-task language is missing")
+        require(f'task.{expected_proof_task}.title:' in prepared_lang, f"{spec.target} prepared proof-task language is missing")
+        if next_target:
+            next_spec = SPECS[int(next_target[-3:]) - 1]
+            require(f"structure_map {next_spec.structure_id} 2" in prepared_quests, f"{spec.target} does not hand off the next institutional locator")
+            require(f'id: "{prepared_map_reward_id(next_target)}"' in prepared_quests, f"{spec.target} next locator reward ID is unstable")
+
         require(
             row["worldgen_activation"] == ("controlled_pt9_probe" if is_probe else "staged_not_in_structure_set"),
             f"{spec.target} worldgen activation state is stale",
@@ -146,18 +259,17 @@ def main():
         else:
             require("darknet_return_hook" not in row, f"{spec.target} has an unplanned Darknet return hook")
 
-        # Quest wiring is additive and can be prepared before worldgen promotion.
-        # Locator rewards for staged sites are explicitly marked as requiring
-        # worldgen activation in the registry and must not be treated as runtime proof.
+        # Existing live quests remain a separate contract from the prepared
+        # catalog. Do not force staged destinations into live player progression.
         if spec.target in DESTINATION_QUESTS:
             integrated_count += 1
             for item in (spec.proof, spec.lore):
                 if item:
-                    require(f'id: "{item}"' in chapter, f"{item} has no quest task")
-            require(f'structure: "{spec.structure_id}"' in chapter, f"{spec.target} has no structure task")
-            require(f"structure_map {spec.structure_id} 2" in chapter, f"{spec.target} has no locator handoff")
+                    require(f'id: "{item}"' in chapter, f"{item} has no live quest task")
+            require(f'structure: "{spec.structure_id}"' in chapter, f"{spec.target} has no live structure task")
+            require(f"structure_map {spec.structure_id} 2" in chapter, f"{spec.target} has no live locator handoff")
             expected_reward = "70E" + hashlib.sha256(DESTINATION_QUESTS[spec.target].encode()).hexdigest()[:13].upper()
-            require(f'id: "{expected_reward}"' in chapter, f"{spec.target} locator reward ID is not stable")
+            require(f'id: "{expected_reward}"' in chapter, f"{spec.target} live locator reward ID is not stable")
 
         require((spec.structure_id in registered) is is_probe, f"{spec.target} structure-set gating is wrong")
 
@@ -186,13 +298,20 @@ def main():
         if spec.target in ATLAS_TARGETS:
             require(not proof_texture.exists(), f"{spec.target} rejected Atlas proof art is still present")
 
+    state = read_json(REGISTRY / "implementation_state.json")
+    live_targets = sorted(spec.target for spec in SPECS if f'structure: "{spec.structure_id}"' in chapter)
+    require(state.get("quest_authored") == expected_targets, "implementation state must record all 64 authored site quests")
+    require(state.get("quest_live") == live_targets, "implementation state live-quest list is stale")
+    require(state.get("quest_activation_pending") == sorted(set(expected_targets) - set(live_targets)), "implementation state activation-pending list is stale")
+    require(state.get("quest_layer_status") == "full_64_site_catalog_authored_activation_gated", "implementation state quest-layer status is stale")
+
     require(len(DARKNET_RETURN_TARGETS) >= 5, "at least five earlier sites must reserve meaningful Darknet return visits")
-    require(set(DARKNET_RETURN_TARGETS).issubset({spec.target for spec in SPECS}), "Darknet return hook references an unimplemented site")
+    require(set(DARKNET_RETURN_TARGETS).issubset(set(expected_targets)), "Darknet return hook references an unimplemented site")
 
     print(
-        f"Old World static validation passed: 64 targets, 13-quest canonical spine, "
-        f"{len(SPECS)} deterministic sites, {len(registered)} controlled worldgen target, "
-        f"{integrated_count} prepared quest integrations, {len(DARKNET_RETURN_TARGETS)} Darknet return hooks."
+        f"Old World static validation passed: 64 structures, 64 activation-gated site quests, "
+        f"13 canonical major quests, {len(registered)} controlled worldgen target, "
+        f"{integrated_count} live early-site integrations, {len(DARKNET_RETURN_TARGETS)} Darknet return hooks."
     )
 
 
