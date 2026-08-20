@@ -146,6 +146,27 @@ SPECS = (
         "institutional_identity": "Pleroma cyan inspection markings recur across otherwise generic containers, showing how pervasive the carrier had become across modes and regions",
         "historical_damage_signature": "yellow inspection lanes, improvised barriers and backed-up outbound cargo show active containment being imposed on a system built for continuous movement",
         "narrative_evidence_loot": "guaranteed container inspection record supports BOTH SIDES OF THE WALL by showing quarantine controls layered over still-global freight movement"}, "uncommon_sites"),
+    Spec("OWS-025", "ows_025_pleroma_automated_market_fulfillment_center", "infinite_domain:dilapidated_grocery", "dilapidated_grocery", "kubejs:pleroma_ration_conversion_notice", None, "Early containment", ("minecraft:cyan_concrete", "minecraft:white_concrete", "create:depot", "create:mechanical_press", "create:cardboard_block", "immersiveengineering:crate", "minecraft:yellow_concrete"), {
+        "silhouette_exterior_identity": "Pleroma cyan/white fulfillment markings overwrite the damaged market frontage while leaving the donor grocery silhouette recognizable",
+        "interior_zoning_circulation": "consumer shelves and receiving areas are converted into repeated sort stations feeding a broad emergency ration allocation strip and rear reserve stock",
+        "functional_machinery_props": "depot/press sort stations, cartons, ration crates and marked allocation lanes turn ordinary retail fulfillment into emergency distribution",
+        "institutional_identity": "Pleroma routing remains corporate and systematic even as the public-facing market is repurposed for ration issuance",
+        "historical_damage_signature": "the pre-existing rear structural damage remains, but the more important story is operational: consumer flow has been replaced by controlled ration staging",
+        "narrative_evidence_loot": "guaranteed ration conversion notice records the moment ordinary abundance was formally converted into civilian emergency allocation"}, "uncommon_sites"),
+    Spec("OWS-026", "ows_026_pleroma_quarantine_cargo_warehouse", "infinite_domain:corporate_warehouse_clean_master", "corporate_warehouse", "kubejs:pleroma_quarantine_cargo_order", None, "Active containment", ("minecraft:cyan_concrete", "minecraft:lime_concrete", "minecraft:red_concrete", "immersiveengineering:crate", "immersiveengineering:insulating_glass", "minecraft:iron_bars", "minecraft:yellow_concrete"), {
+        "silhouette_exterior_identity": "Pleroma cyan identity sits above a warehouse split into visually explicit accepted and rejected cargo zones",
+        "interior_zoning_circulation": "a central customs barrier divides certified agricultural freight from rejected loads, with sealed inspection cages and separate outbound paths",
+        "functional_machinery_props": "sealed cargo cages, inspection stock, quarantine fencing and separated crate fields make EP-7-style certification operational rather than textual",
+        "institutional_identity": "Pleroma routing and customs segregation show trade institutions trying to manufacture clean and dirty categories inside a contaminated system",
+        "historical_damage_signature": "the rejected side accumulates yellow isolation and stalled cargo while the certified side still attempts routine throughput",
+        "narrative_evidence_loot": "guaranteed quarantine cargo order documents the rules used to separate accepted agricultural freight from rejected contaminated loads"}, "uncommon_sites"),
+    Spec("OWS-027", "ows_027_pleroma_meridian_port_logistics_terminal", "infinite_domain:warm_industrial_mountain_port_clean_master", "warm_industrial_mountain_port", "kubejs:port_emergency_closure_record", None, "Late containment", ("minecraft:cyan_concrete", "minecraft:light_gray_concrete", "minecraft:orange_concrete", "immersiveengineering:crate", "minecraft:iron_bars", "minecraft:yellow_concrete", "minecraft:red_concrete", "minecraft:white_wool"), {
+        "silhouette_exterior_identity": "Pleroma cyan port identity remains visible above dense container fields, but emergency red closure zones and fenced customs corridors now dominate the terminal",
+        "interior_zoning_circulation": "normal container movement terminates at closed customs gates while backed-up cargo, civilian emergency staging and military-style barriers occupy former outbound space",
+        "functional_machinery_props": "container stacks, inspection crates, continuous fencing and blocked gates show a global logistics terminal being physically converted into a closure point",
+        "institutional_identity": "the same Pleroma routing seen at ordinary depots now frames an international terminal, demonstrating the carrier's global reach immediately before trade stops",
+        "historical_damage_signature": "red closure fields, stalled cargo and emergency civilian shelter masses show late containment replacing commercial throughput with border control",
+        "narrative_evidence_loot": "guaranteed port emergency closure record supports THE FIREBREAK WARS by documenting the final shutdown of normal international freight"}, "rare_sites"),
 )
 
 BY_TARGET = {spec.target: spec for spec in SPECS}
@@ -477,7 +498,62 @@ def build_024():
     t.chest(39, 2, 29, BY_TARGET["OWS-024"].loot_id, "west")
     return t
 
-BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017, "OWS-018": build_018, "OWS-019": build_019, "OWS-020": build_020, "OWS-021": build_021, "OWS-022": build_022, "OWS-023": build_023, "OWS-024": build_024}
+def build_025():
+    t = base.grocery_store()
+    t.fill((14, 8, 7), (24, 11, 7), "minecraft:white_concrete")
+    t.fill((16, 9, 6), (22, 10, 6), "minecraft:cyan_concrete")
+    # Former consumer fulfillment lanes are mechanically repurposed for ration allocation.
+    for x in (8, 14, 20, 26):
+        t.set(x, 2, 15, "create:depot")
+        t.set(x, 3, 16, "create:mechanical_press", facing="north")
+        t.fill((x - 1, 2, 18), (x + 2, 4, 21), "create:cardboard_block")
+    t.fill((6, 1, 22), (30, 1, 25), "minecraft:yellow_concrete")
+    for x in (8, 15, 22, 29):
+        t.fill((x, 2, 23), (x + 3, 4, 25), "immersiveengineering:crate")
+    t.fill((24, 2, 27), (34, 4, 30), "immersiveengineering:crate")
+    t.chest(32, 2, 28, BY_TARGET["OWS-025"].loot_id, "west")
+    return t
+
+def build_026():
+    t = base.corporate_warehouse_clean_master()
+    t.fill((15, 12, 8), (45, 14, 8), "minecraft:white_concrete")
+    t.fill((20, 13, 7), (40, 15, 7), "minecraft:cyan_concrete")
+    # The floor itself encodes the attempted clean/dirty customs distinction.
+    t.fill((16, 1, 11), (29, 1, 31), "minecraft:lime_concrete")
+    t.fill((32, 1, 11), (45, 1, 31), "minecraft:red_concrete")
+    for x in (18, 24, 34, 40):
+        t.fill((x, 2, 13), (x + 4, 5, 21), "immersiveengineering:crate")
+        t.fill((x, 2, 23), (x + 4, 6, 28), "immersiveengineering:insulating_glass")
+        t.clear((x + 1, 3, 24), (x + 3, 5, 27))
+    t.fill((30, 2, 10), (31, 7, 32), "minecraft:iron_bars")
+    t.fill((31, 1, 10), (32, 1, 32), "minecraft:yellow_concrete")
+    t.fill((35, 2, 25), (43, 4, 29), "minecraft:yellow_concrete")
+    t.chest(43, 2, 15, BY_TARGET["OWS-026"].loot_id, "west")
+    return t
+
+def build_027():
+    t = base.warm_industrial_mountain_port_clean_master()
+    t.fill((4, 17, 8), (30, 19, 8), "minecraft:white_concrete")
+    t.fill((10, 18, 7), (24, 21, 7), "minecraft:cyan_concrete")
+    # The familiar container field is now trapped behind a hardened closure corridor.
+    for row, z in enumerate((8, 17, 26)):
+        for col, x in enumerate((4, 12, 20)):
+            block = ("minecraft:cyan_concrete", "minecraft:light_gray_concrete", "minecraft:orange_concrete")[(row + col) % 3]
+            t.fill((x, 2, z), (x + 5, 4, z + 6), block)
+    t.fill((30, 1, 7), (44, 1, 32), "minecraft:yellow_concrete")
+    t.fill((31, 2, 7), (31, 6, 32), "minecraft:iron_bars")
+    t.fill((43, 2, 7), (43, 6, 32), "minecraft:iron_bars")
+    for z in (10, 18, 26):
+        t.fill((34, 2, z), (40, 4, z + 3), "immersiveengineering:crate")
+    # Civilian emergency staging and the final closed outbound gate replace normal trade flow.
+    t.fill((5, 1, 36), (24, 1, 42), "minecraft:red_concrete")
+    t.fill((7, 2, 37), (22, 4, 41), "minecraft:white_wool")
+    t.fill((27, 1, 34), (45, 1, 42), "minecraft:red_concrete")
+    t.fill((27, 2, 34), (45, 5, 35), "minecraft:iron_bars")
+    t.chest(39, 2, 29, BY_TARGET["OWS-027"].loot_id, "west")
+    return t
+
+BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017, "OWS-018": build_018, "OWS-019": build_019, "OWS-020": build_020, "OWS-021": build_021, "OWS-022": build_022, "OWS-023": build_023, "OWS-024": build_024, "OWS-025": build_025, "OWS-026": build_026, "OWS-027": build_027}
 
 def loot_table(spec):
     items = list(dict.fromkeys([spec.proof] + ([spec.lore] if spec.lore else [])))
