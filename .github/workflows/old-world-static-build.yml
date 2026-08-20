@@ -7,6 +7,10 @@ on:
     paths:
       - 'scripts/generate_old_world_narrative_structures.py'
       - 'scripts/old_world_narrative_core.py'
+      - 'scripts/old_world_later_waves.py'
+      - 'scripts/old_world_institution_waves.py'
+      - 'scripts/old_world_crisis_waves.py'
+      - 'scripts/old_world_final_waves.py'
       - 'scripts/build_old_world_narrative.py'
       - 'scripts/old_world_narrative_package_core.py'
       - 'scripts/validate_old_world_narrative.py'
@@ -40,6 +44,10 @@ jobs:
           python -m py_compile \
             scripts/generate_old_world_narrative_structures.py \
             scripts/old_world_narrative_core.py \
+            scripts/old_world_later_waves.py \
+            scripts/old_world_institution_waves.py \
+            scripts/old_world_crisis_waves.py \
+            scripts/old_world_final_waves.py \
             scripts/build_old_world_narrative.py \
             scripts/old_world_narrative_package_core.py \
             scripts/render_structure_review.py \
