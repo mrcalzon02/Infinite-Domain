@@ -118,6 +118,34 @@ SPECS = (
         "institutional_identity": "PolyCore zone coding and redundant barrier layers present a deliberate final containment doctrine rather than another ordinary exposure laboratory",
         "historical_damage_signature": "the outer barriers remain mostly intact while mycelium and fungal growth are already established inside the innermost observation volume, physically proving that stronger walls only delayed failure",
         "narrative_evidence_loot": "guaranteed Kel material integrity summary records the conclusion that no practical barrier material could restore a meaningful clean perimeter once environmental contamination was established"}, "rare_sites"),
+    Spec("OWS-021", "ows_021_pleroma_roadside_freight_depot", "infinite_domain:freight_depot_clean_master", "freight_depot", "kubejs:pleroma_dispatch_manifest", None, "Pre-crisis", ("minecraft:cyan_concrete", "minecraft:white_concrete", "immersiveengineering:crate", "create:cardboard_block"), {
+        "silhouette_exterior_identity": "cyan-and-white Pleroma dispatch bands and a simple depot blade distinguish the site without changing the donor's freight silhouette",
+        "interior_zoning_circulation": "road apron, warehouse stock, dispatch board, truck court and rail approaches remain separate and readable while branded freight occupies each handoff point",
+        "functional_machinery_props": "stacked crates, packaged cartons, marked loading lanes and dispatch stock make the depot read as an ordinary working logistics node",
+        "institutional_identity": "repeated cyan routing marks and standardized freight groupings establish Pleroma as a mundane recurring carrier rather than an exceptional crisis institution",
+        "historical_damage_signature": "the facility remains substantially normal and organized, preserving the pre-crisis baseline needed for later Pleroma sites to show degradation",
+        "narrative_evidence_loot": "guaranteed Pleroma dispatch manifest proves the brand's routine participation in ordinary regional freight movement"}),
+    Spec("OWS-022", "ows_022_pleroma_urban_distribution_warehouse", "infinite_domain:corporate_warehouse_clean_master", "corporate_warehouse", "kubejs:pleroma_food_distribution_manifest", None, "Pre-crisis -> Early anomaly", ("minecraft:cyan_concrete", "minecraft:white_concrete", "immersiveengineering:crate", "create:cardboard_block", "create:depot", "minecraft:lime_concrete"), {
+        "silhouette_exterior_identity": "Pleroma cyan/white warehouse bands convert the corporate distribution shell into a recognizable high-volume urban logistics node",
+        "interior_zoning_circulation": "five dense stock lanes feed automated sort depots and a broad outbound staging strip while the donor's office and truck circulation remain intact",
+        "functional_machinery_props": "crate racks, packaged cartons, sort depots and repeated Evercrop-marked food parcels show industrial-scale throughput rather than boutique storage",
+        "institutional_identity": "standardized cyan routing lanes and repeatable bay geometry make integrated Pleroma supply chains visually obvious",
+        "historical_damage_signature": "the site is still mostly functioning, but outbound staging is beginning to accumulate faster than the sort lanes clear it",
+        "narrative_evidence_loot": "guaranteed food distribution manifest ties Pleroma's enormous distribution capacity directly to mass Evercrop circulation"}),
+    Spec("OWS-023", "ows_023_pleroma_refrigerated_cold_storage_hub", "infinite_domain:corporate_warehouse_clean_master", "corporate_warehouse", "kubejs:pleroma_coldchain_exception_log", None, "Early anomaly", ("minecraft:cyan_concrete", "immersiveengineering:insulating_glass", "oritech:cooler_block", "immersiveengineering:crate", "tfmg:plastic_block", "minecraft:yellow_concrete"), {
+        "silhouette_exterior_identity": "Pleroma cyan cold-chain bands and a white warehouse crown retain the distribution identity while marking the site as refrigerated infrastructure",
+        "interior_zoning_circulation": "four large cold bays progress from normal storage into seal quarantine, with outbound access retained so the logistics failure is spatially understandable",
+        "functional_machinery_props": "cooler floors, insulating-glass chambers, gasket stock and quarantined replacement materials make refrigeration dependence tangible",
+        "institutional_identity": "Pleroma routing remains visible underneath expanding maintenance isolation zones, linking the corporate logistics identity to the material crisis",
+        "historical_damage_signature": "later cold bays have breached seals, widening yellow quarantine areas and staged polymer replacement stock while earlier bays remain serviceable",
+        "narrative_evidence_loot": "guaranteed cold-chain exception log directly links polymer seal degradation to interruptions in food logistics"}),
+    Spec("OWS-024", "ows_024_pleroma_intermodal_container_yard", "infinite_domain:warm_industrial_mountain_port_clean_master", "warm_industrial_mountain_port", "kubejs:pleroma_container_inspection_record", None, "Active containment", ("minecraft:cyan_concrete", "minecraft:light_gray_concrete", "minecraft:orange_concrete", "immersiveengineering:crate", "minecraft:iron_bars", "minecraft:yellow_concrete"), {
+        "silhouette_exterior_identity": "stacked multicolor container masses and cyan Pleroma routing overlays dominate the port yard without erasing its harbor and mountain interfaces",
+        "interior_zoning_circulation": "container stacks occupy the cargo field while a separate inspection lane and blocked outbound strip create a visible quarantine overlay on the normal port workflow",
+        "functional_machinery_props": "stacked container volumes, inspection crates, fenced checkpoints and staged cargo make the intermodal handoff function immediately legible",
+        "institutional_identity": "Pleroma cyan inspection markings recur across otherwise generic containers, showing how pervasive the carrier had become across modes and regions",
+        "historical_damage_signature": "yellow inspection lanes, improvised barriers and backed-up outbound cargo show active containment being imposed on a system built for continuous movement",
+        "narrative_evidence_loot": "guaranteed container inspection record supports BOTH SIDES OF THE WALL by showing quarantine controls layered over still-global freight movement"}, "uncommon_sites"),
 )
 
 BY_TARGET = {spec.target: spec for spec in SPECS}
@@ -376,7 +404,80 @@ def build_020():
     t.chest(11, 2, 17, BY_TARGET["OWS-020"].loot_id, "west")
     return t
 
-BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017, "OWS-018": build_018, "OWS-019": build_019, "OWS-020": build_020}
+def build_021():
+    t = base.freight_depot_clean_master()
+    # Keep road, rail and truck approaches intact; add only the Pleroma handoff identity and stock.
+    t.fill((5, 11, 5), (30, 13, 5), "minecraft:white_concrete")
+    t.fill((10, 12, 4), (25, 15, 4), "minecraft:cyan_concrete")
+    for x in (6, 14, 22):
+        t.fill((x, 2, 10), (x + 4, 4, 15), "immersiveengineering:crate")
+        t.fill((x, 1, 16), (x + 4, 1, 18), "minecraft:cyan_concrete")
+    t.fill((34, 1, 6), (44, 1, 28), "minecraft:white_concrete")
+    for z in (8, 15, 22):
+        t.fill((36, 2, z), (43, 3, z + 3), "create:cardboard_block")
+    # Dispatch board and evidence are intentionally simple; visual refinement is deferred.
+    t.fill((7, 2, 6), (15, 4, 7), "minecraft:black_concrete")
+    t.fill((8, 3, 5), (14, 4, 5), "minecraft:cyan_concrete")
+    t.chest(28, 2, 12, BY_TARGET["OWS-021"].loot_id, "west")
+    return t
+
+def build_022():
+    t = base.corporate_warehouse_clean_master()
+    t.fill((15, 12, 8), (45, 14, 8), "minecraft:white_concrete")
+    t.fill((20, 13, 7), (40, 15, 7), "minecraft:cyan_concrete")
+    # Dense lanes and repeated Evercrop parcels emphasize scale, not architectural detail.
+    for x in (17, 23, 29, 35, 41):
+        t.fill((x, 1, 12), (x + 3, 1, 30), "minecraft:cyan_concrete")
+        t.fill((x, 2, 13), (x + 3, 5, 18), "immersiveengineering:crate")
+        t.fill((x, 2, 21), (x + 3, 4, 26), "create:cardboard_block")
+        t.fill((x + 1, 2, 28), (x + 2, 3, 29), "minecraft:lime_concrete")
+    for x in (18, 26, 34, 42):
+        t.set(x, 2, 32, "create:depot")
+    t.fill((16, 1, 34), (45, 1, 36), "minecraft:white_concrete")
+    t.chest(43, 2, 15, BY_TARGET["OWS-022"].loot_id, "west")
+    return t
+
+def build_023():
+    t = base.corporate_warehouse_clean_master()
+    t.fill((15, 12, 8), (45, 14, 8), "minecraft:white_concrete")
+    t.fill((20, 13, 7), (40, 15, 7), "minecraft:cyan_concrete")
+    # Four cold bays show the same seal problem becoming operationally expensive.
+    for index, x in enumerate((17, 25, 33, 41), 1):
+        t.fill((x, 2, 12), (x + 5, 7, 25), "immersiveengineering:insulating_glass")
+        t.clear((x + 1, 3, 13), (x + 4, 6, 24))
+        t.fill((x + 1, 2, 14), (x + 4, 2, 22), "oritech:cooler_block")
+        t.fill((x + 1, 3, 20), (x + 4, 4, 23), "immersiveengineering:crate")
+        t.fill((x, 1, 27), (x + index + 1, 1, 31), "minecraft:yellow_concrete")
+        if index >= 3:
+            t.clear((x + 4, 4, 24), (x + 5, 6, 25))
+            t.fill((x + 1, 2, 29), (x + 4, 3, 31), "tfmg:plastic_block")
+    t.fill((16, 1, 33), (45, 1, 36), "minecraft:yellow_concrete")
+    t.chest(43, 2, 15, BY_TARGET["OWS-023"].loot_id, "west")
+    return t
+
+def build_024():
+    t = base.warm_industrial_mountain_port_clean_master()
+    # Container masses are deliberately block-simple; the later schematic pass owns their detail.
+    t.fill((4, 17, 8), (30, 19, 8), "minecraft:white_concrete")
+    t.fill((10, 18, 7), (24, 21, 7), "minecraft:cyan_concrete")
+    container_blocks = ("minecraft:cyan_concrete", "minecraft:light_gray_concrete", "minecraft:orange_concrete")
+    for row, z in enumerate((9, 18, 27)):
+        for col, x in enumerate((5, 13, 21)):
+            block = container_blocks[(row + col) % len(container_blocks)]
+            t.fill((x, 2, z), (x + 5, 4, z + 6), block)
+            if (row + col) % 2 == 0:
+                t.fill((x, 5, z), (x + 5, 7, z + 6), block)
+    # Inspection lane and improvised quarantine barriers overlay the normal port workflow.
+    t.fill((31, 1, 8), (43, 1, 31), "minecraft:yellow_concrete")
+    for z in (10, 17, 24):
+        t.fill((33, 2, z), (40, 4, z + 3), "immersiveengineering:crate")
+        t.fill((41, 2, z), (42, 5, z + 3), "minecraft:iron_bars")
+    t.fill((30, 2, 33), (44, 4, 35), "minecraft:orange_concrete")
+    t.fill((30, 1, 36), (44, 1, 41), "minecraft:yellow_concrete")
+    t.chest(39, 2, 29, BY_TARGET["OWS-024"].loot_id, "west")
+    return t
+
+BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017, "OWS-018": build_018, "OWS-019": build_019, "OWS-020": build_020, "OWS-021": build_021, "OWS-022": build_022, "OWS-023": build_023, "OWS-024": build_024}
 
 def loot_table(spec):
     items = list(dict.fromkeys([spec.proof] + ([spec.lore] if spec.lore else [])))
