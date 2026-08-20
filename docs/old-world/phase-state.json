@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "program": "Infinite Domain Old World Narrative",
   "updated": "2026-08-19",
   "prerequisite_handoff": {
@@ -8,32 +8,43 @@
     "runtime_validation": "PENDING_AND_EXPLICITLY_SEPARATE",
     "note": "Owner acceptance permits narrative lineage and asset development to proceed without representing runtime checks as complete."
   },
+  "authority": {
+    "proof_item_registry": "kubejs/config/old_world_evidence.json",
+    "proof_item_registration": "kubejs/startup_scripts/old_world_evidence_items.js",
+    "structure_generation": "scripts/generate_old_world_narrative_structures.py",
+    "structure_registry": "old_world_narrative/registry/structure_targets.json",
+    "supplemental_lore_items": "kubejs/startup_scripts/old_world_narrative_items.js",
+    "note": "The earlier VCF-only generator was superseded by the merged Old World narrative generator and must not remain as a second mutation path."
+  },
   "phases": {
     "0_handoff_discovery": {"status":"complete"},
     "1_narrative_infrastructure": {
       "status": "active",
       "completed": [
         "64 proof item IDs frozen",
-        "64 proof item registrations authored",
+        "64 proof item registrations authored from one canonical registry",
         "institution-specific item archetypes assigned",
         "VCF proof-item texture batch OWS-001 through OWS-008 authored at native 128x128 inventory resolution",
-        "VCF OWS-001 through OWS-008 narrative descendant builders authored",
-        "VCF OWS-001 through OWS-008 deterministic proof loot tables authored",
-        "staged/test/full VCF worldgen activation modes authored with PT-9 as the isolated runtime test target"
+        "Atlas proof-item texture batch OWS-009 through OWS-014 authored at native 128x128 inventory resolution",
+        "duplicate proof registration introduced by the merged narrative startup file reconciled",
+        "merged Old World structure generator designated as the single structure mutation path",
+        "10-site static investigation wave built with deterministic proof loot",
+        "Old World Investigation FTB Quest chapter seeded with locator handoffs and evidence-return tasks"
       ],
       "remaining": [
-        "execute staged VCF generator and validate structural lint",
-        "run PT-9 controlled runtime generation/locator test",
-        "author proof-item PNG textures for OWS-009 through OWS-064",
-        "implement lore text registry and validator",
-        "add first Exploration quest handoff to PT-9 after locator validation"
+        "patch scripts/build_old_world_narrative.py so regeneration preserves the canonical proof-registry separation",
+        "run controlled fresh-world structure placement and structure-map tests",
+        "verify FTB structure-task completion and guaranteed proof chest acquisition",
+        "author proof-item PNG textures for OWS-015 through OWS-064",
+        "expand lore corpus from the 36 required anchors toward the 96-record minimum",
+        "complete all 13 major Exploration quest titles and dependencies"
       ]
     },
-    "2_common_structures":{"status":"pending"},
-    "3_uncommon_structures":{"status":"pending"},
-    "4_rare_landmarks":{"status":"pending"},
-    "5_lore_corpus":{"status":"pending"},
-    "6_exploration_quest_spine":{"status":"pending"},
+    "2_common_structures":{"status":"active","static_built":6},
+    "3_uncommon_structures":{"status":"active","static_built":3},
+    "4_rare_landmarks":{"status":"active","static_built":1},
+    "5_lore_corpus":{"status":"active_seed_only"},
+    "6_exploration_quest_spine":{"status":"active_partial"},
     "7_darknet_archaeology":{"status":"pending"},
     "8_space_transition":{"status":"pending"}
   },
@@ -42,9 +53,11 @@
     "lineage_sources_selected":64,
     "proof_item_ids_defined":64,
     "proof_item_registrations_authored":64,
-    "proof_item_pngs_authored":8,
-    "deterministic_proof_loot_tables_authored":8,
-    "narrative_structure_variants_authored":8,
-    "narrative_structure_variants_built":0
-  }
+    "proof_item_pngs_authored":14,
+    "deterministic_proof_loot_tables_built":10,
+    "narrative_structure_variants_built":10,
+    "narrative_structure_variants_runtime_verified":0,
+    "major_exploration_quests_required":13
+  },
+  "next_static_targets": ["OWS-005", "OWS-007", "OWS-011", "OWS-013", "OWS-014"]
 }
