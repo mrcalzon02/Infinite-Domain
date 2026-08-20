@@ -4,12 +4,14 @@
 	filename: "era_06_high_energy_and_nuclear_engineering"
 	group: "346E9B7B176D7846"
 	id: "0FD581D87A58E08D"
+	icon: "create_new_age:reactor_rod"
 	images: [ ]
 	order_index: 7
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["5510000000000002"]
+			icon: "create_new_age:reactor_rod"
 			id: "5610000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -21,6 +23,7 @@
 		}
 		{
 			dependencies: ["5610000000000001"]
+			icon: "more_ores_more_gems:uranium_pickaxe"
 			id: "6611000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -33,6 +36,7 @@
 		}
 		{
 			dependencies: ["6611000000000001"]
+			icon: "kubejs:uranium_mineral_trace"
 			id: "1610000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -46,6 +50,7 @@
 		}
 		{
 			dependencies: ["1610000000000001"]
+			icon: "kubejs:uranium_bearing_fines"
 			id: "1610000000000002"
 			rewards: [{
 				id: "1630000000000002"
@@ -67,6 +72,7 @@
 		}
 		{
 			dependencies: ["1610000000000002"]
+			icon: "kubejs:washed_uranium_concentrate"
 			id: "1610000000000003"
 			shape: "hexagon"
 			tasks: [{
@@ -80,6 +86,7 @@
 		}
 		{
 			dependencies: ["1610000000000003"]
+			icon: "kubejs:purified_uranium_compound"
 			id: "1610000000000004"
 			shape: "hexagon"
 			tasks: [{
@@ -93,6 +100,7 @@
 		}
 		{
 			dependencies: ["1610000000000004"]
+			icon: "kubejs:green_fuel_pellet"
 			id: "1610000000000005"
 			rewards: [{
 				id: "1630000000000005"
@@ -114,6 +122,7 @@
 		}
 		{
 			dependencies: ["1610000000000005"]
+			icon: "kubejs:fired_fuel_pellet"
 			id: "1610000000000006"
 			shape: "hexagon"
 			tasks: [{
@@ -127,6 +136,7 @@
 		}
 		{
 			dependencies: ["1610000000000006"]
+			icon: "createnuclear:uranium_rod"
 			id: "1610000000000007"
 			shape: "hexagon"
 			tasks: [{
@@ -140,6 +150,7 @@
 		}
 		{
 			dependencies: ["1610000000000007"]
+			icon: "kubejs:era6_mining_contribution"
 			id: "1610000000000008"
 			rewards: [{
 				count: 2
@@ -161,6 +172,7 @@
 		}
 		{
 			dependencies: ["6611000000000001"]
+			icon: "create_new_age:reactor_rod"
 			id: "2610000000000001"
 			shape: "heart"
 			tasks: [{
@@ -172,6 +184,7 @@
 		}
 		{
 			dependencies: ["2610000000000001"]
+			icon: "createnuclear:black_anti_radiation_helmet"
 			id: "2610000000000002"
 			rewards: [{
 				id: "2630000000000002"
@@ -193,6 +206,7 @@
 		}
 		{
 			dependencies: ["2610000000000002"]
+			icon: "wastelands:purified_water"
 			id: "2610000000000003"
 			shape: "heart"
 			tasks: [{
@@ -206,6 +220,7 @@
 		}
 		{
 			dependencies: ["2610000000000003"]
+			icon: "minecraft:golden_apple"
 			id: "2610000000000004"
 			shape: "heart"
 			tasks: [{
@@ -219,6 +234,7 @@
 		}
 		{
 			dependencies: ["2610000000000004"]
+			icon: "create_new_age:reactor_rod"
 			id: "2610000000000005"
 			shape: "heart"
 			tasks: [{
@@ -230,6 +246,7 @@
 		}
 		{
 			dependencies: ["2610000000000005"]
+			icon: "wastelands:canned_food"
 			id: "2610000000000006"
 			shape: "heart"
 			tasks: [{
@@ -243,6 +260,7 @@
 		}
 		{
 			dependencies: ["2610000000000006"]
+			icon: "minecraft:golden_carrot"
 			id: "2610000000000007"
 			shape: "heart"
 			tasks: [{
@@ -256,6 +274,7 @@
 		}
 		{
 			dependencies: ["2610000000000007"]
+			icon: "kubejs:era6_farming_contribution"
 			id: "2610000000000008"
 			rewards: [{
 				count: 2
@@ -277,6 +296,7 @@
 		}
 		{
 			dependencies: ["6611000000000001"]
+			icon: "minecraft:recovery_compass"
 			id: "3610000000000001"
 			shape: "diamond"
 			tasks: [{
@@ -289,6 +309,7 @@
 		}
 		{
 			dependencies: ["3610000000000001"]
+			icon: "createnuclear:reactor_blueprint_item"
 			id: "3610000000000002"
 			rewards: [{
 				id: "3630000000000002"
@@ -309,6 +330,7 @@
 		}
 		{
 			dependencies: ["3610000000000002"]
+			icon: "createnuclear:reactor_casing"
 			id: "3610000000000003"
 			shape: "diamond"
 			tasks: [{
@@ -322,6 +344,7 @@
 		}
 		{
 			dependencies: ["3610000000000003"]
+			icon: "createnuclear:reactor_cooler"
 			id: "3610000000000004"
 			shape: "diamond"
 			tasks: [{
@@ -335,6 +358,7 @@
 		}
 		{
 			dependencies: ["3610000000000004"]
+			icon: "createnuclear:reactor_controller"
 			id: "3610000000000005"
 			rewards: [
 				{
@@ -365,6 +389,7 @@
 		}
 		{
 			dependencies: ["3610000000000005"]
+			icon: "create_new_age:reactor_rod"
 			id: "3610000000000006"
 			shape: "diamond"
 			tasks: [{
@@ -377,6 +402,7 @@
 		}
 		{
 			dependencies: ["3610000000000006"]
+			icon: "ae2lt:mysterious_cell"
 			id: "3610000000000007"
 			shape: "diamond"
 			tasks: [{
@@ -389,6 +415,7 @@
 		}
 		{
 			dependencies: ["3610000000000007"]
+			icon: "kubejs:era6_exploration_contribution"
 			id: "3610000000000008"
 			rewards: [{
 				count: 2
@@ -410,6 +437,7 @@
 		}
 		{
 			dependencies: ["1610000000000002"]
+			icon: "kubejs:empty_fuel_cladding"
 			id: "4610000000000001"
 			shape: "gear"
 			tasks: [{
@@ -422,6 +450,7 @@
 		}
 		{
 			dependencies: ["1610000000000004"]
+			icon: "kubejs:fuel_pellet_stack"
 			id: "4610000000000002"
 			shape: "gear"
 			tasks: [{
@@ -434,6 +463,7 @@
 		}
 		{
 			dependencies: ["1610000000000006"]
+			icon: "createnuclear:graphite_rod"
 			id: "4610000000000003"
 			rewards: [{
 				id: "4630000000000003"
@@ -454,6 +484,7 @@
 		}
 		{
 			dependencies: ["2610000000000002"]
+			icon: "createnuclear:black_anti_radiation_chestplate"
 			id: "4610000000000004"
 			shape: "gear"
 			tasks: [{
@@ -466,6 +497,7 @@
 		}
 		{
 			dependencies: ["2610000000000004"]
+			icon: "ae2lt:module_radiation_protection"
 			id: "4610000000000005"
 			shape: "gear"
 			tasks: [{
@@ -478,6 +510,7 @@
 		}
 		{
 			dependencies: ["2610000000000006"]
+			icon: "create_new_age:reactor_rod"
 			id: "4610000000000006"
 			shape: "gear"
 			tasks: [{
@@ -489,6 +522,7 @@
 		}
 		{
 			dependencies: ["3610000000000002"]
+			icon: "oritech:reactor_controller"
 			id: "4610000000000007"
 			shape: "gear"
 			tasks: [{
@@ -501,6 +535,7 @@
 		}
 		{
 			dependencies: ["3610000000000004"]
+			icon: "oritech:advanced_battery"
 			id: "4610000000000008"
 			shape: "gear"
 			tasks: [{
@@ -513,6 +548,7 @@
 		}
 		{
 			dependencies: ["3610000000000006"]
+			icon: "ae2lt:lightning_cell_component_i"
 			id: "4610000000000009"
 			rewards: [{
 				id: "4630000000000009"
@@ -538,6 +574,7 @@
 				"3610000000000008"
 			]
 			dependency_requirement: "one_completed"
+			icon: "kubejs:atomic_foundation_core"
 			id: "5610000000000002"
 			min_required_dependencies: 1
 			rewards: [
@@ -575,6 +612,7 @@
 		}
 		{
 			dependencies: ["2610000000000003"]
+			icon: "minecraft:kelp"
 			id: "7611000000000001"
 			optional: true
 			shape: "gear"
@@ -592,6 +630,7 @@
 				"7611000000000001"
 				"3610000000000005"
 			]
+			icon: "kubejs:kelp_chelating_pulp"
 			id: "7611000000000002"
 			optional: true
 			shape: "gear"
@@ -606,6 +645,7 @@
 		}
 		{
 			dependencies: ["7611000000000002"]
+			icon: "kubejs:chelating_broth_bucket"
 			id: "7611000000000003"
 			optional: true
 			rewards: [{
@@ -632,6 +672,7 @@
 				"3610000000000005"
 				"7511000000000006"
 			]
+			icon: "kubejs:precipitated_tungsten_concentrate"
 			id: "7611000000000004"
 			optional: true
 			shape: "gear"
@@ -649,6 +690,7 @@
 				"7611000000000003"
 				"7611000000000004"
 			]
+			icon: "kubejs:high_grade_tungsten_concentrate"
 			id: "7611000000000005"
 			optional: true
 			shape: "gear"
@@ -663,6 +705,7 @@
 		}
 		{
 			dependencies: ["7611000000000005"]
+			icon: "more_ores_more_gems:tungsten_nugget"
 			id: "7611000000000006"
 			optional: true
 			rewards: [{
