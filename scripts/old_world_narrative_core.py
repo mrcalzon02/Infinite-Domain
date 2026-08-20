@@ -90,6 +90,13 @@ SPECS = (
         "institutional_identity": "PolyCore test numbering and magenta/white zone control make the repeated experiment legible",
         "historical_damage_signature": "progressively larger yellow isolation fields across chambers record reproducible biological degradation",
         "narrative_evidence_loot": "guaranteed test authorization and LOR-009 document the same elastomer failure four times"}, "uncommon_sites"),
+    Spec("OWS-017", "ows_017_polycore_composite_barrier_laboratory", "infinite_domain:industrial_facility_clean_master", "industrial_facility", "kubejs:polycore_composite_failure_file", None, "Active containment", ("minecraft:magenta_concrete", "immersiveengineering:insulating_glass", "tfmg:plastic_block", "minecraft:quartz_block", "minecraft:yellow_concrete"), {
+        "silhouette_exterior_identity": "PolyCore magenta test-hall bands and a white composite-lab crown distinguish the facility from its industrial donor",
+        "interior_zoning_circulation": "receiving, coupon preparation, four barrier cells, inspection, failed-material quarantine and records dispatch form a readable test sequence",
+        "functional_machinery_props": "sealed barrier cells, layered polymer-mineral coupons, retained process equipment and inspection benches support repeated composite trials",
+        "institutional_identity": "PolyCore magenta/white zone coding and numbered barrier cells present composite substitution as an organized emergency research program",
+        "historical_damage_signature": "later cells carry widening yellow isolation fields, breached laminate coupons and repair stock as active containment defeats successively stronger barriers",
+        "narrative_evidence_loot": "guaranteed composite failure file proves the material crisis had escalated beyond ordinary elastomers into engineered barrier systems"}, "uncommon_sites"),
 )
 
 BY_TARGET = {spec.target: spec for spec in SPECS}
@@ -211,7 +218,35 @@ def build_016():
     t.fill((6, 2, 16), (12, 4, 19), "immersiveengineering:crate"); t.chest(11, 2, 17, BY_TARGET["OWS-016"].loot_id, "west")
     return t
 
-BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016}
+def build_017():
+    t = base.industrial_facility_clean_master()
+    # Preserve the donor workflow while making the composite emergency program unmistakable.
+    t.fill((24, 13, 9), (48, 15, 9), "minecraft:white_concrete")
+    t.fill((28, 14, 8), (44, 17, 8), "minecraft:magenta_concrete")
+    t.fill((5, 12, 12), (22, 14, 12), "minecraft:magenta_concrete")
+    t.fill((51, 10, 13), (64, 12, 13), "minecraft:magenta_concrete")
+    # Four barrier cells replace the generic pressing stations. Each contains a layered
+    # polymer/mineral coupon and an observation shell; later cells show escalating failure.
+    for index, x in enumerate((25, 31, 37, 43), 1):
+        t.fill((x, 2, 24), (x + 4, 7, 31), "immersiveengineering:insulating_glass")
+        t.clear((x + 1, 3, 25), (x + 3, 6, 30))
+        t.fill((x + 1, 2, 25), (x + 3, 2, 30), "tfmg:plastic_block")
+        t.fill((x + 2, 3, 27), (x + 2, 5, 28), "minecraft:quartz_block")
+        t.fill((x + 1, 3, 29), (x + 3, 4, 29), "immersiveengineering:sheetmetal_steel")
+        t.fill((x, 1, 33), (x + index, 1, 37), "minecraft:yellow_concrete")
+        t.fill((x + 1, 2, 34), (x + 3, 3, 36), "minecraft:magenta_concrete")
+        if index >= 3:
+            t.clear((x + 2, 3, 29), (x + 2, 4 + (index - 3), 29))
+            t.fill((x + 1, 2, 38), (x + 3, 3, 39), "immersiveengineering:crate")
+    # Inspection and failed-material quarantine retain the original dispatch wing.
+    t.fill((52, 1, 24), (64, 1, 26), "minecraft:white_concrete")
+    t.fill((55, 2, 24), (63, 4, 25), "tfmg:plastic_block")
+    t.fill((56, 1, 33), (64, 1, 35), "minecraft:yellow_concrete")
+    t.fill((57, 2, 34), (63, 4, 35), "immersiveengineering:crate")
+    t.chest(62, 2, 33, BY_TARGET["OWS-017"].loot_id, "west")
+    return t
+
+BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017}
 
 def loot_table(spec):
     items = list(dict.fromkeys([spec.proof] + ([spec.lore] if spec.lore else [])))
