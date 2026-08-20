@@ -2,38 +2,9 @@
   "type": "minecraft:chest",
   "random_sequence": "infinite_domain:chests/old_world/ows_022_pleroma_urban_distribution_warehouse",
   "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "kubejs:pleroma_food_distribution_manifest"
-        }
-      ]
-    },
-    {
-      "rolls": {
-        "type": "minecraft:uniform",
-        "min": 2,
-        "max": 4
-      },
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "create:andesite_alloy",
-          "weight": 8
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:iron_ingot",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:item",
-          "name": "immersiveengineering:component_iron",
-          "weight": 5
-        }
-      ]
-    }
+    {"rolls":1,"entries":[{"type":"minecraft:item","name":"kubejs:pleroma_food_distribution_manifest"}]},
+    {"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Everywhere by Morning","author":"Pleroma Logistics Supervisor","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA I\nPleroma Logistics Supervisor","You want to understand the modern economy? Watch Dock Nine. Evercrop concentrate arrived at 02:10. By 03:00 it was separated into regional loads. By 04:30 those loads were on autonomous freight.","By tomorrow morning product from this warehouse will be in thirty-seven cities: hospitals, schools, military commissaries, emergency shelters, neighborhood markets. Some people find that frightening. I find it beautiful.","A generation ago a regional crop failure meant rationing. Now we reroute breakfast across a continent before most people wake up. That is what logistics is. Making distance irrelevant."],"mode":{"type":"replace_all"}}]}]},
+    {"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Trace the Shipment","author":"Dr. Mara Vey","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA III\nDr. Mara Vey","Pleroma finally gave us the distribution archive. Not voluntarily. I've spent six hours following one EP-7 production lot. One lot. It entered this warehouse seventeen months ago.","From here it went to twelve regional centers, then hundreds of deliveries. Hospitals cultured derivatives. Military depots stored dormant stock. Household kits were resold. Humanitarian shipments crossed two borders.","A Pelagos ship carried some south. There is no chain anymore. It's a web. They're asking us to identify the original outbreak perimeter. Commercial distribution was the outbreak perimeter, and it covered most of the civilized world."],"mode":{"type":"replace_all"}}]}]},
+    {"rolls":{"type":"minecraft:uniform","min":2,"max":4},"entries":[{"type":"minecraft:item","name":"create:andesite_alloy","weight":8},{"type":"minecraft:item","name":"minecraft:iron_ingot","weight":10},{"type":"minecraft:item","name":"immersiveengineering:component_iron","weight":5}]}
   ]
 }
