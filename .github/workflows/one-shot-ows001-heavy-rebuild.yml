@@ -10,6 +10,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: ows001-heavy-rebuild
+  cancel-in-progress: true
+
 jobs:
   rebuild:
     runs-on: ubuntu-latest
@@ -208,4 +212,6 @@ jobs:
           git rm --cached --ignore-unmatch .github/workflows/one-shot-ows001-heavy-rebuild.yml || true
           git add -u -- .github/workflows/one-shot-ows001-heavy-rebuild.yml
           git commit -m 'Heavy rebuild OWS-001 culture service depot'
+          git fetch origin main
+          git rebase origin/main
           git push origin HEAD:main
