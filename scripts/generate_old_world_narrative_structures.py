@@ -17,6 +17,7 @@ import json
 from pathlib import Path
 
 import old_world_narrative_core as core
+import old_world_later_waves as later
 
 base = core.base
 ROOT = Path(__file__).resolve().parents[1]
@@ -582,7 +583,7 @@ spec_009 = core.Spec(
     _core_spec_009.set_name,
 )
 
-EXTENSIONS = VCF_COMPLETION + ATLAS_EXTENSION + AEVUM_EXTENSION
+EXTENSIONS = VCF_COMPLETION + ATLAS_EXTENSION + AEVUM_EXTENSION + tuple(later.SPECS)
 core.SPECS = tuple(
     sorted(
         tuple(spec_009 if spec.target == "OWS-009" else spec for spec in core.SPECS) + EXTENSIONS,
@@ -603,6 +604,7 @@ core.BUILDERS.update({
     "OWS-031": build_031,
     "OWS-032": build_032,
     "OWS-033": build_033,
+    **later.BUILDERS,
 })
 
 Spec = core.Spec
@@ -690,7 +692,7 @@ def sync_registry() -> None:
         state["controlled_worldgen_targets"] = list(CONTROLLED_WORLDGEN_TARGETS)
         state["production_worldgen_status"] = "staged_pending_runtime_validation"
         state["darknet_return_targets_reserved"] = sorted(DARKNET_RETURN_TARGETS)
-        state["current_wave"] = "aevum_functional_coverage_and_pt9_controlled_runtime_probe"
+        state["current_wave"] = later.CURRENT_WAVE
         implemented_set = set(implemented)
         state["next_targets"] = [
             row["id"] for row in targets
