@@ -93,6 +93,7 @@ jobs:
             old_world_narrative/structures/
             old_world_narrative/reviews/
             old_world_narrative/registry/
+            old_world_narrative/quests/
             config/ftbquests/quests/chapters/old_world_investigation.snbt
             config/ftbquests/quests/lang/en_us.snbt
 
@@ -109,6 +110,7 @@ jobs:
             old_world_narrative/structures/ \
             old_world_narrative/reviews/ \
             old_world_narrative/registry/ \
+            old_world_narrative/quests/ \
             config/ftbquests/quests/chapters/old_world_investigation.snbt \
             config/ftbquests/quests/lang/en_us.snbt
           if git diff --cached --quiet; then
