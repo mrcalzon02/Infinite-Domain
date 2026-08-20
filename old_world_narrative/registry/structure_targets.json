@@ -120,11 +120,19 @@
       "quest_hook": "THE PERFECT CROP (support)",
       "unique_proof_item_seed": "vcf_packaging_quality_report",
       "revision_intensity": "High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:abandoned_orchard_cannery_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_005_vcf_harvest_packaging_annex",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_005_vcf_harvest_packaging_annex.nbt"
     },
     {
       "id": "OWS-006",
@@ -164,11 +172,19 @@
       "quest_hook": "THE PERIMETER NEVER EXISTED (evidence)",
       "unique_proof_item_seed": "ep7_distribution_and_durability_record",
       "revision_intensity": "Very High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:nuclear_research_annex_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory.nbt"
     },
     {
       "id": "OWS-008",
@@ -182,11 +198,19 @@
       "quest_hook": "THE GREY BLOOM / CONTINUITY support",
       "unique_proof_item_seed": "vcf_persistence_incident_file",
       "revision_intensity": "Very High",
-      "implementation_status": "approved_for_mapping",
-      "mapped_source_structure": null,
-      "narrative_structure": null,
-      "acceptance_dimensions": [],
-      "runtime_validation": "deferred"
+      "implementation_status": "implemented_static_runtime_deferred",
+      "mapped_source_structure": "infinite_domain:mountain_biohazard_lab_clean_master",
+      "narrative_structure": "infinite_domain:old_world/ows_008_vcf_emergency_persistence_investigation_lab",
+      "acceptance_dimensions": [
+        "silhouette_exterior_identity",
+        "interior_zoning_circulation",
+        "functional_machinery_props",
+        "institutional_identity",
+        "historical_damage_signature",
+        "narrative_evidence_loot"
+      ],
+      "runtime_validation": "deferred",
+      "narrative_source_template": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab.nbt"
     },
     {
       "id": "OWS-009",
