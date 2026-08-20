@@ -1,6 +1,7 @@
 name: One-shot OWS-001 Heavy Rebuild
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
