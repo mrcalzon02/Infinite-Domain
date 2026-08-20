@@ -23,13 +23,20 @@ SUPPLEMENTAL_STARTUP = ROOT / "kubejs" / "startup_scripts" / "old_world_narrativ
 
 # Extend the preserved package builder's implementation mapping from the same
 # structure specs used by the authoritative generator. This prevents a package
-# rebuild from resetting OWS-011/013/014 back to approved_for_mapping.
+# rebuild from resetting later implemented targets back to approved_for_mapping.
 for spec in SPECS:
     core.IMPLEMENTED_TARGETS[spec.target] = {
         "source": spec.source_id,
         "name": spec.name,
         "dimensions": list(spec.dimensions),
     }
+
+# OWS-017 is supporting evidence for BOTH SIDES OF THE WALL. The major quest's
+# later continuity landmark remains OWS-045; this additive target records the
+# PolyCore material-barrier evidence without pretending the later site exists.
+for qid, _title, _prerequisite, target_structures in core.QUEST_SPINE:
+    if qid == "OWQ-05" and "OWS-017" not in target_structures:
+        target_structures.insert(0, "OWS-017")
 
 _original_build_registries = core.build_registries
 
@@ -40,10 +47,38 @@ def build_registries() -> None:
     targets_path = REGISTRY / "structure_targets.json"
     if not state_path.is_file() or not targets_path.is_file():
         return
+
     state = json.loads(state_path.read_text(encoding="utf-8"))
-    targets = json.loads(targets_path.read_text(encoding="utf-8"))["targets"]
+    targets_document = json.loads(targets_path.read_text(encoding="utf-8"))
+    targets = targets_document["targets"]
     implemented = sorted(spec.target for spec in SPECS)
+    implemented_set = set(implemented)
+
+    # Functional completion and schematic quality are deliberately separate.
+    # Current Old World builds are allowed to move progression forward while all
+    # remain queued for the dedicated later architectural/schematic rebuild.
+    for row in targets:
+        if row["id"] in implemented_set:
+            row["functional_status"] = "static_implemented"
+            row["quality_status"] = "schematic_revision_pending"
+        else:
+            row["functional_status"] = "not_yet_implemented"
+            row["quality_status"] = "not_yet_assessed"
+    targets_path.write_text(
+        json.dumps(targets_document, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+
     state["static_implemented"] = implemented
+    state["schematic_revision_pending"] = implemented
+
+    quest_targets = {
+        target
+        for _qid, _title, _prerequisite, target_structures in core.QUEST_SPINE
+        for target in target_structures
+    }
+    state["quest_integrated"] = sorted(implemented_set & quest_targets)
 
     render_manifest = PROGRAM / "reviews" / "render-manifest.json"
     rendered = set()
@@ -55,8 +90,7 @@ def build_registries() -> None:
     state["static_render_reviewed"] = sorted(
         spec.target for spec in SPECS if spec.structure_id in rendered
     )
-    state["current_wave"] = "atlas_service_assembly_controls_wave"
-    implemented_set = set(implemented)
+    state["current_wave"] = "polycore_static_coverage_ows_017_onward"
     state["next_targets"] = [
         row["id"] for row in targets
         if row["id"] not in implemented_set and row.get("implementation_status") == "approved_for_mapping"
