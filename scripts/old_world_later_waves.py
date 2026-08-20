@@ -154,6 +154,144 @@ HELION_EXTENSION = (
     ),
 )
 
+BLACKGLASS_EXTENSION = (
+    core.Spec(
+        "OWS-039",
+        "ows_039_blackglass_street_communications_exchange",
+        "infinite_domain:radio_mast_clean_master",
+        "radio_mast",
+        "kubejs:blackglass_exchange_access_token",
+        "kubejs:blackglass_exchange_access_token",
+        "Early anomaly",
+        (
+            "minecraft:black_concrete",
+            "minecraft:white_concrete",
+            "minecraft:tinted_glass",
+            "ae2:drive",
+            "ae2:controller",
+            "minecraft:light_blue_concrete",
+        ),
+        {
+            "silhouette_exterior_identity": "a compact black-and-white Blackglass exchange hut anchors the existing communications mast, making secure telecom infrastructure recognizable at street scale",
+            "interior_zoning_circulation": "street service entry, routing cabinets, secure controller core and mast handoff form a tiny but legible communications workflow",
+            "functional_machinery_props": "data drives, controller hardware and protected cabinet rows establish a sophisticated digital exchange without requiring later Darknet functionality",
+            "institutional_identity": "Blackglass black fields, white service edges and sparse cyan routing marks create a consistent secure-network identity",
+            "historical_damage_signature": "the exchange remains operationally intact with only early service isolation, establishing an information-infrastructure baseline before later archive failures",
+            "narrative_evidence_loot": "guaranteed exchange access token is usable as physical archaeological evidence now while preserving its deeper network meaning for the later Darknet phase",
+        },
+        "common_sites",
+    ),
+    core.Spec(
+        "OWS-040",
+        "ows_040_blackglass_civic_data_relay",
+        "infinite_domain:ae2_records_archive_clean_master",
+        "ae2_records_archive",
+        "kubejs:encrypted_civic_data_cartridge",
+        "kubejs:encrypted_civic_data_cartridge",
+        "Active containment",
+        (
+            "minecraft:black_concrete",
+            "minecraft:white_concrete",
+            "minecraft:light_blue_concrete",
+            "ae2:drive",
+            "ae2:controller",
+            "immersiveengineering:capacitor_hv",
+            "minecraft:yellow_concrete",
+        ),
+        {
+            "silhouette_exterior_identity": "Blackglass black relay bands and a white civic-network crown turn the hardened archive shell into a municipal data node",
+            "interior_zoning_circulation": "public-network intake, encrypted civic routing, secure data core, backup power and physical archive handoff are separated",
+            "functional_machinery_props": "controller and drive banks, backup capacitors and isolated terminal zones make civic networking and resilience physically legible",
+            "institutional_identity": "Blackglass security colors are interrupted by civic white and cyan route coding, showing a private technical layer embedded in government services",
+            "historical_damage_signature": "yellow backup-power and isolation fields show active containment forcing the relay to operate increasingly as a hardened island",
+            "narrative_evidence_loot": "guaranteed encrypted civic data cartridge provides physical evidence immediately while its protected contents remain reserved for later re-exploration",
+        },
+        "uncommon_sites",
+    ),
+    core.Spec(
+        "OWS-041",
+        "ows_041_blackglass_industrial_control_archive",
+        "infinite_domain:industrial_facility_clean_master",
+        "industrial_facility",
+        "kubejs:encrypted_industrial_archive",
+        "kubejs:encrypted_industrial_archive",
+        "Late containment",
+        (
+            "minecraft:black_concrete",
+            "minecraft:orange_concrete",
+            "minecraft:light_blue_concrete",
+            "ae2:drive",
+            "ae2:controller",
+            "immersiveengineering:capacitor_hv",
+            "minecraft:yellow_concrete",
+        ),
+        {
+            "silhouette_exterior_identity": "a black Blackglass control/archive wing is visibly attached to the industrial plant while Atlas-orange and Helion-cyan interface markings remain distinct",
+            "interior_zoning_circulation": "industrial telemetry intake, vendor correlation cells, secure archive core, backup power and records dispatch create a cross-industry evidence chain",
+            "functional_machinery_props": "data drives, controllers, power backup and color-coded Atlas/Helion interfaces physically connect failures previously seen at separate sites",
+            "institutional_identity": "Blackglass security fields contain rather than erase the orange automation and cyan power identities of the systems being monitored",
+            "historical_damage_signature": "late-containment yellow isolation surrounds an archive still ingesting emergency data, showing institutions correlating systemic failure even while losing control",
+            "narrative_evidence_loot": "guaranteed encrypted industrial archive preserves the cross-industry correlation object for later interpretation without implementing Darknet decryption early",
+        },
+        "uncommon_sites",
+    ),
+    core.Spec(
+        "OWS-042",
+        "ows_042_blackglass_regional_data_center",
+        "infinite_domain:bombed_data_center_clean_master",
+        "bombed_data_center",
+        "kubejs:blackglass_regional_archive_module",
+        "kubejs:blackglass_regional_archive_module",
+        "Late containment",
+        (
+            "minecraft:black_concrete",
+            "minecraft:white_concrete",
+            "minecraft:tinted_glass",
+            "ae2:drive",
+            "ae2:controller",
+            "immersiveengineering:capacitor_hv",
+            "minecraft:yellow_concrete",
+        ),
+        {
+            "silhouette_exterior_identity": "Blackglass black security bands and white hardened-utility markings reinforce the purpose-built data campus rather than changing its fundamental silhouette",
+            "interior_zoning_circulation": "security intake, server halls, controller core, hardened utilities, backup power and inaccessible archive vaults remain separately readable",
+            "functional_machinery_props": "dense drive banks, controller clusters, backup capacitors and secure glazing make regional data infrastructure materially convincing",
+            "institutional_identity": "Blackglass branding dominates because this is a primary company facility rather than a relay embedded in another institution",
+            "historical_damage_signature": "yellow utility-isolation paths and segmented server halls show late containment preserving fragments of service by sacrificing full-campus connectivity",
+            "narrative_evidence_loot": "guaranteed regional archive module establishes a major technological-archaeology return site while leaving encrypted contents inaccessible until the intended later phase",
+        },
+        "rare_sites",
+    ),
+    core.Spec(
+        "OWS-043",
+        "ows_043_blackglass_government_continuity_archive_node",
+        "infinite_domain:bunker_network_clean_master",
+        "bunker_network",
+        "kubejs:government_encrypted_archive",
+        "kubejs:government_encrypted_archive",
+        "Firebreak Wars",
+        (
+            "minecraft:black_concrete",
+            "minecraft:white_concrete",
+            "immersiveengineering:concrete_reinforced",
+            "ae2:drive",
+            "ae2:controller",
+            "immersiveengineering:capacitor_hv",
+            "minecraft:red_concrete",
+            "minecraft:yellow_concrete",
+        ),
+        {
+            "silhouette_exterior_identity": "the civil-defense bunker remains externally austere while Blackglass security markings identify an internal government continuity archive rather than a generic shelter",
+            "interior_zoning_circulation": "hardened intake, political records, military communications, secure data core, damaged archive sectors and continuity command handoff are compartmentalized",
+            "functional_machinery_props": "reinforced rooms, redundant drive banks, controllers and backup power show why selected records survived deeper into the Firebreak period",
+            "institutional_identity": "Blackglass technical security is visibly subordinate to government continuity markings, demonstrating contractor infrastructure embedded in state emergency operations",
+            "historical_damage_signature": "red sealed sectors and yellow partially corrupted archive lanes show a hardened node surviving physically while losing pieces of its informational record",
+            "narrative_evidence_loot": "guaranteed government encrypted archive preserves political and military crisis evidence for later interpretation without prematurely exposing its protected contents",
+        },
+        "rare_sites",
+    ),
+)
+
 
 def build_034():
     t = base.city_electrical_substation_clean_master()
@@ -232,12 +370,85 @@ def build_038():
     t.chest(40, 2, 55, "infinite_domain:chests/old_world/ows_038_helion_nuclear_auxiliary_emergency_complex", "west")
     return t
 
-SPECS = HELION_EXTENSION
+
+def build_039():
+    t = base.radio_mast_clean_master()
+    t.fill((1, 1, 1), (4, 6, 5), "minecraft:black_concrete")
+    t.clear((2, 2, 2), (3, 5, 4))
+    t.fill((1, 2, 2), (1, 4, 4), "minecraft:tinted_glass")
+    t.fill((2, 2, 3), (3, 4, 3), "ae2:drive")
+    t.set(3, 2, 4, "ae2:controller")
+    t.fill((1, 6, 1), (4, 7, 5), "minecraft:white_concrete")
+    t.fill((5, 1, 4), (9, 1, 5), "minecraft:light_blue_concrete")
+    t.chest(3, 2, 2, "infinite_domain:chests/old_world/ows_039_blackglass_street_communications_exchange", "south")
+    return t
+
+
+def build_040():
+    t = base.ae2_records_archive_clean_master()
+    t.fill((6, 9, 10), (57, 11, 10), "minecraft:black_concrete")
+    t.fill((18, 22, 25), (58, 24, 25), "minecraft:white_concrete")
+    t.fill((39, 13, 27), (57, 13, 28), "minecraft:light_blue_concrete")
+    t.fill((45, 14, 34), (55, 17, 36), "ae2:drive")
+    t.fill((47, 14, 39), (53, 17, 42), "ae2:controller")
+    t.fill((46, 14, 18), (55, 17, 20), "immersiveengineering:capacitor_hv")
+    t.fill((34, 13, 43), (58, 13, 49), "minecraft:yellow_concrete")
+    t.chest(54, 14, 33, "infinite_domain:chests/old_world/ows_040_blackglass_civic_data_relay", "west")
+    return t
+
+
+def build_041():
+    t = base.industrial_facility_clean_master()
+    t.fill((51, 10, 13), (64, 12, 13), "minecraft:black_concrete")
+    t.fill((52, 1, 24), (64, 1, 26), "minecraft:white_concrete")
+    t.fill((54, 2, 18), (62, 5, 20), "ae2:drive")
+    t.fill((56, 2, 22), (60, 5, 23), "ae2:controller")
+    t.fill((54, 2, 28), (62, 4, 30), "immersiveengineering:capacitor_hv")
+    t.fill((52, 1, 32), (64, 1, 34), "minecraft:yellow_concrete")
+    t.fill((53, 2, 35), (58, 3, 37), "minecraft:orange_concrete")
+    t.fill((59, 2, 35), (64, 3, 37), "minecraft:light_blue_concrete")
+    t.chest(62, 2, 33, "infinite_domain:chests/old_world/ows_041_blackglass_industrial_control_archive", "west")
+    return t
+
+
+def build_042():
+    t = base.bombed_data_center_clean_master()
+    t.fill((5, 9, 7), (55, 11, 7), "minecraft:black_concrete")
+    t.fill((12, 12, 6), (48, 14, 6), "minecraft:white_concrete")
+    for x in (9, 17, 25, 33, 41, 49):
+        t.fill((x, 2, 16), (x + 3, 6, 20), "ae2:drive")
+        t.fill((x, 2, 24), (x + 3, 5, 27), "ae2:controller")
+    t.fill((42, 2, 33), (56, 5, 36), "immersiveengineering:capacitor_hv")
+    t.fill((40, 1, 38), (57, 1, 47), "minecraft:yellow_concrete")
+    t.fill((45, 2, 40), (56, 7, 47), "minecraft:tinted_glass")
+    t.chest(52, 2, 45, "infinite_domain:chests/old_world/ows_042_blackglass_regional_data_center", "west")
+    return t
+
+
+def build_043():
+    t = base.bunker_network_clean_master()
+    t.fill((4, 2, 4), (42, 4, 4), "minecraft:black_concrete")
+    t.fill((8, 2, 10), (38, 2, 12), "minecraft:white_concrete")
+    for x in (9, 16, 23, 30, 37):
+        t.fill((x, 3, 15), (x + 3, 6, 19), "ae2:drive")
+        t.set(x + 1, 3, 21, "ae2:controller")
+    t.fill((7, 2, 25), (39, 2, 29), "minecraft:yellow_concrete")
+    t.fill((27, 2, 30), (41, 2, 38), "minecraft:red_concrete")
+    t.fill((30, 3, 32), (39, 6, 36), "immersiveengineering:capacitor_hv")
+    t.chest(22, 2, 22, "infinite_domain:chests/old_world/ows_043_blackglass_government_continuity_archive_node", "east")
+    return t
+
+SPECS = HELION_EXTENSION + BLACKGLASS_EXTENSION
 BUILDERS = {
     "OWS-034": build_034,
     "OWS-035": build_035,
     "OWS-036": build_036,
     "OWS-037": build_037,
     "OWS-038": build_038,
+    "OWS-039": build_039,
+    "OWS-040": build_040,
+    "OWS-041": build_041,
+    "OWS-042": build_042,
+    "OWS-043": build_043,
 }
-CURRENT_WAVE = "helion_functional_coverage_and_pt9_controlled_runtime_probe"
+CURRENT_WAVE = "blackglass_functional_coverage_and_pt9_controlled_runtime_probe"
