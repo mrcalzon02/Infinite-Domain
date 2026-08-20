@@ -107,26 +107,6 @@ jobs:
           git diff --stat
           git diff --name-only > old-world-generated-files.txt
 
-      - name: Upload generated Old World artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: old-world-static-build
-          if-no-files-found: error
-          retention-days: 7
-          path: |
-            old-world-generated-files.txt
-            kubejs/data/infinite_domain/structure/wasteland/old_world/
-            kubejs/data/infinite_domain/worldgen/structure/old_world/
-            kubejs/data/infinite_domain/worldgen/structure_set/old_world/
-            kubejs/data/infinite_domain/worldgen/template_pool/old_world/
-            kubejs/data/infinite_domain/loot_table/chests/old_world/
-            old_world_narrative/structures/
-            old_world_narrative/reviews/
-            old_world_narrative/registry/
-            old_world_narrative/quests/
-            config/ftbquests/quests/chapters/old_world_investigation.snbt
-            config/ftbquests/quests/lang/en_us.snbt
-
       - name: Commit validated OWS-001 rebuild and generated outputs
         run: |
           git config user.name 'github-actions[bot]'
@@ -162,6 +142,27 @@ jobs:
             git rebase origin/main
             git push origin HEAD:main
           fi
+
+      - name: Upload generated Old World artifact
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: old-world-static-build
+          if-no-files-found: warn
+          retention-days: 7
+          path: |
+            old-world-generated-files.txt
+            kubejs/data/infinite_domain/structure/wasteland/old_world/
+            kubejs/data/infinite_domain/worldgen/structure/old_world/
+            kubejs/data/infinite_domain/worldgen/structure_set/old_world/
+            kubejs/data/infinite_domain/worldgen/template_pool/old_world/
+            kubejs/data/infinite_domain/loot_table/chests/old_world/
+            old_world_narrative/structures/
+            old_world_narrative/reviews/
+            old_world_narrative/registry/
+            old_world_narrative/quests/
+            config/ftbquests/quests/chapters/old_world_investigation.snbt
+            config/ftbquests/quests/lang/en_us.snbt
 
       - name: Persist first static-build failure for repair
         if: failure()
