@@ -1,0 +1,79 @@
+{
+  "format_version": 1,
+  "phase": "heavy_schematic_rebuild",
+  "scope": "OWS-001 through OWS-064",
+  "execution_policy": "single_target_sequential",
+  "active_target": "OWS-001",
+  "active_target_name": "Neighborhood Culture Service Depot",
+  "active_institution": "Verdant Continuum Foods",
+  "active_status": "heavy_rebuild_planning",
+  "completed": [],
+  "static_review_passed": [],
+  "runtime_quality_approved": [],
+  "queue": [
+    "OWS-001", "OWS-002", "OWS-003", "OWS-004", "OWS-005", "OWS-006", "OWS-007", "OWS-008",
+    "OWS-009", "OWS-010", "OWS-011", "OWS-012", "OWS-013", "OWS-014", "OWS-015", "OWS-016",
+    "OWS-017", "OWS-018", "OWS-019", "OWS-020", "OWS-021", "OWS-022", "OWS-023", "OWS-024",
+    "OWS-025", "OWS-026", "OWS-027", "OWS-028", "OWS-029", "OWS-030", "OWS-031", "OWS-032",
+    "OWS-033", "OWS-034", "OWS-035", "OWS-036", "OWS-037", "OWS-038", "OWS-039", "OWS-040",
+    "OWS-041", "OWS-042", "OWS-043", "OWS-044", "OWS-045", "OWS-046", "OWS-047", "OWS-048",
+    "OWS-049", "OWS-050", "OWS-051", "OWS-052", "OWS-053", "OWS-054", "OWS-055", "OWS-056",
+    "OWS-057", "OWS-058", "OWS-059", "OWS-060", "OWS-061", "OWS-062", "OWS-063", "OWS-064"
+  ],
+  "pass_order": [
+    "donor_audit",
+    "institutional_identity_contract",
+    "operational_program",
+    "architectural_reconstruction",
+    "circulation_and_access",
+    "machinery_and_furnishing",
+    "signage_and_wayfinding",
+    "historical_damage",
+    "narrative_evidence_and_loot",
+    "micro_detail",
+    "static_render_review",
+    "static_validation",
+    "quality_status_promotion"
+  ],
+  "active_target_passes": {
+    "donor_audit": "in_progress",
+    "institutional_identity_contract": "defined",
+    "operational_program": "defined",
+    "architectural_reconstruction": "pending",
+    "circulation_and_access": "pending",
+    "machinery_and_furnishing": "pending",
+    "signage_and_wayfinding": "pending",
+    "historical_damage": "pending",
+    "narrative_evidence_and_loot": "pending",
+    "micro_detail": "pending",
+    "static_render_review": "pending",
+    "static_validation": "pending",
+    "quality_status_promotion": "pending"
+  },
+  "ows_001_contract": {
+    "institution": "Verdant Continuum Foods",
+    "abbreviation": "VCF",
+    "facility_name": "Neighborhood Culture Service Depot",
+    "donor": "grocery_clean_master",
+    "donor_disposition": "major interior repurpose and facade reconstruction required; supermarket identity must not remain dominant",
+    "workflow": [
+      "culture delivery",
+      "receiving and temperature check",
+      "refrigerated culture lockers",
+      "public culture issue counter",
+      "customer return intake",
+      "return quarantine and sanitation",
+      "crate consolidation",
+      "service dispatch"
+    ],
+    "required_primary_sign": "VERDANT CONTINUUM FOODS",
+    "required_facility_sign": "NEIGHBORHOOD CULTURE SERVICE DEPOT",
+    "minimum_purposeful_signs": 5,
+    "quality_goal": "purpose-built VCF neighborhood biological-food service depot, not a recolored supermarket"
+  },
+  "status_separation": {
+    "functional_coverage": "preserve existing functional implementation status independently",
+    "runtime_validation": "do not infer runtime approval from heavy rebuild completion",
+    "schematic_quality": "tracked by this file and the per-target quality status"
+  }
+}
