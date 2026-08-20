@@ -1,0 +1,73 @@
+name: Old World Static Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate_old_world_narrative_structures.py'
+      - 'scripts/old_world_narrative_core.py'
+      - 'scripts/build_old_world_narrative.py'
+      - 'scripts/old_world_narrative_package_core.py'
+      - 'scripts/validate_old_world_narrative.py'
+      - '.github/workflows/old-world-static-build.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build-old-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact source revision
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install static render dependency
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Rebuild package registries safely
+        run: python scripts/build_old_world_narrative.py
+
+      - name: Generate authoritative Old World structures
+        run: python scripts/generate_old_world_narrative_structures.py
+
+      - name: Render static review views
+        run: python scripts/render_structure_review.py --old-world
+
+      - name: Synchronize render-aware implementation state
+        run: python scripts/build_old_world_narrative.py
+
+      - name: Validate Old World static contracts
+        run: |
+          python scripts/validate_old_world_narrative.py
+          python scripts/audit_old_world_registry_conflicts.py
+
+      - name: Record generated change set
+        run: |
+          git status --short
+          git diff --stat
+          git diff --name-only > old-world-generated-files.txt
+
+      - name: Upload generated Old World artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: old-world-static-build
+          if-no-files-found: error
+          retention-days: 7
+          path: |
+            old-world-generated-files.txt
+            kubejs/data/infinite_domain/structure/wasteland/old_world/
+            kubejs/data/infinite_domain/worldgen/structure/old_world/
+            kubejs/data/infinite_domain/worldgen/structure_set/old_world/
+            kubejs/data/infinite_domain/worldgen/template_pool/old_world/
+            kubejs/data/infinite_domain/loot_table/chests/old_world/
+            old_world_narrative/structures/
+            old_world_narrative/reviews/
+            old_world_narrative/registry/
+            config/ftbquests/quests/chapters/old_world_investigation.snbt
+            config/ftbquests/quests/lang/en_us.snbt
