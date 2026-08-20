@@ -167,6 +167,13 @@ SPECS = (
         "institutional_identity": "the same Pleroma routing seen at ordinary depots now frames an international terminal, demonstrating the carrier's global reach immediately before trade stops",
         "historical_damage_signature": "red closure fields, stalled cargo and emergency civilian shelter masses show late containment replacing commercial throughput with border control",
         "narrative_evidence_loot": "guaranteed port emergency closure record supports THE FIREBREAK WARS by documenting the final shutdown of normal international freight"}, "rare_sites"),
+    Spec("OWS-028", "ows_028_aevum_neighborhood_regenerative_clinic", "infinite_domain:ruined_cyberware_clinic_clean_master", "ruined_cyberware_clinic", "kubejs:aevum_patient_recovery_brief", None, "Pre-crisis", ("minecraft:purple_concrete", "minecraft:white_concrete", "minecraft:smooth_quartz", "minecraft:light_blue_stained_glass", "create:fluid_tank", "minecraft:brewing_stand"), {
+        "silhouette_exterior_identity": "Aevum purple-and-white clinical bands and a clean regenerative-care blade replace the donor clinic's cyberware identity without requiring a full facade rebuild",
+        "interior_zoning_circulation": "reception leads into four ordinary recovery bays, a biologic preparation counter, follow-up monitoring and a small records point in a calm patient-facing sequence",
+        "functional_machinery_props": "quartz recovery couches, glass privacy screens, biologic fluid tanks and treatment preparation stations make routine regenerative care physically legible",
+        "institutional_identity": "Aevum's clean purple/white medical zoning and repeated recovery-bay layout present the treatment as normalized neighborhood healthcare rather than an elite emergency program",
+        "historical_damage_signature": "the implemented treatment zone is intentionally orderly and substantially intact, establishing a desirable pre-crisis baseline before later Aevum sites show supply dependence and failure",
+        "narrative_evidence_loot": "guaranteed Aevum patient recovery brief documents ordinary successful treatment and supports A CURE FOR AGE without pretending the medicine was fraudulent"}),
 )
 
 BY_TARGET = {spec.target: spec for spec in SPECS}
@@ -290,13 +297,10 @@ def build_016():
 
 def build_017():
     t = base.industrial_facility_clean_master()
-    # Preserve the donor workflow while making the composite emergency program unmistakable.
     t.fill((24, 13, 9), (48, 15, 9), "minecraft:white_concrete")
     t.fill((28, 14, 8), (44, 17, 8), "minecraft:magenta_concrete")
     t.fill((5, 12, 12), (22, 14, 12), "minecraft:magenta_concrete")
     t.fill((51, 10, 13), (64, 12, 13), "minecraft:magenta_concrete")
-    # Four barrier cells replace the generic pressing stations. Each contains a layered
-    # polymer/mineral coupon and an observation shell; later cells show escalating failure.
     for index, x in enumerate((25, 31, 37, 43), 1):
         t.fill((x, 2, 24), (x + 4, 7, 31), "immersiveengineering:insulating_glass")
         t.clear((x + 1, 3, 25), (x + 3, 6, 30))
@@ -308,7 +312,6 @@ def build_017():
         if index >= 3:
             t.clear((x + 2, 3, 29), (x + 2, 4 + (index - 3), 29))
             t.fill((x + 1, 2, 38), (x + 3, 3, 39), "immersiveengineering:crate")
-    # Inspection and failed-material quarantine retain the original dispatch wing.
     t.fill((52, 1, 24), (64, 1, 26), "minecraft:white_concrete")
     t.fill((55, 2, 24), (63, 4, 25), "tfmg:plastic_block")
     t.fill((56, 1, 33), (64, 1, 35), "minecraft:yellow_concrete")
@@ -318,11 +321,9 @@ def build_017():
 
 def build_018():
     t = base.nuclear_research_annex_clean_master()
-    # Keep the annex massing and circulation; overlay only the emergency PolyCore identity.
     t.fill((5, 13, 10), (38, 15, 10), "minecraft:white_concrete")
     t.fill((12, 14, 9), (31, 17, 9), "minecraft:magenta_concrete")
     t.fill((5, 11, 36), (43, 13, 36), "minecraft:magenta_concrete")
-    # Rework the three existing laboratory benches into increasingly expensive isolation trials.
     for index, x in enumerate((8, 21, 32), 1):
         t.fill((x, 2, 24), (x + 6, 8, 32), "immersiveengineering:insulating_glass")
         t.clear((x + 1, 3, 25), (x + 5, 7, 31))
@@ -337,7 +338,6 @@ def build_018():
         elif index == 3:
             t.clear((x + 3, 3, 29), (x + 5, 7, 32))
             t.fill((x + 1, 2, 37), (x + 5, 3, 39), "immersiveengineering:crate")
-    # The donor reactor ring becomes the full-scale ceramic/metal isolation trial.
     cx, cz, radius = 56, 38, 13
     for y in range(2, 11):
         for dx in range(-radius, radius + 1):
@@ -348,11 +348,9 @@ def build_018():
                     t.set(cx + dx, y, cz + dz, block)
     for x, z in ((56, 25), (56, 51), (43, 38), (69, 38)):
         t.fill((x, 4, z), (x, 10, z), "minecraft:magenta_concrete")
-    # A localized late breach makes the result unambiguous: ceramic buys time, not immunity.
     t.clear((64, 4, 43), (69, 9, 48))
     t.fill((62, 1, 42), (69, 1, 49), "minecraft:yellow_concrete")
     t.fill((64, 2, 45), (68, 3, 49), "immersiveengineering:crate")
-    # Retain the rear support wing as retrofit stock and records storage.
     t.fill((8, 2, 41), (18, 4, 53), "minecraft:polished_diorite")
     t.fill((10, 5, 43), (16, 6, 51), "immersiveengineering:sheetmetal_steel")
     t.fill((36, 1, 50), (42, 1, 56), "minecraft:yellow_concrete")
@@ -361,29 +359,19 @@ def build_018():
 
 def build_019():
     t = base.corporate_warehouse_clean_master()
-    # Preserve the warehouse traffic plan; convert its stock program to emergency substitutions.
     t.fill((15, 12, 8), (45, 14, 8), "minecraft:white_concrete")
     t.fill((19, 13, 7), (41, 15, 7), "minecraft:magenta_concrete")
     t.fill((16, 10, 35), (46, 11, 36), "minecraft:magenta_concrete")
-    materials = (
-        "tfmg:plastic_block",
-        "minecraft:polished_diorite",
-        "immersiveengineering:sheetmetal_steel",
-        "minecraft:polished_diorite",
-        "immersiveengineering:sheetmetal_steel",
-    )
+    materials = ("tfmg:plastic_block", "minecraft:polished_diorite", "immersiveengineering:sheetmetal_steel", "minecraft:polished_diorite", "immersiveengineering:sheetmetal_steel")
     for index, (x, material) in enumerate(zip((17, 23, 29, 35, 41), materials), 1):
         t.fill((x, 1, 12), (x + 3, 1, 29), "minecraft:white_concrete")
         t.fill((x, 2, 14), (x + 3, 4, 20), material)
         t.fill((x, 2, 23), (x + 3, 4, 28), "immersiveengineering:crate")
         t.fill((x, 1, 30), (x + index, 1, 33), "minecraft:yellow_concrete")
-    # Packing and dispatch retain the donor's circulation but show continuity work at emergency tempo.
     t.fill((5, 2, 23), (13, 4, 30), "immersiveengineering:crate")
     t.fill((6, 2, 32), (14, 3, 36), "create:cardboard_block")
     t.fill((16, 1, 36), (45, 1, 40), "minecraft:yellow_concrete")
-    for x in (18, 26, 34, 42):
-        t.fill((x, 2, 37), (x + 3, 3, 39), "immersiveengineering:crate")
-    # The original polymer lane is separately quarantined as substitutions move mineral and metallic.
+    for x in (18, 26, 34, 42): t.fill((x, 2, 37), (x + 3, 3, 39), "immersiveengineering:crate")
     t.fill((17, 1, 19), (21, 1, 25), "minecraft:yellow_concrete")
     t.fill((18, 2, 20), (20, 4, 24), "tfmg:plastic_block")
     t.chest(43, 2, 15, BY_TARGET["OWS-019"].loot_id, "west")
@@ -391,35 +379,28 @@ def build_019():
 
 def build_020():
     t = base.mountain_biohazard_lab_clean_master()
-    # Preserve the donor shell and circulation while making the late-containment retrofit legible.
     t.fill((19, 9, 3), (35, 11, 3), "minecraft:white_concrete")
     t.fill((22, 10, 2), (32, 13, 2), "minecraft:magenta_concrete")
     t.fill((27, 13, 13), (52, 15, 13), "immersiveengineering:sheetmetal_steel")
     t.clear((28, 2, 17), (51, 9, 35))
-    # Outer metallic barrier and mineralized floor.
     t.fill((29, 2, 18), (50, 8, 18), "immersiveengineering:sheetmetal_steel")
     t.fill((29, 2, 34), (50, 8, 34), "immersiveengineering:sheetmetal_steel")
     t.fill((29, 2, 18), (29, 8, 34), "immersiveengineering:sheetmetal_steel")
     t.fill((50, 2, 18), (50, 8, 34), "immersiveengineering:sheetmetal_steel")
     t.fill((29, 1, 18), (50, 1, 34), "minecraft:polished_diorite")
     t.clear((38, 2, 18), (40, 5, 18))
-    # Inner mineral barrier creates a second apparently intact perimeter.
     t.fill((33, 2, 22), (46, 7, 22), "minecraft:polished_diorite")
     t.fill((33, 2, 30), (46, 7, 30), "minecraft:polished_diorite")
     t.fill((33, 2, 22), (33, 7, 30), "minecraft:polished_diorite")
     t.fill((46, 2, 22), (46, 7, 30), "minecraft:polished_diorite")
     t.clear((38, 2, 22), (40, 5, 22))
-    # The contamination is already inside both barriers, which is the actual evidence.
     t.fill((35, 2, 24), (44, 6, 29), "immersiveengineering:insulating_glass")
     t.clear((36, 3, 25), (43, 5, 28))
     t.fill((36, 2, 25), (43, 2, 28), "minecraft:mycelium")
-    for x, z in ((37, 26), (39, 27), (41, 26), (42, 28)):
-        t.set(x, 3, z, "minecraft:brown_mushroom")
-    # Utilities are physically segregated so a failed pipe cannot be mistaken for the ingress route.
+    for x, z in ((37, 26), (39, 27), (41, 26), (42, 28)): t.set(x, 3, z, "minecraft:brown_mushroom")
     t.fill((6, 2, 22), (16, 4, 26), "create:fluid_tank")
     t.fill((6, 2, 29), (18, 2, 29), "create:fluid_pipe")
-    for x in (8, 14):
-        t.set(x, 2, 31, "create:mechanical_pump", facing="south")
+    for x in (8, 14): t.set(x, 2, 31, "create:mechanical_pump", facing="south")
     t.fill((5, 1, 27), (19, 1, 34), "minecraft:yellow_concrete")
     t.fill((8, 2, 33), (17, 4, 34), "immersiveengineering:crate")
     t.chest(11, 2, 17, BY_TARGET["OWS-020"].loot_id, "west")
@@ -427,16 +408,13 @@ def build_020():
 
 def build_021():
     t = base.freight_depot_clean_master()
-    # Keep road, rail and truck approaches intact; add only the Pleroma handoff identity and stock.
     t.fill((5, 11, 5), (30, 13, 5), "minecraft:white_concrete")
     t.fill((10, 12, 4), (25, 15, 4), "minecraft:cyan_concrete")
     for x in (6, 14, 22):
         t.fill((x, 2, 10), (x + 4, 4, 15), "immersiveengineering:crate")
         t.fill((x, 1, 16), (x + 4, 1, 18), "minecraft:cyan_concrete")
     t.fill((34, 1, 6), (44, 1, 28), "minecraft:white_concrete")
-    for z in (8, 15, 22):
-        t.fill((36, 2, z), (43, 3, z + 3), "create:cardboard_block")
-    # Dispatch board and evidence are intentionally simple; visual refinement is deferred.
+    for z in (8, 15, 22): t.fill((36, 2, z), (43, 3, z + 3), "create:cardboard_block")
     t.fill((7, 2, 6), (15, 4, 7), "minecraft:black_concrete")
     t.fill((8, 3, 5), (14, 4, 5), "minecraft:cyan_concrete")
     t.chest(28, 2, 12, BY_TARGET["OWS-021"].loot_id, "west")
@@ -446,14 +424,12 @@ def build_022():
     t = base.corporate_warehouse_clean_master()
     t.fill((15, 12, 8), (45, 14, 8), "minecraft:white_concrete")
     t.fill((20, 13, 7), (40, 15, 7), "minecraft:cyan_concrete")
-    # Dense lanes and repeated Evercrop parcels emphasize scale, not architectural detail.
     for x in (17, 23, 29, 35, 41):
         t.fill((x, 1, 12), (x + 3, 1, 30), "minecraft:cyan_concrete")
         t.fill((x, 2, 13), (x + 3, 5, 18), "immersiveengineering:crate")
         t.fill((x, 2, 21), (x + 3, 4, 26), "create:cardboard_block")
         t.fill((x + 1, 2, 28), (x + 2, 3, 29), "minecraft:lime_concrete")
-    for x in (18, 26, 34, 42):
-        t.set(x, 2, 32, "create:depot")
+    for x in (18, 26, 34, 42): t.set(x, 2, 32, "create:depot")
     t.fill((16, 1, 34), (45, 1, 36), "minecraft:white_concrete")
     t.chest(43, 2, 15, BY_TARGET["OWS-022"].loot_id, "west")
     return t
@@ -462,7 +438,6 @@ def build_023():
     t = base.corporate_warehouse_clean_master()
     t.fill((15, 12, 8), (45, 14, 8), "minecraft:white_concrete")
     t.fill((20, 13, 7), (40, 15, 7), "minecraft:cyan_concrete")
-    # Four cold bays show the same seal problem becoming operationally expensive.
     for index, x in enumerate((17, 25, 33, 41), 1):
         t.fill((x, 2, 12), (x + 5, 7, 25), "immersiveengineering:insulating_glass")
         t.clear((x + 1, 3, 13), (x + 4, 6, 24))
@@ -478,7 +453,6 @@ def build_023():
 
 def build_024():
     t = base.warm_industrial_mountain_port_clean_master()
-    # Container masses are deliberately block-simple; the later schematic pass owns their detail.
     t.fill((4, 17, 8), (30, 19, 8), "minecraft:white_concrete")
     t.fill((10, 18, 7), (24, 21, 7), "minecraft:cyan_concrete")
     container_blocks = ("minecraft:cyan_concrete", "minecraft:light_gray_concrete", "minecraft:orange_concrete")
@@ -486,9 +460,7 @@ def build_024():
         for col, x in enumerate((5, 13, 21)):
             block = container_blocks[(row + col) % len(container_blocks)]
             t.fill((x, 2, z), (x + 5, 4, z + 6), block)
-            if (row + col) % 2 == 0:
-                t.fill((x, 5, z), (x + 5, 7, z + 6), block)
-    # Inspection lane and improvised quarantine barriers overlay the normal port workflow.
+            if (row + col) % 2 == 0: t.fill((x, 5, z), (x + 5, 7, z + 6), block)
     t.fill((31, 1, 8), (43, 1, 31), "minecraft:yellow_concrete")
     for z in (10, 17, 24):
         t.fill((33, 2, z), (40, 4, z + 3), "immersiveengineering:crate")
@@ -502,14 +474,12 @@ def build_025():
     t = base.grocery_store()
     t.fill((14, 8, 7), (24, 11, 7), "minecraft:white_concrete")
     t.fill((16, 9, 6), (22, 10, 6), "minecraft:cyan_concrete")
-    # Former consumer fulfillment lanes are mechanically repurposed for ration allocation.
     for x in (8, 14, 20, 26):
         t.set(x, 2, 15, "create:depot")
         t.set(x, 3, 16, "create:mechanical_press", facing="north")
         t.fill((x - 1, 2, 18), (x + 2, 4, 21), "create:cardboard_block")
     t.fill((6, 1, 22), (30, 1, 25), "minecraft:yellow_concrete")
-    for x in (8, 15, 22, 29):
-        t.fill((x, 2, 23), (x + 3, 4, 25), "immersiveengineering:crate")
+    for x in (8, 15, 22, 29): t.fill((x, 2, 23), (x + 3, 4, 25), "immersiveengineering:crate")
     t.fill((24, 2, 27), (34, 4, 30), "immersiveengineering:crate")
     t.chest(32, 2, 28, BY_TARGET["OWS-025"].loot_id, "west")
     return t
@@ -518,7 +488,6 @@ def build_026():
     t = base.corporate_warehouse_clean_master()
     t.fill((15, 12, 8), (45, 14, 8), "minecraft:white_concrete")
     t.fill((20, 13, 7), (40, 15, 7), "minecraft:cyan_concrete")
-    # The floor itself encodes the attempted clean/dirty customs distinction.
     t.fill((16, 1, 11), (29, 1, 31), "minecraft:lime_concrete")
     t.fill((32, 1, 11), (45, 1, 31), "minecraft:red_concrete")
     for x in (18, 24, 34, 40):
@@ -535,7 +504,6 @@ def build_027():
     t = base.warm_industrial_mountain_port_clean_master()
     t.fill((4, 17, 8), (30, 19, 8), "minecraft:white_concrete")
     t.fill((10, 18, 7), (24, 21, 7), "minecraft:cyan_concrete")
-    # The familiar container field is now trapped behind a hardened closure corridor.
     for row, z in enumerate((8, 17, 26)):
         for col, x in enumerate((4, 12, 20)):
             block = ("minecraft:cyan_concrete", "minecraft:light_gray_concrete", "minecraft:orange_concrete")[(row + col) % 3]
@@ -543,9 +511,7 @@ def build_027():
     t.fill((30, 1, 7), (44, 1, 32), "minecraft:yellow_concrete")
     t.fill((31, 2, 7), (31, 6, 32), "minecraft:iron_bars")
     t.fill((43, 2, 7), (43, 6, 32), "minecraft:iron_bars")
-    for z in (10, 18, 26):
-        t.fill((34, 2, z), (40, 4, z + 3), "immersiveengineering:crate")
-    # Civilian emergency staging and the final closed outbound gate replace normal trade flow.
+    for z in (10, 18, 26): t.fill((34, 2, z), (40, 4, z + 3), "immersiveengineering:crate")
     t.fill((5, 1, 36), (24, 1, 42), "minecraft:red_concrete")
     t.fill((7, 2, 37), (22, 4, 41), "minecraft:white_wool")
     t.fill((27, 1, 34), (45, 1, 42), "minecraft:red_concrete")
@@ -553,7 +519,30 @@ def build_027():
     t.chest(39, 2, 29, BY_TARGET["OWS-027"].loot_id, "west")
     return t
 
-BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017, "OWS-018": build_018, "OWS-019": build_019, "OWS-020": build_020, "OWS-021": build_021, "OWS-022": build_022, "OWS-023": build_023, "OWS-024": build_024, "OWS-025": build_025, "OWS-026": build_026, "OWS-027": build_027}
+def build_028():
+    t = base.ruined_cyberware_clinic_clean_master()
+    # Re-establish a calm, ordinary clinic program inside the reusable donor shell.
+    t.fill((5, 10, 10), (53, 12, 10), "minecraft:white_concrete")
+    t.fill((12, 11, 9), (46, 14, 9), "minecraft:purple_concrete")
+    t.clear((7, 2, 13), (50, 8, 24))
+    t.fill((7, 1, 13), (50, 1, 24), "minecraft:smooth_quartz")
+    # Reception and patient routing.
+    t.fill((8, 2, 14), (17, 3, 16), "minecraft:smooth_quartz")
+    t.fill((9, 4, 14), (16, 5, 14), "minecraft:purple_concrete")
+    # Four recovery bays: privacy screens, treatment couches and biologic preparation points.
+    for x in (20, 28, 36, 44):
+        t.fill((x, 2, 14), (x + 5, 6, 21), "minecraft:light_blue_stained_glass")
+        t.clear((x + 1, 3, 15), (x + 4, 5, 20))
+        t.fill((x + 1, 2, 16), (x + 4, 2, 18), "minecraft:smooth_quartz")
+        t.fill((x + 1, 3, 19), (x + 2, 4, 20), "create:fluid_tank")
+        t.set(x + 4, 3, 20, "minecraft:brewing_stand", has_bottle_0="false", has_bottle_1="false", has_bottle_2="false")
+    # Follow-up monitoring and records stay directly accessible from the recovery route.
+    t.fill((8, 2, 20), (16, 4, 23), "minecraft:white_concrete")
+    t.fill((9, 3, 22), (15, 4, 23), "minecraft:purple_concrete")
+    t.chest(14, 2, 22, BY_TARGET["OWS-028"].loot_id, "west")
+    return t
+
+BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016, "OWS-017": build_017, "OWS-018": build_018, "OWS-019": build_019, "OWS-020": build_020, "OWS-021": build_021, "OWS-022": build_022, "OWS-023": build_023, "OWS-024": build_024, "OWS-025": build_025, "OWS-026": build_026, "OWS-027": build_027, "OWS-028": build_028}
 
 def loot_table(spec):
     items = list(dict.fromkeys([spec.proof] + ([spec.lore] if spec.lore else [])))
@@ -572,8 +561,7 @@ def generate(spec):
     statistics = template.save(f"old_world/{spec.name}")
     if previous_nbt is not None:
         generated_nbt = nbt_path.read_bytes()
-        if gzip.decompress(previous_nbt) == gzip.decompress(generated_nbt):
-            nbt_path.write_bytes(previous_nbt)
+        if gzip.decompress(previous_nbt) == gzip.decompress(generated_nbt): nbt_path.write_bytes(previous_nbt)
     base.write_json(DATA / "worldgen" / "template_pool" / "old_world" / f"{spec.name}.json", {"fallback": "minecraft:empty", "elements": [{"weight": 1, "element": {"location": f"infinite_domain:wasteland/old_world/{spec.name}", "processors": "minecraft:empty", "projection": "rigid", "element_type": "minecraft:single_pool_element"}}]})
     base.write_json(DATA / "worldgen" / "structure" / "old_world" / f"{spec.name}.json", {"type": "minecraft:jigsaw", "biomes": "#infinite_domain:wasteland_site_biomes", "step": "surface_structures", "spawn_overrides": {}, "terrain_adaptation": "beard_box", "start_pool": f"infinite_domain:old_world/{spec.name}", "size": 1, "start_height": {"absolute": 0}, "max_distance_from_center": 80, "use_expansion_hack": False, "liquid_settings": "ignore_waterlogging", "project_start_to_heightmap": "WORLD_SURFACE_WG"})
     base.write_json(DATA / "loot_table" / "chests" / "old_world" / f"{spec.name}.json", loot_table(spec))
