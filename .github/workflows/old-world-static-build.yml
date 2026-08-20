@@ -41,35 +41,54 @@ jobs:
 
       - name: Compile Old World Python entrypoints
         run: |
-          python -m py_compile \
-            scripts/generate_old_world_narrative_structures.py \
-            scripts/old_world_narrative_core.py \
-            scripts/old_world_later_waves.py \
-            scripts/old_world_institution_waves.py \
-            scripts/old_world_crisis_waves.py \
-            scripts/old_world_final_waves.py \
-            scripts/build_old_world_narrative.py \
-            scripts/old_world_narrative_package_core.py \
-            scripts/render_structure_review.py \
-            scripts/validate_old_world_narrative.py \
-            scripts/audit_old_world_registry_conflicts.py
+          set -o pipefail
+          {
+            echo '=== Compile Old World Python entrypoints ==='
+            python -m py_compile \
+              scripts/generate_old_world_narrative_structures.py \
+              scripts/old_world_narrative_core.py \
+              scripts/old_world_later_waves.py \
+              scripts/old_world_institution_waves.py \
+              scripts/old_world_crisis_waves.py \
+              scripts/old_world_final_waves.py \
+              scripts/build_old_world_narrative.py \
+              scripts/old_world_narrative_package_core.py \
+              scripts/render_structure_review.py \
+              scripts/validate_old_world_narrative.py \
+              scripts/audit_old_world_registry_conflicts.py
+          } 2>&1 | tee -a old-world-static-build.log
 
       - name: Rebuild package registries safely
-        run: python scripts/build_old_world_narrative.py
+        run: |
+          set -o pipefail
+          { echo '=== Rebuild package registries safely ==='; python scripts/build_old_world_narrative.py; } 2>&1 | tee -a old-world-static-build.log
 
       - name: Generate authoritative Old World structures
-        run: python scripts/generate_old_world_narrative_structures.py
+        run: |
+          set -o pipefail
+          { echo '=== Generate authoritative Old World structures ==='; python scripts/generate_old_world_narrative_structures.py; } 2>&1 | tee -a old-world-static-build.log
 
       - name: Render static review views
-        run: python scripts/render_structure_review.py --old-world
+        run: |
+          set -o pipefail
+          { echo '=== Render static review views ==='; python scripts/render_structure_review.py --old-world; } 2>&1 | tee -a old-world-static-build.log
 
       - name: Synchronize render-aware implementation state
-        run: python -c "import sys; sys.path.insert(0, 'scripts'); import generate_old_world_narrative_structures as old_world; old_world.sync_registry()"
+        run: |
+          set -o pipefail
+          { echo '=== Synchronize render-aware implementation state ==='; python -c "import sys; sys.path.insert(0, 'scripts'); import generate_old_world_narrative_structures as old_world; old_world.sync_registry()"; } 2>&1 | tee -a old-world-static-build.log
 
       - name: Validate Old World static contracts
         run: |
-          python scripts/validate_old_world_narrative.py
-          python scripts/audit_old_world_registry_conflicts.py
+          set -o pipefail
+          {
+            echo '=== Validate Old World static contracts ==='
+            python scripts/validate_old_world_narrative.py
+            python scripts/audit_old_world_registry_conflicts.py
+          } 2>&1 | tee -a old-world-static-build.log
+
+      - name: Clear stale failure diagnostic after successful validation
+        run: rm -f old_world_narrative/reviews/static-build-failure.log
 
       - name: Record generated change set
         run: |
@@ -117,5 +136,23 @@ jobs:
             echo 'No generated changes to commit.'
           else
             git commit -m 'Generate validated Old World static artifacts'
+            git push origin HEAD:main
+          fi
+
+      - name: Persist first static-build failure for repair
+        if: failure()
+        run: |
+          mkdir -p old_world_narrative/reviews
+          {
+            echo '[SYSTEM REPORT] Old World static build failure diagnostic'
+            echo "source_sha=${GITHUB_SHA}"
+            echo
+            cat old-world-static-build.log 2>/dev/null || echo 'No project-stage log was produced; failure occurred before Python compilation.'
+          } > old_world_narrative/reviews/static-build-failure.log
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- old_world_narrative/reviews/static-build-failure.log
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record Old World static build failure'
             git push origin HEAD:main
           fi
