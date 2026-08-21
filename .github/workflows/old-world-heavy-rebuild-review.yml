@@ -78,6 +78,34 @@ jobs:
       - name: Render OWS-002 Gate B if ready
         run: python scripts/render_ows002_gate_b_intact.py
 
+      - name: Build compact OWS-002 Gate-B review proxies if available
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          root = Path('old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_b_intact/r1')
+          names = (
+              'front_left', 'front_right', 'rear_left', 'rear_right',
+              'roof_top_oblique', 'interior_cutaway', 'floor_slices',
+          )
+          if root.is_dir():
+              for name in names:
+                  src = root / f'{name}.png'
+                  if not src.is_file():
+                      continue
+                  with Image.open(src) as image:
+                      proxy = image.convert('RGB')
+                      proxy.thumbnail((420, 420), Image.Resampling.LANCZOS)
+                      proxy.save(
+                          root / f'{name}_review.jpg',
+                          format='JPEG',
+                          quality=48,
+                          optimize=True,
+                          progressive=True,
+                      )
+          PY
+
       - name: Render OWS-001 Gate C if ready
         run: python scripts/render_ows001_gate_c_damage_states.py
 
