@@ -123,6 +123,14 @@ jobs:
       - name: Analyze OWS-001 Gate D shipping-render regression if ready
         run: python scripts/analyze_ows001_gate_d_visuals.py
 
+      - name: Upload active-target visual review bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: old-world-heavy-rebuild-${{ env.ACTIVE_TARGET }}
+          path: old_world_narrative/reviews/heavy_rebuild/visual/${{ env.ACTIVE_TARGET }}/
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Show review changes
         run: |
           git status --short
