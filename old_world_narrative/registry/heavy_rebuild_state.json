@@ -12,7 +12,7 @@
   "active_target": "OWS-001",
   "active_target_name": "Neighborhood Culture Service Depot",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_c_r1_rendered_pending_review",
+  "active_status": "gate_c_r1_image_checks_passed_pending_review",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-001_RESTART_DOSSIER.md",
   "legacy_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-001_REBUILD_DOSSIER.md",
   "completed": [],
@@ -134,7 +134,7 @@
     "loot_architecture": "implemented_pending_gate_c_review",
     "quest_proof": "implemented_pending_gate_c_review",
     "damage_and_decay": "implemented_pending_gate_c_review",
-    "visual_gate_c_damage_states": "r1_rendered_pending_manual_review",
+    "visual_gate_c_damage_states": "r1_image_checks_passed_pending_manual_review",
     "micro_detail": "pending",
     "visual_gate_d_final_multi_angle": "pending",
     "static_validation": "pending",
@@ -231,7 +231,7 @@
       ]
     },
     "gate_c_damage_states": {
-      "status": "r1_rendered_pending_manual_review",
+      "status": "r1_image_checks_passed_pending_manual_review",
       "required": true,
       "minimum_states": [
         "D0",
@@ -245,7 +245,9 @@
       "review_stage_source": "scripts/render_ows001_gate_c_damage_states.py",
       "review_only": true,
       "d1_change_count": 29,
-      "d3_change_count": 137
+      "d3_change_count": 137,
+      "r1_visual_metrics": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-001/gate_c_damage_states/r1/visual_metrics.json",
+      "image_level_checks": "passed_pending_manual_review"
     },
     "gate_d_final_multi_angle": {
       "status": "not_started",
