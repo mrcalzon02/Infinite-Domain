@@ -6,7 +6,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/old-world-ows003-gate-c.yml'
-      - 'scripts/render_ows003_gate_c_damage_states.py'
+      - 'scripts/render_ows003_gate_c_damage_states*.py'
       - 'scripts/render_ows003_gate_b_intact*.py'
       - 'old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS13_HISTORICAL_LAYERING.md'
       - 'old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS14_ENVIRONMENTAL_NARRATIVE.md'
@@ -40,6 +40,27 @@ jobs:
       - name: Install render dependency
         run: python -m pip install --disable-pip-version-check pillow
 
+      - name: Resolve latest Gate-C revision
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+          base = Path('scripts/render_ows003_gate_c_damage_states.py')
+          candidates = [(1, base)] if base.exists() else []
+          for path in Path('scripts').glob('render_ows003_gate_c_damage_states_r*.py'):
+              match = re.search(r'_r(\d+)\.py$', path.name)
+              if match:
+                  candidates.append((int(match.group(1)), path))
+          if not candidates:
+              raise SystemExit('No OWS-003 Gate-C renderer exists')
+          revision, path = max(candidates)
+          with open(os.environ['GITHUB_ENV'], 'a') as handle:
+              handle.write(f'GATE_C_REVISION=r{revision}\n')
+              handle.write(f'GATE_C_SCRIPT={path.as_posix()}\n')
+          print(f'Using {path} as Gate-C r{revision}')
+          PY
+
       - name: Compile Gate-C review model
         run: |
           python -m py_compile \
@@ -48,14 +69,14 @@ jobs:
             scripts/render_old_world_heavy_rebuild_review.py \
             scripts/render_ows003_gate_a_massing.py \
             scripts/render_ows003_gate_b_intact*.py \
-            scripts/render_ows003_gate_c_damage_states.py
+            scripts/render_ows003_gate_c_damage_states*.py
 
-      - name: Render OWS-003 Gate-C r1
+      - name: Render latest OWS-003 Gate-C revision
         id: render_gate_c
         continue-on-error: true
         run: |
           set -o pipefail
-          python scripts/render_ows003_gate_c_damage_states.py 2>&1 | tee /tmp/ows003-gate-c.log
+          python "${GATE_C_SCRIPT}" 2>&1 | tee /tmp/ows003-gate-c.log
 
       - name: Persist Gate-C failure diagnostic
         if: steps.render_gate_c.outcome == 'failure'
@@ -82,8 +103,8 @@ jobs:
             "run_attempt": "${GITHUB_RUN_ATTEMPT}",
             "head_sha": "${GITHUB_SHA}",
             "active_target": "OWS-003",
-            "revision": "r1",
-            "renderer": "scripts/render_ows003_gate_c_damage_states.py"
+            "revision": "${GATE_C_REVISION}",
+            "renderer": "${GATE_C_SCRIPT}"
           }
           EOF
 
@@ -91,7 +112,7 @@ jobs:
         if: steps.render_gate_c.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
-          name: old-world-heavy-rebuild-OWS-003-gate-c-r1
+          name: old-world-heavy-rebuild-OWS-003-gate-c
           retention-days: 7
           path: |
             old_world_narrative/reviews/heavy_rebuild/visual/OWS-003/
