@@ -8,7 +8,7 @@ on:
       - 'scripts/generate_wasteland_sites.py'
       - 'scripts/generate_old_world_narrative_structures.py'
       - 'scripts/old_world_narrative_core.py'
-      - 'scripts/old_world_ows001_final.py'
+      - 'scripts/old_world_ows*_final.py'
       - 'scripts/old_world_later_waves.py'
       - 'scripts/old_world_institution_waves.py'
       - 'scripts/old_world_crisis_waves.py'
@@ -17,13 +17,16 @@ on:
       - 'scripts/old_world_narrative_package_core.py'
       - 'scripts/render_structure_review.py'
       - 'scripts/render_old_world_heavy_rebuild_review.py'
-      - 'scripts/render_ows001_gate_a_massing.py'
-      - 'scripts/render_ows001_gate_d_final.py'
-      - 'scripts/analyze_ows001_gate_d_visuals.py'
+      - 'scripts/render_ows*_gate_*.py'
+      - 'scripts/analyze_ows*_gate_*.py'
       - 'scripts/validate_old_world_narrative.py'
       - 'docs/HEAVY_REBUILD_DOCTRINE.md'
       - 'docs/old-world/**'
-      - 'old_world_narrative/reviews/heavy_rebuild/OWS-001_RESTART_DOSSIER.md'
+      - 'old_world_narrative/registry/heavy_rebuild_state.json'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_RESTART_DOSSIER.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_GATE_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_FINAL_REBUILD_REPORT.md'
       - '.github/workflows/old-world-static-build.yml'
 
 permissions:
@@ -59,7 +62,7 @@ jobs:
               scripts/generate_wasteland_sites.py \
               scripts/generate_old_world_narrative_structures.py \
               scripts/old_world_narrative_core.py \
-              scripts/old_world_ows001_final.py \
+              scripts/old_world_ows*_final.py \
               scripts/old_world_later_waves.py \
               scripts/old_world_institution_waves.py \
               scripts/old_world_crisis_waves.py \
@@ -68,28 +71,37 @@ jobs:
               scripts/old_world_narrative_package_core.py \
               scripts/render_structure_review.py \
               scripts/render_old_world_heavy_rebuild_review.py \
-              scripts/render_ows001_gate_a_massing.py \
-              scripts/render_ows001_gate_d_final.py \
-              scripts/analyze_ows001_gate_d_visuals.py \
+              scripts/render_ows*_gate_*.py \
+              scripts/analyze_ows*_gate_*.py \
               scripts/validate_old_world_narrative.py \
               scripts/audit_old_world_registry_conflicts.py
           } 2>&1 | tee -a old-world-static-build.log
+
+      - name: Resolve active heavy-rebuild target
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          state = json.loads(Path('old_world_narrative/registry/heavy_rebuild_state.json').read_text())
+          target = state['active_target']
+          Path('active-old-world-target.txt').write_text(target + '\n')
+          with open('${GITHUB_ENV}', 'a') as handle:
+              handle.write(f'ACTIVE_OLD_WORLD_TARGET={target}\n')
+          print(f'Active heavy-rebuild target: {target}')
+          PY
 
       - name: Render active heavy-rebuild Phase-0 baseline
         run: |
           set -o pipefail
           {
-            echo '=== Render active heavy-rebuild Phase-0 baseline ==='
-            python scripts/render_old_world_heavy_rebuild_review.py --target OWS-001 --gate baseline
+            echo "=== Render ${ACTIVE_OLD_WORLD_TARGET} Phase-0 baseline ==="
+            python scripts/render_old_world_heavy_rebuild_review.py --target "${ACTIVE_OLD_WORLD_TARGET}" --gate baseline
           } 2>&1 | tee -a old-world-static-build.log
 
-      - name: Render active OWS-001 Gate-A massing when ready
+      - name: Render legacy OWS-001 Gate-A massing when applicable
         run: |
           set -o pipefail
-          {
-            echo '=== Render active OWS-001 Gate-A massing when ready ==='
-            python scripts/render_ows001_gate_a_massing.py
-          } 2>&1 | tee -a old-world-static-build.log
+          { python scripts/render_ows001_gate_a_massing.py; } 2>&1 | tee -a old-world-static-build.log
 
       - name: Rebuild package registries safely
         run: |
@@ -101,21 +113,15 @@ jobs:
           set -o pipefail
           { echo '=== Generate authoritative Old World structures ==='; python scripts/generate_old_world_narrative_structures.py; } 2>&1 | tee -a old-world-static-build.log
 
-      - name: Render synchronized OWS-001 Gate-D final review when ready
+      - name: Render synchronized OWS-001 Gate-D final review when applicable
         run: |
           set -o pipefail
-          {
-            echo '=== Render synchronized OWS-001 Gate-D final review when ready ==='
-            python scripts/render_ows001_gate_d_final.py
-          } 2>&1 | tee -a old-world-static-build.log
+          { python scripts/render_ows001_gate_d_final.py; } 2>&1 | tee -a old-world-static-build.log
 
-      - name: Analyze synchronized OWS-001 Gate-D shipping render when ready
+      - name: Analyze synchronized OWS-001 Gate-D shipping render when applicable
         run: |
           set -o pipefail
-          {
-            echo '=== Analyze synchronized OWS-001 Gate-D shipping render when ready ==='
-            python scripts/analyze_ows001_gate_d_visuals.py
-          } 2>&1 | tee -a old-world-static-build.log
+          { python scripts/analyze_ows001_gate_d_visuals.py; } 2>&1 | tee -a old-world-static-build.log
 
       - name: Render ordinary static review views
         run: |
@@ -183,6 +189,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 7
           path: |
+            active-old-world-target.txt
             old-world-generated-files.txt
             kubejs/data/infinite_domain/structure/wasteland/old_world/
             kubejs/data/infinite_domain/worldgen/structure/old_world/
@@ -203,6 +210,7 @@ jobs:
           {
             echo '[SYSTEM REPORT] Old World static build failure diagnostic'
             echo "source_sha=${GITHUB_SHA}"
+            echo "active_target=${ACTIVE_OLD_WORLD_TARGET:-unresolved}"
             echo
             cat old-world-static-build.log 2>/dev/null || echo 'No project-stage log was produced; failure occurred before Python compilation.'
           } > old_world_narrative/reviews/static-build-failure.log
