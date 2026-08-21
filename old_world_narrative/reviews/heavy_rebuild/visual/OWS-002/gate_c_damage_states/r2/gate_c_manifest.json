@@ -1,0 +1,40 @@
+{
+  "target": "OWS-002",
+  "gate": "gate_c_damage_states",
+  "revision": "gate-c-r2@e7268e88",
+  "source_commit": "e7268e88ace970ac789fbb3f6a84ab01f8a95584",
+  "fixed_camera_set": "ows002_fixed_v1",
+  "visual_review_status": "rendered_pending_manual_review",
+  "r1_decision": "REVISION REQUIRED \u2014 D3 visually too pristine",
+  "accepted_from_r1": [
+    "D0",
+    "D1"
+  ],
+  "revised_in_r2": [
+    "D3"
+  ],
+  "states": {
+    "d0": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r2/d0/review_manifest.json",
+    "d1": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r2/d1/review_manifest.json",
+    "d3": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r2/d3/review_manifest.json"
+  },
+  "comparison_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r2/damage_comparison_sheet.png",
+  "change_counts_from_d0": {
+    "d1": 83,
+    "d3": 520
+  },
+  "protected_invariants_asserted": [
+    "north public entrance and queue",
+    "staff-side records/proof approach",
+    "openable canonical proof chest",
+    "grow aisles A and B",
+    "west harvest/wash transfer",
+    "south relief dispatch lane and doors",
+    "east receiving doors",
+    "roof ladder/trapdoor",
+    "primary VCF/facility identity",
+    "surviving cultivation and irrigation evidence",
+    "exactly two D3 vanilla encounter spawners"
+  ],
+  "significant_findings_corrected_or_justified": false
+}

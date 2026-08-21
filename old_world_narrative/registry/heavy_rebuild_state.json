@@ -10,7 +10,7 @@
   "active_target": "OWS-002",
   "active_target_name": "Emergency Community Grow Hall",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_c_r1_passed_micro_detail_ready",
+  "active_status": "gate_c_r2_rendered_pending_review",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-002_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001"
@@ -137,14 +137,14 @@
     "operational_systems": "complete_gate_b_r2",
     "institutional_identity": "complete_gate_b_r2",
     "visual_gate_b_intact_state": "passed_r2",
-    "historical_layering": "complete_gate_c_r1",
-    "environmental_narrative": "complete_gate_c_r1",
-    "encounter_architecture": "complete_gate_c_r1",
-    "loot_architecture": "complete_gate_c_r1",
-    "quest_proof": "complete_gate_c_r1",
-    "damage_and_decay": "complete_gate_c_r1",
-    "visual_gate_c_damage_states": "passed_r1",
-    "micro_detail": "implementation_ready",
+    "historical_layering": "implemented_pending_gate_c_r2_review",
+    "environmental_narrative": "implemented_pending_gate_c_r2_review",
+    "encounter_architecture": "implemented_pending_gate_c_r2_review",
+    "loot_architecture": "implemented_pending_gate_c_r2_review",
+    "quest_proof": "implemented_pending_gate_c_r2_review",
+    "damage_and_decay": "implemented_pending_gate_c_r2_review",
+    "visual_gate_c_damage_states": "r2_rendered_pending_manual_review",
+    "micro_detail": "blocked_by_gate_c_r2_review",
     "visual_gate_d_final_multi_angle": "pending",
     "static_validation": "pending",
     "quality_status_promotion": "pending"
@@ -256,7 +256,7 @@
       "review_only": true
     },
     "gate_c_damage_states": {
-      "status": "passed_r1",
+      "status": "r2_rendered_pending_manual_review",
       "required": true,
       "minimum_states": [
         "D0",
@@ -267,13 +267,17 @@
       "rule": "D1 must show demand pressure plus one localized rack/service anomaly while the facility still operates. D3 must follow roof/glazing/water/service abandonment, preserve proof and primary circulation, and remain visually reconstructable as the Gate-B r2 building.",
       "r1_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r1/gate_c_manifest.json",
       "r1_comparison_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r1/damage_comparison_sheet.png",
-      "review_stage_source": "scripts/render_ows002_gate_c_damage_states.py",
+      "review_stage_source": "scripts/render_ows002_gate_c_damage_states_r2.py",
       "review_only": true,
       "d1_change_count": 83,
       "d3_change_count": 352,
-      "decision": "PASSED",
+      "decision": "R1 REVISION REQUIRED",
       "r1_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R1_REVIEW.md",
-      "significant_findings_corrected_or_justified": true
+      "significant_findings_corrected_or_justified": false,
+      "r1_decision": "REVISION REQUIRED",
+      "r2_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r2/gate_c_manifest.json",
+      "r2_comparison_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r2/damage_comparison_sheet.png",
+      "r2_d3_change_count": 520
     },
     "gate_d_final_multi_angle": {
       "status": "blocked_by_gate_c_micro_detail_and_authoritative_sync",
