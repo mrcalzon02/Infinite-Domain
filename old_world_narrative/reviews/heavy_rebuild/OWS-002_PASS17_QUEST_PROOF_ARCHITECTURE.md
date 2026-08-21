@@ -14,9 +14,11 @@ Place the deterministic proof chest in the **staff-side authorization/records ar
 
 Target coordinate for Gate-C/D3 study:
 
-`(20, 2, 14)` unless the final synchronized builder requires a one-block adjustment to preserve the passed circulation contract.
+`(23, 2, 14)` unless the final synchronized builder requires a one-block adjustment to preserve the passed circulation contract.
 
-The position is chosen because it:
+The original planning candidate `(20, 2, 14)` was rejected before implementation because the intact records furniture occupies the volume directly above it; a chest could therefore exist in NBT yet fail the practical openability gate. `(23, 2, 14)` is the adjacent clear records position and must retain clear space immediately above the chest.
+
+The selected position:
 
 - belongs to the emergency authorization workflow;
 - is near the public intake narrative without sitting in the public queue;
@@ -24,6 +26,7 @@ The position is chosen because it:
 - is outside the west optional encounter;
 - is far from planned roof/lantern collapse;
 - can remain reachable without block breaking;
+- can be opened because its top-access space is protected;
 - allows the proof to survive while the production hall visibly decays around it.
 
 ## Deterministic acquisition contract
@@ -31,6 +34,8 @@ The position is chosen because it:
 The D3 structure must contain exactly one quest-critical chest at the selected records location whose `LootTable` NBT is exactly:
 
 `infinite_domain:chests/old_world/ows_002_vcf_emergency_community_grow_hall`
+
+The block immediately above the chest must remain air/openable space.
 
 The generated loot table already guarantees the unique proof item in a one-roll singleton pool. The structure must not substitute a generic VCF or wasteland table.
 
@@ -59,10 +64,11 @@ Surviving registration/authorization signage, counter remnants, lectern/records 
 Reject if:
 
 - no chest exists at the proof location;
+- the block directly above the chest prevents opening;
 - loot-table NBT differs from the canonical OWS-002 table;
 - more than one progression-critical proof container is introduced;
 - damage or an encounter blocks the route;
 - the proof is relocated to a dramatic deep room merely to create a dungeon finale;
 - acquiring the proof requires runtime behavior not guaranteed by the structure.
 
-**PASS 17 STATUS: COMPLETE — deterministic proof architecture fixed to the authorization/records workflow.**
+**PASS 17 STATUS: COMPLETE — deterministic, openable proof architecture fixed to the authorization/records workflow.**
