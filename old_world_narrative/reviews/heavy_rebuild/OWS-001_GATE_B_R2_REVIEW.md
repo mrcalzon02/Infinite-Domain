@@ -1,44 +1,52 @@
 # [SYSTEM REPORT] OWS-001 — Gate B r2 Intact-State Review
 
-## Decision
+## Corrected decision
 
-**PASSED.** OWS-001 may advance beyond the intact/normal-operation gate.
+**REVISION REQUIRED. Gate B remains closed.**
 
-The r2 review model preserves the Gate-A-approved 39x13x33 massing and corrects every blocking Gate-B r1 defect without using damage, rubble, emergency overlays or loot dressing to hide architectural problems.
+An initial review marked r2 passed after the r1 clearance, roof-access, sign-support and room-enclosure defects were corrected. A subsequent full path-continuity audit performed **before any Gate-C implementation** found an additional blocking defect. This record supersedes the earlier pass judgment rather than concealing it.
 
-## r1 blockers resolved
+## r1 blockers successfully resolved in r2
 
-1. **Culture-locker service clearance** — the primary locker room now guarantees x=21..23 as a three-block-wide clear service/maintenance aisle. The review script asserts that volume remains unobstructed at player height.
-2. **Central staff spine** — receiving freight was moved into west/east staging pockets and x=17..19 remains clear through the receiving threshold. The review script asserts the three-block staff spine from the controlled public divider to the rear service approach.
-3. **Roof maintenance access** — the east service ladder now penetrates the y=9 roof plane and reaches a dedicated rooftop service landing rather than terminating into a ceiling.
-4. **Purpose-driven signage** — r2 mounts signs one block off verified supporting wall faces. The helper rejects missing supports and occupied sign positions. Corporate, facility, public, staff, receiving, cold-stock, records and plant signs are therefore physical architecture rather than source-only labels.
-5. **Supervisor/records enclosure** — a broad interior-clear pass had erased part of the room's north wall. r2 restores the missing enclosure and the sign-support check verifies the correction.
+1. **Culture-locker service clearance** — x=21..23 is now a real three-block-wide clear service/maintenance aisle.
+2. **Central staff spine** — receiving freight no longer occupies x=17..19.
+3. **Roof maintenance access** — the ladder penetrates the roof plane and reaches a service landing.
+4. **Purpose-driven signage** — signs now mount from verified support faces and reject occupied mounting positions.
+5. **Supervisor/records enclosure** — the room's missing north wall was restored.
 
-## Intact building interpretation
+Those corrections remain accepted and must survive r3.
 
-The D0 facility now reads as a plausible Verdant Continuum Foods neighborhood biological-food service depot rather than a supermarket reskin:
+## New blocking finding discovered by path audit
 
-- the public pavilion contains distinct `RETURN CULTURES` and `CULTURE ISSUE` handoff points;
-- the controlled divider prevents the public lobby from spilling into staff production space;
-- returned material moves west into sanitation, normal quality hold and crate consolidation;
-- clean material moves east through locker issue and cold holding;
-- inbound freight reaches receiving/batch check without occupying the central staff spine;
-- supervisor/batch records sit beside the service process rather than in the public room;
-- rooftop refrigeration is physically related to the east cold-chain volume and has staff-only access;
-- the primary identity reads `VERDANT CONTINUUM FOODS` and `NEIGHBORHOOD CULTURE SERVICE DEPOT`;
-- operational signs identify the actual functions they serve rather than decorating blank walls.
+The supervisor/records room's west doorway at x=24,z=27 opens directly against the adjacent x=23 process wall. The same x=23 partition also leaves the receiving/batch-check area without a coherent accepted-goods crossing toward the clean-stock door at x=26,z=22.
 
-## Gate-B carry-forward obligations
+The building therefore has two source-level accessibility failures despite otherwise improved room zoning:
 
-These are not Gate-B blockers, but they must be addressed in later doctrine passes:
+- **records access is physically blocked**, making the intended deterministic proof location invalid as a player route;
+- **receiving -> batch check -> clean stock is not continuously traversable as designed**, so the operational flow claimed by the intact interpretation is incomplete.
 
-- historical layering must show the transition from ordinary D0 operation to the first material/supply anomaly without making VCF retroactively sinister;
-- environmental narrative must concentrate evidence at real workflow interfaces: returns, seals, sanitation, refrigeration, batch check and quality hold;
-- encounter architecture must preserve the intended public/staff/service routes rather than filling every room with threats;
-- loot/proof architecture must put the deterministic evidence where a supervisor or batch-control worker would actually retain it;
-- D3 decay must remain materially and structurally causal; it may not dissolve the approved D0 workflow into generic ruin;
-- final microdetail must refine ceilings, service fittings, roof safety/access cues and room-scale props without changing the approved program.
+## Required r3 correction
+
+The x=23 process boundary must gain two purpose-specific crossings without compromising clean/dirty separation:
+
+1. a clean-stock transfer opening aligned with the existing x=26,z=22 clean-side door;
+2. a supervisor/records access opening aligned with a real opening through the x=24 room wall.
+
+The batch-check counter must remain outside both crossings, and the three-block x=17..19 staff spine must remain clear.
+
+The r3 review model must add executable route assertions for:
+
+- entrance/staff spine clearance;
+- receiving-to-clean-stock transfer clearance;
+- receiving/staff-spine-to-supervisor-records clearance;
+- culture-locker three-block service aisle;
+- roof maintenance access;
+- supported signage.
+
+## Planning work performed after the premature pass
+
+Pass-13 through Pass-18 historical/narrative documents were authored before this deeper route defect was discovered. They remain **planning drafts only** and do not constitute execution or approval of historical damage. Their implementation is blocked until Gate B r3 passes.
 
 ## Status separation
 
-Passing Gate B approves only the **D0 intact architectural interpretation**. It does not approve D1/D3 historical states, final schematic quality, static worldgen replacement, or runtime placement.
+Gate B approves only a fully traversable D0 intact building. No D1/D3 visual gate, authoritative worldgen replacement, final schematic-quality status or runtime approval may advance on r2.
