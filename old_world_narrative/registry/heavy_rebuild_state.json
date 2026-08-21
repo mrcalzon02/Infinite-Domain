@@ -12,7 +12,7 @@
   "active_target": "OWS-001",
   "active_target_name": "Neighborhood Culture Service Depot",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_d_r1_rendered_authoritative_sync_verified_pending_review",
+  "active_status": "gate_d_r1_image_checks_passed_authoritative_sync_verified_pending_review",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-001_RESTART_DOSSIER.md",
   "legacy_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-001_REBUILD_DOSSIER.md",
   "completed": [],
@@ -136,7 +136,7 @@
     "damage_and_decay": "complete_gate_c_r1",
     "visual_gate_c_damage_states": "passed_r1",
     "micro_detail": "complete",
-    "visual_gate_d_final_multi_angle": "r1_rendered_authoritative_sync_verified_pending_manual_review",
+    "visual_gate_d_final_multi_angle": "r1_image_checks_passed_authoritative_sync_verified_pending_manual_review",
     "static_validation": "pending",
     "quality_status_promotion": "pending"
   },
@@ -255,7 +255,7 @@
       "r1_decision": "PASSED"
     },
     "gate_d_final_multi_angle": {
-      "status": "r1_rendered_authoritative_sync_verified_pending_manual_review",
+      "status": "r1_image_checks_passed_pending_manual_review",
       "required": true,
       "damage_state": "D3 authoritative worldgen state",
       "fixed_camera_set": "ows001_fixed_v1",
@@ -265,7 +265,9 @@
       "review_only": false,
       "render_source": "shipping_nbt",
       "exact_authoritative_nbt_match": true,
-      "shipping_nbt_sha256": "6241ebe9a5481acd31240c6ad6d917eeecba537cfd8df2eed81b9390ffa6d5c1"
+      "shipping_nbt_sha256": "6241ebe9a5481acd31240c6ad6d917eeecba537cfd8df2eed81b9390ffa6d5c1",
+      "r1_visual_regression_metrics": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-001/gate_d_final/r1/visual_regression_metrics.json",
+      "image_level_checks": "passed_pending_manual_review"
     }
   },
   "ows_001_contract": {
