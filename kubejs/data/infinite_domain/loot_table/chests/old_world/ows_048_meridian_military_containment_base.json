@@ -1,1 +1,99 @@
-{"type":"minecraft:chest","random_sequence":"infinite_domain:chests/old_world/ows_048_meridian_military_containment_base","pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":"kubejs:containment_command_directive"}]},{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Not the Enemy","author":"Meridian Field Officer","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA VII\nMeridian Field Officer","Karsic forces are six kilometers east. Officially hostile. Nobody has fired in fourteen hours. Both sides are watching the same Grey Bloom advance along the abandoned freight corridor.","Their engineers burned one section yesterday. We nearly called artillery because sensors detected the explosion. They nearly called artillery when our aircraft arrived.","This is insanity. The fungus doesn't care whose border this is. The soldiers across the valley probably haven't slept any more than we have. Command says maintain readiness.","So we stand here pointing weapons at men trying to stop the same thing from reaching their homes. I don't know how much longer that can hold."],"mode":{"type":"replace_all"}}]}]},{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Retaliation","author":"Meridian Field Officer","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA VII\nMeridian Field Officer","Karsic strike confirmed west of Boundary Marker Eight. Command classified it as hostile nuclear employment. We received authorization to retaliate twelve minutes ago.","I asked whether the target had been a Firebreak zone. Nobody knows. Communications with regional command are intermittent. The men are loading. I can hear them.","We trained our entire lives for the day another country fired a nuclear weapon across this border. I never imagined we'd spend the day arguing whether they were trying to kill us or kill a fungus.","Apparently it no longer matters. Orders are orders. God help us."],"mode":{"type":"replace_all"}}]}]},{"rolls":{"type":"minecraft:uniform","min":2,"max":4},"entries":[{"type":"minecraft:item","name":"create:andesite_alloy","weight":8},{"type":"minecraft:item","name":"minecraft:iron_ingot","weight":10},{"type":"minecraft:item","name":"immersiveengineering:component_iron","weight":5}]}]}
+{
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_048_meridian_military_containment_base",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:containment_command_directive"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Not the Enemy",
+              "author": "Meridian Field Officer",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA VII\nMeridian Field Officer",
+                "Karsic forces are six kilometers east. Officially hostile. Nobody has fired in fourteen hours. Both sides are watching the same Grey Bloom advance along the abandoned freight corridor.",
+                "Their engineers burned one section yesterday. We nearly called artillery because sensors detected the explosion. They nearly called artillery when our aircraft arrived.",
+                "This is insanity. The fungus doesn't care whose border this is. The soldiers across the valley probably haven't slept any more than we have. Command says maintain readiness.",
+                "So we stand here pointing weapons at men trying to stop the same thing from reaching their homes. I don't know how much longer that can hold."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Retaliation",
+              "author": "Meridian Field Officer",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA VII\nMeridian Field Officer",
+                "Karsic strike confirmed west of Boundary Marker Eight. Command classified it as hostile nuclear employment. We received authorization to retaliate twelve minutes ago.",
+                "I asked whether the target had been a Firebreak zone. Nobody knows. Communications with regional command are intermittent. The men are loading. I can hear them.",
+                "We trained our entire lives for the day another country fired a nuclear weapon across this border. I never imagined we'd spend the day arguing whether they were trying to kill us or kill a fungus.",
+                "Apparently it no longer matters. Orders are orders. God help us."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

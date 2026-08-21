@@ -1,7 +1,108 @@
 {
-"type":"minecraft:chest","random_sequence":"infinite_domain:chests/old_world/ows_016_polycore_elastomer_exposure_array","pools":[
-{"rolls":1,"entries":[{"type":"minecraft:item","name":"kubejs:polycore_elastomer_exposure_test"}]},{"rolls":1,"entries":[{"type":"minecraft:item","name":"kubejs:polycore_exposure_test_04"}]},
-{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Give Me Another Material","author":"Dr. Sora Kel","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA II\nDr. Sora Kel","Test Array Twelve. Reinforced elastomer survived ninety-one hours, thirty-six better than the previous formulation. Ceramic laminate remains clean. Metallic compression seals remain viable, though the cost is obscene.","So no, the situation is not impossible. It is an engineering problem. Engineering problems have specifications. Specifications have tolerances. Tolerances can be improved.","If VCF wants a barrier PT-9 cannot compromise, we'll build one. Procurement is screaming about cost. Legal is screaming about liability. Three vice presidents want to call the latest material permanent containment grade.","No. Nothing is permanent. But we can make it better. Give me another week."],"mode":{"type":"replace_all"}}]}]},
-{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Both Sides","author":"Dr. Sora Kel","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA III\nDr. Sora Kel","Test Array Thirty-One failed. Metal. Ceramic. Mineralized coating. No exposed flexible polymer inside the chamber. It still colonized. We tore the chamber apart.","The ingress wasn't through the barrier. The sample was already behind it. Not visible culture—residue. Something microscopic survived preparation. We built a better wall around a contaminated room.","That's the pattern. Food plant. Hospital. Pump station. Research lab. Everyone asks what stronger material they should buy. I don't know what to tell them anymore.","The question assumes there is a clean side. I am increasingly unable to demonstrate that there is."],"mode":{"type":"replace_all"}}]}]},
-{"rolls":{"type":"minecraft:uniform","min":2,"max":4},"entries":[{"type":"minecraft:item","name":"create:andesite_alloy","weight":8},{"type":"minecraft:item","name":"minecraft:iron_ingot","weight":10},{"type":"minecraft:item","name":"immersiveengineering:component_iron","weight":5}]}
-]}
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_016_polycore_elastomer_exposure_array",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:polycore_elastomer_exposure_test"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:polycore_exposure_test_04"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Give Me Another Material",
+              "author": "Dr. Sora Kel",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA II\nDr. Sora Kel",
+                "Test Array Twelve. Reinforced elastomer survived ninety-one hours, thirty-six better than the previous formulation. Ceramic laminate remains clean. Metallic compression seals remain viable, though the cost is obscene.",
+                "So no, the situation is not impossible. It is an engineering problem. Engineering problems have specifications. Specifications have tolerances. Tolerances can be improved.",
+                "If VCF wants a barrier PT-9 cannot compromise, we'll build one. Procurement is screaming about cost. Legal is screaming about liability. Three vice presidents want to call the latest material permanent containment grade.",
+                "No. Nothing is permanent. But we can make it better. Give me another week."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Both Sides",
+              "author": "Dr. Sora Kel",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA III\nDr. Sora Kel",
+                "Test Array Thirty-One failed. Metal. Ceramic. Mineralized coating. No exposed flexible polymer inside the chamber. It still colonized. We tore the chamber apart.",
+                "The ingress wasn't through the barrier. The sample was already behind it. Not visible culture\u2014residue. Something microscopic survived preparation. We built a better wall around a contaminated room.",
+                "That's the pattern. Food plant. Hospital. Pump station. Research lab. Everyone asks what stronger material they should buy. I don't know what to tell them anymore.",
+                "The question assumes there is a clean side. I am increasingly unable to demonstrate that there is."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

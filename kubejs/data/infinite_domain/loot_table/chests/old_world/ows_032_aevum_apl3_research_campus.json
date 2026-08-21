@@ -1,1 +1,99 @@
-{"type":"minecraft:chest","random_sequence":"infinite_domain:chests/old_world/ows_032_aevum_apl3_research_campus","pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":"kubejs:apl3_research_summary"}]},{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Dependency","author":"Dr. Lena Orlov","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA III\nDr. Lena Orlov","I argued with Vey today. Not scientifically. Morally. She wants immediate suspension of industrial EP-7 production. She's probably right biologically.","But Aevum has eleven million active patients dependent upon derived products. Food systems are worse. Governments cannot shut down Evercrop without simultaneously creating a food shortage and medical crisis.","That is not corporate propaganda. It is arithmetic. Continuity asks leaders to eliminate the thing feeding their cities and treating their sick because it may eventually destroy the system providing both.","There is no clean decision left. We waited too long for clean decisions."],"mode":{"type":"replace_all"}}]}]},{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Classified","author":"Dr. Lena Orlov","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA VI\nDr. Lena Orlov","Legal removed another section from the APL report. Government security removed Vale's atmospheric appendix. VCF objected to Vey's distribution analysis. Military command classified the Firebreak projections.","Nobody is coordinating the suppression. That's almost worse. There isn't a room where villains decided to hide the truth.","There are a thousand rooms where reasonable people decide one specific truth is too dangerous to release today. Markets might panic. Patients might riot. Food distribution might collapse.","An operation might be compromised. Public confidence might fall. Every deletion has an explanation. Put them together and the public receives nothing."],"mode":{"type":"replace_all"}}]}]},{"rolls":{"type":"minecraft:uniform","min":2,"max":4},"entries":[{"type":"minecraft:item","name":"create:andesite_alloy","weight":8},{"type":"minecraft:item","name":"minecraft:iron_ingot","weight":10},{"type":"minecraft:item","name":"immersiveengineering:component_iron","weight":5}]}]}
+{
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_032_aevum_apl3_research_campus",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:apl3_research_summary"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Dependency",
+              "author": "Dr. Lena Orlov",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA III\nDr. Lena Orlov",
+                "I argued with Vey today. Not scientifically. Morally. She wants immediate suspension of industrial EP-7 production. She's probably right biologically.",
+                "But Aevum has eleven million active patients dependent upon derived products. Food systems are worse. Governments cannot shut down Evercrop without simultaneously creating a food shortage and medical crisis.",
+                "That is not corporate propaganda. It is arithmetic. Continuity asks leaders to eliminate the thing feeding their cities and treating their sick because it may eventually destroy the system providing both.",
+                "There is no clean decision left. We waited too long for clean decisions."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Classified",
+              "author": "Dr. Lena Orlov",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA VI\nDr. Lena Orlov",
+                "Legal removed another section from the APL report. Government security removed Vale's atmospheric appendix. VCF objected to Vey's distribution analysis. Military command classified the Firebreak projections.",
+                "Nobody is coordinating the suppression. That's almost worse. There isn't a room where villains decided to hide the truth.",
+                "There are a thousand rooms where reasonable people decide one specific truth is too dangerous to release today. Markets might panic. Patients might riot. Food distribution might collapse.",
+                "An operation might be compromised. Public confidence might fall. Every deletion has an explanation. Put them together and the public receives nothing."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

@@ -1,1 +1,99 @@
-{"type":"minecraft:chest","random_sequence":"infinite_domain:chests/old_world/ows_042_blackglass_regional_data_center","pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":"kubejs:regional_archive_module"}]},{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Access Denied","author":"Blackglass Systems Administrator","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA VI\nBlackglass Systems Administrator","Emergency archive partition is sealed under Commonwealth Security Directive 91. No, I cannot override it. VCF cannot access government correspondence. Government health cannot access military Firebreak planning.","Military command cannot access Pelagos diplomatic traffic. Everybody suddenly wants every database connected after spending twenty years paying us to keep them separated.","We've got atmospheric models in one compartment, distribution records in another, material failures somewhere else, and intelligence reports blaming Karsis in a fourth.","Maybe if somebody had been allowed to see all of it six months ago, we'd understand what's happening. But security worked exactly as designed. Congratulations to us."],"mode":{"type":"replace_all"}}]}]},{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"The Firebreak Wars","author":"Dr. Lena Orlov","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA VII\nDr. Lena Orlov","Blackglass reconstruction complete. This is worse than we thought. The first Karsic retaliatory launch wasn't ordered because they confirmed a Meridian attack.","They saw a border Firebreak detonation. Their early-warning network classified it as tactical nuclear employment. Meridian then interpreted Karsic mobilization as preparation to exploit the crisis.","Pelagos warned both sides atmospheric contamination was already transnational. Half the messages never reached the correct ministries. The war wasn't separate from the containment crisis. It grew out of it.","Quarantine strike. Military warning. Misinterpretation. Retaliation. Communications failure. Another strike. There may never have been a moment when somebody consciously decided to begin the last war."],"mode":{"type":"replace_all"}}]}]},{"rolls":{"type":"minecraft:uniform","min":2,"max":4},"entries":[{"type":"minecraft:item","name":"create:andesite_alloy","weight":8},{"type":"minecraft:item","name":"minecraft:iron_ingot","weight":10},{"type":"minecraft:item","name":"immersiveengineering:component_iron","weight":5}]}]}
+{
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_042_blackglass_regional_data_center",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:blackglass_regional_archive_module"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Access Denied",
+              "author": "Blackglass Systems Administrator",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA VI\nBlackglass Systems Administrator",
+                "Emergency archive partition is sealed under Commonwealth Security Directive 91. No, I cannot override it. VCF cannot access government correspondence. Government health cannot access military Firebreak planning.",
+                "Military command cannot access Pelagos diplomatic traffic. Everybody suddenly wants every database connected after spending twenty years paying us to keep them separated.",
+                "We've got atmospheric models in one compartment, distribution records in another, material failures somewhere else, and intelligence reports blaming Karsis in a fourth.",
+                "Maybe if somebody had been allowed to see all of it six months ago, we'd understand what's happening. But security worked exactly as designed. Congratulations to us."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "The Firebreak Wars",
+              "author": "Dr. Lena Orlov",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA VII\nDr. Lena Orlov",
+                "Blackglass reconstruction complete. This is worse than we thought. The first Karsic retaliatory launch wasn't ordered because they confirmed a Meridian attack.",
+                "They saw a border Firebreak detonation. Their early-warning network classified it as tactical nuclear employment. Meridian then interpreted Karsic mobilization as preparation to exploit the crisis.",
+                "Pelagos warned both sides atmospheric contamination was already transnational. Half the messages never reached the correct ministries. The war wasn't separate from the containment crisis. It grew out of it.",
+                "Quarantine strike. Military warning. Misinterpretation. Retaliation. Communications failure. Another strike. There may never have been a moment when somebody consciously decided to begin the last war."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

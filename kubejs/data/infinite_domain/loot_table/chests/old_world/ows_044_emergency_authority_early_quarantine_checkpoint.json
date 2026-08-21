@@ -1,1 +1,99 @@
-{"type":"minecraft:chest","random_sequence":"infinite_domain:chests/old_world/ows_044_emergency_authority_early_quarantine_checkpoint","pools":[{"rolls":1,"entries":[{"type":"minecraft:item","name":"kubejs:quarantine_inspection_pass"}]},{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Buying Time","author":"Dr. Lena Orlov","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA IV\nDr. Lena Orlov","Continuity meeting concluded at 03:20. I want this preserved because we're already being described as opposing quarantine. We do not oppose quarantine.","This checkpoint may save lives. Slowing movement matters. Reducing exposure matters. Buying hospitals another week matters. But this wall is not a biological frontier.","There are EP-7 cultures behind me, ahead of me, and dormant cultures in shelters that have never reported an outbreak. Use the wall. Use the checkpoint. Save whoever you can.","Just do not mistake delay for eradication. Those are different things."],"mode":{"type":"replace_all"}}]}]},{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Monday","author":"Civilian Checkpoint Officer","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA V\nCivilian Checkpoint Officer","They told everyone the bridge would reopen Monday. Then Wednesday. Then they stopped giving dates. Today we welded the civilian gate shut.","People on the east side screamed that their families are over here. People here screamed that their medicine is over there. Orders say nobody crosses without military clearance.","There's fungus growing beneath the west barricade. There's fungus growing beneath the east barricade. A recruit asked me which side is contaminated.","I didn't answer him. I don't think anybody knows what that word means anymore."],"mode":{"type":"replace_all"}}]}]},{"rolls":{"type":"minecraft:uniform","min":2,"max":4},"entries":[{"type":"minecraft:item","name":"create:andesite_alloy","weight":8},{"type":"minecraft:item","name":"minecraft:iron_ingot","weight":10},{"type":"minecraft:item","name":"immersiveengineering:component_iron","weight":5}]}]}
+{
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_044_emergency_authority_early_quarantine_checkpoint",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:quarantine_inspection_pass"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Buying Time",
+              "author": "Dr. Lena Orlov",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA IV\nDr. Lena Orlov",
+                "Continuity meeting concluded at 03:20. I want this preserved because we're already being described as opposing quarantine. We do not oppose quarantine.",
+                "This checkpoint may save lives. Slowing movement matters. Reducing exposure matters. Buying hospitals another week matters. But this wall is not a biological frontier.",
+                "There are EP-7 cultures behind me, ahead of me, and dormant cultures in shelters that have never reported an outbreak. Use the wall. Use the checkpoint. Save whoever you can.",
+                "Just do not mistake delay for eradication. Those are different things."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Monday",
+              "author": "Civilian Checkpoint Officer",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA V\nCivilian Checkpoint Officer",
+                "They told everyone the bridge would reopen Monday. Then Wednesday. Then they stopped giving dates. Today we welded the civilian gate shut.",
+                "People on the east side screamed that their families are over here. People here screamed that their medicine is over there. Orders say nobody crosses without military clearance.",
+                "There's fungus growing beneath the west barricade. There's fungus growing beneath the east barricade. A recruit asked me which side is contaminated.",
+                "I didn't answer him. I don't think anybody knows what that word means anymore."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

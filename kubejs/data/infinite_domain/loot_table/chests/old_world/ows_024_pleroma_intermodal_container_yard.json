@@ -1,10 +1,97 @@
 {
-  "type":"minecraft:chest",
-  "random_sequence":"infinite_domain:chests/old_world/ows_024_pleroma_intermodal_container_yard",
-  "pools":[
-    {"rolls":1,"entries":[{"type":"minecraft:item","name":"kubejs:pleroma_container_inspection_record"}]},
-    {"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Inspection Required","author":"Pelagos-Port Liaison Officer","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA III\nPelagos-Port Liaison Officer","New biological inspection rules take effect at midnight. Live agricultural culture requires certification. EP-7 requires secondary inspection. Yes, this will slow the port. No, I do not care what Pleroma's throughput guarantee says.","We've had unexplained fungal growth in three refrigerated holds. Meridian says it's local sanitation. Pelagos says the cargo arrived contaminated. Shipping companies say everybody is panicking. Maybe.","But I inspected Berth Twelve myself. They pressure-washed that ventilation duct yesterday. There's growth in it again."],"mode":{"type":"replace_all"}}]}]},
-    {"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"The Port Is Closed","author":"Dr. Aron Vale","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA IV\nDr. Aron Vale","They closed the port. Too late, obviously. But politically they had to close something. Thirty-two ships are anchored offshore and thousands of containers have nowhere to go. Pelagos suspended Meridian agricultural cargo.","Meridian threatens reciprocal restrictions. Karsis closed two land crossings. Everyone is drawing boundaries: trade, national, quarantine. The atmosphere recognizes none of them. Neither does a dormant spore on a cargo pallet.","I understand why they're doing it. That's the worst part. Every individual decision makes sense if you look only at the next forty-eight hours. Our problem may be that nobody has the luxury of looking farther."],"mode":{"type":"replace_all"}}]}]},
-    {"rolls":{"type":"minecraft:uniform","min":2,"max":4},"entries":[{"type":"minecraft:item","name":"create:andesite_alloy","weight":8},{"type":"minecraft:item","name":"minecraft:iron_ingot","weight":10},{"type":"minecraft:item","name":"immersiveengineering:component_iron","weight":5}]}
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_024_pleroma_intermodal_container_yard",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:pleroma_container_inspection_record"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Inspection Required",
+              "author": "Pelagos-Port Liaison Officer",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA III\nPelagos-Port Liaison Officer",
+                "New biological inspection rules take effect at midnight. Live agricultural culture requires certification. EP-7 requires secondary inspection. Yes, this will slow the port. No, I do not care what Pleroma's throughput guarantee says.",
+                "We've had unexplained fungal growth in three refrigerated holds. Meridian says it's local sanitation. Pelagos says the cargo arrived contaminated. Shipping companies say everybody is panicking. Maybe.",
+                "But I inspected Berth Twelve myself. They pressure-washed that ventilation duct yesterday. There's growth in it again."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "The Port Is Closed",
+              "author": "Dr. Aron Vale",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA IV\nDr. Aron Vale",
+                "They closed the port. Too late, obviously. But politically they had to close something. Thirty-two ships are anchored offshore and thousands of containers have nowhere to go. Pelagos suspended Meridian agricultural cargo.",
+                "Meridian threatens reciprocal restrictions. Karsis closed two land crossings. Everyone is drawing boundaries: trade, national, quarantine. The atmosphere recognizes none of them. Neither does a dormant spore on a cargo pallet.",
+                "I understand why they're doing it. That's the worst part. Every individual decision makes sense if you look only at the next forty-eight hours. Our problem may be that nobody has the luxury of looking farther."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
   ]
 }

@@ -1,7 +1,99 @@
 {
-"type":"minecraft:chest","random_sequence":"infinite_domain:chests/old_world/ows_004_vcf_mycological_vertical_farm_tower","pools":[
-{"rolls":1,"entries":[{"type":"minecraft:item","name":"kubejs:evercrop_cultivation_handbook"}]},
-{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"A Crop That Refuses to Fail","author":"Dr. Mara Vey","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA I\nDr. Mara Vey","They increased the target again. Twelve percent. I told them twelve percent was ridiculous. Then Cultivation Fourteen beat it by three. No bacterial collapse. No temperature-loss event.","We interrupted nutrient circulation for six hours and EP-7 recovered before conventional cultures stabilized. PT-9 is doing exactly what we hoped. A farm like this doesn't need perfect weather or soil.","Half of it doesn't even need sunlight. You could put one beneath a city, in a desert, or ship dormant stock across an ocean and feed people within days.","We keep joking that we've created the crop that refuses to fail. I think we actually have. God. Imagine what we can do with that."],"mode":{"type":"replace_all"}}]}]},
-{"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Still Producing","author":"VCF Cultivation Technician","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA V\nVCF Cultivation Technician","Farm Operations Log. Line Three is down again. Not production. The machinery. The coolant seals are gone. Harvest belt insulation is peeling. Maintenance has twenty-eight open calls and six technicians.","But the damn fungus is healthy. We haven't had stable ventilation for four days and it's still producing. Management wants us harvesting because the city ration office doubled its request.","Soldiers check every pallet leaving. Nobody checks the walls anymore. Grey Bloom grows around the inspection booth. They painted over it this morning. It was back before lunch.","We spent twenty years trying to grow food that couldn't die. I think that's the only part of this building that's still working."],"mode":{"type":"replace_all"}}]}]},
-{"rolls":{"type":"minecraft:uniform","min":2,"max":4},"entries":[{"type":"minecraft:item","name":"create:andesite_alloy","weight":8},{"type":"minecraft:item","name":"minecraft:iron_ingot","weight":10},{"type":"minecraft:item","name":"immersiveengineering:component_iron","weight":5}]}
-]}
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_004_vcf_mycological_vertical_farm_tower",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:evercrop_cultivation_handbook"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "A Crop That Refuses to Fail",
+              "author": "Dr. Mara Vey",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA I\nDr. Mara Vey",
+                "They increased the target again. Twelve percent. I told them twelve percent was ridiculous. Then Cultivation Fourteen beat it by three. No bacterial collapse. No temperature-loss event.",
+                "We interrupted nutrient circulation for six hours and EP-7 recovered before conventional cultures stabilized. PT-9 is doing exactly what we hoped. A farm like this doesn't need perfect weather or soil.",
+                "Half of it doesn't even need sunlight. You could put one beneath a city, in a desert, or ship dormant stock across an ocean and feed people within days.",
+                "We keep joking that we've created the crop that refuses to fail. I think we actually have. God. Imagine what we can do with that."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Still Producing",
+              "author": "VCF Cultivation Technician",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA V\nVCF Cultivation Technician",
+                "Farm Operations Log. Line Three is down again. Not production. The machinery. The coolant seals are gone. Harvest belt insulation is peeling. Maintenance has twenty-eight open calls and six technicians.",
+                "But the damn fungus is healthy. We haven't had stable ventilation for four days and it's still producing. Management wants us harvesting because the city ration office doubled its request.",
+                "Soldiers check every pallet leaving. Nobody checks the walls anymore. Grey Bloom grows around the inspection booth. They painted over it this morning. It was back before lunch.",
+                "We spent twenty years trying to grow food that couldn't die. I think that's the only part of this building that's still working."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

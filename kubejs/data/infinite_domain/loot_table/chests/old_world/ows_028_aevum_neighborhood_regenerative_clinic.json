@@ -1,10 +1,98 @@
 {
-  "type":"minecraft:chest",
-  "random_sequence":"infinite_domain:chests/old_world/ows_028_aevum_neighborhood_regenerative_clinic",
-  "pools":[
-    {"rolls":1,"entries":[{"type":"minecraft:item","name":"kubejs:aevum_patient_recovery_brief"}]},
-    {"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Twenty More Years","author":"Dr. Lena Orlov","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA I\nDr. Lena Orlov","Patient 4417 walked today. Six months ago she was told the spinal damage was permanent. This morning she walked twelve meters—badly, painfully—and laughed the entire way. APL-3 isn't magic. I want that stated clearly.","But after refinement? Nerve regeneration. Organ recovery. Reduced cellular degradation. We are looking at people who may receive twenty additional healthy years. Maybe more. People talk about life-extension as though it's vanity.","It isn't. It's another birthday with your children. Another decade with your partner. Another morning you weren't supposed to have. Nobody should ever pretend there was nothing here worth protecting."],"mode":{"type":"replace_all"}}]}]},
-    {"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"The Last Dose","author":"Aevum Physician","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA V\nAevum Physician","We administered the last complete APL course at 16:40. Supply says no replacement shipment is expected. I have thirty-two patients mid-regeneration. Stopping treatment isn't immediately lethal—for most.","That's what administration keeps emphasizing. Families are gathering outside pharmacy storage. Security locked the lower treatment floor. Someone painted VCF KNEW across the entrance. Maybe they did. Maybe they didn't.","I don't care tonight. I have a twelve-year-old whose liver was supposed to be repaired by Friday, and the biological supply chain capable of doing that no longer exists.","We had medicine that would have sounded impossible to our grandparents. Now I am rationing it by syringe."],"mode":{"type":"replace_all"}}]}]},
-    {"rolls":{"type":"minecraft:uniform","min":2,"max":4},"entries":[{"type":"minecraft:item","name":"create:andesite_alloy","weight":8},{"type":"minecraft:item","name":"minecraft:iron_ingot","weight":10},{"type":"minecraft:item","name":"immersiveengineering:component_iron","weight":5}]}
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_028_aevum_neighborhood_regenerative_clinic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:aevum_patient_recovery_brief"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Twenty More Years",
+              "author": "Dr. Lena Orlov",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA I\nDr. Lena Orlov",
+                "Patient 4417 walked today. Six months ago she was told the spinal damage was permanent. This morning she walked twelve meters\u2014badly, painfully\u2014and laughed the entire way. APL-3 isn't magic. I want that stated clearly.",
+                "But after refinement? Nerve regeneration. Organ recovery. Reduced cellular degradation. We are looking at people who may receive twenty additional healthy years. Maybe more. People talk about life-extension as though it's vanity.",
+                "It isn't. It's another birthday with your children. Another decade with your partner. Another morning you weren't supposed to have. Nobody should ever pretend there was nothing here worth protecting."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "The Last Dose",
+              "author": "Aevum Physician",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA V\nAevum Physician",
+                "We administered the last complete APL course at 16:40. Supply says no replacement shipment is expected. I have thirty-two patients mid-regeneration. Stopping treatment isn't immediately lethal\u2014for most.",
+                "That's what administration keeps emphasizing. Families are gathering outside pharmacy storage. Security locked the lower treatment floor. Someone painted VCF KNEW across the entrance. Maybe they did. Maybe they didn't.",
+                "I don't care tonight. I have a twelve-year-old whose liver was supposed to be repaired by Friday, and the biological supply chain capable of doing that no longer exists.",
+                "We had medicine that would have sounded impossible to our grandparents. Now I am rationing it by syringe."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
   ]
 }

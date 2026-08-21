@@ -1,10 +1,97 @@
 {
-  "type":"minecraft:chest",
-  "random_sequence":"infinite_domain:chests/old_world/ows_030_aevum_apl_hospital_recovery_ward",
-  "pools":[
-    {"rolls":1,"entries":[{"type":"minecraft:item","name":"kubejs:apl_clinical_record"}]},
-    {"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Routine Miracle","author":"Hospital Physician","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA I\nHospital Physician","Three organ-regeneration discharges today. Two cancer-recovery patients transferred to outpatient care. One neural-repair case walking with assistance. Routine Wednesday. That's the absurd part.","My mother would have called half of this miraculous. My residents call it Wednesday. The hospital board wants another Aevum suite next year. I support it. Waiting lists are already six months.","We are living through one of the greatest medical revolutions in human history and somehow everyone is annoyed the cafeteria is changing suppliers. Maybe that's what progress looks like when it wins. It becomes ordinary."],"mode":{"type":"replace_all"}}]}]},
-    {"rolls":1,"entries":[{"type":"minecraft:item","name":"minecraft:written_book","functions":[{"function":"minecraft:set_book_cover","title":"Keep the Refrigeration Running","author":"Hospital Facilities Manager","generation":0},{"function":"minecraft:set_written_book_pages","pages":["AUDIO TRANSCRIPT\nERA V\nHospital Facilities Manager","Priority list: surgical air. APL storage refrigeration. Emergency ward. Water sterilization. Everything else can die. We lost the north electrical trunk again because insulation is degrading.","Helion says the grid may shed this district tonight. Generators have eighteen hours of fuel. There are Grey Bloom colonies in the ambulance bay. Do not burn them.","Last time maintenance burned one we had spores in the intake filters within an hour. Keep the refrigeration running. If the building has to go dark, fine. Keep that room cold."],"mode":{"type":"replace_all"}}]}]},
-    {"rolls":{"type":"minecraft:uniform","min":2,"max":4},"entries":[{"type":"minecraft:item","name":"create:andesite_alloy","weight":8},{"type":"minecraft:item","name":"minecraft:iron_ingot","weight":10},{"type":"minecraft:item","name":"immersiveengineering:component_iron","weight":5}]}
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_030_aevum_apl_hospital_recovery_ward",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:apl_clinical_record"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Routine Miracle",
+              "author": "Hospital Physician",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA I\nHospital Physician",
+                "Three organ-regeneration discharges today. Two cancer-recovery patients transferred to outpatient care. One neural-repair case walking with assistance. Routine Wednesday. That's the absurd part.",
+                "My mother would have called half of this miraculous. My residents call it Wednesday. The hospital board wants another Aevum suite next year. I support it. Waiting lists are already six months.",
+                "We are living through one of the greatest medical revolutions in human history and somehow everyone is annoyed the cafeteria is changing suppliers. Maybe that's what progress looks like when it wins. It becomes ordinary."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Keep the Refrigeration Running",
+              "author": "Hospital Facilities Manager",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA V\nHospital Facilities Manager",
+                "Priority list: surgical air. APL storage refrigeration. Emergency ward. Water sterilization. Everything else can die. We lost the north electrical trunk again because insulation is degrading.",
+                "Helion says the grid may shed this district tonight. Generators have eighteen hours of fuel. There are Grey Bloom colonies in the ambulance bay. Do not burn them.",
+                "Last time maintenance burned one we had spores in the intake filters within an hour. Keep the refrigeration running. If the building has to go dark, fine. Keep that room cold."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
   ]
 }
