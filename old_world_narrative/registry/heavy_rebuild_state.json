@@ -10,7 +10,7 @@
   "active_target": "OWS-002",
   "active_target_name": "Emergency Community Grow Hall",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_b_r2_passed_historical_layering_ready",
+  "active_status": "pass_13_historical_layering_complete_environmental_narrative_ready",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-002_RESTART_DOSSIER.md",
   "completed": ["OWS-001"],
   "static_review_passed": ["OWS-001"],
@@ -56,7 +56,7 @@
     "operational_systems": "complete_gate_b_r2",
     "institutional_identity": "complete_gate_b_r2",
     "visual_gate_b_intact_state": "passed_r2",
-    "historical_layering": "pending",
+    "historical_layering": "complete_design_contract",
     "environmental_narrative": "pending",
     "encounter_architecture": "pending",
     "loot_architecture": "pending",
@@ -84,7 +84,8 @@
     "pass_11_operational_systems": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS11_OPERATIONAL_SYSTEMS.md",
     "pass_12_institutional_identity": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS12_VCF_EMERGENCY_IDENTITY.md",
     "gate_b_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_B_R1_REVIEW.md",
-    "gate_b_r2_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_B_R2_REVIEW.md"
+    "gate_b_r2_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_B_R2_REVIEW.md",
+    "pass_13_historical_layering": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS13_HISTORICAL_LAYERING.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -161,7 +162,7 @@
       "review_only": true
     },
     "gate_c_damage_states": {
-      "status": "blocked_by_passes_13_to_18",
+      "status": "blocked_by_passes_14_to_18",
       "required": true,
       "minimum_states": ["D0", "D1", "D3"],
       "fixed_camera_set": "ows002_fixed_v1"
