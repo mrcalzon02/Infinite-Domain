@@ -14,6 +14,7 @@ on:
       - 'scripts/analyze_ows001_gate_d_visuals.py'
       - 'scripts/render_ows002_gate_a_massing.py'
       - 'scripts/render_ows002_gate_b_intact.py'
+      - 'scripts/render_ows002_gate_c_damage_states.py'
       - '.github/workflows/old-world-heavy-rebuild-review.yml'
 
 permissions:
@@ -55,7 +56,8 @@ jobs:
             scripts/render_ows001_gate_d_final.py \
             scripts/analyze_ows001_gate_d_visuals.py \
             scripts/render_ows002_gate_a_massing.py \
-            scripts/render_ows002_gate_b_intact.py
+            scripts/render_ows002_gate_b_intact.py \
+            scripts/render_ows002_gate_c_damage_states.py
 
       - name: Resolve active heavy-rebuild target
         run: |
@@ -78,39 +80,14 @@ jobs:
       - name: Render OWS-002 Gate B if ready
         run: python scripts/render_ows002_gate_b_intact.py
 
-      - name: Build compact OWS-002 Gate-B review proxies if available
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          from PIL import Image
-
-          root = Path('old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_b_intact/r1')
-          names = (
-              'front_left', 'front_right', 'rear_left', 'rear_right',
-              'roof_top_oblique', 'interior_cutaway', 'floor_slices',
-          )
-          if root.is_dir():
-              for name in names:
-                  src = root / f'{name}.png'
-                  if not src.is_file():
-                      continue
-                  with Image.open(src) as image:
-                      proxy = image.convert('RGB')
-                      proxy.thumbnail((240, 240), Image.Resampling.LANCZOS)
-                      proxy.save(
-                          root / f'{name}_review.jpg',
-                          format='JPEG',
-                          quality=32,
-                          optimize=True,
-                          progressive=True,
-                      )
-          PY
-
       - name: Render OWS-001 Gate C if ready
         run: python scripts/render_ows001_gate_c_damage_states.py
 
       - name: Analyze OWS-001 Gate C rendered pixels if ready
         run: python scripts/analyze_ows001_gate_c_visuals.py
+
+      - name: Render OWS-002 Gate C if ready
+        run: python scripts/render_ows002_gate_c_damage_states.py
 
       # Automatic Gate-D generation is owned by old-world-static-build.yml so it
       # always runs after the authoritative NBT has been regenerated in the same
