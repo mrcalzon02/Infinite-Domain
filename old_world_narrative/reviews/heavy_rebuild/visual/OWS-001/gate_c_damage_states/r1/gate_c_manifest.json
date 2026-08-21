@@ -1,0 +1,29 @@
+{
+  "target": "OWS-001",
+  "gate": "gate_c_damage_states",
+  "revision": "gate-c-r1@aa27838b",
+  "source_commit": "aa27838bcbe8cd9e04431ab49b31426e5fb43eeb",
+  "fixed_camera_set": "ows001_fixed_v1",
+  "visual_review_status": "rendered_pending_manual_review",
+  "states": {
+    "d0": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-001/gate_c_damage_states/r1/d0/review_manifest.json",
+    "d1": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-001/gate_c_damage_states/r1/d1/review_manifest.json",
+    "d3": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-001/gate_c_damage_states/r1/d3/review_manifest.json"
+  },
+  "change_counts_from_d0": {
+    "d1": 29,
+    "d3": 137
+  },
+  "protected_invariants_asserted": [
+    "public entrance",
+    "central three-block staff spine",
+    "culture-locker three-block aisle",
+    "receiving-to-clean-stock route",
+    "supervisor-records route",
+    "rear receiving exit",
+    "primary VCF identity",
+    "surviving refrigeration evidence",
+    "guaranteed supervisor-records proof chest"
+  ],
+  "significant_findings_corrected_or_justified": false
+}
