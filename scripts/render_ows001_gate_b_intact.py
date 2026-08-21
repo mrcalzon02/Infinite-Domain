@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """[SYSTEM REPORT] Build and render OWS-001 Gate-B intact/operational D0 review.
 
-This is a review-only historical interpretation. It is deliberately NOT the
-shipping D3 worldgen NBT. Revision r2 corrects the blocking findings from the
-recorded Gate-B r1 review: locker-service clearance, receiving/staff circulation,
-real roof maintenance access, and physically supported purpose-driven signage.
-Damage and long-term decay remain forbidden until Gate B passes.
+This is a review-only historical interpretation, never the shipping D3 worldgen
+NBT. Revision r2 corrects the recorded Gate-B r1 blockers: locker-service
+clearance, receiving/staff circulation, real roof maintenance access, and
+physically supported purpose-driven signage. Damage and long-term decay remain
+forbidden until Gate B passes.
 """
 from __future__ import annotations
 
@@ -16,7 +16,6 @@ import generate_wasteland_sites as base
 from render_old_world_heavy_rebuild_review import OUTPUT_ROOT, ROOT, render_review_set
 from render_ows001_gate_a_massing import build_gate_a_massing
 from render_structure_review import unpack_structure
-
 
 STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 TEMP_NAME = "_heavy_review_ows001_gate_b_intact_r2"
@@ -41,12 +40,7 @@ def _block_name(t: base.Template, x: int, y: int, z: int) -> str:
     return t.palette[state]["Name"]
 
 
-def _assert_clear(
-    t: base.Template,
-    a: tuple[int, int, int],
-    b: tuple[int, int, int],
-    label: str,
-) -> None:
+def _assert_clear(t: base.Template, a: tuple[int, int, int], b: tuple[int, int, int], label: str) -> None:
     """Fail the review build if a promised circulation volume is obstructed."""
     for x in range(min(a[0], b[0]), max(a[0], b[0]) + 1):
         for y in range(min(a[1], b[1]), max(a[1], b[1]) + 1):
@@ -64,12 +58,7 @@ def _sign_on_wall(
     facing: str,
     *lines: str,
 ) -> None:
-    """Mount a wall sign one block off a verified supporting wall face.
-
-    `facing` is the direction the sign front faces. The supporting wall therefore
-    sits one block behind it. This prevents the r1 error where signs replaced the
-    very wall block that was supposed to support them.
-    """
+    """Mount a sign one block off a verified supporting wall face."""
     offsets = {
         "north": (0, 0, -1),
         "south": (0, 0, 1),
@@ -97,9 +86,7 @@ def build_gate_b_intact() -> base.Template:
     """Integrate the D0 building program into the Gate-A-approved r2 massing."""
     t = build_gate_a_massing()
 
-    # ---------------------------------------------------------------------
-    # Pass 7: rationalize the overlapping review shells into usable volumes.
-    # ---------------------------------------------------------------------
+    # Rationalize overlapping Gate-A shells into usable internal volumes.
     t.clear((13, 2, 4), (25, 6, 11))
     t.clear((9, 2, 9), (25, 7, 19))
     t.clear((11, 2, 19), (28, 6, 26))
@@ -108,13 +95,13 @@ def build_gate_b_intact() -> base.Template:
     t.clear((13, 2, 24), (28, 6, 30))
     t.clear((25, 2, 26), (32, 5, 28))
 
-    # Front glazing and principal double entrance.
+    # Public glazing and entrance.
     t.fill((14, 2, 3), (24, 5, 3), "create:framed_glass")
     t.clear((18, 2, 3), (19, 4, 3))
     _door(t, 18, 2, 3, "south", hinge="left")
     _door(t, 19, 2, 3, "south", hinge="right")
 
-    # Sparse rational structural rhythm.
+    # Rational structural rhythm and ceiling/service beams.
     for x in (14, 20):
         t.fill((x, 2, 14), (x, 7, 14), "tfmg:steel_block")
     for x in (28, 33):
@@ -123,13 +110,9 @@ def build_gate_b_intact() -> base.Template:
     t.fill((9, 7, 14), (25, 7, 14), "tfmg:steel_block")
     t.fill((27, 8, 17), (34, 8, 17), "tfmg:steel_block")
 
-    # ---------------------------------------------------------------------
-    # Pass 8/10: circulation + interior partitions.
-    # ---------------------------------------------------------------------
+    # Public orientation and service counters.
     t.fill((13, 1, 4), (25, 1, 11), "minecraft:smooth_stone")
     t.fill((17, 1, 4), (20, 1, 8), "minecraft:white_concrete")
-
-    # Public return and issue counters.
     t.fill((13, 2, 9), (16, 2, 10), "zvhouses:stone_brick_countertop")
     t.fill((20, 2, 9), (24, 2, 10), "zvhouses:stone_brick_countertop")
     t.fill((13, 3, 10), (16, 3, 10), "minecraft:light_gray_concrete")
@@ -144,11 +127,11 @@ def build_gate_b_intact() -> base.Template:
     _door(t, 17, 2, 11, "north")
     _door(t, 25, 2, 11, "north")
 
-    # Three-block central staff spine, preserved all the way to receiving in r2.
+    # Three-block central staff spine stays clear through receiving.
     t.fill((17, 1, 12), (19, 1, 30), "minecraft:light_gray_concrete")
     t.clear((17, 2, 12), (19, 6, 30))
 
-    # West return-processing boundary and sanitation / quality-hold split.
+    # West return-processing and sanitation/quality-hold boundaries.
     t.fill((12, 2, 12), (12, 6, 24), "minecraft:white_concrete")
     t.clear((12, 2, 14), (12, 4, 15))
     _door(t, 12, 2, 14, "west")
@@ -159,22 +142,20 @@ def build_gate_b_intact() -> base.Template:
     t.clear((9, 2, 20), (9, 4, 20))
     _door(t, 9, 2, 20, "south")
 
-    # Clean-side boundary into east cold block.
+    # East clean-side boundary.
     t.fill((26, 2, 11), (26, 8, 25), "minecraft:white_concrete")
     t.clear((26, 2, 15), (26, 4, 16))
     _door(t, 26, 2, 15, "east")
     t.clear((26, 2, 22), (26, 4, 22))
     _door(t, 26, 2, 22, "east")
 
-    # Rear receiving boundaries.
+    # Rear receiving boundaries and freight frame.
     t.fill((10, 2, 21), (16, 6, 21), "tfmg:cinder_block")
     t.clear((14, 2, 21), (14, 4, 21))
     _door(t, 14, 2, 21, "north")
     t.fill((23, 2, 21), (23, 6, 27), "minecraft:white_concrete")
     t.clear((23, 2, 24), (23, 4, 24))
     _door(t, 23, 2, 24, "east")
-
-    # Rear freight opening/frame.
     t.clear((17, 2, 31), (20, 5, 31))
     for x in (16, 21):
         t.fill((x, 1, 30), (x, 6, 31), "tfmg:steel_block")
@@ -185,12 +166,7 @@ def build_gate_b_intact() -> base.Template:
     t.clear((24, 2, 27), (24, 4, 27))
     _door(t, 24, 2, 27, "east")
 
-    # ---------------------------------------------------------------------
-    # Pass 10/11: room-scale operational systems.
-    # ---------------------------------------------------------------------
-
-    # Primary culture-locker hero space. r2 deliberately leaves x=21..23 clear
-    # as a full three-block maintenance/issue aisle from z=13..19.
+    # Culture locker hero space: x=21..23 is a guaranteed three-block aisle.
     t.fill((20, 1, 12), (25, 1, 19), "minecraft:light_gray_concrete")
     for z in (13, 15, 17, 19):
         t.fill((20, 2, z), (20, 3, z), "oritech:cooler_block")
@@ -207,7 +183,7 @@ def build_gate_b_intact() -> base.Template:
             t.set(x, 3, z, "oritech:cooler_block")
     t.fill((28, 2, 23), (33, 3, 24), "immersiveengineering:crate")
 
-    # Return sanitation and normal D0 quality hold.
+    # Sanitation, normal D0 quality hold and returned-crate consolidation.
     t.fill((5, 2, 16), (10, 2, 16), "create:fluid_pipe")
     t.set(6, 2, 18, "minecraft:water_cauldron", level="3")
     t.set(9, 2, 18, "minecraft:water_cauldron", level="3")
@@ -215,30 +191,25 @@ def build_gate_b_intact() -> base.Template:
     t.fill((5, 2, 19), (7, 3, 19), "immersiveengineering:crate")
     t.fill((5, 2, 21), (7, 3, 23), "immersiveengineering:crate")
     t.fill((9, 2, 22), (10, 3, 23), "minecraft:barrel")
-
-    # Returned-crate consolidation.
     t.fill((11, 1, 22), (16, 1, 27), "tfmg:factory_floor")
     t.fill((11, 2, 23), (14, 3, 25), "immersiveengineering:crate")
     t.fill((12, 2, 26), (15, 2, 26), "jaffabricate:pallet_full")
 
-    # Receiving and batch/temperature check. r2 moves freight into west/east
-    # staging pockets and keeps x=17..19 unobstructed through the full approach.
+    # Receiving: freight lives in side pockets; staff spine remains unobstructed.
     t.fill((13, 1, 24), (22, 1, 30), "tfmg:factory_floor")
     t.fill((13, 2, 27), (15, 3, 29), "jaffabricate:pallet_full")
     t.fill((21, 2, 27), (22, 3, 29), "immersiveengineering:crate")
     t.fill((20, 2, 24), (22, 2, 25), "zvhouses:stone_brick_countertop")
     t.set(21, 3, 25, "create:depot")
 
-    # Supervisor/batch-record station.
+    # Supervisor/batch records station.
     t.fill((25, 1, 26), (32, 1, 28), "minecraft:smooth_stone")
     t.fill((26, 2, 27), (30, 2, 27), "zvhouses:stone_brick_countertop")
     t.set(30, 3, 27, "the_wasteland_reworked:radio")
     t.fill((31, 2, 26), (32, 4, 28), "minecraft:bookshelf")
     t.set(27, 2, 28, "minecraft:barrel")
 
-    # ---------------------------------------------------------------------
-    # Ceiling, lighting, maintenance and rooftop cold-chain support.
-    # ---------------------------------------------------------------------
+    # Ceiling/lighting.
     for x in (15, 19, 23):
         for z in (5, 8):
             _light(t, x, 6, z)
@@ -251,46 +222,35 @@ def build_gate_b_intact() -> base.Template:
     for x in (15, 20, 26):
         _light(t, x, 6, 27)
 
-    # r2 roof access: ladder penetrates the y=9 roof plane and opens directly to
-    # a durable service landing rather than terminating beneath a solid ceiling.
+    # Real roof access: ladder penetrates y=9 and reaches a service landing.
     t.fill((31, 9, 21), (33, 9, 24), "minecraft:smooth_stone")
     t.fill((34, 2, 23), (34, 9, 23), "minecraft:ladder", facing="west", waterlogged="false")
 
-    # Recognizable refrigeration plant with open service gaps and a real feed.
+    # Refrigeration plant and connected service feed.
     for x, z in ((17, 14), (20, 14), (24, 15), (28, 15)):
         t.set(x, 10, z, "oritech:cooler_block")
     t.fill((18, 10, 18), (29, 10, 18), "create:fluid_pipe")
     t.fill((34, 3, 18), (34, 10, 18), "create:fluid_pipe")
     t.fill((29, 10, 18), (34, 10, 18), "create:fluid_pipe")
 
-    # ---------------------------------------------------------------------
-    # Pass 9/12: physically supported exterior/identity signage.
-    # ---------------------------------------------------------------------
-
-    # Public facade identity: support wall is z=3; signs project to z=2.
-    _sign_on_wall(t, 15, 6, 3, "north", "VERDANT", "CONTINUUM", "FOODS")
-    _sign_on_wall(t, 22, 6, 3, "north", "NEIGHBORHOOD", "CULTURE SERVICE", "DEPOT")
-
-    # Customer wayfinding on the north/public face of the z=11 divider.
+    # Physically supported VCF signage. The helper verifies support and target air.
+    # Public identity uses the roof fascia above the canopy rather than colliding
+    # with the canopy slab itself.
+    _sign_on_wall(t, 15, 7, 3, "north", "VERDANT", "CONTINUUM", "FOODS")
+    _sign_on_wall(t, 22, 7, 3, "north", "NEIGHBORHOOD", "CULTURE SERVICE", "DEPOT")
     _sign_on_wall(t, 13, 4, 11, "north", "RETURN", "CULTURES")
     _sign_on_wall(t, 20, 4, 11, "north", "CULTURE", "ISSUE")
-
-    # Staff-side and operational signs use real nearby partitions as supports.
     _sign_on_wall(t, 20, 5, 11, "south", "COLD LOCKERS", "AUTHORIZED STAFF")
     _sign_on_wall(t, 12, 4, 17, "west", "SANITATION", "RETURNS ONLY")
     _sign_on_wall(t, 7, 4, 20, "north", "QUALITY HOLD", "STAFF ONLY")
     _sign_on_wall(t, 15, 4, 21, "south", "RETURN CRATES", "SERVICE DISPATCH")
-    _sign_on_wall(t, 18, 6, 31, "north", "RECEIVING", "BATCH CHECK")
+    _sign_on_wall(t, 22, 4, 31, "north", "RECEIVING", "BATCH CHECK")
     _sign_on_wall(t, 26, 5, 22, "east", "CLEAN STOCK", "COLD HOLD")
     _sign_on_wall(t, 28, 4, 25, "north", "SUPERVISOR", "BATCH RECORDS")
-    _sign_on_wall(t, 35, 5, 18, "west", "COLD PLANT", "STAFF ONLY")
-
-    # Rear exterior service identity projects south from the z=31 wall.
+    _sign_on_wall(t, 35, 5, 16, "west", "COLD PLANT", "STAFF ONLY")
     _sign_on_wall(t, 22, 5, 31, "south", "VCF SERVICE", "RECEIVING")
 
-    # ---------------------------------------------------------------------
-    # Gate-B r2 invariants. These are intentionally executable quality contracts.
-    # ---------------------------------------------------------------------
+    # Executable Gate-B r2 quality contracts.
     _assert_clear(t, (21, 2, 13), (23, 3, 19), "culture-locker three-block service aisle")
     _assert_clear(t, (17, 2, 12), (19, 3, 30), "central three-block staff spine")
     if _block_name(t, 34, 9, 23) != "minecraft:ladder":
