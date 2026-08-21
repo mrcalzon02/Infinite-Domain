@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/old-world-ows003-gate-c.yml'
       - 'scripts/render_ows003_gate_c_damage_states*.py'
+      - 'scripts/render_ows003_gate_c_damage_states_r3.py'
       - 'scripts/render_ows003_gate_b_intact*.py'
       - 'old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS13_HISTORICAL_LAYERING.md'
       - 'old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS14_ENVIRONMENTAL_NARRATIVE.md'
