@@ -59,12 +59,7 @@ def _sign_on_wall(
     *lines: str,
 ) -> None:
     """Mount a sign one block off a verified supporting wall face."""
-    offsets = {
-        "north": (0, 0, -1),
-        "south": (0, 0, 1),
-        "west": (-1, 0, 0),
-        "east": (1, 0, 0),
-    }
+    offsets = {"north": (0, 0, -1), "south": (0, 0, 1), "west": (-1, 0, 0), "east": (1, 0, 0)}
     if facing not in offsets:
         raise ValueError(f"Unsupported wall-sign facing: {facing}")
     support = _block_name(t, wall_x, wall_y, wall_z)
@@ -161,8 +156,10 @@ def build_gate_b_intact() -> base.Template:
         t.fill((x, 1, 30), (x, 6, 31), "tfmg:steel_block")
     t.fill((16, 6, 30), (21, 6, 31), "tfmg:steel_block")
 
-    # Supervisor/records enclosure.
+    # Supervisor/records room. The broad shell-clear pass erased part of the
+    # original bump-out wall in r1; r2 explicitly restores a complete enclosure.
     t.fill((24, 2, 25), (24, 5, 29), "minecraft:stone_bricks")
+    t.fill((25, 2, 25), (32, 5, 25), "minecraft:stone_bricks")
     t.clear((24, 2, 27), (24, 4, 27))
     _door(t, 24, 2, 27, "east")
 
@@ -233,9 +230,8 @@ def build_gate_b_intact() -> base.Template:
     t.fill((34, 3, 18), (34, 10, 18), "create:fluid_pipe")
     t.fill((29, 10, 18), (34, 10, 18), "create:fluid_pipe")
 
-    # Physically supported VCF signage. The helper verifies support and target air.
-    # Public identity uses the roof fascia above the canopy rather than colliding
-    # with the canopy slab itself.
+    # Physically supported VCF signage. Each call identifies a real support block;
+    # the helper projects the sign into adjacent air and rejects collisions.
     _sign_on_wall(t, 15, 7, 3, "north", "VERDANT", "CONTINUUM", "FOODS")
     _sign_on_wall(t, 22, 7, 3, "north", "NEIGHBORHOOD", "CULTURE SERVICE", "DEPOT")
     _sign_on_wall(t, 13, 4, 11, "north", "RETURN", "CULTURES")
