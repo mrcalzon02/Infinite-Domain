@@ -10,7 +10,7 @@
   "active_target": "OWS-003",
   "active_target_name": "Cold Chain Culture Nursery",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_a_r1_passed_pass_7_structural_system_ready",
+  "active_status": "gate_b_intact_ready_to_implement",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-003_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001",
@@ -138,13 +138,13 @@
     "scale_translation": "complete_for_gate_a_study",
     "massing": "complete_gate_a_r1",
     "visual_gate_a_massing": "passed_r1",
-    "structural_system": "ready",
-    "circulation_and_access": "pending",
-    "exterior_architecture": "pending",
-    "interior_architecture": "pending",
-    "operational_systems": "pending",
-    "institutional_identity": "pending",
-    "visual_gate_b_intact_state": "pending",
+    "structural_system": "defined_ready_for_gate_b_implementation",
+    "circulation_and_access": "defined_ready_for_gate_b_implementation",
+    "exterior_architecture": "defined_ready_for_gate_b_implementation",
+    "interior_architecture": "defined_ready_for_gate_b_implementation",
+    "operational_systems": "defined_ready_for_gate_b_implementation",
+    "institutional_identity": "defined_ready_for_gate_b_implementation",
+    "visual_gate_b_intact_state": "ready_for_intact_implementation",
     "historical_layering": "pending",
     "environmental_narrative": "pending",
     "encounter_architecture": "pending",
@@ -164,7 +164,13 @@
     "precedent_research": "old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS3_PRECEDENT_RESEARCH.md",
     "program_and_adjacency": "old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS4_PROGRAM_ADJACENCY.md",
     "scale_translation": "old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS5_SCALE_TRANSLATION.md",
-    "gate_a_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-003_GATE_A_R1_REVIEW.md"
+    "gate_a_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-003_GATE_A_R1_REVIEW.md",
+    "structural_system": "old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS7_STRUCTURAL_SYSTEM.md",
+    "circulation_and_access": "old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS8_CIRCULATION_ACCESS.md",
+    "exterior_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS9_EXTERIOR_ARCHITECTURE.md",
+    "interior_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS10_INTERIOR_ARCHITECTURE.md",
+    "operational_systems": "old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS11_OPERATIONAL_SYSTEMS.md",
+    "institutional_identity": "old_world_narrative/reviews/heavy_rebuild/OWS-003_PASS12_VCF_IDENTITY.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -200,11 +206,12 @@
       "significant_findings_corrected_or_justified": true
     },
     "gate_b_intact_state": {
-      "status": "blocked_by_passes_7_12",
+      "status": "ready_for_intact_implementation",
       "required": true,
       "damage_state": "D0 intact / operational",
       "fixed_camera_set": "ows003_fixed_v1",
-      "review_only": true
+      "review_only": true,
+      "rule": "D0 must prove the retained cannery frame, inserted cold rooms, receiving/intake/pre-cool, vault/nursery, quality hold, release/licensing, packing/dispatch, refrigeration plant and usable maintenance route before history begins."
     },
     "gate_c_damage_states": {
       "status": "blocked_by_gate_b_and_history_passes",
