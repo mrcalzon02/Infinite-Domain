@@ -11,6 +11,7 @@ on:
       - 'scripts/render_ows003_gate_b_intact_r3.py'
       - 'scripts/render_ows003_gate_b_intact_r4.py'
       - 'scripts/render_ows003_gate_b_intact_r5.py'
+      - 'scripts/render_ows003_gate_b_intact_r6.py'
 
 permissions:
   contents: write
@@ -47,14 +48,15 @@ jobs:
             scripts/render_ows003_gate_b_intact_r2.py \
             scripts/render_ows003_gate_b_intact_r3.py \
             scripts/render_ows003_gate_b_intact_r4.py \
-            scripts/render_ows003_gate_b_intact_r5.py
+            scripts/render_ows003_gate_b_intact_r5.py \
+            scripts/render_ows003_gate_b_intact_r6.py
 
-      - name: Render OWS-003 Gate-B r5
+      - name: Render OWS-003 Gate-B r6
         id: render_gate_b
         continue-on-error: true
         run: |
           set -o pipefail
-          python scripts/render_ows003_gate_b_intact_r5.py 2>&1 | tee /tmp/ows003-gate-b.log
+          python scripts/render_ows003_gate_b_intact_r6.py 2>&1 | tee /tmp/ows003-gate-b.log
 
       - name: Persist Gate-B failure diagnostic
         if: steps.render_gate_b.outcome == 'failure'
@@ -81,7 +83,7 @@ jobs:
             "run_attempt": "${GITHUB_RUN_ATTEMPT}",
             "head_sha": "${GITHUB_SHA}",
             "active_target": "OWS-003",
-            "revision": "r5"
+            "revision": "r6"
           }
           EOF
 
@@ -89,7 +91,7 @@ jobs:
         if: steps.render_gate_b.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
-          name: old-world-heavy-rebuild-OWS-003-gate-b-r5
+          name: old-world-heavy-rebuild-OWS-003-gate-b-r6
           retention-days: 7
           path: |
             old_world_narrative/reviews/heavy_rebuild/visual/OWS-003/
