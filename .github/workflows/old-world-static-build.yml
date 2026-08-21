@@ -81,11 +81,12 @@ jobs:
         run: |
           python - <<'PY'
           import json
+          import os
           from pathlib import Path
           state = json.loads(Path('old_world_narrative/registry/heavy_rebuild_state.json').read_text())
           target = state['active_target']
           Path('active-old-world-target.txt').write_text(target + '\n')
-          with open('${GITHUB_ENV}', 'a') as handle:
+          with open(os.environ['GITHUB_ENV'], 'a') as handle:
               handle.write(f'ACTIVE_OLD_WORLD_TARGET={target}\n')
           print(f'Active heavy-rebuild target: {target}')
           PY
