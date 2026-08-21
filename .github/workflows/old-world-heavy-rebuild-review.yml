@@ -5,8 +5,6 @@ on:
   push:
     branches: [main]
     paths:
-      - 'scripts/old_world_narrative_core.py'
-      - 'scripts/old_world_ows001_final.py'
       - 'scripts/render_old_world_heavy_rebuild_review.py'
       - 'scripts/render_ows001_gate_a_massing.py'
       - 'scripts/render_ows001_gate_b_intact.py'
@@ -70,6 +68,11 @@ jobs:
       - name: Analyze Gate C rendered pixels if ready
         run: python scripts/analyze_ows001_gate_c_visuals.py
 
+      # Automatic Gate-D generation is owned by old-world-static-build.yml so it
+      # always runs after the authoritative NBT has been regenerated in the same
+      # checkout. These steps remain available for explicit/manual review runs or
+      # renderer/analyzer changes, but builder/core edits no longer trigger this
+      # workflow and therefore cannot race ahead of production serialization.
       - name: Render synchronized Gate D if ready
         run: python scripts/render_ows001_gate_d_final.py
 
