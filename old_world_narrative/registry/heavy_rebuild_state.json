@@ -10,7 +10,7 @@
   "active_target": "OWS-002",
   "active_target_name": "Emergency Community Grow Hall",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_c_r1_rendered_pending_review",
+  "active_status": "gate_c_r1_passed_micro_detail_ready",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-002_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001"
@@ -137,14 +137,14 @@
     "operational_systems": "complete_gate_b_r2",
     "institutional_identity": "complete_gate_b_r2",
     "visual_gate_b_intact_state": "passed_r2",
-    "historical_layering": "implemented_pending_gate_c_review",
-    "environmental_narrative": "implemented_pending_gate_c_review",
-    "encounter_architecture": "implemented_pending_gate_c_review",
-    "loot_architecture": "implemented_pending_gate_c_review",
-    "quest_proof": "implemented_pending_gate_c_review",
-    "damage_and_decay": "implemented_pending_gate_c_review",
-    "visual_gate_c_damage_states": "r1_rendered_pending_manual_review",
-    "micro_detail": "pending",
+    "historical_layering": "complete_gate_c_r1",
+    "environmental_narrative": "complete_gate_c_r1",
+    "encounter_architecture": "complete_gate_c_r1",
+    "loot_architecture": "complete_gate_c_r1",
+    "quest_proof": "complete_gate_c_r1",
+    "damage_and_decay": "complete_gate_c_r1",
+    "visual_gate_c_damage_states": "passed_r1",
+    "micro_detail": "implementation_ready",
     "visual_gate_d_final_multi_angle": "pending",
     "static_validation": "pending",
     "quality_status_promotion": "pending"
@@ -171,7 +171,8 @@
     "pass_15_encounter_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS15_ENCOUNTER_ARCHITECTURE.md",
     "pass_16_loot_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS16_LOOT_ARCHITECTURE.md",
     "pass_17_quest_proof": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS17_QUEST_PROOF_ARCHITECTURE.md",
-    "pass_18_damage_and_decay": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS18_DAMAGE_AND_DECAY.md"
+    "pass_18_damage_and_decay": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS18_DAMAGE_AND_DECAY.md",
+    "gate_c_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R1_REVIEW.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -255,7 +256,7 @@
       "review_only": true
     },
     "gate_c_damage_states": {
-      "status": "r1_rendered_pending_manual_review",
+      "status": "passed_r1",
       "required": true,
       "minimum_states": [
         "D0",
@@ -269,7 +270,10 @@
       "review_stage_source": "scripts/render_ows002_gate_c_damage_states.py",
       "review_only": true,
       "d1_change_count": 83,
-      "d3_change_count": 352
+      "d3_change_count": 352,
+      "decision": "PASSED",
+      "r1_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R1_REVIEW.md",
+      "significant_findings_corrected_or_justified": true
     },
     "gate_d_final_multi_angle": {
       "status": "blocked_by_gate_c_micro_detail_and_authoritative_sync",
