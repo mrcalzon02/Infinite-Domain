@@ -15,7 +15,7 @@ on:
       - 'scripts/render_ows002_gate_a_massing.py'
       - 'scripts/render_ows002_gate_b_intact.py'
       - 'scripts/render_ows002_gate_c_damage_states.py'
-      - 'scripts/approve_ows002_gate_c.py'
+      - 'scripts/render_ows002_gate_c_damage_states_r2.py'
       - 'old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R1_REVIEW.md'
       - '.github/workflows/old-world-heavy-rebuild-review.yml'
 
@@ -60,7 +60,7 @@ jobs:
             scripts/render_ows002_gate_a_massing.py \
             scripts/render_ows002_gate_b_intact.py \
             scripts/render_ows002_gate_c_damage_states.py \
-            scripts/approve_ows002_gate_c.py
+            scripts/render_ows002_gate_c_damage_states_r2.py
 
       - name: Resolve active heavy-rebuild target
         run: |
@@ -89,11 +89,16 @@ jobs:
       - name: Analyze OWS-001 Gate C rendered pixels if ready
         run: python scripts/analyze_ows001_gate_c_visuals.py
 
-      - name: Render OWS-002 Gate C if ready
+      - name: Render OWS-002 Gate C r1 if ready
         run: python scripts/render_ows002_gate_c_damage_states.py
 
-      - name: Record approved OWS-002 Gate C if ready
-        run: python scripts/approve_ows002_gate_c.py
+      - name: Render OWS-002 Gate C r2 if required
+        run: python scripts/render_ows002_gate_c_damage_states_r2.py
+
+      # Gate-C visual decisions are intentionally NOT auto-approved in this
+      # workflow. Renderers may only persist pending-review state. A pass/fail
+      # decision is recorded after the fixed-camera artifacts are actually
+      # inspected, per docs/HEAVY_REBUILD_DOCTRINE.md.
 
       # Automatic Gate-D generation is owned by old-world-static-build.yml so it
       # always runs after the authoritative NBT has been regenerated in the same
@@ -135,7 +140,7 @@ jobs:
       - name: Persist review artifacts and gate state
         run: |
           git config user.name 'github-actions[bot]'
-          git config user.email '4189823+github-actions[bot]@users.noreply.github.com'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- \
             old_world_narrative/reviews/heavy_rebuild/visual/ \
             old_world_narrative/registry/heavy_rebuild_state.json
