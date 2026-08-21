@@ -2,10 +2,11 @@
 """[SYSTEM REPORT] Build and render OWS-001 Gate-B intact/operational D0 review.
 
 This is a review-only historical interpretation, never the shipping D3 worldgen
-NBT. Revision r2 corrects the recorded Gate-B r1 blockers: locker-service
-clearance, receiving/staff circulation, real roof maintenance access, and
-physically supported purpose-driven signage. Damage and long-term decay remain
-forbidden until Gate B passes.
+NBT. Revision r3 preserves the r2 corrections and fixes the final route defects
+found during post-review circulation auditing: receiving now has an intentional
+accepted-goods crossing to clean stock, and the records room has a genuinely
+accessible staff entrance. Damage and long-term decay remain forbidden until
+Gate B passes.
 """
 from __future__ import annotations
 
@@ -18,9 +19,9 @@ from render_ows001_gate_a_massing import build_gate_a_massing
 from render_structure_review import unpack_structure
 
 STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-TEMP_NAME = "_heavy_review_ows001_gate_b_intact_r2"
+TEMP_NAME = "_heavy_review_ows001_gate_b_intact_r3"
 TEMP_NBT = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland" / f"{TEMP_NAME}.nbt"
-OUTPUT_DIR = OUTPUT_ROOT / "OWS-001" / "gate_b_intact" / "r2"
+OUTPUT_DIR = OUTPUT_ROOT / "OWS-001" / "gate_b_intact" / "r3"
 AIR = {"minecraft:air", "minecraft:cave_air", "minecraft:void_air", "minecraft:structure_void"}
 
 
@@ -48,6 +49,14 @@ def _assert_clear(t: base.Template, a: tuple[int, int, int], b: tuple[int, int, 
                 name = _block_name(t, x, y, z)
                 if name not in AIR:
                     raise AssertionError(f"{label} obstructed at {(x, y, z)} by {name}")
+
+
+def _assert_door(t: base.Template, x: int, y: int, z: int, label: str) -> None:
+    """Require a complete two-block iron door at the route control point."""
+    for yy in (y, y + 1):
+        name = _block_name(t, x, yy, z)
+        if name != "minecraft:iron_door":
+            raise AssertionError(f"{label} missing iron door at {(x, yy, z)}; found {name}")
 
 
 def _sign_on_wall(
@@ -144,24 +153,28 @@ def build_gate_b_intact() -> base.Template:
     t.clear((26, 2, 22), (26, 4, 22))
     _door(t, 26, 2, 22, "east")
 
-    # Rear receiving boundaries and freight frame.
+    # Rear receiving/process boundary. r3 removes the arbitrary r2 z=24 doorway
+    # and instead cuts two purpose-aligned portals: z=22 for accepted goods toward
+    # clean stock, and z=26 for staff access to the records-room control door.
+    t.fill((23, 2, 21), (23, 6, 27), "minecraft:white_concrete")
+    t.clear((23, 2, 22), (23, 4, 22))
+    t.clear((23, 2, 26), (23, 4, 26))
+
+    # West receiving boundary and rear freight frame.
     t.fill((10, 2, 21), (16, 6, 21), "tfmg:cinder_block")
     t.clear((14, 2, 21), (14, 4, 21))
     _door(t, 14, 2, 21, "north")
-    t.fill((23, 2, 21), (23, 6, 27), "minecraft:white_concrete")
-    t.clear((23, 2, 24), (23, 4, 24))
-    _door(t, 23, 2, 24, "east")
     t.clear((17, 2, 31), (20, 5, 31))
     for x in (16, 21):
         t.fill((x, 1, 30), (x, 6, 31), "tfmg:steel_block")
     t.fill((16, 6, 30), (21, 6, 31), "tfmg:steel_block")
 
-    # Supervisor/records room. The broad shell-clear pass erased part of the
-    # original bump-out wall in r1; r2 explicitly restores a complete enclosure.
+    # Supervisor/records room. Its controlled west door moves from z=27 to z=26
+    # so it aligns with the process portal and the unobstructed staff approach.
     t.fill((24, 2, 25), (24, 5, 29), "minecraft:stone_bricks")
     t.fill((25, 2, 25), (32, 5, 25), "minecraft:stone_bricks")
-    t.clear((24, 2, 27), (24, 4, 27))
-    _door(t, 24, 2, 27, "east")
+    t.clear((24, 2, 26), (24, 4, 26))
+    _door(t, 24, 2, 26, "east")
 
     # Culture locker hero space: x=21..23 is a guaranteed three-block aisle.
     t.fill((20, 1, 12), (25, 1, 19), "minecraft:light_gray_concrete")
@@ -246,9 +259,16 @@ def build_gate_b_intact() -> base.Template:
     _sign_on_wall(t, 35, 5, 16, "west", "COLD PLANT", "STAFF ONLY")
     _sign_on_wall(t, 22, 5, 31, "south", "VCF SERVICE", "RECEIVING")
 
-    # Executable Gate-B r2 quality contracts.
+    # Executable Gate-B r3 quality contracts. These retain all prior r2 contracts
+    # and add direct checks for both route defects that caused the r2 rollback.
     _assert_clear(t, (21, 2, 13), (23, 3, 19), "culture-locker three-block service aisle")
     _assert_clear(t, (17, 2, 12), (19, 3, 30), "central three-block staff spine")
+    _assert_clear(t, (17, 2, 22), (25, 3, 22), "receiving-to-clean-stock accepted-goods route")
+    _assert_door(t, 26, 2, 22, "clean-stock route control")
+    _assert_clear(t, (17, 2, 26), (23, 3, 26), "staff-spine-to-records approach")
+    _assert_door(t, 24, 2, 26, "supervisor-records route control")
+    if _block_name(t, 23, 2, 24) != "minecraft:white_concrete":
+        raise AssertionError("obsolete r2 process doorway at z=24 was not sealed")
     if _block_name(t, 34, 9, 23) != "minecraft:ladder":
         raise AssertionError("roof maintenance ladder does not penetrate the roof plane")
 
@@ -275,7 +295,7 @@ def main() -> None:
         manifest = render_review_set(
             target="OWS-001",
             gate="gate_b_intact_state",
-            revision=f"intact-r2@{revision}",
+            revision=f"intact-r3@{revision}",
             damage_state="D0 intact/normal operation",
             source_commit=os.environ.get("GITHUB_SHA", "working-tree"),
             source_path="review-only:build_gate_b_intact()",
@@ -287,7 +307,7 @@ def main() -> None:
     finally:
         TEMP_NBT.unlink(missing_ok=True)
 
-    state["active_status"] = "gate_b_intact_r2_rendered_pending_review"
+    state["active_status"] = "gate_b_intact_r3_rendered_pending_review"
     for key in (
         "structural_system",
         "circulation_and_access",
@@ -296,17 +316,17 @@ def main() -> None:
         "operational_systems",
         "institutional_identity",
     ):
-        state["active_target_passes"][key] = "r2_implemented_pending_gate_b_review"
-    state["active_target_passes"]["visual_gate_b_intact_state"] = "r2_rendered_pending_manual_review"
-    gate["status"] = "r2_rendered_pending_manual_review"
-    gate["r2_artifact_manifest"] = str((OUTPUT_DIR / "review_manifest.json").relative_to(ROOT)).replace("\\", "/")
+        state["active_target_passes"][key] = "r3_implemented_pending_gate_b_review"
+    state["active_target_passes"]["visual_gate_b_intact_state"] = "r3_rendered_pending_manual_review"
+    gate["status"] = "r3_rendered_pending_manual_review"
+    gate["r3_artifact_manifest"] = str((OUTPUT_DIR / "review_manifest.json").relative_to(ROOT)).replace("\\", "/")
     gate["review_stage_source"] = "scripts/render_ows001_gate_b_intact.py"
     gate["review_only"] = True
     state["visual_review_gates"]["gate_b_intact_state"] = gate
     STATE_PATH.write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8", newline="\n")
 
     print(
-        f"Rendered OWS-001 Gate B intact r2 at {manifest['dimensions']} using "
+        f"Rendered OWS-001 Gate B intact r3 at {manifest['dimensions']} using "
         f"{manifest['fixed_camera_set']}; visual approval remains pending."
     )
 
