@@ -12,11 +12,15 @@
   "active_target": "OWS-001",
   "active_target_name": "Neighborhood Culture Service Depot",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_d_r1_image_checks_passed_authoritative_sync_verified_pending_review",
+  "active_status": "peak_quality_static_approved_runtime_validation_deferred",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-001_RESTART_DOSSIER.md",
   "legacy_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-001_REBUILD_DOSSIER.md",
-  "completed": [],
-  "static_review_passed": [],
+  "completed": [
+    "OWS-001"
+  ],
+  "static_review_passed": [
+    "OWS-001"
+  ],
   "runtime_quality_approved": [],
   "queue": [
     "OWS-001",
@@ -136,9 +140,9 @@
     "damage_and_decay": "complete_gate_c_r1",
     "visual_gate_c_damage_states": "passed_r1",
     "micro_detail": "complete",
-    "visual_gate_d_final_multi_angle": "r1_image_checks_passed_authoritative_sync_verified_pending_manual_review",
-    "static_validation": "pending",
-    "quality_status_promotion": "pending"
+    "visual_gate_d_final_multi_angle": "passed_r1",
+    "static_validation": "passed",
+    "quality_status_promotion": "peak_quality_static_approved_93"
   },
   "planning_records": {
     "phase_0_baseline_review": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PHASE0_BASELINE_REVIEW.md",
@@ -164,7 +168,10 @@
     "pass_16_loot_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS16_LOOT_ARCHITECTURE.md",
     "pass_17_quest_proof": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS17_QUEST_PROOF.md",
     "pass_18_damage_decay": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS18_DAMAGE_DECAY.md",
-    "gate_c_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-001_GATE_C_R1_REVIEW.md"
+    "gate_c_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-001_GATE_C_R1_REVIEW.md",
+    "pass_19_micro_detail": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS19_MICRODETAIL.md",
+    "gate_d_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-001_GATE_D_R1_REVIEW.md",
+    "final_rebuild_report": "old_world_narrative/reviews/heavy_rebuild/OWS-001_FINAL_REBUILD_REPORT.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -255,7 +262,7 @@
       "r1_decision": "PASSED"
     },
     "gate_d_final_multi_angle": {
-      "status": "r1_image_checks_passed_pending_manual_review",
+      "status": "passed_r1",
       "required": true,
       "damage_state": "D3 authoritative worldgen state",
       "fixed_camera_set": "ows001_fixed_v1",
@@ -267,7 +274,10 @@
       "exact_authoritative_nbt_match": true,
       "shipping_nbt_sha256": "6241ebe9a5481acd31240c6ad6d917eeecba537cfd8df2eed81b9390ffa6d5c1",
       "r1_visual_regression_metrics": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-001/gate_d_final/r1/visual_regression_metrics.json",
-      "image_level_checks": "passed_pending_manual_review"
+      "image_level_checks": "passed",
+      "r1_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-001_GATE_D_R1_REVIEW.md",
+      "r1_decision": "PASSED",
+      "final_preview_synchronized_with_authoritative_nbt": true
     }
   },
   "ows_001_contract": {
@@ -291,7 +301,14 @@
     "minimum_purposeful_signs": 5,
     "quality_goal": "purpose-built VCF neighborhood biological-food service depot, not a recolored supermarket",
     "approval_threshold": 90,
-    "gate_a_dimensions": [
+    "quality_score": 93,
+    "quality_status": "peak_quality_static_approved",
+    "original_dimensions": [
+      39,
+      13,
+      33
+    ],
+    "final_dimensions": [
       39,
       13,
       33
