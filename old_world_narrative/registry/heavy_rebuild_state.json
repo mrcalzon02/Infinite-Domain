@@ -12,7 +12,7 @@
   "active_target": "OWS-001",
   "active_target_name": "Neighborhood Culture Service Depot",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "pass_2_functional_definition",
+  "active_status": "pass_6_massing_in_progress",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-001_RESTART_DOSSIER.md",
   "legacy_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-001_REBUILD_DOSSIER.md",
   "completed": [],
@@ -59,11 +59,11 @@
   "active_target_passes": {
     "donor_audit": "complete",
     "baseline_3d_review": "reviewed_rebuild_required",
-    "functional_definition": "in_progress",
-    "precedent_research": "pending",
-    "program_and_adjacency": "pending",
-    "scale_translation": "pending",
-    "massing": "pending",
+    "functional_definition": "complete",
+    "precedent_research": "complete",
+    "program_and_adjacency": "complete",
+    "scale_translation": "complete_for_gate_a_study",
+    "massing": "in_progress",
     "visual_gate_a_massing": "pending",
     "structural_system": "pending",
     "circulation_and_access": "pending",
@@ -84,6 +84,13 @@
     "static_validation": "pending",
     "quality_status_promotion": "pending"
   },
+  "planning_records": {
+    "phase_0_baseline_review": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PHASE0_BASELINE_REVIEW.md",
+    "pass_2_functional_definition": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS2_FUNCTIONAL_DEFINITION.md",
+    "pass_3_precedent_revalidation": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS3_PRECEDENT_REVALIDATION.md",
+    "pass_4_program_adjacency": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS4_PROGRAM_ADJACENCY.md",
+    "pass_5_scale_translation": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS5_SCALE_TRANSLATION.md"
+  },
   "visual_review_gates": {
     "baseline": {
       "status": "reviewed_rebuild_required",
@@ -97,10 +104,11 @@
       "decision": "Preserve neighborhood scale, approach, rear-loading relationship, useful masonry shell portions and roof envelope as raw geometry. Rebuild the supermarket program, facade hierarchy, roof plant, circulation, cold-chain spaces, return/sanitation workflow, records station and all corporate identity beyond donor-neutral context."
     },
     "gate_a_massing": {
-      "status": "not_started",
+      "status": "designing_massing_review",
       "required": true,
       "damage_state": "D0/intact massing",
-      "fixed_camera_set": "ows001_fixed_v1"
+      "fixed_camera_set": "ows001_fixed_v1",
+      "rule": "No interior detail, damage, loot dressing or microdetail may be used to rescue a weak silhouette."
     },
     "gate_b_intact_state": {
       "status": "not_started",
@@ -142,7 +150,8 @@
     "required_facility_sign": "NEIGHBORHOOD CULTURE SERVICE DEPOT",
     "minimum_purposeful_signs": 5,
     "quality_goal": "purpose-built VCF neighborhood biological-food service depot, not a recolored supermarket",
-    "approval_threshold": 90
+    "approval_threshold": 90,
+    "gate_a_dimensions": [39, 13, 33]
   },
   "status_separation": {
     "functional_coverage": "preserve existing functional implementation status independently",
