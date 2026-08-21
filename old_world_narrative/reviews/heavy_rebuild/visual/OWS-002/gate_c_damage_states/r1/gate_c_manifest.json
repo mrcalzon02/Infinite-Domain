@@ -1,0 +1,32 @@
+{
+  "target": "OWS-002",
+  "gate": "gate_c_damage_states",
+  "revision": "gate-c-r1@f4f8a5c7",
+  "source_commit": "f4f8a5c7dd9610ce3b00dc53afa36e63ae1164e3",
+  "fixed_camera_set": "ows002_fixed_v1",
+  "visual_review_status": "rendered_pending_manual_review",
+  "states": {
+    "d0": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r1/d0/review_manifest.json",
+    "d1": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r1/d1/review_manifest.json",
+    "d3": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r1/d3/review_manifest.json"
+  },
+  "comparison_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_c_damage_states/r1/damage_comparison_sheet.png",
+  "change_counts_from_d0": {
+    "d1": 83,
+    "d3": 352
+  },
+  "protected_invariants_asserted": [
+    "north public entrance and queue",
+    "staff-side records/proof approach",
+    "openable canonical proof chest",
+    "grow aisles A and B",
+    "west harvest/wash transfer",
+    "south relief dispatch lane and doors",
+    "east receiving doors",
+    "roof ladder/trapdoor",
+    "primary VCF/facility identity",
+    "surviving cultivation and irrigation evidence",
+    "exactly two D3 vanilla encounter spawners"
+  ],
+  "significant_findings_corrected_or_justified": false
+}
