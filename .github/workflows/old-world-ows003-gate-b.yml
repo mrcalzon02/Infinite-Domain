@@ -7,6 +7,8 @@ on:
     paths:
       - '.github/workflows/old-world-ows003-gate-b.yml'
       - 'scripts/render_ows003_gate_b_intact*.py'
+      - 'scripts/record_ows003_gate_b_r7.py'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-003_GATE_B_R7_REVIEW.md'
 
 permissions:
   contents: write
@@ -60,9 +62,10 @@ jobs:
             scripts/render_structure_review.py \
             scripts/render_old_world_heavy_rebuild_review.py \
             scripts/render_ows003_gate_a_massing.py \
-            scripts/render_ows003_gate_b_intact*.py
+            scripts/render_ows003_gate_b_intact*.py \
+            scripts/record_ows003_gate_b_r7.py
 
-      - name: Render latest OWS-003 Gate-B revision
+      - name: Render latest OWS-003 Gate-B revision when still renderable
         id: render_gate_b
         continue-on-error: true
         run: |
@@ -82,6 +85,10 @@ jobs:
             git rebase origin/main
             git push origin HEAD:main
           fi
+
+      - name: Record explicit reviewed Gate-B decision
+        if: steps.render_gate_b.outcome == 'success'
+        run: python scripts/record_ows003_gate_b_r7.py
 
       - name: Record Gate-B workflow provenance
         if: steps.render_gate_b.outcome == 'success'
@@ -109,7 +116,7 @@ jobs:
             old_world_narrative/reviews/heavy_rebuild/visual/OWS-003/
             old_world_narrative/registry/heavy_rebuild_state.json
 
-      - name: Persist Gate-B artifacts and pending-review state
+      - name: Persist Gate-B artifacts and reviewed state
         if: steps.render_gate_b.outcome == 'success'
         run: |
           git config user.name 'github-actions[bot]'
@@ -121,7 +128,7 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No Gate-B changes to persist.'
           else
-            git commit -m 'Persist OWS-003 Gate-B intact review artifacts'
+            git commit -m 'Record OWS-003 Gate-B r7 approval state'
             git fetch origin main
             git rebase origin/main
             git push origin HEAD:main
