@@ -1,0 +1,41 @@
+{
+  "target": "OWS-002",
+  "gate": "gate_d_final",
+  "revision": "r1",
+  "comparison": "Gate-D authoritative shipping NBT renders vs Gate-C r2 approved D3 renders",
+  "fixed_camera_set": "ows002_fixed_v1",
+  "authoritative_sync": {
+    "exact_decompressed_nbt_match": true,
+    "shipping_nbt_sha256": "e6dd44528061f617a4259e8cb123afaa88451a16dd81cdf876475383f8d21548",
+    "render_source": "shipping_nbt"
+  },
+  "visible_change_ratio_from_gate_c_r2_d3": {
+    "front_left": 0.0,
+    "rear_left": 0.0005778503965249272,
+    "rear_right": 0.0008994088712728806,
+    "front_right": 0.0,
+    "roof_top_oblique": 0.00043695551246688695,
+    "interior_cutaway": 0.0
+  },
+  "foreground_silhouette_ratio_from_gate_c_r2_d3": {
+    "front_left": 1.0,
+    "rear_left": 1.0,
+    "rear_right": 1.0,
+    "front_right": 1.0,
+    "roof_top_oblique": 1.0,
+    "interior_cutaway": 1.0
+  },
+  "averages": {
+    "all_views": 0.0003190357967107825,
+    "exterior": 0.00036931481694945197,
+    "maximum_single_view": 0.0008994088712728806
+  },
+  "checks": {
+    "post_gate_c_changes_remain_microdetail_scale": true,
+    "exterior_silhouette_retained": true,
+    "roof_site_silhouette_retained": true,
+    "authoritative_shipping_sync_retained": true
+  },
+  "decision": "IMAGE_LEVEL_REGRESSION_CHECKS_PASSED_PENDING_MANUAL_REVIEW",
+  "note": "This is a regression guard, not automatic Gate-D visual approval."
+}

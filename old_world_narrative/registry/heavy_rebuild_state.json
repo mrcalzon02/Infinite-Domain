@@ -10,7 +10,7 @@
   "active_target": "OWS-002",
   "active_target_name": "Emergency Community Grow Hall",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_c_r2_passed_micro_detail_ready",
+  "active_status": "gate_d_r1_image_checks_passed_authoritative_sync_verified_pending_review",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-002_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001"
@@ -144,8 +144,8 @@
     "quest_proof": "complete_gate_c_r2",
     "damage_and_decay": "complete_gate_c_r2",
     "visual_gate_c_damage_states": "passed_r2",
-    "micro_detail": "implementation_ready",
-    "visual_gate_d_final_multi_angle": "pending",
+    "micro_detail": "implemented_authoritative_builder_gate_d_sync_verified",
+    "visual_gate_d_final_multi_angle": "r1_image_checks_passed_authoritative_sync_verified_pending_manual_review",
     "static_validation": "pending",
     "quality_status_promotion": "pending"
   },
@@ -173,7 +173,8 @@
     "pass_17_quest_proof": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS17_QUEST_PROOF_ARCHITECTURE.md",
     "pass_18_damage_and_decay": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS18_DAMAGE_AND_DECAY.md",
     "gate_c_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R1_REVIEW.md",
-    "gate_c_r2_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R2_REVIEW.md"
+    "gate_c_r2_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R2_REVIEW.md",
+    "pass_19_micro_detail": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS19_MICRODETAIL.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -283,10 +284,19 @@
       "r2_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R2_REVIEW.md"
     },
     "gate_d_final_multi_angle": {
-      "status": "blocked_by_gate_c_micro_detail_and_authoritative_sync",
+      "status": "r1_image_checks_passed_pending_manual_review",
       "required": true,
       "damage_state": "D3 authoritative worldgen state",
-      "fixed_camera_set": "ows002_fixed_v1"
+      "fixed_camera_set": "ows002_fixed_v1",
+      "r1_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_d_final/r1/review_manifest.json",
+      "r1_authoritative_sync": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_d_final/r1/authoritative_sync.json",
+      "review_stage_source": "scripts/render_ows002_gate_d_final.py",
+      "review_only": false,
+      "render_source": "shipping_nbt",
+      "exact_authoritative_nbt_match": true,
+      "shipping_nbt_sha256": "e6dd44528061f617a4259e8cb123afaa88451a16dd81cdf876475383f8d21548",
+      "r1_visual_regression_metrics": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_d_final/r1/visual_regression_metrics.json",
+      "image_level_checks": "passed_pending_manual_review"
     }
   },
   "ows_002_contract": {
