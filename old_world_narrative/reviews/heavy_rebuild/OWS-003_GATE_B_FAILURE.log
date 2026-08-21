@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact.py", line 451, in <module>
+    main()
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact.py", line 402, in main
+    t = build_gate_b_intact()
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact.py", line 346, in build_gate_b_intact
+    _add_identity_and_wayfinding(t)
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact.py", line 329, in _add_identity_and_wayfinding
+    _sign_on_wall(t, 35, 6, 38, "east", "RELEASE", "INSPECTION")
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact.py", line 72, in _sign_on_wall
+    raise AssertionError(f"Cannot mount {' / '.join(lines)}: support {(wall_x, wall_y, wall_z)} is {support}")
+AssertionError: Cannot mount RELEASE / INSPECTION: support (35, 6, 38) is minecraft:air
