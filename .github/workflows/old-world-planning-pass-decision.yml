@@ -1,0 +1,51 @@
+name: Old World Planning Pass Decision
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/record_old_world_planning_passes.py'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS5_SCALE_TRANSLATION.md'
+      - '.github/workflows/old-world-planning-pass-decision.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: old-world-static-build-main
+  cancel-in-progress: true
+
+jobs:
+  record-planning:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out planning revision
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Compile guarded planning recorder
+        run: python -m py_compile scripts/record_old_world_planning_passes.py
+
+      - name: Record completed planning passes
+        run: python scripts/record_old_world_planning_passes.py
+
+      - name: Persist Gate-A readiness
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- old_world_narrative/registry/heavy_rebuild_state.json
+          if git diff --cached --quiet; then
+            echo 'No planning-state change to persist.'
+          else
+            git commit -m 'Record active Old World planning passes'
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
