@@ -2,62 +2,51 @@
 
 ## Decision
 
-**PASSED.** OWS-002 may advance beyond the D0/D1/D3 historical-state gate.
+**REVISION REQUIRED.** OWS-002 must not advance beyond Gate C on the r1 damage set.
 
-The r1 comparison sheet and individual fixed-camera renders were visually inspected against the accepted Gate-B r2 building and the Pass 13–18 contracts. The three states remain the same recognizable 51 x 21 x 47 emergency grow-hall conversion, and the final ruin is a causal transformation rather than a replacement structure.
+The r1 comparison sheet and individual fixed-camera renders were re-inspected against the accepted Gate-B r2 building and the Pass 13–18 historical contracts. The mechanical contracts succeeded: D1 changed 83 positions, D3 changed 352 positions, the proof chest remained deterministic and openable, primary circulation survived, the institutional identity remained readable, and the two restrained D3 encounter niches were present.
 
-## State separation
+Those mechanical successes do **not** satisfy the visual gate by themselves.
 
-### D0 — intact / operational
+## Accepted portion — D0
 
-D0 remains the accepted Gate-B r2 municipal/VCF emergency grow hall. The civic shell, tall cultivation hall, lantern, east receiving, south dispatch, lower-roof service plant and high irrigation system remain legible before historical damage is introduced.
+D0 remains the accepted Gate-B r2 intact municipal/VCF emergency grow hall. No revision is required to the intact state.
 
-### D1 — demand pressure and localized anomaly
+## Accepted portion — D1
 
-D1 changes **83 structure positions** from D0. The changes are restrained and operational rather than catastrophic: public-side relief stock increases, receiving and dispatch staging become busier, and only the south/east end of cultivation Bank 3 is placed under a visible quality hold. The exterior silhouette and roof remain intact, while the interior cutaway makes the bounded suspect rack segment visible without implying that the entire facility has failed.
+D1 remains accepted as the late-operation / bounded-anomaly interpretation. The public relief backlog, added receiving/dispatch pressure and the localized Rack-3 quality hold are visible without converting the entire building into a quarantine installation. The exterior remains substantially intact, which is appropriate while the facility is still operating.
 
-This is appropriate to the recorded early-containment story: the warning exists, staff believe it is local, and food-security operations continue around it.
+## Blocking r1 finding — D3 is visually too pristine
 
-### D3 — current causal ruin
+The r1 D3 source contains causal damage, but the fixed exterior cameras still read too strongly as the intact Gate-B building with several localized holes. For a current-world ruin after long abandonment, the change is insufficiently legible at building and facade scale.
 
-D3 changes **352 structure positions** from D0. The fixed-camera comparison shows a materially stronger transformation while preserving the approved building identity. The most visible failures follow the recorded causal chain:
+Blocking defects:
 
-- selected roof-lantern glazing is lost while the lantern frame and hero volume survive;
-- the lower-roof service area develops a localized weather penetration;
-- the historically suspect third-bank segment is the cultivation area that fails most heavily;
-- a nearby irrigation branch is broken while the larger service system remains reconstructable;
-- west wet-service areas weather more heavily than the protected public/records zone;
-- east receiving and south dispatch remain recognizable working thresholds beneath later decay;
-- exterior damage is intentionally selective rather than uniformly scattered across every facade.
+1. the lower civic/support roofs remain too clean outside the single west service penetration;
+2. long hall wall systems retain too much intact brick/clerestory regularity to communicate centuries of weather exposure;
+3. east receiving remains visually close to the operational D0 service portal despite minor apron/weather changes;
+4. south dispatch retains an overly complete canopy/apron reading for the recorded abandonment period;
+5. west wet-service decay is spatially correct but too small to read clearly from the exterior review angles;
+6. the final state therefore depends too much on the roof-lantern holes to communicate age, instead of showing a coherent building-wide hierarchy of protected, exposed and wet failure zones.
 
-The comparison sheet retains clear visual continuity between D0, D1 and D3. D3 reads as the same emergency grow hall after long abandonment, not as a generic rubble field.
+The doctrine explicitly requires Gate C to prove historical transformation rather than merely numerical block subtraction. r1 does not meet that visual standard.
 
-## Protected invariants verified
+## r2 correction contract
 
-The Gate-C builder asserts before rendering that D3 retains:
+Preserve D0 and D1 exactly. Revise **D3 only** with stronger but still causal centuries-later decay:
 
-- north public entrance and queue route;
-- staff-side records/proof approach;
-- an openable proof chest with the canonical OWS-002 loot table;
-- at least two principal cultivation aisles;
-- west harvest/wash transfer;
-- south relief-dispatch lane and door pair;
-- east receiving door pair;
-- retained roof ladder/trapdoor access;
-- primary Verdant Continuum Foods / facility identity;
-- substantial surviving cultivation and irrigation evidence;
-- exactly two restrained vanilla D3 encounter spawners.
+- extend lower-roof membrane/weather failure outward from the recorded west service penetration;
+- introduce selective facade masonry loss/cracking and limited clerestory loss aligned to existing structural bays rather than random peppering;
+- weather the east receiving threshold and apron more visibly while preserving both receiving doors and the batch-check reading;
+- weather the south dispatch canopy/apron more visibly while preserving the central dispatch lane and both dispatch doors;
+- expand wet-service exterior deterioration around the actual wash/service side rather than across the public frontage;
+- keep the north public/records zone the best-preserved part of the structure;
+- retain the roof lantern frame, major hall silhouette, cultivation evidence, irrigation evidence, proof route, deterministic proof chest, two encounter niches and all protected circulation contracts.
 
-The deterministic proof chest remains fixed at `(23, 2, 14)` in the authorization/records workflow, with clear space above it and no optional encounter required for access.
+D3 must remain reconstructable as the same Emergency Community Grow Hall. The correction is not permission to create a rubble field.
 
-## Visual judgment
+## Gate status
 
-The D1/D3 chronology is legible without sacrificing the strong Gate-B massing. The tall hall remains the dominant volume, the lantern remains identifiable even after localized glazing failure, and the front-of-house versus service-side distinction survives. The final damage density is sufficient to communicate centuries of exposure but not so severe that the original institutional workflow is lost.
+Gate C r1 is **FAILED — D3 REVISION REQUIRED**.
 
-No blocking visual defect was found in the r1 comparison set. Gate C therefore passes at r1.
-
-## Gate-D handoff
-
-Gate C approves the historical and damage interpretation only. Pass 19 may now add restrained micro-detail that reinforces the already-approved function, chronology, navigation and environmental causality. It may not change the approved massing, principal circulation, proof route, encounter limits or failure chain.
-
-After micro-detail, the approved D3 geometry must be moved into the authoritative OWS-002 shipping source and regenerated. Gate D must then render from that actual authoritative NBT and prove synchronization before static validation and the >=90/100 quality promotion are allowed. Runtime/worldgen approval remains separate and deferred.
+Passes 13–18 remain valid design contracts. D0 and D1 are accepted inputs. Gate D, static validation, quality promotion and OWS-003 remain blocked until a revised D3 passes Gate C.
