@@ -156,6 +156,19 @@ jobs:
       - name: Clear stale failure diagnostic after successful validation
         run: rm -f old_world_narrative/reviews/static-build-failure.log
 
+      - name: Record static workflow provenance
+        run: |
+          mkdir -p "old_world_narrative/reviews/heavy_rebuild/visual/$ACTIVE_OLD_WORLD_TARGET"
+          cat > "old_world_narrative/reviews/heavy_rebuild/visual/$ACTIVE_OLD_WORLD_TARGET/static_workflow_run.json" <<EOF
+          {
+            "workflow": "Old World Static Build",
+            "run_id": "${GITHUB_RUN_ID}",
+            "run_attempt": "${GITHUB_RUN_ATTEMPT}",
+            "head_sha": "${GITHUB_SHA}",
+            "active_target": "${ACTIVE_OLD_WORLD_TARGET}"
+          }
+          EOF
+
       - name: Record generated change set
         run: |
           git status --short
