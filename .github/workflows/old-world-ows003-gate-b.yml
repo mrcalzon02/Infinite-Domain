@@ -41,9 +41,28 @@ jobs:
             scripts/render_ows003_gate_b_intact.py
 
       - name: Render OWS-003 Gate-B r1
-        run: python scripts/render_ows003_gate_b_intact.py
+        id: render_gate_b
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python scripts/render_ows003_gate_b_intact.py 2>&1 | tee /tmp/ows003-gate-b.log
+
+      - name: Persist Gate-B failure diagnostic
+        if: steps.render_gate_b.outcome == 'failure'
+        run: |
+          cp /tmp/ows003-gate-b.log old_world_narrative/reviews/heavy_rebuild/OWS-003_GATE_B_FAILURE.log
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- old_world_narrative/reviews/heavy_rebuild/OWS-003_GATE_B_FAILURE.log
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record OWS-003 Gate-B renderer failure'
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
 
       - name: Record Gate-B workflow provenance
+        if: steps.render_gate_b.outcome == 'success'
         run: |
           mkdir -p old_world_narrative/reviews/heavy_rebuild/visual/OWS-003
           cat > old_world_narrative/reviews/heavy_rebuild/visual/OWS-003/gate_b_workflow_run.json <<EOF
@@ -57,6 +76,7 @@ jobs:
           EOF
 
       - name: Upload Gate-B review artifact
+        if: steps.render_gate_b.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
           name: old-world-heavy-rebuild-OWS-003-gate-b-r1
@@ -66,6 +86,7 @@ jobs:
             old_world_narrative/registry/heavy_rebuild_state.json
 
       - name: Persist Gate-B artifacts and pending-review state
+        if: steps.render_gate_b.outcome == 'success'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -80,3 +101,7 @@ jobs:
             git rebase origin/main
             git push origin HEAD:main
           fi
+
+      - name: Fail job after diagnostic persistence
+        if: steps.render_gate_b.outcome == 'failure'
+        run: exit 1
