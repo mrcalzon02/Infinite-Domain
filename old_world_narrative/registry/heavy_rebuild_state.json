@@ -12,7 +12,7 @@
   "active_target": "OWS-001",
   "active_target_name": "Neighborhood Culture Service Depot",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_b_intact_r1_rendered_pending_review",
+  "active_status": "gate_b_r1_revision_required_r2_in_progress",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-001_RESTART_DOSSIER.md",
   "legacy_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-001_REBUILD_DOSSIER.md",
   "completed": [],
@@ -121,13 +121,13 @@
     "scale_translation": "complete_for_gate_a_study",
     "massing": "complete_gate_a_r2",
     "visual_gate_a_massing": "passed_r2",
-    "structural_system": "implemented_pending_gate_b_review",
-    "circulation_and_access": "implemented_pending_gate_b_review",
-    "exterior_architecture": "implemented_pending_gate_b_review",
-    "interior_architecture": "implemented_pending_gate_b_review",
-    "operational_systems": "implemented_pending_gate_b_review",
-    "institutional_identity": "implemented_pending_gate_b_review",
-    "visual_gate_b_intact_state": "r1_rendered_pending_manual_review",
+    "structural_system": "r1_revision_required",
+    "circulation_and_access": "r1_revision_required",
+    "exterior_architecture": "r1_revision_required",
+    "interior_architecture": "r1_revision_required",
+    "operational_systems": "r1_revision_required",
+    "institutional_identity": "r1_revision_required",
+    "visual_gate_b_intact_state": "r1_revision_required",
     "historical_layering": "pending",
     "environmental_narrative": "pending",
     "encounter_architecture": "pending",
@@ -154,7 +154,8 @@
     "pass_9_exterior_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS9_EXTERIOR_ARCHITECTURE.md",
     "pass_10_interior_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS10_INTERIOR_ARCHITECTURE.md",
     "pass_11_operational_systems": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS11_OPERATIONAL_SYSTEMS.md",
-    "pass_12_institutional_identity": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS12_VCF_IDENTITY.md"
+    "pass_12_institutional_identity": "old_world_narrative/reviews/heavy_rebuild/OWS-001_PASS12_VCF_IDENTITY.md",
+    "gate_b_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-001_GATE_B_R1_REVIEW.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -189,14 +190,22 @@
       "review_only": true
     },
     "gate_b_intact_state": {
-      "status": "r1_rendered_pending_manual_review",
+      "status": "rerender_required",
       "required": true,
       "damage_state": "D0 intact/operational",
       "fixed_camera_set": "ows001_fixed_v1",
       "review_stage_source": "scripts/render_ows001_gate_b_intact.py",
       "review_only": true,
       "rule": "A bad intact building cannot be rescued by later rubble. Review architecture, room logic, company identity and operational systems before historical damage begins.",
-      "r1_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-001/gate_b_intact/r1/review_manifest.json"
+      "r1_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-001/gate_b_intact/r1/review_manifest.json",
+      "r1_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-001_GATE_B_R1_REVIEW.md",
+      "r1_decision": "REVISION REQUIRED",
+      "r1_blocking_findings": [
+        "culture-locker service aisle is one block wide where the plan requires three clear blocks",
+        "receiving staging pinches the central three-block staff spine at the freight handoff",
+        "east service ladder terminates under a solid roof with no usable roof access",
+        "multiple wall signs are placed in wall planes or without a valid supporting face"
+      ]
     },
     "gate_c_damage_states": {
       "status": "not_started",
