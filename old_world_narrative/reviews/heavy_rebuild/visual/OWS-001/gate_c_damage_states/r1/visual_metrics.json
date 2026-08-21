@@ -2,7 +2,7 @@
   "target": "OWS-001",
   "gate": "gate_c_damage_states",
   "revision": "r1",
-  "analysis": "actual rendered PNG pixels below the title band",
+  "analysis": "actual rendered PNG pixels; camera titles cropped and floor-map labels excluded",
   "camera_set": "ows001_fixed_v1",
   "visible_change_ratio": {
     "d1_from_d0": {
@@ -19,6 +19,10 @@
       "front_right": 0.018923647561060956,
       "interior_cutaway": 0.01589669342926922
     }
+  },
+  "floor_map_visible_change_ratio": {
+    "d1_from_d0": 0.016561514195583597,
+    "d3_from_d0": 0.04878048780487805
   },
   "foreground_silhouette_ratio": {
     "d1_vs_d0": {
@@ -37,13 +41,14 @@
     }
   },
   "averages": {
-    "d1_all_views": 0.0005118530543002968,
-    "d3_all_views": 0.016437662014672623,
+    "d1_all_isometric_views": 0.0005118530543002968,
+    "d3_all_isometric_views": 0.016437662014672623,
     "d1_exterior": 0.0,
     "d3_exterior": 0.016572904161023475
   },
   "checks": {
-    "d1_visibly_present_but_restrained": true,
+    "d1_visibly_present_in_internal_review": true,
+    "d1_restrained": true,
     "d3_visibly_stronger_than_d1": true,
     "d3_visible_from_multiple_exterior_cameras": true,
     "d1_exterior_silhouette_retained": true,
