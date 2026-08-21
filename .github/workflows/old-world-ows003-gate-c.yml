@@ -141,3 +141,5 @@ jobs:
       - name: Fail job after diagnostic persistence
         if: steps.render_gate_c.outcome == 'failure'
         run: exit 1
+
+# Ref-push trigger marker for the Gate-C r3 review; no approval semantics.
