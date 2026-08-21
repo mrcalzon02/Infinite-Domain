@@ -96,11 +96,11 @@ jobs:
                       continue
                   with Image.open(src) as image:
                       proxy = image.convert('RGB')
-                      proxy.thumbnail((420, 420), Image.Resampling.LANCZOS)
+                      proxy.thumbnail((240, 240), Image.Resampling.LANCZOS)
                       proxy.save(
                           root / f'{name}_review.jpg',
                           format='JPEG',
-                          quality=48,
+                          quality=32,
                           optimize=True,
                           progressive=True,
                       )
