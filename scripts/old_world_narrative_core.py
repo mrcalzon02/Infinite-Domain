@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """[SYSTEM REPORT] Authoritative Old World narrative generation core.
 
-Structure specifications and builders are preserved in
-_old_world_narrative_structure_core.py. This module owns generated output,
-including deterministic proof loot and the Continuity audio-diary books.
+Structure specifications and legacy builders are preserved in
+_old_world_narrative_structure_core.py. OWS-001 is now dispatched through the
+reviewed final heavy-rebuild builder in old_world_ows001_final.py so the shipping
+NBT and Gate-D preview consume one source of truth.
 
-The audio diary registry is authoritative metadata. Canonical book payloads
-live under old_world_narrative/audio_diary_books so regeneration never depends
-on already-generated runtime loot tables.
+This module owns generated output, including deterministic proof loot and the
+Continuity audio-diary books. The audio diary registry is authoritative metadata.
+Canonical book payloads live under old_world_narrative/audio_diary_books so
+regeneration never depends on already-generated runtime loot tables.
 """
 from __future__ import annotations
 
@@ -17,6 +19,13 @@ import json
 from pathlib import Path
 
 from _old_world_narrative_structure_core import *  # noqa: F401,F403
+import old_world_ows001_final as ows001_final
+
+# Compose reviewed per-target final builders at the authoritative core boundary.
+# This is not a runtime mutation layer: BUILDERS is the single generation dispatch
+# table consumed by generate(), copied once from the preserved legacy source.
+BUILDERS = dict(BUILDERS)
+BUILDERS["OWS-001"] = ows001_final.build_001
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
