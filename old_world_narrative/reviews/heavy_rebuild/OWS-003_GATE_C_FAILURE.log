@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_c_damage_states.py", line 325, in <module>
+    main()
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_c_damage_states.py", line 259, in main
+    d3 = build_d3()
+         ^^^^^^^^^^
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_c_damage_states.py", line 212, in build_d3
+    _assert_d3_routes(t)
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_c_damage_states.py", line 98, in _assert_d3_routes
+    gate_b_base._assert_clear(t, (44, 2, 11), (52, 3, 12), "D3 proof-office approach")
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact.py", line 46, in _assert_clear
+    raise AssertionError(f"{label} obstructed at {(x, y, z)} by {name}")
+AssertionError: D3 proof-office approach obstructed at (49, 2, 12) by minecraft:lectern
