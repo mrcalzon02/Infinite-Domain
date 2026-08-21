@@ -10,7 +10,7 @@
   "active_target": "OWS-002",
   "active_target_name": "Emergency Community Grow Hall",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "phase_0_baseline_reviewed_rebuild_required",
+  "active_status": "passes_2_to_5_complete_gate_a_massing_ready",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-002_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001"
@@ -124,12 +124,12 @@
   "active_target_passes": {
     "donor_audit": "complete",
     "baseline_3d_review": "reviewed_rebuild_required",
-    "functional_definition": "pending",
-    "precedent_research": "pending",
-    "program_and_adjacency": "pending",
-    "scale_translation": "pending",
-    "massing": "pending",
-    "visual_gate_a_massing": "pending",
+    "functional_definition": "complete",
+    "precedent_research": "complete",
+    "program_and_adjacency": "complete",
+    "scale_translation": "complete_for_gate_a_study",
+    "massing": "ready_for_gate_a_r1_implementation",
+    "visual_gate_a_massing": "pending_render_and_review",
     "structural_system": "pending",
     "circulation_and_access": "pending",
     "exterior_architecture": "pending",
@@ -151,7 +151,11 @@
   },
   "planning_records": {
     "restart_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-002_RESTART_DOSSIER.md",
-    "phase_0_baseline_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PHASE0_BASELINE_REVIEW.md"
+    "phase_0_baseline_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PHASE0_BASELINE_REVIEW.md",
+    "pass_2_functional_definition": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS2_FUNCTIONAL_DEFINITION.md",
+    "pass_3_precedent_research": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS3_PRECEDENT_RESEARCH.md",
+    "pass_4_program_adjacency": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS4_PROGRAM_ADJACENCY.md",
+    "pass_5_scale_translation": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS5_SCALE_TRANSLATION.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -173,10 +177,12 @@
       "decision": "REBUILD REQUIRED"
     },
     "gate_a_massing": {
-      "status": "blocked_by_passes_2_to_5",
+      "status": "ready_for_massing_implementation",
       "required": true,
       "damage_state": "D0 intact massing",
-      "fixed_camera_set": "ows002_fixed_v1"
+      "fixed_camera_set": "ows002_fixed_v1",
+      "review_only": true,
+      "rule": "Review retained civic massing plus emergency intake, service receiving, relief dispatch, roof lantern and grow-service roof plant before crop racks, machinery, damage or microdetail may hide macro defects."
     },
     "gate_b_intact_state": {
       "status": "blocked_by_gate_a_and_passes_7_to_12",
@@ -235,7 +241,13 @@
       51,
       21,
       47
-    ]
+    ],
+    "gate_a_dimensions": [
+      51,
+      21,
+      47
+    ],
+    "gate_a_scale_status": "accepted_provisionally_for_r1"
   },
   "status_separation": {
     "functional_coverage": "preserve existing functional implementation status independently",
