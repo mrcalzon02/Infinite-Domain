@@ -339,6 +339,52 @@ StartupEvents.registry('block', event => {
                 [2, 3, 0, 14, 16, 2],
                 [2, 3, 14, 14, 16, 16]
             ]
+        },
+        {
+            id: 'ruined_crafting_table',
+            name: 'Ruined Crafting Table',
+            sourceModel: 'minecraft:block/crafting_table',
+            stone: false,
+            boxes: [[0, 0, 0, 16, 16, 16]]
+        },
+        {
+            id: 'ruined_anvil',
+            name: 'Ruined Anvil',
+            sourceModel: 'minecraft:block/damaged_anvil',
+            horizontal: true,
+            stone: true,
+            fullBlock: false,
+            boxes: [
+                [2, 0, 3, 14, 4, 13],
+                [4, 4, 5, 12, 10, 11],
+                [1, 10, 3, 15, 16, 13]
+            ]
+        },
+        {
+            id: 'ruined_campfire',
+            name: 'Ruined Campfire',
+            sourceModel: 'minecraft:block/campfire_off',
+            horizontal: true,
+            stone: false,
+            fullBlock: false,
+            boxes: [[0, 0, 0, 16, 7, 16]]
+        },
+        {
+            id: 'ruined_soul_campfire',
+            name: 'Ruined Soul Campfire',
+            sourceModel: 'minecraft:block/soul_campfire_off',
+            horizontal: true,
+            stone: false,
+            fullBlock: false,
+            boxes: [[0, 0, 0, 16, 7, 16]]
+        },
+        {
+            id: 'ruined_enchanting_table',
+            name: 'Ruined Enchanting Table',
+            sourceModel: 'minecraft:block/enchanting_table',
+            stone: true,
+            fullBlock: false,
+            boxes: [[0, 0, 0, 16, 12, 16]]
         }
     ]
 
@@ -348,11 +394,13 @@ StartupEvents.registry('block', event => {
             .hardness(2.5)
             .resistance(3.0)
             .requiresTool(true)
-            .tagBlock('minecraft:mineable/pickaxe')
             .defaultCutout()
 
-        if (def.stone) builder.stoneSoundType()
-        else builder.woodSoundType()
+        if (def.stone) {
+            builder.stoneSoundType().tagBlock('minecraft:mineable/pickaxe')
+        } else {
+            builder.woodSoundType().tagBlock('minecraft:mineable/axe')
+        }
 
         if (def.fullBlock === false) builder.fullBlock(false)
 
@@ -397,7 +445,14 @@ const RUINED_REPLACEMENTS = [
     { source: Blocks.CAULDRON,          id: 'ruined_cauldron' },
     { source: Blocks.WATER_CAULDRON,    id: 'ruined_cauldron' },
     { source: Blocks.LAVA_CAULDRON,     id: 'ruined_cauldron' },
-    { source: Blocks.POWDER_SNOW_CAULDRON, id: 'ruined_cauldron' }
+    { source: Blocks.POWDER_SNOW_CAULDRON, id: 'ruined_cauldron' },
+    { source: Blocks.CRAFTING_TABLE,    id: 'ruined_crafting_table' },
+    { source: Blocks.ANVIL,             id: 'ruined_anvil',             horizontal: true },
+    { source: Blocks.CHIPPED_ANVIL,     id: 'ruined_anvil',             horizontal: true },
+    { source: Blocks.DAMAGED_ANVIL,     id: 'ruined_anvil',             horizontal: true },
+    { source: Blocks.CAMPFIRE,          id: 'ruined_campfire',          horizontal: true },
+    { source: Blocks.SOUL_CAMPFIRE,     id: 'ruined_soul_campfire',     horizontal: true },
+    { source: Blocks.ENCHANTING_TABLE,  id: 'ruined_enchanting_table' }
 ]
 
 function ruinedReplacement(state) {
