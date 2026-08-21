@@ -10,13 +10,15 @@
   "active_target": "OWS-002",
   "active_target_name": "Emergency Community Grow Hall",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_d_r1_image_checks_passed_authoritative_sync_verified_pending_review",
+  "active_status": "peak_quality_static_approved_runtime_validation_deferred",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-002_RESTART_DOSSIER.md",
   "completed": [
-    "OWS-001"
+    "OWS-001",
+    "OWS-002"
   ],
   "static_review_passed": [
-    "OWS-001"
+    "OWS-001",
+    "OWS-002"
   ],
   "runtime_quality_approved": [],
   "completed_records": {
@@ -24,6 +26,12 @@
       "quality_score": 93,
       "quality_status": "peak_quality_static_approved",
       "final_report": "old_world_narrative/reviews/heavy_rebuild/OWS-001_FINAL_REBUILD_REPORT.md",
+      "runtime_validation": "deferred"
+    },
+    "OWS-002": {
+      "quality_score": 94,
+      "quality_status": "peak_quality_static_approved",
+      "final_report": "old_world_narrative/reviews/heavy_rebuild/OWS-002_FINAL_REBUILD_REPORT.md",
       "runtime_validation": "deferred"
     }
   },
@@ -144,10 +152,10 @@
     "quest_proof": "complete_gate_c_r2",
     "damage_and_decay": "complete_gate_c_r2",
     "visual_gate_c_damage_states": "passed_r2",
-    "micro_detail": "implemented_authoritative_builder_gate_d_sync_verified",
-    "visual_gate_d_final_multi_angle": "r1_image_checks_passed_authoritative_sync_verified_pending_manual_review",
-    "static_validation": "pending",
-    "quality_status_promotion": "pending"
+    "micro_detail": "complete",
+    "visual_gate_d_final_multi_angle": "passed_r1",
+    "static_validation": "passed",
+    "quality_status_promotion": "passed_94_of_100"
   },
   "planning_records": {
     "restart_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-002_RESTART_DOSSIER.md",
@@ -174,7 +182,9 @@
     "pass_18_damage_and_decay": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS18_DAMAGE_AND_DECAY.md",
     "gate_c_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R1_REVIEW.md",
     "gate_c_r2_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R2_REVIEW.md",
-    "pass_19_micro_detail": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS19_MICRODETAIL.md"
+    "pass_19_micro_detail": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS19_MICRODETAIL.md",
+    "gate_d_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_D_R1_REVIEW.md",
+    "final_rebuild_report": "old_world_narrative/reviews/heavy_rebuild/OWS-002_FINAL_REBUILD_REPORT.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -284,7 +294,7 @@
       "r2_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R2_REVIEW.md"
     },
     "gate_d_final_multi_angle": {
-      "status": "r1_image_checks_passed_pending_manual_review",
+      "status": "passed_r1",
       "required": true,
       "damage_state": "D3 authoritative worldgen state",
       "fixed_camera_set": "ows002_fixed_v1",
@@ -296,7 +306,10 @@
       "exact_authoritative_nbt_match": true,
       "shipping_nbt_sha256": "e6dd44528061f617a4259e8cb123afaa88451a16dd81cdf876475383f8d21548",
       "r1_visual_regression_metrics": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-002/gate_d_final/r1/visual_regression_metrics.json",
-      "image_level_checks": "passed_pending_manual_review"
+      "image_level_checks": "passed_pending_manual_review",
+      "decision": "PASSED",
+      "r1_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_D_R1_REVIEW.md",
+      "significant_findings_corrected_or_justified": true
     }
   },
   "ows_002_contract": {
