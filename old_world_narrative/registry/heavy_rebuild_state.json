@@ -10,7 +10,7 @@
   "active_target": "OWS-002",
   "active_target_name": "Emergency Community Grow Hall",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "pass_13_historical_layering_complete_environmental_narrative_ready",
+  "active_status": "gate_c_implementation_ready",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-002_RESTART_DOSSIER.md",
   "completed": ["OWS-001"],
   "static_review_passed": ["OWS-001"],
@@ -57,12 +57,12 @@
     "institutional_identity": "complete_gate_b_r2",
     "visual_gate_b_intact_state": "passed_r2",
     "historical_layering": "complete_design_contract",
-    "environmental_narrative": "pending",
-    "encounter_architecture": "pending",
-    "loot_architecture": "pending",
-    "quest_proof": "pending",
-    "damage_and_decay": "pending",
-    "visual_gate_c_damage_states": "pending",
+    "environmental_narrative": "complete_design_contract",
+    "encounter_architecture": "complete_design_contract",
+    "loot_architecture": "complete_design_contract",
+    "quest_proof": "complete_design_contract",
+    "damage_and_decay": "complete_design_contract",
+    "visual_gate_c_damage_states": "implementation_ready",
     "micro_detail": "pending",
     "visual_gate_d_final_multi_angle": "pending",
     "static_validation": "pending",
@@ -85,7 +85,12 @@
     "pass_12_institutional_identity": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS12_VCF_EMERGENCY_IDENTITY.md",
     "gate_b_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_B_R1_REVIEW.md",
     "gate_b_r2_review": "old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_B_R2_REVIEW.md",
-    "pass_13_historical_layering": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS13_HISTORICAL_LAYERING.md"
+    "pass_13_historical_layering": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS13_HISTORICAL_LAYERING.md",
+    "pass_14_environmental_narrative": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS14_ENVIRONMENTAL_NARRATIVE.md",
+    "pass_15_encounter_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS15_ENCOUNTER_ARCHITECTURE.md",
+    "pass_16_loot_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS16_LOOT_ARCHITECTURE.md",
+    "pass_17_quest_proof": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS17_QUEST_PROOF_ARCHITECTURE.md",
+    "pass_18_damage_and_decay": "old_world_narrative/reviews/heavy_rebuild/OWS-002_PASS18_DAMAGE_AND_DECAY.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -162,10 +167,11 @@
       "review_only": true
     },
     "gate_c_damage_states": {
-      "status": "blocked_by_passes_14_to_18",
+      "status": "implementation_ready",
       "required": true,
       "minimum_states": ["D0", "D1", "D3"],
-      "fixed_camera_set": "ows002_fixed_v1"
+      "fixed_camera_set": "ows002_fixed_v1",
+      "rule": "D1 must show demand pressure plus one localized rack/service anomaly while the facility still operates. D3 must follow roof/glazing/water/service abandonment, preserve proof and primary circulation, and remain visually reconstructable as the Gate-B r2 building."
     },
     "gate_d_final_multi_angle": {
       "status": "blocked_by_gate_c_micro_detail_and_authoritative_sync",
@@ -188,6 +194,8 @@
     "minimum_purposeful_signs": 8,
     "proof_item": "kubejs:emergency_grow_authorization",
     "proof_loot_table": "infinite_domain:chests/old_world/ows_002_vcf_emergency_community_grow_hall",
+    "proof_chest_coordinate": [23, 2, 14],
+    "proof_chest_requires_clear_above": true,
     "quality_goal": "credible municipal emergency food-security conversion operated with VCF cultivation systems, not a community center plus green stripe",
     "approval_threshold": 90,
     "original_dimensions": [51, 21, 47],
