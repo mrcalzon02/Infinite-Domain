@@ -20,7 +20,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: old-world-static-build-main
+  group: old-world-heavy-rebuild-review-main
   cancel-in-progress: true
 
 jobs:
