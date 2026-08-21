@@ -1,10 +1,10 @@
 Traceback (most recent call last):
-  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact_r4.py", line 126, in <module>
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact_r5.py", line 123, in <module>
     main()
-  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact_r4.py", line 70, in main
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact_r5.py", line 66, in main
     r1._assert_intact_contracts(t)
-  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact.py", line 366, in _assert_intact_contracts
-    _assert_clear(t, (40, 2, 22), (44, 4, 25), "nursery 1 service area")
+  File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact.py", line 368, in _assert_intact_contracts
+    _assert_clear(t, (40, 2, 32), (44, 4, 35), "nursery 3 service area")
   File "/home/runner/work/Infinite-Domain/Infinite-Domain/scripts/render_ows003_gate_b_intact.py", line 46, in _assert_clear
     raise AssertionError(f"{label} obstructed at {(x, y, z)} by {name}")
-AssertionError: nursery 1 service area obstructed at (41, 2, 23) by immersiveengineering:crate
+AssertionError: nursery 3 service area obstructed at (43, 2, 32) by tfmg:steel_block
