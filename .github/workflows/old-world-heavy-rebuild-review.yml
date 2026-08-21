@@ -16,7 +16,9 @@ on:
       - 'scripts/render_ows002_gate_b_intact.py'
       - 'scripts/render_ows002_gate_c_damage_states.py'
       - 'scripts/render_ows002_gate_c_damage_states_r2.py'
+      - 'scripts/record_ows002_gate_c_r2.py'
       - 'old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R1_REVIEW.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R2_REVIEW.md'
       - '.github/workflows/old-world-heavy-rebuild-review.yml'
 
 permissions:
@@ -60,7 +62,8 @@ jobs:
             scripts/render_ows002_gate_a_massing.py \
             scripts/render_ows002_gate_b_intact.py \
             scripts/render_ows002_gate_c_damage_states.py \
-            scripts/render_ows002_gate_c_damage_states_r2.py
+            scripts/render_ows002_gate_c_damage_states_r2.py \
+            scripts/record_ows002_gate_c_r2.py
 
       - name: Resolve active heavy-rebuild target
         run: |
@@ -95,10 +98,11 @@ jobs:
       - name: Render OWS-002 Gate C r2 if required
         run: python scripts/render_ows002_gate_c_damage_states_r2.py
 
-      # Gate-C visual decisions are intentionally NOT auto-approved in this
-      # workflow. Renderers may only persist pending-review state. A pass/fail
-      # decision is recorded after the fixed-camera artifacts are actually
-      # inspected, per docs/HEAVY_REBUILD_DOCTRINE.md.
+      # Renderers never create a visual pass decision. The following recorder can
+      # only mirror an explicit already-written manual review decision whose exact
+      # persisted r2 manifest/counts still match the inspected artifact set.
+      - name: Record manually reviewed OWS-002 Gate C r2 if present
+        run: python scripts/record_ows002_gate_c_r2.py
 
       # Automatic Gate-D generation is owned by old-world-static-build.yml so it
       # always runs after the authoritative NBT has been regenerated in the same
