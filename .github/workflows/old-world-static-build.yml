@@ -124,6 +124,16 @@ jobs:
           set -o pipefail
           { python scripts/analyze_ows001_gate_d_visuals.py; } 2>&1 | tee -a old-world-static-build.log
 
+      - name: Render synchronized OWS-002 Gate-D final review when applicable
+        run: |
+          set -o pipefail
+          { python scripts/render_ows002_gate_d_final.py; } 2>&1 | tee -a old-world-static-build.log
+
+      - name: Analyze synchronized OWS-002 Gate-D shipping render when applicable
+        run: |
+          set -o pipefail
+          { python scripts/analyze_ows002_gate_d_visuals.py; } 2>&1 | tee -a old-world-static-build.log
+
       - name: Render ordinary static review views
         run: |
           set -o pipefail
