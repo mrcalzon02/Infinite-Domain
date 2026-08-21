@@ -2,6 +2,8 @@ name: OWS-003 Gate-C Damage-State Review
 
 on:
   workflow_dispatch:
+  issues:
+    types: [opened]
   push:
     branches: [main]
     paths:
@@ -26,6 +28,10 @@ concurrency:
 
 jobs:
   render-gate-c:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip gate-c]')) ||
+      (github.event_name == 'issues' && github.event.issue.title == '[CI] OWS-003 Gate-C r3 fixed-camera trigger')
     runs-on: ubuntu-latest
     steps:
       - name: Check out exact Gate-C revision
@@ -146,3 +152,4 @@ jobs:
 # Guarded continuation trigger: 2026-08-21T23:49Z; no geometry or approval semantics.
 # Gate-C owns a dedicated concurrency lane so unrelated heavy-review work cannot cancel it.
 # Dedicated-lane retrigger: 2026-08-21T23:53Z; no geometry or approval semantics.
+# Temporary exact-title issue trigger permits a one-time CI event when connector pushes do not materialize Actions runs.
