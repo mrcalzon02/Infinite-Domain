@@ -12,6 +12,7 @@ on:
       - 'scripts/analyze_ows001_gate_c_visuals.py'
       - 'scripts/render_ows001_gate_d_final.py'
       - 'scripts/analyze_ows001_gate_d_visuals.py'
+      - 'scripts/render_ows002_gate_a_massing.py'
       - '.github/workflows/old-world-heavy-rebuild-review.yml'
 
 permissions:
@@ -51,32 +52,42 @@ jobs:
             scripts/render_ows001_gate_c_damage_states.py \
             scripts/analyze_ows001_gate_c_visuals.py \
             scripts/render_ows001_gate_d_final.py \
-            scripts/analyze_ows001_gate_d_visuals.py
+            scripts/analyze_ows001_gate_d_visuals.py \
+            scripts/render_ows002_gate_a_massing.py
+
+      - name: Resolve active heavy-rebuild target
+        run: |
+          ACTIVE_TARGET=$(python -c "import json; print(json.load(open('old_world_narrative/registry/heavy_rebuild_state.json'))['active_target'])")
+          echo "ACTIVE_TARGET=$ACTIVE_TARGET" >> "$GITHUB_ENV"
+          echo "Active heavy-rebuild target: $ACTIVE_TARGET"
 
       - name: Render active baseline if needed
-        run: python scripts/render_old_world_heavy_rebuild_review.py --target OWS-001 --gate baseline
+        run: python scripts/render_old_world_heavy_rebuild_review.py --target "$ACTIVE_TARGET" --gate baseline
 
-      - name: Render Gate A if ready
+      - name: Render OWS-001 Gate A if ready
         run: python scripts/render_ows001_gate_a_massing.py
 
-      - name: Render Gate B if ready
+      - name: Render OWS-002 Gate A if ready
+        run: python scripts/render_ows002_gate_a_massing.py
+
+      - name: Render OWS-001 Gate B if ready
         run: python scripts/render_ows001_gate_b_intact.py
 
-      - name: Render Gate C if ready
+      - name: Render OWS-001 Gate C if ready
         run: python scripts/render_ows001_gate_c_damage_states.py
 
-      - name: Analyze Gate C rendered pixels if ready
+      - name: Analyze OWS-001 Gate C rendered pixels if ready
         run: python scripts/analyze_ows001_gate_c_visuals.py
 
       # Automatic Gate-D generation is owned by old-world-static-build.yml so it
       # always runs after the authoritative NBT has been regenerated in the same
-      # checkout. These steps remain available for explicit/manual review runs or
-      # renderer/analyzer changes, but builder/core edits no longer trigger this
-      # workflow and therefore cannot race ahead of production serialization.
-      - name: Render synchronized Gate D if ready
+      # checkout. These OWS-001 steps remain available for explicit/manual review
+      # runs or renderer/analyzer changes, but builder/core edits do not trigger
+      # this workflow and therefore cannot race ahead of production serialization.
+      - name: Render synchronized OWS-001 Gate D if ready
         run: python scripts/render_ows001_gate_d_final.py
 
-      - name: Analyze Gate D shipping-render regression if ready
+      - name: Analyze OWS-001 Gate D shipping-render regression if ready
         run: python scripts/analyze_ows001_gate_d_visuals.py
 
       - name: Show review changes
