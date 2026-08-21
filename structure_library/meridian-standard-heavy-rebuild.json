@@ -1,0 +1,121 @@
+{
+  "format_version": 1,
+  "program_id": "meridian_standard_lost_cities_heavy_rebuild",
+  "scope": "standard Lost Cities structures used in the Meridian Government central-continent spawning region",
+  "status": "active",
+  "production_policy": "functional integration and mechanical correctness are tracked separately from architectural quality; progression-breaking defects block promotion, aesthetic imperfection alone does not",
+  "regional_boundary": {
+    "included": ["Meridian Government", "central spawning continent"],
+    "excluded_for_now": ["Karsic Directorate", "Pelagos Compact", "other future regional architectural languages"]
+  },
+  "design_language": {
+    "theme": "centralized Meridian civic and planning language",
+    "principles": [
+      "readable centralized planning and standardized civic construction",
+      "a recurring central-seeming organizing element may appear as intentional Meridian lore rather than accidental repetition",
+      "shared structural bays, service logic and municipal standards may repeat while individual buildings retain distinct purpose and silhouette",
+      "real-world function, circulation, service access and utility logic take priority over decorative novelty"
+    ]
+  },
+  "implementation_priority": {
+    "block_policy": "vanilla_first",
+    "rules": [
+      "Prefer simple vanilla structural blocks for primary massing, walls, slabs, stairs, roofs, glazing and utility representation.",
+      "Use modded blocks or entities only when their use is mechanically justified, integration-safe and materially improves the structure's purpose or gameplay.",
+      "Do not make standard city structures dependent on decorative mod blocks when vanilla geometry communicates the same function.",
+      "Preserve existing IDs, palettes, Lost Cities assumptions, loot/spawner conventions and quest/evidence hooks unless an authoritative integration change requires otherwise."
+    ]
+  },
+  "required_states": [
+    {"id":"pristine","intent":"intact pre-collapse reference/master; fully legible original use"},
+    {"id":"deteriorated","intent":"maintenance failure, weathering and localized non-structural damage"},
+    {"id":"decayed","intent":"long abandonment, partial envelope failure, vegetation/debris and service-system loss"},
+    {"id":"contaminated","intent":"localized hazardous occupation or environmental contamination while original function remains inferable"},
+    {"id":"destroyed","intent":"major physically coherent structural failure while enough remains to identify original use and support gameplay"}
+  ],
+  "state_rule": "Create a state only where technically appropriate for the Lost Cities placement model; never produce five palette-swapped clones. Derivatives must follow a localized physical/environmental story from an intact master.",
+  "families": [
+    {
+      "order": 1,
+      "id": "downtown_highrise_and_mixed_use",
+      "includes": ["skyscrapers", "office towers", "mixed-use downtown towers", "hotels", "high-rise residential", "podium-and-tower buildings"],
+      "required_logic": ["public lobby", "service/loading access", "vertical core", "stairs", "elevator representation", "mechanical/utility spaces", "roof plant", "tenant/residential/retail zoning as applicable", "fire/service circulation"],
+      "identity_gate": "A tower must communicate its actual use through floor program, public/service circulation and skyline form rather than facade palette alone."
+    },
+    {
+      "order": 2,
+      "id": "urban_commercial_and_main_street",
+      "includes": ["shops", "department stores", "groceries", "restaurants", "banks", "small offices", "street-facing mixed commercial"],
+      "required_logic": ["customer entrance", "staff/service access", "stock/storage", "sanitation", "loading or delivery path", "street relationship"]
+    },
+    {
+      "order": 3,
+      "id": "residential",
+      "includes": ["houses", "rowhouses", "apartments", "tenements", "condominiums", "residential blocks"],
+      "required_logic": ["dwelling circulation", "bathroom/sanitation", "sleeping/living zones", "building services", "shared circulation for multifamily", "street/service relationship"]
+    },
+    {
+      "order": 4,
+      "id": "civic_municipal_and_public_service",
+      "includes": ["schools", "community centers", "fire stations", "police/security facilities", "administrative buildings", "clinics", "libraries/archives", "public works buildings"],
+      "required_logic": ["public zone", "staff zone", "secure/service zone where applicable", "records/storage", "sanitation", "emergency/service access"]
+    },
+    {
+      "order": 5,
+      "id": "infrastructure_transport_and_parking",
+      "includes": ["roads", "intersections", "parking structures/lots", "bus facilities", "rail/subway interfaces", "freight depots", "bridges/tunnels", "service yards"],
+      "required_logic": ["continuous vehicle/pedestrian path", "clear connectors", "maintenance access", "terrain interface", "mode-specific circulation"]
+    },
+    {
+      "order": 6,
+      "id": "utilities_and_city_services",
+      "includes": ["electrical substations", "water treatment", "water storage", "district heating", "waste/incineration", "fuel storage", "communications", "maintenance compounds"],
+      "required_logic": ["input", "process or control", "output/distribution", "maintenance access", "safety separation", "service road"]
+    },
+    {
+      "order": 7,
+      "id": "industrial_logistics_and_warehouse",
+      "includes": ["warehouses", "factories", "processing buildings", "loading docks", "distribution buildings", "industrial compounds"],
+      "required_logic": ["material intake", "processing/storage", "dispatch", "worker access", "maintenance", "loading/service circulation"]
+    }
+  ],
+  "heavy_rebuild_review": [
+    "Confirm parse/load validity, dimensions, origin, ground plane and rotations.",
+    "Confirm road/lot/terrain connectors and Lost Cities placement compatibility.",
+    "Confirm readable primary entrance plus believable service access where the archetype requires it.",
+    "Confirm every occupied floor has usable horizontal and vertical circulation; reject sealed or impossible rooms.",
+    "Confirm room purpose, sanitation, storage, mechanical/service spaces and rooftop treatment appropriate to building use.",
+    "Confirm facade depth, structural bays, windows and roofline correspond to internal program.",
+    "Confirm containers, loot markers, spawners, evidence and quest hooks remain mechanically valid.",
+    "Render/review exterior A, exterior B, roof-off/cutaway and floor slices for substantial buildings.",
+    "Generate damage-state derivatives from the intact master and revalidate each derivative.",
+    "Keep production approval separate from static rebuild completion; in-world review remains required where the existing pipeline requires it."
+  ],
+  "tracking_fields": [
+    "structure_id",
+    "family",
+    "authoritative_source",
+    "functional_status",
+    "quality_status",
+    "states_present",
+    "lost_cities_integration_status",
+    "loot_spawner_status",
+    "quest_evidence_status",
+    "render_review_status",
+    "runtime_review_status",
+    "next_action"
+  ],
+  "initial_execution": {
+    "next_family": "downtown_highrise_and_mixed_use",
+    "reason": "skyscrapers and mixed-use downtown buildings were explicitly restored to the heavy-rebuild scope and exercise the strictest circulation, service, vertical-core and damage-state requirements",
+    "first_pass": [
+      "inventory all existing Meridian-eligible high-rise and downtown mixed-use structures without renaming authoritative IDs",
+      "classify each by actual program and current functional/quality status",
+      "select intact or least-damaged authoritative geometry as the master basis",
+      "repair progression/worldgen blockers before architectural polish",
+      "apply heavy architectural review to vertical core, podium, service/loading, roof plant and floor zoning",
+      "derive only physically coherent missing state variants",
+      "run targeted validation and renders before moving to the next family"
+    ]
+  }
+}
