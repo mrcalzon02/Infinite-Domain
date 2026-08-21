@@ -98,6 +98,7 @@ def main() -> None:
     gate = state.get("visual_review_gates", {}).get("gate_d_final_multi_angle", {})
     status = gate.get("status", "not_started")
     allowed = {
+        "blocked_by_micro_detail_and_authoritative_sync",
         "ready_to_render",
         "ready_to_render_authoritative_sync_required",
         "rerender_required",
