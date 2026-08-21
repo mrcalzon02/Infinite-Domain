@@ -13,6 +13,7 @@ on:
       - 'scripts/render_ows001_gate_d_final.py'
       - 'scripts/analyze_ows001_gate_d_visuals.py'
       - 'scripts/render_ows002_gate_a_massing.py'
+      - 'scripts/render_ows002_gate_b_intact.py'
       - '.github/workflows/old-world-heavy-rebuild-review.yml'
 
 permissions:
@@ -53,7 +54,8 @@ jobs:
             scripts/analyze_ows001_gate_c_visuals.py \
             scripts/render_ows001_gate_d_final.py \
             scripts/analyze_ows001_gate_d_visuals.py \
-            scripts/render_ows002_gate_a_massing.py
+            scripts/render_ows002_gate_a_massing.py \
+            scripts/render_ows002_gate_b_intact.py
 
       - name: Resolve active heavy-rebuild target
         run: |
@@ -72,6 +74,9 @@ jobs:
 
       - name: Render OWS-001 Gate B if ready
         run: python scripts/render_ows001_gate_b_intact.py
+
+      - name: Render OWS-002 Gate B if ready
+        run: python scripts/render_ows002_gate_b_intact.py
 
       - name: Render OWS-001 Gate C if ready
         run: python scripts/render_ows001_gate_c_damage_states.py
