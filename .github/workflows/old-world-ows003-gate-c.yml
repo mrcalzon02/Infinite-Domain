@@ -42,15 +42,39 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Determine whether r3 capture is still needed
+        id: capture
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          state = json.loads(Path('old_world_narrative/registry/heavy_rebuild_state.json').read_text())
+          manifest = Path('old_world_narrative/reviews/heavy_rebuild/visual/OWS-003/gate_c_damage_states/r3/gate_c_manifest.json')
+          gate_status = state.get('visual_review_gates', {}).get('gate_c_damage_states', {}).get('status', '')
+          needed = (
+              state.get('active_target') == 'OWS-003'
+              and not manifest.is_file()
+              and gate_status != 'passed_r3'
+              and state.get('active_status') != 'gate_c_r3_passed_ready_for_micro_detail'
+          )
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as handle:
+              handle.write(f"needed={'true' if needed else 'false'}\n")
+          print(f'OWS-003 Gate-C r3 capture needed={needed}; status={gate_status}; manifest={manifest.is_file()}')
+          PY
+
       - name: Set up Python
+        if: steps.capture.outputs.needed == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install render dependency
+        if: steps.capture.outputs.needed == 'true'
         run: python -m pip install --disable-pip-version-check pillow
 
       - name: Resolve latest Gate-C revision
+        if: steps.capture.outputs.needed == 'true'
         run: |
           python - <<'PY'
           import os
@@ -72,6 +96,7 @@ jobs:
           PY
 
       - name: Compile Gate-C review model
+        if: steps.capture.outputs.needed == 'true'
         run: |
           python -m py_compile \
             scripts/generate_wasteland_sites.py \
@@ -83,6 +108,7 @@ jobs:
             scripts/analyze_ows003_gate_c_visuals.py
 
       - name: Render latest OWS-003 Gate-C revision
+        if: steps.capture.outputs.needed == 'true'
         id: render_gate_c
         continue-on-error: true
         run: |
@@ -90,11 +116,11 @@ jobs:
           python "${GATE_C_SCRIPT}" 2>&1 | tee /tmp/ows003-gate-c.log
 
       - name: Analyze Gate-C r3 pixels without approval semantics
-        if: steps.render_gate_c.outcome == 'success' && env.GATE_C_REVISION == 'r3'
+        if: steps.capture.outputs.needed == 'true' && steps.render_gate_c.outcome == 'success' && env.GATE_C_REVISION == 'r3'
         run: python scripts/analyze_ows003_gate_c_visuals.py
 
       - name: Persist Gate-C failure diagnostic
-        if: steps.render_gate_c.outcome == 'failure'
+        if: steps.capture.outputs.needed == 'true' && steps.render_gate_c.outcome == 'failure'
         run: |
           cp /tmp/ows003-gate-c.log old_world_narrative/reviews/heavy_rebuild/OWS-003_GATE_C_FAILURE.log
           git config user.name 'github-actions[bot]'
@@ -108,7 +134,7 @@ jobs:
           fi
 
       - name: Record Gate-C workflow provenance
-        if: steps.render_gate_c.outcome == 'success'
+        if: steps.capture.outputs.needed == 'true' && steps.render_gate_c.outcome == 'success'
         run: |
           mkdir -p old_world_narrative/reviews/heavy_rebuild/visual/OWS-003
           cat > old_world_narrative/reviews/heavy_rebuild/visual/OWS-003/gate_c_workflow_run.json <<EOF
@@ -125,7 +151,7 @@ jobs:
           EOF
 
       - name: Upload Gate-C review artifact
-        if: steps.render_gate_c.outcome == 'success'
+        if: steps.capture.outputs.needed == 'true' && steps.render_gate_c.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
           name: old-world-heavy-rebuild-OWS-003-gate-c
@@ -135,7 +161,7 @@ jobs:
             old_world_narrative/registry/heavy_rebuild_state.json
 
       - name: Persist Gate-C artifacts and pending-review state
-        if: steps.render_gate_c.outcome == 'success'
+        if: steps.capture.outputs.needed == 'true' && steps.render_gate_c.outcome == 'success'
         run: |
           rm -f old_world_narrative/reviews/heavy_rebuild/OWS-003_GATE_C_FAILURE.log
           git config user.name 'github-actions[bot]'
@@ -154,8 +180,9 @@ jobs:
           fi
 
       - name: Fail job after diagnostic persistence
-        if: steps.render_gate_c.outcome == 'failure'
+        if: steps.capture.outputs.needed == 'true' && steps.render_gate_c.outcome == 'failure'
         run: exit 1
 
 # Temporary schedule + issue event paths exist only to capture the blocked r3 review.
 # Event-specific concurrency prevents cleanup pushes from cancelling an in-flight issue/schedule run.
+# Capture self-disables once the exact r3 manifest exists or Gate C has passed.
