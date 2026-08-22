@@ -2,7 +2,7 @@
 """[SYSTEM REPORT] Authoritative Old World narrative generation core.
 
 Structure specifications and legacy builders are preserved in
-_old_world_narrative_structure_core.py. OWS-001 through OWS-003 are dispatched
+_old_world_narrative_structure_core.py. OWS-001 through OWS-004 are dispatched
 through their reviewed final heavy-rebuild builders so shipping NBT and Gate-D
 previews consume one source of truth per completed/reviewed target.
 
@@ -22,6 +22,7 @@ from _old_world_narrative_structure_core import *  # noqa: F401,F403
 import old_world_ows001_final as ows001_final
 import old_world_ows002_final as ows002_final
 import old_world_ows003_final as ows003_final
+import old_world_ows004_final as ows004_final
 
 # Compose reviewed per-target final builders at the authoritative core boundary.
 # This is not a runtime mutation layer: BUILDERS is the single generation dispatch
@@ -30,6 +31,7 @@ BUILDERS = dict(BUILDERS)
 BUILDERS["OWS-001"] = ows001_final.build_001
 BUILDERS["OWS-002"] = ows002_final.build_002
 BUILDERS["OWS-003"] = ows003_final.build_003
+BUILDERS["OWS-004"] = ows004_final.build_004
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
