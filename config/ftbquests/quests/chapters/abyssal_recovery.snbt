@@ -147,5 +147,252 @@
 			x: 0.0d
 			y: 6.0d
 		}
+
+		{
+			dependencies: ["5AB0550C00000007"]
+			id: "5AB0550C00000008"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_abyssal_survey_relay 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "7EB0550C00000008"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			tasks: [{
+				biome: "infinite_domain:western_abyssal_plain"
+				id: "6AB0550C0000000B"
+				type: "biome"
+			}]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5AB0550C00000008"]
+			id: "5AB0550C00000009"
+			rewards: [
+				{
+					id: "7EB0550C00000009"
+					item: { count: 1, id: "kubejs:pelagos_bathymetric_log" }
+					type: "item"
+				}
+				{
+					command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_fracture_observatory 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "7EB0550C0000000A"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "6AB0550C0000000C"
+				structure: "infinite_domain:abyssal/pelagos_abyssal_survey_relay"
+				type: "structure"
+			}]
+			x: -6.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5AB0550C00000009"]
+			id: "5AB0550C0000000A"
+			rewards: [
+				{
+					id: "7EB0550C0000000B"
+					item: { count: 1, id: "kubejs:pelagos_fracture_sensor_core" }
+					type: "item"
+				}
+				{
+					command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_hadal_probe_station 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "7EB0550C0000000C"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					biome: "infinite_domain:western_fracture_field"
+					id: "6AB0550C0000000D"
+					type: "biome"
+				}
+				{
+					id: "6AB0550C0000000E"
+					structure: "infinite_domain:abyssal/pelagos_fracture_observatory"
+					type: "structure"
+				}
+			]
+			x: -8.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5AB0550C0000000A"]
+			id: "5AB0550C0000000B"
+			rewards: [{
+				id: "7EB0550C0000000D"
+				item: { count: 1, id: "kubejs:pelagos_hadal_pressure_record" }
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [
+				{
+					biome: "infinite_domain:western_hadal_trench"
+					id: "6AB0550C0000000F"
+					type: "biome"
+				}
+				{
+					id: "6AB0550C00000010"
+					structure: "infinite_domain:abyssal/pelagos_hadal_probe_station"
+					type: "structure"
+				}
+			]
+			x: -10.0d
+			y: 14.0d
+		}
+
+		{
+			dependencies: ["5AB0550C00000007"]
+			id: "5AB0550C0000000C"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_abyssal_pipeline_station 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "7EB0550C0000000E"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			tasks: [{
+				biome: "infinite_domain:eastern_abyssal_plain"
+				id: "6AB0550C00000011"
+				type: "biome"
+			}]
+			x: 4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5AB0550C0000000C"]
+			id: "5AB0550C0000000D"
+			rewards: [
+				{
+					id: "7EB0550C0000000F"
+					item: { count: 1, id: "kubejs:karsic_pipeline_telemetry" }
+					type: "item"
+				}
+				{
+					command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_fracture_listening_post 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "7EB0550C00000010"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [{
+				id: "6AB0550C00000012"
+				structure: "infinite_domain:abyssal/karsic_abyssal_pipeline_station"
+				type: "structure"
+			}]
+			x: 6.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5AB0550C0000000D"]
+			id: "5AB0550C0000000E"
+			rewards: [
+				{
+					id: "7EB0550C00000011"
+					item: { count: 1, id: "kubejs:karsic_sonar_archive" }
+					type: "item"
+				}
+				{
+					command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_hadal_blacksite 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "7EB0550C00000012"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					biome: "infinite_domain:eastern_fracture_field"
+					id: "6AB0550C00000013"
+					type: "biome"
+				}
+				{
+					id: "6AB0550C00000014"
+					structure: "infinite_domain:abyssal/karsic_fracture_listening_post"
+					type: "structure"
+				}
+			]
+			x: 8.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5AB0550C0000000E"]
+			id: "5AB0550C0000000F"
+			rewards: [{
+				id: "7EB0550C00000013"
+				item: { count: 1, id: "kubejs:karsic_hadal_blacksite_cipher" }
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [
+				{
+					biome: "infinite_domain:eastern_hadal_trench"
+					id: "6AB0550C00000015"
+					type: "biome"
+				}
+				{
+					id: "6AB0550C00000016"
+					structure: "infinite_domain:abyssal/karsic_hadal_blacksite"
+					type: "structure"
+				}
+			]
+			x: 10.0d
+			y: 14.0d
+		}
+
+		{
+			dependencies: [
+				"5AB0550C0000000B"
+				"5AB0550C0000000F"
+			]
+			id: "5AB0550C00000010"
+			rewards: [
+				{
+					id: "7EB0550C00000014"
+					item: { count: 1, id: "kubejs:abyssal_comparative_dossier" }
+					type: "item"
+				}
+				{
+					id: "7EB0550C00000015"
+					item: { count: 4, id: "numismatics:cog" }
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			tasks: [
+				{
+					id: "6AB0550C00000017"
+					item: { count: 1, id: "kubejs:pelagos_hadal_pressure_record" }
+					type: "item"
+				}
+				{
+					id: "6AB0550C00000018"
+					item: { count: 1, id: "kubejs:karsic_hadal_blacksite_cipher" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 16.0d
+		}
 	]
 }
