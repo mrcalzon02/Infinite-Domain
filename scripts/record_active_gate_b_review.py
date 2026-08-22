@@ -4,6 +4,11 @@
 This script NEVER decides visual quality. It only records an already-authored
 Gate-B PASSED or REVISION REQUIRED decision after confirming the exact persisted
 revision artifact exists. The same guarded bookkeeping works for later OWS targets.
+
+It can also recover from an older workflow bug that downgraded a rendered Gate-B
+state back to planning-ready: recovery is permitted only when the newest persisted
+Gate-B manifest has a matching explicit review. An older review is never applied
+over a newer unreviewed artifact.
 """
 from __future__ import annotations
 
@@ -25,6 +30,51 @@ INTACT_PASSES = (
 )
 
 
+def _manifest_revisions(target: str) -> list[int]:
+    root = VISUAL_ROOT / target / "gate_b_intact"
+    if not root.is_dir():
+        return []
+    revisions: list[int] = []
+    for path in root.glob("r*/review_manifest.json"):
+        match = re.fullmatch(r"r(\d+)", path.parent.name)
+        if match:
+            revisions.append(int(match.group(1)))
+    return sorted(set(revisions))
+
+
+def _review_revisions(target: str) -> list[int]:
+    revisions: list[int] = []
+    for path in REVIEW_ROOT.glob(f"{target}_GATE_B_R*_REVIEW.md"):
+        match = re.fullmatch(rf"{re.escape(target)}_GATE_B_R(\d+)_REVIEW\.md", path.name)
+        if match:
+            revision = int(match.group(1))
+            manifest = VISUAL_ROOT / target / "gate_b_intact" / f"r{revision}" / "review_manifest.json"
+            if manifest.is_file():
+                revisions.append(revision)
+    return sorted(set(revisions))
+
+
+def _resolve_revision(target: str, status: str) -> int | None:
+    pending = re.fullmatch(r"r(\d+)_rendered_pending_manual_review", status)
+    if pending:
+        return int(pending.group(1))
+
+    manifests = _manifest_revisions(target)
+    reviews = _review_revisions(target)
+    if not manifests or not reviews:
+        return None
+
+    latest_manifest = max(manifests)
+    latest_review = max(reviews)
+    if latest_manifest > latest_review:
+        # Never let an older decision govern a newer artifact merely because some
+        # other workflow damaged the state field.
+        return None
+    if latest_review != latest_manifest:
+        return None
+    return latest_review
+
+
 def main() -> None:
     state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
     target = state.get("active_target", "")
@@ -37,11 +87,15 @@ def main() -> None:
         print(f"{target} Gate B already recorded as {status}")
         return
 
-    match = re.fullmatch(r"r(\d+)_rendered_pending_manual_review", status)
-    if not match:
-        print(f"{target} Gate-B recorder skipped: status={status}")
+    revision = _resolve_revision(target, status)
+    if revision is None:
+        manifests = _manifest_revisions(target)
+        reviews = _review_revisions(target)
+        print(
+            f"{target} Gate-B recorder skipped: status={status}; "
+            f"persisted_manifests={manifests}; reviewed_manifests={reviews}"
+        )
         return
-    revision = int(match.group(1))
 
     manifest_path = VISUAL_ROOT / target / "gate_b_intact" / f"r{revision}" / "review_manifest.json"
     review_path = REVIEW_ROOT / f"{target}_GATE_B_R{revision}_REVIEW.md"
@@ -69,6 +123,7 @@ def main() -> None:
 
     rel_review = str(review_path.relative_to(ROOT)).replace("\\", "/")
     gate[f"r{revision}_review_record"] = rel_review
+    gate[f"r{revision}_decision"] = "PASSED" if passed else "REVISION REQUIRED"
     state.setdefault("planning_records", {})[f"gate_b_r{revision}_review"] = rel_review
 
     if revision_required:
