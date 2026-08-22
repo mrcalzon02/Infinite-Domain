@@ -23,3 +23,5 @@ The record belongs at the secure release-review node where retained samples, per
 The route makes the player encounter the physical argument before reading the proof. The nearest encounter is well outside the protected records approach, the block above the chest is clear, and no explosive mob is configured.
 
 **QUEST PROOF ARCHITECTURE: COMPLETE FOR GATE-C r1.**
+
+**QUEST-PROOF ARCHITECTURE: COMPLETE FOR GATE-C IMPLEMENTATION.**

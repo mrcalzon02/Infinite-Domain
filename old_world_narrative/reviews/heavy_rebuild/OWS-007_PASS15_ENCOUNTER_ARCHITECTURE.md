@@ -15,3 +15,5 @@ Four restrained vanilla encounter sources suit this rare research campus:
 Each spawner produces one mob per cycle with a restrained nearby cap. All are visible, reachable and removable. No creepers, modded mobs or explosive threats can destroy the proof record. None occupies the public entrance, a controlled door, the secure-record approach or a mandatory center aisle.
 
 **ENCOUNTER ARCHITECTURE: COMPLETE FOR GATE-C r1.**
+
+**ENCOUNTER ARCHITECTURE: COMPLETE FOR GATE-C IMPLEMENTATION.**

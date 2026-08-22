@@ -33,3 +33,5 @@ The facility is abandoned during wider regional failure rather than destroyed by
 D2 is omitted because there was no discrete local collapse event between regional abandonment and gradual service/weather failure.
 
 **HISTORICAL LAYERING: COMPLETE FOR GATE-C r1.**
+
+**HISTORICAL LAYERING: COMPLETE FOR GATE-C IMPLEMENTATION.**

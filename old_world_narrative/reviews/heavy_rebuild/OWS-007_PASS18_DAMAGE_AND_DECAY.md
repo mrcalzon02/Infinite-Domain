@@ -32,3 +32,5 @@ D3 preserves the 73 x 33 x 63 envelope, public and service thresholds, controlle
 No Pass-19 microdetail is introduced before Gate C review.
 
 **DAMAGE AND DECAY: COMPLETE FOR GATE-C r1.**
+
+**DAMAGE AND DECAY: COMPLETE FOR GATE-C IMPLEMENTATION.**

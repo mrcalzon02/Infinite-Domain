@@ -18,3 +18,5 @@ Exactly one loot-bearing chest sits at local `(43, 2, 56)` in secure commercial-
 The optional rotunda encounter rewards investigation of the hero space but does not control mandatory evidence. The secure-record route provides the canonical proof and practical reward after the player has crossed the intact workflow.
 
 **LOOT ARCHITECTURE: COMPLETE FOR GATE-C r1.**
+
+**LOOT ARCHITECTURE: COMPLETE FOR GATE-C IMPLEMENTATION.**
