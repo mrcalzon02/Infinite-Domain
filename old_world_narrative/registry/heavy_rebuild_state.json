@@ -10,7 +10,7 @@
   "active_target": "OWS-004",
   "active_target_name": "Mycological Vertical Farm Tower",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_a_r1_passed_pass_7_structural_system_ready",
+  "active_status": "gate_b_r4_passed_history_ready",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-004_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001",
@@ -146,14 +146,14 @@
     "scale_translation": "complete_for_gate_a_study",
     "massing": "complete_gate_a_r1",
     "visual_gate_a_massing": "passed_r1",
-    "structural_system": "implemented_gate_b_r4_pending_review",
-    "circulation_and_access": "implemented_gate_b_r4_pending_review",
-    "exterior_architecture": "implemented_gate_b_r4_pending_review",
-    "interior_architecture": "implemented_gate_b_r4_pending_review",
-    "operational_systems": "implemented_gate_b_r4_pending_review",
-    "institutional_identity": "implemented_gate_b_r4_pending_review",
-    "visual_gate_b_intact_state": "r4_rendered_pending_manual_review",
-    "historical_layering": "pending",
+    "structural_system": "complete_gate_b_r4",
+    "circulation_and_access": "complete_gate_b_r4",
+    "exterior_architecture": "complete_gate_b_r4",
+    "interior_architecture": "complete_gate_b_r4",
+    "operational_systems": "complete_gate_b_r4",
+    "institutional_identity": "complete_gate_b_r4",
+    "visual_gate_b_intact_state": "passed_r4",
+    "historical_layering": "ready",
     "environmental_narrative": "pending",
     "encounter_architecture": "pending",
     "loot_architecture": "pending",
@@ -178,7 +178,8 @@
     "exterior_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS9_EXTERIOR_ARCHITECTURE.md",
     "interior_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS10_INTERIOR_ARCHITECTURE.md",
     "operational_systems": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS11_OPERATIONAL_SYSTEMS.md",
-    "institutional_identity": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS12_VCF_IDENTITY.md"
+    "institutional_identity": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS12_VCF_IDENTITY.md",
+    "gate_b_r4_review": "old_world_narrative/reviews/heavy_rebuild/OWS-004_GATE_B_R4_REVIEW.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -214,7 +215,7 @@
       "significant_findings_corrected_or_justified": true
     },
     "gate_b_intact_state": {
-      "status": "r4_rendered_pending_manual_review",
+      "status": "passed_r4",
       "required": true,
       "damage_state": "D0 intact / operational",
       "fixed_camera_set": "ows004_fixed_v1",
@@ -227,7 +228,11 @@
       "r2_decision": "REVISION REQUIRED",
       "r2_implementation_failure": "intact model lacked the required principal staff/player stair system",
       "r3_implementation_failure": "staff-stair assertion treated intentional dogleg landing at (40,6,22) as a missing tread before rendering",
-      "r4_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/gate_b_intact/r4/review_manifest.json"
+      "r4_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/gate_b_intact/r4/review_manifest.json",
+      "r4_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-004_GATE_B_R4_REVIEW.md",
+      "r4_decision": "PASSED",
+      "decision": "PASSED",
+      "significant_findings_corrected_or_justified": true
     },
     "gate_c_damage_states": {
       "status": "blocked_by_gate_b_and_history_passes",
