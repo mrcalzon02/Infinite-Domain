@@ -13,6 +13,7 @@ on:
       - 'scripts/render_ows*_gate_b_intact*.py'
       - 'scripts/render_ows*_gate_c_damage_states*.py'
       - 'scripts/analyze_ows*_gate_c_visuals.py'
+      - 'scripts/record_ows*_planning.py'
       - 'scripts/record_ows*_gate_c*.py'
       - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_GATE_C_*.md'
       - 'old_world_narrative/registry/heavy_rebuild_state.json'
@@ -57,6 +58,17 @@ jobs:
           ACTIVE_TARGET=$(python -c "import json; print(json.load(open('old_world_narrative/registry/heavy_rebuild_state.json'))['active_target'])")
           echo "ACTIVE_TARGET=$ACTIVE_TARGET" >> "$GITHUB_ENV"
           echo "Active heavy-rebuild target: $ACTIVE_TARGET"
+
+      - name: Record guarded active planning state when present
+        run: |
+          TARGET_SLUG=$(echo "$ACTIVE_TARGET" | tr '[:upper:]' '[:lower:]' | tr -d '-')
+          RECORDER="scripts/record_${TARGET_SLUG}_planning.py"
+          if [ -f "$RECORDER" ]; then
+            python -m py_compile "$RECORDER"
+            python "$RECORDER"
+          else
+            echo "No planning recorder for $ACTIVE_TARGET; continuing with persisted state."
+          fi
 
       - name: Render first unresolved active visual gate
         run: python scripts/run_active_heavy_rebuild_review.py
