@@ -48,13 +48,16 @@ def main() -> None:
         raise AssertionError("Gate-A r1 manifest is not a pending-review render set")
 
     review = review_path.read_text(encoding="utf-8")
-    required = (
-        "**Decision:** **PASSED**",
+    if "**Decision:** **PASSED**" not in review:
+        raise AssertionError("Gate-A r1 review lacks explicit PASSED decision")
+    accepted_pass_markers = (
         "**GATE A r1: PASSED.**",
+        f"**{target} GATE A r1: PASSED.**",
     )
-    missing = [marker for marker in required if marker not in review]
-    if missing:
-        raise AssertionError(f"Gate-A r1 review lacks explicit pass markers: {missing}")
+    if not any(marker in review for marker in accepted_pass_markers):
+        raise AssertionError(
+            f"Gate-A r1 review lacks explicit pass marker; expected one of {accepted_pass_markers}"
+        )
 
     passes = state["active_target_passes"]
     passes["massing"] = "complete_gate_a_r1"
