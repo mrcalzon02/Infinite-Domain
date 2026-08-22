@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""[SYSTEM REPORT] Guard OWS-004 planning completion before Gate A.
+"""[SYSTEM REPORT] Guard OWS-004 planning completion across Gate A / Gate B planning.
 
-This recorder does not render or approve a visual gate. It only mirrors the
-already-authored Phase-0 decision and Passes 2-5 into authoritative heavy-rebuild
-state after checking the required records. Gate A remains a separate manual visual
-review after the massing artifact exists.
+This recorder does not render or approve a visual gate. It mirrors the already-
+authored Phase-0 / Passes 2-5 planning into state, preserves an already-passed
+Gate A, and when all explicit Passes 7-12 records exist delegates to the generic
+intact-planning recorder. Visual Gate B remains a separate manual review.
 """
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,12 +24,25 @@ REQUIRED = {
     "scale_translation": "OWS-004_PASS5_SCALE_TRANSLATION.md",
 }
 
+INTACT_FILES = (
+    "OWS-004_PASS7_STRUCTURAL_SYSTEM.md",
+    "OWS-004_PASS8_CIRCULATION_ACCESS.md",
+    "OWS-004_PASS9_EXTERIOR_ARCHITECTURE.md",
+    "OWS-004_PASS10_INTERIOR_ARCHITECTURE.md",
+    "OWS-004_PASS11_OPERATIONAL_SYSTEMS.md",
+    "OWS-004_PASS12_VCF_IDENTITY.md",
+)
+
 
 def _read(name: str) -> str:
     path = REVIEW_ROOT / name
     if not path.is_file():
         raise AssertionError(f"OWS-004 planning recorder missing required record: {path}")
     return path.read_text(encoding="utf-8")
+
+
+def _intact_records_present() -> bool:
+    return all((REVIEW_ROOT / name).is_file() for name in INTACT_FILES)
 
 
 def main() -> None:
@@ -64,17 +78,18 @@ def main() -> None:
     passes["precedent_research"] = "complete"
     passes["program_and_adjacency"] = "complete"
     passes["scale_translation"] = "complete_for_gate_a_study"
-    if passes.get("massing") in {None, "pending"}:
-        passes["massing"] = "ready_for_implementation"
-    if passes.get("visual_gate_a_massing") in {None, "pending"}:
-        passes["visual_gate_a_massing"] = "ready_to_render"
 
     planning = state.setdefault("planning_records", {})
     for key, filename in REQUIRED.items():
         planning[key] = f"old_world_narrative/reviews/heavy_rebuild/{filename}"
 
     gate_a = state["visual_review_gates"]["gate_a_massing"]
-    if not str(gate_a.get("status", "")).startswith("passed"):
+    gate_a_passed = str(gate_a.get("status", "")).startswith("passed")
+    if not gate_a_passed:
+        if passes.get("massing") in {None, "pending"}:
+            passes["massing"] = "ready_for_implementation"
+        if passes.get("visual_gate_a_massing") in {None, "pending"}:
+            passes["visual_gate_a_massing"] = "ready_to_render"
         gate_a["status"] = "ready_for_massing_implementation"
         gate_a["review_only"] = True
         gate_a["rule"] = (
@@ -82,10 +97,22 @@ def main() -> None:
             "service/core expression, distinct receiving/dispatch thresholds and a greenhouse/environmental "
             "crown inside the retained 51x47x47 envelope before operational detail."
         )
-    state["active_status"] = "gate_a_ready_for_massing_implementation"
+        state["active_status"] = "gate_a_ready_for_massing_implementation"
+    else:
+        # Never regress an already-reviewed Gate A to an earlier planning status.
+        if passes.get("structural_system") in {None, "pending"}:
+            passes["structural_system"] = "ready"
+        state["active_status"] = "gate_a_r1_passed_pass_7_structural_system_ready"
 
     STATE_PATH.write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8", newline="\n")
-    print("OWS-004 Phase-0 and Passes 2-5 recorded complete; Gate-A massing is ready to render.")
+
+    if gate_a_passed and _intact_records_present():
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import record_old_world_intact_planning_passes
+        record_old_world_intact_planning_passes.main()
+        print("OWS-004 Passes 7-12 records detected; Gate-B intact implementation opened.")
+    else:
+        print("OWS-004 Phase-0 and Passes 2-5 recorded; waiting on Gate A or complete Passes 7-12 records.")
 
 
 if __name__ == "__main__":
