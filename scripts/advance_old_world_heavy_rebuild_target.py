@@ -6,6 +6,8 @@ active target is already listed in `completed`, selects the first incomplete
 queue entry, snapshots the current source revision as that target's immutable
 Phase-0 baseline commit, and resets only the active-target pass/gate workspace.
 It never marks a pass complete and never advances past an unfinished target.
+
+Queue trigger marker: OWS-004 synchronized Gate-D/static promotion completed.
 """
 from __future__ import annotations
 
