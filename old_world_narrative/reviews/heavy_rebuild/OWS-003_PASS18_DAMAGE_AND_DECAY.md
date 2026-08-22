@@ -76,6 +76,10 @@ Implementation should use change-density guards as a sanity check, not as automa
 - the building silhouette should remain substantially retained and reconstructable;
 - protected proof/circulation contracts must survive all damage layers.
 
+## Gate-C review correction
+
+Gate-C r2 preserved a valid D0 and appropriately restrained D1, but fixed-camera review found its D3 exterior too visually pristine for centuries of abandonment. Gate-C r3 therefore freezes D0/D1 and strengthens only causal D3 deterioration at the refrigeration deck, roof-light wet zones, east receiving edge, south dispatch edge and associated service masonry. This remains the same Pass-18 damage doctrine rather than a new historical event.
+
 ## Pass 18 decision
 
 **DAMAGE AND DECAY: COMPLETE FOR GATE-C IMPLEMENTATION.**
