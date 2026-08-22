@@ -1,0 +1,67 @@
+name: Old World Finalize Active Rebuild
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/record_ows*_final_quality.py'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_GATE_D_*_REVIEW.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_FINAL_REBUILD_REPORT.md'
+      - '.github/workflows/old-world-finalize-active.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: old-world-static-build-main
+  cancel-in-progress: false
+
+jobs:
+  finalize-active-old-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact main revision
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Record guarded active-target quality state
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          root = Path('.')
+          state_path = root / 'old_world_narrative/registry/heavy_rebuild_state.json'
+          state = json.loads(state_path.read_text(encoding='utf-8'))
+          target = state['active_target']
+          suffix = target.split('-', 1)[1]
+          recorder = root / 'scripts' / f'record_ows{suffix}_final_quality.py'
+          if not recorder.is_file():
+              print(f'No final-quality recorder for active target {target}; no-op.')
+              raise SystemExit(0)
+          print(f'Running guarded final-quality recorder for {target}: {recorder}')
+          subprocess.run([sys.executable, str(recorder)], check=True)
+          PY
+
+      - name: Commit only authoritative heavy-rebuild state
+        run: |
+          if git diff --quiet -- old_world_narrative/registry/heavy_rebuild_state.json; then
+            echo 'No heavy-rebuild state promotion to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- old_world_narrative/registry/heavy_rebuild_state.json
+          git commit -m 'Promote active Old World heavy rebuild after static validation'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
