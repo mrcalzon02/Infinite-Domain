@@ -10,7 +10,7 @@
   "active_target": "OWS-004",
   "active_target_name": "Mycological Vertical Farm Tower",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_b_r4_passed_history_ready",
+  "active_status": "gate_c_damage_states_ready_to_implement",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-004_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001",
@@ -153,13 +153,13 @@
     "operational_systems": "complete_gate_b_r4",
     "institutional_identity": "complete_gate_b_r4",
     "visual_gate_b_intact_state": "passed_r4",
-    "historical_layering": "ready",
-    "environmental_narrative": "pending",
-    "encounter_architecture": "pending",
-    "loot_architecture": "pending",
-    "quest_proof": "pending",
-    "damage_and_decay": "pending",
-    "visual_gate_c_damage_states": "pending",
+    "historical_layering": "defined_ready_for_gate_c_implementation",
+    "environmental_narrative": "defined_ready_for_gate_c_implementation",
+    "encounter_architecture": "defined_ready_for_gate_c_implementation",
+    "loot_architecture": "defined_ready_for_gate_c_implementation",
+    "quest_proof": "defined_ready_for_gate_c_implementation",
+    "damage_and_decay": "defined_ready_for_gate_c_implementation",
+    "visual_gate_c_damage_states": "ready_for_damage_implementation",
     "micro_detail": "pending",
     "visual_gate_d_final_multi_angle": "pending",
     "static_validation": "pending",
@@ -179,7 +179,13 @@
     "interior_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS10_INTERIOR_ARCHITECTURE.md",
     "operational_systems": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS11_OPERATIONAL_SYSTEMS.md",
     "institutional_identity": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS12_VCF_IDENTITY.md",
-    "gate_b_r4_review": "old_world_narrative/reviews/heavy_rebuild/OWS-004_GATE_B_R4_REVIEW.md"
+    "gate_b_r4_review": "old_world_narrative/reviews/heavy_rebuild/OWS-004_GATE_B_R4_REVIEW.md",
+    "historical_layering": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS13_HISTORICAL_LAYERING.md",
+    "environmental_narrative": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS14_ENVIRONMENTAL_NARRATIVE.md",
+    "encounter_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS15_ENCOUNTER_ARCHITECTURE.md",
+    "loot_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS16_LOOT_ARCHITECTURE.md",
+    "quest_proof": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS17_QUEST_PROOF_ARCHITECTURE.md",
+    "damage_and_decay": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS18_DAMAGE_AND_DECAY.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -235,7 +241,7 @@
       "significant_findings_corrected_or_justified": true
     },
     "gate_c_damage_states": {
-      "status": "blocked_by_gate_b_and_history_passes",
+      "status": "ready_for_damage_implementation",
       "required": true,
       "minimum_states": [
         "D0",
@@ -243,7 +249,8 @@
         "D3"
       ],
       "fixed_camera_set": "ows004_fixed_v1",
-      "review_only": true
+      "review_only": true,
+      "rule": "D0 must exactly preserve the accepted intact Gate-B model; D1 must express the approved localized historical intervention; D3 must express causal long-term ruin while retaining proof, circulation, institutional identity and reconstructable operations."
     },
     "gate_d_final_multi_angle": {
       "status": "blocked_by_gate_c_micro_detail_and_authoritative_sync",
