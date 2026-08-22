@@ -1,145 +1,197 @@
 # Infinite Domain — East/West Abyssal Ocean Program
 
-Status: **regional biome split implemented; east/west depth shaping implementation is now active through continentalness; actual seabed Y-levels, FTB Ocean Mobs, abyssal structures, and loot integration remain pending runtime validation**.
+Status: **promoted for continued development under an explicit runtime-validation waiver. East/West depth shaping, depth-specific biome routing, FTB Ocean Mobs population/loot, and the first submarine recovery voyage are implemented. Bespoke abyssal structures, ecological feature passes, and measured seabed Y-level proof remain outstanding.**
+
+## Authority and validation status
+
+This is the design/program authority for Infinite Domain's abyssal-ocean work.
+
+- Program/design authority: `docs/ABYSSAL_OCEAN_PROGRAM.md`
+- Mechanical depth record: `docs/ABYSSAL_OCEAN_DEPTH_IMPLEMENTATION.md`
+
+Future work should update these files rather than create a competing planning authority.
+
+On **2026-08-22**, fresh-world/runtime validation was unavailable. Development was explicitly directed to continue **as if the gate had passed**. That directive promotes the implementation for continued development, but it is not fabricated test evidence. No document should claim measured seabed Y-levels, verified aquifer behavior, proven submarine clearance, or proven chunk-generation performance until those observations are actually available.
+
+The deferred validation ledger remains useful for later regression testing, but it is not a blocker for the current implementation sequence.
 
 ## Purpose
 
-Infinite Domain has a strong east/west continental axis and several marine systems, including Create Submarine, Create Aquatic Ambitions, Dungeons Arise: Seven Seas, and FTB Ocean Mobs. The abyssal-ocean program turns the deep-water gaps between recurring eastern and western Wasteland continents into a distinct submarine exploration domain rather than treating every sea as interchangeable vanilla ocean.
+Infinite Domain has a strong east/west continental axis and several marine systems, including Create Submarine, Create Aquatic Ambitions, Dungeons Arise: Seven Seas, and FTB Ocean Mobs. The abyssal program turns the deep-water gaps between recurring eastern and western Wasteland continents into a submarine exploration domain rather than treating every sea as interchangeable vanilla ocean.
 
-The world generator remains authoritative over geography. The abyssal program extends the existing directional climate system; it does not replace the central continent, mountain annulus, north/south climate regimes, or restored vanilla ocean membership.
+The existing world generator remains authoritative. The abyssal program extends the established directional climate/continentalness system; it does not introduce a second world preset or replace the central continent, mountain annulus, north/south climate regimes, or normal ocean band.
 
-## Authoritative reference paths
+## Regional identity
 
-- Program/design authority: `docs/ABYSSAL_OCEAN_PROGRAM.md`
-- Current depth implementation record: `docs/ABYSSAL_OCEAN_DEPTH_IMPLEMENTATION.md`
+### Western Abyss — Pelagos-facing
 
-Future work should update these documents rather than creating parallel planning authorities.
+The Western Abyss emphasizes maritime science, oceanography, subsea power and communications, drowned ports, naval/scientific wreckage, survey stations, undersea relay sites, and research habitats. Its geography and encounter mix should generally support wider navigable approaches, scientific salvage, and evidence-heavy exploration.
 
-## Implemented regional split
+### Eastern Abyss — Karsic-facing
 
-Two first-class biome families now exist:
+The Eastern Abyss emphasizes military/industrial logistics, pipelines, drilling infrastructure, listening stations, strategic research, submarine patrol wrecks, coastal defense remnants, and freight fields. Its geography and encounter mix may become sharper, more industrialized, and more hostile than the Western side while preserving equivalent progression value.
 
-- `infinite_domain:western_abyssal_ocean`
-- `infinite_domain:eastern_abyssal_ocean`
+## Authoritative east/west routing
 
-Their family tags are intentionally separate:
+The Wastelands climate source already uses the Infinite Domain east/west signal through its humidity channel outside protected start/mountain masks. Abyssal routing reuses that authority:
 
-- `#infinite_domain:western_abyssal_biomes`
-- `#infinite_domain:eastern_abyssal_biomes`
-- combined: `#infinite_domain:abyssal_oceans`
+- negative humidity / west-facing gradient -> Western family;
+- positive humidity / east-facing gradient -> Eastern family;
+- narrow humidity band `-0.2 .. 0.2` -> vanilla `minecraft:deep_ocean` transition seam.
 
-Both biomes are appended to `#minecraft:is_ocean` and `#minecraft:is_deep_ocean`, preserving compatibility with systems that discover valid ocean biomes through vanilla tags.
+The east/west signal is multiplied by `custom_worldgen:east_west_ocean_corridor_mask`, derived from the existing east/west continent mask. This suppresses abyss identity and terrain pressure in north/south-dominant geography.
 
-The active Wastelands climate source receives an east/west regional gradient through its humidity channel outside the protected start and mountain masks. The abyss split reuses the existing geography instead of creating a second coordinate convention:
+Far-northern frozen/deep-cold ocean and far-southern deep-lukewarm/warm ocean rules remain separate from the temperate abyss program.
 
-- negative humidity / west-facing gradient -> Western Abyssal Ocean;
-- positive humidity / east-facing gradient -> Eastern Abyssal Ocean;
-- a narrow central transition remains vanilla `minecraft:deep_ocean` rather than creating a hard east/west seam.
+## Active terrain shaping
 
-The east/west signal is now additionally multiplied by `custom_worldgen:east_west_ocean_corridor_mask`, derived from the existing east/west continent mask. This suppresses abyss identity and terrain pressure in north/south-dominant geography.
-
-Only the temperate deep-ocean continentalness band is routed to the current regional abyss biomes. The far-northern frozen/deep-cold ocean regime and far-southern deep-lukewarm/warm regime remain intact.
-
-## Directional selectors and active depth shaping
-
-The gradient datapack exposes reusable directional selectors:
+The gradient datapack exposes these directional and depth functions:
 
 - `custom_worldgen:eastern_abyss_selector`
 - `custom_worldgen:western_abyss_selector`
-
-The following active depth masks now exist:
-
 - `custom_worldgen:east_west_ocean_corridor_mask`
 - `custom_worldgen:abyssal_ocean_mask`
 - `custom_worldgen:abyssal_plain_mask`
 - `custom_worldgen:abyssal_fracture_mask`
 - `custom_worldgen:hadal_trench_mask`
-
-The regional depth functions are independently targetable:
-
 - `custom_worldgen:western_depth_depression`
 - `custom_worldgen:eastern_depth_depression`
+- `custom_worldgen:abyssal_outer_continents`
 
-They currently share the same initial strength curve but remain separate files so Western and Eastern seabed morphology can diverge later without rebuilding shared worldgen.
+`custom_worldgen:continents` uses `abyssal_outer_continents` only on the outer-world side of `central_continent_mask`; the protected central branch remains unchanged.
 
-`custom_worldgen:abyssal_outer_continents` subtracts the appropriate east/west depression from the existing outer continentalness field while leaving the central-continent branch unchanged. This is now mechanically connected to `custom_worldgen:continents`.
-
-The active initial pressure curve is:
+Initial continentalness pressure remains:
 
 1. ocean/slope depression: `0.05`;
 2. abyssal-plain depression: `0.12`;
 3. fracture/hadal depression: `0.28`.
 
-The fracture stage uses low-frequency shifted erosion noise so the deepest terrain should form irregular canyon/trench corridors instead of one uniformly flat deep-ocean plane.
+The fracture stage uses low-frequency shifted erosion noise so the deepest terrain is intended to form irregular canyon/trench corridors rather than a flat world-bottom ocean.
 
-## Reserved biome-family expansion
+## Implemented depth biome families
 
-The current two abyssal-ocean biomes establish identity and routing. Later depth-aware biome work should expand each side independently rather than making one shared pool. Reserved design roles are:
+The active temperate deep-ocean continentalness band is now divided into first-class depth groups.
 
-### Western family
+### Western
 
-- Western continental slope
-- Western abyssal plain
-- Western fracture/canyon field
-- Western hadal trench
-- Western vent or seep field where appropriate
+- `infinite_domain:western_continental_slope` — `-0.60 .. -0.455`
+- `infinite_domain:western_abyssal_plain` — `-0.82 .. -0.60`
+- `infinite_domain:western_fracture_field` — `-1.02 .. -0.82`
+- `infinite_domain:western_hadal_trench` — `-1.20 .. -1.02`
 
-Western content emphasis: Pelagos-facing maritime infrastructure, scientific/oceanographic stations, subsea power and communications, drowned ports, survey sites, and naval/scientific wreckage.
+### Eastern
 
-### Eastern family
+- `infinite_domain:eastern_continental_slope` — `-0.60 .. -0.455`
+- `infinite_domain:eastern_abyssal_plain` — `-0.82 .. -0.60`
+- `infinite_domain:eastern_fracture_field` — `-1.02 .. -0.82`
+- `infinite_domain:eastern_hadal_trench` — `-1.20 .. -1.02`
 
-- Eastern continental slope
-- Eastern abyssal plain
-- Eastern industrial fracture field
-- Eastern hadal trench
-- Eastern vent or seep field where appropriate
+The original compatibility biomes `western_abyssal_ocean` and `eastern_abyssal_ocean` remain valid members of their regional families rather than being destructively removed.
 
-Eastern content emphasis: Karsic-facing heavy industry, military logistics, pipelines, drilling infrastructure, listening stations, strategic research facilities, submarine wrecks, and industrial freight fields.
+## Biome targeting tags
 
-Shared ecological or geological content may appear on both sides, but regional structures, loot pools, mob weights, and evidence tables should be independently targetable through the east/west biome tags.
+Regional tags:
 
-## Depth target — runtime proof still required
+- `#infinite_domain:western_abyssal_biomes`
+- `#infinite_domain:eastern_abyssal_biomes`
 
-The intended seabed profile remains:
+Depth tags:
+
+- `#infinite_domain:abyssal_slope_biomes`
+- `#infinite_domain:abyssal_plain_biomes`
+- `#infinite_domain:abyssal_fracture_biomes`
+- `#infinite_domain:hadal_biomes`
+
+Each depth also has an independent East and West subtag so structures, spawn tables, loot, evidence, and quests can target a side without coordinate duplication.
+
+All current abyssal biomes are appended to vanilla ocean/deep-ocean tags with `replace: false`.
+
+## FTB Ocean Mobs integration
+
+Infinite Domain now owns explicit natural-spawn weights for the nine ordinary FTB Ocean Mobs entity types that the mod permits to spawn naturally:
+
+- `riftling_observer`
+- `abyssal_winged`
+- `corrosive_craig`
+- `mossback_goliath`
+- `abyssal_sludge`
+- `shadow_beast`
+- `rift_minotaur`
+- `tentacled_horror`
+- `rift_demon`
+
+`rift_weaver` and `sludgeling` remain excluded from natural biome spawning because the upstream mod explicitly registers them with a no-natural-spawn placement rule.
+
+Encounter pressure rises with depth rather than globally enabling Rift mobs in all oceans. Slopes have rare intrusions; abyssal plains introduce persistent threats; fracture fields are dangerous; hadal trenches carry the strongest normal encounter mixture.
+
+Western weighting leans toward observation, abyssal fauna, sludge/shadow threats, and tentacled deepwater encounters. Eastern weighting leans toward corrosive/heavy threats, minotaurs, demons, and industrial-feeling hazard pressure.
+
+Infinite Domain-owned entity loot tables now exist under `kubejs/data/ftboceanmobs/loot_table/entities/`. Rewards are deliberately modest salvage/biological materials rather than diamonds, netherite, advanced machines, or other progression bypasses.
+
+## First submarine recovery voyage
+
+The first mechanical submarine expedition is implemented in:
+
+`config/ftbquests/quests/chapters/abyssal_recovery.snbt`
+
+It is additive to the established `Air, Sea and Global Logistics` progression and depends on quest `5E00000000000006` — the existing **Ballast and Propulsion** submarine milestone.
+
+Current voyage sequence:
+
+1. reach `infinite_domain:western_continental_slope`;
+2. receive an explorer map for `minecraft:ocean_ruin_cold`;
+3. enter the mapped underwater ruin;
+4. recover `kubejs:abyssal_navigation_core` as the expedition proof component;
+5. carry the core back into `infinite_domain:spawn_buffer`;
+6. receive the modest completion reward.
+
+The custom proof item is registered by `kubejs/startup_scripts/abyssal_recovery_items.js`. It currently reuses the vanilla echo-shard texture intentionally; bespoke art is polish, not a mechanical blocker.
+
+`minecraft:has_structure/ocean_ruin_cold` now includes the Western continental slope. `ocean_ruin_warm` includes the Eastern continental slope, reserving the same low-risk mechanical scaffolding for a later Eastern branch.
+
+### Temporary-site doctrine
+
+The cold ocean ruin is **not** the final Pelagos wreck. It is a temporary mechanically valid recovery destination used because existence/integration/progression correctness precede architectural polish. A future Heavy Rebuild pass should replace this stand-in with a purpose-built Pelagos survey/submarine wreck while preserving the quest contract and recovery proof item.
+
+## Depth target
+
+Sea level remains 48 and Overworld minimum Y remains -64. Intended physical progression remains:
 
 1. littoral / continental shelf;
 2. continental slope;
 3. abyssal plain;
-4. abyssal valleys and fracture zones;
-5. hadal trenches reaching toward the bedrock cap near world minimum Y.
+4. abyssal valleys/fracture fields;
+5. rare hadal trenches approaching the bedrock cap.
 
-Sea level remains 48 and Overworld minimum Y remains -64. The deepest trench implementation must leave the bedrock floor intact and must be tested against caves, aquifers, structures, and submarine physics before promotion.
+Because runtime measurement was waived rather than performed, no specific seabed Y is marked proven. If a future measurement shows continentalness alone is too shallow, use the existing regional/ocean/hadal masks for a narrowly gated final-density correction. A global Overworld density mutation remains unacceptable.
 
-The new continentalness depression is active, but it is **not yet proven** to produce Y -56 or bedrock-adjacent trenches. Vanilla terrain response to continentalness is nonlinear. If this stage remains too shallow, the next revision may add a narrowly east/west- and ocean-gated final-density contribution using the existing hadal masks. A global Overworld density mutation is not acceptable.
+## Deferred validation ledger
 
-## Ocean-content integration sequence
+When runtime validation becomes available, record rather than assume:
 
-1. Validate that both regional biome IDs and all new density functions load on a fresh Wastelands world.
-2. Measure actual shelf, slope, abyss, and deepest fracture Y-levels and tune toward the bedrock-depth target.
-3. Expand each East/West biome family into explicit slope, abyssal-plain, and hadal groups once the physical depth bands are known.
-4. Populate each biome family with deliberate vanilla/Aquatic Ambitions features rather than leaving the initial sparse scaffold as final ecology.
-5. Wire FTB Ocean Mobs into explicit biome/depth groups with Infinite Domain-owned spawn weights and loot tables.
-6. Add regional abyssal structures and salvage pools, with separate Western and Eastern target tags.
-7. Connect the first Era 3-4 submarine recovery voyage to a validated deep-water destination.
-8. Add deeper repeatable expeditions only after submarine navigation, recovery, and return are reliable in runtime.
+1. all `custom_worldgen` density functions load;
+2. Western/Eastern biome families remain on their intended sides;
+3. north/south climate oceans remain intact;
+4. central continent and mountain annulus remain unchanged;
+5. actual seabed Y for slope, plain, fracture, and hadal candidates;
+6. cave/aquifer behavior and bedrock integrity;
+7. outer East/West continents remain substantial landmasses;
+8. submarine clearance/navigation is practical;
+9. ocean ruin stand-in structures actually generate in their intended slope biomes;
+10. FTB Ocean Mobs encounter density is playable and does not spill into starter coasts;
+11. recovery-voyage tasks and return proof complete correctly.
 
-## Current Abyssal Ocean mod status
+Failure of a deferred check should trigger a focused correction, not invalidate unrelated completed integration work.
 
-The current repository inventory does not expose an `abyssal_ocean` registry namespace and the checked-in `mods/` listing did not show an Abyssal Ocean jar during the implementation pass that established this program. Therefore this system is deliberately owned by the `infinite_domain` and `custom_worldgen` namespaces and does not make a false dependency claim. If a compatible Abyssal Ocean mod is added later, its terrain/features can be evaluated as an implementation ingredient without surrendering Infinite Domain's east/west geography or biome-family ownership.
+## Next development sequence
 
-## Fresh-world validation gate
+1. Add a matching Eastern/Karsic recovery branch using the already-reserved Eastern slope structure compatibility.
+2. Replace temporary vanilla ruin targets with distinct Western and Eastern abyssal structures under the Heavy Rebuild Doctrine.
+3. Add region-owned structure loot/evidence pools and deeper repeatable expeditions.
+4. Populate slope/plain/fracture/hadal biomes with deliberate marine/geological features instead of leaving the first-pass sparse feature scaffold final.
+5. Add Create Aquatic Ambitions and other verified marine assets where they improve traversal, ecology, or salvage without bypassing progression.
+6. Revisit physical depth tuning when runtime measurement is available.
 
-Worldgen changes require newly generated chunks; use a disposable fresh Wastelands world.
+## External Abyssal Ocean mod status
 
-1. Run `/isekai validate custom_worldgen`.
-2. Run `/locate biome infinite_domain:western_abyssal_ocean` and confirm the result is west of the central continent in a genuine deep-water east/west corridor.
-3. Run `/locate biome infinite_domain:eastern_abyssal_ocean` and confirm the result is east of the central continent in a genuine deep-water east/west corridor.
-4. Confirm both resolve as ocean/deep-ocean tagged biomes for ocean structures and compatibility systems.
-5. Inspect representative outer-continent gaps around both east and west and verify Western and Eastern IDs never swap sides.
-6. Inspect north and south outer oceans and confirm frozen/cold and warm/lukewarm regimes were not consumed by abyss routing or depth shaping.
-7. Confirm the central continent and mountain annulus remain unchanged.
-8. Record actual seabed Y at shelf, slope, abyssal plain, fracture field, and deepest trench candidates.
-9. Check for exposed caves, broken aquifers, floating structures, unacceptable cliff walls, or bedrock damage.
-10. Confirm outer east/west continents remain substantial landmasses rather than being eroded into island chains.
-
-Only after this gate passes should the terrain stage be considered mechanically validated or the FTB Ocean Mobs / abyssal structure layers be promoted as implemented.
+The checked repository did not expose an `abyssal_ocean` registry namespace/JAR during establishment of this program. Infinite Domain therefore owns this system through the `infinite_domain` and `custom_worldgen` namespaces. If a compatible third-party Abyssal Ocean mod is added later, it may contribute features without surrendering the pack's East/West geography, depth bands, or progression ownership.
