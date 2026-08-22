@@ -10,7 +10,7 @@
   "active_target": "OWS-004",
   "active_target_name": "Mycological Vertical Farm Tower",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_b_intact_ready_to_implement",
+  "active_status": "gate_b_r2_intact_rendered_pending_review",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-004_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001",
@@ -146,13 +146,13 @@
     "scale_translation": "complete_for_gate_a_study",
     "massing": "complete_gate_a_r1",
     "visual_gate_a_massing": "passed_r1",
-    "structural_system": "defined_ready_for_gate_b_implementation",
-    "circulation_and_access": "defined_ready_for_gate_b_implementation",
-    "exterior_architecture": "defined_ready_for_gate_b_implementation",
-    "interior_architecture": "defined_ready_for_gate_b_implementation",
-    "operational_systems": "defined_ready_for_gate_b_implementation",
-    "institutional_identity": "defined_ready_for_gate_b_implementation",
-    "visual_gate_b_intact_state": "ready_for_intact_implementation",
+    "structural_system": "implemented_gate_b_r2_pending_review",
+    "circulation_and_access": "implemented_gate_b_r2_pending_review",
+    "exterior_architecture": "implemented_gate_b_r2_pending_review",
+    "interior_architecture": "implemented_gate_b_r2_pending_review",
+    "operational_systems": "implemented_gate_b_r2_pending_review",
+    "institutional_identity": "implemented_gate_b_r2_pending_review",
+    "visual_gate_b_intact_state": "r2_rendered_pending_manual_review",
     "historical_layering": "pending",
     "environmental_narrative": "pending",
     "encounter_architecture": "pending",
@@ -214,12 +214,15 @@
       "significant_findings_corrected_or_justified": true
     },
     "gate_b_intact_state": {
-      "status": "ready_for_intact_implementation",
+      "status": "r2_rendered_pending_manual_review",
       "required": true,
       "damage_state": "D0 intact / operational",
       "fixed_camera_set": "ows004_fixed_v1",
       "review_only": true,
-      "rule": "D0 must prove the active target's complete intact operating architecture: structural system, usable public/staff/service circulation, exterior and interior program, connected operational systems, institutional identity, maintenance access and all pre-existing boundaries needed by later history before damage, encounters or loot layers begin."
+      "rule": "D0 must prove the active target's complete intact operating architecture: structural system, usable public/staff/service circulation, exterior and interior program, connected operational systems, institutional identity, maintenance access and all pre-existing boundaries needed by later history before damage, encounters or loot layers begin.",
+      "r1_implementation_failure": "west egress landing slabs overwrote the continuous ladder at production-floor elevations; first CI failure at y=9",
+      "r2_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/gate_b_intact/r2/review_manifest.json",
+      "review_stage_source": "scripts/render_ows004_gate_b_intact_r2.py"
     },
     "gate_c_damage_states": {
       "status": "blocked_by_gate_b_and_history_passes",
