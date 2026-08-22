@@ -10,7 +10,7 @@
   "active_target": "OWS-004",
   "active_target_name": "Mycological Vertical Farm Tower",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "phase_0_baseline_rendered_pending_review",
+  "active_status": "phase_0_reviewed_pass_2_functional_definition_ready",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-004_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001",
@@ -138,9 +138,9 @@
     "quality_status_promotion"
   ],
   "active_target_passes": {
-    "donor_audit": "ready",
-    "baseline_3d_review": "rendered_pending_manual_review",
-    "functional_definition": "pending",
+    "donor_audit": "complete",
+    "baseline_3d_review": "reviewed_rebuild_required",
+    "functional_definition": "ready",
     "precedent_research": "pending",
     "program_and_adjacency": "pending",
     "scale_translation": "pending",
@@ -166,11 +166,12 @@
     "quality_status_promotion": "pending"
   },
   "planning_records": {
-    "restart_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-004_RESTART_DOSSIER.md"
+    "restart_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-004_RESTART_DOSSIER.md",
+    "phase_0_baseline_review": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PHASE0_BASELINE_REVIEW.md"
   },
   "visual_review_gates": {
     "baseline": {
-      "status": "rendered_pending_manual_review",
+      "status": "reviewed_rebuild_required",
       "required": true,
       "source": "untouched OWS-004 functional shipping geometry at baseline_source_commit",
       "minimum_views": [
@@ -183,7 +184,10 @@
       ],
       "contact_sheet": true,
       "fixed_camera_set": "ows004_fixed_v1",
-      "artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/baseline/r0_pre_heavy_rebuild/review_manifest.json"
+      "artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/baseline/r0_pre_heavy_rebuild/review_manifest.json",
+      "review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PHASE0_BASELINE_REVIEW.md",
+      "decision": "REBUILD REQUIRED",
+      "significant_findings_corrected_or_justified": false
     },
     "gate_a_massing": {
       "status": "blocked_by_phase_0_and_planning",
