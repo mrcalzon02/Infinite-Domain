@@ -10,7 +10,7 @@
   "active_target": "OWS-003",
   "active_target_name": "Cold Chain Culture Nursery",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_c_r2_rendered_pending_review",
+  "active_status": "gate_c_r3_rendered_pending_review",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-003_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001",
@@ -145,13 +145,13 @@
     "operational_systems": "complete_gate_b_r7",
     "institutional_identity": "complete_gate_b_r7",
     "visual_gate_b_intact_state": "passed_r7",
-    "historical_layering": "implemented_gate_c_r2_pending_review",
-    "environmental_narrative": "implemented_gate_c_r2_pending_review",
-    "encounter_architecture": "implemented_gate_c_r2_pending_review",
-    "loot_architecture": "implemented_gate_c_r2_pending_review",
-    "quest_proof": "implemented_gate_c_r2_pending_review",
-    "damage_and_decay": "implemented_gate_c_r2_pending_review",
-    "visual_gate_c_damage_states": "r2_rendered_pending_manual_review",
+    "historical_layering": "implemented_gate_c_r3_pending_review",
+    "environmental_narrative": "implemented_gate_c_r3_pending_review",
+    "encounter_architecture": "implemented_gate_c_r3_pending_review",
+    "loot_architecture": "implemented_gate_c_r3_pending_review",
+    "quest_proof": "implemented_gate_c_r3_pending_review",
+    "damage_and_decay": "implemented_gate_c_r3_pending_review",
+    "visual_gate_c_damage_states": "r3_rendered_pending_manual_review",
     "micro_detail": "pending",
     "visual_gate_d_final_multi_angle": "pending",
     "static_validation": "pending",
@@ -232,7 +232,7 @@
       "significant_findings_corrected_or_justified": true
     },
     "gate_c_damage_states": {
-      "status": "r2_rendered_pending_manual_review",
+      "status": "r3_rendered_pending_manual_review",
       "required": true,
       "minimum_states": [
         "D0",
@@ -243,7 +243,10 @@
       "review_only": true,
       "r1_implementation_failure": "proof-office rectangular clearance assertion incorrectly included legitimate batch lectern at x=49,z=12",
       "r2_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-003/gate_c_damage_states/r2/gate_c_manifest.json",
-      "review_stage_source": "scripts/render_ows003_gate_c_damage_states_r2.py"
+      "review_stage_source": "scripts/render_ows003_gate_c_damage_states_r3.py",
+      "r2_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-003_GATE_C_R2_REVIEW.md",
+      "r2_decision": "REVISION REQUIRED",
+      "r3_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-003/gate_c_damage_states/r3/gate_c_manifest.json"
     },
     "gate_d_final_multi_angle": {
       "status": "blocked_by_gate_c_micro_detail_and_authoritative_sync",
