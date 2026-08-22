@@ -56,8 +56,9 @@ def main() -> None:
     gate_a = state["visual_review_gates"]["gate_a_massing"]
     gate_a["status"] = "ready_for_massing_implementation"
     gate_a["rule"] = (
-        "Prove retained adaptive-reuse massing, dominant cold-chain hall, separate inbound/outbound thresholds, "
-        "refrigeration plant reservation, orchard/site hierarchy and maintenance-access mass before operational detail."
+        "Prove the active target's approved macro program, institutional hierarchy, functional thresholds, "
+        "service/maintenance anatomy and site relationship at massing scale before operational detail, damage, "
+        "loot, encounters or microdetail may hide architectural defects."
     )
     state["visual_review_gates"]["gate_a_massing"] = gate_a
     state["active_status"] = "gate_a_massing_ready_to_implement"
