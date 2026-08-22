@@ -1,5 +1,6 @@
 # Advance only after the current active target is already guarded-complete.
-# Retrigger marker: OWS-004 final promotion persisted; activate OWS-005 baseline.
+# HOLD: OWS-004 is closed on static quality, but queue advancement is intentionally
+# paused here. Do not activate OWS-005 until the hold is explicitly removed.
 name: Old World Heavy Rebuild Advance
 
 on:
@@ -19,6 +20,10 @@ concurrency:
 
 jobs:
   advance-and-render-baseline:
+    # Deliberate hard stop. Keeping the push trigger for this guard commit starts
+    # a replacement run in the shared concurrency group, cancelling any older
+    # advancement run before it can persist OWS-005 activation.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out exact activation revision with history
