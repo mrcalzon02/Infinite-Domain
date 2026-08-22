@@ -1,0 +1,73 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "abyssal_recovery"
+	group: "4D9B7E21A6C850F3"
+	id: "7AB0550C00000001"
+	images: [ ]
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5E00000000000006"]
+			id: "5AB0550C00000001"
+			rewards: [{
+				command: "execute in minecraft:overworld run structure_map minecraft:ocean_ruin_cold 2"
+				feedback_message: "infinite_domain.reward.explorer_map"
+				id: "7EB0550C00000001"
+				permission_level: 2
+				silent: true
+				type: "command"
+			}]
+			shape: "diamond"
+			tasks: [{
+				biome: "infinite_domain:western_continental_slope"
+				id: "6AB0550C00000001"
+				type: "biome"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5AB0550C00000001"]
+			id: "5AB0550C00000002"
+			rewards: [{
+				id: "7EB0550C00000002"
+				item: { count: 1, id: "kubejs:abyssal_navigation_core" }
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "6AB0550C00000002"
+				structure: "minecraft:ocean_ruin_cold"
+				type: "structure"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5AB0550C00000002"]
+			id: "5AB0550C00000003"
+			rewards: [{
+				id: "7EB0550C00000003"
+				item: { count: 1, id: "numismatics:cog" }
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [
+				{
+					id: "6AB0550C00000003"
+					item: { count: 1, id: "kubejs:abyssal_navigation_core" }
+					type: "item"
+				}
+				{
+					biome: "infinite_domain:spawn_buffer"
+					id: "6AB0550C00000004"
+					type: "biome"
+				}
+			]
+			x: -2.0d
+			y: 4.0d
+		}
+	]
+}
