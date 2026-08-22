@@ -3,7 +3,7 @@ name: OWS-003 Gate-C Damage-State Review
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 0 * * *'
+    - cron: '*/5 * * * *'
   push:
     branches: [main]
     paths:
@@ -180,5 +180,5 @@ jobs:
         if: steps.capture.outputs.needed == 'true' && steps.render_gate_c.outcome == 'failure'
         run: exit 1
 
-# Temporary daily schedule exists only to capture the blocked r3 review.
-# Capture self-disables once the exact r3 manifest exists or Gate C has passed.
+# Temporary five-minute schedule exists only to capture the blocked r3 review.
+# The state gate makes capture one-shot; remove the schedule immediately after r3 persists.
