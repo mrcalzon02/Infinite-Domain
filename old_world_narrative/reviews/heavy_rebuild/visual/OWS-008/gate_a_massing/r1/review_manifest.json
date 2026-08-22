@@ -1,0 +1,40 @@
+{
+  "target": "OWS-008",
+  "gate": "gate_a_massing",
+  "revision": "massing-r1@local",
+  "damage_state": "D0 intact massing only",
+  "source_commit": "working-tree",
+  "source_path": "review-only:render_ows008_gate_a_massing.build_gate_a_massing()",
+  "dimensions": [
+    55,
+    22,
+    49
+  ],
+  "fixed_camera_set": "ows008_fixed_v1",
+  "visual_review_status": "rendered_pending_manual_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": false,
+  "cutaway_y": 14,
+  "views": {
+    "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/front_left.png",
+    "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/rear_left.png",
+    "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/rear_right.png",
+    "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/front_right.png",
+    "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/roof_top_oblique.png",
+    "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/interior_cutaway.png",
+    "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/floor_slices.png",
+    "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/contact_sheet.png"
+  },
+  "review_model_nbt_sha256": "23d7bc96c3f3ade8566aedad0c7d3a731cf4eeac55c9adcd365ed295ca59f361",
+  "review_builder_sha256": "252a7898afba6d8cd6cfe76aa84ef398765e1c612ea8f3112aa62f27bbe20d81",
+  "review_model_block_positions": 30426,
+  "review_model_non_air_positions": 13314,
+  "review_model_explicit_air_positions": 17112,
+  "review_model_palette_states": 13,
+  "review_model_block_entities": 0,
+  "review_model_entities": 0,
+  "authoritative_shipping_modified": false,
+  "shipping_nbt_git_blob_before": "6646d96d5723bb8d1b611de8354dea41396cb6df",
+  "shipping_nbt_git_blob_after": "6646d96d5723bb8d1b611de8354dea41396cb6df"
+}

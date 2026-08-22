@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "docs/registry-inventory/item-ids.txt"
+OLD_WORLD_EVIDENCE = ROOT / "kubejs/config/old_world_evidence.json"
 LOOT_ROOT = ROOT / "kubejs/data"
 
 
@@ -44,6 +45,13 @@ def main() -> int:
         if "StartupEvents.registry('item'" in source or 'StartupEvents.registry("item"' in source:
             for item_id in re.findall(r"\[['\"]([a-z0-9_./-]+)['\"]\s*,", source):
                 known_items.add(f"kubejs:{item_id}")
+    # Old World proof items are data-driven: the startup script loops over this
+    # JSON registry, so source regexes cannot discover the concrete IDs.
+    evidence = json.loads(OLD_WORLD_EVIDENCE.read_text(encoding="utf-8"))
+    for item in evidence.get("items", []):
+        item_id = item.get("id")
+        if isinstance(item_id, str) and item_id:
+            known_items.add(f"kubejs:{item_id}")
     loot_tables = sorted(LOOT_ROOT.glob("*/loot_table/**/*.json"))
     failures: list[str] = []
     for path in loot_tables:

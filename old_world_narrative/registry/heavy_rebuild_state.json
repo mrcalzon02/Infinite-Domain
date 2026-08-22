@@ -10,7 +10,7 @@
   "active_target": "OWS-007",
   "active_target_name": "EP-7 Agricultural Development Laboratory",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_b_r2_passed_passes_13_18_ready",
+  "active_status": "gate_c_r2_review_needed",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-007_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001",
@@ -177,13 +177,13 @@
     "operational_systems": "complete_gate_b_r2",
     "institutional_identity": "complete_gate_b_r2",
     "visual_gate_b_intact_state": "passed_r2",
-    "historical_layering": "pending",
-    "environmental_narrative": "pending",
-    "encounter_architecture": "pending",
-    "loot_architecture": "pending",
-    "quest_proof": "pending",
-    "damage_and_decay": "pending",
-    "visual_gate_c_damage_states": "pending",
+    "historical_layering": "complete_gate_c_r2",
+    "environmental_narrative": "complete_gate_c_r2",
+    "encounter_architecture": "complete_gate_c_r2",
+    "loot_architecture": "complete_gate_c_r2",
+    "quest_proof": "complete_gate_c_r2",
+    "damage_and_decay": "complete_gate_c_r2",
+    "visual_gate_c_damage_states": "review_needed_r2",
     "micro_detail": "pending",
     "visual_gate_d_final_multi_angle": "pending",
     "static_validation": "pending",
@@ -205,7 +205,16 @@
     "operational_systems": "old_world_narrative/reviews/heavy_rebuild/OWS-007_PASS11_OPERATIONAL_SYSTEMS.md",
     "institutional_identity": "old_world_narrative/reviews/heavy_rebuild/OWS-007_PASS12_VCF_IDENTITY.md",
     "gate_b_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-007_GATE_B_R1_REVIEW.md",
-    "gate_b_r2_review": "old_world_narrative/reviews/heavy_rebuild/OWS-007_GATE_B_R2_REVIEW.md"
+    "gate_b_r2_review": "old_world_narrative/reviews/heavy_rebuild/OWS-007_GATE_B_R2_REVIEW.md",
+    "historical_layering": "old_world_narrative/reviews/heavy_rebuild/OWS-007_PASS13_HISTORICAL_LAYERING.md",
+    "environmental_narrative": "old_world_narrative/reviews/heavy_rebuild/OWS-007_PASS14_ENVIRONMENTAL_NARRATIVE.md",
+    "encounter_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-007_PASS15_ENCOUNTER_ARCHITECTURE.md",
+    "loot_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-007_PASS16_LOOT_ARCHITECTURE.md",
+    "quest_proof": "old_world_narrative/reviews/heavy_rebuild/OWS-007_PASS17_QUEST_PROOF_ARCHITECTURE.md",
+    "damage_and_decay": "old_world_narrative/reviews/heavy_rebuild/OWS-007_PASS18_DAMAGE_AND_DECAY.md",
+    "gate_c_r1_candidate": "old_world_narrative/reviews/heavy_rebuild/OWS-007_GATE_C_R1_CANDIDATE.md",
+    "gate_c_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-007_GATE_C_R1_REVIEW.md",
+    "gate_c_r2_candidate": "old_world_narrative/reviews/heavy_rebuild/OWS-007_GATE_C_R2_CANDIDATE.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -261,7 +270,7 @@
       "significant_findings_corrected_or_justified": true
     },
     "gate_c_damage_states": {
-      "status": "pending",
+      "status": "review_needed_r2",
       "required": true,
       "minimum_states": [
         "D0",
@@ -271,7 +280,24 @@
       "fixed_camera_set": "ows007_fixed_v1",
       "review_only": true,
       "rule": "D0 must exactly preserve the accepted Gate-B r2 model; D1 and D3 must express the approved EP-7 history causally while retaining proof, routes, identity and operational legibility.",
-      "decision": "PENDING",
+      "r1_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-007/gate_c_damage_states/r1/gate_c_manifest.json",
+      "r1_candidate_record": "old_world_narrative/reviews/heavy_rebuild/OWS-007_GATE_C_R1_CANDIDATE.md",
+      "r1_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-007_GATE_C_R1_REVIEW.md",
+      "r1_decision": "REVISION REQUIRED",
+      "r2_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-007/gate_c_damage_states/r2/gate_c_manifest.json",
+      "r2_candidate_record": "old_world_narrative/reviews/heavy_rebuild/OWS-007_GATE_C_R2_CANDIDATE.md",
+      "r2_review_model_sha256_d0": "b116ad94acd595414ca670d4f5205bed69e4116724167a6397a8504acb0ba67a",
+      "r2_review_model_sha256_d1": "7bb865d6d06682dca0b986234c639cc859c7c15be47cd342215b21f3e2ef952f",
+      "r2_review_model_sha256_d3": "d7c3b597af7e5c63a26ceb43f2e6a2e75865e60f2a197e1c0679b52d67c19283",
+      "r2_changed_positions_from_r1_d3": 1,
+      "r2_common_cutaway_y": 8,
+      "r2_proof_position": [
+        43,
+        2,
+        56
+      ],
+      "r2_spawners": 4,
+      "decision": "REVIEW NEEDED",
       "significant_findings_corrected_or_justified": false
     },
     "gate_d_final_multi_angle": {
