@@ -100,13 +100,27 @@ def _record_history_if_authorized(state: dict) -> bool:
 
     passes = state.setdefault("active_target_passes", {})
     records = state.setdefault("planning_records", {})
+    gate_c = state.setdefault("visual_review_gates", {}).setdefault("gate_c_damage_states", {})
+    gate_c_status = str(gate_c.get("status", ""))
+
+    # A passed Gate C proves that Passes 13-18 were not merely planned: they were
+    # implemented in, rendered with, and accepted as part of that exact revision.
+    # Recover that stronger state when a generic planning workflow reruns later.
+    if gate_c_status.startswith("passed_r"):
+        revision = gate_c_status.removeprefix("passed_")
+        history_status = f"complete_gate_c_{revision}"
+    else:
+        history_status = "complete_for_gate_c_implementation"
+
     for pass_key, (filename, _marker) in HISTORY_FILES.items():
-        passes[pass_key] = "complete_for_gate_c_implementation"
+        current = str(passes.get(pass_key, ""))
+        if gate_c_status.startswith("passed_r"):
+            passes[pass_key] = history_status
+        elif not current.startswith(("implemented_gate_c_", "complete_gate_c_", "complete_gate_d_", "peak_quality_", "static_")):
+            passes[pass_key] = history_status
         records[pass_key] = f"old_world_narrative/reviews/heavy_rebuild/{filename}"
 
-    gate_c = state.setdefault("visual_review_gates", {}).setdefault("gate_c_damage_states", {})
-    current = str(gate_c.get("status", ""))
-    if current in GATE_C_OPENABLE:
+    if gate_c_status in GATE_C_OPENABLE:
         gate_c["status"] = "ready_to_render"
         gate_c["history_planning_complete"] = True
         gate_c["required_history_documents"] = [
@@ -116,7 +130,8 @@ def _record_history_if_authorized(state: dict) -> bool:
         gate_c["review_only"] = True
         gate_c["fixed_camera_set"] = gate_c.get("fixed_camera_set", "ows004_fixed_v1")
         passes["visual_gate_c_damage_states"] = "ready_to_render"
-        state["active_status"] = "gate_c_damage_states_ready_to_render"
+        if not _advanced_active_status(state.get("active_status", "")):
+            state["active_status"] = "gate_c_damage_states_ready_to_render"
     return True
 
 
@@ -193,11 +208,9 @@ def main() -> None:
     if _record_history_if_authorized(state):
         STATE_PATH.write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8", newline="\n")
         gate_c_status = state["visual_review_gates"]["gate_c_damage_states"].get("status")
-        print(f"OWS-004 Passes 13-18 recorded; Gate-C state preserved/advanced as {gate_c_status!r}.")
+        print(f"OWS-004 Passes 13-18 recorded monotonically; Gate-C state preserved/advanced as {gate_c_status!r}.")
         return
 
-    # Gate A is passed but history is not yet authorized/complete. Preserve any
-    # existing advanced status instead of resetting it to the old Pass-7 label.
     if not _advanced_active_status(state.get("active_status", "")):
         gate_b_status = str(state.get("visual_review_gates", {}).get("gate_b_intact_state", {}).get("status", ""))
         if gate_b_status.startswith("passed"):
