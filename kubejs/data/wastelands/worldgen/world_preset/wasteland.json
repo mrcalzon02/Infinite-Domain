@@ -20,7 +20,9 @@
             { "biome": "minecraft:frozen_ocean", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "continentalness": [-0.455, -0.19] },
             { "biome": "minecraft:cold_ocean", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "continentalness": [-0.455, -0.19] },
 
-            { "biome": "minecraft:deep_ocean", "temperature": [-0.99, 0.99], "continentalness": [-1.2, -0.455] },
+            { "biome": "infinite_domain:western_abyssal_ocean", "temperature": [-0.99, 0.99], "humidity": [-1.0, -0.2], "continentalness": [-1.2, -0.455] },
+            { "biome": "minecraft:deep_ocean", "temperature": [-0.99, 0.99], "humidity": [-0.2, 0.2], "continentalness": [-1.2, -0.455] },
+            { "biome": "infinite_domain:eastern_abyssal_ocean", "temperature": [-0.99, 0.99], "humidity": [0.2, 1.0], "continentalness": [-1.2, -0.455] },
             { "biome": "minecraft:ocean", "temperature": [-0.99, 0.99], "continentalness": [-0.455, -0.19] },
 
             { "biome": "minecraft:deep_lukewarm_ocean", "temperature": [0.99, 1.0], "continentalness": [-1.2, -0.455] },
