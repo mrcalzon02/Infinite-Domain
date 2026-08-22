@@ -1,0 +1,32 @@
+{
+  "target": "OWS-005",
+  "gate": "baseline",
+  "revision": "pre-heavy-rebuild@d2cdec57",
+  "damage_state": "historical rough implementation",
+  "source_commit": "d2cdec5739d8d2c1423973f6ed7c59ee59224789",
+  "source_path": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_005_vcf_harvest_packaging_annex.nbt",
+  "dimensions": [
+    59,
+    24,
+    51
+  ],
+  "fixed_camera_set": "ows005_fixed_v1",
+  "visual_review_status": "rendered_pending_manual_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": false,
+  "cutaway_y": 4,
+  "views": {
+    "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/baseline/r0_pre_heavy_rebuild/front_left.png",
+    "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/baseline/r0_pre_heavy_rebuild/rear_left.png",
+    "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/baseline/r0_pre_heavy_rebuild/rear_right.png",
+    "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/baseline/r0_pre_heavy_rebuild/front_right.png",
+    "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/baseline/r0_pre_heavy_rebuild/roof_top_oblique.png",
+    "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/baseline/r0_pre_heavy_rebuild/interior_cutaway.png",
+    "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/baseline/r0_pre_heavy_rebuild/floor_slices.png",
+    "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/baseline/r0_pre_heavy_rebuild/contact_sheet.png"
+  },
+  "baseline_nbt_sha256": "7ec3f917c6c979a94e79f235c4afa52c8f51c5dc6776f261f0e60d4218c569ed",
+  "live_nbt_sha256_at_render": "7ec3f917c6c979a94e79f235c4afa52c8f51c5dc6776f261f0e60d4218c569ed",
+  "live_matches_frozen_baseline": true
+}

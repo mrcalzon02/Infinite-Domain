@@ -1,0 +1,32 @@
+{
+  "target": "OWS-005",
+  "gate": "gate_a_massing",
+  "revision": "massing-r1@local",
+  "damage_state": "D0 intact massing only",
+  "source_commit": "working-tree",
+  "source_path": "review-only:render_ows005_gate_a_massing.build_gate_a_massing()",
+  "dimensions": [
+    59,
+    24,
+    51
+  ],
+  "fixed_camera_set": "ows005_fixed_v1",
+  "visual_review_status": "rendered_pending_manual_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": false,
+  "cutaway_y": 7,
+  "views": {
+    "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/gate_a_massing/r1/front_left.png",
+    "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/gate_a_massing/r1/rear_left.png",
+    "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/gate_a_massing/r1/rear_right.png",
+    "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/gate_a_massing/r1/front_right.png",
+    "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/gate_a_massing/r1/roof_top_oblique.png",
+    "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/gate_a_massing/r1/interior_cutaway.png",
+    "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/gate_a_massing/r1/floor_slices.png",
+    "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-005/gate_a_massing/r1/contact_sheet.png"
+  },
+  "review_model_nbt_sha256": "9f4ba26a30f5632acc5480535cb0477ab20ed56e9e96f6725f4eded7184d6402",
+  "review_builder_sha256": "49ae1fe156103342f78b7d5c58a0aa8379a6f0dadcbf8c991ce633fc764d8b1d",
+  "authoritative_shipping_modified": false
+}

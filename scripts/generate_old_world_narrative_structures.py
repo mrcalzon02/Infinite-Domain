@@ -18,6 +18,7 @@ from pathlib import Path
 
 import old_world_narrative_core as core
 import old_world_later_waves as later
+import old_world_ows005_final as ows005_final
 
 base = core.base
 ROOT = Path(__file__).resolve().parents[1]
@@ -335,26 +336,6 @@ AEVUM_EXTENSION = (
 )
 
 
-def build_005():
-    t = base.abandoned_orchard_cannery_clean_master()
-    t.fill((6, 9, 8), (55, 11, 8), "minecraft:white_concrete")
-    t.fill((12, 10, 7), (49, 13, 7), "minecraft:lime_concrete")
-    t.fill((7, 1, 13), (23, 1, 20), "minecraft:light_blue_concrete")
-    t.fill((8, 2, 15), (22, 2, 15), "create:fluid_pipe")
-    t.fill((8, 2, 17), (11, 6, 19), "create:fluid_tank")
-    for x in (27, 34, 41, 48):
-        t.set(x, 2, 16, "create:depot")
-        t.set(x, 3, 17, "create:mechanical_press", facing="north")
-        t.fill((x - 1, 2, 21), (x + 2, 4, 23), "create:cardboard_block")
-    for x in (29, 35, 41, 47):
-        t.fill((x, 2, 28), (x + 2, 5, 31), "oritech:cooler_block")
-    t.fill((8, 2, 28), (20, 4, 34), "jaffabricate:pallet_full")
-    t.fill((45, 1, 33), (56, 1, 39), "minecraft:yellow_concrete")
-    t.fill((47, 2, 34), (55, 4, 38), "create:cardboard_block")
-    t.chest(52, 2, 36, "infinite_domain:chests/old_world/ows_005_vcf_harvest_packaging_annex", "west")
-    return t
-
-
 def build_007():
     t = base.nuclear_research_annex_clean_master()
     t.fill((5, 10, 10), (38, 12, 10), "minecraft:white_concrete")
@@ -592,7 +573,7 @@ core.SPECS = tuple(
 )
 core.BY_TARGET.update({spec.target: spec for spec in core.SPECS})
 core.BUILDERS.update({
-    "OWS-005": build_005,
+    "OWS-005": ows005_final.build_005,
     "OWS-007": build_007,
     "OWS-008": build_008,
     "OWS-009": build_009,
