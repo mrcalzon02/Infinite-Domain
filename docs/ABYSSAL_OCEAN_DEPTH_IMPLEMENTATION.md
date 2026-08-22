@@ -2,68 +2,39 @@
 
 Authoritative parent plan: `docs/ABYSSAL_OCEAN_PROGRAM.md`
 
-Status: **East/West depth shaping is active; depth-specific biomes, FTB Ocean Mobs integration, and the first submarine recovery voyage are implemented. Runtime validation was unavailable on 2026-08-22 and explicitly waived for forward development, so physical Y-level claims remain unmeasured rather than falsely marked proven.**
+Status: **East/West depth shaping, explicit depth biomes, FTB Ocean Mobs integration, bilateral recovery quests, and salvage contracts are implemented. Runtime validation was unavailable on 2026-08-22 and explicitly waived for forward development, so terrain measurements remain unobserved rather than falsely marked proven.**
 
-## Development gate disposition
+## Gate disposition
 
-The ordinary fresh-world gate was not executable during this implementation pass. Project direction was to continue as if the gate were positive.
+The ordinary fresh-world validation pass could not be executed during this implementation cycle. Project direction was to continue as though it had passed.
 
-For status purposes this means:
+That means implementation may be promoted and downstream systems may depend on its IDs/contracts. It does **not** create fictional measurements. Seabed Y, aquifer behavior, submarine clearance, structure placement quality, encounter density, and generation cost remain deferred observations.
 
-- implementation may be promoted and extended;
-- downstream content may depend on the new biome/depth contracts;
-- unavailable runtime observations are retained in the deferred validation ledger;
-- no fabricated terrain measurements or performance claims are permitted.
+## Regional corridor and terrain chain
 
-This document therefore separates **implemented** from **measured**.
+`custom_worldgen:east_west_ocean_corridor_mask` derives from the established east/west continent system and suppresses abyssal intervention in north/south-dominant geography.
 
-## Regional corridor gate
-
-`custom_worldgen:east_west_ocean_corridor_mask` derives from the established east/west continent system. It suppresses abyssal intervention in north/south-dominant geography and ramps toward full strength in the east/west continental wedges.
-
-`custom_worldgen:regional_east_west_gradient` regionalizes the signed east/west gradient before it feeds the normal humidity authority outside protected start and mountain masks.
-
-The result is one geographic authority for both terrain and biome identity rather than duplicated coordinate logic.
-
-## Active depth masks
-
-The current depth chain is decomposed into reusable functions:
+The depth system uses:
 
 - `custom_worldgen:abyssal_ocean_mask`
 - `custom_worldgen:abyssal_plain_mask`
 - `custom_worldgen:abyssal_fracture_mask`
 - `custom_worldgen:hadal_trench_mask`
-
-The fracture mask uses low-frequency shifted erosion noise. The hadal mask is constrained by established deep-water terrain plus fracture selection so the strongest depression is intended to form uncommon trench corridors rather than a uniformly bottomed-out ocean.
-
-These masks operate from `outer_directional_continents`, avoiding recursion through the final `custom_worldgen:continents` function.
-
-## Separate Eastern and Western depression files
-
-Regional terrain pressure is independently addressable through:
-
 - `custom_worldgen:western_depth_depression`
 - `custom_worldgen:eastern_depth_depression`
+- `custom_worldgen:abyssal_outer_continents`
 
-Both currently use the same initial pressure curve:
+`custom_worldgen:continents` uses the abyssal outer function only outside the protected `central_continent_mask` branch.
 
-1. ocean/slope: `0.05`;
-2. abyssal plain: `0.12`;
-3. fracture/hadal: `0.28`.
+Current pressure curve:
 
-They remain separate so later tuning can broaden/terrace the Western seabed and sharpen or increase trench density in the Eastern seabed without replacing the shared masks.
+1. slope/ocean `0.05`;
+2. abyssal plain `0.12`;
+3. fracture/hadal `0.28`.
 
-## Continentalness integration
+Fracture selection uses low-frequency shifted erosion noise. The hadal mask is constrained by both deep-water and fracture membership so the strongest depression remains localized.
 
-`custom_worldgen:abyssal_outer_continents` subtracts the stronger applicable regional depression from `outer_directional_continents`, then clamps the result to `-1.2 .. 1.0`.
-
-`custom_worldgen:continents` uses `abyssal_outer_continents` only for the outer-world branch of `central_continent_mask`. The protected central-continent branch is unchanged.
-
-This is an active terrain integration, not a reserved scaffold.
-
-## Active biome routing bands
-
-The temperate deep-ocean continentalness range is subdivided as follows:
+## Active biome routing
 
 | Role | Continentalness | West | East |
 | --- | --- | --- | --- |
@@ -72,17 +43,11 @@ The temperate deep-ocean continentalness range is subdivided as follows:
 | Fracture field | `-1.02 .. -0.82` | `western_fracture_field` | `eastern_fracture_field` |
 | Hadal trench | `-1.20 .. -1.02` | `western_hadal_trench` | `eastern_hadal_trench` |
 
-For every band:
+Every band uses humidity `-1.0 .. -0.2` for West, `-0.2 .. 0.2` for the vanilla deep-ocean transition seam, and `0.2 .. 1.0` for East.
 
-- humidity `-1.0 .. -0.2` routes West;
-- humidity `-0.2 .. 0.2` remains vanilla `minecraft:deep_ocean` as a transition seam;
-- humidity `0.2 .. 1.0` routes East.
-
-Normal temperate ocean above the deep-ocean boundary remains vanilla. The extreme north/south ocean rules retain their pre-existing climate ownership.
+Normal ocean and extreme north/south ocean climates retain their pre-existing ownership.
 
 ## Targeting tags
-
-Depth and region are both first-class targeting dimensions.
 
 Regional parents:
 
@@ -96,136 +61,116 @@ Combined depth groups:
 - `#infinite_domain:abyssal_fracture_biomes`
 - `#infinite_domain:hadal_biomes`
 
-Each combined depth group is built from corresponding independent Eastern and Western subtags.
-
-All current abyssal depth biomes are appended to vanilla ocean/deep-ocean biome tags with `replace: false`.
+Each combined group is composed from separate West/East subtags. All current abyssal biomes append to vanilla ocean/deep-ocean tags with `replace: false`.
 
 ## FTB Ocean Mobs population
 
-The upstream FTB Ocean Mobs registry was checked before population work. Nine ordinary Rift mobs are eligible for normal placement; the Rift Weaver and sludgeling are explicitly no-natural-spawn entities and remain excluded.
+Nine upstream-normal Rift mobs are used; upstream no-natural-spawn entities (`rift_weaver`, `sludgeling`) remain excluded.
 
-Implemented encounter policy:
+Western encounter progression:
 
-### Western slope
+- slope: rare `riftling_observer`, `abyssal_winged`;
+- plain: `riftling_observer`, rare `mossback_goliath`, rare `shadow_beast`;
+- fracture: `abyssal_sludge`, `shadow_beast`, rare `tentacled_horror`;
+- hadal: `tentacled_horror`, rare `rift_demon`, `rift_minotaur`, `abyssal_winged`.
 
-- drowned baseline
-- rare `riftling_observer`
-- rare `abyssal_winged`
+Eastern encounter progression:
 
-### Western abyssal plain
+- slope: rare `corrosive_craig`, `riftling_observer`;
+- plain: `corrosive_craig`, rare `mossback_goliath`, `abyssal_sludge`;
+- fracture: `corrosive_craig`, `shadow_beast`, rare `rift_minotaur`;
+- hadal: `rift_demon`, `tentacled_horror`, rare `rift_minotaur`, `abyssal_sludge`.
 
-- stronger drowned baseline
-- `riftling_observer`
-- rare `mossback_goliath`
-- rare `shadow_beast`
+Drowned remain a baseline and FTB weights stay conservative. Threat density rises by depth rather than enabling Rift mobs globally.
 
-### Western fracture field
+Entity loot tables live under `kubejs/data/ftboceanmobs/loot_table/entities/` and provide modest salvage/biological drops.
 
-- `abyssal_sludge`
-- `shadow_beast`
-- rare `tentacled_horror`
+## Recovery quest integration
 
-### Western hadal trench
+`config/ftbquests/quests/chapters/abyssal_recovery.snbt` is mechanically attached to existing Air/Sea quest `5E00000000000006` (`Ballast and Propulsion`).
 
-- `tentacled_horror`
-- rare `rift_demon`
-- rare `rift_minotaur`
-- rare `abyssal_winged`
+### Pelagos/Western branch
 
-### Eastern slope
+- visit `western_continental_slope`;
+- map/enter `minecraft:ocean_ruin_cold`;
+- recover `kubejs:abyssal_navigation_core`;
+- return to `infinite_domain:spawn_buffer` with the core.
 
-- drowned baseline
-- rare `corrosive_craig`
-- rare `riftling_observer`
+### Karsic/Eastern branch
 
-### Eastern abyssal plain
+- visit `eastern_continental_slope`;
+- map/enter `minecraft:ocean_ruin_warm`;
+- recover `kubejs:karsic_subsea_data_recorder`;
+- return to `infinite_domain:spawn_buffer` with the recorder.
 
-- `corrosive_craig`
-- rare `mossback_goliath`
-- rare `abyssal_sludge`
+The convergence milestone requires both proof items. New IDs are stable mechanical contracts; polished quest localization may be added later without changing them.
 
-### Eastern fracture field
+`kubejs/startup_scripts/abyssal_recovery_items.js` registers both proof items using vanilla placeholder textures under the mechanical-first rule.
 
-- `corrosive_craig`
-- `shadow_beast`
-- rare `rift_minotaur`
+## Temporary recovery-site compatibility
 
-### Eastern hadal trench
+Current stand-ins are enabled on their intended slope families:
 
-- `rift_demon`
-- `tentacled_horror`
-- rare `rift_minotaur`
-- rare `abyssal_sludge`
+- Western slope -> `minecraft:has_structure/ocean_ruin_cold`
+- Eastern slope -> `minecraft:has_structure/ocean_ruin_warm`
 
-The spawn weights are intentionally conservative relative to drowned populations; risk increases by depth rather than making all oceans globally hostile.
+Semantic structure tags abstract those temporary targets:
 
-## FTB Ocean Mobs loot ownership
+- `#infinite_domain:western_abyssal_recovery_sites`
+- `#infinite_domain:eastern_abyssal_recovery_sites`
 
-Entity loot tables are now supplied by Infinite Domain under:
+The current tag members are vanilla ruins. Purpose-built Infinite Domain structure IDs should later enter/replace these tags so downstream content can keep the same semantic contract.
 
-`kubejs/data/ftboceanmobs/loot_table/entities/`
+## Wreck and deep-salvage loot contracts
 
-All nine naturally placeable mobs receive modest material/salvage drops. The tables avoid advanced machines, diamonds, netherite, or other direct progression bypasses. Rare items such as nautilus shell, echo shard, or crying obsidian are low-probability trophies rather than guaranteed farm outputs.
+Reserved custom-structure chest tables are implemented:
 
-Bespoke biological samples or research items can replace/extend these vanilla-material stand-ins later without changing spawn routing.
+- `infinite_domain:chests/abyssal/pelagos_survey_recovery`
+- `infinite_domain:chests/abyssal/karsic_patrol_recovery`
+- `infinite_domain:chests/abyssal/abyssal_plain_salvage`
+- `infinite_domain:chests/abyssal/hadal_salvage`
 
-## First expedition contract
+The two regional wreck tables guarantee the corresponding proof item and add modest salvage. Deeper generic tables add unusual materials at controlled rates without advanced-machine or late-era bypasses.
 
-`config/ftbquests/quests/chapters/abyssal_recovery.snbt` implements the first submarine recovery line.
+These tables are **not injected into vanilla ocean-ruin chests**. During the temporary phase the quest reward provides story proof. The custom chest contracts are intended for the bespoke wreck structures.
 
-It cross-depends on existing Air/Sea quest `5E00000000000006` (`Ballast and Propulsion`) and therefore does not duplicate the submarine construction ladder.
+## Unmeasured physical boundary
 
-Mechanical sequence:
+Sea level remains 48; Overworld minimum Y remains -64. The intended physical order is shelf -> slope -> abyssal plain -> fracture field -> rare hadal trench.
 
-1. visit `infinite_domain:western_continental_slope`;
-2. receive a map to `minecraft:ocean_ruin_cold`;
-3. enter the ruin;
-4. receive `kubejs:abyssal_navigation_core`;
-5. return to `infinite_domain:spawn_buffer` while possessing the core.
+Still unmeasured:
 
-The proof item is registered in `kubejs/startup_scripts/abyssal_recovery_items.js` and currently uses a vanilla echo-shard texture as an intentional mechanical-first placeholder.
-
-Western slope biomes are appended to `minecraft:has_structure/ocean_ruin_cold`; Eastern slope biomes are appended to `minecraft:has_structure/ocean_ruin_warm`, reserving a symmetric Eastern scaffold.
-
-The vanilla ruin is temporary. A later Heavy Rebuild structure should replace the recovery destination without changing the quest's essential locate-descend-recover-return contract.
-
-## What remains unmeasured
-
-The following are not treated as blockers for this development pass, but remain unproven observations:
-
-- actual seabed Y distribution;
+- actual seabed Y per band;
 - whether strongest trenches reach approximately Y -56 to -60;
 - shelf/slope visual quality;
-- cave and aquifer interaction;
+- caves/aquifers/bedrock interaction;
 - practical submarine clearance;
-- structure placement quality on steep terrain;
-- chunk-generation cost;
-- actual encounter density under live mob-cap conditions.
+- structure placement on steep terrain;
+- generation cost;
+- live encounter density under mob caps.
 
-If later measurement shows continentalness cannot reach the intended depth, add only a narrowly regional/ocean/hadal-gated final-density contribution. Do not globally mutate Overworld depth.
+If future measurement shows continentalness alone is insufficient, any final-density correction must be narrowly gated by East/West + ocean + hadal masks. No global Overworld depth mutation.
 
 ## Deferred validation ledger
 
 When runtime access returns:
 
-1. validate all density functions;
+1. validate density-function loading;
 2. verify East/West routing and transition seam;
-3. inspect central continent and mountain annulus for regression;
-4. inspect north/south oceans for contamination;
-5. measure physical depth bands;
-6. inspect bedrock, caves, and aquifers;
-7. verify slope ocean ruins generate and map correctly;
-8. verify FTB Rift mobs stay out of starter waters and scale acceptably by depth;
-9. complete the Western recovery voyage end-to-end;
-10. measure navigation and chunk-generation performance.
+3. verify central continent/mountain annulus and north/south oceans;
+4. measure physical depth bands;
+5. inspect bedrock/caves/aquifers;
+6. verify cold/warm ruin generation on slope biomes;
+7. run both recovery branches end-to-end;
+8. verify FTB mobs remain out of starter coasts and scale acceptably;
+9. assess submarine navigation;
+10. measure generation performance.
 
 ## Next implementation boundary
 
-Proceed with:
-
-1. an Eastern/Karsic recovery branch;
-2. purpose-built Western and Eastern wreck/installation structures replacing the vanilla ruin stand-ins;
-3. region-owned salvage/evidence loot;
-4. deeper repeatable submarine expeditions;
-5. deliberate aquatic/geological feature population of the current sparse biomes;
-6. runtime tuning when measurement becomes available.
+1. Create first-class Pelagos survey wreck and Karsic patrol wreck worldgen structure IDs, template pools, structure sets, and NBT/schematics.
+2. Bind the already-created regional wreck loot tables to guaranteed evidence chests.
+3. Replace vanilla ruin quest/map targets with those stable custom structure IDs while retaining the semantic structure tags and proof item IDs.
+4. Add abyssal-plain, fracture, and hadal expedition sites.
+5. Populate sparse biome feature lists with verified marine/geological features.
+6. Add polished quest localization and bespoke proof-item art after mechanical structure integration.
