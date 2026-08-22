@@ -16,8 +16,15 @@ on:
       - 'scripts/record_ows*_planning.py'
       - 'scripts/record_ows*_gate_c*.py'
       - 'scripts/record_active_gate_b_review.py'
+      - 'scripts/record_old_world_gate_c_planning_passes.py'
       - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_GATE_B_*.md'
       - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_GATE_C_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS13_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS14_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS15_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS16_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS17_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS18_*.md'
       - 'old_world_narrative/registry/heavy_rebuild_state.json'
       - '.github/workflows/old-world-heavy-rebuild-review.yml'
 
@@ -54,6 +61,9 @@ jobs:
           if [ -f scripts/record_active_gate_b_review.py ]; then
             python -m py_compile scripts/record_active_gate_b_review.py
           fi
+          if [ -f scripts/record_old_world_gate_c_planning_passes.py ]; then
+            python -m py_compile scripts/record_old_world_gate_c_planning_passes.py
+          fi
           if [ -f scripts/record_ows003_gate_c_r3_review.py ]; then
             python -m py_compile scripts/record_ows003_gate_c_r3_review.py
           fi
@@ -82,6 +92,15 @@ jobs:
         run: |
           if [ -f scripts/record_active_gate_b_review.py ]; then
             python scripts/record_active_gate_b_review.py
+          fi
+
+      # Passes 13-18 are planning/implementation authority only. This recorder
+      # verifies their explicit completion markers after Gate B and opens Gate C;
+      # it never decides a visual gate.
+      - name: Record guarded Gate-C planning state when present
+        run: |
+          if [ -f scripts/record_old_world_gate_c_planning_passes.py ]; then
+            python scripts/record_old_world_gate_c_planning_passes.py
           fi
 
       - name: Render first unresolved active visual gate
