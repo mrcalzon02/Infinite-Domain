@@ -10,7 +10,7 @@
   "active_target": "OWS-004",
   "active_target_name": "Mycological Vertical Farm Tower",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_c_r2_rendered_pending_review",
+  "active_status": "gate_c_r4_rendered_pending_review",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-004_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001",
@@ -153,13 +153,13 @@
     "operational_systems": "complete_gate_b_r4",
     "institutional_identity": "complete_gate_b_r4",
     "visual_gate_b_intact_state": "passed_r4",
-    "historical_layering": "implemented_gate_c_r2_pending_review",
-    "environmental_narrative": "implemented_gate_c_r2_pending_review",
-    "encounter_architecture": "implemented_gate_c_r2_pending_review",
-    "loot_architecture": "implemented_gate_c_r2_pending_review",
-    "quest_proof": "implemented_gate_c_r2_pending_review",
-    "damage_and_decay": "implemented_gate_c_r2_pending_review",
-    "visual_gate_c_damage_states": "r2_rendered_pending_manual_review",
+    "historical_layering": "implemented_gate_c_r4_pending_review",
+    "environmental_narrative": "implemented_gate_c_r4_pending_review",
+    "encounter_architecture": "implemented_gate_c_r4_pending_review",
+    "loot_architecture": "implemented_gate_c_r4_pending_review",
+    "quest_proof": "implemented_gate_c_r4_pending_review",
+    "damage_and_decay": "implemented_gate_c_r4_pending_review",
+    "visual_gate_c_damage_states": "r4_rendered_pending_manual_review",
     "micro_detail": "pending",
     "visual_gate_d_final_multi_angle": "pending",
     "static_validation": "pending",
@@ -241,7 +241,7 @@
       "significant_findings_corrected_or_justified": true
     },
     "gate_c_damage_states": {
-      "status": "r2_rendered_pending_manual_review",
+      "status": "r4_rendered_pending_manual_review",
       "required": true,
       "minimum_states": [
         "D0",
@@ -253,7 +253,10 @@
       "rule": "D0 must exactly preserve the accepted intact Gate-B model; D1 must express the approved localized historical intervention; D3 must express causal long-term ruin while retaining proof, circulation, institutional identity and reconstructable operations.",
       "r1_implementation_failure": "vertical-route assertion checked obsolete pre-r4 environmental-riser coordinate x42/z19 inside the new staff stair",
       "r2_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/gate_c_damage_states/r2/gate_c_manifest.json",
-      "review_stage_source": "scripts/render_ows004_gate_c_damage_states_r2.py"
+      "review_stage_source": "scripts/render_ows004_gate_c_damage_states_r4.py",
+      "r2_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-004_GATE_C_R2_REVIEW.md",
+      "r2_decision": "REVISION REQUIRED",
+      "r4_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/gate_c_damage_states/r4/gate_c_manifest.json"
     },
     "gate_d_final_multi_angle": {
       "status": "blocked_by_gate_c_micro_detail_and_authoritative_sync",
