@@ -10,7 +10,7 @@
   "active_target": "OWS-004",
   "active_target_name": "Mycological Vertical Farm Tower",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_c_r4_rendered_pending_review",
+  "active_status": "gate_c_r4_passed_ready_for_micro_detail",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-004_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001",
@@ -153,14 +153,14 @@
     "operational_systems": "complete_gate_b_r4",
     "institutional_identity": "complete_gate_b_r4",
     "visual_gate_b_intact_state": "passed_r4",
-    "historical_layering": "complete_for_gate_c_implementation",
-    "environmental_narrative": "complete_for_gate_c_implementation",
-    "encounter_architecture": "complete_for_gate_c_implementation",
-    "loot_architecture": "complete_for_gate_c_implementation",
-    "quest_proof": "complete_for_gate_c_implementation",
-    "damage_and_decay": "complete_for_gate_c_implementation",
-    "visual_gate_c_damage_states": "r4_rendered_pending_manual_review",
-    "micro_detail": "pending",
+    "historical_layering": "complete_gate_c_r4",
+    "environmental_narrative": "complete_gate_c_r4",
+    "encounter_architecture": "complete_gate_c_r4",
+    "loot_architecture": "complete_gate_c_r4",
+    "quest_proof": "complete_gate_c_r4",
+    "damage_and_decay": "complete_gate_c_r4",
+    "visual_gate_c_damage_states": "passed_r4",
+    "micro_detail": "ready",
     "visual_gate_d_final_multi_angle": "pending",
     "static_validation": "pending",
     "quality_status_promotion": "pending"
@@ -185,7 +185,8 @@
     "encounter_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS15_ENCOUNTER_ARCHITECTURE.md",
     "loot_architecture": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS16_LOOT_ARCHITECTURE.md",
     "quest_proof": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS17_QUEST_PROOF_ARCHITECTURE.md",
-    "damage_and_decay": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS18_DAMAGE_AND_DECAY.md"
+    "damage_and_decay": "old_world_narrative/reviews/heavy_rebuild/OWS-004_PASS18_DAMAGE_AND_DECAY.md",
+    "gate_c_r4_review": "old_world_narrative/reviews/heavy_rebuild/OWS-004_GATE_C_R4_REVIEW.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -241,7 +242,7 @@
       "significant_findings_corrected_or_justified": true
     },
     "gate_c_damage_states": {
-      "status": "r4_rendered_pending_manual_review",
+      "status": "passed_r4",
       "required": true,
       "minimum_states": [
         "D0",
@@ -256,7 +257,12 @@
       "review_stage_source": "scripts/render_ows004_gate_c_damage_states_r4.py",
       "r2_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-004_GATE_C_R2_REVIEW.md",
       "r2_decision": "REVISION REQUIRED",
-      "r4_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/gate_c_damage_states/r4/gate_c_manifest.json"
+      "r4_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/gate_c_damage_states/r4/gate_c_manifest.json",
+      "decision": "PASSED",
+      "r4_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-004_GATE_C_R4_REVIEW.md",
+      "r4_d1_changed_positions_from_d0": 112,
+      "r4_d3_changed_positions_from_d0": 727,
+      "significant_findings_corrected_or_justified": true
     },
     "gate_d_final_multi_angle": {
       "status": "blocked_by_gate_c_micro_detail_and_authoritative_sync",
