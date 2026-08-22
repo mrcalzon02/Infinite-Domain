@@ -2,23 +2,18 @@ name: Old World Heavy Rebuild Review
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
   push:
     branches: [main]
     paths:
+      - 'scripts/run_active_heavy_rebuild_review.py'
       - 'scripts/render_old_world_heavy_rebuild_review.py'
-      - 'scripts/render_ows001_gate_a_massing.py'
-      - 'scripts/render_ows001_gate_b_intact.py'
-      - 'scripts/render_ows001_gate_c_damage_states.py'
-      - 'scripts/analyze_ows001_gate_c_visuals.py'
-      - 'scripts/render_ows001_gate_d_final.py'
-      - 'scripts/analyze_ows001_gate_d_visuals.py'
-      - 'scripts/render_ows002_gate_a_massing.py'
-      - 'scripts/render_ows002_gate_b_intact.py'
-      - 'scripts/render_ows002_gate_c_damage_states.py'
-      - 'scripts/render_ows002_gate_c_damage_states_r2.py'
-      - 'scripts/record_ows002_gate_c_r2.py'
-      - 'old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R1_REVIEW.md'
-      - 'old_world_narrative/reviews/heavy_rebuild/OWS-002_GATE_C_R2_REVIEW.md'
+      - 'scripts/render_ows*_gate_a_massing*.py'
+      - 'scripts/render_ows*_gate_b_intact*.py'
+      - 'scripts/render_ows*_gate_c_damage_states*.py'
+      - 'scripts/analyze_ows*_gate_c_visuals.py'
+      - 'old_world_narrative/registry/heavy_rebuild_state.json'
       - '.github/workflows/old-world-heavy-rebuild-review.yml'
 
 permissions:
@@ -45,25 +40,12 @@ jobs:
       - name: Install render dependency
         run: python -m pip install --disable-pip-version-check pillow
 
-      - name: Compile review pipeline
+      - name: Compile generic review dispatcher
         run: |
           python -m py_compile \
-            scripts/generate_wasteland_sites.py \
-            scripts/old_world_narrative_core.py \
-            scripts/old_world_ows001_final.py \
+            scripts/run_active_heavy_rebuild_review.py \
             scripts/render_structure_review.py \
-            scripts/render_old_world_heavy_rebuild_review.py \
-            scripts/render_ows001_gate_a_massing.py \
-            scripts/render_ows001_gate_b_intact.py \
-            scripts/render_ows001_gate_c_damage_states.py \
-            scripts/analyze_ows001_gate_c_visuals.py \
-            scripts/render_ows001_gate_d_final.py \
-            scripts/analyze_ows001_gate_d_visuals.py \
-            scripts/render_ows002_gate_a_massing.py \
-            scripts/render_ows002_gate_b_intact.py \
-            scripts/render_ows002_gate_c_damage_states.py \
-            scripts/render_ows002_gate_c_damage_states_r2.py \
-            scripts/record_ows002_gate_c_r2.py
+            scripts/render_old_world_heavy_rebuild_review.py
 
       - name: Resolve active heavy-rebuild target
         run: |
@@ -71,49 +53,8 @@ jobs:
           echo "ACTIVE_TARGET=$ACTIVE_TARGET" >> "$GITHUB_ENV"
           echo "Active heavy-rebuild target: $ACTIVE_TARGET"
 
-      - name: Render active baseline if needed
-        run: python scripts/render_old_world_heavy_rebuild_review.py --target "$ACTIVE_TARGET" --gate baseline
-
-      - name: Render OWS-001 Gate A if ready
-        run: python scripts/render_ows001_gate_a_massing.py
-
-      - name: Render OWS-002 Gate A if ready
-        run: python scripts/render_ows002_gate_a_massing.py
-
-      - name: Render OWS-001 Gate B if ready
-        run: python scripts/render_ows001_gate_b_intact.py
-
-      - name: Render OWS-002 Gate B if ready
-        run: python scripts/render_ows002_gate_b_intact.py
-
-      - name: Render OWS-001 Gate C if ready
-        run: python scripts/render_ows001_gate_c_damage_states.py
-
-      - name: Analyze OWS-001 Gate C rendered pixels if ready
-        run: python scripts/analyze_ows001_gate_c_visuals.py
-
-      - name: Render OWS-002 Gate C r1 if ready
-        run: python scripts/render_ows002_gate_c_damage_states.py
-
-      - name: Render OWS-002 Gate C r2 if required
-        run: python scripts/render_ows002_gate_c_damage_states_r2.py
-
-      # Renderers never create a visual pass decision. The following recorder can
-      # only mirror an explicit already-written manual review decision whose exact
-      # persisted r2 manifest/counts still match the inspected artifact set.
-      - name: Record manually reviewed OWS-002 Gate C r2 if present
-        run: python scripts/record_ows002_gate_c_r2.py
-
-      # Automatic Gate-D generation is owned by old-world-static-build.yml so it
-      # always runs after the authoritative NBT has been regenerated in the same
-      # checkout. These OWS-001 steps remain available for explicit/manual review
-      # runs or renderer/analyzer changes, but builder/core edits do not trigger
-      # this workflow and therefore cannot race ahead of production serialization.
-      - name: Render synchronized OWS-001 Gate D if ready
-        run: python scripts/render_ows001_gate_d_final.py
-
-      - name: Analyze OWS-001 Gate D shipping-render regression if ready
-        run: python scripts/analyze_ows001_gate_d_visuals.py
+      - name: Render first unresolved active visual gate
+        run: python scripts/run_active_heavy_rebuild_review.py
 
       - name: Record review workflow provenance
         run: |
@@ -132,7 +73,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: old-world-heavy-rebuild-${{ env.ACTIVE_TARGET }}
-          path: old_world_narrative/reviews/heavy_rebuild/visual/${{ env.ACTIVE_TARGET }}/
+          path: |
+            old_world_narrative/reviews/heavy_rebuild/visual/${{ env.ACTIVE_TARGET }}/
+            old_world_narrative/registry/heavy_rebuild_state.json
           if-no-files-found: ignore
           retention-days: 7
 
@@ -141,7 +84,7 @@ jobs:
           git status --short
           git diff --stat
 
-      - name: Persist review artifacts and gate state
+      - name: Persist review artifacts and pending-review state
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -156,3 +99,6 @@ jobs:
             git rebase origin/main
             git push origin HEAD:main
           fi
+
+# This workflow may render artifacts and run numeric QA, but it never creates a
+# visual PASSED decision. Gate D remains owned by the authoritative static build.
