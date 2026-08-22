@@ -100,3 +100,5 @@ Before Gate B can pass, a reviewer should be able to reconstruct from architectu
 `what arrives -> how it moves up -> what each cultivation floor does -> how environment/utilities are supplied -> how harvest moves down -> where it is checked/packed -> how it leaves -> how visitors are separated from production -> how the upper floor could later be isolated.`
 
 If any of those answers depend primarily on signs or lore text, the intact architecture is incomplete.
+
+**FUNCTIONAL DEFINITION: COMPLETE.**
