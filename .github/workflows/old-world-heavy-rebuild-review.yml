@@ -15,6 +15,8 @@ on:
       - 'scripts/analyze_ows*_gate_c_visuals.py'
       - 'scripts/record_ows*_planning.py'
       - 'scripts/record_ows*_gate_c*.py'
+      - 'scripts/record_active_gate_b_review.py'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_GATE_B_*.md'
       - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_GATE_C_*.md'
       - 'old_world_narrative/registry/heavy_rebuild_state.json'
       - '.github/workflows/old-world-heavy-rebuild-review.yml'
@@ -49,6 +51,9 @@ jobs:
             scripts/run_active_heavy_rebuild_review.py \
             scripts/render_structure_review.py \
             scripts/render_old_world_heavy_rebuild_review.py
+          if [ -f scripts/record_active_gate_b_review.py ]; then
+            python -m py_compile scripts/record_active_gate_b_review.py
+          fi
           if [ -f scripts/record_ows003_gate_c_r3_review.py ]; then
             python -m py_compile scripts/record_ows003_gate_c_r3_review.py
           fi
@@ -70,12 +75,20 @@ jobs:
             echo "No planning recorder for $ACTIVE_TARGET; continuing with persisted state."
           fi
 
+      # Visual judgment remains external/manual. This generic recorder only mirrors
+      # an already-authored Gate-B PASSED or REVISION REQUIRED decision after the
+      # exact persisted revision manifest exists.
+      - name: Record explicit active Gate-B decision when present
+        run: |
+          if [ -f scripts/record_active_gate_b_review.py ]; then
+            python scripts/record_active_gate_b_review.py
+          fi
+
       - name: Render first unresolved active visual gate
         run: python scripts/run_active_heavy_rebuild_review.py
 
-      # Visual judgment remains external/manual. This recorder only mirrors an
-      # already-authored PASSED decision after rechecking exact persisted r3
-      # artifacts and mechanical/image contracts.
+      # Legacy OWS-003 Gate-C visual judgment is also external/manual. This recorder
+      # only mirrors its already-authored PASSED decision after rechecking artifacts.
       - name: Record explicit OWS-003 Gate-C r3 decision when present
         if: env.ACTIVE_TARGET == 'OWS-003'
         run: |
