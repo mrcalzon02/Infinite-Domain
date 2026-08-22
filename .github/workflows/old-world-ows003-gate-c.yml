@@ -2,6 +2,8 @@ name: OWS-003 Gate-C Damage-State Review
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
   push:
     branches: [main]
     paths:
@@ -28,6 +30,7 @@ jobs:
   render-gate-c:
     if: >-
       github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'schedule' ||
       (github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip gate-c]'))
     runs-on: ubuntu-latest
     steps:
@@ -73,7 +76,8 @@ jobs:
             scripts/render_old_world_heavy_rebuild_review.py \
             scripts/render_ows003_gate_a_massing.py \
             scripts/render_ows003_gate_b_intact*.py \
-            scripts/render_ows003_gate_c_damage_states*.py
+            scripts/render_ows003_gate_c_damage_states*.py \
+            scripts/analyze_ows003_gate_c_visuals.py
 
       - name: Render latest OWS-003 Gate-C revision
         id: render_gate_c
@@ -81,6 +85,10 @@ jobs:
         run: |
           set -o pipefail
           python "${GATE_C_SCRIPT}" 2>&1 | tee /tmp/ows003-gate-c.log
+
+      - name: Analyze Gate-C r3 pixels without approval semantics
+        if: steps.render_gate_c.outcome == 'success' && env.GATE_C_REVISION == 'r3'
+        run: python scripts/analyze_ows003_gate_c_visuals.py
 
       - name: Persist Gate-C failure diagnostic
         if: steps.render_gate_c.outcome == 'failure'
@@ -145,7 +153,4 @@ jobs:
         if: steps.render_gate_c.outcome == 'failure'
         run: exit 1
 
-# Ref-push trigger marker for the Gate-C r3 review; no approval semantics.
-# Guarded continuation trigger: 2026-08-21T23:49Z; no geometry or approval semantics.
-# Gate-C owns a dedicated concurrency lane so unrelated heavy-review work cannot cancel it.
-# Dedicated-lane retrigger: 2026-08-21T23:53Z; no geometry or approval semantics.
+# Temporary scheduled execution path; remove immediately after r3 artifact capture.
