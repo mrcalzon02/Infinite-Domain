@@ -100,3 +100,5 @@ It must **not** use mushroom racks, machinery density, proof chests, containment
 From the fixed exterior cameras and roof/top review, before interior production detail exists, does the 51 x 47 x 47 model read as an advanced urban controlled-environment agricultural tower with a public/industrial base, repeated production modules, a major service spine and greenhouse/environmental crown—rather than as an office tower recolored green?
 
 If not, revise massing before Gate B.
+
+**SCALE TRANSLATION: COMPLETE FOR GATE-A STUDY.**
