@@ -12,7 +12,7 @@
 			dependencies: ["5E00000000000006"]
 			id: "5AB0550C00000001"
 			rewards: [{
-				command: "execute in minecraft:overworld run structure_map minecraft:ocean_ruin_cold 2"
+				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_survey_wreck 2"
 				feedback_message: "infinite_domain.reward.explorer_map"
 				id: "7EB0550C00000001"
 				permission_level: 2
@@ -39,7 +39,7 @@
 			shape: "diamond"
 			tasks: [{
 				id: "6AB0550C00000002"
-				structure: "minecraft:ocean_ruin_cold"
+				structure: "infinite_domain:abyssal/pelagos_survey_wreck"
 				type: "structure"
 			}]
 			x: -4.0d
@@ -73,7 +73,7 @@
 			dependencies: ["5E00000000000006"]
 			id: "5AB0550C00000004"
 			rewards: [{
-				command: "execute in minecraft:overworld run structure_map minecraft:ocean_ruin_warm 2"
+				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_patrol_wreck 2"
 				feedback_message: "infinite_domain.reward.explorer_map"
 				id: "7EB0550C00000004"
 				permission_level: 2
@@ -100,7 +100,7 @@
 			shape: "diamond"
 			tasks: [{
 				id: "6AB0550C00000006"
-				structure: "minecraft:ocean_ruin_warm"
+				structure: "infinite_domain:abyssal/karsic_patrol_wreck"
 				type: "structure"
 			}]
 			x: 4.0d
