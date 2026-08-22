@@ -10,7 +10,7 @@
   "active_target": "OWS-004",
   "active_target_name": "Mycological Vertical Farm Tower",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_a_ready_for_massing_implementation",
+  "active_status": "gate_a_r1_massing_rendered_pending_review",
   "active_dossier": "old_world_narrative/reviews/heavy_rebuild/OWS-004_RESTART_DOSSIER.md",
   "completed": [
     "OWS-001",
@@ -144,8 +144,8 @@
     "precedent_research": "complete",
     "program_and_adjacency": "complete",
     "scale_translation": "complete_for_gate_a_study",
-    "massing": "ready_for_implementation",
-    "visual_gate_a_massing": "ready_for_massing_implementation",
+    "massing": "r1_implemented_pending_gate_a_review",
+    "visual_gate_a_massing": "r1_rendered_pending_manual_review",
     "structural_system": "pending",
     "circulation_and_access": "pending",
     "exterior_architecture": "pending",
@@ -194,12 +194,14 @@
       "significant_findings_corrected_or_justified": false
     },
     "gate_a_massing": {
-      "status": "ready_for_massing_implementation",
+      "status": "r1_rendered_pending_manual_review",
       "required": true,
       "damage_state": "D0 intact massing",
       "fixed_camera_set": "ows004_fixed_v1",
       "review_only": true,
-      "rule": "Prove public/industrial podium hierarchy, four cultivation-module bands, a real vertical service/core expression, distinct receiving/dispatch thresholds and a greenhouse/environmental crown inside the retained 51x47x47 envelope before operational detail."
+      "rule": "Prove public/industrial podium hierarchy, four cultivation-module bands, a real vertical service/core expression, distinct receiving/dispatch thresholds and a greenhouse/environmental crown inside the retained 51x47x47 envelope before operational detail.",
+      "r1_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/gate_a_massing/r1/review_manifest.json",
+      "review_stage_source": "scripts/render_ows004_gate_a_massing.py"
     },
     "gate_b_intact_state": {
       "status": "blocked_by_gate_a",
