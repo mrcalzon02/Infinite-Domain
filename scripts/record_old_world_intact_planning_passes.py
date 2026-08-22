@@ -52,8 +52,9 @@ def main() -> None:
     gate_b = state["visual_review_gates"]["gate_b_intact_state"]
     gate_b["status"] = "ready_for_intact_implementation"
     gate_b["rule"] = (
-        "D0 must prove the retained cannery frame, inserted cold rooms, receiving/intake/pre-cool, vault/nursery, "
-        "quality hold, release/licensing, packing/dispatch, refrigeration plant and usable maintenance route before history begins."
+        "D0 must prove the active target's complete intact operating architecture: structural system, usable public/staff/service "
+        "circulation, exterior and interior program, connected operational systems, institutional identity, maintenance access "
+        "and all pre-existing boundaries needed by later history before damage, encounters or loot layers begin."
     )
     state["visual_review_gates"]["gate_b_intact_state"] = gate_b
     state["active_status"] = "gate_b_intact_ready_to_implement"
