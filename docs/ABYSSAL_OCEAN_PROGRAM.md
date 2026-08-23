@@ -1,6 +1,6 @@
 # Infinite Domain — East/West Abyssal Ocean Program
 
-Status: **promoted under the 2026-08-22 runtime-validation waiver. Terrain shaping, eight depth biomes, depth-graded seabed ecology/geology, FTB Ocean Mobs population/loot, two slope recovery wrecks, six accessible rebuilt deep expedition structures, physical site-specific evidence recovery, complete abyssal quest localization, and the first four optional environmental sites are implemented. Runtime terrain and placement observations remain deferred.**
+Status: **promoted under the 2026-08-22 runtime-validation waiver. Terrain shaping, six-pattern systemic seabed deformation, custom slope/fracture cave carvers, eight depth biomes, depth-graded seabed ecology/geology, FTB Ocean Mobs population/loot, two slope recovery wrecks, six accessible rebuilt deep expedition structures, physical site-specific evidence recovery, complete abyssal quest localization, and five optional environmental sites are implemented. Runtime terrain and placement observations remain deferred.**
 
 ## Authority
 
@@ -13,7 +13,7 @@ Future work should update these authorities rather than create parallel plans.
 
 ## Gate disposition
 
-Fresh-world validation was unavailable on 2026-08-22 and development was explicitly directed to continue as if the gate had passed. This permits downstream implementation to depend on the established IDs. It does not create fictional measurements. Seabed Y, aquifer behavior, actual placement quality, submarine clearance, encounter density, and generation performance remain unmeasured.
+Fresh-world validation was unavailable on 2026-08-22 and development was explicitly directed to continue as if the gate had passed. This permits downstream implementation to depend on the established IDs. It does not create fictional measurements. Seabed Y, aquifer behavior, actual placement quality, submarine clearance, encounter density, terrain-pattern appearance, and generation performance remain unmeasured.
 
 ## Regional identity
 
@@ -34,6 +34,32 @@ Current continentalness bands:
 - hadal trench: `-1.20 .. -1.02`
 
 West uses negative regional humidity, East positive regional humidity, and `-0.2 .. 0.2` remains a vanilla deep-ocean transition seam.
+
+The seafloor is no longer shaped only by uniform depth pressure. `custom_worldgen:abyssal_pattern_depression` is now added inside the existing Western and Eastern depth-depression functions, after which `abyssal_outer_continents` continues to feed `custom_worldgen:continents`. The global Wastelands `final_density` router was deliberately left unchanged.
+
+## Systemic terrain-deformation vocabulary
+
+The six supplied black/white reference-noise motifs are implemented as distinct geological processes rather than one generic noise field:
+
+- **Cellular basins / pillow-lava fields:** `custom_worldgen:abyssal_cellular_basin_pattern`
+- **Coarse rift/fault networks:** `custom_worldgen:abyssal_coarse_fracture_pattern`
+- **Diffuse rough seabed:** `custom_worldgen:abyssal_diffuse_roughness_pattern`
+- **Mottled collapse / pockmark provinces:** `custom_worldgen:abyssal_mottled_collapse_pattern`
+- **Vent/caldera provinces:** `custom_worldgen:abyssal_vent_caldera_pattern`
+- **Fine secondary crack networks:** `custom_worldgen:abyssal_fine_fracture_pattern`
+
+Pack-owned noise parameters are `custom_worldgen:abyssal_cells`, `abyssal_faults`, `abyssal_roughness`, and `abyssal_vents`. A separate `abyssal_slope_band_mask` limits shelf/slope roughening, while the existing plain and hadal masks concentrate stronger effects at depth.
+
+The pattern amplitudes are intentionally conservative. Slope deformation contributes at most roughly `0.020` additional continentalness depression from diffuse roughness/coarse gullies; abyssal-plain pattern terms contribute cellular, roughness, collapse, coarse-fault and fine-fault components of `0.025`, `0.008`, `0.012`, `0.035`, and `0.012`; rare hadal vent provinces add an additional `0.065` term. These are logical density-function amplitudes, not measured block-depth claims.
+
+## Deep cave systems
+
+Two custom configured cave carvers now add actual cave geometry in addition to surface deformation:
+
+- `custom_worldgen:abyssal_slope_cave` is appended only to both continental-slope biomes. Probability `0.045`, configured `Y -48 .. 40`, broad horizontal multiplier `1.2 .. 2.2`. Its purpose is cliff caves, shelf caverns and submerged galleries.
+- `custom_worldgen:abyssal_fracture_cave` is appended only to both fracture-field and both hadal biomes. Probability `0.065`, configured `Y -56 .. 16`, horizontal multiplier `1.1 .. 2.4`. Its purpose is deeper fissure caverns and fracture-connected voids.
+
+They supplement rather than replace the vanilla cave/canyon carvers. Aquifers remain responsible for fluid behavior; flooded appearance and cave-mouth accessibility remain runtime-unmeasured.
 
 ## Biome families
 
@@ -90,18 +116,23 @@ The six deep installations are deterministically generated by `tools/abyssal_reb
 
 ## Optional environmental site family
 
-The first non-critical environmental family is active and intentionally separate from the evidence quest chain:
+The non-critical environmental family is active and intentionally separate from the evidence quest chain:
 
 - `infinite_domain:abyssal/pelagos_sensor_debris` — Western abyssal-plain scientific debris with one generic plain-salvage chest; spacing/separation `112/56`.
 - `infinite_domain:abyssal/karsic_pipeline_breach` — Eastern abyssal-plain industrial rupture with one generic plain-salvage chest; spacing/separation `112/56`.
 - `infinite_domain:abyssal/abyssal_cold_seep` — neutral clay/mud/calcite/soul-sand seep across both abyssal plains; no chest; spacing/separation `160/80`.
-- `infinite_domain:abyssal/fracture_vent_field` — neutral magma/basalt/blackstone vent field across both fracture families; no chest; spacing/separation `176/88`.
+- `infinite_domain:abyssal/fracture_vent_field` — neutral magma/basalt/blackstone black-smoker field across both fracture families; no chest; spacing/separation `176/88`.
+- `infinite_domain:abyssal/hadal_vent_complex` — rare 31 × 18 × 31 caldera and eight-chimney hydrothermal province across both hadal families; no chest; spacing/separation `224/112`.
 
-These are generated by `tools/abyssal_rebuild/generate_abyssal_environmental_sites.py`, which imports the shared NBT serializer from the core generator and independently verifies its four expected blob hashes.
+The two vent structures provide different geological scales rather than duplicate scenery: commoner small fracture vents versus uncommon major hadal provinces.
+
+These are generated by `tools/abyssal_rebuild/generate_abyssal_environmental_sites.py`, which imports the shared NBT serializer from the core generator and verifies five expected blob hashes. The hadal vent complex is locked to Git blob `cc17b36102636467d7fa10986e86cabb86e59b57`.
 
 Environmental semantic tags:
 - `#infinite_domain:abyssal_plain_environmental_sites`
 - `#infinite_domain:fracture_environmental_sites`
+- `#infinite_domain:hadal_environmental_sites`
+- `#infinite_domain:abyssal_hydrothermal_sites`
 - `#infinite_domain:abyssal_environmental_sites`
 
 Their purpose is to give the abyss occasional geological and historical texture without making the deep ocean feel crowded. They do not carry unique evidence or quest dependencies.
@@ -166,21 +197,23 @@ Do not scatter these as natural abyssal geology or free intact technology. Futur
 ## Remaining work
 
 1. Heavy Rebuild visual refinement on the two slope wrecks and six core deep installations while retaining stable IDs, open recovery paths and evidence contracts.
-2. Expand optional environmental variants only conservatively: collapsed cables, alternate sensor debris, trench-wall remnants, vent/seep shape variants or other non-critical scenes.
-3. Add bespoke evidence-item textures after mechanical content remains stable.
-4. Revisit Create Aquatic Ambitions only for controlled recovered-technology integration, not natural worldgen.
-5. When runtime access returns, execute the deferred validation ledger rather than retroactively claiming it already happened.
+2. Expand optional environmental variants conservatively: collapsed cables, alternate sensor debris, trench-wall remnants, methane mounds, additional mineral chimneys and seep variants.
+3. Runtime-tune the six deformation amplitudes and two cave-carver rates only after visual observation; do not tune from assumed depths.
+4. Add bespoke evidence-item textures after mechanical content remains stable.
+5. Revisit Create Aquatic Ambitions only for controlled recovered-technology integration, not natural worldgen.
+6. When runtime access returns, execute the deferred validation ledger rather than retroactively claiming it already happened.
 
 ## Deferred observations
 
 Still unmeasured:
 - actual seabed Y by depth band;
+- visual scale/fidelity of the six systemic deformation patterns;
 - hadal approach to the intended near-bedrock target;
-- caves/aquifers/bedrock behavior;
+- custom cave frequency, cave-mouth exposure and aquifer flooding behavior;
 - floor projection and burial appearance;
 - open-breach flooding appearance and chest interaction;
-- optional cold-seep/vent bubble behavior;
-- submarine navigation clearance;
+- cold-seep/fracture-vent/hadal-vent bubble behavior;
+- submarine navigation clearance through caves and around terrain deformation;
 - actual mob-cap encounter density;
 - structure-map behavior;
 - chunk-generation cost.
