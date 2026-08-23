@@ -1,0 +1,18 @@
+{
+  "type": "isekai_api:clamp",
+  "min": 0.0,
+  "max": 1.0,
+  "f": {
+    "type": "isekai_api:multiply",
+    "a": {
+      "type": "isekai_api:multiply",
+      "a": "custom_worldgen:abyssal_slope_band_mask",
+      "b": {
+        "type": "isekai_api:add",
+        "a": {"type": "isekai_api:constant", "value": 1.0},
+        "b": {"type": "isekai_api:negate", "f": "custom_worldgen:abyssal_slope_band_mask"}
+      }
+    },
+    "b": {"type": "isekai_api:constant", "value": 4.0}
+  }
+}

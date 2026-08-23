@@ -51,7 +51,7 @@ def require_refs(path: Path, refs: list[str]) -> None:
 for name in ("abyssal_cells", "abyssal_faults", "abyssal_roughness", "abyssal_vents"):
     load(NOISE / f"{name}.json")
 
-patterns = (
+base_patterns = (
     "abyssal_cellular_basin_pattern",
     "abyssal_coarse_fracture_pattern",
     "abyssal_diffuse_roughness_pattern",
@@ -59,21 +59,66 @@ patterns = (
     "abyssal_vent_caldera_pattern",
     "abyssal_fine_fracture_pattern",
 )
-for name in patterns:
+derived_vertical = (
+    "abyssal_shelf_slump_pattern",
+    "abyssal_exposed_cliff_pattern",
+    "abyssal_trench_scarp_pattern",
+    "abyssal_vent_rim_pattern",
+)
+for name in (*base_patterns, *derived_vertical):
     load(DF / f"{name}.json")
 
-# 2. All six motifs must actually feed the shared depression mix, with band masks.
+# 2. Vertical helper masks must remain derived from the intended depth boundaries.
+require_refs(
+    DF / "abyssal_slope_edge_mask.json",
+    ["custom_worldgen:abyssal_slope_band_mask"],
+)
+require_refs(
+    DF / "hadal_edge_mask.json",
+    ["custom_worldgen:hadal_trench_mask"],
+)
+require_refs(
+    DF / "abyssal_shelf_slump_pattern.json",
+    [
+        "custom_worldgen:abyssal_slope_edge_mask",
+        "custom_worldgen:abyssal_mottled_collapse_pattern",
+    ],
+)
+require_refs(
+    DF / "abyssal_exposed_cliff_pattern.json",
+    [
+        "custom_worldgen:abyssal_slope_band_mask",
+        "custom_worldgen:abyssal_coarse_fracture_pattern",
+        "custom_worldgen:abyssal_fine_fracture_pattern",
+    ],
+)
+require_refs(
+    DF / "abyssal_trench_scarp_pattern.json",
+    [
+        "custom_worldgen:hadal_edge_mask",
+        "custom_worldgen:abyssal_coarse_fracture_pattern",
+        "custom_worldgen:abyssal_fine_fracture_pattern",
+    ],
+)
+require_refs(
+    DF / "abyssal_vent_rim_pattern.json",
+    ["custom_worldgen:abyssal_vent_caldera_pattern"],
+)
+
+# 3. All six reference motifs and all four derived vertical processes must actually
+# feed the shared depression mix, with their band masks.
 require_refs(
     DF / "abyssal_pattern_depression.json",
     [
-        *(f"custom_worldgen:{name}" for name in patterns),
+        *(f"custom_worldgen:{name}" for name in base_patterns),
+        *(f"custom_worldgen:{name}" for name in derived_vertical),
         "custom_worldgen:abyssal_slope_band_mask",
         "custom_worldgen:abyssal_plain_mask",
         "custom_worldgen:hadal_trench_mask",
     ],
 )
 
-# 3. Regional deformation must remain East/West + ocean-corridor gated.
+# 4. Regional deformation must remain East/West + ocean-corridor gated.
 require_refs(
     DF / "western_depth_depression.json",
     [
@@ -91,7 +136,7 @@ require_refs(
     ],
 )
 
-# 4. The regional depressions must feed the outer continents branch, which must
+# 5. The regional depressions must feed the outer continents branch, which must
 # remain protected by the central-continent branch in custom_worldgen:continents.
 require_refs(
     DF / "abyssal_outer_continents.json",
@@ -102,14 +147,14 @@ require_refs(
     ["custom_worldgen:abyssal_outer_continents", "custom_worldgen:central_continent_mask"],
 )
 
-# 5. Critical terrain bridge: vanilla overworld terrain density functions such as
+# 6. Critical terrain bridge: vanilla overworld terrain density functions such as
 # sloped_cheese resolve minecraft:overworld/continents. This datapack override
 # must delegate that registry key to custom_worldgen:continents.
 mc_continents = load(MC_CONTINENTS)
 if mc_continents.get("type") != "minecraft:cache_2d" or mc_continents.get("argument") != "custom_worldgen:continents":
     fail("minecraft:overworld/continents no longer delegates to custom_worldgen:continents")
 
-# 6. The active Wastelands climate router must consume the same continents signal.
+# 7. The active Wastelands climate router must consume the same continents signal.
 settings = load(NOISE_SETTINGS)
 router = settings.get("noise_router", {})
 if router.get("continents") != "custom_worldgen:continents":
@@ -117,7 +162,7 @@ if router.get("continents") != "custom_worldgen:continents":
 if "minecraft:overworld/sloped_cheese" not in serialized(router.get("final_density")):
     fail("Wastelands final_density no longer uses the overworld terrain density chain")
 
-# 7. Purpose-built cave carvers must exist and remain restricted to intended bands.
+# 8. Purpose-built cave carvers must exist and remain restricted to intended bands.
 load(CARVERS / "abyssal_slope_cave.json")
 load(CARVERS / "abyssal_fracture_cave.json")
 
@@ -150,4 +195,7 @@ for name in plain_biomes:
     if leaked:
         fail(f"{name} unexpectedly contains band-specific carver(s): {sorted(leaked)}")
 
-print("[ABYSSAL DEFORMATION PASS] six motifs, terrain bridge, regional gates, and cave-band attachments are intact")
+print(
+    "[ABYSSAL DEFORMATION PASS] six reference motifs, four derived vertical processes, "
+    "terrain bridge, regional gates, and cave-band attachments are intact"
+)
