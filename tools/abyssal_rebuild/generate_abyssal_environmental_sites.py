@@ -10,6 +10,7 @@ EXPECTED_GIT_BLOBS = {
     'karsic_pipeline_breach.nbt': '0bd93d44e2a29b3fc58ad06dc32c846922e75073',
     'abyssal_cold_seep.nbt': '57cb01b1e284b458e47caaae3c5c55afe588d720',
     'fracture_vent_field.nbt': '1b9b278d4e90814e6956bb6ade7aa562db7e5b95',
+    'hadal_vent_complex.nbt': 'cc17b36102636467d7fa10986e86cabb86e59b57',
 }
 
 def pelagos_sensor_debris():
@@ -65,11 +66,58 @@ def fracture_vent_field():
     b.set(9,0,10,'minecraft:crying_obsidian')
     return b
 
+def hadal_vent_complex():
+    b=StructureBuilder((31,18,31))
+    cx=cz=15
+    for x in range(4,27):
+        for z in range(4,27):
+            d=((x-cx)**2+(z-cz)**2)**0.5
+            if 7.0 <= d <= 10.5 and ((x*17+z*31)%5 != 0):
+                b.set(x,0,z,'minecraft:blackstone' if (x+z)%3 else 'minecraft:basalt')
+            if d < 5.0 and ((x*11+z*7)%4==0):
+                b.set(x,0,z,'minecraft:magma_block')
+            elif d < 6.5 and ((x+2*z)%7==0):
+                b.set(x,0,z,'minecraft:smooth_basalt')
+    for x,z in ((15,15),(14,15),(16,15),(15,14),(15,16)):
+        b.set(x,0,z,'minecraft:magma_block')
+    vents=[
+        (9,11,10,'minecraft:basalt'),
+        (13,8,7,'minecraft:smooth_basalt'),
+        (19,9,12,'minecraft:basalt'),
+        (22,14,8,'minecraft:blackstone'),
+        (20,20,14,'minecraft:basalt'),
+        (12,22,9,'minecraft:smooth_basalt'),
+        (7,18,6,'minecraft:blackstone'),
+        (16,17,16,'minecraft:basalt'),
+    ]
+    for x,z,h,mat in vents:
+        for dx,dz in ((0,0),(1,0),(-1,0),(0,1),(0,-1)):
+            b.set(x+dx,0,z+dz,'minecraft:magma_block' if dx==dz==0 else 'minecraft:blackstone')
+        for y in range(1,h+1):
+            b.set(x,y,z,mat)
+            if y < h-2 and y%3==1:
+                if (x+z+y)%2:
+                    b.set(x+1,y,z,'minecraft:basalt')
+                else:
+                    b.set(x,y,z+1,'minecraft:basalt')
+        b.set(x,h+1,z,'minecraft:calcite')
+        if h>=10:
+            b.set(x,h,z,'minecraft:polished_basalt')
+    for x,z in ((10,12),(11,11),(18,11),(19,12),(18,19),(13,20),(8,17),(17,16)):
+        b.set(x,1,z,'minecraft:calcite')
+        if (x+z)%2:
+            b.set(x,2,z,'minecraft:pointed_dripstone',
+                  {'vertical_direction':'up','thickness':'tip','waterlogged':'true'})
+    for x,z in ((14,13),(17,14),(13,17),(18,18),(11,16)):
+        b.set(x,0,z,'minecraft:crying_obsidian')
+    return b
+
 SITES = {
     'pelagos_sensor_debris.nbt': pelagos_sensor_debris,
     'karsic_pipeline_breach.nbt': karsic_pipeline_breach,
     'abyssal_cold_seep.nbt': abyssal_cold_seep,
     'fracture_vent_field.nbt': fracture_vent_field,
+    'hadal_vent_complex.nbt': hadal_vent_complex,
 }
 
 def main():

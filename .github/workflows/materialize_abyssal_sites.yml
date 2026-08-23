@@ -47,7 +47,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          allowed='^(kubejs/data/infinite_domain/structure/abyssal/(pelagos_abyssal_relay|pelagos_fracture_observatory|pelagos_hadal_probe_station|karsic_abyssal_pipeline_station|karsic_fracture_listening_post|karsic_hadal_blacksite|pelagos_sensor_debris|karsic_pipeline_breach|abyssal_cold_seep|fracture_vent_field)\.nbt|config/ftbquests/quests/lang/en_us\.snbt)$'
+          allowed='^(kubejs/data/infinite_domain/structure/abyssal/(pelagos_abyssal_relay|pelagos_fracture_observatory|pelagos_hadal_probe_station|karsic_abyssal_pipeline_station|karsic_fracture_listening_post|karsic_hadal_blacksite|pelagos_sensor_debris|karsic_pipeline_breach|abyssal_cold_seep|fracture_vent_field|hadal_vent_complex)\.nbt|config/ftbquests/quests/lang/en_us\.snbt)$'
           while IFS= read -r path; do
             [[ -z "$path" ]] && continue
             if [[ ! "$path" =~ $allowed ]]; then
@@ -71,6 +71,7 @@ jobs:
             kubejs/data/infinite_domain/structure/abyssal/karsic_pipeline_breach.nbt \
             kubejs/data/infinite_domain/structure/abyssal/abyssal_cold_seep.nbt \
             kubejs/data/infinite_domain/structure/abyssal/fracture_vent_field.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/hadal_vent_complex.nbt \
             config/ftbquests/quests/lang/en_us.snbt
           if git diff --cached --quiet; then
             echo 'Abyssal generated assets already match their authorities.'
