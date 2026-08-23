@@ -1,6 +1,6 @@
 # Infinite Domain — East/West Abyssal Ocean Program
 
-Status: **promoted under the 2026-08-22 runtime-validation waiver. Terrain shaping, six-pattern systemic seabed deformation, custom slope/fracture cave carvers, eight depth biomes, depth-graded seabed ecology/geology, FTB Ocean Mobs population/loot, two slope recovery wrecks, six accessible rebuilt deep expedition structures, physical site-specific evidence recovery, complete abyssal quest localization, and five optional environmental sites are implemented. Runtime terrain and placement observations remain deferred.**
+Status: **promoted under the 2026-08-22 runtime-validation waiver. Terrain shaping, six reference-pattern seabed motifs plus four derived vertical-relief processes, custom slope/fracture cave carvers, eight depth biomes, depth-graded seabed ecology/geology, FTB Ocean Mobs population/loot, two slope recovery wrecks, six accessible rebuilt deep expedition structures, physical site-specific evidence recovery, complete abyssal quest localization, and five optional environmental sites are implemented. Runtime terrain and placement observations remain deferred.**
 
 ## Authority
 
@@ -35,7 +35,7 @@ Current continentalness bands:
 
 West uses negative regional humidity, East positive regional humidity, and `-0.2 .. 0.2` remains a vanilla deep-ocean transition seam.
 
-The seafloor is no longer shaped only by uniform depth pressure. `custom_worldgen:abyssal_pattern_depression` is now added inside the existing Western and Eastern depth-depression functions, after which `abyssal_outer_continents` continues to feed `custom_worldgen:continents`. The global Wastelands `final_density` router was deliberately left unchanged.
+The seafloor is no longer shaped only by uniform depth pressure. `custom_worldgen:abyssal_pattern_depression` is added inside the existing Western and Eastern depth-depression functions, after which `abyssal_outer_continents` continues to feed `custom_worldgen:continents`. The datapack-owned `minecraft:overworld/continents` override delegates to that same custom signal, allowing vanilla Overworld terrain-density functions such as `minecraft:overworld/sloped_cheese` to consume the deformation chain. The global Wastelands `final_density` router itself remains unchanged.
 
 ## Systemic terrain-deformation vocabulary
 
@@ -48,13 +48,37 @@ The six supplied black/white reference-noise motifs are implemented as distinct 
 - **Vent/caldera provinces:** `custom_worldgen:abyssal_vent_caldera_pattern`
 - **Fine secondary crack networks:** `custom_worldgen:abyssal_fine_fracture_pattern`
 
-Pack-owned noise parameters are `custom_worldgen:abyssal_cells`, `abyssal_faults`, `abyssal_roughness`, and `abyssal_vents`. A separate `abyssal_slope_band_mask` limits shelf/slope roughening, while the existing plain and hadal masks concentrate stronger effects at depth.
+Pack-owned noise parameters are `custom_worldgen:abyssal_cells`, `abyssal_faults`, `abyssal_roughness`, and `abyssal_vents`. `abyssal_slope_band_mask` limits shelf/slope roughening, while the existing plain and hadal masks concentrate stronger effects at depth.
 
-The pattern amplitudes are intentionally conservative. Slope deformation contributes at most roughly `0.020` additional continentalness depression from diffuse roughness/coarse gullies; abyssal-plain pattern terms contribute cellular, roughness, collapse, coarse-fault and fine-fault components of `0.025`, `0.008`, `0.012`, `0.035`, and `0.012`; rare hadal vent provinces add an additional `0.065` term. These are logical density-function amplitudes, not measured block-depth claims.
+### Derived vertical-relief layer
+
+Four additional processes recombine those base motifs around depth boundaries so the abyss can produce actual relief transitions instead of only horizontally mottled depth:
+
+- **Shelf-edge slump fields:** `custom_worldgen:abyssal_shelf_slump_pattern` uses a new `abyssal_slope_edge_mask` multiplied by the mottled-collapse field. The edge mask is approximately `4 × slope × (1 - slope)`, concentrating failed-shelf bowls and scalloped sediment collapse around the continental break.
+- **Exposed continental-break faces:** `custom_worldgen:abyssal_exposed_cliff_pattern` applies the stronger of the coarse/fine fracture contours across the slope band, creating line-like gullies and fault cuts through the descending shelf/cliff region.
+- **Hadal trench-wall scarps:** `custom_worldgen:abyssal_trench_scarp_pattern` uses a new `hadal_edge_mask`, approximately `4 × hadal × (1 - hadal)`, multiplied by the stronger fracture contour. This deepens selected portions of trench boundaries rather than uniformly lowering the hadal floor.
+- **Hydrothermal uplift/caldera rims:** `custom_worldgen:abyssal_vent_rim_pattern` is approximately `4 × vent × (1 - vent)`. It surrounds the strongest vent/caldera peaks and enters the depression mix with a negative coefficient, producing relative uplift around the still-positive depressed caldera core.
+
+The combined amplitudes are intentionally conservative:
+- slope base roughness/fault terms: `+0.008` and `+0.012`;
+- shelf-edge slump: `+0.018`;
+- exposed continental-break fault/cliff cuts: `+0.014`;
+- abyssal-plain cellular/roughness/collapse/coarse/fine terms: `+0.025`, `+0.008`, `+0.012`, `+0.035`, `+0.012`;
+- hadal vent/caldera core: `+0.065`;
+- hydrothermal raised rim: `-0.018`;
+- trench-wall scarp cuts: `+0.040`.
+
+Positive terms increase the regional depth-depression contribution. The negative vent-rim term reduces the local depression and therefore creates relative uplift. These are logical density-function amplitudes, not measured block-depth claims.
+
+### Static integrity protection
+
+`tools/abyssal_worldgen/validate_abyssal_deformation.py` now verifies the entire static chain: all four noise registrations, all six reference motifs, both boundary helper masks, all four derived vertical processes, the shared depression mix, East/West ocean gating, the protected central-continent branch, the `minecraft:overworld/continents` terrain bridge, the active Wastelands router connection, and the band-specific cave-carver attachments.
+
+`.github/workflows/abyssal-deformation-integrity.yml` runs the validator whenever the relevant worldgen or biome files change. This is a static connectivity gate only; it does not replace fresh-world visual validation.
 
 ## Deep cave systems
 
-Two custom configured cave carvers now add actual cave geometry in addition to surface deformation:
+Two custom configured cave carvers add actual cave geometry in addition to surface deformation:
 
 - `custom_worldgen:abyssal_slope_cave` is appended only to both continental-slope biomes. Probability `0.045`, configured `Y -48 .. 40`, broad horizontal multiplier `1.2 .. 2.2`. Its purpose is cliff caves, shelf caverns and submerged galleries.
 - `custom_worldgen:abyssal_fracture_cave` is appended only to both fracture-field and both hadal biomes. Probability `0.065`, configured `Y -56 .. 16`, horizontal multiplier `1.1 .. 2.4`. Its purpose is deeper fissure caverns and fracture-connected voids.
@@ -198,7 +222,7 @@ Do not scatter these as natural abyssal geology or free intact technology. Futur
 
 1. Heavy Rebuild visual refinement on the two slope wrecks and six core deep installations while retaining stable IDs, open recovery paths and evidence contracts.
 2. Expand optional environmental variants conservatively: collapsed cables, alternate sensor debris, trench-wall remnants, methane mounds, additional mineral chimneys and seep variants.
-3. Runtime-tune the six deformation amplitudes and two cave-carver rates only after visual observation; do not tune from assumed depths.
+3. Runtime-tune the six base deformation motifs, four derived vertical-relief processes, and two cave-carver rates only after visual observation; do not tune from assumed depths.
 4. Add bespoke evidence-item textures after mechanical content remains stable.
 5. Revisit Create Aquatic Ambitions only for controlled recovered-technology integration, not natural worldgen.
 6. When runtime access returns, execute the deferred validation ledger rather than retroactively claiming it already happened.
@@ -207,7 +231,10 @@ Do not scatter these as natural abyssal geology or free intact technology. Futur
 
 Still unmeasured:
 - actual seabed Y by depth band;
-- visual scale/fidelity of the six systemic deformation patterns;
+- visual scale/fidelity of the six systemic reference motifs;
+- shelf-edge slump frequency and the visual steepness of exposed continental-break faces;
+- hadal trench-wall scarp scale and continuity;
+- whether hydrothermal provinces visibly form a depressed core with a raised rim;
 - hadal approach to the intended near-bedrock target;
 - custom cave frequency, cave-mouth exposure and aquifer flooding behavior;
 - floor projection and burial appearance;
