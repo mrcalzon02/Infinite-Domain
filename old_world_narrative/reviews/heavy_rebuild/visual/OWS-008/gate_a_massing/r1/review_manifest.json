@@ -1,9 +1,15 @@
 {
   "target": "OWS-008",
   "gate": "gate_a_massing",
+<<<<<<< Updated upstream
   "revision": "massing-r1@local",
   "damage_state": "D0 intact massing only",
   "source_commit": "working-tree",
+=======
+  "revision": "massing-r1@74a229a6",
+  "damage_state": "D0 intact massing only",
+  "source_commit": "74a229a6a45e650b2f1d8ccfec8802fc99ed2681",
+>>>>>>> Stashed changes
   "source_path": "review-only:render_ows008_gate_a_massing.build_gate_a_massing()",
   "dimensions": [
     55,
@@ -15,7 +21,11 @@
   "visual_findings": [],
   "significant_findings_corrected_or_justified": false,
   "final_preview_synchronized_with_authoritative_nbt": false,
+<<<<<<< Updated upstream
   "cutaway_y": 14,
+=======
+  "cutaway_y": 7,
+>>>>>>> Stashed changes
   "views": {
     "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/front_left.png",
     "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/rear_left.png",
@@ -26,6 +36,7 @@
     "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/floor_slices.png",
     "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/contact_sheet.png"
   },
+<<<<<<< Updated upstream
   "review_model_nbt_sha256": "23d7bc96c3f3ade8566aedad0c7d3a731cf4eeac55c9adcd365ed295ca59f361",
   "review_builder_sha256": "252a7898afba6d8cd6cfe76aa84ef398765e1c612ea8f3112aa62f27bbe20d81",
   "review_model_block_positions": 30426,
@@ -34,6 +45,33 @@
   "review_model_palette_states": 13,
   "review_model_block_entities": 0,
   "review_model_entities": 0,
+=======
+  "review_model_nbt_sha256": "ec12e9ad5de5da223cac21e3f51efacb34776ef068890f0e38a2479b29988b48",
+  "review_builder_sha256": "84a812b47c56bf8f80024e20376befad13ca5104423319585574b4b8616cff01",
+  "review_model_non_air_blocks": 14058,
+  "review_model_occupied_bounds": {
+    "min": [
+      0,
+      0,
+      0
+    ],
+    "max": [
+      54,
+      20,
+      48
+    ]
+  },
+  "planning_input_sha256": {
+    "old_world_narrative/reviews/heavy_rebuild/OWS-008_PHASE0_BASELINE_REVIEW.md": "5efaccc84013ebfc6f87ef690a8c642ff7574b5cd87f363853936a0ce5ff953c",
+    "old_world_narrative/reviews/heavy_rebuild/OWS-008_PASS2_FUNCTIONAL_DEFINITION.md": "39e04c184f4aeae3fcec924f95ad3551d3e165b0bd7b08e1fa1e62d349dd10ee",
+    "old_world_narrative/reviews/heavy_rebuild/OWS-008_PASS3_PRECEDENT_RESEARCH.md": "d2014ea460cf3765711c0fc97cd3a07771877f43d850364862dc806802a19957",
+    "old_world_narrative/reviews/heavy_rebuild/OWS-008_PASS4_PROGRAM_ADJACENCY.md": "896a866b5c8c421ddf6b969a0143b49f6a259b313a0fb421821565ae8e18b372",
+    "old_world_narrative/reviews/heavy_rebuild/OWS-008_PASS5_SCALE_TRANSLATION.md": "4c0bf81eee252be2fe4bde222171f8134a2e2e4a55c9cd5ca4e22f51de358d51"
+  },
+  "phase0_baseline_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/baseline/r0_pre_heavy_rebuild/review_manifest.json",
+  "frozen_phase0_source_commit": "e14b3f35306fc313e7ea9a114f2384696864533a",
+  "frozen_phase0_shipping_git_blob": "6646d96d5723bb8d1b611de8354dea41396cb6df",
+>>>>>>> Stashed changes
   "authoritative_shipping_modified": false,
   "shipping_nbt_git_blob_before": "6646d96d5723bb8d1b611de8354dea41396cb6df",
   "shipping_nbt_git_blob_after": "6646d96d5723bb8d1b611de8354dea41396cb6df"

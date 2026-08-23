@@ -1,0 +1,41 @@
+{
+  "target": "OWS-009",
+  "gate": "gate_d_final",
+  "revision": "gate-d-r1@74a229a6",
+  "damage_state": "D3 authoritative stabilized shipping state + Pass-19 microdetail",
+  "source_commit": "74a229a6a45e650b2f1d8ccfec8802fc99ed2681",
+  "source_path": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_009_atlas_roadside_repair_depot.nbt",
+  "dimensions": [
+    49,
+    18,
+    41
+  ],
+  "fixed_camera_set": "ows009_fixed_v1",
+  "visual_review_status": "rendered_pending_independent_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": true,
+  "cutaway_y": 6,
+  "views": {
+    "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/front_left.png",
+    "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/rear_left.png",
+    "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/rear_right.png",
+    "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/front_right.png",
+    "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/roof_top_oblique.png",
+    "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/interior_cutaway.png",
+    "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/floor_slices.png",
+    "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/contact_sheet.png"
+  },
+  "authoritative_sync_record": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/authoritative_sync.json",
+  "shipping_nbt_sha256": "261ad9b53740a55a791fa0f7f06915123f95e347704e5a8238efa25bebbeafd9",
+  "shipping_decompressed_nbt_sha256": "d2159e70caa0a801ff0d69ad199824760931c38c4c4b07a1d8114d9099893450",
+  "exact_serialized_nbt_match": true,
+  "exact_decompressed_nbt_match": true,
+  "pass19_positions_verified": 9,
+  "serialized_andesite_casing_count": 1,
+  "canonical_proof_nodes": 1,
+  "deterministic_spawners": 3,
+  "protected_routes_clear": true,
+  "required_blocks_verified": true,
+  "structural_lint_passed": true
+}

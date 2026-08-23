@@ -19,6 +19,8 @@ from pathlib import Path
 import old_world_narrative_core as core
 import old_world_later_waves as later
 import old_world_ows005_final as ows005_final
+import old_world_ows007_final as ows007_final
+import old_world_ows008_final as ows008_final
 
 base = core.base
 ROOT = Path(__file__).resolve().parents[1]
@@ -574,8 +576,8 @@ core.SPECS = tuple(
 core.BY_TARGET.update({spec.target: spec for spec in core.SPECS})
 core.BUILDERS.update({
     "OWS-005": ows005_final.build_005,
-    "OWS-007": build_007,
-    "OWS-008": build_008,
+    "OWS-007": ows007_final.build_007,
+    "OWS-008": ows008_final.build_008,
     "OWS-009": build_009,
     "OWS-011": build_011,
     "OWS-013": build_013,

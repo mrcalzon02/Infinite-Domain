@@ -1,0 +1,85 @@
+{
+  "target": "OWS-010",
+  "gate": "gate_c_damage_states",
+  "revision": "gate-c-r1@74a229a6",
+  "fixed_camera_set": "ows010_fixed_v1",
+  "source_commit": "74a229a6a45e650b2f1d8ccfec8802fc99ed2681",
+  "source_d0": "render_ows010_gate_b_intact.build_gate_b_intact",
+  "accepted_gate_b_review_model_sha256": "ef8c4ea3281f70270c0507f78610ffc44cd100c02fb1b4f387055a15b51e2603",
+  "d0_review_model_sha256": "ef8c4ea3281f70270c0507f78610ffc44cd100c02fb1b4f387055a15b51e2603",
+  "d0_exact_gate_b_match": true,
+  "d1_review_model_sha256": "6fd40660424bb51506edeb3b59fb8db1cb73428548ca356d4e39b175bf58dd7e",
+  "d3_review_model_sha256": "29b9efa13b9ae71cf210aa3630cba224c31d4410d3aea5a4a97d772aa8ef5fc8",
+  "d1_changed_positions_from_d0": 145,
+  "d3_changed_positions_from_d0": 283,
+  "damage_states": [
+    "D0",
+    "D1",
+    "D3"
+  ],
+  "d2_disposition": "omitted_no_materially_distinct_acute_event_between_gradual_lane_cannibalization_and_long_abandonment",
+  "gate_b_architecture_routes_utilities_identity_asserted_all_states": true,
+  "proof_position": [
+    9,
+    11,
+    17
+  ],
+  "proof_loot_table": "infinite_domain:chests/old_world/ows_010_atlas_conveyor_transfer_hall",
+  "proof_item": "kubejs:atlas_transfer_maintenance_card",
+  "lore_item": "kubejs:atlas_transfer_maintenance_manual",
+  "lore_item_occurrences_in_canonical_ows010_loot": 0,
+  "empty_lor_shelves_preserved": [
+    [
+      9,
+      10,
+      16
+    ],
+    [
+      10,
+      10,
+      16
+    ]
+  ],
+  "canonical_proof_nodes_d3": 1,
+  "deterministic_spawners_d3": 3,
+  "comparison_artifact": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/damage_comparison.png",
+  "review_builder_sha256": "f03808145903a4dfe96ed5f1996668d1b25c5e0b3eb0b09284192e585e5973fb",
+  "authoritative_shipping_modified": false,
+  "shipping_nbt_sha256_before": "5e9390d3d41663f1baef6ad017e941dbf6153d168bb9100a8a5fd46193d9035a",
+  "shipping_nbt_sha256_after": "5e9390d3d41663f1baef6ad017e941dbf6153d168bb9100a8a5fd46193d9035a",
+  "shipping_nbt_git_blob_before": "be2ab341c2d252c975711caa93e92c965f943007",
+  "shipping_nbt_git_blob_after": "be2ab341c2d252c975711caa93e92c965f943007",
+  "visual_review_status": "rendered_pending_independent_review",
+  "states": {
+    "D0": {
+      "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d0/front_left.png",
+      "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d0/rear_left.png",
+      "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d0/rear_right.png",
+      "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d0/front_right.png",
+      "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d0/roof_top_oblique.png",
+      "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d0/interior_cutaway.png",
+      "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d0/floor_slices.png",
+      "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d0/contact_sheet.png"
+    },
+    "D1": {
+      "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d1/front_left.png",
+      "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d1/rear_left.png",
+      "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d1/rear_right.png",
+      "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d1/front_right.png",
+      "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d1/roof_top_oblique.png",
+      "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d1/interior_cutaway.png",
+      "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d1/floor_slices.png",
+      "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d1/contact_sheet.png"
+    },
+    "D3": {
+      "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d3/front_left.png",
+      "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d3/rear_left.png",
+      "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d3/rear_right.png",
+      "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d3/front_right.png",
+      "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d3/roof_top_oblique.png",
+      "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d3/interior_cutaway.png",
+      "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d3/floor_slices.png",
+      "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_c_damage_states/r1/d3/contact_sheet.png"
+    }
+  }
+}

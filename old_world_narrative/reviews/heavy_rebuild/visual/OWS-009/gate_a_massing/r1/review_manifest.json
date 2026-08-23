@@ -1,0 +1,37 @@
+{
+  "target": "OWS-009",
+  "gate": "gate_a_massing",
+  "revision": "massing-r1@local",
+  "damage_state": "D0 intact massing only",
+  "source_commit": "working-tree",
+  "source_path": "review-only:render_ows009_gate_a_massing.build_gate_a_massing()",
+  "dimensions": [
+    49,
+    18,
+    41
+  ],
+  "fixed_camera_set": "ows009_fixed_v1",
+  "visual_review_status": "rendered_pending_independent_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": false,
+  "cutaway_y": 10,
+  "views": {
+    "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r1/front_left.png",
+    "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r1/rear_left.png",
+    "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r1/rear_right.png",
+    "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r1/front_right.png",
+    "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r1/roof_top_oblique.png",
+    "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r1/interior_cutaway.png",
+    "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r1/floor_slices.png",
+    "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r1/contact_sheet.png"
+  },
+  "review_model_nbt_sha256": "2c31a930622b974858b7bad339b197c4e10d0a80b9220a584aec3cfad9aa02bd",
+  "review_builder_sha256": "d02e700720527e0b75b6c1ac1c00ca4f8df38212d097a463d86a4f02848efbaf",
+  "phase0_source_sha256": "d80dfca574d8f96eca633ac515e810f02f52e7eab2f36195977b42708068fe0d",
+  "phase0_source_git_blob": "4b2df6f6d8bcb5a58511318f0fe78f9f5fc1d44a",
+  "phase0_shipping_untouched": true,
+  "programmed_massing_aspects_asserted": 9,
+  "pass7_plus_content_present": false,
+  "authoritative_shipping_modified": false
+}

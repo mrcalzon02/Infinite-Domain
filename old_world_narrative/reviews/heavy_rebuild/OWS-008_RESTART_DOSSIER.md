@@ -113,6 +113,16 @@ Later planning must make the following distinguishable before damage obscures th
 
 The crisis story must be legible as successive professional interventions being defeated, not as random mushrooms added to a laboratory. D0/Gate B should preserve the complete emergency operating architecture. D1 and later states may then show repeated seals, added barriers, opened service cavities and contamination recurring behind them.
 
-## Phase-0 hold
+## Live doctrine hold
 
-The exact shipping baseline has been rendered into fixed-camera set `ows008_fixed_v1`. The authoring worker's preliminary visual diagnosis is recorded separately, but no independent reviewer has yet dispositioned the artifact. Passes 2–5, Gate A, downstream geometry, damage work and shared-state changes remain unauthorized until the coordinator records an independent Phase-0 decision.
+The exact shipping baseline was rendered into fixed-camera set `ows008_fixed_v1` and independently reviewed as **REBUILD REQUIRED**. Passes 2–6 then produced a replacement D0 massing model. Independent Gate-A r1 review **PASSED** that exact model and froze its nine accepted macro aspects.
+
+Passes 7–12 were implemented in the target-local Gate-B r1 review model and independently **PASSED**. That decision freezes the intact architecture, threshold hierarchy, pressure/circulation boundaries, distinct Cells A–D, inspection spine, connected services, west command relationship and VCF/emergency identity.
+
+Passes 13–18 were implemented in the target-local Gate-C r1 D0/D1/D3 set and independently **PASSED**. That decision freezes the accepted D3 recurrence path, local roof/canopy failures, proof, encounters, preserved routes and restrained damage footprint.
+
+Pass 19 is now implemented in `scripts/old_world_ows008_final.py`. Its pure `build_accepted_d3()` reproduces the accepted D3 SHA-256 exactly; `build_008()` adds eight localized recurrence/moisture details and no other geometry changes. Normal door stabilization is a no-op.
+
+Authoritative import/dispatch integration and shipping generation are complete. Gate-D r1 proves exact canonical builder-to-shipping serialized and decompressed equality, renders the actual shipping NBT with `ows008_fixed_v1`, and passes target-local mechanical and image-regression guards. Independent visual review, Pass 20, quality scoring and promotion remain coordinator-owned and incomplete.
+
+**CURRENT HOLD: GATE D r1 REVIEW NEEDED — INDEPENDENT VISUAL DECISION REQUIRED.**

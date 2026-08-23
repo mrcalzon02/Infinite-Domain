@@ -1,0 +1,49 @@
+{
+  "target": "OWS-009",
+  "gate": "gate_b_intact",
+  "revision": "intact-r1@74a229a6",
+  "damage_state": "D0 intact / operational",
+  "source_commit": "74a229a6a45e650b2f1d8ccfec8802fc99ed2681",
+  "source_path": "review-only:render_ows009_gate_b_intact.build_gate_b_intact()",
+  "dimensions": [
+    49,
+    18,
+    41
+  ],
+  "fixed_camera_set": "ows009_fixed_v1",
+  "visual_review_status": "rendered_pending_independent_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": false,
+  "cutaway_y": 6,
+  "views": {
+    "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_b_intact/r1/front_left.png",
+    "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_b_intact/r1/rear_left.png",
+    "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_b_intact/r1/rear_right.png",
+    "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_b_intact/r1/front_right.png",
+    "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_b_intact/r1/roof_top_oblique.png",
+    "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_b_intact/r1/interior_cutaway.png",
+    "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_b_intact/r1/floor_slices.png",
+    "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_b_intact/r1/contact_sheet.png"
+  },
+  "review_model_nbt_sha256": "c2c850549694cfa28e898fbe7019841e1c358b5534c1a53136f87f243d90c0a9",
+  "review_builder_sha256": "0fa662cfea2b1cc4586b864911bc598745f574980a31ed7a479eb71466b3c0b5",
+  "gate_a_r2_model_sha256": "cbcdb6151de083cb81fd8e3aa52f81c5741901e4b97c3fe977fa15409e05de83",
+  "placed_positions": 9250,
+  "gate_a_frozen_aspects_asserted": 10,
+  "gate_b_passes_implemented": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "controlled_door_blocks_asserted": 36,
+  "history_damage_encounters_loot_proof_present": false,
+  "authoritative_shipping_modified": false,
+  "shipping_nbt_sha256_before": "d80dfca574d8f96eca633ac515e810f02f52e7eab2f36195977b42708068fe0d",
+  "shipping_nbt_sha256_after": "d80dfca574d8f96eca633ac515e810f02f52e7eab2f36195977b42708068fe0d",
+  "shipping_nbt_git_blob_before": "4b2df6f6d8bcb5a58511318f0fe78f9f5fc1d44a",
+  "shipping_nbt_git_blob_after": "4b2df6f6d8bcb5a58511318f0fe78f9f5fc1d44a"
+}

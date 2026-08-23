@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # [SYSTEM REPORT] OWS-007 Pass 13 — Historical Layering
 
 **Target:** OWS-007 — Verdant Continuum Foods EP-7 Agricultural Development Laboratory  
@@ -35,3 +36,19 @@ D2 is omitted because there was no discrete local collapse event between regiona
 **HISTORICAL LAYERING: COMPLETE FOR GATE-C r1.**
 
 **HISTORICAL LAYERING: COMPLETE FOR GATE-C IMPLEMENTATION.**
+=======
+# OWS-007 Heavy Rebuild — Pass 13 Historical Layering
+
+**Input authority:** independently passed Gate-B r2 D0 model  
+**Gate-C states:** D0, D1 and D3; D2 omitted with justification
+
+## Causal sequence
+
+- **D0 — ordinary success:** EP-7 lots move from accession through reference, storage and stress trials to phenotyping, reseeding and commercial release. The rotunda compares heat/dry, cold/soak, humidity and germination persistence.
+- **D1 — celebrated escalation:** strong durability results cause VCF to expand heat/dry floor zoning, add temporary environmental bypasses, stage more release stock and intensify the rotunda test sectors. The intervention is controlled, intact and presented as product validation rather than crisis response.
+- **D3 — long abandonment:** after distribution rollout and maintenance withdrawal, the overworked Chamber-B/rotunda conditioning branch drains badly. Freeze/thaw opens limited monitor and plant-envelope glazing; rain follows the failed branch into stress-test and wash areas. Persistent moisture allows restrained crop escape and local decay. The campus remains largely legible and structurally intact.
+
+## D2 disposition
+
+D2 is omitted because this is a slow maintenance-withdrawal history with no distinct acute-collapse event. An intermediate state would only interpolate the same leaks and weathering without adding a new causal phase. D1 and D3 preserve the meaningful before/after comparison.
+>>>>>>> Stashed changes

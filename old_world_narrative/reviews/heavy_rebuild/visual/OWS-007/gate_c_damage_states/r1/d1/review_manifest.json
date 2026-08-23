@@ -2,7 +2,11 @@
   "target": "OWS-007",
   "gate": "gate_c_damage_states",
   "revision": "gate-c-r1@local",
+<<<<<<< Updated upstream
   "damage_state": "D1 commercial repeat validation",
+=======
+  "damage_state": "D1 controlled durability-test escalation",
+>>>>>>> Stashed changes
   "source_commit": "working-tree",
   "source_path": "review-only:render_ows007_gate_c_damage_states.build_d1()",
   "dimensions": [
@@ -15,7 +19,11 @@
   "visual_findings": [],
   "significant_findings_corrected_or_justified": false,
   "final_preview_synchronized_with_authoritative_nbt": false,
+<<<<<<< Updated upstream
   "cutaway_y": 8,
+=======
+  "cutaway_y": 11,
+>>>>>>> Stashed changes
   "views": {
     "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-007/gate_c_damage_states/r1/d1/front_left.png",
     "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-007/gate_c_damage_states/r1/d1/rear_left.png",
@@ -26,5 +34,9 @@
     "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-007/gate_c_damage_states/r1/d1/floor_slices.png",
     "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-007/gate_c_damage_states/r1/d1/contact_sheet.png"
   },
+<<<<<<< Updated upstream
   "review_model_nbt_sha256": "7bb865d6d06682dca0b986234c639cc859c7c15be47cd342215b21f3e2ef952f"
+=======
+  "review_model_nbt_sha256": "d6530ad6f6404156a84a2cbe0a42cfcdaa6170a82edeae974fb982856c0548d1"
+>>>>>>> Stashed changes
 }

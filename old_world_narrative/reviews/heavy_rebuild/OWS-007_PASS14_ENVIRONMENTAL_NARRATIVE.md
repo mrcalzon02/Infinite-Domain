@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # [SYSTEM REPORT] OWS-007 Pass 14 — Environmental Narrative
 
 **Target:** OWS-007 — Verdant Continuum Foods EP-7 Agricultural Development Laboratory  
@@ -18,3 +19,23 @@ The EP-7 distribution and durability record confirms the physical argument; it d
 **ENVIRONMENTAL NARRATIVE: COMPLETE FOR GATE-C r1.**
 
 **ENVIRONMENTAL NARRATIVE: COMPLETE FOR GATE-C IMPLEMENTATION.**
+=======
+# OWS-007 Heavy Rebuild — Pass 14 Environmental Narrative
+
+## D1 evidence
+
+- orange/yellow condition bands expand around the accelerated durability racks while center aisles remain clear;
+- temporary pipe bypasses and filter-watch equipment connect Chamber B to the consolidated environmental plant;
+- additional sealed reseeding stock is staged near accession/release workflow;
+- signs describe extended heat/dry cycles, persistence release and conditioning watch rather than emergency containment.
+
+## D3 evidence
+
+- limited missing monitor glazing begins over the intensified Chamber-B branch;
+- landed glass/gravel debris and cracked roof surfaces sit directly below failed openings;
+- moss and coarse-dirt water paths follow the plant, stress chamber and wash/decon drainage line;
+- small surviving crop patches spread only near wet trial beds and the rotunda humidity sector;
+- the public bar, supported observation facade, bridge, rotunda ribs and release-record room remain readable.
+
+The evidence communicates commercial persistence engineering first and centuries-later weather exposure second. No unrelated catastrophe is invented.
+>>>>>>> Stashed changes

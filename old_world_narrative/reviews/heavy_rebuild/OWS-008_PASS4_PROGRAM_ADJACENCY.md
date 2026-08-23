@@ -1,10 +1,15 @@
 # [SYSTEM REPORT] OWS-008 Pass 4 — Program and Adjacency
 
+<<<<<<< Updated upstream
 **Target:** OWS-008 — VCF Emergency Persistence Investigation Laboratory  
+=======
+**Target:** OWS-008 — Emergency Investigation & Persistence Lab  
+>>>>>>> Stashed changes
 **Status:** COMPLETE
 
 ## Program hierarchy
 
+<<<<<<< Updated upstream
 The 55 x 22 x 49 rare site will be studied as a stepped emergency laboratory inside the retained donor bounds:
 
 - a north incident-command and controlled staff threshold;
@@ -170,5 +175,152 @@ Gate A must prove the command threshold, two-level analysis wing, stepped treatm
 Gate B must prove every people/specimen/clean/waste/maintenance route and the complete intact emergency investigation before later collapse can hide it.
 
 Gate C may add successive seals, opened cavities, failed interventions and physically coherent decay only after Gate B passes. It must preserve the clean-face/contaminated-joint contradiction, quest route and secure proof.
+=======
+The 55 x 22 x 49 site will be studied as five connected operational bands:
+
+1. north public/security and incident-liaison threshold;
+2. west staff change, clean support, analysis and upper command/archive;
+3. central treatment/clean-hold validation sequence and observation gallery;
+4. east incident receiving, custody, dirty examination and contaminated return;
+5. south/east service spine, decontamination waste, utilities and roof plant.
+
+The donor's stepped massing is retained as a planning asset only where it serves those roles. Room boundaries may be rebuilt substantially.
+
+## North public / incident-liaison zone
+
+Required adjacencies:
+
+- sheltered principal approach and VCF/emergency identity marker;
+- security/reception controlling every deeper route;
+- field-team check-in and custody handoff desk;
+- incident briefing/liaison room;
+- controlled observation toward the validation gallery;
+- badge threshold to staff circulation;
+- no public path into specimen receiving, clean change, treatment or archive.
+
+The north facade should retain more VCF transparency and human scale than the technical wings while visibly carrying emergency retrofit layers.
+
+## West staff support, analysis and command
+
+Required personnel sequence:
+
+`staff entrance -> clean lockers/change -> handwash/gowning -> controlled staff corridor -> room vestibules -> dirty doffing/wash -> exit`
+
+Support spaces:
+
+- clean consumables and replacement seals;
+- small retained-reference cold store;
+- microscopy/imaging and comparative analysis benches;
+- recurrence-results review wall/table;
+- incident-command room overlooking controls rather than active specimens;
+- secure archive with the deterministic proof;
+- nested encrypted cache reserved for the Darknet return;
+- upper offices/support only where they supervise real work below.
+
+Clean supplies and contaminated returns must never share the same pass-through.
+
+## East incident receipt and dirty examination
+
+Required specimen sequence:
+
+`covered east service receipt -> sealed hold -> custody registration -> dirty examination -> split-sample/reference hold -> pretreatment -> treatment-cell dirty pass-through`
+
+Support relationships:
+
+- initial wash/neutralization;
+- equipment park and cart turning space;
+- dirty-side retained reference storage;
+- direct dirty return to waste decontamination;
+- controlled connection to the central validation hall;
+- no crossing through the public threshold or west clean-support route.
+
+## Central validation hall
+
+The principal intact assembly contains four differentiated rooms arranged around a controlled observation/control gallery:
+
+- **A wet/thermal treatment cell** with wash feed, drain collection and cycle-control edge;
+- **B chemical/vapor treatment cell** with purge connection and sealed material transfer;
+- **C clean-hold verification room** downstream of treatment but upstream of release;
+- **D persistence challenge room** with reference samples and longer-duration environmental control.
+
+Each requires:
+
+- a room-specific vestibule or material pass-through;
+- observation without opening directly to public space;
+- local control/status station;
+- separate service connection and isolation point;
+- enough clearance to clean around equipment;
+- a rear/service face accessible without entering the room.
+
+The gallery must let the player compare the process stages spatially. It is not a public greenhouse promenade.
+
+## Concealed-joint investigation / service spine
+
+Place a continuous technical route behind or between the validation rooms and plant edge. It must connect:
+
+- wall/floor/ceiling service penetrations;
+- accessible duct and pipe chases;
+- numbered inspection panels and seam-sample nodes;
+- successive gasket/seal retrofit examples;
+- drain inspection and effluent sampling;
+- maintenance stair/roof access;
+- analysis/sample-transfer hatches.
+
+This route is both infrastructure and narrative. It should allow the player to see why a room-facing surface could test clean while a hidden joint remained contaminated.
+
+## Upper analysis, command and archive
+
+Required zones:
+
+- microscopy/imaging and comparative analysis benches;
+- retained treated/untreated sample storage;
+- recurrence-results review wall/table;
+- incident-command room overlooking controls rather than active specimens;
+- secure archive with the deterministic proof;
+- nested encrypted cache reserved for the Darknet return;
+- protected records route reachable without entering waste handling.
+
+The proof should be encountered after the player understands the validation sequence. Its exact coordinate remains a later architecture decision, but it should occupy a defensible upper west/central records-custody node rather than the legacy crate row.
+
+## South/east service and plant edge
+
+Required functions:
+
+- clean supply receiving distinct from contaminated specimen receipt;
+- treatment-cell supply/exhaust manifolds;
+- separated fresh-air intake and filtered/purged exhaust;
+- wash/sterilant tanks and pumps;
+- drainage/effluent monitoring or treatment;
+- electrical/data/alarm controls;
+- waste decontamination, sealed hold and removal threshold;
+- maintenance access to the service spine and roof;
+- independent emergency egress preserved from the donor.
+
+The roof must visibly continue these systems. The site must distinguish public approach, incident receipt, clean delivery and waste removal.
+
+## Vertical organization
+
+- **Ground/lower level:** receipt, staff thresholds, treatment cells, clean hold, persistence room, waste and principal gallery.
+- **Upper west/east level:** analysis, incident command, records, staff support and overlook/control functions.
+- **Interstitial/roof-service level:** maintainable air, purge, wash/drain and inspection systems tied to rooms below.
+
+Both donor stairs remain useful candidates, but later architecture must prove a principal staff route and independent maintenance/emergency route with real landings and no one-block institutional bottleneck.
+
+## Exploration route
+
+Primary player route:
+
+`north security -> incident briefing/custody view -> validation gallery -> controlled staff transition -> treatment/clean-hold edge -> exposed-joint investigation spine -> comparative analysis -> incident command -> secure proof archive`
+
+A service loop should expose receipt, plant, drainage and waste before reconnecting to the main route. Later damage may open shortcuts, but it may not destroy the only proof path or force contaminated circulation through clean rooms.
+
+## Gate constraints
+
+Gate A must eventually prove the public/security threshold, differentiated validation hall, asymmetric dirty-analysis wings, continuous service spine, command/archive mass and connected roof plant without relying on signs, mushrooms, benches, proof chests or rubble.
+
+Gate B must prove the complete operating workflow and all clean/dirty/service boundaries before recurrence damage or decay can hide them.
+
+Gate C may show successive seals, opened service cavities, isolation retrofits and later failure only after Gate B passes. It must preserve the logic of the underlying investigation.
+>>>>>>> Stashed changes
 
 **PROGRAM AND ADJACENCY: COMPLETE.**

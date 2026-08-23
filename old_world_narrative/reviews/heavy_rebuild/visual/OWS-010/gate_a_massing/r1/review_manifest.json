@@ -1,0 +1,60 @@
+{
+  "target": "OWS-010",
+  "gate": "gate_a_massing",
+  "revision": "massing-r1@74a229a6",
+  "damage_state": "D0 intact massing only",
+  "source_commit": "74a229a6a45e650b2f1d8ccfec8802fc99ed2681",
+  "source_path": "review-only:render_ows010_gate_a_massing.build_gate_a_massing()",
+  "dimensions": [
+    49,
+    16,
+    43
+  ],
+  "fixed_camera_set": "ows010_fixed_v1",
+  "visual_review_status": "rendered_pending_manual_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": false,
+  "cutaway_y": 7,
+  "views": {
+    "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r1/front_left.png",
+    "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r1/rear_left.png",
+    "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r1/rear_right.png",
+    "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r1/front_right.png",
+    "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r1/roof_top_oblique.png",
+    "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r1/interior_cutaway.png",
+    "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r1/floor_slices.png",
+    "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r1/contact_sheet.png"
+  },
+  "review_model_nbt_sha256": "f0296bc3de982f3cde027e9f87221be3e07add11cd073377f0b7664aa61165c7",
+  "review_builder_sha256": "9bd20e78db7e335611480a94b64ec346db605d818137df5b57a7bb7f019f425a",
+  "review_model_non_air_blocks": 10116,
+  "review_model_occupied_bounds": {
+    "min": [
+      0,
+      0,
+      0
+    ],
+    "max": [
+      48,
+      15,
+      42
+    ]
+  },
+  "planning_input_sha256": {
+    "old_world_narrative/reviews/heavy_rebuild/OWS-010_PHASE0_BASELINE_REVIEW.md": "280cccbc6802d4df5e7293627247f41a6d6fa9f816125ae76f770674d06f87a5",
+    "old_world_narrative/reviews/heavy_rebuild/OWS-010_PASS2_FUNCTIONAL_DEFINITION.md": "85d0e21f8a6141290fb645c8f7b85f5b1bce471e1984576957e66bd842a47a66",
+    "old_world_narrative/reviews/heavy_rebuild/OWS-010_PASS3_PRECEDENT_RESEARCH.md": "2fb825db718301725cbd9b4b3752c1ff1cec03f5877721b5eb28bfd0509697b2",
+    "old_world_narrative/reviews/heavy_rebuild/OWS-010_PASS4_PROGRAM_ADJACENCY.md": "b706220ad52d98d97d787b6ac1415459251fb947bb5de0028b384412f5de4602",
+    "old_world_narrative/reviews/heavy_rebuild/OWS-010_PASS5_SCALE_TRANSLATION.md": "80a3b65b4a021a1cf2e04ed5e2488368916ce6bf1b8a089eca646e6cbb77b87d"
+  },
+  "phase0_baseline_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/baseline/r0_pre_heavy_rebuild/review_manifest.json",
+  "frozen_phase0_source_commit": "e14b3f35306fc313e7ea9a114f2384696864533a",
+  "frozen_phase0_shipping_git_blob": "be2ab341c2d252c975711caa93e92c965f943007",
+  "authoritative_shipping_modified": false,
+  "shipping_nbt_git_blob_before": "be2ab341c2d252c975711caa93e92c965f943007",
+  "shipping_nbt_git_blob_after": "be2ab341c2d252c975711caa93e92c965f943007",
+  "lor_006_manual_placed": false,
+  "canonical_proof_placed": false,
+  "pass_scope": "Pass 6 D0 massing only; Passes 7+ omitted"
+}

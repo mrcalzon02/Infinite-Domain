@@ -1,0 +1,40 @@
+{
+  "target": "OWS-008",
+  "gate": "gate_b_intact",
+  "revision": "intact-r1@74a229a6",
+  "damage_state": "D0 intact / operational",
+  "source_commit": "74a229a6a45e650b2f1d8ccfec8802fc99ed2681",
+  "source_path": "review-only:render_ows008_gate_b_intact.build_gate_b_intact()",
+  "dimensions": [
+    55,
+    22,
+    49
+  ],
+  "fixed_camera_set": "ows008_fixed_v1",
+  "visual_review_status": "rendered_pending_manual_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": false,
+  "cutaway_y": 7,
+  "views": {
+    "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r1/front_left.png",
+    "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r1/rear_left.png",
+    "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r1/rear_right.png",
+    "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r1/front_right.png",
+    "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r1/roof_top_oblique.png",
+    "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r1/interior_cutaway.png",
+    "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r1/floor_slices.png",
+    "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r1/contact_sheet.png"
+  },
+  "review_model_nbt_sha256": "53ea6fe1753808cc0913366185f7b3d949d604d7fc86a87de94237a3737436e8",
+  "review_builder_sha256": "7a1bf3c1e4027f9e83194303ee86bc3185c2c9097e3c275f79765b2bbe7860ed",
+  "gate_a_model_sha256": "ec12e9ad5de5da223cac21e3f51efacb34776ef068890f0e38a2479b29988b48",
+  "placed_positions": 16498,
+  "gate_a_frozen_aspects_asserted": 9,
+  "gate_b_obligations_implemented": 6,
+  "working_door_blocks_asserted": 100,
+  "proof_encounters_history_damage_present": false,
+  "authoritative_shipping_modified": false,
+  "shipping_nbt_git_blob_before": "6646d96d5723bb8d1b611de8354dea41396cb6df",
+  "shipping_nbt_git_blob_after": "6646d96d5723bb8d1b611de8354dea41396cb6df"
+}
