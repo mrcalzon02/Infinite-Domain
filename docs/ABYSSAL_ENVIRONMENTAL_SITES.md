@@ -2,7 +2,7 @@
 
 Parent authority: `docs/ABYSSAL_OCEAN_PROGRAM.md`
 
-Status: **five optional environmental structures mechanically implemented, systemic abyssal deformation and custom deep cave carvers active / runtime appearance unmeasured. A second required environmental/geology family is now committed below as the authoritative future-additions backlog.**
+Status: **five optional environmental structures mechanically implemented, systemic abyssal deformation and custom deep cave carvers active / runtime appearance unmeasured. A second required environmental/geology family and two strictly separated factional oceanographic-remnant spawn pools are committed below as the authoritative future-additions backlog.**
 
 These structures and terrain systems add sparse non-critical seabed scenes around the eight core abyssal expedition sites. They do not carry story-critical evidence, do not gate quests, and may not provide progression-breaking machinery or materials.
 
@@ -51,7 +51,7 @@ This creates two geological vent scales: smaller fracture-field smoker clusters 
 
 ## Required future environmental and deep-geology backlog
 
-The following additions were discussed as the next Abyssal population layer but had not previously been promoted into a required committed backlog. They are now authoritative future work. Planning IDs are stable for discussion and implementation tracking; they are not yet Minecraft registry IDs.
+The following additions are authoritative future work. Planning IDs are stable for discussion and implementation tracking; they are not yet Minecraft registry IDs.
 
 ### AGE-001 — Methane / cold-seep mound fields
 **Type:** terrain-adjacent environmental structure or configured/placed feature family  
@@ -79,54 +79,152 @@ Broad but sparse aprons of gravel, deepslate, tuff, basalt and stone debris bene
 Patchy exposed stone/deepslate/tuff/basalt faces intended to make the new cliff and scarp deformation visibly read as rock rather than ordinary sediment-covered ocean floor. This is a surface-expression system, not a freestanding building.
 
 ### AGE-006 — Collapsed subsea cable runs
-**Type:** faction-neutral / Pelagos-biased environmental structure variants  
-**Target:** continental slope through abyssal plain  
-Broken cable segments, anchor blocks, severed relay junctions, collapsed supports and sections disappearing into sediment or over cliff edges. No intact advanced machinery. Rare modest salvage may be allowed only after progression review.
+**Type:** factional environmental structure variants  
+**Target:** faction-appropriate continental slope through abyssal plain  
+Broken cable segments, anchor blocks, severed relay junctions, collapsed supports and sections disappearing into sediment or over cliff edges. Pelagos and Karsic executions must remain separate and must be selected through their respective faction remnant pools rather than a shared table.
 
 ### AGE-007 — Inactive relay pylons
 **Type:** Pelagos environmental structure family  
 **Target:** western continental slope and western abyssal plain  
-Dead or toppled communications/survey pylons, isolated from the quest-critical Pelagos relay. Variants should include upright-but-dead, snapped, leaning and sediment-buried states. These provide regional history without duplicating the core evidence site.
+Dead or toppled communications/survey pylons, isolated from the quest-critical Pelagos relay. Variants should include upright-but-dead, snapped, leaning and sediment-buried states.
 
 ### AGE-008 — Alternate Pelagos sensor-debris fields
 **Type:** Pelagos environmental structure variants  
 **Target:** western abyssal plain and selected fracture approaches  
-Additional wreckage layouts derived from failed oceanographic instrumentation: broken hydrophone grids, detached sensor booms, instrument sleds and scattered survey frames. Use the existing generic abyssal salvage doctrine where a chest is justified; most variants should contain no chest.
+Additional wreckage layouts derived from failed oceanographic instrumentation: broken hydrophone grids, detached sensor booms, instrument sleds and scattered survey frames.
 
 ### AGE-009 — Karsic pipeline-collapse variants
 **Type:** Karsic environmental structure variants  
 **Target:** eastern abyssal plain, fracture approaches and selected trench margins  
-Collapsed pipe spans, ruptured manifolds, unsupported pipeline bridges, buried line sections and broken armored junctions. These expand the existing `karsic_pipeline_breach` into a family without introducing intact functional machinery.
+Collapsed pipe spans, ruptured manifolds, unsupported pipeline bridges, buried line sections and broken armored junctions.
 
 ### AGE-010 — Trench-wall infrastructure remnants
 **Type:** factional environmental structure family  
 **Target:** fracture fields and hadal trench walls  
-Sparse anchor stations, snapped ladders/gantries, observation brackets, pipe/cable anchors and partial wall-mounted platforms suggesting failed attempts to instrument or exploit the trench. Pelagos and Karsic variants should remain visually distinct.
+Sparse anchor stations, snapped ladders/gantries, observation brackets, pipe/cable anchors and partial wall-mounted platforms. Pelagos and Karsic variants must remain visually and structurally distinct and be selected only by their own factional biome pool.
 
 ### AGE-011 — Alternate cold-seep shapes
 **Type:** neutral geological structure variants  
 **Target:** both abyssal plains  
-Cratered seeps, linear fissure seeps, paired mound seeps, collapsed seep bowls and inactive mineralized seep scars. These are explicitly required to prevent the current single cold-seep template from becoming visibly repetitive.
+Cratered seeps, linear fissure seeps, paired mound seeps, collapsed seep bowls and inactive mineralized seep scars.
 
 ### AGE-012 — Hydrothermal province variants
 **Type:** neutral geological structure variants  
 **Target:** fracture and hadal families  
-Additional province layouts around the existing two vent scales: collapsed chimneys, extinct mineralized fields, asymmetric caldera rims, vent chains aligned along faults and mixed active/inactive fields. This extends the existing `fracture_vent_field` and `hadal_vent_complex`; it does **not** replace or duplicate their registry IDs.
+Additional province layouts around the existing two vent scales: collapsed chimneys, extinct mineralized fields, asymmetric caldera rims, vent chains aligned along faults and mixed active/inactive fields.
 
 ### AGE-013 — Shelf-edge slump debris fields
 **Type:** geological structure / placed-feature family  
 **Target:** continental shelf-to-slope transition  
-Sediment blocks, broken rock rafts, slump scar debris and partially buried material beneath the new `abyssal_shelf_slump_pattern`. This is the physical surface-expression companion to the systemic terrain deformation.
+Sediment blocks, broken rock rafts, slump scar debris and partially buried material beneath the new `abyssal_shelf_slump_pattern`.
 
 ### AGE-014 — Cliff cave-mouth geology
 **Type:** cave-mouth decoration / small geological feature family  
 **Target:** both continental slopes  
-Rockfall, gravel fans, exposed stone lips, sparse magma/mineral patches and collapsed entrance debris around suitable cave openings. The goal is to make `abyssal_slope_cave` openings read as real eroded continental-break caves rather than ordinary Overworld caves intersecting water.
+Rockfall, gravel fans, exposed stone lips, sparse magma/mineral patches and collapsed entrance debris around suitable cave openings.
 
 ### AGE-015 — Fracture cave-mouth / fissure fields
 **Type:** cave-mouth decoration / small geological structure family  
 **Target:** fracture fields and hadal trenches  
-Fault-aligned fissure mouths, collapsed lips, basalt/deepslate rubble, mineral staining and sparse vent-associated geology around suitable `abyssal_fracture_cave` openings. Must not block every cave entrance or destroy submarine navigability.
+Fault-aligned fissure mouths, collapsed lips, basalt/deepslate rubble, mineral staining and sparse vent-associated geology around suitable `abyssal_fracture_cave` openings.
+
+## Faction-remnant architecture: two independent random-spawn pools
+
+The East/West abyssal biome split was created in part so factional Old World detritus can be selected by geography. This is a hard worldgen contract:
+
+- **Western abyssal biomes draw only from the Pelagos remnant pool.**
+- **Eastern abyssal biomes draw only from the Karsic remnant pool.**
+- **Neutral geological sites are a separate shared layer and do not belong to either faction pool.**
+- There must never be one global `abyssal_debris` pool that randomly mixes Pelagos and Karsic structures.
+- The two pools should use multiple small and medium variants so discovery is random within a faction while faction identity remains immediately readable.
+- Depth weighting is allowed inside each pool: slope, plain, fracture and hadal variants may differ in probability, but no Pelagos member may spawn from an Eastern-only selector and no Karsic member may spawn from a Western-only selector.
+
+### AGE-016 — Pelagos oceanographic-remnant random-spawn pool
+
+**Biome selector family:**
+- `infinite_domain:western_continental_slope`
+- `infinite_domain:western_abyssal_plain`
+- `infinite_domain:western_fracture_field`
+- `infinite_domain:western_hadal_trench`
+
+**Discovery identity:** civilian/scientific, maritime, exploratory, observational and oceanographic. Pelagos remnants should look like the remains of a distributed subsea research network: comparatively light framing, visible instruments, survey hardware, copper/prismarine/glass language, cable-linked nodes and carefully positioned observational equipment. Even when badly damaged, they should not read as military fortifications or heavy extraction infrastructure.
+
+Required Pelagos detritus catalog:
+- **PEL-DET-001 — CTD / water-column rosette wrecks:** circular sampling frames, bottle/sensor analogues, collapsed central masts and detached pressure housings.
+- **PEL-DET-002 — Current-meter tripods:** three- or four-legged seabed frames with broken current sensors, tilted legs and sediment burial variants.
+- **PEL-DET-003 — Hydrophone-grid fragments:** cable-linked acoustic listening nodes arranged in broken lines, crosses or partial grids.
+- **PEL-DET-004 — Bathymetric survey sleds:** low tow frames with skids, sensor booms, broken tow attachments and partly buried instrument bays.
+- **PEL-DET-005 — Ocean-bottom seismometer stations:** compact instrument housings with leveling frames, detached sensor pods and cable tails.
+- **PEL-DET-006 — Water-sampler rack debris:** frame-mounted sample containers, snapped manifolds, scattered rack sections and overturned sampling cages.
+- **PEL-DET-007 — Seabed camera rigs:** tripod or sled-mounted camera/light frames, broken light arms and separated observation housings.
+- **PEL-DET-008 — AUV survey wrecks:** small unmanned survey-vehicle shells, broken fins/control surfaces, separated nose sensor packages and embedded impact variants.
+- **PEL-DET-009 — ROV work-cage remnants:** tethered work frames, manipulator-arm fragments, camera booms and collapsed tether-management cages.
+- **PEL-DET-010 — Glider / profiling-float wreckage:** slender autonomous observation bodies, ballast housings, damaged wings or buoyancy modules.
+- **PEL-DET-011 — Mooring-anchor stations:** heavy anchor blocks connected to snapped lines, instrument collars and missing upper mooring sections.
+- **PEL-DET-012 — Navigation-beacon pylons:** small beacon towers, light housings, compass/survey marker language and toppled variants.
+- **PEL-DET-013 — Relay-repeater pods:** isolated communications repeater housings with copper cable entries, broken antenna/sensor stems and buried versions.
+- **PEL-DET-014 — Cable-junction boxes:** compact seabed junction housings with several cable directions, one or more severed routes and exposed support frames.
+- **PEL-DET-015 — Scientific cable-spool debris:** abandoned or overturned cable reels, deployment frames and loose line disappearing into terrain.
+- **PEL-DET-016 — Sample-dredge / corer frames:** sediment corers, grab-sampler frames, bent recovery cages and abandoned sample tooling.
+- **PEL-DET-017 — Benthic observatory nodes:** small permanent observation pads with instrument clusters, sensor masts and partial protective frames.
+- **PEL-DET-018 — Survey-marker fields:** arrays of small numbered/colored markers, stakes, reference posts and calibration targets around former study sites.
+- **PEL-DET-019 — Buoyancy-frame wrecks:** pressure floats/buoyancy blocks, broken suspension frames and snapped tether anchors from lost instrument packages.
+- **PEL-DET-020 — Biological sampling stations:** specimen-frame remnants, collection trays, growth-monitoring racks and non-lootable sample-container scenery.
+- **PEL-DET-021 — Mineral-sampling stations:** rock-sample baskets, coring/drilling support frames and tagged specimen racks, with no high-tier ore reward.
+- **PEL-DET-022 — Towed-sonar fish wreckage:** streamlined sensor bodies, tow points, broken tail fins and severed survey cables.
+- **PEL-DET-023 — Seafloor photogrammetry grids:** repeated camera/reference frames and calibration-marker arrays used to map small seabed regions.
+- **PEL-DET-024 — Research-support landing frames:** simple equipment drop frames, pallet-like scientific cargo bases and empty recovery cradles.
+
+Pelagos depth weighting should favor sampling rigs, cameras, moorings and relay pylons on slopes/plains; survey sleds, seismometers, hydrophones and AUV wrecks on plains/fracture approaches; and sparse high-pressure observatory/seismometer/relay remnants in hadal terrain.
+
+### AGE-017 — Karsic subsea-industrial and surveillance-remnant random-spawn pool
+
+**Biome selector family:**
+- `infinite_domain:eastern_continental_slope`
+- `infinite_domain:eastern_abyssal_plain`
+- `infinite_domain:eastern_fracture_field`
+- `infinite_domain:eastern_hadal_trench`
+
+**Discovery identity:** industrial/military-logistical, surveillance-heavy, extractive and armored. Karsic remnants should look like the remains of a hardened subsea infrastructure network: deepslate/blackstone/iron framing, oxidized copper piping, red warning accents, armored cable conduits, valve/manifold systems, heavy anchors and listening installations. Even small debris should communicate logistics, control or observation rather than civilian scientific exploration.
+
+Required Karsic detritus catalog:
+- **KAR-DET-001 — Ruptured pipeline sections:** straight, bent and severed pipe runs with broken supports and buried ends.
+- **KAR-DET-002 — Valve-manifold wrecks:** multi-branch industrial valve clusters, broken handwheel analogues, cracked housings and displaced pipe junctions.
+- **KAR-DET-003 — Pump-skid remnants:** low armored pump platforms, drive housings, severed inlet/outlet lines and collapsed support legs.
+- **KAR-DET-004 — Armored cable-conduit runs:** thick protected cable routes, junction armor, broken covers and exposed interior line sections.
+- **KAR-DET-005 — Passive sonar pickets:** compact hardened acoustic posts in lines or arcs, often linked by armored cable.
+- **KAR-DET-006 — Hydrophone-listening arrays:** heavier military-style listening nodes with protective cages, warning markers and broken control trunks.
+- **KAR-DET-007 — Seabed surveillance pylons:** armored sensor towers, floodlight arms, camera/sensor housings and toppled variants.
+- **KAR-DET-008 — Pipeline inspection sleds:** industrial tracked/skid-like inspection frames, sensor heads, broken tether points and abandoned tool cages.
+- **KAR-DET-009 — Work-platform fragments:** grated platforms, guardrail remnants, ladders, broken access gantries and support piles.
+- **KAR-DET-010 — Heavy anchor blocks:** oversized mooring or infrastructure anchors with chain/cable remnants and scoured sediment around them.
+- **KAR-DET-011 — Trench-wall cable anchors:** wall-mount brackets, snapped conduits, hanging cable segments and collapsed maintenance platforms.
+- **KAR-DET-012 — Pressure bulkhead sections:** isolated armored wall/door-frame fragments from larger destroyed subsea installations, with no intact functional door reward.
+- **KAR-DET-013 — Logistics pallet debris:** strapped industrial cargo bases, empty crates, broken container frames and scattered maintenance materials.
+- **KAR-DET-014 — Maintenance winch frames:** heavy spool/winch structures, chain guides, cable drums and broken lifting booms.
+- **KAR-DET-015 — Subsea crane-base wrecks:** fixed crane pedestals, collapsed booms, hook/chain remnants and fractured work pads.
+- **KAR-DET-016 — Floodlight / observation towers:** red-accented armored lighting pylons with broken lamps, cages and sensor mounts.
+- **KAR-DET-017 — Warning-beacon posts:** industrial hazard markers, navigation lights, redstone-like warning housings and toppled/buried variants.
+- **KAR-DET-018 — Armored junction bunkers:** very small hardened utility enclosures protecting pipe/cable junctions, mostly breached and empty.
+- **KAR-DET-019 — Pressure-monitor stations:** gauge/sensor housings attached to pipeline stubs, manifold frames or anchor pads.
+- **KAR-DET-020 — Coolant / service-line racks:** parallel small-bore pipe runs, broken rack supports and ruptured maintenance junctions.
+- **KAR-DET-021 — Patrol-drone shell debris:** nonfunctional small surveillance/inspection vehicle shells with separated sensor noses or propulsion housings.
+- **KAR-DET-022 — Listening-post antenna debris:** broken mast/array components scattered near former passive-surveillance positions.
+- **KAR-DET-023 — Armored repeater nodes:** hardened communications pods with multiple conduit connections and destroyed exterior antenna structures.
+- **KAR-DET-024 — Emergency isolation stations:** severed-line shutoff structures, barricaded valve frames and failed containment junctions.
+
+Karsic depth weighting should favor pipelines, manifolds, pump skids, work platforms and maintenance debris on slopes/plains; sonar pickets, armored repeaters, surveillance pylons and cable systems on plains/fractures; and sparse hardened listening, isolation and trench-wall infrastructure remnants in hadal terrain.
+
+### Pool implementation rules
+
+- AGE-016 and AGE-017 are separate weighted random-spawn families, not just visual tags.
+- Each catalog entry should ultimately have multiple damage-state or orientation variants rather than one canonical template.
+- Pool members should use semantic structure tags such as future `#infinite_domain:pelagos_abyssal_detritus` and `#infinite_domain:karsic_abyssal_detritus`, or equivalent faction-specific pool authorities.
+- Worldgen structure sets/pools must reference only the matching factional abyssal biome tags.
+- Shared neutral geology may overlap either faction biome family, but shared factional debris may not.
+- Most debris has no chest. A minority may use modest faction-appropriate salvage after progression review; none may carry quest-critical evidence.
+- No intact advanced machinery, diamonds, netherite, high-tier processing blocks or era bypasses.
+- Placement must stay sparse enough that finding a remnant feels like discovering an abandoned network, not swimming through a continuous junkyard.
 
 ## Production order for the future family
 
@@ -135,15 +233,17 @@ Implementation should proceed in this order unless a registry/runtime constraint
 2. AGE-001 methane/seep mounds and AGE-011 alternate seep shapes;
 3. AGE-002 mineral chimney clusters and AGE-012 hydrothermal variants;
 4. AGE-003 trench-wall collapse debris and AGE-013 shelf-edge slump debris;
-5. AGE-014/015 cave-mouth geology once cave-mouth behavior can be inspected safely;
-6. AGE-006 through AGE-010 factional debris/infrastructure variants.
+5. begin AGE-016 and AGE-017 with 6–8 representative templates per faction so the biome-specific random pools become mechanically real;
+6. AGE-014/015 cave-mouth geology once cave-mouth behavior can be inspected safely;
+7. expand AGE-016/017 toward the full catalogs and fold AGE-006 through AGE-010 into their correct faction pool rather than implementing those as shared debris.
 
 All additions must remain sparse. Geological features should reinforce the terrain process that caused them, and built remnants should never make the abyss feel urbanized or crowded.
 
 ## Implementation rules
 
 - Preserve the eight core expedition IDs and five existing environmental structure IDs.
-- Do not attach quest-critical evidence to AGE-001–015.
+- Preserve the Western/Pelagos versus Eastern/Karsic biome separation as the selector for factional random-spawn remnants.
+- Do not attach quest-critical evidence to AGE-001–017.
 - No diamonds, netherite, intact advanced machines, or era-bypass materials.
 - Prefer deterministic generated NBTs for discrete structures, following the existing abyssal materialization workflow.
 - Prefer configured/placed features or surface rules for genuinely geological scatter where those systems express the feature more naturally than a structure template.
@@ -155,7 +255,7 @@ All additions must remain sparse. Geological features should reinforce the terra
 
 `tools/abyssal_rebuild/generate_abyssal_environmental_sites.py` is the deterministic NBT authority for all five currently implemented discrete environmental sites. It imports the shared structure serializer from the core abyssal generator, embeds expected Git blob hashes, and is verified by the existing Abyssal Assets workflow before generated NBTs may be committed. The hadal vent complex has locked Git blob `cc17b36102636467d7fa10986e86cabb86e59b57`.
 
-AGE-001–015 are planning commitments only until their implementation files, registry/worldgen references and generated assets are committed. As each is implemented, this document must be updated from **planned** to **active** without changing its planning ID.
+AGE-001–017 are planning commitments until their implementation files, registry/worldgen references and generated assets are committed. As each is implemented, this document must be updated from **planned** to **active** without changing its planning ID.
 
 Semantic tags currently implemented:
 - `#infinite_domain:abyssal_plain_environmental_sites`
@@ -168,4 +268,4 @@ Semantic tags currently implemented:
 
 Environmental sites are atmosphere and exploration texture, not progression nodes. Terrain deformation should remain low-amplitude outside fracture/hadal masks, and discrete structures must remain sparse enough that the abyss is dominated by empty scale rather than structure spam.
 
-Runtime still must verify density-function loading, pattern scale, actual seabed deformation, cave flooding and entrances, placement projection, burial, bubble behavior, visual density, submarine clearance, and generation cost.
+Runtime still must verify density-function loading, pattern scale, actual seabed deformation, cave flooding and entrances, placement projection, burial, bubble behavior, visual density, faction-pool isolation, submarine clearance, and generation cost.
