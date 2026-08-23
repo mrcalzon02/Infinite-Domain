@@ -2,7 +2,7 @@
 
 Authoritative parent: `docs/ABYSSAL_OCEAN_PROGRAM.md`
 
-Status: **terrain/depth routing is active under an explicit runtime-validation waiver; all eight abyssal structures, the depth-graded seabed feature pass, and both deep quest branches now consume the resulting depth bands. Physical seabed measurements remain unobserved.**
+Status: **terrain/depth routing is active under an explicit runtime-validation waiver; all eight core abyssal structures, four optional environmental structures, the depth-graded seabed feature pass, and both deep quest branches consume the resulting depth bands. Physical seabed measurements remain unobserved.**
 
 ## Gate disposition
 
@@ -73,7 +73,7 @@ Only verified vanilla 1.21.1 placed-feature IDs are used in the current natural 
 
 The intent is a readable ecological drop-off with depth: populated slope → sparse plain → barren fracture → near-sterile hadal floor. Live distribution remains unmeasured.
 
-## Consumers attached to the depth bands
+## Core structure consumers
 
 Slope:
 - Pelagos survey wreck
@@ -91,13 +91,26 @@ Hadal:
 - Pelagos hadal probe station
 - Karsic hadal blacksite
 
-The six deep structure definitions project to `OCEAN_FLOOR_WG`; their geometry does not alter the terrain functions. `tools/abyssal_rebuild/generate_abyssal_sites.py` is the deterministic source of their active NBTs and verifies each generated Git blob before materialization.
+The six core deep structure definitions project to `OCEAN_FLOOR_WG`; their geometry does not alter the terrain functions. `tools/abyssal_rebuild/generate_abyssal_sites.py` is the deterministic source of their active NBTs and verifies each generated Git blob before materialization.
 
-Every deep installation now contains an intentional underwater access breach. The five ordinary deep sites expose a 3 × 3 outer-shell opening. The Karsic hadal blacksite exposes the outer bunker and inner archive through aligned 3 × 3 breaches. These openings are static accessibility guarantees; actual water behavior and approach quality remain runtime-unmeasured.
+Every core deep installation contains an intentional underwater access breach. The five ordinary deep sites expose a 3 × 3 outer-shell opening. The Karsic hadal blacksite exposes the outer bunker and inner archive through aligned 3 × 3 breaches. These openings are static accessibility guarantees; actual water behavior and approach quality remain runtime-unmeasured.
+
+## Optional environmental consumers
+
+The first optional environmental family consumes the same depth routing without changing it:
+
+- `pelagos_sensor_debris` → Western abyssal plain only; spacing/separation `112/56`, salt `78064401`.
+- `karsic_pipeline_breach` → Eastern abyssal plain only; spacing/separation `112/56`, salt `78064402`.
+- `abyssal_cold_seep` → both abyssal-plain families; spacing/separation `160/80`, salt `78064501`.
+- `fracture_vent_field` → both fracture-field families; spacing/separation `176/88`, salt `78064601`.
+
+All four project to `OCEAN_FLOOR_WG`, use single-piece jigsaw pools and `terrain_adaptation: bury`, and are generated deterministically by `tools/abyssal_rebuild/generate_abyssal_environmental_sites.py`.
+
+The Pelagos debris and Karsic breach reuse the generic abyssal-plain salvage table. The cold seep and vent field have no chest. None is quest-critical and none changes evidence progression.
 
 ## Deep structure evidence
 
-Every deep structure physically contains its site-specific evidence chest and a secondary salvage chest:
+Every core deep structure physically contains its site-specific evidence chest and a secondary salvage chest:
 - Pelagos relay → `pelagos_bathymetric_log`
 - Pelagos observatory → `pelagos_fracture_sensor_core`
 - Pelagos hadal station → `pelagos_hadal_pressure_record`
@@ -120,12 +133,13 @@ When runtime access returns:
 4. inspect north/south oceans for abyssal contamination;
 5. measure seabed Y at shelf, slope, plain, fracture and deepest hadal candidates;
 6. inspect cave/aquifer/bedrock interaction;
-7. verify all eight abyssal structures resolve with `/structure_map`;
+7. verify all eight core and four optional abyssal structures resolve with `/structure_map` where applicable;
 8. inspect `OCEAN_FLOOR_WG` projection, burial, open-breach flooding and chest accessibility;
-9. run both slope-return voyages and both deep expedition branches end-to-end;
-10. verify the new seabed features scale by depth rather than making fracture/hadal terrain visually busy;
-11. verify FTB mobs remain out of starter water and scale by depth;
-12. assess submarine clearance;
-13. measure generation cost.
+9. inspect cold-seep and vent bubble behavior;
+10. run both slope-return voyages and both deep expedition branches end-to-end;
+11. verify the seabed features scale by depth rather than making fracture/hadal terrain visually busy;
+12. verify FTB mobs remain out of starter water and scale by depth;
+13. assess submarine clearance;
+14. measure generation cost.
 
 If continentalness alone later proves too shallow, only a narrowly East/West + ocean + hadal gated final-density contribution may be considered. Global Overworld deepening remains prohibited.
