@@ -1,6 +1,6 @@
 # Infinite Domain — East/West Abyssal Ocean Program
 
-Status: **promoted under the 2026-08-22 runtime-validation waiver. Terrain shaping, eight depth biomes, FTB Ocean Mobs population/loot, two slope recovery wrecks, six stable deep expedition structure IDs, registered deep evidence items, and bilateral submarine quest progression are implemented. Richer six-site NBT rebuilds are authored and statically validated but pending byte-exact binary promotion. Runtime terrain and placement observations remain deferred.**
+Status: **promoted under the 2026-08-22 runtime-validation waiver. Terrain shaping, eight depth biomes, FTB Ocean Mobs population/loot, two slope recovery wrecks, six rebuilt deep expedition structures, physical site-specific evidence recovery, and bilateral submarine quest progression are implemented. Runtime terrain and placement observations remain deferred.**
 
 ## Authority
 
@@ -72,7 +72,7 @@ Hadal:
 - `infinite_domain:abyssal/pelagos_hadal_probe_station`
 - `infinite_domain:abyssal/karsic_hadal_blacksite`
 
-All eight are first-class Infinite Domain IDs with structure definitions, template pools, structure sets and semantic tags. The six active deep-installation NBTs remain the earlier mechanical shells. Differentiated rebuilds for all six have been authored and parsed successfully as 1.21.1/DataVersion 3955 structures, with planned site-specific evidence and secondary salvage containers, but exact binary promotion remains pending.
+All eight are first-class Infinite Domain IDs with structure definitions, template pools, structure sets and semantic tags. The six deep-installation NBTs were deterministically regenerated and committed by `tools/abyssal_rebuild/generate_abyssal_sites.py`; their live Git blob hashes match the generator authority. Each deep installation now contains one site-specific evidence chest and one secondary salvage chest.
 
 ## Evidence progression
 
@@ -102,10 +102,10 @@ Convergence:
 The first two voyages recover physical evidence from the Western and Eastern slope wrecks and return it to `infinite_domain:spawn_buffer`.
 
 After both are complete, the chapter splits into independent deep expeditions:
-- Pelagos: abyssal plain → relay → fracture observatory → hadal probe.
-- Karsic: abyssal plain → pipeline station → fracture listening post → hadal blacksite.
+- Pelagos: abyssal plain → relay + physical bathymetric log → fracture observatory + physical sensor core → hadal probe + physical pressure record.
+- Karsic: abyssal plain → pipeline station + physical telemetry → fracture listening post + physical sonar archive → hadal blacksite + physical cipher.
 
-Maps lead to the next destination and the corrected quest chain uses the actual stable structure IDs. Until the richer NBTs are promoted, deep evidence is issued as a compatibility reward after reaching the matching structure so the active old shells cannot deadlock progression. After binary promotion, convert these steps to physical chest-recovery item tasks. The final milestone requires both hadal records.
+Maps lead to the next destination. Deep evidence is no longer issued by quest completion: every deep site quest requires the matching structure and the item from its guaranteed evidence chest. The final milestone requires both hadal records and produces the comparative dossier with only modest currency.
 
 ## Loot doctrine
 
@@ -125,13 +125,19 @@ Shared salvage:
 
 Evidence tables guarantee the required record and add modest salvage. No site should provide intact advanced machines, diamonds, netherite or direct era bypasses.
 
+## Create Aquatic Ambitions disposition
+
+The verified 1.21.1 upstream addon is processing/automation content, not a natural marine-worldgen provider. Verified registry content includes `create_aquatic_ambitions:mechanical_conduit`, `create_aquatic_ambitions:prismarine_alloy_block`, `create_aquatic_ambitions:prismarine_alloy`, `create_aquatic_ambitions:prismarine_alloy_rod`, `create_aquatic_ambitions:calcium_rich_powder`, `create_aquatic_ambitions:spiky_shell`, and `create_aquatic_ambitions:suspicious_rock`.
+
+Do not scatter these as natural abyssal geology or free intact technology. Future use should be controlled through recipes, intentionally ruined/non-dropping structure props, or era-compatible salvage after progression review.
+
 ## Remaining work
 
-1. Promote the six staged rebuilt NBTs byte-exactly into the active structure paths and switch deep evidence from compatibility rewards to physical chest recovery.
-2. Heavy Rebuild visual refinement on the two slope wrecks and six deep installations while retaining their IDs.
-3. Add polished quest localization and bespoke evidence-item textures.
-4. Populate sparse biome feature lists with verified marine/geological content and Create Aquatic Ambitions assets where useful.
-5. Consider additional optional wreck/vent/seep structure variants after the core eight are visually mature.
+1. Heavy Rebuild visual refinement on the two slope wrecks and six deep installations while retaining all stable IDs and evidence contracts.
+2. Populate sparse biome feature lists with pack-owned marine/geological features built from verified vanilla primitives.
+3. Add polished quest localization and bespoke evidence-item textures without changing stable quest IDs.
+4. Add additional optional wreck/vent/seep variants only after the core eight remain mechanically stable.
+5. Revisit Create Aquatic Ambitions only for controlled recovered-technology integration, not natural worldgen.
 6. When runtime access returns, execute the deferred validation ledger rather than retroactively claiming it already happened.
 
 ## Deferred observations
