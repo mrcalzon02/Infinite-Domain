@@ -145,6 +145,27 @@ KNOWN_BLOCK_COLORS: dict[str, tuple[int, int, int, int]] = {
     # is listed here, rather than left to the hash fallback, so the
     # render-color-fidelity gate treats it as a deliberate decision.
     "minecraft:jigsaw": (0, 0, 0, 0),
+    # Wave 3c: the pack's wasteland/radiation vocabulary. Every value here was
+    # MEASURED -- the mean of the opaque pixels of that block's texture in the
+    # LAST DAYS resource pack, which is this project's own authored art, not
+    # the mod's. Nothing was eyeballed and no third-party texture is copied
+    # into this repository; only the derived triple lives here.
+    "create_new_age:solid_corium": (103, 225, 229, 255),
+    "create_new_age:corium": (123, 235, 238, 255),
+    "the_wasteland_reworked:waste_barrel": (212, 179, 34, 255),
+    "the_wasteland_reworked:rusted_barrel": (130, 40, 13, 255),
+    "the_wasteland_reworked:hazard_concrete": (138, 112, 18, 255),
+    "the_wasteland_reworked:lead_plating": (76, 92, 90, 255),
+    "the_wasteland_reworked:rusted_lead_plating": (97, 77, 58, 255),
+    "the_wasteland_reworked:cut_lead_plating": (89, 103, 101, 255),
+    "the_wasteland_reworked:radiation_hazard_sign": (119, 112, 69, 225),
+    "the_wasteland_reworked:aluminium_grate": (67, 85, 83, 225),
+    "the_wasteland_reworked:broken_aluminium_grate": (65, 84, 81, 225),
+    "the_wasteland_reworked:support_beam": (58, 78, 75, 225),
+    # Our own ruined stand-in: the vanilla blast-furnace colour already in
+    # this table, composited under the pack's own damage_scorched overlay at
+    # that overlay's real per-pixel alpha.
+    "infinite_domain:ruined_blast_furnace": (86, 85, 87, 255),
 }
 
 

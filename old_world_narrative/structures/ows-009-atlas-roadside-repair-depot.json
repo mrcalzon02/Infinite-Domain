@@ -21,26 +21,40 @@
       15,
       33
     ],
-    "placed_blocks": 10218,
+    "placed_blocks": 10272,
     "palette_states": 35,
     "modded_blocks": 2666,
     "spawners": 0,
     "entities": 0
   },
   "structural_lint": {
-    "profile": "programmed_building",
+    "gate": "structure_geometry_lint",
+    "gate_version": "structure_rebuild_system_v2",
+    "hard_fail_count": 0,
     "structural_lint_passed": true,
-    "visual_review": "required",
-    "quality_approved": false,
-    "issues": [],
-    "working_doors": 4,
-    "orphan_door_halves": 0,
-    "window_blocks": 228,
-    "functional_fixtures": 8,
-    "vertical_access_span": 0,
-    "dense_floor_levels": 8,
-    "footprint_variants": 12
+    "review_findings": [],
+    "v2_compliance": {
+      "authored_repair": false,
+      "retrofit_rounds": 1,
+      "retrofit_blocks_written": {
+        "floating_support": 54
+      }
+    },
+    "legacy_assess_fidelity": {
+      "profile": "programmed_building",
+      "structural_lint_passed": true,
+      "visual_review": "required",
+      "quality_approved": false,
+      "issues": [],
+      "working_doors": 4,
+      "orphan_door_halves": 0,
+      "window_blocks": 228,
+      "functional_fixtures": 8,
+      "vertical_access_span": 0,
+      "dense_floor_levels": 8,
+      "footprint_variants": 12
+    }
   },
-  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "static_render_review": "regenerated_under_structure_rebuild_system_v2_not_runtime_approval",
   "runtime_validation": "deferred_by_user"
 }

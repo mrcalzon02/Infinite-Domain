@@ -216,6 +216,10 @@ covers what the generator actually emits and the design decisions behind it.
 
 ### Palette
 
+Two palettes, deliberately: the hull is strict vanilla, and the reactor
+compartment uses the pack's own wasteland and radiation vocabulary.
+
+
 Strict vanilla, no mod dependency. Three-plus visually distinct material
 zones, as the standards require, chosen for value contrast rather than hue
 because value is what survives fog and low light:
@@ -241,6 +245,67 @@ Note that `copper_block` and `copper_grate` needed explicit entries rather
 than relying on the existing `copper` substring rule: that rule returns the
 oxidized green, which is right for `oxidized_cut_copper` and wrong for a
 bright copper screw.
+
+#### The wasteland/radiation palette
+
+Used only in the reactor compartment and the wreck's radiological dressing:
+`the_wasteland_reworked:lead_plating` / `rusted_lead_plating` /
+`cut_lead_plating` (biological shield), `hazard_concrete`,
+`radiation_hazard_sign`, `aluminium_grate`, `support_beam`, `waste_barrel`,
+`rusted_barrel`, and `create_new_age:solid_corium`. Plus
+`infinite_domain:ruined_blast_furnace`, our own ruined equivalent, in place of
+the live blast furnaces this family originally placed.
+
+Three things to keep straight when extending this:
+
+- **The block is `aluminium_grate`; the texture file is `aluminum_grate.png`.**
+  The registry spells it one way and the art the other. Verify block IDs
+  against `docs/registry-inventory/block-ids.txt`, not against texture
+  filenames.
+- **These render colours were measured, not chosen.** Each is the mean of the
+  opaque pixels of that block's texture *in the LAST DAYS resource pack* —
+  this project's own authored art. No third-party texture is copied into the
+  repository; only the derived RGB triple lives in `KNOWN_BLOCK_COLORS`. The
+  ruined blast furnace's value is the vanilla blast-furnace colour composited
+  under the pack's own `damage_scorched` overlay at that overlay's real
+  per-pixel alpha.
+- **Every one of them passes the functional-term test** in
+  `scripts/audit_structure_block_fitness.py`. They are hazard materials and
+  shielding, not machines — which is the distinction
+  `docs/RUINED_FUNCTIONAL_BLOCKS.md` actually draws. `createnuclear:reactor_*`
+  would fail that test and is deliberately not used.
+
+#### Mod dependency, and how it is contained
+
+`the_wasteland_reworked` and `create_new_age` become hard dependencies of the
+wreck assets. The pack's own radiation tags mark these same blocks
+`"required": false`; a structure template has no equivalent, so a missing mod
+means missing blocks rather than a graceful skip.
+
+Contained three ways: the intact `akula_project971_clean_master` carries none
+of them and the validator fails if corium or drums ever appear in it; the
+hull, sail, control surfaces and screw remain entirely vanilla, so what is at
+risk is compartment dressing rather than the shape of the boat; and the
+dependency is on two mods the pack already requires for its radiation model to
+function at all. If the family ever needs to ship without them, the
+substitution point is `_akula_contaminate()` and the `AK_*` palette constants,
+both in one place.
+
+#### Hazard budget
+
+`create_new_age:solid_corium` and `the_wasteland_reworked:waste_barrel` are
+high-tier emitters in the unified radiation model — 4 units per check out to 8
+blocks. Seawater attenuates 12% per block and lead 65%, so a shielded, flooded
+compartment is survivable for a prepared diver and unpleasant for an
+unprepared one, which is the intent.
+
+`validate_deep_sea_structures.py`'s `_akula_hazard_and_fitness` caps this at
+40 source blocks per asset and fails on any extreme-tier emitter
+(`create_new_age:corium`, the fluid, radius 20) appearing at all. The first
+pass filled the entire core cavity with corium and came in at 76 — nearly
+double the ceiling — which is why the ceiling exists rather than being left to
+judgement. The melt now pools in the bottom of the cavity, which is both
+within budget and what a melt actually does.
 
 ### Interior
 
@@ -335,6 +400,10 @@ places nothing is a wrong answer to the question the file exists to answer.
   generated in world yet. Worth watching for in the QA-world pass, and the
   mitigation if it bites is a shallower authored bed rather than abandoning
   the assembly.
+- The widened `audit_structure_block_fitness.py` is syntax-checked only. It
+  needs the vanilla jar and the `mods/` directory to run, which the session
+  that changed it could not execute against. Run it once on a machine that has
+  them before trusting the gate.
 - Fluid-tick cost of the flooded ballast annulus and the wreck interiors has
   not been measured. The standards' performance budget asks for it for any
   structure creating new water/air boundaries at generation time, and this

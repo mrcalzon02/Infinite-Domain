@@ -834,9 +834,25 @@ def lint_structure(
     clean_master_positions: dict[Pos, tuple[str, dict[str, str]]] | None = None,
     site_context: str | None = None,
     allowed_ground_by_context: dict[str, set[str]] | None = None,
+    ground_y: tuple[int, ...] | None = None,
 ) -> LintResult:
+    """`ground_y` is the caller's explicit declaration of the template's real
+    grade level, passed through to `check_structural_connectivity`.
+
+    That check's default — anchor on the template's own lowest solid layer —
+    is right for ordinary buildings but wrong for a template that models an
+    excavation. In a quarry or open pit the lowest solid layer is the *pit
+    floor*, tens of blocks below the grade the site's yard buildings, haul
+    road and plant actually stand on, so every at-grade structure is reported
+    as floating. The check's docstring already anticipates this ("anchor off
+    of it unless a caller explicitly knows better"); this parameter is how a
+    caller says so, and it is the only supported way to do it — a site that
+    declares a grade must still build a real ground course at that level, or
+    the structures on it are floating above a declared plane and the check
+    reports them exactly as before.
+    """
     result = LintResult(structure_id=structure_id)
-    result.findings.extend(check_structural_connectivity(size, positions))
+    result.findings.extend(check_structural_connectivity(size, positions, ground_y=ground_y))
     result.findings.extend(check_stairs_ladders_signs(size, positions))
     result.findings.extend(check_openings_wall_coupled(size, positions))
     result.findings.extend(check_ground_plane(size, positions, allowed_by_context=allowed_ground_by_context, site_context=site_context))
@@ -870,13 +886,29 @@ def _main(argv: list[str]) -> int:
         print("run this from the repository's scripts/ directory", file=sys.stderr)
         return 1
 
+    # Grade declarations for templates that model an excavation. Without these
+    # the standalone scan re-derives grade from the lowest solid layer, which
+    # for a pit template is the excavated floor, and reports the entire
+    # at-grade site as floating. See the file's own rationale block: a
+    # declaration names the plane, it does not waive the requirement to build
+    # ground there.
+    declarations: dict[str, Any] = {}
+    for candidate in (
+        Path(__file__).resolve().parents[1] / "structure_library" / "structure-grade-declarations.json",
+    ):
+        if candidate.is_file():
+            declarations = json.loads(candidate.read_text(encoding="utf-8")).get("declarations", {})
+            break
+
     results: list[dict[str, Any]] = []
     hard_fail_structures = 0
     for path in sorted(structures_dir.rglob("*.nbt")):
         structure_id = path.relative_to(structures_dir).with_suffix("").as_posix()
         size, blocks = load_structure(path)  # type: ignore[misc]
         positions = positions_from_load_structure(size, blocks)
-        result = lint_structure(structure_id, size, positions)
+        declared = declarations.get(structure_id) or declarations.get(Path(structure_id).name)
+        ground_y = tuple(declared["ground_y"]) if declared else None
+        result = lint_structure(structure_id, size, positions, ground_y=ground_y)
         if not result.passed:
             hard_fail_structures += 1
         results.append(result.to_dict())

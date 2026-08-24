@@ -86,24 +86,24 @@
       "issues": [],
       "detail": {
         "akula_wreck_forward_damaged": {
-          "exposed_skin": 4427,
-          "dressed": 295,
-          "fraction": 0.067
+          "exposed_skin": 4423,
+          "dressed": 294,
+          "fraction": 0.066
         },
         "akula_wreck_aft_damaged": {
-          "exposed_skin": 1918,
-          "dressed": 283,
-          "fraction": 0.148
+          "exposed_skin": 1932,
+          "dressed": 281,
+          "fraction": 0.145
         },
         "akula_wreck_forward": {
-          "exposed_skin": 4428,
-          "dressed": 298,
+          "exposed_skin": 4424,
+          "dressed": 297,
           "fraction": 0.067
         },
         "akula_wreck_aft": {
-          "exposed_skin": 1916,
-          "dressed": 282,
-          "fraction": 0.147
+          "exposed_skin": 1930,
+          "dressed": 281,
+          "fraction": 0.146
         }
       }
     },
@@ -113,31 +113,31 @@
       "detail": {
         "akula_project971_clean_master": {
           "components": 1,
-          "largest": 8585,
+          "largest": 8589,
           "orphan_components": 0,
           "orphan_blocks": 0
         },
         "akula_wreck_forward_damaged": {
           "components": 3,
-          "largest": 11642,
+          "largest": 11652,
           "orphan_components": 2,
           "orphan_blocks": 2
         },
         "akula_wreck_aft_damaged": {
           "components": 3,
-          "largest": 6636,
+          "largest": 6648,
           "orphan_components": 2,
           "orphan_blocks": 2
         },
         "akula_wreck_forward": {
           "components": 4,
-          "largest": 11644,
+          "largest": 11654,
           "orphan_components": 3,
           "orphan_blocks": 3
         },
         "akula_wreck_aft": {
           "components": 4,
-          "largest": 6638,
+          "largest": 6650,
           "orphan_components": 3,
           "orphan_blocks": 3
         }
@@ -159,6 +159,46 @@
           "lead_keel_y": 0,
           "tear_face_ratio": 0.08
         }
+      }
+    },
+    "_akula_hazard_and_fitness": {
+      "metadata_valid": true,
+      "issues": [],
+      "detail": {
+        "akula_wreck_aft": {
+          "radiation_sources": {
+            "create_new_age:solid_corium": 36,
+            "the_wasteland_reworked:waste_barrel": 3
+          },
+          "total_source_blocks": 39
+        },
+        "akula_wreck_aft_damaged": {
+          "radiation_sources": {
+            "create_new_age:solid_corium": 36,
+            "the_wasteland_reworked:waste_barrel": 3
+          },
+          "total_source_blocks": 39
+        },
+        "akula_wreck_forward": {
+          "radiation_sources": {
+            "the_wasteland_reworked:waste_barrel": 1
+          },
+          "total_source_blocks": 1
+        },
+        "akula_wreck_forward_damaged": {
+          "radiation_sources": {
+            "the_wasteland_reworked:waste_barrel": 1
+          },
+          "total_source_blocks": 1
+        },
+        "akula_wreck_spine": {
+          "radiation_sources": {
+            "create_new_age:solid_corium": 4,
+            "the_wasteland_reworked:waste_barrel": 1
+          },
+          "total_source_blocks": 5
+        },
+        "_clean_master_radiological": []
       }
     },
     "_akula_assembly": {

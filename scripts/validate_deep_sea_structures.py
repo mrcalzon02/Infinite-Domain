@@ -36,6 +36,12 @@ PRODUCTION_STATUSES = {"quarantined", "automatic_validation", "visual_review", "
 DAMAGE_CAUSES = {
     "corrosion", "biofouling", "silt_burial", "pressure_hull_failure", "flooding_breach",
     "listing_settle", "anchor_drag_scarring", "current_scour", "thermal_scarring",
+    # Wave 3c addition. A reactor compartment opening is not thermal_scarring
+    # (which the standards scope to vent features) and not flooding_breach
+    # (which is about water getting in, not fuel getting out). Nuclear vessels
+    # are a real category in this corpus now, so the vocabulary needs the term
+    # rather than an approximate one.
+    "reactor_breach",
 }
 OCCUPATION_STATES = {
     "derelict", "salvage_crew", "faction_garrison", "hostile_aquatic",
@@ -67,6 +73,15 @@ RENDER_COLOR_CURATED_EXACT = {
     "minecraft:copper_grate", "minecraft:oxidized_cut_copper", "minecraft:oxidized_cut_copper_slab",
     "minecraft:dispenser", "minecraft:red_concrete", "minecraft:tuff",
     "minecraft:jigsaw",
+    # Wave 3c wasteland/radiation vocabulary -- see the note in
+    # render_deep_sea_review.py's KNOWN_BLOCK_COLORS. Keep the two in sync.
+    "create_new_age:solid_corium", "create_new_age:corium",
+    "the_wasteland_reworked:waste_barrel", "the_wasteland_reworked:rusted_barrel",
+    "the_wasteland_reworked:hazard_concrete", "the_wasteland_reworked:lead_plating",
+    "the_wasteland_reworked:rusted_lead_plating", "the_wasteland_reworked:cut_lead_plating",
+    "the_wasteland_reworked:radiation_hazard_sign", "the_wasteland_reworked:aluminium_grate",
+    "the_wasteland_reworked:broken_aluminium_grate", "the_wasteland_reworked:support_beam",
+    "infinite_domain:ruined_blast_furnace",
 }
 RENDER_COLOR_CURATED_SUBSTRINGS = ("sand", "sea_pickle", "kelp", "prismarine", "copper")
 
@@ -156,7 +171,7 @@ def validate_geological_feature(entry: dict[str, Any], issues: list[str]) -> Non
     footprint = require(entry, "footprint", dict, issues)
     if isinstance(footprint, dict) and (not isinstance(footprint.get("width"), int) or not isinstance(footprint.get("depth"), int)):
         issues.append("footprint: width/depth must be integers")
-    check_enum(entry, "hazard_type", {"none", "thermal", "toxic", "pressure", "biological"}, issues)
+    check_enum(entry, "hazard_type", {"none", "thermal", "toxic", "radiological", "pressure", "biological"}, issues)
     validate_nbt_dimensions(entry, issues, height_required=False)
 
 
@@ -230,6 +245,11 @@ def validate_atmosphere_fill(issues: list[str]) -> None:
     acceptable = {
         "minecraft:water", "minecraft:iron_block", "minecraft:iron_bars", "minecraft:blast_furnace",
         "minecraft:redstone_lamp", "minecraft:lever", "minecraft:spawner", "minecraft:chest",
+        # The engine bay's blast furnace is now the ruined stand-in required by
+        # docs/RUINED_FUNCTIONAL_BLOCKS.md. This list is the reason that swap
+        # is worth naming: an atmosphere check keyed to specific fixture names
+        # silently turns a policy fix into a false flooding defect.
+        "infinite_domain:ruined_blast_furnace",
     }
     missing_water = [pos for pos in flooded_samples if blocks.get(pos) not in acceptable]
     if missing_water:
@@ -703,6 +723,102 @@ def validate_akula_assembly(issues: list[str]) -> dict[str, Any]:
     return detail
 
 
+# ---------------------------------------------------------------------------
+# Wave 3c: radiological dressing and the live-functional-block policy
+# ---------------------------------------------------------------------------
+
+AK_RADIATION_SOURCE_BLOCKS = {
+    "create_new_age:corium": "extreme",
+    "create_new_age:solid_corium": "high",
+    "the_wasteland_reworked:waste_barrel": "high",
+    "wastelands:radioactive_waste": "high",
+}
+# Per-asset ceiling on high-tier emitters. Sized against the standards'
+# Hazard/atmosphere-fit axis rather than picked round: a high-tier source is 4
+# units/check out to 8 blocks in the pack's unified radiation model, seawater
+# attenuates 12% per block and lead 65%, so a few dozen shielded blocks read as
+# a hot compartment a prepared diver can work in. Several hundred would make
+# the wreck a no-go zone, which the standards call a design defect and not
+# difficulty.
+AK_HAZARD_CEILING = 40
+# Blocks whose whole point is that they are live and progression-gating.
+# docs/RUINED_FUNCTIONAL_BLOCKS.md forbids these as set dressing and requires
+# the ruined-equivalent instead.
+AK_FORBIDDEN_FUNCTIONAL = {
+    "minecraft:furnace", "minecraft:smoker", "minecraft:blast_furnace",
+    "minecraft:brewing_stand", "minecraft:beacon", "minecraft:conduit",
+}
+
+
+def validate_akula_hazard_and_fitness(issues: list[str]) -> dict[str, Any]:
+    """Two policy gates the existing checks cannot see.
+
+    `scripts/audit_structure_block_fitness.py` enforces the live-functional
+    rule, but only over `structure/wasteland` and only for NON-vanilla blocks.
+    This corpus lives elsewhere and its violation was a vanilla blast furnace,
+    so it fell through both halves of that gate. This check closes the deep-sea
+    side of the gap; the wasteland-side scan path is widened separately.
+
+    The hazard budget exists because radiological dressing is the one damage
+    vocabulary where more is trivially easy and actively worse."""
+    detail: dict[str, Any] = {}
+    if not STRUCTURE_DIR.is_dir():
+        issues.append("hazard_and_fitness: structure directory not found")
+        return detail
+    for path in sorted(STRUCTURE_DIR.glob("*.nbt")):
+        name = path.stem
+        try:
+            _size, cells = _load_cells(path)
+        except (OSError, EOFError, KeyError, ValueError) as error:
+            issues.append(f"hazard_and_fitness: {name} unreadable NBT ({error})")
+            continue
+        counts: dict[str, int] = {}
+        for material in cells.values():
+            if material in AK_RADIATION_SOURCE_BLOCKS:
+                counts[material] = counts.get(material, 0) + 1
+        live = sorted({m for m in cells.values() if m in AK_FORBIDDEN_FUNCTIONAL})
+        entry: dict[str, Any] = {}
+        if counts:
+            entry["radiation_sources"] = counts
+            total = sum(counts.values())
+            entry["total_source_blocks"] = total
+            if total > AK_HAZARD_CEILING:
+                issues.append(
+                    f"hazard_budget: {name} places {total} radiation-source blocks, over the "
+                    f"{AK_HAZARD_CEILING}-block ceiling; that is a no-go zone, not a hot compartment"
+                )
+            extreme = [m for m in counts if AK_RADIATION_SOURCE_BLOCKS[m] == "extreme"]
+            if extreme:
+                issues.append(
+                    f"hazard_budget: {name} places extreme-tier source(s) {extreme}; this corpus's "
+                    "wrecks are meant to be enterable, so extreme-tier emitters need an explicit "
+                    "documented decision rather than being reachable by default"
+                )
+        if live:
+            issues.append(
+                f"block_fitness: {name} places live functional block(s) {live} as set dressing, "
+                "which docs/RUINED_FUNCTIONAL_BLOCKS.md forbids; use the ruined-equivalent"
+            )
+            entry["live_functional_blocks"] = live
+        if entry:
+            detail[name] = entry
+
+    # The intact reference boat must NOT be radiological. Corium is what a
+    # core becomes after it melts; a clean master carrying it would mean the
+    # damage state had leaked into the asset it is supposed to be derived from.
+    clean = STRUCTURE_DIR / "akula_project971_clean_master.nbt"
+    if clean.is_file():
+        _size, cells = _load_cells(clean)
+        leaked = sorted({m for m in cells.values() if m in AK_RADIATION_SOURCE_BLOCKS})
+        detail["_clean_master_radiological"] = leaked
+        if leaked:
+            issues.append(
+                f"hazard_budget: the intact clean master places {leaked}; corium and waste drums "
+                "are consequences of the casualty and must not appear in the pre-damage reference"
+            )
+    return detail
+
+
 def validate_placement_gate(issues: list[str]) -> dict[str, Any]:
     gate_report: dict[str, Any] = {"quarantine_tag_present": QUARANTINE_TAG_PATH.is_file(), "csv_rows_present": {}, "biomes_gated": {}}
     if gate_report["quarantine_tag_present"]:
@@ -832,6 +948,12 @@ def main() -> None:
     impact_detail = validate_akula_impact_conformance(impact_issues)
     results["_akula_impact_conformance"] = {
         "metadata_valid": not impact_issues, "issues": impact_issues, "detail": impact_detail,
+    }
+
+    hazard_issues: list[str] = []
+    hazard_detail = validate_akula_hazard_and_fitness(hazard_issues)
+    results["_akula_hazard_and_fitness"] = {
+        "metadata_valid": not hazard_issues, "issues": hazard_issues, "detail": hazard_detail,
     }
 
     assembly_issues: list[str] = []

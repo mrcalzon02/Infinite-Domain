@@ -251,6 +251,88 @@ so it cannot recur silently.
   jars registering the same structure set is legitimate — the Seven Seas
   entries already do — so the check keys on the triple, not on the target.
 
+### Radiological dressing, and a policy violation this wave introduced
+
+The reactor compartment was originally built from vanilla proxies — an iron
+box, a copper core, a sea lantern — under the family's strict-vanilla rule.
+That rule was right for the hull and wrong for this one compartment: the pack
+already owns a wasteland and radiation vocabulary, and using it makes the
+wreck actually hazardous through
+`infinite-domain-unified-radiation-1.0.0.jar`'s own source tags instead of
+merely looking hazardous.
+
+What changed:
+
+- **Biological shield** is `the_wasteland_reworked:lead_plating` (with the
+  rusted variant as its outer course), which is what a submarine reactor's
+  shield is really made of.
+- **Hazard marking** is `the_wasteland_reworked:hazard_concrete`, with
+  `radiation_hazard_sign` trefoils on the shield faces and
+  `aluminium_grate` in place of iron bars.
+- **The melted core** in the wreck is `create_new_age:solid_corium`, pooled at
+  the bottom of the cavity with the collapsed core structure above it as
+  `cut_lead_plating`, and a spill running forward along the deck toward the
+  tear. `waste_barrel` drums are stowed in the turbine space.
+- **The outcrop carries melt too** — four corium blocks in the keel gouge on
+  the aft side of the crest, because that is the side the reactor compartment
+  was over when the girder parted. It ties the three pieces of the assembly to
+  one event rather than three.
+
+**The reactor is in the AFT half, not the forward half.** The girder parts at
+frame 66 and the reactor occupies frames 71–83. An earlier revision of this
+ledger and of the generator's own docstring said the forward section carried
+the reactor, which was simply wrong; the radiological dressing would have gone
+into the wrong half if it had not been checked against the frame numbers.
+
+**Hazard budget.** `solid_corium` is a high-tier emitter in the unified
+radiation model — 4 units per check out to 8 blocks — so density is a design
+decision, not a detail. The aft section carries
+28 corium blocks and
+3 drums, the forward half one drum, the outcrop five, against a
+per-asset ceiling of 40. The first pass filled the whole core cavity
+and landed 90% over that ceiling, which would have made the wreck a no-go zone
+rather than a hot compartment — the failure the standards' Hazard/atmosphere-fit
+axis names as a design defect rather than difficulty.
+
+**A live blast furnace was placed as set dressing — in this family and in two
+others.** `docs/RUINED_FUNCTIONAL_BLOCKS.md` rule 2 forbids exactly this, and
+declares itself retroactive. The Akula's turbine room had two, and the check
+added for it also found `coastal_patrol_wreck` (all three variants) and
+`abyssal_mining_rig` (both variants) doing the same thing. All seven
+placements are now `infinite_domain:ruined_blast_furnace`, the ruined
+equivalent the policy requires.
+
+The reason it survived is worth recording, because it is a gap and not an
+oversight: `scripts/audit_structure_block_fitness.py` is the gate for that
+policy, and it missed this on **both** axes at once — its scan path was pinned
+to `structure/wasteland`, so this corpus was never inspected, and its sweep
+only considers non-vanilla blocks, so a vanilla blast furnace would have been
+skipped even inside the scan. The audit's `STRUCTURES` root is now the whole
+`structure/` tree, and it carries an explicit `VANILLA_FORBIDDEN` set for the
+blocks rule 2 names. That change is syntax-checked only — running it needs the
+vanilla jar and the mods directory, which this session could not execute
+against — so it should be run once on a machine that has them before it is
+trusted.
+
+**Vocabulary additions**, both narrower than adding a catch-all would have
+been: `reactor_breach` in the damage vocabulary (a compartment opening is not
+`thermal_scarring`, which the standards scope to vent features, nor
+`flooding_breach`, which is about water getting in rather than fuel getting
+out), and `radiological` in the Tier 2 hazard vocabulary (`toxic` was the
+nearest existing term and is not the same hazard).
+
+**The dependency this buys.** These are third-party mod blocks. The pack's own
+radiation tags mark them `"required": false`; a structure template has no such
+option, so the wreck assets now hard-depend on `the_wasteland_reworked` and
+`create_new_age`. That is contained deliberately: the intact clean master
+stays free of corium and drums — enforced by the validator, since a
+pre-damage reference carrying the consequences of the damage would be
+incoherent — and no third-party content is copied into this repository. Only
+block IDs are referenced, exactly as the pack's own datapacks already
+reference them, and every render colour was measured from the LAST DAYS
+resource pack's own authored texture for that block.
+
+
 ### Review evidence added to the pipeline
 
 `scripts/render_deep_sea_review.py` gained a hero view set, because one fixed

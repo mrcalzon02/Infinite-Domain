@@ -462,6 +462,16 @@ standard did not previously have:
   generate on their own, and a validator check that resolves the joints out of
   the shipped NBT. The mechanics and the pitfalls are in
   `docs/deep-sea-structures.md`.
+- **Use the pack's own hazard vocabulary where one exists, and budget it.**
+  Vanilla-first is the rule for structure fabric, not a reason to build a
+  reactor compartment out of proxies when the pack already owns lead plating,
+  hazard concrete, trefoil signage and corium — and when those blocks are
+  registered radiation sources, so the hazard is real rather than depicted.
+  Two constraints come with it: nothing placed may be a live functional block
+  under `docs/RUINED_FUNCTIONAL_BLOCKS.md` (hazard materials and shielding are
+  fine; machines are not), and emitter density needs a declared per-asset
+  ceiling, because the Hazard/atmosphere-fit axis treats an unenterable wreck
+  as a design defect rather than difficulty.
 - **Prefer the mechanism the site can show.** When more than one physical
   mechanism explains a damage state, the standards' requirement that damage
   trace back to one *legible* cause is a tiebreak, not just a description:

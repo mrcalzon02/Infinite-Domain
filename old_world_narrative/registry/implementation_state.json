@@ -44,5 +44,67 @@
     "OWS-005",
     "OWS-007",
     "OWS-013"
-  ]
+  ],
+  "structure_rebuild_system_v2": {
+    "doctrine": "structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md",
+    "gate": "scripts/structure_geometry_lint.py checks 1-3",
+    "disposition": "repair_in_place_not_regenerate",
+    "disposition_reason": "These ten sites are reviewed clean masters carrying a hand-authored narrative revision layer. Section 6's regenerate-from-primitives instruction targets the wasteland family masters, which have no such layer; regenerating these would discard the revision work to fix defects that measured small and localised. Repaired with scripts/old_world_v2_compliance.py instead. Zero authored blocks were removed wave-wide; 20 glass blocks were converted to door frames to open sealed chambers.",
+    "baseline_hard_fail_findings": {
+      "OWS-001": 0,
+      "OWS-002": 19,
+      "OWS-003": 11,
+      "OWS-004": 130,
+      "OWS-006": 11,
+      "OWS-009": 63,
+      "OWS-010": 5,
+      "OWS-012": 2731,
+      "OWS-015": 0,
+      "OWS-016": 24
+    },
+    "baseline_note": "Taken from a standalone scan of the pre-retrofit .nbt corpus. OWS-004 and OWS-009 were reported as 41 findings each by the linter's per-structure report cap; the totals recorded here are the true counts the cap's summary line named.",
+    "current_hard_fail_findings": {
+      "OWS-001": 0,
+      "OWS-002": 0,
+      "OWS-003": 0,
+      "OWS-004": 0,
+      "OWS-006": 0,
+      "OWS-009": 0,
+      "OWS-010": 0,
+      "OWS-012": 0,
+      "OWS-015": 0,
+      "OWS-016": 0
+    },
+    "v2_compliant": [
+      "OWS-001",
+      "OWS-002",
+      "OWS-003",
+      "OWS-004",
+      "OWS-006",
+      "OWS-009",
+      "OWS-010",
+      "OWS-012",
+      "OWS-015",
+      "OWS-016"
+    ],
+    "outstanding_review_flags": {
+      "OWS-015": [
+        "room_composition"
+      ]
+    },
+    "grade_declarations": "structure_library/structure-grade-declarations.json",
+    "human_gate_still_required": "Passing checks 1-3 is not production approval. Section 6 point 4 still requires a QA-world walkthrough and a pass row in structure_library/review/*.csv with reviewer and timestamp.",
+    "detail_density_pass": {
+      "doctrine": "STRUCTURE_REBUILD_SYSTEM_V2.md 3.7 - detail density tied to floor area, no undressed shell volume",
+      "resolved": {
+        "OWS-003": "cold vault given an east-face airlock; the cooler banks and culture crates it holds were visible but unreachable",
+        "OWS-004": "rooftop cultivation greenhouse given a south-face door onto the roof deck",
+        "OWS-006": "roof void dressed as the rooftop plant room it is - duct runs hung from the ceiling slab, air handlers, a door off the roof deck and a service ladder down into the laboratory",
+        "OWS-016": "all four elastomer exposure chambers given clean-corridor airlocks"
+      },
+      "verified_intentional": {
+        "OWS-015": "The flagged void is the water tower's own tank vessel. A sealed tank is what a water tower is; the lint names this case explicitly and asks for verification, not a door. Verified and left alone. The finding is deliberately still reported rather than suppressed, so the next reader re-checks it instead of inheriting a silent exemption."
+      }
+    }
+  }
 }

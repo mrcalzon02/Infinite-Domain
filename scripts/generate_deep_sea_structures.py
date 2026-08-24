@@ -221,7 +221,11 @@ def crew_berth(t: Template, x1: int, x2: int, y: int, z1: int, z2: int) -> None:
 def engine_room(t: Template, x1: int, x2: int, y: int, z1: int, z2: int) -> None:
     cz = (z1 + z2) // 2
     t.fill((x1, y, cz - 1), (x1 + 1, y + 1, cz + 1), "minecraft:iron_block")
-    t.set(x1 + 2, y, cz, "minecraft:blast_furnace", facing="north", lit="false")
+    # Ruined stand-in per docs/RUINED_FUNCTIONAL_BLOCKS.md rule 2. This was a
+    # live blast furnace until the deep-sea block-fitness check was added --
+    # the existing audit only scans structure/wasteland and only non-vanilla
+    # blocks, so this corpus was outside both halves of that gate.
+    t.set(x1 + 2, y, cz, "infinite_domain:ruined_blast_furnace", facing="north")
     t.set(x2 - 1, y, z1, "minecraft:lever", face="wall", facing="east", powered="false")
     t.set(x2 - 1, y, z2 - 1, "minecraft:redstone_lamp", lit="false")
     t.fill((x2 - 2, y, z1 + 1), (x2 - 2, y, z2 - 2), "minecraft:iron_bars", waterlogged="false")
@@ -467,7 +471,7 @@ def abyssal_mining_rig_clean_master() -> Template:
     t.set(3, 5, 4, "minecraft:lectern")
     t.set(3, 6, 3, "minecraft:redstone_lamp", lit="true")
     t.fill((9, 5, 2), (9, 5, 10), "minecraft:iron_block")
-    t.set(10, 5, 4, "minecraft:blast_furnace", facing="west", lit="false")
+    t.set(10, 5, 4, "infinite_domain:ruined_blast_furnace", facing="west")
     t.set(10, 5, 8, "minecraft:hopper", facing="down")
     t.set(10, 6, 8, "minecraft:barrel", facing="down", open="false")
     for x in (2, 10):
@@ -614,6 +618,54 @@ AK_HAZARD = "minecraft:red_concrete"
 AK_RUBBLE = "minecraft:cobbled_deepslate"
 AK_SEDIMENT = "minecraft:sand"
 AK_COARSE = "minecraft:gravel"
+
+# The pack's own wasteland/radiation vocabulary, used in place of vanilla
+# proxies for the one part of this boat that is genuinely nuclear.
+#
+# This is a deliberate, documented departure from the family's strict-vanilla
+# rule, and it is narrower than it looks. Three things make it the right call
+# rather than a convenience:
+#
+#  * `docs/RUINED_FUNCTIONAL_BLOCKS.md` forbids placing live functional
+#    machinery as set dressing and names reactor components as the worst
+#    offender in the corpus. It also requires the ruined-equivalent stand-in
+#    wherever one exists. None of the blocks below are machines: they are
+#    hazard materials and shielding, and every one of them passes
+#    `scripts/audit_structure_block_fitness.py`'s functional-term test.
+#  * They are already the pack's registered radiation sources -- the tags in
+#    `infinite-domain-unified-radiation-1.0.0.jar` list `solid_corium` and
+#    `waste_barrel` as high-tier emitters -- so a diver in this wreck takes a
+#    real dose through the pack's own unified radiation model instead of
+#    looking at decorative green blocks.
+#  * Every render colour below was measured from the LAST DAYS resource
+#    pack's own authored texture for that block, not guessed. No third-party
+#    content is copied into this repository; only block IDs are referenced,
+#    exactly as the pack's own datapacks already reference them.
+#
+# The cost is a hard mod dependency: unlike the radiation tags, which mark
+# these blocks `"required": false`, a structure template has no optional
+# reference. See docs/deep-sea-structures.md for how that is contained.
+AK_LEAD = "the_wasteland_reworked:lead_plating"
+AK_LEAD_RUSTED = "the_wasteland_reworked:rusted_lead_plating"
+AK_LEAD_CUT = "the_wasteland_reworked:cut_lead_plating"
+AK_HAZARD_CONCRETE = "the_wasteland_reworked:hazard_concrete"
+AK_TREFOIL = "the_wasteland_reworked:radiation_hazard_sign"
+AK_GRATE_ALU = "the_wasteland_reworked:aluminium_grate"
+AK_GRATE_BROKEN = "the_wasteland_reworked:broken_aluminium_grate"
+AK_BEAM = "the_wasteland_reworked:support_beam"
+AK_WASTE_BARREL = "the_wasteland_reworked:waste_barrel"
+AK_RUSTED_BARREL = "the_wasteland_reworked:rusted_barrel"
+AK_CORIUM = "create_new_age:solid_corium"
+# Our own ruined-equivalent, required by the policy above in place of a live
+# blast furnace. The first build of this family placed two working
+# `minecraft:blast_furnace` blocks in the turbine room as scenery, which the
+# policy explicitly forbids -- and the automated fitness gate would not have
+# caught it, because that gate only inspects non-vanilla blocks.
+AK_RUINED_FURNACE = "infinite_domain:ruined_blast_furnace"
+
+# Radiation sources this family places, with their tier in the pack's unified
+# radiation model. Used by the hazard-budget check in the validator.
+AK_RADIATION_SOURCES = {AK_CORIUM: "high", AK_WASTE_BARREL: "high"}
 
 
 def akula_hull_radius(z: int) -> float:
@@ -873,24 +925,40 @@ def _akula_command_post(t: Template) -> None:
     t.ladder(AKULA_CX - 1, 2, 4, z1 - 3, "north")
 
 
-def _akula_reactor(t: Template) -> None:
+def _akula_reactor(t: Template, core: str | None = None) -> None:
+    """OK-650B compartment.
+
+    Shielding is `lead_plating` rather than the hull's iron, because lead is
+    what a submarine reactor's biological shield is actually made of and the
+    pack already owns the block. `core` lets the wreck derivative swap the
+    intact core for solidified corium without duplicating the compartment."""
     z0, z1 = AKULA_C4
     centre = (z0 + z1) // 2
-    # OK-650B: a shielded core the player can see into but not walk through,
-    # ringed by hazard marking on the deck and biological shielding.
-    t.fill((AKULA_CX - 2, 2, centre - 2), (AKULA_CX + 2, 9, centre + 2), AK_PRESSURE)
-    t.fill((AKULA_CX - 1, 3, centre - 1), (AKULA_CX + 1, 8, centre + 1), AK_SCREW)
-    t.fill((AKULA_CX, 4, centre), (AKULA_CX, 7, centre), "minecraft:sea_lantern")
+    core = core or AK_SCREW
+    # Biological shield: a lead box the player can see into but not walk
+    # through. Its outer course is the rusted variant so the shield reads as
+    # two materials rather than one flat mass.
+    t.fill((AKULA_CX - 2, 2, centre - 2), (AKULA_CX + 2, 9, centre + 2), AK_LEAD)
+    for dz in (-2, 2):
+        for x in range(AKULA_CX - 2, AKULA_CX + 3):
+            t.set(x, 9, centre + dz, AK_LEAD_RUSTED)
+    t.fill((AKULA_CX - 1, 3, centre - 1), (AKULA_CX + 1, 8, centre + 1), core)
+    if core == AK_SCREW:
+        t.fill((AKULA_CX, 4, centre), (AKULA_CX, 7, centre), "minecraft:sea_lantern")
+    # Hazard marking on the deck, and the trefoil on the shield face -- the
+    # signage a player reads before the geiger counter tells them.
     for dz in (-3, 3):
         for x in range(AKULA_CX - 3, AKULA_CX + 4):
-            t.set(x, 5, centre + dz, AK_HAZARD)
+            t.set(x, 5, centre + dz, AK_HAZARD_CONCRETE)
     for dx in (-3, 3):
         for z in range(centre - 3, centre + 4):
-            t.set(AKULA_CX + dx, 5, z, AK_HAZARD)
+            t.set(AKULA_CX + dx, 5, z, AK_HAZARD_CONCRETE)
+    t.set(AKULA_CX, 7, centre - 3, AK_TREFOIL)
+    t.set(AKULA_CX, 7, centre + 3, AK_TREFOIL)
     for y in (6, 7, 8):
         for dz in (-3, 3):
-            t.set(AKULA_CX - 2, y, centre + dz, "minecraft:iron_bars", waterlogged="false")
-            t.set(AKULA_CX + 2, y, centre + dz, "minecraft:iron_bars", waterlogged="false")
+            t.set(AKULA_CX - 2, y, centre + dz, AK_GRATE_ALU)
+            t.set(AKULA_CX + 2, y, centre + dz, AK_GRATE_ALU)
     # Reactor control station at the forward end of the compartment.
     t.set(AKULA_CX - 3, 6, z0 + 1, "minecraft:lectern", facing="east", has_book="false", powered="false")
     t.set(AKULA_CX - 3, 7, z0 + 1, "minecraft:redstone_lamp", lit="true")
@@ -902,9 +970,15 @@ def _akula_turbine(t: Template) -> None:
     z0, z1 = AKULA_C5
     # Steam plant to port, turbo-generator to starboard, and the main shaft
     # running aft on the centreline at hull-axis height.
-    t.set(AKULA_CX - 3, 6, z0 + 1, "minecraft:blast_furnace", facing="east", lit="false")
+    # Ruined stand-ins, not working furnaces: docs/RUINED_FUNCTIONAL_BLOCKS.md
+    # rule 2 forbids a real blast furnace placed for visual flavour, and this
+    # family shipped two of them before this pass.
+    t.set(AKULA_CX - 3, 6, z0 + 1, AK_RUINED_FURNACE, facing="east")
     t.set(AKULA_CX - 3, 6, z0 + 3, "minecraft:hopper", facing="down")
-    t.set(AKULA_CX + 3, 6, z0 + 2, "minecraft:blast_furnace", facing="west", lit="false")
+    t.set(AKULA_CX + 3, 6, z0 + 2, AK_RUINED_FURNACE, facing="west")
+    for z in range(z0, z1 + 1, 4):
+        t.set(AKULA_CX - 3, 9, z, AK_BEAM)
+        t.set(AKULA_CX + 3, 9, z, AK_BEAM)
     for z in range(z0, z1 + 1):
         t.set(AKULA_CX, 4, z, AK_PRESSURE)
     for z in range(z0 + 1, z1, 3):
@@ -1509,6 +1583,73 @@ def _akula_marine_decay(cells: dict, model: dict[str, Any], section: str) -> dic
     return out
 
 
+def _akula_contaminate(cells: dict, section: str) -> dict:
+    """Radiological consequences of the break, applied per section.
+
+    Which half gets contaminated is not a styling choice: the girder parts at
+    frame 66 and the reactor occupies frames 71-83, so the reactor and turbine
+    spaces travel with the AFT section. The forward half carries no core and
+    gets only stores dressing. Putting corium in both halves would be the
+    "sprinkle it about until it reads nuclear" failure the standards' damage
+    rules exist to prevent -- it has to trace to the one compartment that
+    actually contained it.
+
+    Density is deliberately restrained. `create_new_age:solid_corium` is a
+    high-tier emitter in the pack's unified radiation model (4 units/check out
+    to 8 blocks), so a heavy scatter would make the wreck unenterable rather
+    than dangerous, and the standards' Hazard/atmosphere-fit axis calls that a
+    design defect and not difficulty. The validator's hazard-budget check caps
+    it."""
+    out = dict(cells)
+    z0, z1 = AKULA_C4
+    centre = (z0 + z1) // 2
+
+    if section == "aft":
+        # 1. The core itself melted. Everything that was fuel/core fabric
+        #    inside the biological shield becomes solidified corium.
+        for (x, y, z), (name, props, nbt) in cells.items():
+            if not (z0 <= z <= z1):
+                continue
+            if name not in (AK_SCREW, "minecraft:sea_lantern"):
+                continue
+            # Melt pools at the bottom of the cavity; what was above it
+            # collapsed into it as plating rubble. Filling the whole core
+            # volume with corium put this asset 90% over the hazard ceiling
+            # on the first pass and, worse, read as a solid glowing block
+            # rather than as something that flowed.
+            out[(x, y, z)] = (AK_CORIUM, {}, None) if y <= 4 else (AK_LEAD_CUT, {}, None)
+        # 2. The shield failed on one side only -- a breach with a direction,
+        #    not a uniformly rotted box.
+        for y in range(3, 9):
+            for dz in range(-1, 2):
+                out.pop((AKULA_CX + 2, y, centre + dz), None)
+            out[(AKULA_CX + 2, y, centre + 2)] = (AK_LEAD_RUSTED, {}, None)
+        # 3. Spill trail: melt ran forward along the deck, downhill toward the
+        #    torn end, thinning as it went.
+        for i, z in enumerate(range(z0 - 1, AKULA_BREAK_Z, -1)):
+            width = max(0, 2 - i // 2)
+            for dx in range(-width, width + 1):
+                if (i + dx) % 2:
+                    continue
+                out[(AKULA_CX + dx, 5, z)] = (AK_CORIUM, {}, None)
+        # 4. Stowed waste drums in the turbine space, some still upright.
+        for x, z in ((AKULA_CX - 3, 88), (AKULA_CX + 3, 91), (AKULA_CX - 2, 95)):
+            out[(x, 6, z)] = (AK_WASTE_BARREL, {}, None)
+        for x, z in ((AKULA_CX + 3, 87), (AKULA_CX - 3, 93)):
+            out[(x, 6, z)] = (AK_RUSTED_BARREL, {}, None)
+        # 5. Shield plating torn off and lying in the compartment.
+        for x, z in ((AKULA_CX - 3, centre + 4), (AKULA_CX + 3, centre - 4)):
+            out[(x, 6, z)] = (AK_LEAD_CUT, {}, None)
+    else:
+        # Forward half: no reactor, so no corium. Ship's stores only -- and a
+        # single waste drum, because a boat with a reactor carries shielded
+        # waste forward of it too.
+        for x, z in ((AKULA_CX - 3, 24), (AKULA_CX + 3, 31)):
+            out[(x, 6, z)] = (AK_RUSTED_BARREL, {}, None)
+        out[(AKULA_CX + 3, 6, 55)] = (AK_WASTE_BARREL, {}, None)
+    return out
+
+
 def _akula_place_rotated(t: Template, cells: dict, pivot: tuple[float, float, float],
                          offset: tuple[int, int, int], roll_deg: float, pitch_deg: float,
                          tag_region: tuple[int, int, int, int, int, int] | None = None) -> set[tuple[int, int, int]]:
@@ -1599,7 +1740,14 @@ def _akula_close_skin(t: Template) -> int:
             if AK_LIGHT_HULL in neighbours:
                 fills[pos] = AK_LIGHT_HULL
             else:
-                fills[pos] = max(set(neighbours), key=neighbours.count)
+                # sorted(), not set(): `max` over a set of strings resolves
+                # ties in set-iteration order, and CPython randomises string
+                # hashing per process. That made this generator produce a
+                # different NBT on every run for any asset whose skin had a
+                # tied pinhole -- caught by re-running generate() twice and
+                # diffing the output, which is the only way this class of bug
+                # ever shows up.
+                fills[pos] = max(sorted(set(neighbours)), key=neighbours.count)
     for pos, material in fills.items():
         t.set(pos[0], pos[1], pos[2], material)
         sealed += 1
@@ -1750,8 +1898,14 @@ def _akula_flood(t: Template, dry_cells: set[tuple[int, int, int]] | None = None
 
 
 def akula_wreck_forward_section() -> Template:
-    """Bow through the imploded compartment: sonar dome, torpedo room, command
-    post, sail, reactor. Bow-embedded, listed to port, torn end raised.
+    """Bow through the break: sonar dome, torpedo room, command post and sail.
+    Bow-embedded, listed to port, torn end raised.
+
+    Note which compartments are actually here. The girder parts at frame 66
+    and the reactor sits at frames 71-83, so the reactor and turbine spaces
+    are in the AFT section, not this one -- an earlier revision of this
+    docstring and of the ledger claimed the reactor was forward, which was
+    simply wrong and made the radiological dressing land in the wrong half.
 
     Template y=0 is the ocean floor, so the hull the impact model buries below
     the floor is deliberately not authored -- the surrounding terrain covers
@@ -1761,6 +1915,7 @@ def akula_wreck_forward_section() -> Template:
     spec = model["sections"]["forward"]
     cells = _akula_tear(_template_cells(akula_project971_clean_master()), 0, AKULA_BREAK_Z + 4, model, True)
     cells = _akula_marine_decay(cells, model, "forward")
+    cells = _akula_contaminate(cells, "forward")
     t = Template((AKULA_WRECK_X, AKULA_WRECK_Y, AKULA_FWD_LEN + 6))
     # The torpedo room's bulkheads are the heaviest in the boat and they sit
     # forward of the tear, so this is the one compartment that plausibly held
@@ -1790,6 +1945,7 @@ def akula_wreck_aft_section() -> Template:
     spec = model["sections"]["aft"]
     cells = _akula_tear(_template_cells(akula_project971_clean_master()), AKULA_BREAK_Z - 4, AKULA_LEN - 1, model, False)
     cells = _akula_marine_decay(cells, model, "aft")
+    cells = _akula_contaminate(cells, "aft")
     shifted = {(x, y, z - (AKULA_BREAK_Z - 4)): v for (x, y, z), v in cells.items()}
     t = Template((AKULA_WRECK_X, AKULA_WRECK_AFT_Y, AKULA_AFT_LEN + 13))
     _akula_place_rotated(
@@ -2034,6 +2190,13 @@ def akula_wreck_spine() -> Template:
     ):
         top = crest.get((x, z), 0)
         t.set(x, max(0, top - 2), z, material)
+    # Melt in the gouge, on the aft side of the crest only -- that is the side
+    # the reactor compartment was over when the girder parted, and it ties the
+    # three pieces of the assembly into one event rather than three props.
+    for x, z in ((12, 18), (11, 20), (13, 21), (12, 23)):
+        top = crest.get((x, z), 0)
+        t.set(x, max(0, top - 1), z, AK_CORIUM)
+    t.set(AKULA_SPINE_CX + 1, max(0, crest.get((AKULA_SPINE_CX + 1, 22), 0)), 22, AK_WASTE_BARREL)
     for x, z in ((4, 5), (20, 9), (6, 18), (18, 20), (12, 2)):
         top = crest.get((x, z), 0)
         t.set(x, top + 1, z, "minecraft:prismarine_bricks")
@@ -2379,8 +2542,9 @@ def _akula_catalog_entries(stats: dict[str, Any]) -> list[dict[str, Any]]:
             "supports_intact": False,
             "supports_damage_variants": True,
             "supports_occupation_variants": True,
-            "damage_causes": ["pressure_hull_failure", "flooding_breach", "listing_settle",
-                              "silt_burial", "corrosion", "biofouling", "current_scour"],
+            "damage_causes": ["pressure_hull_failure", "reactor_breach", "flooding_breach",
+                              "listing_settle", "silt_burial", "corrosion", "biofouling",
+                              "current_scour"],
             "source_license": licence,
             "conversion_target": "scattered",
             "production_status": "quarantined",
@@ -2436,8 +2600,9 @@ def _akula_catalog_entries(stats: dict[str, Any]) -> list[dict[str, Any]]:
             "supports_intact": False,
             "supports_damage_variants": True,
             "supports_occupation_variants": True,
-            "damage_causes": ["pressure_hull_failure", "flooding_breach", "listing_settle",
-                              "silt_burial", "corrosion", "biofouling", "current_scour"],
+            "damage_causes": ["pressure_hull_failure", "reactor_breach", "flooding_breach",
+                              "listing_settle", "silt_burial", "corrosion", "biofouling",
+                              "current_scour"],
             "occupation_state": "hostile_aquatic",
             "source_license": licence,
             "conversion_target": "scattered",
@@ -2450,7 +2615,7 @@ def _akula_catalog_entries(stats: dict[str, Any]) -> list[dict[str, Any]]:
             "biome_scope": scope,
             "feature_type": "rock_outcrop",
             "footprint": dims("akula_wreck_spine")["footprint"],
-            "hazard_type": "none",
+            "hazard_type": "radiological",
             "source_template": "kubejs/data/infinite_domain/structure/deep_sea/akula_wreck_spine.nbt",
             "placement_ref": "kubejs/data/infinite_domain/worldgen/structure_set/deep_sea/akula_wreck_site.json",
             "source_license": licence,

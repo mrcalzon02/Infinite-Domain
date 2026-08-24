@@ -72,6 +72,35 @@ check in Creative: block renders correctly on all four `facing` rotations, item 
 right in inventory, breaking it with a pickaxe drops itself, and the scrap recipe resolves
 in JEI/REI.
 
+## Gate coverage correction (2026-08-24)
+
+The gate this policy relies on, `scripts/audit_structure_block_fitness.py`,
+was not enforcing rule 2 as written. It missed on two independent axes at
+once:
+
+1. **Scan path.** `STRUCTURES` was pinned to
+   `kubejs/data/infinite_domain/structure/wasteland`, so the deep-sea corpus —
+   which is authored, ships modded blocks, and is covered by this policy —
+   was never inspected at all.
+2. **Vanilla blocks.** The sweep only considers blocks whose namespace is not
+   `minecraft:`, so a live vanilla furnace/smoker/blast furnace placed as set
+   dressing could never be flagged, even inside the scan path. Rule 2 names
+   those blocks explicitly.
+
+Together those meant seven live `minecraft:blast_furnace` placements sat in
+the deep-sea corpus while the gate reported green: `coastal_patrol_wreck`
+(three variants), `abyssal_mining_rig` (two variants), and the Wave 3
+`akula_project971` turbine room (two). All are now
+`infinite_domain:ruined_blast_furnace`.
+
+Fixed by rooting `STRUCTURES` at the whole `structure/` tree and adding an
+explicit `VANILLA_FORBIDDEN` set covering the blocks rule 2 names. The report
+now records `categories_scanned` so a future corpus added outside the scan
+path is visible rather than silent. **This change is syntax-checked only** —
+running it requires the vanilla jar and `mods/`, which the session that made
+it could not execute against; run it once on a machine that has them before
+treating the gate as trustworthy again.
+
 ## Backlog
 
 - Only furnace/smoker/blast furnace exist so far. The block-fitness audit

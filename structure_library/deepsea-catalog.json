@@ -417,6 +417,7 @@
       "supports_occupation_variants": true,
       "damage_causes": [
         "pressure_hull_failure",
+        "reactor_breach",
         "flooding_breach",
         "listing_settle",
         "silt_burial",
@@ -507,6 +508,7 @@
       "supports_occupation_variants": true,
       "damage_causes": [
         "pressure_hull_failure",
+        "reactor_breach",
         "flooding_breach",
         "listing_settle",
         "silt_burial",
@@ -538,7 +540,7 @@
         "width": 25,
         "depth": 26
       },
-      "hazard_type": "none",
+      "hazard_type": "radiological",
       "source_template": "kubejs/data/infinite_domain/structure/deep_sea/akula_wreck_spine.nbt",
       "placement_ref": "kubejs/data/infinite_domain/worldgen/structure_set/deep_sea/akula_wreck_site.json",
       "source_license": {

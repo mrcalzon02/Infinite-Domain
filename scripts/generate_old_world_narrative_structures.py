@@ -5,6 +5,8 @@ import gzip
 from dataclasses import dataclass
 from pathlib import Path
 import generate_wasteland_sites as base
+import old_world_v2_compliance as v2
+import structure_geometry_lint as geometry_lint
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
@@ -213,6 +215,266 @@ def build_016():
 
 BUILDERS = {"OWS-001": build_001, "OWS-002": build_002, "OWS-003": build_003, "OWS-004": build_004, "OWS-006": build_006, "OWS-009": build_009, "OWS-010": build_010, "OWS-012": build_012, "OWS-015": build_015, "OWS-016": build_016}
 
+
+# ---------------------------------------------------------------------------
+# Structure Rebuild System v2 compliance
+# ---------------------------------------------------------------------------
+#
+# `structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md` retires `assess_fidelity`
+# as the production gate. These sites are therefore gated on
+# `structure_geometry_lint` checks 1-3 instead, and repaired by
+# `old_world_v2_compliance` rather than regenerated from scratch — see that
+# module's header for why repair rather than rebuild is the correct
+# disposition for this particular wave.
+#
+# Two kinds of fix run, and the split is deliberate:
+#
+#   * the finding-driven retrofit (`v2.converge`) handles defect classes where
+#     there is exactly one correct answer — a stair run needs a shaft, a ladder
+#     needs backing, a door needs jambs. It repairs only the coordinates the
+#     gate reported, so a site with no findings is left untouched.
+#
+#   * `_authored_*` functions below handle the cases where the fix is a design
+#     decision. Those are written out longhand, per site, so they can be read
+#     and disagreed with rather than buried in a generic operator.
+
+# Per-site repair palette, chosen to match each building's existing material
+# vocabulary so a retrofit does not read as a patch.
+COMPLIANCE_PALETTE: dict[str, dict[str, str]] = {
+    "OWS-001": {"wall_block": "minecraft:white_concrete"},
+    "OWS-002": {"wall_block": "minecraft:white_concrete", "backing_block": "minecraft:stripped_spruce_log"},
+    "OWS-003": {"wall_block": "minecraft:white_concrete"},
+    "OWS-004": {"wall_block": "minecraft:smooth_stone", "frame_block": "minecraft:white_concrete"},
+    "OWS-006": {"wall_block": "minecraft:white_concrete"},
+    "OWS-009": {"wall_block": "minecraft:polished_blackstone"},
+    "OWS-010": {"wall_block": "minecraft:polished_andesite"},
+    "OWS-012": {"wall_block": "minecraft:polished_blackstone"},
+    "OWS-015": {"wall_block": "minecraft:white_concrete"},
+    "OWS-016": {"wall_block": "minecraft:white_concrete"},
+}
+
+# Templates that model an excavation must declare the grade their at-grade
+# structures stand on; see structure_geometry_lint.lint_structure's `ground_y`.
+COMPLIANCE_GROUND_Y: dict[str, tuple[int, ...]] = {
+    "OWS-012": (12, 13),
+}
+
+
+def _authored_002(t):
+    """Roof-hatch curb.
+
+    The escape ladder's iron trapdoor sits one course above the copper roof
+    deck with nothing beside it — a hatch with no curb, floating over its own
+    shaft. A four-block curb ring is what a real roof hatch has, and it ties
+    the trapdoor back into the deck.
+    """
+    for dx, dz in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+        v2.place_if_empty(t, (44 + dx, 19, 38 + dz), "minecraft:weathered_cut_copper")
+
+
+def _authored_006(t):
+    """Airlocks into the three PT-9 symbiosis chambers.
+
+    Each chamber was a sealed glass box containing soil, cultures and a
+    reagent station — legible from outside, impossible to enter. The site's
+    own acceptance dimension calls for "sample intake, three symbiosis
+    chambers, bacterial controls ... separated", which means separated by a
+    controlled door, not walled off entirely. Each chamber gets a framed iron
+    airlock on its corridor face and a threshold step up from the hall floor
+    to the raised chamber deck.
+    """
+    for x in (8, 16, 24):
+        v2.cut_access_doorway(
+            t, (x + 2, 3, 14), "north",
+            door_block="minecraft:iron_door",
+            frame_block="minecraft:white_concrete",
+        )
+
+
+def _authored_012(t):
+    """The quarry's missing ground, and a continuous process deck.
+
+    This template modelled only what was excavated. The haul road, service
+    house, crushing plant and timber headframe all stood at natural grade with
+    nothing beneath them, which is why this site alone accounted for 2,731 of
+    the wave's connectivity findings — not because the buildings were badly
+    built, but because the site had no ground.
+
+    Three fixes, in the order the site reads:
+
+    1. An industrial-hardstanding working yard at grade (y=12) under the haul
+       road bed and the three building pads, laid in coherent patches rather
+       than the universal asphalt speckle v2 doctrine 3.5 bans. The pit itself
+       is untouched; the pads stop at the rim and the existing benches already
+       carry the haul route down to the pit floor.
+    2. The process deck carried south from z=19 to z=23, so bulk feed,
+       crushing, milling, mixing and dust extraction stand on one continuous
+       structure. The acceptance dimension already claims this process line is
+       continuous; now it is.
+    3. An overhead gantry for the mechanical mixer. The mixer must hang two
+       courses above its basin with the span between them clear, so it is
+       carried from a beam above rather than propped from below — a support
+       column under it would have satisfied the geometry gate and broken the
+       machine.
+    """
+    for corner_a, corner_b, seed in (
+        ((2, 0), (66, 17), 1201),    # haul road bed and north working yard
+        ((2, 14), (17, 36), 1202),   # west service-house pad
+        ((44, 19), (66, 31), 1203),  # east crushing-plant pad
+        ((54, 40), (66, 52), 1204),  # southeast headframe pad
+    ):
+        v2.grade_pad(t, corner_a, corner_b, "industrial_hardstanding", y=12, seed=seed)
+
+    for x in range(46, 63):
+        for z in range(19, 24):
+            v2.place_if_empty(t, (x, 14, z), "create:andesite_casing")
+            v2.place_if_empty(t, (x, 13, z), "create:andesite_casing")
+
+    for y in range(15, 19):
+        v2.place_if_empty(t, (50, y, 20), "create:andesite_casing")
+        v2.place_if_empty(t, (54, y, 20), "create:andesite_casing")
+    for x in range(50, 55):
+        v2.place_if_empty(t, (x, 18, 20), "create:andesite_casing")
+
+
+def _authored_003(t):
+    """Access into the cold vault.
+
+    The glazed cold vault holds the cooler banks and the sealed culture
+    crates the whole site exists to move, and had no way in — the crates
+    could be seen and never reached. The vault's own workflow runs receiving
+    to dispatch west to east, so the door goes on the east face where the
+    scaffolding racks and the dispatch apron already are.
+    """
+    v2.cut_access_doorway(
+        t, (45, 3, 28), "east",
+        door_block="minecraft:iron_door",
+        frame_block="minecraft:white_concrete",
+    )
+
+
+def _authored_004(t):
+    """Access into the rooftop cultivation greenhouse.
+
+    The greenhouse is the tower's crown and the most public thing on the
+    site — "a luminous rooftop greenhouse" in its own silhouette dimension —
+    and it was a sealed glass box on top of the roof deck. A door on its
+    south face opens it onto the deck at the head of the tower's circulation.
+    """
+    v2.cut_access_doorway(
+        t, (20, 44, 26), "south",
+        door_block="minecraft:dark_oak_door",
+        frame_block="minecraft:white_concrete",
+    )
+
+
+def _authored_006_plenum(t):
+    """Turn the lab's roof void into a legible mechanical plenum.
+
+    468 blocks of sealed, undressed air sat above the laboratory — exactly
+    the "undifferentiated mass" v2 doctrine 3.7 rejects. Filling it with
+    furniture would be dishonest; it is a plenum. So it is dressed as one and
+    given service access, which for a building whose whole purpose is sealed
+    containment chambers is the most load-bearing room in it: this is where
+    the air handling that keeps those chambers sealed would live.
+
+    It reads as what it is: a rooftop plant room standing on the roof deck,
+    entered by a door off the roof, with a service ladder dropping through
+    its floor into the laboratory below. Duct runs are carried directly
+    beneath the ceiling slab so they hang from it rather than floating.
+    """
+    # Door off the roof deck into the plant room.
+    v2.cut_access_doorway(
+        t, (29, 21, 35), "west",
+        door_block="minecraft:iron_door",
+        frame_block="minecraft:smooth_stone",
+    )
+
+    # Service hatch and ladder down into the floor below.
+    for y in range(20, 21):
+        t.set(30, y, 31, "minecraft:air")
+    for y in range(17, 22):
+        v2.place_if_empty(t, (29, y, 31), "minecraft:smooth_stone")
+        t.set(30, y, 31, "minecraft:ladder", facing="east", waterlogged="false")
+
+    # Duct runs beneath the ceiling slab, with an air handler on each line.
+    for x in (33, 36, 39):
+        for z in range(31, 41):
+            v2.place_if_empty(t, (x, 23, z), "create:fluid_pipe")
+        v2.place_if_empty(t, (x, 23, 30), "create:encased_fan", facing="south")
+    for z in (33, 37):
+        for x in range(31, 42):
+            v2.place_if_empty(t, (x, 23, z), "create:fluid_pipe")
+
+
+def _authored_016(t):
+    """Access into the four elastomer exposure chambers.
+
+    Same defect and same answer as the PT-9 laboratory: four sealed glass
+    cells holding the polymer coupons whose repeated failure is the site's
+    entire evidence, with no way for the technicians who loaded them — or the
+    player — to reach them. Each gets a framed airlock on its clean-corridor
+    face, which is also what makes the "clean observation route" the site
+    claims actually a route.
+    """
+    for x in (30, 35, 40, 45):
+        v2.cut_access_doorway(
+            t, (x + 1, 3, 19), "north",
+            door_block="minecraft:iron_door",
+            frame_block="minecraft:white_concrete",
+        )
+
+
+def _authored_006_all(t):
+    _authored_006(t)
+    _authored_006_plenum(t)
+
+
+# OWS-015's tank is deliberately absent from this table. Its flagged void is
+# the water tower's own vessel: a sealed tank is what a water tower is, and
+# the lint names that case explicitly ("may be ... an intentionally sealed
+# vessel, verify"). It was verified and left alone. Cutting a door into a
+# pressure vessel to satisfy a heuristic would be the wrong reading of the
+# gate, and the finding stays reported so the next reader re-checks it rather
+# than inheriting a silent exemption.
+AUTHORED_COMPLIANCE = {
+    "OWS-002": _authored_002,
+    "OWS-003": _authored_003,
+    "OWS-004": _authored_004,
+    "OWS-006": _authored_006_all,
+    "OWS-012": _authored_012,
+    "OWS-016": _authored_016,
+}
+
+
+def apply_v2_compliance(target, template):
+    """Bring one site to Structure Rebuild System v2 compliance.
+
+    Returns the final `LintResult` and a record of what the retrofit wrote, so
+    the site's registry entry can state what was actually done rather than
+    asserting the structure is fine.
+    """
+    authored = AUTHORED_COMPLIANCE.get(target)
+    if authored:
+        authored(template)
+        base.stabilize_door_pairs(template)
+
+    palette = dict(COMPLIANCE_PALETTE[target])
+    ground_y = COMPLIANCE_GROUND_Y.get(target)
+    if ground_y:
+        palette["ground_y"] = ground_y
+    result, rounds = v2.converge(template, geometry_lint, target, **palette)
+    base.stabilize_door_pairs(template)
+
+    size, positions = geometry_lint.positions_from_template(template)
+    result = geometry_lint.lint_structure(target, size, positions, ground_y=ground_y)
+    retrofit = {key: sum(r.get(key, 0) for r in rounds) for key in (rounds[0] if rounds else {})}
+    return result, {
+        "authored_repair": bool(authored),
+        "retrofit_rounds": len(rounds),
+        "retrofit_blocks_written": {key: value for key, value in retrofit.items() if value},
+    }
+
 def loot_table(spec):
     items = list(dict.fromkeys([spec.proof] + ([spec.lore] if spec.lore else [])))
     pools = [{"rolls": 1, "entries": [{"type": "minecraft:item", "name": item}]} for item in items]
@@ -223,8 +485,32 @@ def loot_table(spec):
     return {"type": "minecraft:chest", "random_sequence": spec.loot_id, "pools": pools}
 
 def generate(spec):
-    template = BUILDERS[spec.target](); base.stabilize_door_pairs(template); metrics = base.assess_fidelity(spec.source_profile, template)
-    if not metrics["structural_lint_passed"]: raise ValueError(f"{spec.target} failed structural lint: " + "; ".join(metrics["issues"]))
+    template = BUILDERS[spec.target]()
+    base.stabilize_door_pairs(template)
+
+    # Structure Rebuild System v2 gate. `assess_fidelity` counted door halves,
+    # glass blocks and fixture keywords; it could not see a floating window, an
+    # unsupported stair, or a building standing on nothing, and every site in
+    # this wave passed it while carrying exactly those defects. It is kept
+    # below as a supplementary record only — the gate is the geometry lint.
+    lint_result, retrofit = apply_v2_compliance(spec.target, template)
+    if not lint_result.passed:
+        detail = "; ".join(f"{f.check}@{f.position}: {f.detail}" for f in lint_result.findings if f.severity == "hard_fail")
+        raise ValueError(f"{spec.target} failed structure_geometry_lint checks 1-3: {detail}")
+
+    legacy_metrics = base.assess_fidelity(spec.source_profile, template)
+    metrics = {
+        "gate": "structure_geometry_lint",
+        "gate_version": "structure_rebuild_system_v2",
+        "hard_fail_count": lint_result.hard_fail_count,
+        "structural_lint_passed": lint_result.passed,
+        "review_findings": [
+            {"check": f.check, "position": list(f.position) if f.position else None, "detail": f.detail}
+            for f in lint_result.findings if f.severity == "review_flag"
+        ],
+        "v2_compliance": retrofit,
+        "legacy_assess_fidelity": legacy_metrics,
+    }
     nbt_path = DATA / "structure" / "wasteland" / "old_world" / f"{spec.name}.nbt"
     previous_nbt = nbt_path.read_bytes() if nbt_path.is_file() else None
     statistics = template.save(f"old_world/{spec.name}")
@@ -235,7 +521,7 @@ def generate(spec):
     base.write_json(DATA / "worldgen" / "template_pool" / "old_world" / f"{spec.name}.json", {"fallback": "minecraft:empty", "elements": [{"weight": 1, "element": {"location": f"infinite_domain:wasteland/old_world/{spec.name}", "processors": "minecraft:empty", "projection": "rigid", "element_type": "minecraft:single_pool_element"}}]})
     base.write_json(DATA / "worldgen" / "structure" / "old_world" / f"{spec.name}.json", {"type": "minecraft:jigsaw", "biomes": "#infinite_domain:wasteland_site_biomes", "step": "surface_structures", "spawn_overrides": {}, "terrain_adaptation": "beard_box", "start_pool": f"infinite_domain:old_world/{spec.name}", "size": 1, "start_height": {"absolute": 0}, "max_distance_from_center": 80, "use_expansion_hack": False, "liquid_settings": "ignore_waterlogging", "project_start_to_heightmap": "WORLD_SURFACE_WG"})
     base.write_json(DATA / "loot_table" / "chests" / "old_world" / f"{spec.name}.json", loot_table(spec))
-    base.write_json(ROOT / "old_world_narrative" / "structures" / f"{spec.target.lower()}-{spec.name[8:].replace('_', '-')}.json", {"format_version": 1, "target_id": spec.target, "structure_id": spec.structure_id, "source_structure": spec.source_id, "collapse_phase": spec.phase, "acceptance_dimensions": spec.dimensions, "proof_item": spec.proof, "lore_record": spec.lore, "loot_table": spec.loot_id, "locator_command": f"/structure_map {spec.structure_id} 2", "statistics": statistics, "structural_lint": metrics, "static_render_review": "generated_and_inspected_not_runtime_approval", "runtime_validation": "deferred_by_user"})
+    base.write_json(ROOT / "old_world_narrative" / "structures" / f"{spec.target.lower()}-{spec.name[8:].replace('_', '-')}.json", {"format_version": 1, "target_id": spec.target, "structure_id": spec.structure_id, "source_structure": spec.source_id, "collapse_phase": spec.phase, "acceptance_dimensions": spec.dimensions, "proof_item": spec.proof, "lore_record": spec.lore, "loot_table": spec.loot_id, "locator_command": f"/structure_map {spec.structure_id} 2", "statistics": statistics, "structural_lint": metrics, "static_render_review": "regenerated_under_structure_rebuild_system_v2_not_runtime_approval", "runtime_validation": "deferred_by_user"})
 
 def main():
     for spec in SPECS: generate(spec)

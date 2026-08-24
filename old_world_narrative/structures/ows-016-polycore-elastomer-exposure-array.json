@@ -23,25 +23,41 @@
       49
     ],
     "placed_blocks": 30743,
-    "palette_states": 67,
-    "modded_blocks": 8489,
+    "palette_states": 69,
+    "modded_blocks": 8463,
     "spawners": 0,
     "entities": 0
   },
   "structural_lint": {
-    "profile": "multi_story_building",
+    "gate": "structure_geometry_lint",
+    "gate_version": "structure_rebuild_system_v2",
+    "hard_fail_count": 0,
     "structural_lint_passed": true,
-    "visual_review": "required",
-    "quality_approved": false,
-    "issues": [],
-    "working_doors": 36,
-    "orphan_door_halves": 0,
-    "window_blocks": 694,
-    "functional_fixtures": 39,
-    "vertical_access_span": 16,
-    "dense_floor_levels": 14,
-    "footprint_variants": 19
+    "review_findings": [],
+    "v2_compliance": {
+      "authored_repair": true,
+      "retrofit_rounds": 1,
+      "retrofit_blocks_written": {
+        "stair_casing": 110,
+        "door_framing": 16,
+        "glazing_framing": 14
+      }
+    },
+    "legacy_assess_fidelity": {
+      "profile": "multi_story_building",
+      "structural_lint_passed": true,
+      "visual_review": "required",
+      "quality_approved": false,
+      "issues": [],
+      "working_doors": 40,
+      "orphan_door_halves": 0,
+      "window_blocks": 668,
+      "functional_fixtures": 39,
+      "vertical_access_span": 16,
+      "dense_floor_levels": 14,
+      "footprint_variants": 19
+    }
   },
-  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "static_render_review": "regenerated_under_structure_rebuild_system_v2_not_runtime_approval",
   "runtime_validation": "deferred_by_user"
 }

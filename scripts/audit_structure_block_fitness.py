@@ -9,7 +9,16 @@ from audit_generated_state_values import ROOT, VANILLA_JAR, allowed_values, pars
 from convert_nbt_to_lostcities import load_structure
 
 
-STRUCTURES = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland"
+# Scan EVERY authored structure category, not just wasteland.
+#
+# This gate was written for the wasteland corpus and its path was pinned to
+# it, so the deep-sea corpus -- which now places modded blocks of its own --
+# was never inspected at all. That is how a live `minecraft:blast_furnace`
+# survived in three deep-sea assets after docs/RUINED_FUNCTIONAL_BLOCKS.md
+# declared the rule retroactive: the corpus was outside the scan path, and the
+# block was vanilla so the modded-only filter below would have skipped it even
+# if it had not been.
+STRUCTURES = ROOT / "kubejs" / "data" / "infinite_domain" / "structure"
 REPORT = ROOT / "docs" / "structure-block-fitness-audit.json"
 ALLOWLIST = ROOT / "structure_library" / "approved-functional-block-exceptions.json"
 DIRECTIONAL = {"facing", "axis", "orientation", "horizontal_facing", "face"}
@@ -20,6 +29,14 @@ FUNCTIONAL_TERMS = {
     "tank", "turbine", "valve",
 }
 CONNECTIVE_TERMS = {"fence", "girder", "pipe", "scaffold", "truss", "wall"}
+# Rule 2 of docs/RUINED_FUNCTIONAL_BLOCKS.md names these explicitly, and they
+# are vanilla, so the modded-only sweep below cannot see them. They are the
+# small-scale version of the same tech-skip problem: a player who mines a
+# working blast furnace out of a ruin skips the progression it gates.
+VANILLA_FORBIDDEN = {
+    "minecraft:furnace", "minecraft:smoker", "minecraft:blast_furnace",
+    "minecraft:brewing_stand", "minecraft:beacon", "minecraft:conduit",
+}
 
 
 def structure_label(path: Path) -> str:
@@ -120,6 +137,21 @@ def main() -> None:
                 "structures": unlisted,
                 "reason": f"placed in structures not covered by its approved exception (approved for: {sorted(allowed_structures) or 'none listed'})",
             })
+    for block in sorted(all_blocks & VANILLA_FORBIDDEN):
+        exception = allowed.get(block)
+        structures = sorted(usage[block])
+        if exception is not None:
+            allowed_structures = set(exception.get("structures", []))
+            structures = sorted(set(structures) - allowed_structures) if allowed_structures else []
+        if structures:
+            violations.append({
+                "block": block,
+                "placements": sum(usage[block].values()),
+                "structures": structures,
+                "reason": "live-functional vanilla block named in docs/RUINED_FUNCTIONAL_BLOCKS.md rule 2 "
+                          "placed as set dressing; use the infinite_domain:ruined_* equivalent",
+            })
+
     if violations:
         failures.append(
             f"{len(violations)} live-functional/machine block type(s) are placed as structure set dressing without an "
@@ -130,6 +162,7 @@ def main() -> None:
     report = {
         "templates_scanned": len(files),
         "modded_block_types": len(records),
+        "categories_scanned": sorted({p.relative_to(STRUCTURES).parts[0] for p in files}),
         "policy": "Vanilla stable blocks are the default. No live-functional/machine block may be placed as structure set dressing "
                   "unless it has an explicit, structure-scoped exception in approved-functional-block-exceptions.json; the "
                   "required default is a vanilla proxy or, where one exists, an infinite_domain:ruined_* decorative equivalent. "
