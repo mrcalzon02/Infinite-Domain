@@ -9,7 +9,7 @@ EXPECTED_GIT_BLOBS = {
     'pelagos_sensor_debris.nbt': '250609f66e104c6a78a1566f69c2101f26ada399',
     'karsic_pipeline_breach.nbt': '0bd93d44e2a29b3fc58ad06dc32c846922e75073',
     'abyssal_cold_seep.nbt': '9729cc302901704dd5a2815ec37ead56ef77be46',
-    'fracture_vent_field.nbt': '1b9b278d4e90814e6956bb6ade7aa562db7e5b95',
+    'fracture_vent_field.nbt': '34b0d8504173772f406398fcc67a7d30932121e5',
     'hadal_vent_complex.nbt': 'cc17b36102636467d7fa10986e86cabb86e59b57',
 }
 
@@ -89,16 +89,63 @@ def abyssal_cold_seep():
     return b
 
 def fracture_vent_field():
-    b=StructureBuilder((21,13,21))
-    for x,z,h in ((5,6,7),(10,10,11),(15,7,8),(7,15,6),(14,15,9)):
+    b=StructureBuilder((29,16,27))
+    # Broken, asymmetric mineralized aprons keep open-water lanes between vent groups.
+    for cx,cz,r in ((7,7,5),(15,8,4),(21,15,5),(10,20,4)):
+        for x in range(max(1,cx-r),min(28,cx+r+1)):
+            for z in range(max(1,cz-r),min(26,cz+r+1)):
+                d=((x-cx)**2+(z-cz)**2)**0.5
+                if d<=r and ((x*17+z*23+cx+cz)%7!=0):
+                    selector=(x*11+z*13+cx)%10
+                    mat='minecraft:blackstone' if selector<5 else ('minecraft:smooth_basalt' if selector<8 else 'minecraft:calcite')
+                    b.set(x,0,z,mat)
+    # Active smokers use different materials, heights, footprints, and branch directions.
+    active=[
+        (6,7,10,'minecraft:basalt',((1,4,0),(-1,7,0))),
+        (14,8,13,'minecraft:smooth_basalt',((0,5,1),(1,9,0))),
+        (22,14,9,'minecraft:blackstone',((-1,4,0),(0,6,-1))),
+        (10,20,7,'minecraft:basalt',((1,3,0),(0,5,1))),
+    ]
+    for x,z,h,mat,branches in active:
         b.set(x,0,z,'minecraft:magma_block')
-        b.fill(x,1,z,x,h,z,'minecraft:basalt')
-        if h>=8:
-            b.set(x,h+1,z,'minecraft:polished_basalt')
         for dx,dz in ((1,0),(-1,0),(0,1),(0,-1)):
             b.set(x+dx,0,z+dz,'minecraft:blackstone')
-    b.set(10,0,9,'minecraft:crying_obsidian')
-    b.set(9,0,10,'minecraft:crying_obsidian')
+        for y in range(1,h+1):
+            b.set(x,y,z,mat)
+            if y in (2,3) and h>=9:
+                b.set(x+1,y,z,mat)
+        for dx,by,dz in branches:
+            for step in range(1,3):
+                b.set(x+dx*step,by,z+dz*step,mat)
+            b.set(x+dx*2,by+1,z+dz*2,'minecraft:calcite')
+        b.set(x,h+1,z,'minecraft:calcite')
+        if h>=10:
+            b.set(x,h,z,'minecraft:polished_basalt')
+    # Extinct and collapsed stacks deliberately contain no magma source.
+    for x,z,h in ((18,5,5),(25,21,6),(5,17,4)):
+        for y in range(1,h+1):
+            if y!=h-1:
+                b.set(x,y,z,'minecraft:smooth_basalt' if (x+z+y)%2 else 'minecraft:blackstone')
+        b.set(x+1,max(1,h-2),z,'minecraft:calcite')
+        for dx,dz in ((1,0),(-1,0),(0,1),(0,-1),(1,1),(-1,1)):
+            if (x+z+dx+dz)%3:
+                b.set(x+dx,0,z+dz,'minecraft:blackstone')
+                if (dx+dz)%2:
+                    b.set(x+dx,1,z+dz,'minecraft:basalt')
+    # Low diffuse vent patches prevent the field from reading as only tall columns.
+    for cx,cz in ((9,10),(17,14),(19,19)):
+        for dx,dz in ((0,0),(1,0),(-1,0),(0,1),(0,-1)):
+            mat='minecraft:magma_block' if (dx,dz)==(0,0) else ('minecraft:calcite' if (dx+dz)%2 else 'minecraft:smooth_basalt')
+            b.set(cx+dx,0,cz+dz,mat)
+        for dx,dz in ((1,1),(-1,-1)):
+            b.set(cx+dx,1,cz+dz,'minecraft:calcite')
+    for x,z in ((8,6),(7,9),(13,6),(16,9),(21,12),(23,16),(9,18),(12,21),(19,4),(24,20)):
+        b.set(x,1,z,'minecraft:calcite')
+        if (x+z)%3==0:
+            b.set(x,2,z,'minecraft:pointed_dripstone',
+                  {'vertical_direction':'up','thickness':'tip','waterlogged':'true'})
+    for x,z in ((13,9),(20,16),(6,8)):
+        b.set(x,0,z,'minecraft:crying_obsidian')
     return b
 
 def hadal_vent_complex():

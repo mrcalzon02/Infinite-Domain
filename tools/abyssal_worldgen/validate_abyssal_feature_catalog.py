@@ -1,0 +1,149 @@
+#!/usr/bin/env python3
+"""[SYSTEM REPORT] Static contract validator for the abyssal feature build queue."""
+from __future__ import annotations
+
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "tools/abyssal_worldgen/abyssal_feature_catalog.json"
+STRUCTURES = ROOT / "kubejs/data/infinite_domain/worldgen/structure/abyssal"
+STRUCTURE_SETS = ROOT / "kubejs/data/infinite_domain/worldgen/structure_set/abyssal"
+NBT = ROOT / "kubejs/data/infinite_domain/structure/abyssal"
+
+EXPECTED_ORDER = [
+    "SF-REVIEW-002", "SF-REVIEW-003",
+    "OSF-005", "OSF-006", "OSF-007", "OSF-019", "OSF-023",
+    "OSF-027", "OSF-037", "OSF-045", "OSF-049",
+]
+REQUIRED = {
+    "planning_id", "name", "registry_id", "faction", "state",
+    "implementation_type", "source_path", "target_selectors", "depth_zones",
+    "footprint", "projection", "terrain_adaptation", "placement", "palette",
+    "geometry_contract", "hazards", "loot_policy", "runtime_validation",
+}
+
+
+def fail(message: str) -> None:
+    print(f"[ABYSSAL FEATURE CATALOG FAIL] {message}", file=sys.stderr)
+    raise SystemExit(1)
+
+
+def load(path: Path):
+    if not path.is_file():
+        fail(f"missing required file: {path.relative_to(ROOT)}")
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        fail(f"invalid JSON in {path.relative_to(ROOT)}: {exc}")
+
+
+def validate_footprint(fid: str, footprint: dict) -> None:
+    if all(k in footprint for k in ("x", "y", "z")):
+        dims = [footprint[k] for k in ("x", "y", "z")]
+        if any(not isinstance(v, int) or v <= 0 or v > 128 for v in dims):
+            fail(f"{fid} has invalid fixed footprint {dims}")
+        return
+    for axis in ("x_range", "y_range", "z_range"):
+        rng = footprint.get(axis)
+        if not isinstance(rng, list) or len(rng) != 2 or any(not isinstance(v, int) for v in rng):
+            fail(f"{fid} missing valid {axis}")
+        if rng[0] <= 0 or rng[1] < rng[0] or rng[1] > 256:
+            fail(f"{fid} has invalid {axis}: {rng}")
+
+
+def validate_live_structure(feature: dict) -> None:
+    fid = feature["planning_id"]
+    registry = feature["registry_id"]
+    if not registry or not registry.startswith("infinite_domain:abyssal/"):
+        fail(f"{fid} live structure lacks stable abyssal registry ID")
+    name = registry.rsplit("/", 1)[-1]
+    structure_path = STRUCTURES / f"{name}.json"
+    set_path = STRUCTURE_SETS / f"{name}.json"
+    nbt_path = NBT / f"{name}.nbt"
+    structure = load(structure_path)
+    structure_set = load(set_path)
+    if not nbt_path.is_file():
+        fail(f"{fid} missing materialized NBT {nbt_path.relative_to(ROOT)}")
+    if structure.get("project_start_to_heightmap") != feature["projection"]:
+        fail(f"{fid} projection disagrees with live structure JSON")
+    if structure.get("terrain_adaptation") != feature["terrain_adaptation"]:
+        fail(f"{fid} terrain adaptation disagrees with live structure JSON")
+    selectors = feature["target_selectors"]
+    if structure.get("biomes") not in selectors:
+        fail(f"{fid} catalog selectors omit live biome selector {structure.get('biomes')}")
+    placement = structure_set.get("placement", {})
+    expected = feature["placement"]
+    for catalog_key, live_key in (("spacing_chunks", "spacing"), ("separation_chunks", "separation"), ("salt", "salt")):
+        if expected.get(catalog_key) != placement.get(live_key):
+            fail(f"{fid} {catalog_key} disagrees with live structure set")
+    members = structure_set.get("structures", [])
+    if not any(member.get("structure") == registry for member in members):
+        fail(f"{fid} structure set no longer references {registry}")
+    source = feature.get("source_path")
+    if not source or not (ROOT / source).is_file():
+        fail(f"{fid} source_path is not an existing authoritative generator")
+
+
+catalog = load(CATALOG)
+if catalog.get("catalog_version") != 1:
+    fail("catalog_version must be 1")
+if catalog.get("process_order") != EXPECTED_ORDER:
+    fail("process_order no longer matches the approved review/tranche sequence")
+contract = catalog.get("feature_contract", {})
+for flag in (
+    "neutral_features_must_not_mix_faction_pools",
+    "no_progression_breaking_loot",
+    "preserve_existing_registry_ids_when_refining",
+    "submarine_clearance_is_required_runtime_evidence",
+):
+    if contract.get(flag) is not True:
+        fail(f"feature contract lost required flag {flag}")
+
+features = catalog.get("features")
+if not isinstance(features, list) or not features:
+    fail("features must be a non-empty list")
+ids = [f.get("planning_id") for f in features]
+if ids != EXPECTED_ORDER:
+    fail("feature records must exist exactly once and in process_order")
+if len(set(ids)) != len(ids):
+    fail("duplicate planning IDs")
+
+registry_ids = []
+for feature in features:
+    fid = feature.get("planning_id", "<missing>")
+    missing = sorted(REQUIRED.difference(feature))
+    if missing:
+        fail(f"{fid} missing fields: {', '.join(missing)}")
+    if feature["faction"] != "neutral":
+        fail(f"{fid} entered the neutral AGE-018 queue with faction={feature['faction']}")
+    if not feature["target_selectors"] or not feature["depth_zones"]:
+        fail(f"{fid} lacks biome/depth ownership")
+    validate_footprint(fid, feature["footprint"])
+    if len(feature["palette"]) < 3:
+        fail(f"{fid} palette is too underspecified")
+    if len(feature["geometry_contract"]) < 3:
+        fail(f"{fid} geometry contract is too underspecified")
+    runtime = feature["runtime_validation"]
+    if runtime.get("status") != "deferred":
+        fail(f"{fid} improperly claims runtime validation")
+    checks = set(runtime.get("checks", []))
+    for required_check in ("submarine clearance", "chunk-generation cost"):
+        if required_check not in checks:
+            fail(f"{fid} runtime ledger omits {required_check}")
+    registry = feature["registry_id"]
+    if registry:
+        if registry in registry_ids:
+            fail(f"duplicate registry ID {registry}")
+        registry_ids.append(registry)
+        validate_live_structure(feature)
+    elif feature["state"] not in {"specified", "planned"}:
+        fail(f"{fid} has no registry ID but state={feature['state']}")
+    if "ore" in feature["loot_policy"] and feature["loot_policy"] != "no-progression-material":
+        fail(f"{fid} loot policy risks progression bypass")
+
+print(
+    "[ABYSSAL FEATURE CATALOG PASS] 11 queued features have structural metadata, "
+    "neutral ownership, geometry contracts, runtime deferrals, and live structure links where implemented"
+)

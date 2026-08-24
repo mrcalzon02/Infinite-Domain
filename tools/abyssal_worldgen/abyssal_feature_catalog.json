@@ -1,0 +1,76 @@
+{
+  "catalog_version": 1,
+  "authority": [
+    "docs/ABYSSAL_ENVIRONMENTAL_SITES.md",
+    "docs/ABYSSAL_NEUTRAL_SEAFLOOR_FEATURE_POOL.md",
+    "docs/ABYSSAL_SEAFLOOR_FEATURE_REVIEW.md"
+  ],
+  "scope": "active-template completion plus AGE-018 implementation tranche 1",
+  "process_order": ["SF-REVIEW-002","SF-REVIEW-003","OSF-005","OSF-006","OSF-007","OSF-019","OSF-023","OSF-027","OSF-037","OSF-045","OSF-049"],
+  "feature_contract": {
+    "runtime_status": "deferred-until-fresh-world-validation",
+    "neutral_features_must_not_mix_faction_pools": true,
+    "no_progression_breaking_loot": true,
+    "preserve_existing_registry_ids_when_refining": true,
+    "submarine_clearance_is_required_runtime_evidence": true
+  },
+  "features": [
+    {
+      "planning_id":"SF-REVIEW-002","name":"Fracture Vent Field","registry_id":"infinite_domain:abyssal/fracture_vent_field","faction":"neutral","state":"refined-static","implementation_type":"structure_template","source_path":"tools/abyssal_rebuild/generate_abyssal_environmental_sites.py",
+      "target_selectors":["#infinite_domain:abyssal_fracture_biomes"],"depth_zones":["fracture/ridge"],"footprint":{"x":29,"y":16,"z":27},"projection":"OCEAN_FLOOR_WG","terrain_adaptation":"bury","placement":{"spacing_chunks":176,"separation_chunks":88,"salt":78064601},
+      "palette":["minecraft:basalt","minecraft:smooth_basalt","minecraft:blackstone","minecraft:calcite","minecraft:magma_block","minecraft:polished_basalt","minecraft:pointed_dripstone","minecraft:crying_obsidian"],
+      "geometry_contract":["asymmetric mineralized aprons","four active branched smokers","three extinct/broken stacks","three diffuse vent patches","open-water lanes between clusters"],"hazards":["localized magma/bubble behavior requires runtime confirmation"],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","active-versus-extinct readability","bubble-column behavior"]}
+    },
+    {
+      "planning_id":"SF-REVIEW-003","name":"Hadal Vent Complex","registry_id":"infinite_domain:abyssal/hadal_vent_complex","faction":"neutral","state":"queued-refinement","implementation_type":"structure_template","source_path":"tools/abyssal_rebuild/generate_abyssal_environmental_sites.py",
+      "target_selectors":["#infinite_domain:hadal_biomes"],"depth_zones":["hadal trench floor"],"footprint":{"x":31,"y":18,"z":31},"projection":"OCEAN_FLOOR_WG","terrain_adaptation":"bury","placement":{"spacing_chunks":224,"separation_chunks":112,"salt":78064602},
+      "palette":["minecraft:basalt","minecraft:smooth_basalt","minecraft:blackstone","minecraft:calcite","minecraft:magma_block","minecraft:polished_basalt","minecraft:pointed_dripstone","minecraft:crying_obsidian"],
+      "geometry_contract":["broken caldera ring","central magma field","mixed active/extinct chimney zones","collapsed chimney rubble","asymmetric mineral apron","correlation with vent-rim deformation"],"hazards":["magma and bubble-column behavior requires runtime confirmation"],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","caldera/deformation correlation","chimney silhouette diversity"]}
+    },
+    {
+      "planning_id":"OSF-005","name":"Pillow-lava Fields","registry_id":null,"faction":"neutral","state":"specified","implementation_type":"placed_feature_or_small_structure","source_path":null,
+      "target_selectors":["#infinite_domain:abyssal_fracture_biomes","#infinite_domain:hadal_biomes"],"depth_zones":["fracture/ridge","hadal-adjacent"],"footprint":{"x_range":[13,37],"y_range":[2,7],"z_range":[13,37]},"projection":"OCEAN_FLOOR_WG","terrain_adaptation":"bury_or_surface_match","placement":{"density":"common-within-volcanic-provinces","minimum_clearance_blocks":6},
+      "palette":["minecraft:basalt","minecraft:smooth_basalt","minecraft:blackstone"],"geometry_contract":["overlapping rounded lobes","broken lobe fronts","sediment gaps","no flowing lava"],"hazards":[],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","lobe readability","terrain seam avoidance"]}
+    },
+    {
+      "planning_id":"OSF-006","name":"Cooled Lava / Magma-tube Systems","registry_id":null,"faction":"neutral","state":"specified","implementation_type":"terrain_or_structure_hybrid","source_path":null,
+      "target_selectors":["#infinite_domain:abyssal_fracture_biomes"],"depth_zones":["fracture/ridge"],"footprint":{"x_range":[24,64],"y_range":[6,18],"z_range":[24,64]},"projection":"subsurface-seafloor","terrain_adaptation":"embed","placement":{"density":"uncommon","minimum_clearance_blocks":8},
+      "palette":["minecraft:basalt","minecraft:smooth_basalt","minecraft:blackstone","minecraft:tuff"],"geometry_contract":["tubular passage","branch or bend variant","partly exposed roof segments","collapsed segments reserved for OSF-007","not an ordinary cave-carver substitute"],"hazards":["avoid trapped-air assumptions"],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","flooding continuity","tube navigability","roof stability"]}
+    },
+    {
+      "planning_id":"OSF-007","name":"Lava-tube Skylights and Collapse Windows","registry_id":null,"faction":"neutral","state":"specified","implementation_type":"structure_template","source_path":null,
+      "target_selectors":["#infinite_domain:abyssal_fracture_biomes"],"depth_zones":["fracture/ridge"],"footprint":{"x_range":[11,25],"y_range":[5,12],"z_range":[11,25]},"projection":"OCEAN_FLOOR_WG","terrain_adaptation":"bury","placement":{"density":"rare-child-of-osf-006","minimum_clearance_blocks":6},
+      "palette":["minecraft:basalt","minecraft:smooth_basalt","minecraft:blackstone","minecraft:gravel"],"geometry_contract":["irregular roof breach","collapsed basalt rim","rubble cone into tube","clear swim-through opening","must correlate with OSF-006 rather than spawn as an isolated fake hole"],"hazards":["fall/drop only; no forced damage blocks"],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","parent tube correlation","entrance visibility"]}
+    },
+    {
+      "planning_id":"OSF-019","name":"Pockmark Fields","registry_id":null,"faction":"neutral","state":"specified","implementation_type":"placed_feature","source_path":null,
+      "target_selectors":["#infinite_domain:abyssal_plain_biomes"],"depth_zones":["abyssal plain","lower slope"],"footprint":{"x_range":[24,56],"y_range":[1,5],"z_range":[24,56]},"projection":"OCEAN_FLOOR_WG","terrain_adaptation":"surface_depression","placement":{"density":"uncommon-clustered","minimum_clearance_blocks":4},
+      "palette":["minecraft:mud","minecraft:clay","minecraft:gravel","minecraft:calcite"],"geometry_contract":["multiple shallow depressions","nonuniform diameter/depth","overlapping and isolated pits","optional inactive seep scars","no repetitive grid"],"hazards":[],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","depression survival after projection","cluster repetition"]}
+    },
+    {
+      "planning_id":"OSF-023","name":"Shelf Sand-wave / Ripple Fields","registry_id":null,"faction":"neutral","state":"specified","implementation_type":"placed_feature","source_path":null,
+      "target_selectors":["authoritative shelf/ocean tags","infinite_domain:western_continental_slope","infinite_domain:eastern_continental_slope"],"depth_zones":["shelf","upper slope"],"footprint":{"x_range":[32,96],"y_range":[1,4],"z_range":[32,96]},"projection":"OCEAN_FLOOR_WG","terrain_adaptation":"surface_match","placement":{"density":"broad-low-frequency","minimum_clearance_blocks":4},
+      "palette":["minecraft:sand","minecraft:gravel","minecraft:clay"],"geometry_contract":["parallel-to-curving bedforms","variable wavelength","broken crests","orientation patches","must differ from vanilla disks"],"hazards":[],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","bedform orientation","slope clipping"]}
+    },
+    {
+      "planning_id":"OSF-027","name":"Turbidity-current Channels","registry_id":null,"faction":"neutral","state":"specified","implementation_type":"terrain_density_or_surface_rule","source_path":null,
+      "target_selectors":["infinite_domain:western_continental_slope","infinite_domain:eastern_continental_slope","#infinite_domain:abyssal_plain_biomes"],"depth_zones":["lower slope","abyssal plain"],"footprint":{"x_range":[64,192],"y_range":[3,14],"z_range":[64,192]},"projection":"terrain-scale","terrain_adaptation":"carve_and_deposit","placement":{"density":"sparse-network","minimum_clearance_blocks":10},
+      "palette":["minecraft:gravel","minecraft:clay","minecraft:sand","minecraft:stone","minecraft:deepslate"],"geometry_contract":["sinuous channel","down-basin continuity","erosional thalweg","patchy levee/deposit margins","must not read as cave"],"hazards":[],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","network continuity","slope-to-plain transition"]}
+    },
+    {
+      "planning_id":"OSF-037","name":"Manganese / Polymetallic Nodule-field Analogues","registry_id":null,"faction":"neutral","state":"specified","implementation_type":"placed_feature","source_path":null,
+      "target_selectors":["#infinite_domain:abyssal_plain_biomes"],"depth_zones":["abyssal plain"],"footprint":{"x_range":[16,48],"y_range":[1,2],"z_range":[16,48]},"projection":"OCEAN_FLOOR_WG","terrain_adaptation":"surface_match","placement":{"density":"patchy-common","minimum_clearance_blocks":3},
+      "palette":["minecraft:blackstone","minecraft:cobbled_deepslate","minecraft:gravel"],"geometry_contract":["sparse dark nodules","irregular patch edges","soft-sediment gaps","decorative only","no ore-block stand-ins"],"hazards":[],"loot_policy":"no-progression-material","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","resource-exploit audit","density readability"]}
+    },
+    {
+      "planning_id":"OSF-045","name":"Whale-fall Sites","registry_id":null,"faction":"neutral","state":"specified","implementation_type":"structure_template_variants","source_path":null,
+      "target_selectors":["#infinite_domain:abyssal_plain_biomes","#infinite_domain:hadal_biomes"],"depth_zones":["abyssal plain","rare hadal floor"],"footprint":{"x_range":[18,42],"y_range":[5,12],"z_range":[10,24]},"projection":"OCEAN_FLOOR_WG","terrain_adaptation":"bury","placement":{"density":"very-rare","minimum_clearance_blocks":8},
+      "palette":["minecraft:bone_block","minecraft:calcite","minecraft:mud","minecraft:clay","minecraft:gravel"],"geometry_contract":["coherent skeleton variant","dispersed-rib/vertebra variant","sedimented-old-fall variant","localized disturbed sediment","no treasure-chest dependency"],"hazards":[],"loot_policy":"ecological-landmark-no-pinata","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","skeletal readability","variant distinction"]}
+    },
+    {
+      "planning_id":"OSF-049","name":"Wood-fall Sites","registry_id":null,"faction":"neutral","state":"specified","implementation_type":"structure_template_variants","source_path":null,
+      "target_selectors":["authoritative shelf/ocean tags","infinite_domain:western_continental_slope","infinite_domain:eastern_continental_slope","#infinite_domain:abyssal_plain_biomes"],"depth_zones":["shelf","slope","abyssal plain"],"footprint":{"x_range":[10,34],"y_range":[3,10],"z_range":[8,24]},"projection":"OCEAN_FLOOR_WG","terrain_adaptation":"bury","placement":{"density":"rare-depth-weighted","minimum_clearance_blocks":6},
+      "palette":["minecraft:oak_log","minecraft:dark_oak_log","minecraft:stripped_oak_log","minecraft:mud","minecraft:clay","minecraft:gravel"],"geometry_contract":["natural trunk/root mass","fragmented timber variant","sediment-buried variant","must not resemble manufactured faction wreckage"],"hazards":[],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","natural-versus-manufactured readability","burial appearance"]}
+    }
+  ]
+}
