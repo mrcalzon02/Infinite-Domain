@@ -1,0 +1,60 @@
+{
+  "validator": "StructureSmith-compatible generation gate",
+  "target": "Infinite Domain / NeoForge 1.21.1",
+  "structure_id": "infinite_domain:offworld/continuity_lunar_crash_station",
+  "checks": {
+    "nbt_gzip_magic": true,
+    "data_version": 3955,
+    "size": [
+      47,
+      26,
+      47
+    ],
+    "size_within_48_cube": true,
+    "block_count": 4365,
+    "palette_entries": 44,
+    "stellaris_palette_entries": 26,
+    "loot_chests": 2,
+    "moon_biome_gate": true,
+    "surface_projection": true,
+    "random_spread_valid": true,
+    "random_spread_spacing_chunks": 96,
+    "random_spread_separation_chunks": 56,
+    "random_spread_salt": 1686787742,
+    "deterministic_nbt_sha256": "56e1c632c8ac49f492114b99f39c9e63609735c6562df77789a1b51608bd5197",
+    "passed": true
+  },
+  "used_stellaris_blocks": [
+    "stellaris:antenna",
+    "stellaris:big_oxygen_tank",
+    "stellaris:cable",
+    "stellaris:cable_t2",
+    "stellaris:cable_t3",
+    "stellaris:coal_generator",
+    "stellaris:cracked_moon_stone_bricks",
+    "stellaris:desh_plating_block",
+    "stellaris:diesel_generator",
+    "stellaris:earth_globe",
+    "stellaris:heavy_metal_plate",
+    "stellaris:iron_plating_block",
+    "stellaris:moon_cobblestone",
+    "stellaris:moon_stone",
+    "stellaris:oxygen_distributor",
+    "stellaris:pipe_t1",
+    "stellaris:pipe_t2",
+    "stellaris:solar_panel",
+    "stellaris:steel_pillar",
+    "stellaris:steel_plating_block",
+    "stellaris:t1_tank",
+    "stellaris:t2_bank",
+    "stellaris:t2_tank",
+    "stellaris:t3_bank",
+    "stellaris:t3_tank",
+    "stellaris:water_separator"
+  ],
+  "notes": [
+    "Palette uses IDs verified against Infinite Domain's current registry inventory.",
+    "Placement follows the existing offworld Continuity pattern: jigsaw + moon biome tag + WORLD_SURFACE_WG + random_spread.",
+    "Runtime validation in a fresh lunar world is still required for terrain blending, actual Stellaris blockstate behavior, and gameplay traversal."
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 3.0,
+        "max": 6.0
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "stellaris:steel_ingot",
+          "weight": 12,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2.0,
+                "max": 8.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "stellaris:battery",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "stellaris:oxygen_tank",
+          "weight": 7
+        },
+        {
+          "type": "minecraft:item",
+          "name": "stellaris:big_oxygen_tank",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "stellaris:space_suit_helmet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "stellaris:space_suit_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "stellaris:fluid_cell",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 4.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2.0,
+                "max": 10.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:redstone",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2.0,
+                "max": 12.0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

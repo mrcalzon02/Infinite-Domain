@@ -1,0 +1,50 @@
+{
+  "structure_id": "infinite_domain:offworld/continuity_lunar_crash_station",
+  "operation": "generate",
+  "structure_type": "shipwreck",
+  "target_version": "1.21.1",
+  "grade": 6,
+  "purpose": {
+    "primary": "late-era Continuity exploration / evidence site",
+    "player_read": "crashed orbital station converted into a desperate lunar survival encampment",
+    "required_zones": [
+      "impact nose",
+      "ruptured command compartment",
+      "habitation spine",
+      "life-support salvage core",
+      "engineering bay",
+      "external emergency shelter",
+      "broken solar farm",
+      "jury-rigged crawl-tube",
+      "evidence cache"
+    ]
+  },
+  "theme": {
+    "faction": "Continuity",
+    "era": "late",
+    "condition": "catastrophic lunar crash with prolonged improvised occupation",
+    "visual_language": [
+      "pressure hull",
+      "mismatched welded patches",
+      "regolith shielding",
+      "cannibalized life support",
+      "salvage racks",
+      "field cables and pipes",
+      "broken solar infrastructure"
+    ]
+  },
+  "context": {
+    "dimension_authority": "Stellaris",
+    "biome_selector": "#stellaris:moon_biomes",
+    "placement": "WORLD_SURFACE_WG",
+    "world_seed_behavior": "minecraft:random_spread"
+  },
+  "generation": {
+    "kind": "offworld_crash_site",
+    "materialize_nbt": true,
+    "materialization_mode": "single",
+    "emit_binary": true,
+    "data_version": 3955,
+    "seed": 201421223
+  }
+}
