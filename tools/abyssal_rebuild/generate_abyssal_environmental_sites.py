@@ -8,7 +8,7 @@ from generate_abyssal_sites import StructureBuilder
 EXPECTED_GIT_BLOBS = {
     'pelagos_sensor_debris.nbt': '250609f66e104c6a78a1566f69c2101f26ada399',
     'karsic_pipeline_breach.nbt': '0bd93d44e2a29b3fc58ad06dc32c846922e75073',
-    'abyssal_cold_seep.nbt': '57cb01b1e284b458e47caaae3c5c55afe588d720',
+    'abyssal_cold_seep.nbt': '9729cc302901704dd5a2815ec37ead56ef77be46',
     'fracture_vent_field.nbt': '1b9b278d4e90814e6956bb6ade7aa562db7e5b95',
     'hadal_vent_complex.nbt': 'cc17b36102636467d7fa10986e86cabb86e59b57',
 }
@@ -44,13 +44,48 @@ def karsic_pipeline_breach():
     return b
 
 def abyssal_cold_seep():
-    b=StructureBuilder((17,5,17))
-    b.fill(3,0,3,13,0,13,'minecraft:clay')
-    b.fill(5,0,5,11,0,11,'minecraft:mud')
-    for x,z in ((8,8),(6,8),(10,8),(8,6),(8,10)):
-        b.set(x,1,z,'minecraft:soul_sand')
-    for x,z in ((5,5),(11,5),(5,11),(11,11),(8,4),(4,8),(12,8),(8,12)):
-        b.set(x,1,z,'minecraft:calcite')
+    b=StructureBuilder((25,7,25)); cx=cz=12
+    for x in range(2,23):
+        for z in range(2,23):
+            d=((x-cx)**2+(z-cz)**2)**0.5
+            irregular=((x*13+z*7)%11)-5
+            if d <= 9.2 + irregular*0.08:
+                selector=(x*17+z*29)%13
+                mat='minecraft:clay' if selector<6 else ('minecraft:mud' if selector<11 else 'minecraft:gravel')
+                b.set(x,0,z,mat)
+    for mx,mz,r,maxh in ((7,10,4.6,2),(16,9,3.8,2),(15,17,4.3,2),(9,17,3.2,1)):
+        for x in range(max(1,int(mx-r-1)),min(24,int(mx+r+2))):
+            for z in range(max(1,int(mz-r-1)),min(24,int(mz+r+2))):
+                d=((x-mx)**2+(z-mz)**2)**0.5
+                if d<=r:
+                    if ((x*19+z*23+mx+mz)%9)==0 and d>r*0.72:
+                        continue
+                    h=2 if maxh>=2 and d<r*0.42 else 1
+                    for y in range(1,h+1):
+                        b.set(x,y,z,'minecraft:mud' if (x+2*z+y)%4 else 'minecraft:clay')
+    for x in range(8,17):
+        for z in range(8,17):
+            d=((x-cx)**2+(z-cz)**2)**0.5
+            if d<3.1:
+                b.remove(x,1,z); b.remove(x,2,z)
+                b.set(x,0,z,'minecraft:mud' if (x+z)%3 else 'minecraft:clay')
+            elif d<=4.3 and ((x*7+z*11)%4!=0):
+                b.set(x,1,z,'minecraft:calcite')
+    for x,z,y in ((11,11,1),(14,12,1),(12,15,1),(7,10,3)):
+        b.set(x,y,z,'minecraft:soul_sand')
+        for dx,dz in ((1,0),(-1,0),(0,1),(0,-1)):
+            if (x+z+dx+dz)%3:
+                b.set(x+dx,max(1,y),z+dz,'minecraft:calcite')
+    for x,z,h in ((6,9,3),(17,9,4),(16,18,3),(9,18,2),(18,15,2)):
+        for y in range(1,h+1):
+            b.set(x,y,z,'minecraft:calcite')
+        if h>=3:
+            b.set(x,h+1,z,'minecraft:pointed_dripstone',
+                  {'vertical_direction':'up','thickness':'tip','waterlogged':'true'})
+    for x,z in ((4,12),(5,13),(6,14),(19,11),(18,12),(17,13),(12,20),(13,20),(14,19)):
+        b.set(x,1,z,'minecraft:calcite' if (x+z)%2 else 'minecraft:gravel')
+    for x,z in ((3,8),(4,8),(5,8),(20,16),(19,16),(18,16),(12,3),(12,4),(12,5)):
+        b.set(x,0,z,'minecraft:gravel')
     return b
 
 def fracture_vent_field():
