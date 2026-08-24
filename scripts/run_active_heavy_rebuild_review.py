@@ -38,12 +38,39 @@ def _passed(status: str) -> bool:
     }
 
 
+def _declared_renderer_revision(path: Path, default: int) -> int:
+    """Resolve a renderer's authored output revision without renaming its source file.
+
+    Older renderers used an unsuffixed filename for r1. Newer repair passes may keep
+    that authoritative filename while advancing OUTPUT_DIR to r2/r3. Treating every
+    unsuffixed renderer as r1 causes the dispatcher to mistake an old persisted r1
+    artifact for the current repaired candidate and permanently block rerendering.
+    """
+    try:
+        source = path.read_text(encoding="utf-8")
+    except OSError:
+        return default
+
+    explicit = re.search(r"(?m)^\s*REVIEW_REVISION\s*=\s*(\d+)\s*$", source)
+    if explicit:
+        return int(explicit.group(1))
+
+    output_dir = re.search(
+        r"(?m)^\s*OUTPUT_DIR\s*=.*?/\s*[\"']r(\d+)[\"']\s*$",
+        source,
+    )
+    if output_dir:
+        return int(output_dir.group(1))
+
+    return default
+
+
 def _revisioned_renderer(target_slug: str, stem: str) -> tuple[int, Path] | None:
-    """Return newest base/rN renderer, treating an unsuffixed renderer as r1."""
+    """Return newest authored renderer, honoring its declared output revision."""
     base = SCRIPTS / f"render_{target_slug}_{stem}.py"
     candidates: list[tuple[int, Path]] = []
     if base.is_file():
-        candidates.append((1, base))
+        candidates.append((_declared_renderer_revision(base, 1), base))
     pattern = f"render_{target_slug}_{stem}_r*.py"
     for path in SCRIPTS.glob(pattern):
         match = re.search(r"_r(\d+)\.py$", path.name)
