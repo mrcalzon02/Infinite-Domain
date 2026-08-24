@@ -1,0 +1,349 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://infinite-domain.invalid/schemas/deepsea-metadata.schema.json",
+  "type": "object",
+  "required": [
+    "format_version",
+    "assets"
+  ],
+  "properties": {
+    "format_version": {
+      "const": 1
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "asset_id",
+          "asset_class",
+          "depth_band",
+          "biome_scope"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"
+          },
+          "asset_class": {
+            "enum": [
+              "geological_macro",
+              "geological_feature",
+              "structure"
+            ]
+          },
+          "depth_band": {
+            "enum": [
+              "shelf",
+              "open_floor",
+              "deep_floor",
+              "abyssal"
+            ]
+          },
+          "biome_scope": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          },
+          "terrain_feature_type": {
+            "enum": [
+              "trench",
+              "ridge",
+              "seamount",
+              "abyssal_plain",
+              "shelf_break",
+              "canyon_network"
+            ]
+          },
+          "noise_scope": {
+            "type": "string"
+          },
+          "max_extent": {
+            "type": "object",
+            "required": [
+              "width",
+              "depth",
+              "vertical_range"
+            ],
+            "properties": {
+              "width": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "depth": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "vertical_range": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          "feature_type": {
+            "enum": [
+              "vent_field",
+              "brine_pool",
+              "silt_fan",
+              "rock_arch_cluster",
+              "rock_outcrop",
+              "methane_seep",
+              "bioluminescent_bed",
+              "debris_scatter"
+            ]
+          },
+          "footprint": {
+            "type": "object",
+            "required": [
+              "width",
+              "depth"
+            ],
+            "properties": {
+              "width": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "depth": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          "hazard_type": {
+            "enum": [
+              "none",
+              "thermal",
+              "toxic",
+              "radiological",
+              "pressure",
+              "biological"
+            ]
+          },
+          "placement_ref": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "wreck",
+              "submariner_facility"
+            ]
+          },
+          "build_style": {
+            "enum": [
+              "pre_collapse_civilian_industrial",
+              "create_industrial_offshore",
+              "military_remnant",
+              "darknet_adjacent",
+              "ancient_unknown_origin",
+              "other"
+            ]
+          },
+          "build_style_note": {
+            "type": "string",
+            "description": "Required justification when build_style is 'other'."
+          },
+          "burial_state": {
+            "enum": [
+              "exposed",
+              "partially_buried",
+              "subterranean"
+            ]
+          },
+          "access_connector": {
+            "enum": [
+              "diver_hatch",
+              "moon_pool",
+              "submarine_dock",
+              "surface_shaft",
+              "buried_shaft",
+              "none"
+            ]
+          },
+          "dominant_atmosphere_state": {
+            "enum": [
+              "flooded",
+              "dry_pressurized",
+              "mixed_breached"
+            ]
+          },
+          "has_mixed_compartments": {
+            "type": "boolean"
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "source_role": {
+            "enum": [
+              "rough_source",
+              "clean_master",
+              "damage_variant",
+              "occupation_variant"
+            ]
+          },
+          "source_template": {
+            "type": "string"
+          },
+          "refinement_intensity": {
+            "enum": [
+              "repair",
+              "light",
+              "standard",
+              "heavy",
+              "rebuild"
+            ]
+          },
+          "supports_intact": {
+            "type": "boolean"
+          },
+          "supports_damage_variants": {
+            "type": "boolean"
+          },
+          "supports_occupation_variants": {
+            "type": "boolean"
+          },
+          "damage_causes": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "corrosion",
+                "biofouling",
+                "silt_burial",
+                "pressure_hull_failure",
+                "reactor_breach",
+                "flooding_breach",
+                "listing_settle",
+                "anchor_drag_scarring",
+                "current_scour",
+                "thermal_scarring"
+              ]
+            }
+          },
+          "occupation_state": {
+            "enum": [
+              "derelict",
+              "salvage_crew",
+              "faction_garrison",
+              "hostile_aquatic",
+              "quarantine_outbreak",
+              "smuggler_cache",
+              "quest_location"
+            ]
+          },
+          "source_license": {
+            "type": "object",
+            "required": [
+              "origin",
+              "license",
+              "redistributable"
+            ],
+            "properties": {
+              "origin": {
+                "type": "string"
+              },
+              "license": {
+                "type": "string"
+              },
+              "redistributable": {
+                "type": "boolean"
+              }
+            }
+          },
+          "conversion_target": {
+            "enum": [
+              "part",
+              "building",
+              "multibuilding",
+              "scattered"
+            ]
+          },
+          "production_status": {
+            "enum": [
+              "quarantined",
+              "automatic_validation",
+              "visual_review",
+              "approved",
+              "rejected"
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "asset_class": {
+                  "const": "geological_macro"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "terrain_feature_type",
+                "noise_scope"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "asset_class": {
+                  "const": "geological_feature"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "feature_type",
+                "footprint",
+                "hazard_type"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "asset_class": {
+                  "const": "structure"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "category",
+                "build_style",
+                "burial_state",
+                "access_connector",
+                "dominant_atmosphere_state",
+                "source_role",
+                "refinement_intensity",
+                "source_license",
+                "production_status",
+                "footprint",
+                "height"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "build_style": {
+                  "const": "other"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "build_style_note"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

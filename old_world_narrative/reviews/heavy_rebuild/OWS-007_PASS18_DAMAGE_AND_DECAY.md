@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 # [SYSTEM REPORT] OWS-007 Pass 18 — Damage and Decay
 
 **Target:** OWS-007 — Verdant Continuum Foods EP-7 Agricultural Development Laboratory  
@@ -35,18 +34,3 @@ No Pass-19 microdetail is introduced before Gate C review.
 **DAMAGE AND DECAY: COMPLETE FOR GATE-C r1.**
 
 **DAMAGE AND DECAY: COMPLETE FOR GATE-C IMPLEMENTATION.**
-=======
-# OWS-007 Heavy Rebuild — Pass 18 Damage and Decay
-
-## Damage logic
-
-- Damage grows from the D1 accelerated-conditioning branch and its temporary bypasses.
-- Chamber B loses selected upper monitor glazing after freeze/thaw; debris lands on surviving roof/floor surfaces below.
-- The west plant crown weathers locally around the failed branch, with drainage staining continuing toward stress and wash/decon zones.
-- The rotunda conditioning cap and humidity sector receive limited leakage and crop escape; radial ribs, annulus, central control and bridge remain reconstructable.
-- The south wash roof shows localized water entry while secure records and the proof approach remain protected.
-
-## Restraint and preservation
-
-There is no random-air destruction, explosion crater, generalized collapse or decorative rubble wash. D3 preserves the 73 x 33 x 63 envelope, all principal routes, supported mullion-and-beam facade, corporate identity, chamber family, environmental-system logic and enough intact machinery to reconstruct normal operation.
->>>>>>> Stashed changes

@@ -26,7 +26,12 @@ def abandoned_orchard_cannery_clean_master():
     A.shell(t, (26, 1, 22), (55, 16, 46), "minecraft:bricks", "tfmg:factory_floor", "minecraft:weathered_cut_copper")
     A.shell(t, (43, 1, 10), (55, 12, 23), "minecraft:bricks", "tfmg:factory_floor", "minecraft:smooth_stone")
     t.clear((29, 2, 22), (39, 7, 23))
-    t.clear((43, 2, 14), (44, 7, 20))
+    # The breach into the dispatch office wing only opened that wing's own
+    # west wall (x=43); the receiving wing's east wall (x=42) right next to
+    # it was never cleared, so the office (desk + radio) stayed sealed
+    # behind a solid wall with zero doors anywhere. Clear both wall layers
+    # so the breach actually connects through to receiving's front door.
+    t.clear((42, 2, 14), (44, 7, 20))
     A.double_door(t, 30, 2, 8, "north", "iron")
     A.partition_x(t, 34, 2, 9, 21, "tfmg:cinder_block", 15)
     A.partition_z(t, 31, 2, 27, 54, "tfmg:cinder_block", (32, 41, 50))
@@ -97,6 +102,13 @@ def ruined_grain_elevator_clean_master():
     A.desk(t, 18, 2, 34)
     t.set(22, 2, 34, "the_wasteland_reworked:radio")
     A.stair_flight(t, 19, 2, 22, 15, "south", "minecraft:stone_brick_stairs")
+    # The elevator leg tower (radio inside) is its own fully-walled box
+    # (west wall at x=20) with no door anywhere, distinct from the headhouse
+    # next door even though their footprints overlap. Cut a real doorway
+    # through the shared wall so the headhouse's own front door actually
+    # reaches the tower interior.
+    t.clear((20, 2, 25), (20, 3, 25))
+    A.door(t, 20, 2, 25, "east", "iron")
     t.fill((23, 28, 9), (49, 31, 33), "immersiveengineering:sheetmetal_steel")
     t.clear((25, 29, 11), (47, 30, 31))
     for x in range(4, 52):
@@ -149,13 +161,23 @@ def shattered_greenhouse_nursery_clean_master():
         for x in range(x1 + 2, x2 - 1, 4):
             t.fill((x, 2, 24), (x, 2, 42), "minecraft:farmland", moisture="7")
             for z in range(25, 42, 4): t.set(x, 3, z, "minecraft:flower_pot")
+        # The east and west bays were fully enclosed glass boxes with no
+        # door on any side (only the middle bay got one, below). Give each
+        # its own south-wall door, seated next to the nearest structural
+        # post (x1 + 5) rather than in open glazing, so it is actually
+        # framed instead of floating in an unwalled window run.
+        if x1 != 21:
+            A.door(t, x1 + 6, 2, 45, "south", "iron")
     # Potting line, irrigation tanks and exterior tree/shrub yard.
     t.fill((22, 2, 24), (38, 3, 27), "minecraft:spruce_planks")
     for x in (24, 29, 34): t.set(x, 3, 25, "minecraft:composter", level="5")
     for x in (5, 12, 45, 52): t.fill((x, 2, 42), (x + 2, 2, 44), "minecraft:water_cauldron", level="3")
     for x in range(4, 58, 6):
         t.fill((x, 1, 17), (x, 4, 17), "minecraft:spruce_log", axis="y"); t.fill((x - 1, 4, 16), (x + 1, 6, 18), "minecraft:spruce_leaves", persistent="true", distance="1")
-    A.double_door(t, 28, 2, 45, "south", "iron")
+    # Seated next to the post at x=26 (was mid-glazing at x=28, which left
+    # the door itself unframed on both axes — a pre-existing opening-coupling
+    # bug caught incidentally while fixing the other two bays' missing doors).
+    A.door(t, 27, 2, 45, "south", "iron")
     return t
 
 

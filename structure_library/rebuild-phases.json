@@ -1,11 +1,12 @@
 {
-  "policy": "generated-structure-refinement-policy.json",
+  "policy": "structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md",
+  "policy_note": "generated-structure-refinement-policy.json is superseded; every phase status below was reset from candidate_for_in_world_review to requires_regeneration_v2 on 2026-08-23 because it was produced by primitives STRUCTURE_REBUILD_SYSTEM_V2.md documents as defective (floating stairs/windows, rectangular-cube damage, context-blind ground surfacing).",
   "production_approvals": [],
   "phases": [
     {
       "phase": 1,
       "name": "pipeline pilots",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:bungalow_clean_master",
         "infinite_domain:motel_clean_master",
@@ -15,7 +16,7 @@
     {
       "phase": 2,
       "name": "roadside and transport",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:ruined_gas_station",
         "infinite_domain:freight_depot"
@@ -24,7 +25,7 @@
     {
       "phase": 3,
       "name": "civic and logistics",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:ruined_fire_station",
         "infinite_domain:corporate_warehouse"
@@ -33,7 +34,7 @@
     {
       "phase": 4,
       "name": "heavy industry",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:abandoned_create_factory"
       ]
@@ -41,7 +42,7 @@
     {
       "phase": 5,
       "name": "underground military",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:bunker_network"
       ]
@@ -49,7 +50,7 @@
     {
       "phase": 6,
       "name": "buried survivor sites",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:survivor_cache"
       ]
@@ -57,7 +58,7 @@
     {
       "phase": 7,
       "name": "fortified trade settlement",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:trade_outpost"
       ]
@@ -65,7 +66,7 @@
     {
       "phase": 8,
       "name": "decayed agricultural site",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:decayed_farm"
       ]
@@ -73,7 +74,7 @@
     {
       "phase": 9,
       "name": "large residential trailer park",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:trailer_park"
       ]
@@ -81,7 +82,7 @@
     {
       "phase": 10,
       "name": "mountain military garrison",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:mountain_military_complex"
       ]
@@ -89,7 +90,7 @@
     {
       "phase": 11,
       "name": "mountain biohazard laboratory",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:mountain_biohazard_lab"
       ]
@@ -97,7 +98,7 @@
     {
       "phase": 12,
       "name": "decayed forest logging operation",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:decayed_logging_camp"
       ]
@@ -105,7 +106,7 @@
     {
       "phase": 13,
       "name": "bomb-struck data infrastructure",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:bombed_data_center"
       ]
@@ -113,7 +114,7 @@
     {
       "phase": 14,
       "name": "hydroelectric dam and abutment refuges",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:hydroelectric_refuge_dam"
       ]
@@ -121,7 +122,7 @@
     {
       "phase": 15,
       "name": "toppled corporate skyscraper",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:toppled_skyscraper"
       ]
@@ -129,7 +130,7 @@
     {
       "phase": 16,
       "name": "blown-open courtyard apartments",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:blown_apartment_complex"
       ]
@@ -137,7 +138,7 @@
     {
       "phase": 17,
       "name": "ruined mixed-use city block",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:ruined_mixed_use_block"
       ]
@@ -145,7 +146,7 @@
     {
       "phase": 18,
       "name": "subsided mixed-use city frontage",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:sunken_city_front"
       ]
@@ -153,7 +154,7 @@
     {
       "phase": 19,
       "name": "pancaked municipal parking garage",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:pancaked_parking_structure"
       ]
@@ -161,7 +162,7 @@
     {
       "phase": 20,
       "name": "cratered mixed-use downtown intersection",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:cratered_downtown_intersection"
       ]
@@ -169,7 +170,7 @@
     {
       "phase": 21,
       "name": "ruined regional hospital",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:ruined_hospital"
       ]
@@ -177,7 +178,7 @@
     {
       "phase": 22,
       "name": "ruined police precinct",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:ruined_police_precinct"
       ]
@@ -185,7 +186,7 @@
     {
       "phase": 23,
       "name": "ruined civic courthouse",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "assets": [
         "infinite_domain:ruined_courthouse"
       ]
@@ -193,7 +194,7 @@
     {
       "phase": 24,
       "name": "roadside mobility and security family",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "family_id": "roadside_mobility_security",
       "checkpoint_wave": "A",
       "asset_source": "structure_library/rebuild-family-roadmap.json"
@@ -201,7 +202,7 @@
     {
       "phase": 25,
       "name": "habitation and community family",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "family_id": "habitation_and_community",
       "checkpoint_wave": "A",
       "asset_source": "structure_library/rebuild-family-roadmap.json"
@@ -209,7 +210,7 @@
     {
       "phase": 26,
       "name": "urban commercial family",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "family_id": "urban_commercial",
       "checkpoint_wave": "B",
       "asset_source": "structure_library/rebuild-family-roadmap.json"
@@ -217,7 +218,7 @@
     {
       "phase": 27,
       "name": "transit and ports family",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "family_id": "transit_and_ports",
       "checkpoint_wave": "B",
       "asset_source": "structure_library/rebuild-family-roadmap.json"
@@ -225,7 +226,7 @@
     {
       "phase": 28,
       "name": "rural processing family",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "family_id": "rural_processing",
       "checkpoint_wave": "B",
       "asset_source": "structure_library/rebuild-family-roadmap.json"
@@ -233,7 +234,7 @@
     {
       "phase": 29,
       "name": "extraction sites family",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "family_id": "extraction_sites",
       "checkpoint_wave": "B",
       "asset_source": "structure_library/rebuild-family-roadmap.json"
@@ -241,7 +242,7 @@
     {
       "phase": 30,
       "name": "industrial utility and technology family",
-      "status": "candidate_for_in_world_review",
+      "status": "requires_regeneration_v2",
       "family_id": "industrial_utility_technology",
       "checkpoint_wave": "C",
       "asset_source": "structure_library/rebuild-family-roadmap.json"

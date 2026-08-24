@@ -1,0 +1,38 @@
+{
+  "format_version": 1,
+  "canonical_root": "structure_library",
+  "corpus_name": "deep_sea",
+  "governing_standard": "docs/DEEP_SEA_STRUCTURE_AND_GEOLOGICAL_FEATURE_STANDARDS.md",
+  "metadata_schema": "structure_library/deepsea-metadata.schema.json",
+  "metadata_catalog": "structure_library/deepsea-catalog.json",
+  "refinement_policy": "structure_library/deepsea-refinement-policy.json",
+  "structure_storage": "kubejs/data/infinite_domain/structure/deep_sea",
+  "worldgen_template_pool": "kubejs/data/infinite_domain/worldgen/template_pool/deep_sea",
+  "worldgen_structure": "kubejs/data/infinite_domain/worldgen/structure/deep_sea",
+  "worldgen_structure_set": "kubejs/data/infinite_domain/worldgen/structure_set/deep_sea",
+  "quarantine_biome_tag": "kubejs/data/infinite_domain/tags/worldgen/biome/disabled_quarantine_deep_sea_structures.json",
+  "placement_registrant_csv": "docs/biome-gating-audit/ocean-structure-sets.csv",
+  "full_audit_renders": "structure_library/audit_renders/deep_sea",
+  "disposition_ledger": "docs/DEEP_SEA_STRUCTURE_AUDIT.md",
+  "generation_notes": "docs/deep-sea-structures.md",
+  "validation_report": "docs/deepsea-structure-validation.json",
+  "scripts": {
+    "generator": "scripts/generate_deep_sea_structures.py",
+    "validator": "scripts/validate_deep_sea_structures.py",
+    "renderer": "scripts/render_deep_sea_review.py"
+  },
+  "counts": {
+    "assets_total": 16,
+    "asset_class_geological_macro": 0,
+    "asset_class_geological_feature": 4,
+    "asset_class_structure": 12,
+    "families": 4,
+    "production_approved": 0
+  },
+  "sibling_systems": {
+    "land_structure_corpus": "structure_library/corpus-manifest.json",
+    "relationship": "independent corpus, does not share counts/gates/production_status with the land corpus; see the governing standard's 'Relationship to the heavy-rebuild system' section"
+  },
+  "integration_rule": "Only explicitly approved records may be referenced by production worldgen selectors. All sixteen current assets are quarantined behind the empty quarantine_biome_tag pending human in-world review; see disposition_ledger.",
+  "impact_simulation_report": "docs/deepsea-akula-impact-simulation.json"
+}

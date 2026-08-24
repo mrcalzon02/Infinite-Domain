@@ -152,6 +152,21 @@ def excavator_pit_clean_master():
     A.window(t, 4, 15, 46, axis="z")
     A.desk(t, 6, 12, 44)
     t.set(14, 12, 44, "the_wasteland_reworked:radio")
+    # Authored rock footings. The bucket-wheel machine, the loading tower and
+    # the rim office all sat on benches or floors that were never actually
+    # tied down to the pit's own lowest solid layer (y=1) — each was its own
+    # large floating island, not a single 5-block gap. Rather than a floating
+    # bench with nothing under it, each gets a real support pillar standing
+    # in the excavated pit, the way a working quarry leaves rock pillars to
+    # carry a bench or platform above open ground.
+    t.fill((19, 1, 20), (20, 6, 23), "minecraft:stone")
+    t.fill((63, 1, 32), (64, 10, 33), "minecraft:stone")
+    t.fill((9, 1, 48), (10, 10, 49), "minecraft:stone")
+    # The rim road itself (rim_road()'s asphalt surface) is a flat plane at
+    # the surface height with nothing under it in the template either;
+    # give it a few footings too rather than leaving it floating end to end.
+    for px in (10, 30, 50, 65):
+        t.fill((px, 1, 3), (px + 1, 9, 4), "minecraft:stone")
     return t
 
 

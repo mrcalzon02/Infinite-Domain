@@ -1,5 +1,6 @@
 {
-  "format_version": 1,
+  "format_version": 2,
+  "policy": "structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md",
   "purpose": "Replace 57 independent rebuild runs with seven reusable builder families and three consolidated global checkpoints.",
   "baseline": {
     "authoritative_assets": 84,
@@ -7,11 +8,12 @@
     "remaining_assets": 57,
     "production_approvals": 0
   },
+  "v2_reset_note": "The v1 family/checkpoint-wave decomposition below (assets, shared_systems, identity_gate) is still sound and is retained. Every completion claim it previously carried was produced by primitives (stair_flight, window, cracked_pad/roadside_apron, t.clear-based damage) that structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md documents as defective by construction. Progress was reset to zero on 2026-08-23 pending regeneration with the v2 primitives and lint gate in scripts/structure_geometry_primitives_v2.py and scripts/structure_geometry_lint.py. A family only re-enters 'completed' once every member passes the v2 lint's hard-fail checks and its structure_library/review/*.csv row is marked pass by an actual human walkthrough.",
   "progress": {
-    "completed_checkpoint_waves": ["A", "B", "C"],
-    "completed_families": ["roadside_mobility_security", "habitation_and_community", "urban_commercial", "transit_and_ports", "rural_processing", "extraction_sites", "industrial_utility_technology"],
-    "rebuilt_candidates": 84,
-    "remaining_assets": 0,
+    "completed_checkpoint_waves": [],
+    "completed_families": [],
+    "rebuilt_candidates": 0,
+    "remaining_assets": 57,
     "catalog_records": 168,
     "production_approvals": 0
   },
@@ -21,7 +23,8 @@
     "Complete all members of a family before running that family's targeted validation and render batch.",
     "Do not rebuild the QA world, regenerate all renders or convert the complete Lost Cities corpus between individual family members.",
     "Run the expensive full corpus, provenance, conversion, all-render, audit and QA-world gates only at the end of checkpoint waves A, B and C.",
-    "Keep production approvals at zero until explicit in-world review is completed."
+    "Keep production approvals at zero until explicit in-world review is completed.",
+    "Every family member must have an authored structure_library/programs/<id>.json and pass scripts/structure_geometry_lint.py with zero hard-fail findings before its family may be marked complete; a green pipeline exit code alone is not completion evidence."
   ],
   "families": [
     {

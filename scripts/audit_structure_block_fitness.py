@@ -9,8 +9,18 @@ from audit_generated_state_values import ROOT, VANILLA_JAR, allowed_values, pars
 from convert_nbt_to_lostcities import load_structure
 
 
-STRUCTURES = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland"
+# Scan EVERY authored structure category, not just wasteland.
+#
+# This gate was written for the wasteland corpus and its path was pinned to
+# it, so the deep-sea corpus -- which now places modded blocks of its own --
+# was never inspected at all. That is how a live `minecraft:blast_furnace`
+# survived in three deep-sea assets after docs/RUINED_FUNCTIONAL_BLOCKS.md
+# declared the rule retroactive: the corpus was outside the scan path, and the
+# block was vanilla so the modded-only filter below would have skipped it even
+# if it had not been.
+STRUCTURES = ROOT / "kubejs" / "data" / "infinite_domain" / "structure"
 REPORT = ROOT / "docs" / "structure-block-fitness-audit.json"
+ALLOWLIST = ROOT / "structure_library" / "approved-functional-block-exceptions.json"
 DIRECTIONAL = {"facing", "axis", "orientation", "horizontal_facing", "face"}
 FUNCTIONAL_TERMS = {
     "basin", "bearing", "boiler", "burner", "cable", "capacitor", "chute", "compressor",
@@ -19,6 +29,14 @@ FUNCTIONAL_TERMS = {
     "tank", "turbine", "valve",
 }
 CONNECTIVE_TERMS = {"fence", "girder", "pipe", "scaffold", "truss", "wall"}
+# Rule 2 of docs/RUINED_FUNCTIONAL_BLOCKS.md names these explicitly, and they
+# are vanilla, so the modded-only sweep below cannot see them. They are the
+# small-scale version of the same tech-skip problem: a player who mines a
+# working blast furnace out of a ruin skips the progression it gates.
+VANILLA_FORBIDDEN = {
+    "minecraft:furnace", "minecraft:smoker", "minecraft:blast_furnace",
+    "minecraft:brewing_stand", "minecraft:beacon", "minecraft:conduit",
+}
 
 
 def structure_label(path: Path) -> str:
@@ -91,18 +109,78 @@ def main() -> None:
             "implicit_directional_states": implicit,
         })
 
+    allowlist_document = json.loads(ALLOWLIST.read_text(encoding="utf-8")) if ALLOWLIST.exists() else {"approved_exceptions": []}
+    allowed = {
+        entry["block"]: entry
+        for entry in allowlist_document.get("approved_exceptions", [])
+    }
+    failures = []
+    violations = []
+    for record in records:
+        if not record["functional_or_machine"]:
+            continue
+        exception = allowed.get(record["block"])
+        if exception is None:
+            violations.append({
+                "block": record["block"],
+                "placements": record["placements"],
+                "structures": record["structures"],
+                "reason": "live-functional/machine block used as structure set dressing with no approved exception on file",
+            })
+            continue
+        allowed_structures = set(exception.get("structures", []))
+        unlisted = sorted(set(record["structures"]) - allowed_structures) if allowed_structures else []
+        if unlisted:
+            violations.append({
+                "block": record["block"],
+                "placements": record["placements"],
+                "structures": unlisted,
+                "reason": f"placed in structures not covered by its approved exception (approved for: {sorted(allowed_structures) or 'none listed'})",
+            })
+    for block in sorted(all_blocks & VANILLA_FORBIDDEN):
+        exception = allowed.get(block)
+        structures = sorted(usage[block])
+        if exception is not None:
+            allowed_structures = set(exception.get("structures", []))
+            structures = sorted(set(structures) - allowed_structures) if allowed_structures else []
+        if structures:
+            violations.append({
+                "block": block,
+                "placements": sum(usage[block].values()),
+                "structures": structures,
+                "reason": "live-functional vanilla block named in docs/RUINED_FUNCTIONAL_BLOCKS.md rule 2 "
+                          "placed as set dressing; use the infinite_domain:ruined_* equivalent",
+            })
+
+    if violations:
+        failures.append(
+            f"{len(violations)} live-functional/machine block type(s) are placed as structure set dressing without an "
+            f"approved exception in {ALLOWLIST.relative_to(ROOT).as_posix()} "
+            "(see docs/RUINED_FUNCTIONAL_BLOCKS.md for the required vanilla/ruined-equivalent stand-ins)"
+        )
+
     report = {
         "templates_scanned": len(files),
         "modded_block_types": len(records),
-        "policy": "Vanilla stable blocks are the default. Modded functional, directional, connective, kinetic, fluid and block-entity blocks require an explicit purpose and verified state.",
+        "categories_scanned": sorted({p.relative_to(STRUCTURES).parts[0] for p in files}),
+        "policy": "Vanilla stable blocks are the default. No live-functional/machine block may be placed as structure set dressing "
+                  "unless it has an explicit, structure-scoped exception in approved-functional-block-exceptions.json; the "
+                  "required default is a vanilla proxy or, where one exists, an infinite_domain:ruined_* decorative equivalent. "
+                  "Modded directional, connective, kinetic, fluid and block-entity blocks otherwise require an explicit purpose "
+                  "and verified state.",
         "implicit_directional_states": implicit_directional,
         "connective_block_types": sorted(connective),
+        "functional_block_violations": violations,
+        "gate_passed": not failures,
         "modded_usage": records,
     }
     REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(f"Scanned {len(files)} templates containing {len(records)} modded block types")
     print(f"Implicit directional states: {len(implicit_directional)}")
     print(f"Connective modded block types requiring placement review: {len(connective)}")
+    print(f"Functional/machine block violations: {len(violations)}")
+    if failures:
+        raise SystemExit("Structure block-fitness gate failed:\n- " + "\n- ".join(failures))
 
 
 if __name__ == "__main__":

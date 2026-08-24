@@ -1,0 +1,581 @@
+{
+  "format_version": 1,
+  "assets": [
+    {
+      "asset_id": "infinite_domain:deep_sea/coastal_patrol_wreck_clean_master",
+      "asset_class": "structure",
+      "depth_band": "shelf",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:lukewarm_ocean",
+        "minecraft:warm_ocean"
+      ],
+      "category": "wreck",
+      "build_style": "military_remnant",
+      "burial_state": "exposed",
+      "access_connector": "surface_shaft",
+      "dominant_atmosphere_state": "dry_pressurized",
+      "has_mixed_compartments": false,
+      "footprint": {
+        "width": 11,
+        "depth": 25
+      },
+      "height": 11,
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/coastal_patrol_wreck_clean_master.nbt",
+      "refinement_intensity": "heavy",
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined"
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/coastal_patrol_wreck_damaged",
+      "asset_class": "structure",
+      "depth_band": "shelf",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:lukewarm_ocean",
+        "minecraft:warm_ocean"
+      ],
+      "category": "wreck",
+      "build_style": "military_remnant",
+      "burial_state": "exposed",
+      "access_connector": "diver_hatch",
+      "dominant_atmosphere_state": "mixed_breached",
+      "has_mixed_compartments": true,
+      "footprint": {
+        "width": 11,
+        "depth": 25
+      },
+      "height": 11,
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/coastal_patrol_wreck_damaged.nbt",
+      "refinement_intensity": "heavy",
+      "supports_intact": false,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "damage_causes": [
+        "corrosion",
+        "biofouling",
+        "flooding_breach",
+        "listing_settle"
+      ],
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined"
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/coastal_patrol_wreck",
+      "asset_class": "structure",
+      "depth_band": "shelf",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:lukewarm_ocean",
+        "minecraft:warm_ocean"
+      ],
+      "category": "wreck",
+      "build_style": "military_remnant",
+      "burial_state": "exposed",
+      "access_connector": "diver_hatch",
+      "dominant_atmosphere_state": "mixed_breached",
+      "has_mixed_compartments": true,
+      "footprint": {
+        "width": 11,
+        "depth": 25
+      },
+      "height": 11,
+      "source_role": "occupation_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/coastal_patrol_wreck.nbt",
+      "refinement_intensity": "heavy",
+      "supports_intact": false,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "damage_causes": [
+        "corrosion",
+        "biofouling",
+        "flooding_breach",
+        "listing_settle"
+      ],
+      "occupation_state": "hostile_aquatic",
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined"
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/coastal_patrol_debris_field",
+      "asset_class": "geological_feature",
+      "depth_band": "shelf",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:lukewarm_ocean",
+        "minecraft:warm_ocean"
+      ],
+      "feature_type": "debris_scatter",
+      "footprint": {
+        "width": 9,
+        "depth": 9
+      },
+      "hazard_type": "none",
+      "placement_ref": "kubejs/data/infinite_domain/worldgen/structure_set/deep_sea/coastal_patrol_debris_field.json",
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "production_status": "quarantined"
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/flooded_relay_shelter_clean_master",
+      "asset_class": "structure",
+      "depth_band": "open_floor",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:cold_ocean"
+      ],
+      "category": "submariner_facility",
+      "build_style": "pre_collapse_civilian_industrial",
+      "burial_state": "subterranean",
+      "access_connector": "buried_shaft",
+      "dominant_atmosphere_state": "flooded",
+      "has_mixed_compartments": false,
+      "footprint": {
+        "width": 9,
+        "depth": 9
+      },
+      "height": 9,
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/flooded_relay_shelter_clean_master.nbt",
+      "refinement_intensity": "standard",
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "notes": "Deliberately built dry at construction; the clean master is the pre-flood reference. The whole chamber and shaft are declared flooded because the placed derivative is what matters for the flooded/dry distinction, not the corpus-only clean master."
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/flooded_relay_shelter",
+      "asset_class": "structure",
+      "depth_band": "open_floor",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:cold_ocean"
+      ],
+      "category": "submariner_facility",
+      "build_style": "pre_collapse_civilian_industrial",
+      "burial_state": "subterranean",
+      "access_connector": "buried_shaft",
+      "dominant_atmosphere_state": "flooded",
+      "has_mixed_compartments": false,
+      "footprint": {
+        "width": 9,
+        "depth": 9
+      },
+      "height": 9,
+      "source_role": "occupation_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/flooded_relay_shelter.nbt",
+      "refinement_intensity": "standard",
+      "supports_intact": false,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "damage_causes": [
+        "silt_burial",
+        "corrosion"
+      ],
+      "occupation_state": "derelict",
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined"
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/abyssal_mining_rig_clean_master",
+      "asset_class": "structure",
+      "depth_band": "deep_floor",
+      "biome_scope": [
+        "minecraft:deep_ocean",
+        "minecraft:deep_cold_ocean"
+      ],
+      "category": "submariner_facility",
+      "build_style": "create_industrial_offshore",
+      "burial_state": "exposed",
+      "access_connector": "moon_pool",
+      "dominant_atmosphere_state": "dry_pressurized",
+      "has_mixed_compartments": true,
+      "footprint": {
+        "width": 13,
+        "depth": 13
+      },
+      "height": 10,
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/abyssal_mining_rig_clean_master.nbt",
+      "refinement_intensity": "heavy",
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "notes": "The moon pool's water floor is a functional design element (submersible entry), not a mixed_breached defect -- declared dry_pressurized with has_mixed_compartments=true rather than mixed_breached, which this system's vocabulary reserves for damage-caused flooding. Interior moon-pool clearance is not yet checked against a real create_submarine/create_aquatic_ambitions hull; see docs/deep-sea-structures.md."
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/abyssal_mining_rig",
+      "asset_class": "structure",
+      "depth_band": "deep_floor",
+      "biome_scope": [
+        "minecraft:deep_ocean",
+        "minecraft:deep_cold_ocean"
+      ],
+      "category": "submariner_facility",
+      "build_style": "create_industrial_offshore",
+      "burial_state": "exposed",
+      "access_connector": "moon_pool",
+      "dominant_atmosphere_state": "dry_pressurized",
+      "has_mixed_compartments": true,
+      "footprint": {
+        "width": 13,
+        "depth": 13
+      },
+      "height": 10,
+      "source_role": "occupation_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/abyssal_mining_rig.nbt",
+      "refinement_intensity": "heavy",
+      "supports_intact": false,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "damage_causes": [
+        "corrosion",
+        "current_scour",
+        "thermal_scarring"
+      ],
+      "occupation_state": "faction_garrison",
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined"
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/abyssal_vent_field",
+      "asset_class": "geological_feature",
+      "depth_band": "deep_floor",
+      "biome_scope": [
+        "minecraft:deep_ocean",
+        "minecraft:deep_cold_ocean"
+      ],
+      "feature_type": "vent_field",
+      "footprint": {
+        "width": 9,
+        "depth": 9
+      },
+      "hazard_type": "thermal",
+      "placement_ref": "kubejs/data/infinite_domain/worldgen/structure_set/deep_sea/abyssal_vent_field.json",
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "production_status": "quarantined",
+      "notes": "Magma blocks generate their bubble columns live at runtime; the NBT places geology and glow dressing only."
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/akula_project971_clean_master",
+      "asset_class": "structure",
+      "depth_band": "open_floor",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_cold_ocean"
+      ],
+      "category": "wreck",
+      "build_style": "military_remnant",
+      "burial_state": "exposed",
+      "access_connector": "diver_hatch",
+      "dominant_atmosphere_state": "dry_pressurized",
+      "has_mixed_compartments": true,
+      "footprint": {
+        "width": 17,
+        "depth": 113
+      },
+      "height": 22,
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/akula_project971_clean_master.nbt",
+      "refinement_intensity": "rebuild",
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "notes": "Project 971 Shchuka-B at 1 block = 1 m: 113 m LOA, 13.6 m beam, ~20 m keel to sail top. Size band is deliberately outside the standards' 'large industrial platform' row -- this is a named hero landmark on the scale of the ~114-block Seven Seas ships docs/WORLDGEN_STRUCTURE_SAFETY.md already treats as precedent, not a facility. Genuinely double-hulled: a free-flooding light hull over a cylindrical pressure hull, main ballast tanks in the annulus. The flooded annulus is construction, not damage, so this declares dry_pressurized with has_mixed_compartments=true, the same distinction abyssal_mining_rig's moon pool draws. Corpus reference only -- not registered for world generation."
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/akula_wreck_forward_damaged",
+      "asset_class": "structure",
+      "depth_band": "open_floor",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_cold_ocean"
+      ],
+      "category": "wreck",
+      "build_style": "military_remnant",
+      "burial_state": "partially_buried",
+      "access_connector": "diver_hatch",
+      "dominant_atmosphere_state": "mixed_breached",
+      "has_mixed_compartments": true,
+      "footprint": {
+        "width": 25,
+        "depth": 72
+      },
+      "height": 26,
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/akula_wreck_forward_damaged.nbt",
+      "refinement_intensity": "rebuild",
+      "supports_intact": false,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "damage_causes": [
+        "pressure_hull_failure",
+        "flooding_breach",
+        "listing_settle",
+        "silt_burial",
+        "corrosion",
+        "biofouling",
+        "current_scour"
+      ],
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "notes": "Forward section, bow through the imploded compartment. Attitude is derived, not chosen: docs/deepsea-akula-impact-simulation.json puts impact at 17.09 m/s, free nose penetration at 19.63 m limited by hull geometry to 10.24 m, giving 8.8 deg bow-down and 13.1 deg of port list. Hull below the ocean-floor datum is intentionally not authored so the section emerges from the seabed instead of sitting in a pit. The torpedo room retains its air: that is the mixed_breached declaration and it is a real compartment, not a metadata flag."
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/akula_wreck_aft_damaged",
+      "asset_class": "structure",
+      "depth_band": "open_floor",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_cold_ocean"
+      ],
+      "category": "wreck",
+      "build_style": "military_remnant",
+      "burial_state": "partially_buried",
+      "access_connector": "none",
+      "dominant_atmosphere_state": "flooded",
+      "has_mixed_compartments": false,
+      "footprint": {
+        "width": 25,
+        "depth": 60
+      },
+      "height": 30,
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/akula_wreck_aft_damaged.nbt",
+      "refinement_intensity": "rebuild",
+      "supports_intact": false,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "damage_causes": [
+        "pressure_hull_failure",
+        "reactor_breach",
+        "flooding_breach",
+        "listing_settle",
+        "silt_burial",
+        "corrosion",
+        "biofouling",
+        "current_scour"
+      ],
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "notes": "Aft section, turbine room through the screw. Torn end bedded, stern and towed-array pod raised clear at 12.3 deg with 22.6 deg starboard list. The raised stern is a genuine cantilever off the bedded end and the impact model reports its bending margin, so the overhang is supported geometry rather than the unexplained floating mass the audit checklist treats as a defect."
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/akula_wreck_forward",
+      "asset_class": "structure",
+      "depth_band": "open_floor",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_cold_ocean"
+      ],
+      "category": "wreck",
+      "build_style": "military_remnant",
+      "burial_state": "partially_buried",
+      "access_connector": "diver_hatch",
+      "dominant_atmosphere_state": "mixed_breached",
+      "has_mixed_compartments": true,
+      "footprint": {
+        "width": 25,
+        "depth": 72
+      },
+      "height": 26,
+      "source_role": "occupation_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/akula_wreck_forward.nbt",
+      "refinement_intensity": "rebuild",
+      "supports_intact": false,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "damage_causes": [
+        "pressure_hull_failure",
+        "flooding_breach",
+        "listing_settle",
+        "silt_burial",
+        "corrosion",
+        "biofouling",
+        "current_scour"
+      ],
+      "occupation_state": "hostile_aquatic",
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined"
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/akula_wreck_aft",
+      "asset_class": "structure",
+      "depth_band": "open_floor",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_cold_ocean"
+      ],
+      "category": "wreck",
+      "build_style": "military_remnant",
+      "burial_state": "partially_buried",
+      "access_connector": "none",
+      "dominant_atmosphere_state": "flooded",
+      "has_mixed_compartments": false,
+      "footprint": {
+        "width": 25,
+        "depth": 60
+      },
+      "height": 30,
+      "source_role": "occupation_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/akula_wreck_aft.nbt",
+      "refinement_intensity": "rebuild",
+      "supports_intact": false,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": true,
+      "damage_causes": [
+        "pressure_hull_failure",
+        "reactor_breach",
+        "flooding_breach",
+        "listing_settle",
+        "silt_burial",
+        "corrosion",
+        "biofouling",
+        "current_scour"
+      ],
+      "occupation_state": "hostile_aquatic",
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined"
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/akula_wreck_spine",
+      "asset_class": "geological_feature",
+      "depth_band": "open_floor",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_cold_ocean"
+      ],
+      "feature_type": "rock_outcrop",
+      "footprint": {
+        "width": 25,
+        "depth": 26
+      },
+      "hazard_type": "radiological",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/akula_wreck_spine.nbt",
+      "placement_ref": "kubejs/data/infinite_domain/worldgen/structure_set/deep_sea/akula_wreck_site.json",
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "production_status": "quarantined",
+      "notes": "Start piece of the akula_wreck_site jigsaw assembly, and the reason the wreck has two halves. Carries a keel-width gouge along its crown on the boat's own heading with hull plating driven into it, so the cause of the break is visible at the site rather than only recorded in the impact model. `rock_outcrop` is a Wave 3 addition to the Tier 2 feature vocabulary: the existing terms had no entry for bare rock, and filing this under rock_arch_cluster would have been a wrong label rather than an imprecise one. Height is fitted to the two hull sections it supports -- a forward shoulder the forward section's torn end is still propped on, a crest the hull parted over, and a steeper aft face the after section slid off."
+    },
+    {
+      "asset_id": "infinite_domain:deep_sea/akula_debris_field",
+      "asset_class": "geological_feature",
+      "depth_band": "open_floor",
+      "biome_scope": [
+        "minecraft:ocean",
+        "minecraft:cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_cold_ocean"
+      ],
+      "feature_type": "debris_scatter",
+      "footprint": {
+        "width": 15,
+        "depth": 15
+      },
+      "hazard_type": "none",
+      "source_template": "kubejs/data/infinite_domain/structure/deep_sea/akula_debris_field.nbt",
+      "placement_ref": "kubejs/data/infinite_domain/worldgen/structure_set/deep_sea/akula_debris_field.json",
+      "source_license": {
+        "origin": "infinite_domain_original",
+        "license": "project_owned",
+        "redistributable": true
+      },
+      "production_status": "quarantined",
+      "notes": "Plating and machinery driven off by the implosion. Reference fragment leaves at 42.9 m/s but water drag stops a 40 mm plate in 2.1 m, so the field's extent is governed by where the two sections settled, not by fragment throw -- the model reports both so the field is not sized on the wrong mechanism."
+    }
+  ]
+}

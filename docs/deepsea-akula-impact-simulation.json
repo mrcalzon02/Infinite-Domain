@@ -1,0 +1,87 @@
+{
+  "cause": "pressure_hull_failure",
+  "governing_mechanism": "seabed_outcrop_hogging",
+  "narrative": "Depth-control casualty over the continental shelf break. The boat sank at an angle and came down across a rock outcrop amidships. The outcrop acted as a point support under a free-free hull girder; both overhanging halves kept descending and the girder failed in hogging over the contact at frame z=66. The two halves then slid off the ridge in opposite directions, the forward section burying its bow and the aft section slumping its torn end to the seabed.",
+  "mechanism_selection": "Three mechanisms were evaluated. Self-weight straddle does not break this hull. Implosion at collapse depth does break it, comfortably, and is a perfectly good reason for the boat to be on the bottom -- but it leaves nothing at the site, so a player looking at two halves has no way to know why there are two halves. The outcrop breaks it too AND leaves the rock and the keel gouge as visible evidence. Legibility is the tiebreak, per the standards' requirement that damage trace back to one legible cause; the implosion figures are kept below because ruling a mechanism in or out is worth as much as selecting one.",
+  "collapse_depth_m": 720.0,
+  "collapse_pressure_pa": 7239780,
+  "implosion_energy_j": 4716287008,
+  "outcrop": {
+    "mechanism": "hogging failure over a rock outcrop acting as a point support",
+    "crush_distance_m": 2.5,
+    "critical_impact_velocity_ms": 6.77,
+    "moment_capacity_nm": 1997751335,
+    "descent_attitudes": {
+      "broadside": {
+        "impact_velocity_ms": 6.92,
+        "hogging_moment_nm": 2088190135,
+        "margin": 1.05,
+        "breaks": true
+      },
+      "angled_30deg": {
+        "impact_velocity_ms": 11.54,
+        "hogging_moment_nm": 5810470141,
+        "margin": 2.91,
+        "breaks": true
+      },
+      "bow_down": {
+        "impact_velocity_ms": 17.55,
+        "hogging_moment_nm": 13424422351,
+        "margin": 6.72,
+        "breaks": true
+      }
+    },
+    "governs": true,
+    "leaves_site_evidence": true,
+    "note": "A boat arriving flat and slow lands within a few percent of the threshold -- too close to call it either way honestly -- while an angled descent breaks it with real margin. The authored sections sit at 8.8 and 12.3 degrees, which is an angled arrival, so the wreck attitude and the break mechanism are consistent with each other rather than independently chosen."
+  },
+  "girder": {
+    "hammer_force_n": 524031890,
+    "shear_capacity_n": 240292140,
+    "shear_margin": 2.18,
+    "severs": true,
+    "moment_capacity_nm": 1997751335,
+    "self_weight_moment_nm": 602366023,
+    "self_weight_would_break": false
+  },
+  "break_frame_z": 66,
+  "tear_zone_z": [
+    60,
+    72
+  ],
+  "sections": {
+    "forward": {
+      "length_m": 66,
+      "mass_kg": 2920354,
+      "added_mass_kg": 6093624,
+      "impact_velocity_ms": 17.09,
+      "impact_energy_j": 1316206958,
+      "free_penetration_m": 19.63,
+      "seated_penetration_m": 10.24,
+      "penetration_limited_by": "hull geometry",
+      "pitch_deg": 8.8,
+      "list_bound_deg": 30.1,
+      "list_deg": 13.1,
+      "list_side": "port"
+    },
+    "aft": {
+      "length_m": 47,
+      "mass_kg": 2079646,
+      "added_mass_kg": 4339399,
+      "impact_velocity_ms": 16.52,
+      "impact_energy_j": 876038163,
+      "free_penetration_m": 42.58,
+      "seated_penetration_m": 10.24,
+      "penetration_limited_by": "hull geometry",
+      "pitch_deg": 12.3,
+      "list_bound_deg": 57.1,
+      "list_deg": 22.6,
+      "list_side": "starboard"
+    }
+  },
+  "debris": {
+    "fragment_launch_ms": 42.9,
+    "fragment_range_m": 2.1,
+    "field_radius_m": 6
+  }
+}

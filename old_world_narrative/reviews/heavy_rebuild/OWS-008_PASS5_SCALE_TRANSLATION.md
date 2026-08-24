@@ -1,15 +1,10 @@
 # [SYSTEM REPORT] OWS-008 Pass 5 — Minecraft Scale Translation
 
-<<<<<<< Updated upstream
 **Target:** OWS-008 — VCF Emergency Persistence Investigation Laboratory  
-=======
-**Target:** OWS-008 — Emergency Investigation & Persistence Lab  
->>>>>>> Stashed changes
 **Status:** COMPLETE FOR GATE-A STUDY
 
 ## Scale decision
 
-<<<<<<< Updated upstream
 Retain **55 x 22 x 49** as the maximum envelope for the first Gate-A massing study. Do not preserve the donor's occupied volume block-for-block.
 
 The baseline already fits public/security intake, two-level research, pressure-zoned containment, service rooms, rear plant and multiple exits. Its failure is that generic donor massing and repeated glass boxes do not express the investigation. Gate A should redistribute and carve the existing volume before requesting any worldgen expansion.
@@ -77,43 +72,11 @@ Use the 22-block height as a composed laboratory section:
 4. **roof/service layer, about Y16–21:** air-handling, treatment plant, separated stacks/intakes, access housings and maintenance paths.
 
 Some challenge or treatment volumes may use the full lower-to-upper clear height. Do not create a generic second floor across rooms that require taller treatment/service anatomy.
-=======
-Retain **55 x 22 x 49** as the maximum envelope for the first Gate-A massing study. The baseline proves that the footprint can hold a large pressure-zoned laboratory, two occupied levels, service volumes and multiple exterior approaches. Its failure is program allocation and institutional reading, not insufficient gross area.
-
-Later expansion is permitted only if Gate-A implementation demonstrates a specific circulation, plant or service-clearance blocker and the coordinator approves a changed worldgen envelope. No expansion is authorized by this pass.
-
-## Plan translation
-
-Use approximate planning bands rather than freezing exact room coordinates:
-
-- **north 8–12 blocks:** public/security intake, briefing and controlled staff threshold;
-- **west 12–20 blocks wide:** staff change, clean support, analysis and upper command/archive;
-- **central 20–26 blocks deep:** validation hall, four differentiated rooms and observation/control gallery;
-- **east 10–16 blocks wide:** incident receipt, custody, dirty examination and contaminated return;
-- **south/rear 5–9 blocks:** service spine, wash/sterilant plant, drainage/effluent, waste hold and maintenance access.
-
-These bands may interlock or step to preserve the donor's useful silhouette, but no room may eliminate the separate public, specimen, clean-supply, waste and maintenance thresholds.
-
-## Validation-room translation
-
-Each treatment/hold room must be large enough to read as a process space rather than a display case:
-
-- target clear plan approximately **7–10 blocks wide by 8–12 blocks deep**;
-- target clear height approximately **5–7 blocks**;
-- minimum **2-block clear** internal operator/service aisle;
-- a **3-block clear** principal gallery/cross-aisle where staff and player traffic converge;
-- a **2–3 block** vestibule/pass-through depth at controlled boundaries;
-- a **2–4 block** rear service/interstitial band shared in a disciplined grid;
-- observation glazing concentrated toward the gallery, not wrapped around every face.
-
-The four rooms need a common structural/service rhythm but must differ in volume, equipment clearance and connection to treatment, clean hold or persistence functions.
->>>>>>> Stashed changes
 
 ## Circulation translation
 
 For later Gate B:
 
-<<<<<<< Updated upstream
 - incident/public route: generally **3 blocks clear**, widening to **4–5** at security/briefing and observation nodes;
 - staff controlled spine: **2–3 blocks clear**;
 - sealed sample/cart route: **3 blocks clear** at receipt, accession and principal turns;
@@ -190,83 +153,5 @@ It must not rely on colored glass, proof chests, signs, mushrooms, warning strip
 From the fixed exterior cameras, roof/top view and an interior section/cutaway, does the 55 x 22 x 49 candidate read as a VCF emergency investigation institution organized around one-way specimen treatment, delayed clean verification, a memorable service-joint forensics sequence, separated plant/waste systems and accumulated professional containment revisions—rather than as the inherited mountain biohazard lab with four glass cubes?
 
 If not, revise massing before any Gate-B intact-state work begins.
-=======
-- public/briefing route: generally **3 blocks clear**, widening at security and observation;
-- controlled staff corridor: **2–3 blocks clear**;
-- specimen/material movement: **3 blocks clear** at receipt, turns and pass-through approaches;
-- maintenance/service-joint route: minimum **2 blocks clear**, widening to **3–4 blocks** at manifold and inspection nodes;
-- waste/cart route: **3 blocks clear** from room return to decontamination and hold;
-- principal stair: at least **2 blocks clear** with full landings;
-- maintenance/emergency stair: at least **2 blocks clear** where it serves routine access;
-- public and major controlled thresholds should be double-width or vestibule-scaled; single doors remain appropriate for minor offices and inspection rooms.
-
-No one-block ladder may serve as the principal institutional or roof-maintenance route.
-
-## Section translation
-
-Use the 22-block height as three purposeful layers:
-
-1. **site/base, roughly Y0–2:** approaches, retaining/site transitions, loading thresholds and occupied floor datum;
-2. **primary controlled volume, roughly Y2–9:** receipt, staff transitions, validation rooms, gallery, analysis and waste process;
-3. **upper/roof service, roughly Y9–21:** selective command/records/overlook rooms, service plenums, plant, exhaust/intake and protected maintenance access.
-
-Do not fill the entire upper envelope with generic offices. The section must show taller process rooms, selective upper command/analysis occupancy and service volume tied to the rooms below.
-
-## Wall, boundary and joint translation
-
-- minor dry office partitions may be one block thick;
-- exterior and major controlled boundaries should read as **2-block systems** through structure, cladding, seal layers, vestibules or recessed glazing;
-- reserve accessible inspection faces at critical penetrations rather than burying every pipe in solid walls;
-- use repeated seam modules at readable intervals, with enough variation to show successive retrofit generations;
-- floor/drain and ceiling/duct interfaces need vertical continuity into effluent and roof-service systems;
-- the hidden-joint story must occupy real navigable volume, not a one-block decorative strip.
-
-## Plant and roof translation
-
-Reserve enough mass for:
-
-- one primary air-handling/supply block;
-- separated high exhaust stacks or discharge mass away from the public intake;
-- treatment-cell purge/filtration manifold;
-- wash/sterilant storage and pump volume;
-- drainage/effluent monitoring below or behind the cells;
-- **2-block minimum** protected roof/service paths;
-- a vertical maintenance core reaching every active plant level.
-
-Roof equipment must connect visibly to the central validation grid. Random stacks or disconnected pipe forests fail the scale test.
-
-## Site translation
-
-Within the retained footprint, Gate A should reserve:
-
-- a north public/security forecourt;
-- a covered incident-receipt threshold sized for carts and sealed containers;
-- a distinct clean-delivery point;
-- an east/rear waste-removal apron;
-- a south maintenance/emergency route;
-- retaining, drainage and utility transitions that seat the facility in mountain terrain.
-
-The site does not need a large parking lot, but every operational exterior door must have a believable approach and purpose.
-
-## Gate-A scope boundary
-
-A future Pass-6 candidate may establish only:
-
-- public/security intake hierarchy;
-- differentiated validation-hall volumes;
-- west clean-analysis/command and east dirty-receiving asymmetry;
-- continuous service/joint-inspection spine;
-- vertical circulation/core expression;
-- connected roof plant and distinct operational thresholds;
-- macro structural/facade rhythm and retained site relationships.
-
-It must not rely on signs, mushrooms, specimen props, incident records, spawners, loot, rubble or microdetail to make the building readable. This pass does not authorize Pass 6 or create a Gate-A candidate.
-
-## Gate-A acceptance question
-
-From fixed exterior cameras, roof view and interior/section review, does the future 55 x 22 x 49 candidate read as a VCF laboratory converted into an emergency decontamination-validation and hidden-recurrence investigation facility—with distinguishable public, dirty, clean, service and command systems—rather than as a mountain biohazard donor with four glass boxes?
-
-If not, the massing must be revised before any intact-state downstream pass begins.
->>>>>>> Stashed changes
 
 **SCALE TRANSLATION: COMPLETE FOR GATE-A STUDY.**

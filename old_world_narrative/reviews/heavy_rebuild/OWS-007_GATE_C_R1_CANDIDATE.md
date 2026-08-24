@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 # [SYSTEM REPORT] OWS-007 Gate C r1 — Damage-State Candidate
 
 **Target:** OWS-007 — Verdant Continuum Foods EP-7 Agricultural Development Laboratory  
@@ -69,55 +68,3 @@ Review the exact fixed-camera D0/D1/D3 images and decide whether:
 5. the final ruin preserves routes, corporate identity, operational reconstruction and the deep secure-record proof path.
 
 No Gate-C pass is recorded here. Pass 19 and authoritative shipping synchronization remain blocked until an independent reviewer explicitly passes this exact r1 artifact.
-=======
-# OWS-007 Gate C r1 — Damage-State Candidate
-
-**Target:** OWS-007 — Verdant Continuum Foods EP-7 Agricultural Development Laboratory  
-**Procedure:** `docs/HEAVY_REBUILD_DOCTRINE.md`  
-**Input authority:** independently passed Gate-B r2  
-**Candidate status:** **REVIEW NEEDED**  
-**Decision owner:** independent `ows-visual-reviewer`
-
-## Exact persisted artifact
-
-- Gate manifest: `old_world_narrative/reviews/heavy_rebuild/visual/OWS-007/gate_c_damage_states/r1/gate_c_manifest.json`
-- Comparison: `old_world_narrative/reviews/heavy_rebuild/visual/OWS-007/gate_c_damage_states/r1/damage_comparison.png`
-- Fixed camera set: `ows007_fixed_v1`
-- Dimensions: 73 x 33 x 63
-- Builder SHA-256: `71550a7292e6a3179c83c1e0ad38e97892eafa30a26c2509a59b2f8eb0660fc5`
-
-## State provenance
-
-| State | Review-model SHA-256 | Delta from D0 | Meaning |
-|---|---|---:|---|
-| D0 | `b116ad94acd595414ca670d4f5205bed69e4116724167a6397a8504acb0ba67a` | 0 | Exact accepted Gate-B r2 intact model |
-| D1 | `d6530ad6f6404156a84a2cbe0a42cfcdaa6170a82edeae974fb982856c0548d1` | 350 | Controlled durability-test escalation |
-| D3 | `62b146b0cb46af49ceaf6fced34785b32c9c9278ae482a5af8ca54513928f54c` | 1,048 | Restrained causal long-abandonment ruin |
-
-D2 is omitted because maintenance withdrawal, freeze/thaw and water ingress create no distinct acute-collapse phase. A D2 image would interpolate the same leak and weathering path without adding causal evidence.
-
-## Historical case
-
-- D1 expands condition zoning, environmental bypasses and persistence-release stock after successful EP-7 durability trials; architecture remains intact and corporate language remains optimistic.
-- D3 follows that intensified Chamber-B/rotunda conditioning branch after abandonment: selected monitor and plant glazing fails, debris lands below, and water/moss follows the stress and wash/decon drainage line.
-- The rotunda humidity sector shows restrained crop escape while ribs, annulus, control node, bridge and overall laboratory workflow remain reconstructable.
-- There is no explosion, generalized collapse, random destruction or unrelated contamination narrative.
-
-## Gameplay and proof
-
-- exactly one canonical proof/loot node at `(43, 2, 55)` uses `infinite_domain:chests/old_world/ows_007_vcf_ep7_agricultural_development_laboratory`;
-- its clear south approach connects to the preserved two-wide service lane;
-- three bounded D3 spawners occupy the west plant recess, Chamber-B rack edge and lower rotunda sector;
-- D0/D1 contain no proof chest or spawners;
-- primary doors, routes, environmental-system anatomy, agricultural program and VCF signs remain asserted.
-
-## Freeze and visual preflight
-
-D0 byte identity to the accepted Gate-B r2 model is asserted. The corrected white-mullion/light-gray-beam cyan observation facade is asserted block-for-block in D0, D1 and D3. The author inspected the exact damage comparison and D3 contact sheet; the states remain visually distinct, causal and restrained, with no obvious floating debris, malformed major element or route-obscuring collapse. This is not a visual decision.
-
-## Shipping isolation
-
-Authoritative shipping NBT remained unchanged. Git blob before and after rendering: `13c045293c5d40a939ee79bec6c894fd807b0970`. All temporary state NBT files were deleted.
-
-Pass 19 and authoritative synchronization remain blocked pending independent review of this exact Gate-C r1 artifact.
->>>>>>> Stashed changes

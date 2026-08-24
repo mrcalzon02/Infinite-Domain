@@ -1,0 +1,25 @@
+{
+  "format_version": 1,
+  "purpose": "Explicit ground-plane declarations for templates that model an excavation.",
+  "rationale": [
+    "structure_geometry_lint.check_structural_connectivity anchors its flood fill on the",
+    "template's own lowest solid layer. That is correct for a building, whose lowest course",
+    "is its footing, and wrong for a template that models a pit: there the lowest solid layer",
+    "is the excavated floor, tens of blocks below the grade the site's haul road, yard",
+    "buildings and plant actually stand on, so every at-grade structure is reported floating.",
+    "",
+    "A declaration here does NOT excuse a site from having ground. The declared level must be",
+    "a real, built ground course in the template - if a structure hovers above the declared",
+    "plane it is reported exactly as before. The declaration only tells the gate which plane",
+    "counts as grade; it is not a suppression list, and it must never be used as one.",
+    "",
+    "Keys are the structure path relative to the scanned directory, without the .nbt suffix,",
+    "matching the structure_id the standalone linter prints."
+  ],
+  "declarations": {
+    "ows_012_atlas_bulk_crushing_preparation_plant": {
+      "ground_y": [12, 13],
+      "reason": "Open-pit quarry. Pit floor sits at y=2 and the benches carry it up to the rim; the haul road bed, service house, crushing plant and headframe all stand on the working yard at y=12, which is built as an industrial-hardstanding grade course by _authored_012 in scripts/generate_old_world_narrative_structures.py."
+    }
+  }
+}
