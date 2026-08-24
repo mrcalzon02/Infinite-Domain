@@ -24,11 +24,13 @@ For each feature, proceed in this order:
 ### SF-REVIEW-001 — `infinite_domain:abyssal/abyssal_cold_seep`
 **Biome:** both abyssal plains via `#infinite_domain:abyssal_plain_biomes`  
 **Placement:** `OCEAN_FLOOR_WG`, terrain adaptation `bury`, spacing/separation `160/80`  
-**Current assessment:** first-pass active template was under-detailed: a flat rectangular clay/mud pad, five evenly arranged soul-sand seep points and sparse calcite markers. It communicated the concept but not an actual seep province.
+**Original assessment:** first-pass active template was under-detailed: a flat rectangular clay/mud pad, five evenly arranged soul-sand seep points and sparse calcite markers. It communicated the concept but not an actual seep province.
 
-**Refinement initiated 2026-08-23:** authoritative generator expanded from `17×5×17` to `25×7×25` with an irregular clay/mud/gravel sediment apron, multiple low mud/carbonate mounds, a central pockmark bowl, broken carbonate rim, four irregular active seep points, short carbonate chimney/concretion forms, inactive mineral scars and localized gravel scour streaks. Registry ID, biome tag, placement and spacing remain unchanged. Expected generated Git blob is `9729cc302901704dd5a2815ec37ead56ef77be46`.
+**Refinement completed 2026-08-23:** authoritative generator expanded from `17×5×17` to `25×7×25` with an irregular clay/mud/gravel sediment apron, multiple low mud/carbonate mounds, a central pockmark bowl, broken carbonate rim, four irregular active seep points, short carbonate chimney/concretion forms, inactive mineral scars and localized gravel scour streaks. Registry ID, biome tag, placement and spacing remain unchanged.
 
-**State:** generator refined; generated NBT must be confirmed materialized before final promotion.
+**Materialization:** generated Git blob `9729cc302901704dd5a2815ec37ead56ef77be46`, confirmed live on `main` by the Abyssal Assets materializer.
+
+**State:** **REFINED / STATIC-MECHANICAL COMPLETE.** Bubble behavior, burial appearance and visual scale remain runtime-unmeasured.
 
 ### SF-REVIEW-002 — `infinite_domain:abyssal/fracture_vent_field`
 **Biome:** both fracture-field families  
