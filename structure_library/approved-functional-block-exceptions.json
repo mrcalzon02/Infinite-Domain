@@ -1,0 +1,4 @@
+{
+  "$schema_note": "Consumed by scripts/audit_structure_block_fitness.py as a hard blocking gate. A block listed here is exempt from the vanilla-first / no-tech-skip rule (see docs/RUINED_FUNCTIONAL_BLOCKS.md) either everywhere it is placed (omit 'structures') or only in the listed structures (any placement of that block outside the list still fails the gate). Do not add an entry to silence a failure without a documented reason - every exception here is a deliberate, reviewed decision, not a workaround.",
+  "approved_exceptions": []
+}

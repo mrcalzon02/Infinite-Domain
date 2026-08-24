@@ -1,0 +1,56 @@
+name: Old World Gate-C Planning Decision
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/record_old_world_gate_c_planning_passes.py'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS13_HISTORICAL_LAYERING.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS14_ENVIRONMENTAL_NARRATIVE.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS15_ENCOUNTER_ARCHITECTURE.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS16_LOOT_ARCHITECTURE.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS17_QUEST_PROOF_ARCHITECTURE.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS18_DAMAGE_AND_DECAY.md'
+      - '.github/workflows/old-world-gate-c-planning-decision.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: old-world-static-build-main
+  cancel-in-progress: true
+
+jobs:
+  record-gate-c-planning:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out planning revision
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Compile guarded Gate-C planning recorder
+        run: python -m py_compile scripts/record_old_world_gate_c_planning_passes.py
+
+      - name: Record completed Passes 13-18
+        run: python scripts/record_old_world_gate_c_planning_passes.py
+
+      - name: Persist Gate-C readiness
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- old_world_narrative/registry/heavy_rebuild_state.json
+          if git diff --cached --quiet; then
+            echo 'No Gate-C planning state change to persist.'
+          else
+            git commit -m 'Record active Old World Gate-C planning passes'
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi

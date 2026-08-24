@@ -1,0 +1,83 @@
+name: Materialize Abyssal Assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/materialize_abyssal_sites.yml'
+      - 'tools/abyssal_rebuild/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: materialize-abyssal-assets-main
+  cancel-in-progress: false
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate and verify core abyssal structures
+        run: |
+          python tools/abyssal_rebuild/generate_abyssal_sites.py kubejs/data/infinite_domain/structure/abyssal --verify
+
+      - name: Generate and verify abyssal environmental sites
+        run: |
+          python tools/abyssal_rebuild/generate_abyssal_environmental_sites.py kubejs/data/infinite_domain/structure/abyssal --verify
+
+      - name: Install abyssal quest localization
+        run: |
+          python tools/abyssal_rebuild/update_quest_localization.py config/ftbquests/quests/lang/en_us.snbt
+
+      - name: Reject unrelated generated changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          allowed='^(kubejs/data/infinite_domain/structure/abyssal/(pelagos_abyssal_relay|pelagos_fracture_observatory|pelagos_hadal_probe_station|karsic_abyssal_pipeline_station|karsic_fracture_listening_post|karsic_hadal_blacksite|pelagos_sensor_debris|karsic_pipeline_breach|abyssal_cold_seep|fracture_vent_field|hadal_vent_complex)\.nbt|config/ftbquests/quests/lang/en_us\.snbt)$'
+          while IFS= read -r path; do
+            [[ -z "$path" ]] && continue
+            if [[ ! "$path" =~ $allowed ]]; then
+              echo "Unexpected generated change: $path" >&2
+              exit 1
+            fi
+          done < <(git status --porcelain=v1 | sed -E 's/^.. //')
+
+      - name: Commit materialized assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add \
+            kubejs/data/infinite_domain/structure/abyssal/pelagos_abyssal_relay.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/pelagos_fracture_observatory.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/pelagos_hadal_probe_station.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/karsic_abyssal_pipeline_station.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/karsic_fracture_listening_post.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/karsic_hadal_blacksite.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/pelagos_sensor_debris.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/karsic_pipeline_breach.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/abyssal_cold_seep.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/fracture_vent_field.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/hadal_vent_complex.nbt \
+            config/ftbquests/quests/lang/en_us.snbt
+          if git diff --cached --quiet; then
+            echo 'Abyssal generated assets already match their authorities.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Materialize abyssal generated assets'
+          git push origin HEAD:main

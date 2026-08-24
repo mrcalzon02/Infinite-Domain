@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_050_meridian_firebreak_crater_command_site",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:firebreak_site_six_after_action"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Sterile",
+              "author": "Firebreak Operations Officer",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA VI\nFirebreak Operations Officer",
+                "Firebreak Site Six. Detonation confirmed 04:21. Primary contaminated urban mass eliminated. Thermal zone exceeds sterilization requirement.",
+                "Remote biological sensors show a ninety-eight-point-seven percent decline in detected activity within the operational radius. No friendly ground forces inside exclusion boundary. Civilian evacuation figures remain classified.",
+                "Command assessment: operation successful. The infection can be destroyed. Recommend immediate authorization for additional Firebreak targets while strategic conditions remain favorable.",
+                "We've finally found something that works."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "You Are Distributing It",
+              "author": "Dr. Aron Vale",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA VI\nDr. Aron Vale",
+                "I watched the Firebreak cloud reach the upper troposphere. Command keeps sending me ground-zero biological readings. I know ground zero is sterile. That is not the question.",
+                "You converted a metropolitan ecosystem into particulate debris, heated it, accelerated it vertically, and injected it into a moving atmosphere.",
+                "You are measuring the place you destroyed. I am measuring where pieces of it are going. Our models show surviving biological material downwind beyond the declared containment region.",
+                "Stop approving additional strikes until atmospheric sampling is complete. This is not opposition to military action. This is physics. Stop burning infected cities long enough to measure what the fire is carrying away."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

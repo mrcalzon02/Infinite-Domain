@@ -1,0 +1,111 @@
+name: OWS-004 Gate-B Intact Review
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/old-world-ows004-gate-b.yml'
+      - 'scripts/render_ows004_gate_b_intact*.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: old-world-ows004-gate-b-main
+  cancel-in-progress: true
+
+jobs:
+  render-gate-b:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact intact revision
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Persist run provenance before rendering
+        run: |
+          mkdir -p old_world_narrative/reviews/heavy_rebuild/visual/OWS-004
+          cat > old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/gate_b_workflow_run.json <<EOF
+          {
+            "workflow": "OWS-004 Gate-B Intact Review",
+            "run_id": "${GITHUB_RUN_ID}",
+            "run_attempt": "${GITHUB_RUN_ATTEMPT}",
+            "head_sha": "${GITHUB_SHA}",
+            "active_target": "OWS-004"
+          }
+          EOF
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/gate_b_workflow_run.json
+          git commit -m 'Record OWS-004 Gate-B workflow provenance'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install render dependency
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Resolve latest Gate-B revision
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+          base = Path('scripts/render_ows004_gate_b_intact.py')
+          candidates = [(1, base)] if base.exists() else []
+          for path in Path('scripts').glob('render_ows004_gate_b_intact_r*.py'):
+              match = re.search(r'_r(\d+)\.py$', path.name)
+              if match:
+                  candidates.append((int(match.group(1)), path))
+          if not candidates:
+              raise SystemExit('No OWS-004 Gate-B renderer exists')
+          revision, path = max(candidates)
+          with open(os.environ['GITHUB_ENV'], 'a') as handle:
+              handle.write(f'GATE_B_REVISION=r{revision}\n')
+              handle.write(f'GATE_B_SCRIPT={path.as_posix()}\n')
+          print(f'Using {path} as Gate-B r{revision}')
+          PY
+
+      - name: Compile Gate-B review model
+        run: |
+          python -m py_compile \
+            scripts/generate_wasteland_sites.py \
+            scripts/render_structure_review.py \
+            scripts/render_old_world_heavy_rebuild_review.py \
+            scripts/render_ows004_gate_a_massing.py \
+            scripts/render_ows004_gate_b_intact*.py
+
+      - name: Render latest OWS-004 Gate-B revision
+        run: python "${GATE_B_SCRIPT}"
+
+      - name: Upload Gate-B review artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: old-world-heavy-rebuild-OWS-004-gate-b-${{ env.GATE_B_REVISION }}
+          retention-days: 7
+          path: |
+            old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/
+            old_world_narrative/registry/heavy_rebuild_state.json
+
+      - name: Persist Gate-B artifacts and pending-review state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- \
+            old_world_narrative/reviews/heavy_rebuild/visual/OWS-004/ \
+            old_world_narrative/registry/heavy_rebuild_state.json
+          if git diff --cached --quiet; then
+            echo 'No Gate-B changes to persist.'
+          else
+            git commit -m 'Persist OWS-004 Gate-B intact review artifacts'
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi

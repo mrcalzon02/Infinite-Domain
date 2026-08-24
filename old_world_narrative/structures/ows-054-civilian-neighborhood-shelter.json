@@ -1,0 +1,52 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-054",
+  "structure_id": "infinite_domain:old_world/ows_054_civilian_neighborhood_shelter",
+  "source_structure": "infinite_domain:emergency_relief_shelter_clean_master",
+  "collapse_phase": "Active containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "the existing civic shelter remains visually modest, with improvised yellow wayfinding and crowded relief stock rather than institutional branding",
+    "interior_zoning_circulation": "registration, family sleeping, single sleeping, clinic, food service, stores and resident information remain a complete civilian shelter workflow",
+    "functional_machinery_props": "cots, food crates, cardboard personal stores, basic medical stock and information boards show prolonged civilian occupancy",
+    "institutional_identity": "civilian identity is expressed through personal belongings, handwritten-style information areas and municipal hazard markings rather than a corporate color system",
+    "historical_damage_signature": "overflow bedding and shrinking supply zones show active containment stretching an intact shelter beyond its intended capacity",
+    "narrative_evidence_loot": "guaranteed shelter resident log records ordinary people adapting daily routines to a crisis they still expected institutions to survive"
+  },
+  "proof_item": "kubejs:shelter_resident_log",
+  "lore_record": "kubejs:shelter_resident_log",
+  "audio_diary_ids": [
+    "14a",
+    "14b"
+  ],
+  "audio_diary_loot": "deterministic_same_as_proof_item",
+  "loot_table": "infinite_domain:chests/old_world/ows_054_civilian_neighborhood_shelter",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_054_civilian_neighborhood_shelter 2",
+  "statistics": {
+    "size": [
+      49,
+      18,
+      43
+    ],
+    "placed_blocks": 17782,
+    "palette_states": 50,
+    "modded_blocks": 4002,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 15,
+    "orphan_door_halves": 0,
+    "window_blocks": 524,
+    "functional_fixtures": 13,
+    "vertical_access_span": 11,
+    "dense_floor_levels": 11,
+    "footprint_variants": 15
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

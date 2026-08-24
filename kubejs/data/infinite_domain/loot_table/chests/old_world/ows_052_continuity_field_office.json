@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_052_continuity_field_office",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:continuity_crossdisciplinary_fragment"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Five Different Problems",
+              "author": "Dr. Mara Vey",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA III\nDr. Mara Vey",
+                "First full cross-disciplinary meeting. Vey. Thorne. Kel. Vale. Orlov. Five people who, until two months ago, thought they were studying five different problems.",
+                "Crop persistence. Polymer degradation. Material failure. Atmospheric dispersal. Medical supply dependence. They're the same problem. Or parts of one.",
+                "We covered the wall in incident maps: VCF sites, hospitals, Pleroma warehouses, utility failures, atmospheric detections. The overlaps imply reservoirs we haven't identified.",
+                "Thorne called it a distributed ecosystem. Vale went silent, then asked whether anyone had complete records of international Evercrop shipments. Nobody did. I think Continuity began in that silence."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Administrative Perimeters",
+              "author": "Dr. Elias Thorne",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA IV\nDr. Elias Thorne",
+                "Draft conclusion: the containment perimeter is administrative, not biological. Kel says that's too aggressive for the government brief. Vey says it isn't aggressive enough.",
+                "Orlov says if we phrase it poorly they'll stop reading. So here is the version that will never make the official report: we draw circles around visible fungus, then call everything outside the circle clean.",
+                "That is not science. That is cartography used as emotional support. Keep checkpoints. Keep decontamination. Keep slowing movement.",
+                "But stop pretending absence of visible bloom proves biological absence. It doesn't. We have enough data now to say that. I wish we didn't."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

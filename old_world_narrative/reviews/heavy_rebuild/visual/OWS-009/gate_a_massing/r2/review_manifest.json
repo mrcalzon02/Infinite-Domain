@@ -1,0 +1,39 @@
+{
+  "target": "OWS-009",
+  "gate": "gate_a_massing",
+  "revision": "massing-r2@local",
+  "damage_state": "D0 intact massing only",
+  "source_commit": "working-tree",
+  "source_path": "review-only:render_ows009_gate_a_massing_r2.build_gate_a_massing_r2()",
+  "dimensions": [
+    49,
+    18,
+    41
+  ],
+  "fixed_camera_set": "ows009_fixed_v1",
+  "visual_review_status": "rendered_pending_independent_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": false,
+  "cutaway_y": 10,
+  "views": {
+    "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r2/front_left.png",
+    "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r2/rear_left.png",
+    "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r2/rear_right.png",
+    "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r2/front_right.png",
+    "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r2/roof_top_oblique.png",
+    "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r2/interior_cutaway.png",
+    "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r2/floor_slices.png",
+    "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r2/contact_sheet.png"
+  },
+  "review_model_nbt_sha256": "cbcdb6151de083cb81fd8e3aa52f81c5741901e4b97c3fe977fa15409e05de83",
+  "review_builder_sha256": "4eabfdc2916c464a7f27d4717a0a7b40acad3852957c26858e139c48f5d02c62",
+  "phase0_source_sha256": "d80dfca574d8f96eca633ac515e810f02f52e7eab2f36195977b42708068fe0d",
+  "phase0_source_git_blob": "4b2df6f6d8bcb5a58511318f0fe78f9f5fc1d44a",
+  "phase0_shipping_untouched": true,
+  "gate_a_r1_decision": "REVISION REQUIRED",
+  "changed_positions_from_r1": 1902,
+  "r2_massing_aspects_asserted": 9,
+  "pass7_plus_content_present": false,
+  "authoritative_shipping_modified": false
+}

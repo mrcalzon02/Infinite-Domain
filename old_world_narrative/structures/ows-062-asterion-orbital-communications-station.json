@@ -1,0 +1,52 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-062",
+  "structure_id": "infinite_domain:old_world/ows_062_asterion_orbital_communications_station",
+  "source_structure": "infinite_domain:radio_mast_clean_master",
+  "collapse_phase": "Firebreak Wars",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "the communications mast gains an Asterion blue/white orbital-tracking cabin and instrument crown while retaining its long-range relay silhouette",
+    "interior_zoning_circulation": "ground communications support, tracking equipment, vertical service route, upper relay instrumentation and protected contact archive remain readable",
+    "functional_machinery_props": "sensor arrays, data storage and hardened relay hardware physically support persistent orbital communications",
+    "institutional_identity": "Asterion aerospace colors distinguish orbital traffic from Blackglass terrestrial networking despite shared data technology",
+    "historical_damage_signature": "the station remains structurally useful despite terrestrial collapse, emphasizing communications persistence rather than destruction",
+    "narrative_evidence_loot": "guaranteed orbital contact record proves that off-world crews or systems were still reachable while the surface crisis escalated"
+  },
+  "proof_item": "kubejs:asterion_orbital_contact_record",
+  "lore_record": "kubejs:asterion_orbital_contact_record",
+  "audio_diary_ids": [
+    "24a",
+    "24b"
+  ],
+  "audio_diary_loot": "deterministic_same_as_proof_item",
+  "loot_table": "infinite_domain:chests/old_world/ows_062_asterion_orbital_communications_station",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_062_asterion_orbital_communications_station 2",
+  "statistics": {
+    "size": [
+      15,
+      28,
+      15
+    ],
+    "placed_blocks": 677,
+    "palette_states": 26,
+    "modded_blocks": 391,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "landmark_or_outdoor_site",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 1,
+    "orphan_door_halves": 0,
+    "window_blocks": 4,
+    "functional_fixtures": 7,
+    "vertical_access_span": 0,
+    "dense_floor_levels": 7,
+    "footprint_variants": 6
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

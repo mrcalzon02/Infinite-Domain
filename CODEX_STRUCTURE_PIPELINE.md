@@ -55,6 +55,53 @@ After every meaningful verified batch:
 
 Only create `.codex/structure_pipeline_complete` after **both Stage A and Stage B completion gates** are satisfied.
 
+## Sibling systems out of this pipeline's scope
+
+Stage A and Stage B below govern the **land** structure corpus only —
+inbuilt-schematic auditing and donor-corpus acquisition/rebuild. The
+**deep-sea structure and geological feature system** is a separate,
+independently governed corpus that does not gate on, block, or get folded
+into either stage's completion criteria. Do not conflate the two, and do
+not skip past the deep-sea system as unrelated to "structure work" just
+because it isn't named in Stage A/B below.
+
+Its own authoritative entry points:
+
+- `docs/DEEP_SEA_STRUCTURE_AND_GEOLOGICAL_FEATURE_STANDARDS.md` — the
+  design doctrine and audit standard, playing the role
+  `STRUCTURE_REBUILD_SYSTEM_V2.md` plays for the land corpus.
+- `structure_library/deepsea-metadata.schema.json` — the metadata schema
+  (three-tier `asset_class`: `geological_macro` | `geological_feature` |
+  `structure`).
+- `structure_library/deepsea-catalog.json` — the metadata catalog.
+- `structure_library/deepsea-refinement-policy.json` — the refinement/
+  production-default policy, mirroring `generated-structure-refinement-policy.json`'s
+  role but for this corpus.
+- `structure_library/deepsea-corpus-manifest.json` — the authoritative
+  path map for this corpus, the deep-sea equivalent of
+  `structure_library/corpus-manifest.json`.
+- `scripts/generate_deep_sea_structures.py` — the generator.
+- `scripts/validate_deep_sea_structures.py` — **the deep-sea structure
+  validator**: metadata/schema conformance, source-NBT dimension checks,
+  atmosphere-fill (flooded/dry/mixed-breached compartment) checks,
+  render-color-fidelity checks, and the quarantine placement gate. Run it
+  the same way `validate_structure_corpus.py` is run for the land corpus,
+  but never as a substitute for it or vice versa — the two validate
+  disjoint corpora against disjoint schemas.
+- `scripts/render_deep_sea_review.py` — isometric + floor-slice render
+  evidence generator for this corpus.
+- `docs/DEEP_SEA_STRUCTURE_AUDIT.md` — the disposition ledger, in the same
+  format as `docs/INBUILT_STRUCTURE_AUDIT.md`.
+- `docs/deep-sea-structures.md` — generation notes and known-gap tracking.
+
+If a resumed run's task is deep-sea structure/feature work, read
+`docs/DEEP_SEA_STRUCTURE_AND_GEOLOGICAL_FEATURE_STANDARDS.md` in full
+before touching any of the files above, the same way Stage A/B below
+require reading their own governing documents first. This corpus has no
+`.codex/`-tracked state file of its own yet; its progress lives entirely in
+`docs/DEEP_SEA_STRUCTURE_AUDIT.md`'s ledger and `deepsea-catalog.json`'s
+`production_status` fields.
+
 ## Repository discipline
 
 - Work only on the existing `main` branch. Never create side branches.
@@ -127,7 +174,58 @@ Do not enter Stage B until:
 5. Audit manifests/reports agree with actual assets.
 6. `.codex/structure_pipeline_state.md` contains a final Stage A summary.
 
-When satisfied, begin Stage B immediately if execution capacity remains.
+When satisfied, proceed to Stage A.5, then begin/resume Stage B if execution capacity remains.
+
+---
+
+# STAGE A.5 — Structural Rebuild System v2 Adoption
+
+The first player-scale, in-game review performed against this pipeline's own
+prior output (the review `.codex/structure_pipeline_blocked.md` was blocking
+on) found the existing generated corpus systemically defective: floating
+stairs with no room to climb them, floating windows with no wall, slab roofs
+intruding into walls, damage authored as a clean cube of missing blocks or a
+hazy random scatter, lot surfacing that is the same asphalt-and-gravel pad
+regardless of site context, undetailed solid/hollow interior volumes, and no
+terrain/foundation accommodation for below-grade sites. `assess_fidelity()`
+in `scripts/generate_wasteland_sites.py` — the only automated gate any of
+this passed through — is a door/window/fixture keyword counter; it cannot
+and does not detect any of the above. `structure_library/generated-structure-refinement-policy.json`
+is superseded and now says so in place.
+
+Before resuming or re-running any family rebuild:
+
+1. Read `structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md` in full. It is now
+   the authoritative design doctrine and QA gate for every algorithmically
+   generated structure, superseding the "heavy rebuild" language in Stage B
+   Phase 19 below wherever the two disagree.
+2. Land `scripts/structure_geometry_lint.py` and
+   `scripts/structure_geometry_primitives_v2.py`; wire the lint module into
+   `generate_wasteland_sites.py`'s `generate()` in place of (not merely
+   beside) `assess_fidelity()`, and wire the v2 primitives in as the only
+   sanctioned way to place stairs, ladders, signs, windows, ground plates,
+   foundations, and damage breaches. Verify the swap under real execution
+   before trusting it — this repository's own rule against marking work
+   complete on exit code alone applies to this swap too.
+3. Run `scripts/structure_geometry_lint.py` in standalone mode against every
+   existing corpus `.nbt` to establish the true baseline defect count. Do
+   not trust `structure_library/rebuild-family-roadmap.json` or
+   `structure_library/rebuild-phases.json`'s prior status fields — both have
+   been reset to `requires_regeneration_v2`/empty progress because their
+   prior "completed" state was not evidence-backed.
+4. For each family, in the existing checkpoint-wave order: ensure every
+   member has an authored `structure_library/programs/<id>.json`; rebuild
+   the clean master with the v2 primitives; confirm zero hard-fail lint
+   findings; re-derive damage/occupation variants with the v2 damage
+   operator; confirm zero hard-fail lint findings on the derivatives; render
+   and record the heuristic findings from the damage-coherence and
+   ground-context checks for human review.
+5. Do not mark a family complete on script success alone. A family is
+   complete only when every member has zero hard-fail lint findings.
+   Production approval still requires the human QA-world walkthrough and a
+   `pass` row in `structure_library/review/*.csv` with reviewer and
+   timestamp — this stage does not shortcut that gate, it makes it
+   meaningful.
 
 ---
 
@@ -303,6 +401,8 @@ source original → normalized master → refined master → wasteland variants
 Never destructively refine/damage the only source copy.
 
 ## Phase 19 — Rough-building refinement pipeline
+
+Superseded in detail by `structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md` (see Stage A.5): the geometric requirements below are the original intent, but the concrete rules, the automated QA gate, and the sanctioned primitives now live in that document. Follow it wherever this phase's language is less specific.
 
 Apply controlled passes to imported rough buildings and existing Infinite Domain schematics.
 

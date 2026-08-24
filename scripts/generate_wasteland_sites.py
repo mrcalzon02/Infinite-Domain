@@ -505,9 +505,13 @@ def roadside_apron(t: Template, *, road: tuple[int, int, int, int] | None = None
 
 
 def vehicle_wheels(t: Template, xs: tuple[int, ...], z1: int, z2: int, y: int = 2) -> None:
+    # Wheel columns extend one block below the nominal wheel height to rest
+    # directly on the roadside apron (always y=0). Without this the whole
+    # vehicle body floats a full block above the ground plate with nothing
+    # bridging the gap.
     for x in xs:
-        t.fill((x, y, z1), (x + 1, y + 1, z1), "minecraft:blackstone")
-        t.fill((x, y, z2), (x + 1, y + 1, z2), "minecraft:blackstone")
+        t.fill((x, y - 1, z1), (x + 1, y + 1, z1), "minecraft:blackstone")
+        t.fill((x, y - 1, z2), (x + 1, y + 1, z2), "minecraft:blackstone")
 
 
 def radio_mast_clean_master() -> Template:
@@ -523,6 +527,15 @@ def radio_mast_clean_master() -> Template:
         t.fill((6, y, 8), (8, y, 8), "immersiveengineering:sheetmetal_steel")
         t.fill((6, y, 7), (6, y, 7), "immersiveengineering:sheetmetal_steel")
         t.fill((8, y, 7), (8, y, 7), "immersiveengineering:sheetmetal_steel")
+    # v2 fix: the mast head previously had zero physical connection to the four
+    # corner-only legs below it (nothing occupies the center column at x=7,z=7
+    # until y=24). Bridge the legs through the center at y=24 so the antenna
+    # base, rod, and everything above it sit on genuinely connected geometry.
+    for x, z in ((6, 6), (8, 6), (6, 8), (8, 8)):
+        t.set(x, 24, z, "tfmg:steel_block")
+    t.fill((6, 24, 6), (6, 24, 8), "tfmg:steel_block")
+    t.fill((8, 24, 6), (8, 24, 8), "tfmg:steel_block")
+    t.fill((6, 24, 7), (8, 24, 7), "tfmg:steel_block")
     t.fill((7, 24, 7), (7, 26, 7), "minecraft:polished_blackstone")
     t.set(7, 27, 7, "minecraft:lightning_rod", facing="up", waterlogged="false")
     for x, y, z in ((4, 16, 7), (10, 19, 7), (7, 22, 4), (7, 13, 10)):
@@ -540,6 +553,11 @@ def radio_mast_clean_master() -> Template:
 def radio_mast() -> Template:
     t = radio_mast_clean_master()
     t.clear((8, 18, 6), (10, 24, 8))
+    # v2 fix: that clear strips the x=8-10 side of the (10, 19, 7) instrument
+    # platform but leaves its x=7 stub behind with nothing left to support it
+    # (the platform's only connection ran through the now-cleared x=8 leg).
+    # Remove the orphaned stub instead of leaving damaged-but-floating debris.
+    t.clear((7, 19, 7), (7, 19, 7))
     t.fill((9, 1, 5), (12, 2, 8), "minecraft:gravel")
     t.set(10, 2, 7, "tfmg:steel_block")
     t.set(12, 1, 9, "wastelands:scrap_pile")
@@ -565,6 +583,9 @@ def wrecked_sedan_clean_master() -> Template:
     t.set(3, 3, 4, "minecraft:sea_lantern")
     t.set(3, 3, 6, "minecraft:sea_lantern")
     t.chest(12, 3, 5, "infinite_domain:chests/wasteland_roadside", "east")
+    # The cabin (chest inside) had zero doors anywhere on its boundary. The
+    # north wall is only 1 block thick here, so a single door closes it.
+    door(t, 8, 3, 3, "north", "dark_oak")
     return t
 
 
@@ -612,9 +633,11 @@ def delivery_van() -> Template:
 def battle_tank_clean_master() -> Template:
     t = Template((25, 12, 17))
     roadside_apron(t)
+    # Tracks extend down to y=1 so they rest on the y=0 apron instead of
+    # floating a full block above it with nothing bridging the gap.
     for x in range(4, 18):
-        t.fill((x, 2, 2), (x, 4, 4), "minecraft:blackstone")
-        t.fill((x, 2, 12), (x, 4, 14), "minecraft:blackstone")
+        t.fill((x, 1, 2), (x, 4, 4), "minecraft:blackstone")
+        t.fill((x, 1, 12), (x, 4, 14), "minecraft:blackstone")
     t.fill((3, 4, 4), (19, 6, 12), "minecraft:green_terracotta")
     t.fill((5, 7, 5), (17, 8, 11), "minecraft:green_concrete")
     t.clear((7, 5, 6), (16, 7, 10))
@@ -628,6 +651,11 @@ def battle_tank_clean_master() -> Template:
     t.set(13, 5, 9, "minecraft:dark_oak_stairs", facing="west", half="bottom", shape="straight", waterlogged="false")
     t.chest(16, 5, 8, "infinite_domain:chests/wasteland_military", "east")
     t.set(12, 11, 8, "minecraft:iron_trapdoor", facing="north", half="top", open="false", powered="false", waterlogged="false")
+    # Hull hatch: the crew compartment (furnace, radio, chest) had zero doors
+    # anywhere on its boundary. Breach the inner wall layer and seat a real
+    # door in the outer layer so the hull is actually enterable.
+    t.clear((11, 5, 5), (11, 6, 5))
+    door(t, 11, 5, 4, "north", "iron")
     return t
 
 
@@ -6088,6 +6116,12 @@ def gas_station_clean_master() -> Template:
     t.fill((18, 2, 8), (19, 2, 16), "minecraft:smooth_stone")
     t.set(18, 3, 9, "minecraft:barrel", facing="up", open="false")
     t.set(19, 3, 15, "minecraft:redstone_lamp", lit="false")
+    # The buried fuel vault (barrel + redstone lamp inside) was completely
+    # sealed with no access at all. Open a real maintenance shaft straight
+    # up through the vault roof, the ground slab and the pump-island plate
+    # above it, in the aisle between the two tank chambers, connecting the
+    # vault to the open pump forecourt instead of leaving it unreachable.
+    t.clear((18, 6, 12), (18, 8, 12))
     return t
 
 
@@ -6311,9 +6345,11 @@ def destroyed_refugee_convoy_clean_master() -> Template:
     for x, z, length, color in ((16, 5, 12, "minecraft:white_concrete"), (17, 24, 17, "minecraft:yellow_terracotta"), (16, 46, 8, "minecraft:white_concrete")):
         t.fill((x, 2, z), (x + 10, 6, z + length), color)
         t.clear((x + 2, 3, z + 2), (x + 8, 5, z + length - 2))
+        # Wheel blocks extend down to y=1 so each vehicle body rests on the
+        # y=0 apron instead of floating a full block above it.
         for wz in (z + 2, z + length - 2):
-            t.fill((x - 1, 2, wz), (x, 3, wz + 1), "minecraft:blackstone")
-            t.fill((x + 10, 2, wz), (x + 11, 3, wz + 1), "minecraft:blackstone")
+            t.fill((x - 1, 1, wz), (x, 3, wz + 1), "minecraft:blackstone")
+            t.fill((x + 10, 1, wz), (x + 11, 3, wz + 1), "minecraft:blackstone")
         t.fill((x + 2, 5, z), (x + 8, 6, z), "minecraft:light_blue_stained_glass")
     # Vehicle-class silhouette pass: stepped aid-truck cab, continuous bus
     # glazing and a compact high-roof ambulance replace three equal cuboids.
@@ -6352,6 +6388,17 @@ def destroyed_refugee_convoy_clean_master() -> Template:
         t.fill((x + 4, 9, 18), (x + 5, 9, 31), "minecraft:green_wool")
         bed(t, x + 2, 2, 23, "north", "white")
         t.fill((x + 6, 2, 25), (x + 8, 4, 28), "minecraft:scaffolding")
+        # Both triage/supply tents were fully enclosed (walls on all four
+        # sides, cot inside) with no tent flap anywhere. Breach the north
+        # wall with a real door so each tent is actually enterable.
+        door(t, x + 4, 2, 18, "north", "spruce")
+    # Aid-truck cargo bay (chest inside) and ambulance (bed inside) were also
+    # fully enclosed vehicle hulls with zero doors. Breach the inner wall
+    # layer and seat a real door/doors in the outer layer for each.
+    t.clear((21, 3, 16), (21, 4, 16))
+    door(t, 21, 3, 17, "south", "iron")
+    t.clear((20, 3, 53), (21, 4, 53))
+    double_door(t, 20, 3, 54, "south", "iron")
     return t
 
 

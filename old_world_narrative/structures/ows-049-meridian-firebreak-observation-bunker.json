@@ -1,0 +1,52 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-049",
+  "structure_id": "infinite_domain:old_world/ows_049_meridian_firebreak_observation_bunker",
+  "source_structure": "infinite_domain:bunker_network_clean_master",
+  "collapse_phase": "Firebreak",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "the civil-defense bunker is converted into an orange/red Firebreak observation post with protected viewing and hardened records spaces",
+    "interior_zoning_circulation": "observation intake, operations room, protected communications, blast monitoring, supply reserve and sealed fallback compartments remain legible",
+    "functional_machinery_props": "hardened data storage, command tables, reserve crates and reinforced observation positions support sustained monitoring of destructive containment actions",
+    "institutional_identity": "Meridian Firebreak orange/red operation markings replace earlier civilian shelter identity while yellow hazard boundaries remain",
+    "historical_damage_signature": "sealed fallback rooms and emergency reserve placement show observers expecting their own perimeter to fail while operations continue",
+    "narrative_evidence_loot": "guaranteed Firebreak operations record documents the shift from quarantine and decontamination to deliberate destructive exclusion operations"
+  },
+  "proof_item": "kubejs:firebreak_operations_record",
+  "lore_record": "kubejs:firebreak_operations_record",
+  "audio_diary_ids": [
+    "18a",
+    "18b"
+  ],
+  "audio_diary_loot": "deterministic_same_as_proof_item",
+  "loot_table": "infinite_domain:chests/old_world/ows_049_meridian_firebreak_observation_bunker",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_049_meridian_firebreak_observation_bunker 2",
+  "statistics": {
+    "size": [
+      47,
+      26,
+      47
+    ],
+    "placed_blocks": 17905,
+    "palette_states": 68,
+    "modded_blocks": 8607,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 45,
+    "orphan_door_halves": 0,
+    "window_blocks": 20,
+    "functional_fixtures": 41,
+    "vertical_access_span": 16,
+    "dense_floor_levels": 18,
+    "footprint_variants": 21
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

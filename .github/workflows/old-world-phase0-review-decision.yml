@@ -1,0 +1,51 @@
+name: Old World Phase-0 Review Decision
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/record_old_world_phase0_review.py'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PHASE0_BASELINE_REVIEW.md'
+      - '.github/workflows/old-world-phase0-review-decision.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: old-world-static-build-main
+  cancel-in-progress: true
+
+jobs:
+  record-phase0-decision:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact review revision
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Compile guarded decision recorder
+        run: python -m py_compile scripts/record_old_world_phase0_review.py
+
+      - name: Record already-completed Phase-0 visual decision
+        run: python scripts/record_old_world_phase0_review.py
+
+      - name: Persist Phase-0 decision state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- old_world_narrative/registry/heavy_rebuild_state.json
+          if git diff --cached --quiet; then
+            echo 'No Phase-0 state change to persist.'
+          else
+            git commit -m 'Record active Old World Phase-0 review decision'
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi

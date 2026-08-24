@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-041",
+  "structure_id": "infinite_domain:old_world/ows_041_blackglass_industrial_control_archive",
+  "source_structure": "infinite_domain:industrial_facility_clean_master",
+  "collapse_phase": "Late containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "a black Blackglass control/archive wing is visibly attached to the industrial plant while Atlas-orange and Helion-cyan interface markings remain distinct",
+    "interior_zoning_circulation": "industrial telemetry intake, vendor correlation cells, secure archive core, backup power and records dispatch create a cross-industry evidence chain",
+    "functional_machinery_props": "data drives, controllers, power backup and color-coded Atlas/Helion interfaces physically connect failures previously seen at separate sites",
+    "institutional_identity": "Blackglass security fields contain rather than erase the orange automation and cyan power identities of the systems being monitored",
+    "historical_damage_signature": "late-containment yellow isolation surrounds an archive still ingesting emergency data, showing institutions correlating systemic failure even while losing control",
+    "narrative_evidence_loot": "guaranteed encrypted industrial archive preserves the cross-industry correlation object for later interpretation without implementing Darknet decryption early"
+  },
+  "proof_item": "kubejs:encrypted_industrial_archive",
+  "lore_record": "kubejs:encrypted_industrial_archive",
+  "audio_diary_ids": [],
+  "audio_diary_loot": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_041_blackglass_industrial_control_archive",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_041_blackglass_industrial_control_archive 2",
+  "statistics": {
+    "size": [
+      69,
+      29,
+      57
+    ],
+    "placed_blocks": 42199,
+    "palette_states": 38,
+    "modded_blocks": 9344,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 14,
+    "orphan_door_halves": 0,
+    "window_blocks": 583,
+    "functional_fixtures": 10,
+    "vertical_access_span": 21,
+    "dense_floor_levels": 10,
+    "footprint_variants": 21
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

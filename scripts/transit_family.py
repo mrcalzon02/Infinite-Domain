@@ -214,6 +214,11 @@ def collapsed_airship_terminal_clean_master():
         A.shell(t, (56, 1, z), (64, 31, z + 7), "minecraft:polished_blackstone_bricks", "minecraft:smooth_stone", "minecraft:smooth_stone")
         t.clear((57, 12, z + 1), (63, 20, z + 6))
         A.stair_flight(t, 57, 2, z + 1, 13, "south", "minecraft:stone_brick_stairs")
+        # The 13-step flight climbs 6 steps past the tower shell's far wall
+        # (z + 7), so those upper treads had no backing at all and floated
+        # in open air. A real exterior maintenance-stair wall picks up where
+        # the tower shell leaves off, backing every step through the top.
+        t.fill((56, 9, z + 8), (56, 14, z + 13), "minecraft:polished_blackstone_bricks")
     t.fill((10, 22, 16), (38, 30, 39), "create:framed_glass")
     t.fill((6, 22, 40), (23, 27, 49), "immersiveengineering:sheetmetal_steel")
     return t

@@ -50,9 +50,11 @@
 **/__pycache__/
 **/*.pyc
 
-# The combined resource-pack layer contains compatibility assets whose upstream
-# redistribution rights require a separate file-by-file clearance pass.
-/resourcepacks/
+# Third-party/base resource-pack ZIPs are excluded. Only the combined project pack
+# (LAST_DAYS_INFINITE_DOMAIN_1_21_1) is retained.
+/resourcepacks/*
+!/resourcepacks/LAST_DAYS_INFINITE_DOMAIN_1_21_1.zip
+!/resourcepacks/LAST_DAYS_INFINITE_DOMAIN_1_21_1/
 
 # Generated/reference review payloads are reproducible and may contain upstream art.
 /docs/texture-audit/

@@ -1,0 +1,52 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-064",
+  "structure_id": "infinite_domain:old_world/ows_064_asterion_primary_meridian_launch_complex",
+  "source_structure": "infinite_domain:collapsed_airship_terminal_clean_master",
+  "collapse_phase": "Firebreak Wars -> Post-collapse",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "the large airship-terminal lineage is repurposed into an Asterion launch landmark with blue/white terminal identity, hardened berths and an unmistakable launch-support field",
+    "interior_zoning_circulation": "arrival, mission processing, crew staging, cargo handling, launch-control archive, hardened departure route and abandoned emergency sectors remain distinct",
+    "functional_machinery_props": "reinforced launch aprons, fuel/service manifolds, mission crates, data archives and protected control hardware make the complex function as a terrestrial gateway to off-world infrastructure",
+    "institutional_identity": "Asterion blue/white identity dominates the landmark while red Firebreak emergency fields document the collapse occurring around an institution still trying to launch",
+    "historical_damage_signature": "closed passenger areas, fortified launch access and abandoned emergency staging preserve the transition from active launch center to post-collapse archaeological landmark",
+    "narrative_evidence_loot": "guaranteed primary launch archive closes the Old World physical sequence by preserving launch records, emergency decisions and the final relationship between surface collapse and off-world continuity"
+  },
+  "proof_item": "kubejs:asterion_primary_launch_archive",
+  "lore_record": "kubejs:asterion_primary_launch_archive",
+  "audio_diary_ids": [
+    "23a",
+    "23b"
+  ],
+  "audio_diary_loot": "deterministic_same_as_proof_item",
+  "loot_table": "infinite_domain:chests/old_world/ows_064_asterion_primary_meridian_launch_complex",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_064_asterion_primary_meridian_launch_complex 2",
+  "statistics": {
+    "size": [
+      67,
+      35,
+      57
+    ],
+    "placed_blocks": 55585,
+    "palette_states": 43,
+    "modded_blocks": 14488,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 8,
+    "orphan_door_halves": 0,
+    "window_blocks": 6264,
+    "functional_fixtures": 16,
+    "vertical_access_span": 12,
+    "dense_floor_levels": 18,
+    "footprint_variants": 14
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-045",
+  "structure_id": "infinite_domain:old_world/ows_045_emergency_authority_late_quarantine_fortress",
+  "source_structure": "infinite_domain:military_checkpoint_clean_master",
+  "collapse_phase": "Late containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "the same road-checkpoint lineage is buried under reinforced blocks, grates and red closure markings until it reads as a fortress rather than a screening post",
+    "interior_zoning_circulation": "multiple stop lines, inspection pocket, sealed rejection lane, guarded passage and emergency stock turn simple traffic control into a hardened perimeter",
+    "functional_machinery_props": "reinforced barriers, layered gates, stock crates and permanent exclusion lanes show quarantine consuming increasing material and manpower",
+    "institutional_identity": "Emergency Authority markings remain visible beneath Continuity-adjacent perimeter fragments and increasingly militarized closure colors",
+    "historical_damage_signature": "red permanently closed lanes and duplicated barriers demonstrate a late-containment doctrine built around shrinking passable corridors",
+    "narrative_evidence_loot": "guaranteed Continuity perimeter fragment records the transition from selective quarantine to hardened territorial separation"
+  },
+  "proof_item": "kubejs:continuity_perimeter_fragment",
+  "lore_record": "kubejs:continuity_perimeter_fragment",
+  "audio_diary_ids": [],
+  "audio_diary_loot": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_045_emergency_authority_late_quarantine_fortress",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_045_emergency_authority_late_quarantine_fortress 2",
+  "statistics": {
+    "size": [
+      45,
+      15,
+      31
+    ],
+    "placed_blocks": 5919,
+    "palette_states": 39,
+    "modded_blocks": 2616,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "programmed_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 3,
+    "orphan_door_halves": 0,
+    "window_blocks": 4,
+    "functional_fixtures": 5,
+    "vertical_access_span": 0,
+    "dense_floor_levels": 6,
+    "footprint_variants": 10
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

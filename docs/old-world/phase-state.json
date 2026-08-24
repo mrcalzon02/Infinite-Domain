@@ -1,0 +1,125 @@
+{
+  "schema_version": 4,
+  "program": "Infinite Domain Old World Narrative",
+  "updated": "2026-08-19",
+  "prerequisite_handoff": {
+    "status": "SATISFIED_BY_PROJECT_OWNER_INSPECTION_DIRECTIVE",
+    "accepted_source_structures": 84,
+    "runtime_validation": "PENDING_AND_EXPLICITLY_SEPARATE",
+    "note": "Owner acceptance permits narrative lineage and asset development to proceed without representing runtime checks as complete."
+  },
+  "authority": {
+    "proof_item_registry": "kubejs/config/old_world_evidence.json",
+    "proof_item_registration": "kubejs/startup_scripts/old_world_evidence_items.js",
+    "structure_generation": "scripts/generate_old_world_narrative_structures.py",
+    "structure_core": "scripts/old_world_narrative_core.py",
+    "package_generation": "scripts/build_old_world_narrative.py",
+    "package_core": "scripts/old_world_narrative_package_core.py",
+    "structure_registry": "old_world_narrative/registry/structure_targets.json",
+    "supplemental_lore_items": "kubejs/startup_scripts/old_world_narrative_items.js",
+    "static_validation_workflow": ".github/workflows/old-world-static-build.yml",
+    "note": "One public structure-generation entrypoint and one public package-generation entrypoint own mutations; preserved core modules are implementation components only and cannot independently supersede those entrypoints."
+  },
+  "graphics_recovery": {
+    "vcf_ows_001_008": "accepted_existing_batch",
+    "atlas_ows_009_014": "REJECTED_DISCARDED_PENDING_REAUTHOR",
+    "atlas_failed_outputs_removed_from_active_texture_path": true,
+    "atlas_reauthor_gate": [
+      "inspect successful surrounding pack item art before drawing",
+      "preserve material identity and object-specific silhouette",
+      "review at native size and inventory scale",
+      "compare in nearest-neighbor contact sheet",
+      "accept each object archetype individually before the family is committed"
+    ],
+    "note": "The previous Atlas image-generation pass is not a usable source. File existence or 128x128 dimensions do not constitute visual acceptance."
+  },
+  "worldgen_activation": {
+    "production_status": "STAGED_PENDING_RUNTIME_VALIDATION",
+    "controlled_runtime_target": "OWS-006",
+    "controlled_runtime_target_name": "VCF PT-9 Symbiosis Pilot Laboratory",
+    "controlled_structure_set": "controlled_pt9_probe.json",
+    "runtime_verified_targets": [],
+    "note": "Static NBT, pools, structure definitions and deterministic loot may exist for implemented sites without being admitted to natural worldgen. PT-9 is the sole controlled probe target."
+  },
+  "phases": {
+    "0_handoff_discovery": {
+      "status": "complete"
+    },
+    "1_narrative_infrastructure": {
+      "status": "active",
+      "completed": [
+        "64 proof item IDs frozen",
+        "64 proof item registrations authored from one canonical registry",
+        "institution-specific item archetypes assigned",
+        "VCF proof-item texture batch OWS-001 through OWS-008 retained as the accepted first evidence-art batch",
+        "duplicate proof registration introduced by the merged narrative startup file reconciled",
+        "package regeneration hardened so canonical proof IDs are not re-registered",
+        "single authoritative Old World structure generator established over preserved implementation core",
+        "GitHub static build compiles Python entrypoints before regeneration and validation",
+        "VCF OWS-001 through OWS-008 physically complete as static narrative descendants",
+        "Atlas OWS-009 through OWS-014 physically complete as static narrative descendants",
+        "Atlas OWS-009 through OWS-014 carry deterministic evidence placement and six explicit revision dimensions",
+        "five earlier Old World locations reserve meaningful later Darknet return hooks",
+        "PolyCore OWS-015 and OWS-016 physically implemented as the beginning of the third family",
+        "Old World Investigation FTB Quest chapter seeded with additive locator handoffs and evidence-return tasks",
+        "natural worldgen gated to the controlled OWS-006 PT-9 probe instead of the full static corpus"
+      ],
+      "remaining": [
+        "run controlled fresh-world PT-9 placement and structure-map tests",
+        "verify FTB structure-task completion and guaranteed PT-9 proof chest acquisition",
+        "re-author Atlas proof textures OWS-009 through OWS-014 only after the recovered visual method passes comparison review",
+        "author proof-item PNG textures for OWS-015 through OWS-064 after Atlas art recovery is proven",
+        "continue static site construction institution by institution from OWS-017 onward",
+        "expand lore corpus from the 36 required anchors toward the 96-record minimum",
+        "complete all 13 major Exploration quest titles and dependencies",
+        "promote additional structure families into natural worldgen only after controlled runtime validation"
+      ]
+    },
+    "2_common_structures": {
+      "status": "active_static_runtime_staged",
+      "static_built": 7
+    },
+    "3_uncommon_structures": {
+      "status": "active_static_runtime_staged",
+      "static_built": 5
+    },
+    "4_rare_landmarks": {
+      "status": "active_static_runtime_staged",
+      "static_built": 4
+    },
+    "5_lore_corpus": {
+      "status": "active_seed_only"
+    },
+    "6_exploration_quest_spine": {
+      "status": "active_partial_hooks_prepared"
+    },
+    "7_darknet_archaeology": {
+      "status": "pending_hooks_reserved"
+    },
+    "8_space_transition": {
+      "status": "pending"
+    }
+  },
+  "counts": {
+    "revision_rows": 64,
+    "lineage_sources_selected": 64,
+    "proof_item_ids_defined": 64,
+    "proof_item_registrations_authored": 64,
+    "proof_item_pngs_accepted": 8,
+    "atlas_failed_proof_item_pngs_discarded": 6,
+    "deterministic_proof_loot_tables_built": 16,
+    "narrative_structure_variants_built": 16,
+    "narrative_structure_variants_static_render_reviewed": 16,
+    "narrative_structure_variants_runtime_verified": 0,
+    "controlled_worldgen_targets": 1,
+    "darknet_return_hooks_reserved": 5,
+    "major_exploration_quests_required": 13
+  },
+  "next_static_targets": [
+    "OWS-017",
+    "OWS-018",
+    "OWS-019",
+    "OWS-020",
+    "OWS-021"
+  ]
+}

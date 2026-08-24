@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-029",
+  "structure_id": "infinite_domain:old_world/ows_029_aevum_longevity_treatment_center",
+  "source_structure": "infinite_domain:bombed_hotel_clean_master",
+  "collapse_phase": "Pre-crisis",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Aevum purple and white treatment-center bands convert the hotel-derived tower into an upscale longevity clinic without erasing its comfortable pre-crisis hospitality scale",
+    "interior_zoning_circulation": "reception, consultation suites, repeated treatment rooms, long-term monitoring stations and recovery lounges create a deliberate elective-care sequence",
+    "functional_machinery_props": "quartz treatment couches, privacy glass, biologic tanks, preparation stations and monitoring counters make recurring longevity therapy physically legible",
+    "institutional_identity": "Aevum branding is polished and aspirational, presenting extended healthy lifespan as an ordinary premium service rather than a secret experiment",
+    "historical_damage_signature": "the center remains intact and orderly; the historical signature is normalized long-duration treatment infrastructure rather than crisis damage",
+    "narrative_evidence_loot": "guaranteed Aevum longevity brief establishes that healthy lifespan extension was real, socially desirable and already integrated into normal life"
+  },
+  "proof_item": "kubejs:aevum_longevity_brief",
+  "lore_record": "kubejs:aevum_longevity_brief",
+  "audio_diary_ids": [],
+  "audio_diary_loot": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_029_aevum_longevity_treatment_center",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_029_aevum_longevity_treatment_center 2",
+  "statistics": {
+    "size": [
+      53,
+      39,
+      47
+    ],
+    "placed_blocks": 44469,
+    "palette_states": 58,
+    "modded_blocks": 3069,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 31,
+    "orphan_door_halves": 0,
+    "window_blocks": 576,
+    "functional_fixtures": 134,
+    "vertical_access_span": 27,
+    "dense_floor_levels": 13,
+    "footprint_variants": 20
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

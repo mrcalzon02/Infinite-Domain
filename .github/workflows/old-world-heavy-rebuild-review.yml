@@ -1,0 +1,167 @@
+name: Old World Heavy Rebuild Review
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/run_active_heavy_rebuild_review.py'
+      - 'scripts/render_old_world_heavy_rebuild_review.py'
+      - 'scripts/render_ows*_gate_a_massing*.py'
+      - 'scripts/render_ows*_gate_b_intact*.py'
+      - 'scripts/render_ows*_gate_c_damage_states*.py'
+      - 'scripts/analyze_ows*_gate_c_visuals.py'
+      - 'scripts/record_ows*_planning.py'
+      - 'scripts/record_ows*_gate_c*.py'
+      - 'scripts/record_active_gate_b_review.py'
+      - 'scripts/record_old_world_gate_c_planning_passes.py'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_GATE_B_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_GATE_C_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS13_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS14_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS15_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS16_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS17_*.md'
+      - 'old_world_narrative/reviews/heavy_rebuild/OWS-*_PASS18_*.md'
+      - 'old_world_narrative/registry/heavy_rebuild_state.json'
+      - '.github/workflows/old-world-heavy-rebuild-review.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: old-world-heavy-rebuild-review-main
+  cancel-in-progress: true
+
+jobs:
+  review-active-old-world-target:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact review revision
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install render dependency
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Compile generic review dispatcher
+        run: |
+          python -m py_compile \
+            scripts/run_active_heavy_rebuild_review.py \
+            scripts/render_structure_review.py \
+            scripts/render_old_world_heavy_rebuild_review.py
+          if [ -f scripts/record_active_gate_b_review.py ]; then
+            python -m py_compile scripts/record_active_gate_b_review.py
+          fi
+          if [ -f scripts/record_old_world_gate_c_planning_passes.py ]; then
+            python -m py_compile scripts/record_old_world_gate_c_planning_passes.py
+          fi
+          if [ -f scripts/record_ows003_gate_c_r3_review.py ]; then
+            python -m py_compile scripts/record_ows003_gate_c_r3_review.py
+          fi
+
+      - name: Resolve active heavy-rebuild target
+        run: |
+          ACTIVE_TARGET=$(python -c "import json; print(json.load(open('old_world_narrative/registry/heavy_rebuild_state.json'))['active_target'])")
+          echo "ACTIVE_TARGET=$ACTIVE_TARGET" >> "$GITHUB_ENV"
+          echo "Active heavy-rebuild target: $ACTIVE_TARGET"
+
+      - name: Record guarded active planning state when present
+        run: |
+          TARGET_SLUG=$(echo "$ACTIVE_TARGET" | tr '[:upper:]' '[:lower:]' | tr -d '-')
+          RECORDER="scripts/record_${TARGET_SLUG}_planning.py"
+          if [ -f "$RECORDER" ]; then
+            python -m py_compile "$RECORDER"
+            python "$RECORDER"
+          else
+            echo "No planning recorder for $ACTIVE_TARGET; continuing with persisted state."
+          fi
+
+      # Visual judgment remains external/manual. This generic recorder only mirrors
+      # an already-authored Gate-B PASSED or REVISION REQUIRED decision after the
+      # exact persisted revision manifest exists.
+      - name: Record explicit active Gate-B decision when present
+        run: |
+          if [ -f scripts/record_active_gate_b_review.py ]; then
+            python scripts/record_active_gate_b_review.py
+          fi
+
+      # Passes 13-18 are planning/implementation authority only. This recorder
+      # verifies their explicit completion markers after Gate B and opens Gate C;
+      # it never decides a visual gate.
+      - name: Record guarded Gate-C planning state when present
+        run: |
+          if [ -f scripts/record_old_world_gate_c_planning_passes.py ]; then
+            python scripts/record_old_world_gate_c_planning_passes.py
+          fi
+
+      - name: Render first unresolved active visual gate
+        run: python scripts/run_active_heavy_rebuild_review.py
+
+      # Legacy OWS-003 Gate-C visual judgment is also external/manual. This recorder
+      # only mirrors its already-authored PASSED decision after rechecking artifacts.
+      - name: Record explicit OWS-003 Gate-C r3 decision when present
+        if: env.ACTIVE_TARGET == 'OWS-003'
+        run: |
+          if [ -f old_world_narrative/reviews/heavy_rebuild/OWS-003_GATE_C_R3_REVIEW.md ] && \
+             [ -f old_world_narrative/reviews/heavy_rebuild/visual/OWS-003/gate_c_damage_states/r3/gate_c_manifest.json ]; then
+            python scripts/record_ows003_gate_c_r3_review.py
+          else
+            echo 'OWS-003 Gate-C r3 explicit review/artifact not both present; recorder skipped.'
+          fi
+
+      - name: Record review workflow provenance
+        run: |
+          mkdir -p "old_world_narrative/reviews/heavy_rebuild/visual/$ACTIVE_TARGET"
+          cat > "old_world_narrative/reviews/heavy_rebuild/visual/$ACTIVE_TARGET/workflow_run.json" <<EOF
+          {
+            "workflow": "Old World Heavy Rebuild Review",
+            "run_id": "${GITHUB_RUN_ID}",
+            "run_attempt": "${GITHUB_RUN_ATTEMPT}",
+            "head_sha": "${GITHUB_SHA}",
+            "active_target": "${ACTIVE_TARGET}"
+          }
+          EOF
+
+      - name: Upload active-target visual review bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: old-world-heavy-rebuild-${{ env.ACTIVE_TARGET }}
+          path: |
+            old_world_narrative/reviews/heavy_rebuild/visual/${{ env.ACTIVE_TARGET }}/
+            old_world_narrative/registry/heavy_rebuild_state.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Show review changes
+        run: |
+          git status --short
+          git diff --stat
+
+      - name: Persist review artifacts and gate state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- \
+            old_world_narrative/reviews/heavy_rebuild/visual/ \
+            old_world_narrative/registry/heavy_rebuild_state.json
+          if git diff --cached --quiet; then
+            echo 'No heavy-rebuild review changes to persist.'
+          else
+            git commit -m 'Persist Old World heavy-rebuild visual gate artifacts'
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
+
+# This workflow may render artifacts, run numeric QA, and record already-authored
+# visual decisions. It never authors a visual PASSED decision. Gate D remains
+# owned by the authoritative static build.

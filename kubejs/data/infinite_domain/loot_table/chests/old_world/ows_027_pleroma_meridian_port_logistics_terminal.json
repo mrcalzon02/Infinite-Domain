@@ -1,0 +1,97 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_027_pleroma_meridian_port_logistics_terminal",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:port_emergency_closure_record"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "The Ships Keep Coming",
+              "author": "Pelagos Harbor Coordinator",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA IV\nPelagos Harbor Coordinator",
+                "Another Meridian refugee vessel requested berth. We have nowhere to put them. Quarantine Anchorage is full. Temporary housing is full. Customs warehouse is now a medical ward.",
+                "The government says no additional disembarkation until biological inspection is complete. The ship says they have children without water. Another vessel behind them reports suspected Grey Bloom in the engine spaces.",
+                "Every captain insists they're clean. Every port insists the ships are contaminated. And the sea between us keeps filling with people nobody wants to reject and nobody believes they can safely accept."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Pelagos Goes Silent",
+              "author": "Dr. Aron Vale",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA VIII\nDr. Aron Vale",
+                "No Pelagos atmospheric update today. First missed exchange in eleven years. Blackglass routing attempted three alternates. Nothing. Satellite imagery shows multiple southern port fires.",
+                "Shipping transponders have dropped almost completely. Pelagos was the world's maritime bloodstream. If they're gone, global freight is functionally over. I used to model atmospheric circulation as a separate system from economics.",
+                "Air moved one way. Cargo another. People another. The crisis taught us civilization only looks like separate systems when it's healthy. Under stress, everything becomes the same network. And then the network fails together."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

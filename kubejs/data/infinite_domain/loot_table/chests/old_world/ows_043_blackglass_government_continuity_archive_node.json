@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:chest",
+  "random_sequence": "infinite_domain:chests/old_world/ows_043_blackglass_government_continuity_archive_node",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "kubejs:government_encrypted_archive"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "No Good Option",
+              "author": "Dr. Lena Orlov",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA VI\nDr. Lena Orlov",
+                "Cabinet briefing ended. They asked Continuity for a recommendation. Singular. As though there is one.",
+                "Evacuate the city and food distribution collapses. Keep it open and contamination spreads. Stop APL production and hospitals lose treatments. Continue and biological infrastructure remains active.",
+                "Reject Firebreak and command says we surrender contaminated regions. Approve it and Vale says we accelerate atmospheric transport. Every minister wanted us to tell them which disaster was not real.",
+                "They're all real. This is what collapse looks like from inside government. Not evil. Not stupidity. A room full of exhausted people choosing which unacceptable consequence happens first."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "minecraft:set_book_cover",
+              "title": "Cyranth Evacuation Authority",
+              "author": "Commonwealth Civil Servant",
+              "generation": 0
+            },
+            {
+              "function": "minecraft:set_written_book_pages",
+              "pages": [
+                "AUDIO TRANSCRIPT\nERA VIII\nCommonwealth Civil Servant",
+                "Cyranth evacuation authority confirmed. Government departments are transferring to continuity installations. Essential records only. Families of designated personnel are restricted to one bag per person.",
+                "The public announcement will describe this as decentralization. It is evacuation. I don't know why I'm recording that. Maybe because every document I signed today uses a different word.",
+                "Redeployment. Continuity. Strategic relocation. Administrative dispersal. Nobody wants to write: the capital is being abandoned.",
+                "So there. Now someone has."
+              ],
+              "mode": {
+                "type": "replace_all"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:andesite_alloy",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "immersiveengineering:component_iron",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

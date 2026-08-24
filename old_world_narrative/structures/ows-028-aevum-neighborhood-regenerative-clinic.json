@@ -1,0 +1,52 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-028",
+  "structure_id": "infinite_domain:old_world/ows_028_aevum_neighborhood_regenerative_clinic",
+  "source_structure": "infinite_domain:ruined_cyberware_clinic_clean_master",
+  "collapse_phase": "Pre-crisis",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Aevum purple-and-white clinical bands and a clean regenerative-care blade replace the donor clinic's cyberware identity without requiring a full facade rebuild",
+    "interior_zoning_circulation": "reception leads into four ordinary recovery bays, a biologic preparation counter, follow-up monitoring and a small records point in a calm patient-facing sequence",
+    "functional_machinery_props": "quartz recovery couches, glass privacy screens, biologic fluid tanks and treatment preparation stations make routine regenerative care physically legible",
+    "institutional_identity": "Aevum's clean purple/white medical zoning and repeated recovery-bay layout present the treatment as normalized neighborhood healthcare rather than an elite emergency program",
+    "historical_damage_signature": "the implemented treatment zone is intentionally orderly and substantially intact, establishing a desirable pre-crisis baseline before later Aevum sites show supply dependence and failure",
+    "narrative_evidence_loot": "guaranteed Aevum patient recovery brief documents ordinary successful treatment and supports A CURE FOR AGE without pretending the medicine was fraudulent"
+  },
+  "proof_item": "kubejs:aevum_patient_recovery_brief",
+  "lore_record": null,
+  "audio_diary_ids": [
+    "11a",
+    "11b"
+  ],
+  "audio_diary_loot": "deterministic_same_as_proof_item",
+  "loot_table": "infinite_domain:chests/old_world/ows_028_aevum_neighborhood_regenerative_clinic",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_028_aevum_neighborhood_regenerative_clinic 2",
+  "statistics": {
+    "size": [
+      59,
+      26,
+      51
+    ],
+    "placed_blocks": 31849,
+    "palette_states": 40,
+    "modded_blocks": 3885,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 11,
+    "orphan_door_halves": 0,
+    "window_blocks": 830,
+    "functional_fixtures": 25,
+    "vertical_access_span": 11,
+    "dense_floor_levels": 9,
+    "footprint_variants": 20
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

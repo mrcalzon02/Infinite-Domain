@@ -1,0 +1,52 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-052",
+  "structure_id": "infinite_domain:old_world/ows_052_continuity_field_office",
+  "source_structure": "infinite_domain:ruined_cyberware_clinic_clean_master",
+  "collapse_phase": "Active containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "a repurposed clinic/office receives restrained Continuity white/cyan field markings while its civilian origin remains deliberately visible",
+    "interior_zoning_circulation": "sample intake, biology desk, materials desk, logistics board, shared analysis room and protected records point make cross-disciplinary work spatially obvious",
+    "functional_machinery_props": "small sealed work cells, data storage, sample crates and shared analysis stations show a field team synthesizing evidence rather than running one specialized laboratory",
+    "institutional_identity": "Continuity identity is intentionally composite and low-key, allowing traces of VCF, PolyCore, Pleroma and Helion evidence to coexist in the same office",
+    "historical_damage_signature": "the site remains functional but crowded with evidence from multiple failing systems, making information overload rather than physical destruction the central signature",
+    "narrative_evidence_loot": "guaranteed cross-disciplinary fragment records the moment separate agricultural, material, logistics and atmospheric anomalies are recognized as one system"
+  },
+  "proof_item": "kubejs:continuity_crossdisciplinary_fragment",
+  "lore_record": "kubejs:continuity_crossdisciplinary_fragment",
+  "audio_diary_ids": [
+    "09a",
+    "09b"
+  ],
+  "audio_diary_loot": "deterministic_same_as_proof_item",
+  "loot_table": "infinite_domain:chests/old_world/ows_052_continuity_field_office",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_052_continuity_field_office 2",
+  "statistics": {
+    "size": [
+      59,
+      26,
+      51
+    ],
+    "placed_blocks": 31783,
+    "palette_states": 43,
+    "modded_blocks": 4815,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 14,
+    "orphan_door_halves": 0,
+    "window_blocks": 734,
+    "functional_fixtures": 21,
+    "vertical_access_span": 11,
+    "dense_floor_levels": 10,
+    "footprint_variants": 19
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

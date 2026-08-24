@@ -1,0 +1,26 @@
+{
+  "policy_version": 1,
+  "scope": "all Infinite Domain deep-sea structures and geological features",
+  "production_default": "quarantined",
+  "required_sequence": [
+    "declare asset_class, depth band, biome scope, and (for structures) build style, burial state, access connector",
+    "build and preserve an intact clean master for every structure",
+    "derive damage variants using the controlled damage vocabulary, spatially coherent to one legible cause",
+    "derive occupation variants using the controlled occupation vocabulary",
+    "for a damage variant whose cause is a discrete physical event, derive the event first and author the geometry from it: docs/deepsea-akula-impact-simulation.json is the reference, and validate_deep_sea_structures.py checks the authored attitude against the model rather than trusting that the two still agree",
+    "validate metadata, source-NBT dimensions, and per-compartment atmosphere fill",
+    "render isometric and floor-slice evidence for every derivative",
+    "register worldgen placement behind the quarantine biome tag and log it in docs/biome-gating-audit/ocean-structure-sets.csv",
+    "walk the structure in the QA world and test the access connector against installed submersibles",
+    "admit to production world generation only after explicit human approval"
+  ],
+  "initial_reference": "infinite_domain:deep_sea/coastal_patrol_wreck_clean_master",
+  "wave_2_families": [
+    "infinite_domain:deep_sea/flooded_relay_shelter_clean_master",
+    "infinite_domain:deep_sea/abyssal_mining_rig_clean_master"
+  ],
+  "production_approvals": [],
+  "wave_3_families": [
+    "infinite_domain:deep_sea/akula_project971_clean_master"
+  ]
+}

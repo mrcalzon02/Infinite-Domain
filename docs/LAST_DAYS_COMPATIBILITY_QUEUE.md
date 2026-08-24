@@ -39,3 +39,9 @@ New compatibility work stays at the installed source texture's native dimensions
 The 2026-08-19 LV-capacitor and encased-cogwheel native-pixel attempt failed visual review and was reverted in full. Its flat iconography, weak material description, and simplistic housing bands did not meet the LAST DAYS standard. It is not a completed checkpoint and must not be used as a reference.
 
 Before further compatibility production, one directional machine must be re-authored and reviewed against successful LAST DAYS artwork and its wrapped model. No additional family should be propagated until that single sample is demonstrably successful.
+
+### Current proven scope
+
+- `immersiveengineering:crate` has passed the simple full-cube gate at native 16x16 and is the approved reference for rugged framed timber storage blocks.
+- `immersiveengineering:reinforced_crate` has passed one controlled same-model propagation with explicit timber/steel separation.
+- This approval does not extend to reinforced, festive, directional, animated, connected, or multipart assets. The next gate remains one directional machine with functional face distinctions.

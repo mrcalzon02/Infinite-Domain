@@ -1,0 +1,648 @@
+{
+  "files_scanned": 84,
+  "structures_with_hard_fail_findings": 65,
+  "hard_fail_findings_by_check": {
+    "structural_connectivity": 1495,
+    "opening_wall_coupling": 191,
+    "room_composition": 11,
+    "ladder_backing": 52,
+    "stair_enclosure": 14,
+    "stair_landing": 9
+  },
+  "review_flag_findings_by_check": {
+    "room_composition": 77
+  },
+  "true_total_floating_blocks": 34262,
+  "structural_connectivity_worst_offenders": [
+    [
+      "crashed_cargo_airship_clean_master",
+      10297
+    ],
+    [
+      "excavator_pit_clean_master",
+      6842
+    ],
+    [
+      "collapsed_subway_station_clean_master",
+      4463
+    ],
+    [
+      "collapsed_mine_entrance_clean_master",
+      2646
+    ],
+    [
+      "abandoned_quarry_clean_master",
+      2363
+    ],
+    [
+      "destroyed_refugee_convoy_clean_master",
+      1906
+    ],
+    [
+      "broken_solar_field_clean_master",
+      836
+    ],
+    [
+      "battle_tank_clean_master",
+      806
+    ],
+    [
+      "sunken_highway_interchange_clean_master",
+      504
+    ],
+    [
+      "delivery_van_clean_master",
+      445
+    ],
+    [
+      "ruined_shopping_mall_clean_master",
+      396
+    ],
+    [
+      "district_heating_station_clean_master",
+      360
+    ],
+    [
+      "freight_depot_clean_master",
+      344
+    ],
+    [
+      "nuclear_research_annex_clean_master",
+      343
+    ],
+    [
+      "pancaked_parking_structure_clean_master",
+      220
+    ],
+    [
+      "ruined_courthouse_clean_master",
+      196
+    ],
+    [
+      "wrecked_sedan_clean_master",
+      181
+    ],
+    [
+      "trade_outpost_clean_master",
+      112
+    ],
+    [
+      "decayed_logging_camp_clean_master",
+      110
+    ],
+    [
+      "create_factory_clean_master",
+      109
+    ],
+    [
+      "city_water_treatment_plant_clean_master",
+      75
+    ],
+    [
+      "ruined_rowhouse_block_clean_master",
+      65
+    ],
+    [
+      "bombed_hotel_clean_master",
+      60
+    ],
+    [
+      "sunken_city_front_clean_master",
+      54
+    ],
+    [
+      "ruined_office_tower_clean_master",
+      52
+    ],
+    [
+      "cratered_downtown_intersection_clean_master",
+      46
+    ],
+    [
+      "decayed_ranch_clean_master",
+      43
+    ],
+    [
+      "remote_sawmill_clean_master",
+      36
+    ],
+    [
+      "tenement_courtyard_clean_master",
+      36
+    ],
+    [
+      "ruined_mixed_use_block_clean_master",
+      34
+    ],
+    [
+      "ruined_department_store_clean_master",
+      32
+    ],
+    [
+      "elevated_rail_collapse_clean_master",
+      28
+    ],
+    [
+      "blown_apartment_complex_clean_master",
+      27
+    ],
+    [
+      "wasteland_fire_lookout_clean_master",
+      22
+    ],
+    [
+      "shattered_luxury_condo_clean_master",
+      19
+    ],
+    [
+      "collapsed_airship_terminal_clean_master",
+      12
+    ],
+    [
+      "motel_clean_master",
+      12
+    ],
+    [
+      "ruined_police_precinct_clean_master",
+      12
+    ],
+    [
+      "mountain_biohazard_lab_clean_master",
+      10
+    ],
+    [
+      "ruined_bus_terminal_clean_master",
+      9
+    ],
+    [
+      "abandoned_orchard_cannery_clean_master",
+      8
+    ],
+    [
+      "ae2_records_archive_clean_master",
+      8
+    ],
+    [
+      "ruined_city_school_clean_master",
+      8
+    ],
+    [
+      "ruined_cyberware_clinic_clean_master",
+      8
+    ],
+    [
+      "bombed_data_center_clean_master",
+      7
+    ],
+    [
+      "bunker_network_clean_master",
+      6
+    ],
+    [
+      "ruined_hospital_clean_master",
+      6
+    ],
+    [
+      "split_level_house_clean_master",
+      6
+    ],
+    [
+      "abandoned_culdesac_clean_master",
+      5
+    ],
+    [
+      "mountain_military_complex_clean_master",
+      5
+    ],
+    [
+      "survivor_cache_clean_master",
+      5
+    ],
+    [
+      "corporate_warehouse_clean_master",
+      4
+    ],
+    [
+      "fire_station_clean_master",
+      4
+    ],
+    [
+      "hydroelectric_refuge_dam_clean_master",
+      4
+    ],
+    [
+      "industrial_facility_clean_master",
+      4
+    ],
+    [
+      "cold_industrial_mountain_port_clean_master",
+      2
+    ],
+    [
+      "emergency_relief_shelter_clean_master",
+      2
+    ],
+    [
+      "toppled_skyscraper_clean_master",
+      2
+    ],
+    [
+      "warm_industrial_mountain_port_clean_master",
+      2
+    ],
+    [
+      "decayed_farm_clean_master",
+      1
+    ],
+    [
+      "ruined_community_center_clean_master",
+      1
+    ],
+    [
+      "ruined_ranger_station_clean_master",
+      1
+    ]
+  ],
+  "furnished_sealed_hard_fail_by_structure": {
+    "abandoned_orchard_cannery_clean_master": 1,
+    "battle_tank_clean_master": 1,
+    "destroyed_refugee_convoy_clean_master": 4,
+    "gas_station_clean_master": 1,
+    "ruined_grain_elevator_clean_master": 1,
+    "shattered_greenhouse_nursery_clean_master": 2,
+    "wrecked_sedan_clean_master": 1
+  },
+  "unfurnished_sealed_review_flag_by_structure": {
+    "abandoned_culdesac_clean_master": 5,
+    "abandoned_oil_field_clean_master": 3,
+    "abandoned_orchard_cannery_clean_master": 1,
+    "ae2_records_archive_clean_master": 3,
+    "bombed_data_center_clean_master": 2,
+    "city_water_treatment_plant_clean_master": 3,
+    "collapsed_mine_entrance_clean_master": 3,
+    "collapsed_subway_station_clean_master": 2,
+    "crashed_cargo_airship_clean_master": 1,
+    "cratered_downtown_intersection_clean_master": 5,
+    "decayed_logging_camp_clean_master": 3,
+    "decayed_ranch_clean_master": 1,
+    "delivery_van_clean_master": 1,
+    "destroyed_refugee_convoy_clean_master": 1,
+    "district_heating_station_clean_master": 1,
+    "excavator_pit_clean_master": 1,
+    "gas_station_clean_master": 2,
+    "hydroelectric_refuge_dam_clean_master": 2,
+    "industrial_facility_clean_master": 1,
+    "mountain_military_complex_clean_master": 5,
+    "municipal_incinerator_clean_master": 1,
+    "nuclear_research_annex_clean_master": 1,
+    "remote_sawmill_clean_master": 2,
+    "roadside_church_cemetery_clean_master": 4,
+    "ruined_courthouse_clean_master": 1,
+    "ruined_cyberware_clinic_clean_master": 1,
+    "ruined_fuel_depot_clean_master": 6,
+    "ruined_grain_elevator_clean_master": 5,
+    "ruined_shopping_mall_clean_master": 1,
+    "shattered_luxury_condo_clean_master": 2,
+    "sunken_city_front_clean_master": 4,
+    "tenement_courtyard_clean_master": 2,
+    "wasteland_water_tower_clean_master": 1
+  },
+  "per_structure": {
+    "abandoned_culdesac_clean_master": {
+      "hard_fail": 5,
+      "review_flag": 5
+    },
+    "abandoned_oil_field_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 3
+    },
+    "abandoned_orchard_cannery_clean_master": {
+      "hard_fail": 11,
+      "review_flag": 1
+    },
+    "abandoned_quarry_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 0
+    },
+    "abandoned_truck_stop_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "ae2_records_archive_clean_master": {
+      "hard_fail": 8,
+      "review_flag": 3
+    },
+    "battle_tank_clean_master": {
+      "hard_fail": 42,
+      "review_flag": 0
+    },
+    "blown_apartment_complex_clean_master": {
+      "hard_fail": 59,
+      "review_flag": 0
+    },
+    "bombed_data_center_clean_master": {
+      "hard_fail": 7,
+      "review_flag": 2
+    },
+    "bombed_hotel_clean_master": {
+      "hard_fail": 89,
+      "review_flag": 0
+    },
+    "broken_solar_field_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 0
+    },
+    "bungalow_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "bunker_network_clean_master": {
+      "hard_fail": 10,
+      "review_flag": 0
+    },
+    "buried_bank_vault_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "city_electrical_substation_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "city_water_treatment_plant_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 3
+    },
+    "cold_industrial_mountain_port_clean_master": {
+      "hard_fail": 6,
+      "review_flag": 0
+    },
+    "collapsed_airship_terminal_clean_master": {
+      "hard_fail": 12,
+      "review_flag": 0
+    },
+    "collapsed_mine_entrance_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 3
+    },
+    "collapsed_subway_station_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 2
+    },
+    "corporate_warehouse_clean_master": {
+      "hard_fail": 4,
+      "review_flag": 0
+    },
+    "crashed_cargo_airship_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 1
+    },
+    "cratered_downtown_intersection_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 5
+    },
+    "create_factory_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 0
+    },
+    "decayed_farm_clean_master": {
+      "hard_fail": 5,
+      "review_flag": 0
+    },
+    "decayed_logging_camp_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 3
+    },
+    "decayed_ranch_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 1
+    },
+    "delivery_van_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 1
+    },
+    "destroyed_refugee_convoy_clean_master": {
+      "hard_fail": 45,
+      "review_flag": 1
+    },
+    "district_heating_station_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 1
+    },
+    "elevated_rail_collapse_clean_master": {
+      "hard_fail": 28,
+      "review_flag": 0
+    },
+    "emergency_relief_shelter_clean_master": {
+      "hard_fail": 12,
+      "review_flag": 0
+    },
+    "excavator_pit_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 1
+    },
+    "fire_station_clean_master": {
+      "hard_fail": 4,
+      "review_flag": 0
+    },
+    "freight_depot_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 0
+    },
+    "gas_station_clean_master": {
+      "hard_fail": 1,
+      "review_flag": 2
+    },
+    "grocery_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "hydroelectric_refuge_dam_clean_master": {
+      "hard_fail": 16,
+      "review_flag": 2
+    },
+    "industrial_facility_clean_master": {
+      "hard_fail": 4,
+      "review_flag": 1
+    },
+    "military_checkpoint_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "motel_clean_master": {
+      "hard_fail": 20,
+      "review_flag": 0
+    },
+    "mountain_biohazard_lab_clean_master": {
+      "hard_fail": 25,
+      "review_flag": 0
+    },
+    "mountain_military_complex_clean_master": {
+      "hard_fail": 12,
+      "review_flag": 5
+    },
+    "municipal_incinerator_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 1
+    },
+    "nuclear_research_annex_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 1
+    },
+    "pancaked_parking_structure_clean_master": {
+      "hard_fail": 43,
+      "review_flag": 0
+    },
+    "radio_mast_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "remote_sawmill_clean_master": {
+      "hard_fail": 36,
+      "review_flag": 2
+    },
+    "roadside_church_cemetery_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 4
+    },
+    "ruined_bus_terminal_clean_master": {
+      "hard_fail": 25,
+      "review_flag": 0
+    },
+    "ruined_city_school_clean_master": {
+      "hard_fail": 31,
+      "review_flag": 0
+    },
+    "ruined_community_center_clean_master": {
+      "hard_fail": 19,
+      "review_flag": 0
+    },
+    "ruined_courthouse_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 1
+    },
+    "ruined_cyberware_clinic_clean_master": {
+      "hard_fail": 8,
+      "review_flag": 1
+    },
+    "ruined_department_store_clean_master": {
+      "hard_fail": 34,
+      "review_flag": 0
+    },
+    "ruined_fuel_depot_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 6
+    },
+    "ruined_grain_elevator_clean_master": {
+      "hard_fail": 1,
+      "review_flag": 5
+    },
+    "ruined_hospital_clean_master": {
+      "hard_fail": 6,
+      "review_flag": 0
+    },
+    "ruined_mixed_use_block_clean_master": {
+      "hard_fail": 42,
+      "review_flag": 0
+    },
+    "ruined_office_tower_clean_master": {
+      "hard_fail": 73,
+      "review_flag": 0
+    },
+    "ruined_police_precinct_clean_master": {
+      "hard_fail": 18,
+      "review_flag": 0
+    },
+    "ruined_ranger_station_clean_master": {
+      "hard_fail": 1,
+      "review_flag": 0
+    },
+    "ruined_roadside_diner_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "ruined_rowhouse_block_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 0
+    },
+    "ruined_shopping_mall_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 1
+    },
+    "scrapyard_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "service_garage_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "shattered_greenhouse_nursery_clean_master": {
+      "hard_fail": 4,
+      "review_flag": 0
+    },
+    "shattered_luxury_condo_clean_master": {
+      "hard_fail": 19,
+      "review_flag": 2
+    },
+    "shattered_wind_farm_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "split_level_house_clean_master": {
+      "hard_fail": 6,
+      "review_flag": 0
+    },
+    "sunken_city_front_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 4
+    },
+    "sunken_highway_interchange_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 0
+    },
+    "survivor_cache_clean_master": {
+      "hard_fail": 11,
+      "review_flag": 0
+    },
+    "tenement_courtyard_clean_master": {
+      "hard_fail": 36,
+      "review_flag": 2
+    },
+    "toppled_skyscraper_clean_master": {
+      "hard_fail": 2,
+      "review_flag": 0
+    },
+    "trade_outpost_clean_master": {
+      "hard_fail": 41,
+      "review_flag": 0
+    },
+    "trailer_park_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "warm_industrial_mountain_port_clean_master": {
+      "hard_fail": 6,
+      "review_flag": 0
+    },
+    "wasteland_fire_lookout_clean_master": {
+      "hard_fail": 23,
+      "review_flag": 0
+    },
+    "wasteland_water_tower_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 1
+    },
+    "wasteland_weigh_station_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "wilderness_substation_clean_master": {
+      "hard_fail": 0,
+      "review_flag": 0
+    },
+    "wrecked_sedan_clean_master": {
+      "hard_fail": 42,
+      "review_flag": 0
+    }
+  }
+}

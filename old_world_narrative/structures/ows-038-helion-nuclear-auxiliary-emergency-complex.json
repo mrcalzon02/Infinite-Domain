@@ -1,0 +1,52 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-038",
+  "structure_id": "infinite_domain:old_world/ows_038_helion_nuclear_auxiliary_emergency_complex",
+  "source_structure": "infinite_domain:nuclear_research_annex_clean_master",
+  "collapse_phase": "Late containment -> Firebreak",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Helion cyan auxiliary-system bands are increasingly dominated by red emergency shutdown fields and hardened perimeter work around the nuclear annex",
+    "interior_zoning_circulation": "auxiliary cooling, emergency pumps, backup power, shutdown control, repair stock and protected access form a last-resort plant-support sequence",
+    "functional_machinery_props": "redundant coolant tanks, pumps, high-voltage backup banks, repair crates and hardened barriers show the systems required to shut a reactor down safely",
+    "institutional_identity": "Helion utility coding remains readable underneath military-style emergency restrictions, keeping the site tied to infrastructure rather than weapons research",
+    "historical_damage_signature": "red shutdown zones, isolated coolant circuits and protected repair corridors show late containment crossing into Firebreak-era emergency plant stabilization",
+    "narrative_evidence_loot": "guaranteed reactor emergency log bridges ordinary material degradation to the nuclear and grid emergencies encountered later in the collapse narrative"
+  },
+  "proof_item": "kubejs:helion_reactor_emergency_log",
+  "lore_record": "kubejs:helion_reactor_emergency_log",
+  "audio_diary_ids": [
+    "16a",
+    "16b"
+  ],
+  "audio_diary_loot": "deterministic_same_as_proof_item",
+  "loot_table": "infinite_domain:chests/old_world/ows_038_helion_nuclear_auxiliary_emergency_complex",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_038_helion_nuclear_auxiliary_emergency_complex 2",
+  "statistics": {
+    "size": [
+      73,
+      33,
+      63
+    ],
+    "placed_blocks": 37090,
+    "palette_states": 43,
+    "modded_blocks": 11921,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 5,
+    "orphan_door_halves": 0,
+    "window_blocks": 2141,
+    "functional_fixtures": 39,
+    "vertical_access_span": 7,
+    "dense_floor_levels": 13,
+    "footprint_variants": 24
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

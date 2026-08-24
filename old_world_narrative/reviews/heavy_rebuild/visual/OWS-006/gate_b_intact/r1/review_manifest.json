@@ -1,0 +1,39 @@
+{
+  "target": "OWS-006",
+  "gate": "gate_b_intact",
+  "revision": "intact-r1@local",
+  "damage_state": "D0 intact / operational",
+  "source_commit": "working-tree",
+  "source_path": "review-only:render_ows006_gate_b_intact.build_gate_b_intact()",
+  "dimensions": [
+    59,
+    26,
+    51
+  ],
+  "fixed_camera_set": "ows006_fixed_v1",
+  "visual_review_status": "rendered_pending_manual_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": false,
+  "cutaway_y": 7,
+  "views": {
+    "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-006/gate_b_intact/r1/front_left.png",
+    "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-006/gate_b_intact/r1/rear_left.png",
+    "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-006/gate_b_intact/r1/rear_right.png",
+    "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-006/gate_b_intact/r1/front_right.png",
+    "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-006/gate_b_intact/r1/roof_top_oblique.png",
+    "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-006/gate_b_intact/r1/interior_cutaway.png",
+    "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-006/gate_b_intact/r1/floor_slices.png",
+    "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-006/gate_b_intact/r1/contact_sheet.png"
+  },
+  "review_model_nbt_sha256": "fb1a6c530a3731794547c429e56ab47d93e7082b1157ca255f2790b900a5749e",
+  "review_builder_sha256": "373cd82cacd35ebddc11ed9177f7b6875fe48b9e96addd2ea6b79d073f8f8c5c",
+  "gate_a_model_sha256": "76c05221b6f837f6aef074867387c028d63dc9bd90649e864062509882988a88",
+  "placed_positions": 18269,
+  "gate_a_frozen_aspects_asserted": 10,
+  "gate_b_obligations_implemented": 6,
+  "proof_encounters_damage_present": false,
+  "authoritative_shipping_modified": false,
+  "shipping_nbt_git_blob_before": "0ae864e9fe9f69dbf249173e71aeac605e6aaf03",
+  "shipping_nbt_git_blob_after": "0ae864e9fe9f69dbf249173e71aeac605e6aaf03"
+}

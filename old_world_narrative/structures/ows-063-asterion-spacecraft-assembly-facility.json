@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-063",
+  "structure_id": "infinite_domain:old_world/ows_063_asterion_spacecraft_assembly_facility",
+  "source_structure": "infinite_domain:create_factory_clean_master",
+  "collapse_phase": "Late containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Asterion blue high-bay assembly markings and a white aerospace crown transform the Create factory lineage into a spacecraft production hall",
+    "interior_zoning_circulation": "component receiving, structural assembly cells, systems integration, tank/service preparation, inspection and evacuation staging form a clear production sequence",
+    "functional_machinery_props": "presses, casings, fluid tanks, integration stock and mission crates make advanced vehicle assembly legible using the pack's industrial language",
+    "institutional_identity": "Asterion aerospace branding overlays recognizable Atlas/Create-style automation, showing the space program drawing on the wider industrial base",
+    "historical_damage_signature": "red evacuation lanes cut through an otherwise active assembly floor, showing personnel withdrawal occurring before all spacecraft work stopped",
+    "narrative_evidence_loot": "guaranteed assembly evacuations order records the conflict between preserving launch capability and removing workers from a collapsing region"
+  },
+  "proof_item": "kubejs:asterion_assembly_evacuations_order",
+  "lore_record": "kubejs:asterion_assembly_evacuations_order",
+  "audio_diary_ids": [],
+  "audio_diary_loot": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_063_asterion_spacecraft_assembly_facility",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_063_asterion_spacecraft_assembly_facility 2",
+  "statistics": {
+    "size": [
+      47,
+      27,
+      37
+    ],
+    "placed_blocks": 20800,
+    "palette_states": 67,
+    "modded_blocks": 4939,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 10,
+    "orphan_door_halves": 0,
+    "window_blocks": 208,
+    "functional_fixtures": 57,
+    "vertical_access_span": 6,
+    "dense_floor_levels": 17,
+    "footprint_variants": 19
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

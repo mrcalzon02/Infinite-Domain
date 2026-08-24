@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-008",
+  "structure_id": "infinite_domain:old_world/ows_008_vcf_emergency_persistence_investigation_lab",
+  "source_structure": "infinite_domain:mountain_biohazard_lab_clean_master",
+  "collapse_phase": "Active containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "VCF green emergency-lab markings are overpainted by yellow containment bands and repeated clean-zone numbering",
+    "interior_zoning_circulation": "dirty intake, sterilization sequence, clean-room checks, service-joint inspection, persistence testing and incident archive require repeated boundary crossings",
+    "functional_machinery_props": "wash piping, sealed observation rooms, sample benches and deliberately exposed service joints reproduce failed decontamination pathways",
+    "institutional_identity": "VCF bioscience branding survives beneath increasingly dominant containment colors, showing a commercial lab becoming an emergency investigation site",
+    "historical_damage_signature": "mycelial contamination reappears along service seams after multiple sterilization zones, turning procedural failure itself into the physical story",
+    "narrative_evidence_loot": "guaranteed persistence incident file documents repeated clean-room breaches and establishes that procedure changes could not restore containment"
+  },
+  "proof_item": "kubejs:vcf_persistence_incident_file",
+  "lore_record": null,
+  "audio_diary_ids": [],
+  "audio_diary_loot": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_008_vcf_emergency_persistence_investigation_lab 2",
+  "statistics": {
+    "size": [
+      55,
+      22,
+      49
+    ],
+    "placed_blocks": 29421,
+    "palette_states": 74,
+    "modded_blocks": 4372,
+    "spawners": 3,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 59,
+    "orphan_door_halves": 0,
+    "window_blocks": 878,
+    "functional_fixtures": 694,
+    "vertical_access_span": 13,
+    "dense_floor_levels": 17,
+    "footprint_variants": 20
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

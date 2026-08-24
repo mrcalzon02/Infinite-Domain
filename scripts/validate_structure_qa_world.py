@@ -24,21 +24,37 @@ def string_values(tag):
             yield from string_values(child)
 
 
+def function_names(base: Path, exclude: frozenset[str] = frozenset()) -> list[str]:
+    """Names of every *.mcfunction file under base, recursively, expressed as
+    the path relative to base with the extension stripped (e.g. a file at
+    base/old_world/ows_001.mcfunction becomes "old_world/ows_001"). A plain
+    .glob("*.mcfunction") only sees files directly inside base and a bare
+    .stem drops any subdirectory prefix, so both would silently undercount
+    and misname structures whose id contains a "/" (e.g. old_world targets)."""
+    names = []
+    for candidate in base.rglob("*.mcfunction"):
+        relative = candidate.relative_to(base).with_suffix("").as_posix()
+        if relative in exclude or candidate.stem in exclude:
+            continue
+        names.append(relative)
+    return sorted(names)
+
+
 def main() -> None:
     expected_structures = builder.structure_names()
     expected_roads = builder.road_names()
     expected_modules = builder.module_names()
     expected_blocks = builder.block_samples()
     failures = []
-    structure_functions = sorted(path.stem for path in (FUNCTIONS / "structure").glob("*.mcfunction"))
+    structure_functions = function_names(FUNCTIONS / "structure")
     controls_complete = set(structure_functions) == set(expected_structures) and len(structure_functions) == len(expected_structures)
     if not controls_complete:
-        failures.append("individual structure controls disagree with the authoritative 84-structure manifest")
-    road_functions = sorted(path.stem for path in (FUNCTIONS / "road").glob("*.mcfunction"))
+        failures.append(f"individual structure controls disagree with the authoritative {len(expected_structures)}-structure manifest")
+    road_functions = function_names(FUNCTIONS / "road")
     road_controls_complete = set(road_functions) == set(expected_roads) and len(road_functions) == len(expected_roads)
     if not road_controls_complete:
         failures.append("individual road controls disagree with the modular road catalog")
-    module_functions = sorted(path.stem for path in (FUNCTIONS / "module").glob("*.mcfunction"))
+    module_functions = function_names(FUNCTIONS / "module")
     module_controls_complete = set(module_functions) == set(expected_modules) and len(module_functions) == len(expected_modules)
     if not module_controls_complete:
         failures.append("individual structure-module controls disagree with the reusable kit catalog")
@@ -51,7 +67,7 @@ def main() -> None:
     module_build_all = sorted((FUNCTIONS / "module_all").glob("*.mcfunction"))
     if len(module_build_all) != len(expected_modules) + 1:
         failures.append("module BUILD ALL chain does not contain one batch per module plus its entrypoint")
-    rotation_functions = sorted(path.stem for path in (FUNCTIONS / "rotation").glob("*.mcfunction") if path.stem not in {"next", "reset"})
+    rotation_functions = function_names(FUNCTIONS / "rotation", exclude=frozenset({"next", "reset"}))
     rotation_harness_complete = set(rotation_functions) == set(expected_structures) and len(rotation_functions) == len(expected_structures)
     if not rotation_harness_complete:
         failures.append("four-way rotation harness does not cover every authoritative structure")
@@ -61,11 +77,11 @@ def main() -> None:
             if rotation not in text:
                 failures.append(f"rotation/{name} is missing placement orientation {rotation.strip().split()[0]}")
     clean_roads = [name for name in expected_roads if name.endswith("__clean")]
-    road_rotation_functions = sorted(path.stem for path in (FUNCTIONS / "road_rotation").glob("*.mcfunction") if path.stem not in {"next", "reset"})
+    road_rotation_functions = function_names(FUNCTIONS / "road_rotation", exclude=frozenset({"next", "reset"}))
     road_rotation_harness_complete = set(road_rotation_functions) == set(clean_roads) and len(road_rotation_functions) == len(clean_roads)
     if not road_rotation_harness_complete:
         failures.append("four-way road rotation harness does not cover all clean topology families")
-    module_rotation_functions = sorted(path.stem for path in (FUNCTIONS / "module_rotation").glob("*.mcfunction") if path.stem not in {"next", "reset"})
+    module_rotation_functions = function_names(FUNCTIONS / "module_rotation", exclude=frozenset({"next", "reset"}))
     module_rotation_harness_complete = set(module_rotation_functions) == set(expected_modules) and len(module_rotation_functions) == len(expected_modules)
     if not module_rotation_harness_complete:
         failures.append("four-way module rotation harness does not cover all reusable structure modules")

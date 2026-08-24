@@ -1,0 +1,59 @@
+{
+  "target": "OWS-001",
+  "gate": "gate_c_damage_states",
+  "revision": "r1",
+  "analysis": "actual rendered PNG pixels; camera titles cropped and floor-map labels excluded",
+  "camera_set": "ows001_fixed_v1",
+  "visible_change_ratio": {
+    "d1_from_d0": {
+      "front_left": 0.0,
+      "rear_left": 0.0,
+      "rear_right": 0.0,
+      "front_right": 0.0,
+      "interior_cutaway": 0.0025592652715014843
+    },
+    "d3_from_d0": {
+      "front_left": 0.01651557182486344,
+      "rear_left": 0.01677435387673956,
+      "rear_right": 0.01407804338142994,
+      "front_right": 0.018923647561060956,
+      "interior_cutaway": 0.01589669342926922
+    }
+  },
+  "floor_map_visible_change_ratio": {
+    "d1_from_d0": 0.016561514195583597,
+    "d3_from_d0": 0.04878048780487805
+  },
+  "foreground_silhouette_ratio": {
+    "d1_vs_d0": {
+      "front_left": 1.0,
+      "rear_left": 1.0,
+      "rear_right": 1.0,
+      "front_right": 1.0,
+      "interior_cutaway": 1.0
+    },
+    "d3_vs_d0": {
+      "front_left": 0.9999428032144594,
+      "rear_left": 1.0,
+      "rear_right": 1.0,
+      "front_right": 0.9999440128770383,
+      "interior_cutaway": 0.99994150250808
+    }
+  },
+  "averages": {
+    "d1_all_isometric_views": 0.0005118530543002968,
+    "d3_all_isometric_views": 0.016437662014672623,
+    "d1_exterior": 0.0,
+    "d3_exterior": 0.016572904161023475
+  },
+  "checks": {
+    "d1_visibly_present_in_internal_review": true,
+    "d1_restrained": true,
+    "d3_visibly_stronger_than_d1": true,
+    "d3_visible_from_multiple_exterior_cameras": true,
+    "d1_exterior_silhouette_retained": true,
+    "d3_exterior_silhouette_retained": true
+  },
+  "decision": "IMAGE_LEVEL_CHECKS_PASSED_PENDING_REVIEW",
+  "note": "Numeric image QA is a blocking safeguard, not an automatic Gate-C visual approval."
+}

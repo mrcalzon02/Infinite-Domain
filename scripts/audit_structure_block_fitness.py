@@ -11,6 +11,7 @@ from convert_nbt_to_lostcities import load_structure
 
 STRUCTURES = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland"
 REPORT = ROOT / "docs" / "structure-block-fitness-audit.json"
+ALLOWLIST = ROOT / "structure_library" / "approved-functional-block-exceptions.json"
 DIRECTIONAL = {"facing", "axis", "orientation", "horizontal_facing", "face"}
 FUNCTIONAL_TERMS = {
     "basin", "bearing", "boiler", "burner", "cable", "capacitor", "chute", "compressor",
@@ -91,18 +92,62 @@ def main() -> None:
             "implicit_directional_states": implicit,
         })
 
+    allowlist_document = json.loads(ALLOWLIST.read_text(encoding="utf-8")) if ALLOWLIST.exists() else {"approved_exceptions": []}
+    allowed = {
+        entry["block"]: entry
+        for entry in allowlist_document.get("approved_exceptions", [])
+    }
+    failures = []
+    violations = []
+    for record in records:
+        if not record["functional_or_machine"]:
+            continue
+        exception = allowed.get(record["block"])
+        if exception is None:
+            violations.append({
+                "block": record["block"],
+                "placements": record["placements"],
+                "structures": record["structures"],
+                "reason": "live-functional/machine block used as structure set dressing with no approved exception on file",
+            })
+            continue
+        allowed_structures = set(exception.get("structures", []))
+        unlisted = sorted(set(record["structures"]) - allowed_structures) if allowed_structures else []
+        if unlisted:
+            violations.append({
+                "block": record["block"],
+                "placements": record["placements"],
+                "structures": unlisted,
+                "reason": f"placed in structures not covered by its approved exception (approved for: {sorted(allowed_structures) or 'none listed'})",
+            })
+    if violations:
+        failures.append(
+            f"{len(violations)} live-functional/machine block type(s) are placed as structure set dressing without an "
+            f"approved exception in {ALLOWLIST.relative_to(ROOT).as_posix()} "
+            "(see docs/RUINED_FUNCTIONAL_BLOCKS.md for the required vanilla/ruined-equivalent stand-ins)"
+        )
+
     report = {
         "templates_scanned": len(files),
         "modded_block_types": len(records),
-        "policy": "Vanilla stable blocks are the default. Modded functional, directional, connective, kinetic, fluid and block-entity blocks require an explicit purpose and verified state.",
+        "policy": "Vanilla stable blocks are the default. No live-functional/machine block may be placed as structure set dressing "
+                  "unless it has an explicit, structure-scoped exception in approved-functional-block-exceptions.json; the "
+                  "required default is a vanilla proxy or, where one exists, an infinite_domain:ruined_* decorative equivalent. "
+                  "Modded directional, connective, kinetic, fluid and block-entity blocks otherwise require an explicit purpose "
+                  "and verified state.",
         "implicit_directional_states": implicit_directional,
         "connective_block_types": sorted(connective),
+        "functional_block_violations": violations,
+        "gate_passed": not failures,
         "modded_usage": records,
     }
     REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(f"Scanned {len(files)} templates containing {len(records)} modded block types")
     print(f"Implicit directional states: {len(implicit_directional)}")
     print(f"Connective modded block types requiring placement review: {len(connective)}")
+    print(f"Functional/machine block violations: {len(violations)}")
+    if failures:
+        raise SystemExit("Structure block-fitness gate failed:\n- " + "\n- ".join(failures))
 
 
 if __name__ == "__main__":

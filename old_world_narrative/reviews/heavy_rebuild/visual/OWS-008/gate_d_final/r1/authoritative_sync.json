@@ -1,0 +1,119 @@
+{
+  "target": "OWS-008",
+  "gate": "gate_d_final",
+  "revision": "gate-d-r1@74a229a6",
+  "spec_name": "ows_008_vcf_emergency_persistence_investigation_lab",
+  "authoritative_dispatch": "generate_old_world_narrative_structures.BUILDERS['OWS-008']",
+  "authoritative_builder": "old_world_ows008_final.build_008",
+  "accepted_gate_c_d3_sha256": "6de9ee39cde02c1ea298a7352c9b4eb6502a21ff6696b6c972795769efc33f36",
+  "production_door_stabilization_applied": true,
+  "shipping_nbt": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab.nbt",
+  "production_python": "C:\\Users\\Admin\\AppData\\Local\\Python\\bin\\python.exe",
+  "serialized_nbt_bytes": 84708,
+  "decompressed_nbt_bytes": 1071664,
+  "builder_serialization_sha256": "3dcf761116820064dee5a2071254f2b2255a7faa1c2312f7b74057320980c7ff",
+  "shipping_nbt_sha256": "3dcf761116820064dee5a2071254f2b2255a7faa1c2312f7b74057320980c7ff",
+  "builder_decompressed_nbt_sha256": "40b0aae49bcf04bee75c63097ede66315a5d0da705987ff15c948d5263ef7753",
+  "shipping_decompressed_nbt_sha256": "40b0aae49bcf04bee75c63097ede66315a5d0da705987ff15c948d5263ef7753",
+  "exact_serialized_nbt_match": true,
+  "exact_decompressed_nbt_match": true,
+  "dimensions": [
+    55,
+    22,
+    49
+  ],
+  "positions_in_bounds": true,
+  "pass19_microdetail": {
+    "(7, 3, 38)": "minecraft:cobweb",
+    "(9, 2, 38)": "minecraft:brown_mushroom",
+    "(18, 2, 42)": "minecraft:red_mushroom",
+    "(28, 3, 41)": "minecraft:cobweb",
+    "(36, 2, 42)": "minecraft:brown_mushroom",
+    "(48, 2, 40)": "minecraft:red_mushroom",
+    "(49, 3, 36)": "minecraft:cobweb",
+    "(50, 2, 40)": "minecraft:brown_mushroom"
+  },
+  "pass19_positions_verified": 8,
+  "canonical_proof_position": [
+    12,
+    14,
+    29
+  ],
+  "canonical_proof_nodes": 1,
+  "spawner_positions": [
+    [
+      51,
+      2,
+      24
+    ],
+    [
+      14,
+      2,
+      34
+    ],
+    [
+      14,
+      2,
+      41
+    ]
+  ],
+  "deterministic_spawners": 3,
+  "protected_route_positions": [
+    [
+      25,
+      2,
+      5
+    ],
+    [
+      27,
+      2,
+      15
+    ],
+    [
+      11,
+      2,
+      30
+    ],
+    [
+      22,
+      2,
+      29
+    ],
+    [
+      33,
+      2,
+      27
+    ],
+    [
+      45,
+      2,
+      25
+    ],
+    [
+      28,
+      2,
+      44
+    ],
+    [
+      12,
+      14,
+      28
+    ]
+  ],
+  "protected_routes_clear": true,
+  "required_block_counts": {
+    "minecraft:lime_concrete": 623,
+    "minecraft:yellow_concrete": 477,
+    "create:framed_glass": 878,
+    "create:fluid_pipe": 617,
+    "minecraft:mycelium": 84,
+    "minecraft:brown_mushroom": 17
+  },
+  "canonical_proof_loot_table": "infinite_domain:chests/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
+  "canonical_proof_loot_table_references": 1,
+  "render_source": "shipping_nbt",
+  "fixed_camera_set": "ows008_fixed_v1",
+  "fixed_cutaway_y": 7,
+  "review_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_d_final/r1/review_manifest.json",
+  "final_preview_synchronized_with_authoritative_nbt": true
+}

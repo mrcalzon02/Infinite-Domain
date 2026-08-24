@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-018",
+  "structure_id": "infinite_domain:old_world/ows_018_polycore_ceramic_isolation_test_center",
+  "source_structure": "infinite_domain:nuclear_research_annex_clean_master",
+  "collapse_phase": "Active containment",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "PolyCore magenta retrofit bands and a white ceramic-isolation crown distinguish the annex while preserving its containment silhouette",
+    "interior_zoning_circulation": "three bench-scale isolation cells progress from ceramic to ceramic-metal hybrid trials before the route reaches the full-scale containment chamber and records store",
+    "functional_machinery_props": "insulating-glass observation cells, mineral barrier coupons, steel backing plates, retrofit stock and the retained containment plant support comparative isolation testing",
+    "institutional_identity": "PolyCore magenta/white zone coding and numbered ceramic test bays make the emergency substitution program legible without rebuilding the donor architecture",
+    "historical_damage_signature": "successive cells show larger isolation fields and localized breaches while the full-scale ring carries a patched ceramic-metal shell, demonstrating delay rather than immunity",
+    "narrative_evidence_loot": "guaranteed ceramic isolation result records that non-polymer barriers extended service life but still failed after environmental contamination"
+  },
+  "proof_item": "kubejs:polycore_ceramic_isolation_result",
+  "lore_record": null,
+  "audio_diary_ids": [],
+  "audio_diary_loot": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_018_polycore_ceramic_isolation_test_center",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_018_polycore_ceramic_isolation_test_center 2",
+  "statistics": {
+    "size": [
+      73,
+      33,
+      63
+    ],
+    "placed_blocks": 36441,
+    "palette_states": 43,
+    "modded_blocks": 11264,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 9,
+    "orphan_door_halves": 0,
+    "window_blocks": 2819,
+    "functional_fixtures": 2,
+    "vertical_access_span": 7,
+    "dense_floor_levels": 14,
+    "footprint_variants": 23
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

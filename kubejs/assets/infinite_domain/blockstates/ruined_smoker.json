@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "infinite_domain:block/ruined_smoker"
+    },
+    "facing=south": {
+      "model": "infinite_domain:block/ruined_smoker",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "infinite_domain:block/ruined_smoker",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "infinite_domain:block/ruined_smoker",
+      "y": 90
+    }
+  }
+}

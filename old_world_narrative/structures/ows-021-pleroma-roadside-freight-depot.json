@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-021",
+  "structure_id": "infinite_domain:old_world/ows_021_pleroma_roadside_freight_depot",
+  "source_structure": "infinite_domain:freight_depot_clean_master",
+  "collapse_phase": "Pre-crisis",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "cyan-and-white Pleroma dispatch bands and a simple depot blade distinguish the site without changing the donor's freight silhouette",
+    "interior_zoning_circulation": "road apron, warehouse stock, dispatch board, truck court and rail approaches remain separate and readable while branded freight occupies each handoff point",
+    "functional_machinery_props": "stacked crates, packaged cartons, marked loading lanes and dispatch stock make the depot read as an ordinary working logistics node",
+    "institutional_identity": "repeated cyan routing marks and standardized freight groupings establish Pleroma as a mundane recurring carrier rather than an exceptional crisis institution",
+    "historical_damage_signature": "the facility remains substantially normal and organized, preserving the pre-crisis baseline needed for later Pleroma sites to show degradation",
+    "narrative_evidence_loot": "guaranteed Pleroma dispatch manifest proves the brand's routine participation in ordinary regional freight movement"
+  },
+  "proof_item": "kubejs:pleroma_dispatch_manifest",
+  "lore_record": null,
+  "audio_diary_ids": [],
+  "audio_diary_loot": null,
+  "loot_table": "infinite_domain:chests/old_world/ows_021_pleroma_roadside_freight_depot",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_021_pleroma_roadside_freight_depot 2",
+  "statistics": {
+    "size": [
+      47,
+      27,
+      37
+    ],
+    "placed_blocks": 15297,
+    "palette_states": 55,
+    "modded_blocks": 3775,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "multi_story_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 7,
+    "orphan_door_halves": 0,
+    "window_blocks": 284,
+    "functional_fixtures": 41,
+    "vertical_access_span": 6,
+    "dense_floor_levels": 14,
+    "footprint_variants": 17
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}

@@ -1,0 +1,62 @@
+{
+  "target": "OWS-010",
+  "gate": "gate_a_massing",
+  "revision": "massing-r2@74a229a6",
+  "damage_state": "D0 intact massing only",
+  "source_commit": "74a229a6a45e650b2f1d8ccfec8802fc99ed2681",
+  "source_path": "review-only:render_ows010_gate_a_massing_r2.build_gate_a_massing_r2()",
+  "dimensions": [
+    49,
+    16,
+    43
+  ],
+  "fixed_camera_set": "ows010_fixed_v1",
+  "visual_review_status": "rendered_pending_independent_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": false,
+  "cutaway_y": 7,
+  "views": {
+    "front_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r2/front_left.png",
+    "rear_left": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r2/rear_left.png",
+    "rear_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r2/rear_right.png",
+    "front_right": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r2/front_right.png",
+    "roof_top_oblique": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r2/roof_top_oblique.png",
+    "interior_cutaway": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r2/interior_cutaway.png",
+    "floor_slices": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r2/floor_slices.png",
+    "contact_sheet": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r2/contact_sheet.png"
+  },
+  "review_model_nbt_sha256": "784e37d03c8f8eea79ca57db14b85ca70e0c517a3e25e506d073a34dd9f1573d",
+  "review_builder_sha256": "4f27e0ba8fd95fdaa99ff6e2b177ad8ef2c9ffec3572c70a1e7dcb450ad8ad66",
+  "review_model_non_air_blocks": 11488,
+  "review_model_occupied_bounds": {
+    "min": [
+      0,
+      0,
+      0
+    ],
+    "max": [
+      48,
+      15,
+      42
+    ]
+  },
+  "r1_review_model_nbt_sha256": "f0296bc3de982f3cde027e9f87221be3e07add11cd073377f0b7664aa61165c7",
+  "phase0_source_sha256": "5e9390d3d41663f1baef6ad017e941dbf6153d168bb9100a8a5fd46193d9035a",
+  "phase0_source_git_blob": "be2ab341c2d252c975711caa93e92c965f943007",
+  "phase0_shipping_untouched": true,
+  "shipping_nbt_git_blob_before": "be2ab341c2d252c975711caa93e92c965f943007",
+  "shipping_nbt_git_blob_after": "be2ab341c2d252c975711caa93e92c965f943007",
+  "r1_accepted_aspects_frozen": 9,
+  "r2_changed_positions": 2354,
+  "r2_scope": [
+    "distinct projected inbound 01-02 and recessed outbound 03-04 dock-crown assemblies",
+    "lane/truss-aligned north/side piers, deep gallery/clerestory recesses and service thresholds",
+    "raised hall-facing control/records lantern profile",
+    "east maintenance base threshold, bridge hood, vertical piers and roof cap"
+  ],
+  "pass7_plus_content_present": false,
+  "lor_006_manual_placed": false,
+  "canonical_proof_placed": false,
+  "authoritative_shipping_modified": false
+}

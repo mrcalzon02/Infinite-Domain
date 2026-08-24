@@ -1,0 +1,231 @@
+{
+  "purpose": "Deep-sea corpus metadata, source-NBT dimension, atmosphere-fill, and production-gate validation. This is not visual or in-world approval.",
+  "assets_checked": 16,
+  "valid": true,
+  "production_approved": 0,
+  "assets": {
+    "infinite_domain:deep_sea/coastal_patrol_wreck_clean_master": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/coastal_patrol_wreck_damaged": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/coastal_patrol_wreck": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/coastal_patrol_debris_field": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/flooded_relay_shelter_clean_master": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/flooded_relay_shelter": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/abyssal_mining_rig_clean_master": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/abyssal_mining_rig": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/abyssal_vent_field": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/akula_project971_clean_master": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/akula_wreck_forward_damaged": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/akula_wreck_aft_damaged": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/akula_wreck_forward": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/akula_wreck_aft": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/akula_wreck_spine": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "infinite_domain:deep_sea/akula_debris_field": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "_atmosphere_fill": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "_render_color_fidelity": {
+      "metadata_valid": true,
+      "issues": [],
+      "detail": {}
+    },
+    "_akula_atmosphere": {
+      "metadata_valid": true,
+      "issues": []
+    },
+    "_akula_dressing_density": {
+      "metadata_valid": true,
+      "issues": [],
+      "detail": {
+        "akula_wreck_forward_damaged": {
+          "exposed_skin": 4427,
+          "dressed": 295,
+          "fraction": 0.067
+        },
+        "akula_wreck_aft_damaged": {
+          "exposed_skin": 1918,
+          "dressed": 283,
+          "fraction": 0.148
+        },
+        "akula_wreck_forward": {
+          "exposed_skin": 4428,
+          "dressed": 298,
+          "fraction": 0.067
+        },
+        "akula_wreck_aft": {
+          "exposed_skin": 1916,
+          "dressed": 282,
+          "fraction": 0.147
+        }
+      }
+    },
+    "_akula_structural_continuity": {
+      "metadata_valid": true,
+      "issues": [],
+      "detail": {
+        "akula_project971_clean_master": {
+          "components": 1,
+          "largest": 8585,
+          "orphan_components": 0,
+          "orphan_blocks": 0
+        },
+        "akula_wreck_forward_damaged": {
+          "components": 3,
+          "largest": 11642,
+          "orphan_components": 2,
+          "orphan_blocks": 2
+        },
+        "akula_wreck_aft_damaged": {
+          "components": 3,
+          "largest": 6636,
+          "orphan_components": 2,
+          "orphan_blocks": 2
+        },
+        "akula_wreck_forward": {
+          "components": 4,
+          "largest": 11644,
+          "orphan_components": 3,
+          "orphan_blocks": 3
+        },
+        "akula_wreck_aft": {
+          "components": 4,
+          "largest": 6638,
+          "orphan_components": 3,
+          "orphan_blocks": 3
+        }
+      }
+    },
+    "_akula_impact_conformance": {
+      "metadata_valid": true,
+      "issues": [],
+      "detail": {
+        "akula_wreck_forward_damaged": {
+          "measured_pitch_deg": 5.2,
+          "model_pitch_deg": 8.8,
+          "lead_keel_y": 0,
+          "tear_face_ratio": 0.01
+        },
+        "akula_wreck_aft_damaged": {
+          "measured_pitch_deg": 14.8,
+          "model_pitch_deg": 12.3,
+          "lead_keel_y": 0,
+          "tear_face_ratio": 0.08
+        }
+      }
+    },
+    "_akula_assembly": {
+      "metadata_valid": true,
+      "issues": [],
+      "detail": {
+        "pieces": {
+          "akula_wreck_spine": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "z_min": 0,
+            "z_max": 25
+          },
+          "akula_wreck_forward": {
+            "origin": [
+              0,
+              0,
+              -72
+            ],
+            "z_min": -72,
+            "z_max": -1
+          },
+          "akula_wreck_aft": {
+            "origin": [
+              0,
+              0,
+              26
+            ],
+            "z_min": 26,
+            "z_max": 85
+          }
+        },
+        "outcrop_between_sections": true,
+        "gap_forward_blocks": 1,
+        "gap_aft_blocks": 1,
+        "max_span_from_start_blocks": 85,
+        "max_distance_from_center": 116
+      }
+    },
+    "_placement_gate": {
+      "metadata_valid": true,
+      "issues": [],
+      "detail": {
+        "quarantine_tag_present": true,
+        "csv_rows_present": {
+          "infinite_domain:deep_sea/coastal_patrol_wreck": true,
+          "infinite_domain:deep_sea/coastal_patrol_debris_field": true,
+          "infinite_domain:deep_sea/flooded_relay_shelter": true,
+          "infinite_domain:deep_sea/abyssal_mining_rig": true,
+          "infinite_domain:deep_sea/abyssal_vent_field": true,
+          "infinite_domain:deep_sea/akula_wreck_site": true,
+          "infinite_domain:deep_sea/akula_debris_field": true
+        },
+        "biomes_gated": {
+          "infinite_domain:deep_sea/coastal_patrol_wreck": true,
+          "infinite_domain:deep_sea/coastal_patrol_debris_field": true,
+          "infinite_domain:deep_sea/flooded_relay_shelter": true,
+          "infinite_domain:deep_sea/abyssal_mining_rig": true,
+          "infinite_domain:deep_sea/abyssal_vent_field": true,
+          "infinite_domain:deep_sea/akula_wreck_site": true,
+          "infinite_domain:deep_sea/akula_debris_field": true
+        },
+        "duplicate_registrant_rows": []
+      }
+    }
+  }
+}

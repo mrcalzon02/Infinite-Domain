@@ -1,0 +1,169 @@
+{
+  "target": "OWS-009",
+  "gate": "gate_d_final",
+  "revision": "gate-d-r1@74a229a6",
+  "spec_name": "ows_009_atlas_roadside_repair_depot",
+  "authoritative_dispatch": "generate_old_world_narrative_structures.BUILDERS['OWS-009']",
+  "authoritative_builder": "old_world_ows009_final.build_009",
+  "accepted_gate_c_d3_sha256": "42835cb4b926a8445b66016fa5d21f5219ec38386bc4dc2b941585ab5924b578",
+  "production_door_stabilization_applied": true,
+  "shipping_nbt": "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_009_atlas_roadside_repair_depot.nbt",
+  "production_python": "C:\\Users\\Admin\\AppData\\Local\\Python\\bin\\python.exe",
+  "serialized_nbt_bytes": 51907,
+  "decompressed_nbt_bytes": 650218,
+  "builder_serialization_sha256": "261ad9b53740a55a791fa0f7f06915123f95e347704e5a8238efa25bebbeafd9",
+  "shipping_nbt_sha256": "261ad9b53740a55a791fa0f7f06915123f95e347704e5a8238efa25bebbeafd9",
+  "builder_decompressed_nbt_sha256": "d2159e70caa0a801ff0d69ad199824760931c38c4c4b07a1d8114d9099893450",
+  "shipping_decompressed_nbt_sha256": "d2159e70caa0a801ff0d69ad199824760931c38c4c4b07a1d8114d9099893450",
+  "exact_serialized_nbt_match": true,
+  "exact_decompressed_nbt_match": true,
+  "accepted_d3_named_delta_positions": 9,
+  "accepted_d3_named_additions": 9,
+  "accepted_d3_named_replacements": 0,
+  "pass19_delta_positions": [
+    [
+      32,
+      3,
+      33
+    ],
+    [
+      34,
+      2,
+      28
+    ],
+    [
+      34,
+      3,
+      26
+    ],
+    [
+      37,
+      1,
+      37
+    ],
+    [
+      40,
+      1,
+      38
+    ],
+    [
+      41,
+      1,
+      37
+    ],
+    [
+      41,
+      3,
+      33
+    ],
+    [
+      44,
+      1,
+      36
+    ],
+    [
+      46,
+      1,
+      28
+    ]
+  ],
+  "structural_metrics": {
+    "working_doors": 19,
+    "orphan_door_halves": 0,
+    "window_blocks": 387,
+    "functional_fixtures": 263,
+    "vertical_access_span": 0,
+    "dense_floor_levels": 15,
+    "footprint_variants": 17
+  },
+  "structural_lint": {
+    "profile": "programmed_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 19,
+    "orphan_door_halves": 0,
+    "window_blocks": 387,
+    "functional_fixtures": 263,
+    "vertical_access_span": 0,
+    "dense_floor_levels": 15,
+    "footprint_variants": 17
+  },
+  "dimensions": [
+    49,
+    18,
+    41
+  ],
+  "positions_in_bounds": true,
+  "pass19_microdetail": {
+    "(34, 2, 28)": "create:andesite_casing",
+    "(32, 3, 33)": "minecraft:cobweb",
+    "(34, 3, 26)": "minecraft:cobweb",
+    "(41, 3, 33)": "minecraft:cobweb",
+    "(37, 1, 37)": "minecraft:red_mushroom",
+    "(40, 1, 38)": "minecraft:brown_mushroom",
+    "(41, 1, 37)": "minecraft:brown_mushroom",
+    "(44, 1, 36)": "minecraft:red_mushroom",
+    "(46, 1, 28)": "minecraft:brown_mushroom"
+  },
+  "pass19_positions_verified": 9,
+  "sole_required_casing_position": [
+    34,
+    2,
+    28
+  ],
+  "serialized_andesite_casing_count": 1,
+  "canonical_proof_position": [
+    37,
+    2,
+    29
+  ],
+  "canonical_proof_nodes": 1,
+  "spawner_positions": [
+    [
+      6,
+      2,
+      21
+    ],
+    [
+      23,
+      2,
+      21
+    ],
+    [
+      43,
+      2,
+      33
+    ]
+  ],
+  "deterministic_spawners": 3,
+  "protected_route_regions": [
+    "Bay-01 vehicle lane",
+    "Bay-02 vehicle lane",
+    "Bay-03 vehicle lane",
+    "transverse field",
+    "technician spine",
+    "customer route",
+    "parts route",
+    "records/core route"
+  ],
+  "protected_route_cells_checked": 967,
+  "protected_routes_clear": true,
+  "required_block_counts": {
+    "create:andesite_casing": 1,
+    "tfmg:steel_block": 1961,
+    "create:framed_glass": 387,
+    "create:fluid_pipe": 246,
+    "minecraft:oxidized_copper_grate": 169,
+    "minecraft:moss_block": 27,
+    "minecraft:weathered_cut_copper": 35
+  },
+  "canonical_proof_loot_table": "infinite_domain:chests/old_world/ows_009_atlas_roadside_repair_depot",
+  "canonical_proof_loot_table_references": 1,
+  "render_source": "shipping_nbt",
+  "fixed_camera_set": "ows009_fixed_v1",
+  "fixed_cutaway_y": 6,
+  "review_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/review_manifest.json",
+  "final_preview_synchronized_with_authoritative_nbt": true
+}

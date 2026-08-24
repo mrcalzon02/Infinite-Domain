@@ -1,0 +1,52 @@
+{
+  "format_version": 1,
+  "target_id": "OWS-022",
+  "structure_id": "infinite_domain:old_world/ows_022_pleroma_urban_distribution_warehouse",
+  "source_structure": "infinite_domain:corporate_warehouse_clean_master",
+  "collapse_phase": "Pre-crisis -> Early anomaly",
+  "acceptance_dimensions": {
+    "silhouette_exterior_identity": "Pleroma cyan/white warehouse bands convert the corporate distribution shell into a recognizable high-volume urban logistics node",
+    "interior_zoning_circulation": "five dense stock lanes feed automated sort depots and a broad outbound staging strip while the donor's office and truck circulation remain intact",
+    "functional_machinery_props": "crate racks, packaged cartons, sort depots and repeated Evercrop-marked food parcels show industrial-scale throughput rather than boutique storage",
+    "institutional_identity": "standardized cyan routing lanes and repeatable bay geometry make integrated Pleroma supply chains visually obvious",
+    "historical_damage_signature": "the site is still mostly functioning, but outbound staging is beginning to accumulate faster than the sort lanes clear it",
+    "narrative_evidence_loot": "guaranteed food distribution manifest ties Pleroma's enormous distribution capacity directly to mass Evercrop circulation"
+  },
+  "proof_item": "kubejs:pleroma_food_distribution_manifest",
+  "lore_record": null,
+  "audio_diary_ids": [
+    "05a",
+    "05b"
+  ],
+  "audio_diary_loot": "deterministic_same_as_proof_item",
+  "loot_table": "infinite_domain:chests/old_world/ows_022_pleroma_urban_distribution_warehouse",
+  "locator_command": "/structure_map infinite_domain:old_world/ows_022_pleroma_urban_distribution_warehouse 2",
+  "statistics": {
+    "size": [
+      49,
+      16,
+      43
+    ],
+    "placed_blocks": 18055,
+    "palette_states": 60,
+    "modded_blocks": 4866,
+    "spawners": 0,
+    "entities": 0
+  },
+  "structural_lint": {
+    "profile": "programmed_building",
+    "structural_lint_passed": true,
+    "visual_review": "required",
+    "quality_approved": false,
+    "issues": [],
+    "working_doors": 15,
+    "orphan_door_halves": 0,
+    "window_blocks": 254,
+    "functional_fixtures": 47,
+    "vertical_access_span": 6,
+    "dense_floor_levels": 13,
+    "footprint_variants": 15
+  },
+  "static_render_review": "generated_and_inspected_not_runtime_approval",
+  "runtime_validation": "deferred_by_user"
+}
