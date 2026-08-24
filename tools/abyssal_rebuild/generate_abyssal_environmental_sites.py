@@ -10,7 +10,7 @@ EXPECTED_GIT_BLOBS = {
     'karsic_pipeline_breach.nbt': '0bd93d44e2a29b3fc58ad06dc32c846922e75073',
     'abyssal_cold_seep.nbt': '9729cc302901704dd5a2815ec37ead56ef77be46',
     'fracture_vent_field.nbt': '34b0d8504173772f406398fcc67a7d30932121e5',
-    'hadal_vent_complex.nbt': 'cc17b36102636467d7fa10986e86cabb86e59b57',
+    'hadal_vent_complex.nbt': '7a5fa3ad2cbe5ee8b190d2045606441418aa0e49',
 }
 
 def pelagos_sensor_debris():
@@ -149,48 +149,86 @@ def fracture_vent_field():
     return b
 
 def hadal_vent_complex():
-    b=StructureBuilder((31,18,31))
-    cx=cz=15
-    for x in range(4,27):
-        for z in range(4,27):
+    b=StructureBuilder((31,18,31)); cx=cz=15
+    # Broken asymmetric caldera ring. North/east arc is uplifted while the
+    # south-west sector is collapsed into rubble, leaving broad swim lanes.
+    for x in range(3,28):
+        for z in range(3,28):
             d=((x-cx)**2+(z-cz)**2)**0.5
-            if 7.0 <= d <= 10.5 and ((x*17+z*31)%5 != 0):
-                b.set(x,0,z,'minecraft:blackstone' if (x+z)%3 else 'minecraft:basalt')
-            if d < 5.0 and ((x*11+z*7)%4==0):
-                b.set(x,0,z,'minecraft:magma_block')
-            elif d < 6.5 and ((x+2*z)%7==0):
-                b.set(x,0,z,'minecraft:smooth_basalt')
-    for x,z in ((15,15),(14,15),(16,15),(15,14),(15,16)):
+            irregular=(((x*19+z*31)%13)-6)*0.10
+            if 8.0+irregular <= d <= 11.4+irregular and ((x*7+z*11)%6!=0):
+                selector=(x*13+z*17)%12
+                mat='minecraft:blackstone' if selector<5 else ('minecraft:basalt' if selector<10 else 'minecraft:smooth_basalt')
+                b.set(x,0,z,mat)
+                if (z<=12 or x>=20) and ((x+2*z)%5 in (0,1)):
+                    b.set(x,1,z,'minecraft:basalt' if selector%2 else 'minecraft:blackstone')
+                    if (x+z)%11==0:
+                        b.set(x,2,z,'minecraft:smooth_basalt')
+    # Central altered crust is broken and mineralized rather than a flat magma carpet.
+    for x in range(9,22):
+        for z in range(9,22):
+            d=((x-cx)**2+(z-cz)**2)**0.5
+            if d <= 6.6 and ((x*5+z*9)%4 != 0):
+                sel=(x*11+z*7)%15
+                mat='minecraft:smooth_basalt' if sel<7 else ('minecraft:blackstone' if sel<12 else 'minecraft:calcite')
+                b.set(x,0,z,mat)
+    for x,z in ((15,15),(14,15),(16,15),(15,14),(15,16),(12,14),(19,17),(17,11)):
         b.set(x,0,z,'minecraft:magma_block')
-    vents=[
-        (9,11,10,'minecraft:basalt'),
-        (13,8,7,'minecraft:smooth_basalt'),
-        (19,9,12,'minecraft:basalt'),
-        (22,14,8,'minecraft:blackstone'),
-        (20,20,14,'minecraft:basalt'),
-        (12,22,9,'minecraft:smooth_basalt'),
-        (7,18,6,'minecraft:blackstone'),
-        (16,17,16,'minecraft:basalt'),
+    # Five active smokers have distinct heights, materials and branch patterns.
+    active=[
+        (10,10,11,'minecraft:basalt',((1,4,0),(0,7,1))),
+        (17,8,15,'minecraft:smooth_basalt',((-1,5,0),(1,10,0))),
+        (22,13,9,'minecraft:blackstone',((0,4,-1),(-1,6,0))),
+        (19,21,14,'minecraft:basalt',((1,5,0),(0,9,-1))),
+        (12,18,8,'minecraft:smooth_basalt',((-1,3,0),(0,5,1))),
     ]
-    for x,z,h,mat in vents:
-        for dx,dz in ((0,0),(1,0),(-1,0),(0,1),(0,-1)):
-            b.set(x+dx,0,z+dz,'minecraft:magma_block' if dx==dz==0 else 'minecraft:blackstone')
+    for x,z,h,mat,branches in active:
+        b.set(x,0,z,'minecraft:magma_block')
+        for dx,dz in ((1,0),(-1,0),(0,1),(0,-1)):
+            b.set(x+dx,0,z+dz,'minecraft:blackstone')
         for y in range(1,h+1):
             b.set(x,y,z,mat)
-            if y < h-2 and y%3==1:
-                if (x+z+y)%2:
-                    b.set(x+1,y,z,'minecraft:basalt')
-                else:
-                    b.set(x,y,z+1,'minecraft:basalt')
+            if y in (2,3) and h>=10:
+                b.set(x+1,y,z,mat)
+            if y in (4,8) and h>=12:
+                b.set(x,y,z+1,mat)
+        for dx,by,dz in branches:
+            for step in range(1,3):
+                b.set(x+dx*step,by,z+dz*step,mat)
+            b.set(x+dx*2,by+1,z+dz*2,'minecraft:calcite')
+        if h>=14:
+            b.fill(x-2,1,z+1,x-2,6,z+1,'minecraft:basalt')
+            b.set(x-2,7,z+1,'minecraft:calcite')
         b.set(x,h+1,z,'minecraft:calcite')
-        if h>=10:
+        if h>=11:
             b.set(x,h,z,'minecraft:polished_basalt')
-    for x,z in ((10,12),(11,11),(18,11),(19,12),(18,19),(13,20),(8,17),(17,16)):
+    # Four extinct/collapsed zones have no magma source and shed rubble outward.
+    for x,z,h in ((7,17,6),(24,20,7),(8,24,5),(23,7,4)):
+        for y in range(1,h+1):
+            if y!=h-1:
+                b.set(x,y,z,'minecraft:blackstone' if (x+y+z)%2 else 'minecraft:smooth_basalt')
+        if h>=6:
+            b.set(x+1,h-2,z,'minecraft:calcite')
+        rubble=((1,0),(-1,0),(0,1),(0,-1),(1,1),(2,0),(1,-1),(-1,1))
+        for idx,(dx,dz) in enumerate(rubble):
+            if (x+z+idx)%3:
+                b.set(x+dx,0,z+dz,'minecraft:blackstone' if idx%2 else 'minecraft:basalt')
+                if idx in (1,4,6):
+                    b.set(x+dx,1,z+dz,'minecraft:smooth_basalt')
+    # An east/north mineral apron ties the discrete template to the vent-rim uplift language.
+    for x in range(13,26):
+        for z in range(7,19):
+            d=((x-18)**2+(z-13)**2)**0.5
+            if d<=7.5 and ((x*23+z*29)%5!=0):
+                if (x,0,z) not in b.blocks:
+                    mat='minecraft:calcite' if (x+z)%4==0 else 'minecraft:smooth_basalt'
+                    b.set(x,0,z,mat)
+    for x,z in ((9,12),(11,11),(15,9),(18,10),(20,12),(21,16),(18,19),(14,19),(10,17),(7,20),(23,18),(24,9)):
         b.set(x,1,z,'minecraft:calcite')
         if (x+z)%2:
             b.set(x,2,z,'minecraft:pointed_dripstone',
                   {'vertical_direction':'up','thickness':'tip','waterlogged':'true'})
-    for x,z in ((14,13),(17,14),(13,17),(18,18),(11,16)):
+    for x,z in ((14,13),(18,14),(13,17),(19,18),(11,15)):
         b.set(x,0,z,'minecraft:crying_obsidian')
     return b
 
