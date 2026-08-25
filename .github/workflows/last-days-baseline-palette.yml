@@ -1,0 +1,66 @@
+name: LAST DAYS baseline palette application
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/last-days-baseline-palette.yml
+      - tools/last_days_baseline_palette.py
+      - docs/last-days-mod-reference-assets.csv
+
+permissions:
+  contents: write
+
+concurrency:
+  group: last-days-baseline-palette
+  cancel-in-progress: false
+
+jobs:
+  apply-baseline-palette:
+    name: Apply baseline palette to untouched imports
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Check out authoritative main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install image dependency
+        run: python -m pip install 'Pillow>=10,<12'
+
+      - name: Apply SHA-gated LAST DAYS baseline palette
+        run: python tools/last_days_baseline_palette.py --apply
+
+      - name: Verify generated audit files
+        run: |
+          test -s docs/last-days-baseline-palette-pass.csv
+          test -s docs/last-days-baseline-palette-pass.md
+
+      - name: Commit palette-aligned placeholders
+        shell: bash
+        run: |
+          git add --all -- \
+            resourcepacks/LAST_DAYS_INFINITE_DOMAIN_1_21_1/assets \
+            docs/last-days-baseline-palette-pass.csv \
+            docs/last-days-baseline-palette-pass.md
+
+          if git diff --cached --quiet; then
+            echo 'No eligible untouched imported textures required palette alignment.'
+            exit 0
+          fi
+
+          echo "Staged files: $(git diff --cached --name-only | wc -l)"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Apply LAST DAYS baseline palette to compatibility placeholders'
+          git push origin HEAD:main
