@@ -1,19 +1,9 @@
 {
   "catalog_version": 1,
-  "authority": [
-    "docs/ABYSSAL_ENVIRONMENTAL_SITES.md",
-    "docs/ABYSSAL_NEUTRAL_SEAFLOOR_FEATURE_POOL.md",
-    "docs/ABYSSAL_SEAFLOOR_FEATURE_REVIEW.md"
-  ],
+  "authority": ["docs/ABYSSAL_ENVIRONMENTAL_SITES.md", "docs/ABYSSAL_NEUTRAL_SEAFLOOR_FEATURE_POOL.md", "docs/ABYSSAL_SEAFLOOR_FEATURE_REVIEW.md"],
   "scope": "active-template completion plus AGE-018 implementation tranche 1",
   "process_order": ["SF-REVIEW-002","SF-REVIEW-003","OSF-005","OSF-006","OSF-007","OSF-019","OSF-023","OSF-027","OSF-037","OSF-045","OSF-049"],
-  "feature_contract": {
-    "runtime_status": "deferred-until-fresh-world-validation",
-    "neutral_features_must_not_mix_faction_pools": true,
-    "no_progression_breaking_loot": true,
-    "preserve_existing_registry_ids_when_refining": true,
-    "submarine_clearance_is_required_runtime_evidence": true
-  },
+  "feature_contract": {"runtime_status":"deferred-until-fresh-world-validation","neutral_features_must_not_mix_faction_pools":true,"no_progression_breaking_loot":true,"preserve_existing_registry_ids_when_refining":true,"submarine_clearance_is_required_runtime_evidence":true},
   "features": [
     {
       "planning_id":"SF-REVIEW-002","name":"Fracture Vent Field","registry_id":"infinite_domain:abyssal/fracture_vent_field","faction":"neutral","state":"refined-static","implementation_type":"structure_template","source_path":"tools/abyssal_rebuild/generate_abyssal_environmental_sites.py",
@@ -33,9 +23,9 @@
       "palette":["minecraft:basalt","minecraft:smooth_basalt","minecraft:blackstone"],"geometry_contract":["overlapping rounded pillow lobes","broken pressure/lobe fronts","exposed hardground patches","sediment and water gaps between groups","no flowing lava"],"hazards":[],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","lobe readability","terrain seam avoidance","density in fracture versus hadal biomes"]}
     },
     {
-      "planning_id":"OSF-006","name":"Cooled Lava / Magma-tube Systems","registry_id":null,"faction":"neutral","state":"specified","implementation_type":"terrain_or_structure_hybrid","source_path":null,
-      "target_selectors":["#infinite_domain:abyssal_fracture_biomes"],"depth_zones":["fracture/ridge"],"footprint":{"x_range":[24,64],"y_range":[6,18],"z_range":[24,64]},"projection":"subsurface-seafloor","terrain_adaptation":"embed","placement":{"density":"uncommon","minimum_clearance_blocks":8},
-      "palette":["minecraft:basalt","minecraft:smooth_basalt","minecraft:blackstone","minecraft:tuff"],"geometry_contract":["tubular passage","branch or bend variant","partly exposed roof segments","collapsed segments reserved for OSF-007","not an ordinary cave-carver substitute"],"hazards":["avoid trapped-air assumptions"],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","flooding continuity","tube navigability","roof stability"]}
+      "planning_id":"OSF-006","name":"Cooled Lava / Magma-tube Systems","registry_id":"infinite_domain:abyssal/cooled_lava_tube_system","faction":"neutral","state":"implemented-static","implementation_type":"structure_template","source_path":"tools/abyssal_rebuild/generate_cooled_lava_tube_system.py",
+      "target_selectors":["#infinite_domain:abyssal_fracture_biomes"],"depth_zones":["fracture/ridge"],"footprint":{"x":49,"y":12,"z":41},"projection":"OCEAN_FLOOR_WG","terrain_adaptation":"bury","placement":{"spacing_chunks":112,"separation_chunks":56,"salt":78064702,"minimum_clearance_blocks":8},
+      "palette":["minecraft:basalt","minecraft:smooth_basalt","minecraft:blackstone","minecraft:tuff","minecraft:gravel"],"geometry_contract":["long flooded arched primary conduit","bent alignment and lateral branch","open water-preserving interior","minor weathered roof segments that do not substitute for OSF-007","exterior pressure ridges and cooled flow fronts","sediment/tuff roof drapes"],"hazards":["avoid trapped-air assumptions"],"loot_policy":"none","runtime_validation":{"status":"deferred","checks":["placement/projection","terrain fit","visual scale","submarine clearance","chunk-generation cost","flooding continuity","tube navigability","roof stability","burial depth"]}
     },
     {
       "planning_id":"OSF-007","name":"Lava-tube Skylights and Collapse Windows","registry_id":null,"faction":"neutral","state":"specified","implementation_type":"structure_template","source_path":null,
