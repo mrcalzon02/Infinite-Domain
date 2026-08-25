@@ -14,12 +14,47 @@
     "counts as grade; it is not a suppression list, and it must never be used as one.",
     "",
     "Keys are the structure path relative to the scanned directory, without the .nbt suffix,",
-    "matching the structure_id the standalone linter prints."
+    "matching the structure_id the standalone linter prints.",
+    "",
+    "Scope note: declarations here cover excavation-site templates in the land corpus.",
+    "A site that declares a grade must build a real ground course at it - see",
+    "extraction_family.site_grade(), which is what these entries are paired with."
   ],
   "declarations": {
     "ows_012_atlas_bulk_crushing_preparation_plant": {
-      "ground_y": [12, 13],
+      "ground_y": [
+        12,
+        13
+      ],
       "reason": "Open-pit quarry. Pit floor sits at y=2 and the benches carry it up to the rim; the haul road bed, service house, crushing plant and headframe all stand on the working yard at y=12, which is built as an industrial-hardstanding grade course by _authored_012 in scripts/generate_old_world_narrative_structures.py."
+    },
+    "abandoned_quarry_clean_master": {
+      "ground_y": [
+        12,
+        13
+      ],
+      "reason": "Open-pit stone quarry. Three benches descend from the rim to a pit floor at y=2; the haul road, rim crusher line and maintenance building all stand on the working yard at y=12, built as an industrial-hardstanding course by extraction_family.site_grade()."
+    },
+    "abandoned_quarry": {
+      "ground_y": [
+        12,
+        13
+      ],
+      "reason": "Open-pit stone quarry. Three benches descend from the rim to a pit floor at y=2; the haul road, rim crusher line and maintenance building all stand on the working yard at y=12, built as an industrial-hardstanding course by extraction_family.site_grade(). Damage variant of the same site."
+    },
+    "collapsed_mine_entrance_clean_master": {
+      "ground_y": [
+        8,
+        9
+      ],
+      "reason": "Timbered drift mine. The drift descends to y=2 while the portal headframe, hoist house, ore bins and haul road stand on the working yard at y=8, built by extraction_family.site_grade()."
+    },
+    "collapsed_mine_entrance": {
+      "ground_y": [
+        8,
+        9
+      ],
+      "reason": "Timbered drift mine. The drift descends to y=2 while the portal headframe, hoist house, ore bins and haul road stand on the working yard at y=8, built by extraction_family.site_grade(). Damage variant of the same site."
     }
   }
 }

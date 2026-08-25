@@ -1,0 +1,2812 @@
+{
+  "structure_id": "lyran_research",
+  "display_name": "Lyran Research",
+  "family": "nether_landmark",
+  "asset_class": "structure",
+  "doctrine": "structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md",
+  "design_document": "docs/LYRAN_RESEARCH.md",
+  "reference_plan": "structure_library/programs/lyran_research_level1_plan.json",
+  "template_size": [
+    91,
+    72,
+    91
+  ],
+  "placement": {
+    "dimension": "minecraft:the_nether",
+    "start_height_absolute": 10,
+    "terrain_adaptation": "none",
+    "sealed_envelope": true,
+    "surface_opening": "ascent shaft mouth only"
+  },
+  "circulation": [
+    {
+      "key": "north_ascent",
+      "rect": [
+        53,
+        1,
+        59,
+        11
+      ],
+      "from_level": "concourse",
+      "kind": "encased_stairwell",
+      "rise": 8
+    },
+    {
+      "key": "north_ascent2",
+      "rect": [
+        53,
+        1,
+        59,
+        11
+      ],
+      "from_level": "habitation",
+      "kind": "encased_stairwell",
+      "rise": 8
+    },
+    {
+      "key": "west_descent",
+      "rect": [
+        2,
+        43,
+        9,
+        53
+      ],
+      "from_level": "laboratories",
+      "kind": "encased_stairwell",
+      "rise": 8
+    },
+    {
+      "key": "east_descent",
+      "rect": [
+        58,
+        50,
+        64,
+        60
+      ],
+      "from_level": "laboratories",
+      "kind": "encased_stairwell",
+      "rise": 8
+    },
+    {
+      "key": "deep_descent",
+      "rect": [
+        31,
+        76,
+        39,
+        86
+      ],
+      "from_level": "deep_works",
+      "kind": "encased_stairwell",
+      "rise": 8
+    },
+    {
+      "key": "ascent_shaft",
+      "rect": [
+        53,
+        2,
+        59,
+        8
+      ],
+      "from_level": "anchorage",
+      "kind": "ladder_shaft",
+      "rise": 32
+    }
+  ],
+  "levels": [
+    {
+      "key": "deep_works",
+      "title": "Deep Works",
+      "local_y": 0,
+      "world_y": 10,
+      "regions": [
+        "south"
+      ],
+      "interior_height": 6,
+      "rooms": [
+        {
+          "map_room": 37,
+          "name": "The Geothermal Tap",
+          "kind": "geothermal",
+          "shape": "rectilinear",
+          "bounds": [
+            21,
+            49,
+            39,
+            65
+          ],
+          "floor_cells": 54,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            40
+          ]
+        },
+        {
+          "map_room": 38,
+          "name": "Tap Gallery West",
+          "kind": "machine",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            57,
+            49,
+            65
+          ],
+          "floor_cells": 54,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            41
+          ]
+        },
+        {
+          "map_room": 39,
+          "name": "Tap Gallery East",
+          "kind": "machine",
+          "shape": "rectilinear",
+          "bounds": [
+            51,
+            57,
+            57,
+            65
+          ],
+          "floor_cells": 42,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": []
+        },
+        {
+          "map_room": 40,
+          "name": "The Foundry",
+          "kind": "kiln",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            67,
+            40,
+            73
+          ],
+          "floor_cells": 64,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            37,
+            43
+          ]
+        },
+        {
+          "map_room": 41,
+          "name": "Casting Floor",
+          "kind": "workshop",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            67,
+            47,
+            75
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            38,
+            42,
+            45
+          ]
+        },
+        {
+          "map_room": 42,
+          "name": "Slag Hall",
+          "kind": "graveyard",
+          "shape": "rectilinear",
+          "bounds": [
+            49,
+            67,
+            57,
+            73
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            41
+          ]
+        },
+        {
+          "map_room": 43,
+          "name": "Deep Stair Foot",
+          "kind": "stairhall",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            75,
+            39,
+            83
+          ],
+          "floor_cells": 65,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            40
+          ]
+        },
+        {
+          "map_room": 44,
+          "name": "Pump House",
+          "kind": "machine",
+          "shape": "pentagonal",
+          "bounds": [
+            49,
+            74,
+            59,
+            81
+          ],
+          "floor_cells": 52,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            46
+          ]
+        },
+        {
+          "map_room": 45,
+          "name": "Fuel Cells",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            39,
+            77,
+            45,
+            83
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            41,
+            46
+          ]
+        },
+        {
+          "map_room": 46,
+          "name": "THE SINK",
+          "kind": "sink",
+          "shape": "rectilinear",
+          "bounds": [
+            47,
+            83,
+            55,
+            89
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            44,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "key": "laboratories",
+      "title": "The Laboratories",
+      "local_y": 8,
+      "world_y": 18,
+      "regions": [
+        "band",
+        "south"
+      ],
+      "interior_height": 6,
+      "rooms": [
+        {
+          "map_room": 10,
+          "name": "Metrology West",
+          "kind": "lab",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            29,
+            47,
+            37
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            15,
+            22
+          ]
+        },
+        {
+          "map_room": 11,
+          "name": "Sounding Bench One",
+          "kind": "lab",
+          "shape": "rectilinear",
+          "bounds": [
+            49,
+            29,
+            57,
+            37
+          ],
+          "floor_cells": 51,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            22,
+            23
+          ]
+        },
+        {
+          "map_room": 12,
+          "name": "Reagent Store",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            3,
+            31,
+            9,
+            39
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            13,
+            20,
+            26
+          ]
+        },
+        {
+          "map_room": 13,
+          "name": "Specimen Hold",
+          "kind": "cells",
+          "shape": "rectilinear",
+          "bounds": [
+            11,
+            31,
+            19,
+            37
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            12,
+            14,
+            20
+          ]
+        },
+        {
+          "map_room": 14,
+          "name": "Coolant Ring",
+          "kind": "cistern",
+          "shape": "circular",
+          "bounds": [
+            21,
+            31,
+            29,
+            39
+          ],
+          "floor_cells": 71,
+          "lighting": "minecraft:shroomlight",
+          "secure": false,
+          "adjacent_rooms": [
+            13,
+            20
+          ]
+        },
+        {
+          "map_room": 15,
+          "name": "Anchor Gallery North",
+          "kind": "gallery",
+          "shape": "circular",
+          "bounds": [
+            31,
+            31,
+            39,
+            37
+          ],
+          "floor_cells": 47,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            8,
+            10,
+            21
+          ]
+        },
+        {
+          "map_room": 16,
+          "name": "Blaze Crucible",
+          "kind": "kiln",
+          "shape": "rectilinear",
+          "bounds": [
+            57,
+            31,
+            63,
+            40
+          ],
+          "floor_cells": 52,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": []
+        },
+        {
+          "map_room": 17,
+          "name": "Assay Hall",
+          "kind": "lab",
+          "shape": "rectilinear",
+          "bounds": [
+            65,
+            31,
+            73,
+            37
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            18,
+            24,
+            25
+          ]
+        },
+        {
+          "map_room": 18,
+          "name": "Sample Store",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            75,
+            31,
+            81,
+            37
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            17,
+            19
+          ]
+        },
+        {
+          "map_room": 19,
+          "name": "Powder Magazine",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            83,
+            31,
+            89,
+            39
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            18,
+            28
+          ]
+        },
+        {
+          "map_room": 20,
+          "name": "Sounding Bench Two",
+          "kind": "lab",
+          "shape": "rectilinear",
+          "bounds": [
+            11,
+            39,
+            19,
+            46
+          ],
+          "floor_cells": 64,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            12,
+            13,
+            14,
+            26
+          ]
+        },
+        {
+          "map_room": 21,
+          "name": "THE ANCHOR WORKS",
+          "kind": "anchor",
+          "shape": "circular",
+          "bounds": [
+            31,
+            39,
+            39,
+            48
+          ],
+          "floor_cells": 70,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            15,
+            22
+          ]
+        },
+        {
+          "map_room": 22,
+          "name": "Anchor Gallery East",
+          "kind": "gallery",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            39,
+            51,
+            45
+          ],
+          "floor_cells": 65,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            10,
+            11,
+            21,
+            30,
+            31
+          ]
+        },
+        {
+          "map_room": 23,
+          "name": "Calibration Cell",
+          "kind": "control",
+          "shape": "pentagonal",
+          "bounds": [
+            51,
+            39,
+            57,
+            44
+          ],
+          "floor_cells": 33,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            11,
+            16,
+            24
+          ]
+        },
+        {
+          "map_room": 24,
+          "name": "Furnace Row",
+          "kind": "kiln",
+          "shape": "rectilinear",
+          "bounds": [
+            59,
+            39,
+            67,
+            47
+          ],
+          "floor_cells": 78,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            17,
+            23,
+            25,
+            32,
+            34
+          ]
+        },
+        {
+          "map_room": 25,
+          "name": "Optics Bench",
+          "kind": "workshop",
+          "shape": "rectilinear",
+          "bounds": [
+            69,
+            39,
+            80,
+            45
+          ],
+          "floor_cells": 67,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            17,
+            24,
+            28
+          ]
+        },
+        {
+          "map_room": 26,
+          "name": "West Landing",
+          "kind": "stairhall",
+          "shape": "rectilinear",
+          "bounds": [
+            1,
+            31,
+            9,
+            49
+          ],
+          "floor_cells": 81,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            12,
+            20,
+            29
+          ]
+        },
+        {
+          "map_room": 27,
+          "name": "Apparatus Hall",
+          "kind": "machine",
+          "shape": "rectilinear",
+          "bounds": [
+            21,
+            40,
+            29,
+            49
+          ],
+          "floor_cells": 69,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": []
+        },
+        {
+          "map_room": 28,
+          "name": "Condenser Bank",
+          "kind": "reclaim",
+          "shape": "rectilinear",
+          "bounds": [
+            79,
+            39,
+            87,
+            49
+          ],
+          "floor_cells": 82,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            19,
+            25,
+            36
+          ]
+        },
+        {
+          "map_room": 29,
+          "name": "Annealing Ring",
+          "kind": "kiln",
+          "shape": "circular",
+          "bounds": [
+            9,
+            47,
+            19,
+            57
+          ],
+          "floor_cells": 79,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            26,
+            35
+          ]
+        },
+        {
+          "map_room": 30,
+          "name": "Anchor Control",
+          "kind": "control",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            47,
+            47,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            22,
+            31,
+            37,
+            38
+          ]
+        },
+        {
+          "map_room": 31,
+          "name": "Fabrication",
+          "kind": "workshop",
+          "shape": "rectilinear",
+          "bounds": [
+            49,
+            47,
+            55,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            22,
+            30,
+            34
+          ]
+        },
+        {
+          "map_room": 32,
+          "name": "Containment Cells",
+          "kind": "cells",
+          "shape": "rectilinear",
+          "bounds": [
+            69,
+            47,
+            75,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            24
+          ]
+        },
+        {
+          "map_room": 33,
+          "name": "Survey Office",
+          "kind": "archive",
+          "shape": "rectilinear",
+          "bounds": [
+            29,
+            49,
+            37,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            37
+          ]
+        },
+        {
+          "map_room": 34,
+          "name": "East Landing",
+          "kind": "stairhall",
+          "shape": "rectilinear",
+          "bounds": [
+            57,
+            49,
+            63,
+            55
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            24,
+            31
+          ]
+        },
+        {
+          "map_room": 35,
+          "name": "Effluent Sorting",
+          "kind": "reclaim",
+          "shape": "rectilinear",
+          "bounds": [
+            1,
+            51,
+            23,
+            59
+          ],
+          "floor_cells": 93,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            29
+          ]
+        },
+        {
+          "map_room": 36,
+          "name": "Service Warren",
+          "kind": "warren",
+          "shape": "rectilinear",
+          "bounds": [
+            77,
+            51,
+            83,
+            59
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            28
+          ]
+        },
+        {
+          "map_room": 37,
+          "name": "Failed Apparatus",
+          "kind": "graveyard",
+          "shape": "rectilinear",
+          "bounds": [
+            21,
+            49,
+            39,
+            65
+          ],
+          "floor_cells": 116,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            30,
+            33,
+            38,
+            40
+          ]
+        },
+        {
+          "map_room": 38,
+          "name": "Sample Store South",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            57,
+            49,
+            65
+          ],
+          "floor_cells": 81,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            30,
+            37,
+            39,
+            41
+          ]
+        },
+        {
+          "map_room": 39,
+          "name": "Cold Store",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            51,
+            57,
+            57,
+            65
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            38
+          ]
+        },
+        {
+          "map_room": 40,
+          "name": "Quiet Room",
+          "kind": "cells",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            67,
+            40,
+            73
+          ],
+          "floor_cells": 64,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            37,
+            43
+          ]
+        },
+        {
+          "map_room": 41,
+          "name": "Field Infirmary",
+          "kind": "clinic",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            67,
+            47,
+            75
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            38,
+            42,
+            45
+          ]
+        },
+        {
+          "map_room": 42,
+          "name": "Disposal",
+          "kind": "mortuary",
+          "shape": "rectilinear",
+          "bounds": [
+            49,
+            67,
+            57,
+            73
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            41
+          ]
+        },
+        {
+          "map_room": 43,
+          "name": "Deep Stair Head",
+          "kind": "stairhall",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            75,
+            39,
+            83
+          ],
+          "floor_cells": 65,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            40
+          ]
+        },
+        {
+          "map_room": 44,
+          "name": "Abandoned Chapel",
+          "kind": "shrine",
+          "shape": "pentagonal",
+          "bounds": [
+            49,
+            74,
+            59,
+            81
+          ],
+          "floor_cells": 52,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            46
+          ]
+        },
+        {
+          "map_room": 45,
+          "name": "Store Cells",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            39,
+            77,
+            45,
+            83
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            41,
+            46
+          ]
+        },
+        {
+          "map_room": 46,
+          "name": "Sealed Ward",
+          "kind": "cells",
+          "shape": "rectilinear",
+          "bounds": [
+            47,
+            83,
+            55,
+            89
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            44,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "key": "concourse",
+      "title": "The Concourse",
+      "local_y": 16,
+      "world_y": 26,
+      "regions": [
+        "band",
+        "north",
+        "south"
+      ],
+      "interior_height": 6,
+      "rooms": [
+        {
+          "map_room": 1,
+          "name": "The Muster Ring",
+          "kind": "memorial",
+          "shape": "circular",
+          "bounds": [
+            33,
+            1,
+            41,
+            9
+          ],
+          "floor_cells": 67,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            2,
+            4
+          ]
+        },
+        {
+          "map_room": 2,
+          "name": "Chapter House",
+          "kind": "council",
+          "shape": "pentagonal",
+          "bounds": [
+            43,
+            1,
+            51,
+            9
+          ],
+          "floor_cells": 51,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "map_room": 3,
+          "name": "Ascent Hall",
+          "kind": "stairhall",
+          "shape": "rectilinear",
+          "bounds": [
+            53,
+            1,
+            59,
+            7
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            2
+          ]
+        },
+        {
+          "map_room": 4,
+          "name": "The Registry",
+          "kind": "archive",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            11,
+            39,
+            19
+          ],
+          "floor_cells": 81,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            1,
+            8
+          ]
+        },
+        {
+          "map_room": 5,
+          "name": "Rotunda of Returns",
+          "kind": "memorial",
+          "shape": "circular",
+          "bounds": [
+            41,
+            11,
+            49,
+            19
+          ],
+          "floor_cells": 71,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            2
+          ]
+        },
+        {
+          "map_room": 6,
+          "name": "Warden's Office",
+          "kind": "office",
+          "shape": "rectilinear",
+          "bounds": [
+            51,
+            11,
+            57,
+            19
+          ],
+          "floor_cells": 51,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": []
+        },
+        {
+          "map_room": 7,
+          "name": "The Signal Ring",
+          "kind": "control",
+          "shape": "circular",
+          "bounds": [
+            51,
+            19,
+            59,
+            27
+          ],
+          "floor_cells": 68,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            9,
+            11
+          ]
+        },
+        {
+          "map_room": 8,
+          "name": "Records Vault",
+          "kind": "archive",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            21,
+            39,
+            29
+          ],
+          "floor_cells": 81,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            4,
+            9,
+            15
+          ]
+        },
+        {
+          "map_room": 9,
+          "name": "Dispatch",
+          "kind": "office",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            20,
+            49,
+            27
+          ],
+          "floor_cells": 64,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "map_room": 10,
+          "name": "The Clinic",
+          "kind": "clinic",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            29,
+            47,
+            37
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            9,
+            11,
+            15,
+            22
+          ]
+        },
+        {
+          "map_room": 11,
+          "name": "Apothecary",
+          "kind": "clinic",
+          "shape": "rectilinear",
+          "bounds": [
+            49,
+            29,
+            57,
+            37
+          ],
+          "floor_cells": 65,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            7,
+            10,
+            22,
+            23
+          ]
+        },
+        {
+          "map_room": 12,
+          "name": "West Reclamation",
+          "kind": "reclaim",
+          "shape": "rectilinear",
+          "bounds": [
+            3,
+            31,
+            9,
+            39
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            13,
+            20,
+            26
+          ]
+        },
+        {
+          "map_room": 13,
+          "name": "Culture Hall",
+          "kind": "farm",
+          "shape": "rectilinear",
+          "bounds": [
+            11,
+            31,
+            19,
+            37
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:shroomlight",
+          "secure": false,
+          "adjacent_rooms": [
+            12,
+            14,
+            20
+          ]
+        },
+        {
+          "map_room": 14,
+          "name": "Cistern Ring",
+          "kind": "cistern",
+          "shape": "circular",
+          "bounds": [
+            21,
+            31,
+            29,
+            39
+          ],
+          "floor_cells": 71,
+          "lighting": "minecraft:shroomlight",
+          "secure": false,
+          "adjacent_rooms": [
+            13,
+            20
+          ]
+        },
+        {
+          "map_room": 15,
+          "name": "Concourse Well",
+          "kind": "hall",
+          "shape": "circular",
+          "bounds": [
+            31,
+            31,
+            39,
+            37
+          ],
+          "floor_cells": 47,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            8,
+            10,
+            21
+          ]
+        },
+        {
+          "map_room": 16,
+          "name": "Refectory",
+          "kind": "refectory",
+          "shape": "rectilinear",
+          "bounds": [
+            57,
+            31,
+            63,
+            40
+          ],
+          "floor_cells": 52,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": []
+        },
+        {
+          "map_room": 17,
+          "name": "The Long Hall",
+          "kind": "hall",
+          "shape": "rectilinear",
+          "bounds": [
+            65,
+            31,
+            73,
+            37
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            18,
+            24,
+            25
+          ]
+        },
+        {
+          "map_room": 18,
+          "name": "Store Rooms",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            75,
+            31,
+            81,
+            37
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            17,
+            19
+          ]
+        },
+        {
+          "map_room": 19,
+          "name": "East Magazine",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            83,
+            31,
+            89,
+            39
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            18,
+            28
+          ]
+        },
+        {
+          "map_room": 20,
+          "name": "Provisioning",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            11,
+            39,
+            19,
+            46
+          ],
+          "floor_cells": 64,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            12,
+            13,
+            14,
+            26
+          ]
+        },
+        {
+          "map_room": 21,
+          "name": "THE GATE CHAMBER",
+          "kind": "gate",
+          "shape": "circular",
+          "bounds": [
+            31,
+            39,
+            39,
+            48
+          ],
+          "floor_cells": 70,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            15,
+            22
+          ]
+        },
+        {
+          "map_room": 22,
+          "name": "Gate Antechamber",
+          "kind": "vesting",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            39,
+            51,
+            45
+          ],
+          "floor_cells": 65,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            10,
+            11,
+            21,
+            30,
+            31
+          ]
+        },
+        {
+          "map_room": 23,
+          "name": "The Eye Reliquary",
+          "kind": "reliquary",
+          "shape": "pentagonal",
+          "bounds": [
+            51,
+            39,
+            57,
+            44
+          ],
+          "floor_cells": 33,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            11,
+            16,
+            24
+          ]
+        },
+        {
+          "map_room": 24,
+          "name": "Crucible Shop",
+          "kind": "workshop",
+          "shape": "rectilinear",
+          "bounds": [
+            59,
+            39,
+            67,
+            47
+          ],
+          "floor_cells": 78,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            17,
+            23,
+            25,
+            32,
+            34
+          ]
+        },
+        {
+          "map_room": 25,
+          "name": "Glass & Lens Works",
+          "kind": "workshop",
+          "shape": "rectilinear",
+          "bounds": [
+            69,
+            39,
+            80,
+            45
+          ],
+          "floor_cells": 67,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            17,
+            24,
+            28
+          ]
+        },
+        {
+          "map_room": 26,
+          "name": "West Stair Hall",
+          "kind": "stairhall",
+          "shape": "rectilinear",
+          "bounds": [
+            1,
+            31,
+            9,
+            49
+          ],
+          "floor_cells": 81,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            12,
+            20,
+            29
+          ]
+        },
+        {
+          "map_room": 27,
+          "name": "Machine Hall",
+          "kind": "machine",
+          "shape": "rectilinear",
+          "bounds": [
+            21,
+            40,
+            29,
+            49
+          ],
+          "floor_cells": 69,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": []
+        },
+        {
+          "map_room": 28,
+          "name": "East Reclamation",
+          "kind": "reclaim",
+          "shape": "rectilinear",
+          "bounds": [
+            79,
+            39,
+            87,
+            49
+          ],
+          "floor_cells": 82,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            19,
+            25,
+            36
+          ]
+        },
+        {
+          "map_room": 29,
+          "name": "The Kiln Ring",
+          "kind": "kiln",
+          "shape": "circular",
+          "bounds": [
+            9,
+            47,
+            19,
+            57
+          ],
+          "floor_cells": 79,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            26,
+            35
+          ]
+        },
+        {
+          "map_room": 30,
+          "name": "Gate Control",
+          "kind": "control",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            47,
+            47,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            22,
+            31,
+            37,
+            38
+          ]
+        },
+        {
+          "map_room": 31,
+          "name": "Instrument Shop",
+          "kind": "workshop",
+          "shape": "rectilinear",
+          "bounds": [
+            49,
+            47,
+            55,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            22,
+            30,
+            34
+          ]
+        },
+        {
+          "map_room": 32,
+          "name": "Quarantine Cells",
+          "kind": "cells",
+          "shape": "rectilinear",
+          "bounds": [
+            69,
+            47,
+            75,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            24
+          ]
+        },
+        {
+          "map_room": 33,
+          "name": "Cartography",
+          "kind": "archive",
+          "shape": "rectilinear",
+          "bounds": [
+            29,
+            49,
+            37,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            37
+          ]
+        },
+        {
+          "map_room": 34,
+          "name": "East Stair Hall",
+          "kind": "stairhall",
+          "shape": "rectilinear",
+          "bounds": [
+            57,
+            49,
+            63,
+            55
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            24,
+            31
+          ]
+        },
+        {
+          "map_room": 35,
+          "name": "Waste Sorting",
+          "kind": "reclaim",
+          "shape": "rectilinear",
+          "bounds": [
+            1,
+            51,
+            23,
+            59
+          ],
+          "floor_cells": 93,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            29
+          ]
+        },
+        {
+          "map_room": 36,
+          "name": "The Warren",
+          "kind": "warren",
+          "shape": "rectilinear",
+          "bounds": [
+            77,
+            51,
+            83,
+            59
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            28
+          ]
+        },
+        {
+          "map_room": 37,
+          "name": "The Commons",
+          "kind": "refectory",
+          "shape": "rectilinear",
+          "bounds": [
+            21,
+            49,
+            39,
+            65
+          ],
+          "floor_cells": 116,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            30,
+            33,
+            38,
+            40
+          ]
+        },
+        {
+          "map_room": 38,
+          "name": "Dormitory A",
+          "kind": "dormitory",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            57,
+            49,
+            65
+          ],
+          "floor_cells": 81,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            30,
+            37,
+            39,
+            41
+          ]
+        },
+        {
+          "map_room": 39,
+          "name": "Dormitory B",
+          "kind": "dormitory",
+          "shape": "rectilinear",
+          "bounds": [
+            51,
+            57,
+            57,
+            65
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            38
+          ]
+        },
+        {
+          "map_room": 40,
+          "name": "The Creche",
+          "kind": "creche",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            67,
+            40,
+            73
+          ],
+          "floor_cells": 64,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            37,
+            43
+          ]
+        },
+        {
+          "map_room": 41,
+          "name": "Infirmary",
+          "kind": "clinic",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            67,
+            47,
+            75
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            38,
+            42,
+            45
+          ]
+        },
+        {
+          "map_room": 42,
+          "name": "Mortuary",
+          "kind": "mortuary",
+          "shape": "rectilinear",
+          "bounds": [
+            49,
+            67,
+            57,
+            73
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            41
+          ]
+        },
+        {
+          "map_room": 43,
+          "name": "The Ossuary",
+          "kind": "ossuary",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            75,
+            39,
+            83
+          ],
+          "floor_cells": 65,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            40
+          ]
+        },
+        {
+          "map_room": 44,
+          "name": "Shrine of the Return",
+          "kind": "shrine",
+          "shape": "pentagonal",
+          "bounds": [
+            49,
+            74,
+            59,
+            81
+          ],
+          "floor_cells": 52,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            46
+          ]
+        },
+        {
+          "map_room": 45,
+          "name": "Pilgrim Cells",
+          "kind": "cells",
+          "shape": "rectilinear",
+          "bounds": [
+            39,
+            77,
+            45,
+            83
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            41,
+            46
+          ]
+        },
+        {
+          "map_room": 46,
+          "name": "The Last Ward",
+          "kind": "lastward",
+          "shape": "rectilinear",
+          "bounds": [
+            47,
+            83,
+            55,
+            89
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            44,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "key": "habitation",
+      "title": "Habitation Terraces",
+      "local_y": 24,
+      "world_y": 34,
+      "regions": [
+        "band",
+        "north"
+      ],
+      "interior_height": 6,
+      "rooms": [
+        {
+          "map_room": 1,
+          "name": "Terrace Rotunda",
+          "kind": "hall",
+          "shape": "circular",
+          "bounds": [
+            33,
+            1,
+            41,
+            9
+          ],
+          "floor_cells": 67,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            2,
+            4
+          ]
+        },
+        {
+          "map_room": 2,
+          "name": "Married Quarters",
+          "kind": "dormitory",
+          "shape": "pentagonal",
+          "bounds": [
+            43,
+            1,
+            51,
+            9
+          ],
+          "floor_cells": 51,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "map_room": 3,
+          "name": "Upper Ascent",
+          "kind": "stairhall",
+          "shape": "rectilinear",
+          "bounds": [
+            53,
+            1,
+            59,
+            7
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            2
+          ]
+        },
+        {
+          "map_room": 4,
+          "name": "Dormitory C",
+          "kind": "dormitory",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            11,
+            39,
+            19
+          ],
+          "floor_cells": 81,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            1,
+            8
+          ]
+        },
+        {
+          "map_room": 5,
+          "name": "Wash House",
+          "kind": "reclaim",
+          "shape": "circular",
+          "bounds": [
+            41,
+            11,
+            49,
+            19
+          ],
+          "floor_cells": 71,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            2
+          ]
+        },
+        {
+          "map_room": 6,
+          "name": "Steward's Room",
+          "kind": "office",
+          "shape": "rectilinear",
+          "bounds": [
+            51,
+            11,
+            57,
+            19
+          ],
+          "floor_cells": 51,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": []
+        },
+        {
+          "map_room": 7,
+          "name": "Upper Commons",
+          "kind": "refectory",
+          "shape": "circular",
+          "bounds": [
+            51,
+            19,
+            59,
+            27
+          ],
+          "floor_cells": 68,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            9,
+            11
+          ]
+        },
+        {
+          "map_room": 8,
+          "name": "Dormitory D",
+          "kind": "dormitory",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            21,
+            39,
+            29
+          ],
+          "floor_cells": 81,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            4,
+            9,
+            15
+          ]
+        },
+        {
+          "map_room": 9,
+          "name": "Dormitory E",
+          "kind": "dormitory",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            20,
+            49,
+            27
+          ],
+          "floor_cells": 64,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "map_room": 10,
+          "name": "Nursery",
+          "kind": "creche",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            29,
+            47,
+            37
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            9,
+            11,
+            15,
+            22
+          ]
+        },
+        {
+          "map_room": 11,
+          "name": "Schoolroom",
+          "kind": "archive",
+          "shape": "rectilinear",
+          "bounds": [
+            49,
+            29,
+            57,
+            37
+          ],
+          "floor_cells": 65,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            7,
+            10,
+            22,
+            23
+          ]
+        },
+        {
+          "map_room": 12,
+          "name": "Farm Hall West",
+          "kind": "farm",
+          "shape": "rectilinear",
+          "bounds": [
+            3,
+            31,
+            9,
+            39
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:shroomlight",
+          "secure": false,
+          "adjacent_rooms": [
+            13,
+            20,
+            26
+          ]
+        },
+        {
+          "map_room": 13,
+          "name": "Farm Hall Two",
+          "kind": "farm",
+          "shape": "rectilinear",
+          "bounds": [
+            11,
+            31,
+            19,
+            37
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:shroomlight",
+          "secure": false,
+          "adjacent_rooms": [
+            12,
+            14,
+            20
+          ]
+        },
+        {
+          "map_room": 14,
+          "name": "Upper Cistern",
+          "kind": "cistern",
+          "shape": "circular",
+          "bounds": [
+            21,
+            31,
+            29,
+            39
+          ],
+          "floor_cells": 71,
+          "lighting": "minecraft:shroomlight",
+          "secure": false,
+          "adjacent_rooms": [
+            13,
+            20
+          ]
+        },
+        {
+          "map_room": 15,
+          "name": "Gate Gallery North",
+          "kind": "gallery",
+          "shape": "circular",
+          "bounds": [
+            31,
+            31,
+            39,
+            37
+          ],
+          "floor_cells": 47,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            8,
+            10,
+            21
+          ]
+        },
+        {
+          "map_room": 16,
+          "name": "Refectory Annex",
+          "kind": "refectory",
+          "shape": "rectilinear",
+          "bounds": [
+            57,
+            31,
+            63,
+            40
+          ],
+          "floor_cells": 52,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": []
+        },
+        {
+          "map_room": 17,
+          "name": "Laundry",
+          "kind": "reclaim",
+          "shape": "rectilinear",
+          "bounds": [
+            65,
+            31,
+            73,
+            37
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            18,
+            24,
+            25
+          ]
+        },
+        {
+          "map_room": 18,
+          "name": "Linen Store",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            75,
+            31,
+            81,
+            37
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            17,
+            19
+          ]
+        },
+        {
+          "map_room": 19,
+          "name": "Upper Magazine",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            83,
+            31,
+            89,
+            39
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            18,
+            28
+          ]
+        },
+        {
+          "map_room": 20,
+          "name": "Farm Hall Three",
+          "kind": "farm",
+          "shape": "rectilinear",
+          "bounds": [
+            11,
+            39,
+            19,
+            46
+          ],
+          "floor_cells": 64,
+          "lighting": "minecraft:shroomlight",
+          "secure": false,
+          "adjacent_rooms": [
+            12,
+            13,
+            14,
+            26
+          ]
+        },
+        {
+          "map_room": 21,
+          "name": "GATE VOID",
+          "kind": "gatevoid",
+          "shape": "circular",
+          "bounds": [
+            31,
+            39,
+            39,
+            48
+          ],
+          "floor_cells": 70,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            15,
+            22
+          ]
+        },
+        {
+          "map_room": 22,
+          "name": "Gate Gallery East",
+          "kind": "gallery",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            39,
+            51,
+            45
+          ],
+          "floor_cells": 65,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            10,
+            11,
+            21,
+            30,
+            31
+          ]
+        },
+        {
+          "map_room": 23,
+          "name": "Vestry",
+          "kind": "shrine",
+          "shape": "pentagonal",
+          "bounds": [
+            51,
+            39,
+            57,
+            44
+          ],
+          "floor_cells": 33,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            11,
+            16,
+            24
+          ]
+        },
+        {
+          "map_room": 24,
+          "name": "Weaving Room",
+          "kind": "workshop",
+          "shape": "rectilinear",
+          "bounds": [
+            59,
+            39,
+            67,
+            47
+          ],
+          "floor_cells": 78,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            17,
+            23,
+            25,
+            32,
+            34
+          ]
+        },
+        {
+          "map_room": 25,
+          "name": "Potters",
+          "kind": "workshop",
+          "shape": "rectilinear",
+          "bounds": [
+            69,
+            39,
+            80,
+            45
+          ],
+          "floor_cells": 67,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            17,
+            24,
+            28
+          ]
+        },
+        {
+          "map_room": 26,
+          "name": "West Landing",
+          "kind": "stairhall",
+          "shape": "rectilinear",
+          "bounds": [
+            1,
+            31,
+            9,
+            49
+          ],
+          "floor_cells": 81,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            12,
+            20,
+            29
+          ]
+        },
+        {
+          "map_room": 27,
+          "name": "Spore Beds",
+          "kind": "farm",
+          "shape": "rectilinear",
+          "bounds": [
+            21,
+            40,
+            29,
+            49
+          ],
+          "floor_cells": 69,
+          "lighting": "minecraft:shroomlight",
+          "secure": false,
+          "adjacent_rooms": []
+        },
+        {
+          "map_room": 28,
+          "name": "Upper Reclamation",
+          "kind": "reclaim",
+          "shape": "rectilinear",
+          "bounds": [
+            79,
+            39,
+            87,
+            49
+          ],
+          "floor_cells": 82,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            19,
+            25,
+            36
+          ]
+        },
+        {
+          "map_room": 29,
+          "name": "Bath Ring",
+          "kind": "cistern",
+          "shape": "circular",
+          "bounds": [
+            9,
+            47,
+            19,
+            57
+          ],
+          "floor_cells": 79,
+          "lighting": "minecraft:shroomlight",
+          "secure": false,
+          "adjacent_rooms": [
+            26,
+            35
+          ]
+        },
+        {
+          "map_room": 30,
+          "name": "Gate Gallery South",
+          "kind": "gallery",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            47,
+            47,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            22,
+            31,
+            37,
+            38
+          ]
+        },
+        {
+          "map_room": 31,
+          "name": "Repair Shop",
+          "kind": "workshop",
+          "shape": "rectilinear",
+          "bounds": [
+            49,
+            47,
+            55,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            22,
+            30,
+            34
+          ]
+        },
+        {
+          "map_room": 32,
+          "name": "Sick Cells",
+          "kind": "cells",
+          "shape": "rectilinear",
+          "bounds": [
+            69,
+            47,
+            75,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            24
+          ]
+        },
+        {
+          "map_room": 33,
+          "name": "Reading Room",
+          "kind": "archive",
+          "shape": "rectilinear",
+          "bounds": [
+            29,
+            49,
+            37,
+            55
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            37
+          ]
+        },
+        {
+          "map_room": 34,
+          "name": "East Landing",
+          "kind": "stairhall",
+          "shape": "rectilinear",
+          "bounds": [
+            57,
+            49,
+            63,
+            55
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            24,
+            31
+          ]
+        },
+        {
+          "map_room": 35,
+          "name": "Compost Hall",
+          "kind": "farm",
+          "shape": "rectilinear",
+          "bounds": [
+            1,
+            51,
+            23,
+            59
+          ],
+          "floor_cells": 93,
+          "lighting": "minecraft:shroomlight",
+          "secure": false,
+          "adjacent_rooms": [
+            29
+          ]
+        },
+        {
+          "map_room": 36,
+          "name": "Upper Warren",
+          "kind": "warren",
+          "shape": "rectilinear",
+          "bounds": [
+            77,
+            51,
+            83,
+            59
+          ],
+          "floor_cells": 63,
+          "lighting": "minecraft:lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "key": "anchorage",
+      "title": "The Anchorage",
+      "local_y": 32,
+      "world_y": 42,
+      "regions": [
+        "north"
+      ],
+      "interior_height": 6,
+      "rooms": [
+        {
+          "map_room": 1,
+          "name": "The Watch",
+          "kind": "control",
+          "shape": "circular",
+          "bounds": [
+            33,
+            1,
+            41,
+            9
+          ],
+          "floor_cells": 67,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            2,
+            4
+          ]
+        },
+        {
+          "map_room": 2,
+          "name": "Blast Lock",
+          "kind": "airlock",
+          "shape": "pentagonal",
+          "bounds": [
+            43,
+            1,
+            51,
+            9
+          ],
+          "floor_cells": 51,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "map_room": 3,
+          "name": "Shaft Head",
+          "kind": "stairhall",
+          "shape": "rectilinear",
+          "bounds": [
+            53,
+            1,
+            59,
+            7
+          ],
+          "floor_cells": 49,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            2
+          ]
+        },
+        {
+          "map_room": 4,
+          "name": "Decontamination",
+          "kind": "airlock",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            11,
+            39,
+            19
+          ],
+          "floor_cells": 81,
+          "lighting": "minecraft:soul_lantern",
+          "secure": true,
+          "adjacent_rooms": [
+            1,
+            8
+          ]
+        },
+        {
+          "map_room": 5,
+          "name": "Muster Well",
+          "kind": "hall",
+          "shape": "circular",
+          "bounds": [
+            41,
+            11,
+            49,
+            19
+          ],
+          "floor_cells": 71,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            2
+          ]
+        },
+        {
+          "map_room": 6,
+          "name": "Watch Office",
+          "kind": "office",
+          "shape": "rectilinear",
+          "bounds": [
+            51,
+            11,
+            57,
+            19
+          ],
+          "floor_cells": 51,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": []
+        },
+        {
+          "map_room": 7,
+          "name": "The Dead Mooring",
+          "kind": "storage",
+          "shape": "circular",
+          "bounds": [
+            51,
+            19,
+            59,
+            27
+          ],
+          "floor_cells": 68,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            9,
+            11
+          ]
+        },
+        {
+          "map_room": 8,
+          "name": "Cargo Hall West",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            31,
+            21,
+            39,
+            29
+          ],
+          "floor_cells": 81,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            4,
+            9,
+            15
+          ]
+        },
+        {
+          "map_room": 9,
+          "name": "Cargo Hall East",
+          "kind": "storage",
+          "shape": "rectilinear",
+          "bounds": [
+            41,
+            20,
+            49,
+            27
+          ],
+          "floor_cells": 64,
+          "lighting": "minecraft:soul_lantern",
+          "secure": false,
+          "adjacent_rooms": [
+            7,
+            8,
+            10
+          ]
+        }
+      ]
+    }
+  ],
+  "loot_tables": [
+    "infinite_domain:chests/wasteland_data",
+    "infinite_domain:chests/wasteland_home",
+    "infinite_domain:chests/wasteland_industrial"
+  ]
+}

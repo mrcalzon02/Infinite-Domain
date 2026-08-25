@@ -1,0 +1,89 @@
+{
+  "structure_id": "lyran_research",
+  "generator": "scripts/lyran_research.py",
+  "deterministic": true,
+  "build": {
+    "size": [
+      91,
+      72,
+      91
+    ],
+    "placed_blocks": 122159,
+    "palette_states": 60,
+    "modded_blocks": 0,
+    "chests": 79,
+    "portal_frames": 24,
+    "levels": {
+      "deep_works": 668,
+      "laboratories": 2643,
+      "concourse": 3300,
+      "habitation": 2632,
+      "anchorage": 657
+    },
+    "circulation_repairs": {
+      "deep_works": {
+        "reopened": 1,
+        "archways": 2
+      },
+      "laboratories": {
+        "reopened": 1,
+        "archways": 4
+      },
+      "concourse": {
+        "reopened": 0,
+        "archways": 4
+      },
+      "habitation": {
+        "reopened": 2,
+        "archways": 4
+      },
+      "anchorage": {
+        "reopened": 0,
+        "archways": 2
+      }
+    },
+    "envelope_seal_blocks": 429
+  },
+  "geometry_lint": {
+    "tool": "scripts/structure_geometry_lint.py",
+    "in_memory": {
+      "hard_fail_count": 0,
+      "passed": true,
+      "findings": 0
+    },
+    "after_disk_round_trip": {
+      "hard_fail_count": 0,
+      "passed": true,
+      "findings": 0
+    },
+    "checks": [
+      "structural_connectivity",
+      "stairs_ladders_signs",
+      "openings_wall_coupled",
+      "ground_plane",
+      "room_composition",
+      "damage_coherence"
+    ]
+  },
+  "playability_verification": {
+    "tool": "scripts/verify_lyran.py",
+    "passed": true,
+    "checks_passed": [
+      "End portal is a correct 12-frame vanilla ring, all frames facing inward",
+      "portal ring has exactly 12 frame positions",
+      "portal generates partially completed (4 of 12 eyes seated, 8 left for the player)",
+      "the 3x3 portal interior is clear, so the portal can actually form",
+      "ring corners are empty, matching vanilla portal geometry",
+      "envelope is lava-tight: no interior air cell borders unplaced world rock (0 leaks)",
+      "a player entering at the shaft mouth can walk to the Gate Chamber (50 of 70 chamber cells reached)",
+      "level 'deep_works' is reachable (562 standing cells reached at y=1)",
+      "level 'laboratories' is reachable (2167 standing cells reached at y=9)",
+      "level 'concourse' is reachable (2736 standing cells reached at y=17)",
+      "level 'habitation' is reachable (2175 standing cells reached at y=25)",
+      "level 'anchorage' is reachable (533 standing cells reached at y=33)",
+      "reachable interior volume is substantial (11665 cells)",
+      "no iron doors (would be unopenable) \u2014 found 0"
+    ],
+    "checks_failed": []
+  }
+}

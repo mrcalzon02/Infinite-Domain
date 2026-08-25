@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from typing import Any
 
+import structure_geometry_primitives_v2 as v2p
+
 A: Any = None
 
 
@@ -33,18 +35,27 @@ def collapsed_subway_station_clean_master():
         t.fill((4, 1, z - 2), (58, 1, z + 2), "minecraft:deepslate_tiles")
         for x in range(5, 58):
             t.set(x, 2, z, "minecraft:rail", shape="east_west", waterlogged="false")
-    t.fill((5, 2, 14), (57, 3, 19), "minecraft:smooth_stone")
-    t.fill((5, 2, 25), (57, 3, 30), "minecraft:smooth_stone")
+    # Platforms are built down onto the station invert, not floated two courses
+    # above it. Both island platforms previously started at y=2 with nothing
+    # beneath them between the two track beds, so each was a 777-block island
+    # hanging over open air inside its own excavated box.
+    t.fill((5, 1, 14), (57, 3, 19), "minecraft:smooth_stone")
+    t.fill((5, 1, 25), (57, 3, 30), "minecraft:smooth_stone")
     for x in range(8, 57, 8):
         for z in (15, 29):
-            t.fill((x, 4, z), (x, 9, z), "minecraft:polished_blackstone_bricks")
+            # Platform columns are carried all the way to the mezzanine slab
+            # rather than stopping at canopy height. In a station of this
+            # section the platform columns are what hold the concourse up —
+            # without them the entire 2,890-block mezzanine level was a slab
+            # floating over the platforms with nothing supporting it.
+            t.fill((x, 4, z), (x, 10, z), "minecraft:polished_blackstone_bricks")
             t.fill((x - 2, 9, z - 1), (x + 2, 9, z + 1), "minecraft:smooth_stone_slab", type="bottom", waterlogged="false")
             t.set(x, 6, z, "create:red_nixie_tube")
     # Mezzanine concourse, ticketing, toilets, staff and maintenance rooms.
     t.fill((4, 11, 6), (58, 12, 38), "minecraft:smooth_stone")
     t.clear((19, 11, 13), (43, 12, 31))
-    A.stair_flight(t, 10, 3, 15, 9, "south", "minecraft:stone_brick_stairs")
-    A.stair_flight(t, 47, 3, 26, 9, "north", "minecraft:stone_brick_stairs")
+    v2p.encased_stairwell(t, 10, 3, 15, 9, "south", block="minecraft:stone_brick_stairs", wall="minecraft:polished_blackstone_bricks", width=1)
+    v2p.encased_stairwell(t, 47, 3, 26, 9, "north", block="minecraft:stone_brick_stairs", wall="minecraft:polished_blackstone_bricks", width=1)
     t.fill((8, 13, 8), (24, 13, 10), "zvhouses:stone_brick_countertop")
     for x in (10, 14, 18, 22):
         t.set(x, 14, 10, "minecraft:iron_trapdoor", facing="south", half="top", open="false", powered="false", waterlogged="false")
@@ -56,8 +67,8 @@ def collapsed_subway_station_clean_master():
     t.set(53, 13, 9, "minecraft:water_cauldron", level="1")
     t.set(56, 13, 9, "minecraft:quartz_stairs", facing="west", half="bottom", shape="straight", waterlogged="false")
     # Independent street stairs terminate in glazed entrance pavilions.
-    A.stair_flight(t, 7, 12, 31, 9, "south", "minecraft:stone_brick_stairs")
-    A.stair_flight(t, 50, 12, 7, 9, "south", "minecraft:stone_brick_stairs")
+    v2p.encased_stairwell(t, 7, 12, 31, 9, "south", block="minecraft:stone_brick_stairs", wall="minecraft:polished_blackstone_bricks", width=1)
+    v2p.encased_stairwell(t, 50, 12, 7, 9, "south", block="minecraft:stone_brick_stairs", wall="minecraft:polished_blackstone_bricks", width=1)
     A.shell(t, (4, 20, 30), (16, 23, 40), "create:framed_glass", "minecraft:smooth_stone", "minecraft:smooth_stone_slab")
     A.shell(t, (47, 20, 4), (59, 23, 14), "create:framed_glass", "minecraft:smooth_stone", "minecraft:smooth_stone_slab")
     return t
@@ -65,7 +76,12 @@ def collapsed_subway_station_clean_master():
 
 def collapsed_subway_station():
     t = collapsed_subway_station_clean_master()
-    t.clear((39, 8, 22), (62, 23, 44))
+    # Breach edge moved one block west so the platform canopy bay whose column
+    # this removes goes with it. Cutting at x=39 severed the column at x=40 but
+    # left the west lip of its canopy standing on nothing — a three-block
+    # fragment floating over the platform, which is exactly the "damage as
+    # subtraction that orphans geometry" v2 doctrine 3.4 rejects.
+    t.clear((38, 8, 22), (62, 23, 44))
     t.fill((41, 1, 23), (62, 10, 44), "minecraft:gravel")
     t.clear((1, 15, 2), (18, 23, 17))
     t.spawner(28, 3, 17, "minecraft:zombie", count=3, nearby=8)
@@ -257,11 +273,19 @@ def crashed_cargo_airship_clean_master():
     A.bed(t, 20, 8, 12, "north", "gray")
     A.bed(t, 24, 8, 12, "north", "gray")
     # Keel, stabilizers, engine pods and tailplanes define the vehicle silhouette.
-    t.fill((12, 3, 18), (59, 6, 20), "minecraft:polished_blackstone_bricks")
+    # The keel is carried down to the apron rather than stopping at y=3: this
+    # is a *crashed* airship resting on the ground, and the shared
+    # `roadside_apron` lays its ground plate at y=0, so a keel starting at y=3
+    # left the entire 9,817-block hull assembly floating over a two-course gap
+    # with nothing at y=1 or y=2 at all. Same defect class as the vehicle
+    # family's wheel/track gap; same fix — extend the structure's own contact
+    # geometry in its own material until it touches the ground.
+    t.fill((12, 1, 18), (59, 6, 20), "minecraft:polished_blackstone_bricks")
     t.fill((25, 10, 0), (43, 13, 38), "immersiveengineering:sheetmetal_steel")
     t.clear((26, 11, 10), (42, 13, 28))
     for z in (4, 31):
-        t.fill((48, 5, z), (57, 10, z + 3), "tfmg:steel_block")
+        # Engine pods likewise reach the ground — they are ploughed into it.
+        t.fill((48, 1, z), (57, 10, z + 3), "tfmg:steel_block")
     t.fill((58, 15, 9), (68, 19, 29), "minecraft:oxidized_copper")
     t.fill((62, 19, 4), (69, 24, 34), "immersiveengineering:sheetmetal_steel")
     return t

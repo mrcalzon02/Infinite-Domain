@@ -16,9 +16,58 @@ def rim_road(t, y, x1, x2, z1=1, z2=7):
         t.set(x, y + 1, (z1 + z2) // 2, "minecraft:yellow_concrete")
 
 
+# Coherent, patch-based industrial hardstanding. Not a per-block modulo
+# speckle — see STRUCTURE_REBUILD_SYSTEM_V2.md doctrine 3.5.
+_GRADE_PALETTE = (
+    "minecraft:gray_concrete",
+    "minecraft:polished_andesite",
+    "minecraft:gravel",
+    "minecraft:coarse_dirt",
+)
+
+
+def site_grade(t, y, *, seed=0, patch=5):
+    """Lay the working-yard ground course at an excavation site's real grade.
+
+    Every template in this family models only what was *excavated* — the pit,
+    the drift, the benches — and then stands its buildings, haul road and plant
+    on natural grade, where nothing is ever placed. The result is a site whose
+    entire surface level rests on air: `structure_geometry_lint`'s connectivity
+    check anchors on the template's lowest solid layer, which for these
+    templates is the bottom of the excavation, so every at-grade structure is
+    correctly reported as floating. It is not a geometry bug in the buildings;
+    the site simply has no ground.
+
+    This is the same defect class as the vehicle-family `roadside_apron` gap
+    fixed previously (ground plate at one y, object geometry starting at
+    another with nothing between), and the same one found and fixed in the Old
+    World wave's `ows_012_atlas_bulk_crushing_preparation_plant`.
+
+    Call this **before** `rim_road` and before the excavation's `t.clear()`
+    cuts, so the road is laid into the grade and the excavation carves through
+    it — which is what gives the pit a real rim rather than a floating lip.
+
+    Sites that use this must also be listed in
+    `structure_library/structure-grade-declarations.json` so the standalone
+    lint scan anchors on the same plane the generator built.
+    """
+    import random
+
+    rng = random.Random(seed)
+    sx, _sy, sz = t.size
+    for px in range(0, sx, patch):
+        for pz in range(0, sz, patch):
+            t.fill(
+                (px, y, pz),
+                (min(sx - 1, px + patch - 1), y, min(sz - 1, pz + patch - 1)),
+                rng.choice(_GRADE_PALETTE),
+            )
+
+
 def abandoned_quarry_clean_master():
     t = A.Template((69, 30, 61))
     surface = 12
+    site_grade(t, surface, seed=6912)
     rim_road(t, surface, 4, 64)
     # A three-bench stone excavation. Explicit air below template surface cuts
     # into the projected terrain instead of placing a decorative bowl on top.
@@ -68,6 +117,7 @@ def abandoned_quarry():
 def collapsed_mine_entrance_clean_master():
     t = A.Template((55, 27, 49))
     surface = 8
+    site_grade(t, surface, seed=5527)
     rim_road(t, surface, 8, 46)
     # Two-level timbered drift descending south from a surface portal.
     t.clear((21, 2, 10), (33, 15, 46))
@@ -76,7 +126,18 @@ def collapsed_mine_entrance_clean_master():
         t.fill((22, floor_y, z), (22, floor_y + 6, z), "minecraft:stripped_dark_oak_log", axis="y")
         t.fill((32, floor_y, z), (32, floor_y + 6, z), "minecraft:stripped_dark_oak_log", axis="y")
         t.fill((22, floor_y + 6, z), (32, floor_y + 6, z), "minecraft:stripped_dark_oak_log", axis="x")
-        t.fill((23, floor_y - 1, z - 2), (31, floor_y - 1, z + 2), "minecraft:deepslate")
+        # Two-course floor bed: consecutive drift segments step down one
+        # course, and a single-course slab leaves each segment only
+        # diagonally adjacent to the next — so the descending drift was a
+        # chain of disconnected islands rather than a continuous floor.
+        t.fill((22, floor_y - 2, z - 2), (32, floor_y - 1, z + 2), "minecraft:deepslate")
+        # Rock cut faces. The drift is an excavation, so it has walls: without
+        # them the timbered assembly hung inside the void its own `t.clear()`
+        # opened, touching the surrounding ground nowhere. Lining the cut from
+        # the floor bed up to grade is both what an adit actually looks like
+        # and what ties the drift back into the site.
+        for wall_x in (21, 33):
+            t.fill((wall_x, floor_y - 2, z - 2), (wall_x, surface, z + 2), "minecraft:deepslate")
         for x in range(24, 31):
             t.set(x, floor_y, z, "minecraft:rail", shape="north_south", waterlogged="false")
         t.set(27, floor_y + 5, z, "minecraft:lantern", hanging="true", waterlogged="false")
@@ -141,10 +202,27 @@ def excavator_pit_clean_master():
                 t.set(59, wheel_y + dy, wheel_z + dz, "minecraft:yellow_concrete")
     for dy, dz in ((-7, 0), (7, 0), (0, -7), (0, 7), (-5, -5), (5, 5), (-5, 5), (5, -5)):
         t.fill((58, wheel_y + dy, wheel_z + dz), (60, wheel_y + dy, wheel_z + dz), "minecraft:black_concrete")
+        if dy and dz:
+            # The four diagonal spoke tips sit just outside the wheel ring and
+            # meet its nearest cell only corner-to-corner, so each was a
+            # detached three-block marker floating beside the wheel. One
+            # orthogonal link block makes it an actual spoke tip.
+            link_z = wheel_z + dz - (1 if dz > 0 else -1)
+            t.fill((58, wheel_y + dy, link_z), (60, wheel_y + dy, link_z), "minecraft:black_concrete")
     # Conveyor climbs to a distinct rim loading tower and truck pad.
     for x in range(31, 66):
         y = 12 + (x - 31) // 8
         t.fill((x, y, 31), (x, y + 1, 34), "minecraft:polished_blackstone")
+    # Conveyor trestles. The climbing conveyor was drawn as an unsupported
+    # ribbon spanning the whole pit, carried only by the loading tower at its
+    # outboard end — so the damage pass, which cuts the tower end away, left
+    # the entire inboard span hanging in the air. A conveyor of this length is
+    # carried on trestles standing in the pit floor; drawing them fixes the
+    # clean master and makes the damaged variant's severed span stand up on
+    # its own instead of needing the break papered over afterwards.
+    for x in range(35, 66, 10):
+        deck = 12 + (x - 31) // 8
+        t.fill((x, 2, 32), (x, deck - 1, 33), "minecraft:polished_blackstone")
     t.fill((61, 11, 29), (68, 23, 38), "minecraft:yellow_concrete")
     t.clear((63, 13, 31), (66, 21, 36))
     A.shell(t, (4, 11, 40), (17, 21, 56), "minecraft:bricks", "tfmg:factory_floor", "minecraft:smooth_stone")
