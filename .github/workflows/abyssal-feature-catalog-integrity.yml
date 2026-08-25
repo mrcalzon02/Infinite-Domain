@@ -13,6 +13,7 @@ on:
       - 'tools/abyssal_rebuild/generate_cooled_lava_tube_system.py'
       - 'tools/abyssal_rebuild/generate_shelf_sand_wave_field.py'
       - 'tools/abyssal_rebuild/generate_nodule_field.py'
+      - 'tools/abyssal_rebuild/generate_whale_falls.py'
       - 'kubejs/data/infinite_domain/structure/abyssal/**'
       - 'kubejs/data/infinite_domain/worldgen/structure/abyssal/**'
       - 'kubejs/data/infinite_domain/worldgen/structure_set/abyssal/**'
@@ -59,3 +60,9 @@ jobs:
         run: |
           python tools/abyssal_rebuild/generate_nodule_field.py /tmp/abyssal-env --verify
           cmp "/tmp/abyssal-env/nodule_field.nbt" "kubejs/data/infinite_domain/structure/abyssal/nodule_field.nbt"
+      - name: Regenerate OSF-045 whale-fall family
+        run: |
+          python tools/abyssal_rebuild/generate_whale_falls.py /tmp/abyssal-env --verify
+          for nbt in whale_fall_coherent whale_fall_dispersed whale_fall_sedimented; do
+            cmp "/tmp/abyssal-env/${nbt}.nbt" "kubejs/data/infinite_domain/structure/abyssal/${nbt}.nbt"
+          done
