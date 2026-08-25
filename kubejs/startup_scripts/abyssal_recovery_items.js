@@ -1,9 +1,8 @@
 // [SYSTEM REPORT] Abyssal recovery evidence registry.
 // Mechanical-first implementation: bespoke art may replace vanilla placeholder textures later.
 //
-// Deep-expedition research items are registered authoritatively in
-// abyssal_deep_research_items.js. This file owns only the two initial recovery
-// items so every kubejs item ID has exactly one registry owner.
+// This is the complete active abyssal recovery item set. The obsolete seven-item
+// deep-research registry was removed; only these two recovery items are registered.
 
 StartupEvents.registry('item', event => {
     event.create('abyssal_navigation_core')
