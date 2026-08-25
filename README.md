@@ -10,6 +10,25 @@ The repository now contains the active editable **LAST DAYS: Infinite Domain** r
 
 This is the Infinite Domain continuation and compatibility layer for the LAST DAYS visual language. It is not merely a reference to an external pack: the resource-pack structure, metadata, assets, documentation, pack icon, credits, and compatibility namespaces are present directly in the repository on `main`.
 
+### CurseForge project history
+
+**Our Last Days MegaPack** is also the long-running CurseForge resource-pack project published by **Mrcalzon02** under CurseForge project ID **253075**:
+
+https://www.curseforge.com/minecraft/texture-packs/our-last-days-megapack
+
+The CurseForge listing records support/releases across Minecraft **1.7.10, 1.11, 1.11.1, 1.11.2, and 1.20.1**. Its historical release/update notes are retained here so the current Infinite Domain continuation has an explicit lineage back to the public MegaPack releases.
+
+#### CurseForge-listed changelog
+
+- **November 1, 2016 — Our Last Days Mega pack Day-1 / Minecraft 1.7.10:** Initial Day-1 public MegaPack release.
+- **February 5, 2017:** Added custom sounds and music and continued the early update pass around the LAST DAYS base pack and modded-use environment.
+- **February 6, 2017 — Last_Days1.01.zip / Minecraft 1.7.10:** Follow-up 1.7.10 release published.
+- **February 12, 2017 — Last_Days_1.11R1:** First listed 1.11-generation release line.
+- **February 22, 2017 — Our Last Days 1.11 R2 / Minecraft 1.11.2:** Development focus moved to Minecraft 1.11 and later. This update expanded planned mod support, realigned several container GUI textures, repaired zombie-villager and zombie textures, adjusted Guardian/Elder Guardian textures, added Prismarine variants and Magma, retextured the wooden trapdoor, restored/modified assorted animated blocks, and re-enabled the US English language file.
+- **March 21, 2024 — LAST_DAYS_1_20_1.zip / Minecraft 1.20.1:** Latest public CurseForge release. Its file-level changelog is listed as **“Changes updates and tweaks.”** This 1.20.1 archive is the untouched upstream source retained for the current Infinite Domain porting effort.
+
+The CurseForge project predates the current Minecraft 1.21.1 / NeoForge conversion work in this repository. The entries above describe the **published Our Last Days MegaPack history**; the sections below describe the newer Infinite Domain compatibility and authored-art work that has not yet been represented by those older CurseForge release notes.
+
 ### Current pack identity
 
 - **Target:** Minecraft 1.21.1 / NeoForge
