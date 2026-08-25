@@ -9,6 +9,9 @@ on:
       - .github/workflows/last-days-baseline-palette.yml
       - tools/last_days_baseline_palette.py
       - docs/last-days-mod-reference-assets.csv
+  # One-shot fallback for 2026-08-25 02:15 UTC. The successful job removes this trigger.
+  schedule:
+    - cron: '15 2 25 8 *'
 
 permissions:
   contents: write
@@ -30,26 +33,57 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
+      - name: Detect completed baseline
+        id: gate
+        shell: bash
+        run: |
+          if test -s docs/last-days-baseline-palette-pass.md && \
+             grep -Fq 'Mode: **APPLIED**' docs/last-days-baseline-palette-pass.md; then
+            echo 'needed=false' >> "$GITHUB_OUTPUT"
+            echo 'Baseline audit already records an applied pass; refusing duplicate conversion.'
+          else
+            echo 'needed=true' >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Set up Python
+        if: steps.gate.outputs.needed == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Install image dependencies
+        if: steps.gate.outputs.needed == 'true'
         run: python -m pip install 'Pillow>=10,<12' 'numpy>=2,<3'
 
       - name: Apply SHA-gated LAST DAYS baseline palette
+        if: steps.gate.outputs.needed == 'true'
         run: python tools/last_days_baseline_palette.py --apply
 
       - name: Verify generated audit files
+        if: steps.gate.outputs.needed == 'true'
         run: |
           test -s docs/last-days-baseline-palette-pass.csv
           test -s docs/last-days-baseline-palette-pass.md
+          grep -Fq 'Mode: **APPLIED**' docs/last-days-baseline-palette-pass.md
 
       - name: Commit and safely rebase palette-aligned placeholders
+        if: steps.gate.outputs.needed == 'true'
         shell: bash
         run: |
+          # Remove the dated schedule after the pass succeeds. workflow_dispatch and guarded
+          # push support remain available without leaving a recurring timer behind.
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('.github/workflows/last-days-baseline-palette.yml')
+          text = path.read_text(encoding='utf-8')
+          marker = "  # One-shot fallback for 2026-08-25 02:15 UTC. The successful job removes this trigger.\n  schedule:\n    - cron: '15 2 25 8 *'\n"
+          if marker in text:
+              text = text.replace(marker, '')
+              path.write_text(text, encoding='utf-8')
+          PY
+
           git add --all -- \
+            .github/workflows/last-days-baseline-palette.yml \
             resourcepacks/LAST_DAYS_INFINITE_DOMAIN_1_21_1/assets \
             docs/last-days-baseline-palette-pass.csv \
             docs/last-days-baseline-palette-pass.md
