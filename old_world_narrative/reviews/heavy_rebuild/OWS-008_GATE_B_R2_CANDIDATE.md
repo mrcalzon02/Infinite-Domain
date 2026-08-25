@@ -5,7 +5,7 @@
 **Planned artifact:** `old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r2/review_manifest.json`  
 **Renderer:** `scripts/render_ows008_gate_b_intact.py`  
 **Fixed camera set:** `ows008_fixed_v1`  
-**Status:** **RENDER NEEDED — independent Gate-B r2 inspection required**
+**Status:** **EXECUTION REQUESTED — independent Gate-B r2 inspection required**
 
 ## Candidate provenance
 
@@ -24,6 +24,21 @@ The renderer asserts the accepted Gate-A source, all intact threshold/service/
 identity contracts, 20 exact west-stair treads, two-block tread headroom and a
 supported lower-entry-to-upper-proof-approach route.
 
+## Route-repair audit
+
+The overwrite defect is now guarded at the write-order boundary rather than
+merely documented after generation. Pass 10 resolves the west-wing partitions
+and upper landing first; the accepted west command/archive stair flights are
+then replayed after those writes. The authoritative production builder uses the
+same ordering and asserts every stair tread, two-block headroom, route-step
+continuity, feet/head clearance and floor support through the full upper proof
+route.
+
+This record intentionally changes no visual decision. Its update is an explicit
+request for the repository's Old World Heavy Rebuild Review workflow to render
+the exact Gate-B r2 candidate on `main` and persist the resulting fixed-camera
+artifact bundle for independent inspection.
+
 ## Independent review obligations
 
 Inspect the exact persisted r2 contact sheet, all fixed exterior angles, roof,
@@ -36,4 +51,4 @@ stairs, visual noise or any broader design drift.
 Gate-B r1 approval is historical evidence only and does not approve r2 bytes.
 This worker records no visual decision.
 
-**OWS-008 GATE B r2: RENDER NEEDED / REVIEW NEEDED.**
+**OWS-008 GATE B r2: EXECUTION REQUESTED / REVIEW NEEDED.**
