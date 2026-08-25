@@ -62,7 +62,7 @@ def require_source(feature: dict) -> None:
     fid = feature["planning_id"]
     source = feature.get("source_path")
     if not source or not (ROOT / source).is_file():
-        fail(f"{fid} source_path is not an existing authoritative generator")
+        fail(f"{fid} source_path is not an existing authoritative source")
 
 
 def validate_live_structure(feature: dict) -> None:
@@ -122,6 +122,21 @@ def validate_parent_component(feature: dict, known_registries: set[str]) -> None
     require_source(feature)
 
 
+def validate_systemic_feature(feature: dict) -> None:
+    fid = feature["planning_id"]
+    require_source(feature)
+    refs = feature.get("systemic_references")
+    if not isinstance(refs, dict) or not refs:
+        fail(f"{fid} implemented-systemic feature lacks systemic_references")
+    for rel, tokens in refs.items():
+        if not isinstance(tokens, list) or not tokens:
+            fail(f"{fid} systemic reference {rel} has no required tokens")
+        text = serialized(load(ROOT / rel))
+        missing = [token for token in tokens if token not in text]
+        if missing:
+            fail(f"{fid} systemic reference {rel} lost: {', '.join(missing)}")
+
+
 catalog = load(CATALOG)
 if catalog.get("catalog_version") != 1:
     fail("catalog_version must be 1")
@@ -176,6 +191,8 @@ for feature in features:
         validate_live_structure(feature)
     elif feature["state"] == "implemented-component":
         validate_parent_component(feature, set(registry_ids))
+    elif feature["state"] == "implemented-systemic":
+        validate_systemic_feature(feature)
     elif feature["state"] not in {"specified", "planned"}:
         fail(f"{fid} has no registry ID but state={feature['state']}")
     if "ore" in feature["loot_policy"] and feature["loot_policy"] != "no-progression-material":
@@ -183,6 +200,6 @@ for feature in features:
 
 print(
     "[ABYSSAL FEATURE CATALOG PASS] 11 queued features have structural metadata, "
-    "neutral ownership, geometry contracts, runtime deferrals, live structure links, "
-    "and validated parent-pool component relationships where implemented"
+    "neutral ownership, geometry contracts, runtime deferrals, and validated live, "
+    "component, or systemic implementation links where implemented"
 )
