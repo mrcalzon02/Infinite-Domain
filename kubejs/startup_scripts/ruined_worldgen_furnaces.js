@@ -467,7 +467,7 @@ function registeredBlock(id) {
     return $BuiltInRegistries.BLOCK.get($ResourceLocation.tryParse(id))
 }
 
-ForgeEvents.onEvent('net.minecraftforge.event.level.ChunkEvent$Load', event => {
+NativeEvents.onEvent(Java.loadClass('net.neoforged.neoforge.event.level.ChunkEvent$Load'), event => {
     if (!event.isNewChunk()) return
 
     const level = event.getLevel()
