@@ -46,11 +46,15 @@ The active queue is also represented in `tools/abyssal_worldgen/abyssal_feature_
 **State:** **REFINED / STATIC-MECHANICAL COMPLETE.** Active-versus-extinct readability, bubble-column behavior, burial appearance, submarine approach and visual scale remain runtime-unmeasured.
 
 ### SF-REVIEW-003 — `infinite_domain:abyssal/hadal_vent_complex`
-**Biome:** both hadal families  
-**Placement:** `OCEAN_FLOOR_WG`, uncommon `224/112` structure-set placement  
-**Current assessment:** active and more developed than the original fracture field, with a broken caldera ring, central magma field and eight chimneys. It still needs review for chimney silhouette diversity, extinct-versus-active zones, collapsed chimney rubble, mineral apron continuity, caldera asymmetry and clearer relationship to the systemic hydrothermal uplift/caldera-rim deformation.
+**Biome:** both hadal families through live selector `#infinite_domain:hadal_biomes`  
+**Placement:** `OCEAN_FLOOR_WG`, terrain adaptation `bury`, spacing/separation `224/112`, salt `78064602`  
+**Original assessment:** the prior `31×18×31` template had a broken caldera ring, central magma field and eight chimneys, but its silhouettes and activity states were too uniform and the caldera/mineral apron relationship to the systemic vent-rim deformation was weak.
 
-**State:** **next feature to process.**
+**Refinement completed 2026-08-24:** footprint and all external worldgen contracts remain unchanged. The authoritative generator now builds an asymmetric caldera with an uplifted north/east arc and collapsed south-west sector, broken altered-crust hydrothermal floor, five active smokers with distinct heights/materials/branch patterns, four extinct or collapsed chimney zones with outward rubble, a connected east/north mineral apron and preserved swim lanes through the province.
+
+**Materialization authority:** generated Git blob `7a5fa3ad2cbe5ee8b190d2045606441418aa0e49`. The catalog-integrity workflow regenerated and byte-compared the shipping template successfully after the refinement commit.
+
+**State:** **REFINED / STATIC-MECHANICAL COMPLETE.** Bubble-column behavior, burial appearance, submarine approach, visual scale and actual correlation with the systemic vent-rim deformation remain runtime-unmeasured.
 
 ### SF-REVIEW-004 — Vanilla seabed geology decoration in custom depth biomes
 **Current implementation:** `minecraft:underwater_magma`, `disk_sand`, `disk_clay`, `disk_gravel` with vegetation reduced by depth.  
@@ -62,28 +66,29 @@ The active queue is also represented in `tools/abyssal_worldgen/abyssal_feature_
 **Current implementation:** systemic shelf/slump/cliff deformation plus vanilla sediment/magma decoration and `abyssal_slope_cave`.  
 **Assessment:** terrain shape exists, but the floor still needs physical surface expressions such as AGE-004/005/013 and OSF-023/024/031/033. The deformation should be made visually legible with exposed rock, talus, slump debris and shelf/current bedforms.
 
-**State:** queued after the three existing neutral structure templates.
+**State:** queued for AGE-018 surface-expression work.
 
 ### SF-REVIEW-006 — Fracture/hadal surface expression
-**Current implementation:** fracture/scarp/caldera deformation, custom deep cave carver, generic gravel/magma decoration and the two vent structures.  
-**Assessment:** strong structural foundation but missing pillow lava, cooled lava-tube geology, volcanic rubble, fissure ridges, exposed hardground and cave-mouth/fault debris.
+**Current implementation:** fracture/scarp/caldera deformation, custom deep cave carver, generic gravel/magma decoration, the two refined vent structures and OSF-005 pillow-lava fields.  
+**Assessment:** the volcanic surface vocabulary is now materially stronger, but cooled lava tubes, tube collapses, fissure ridges, exposed hardground and cave-mouth/fault debris remain incomplete.
 
-**State:** AGE-018 implementation tranche required.
+**State:** AGE-018 implementation tranche active.
 
-## First AGE-018 implementation tranche after active-template review
+## First AGE-018 implementation tranche
 
-The first tranche now has machine-readable structural/feature specifications in `tools/abyssal_worldgen/abyssal_feature_catalog.json`. Process them only after SF-REVIEW-003 is mechanically coherent:
-1. **OSF-005 — Pillow-lava fields**
-2. **OSF-006 — Cooled lava / magma-tube systems**
-3. **OSF-007 — Lava-tube skylights and collapse windows**
-4. **OSF-019 — Pockmark fields**
-5. **OSF-023 — Shelf sand-wave / ripple fields**
-6. **OSF-027 — Turbidity-current channels**
-7. **OSF-037 — Manganese/polymetallic nodule-field analogues**
-8. **OSF-045 — Whale-fall sites**
-9. **OSF-049 — Wood-fall sites**
+The first tranche has machine-readable structural/feature specifications in `tools/abyssal_worldgen/abyssal_feature_catalog.json`.
 
-Each specification now records implementation class, target biome/depth selectors, footprint/vertical range, projection/terrain adaptation, density or spacing intent, palette, geometry contract, hazards, loot/progression policy and explicit deferred runtime checks. Registry IDs remain unset until an implementation is actually authored; the validator rejects falsely promoted states.
+1. **OSF-005 — Pillow-lava fields — IMPLEMENTED / STATIC-MECHANICAL COMPLETE.** `infinite_domain:abyssal/pillow_lava_field` is a deterministic `33×6×33` structure template using overlapping basalt/smooth-basalt/blackstone lobes, broken pressure fronts, exposed hardground and deliberate sediment/water gaps. It contains no flowing lava, loot or progression-bearing materials. It spawns only through `#infinite_domain:volcanic_abyssal_biomes`, which combines fracture and hadal biome families, using `OCEAN_FLOOR_WG`, `bury`, spacing/separation `72/36` and salt `78064701`. Generated Git blob authority: `1df52c9d4ef7c9efcff10b2777b332b597bd0cae`. Runtime density, terrain fit, seams, visual scale and submarine clearance remain unmeasured.
+2. **OSF-006 — Cooled lava / magma-tube systems — NEXT.**
+3. **OSF-007 — Lava-tube skylights and collapse windows.**
+4. **OSF-019 — Pockmark fields.**
+5. **OSF-023 — Shelf sand-wave / ripple fields.**
+6. **OSF-027 — Turbidity-current channels.**
+7. **OSF-037 — Manganese/polymetallic nodule-field analogues.**
+8. **OSF-045 — Whale-fall sites.**
+9. **OSF-049 — Wood-fall sites.**
+
+Each specification records implementation class, target biome/depth selectors, footprint/vertical range, projection/terrain adaptation, density or spacing intent, palette, geometry contract, hazards, loot/progression policy and explicit deferred runtime checks. Registry IDs remain unset for unimplemented targets; the validator rejects falsely promoted states.
 
 ## Deferred runtime checks
 
