@@ -1,17 +1,25 @@
 # LAST DAYS compatibility critical review
 
-## Review protocol
+## Quality-layer clarification
 
-Every new compatibility family begins with one representative asset and remains unpropagated until it passes all gates below.
+This document remains the approval authority for **authored LAST DAYS compatibility work**. It does not treat a broad palette filter as authorship.
+
+A separate **baseline palette alignment** layer is now authorized for untouched imported compatibility textures. That layer may be propagated broadly because it is explicitly temporary: it preserves source geometry and texture structure, shifts ordinary color into the dark gray / olive / worn-metal LAST DAYS range, tones down retained functional colors, and is recorded only as `palette_aligned`. It may never receive a `PASS`, `Authored`, or `Complete` verdict from this document on the strength of palette alignment alone.
+
+The baseline tool is additionally hash-gated against `docs/last-days-mod-reference-assets.csv`: only `Status=imported` PNGs still byte-identical to their original `SourceSha256` are eligible. Existing authored or otherwise changed assets are therefore protected from generic propagation. Recognized normal/specular/roughness/metallic/height/PBR data maps are also excluded.
+
+## Authored review protocol
+
+Every new **authored** compatibility family begins with one representative asset and remains unpropagated as completed art until it passes all gates below.
 
 1. **Authority:** actual model, block state, texture path, source dimensions, alpha, animation, and shared-use relationships are established.
 2. **Object:** construction, materials, function, and gameplay markings are recorded before authoring.
 3. **LAST DAYS references:** successful pack art is selected by material and construction, not merely palette.
-4. **Native authorship:** the texture is authored directly at the installed source dimensions. Enlarged sheets are inspection-only.
+4. **Native authorship:** the texture is authored directly at the installed source dimensions unless a documented fidelity review authorizes a higher resolution.
 5. **Geometry:** details support the mapped surface and do not cross unrelated UV islands.
 6. **Material:** major materials remain distinct and physically plausible.
 7. **Hierarchy:** silhouette and construction read before wear and fine detail.
-8. **Restraint:** no generic rust, noise, scratches, or decorative rivet fields.
+8. **Restraint:** no generic rust, noise, scratches, or decorative rivet fields are accepted as a substitute for authorship.
 9. **Function:** states, ports, direction, motion, and inventory recognition remain legible.
 10. **Technical:** dimensions, alpha, filenames, animation metadata, references, and ZIP contents validate.
 
@@ -39,7 +47,7 @@ Every new compatibility family begins with one representative asset and remains 
 - Function: **PASS** — the crate remains immediately recognizable in block and inventory use.
 - Originality: **PASS** — the native IE brown board artwork was replaced by a reconstructed LAST DAYS timber-and-frame face rather than filtered.
 - Technical: **PASS** — 16x16, fully opaque, unchanged path and model reference; original retained at `backups/last-days-compatibility/immersiveengineering/crate-original.png`.
-- Scope limitation: this proves only a simple full-cube storage-block method. It does not authorize directional-machine, multipart, connected, or animated propagation.
+- Scope limitation: this proves only a simple full-cube storage-block method. It does not authorize directional-machine, multipart, connected, or animated propagation as authored completion.
 
 ### Installed artifact
 
@@ -64,7 +72,7 @@ Every new compatibility family begins with one representative asset and remains 
 - Family coherence: **PASS** — construction follows CR-001 while the stronger material system remains immediately distinct.
 - Technical: **PASS** — native 16x16, fully opaque, unchanged path; original retained at `backups/last-days-compatibility/immersiveengineering/reinforced-crate-original.png`.
 - SHA-256: `9593b18174296810a11f0ae344b919ffc5821de9158d30623b665cdf3256e157`
-- Scope limitation: this validates only the normal and reinforced crate pair. Festive variants remain untouched because their decorative/state requirements need separate review.
+- Scope limitation: this validates only the normal and reinforced crate pair as authored work. Festive variants still require separate authored review even if they receive baseline palette alignment.
 
 ## CR-003 — Immersive Engineering kinetic dynamo
 
