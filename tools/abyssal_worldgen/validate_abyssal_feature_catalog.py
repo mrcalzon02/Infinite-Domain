@@ -73,11 +73,39 @@ def validate_live_structure(feature: dict) -> None:
     name = registry.rsplit("/", 1)[-1]
     structure_path = STRUCTURES / f"{name}.json"
     set_path = STRUCTURE_SETS / f"{name}.json"
-    nbt_path = NBT / f"{name}.nbt"
     structure = load(structure_path)
     structure_set = load(set_path)
-    if not nbt_path.is_file():
-        fail(f"{fid} missing materialized NBT {nbt_path.relative_to(ROOT)}")
+
+    assets = feature.get("materialized_assets")
+    if assets is not None:
+        if not isinstance(assets, list) or not assets:
+            fail(f"{fid} materialized_assets must be a non-empty list")
+        pool_id = feature.get("template_pool_id")
+        if not pool_id or not pool_id.startswith("infinite_domain:abyssal/"):
+            fail(f"{fid} multi-variant structure lacks a stable template_pool_id")
+        if structure.get("start_pool") != pool_id:
+            fail(f"{fid} structure start_pool disagrees with catalog template_pool_id")
+        pool_name = pool_id.rsplit("/", 1)[-1]
+        pool = load(TEMPLATE_POOLS / f"{pool_name}.json")
+        locations = set()
+        for member in pool.get("elements", []):
+            element = member.get("element", {})
+            if isinstance(element, dict) and element.get("location"):
+                locations.add(element["location"])
+        for asset in assets:
+            if not isinstance(asset, str) or not asset.startswith("infinite_domain:abyssal/"):
+                fail(f"{fid} has invalid materialized asset ID {asset!r}")
+            asset_name = asset.rsplit("/", 1)[-1]
+            nbt_path = NBT / f"{asset_name}.nbt"
+            if not nbt_path.is_file():
+                fail(f"{fid} missing materialized variant NBT {nbt_path.relative_to(ROOT)}")
+            if asset not in locations:
+                fail(f"{fid} materialized variant {asset} is absent from template pool {pool_id}")
+    else:
+        nbt_path = NBT / f"{name}.nbt"
+        if not nbt_path.is_file():
+            fail(f"{fid} missing materialized NBT {nbt_path.relative_to(ROOT)}")
+
     if structure.get("project_start_to_heightmap") != feature["projection"]:
         fail(f"{fid} projection disagrees with live structure JSON")
     if structure.get("terrain_adaptation") != feature["terrain_adaptation"]:
@@ -201,5 +229,5 @@ for feature in features:
 print(
     "[ABYSSAL FEATURE CATALOG PASS] 11 queued features have structural metadata, "
     "neutral ownership, geometry contracts, runtime deferrals, and validated live, "
-    "component, or systemic implementation links where implemented"
+    "variant-family, component, or systemic implementation links where implemented"
 )
