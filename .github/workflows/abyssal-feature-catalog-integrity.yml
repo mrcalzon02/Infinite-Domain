@@ -11,6 +11,7 @@ on:
       - 'tools/abyssal_rebuild/generate_abyssal_environmental_sites.py'
       - 'tools/abyssal_rebuild/generate_pillow_lava_field.py'
       - 'tools/abyssal_rebuild/generate_cooled_lava_tube_system.py'
+      - 'tools/abyssal_rebuild/generate_shelf_sand_wave_field.py'
       - 'kubejs/data/infinite_domain/structure/abyssal/**'
       - 'kubejs/data/infinite_domain/worldgen/structure/abyssal/**'
       - 'kubejs/data/infinite_domain/worldgen/structure_set/abyssal/**'
@@ -49,3 +50,7 @@ jobs:
           python tools/abyssal_rebuild/generate_cooled_lava_tube_system.py /tmp/abyssal-env --verify
           cmp "/tmp/abyssal-env/cooled_lava_tube_system.nbt" "kubejs/data/infinite_domain/structure/abyssal/cooled_lava_tube_system.nbt"
           cmp "/tmp/abyssal-env/cooled_lava_tube_with_skylight.nbt" "kubejs/data/infinite_domain/structure/abyssal/cooled_lava_tube_with_skylight.nbt"
+      - name: Regenerate OSF-023 sand-wave field
+        run: |
+          python tools/abyssal_rebuild/generate_shelf_sand_wave_field.py /tmp/abyssal-env --verify
+          cmp "/tmp/abyssal-env/shelf_sand_wave_field.nbt" "kubejs/data/infinite_domain/structure/abyssal/shelf_sand_wave_field.nbt"
