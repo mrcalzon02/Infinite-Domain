@@ -19,7 +19,7 @@ For each feature, proceed in this order:
 6. materialize generated NBT before moving the feature to **refined**;
 7. preserve runtime-unmeasured items in the deferred validation ledger rather than inventing visual results.
 
-The active queue is also represented in `tools/abyssal_worldgen/abyssal_feature_catalog.json`. `tools/abyssal_worldgen/validate_abyssal_feature_catalog.py` rejects missing structural metadata, duplicate IDs, invalid footprints, lost biome/depth ownership, live structure/worldgen mismatches, missing deterministic sources, unsafe loot policy, false runtime-validation claims, and invalid parent-pool component relationships. `.codex/agents/abyssal-feature-validator.toml` applies the same independent-validator discipline used by the Old World structure program.
+The active queue is also represented in `tools/abyssal_worldgen/abyssal_feature_catalog.json`. `tools/abyssal_worldgen/validate_abyssal_feature_catalog.py` rejects missing structural metadata, duplicate IDs, invalid footprints, lost biome/depth ownership, live structure/worldgen mismatches, missing deterministic sources, unsafe loot policy, false runtime-validation claims, invalid parent-pool component relationships and disconnected systemic terrain implementations. `.codex/agents/abyssal-feature-validator.toml` applies the same independent-validator discipline used by the Old World structure program.
 
 ## Current active seabed feature audit
 
@@ -57,16 +57,16 @@ The active queue is also represented in `tools/abyssal_worldgen/abyssal_feature_
 **State:** augmentation in progress.
 
 ### SF-REVIEW-005 — Continental-slope seabed expression
-**Current implementation:** systemic shelf/slump/cliff deformation plus vanilla sediment/magma decoration and `abyssal_slope_cave`.  
-**Assessment:** terrain shape exists; AGE-018 still needs OSF-023/024/031/033-style surface expression.
+**Current implementation:** systemic shelf/slump/cliff deformation plus vanilla sediment/magma decoration, `abyssal_slope_cave`, and OSF-023 process-specific sand-wave fields.  
+**Assessment:** terrain shape now has a current-driven surface expression. OSF-024/031/033-style scarps, slump blocks and talus remain future additions.
 
-**State:** queued for AGE-018 surface-expression work.
+**State:** active augmentation.
 
 ### SF-REVIEW-006 — Fracture/hadal surface expression
 **Current implementation:** fracture/scarp/caldera deformation, custom deep cave carver, generic gravel/magma decoration, refined vent structures, OSF-005 pillow-lava fields and the OSF-006/007 lava-tube family.  
-**Assessment:** volcanic surface vocabulary is now materially stronger. Fissure ridges, exposed hardground and cave-mouth/fault debris remain later additions.
+**Assessment:** volcanic surface vocabulary is materially stronger. Fissure ridges, exposed hardground and cave-mouth/fault debris remain later additions.
 
-**State:** active augmentation; first volcanic tranche complete.
+**State:** first volcanic tranche complete.
 
 ## First AGE-018 implementation tranche
 
@@ -74,15 +74,15 @@ The tranche has machine-readable structural/feature specifications in `tools/aby
 
 1. **OSF-005 — Pillow-lava fields — IMPLEMENTED / STATIC-MECHANICAL COMPLETE.** `infinite_domain:abyssal/pillow_lava_field` is a deterministic `33×6×33` structure template using overlapping basalt/smooth-basalt/blackstone lobes, broken pressure fronts, exposed hardground and deliberate sediment/water gaps. It contains no flowing lava, loot or progression-bearing materials. It spawns only through `#infinite_domain:volcanic_abyssal_biomes` using `OCEAN_FLOOR_WG`, `bury`, spacing/separation `72/36` and salt `78064701`. Git blob authority: `1df52c9d4ef7c9efcff10b2777b332b597bd0cae`.
 2. **OSF-006 — Cooled lava / magma-tube systems — IMPLEMENTED / STATIC-MECHANICAL COMPLETE.** `infinite_domain:abyssal/cooled_lava_tube_system` is a deterministic `49×12×41` flooded arched tube network with a bent primary conduit, lateral branch, pressure ridges, old cooled-flow fronts and tuff/gravel sediment drapes. Omitted interior blocks preserve surrounding water. It is fracture-field only, uses `OCEAN_FLOOR_WG`, `bury`, spacing/separation `112/56`, salt `78064702`, and contains no lava or loot. Git blob authority: `6d9547a67c32c2dcf8dad6a9ac0aeebf087bfc6c`.
-3. **OSF-007 — Lava-tube skylights and collapse windows — IMPLEMENTED COMPONENT / STATIC-MECHANICAL COMPLETE.** This is deliberately not a standalone random structure. `infinite_domain:abyssal/cooled_lava_tube_with_skylight` is a full OSF-006 parent-tube variant containing an irregular roof breach, broken elevated basalt rim, asymmetric tuff/blackstone/gravel rubble cone and preserved swim-through lane. The OSF-006 template pool selects intact tube versus collapse variant at `3:1`; the feature validator enforces materialized component NBT, existing parent registry, live parent structure set and explicit parent-pool membership. Git blob authority: `30af285e59d6e4a0b9b6c14bf9bfc67443c1aef7`.
-4. **OSF-019 — Pockmark fields — NEXT.** Existing `custom_worldgen:abyssal_mottled_collapse_pattern` already feeds `custom_worldgen:abyssal_pattern_depression` behind `custom_worldgen:abyssal_plain_mask`; this systemic terrain path must be audited and formalized before deciding whether any additional surface-expression feature is needed. Do not replace real terrain deformation with a fake decorative NBT depression.
-5. **OSF-023 — Shelf sand-wave / ripple fields.**
-6. **OSF-027 — Turbidity-current channels.**
+3. **OSF-007 — Lava-tube skylights and collapse windows — IMPLEMENTED COMPONENT / STATIC-MECHANICAL COMPLETE.** `infinite_domain:abyssal/cooled_lava_tube_with_skylight` is deliberately a full OSF-006 parent-tube variant rather than a standalone fake hole. It contains an irregular roof breach, broken elevated basalt rim, asymmetric tuff/blackstone/gravel rubble cone and preserved swim-through lane. The OSF-006 template pool selects intact tube versus collapse variant at `3:1`; the validator enforces the parent relationship. Git blob authority: `30af285e59d6e4a0b9b6c14bf9bfc67443c1aef7`.
+4. **OSF-019 — Pockmark fields — IMPLEMENTED SYSTEMIC / STATIC-MECHANICAL COMPLETE.** No duplicate decorative NBT was added. `custom_worldgen:abyssal_mottled_collapse_pattern` is the authoritative non-grid pockmark/collapse pattern, mixed into `custom_worldgen:abyssal_pattern_depression` behind `custom_worldgen:abyssal_plain_mask`, then carried through the existing western/eastern depth-depression chains. The validator now fails if those density-function references become disconnected. Runtime depression readability and surface-material expression remain unmeasured.
+5. **OSF-023 — Shelf sand-wave / ripple fields — IMPLEMENTED / STATIC-MECHANICAL COMPLETE.** `infinite_domain:abyssal/shelf_sand_wave_field` is a deterministic `49×4×49` sand/gravel/clay structure containing curved broken primary crests, an oblique second current patch, varied crest heights, lee-side sediment toes and local scour interruptions. Because no authoritative shallow-shelf tag currently exists, the first implementation is intentionally restricted to `#infinite_domain:abyssal_slope_biomes` rather than inventing geography. It uses `OCEAN_FLOOR_WG`, `bury`, spacing/separation `64/32`, salt `78064703`. Git blob authority: `9cbe79e3e6a57619c9de18ab88b4a659af80653d`.
+6. **OSF-027 — Turbidity-current channels — NEXT.** Treat as terrain-scale erosion/deposition. Prefer the existing density/slope-mask system where it can represent a down-basin thalweg and levee/deposit margins; do not reduce it to an isolated decorative trench or cave-like NBT.
 7. **OSF-037 — Manganese/polymetallic nodule-field analogues.**
 8. **OSF-045 — Whale-fall sites.**
 9. **OSF-049 — Wood-fall sites.**
 
-Each specification records implementation class, target biome/depth selectors, footprint/vertical range, projection/terrain adaptation, density or spacing intent, palette, geometry contract, hazards, loot/progression policy and explicit deferred runtime checks. The validator now supports both independently registered structures and parent-correlated implemented components without falsely assigning duplicate registry IDs.
+Each specification records implementation class, target biome/depth selectors, footprint/vertical range, projection/terrain adaptation, density or spacing intent, palette, geometry contract, hazards, loot/progression policy and explicit deferred runtime checks. The validator supports independently registered structures, parent-correlated components and systemic terrain implementations without conflating their validation requirements.
 
 ## Deferred runtime checks
 
