@@ -47,8 +47,8 @@ def require_refs(path: Path, refs: list[str]) -> None:
         fail(f"{path.relative_to(ROOT)} no longer references: {', '.join(missing)}")
 
 
-# 1. Every reference-image noise vocabulary member must exist.
-for name in ("abyssal_cells", "abyssal_faults", "abyssal_roughness", "abyssal_vents"):
+# 1. Every active abyssal noise vocabulary member must exist.
+for name in ("abyssal_cells", "abyssal_faults", "abyssal_roughness", "abyssal_vents", "abyssal_turbidity"):
     load(NOISE / f"{name}.json")
 
 base_patterns = (
@@ -65,7 +65,11 @@ derived_vertical = (
     "abyssal_trench_scarp_pattern",
     "abyssal_vent_rim_pattern",
 )
-for name in (*base_patterns, *derived_vertical):
+transport_patterns = (
+    "abyssal_turbidity_channel_pattern",
+    "abyssal_turbidity_levee_pattern",
+)
+for name in (*base_patterns, *derived_vertical, *transport_patterns):
     load(DF / f"{name}.json")
 
 # 2. Vertical helper masks must remain derived from the intended depth boundaries.
@@ -105,20 +109,42 @@ require_refs(
     ["custom_worldgen:abyssal_vent_caldera_pattern"],
 )
 
-# 3. All six reference motifs and all four derived vertical processes must actually
-# feed the shared depression mix, with their band masks.
+# 3. Turbidity transport must remain a slope-to-plain density process rather than
+# a detached structure or cave-carver substitute.
+require_refs(
+    DF / "abyssal_turbidity_channel_pattern.json",
+    [
+        "custom_worldgen:abyssal_turbidity",
+        "custom_worldgen:abyssal_slope_band_mask",
+        "custom_worldgen:abyssal_plain_mask",
+    ],
+)
+require_refs(
+    DF / "abyssal_turbidity_levee_pattern.json",
+    [
+        "custom_worldgen:abyssal_turbidity",
+        "custom_worldgen:abyssal_turbidity_channel_pattern",
+        "custom_worldgen:abyssal_diffuse_roughness_pattern",
+        "custom_worldgen:abyssal_slope_band_mask",
+        "custom_worldgen:abyssal_plain_mask",
+    ],
+)
+
+# 4. All reference motifs, derived vertical processes and turbidity transport
+# patterns must feed the shared depression mix, with their band masks.
 require_refs(
     DF / "abyssal_pattern_depression.json",
     [
         *(f"custom_worldgen:{name}" for name in base_patterns),
         *(f"custom_worldgen:{name}" for name in derived_vertical),
+        *(f"custom_worldgen:{name}" for name in transport_patterns),
         "custom_worldgen:abyssal_slope_band_mask",
         "custom_worldgen:abyssal_plain_mask",
         "custom_worldgen:hadal_trench_mask",
     ],
 )
 
-# 4. Regional deformation must remain East/West + ocean-corridor gated.
+# 5. Regional deformation must remain East/West + ocean-corridor gated.
 require_refs(
     DF / "western_depth_depression.json",
     [
@@ -136,7 +162,7 @@ require_refs(
     ],
 )
 
-# 5. The regional depressions must feed the outer continents branch, which must
+# 6. The regional depressions must feed the outer continents branch, which must
 # remain protected by the central-continent branch in custom_worldgen:continents.
 require_refs(
     DF / "abyssal_outer_continents.json",
@@ -147,14 +173,14 @@ require_refs(
     ["custom_worldgen:abyssal_outer_continents", "custom_worldgen:central_continent_mask"],
 )
 
-# 6. Critical terrain bridge: vanilla overworld terrain density functions such as
+# 7. Critical terrain bridge: vanilla overworld terrain density functions such as
 # sloped_cheese resolve minecraft:overworld/continents. This datapack override
 # must delegate that registry key to custom_worldgen:continents.
 mc_continents = load(MC_CONTINENTS)
 if mc_continents.get("type") != "minecraft:cache_2d" or mc_continents.get("argument") != "custom_worldgen:continents":
     fail("minecraft:overworld/continents no longer delegates to custom_worldgen:continents")
 
-# 7. The active Wastelands climate router must consume the same continents signal.
+# 8. The active Wastelands climate router must consume the same continents signal.
 settings = load(NOISE_SETTINGS)
 router = settings.get("noise_router", {})
 if router.get("continents") != "custom_worldgen:continents":
@@ -162,7 +188,7 @@ if router.get("continents") != "custom_worldgen:continents":
 if "minecraft:overworld/sloped_cheese" not in serialized(router.get("final_density")):
     fail("Wastelands final_density no longer uses the overworld terrain density chain")
 
-# 8. Purpose-built cave carvers must exist and remain restricted to intended bands.
+# 9. Purpose-built cave carvers must exist and remain restricted to intended bands.
 load(CARVERS / "abyssal_slope_cave.json")
 load(CARVERS / "abyssal_fracture_cave.json")
 
@@ -197,5 +223,5 @@ for name in plain_biomes:
 
 print(
     "[ABYSSAL DEFORMATION PASS] six reference motifs, four derived vertical processes, "
-    "terrain bridge, regional gates, and cave-band attachments are intact"
+    "two turbidity-transport patterns, terrain bridge, regional gates, and cave-band attachments are intact"
 )
