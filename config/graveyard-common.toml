@@ -1,78 +1,62 @@
-# Welcome to The Graveyard Config!Welcome to The Graveyard Config! 
-# 
-#Structures: 
-# Enable or disable structure spawns. 
-# 
-#Mobs: 
-#Configure spawning weight and group size of the spawn (ghoul, revenant, reaper, nightmare, skeleton creeper). 
-# Configure if mobs burn in sunlight and/or if mobs are affected by the wither effect. 
-# 
-#Additional: 
-#Configure graveyard fog particles rising from moss and set the chance of spawning them (higher numbers = lower chance of spawning). 
-# Configure if hordes of graveyard mobs can spawn and set their size and frequency. 
-# Configure if urns have a double chest inventory. 
-# Configure if the wither skeleton spawner in the large graveyard will be replaced by a skeleton spawner. 
-# 
-#Configure if boss music plays during the fight against the Corrupted Champion. 
-# 
+# Welcome to The Graveyard Config!
 #
+# Infinite Domain disables Graveyard structure generation here. The first
+# several thousand blocks of progression are authored wasteland geography, and
+# Graveyard structures are not required there. Graveyard mobs and other mod
+# systems remain configured independently below.
 #
-#Music: 
-#
-#Incarnated Evil by Rotch Gwylt (Official The Graveyard Soundtrack). 
-# 
 ["The Graveyard - Structures Config"]
 
 	["The Graveyard - Structures Config".hauntedHouse]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".largeGraveyard]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".mediumGraveyard]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".memorialTree]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".mushroomGrave]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".smallDesertGrave]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".smallDesertGraveyard]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".smallGrave]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".smallSavannaGrave]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".smallGraveyard]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".smallMountainGraveyard]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".crypt]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".altar]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".giantMushroom]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".lichPrison]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".ruins]
-		generate = true
+		generate = false
 
 	["The Graveyard - Structures Config".deadTree]
-		generate = true
+		generate = false
 
 	["The Graveyard - Mob Spawning Config".ghoul]
 		enabled = true
