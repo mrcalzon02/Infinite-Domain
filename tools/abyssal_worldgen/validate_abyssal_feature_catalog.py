@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[2]
 CATALOG = ROOT / "tools/abyssal_worldgen/abyssal_feature_catalog.json"
 STRUCTURES = ROOT / "kubejs/data/infinite_domain/worldgen/structure/abyssal"
 STRUCTURE_SETS = ROOT / "kubejs/data/infinite_domain/worldgen/structure_set/abyssal"
+TEMPLATE_POOLS = ROOT / "kubejs/data/infinite_domain/worldgen/template_pool/abyssal"
 NBT = ROOT / "kubejs/data/infinite_domain/structure/abyssal"
 
 EXPECTED_ORDER = [
@@ -39,6 +40,10 @@ def load(path: Path):
         fail(f"invalid JSON in {path.relative_to(ROOT)}: {exc}")
 
 
+def serialized(obj) -> str:
+    return json.dumps(obj, sort_keys=True, separators=(",", ":"))
+
+
 def validate_footprint(fid: str, footprint: dict) -> None:
     if all(k in footprint for k in ("x", "y", "z")):
         dims = [footprint[k] for k in ("x", "y", "z")]
@@ -51,6 +56,13 @@ def validate_footprint(fid: str, footprint: dict) -> None:
             fail(f"{fid} missing valid {axis}")
         if rng[0] <= 0 or rng[1] < rng[0] or rng[1] > 256:
             fail(f"{fid} has invalid {axis}: {rng}")
+
+
+def require_source(feature: dict) -> None:
+    fid = feature["planning_id"]
+    source = feature.get("source_path")
+    if not source or not (ROOT / source).is_file():
+        fail(f"{fid} source_path is not an existing authoritative generator")
 
 
 def validate_live_structure(feature: dict) -> None:
@@ -81,9 +93,33 @@ def validate_live_structure(feature: dict) -> None:
     members = structure_set.get("structures", [])
     if not any(member.get("structure") == registry for member in members):
         fail(f"{fid} structure set no longer references {registry}")
-    source = feature.get("source_path")
-    if not source or not (ROOT / source).is_file():
-        fail(f"{fid} source_path is not an existing authoritative generator")
+    require_source(feature)
+
+
+def validate_parent_component(feature: dict, known_registries: set[str]) -> None:
+    fid = feature["planning_id"]
+    parent = feature.get("parent_registry_id")
+    component = feature.get("component_asset")
+    if not parent or parent not in known_registries:
+        fail(f"{fid} parent_registry_id is missing or does not reference an earlier live catalog structure")
+    if not component or not component.startswith("infinite_domain:abyssal/"):
+        fail(f"{fid} component_asset must be a stable abyssal asset ID")
+    component_name = component.rsplit("/", 1)[-1]
+    parent_name = parent.rsplit("/", 1)[-1]
+    nbt_path = NBT / f"{component_name}.nbt"
+    if not nbt_path.is_file():
+        fail(f"{fid} missing materialized component NBT {nbt_path.relative_to(ROOT)}")
+    pool = load(TEMPLATE_POOLS / f"{parent_name}.json")
+    locations = []
+    for member in pool.get("elements", []):
+        element = member.get("element", {})
+        if isinstance(element, dict):
+            locations.append(element.get("location"))
+    if component not in locations:
+        fail(f"{fid} component asset {component} is not present in parent template pool {parent_name}")
+    if parent not in serialized(load(STRUCTURE_SETS / f"{parent_name}.json")):
+        fail(f"{fid} parent structure is no longer live in its structure set")
+    require_source(feature)
 
 
 catalog = load(CATALOG)
@@ -110,7 +146,7 @@ if ids != EXPECTED_ORDER:
 if len(set(ids)) != len(ids):
     fail("duplicate planning IDs")
 
-registry_ids = []
+registry_ids: list[str] = []
 for feature in features:
     fid = feature.get("planning_id", "<missing>")
     missing = sorted(REQUIRED.difference(feature))
@@ -138,6 +174,8 @@ for feature in features:
             fail(f"duplicate registry ID {registry}")
         registry_ids.append(registry)
         validate_live_structure(feature)
+    elif feature["state"] == "implemented-component":
+        validate_parent_component(feature, set(registry_ids))
     elif feature["state"] not in {"specified", "planned"}:
         fail(f"{fid} has no registry ID but state={feature['state']}")
     if "ore" in feature["loot_policy"] and feature["loot_policy"] != "no-progression-material":
@@ -145,5 +183,6 @@ for feature in features:
 
 print(
     "[ABYSSAL FEATURE CATALOG PASS] 11 queued features have structural metadata, "
-    "neutral ownership, geometry contracts, runtime deferrals, and live structure links where implemented"
+    "neutral ownership, geometry contracts, runtime deferrals, live structure links, "
+    "and validated parent-pool component relationships where implemented"
 )

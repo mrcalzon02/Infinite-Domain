@@ -44,7 +44,8 @@ jobs:
         run: |
           python tools/abyssal_rebuild/generate_pillow_lava_field.py /tmp/abyssal-env --verify
           cmp "/tmp/abyssal-env/pillow_lava_field.nbt" "kubejs/data/infinite_domain/structure/abyssal/pillow_lava_field.nbt"
-      - name: Regenerate OSF-006 cooled lava-tube system
+      - name: Regenerate OSF-006/007 lava-tube family
         run: |
           python tools/abyssal_rebuild/generate_cooled_lava_tube_system.py /tmp/abyssal-env --verify
           cmp "/tmp/abyssal-env/cooled_lava_tube_system.nbt" "kubejs/data/infinite_domain/structure/abyssal/cooled_lava_tube_system.nbt"
+          cmp "/tmp/abyssal-env/cooled_lava_tube_with_skylight.nbt" "kubejs/data/infinite_domain/structure/abyssal/cooled_lava_tube_with_skylight.nbt"
