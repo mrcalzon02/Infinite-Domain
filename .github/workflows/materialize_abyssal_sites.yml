@@ -47,6 +47,10 @@ jobs:
         run: |
           python tools/abyssal_rebuild/generate_cooled_lava_tube_system.py kubejs/data/infinite_domain/structure/abyssal --verify
 
+      - name: Generate and verify OSF-008 basaltic flow-lobe field
+        run: |
+          python tools/abyssal_rebuild/generate_basaltic_flow_lobes.py kubejs/data/infinite_domain/structure/abyssal --verify
+
       - name: Generate and verify OSF-023 sand-wave field
         run: |
           python tools/abyssal_rebuild/generate_shelf_sand_wave_field.py kubejs/data/infinite_domain/structure/abyssal --verify
@@ -71,7 +75,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          allowed='^(kubejs/data/infinite_domain/structure/abyssal/(pelagos_abyssal_relay|pelagos_fracture_observatory|pelagos_hadal_probe_station|karsic_abyssal_pipeline_station|karsic_fracture_listening_post|karsic_hadal_blacksite|pelagos_sensor_debris|karsic_pipeline_breach|abyssal_cold_seep|fracture_vent_field|hadal_vent_complex|pillow_lava_field|cooled_lava_tube_system|cooled_lava_tube_with_skylight|shelf_sand_wave_field|nodule_field|whale_fall_coherent|whale_fall_dispersed|whale_fall_sedimented|wood_fall_rooted|wood_fall_fragmented|wood_fall_buried)\.nbt|config/ftbquests/quests/lang/en_us\.snbt)$'
+          allowed='^(kubejs/data/infinite_domain/structure/abyssal/(pelagos_abyssal_relay|pelagos_fracture_observatory|pelagos_hadal_probe_station|karsic_abyssal_pipeline_station|karsic_fracture_listening_post|karsic_hadal_blacksite|pelagos_sensor_debris|karsic_pipeline_breach|abyssal_cold_seep|fracture_vent_field|hadal_vent_complex|pillow_lava_field|cooled_lava_tube_system|cooled_lava_tube_with_skylight|basaltic_flow_lobes|shelf_sand_wave_field|nodule_field|whale_fall_coherent|whale_fall_dispersed|whale_fall_sedimented|wood_fall_rooted|wood_fall_fragmented|wood_fall_buried)\.nbt|config/ftbquests/quests/lang/en_us\.snbt)$'
           while IFS= read -r path; do
             [[ -z "$path" ]] && continue
             if [[ ! "$path" =~ $allowed ]]; then
@@ -99,6 +103,7 @@ jobs:
             kubejs/data/infinite_domain/structure/abyssal/pillow_lava_field.nbt \
             kubejs/data/infinite_domain/structure/abyssal/cooled_lava_tube_system.nbt \
             kubejs/data/infinite_domain/structure/abyssal/cooled_lava_tube_with_skylight.nbt \
+            kubejs/data/infinite_domain/structure/abyssal/basaltic_flow_lobes.nbt \
             kubejs/data/infinite_domain/structure/abyssal/shelf_sand_wave_field.nbt \
             kubejs/data/infinite_domain/structure/abyssal/nodule_field.nbt \
             kubejs/data/infinite_domain/structure/abyssal/whale_fall_coherent.nbt \
