@@ -1,15 +1,13 @@
-// [SYSTEM REPORT] Infinite Domain — Ruined Worldgen Infrastructure Progression Gate
+// [SYSTEM REPORT] Infinite Domain — Ruined Infrastructure Block Registry
 //
-// Generated progression-capable vanilla infrastructure is replaced with an
-// inert ruined counterpart only when a new chunk is generated.
+// Registers inert ruined infrastructure blocks for authored structures and
+// schematics. These blocks are placed deliberately by Infinite Domain content;
+// normal world generation is not scanned or rewritten.
 //
 // KubeJS 2101 removed the legacy BasicKubeBlock.Builder methods
 // setBlockstateJson/setModelJson. Visual blockstate/model composition therefore
 // lives in the supported ClientEvents.generateAssets('last', ...) pipeline; this
-// startup script owns only registry behavior and worldgen replacement.
-
-const $BuiltInRegistries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries')
-const $ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
+// startup script owns registry behavior only.
 
 const RUINED_BLOCK_DEFS = [
     { id: 'ruined_furnace', name: 'Ruined Furnace', sourceModel: 'minecraft:block/furnace', stone: true, horizontal: true, furnaceFamily: true },
@@ -74,93 +72,5 @@ StartupEvents.registry('block', event => {
             builder,
             def.furnaceFamily ? `kubejs:block/${def.id}` : def.sourceModel
         )
-    })
-})
-
-const RUINED_REPLACEMENTS = [
-    { source: Blocks.FURNACE,           id: 'ruined_furnace',           horizontal: true },
-    { source: Blocks.SMOKER,            id: 'ruined_smoker',            horizontal: true },
-    { source: Blocks.BLAST_FURNACE,     id: 'ruined_blast_furnace',     horizontal: true },
-    { source: Blocks.STONECUTTER,       id: 'ruined_stonecutter',       horizontal: true },
-    { source: Blocks.SMITHING_TABLE,    id: 'ruined_smithing_table' },
-    { source: Blocks.GRINDSTONE,        id: 'ruined_grindstone',        horizontal: true, attachFace: true },
-    { source: Blocks.CARTOGRAPHY_TABLE, id: 'ruined_cartography_table' },
-    { source: Blocks.FLETCHING_TABLE,   id: 'ruined_fletching_table' },
-    { source: Blocks.LOOM,              id: 'ruined_loom',              horizontal: true },
-    { source: Blocks.LECTERN,           id: 'ruined_lectern',           horizontal: true },
-    { source: Blocks.BREWING_STAND,     id: 'ruined_brewing_stand' },
-    { source: Blocks.COMPOSTER,         id: 'ruined_composter' },
-    { source: Blocks.CAULDRON,          id: 'ruined_cauldron' },
-    { source: Blocks.WATER_CAULDRON,    id: 'ruined_cauldron' },
-    { source: Blocks.LAVA_CAULDRON,     id: 'ruined_cauldron' },
-    { source: Blocks.POWDER_SNOW_CAULDRON, id: 'ruined_cauldron' },
-    { source: Blocks.CRAFTING_TABLE,    id: 'ruined_crafting_table' },
-    { source: Blocks.ANVIL,             id: 'ruined_anvil',             horizontal: true },
-    { source: Blocks.CHIPPED_ANVIL,     id: 'ruined_anvil',             horizontal: true },
-    { source: Blocks.DAMAGED_ANVIL,     id: 'ruined_anvil',             horizontal: true },
-    { source: Blocks.CAMPFIRE,          id: 'ruined_campfire',          horizontal: true },
-    { source: Blocks.SOUL_CAMPFIRE,     id: 'ruined_soul_campfire',     horizontal: true },
-    { source: Blocks.ENCHANTING_TABLE,  id: 'ruined_enchanting_table' }
-]
-
-function ruinedReplacement(state) {
-    for (let i = 0; i < RUINED_REPLACEMENTS.length; i++) {
-        const def = RUINED_REPLACEMENTS[i]
-        if (state.is(def.source)) return def
-    }
-    return null
-}
-
-function registeredBlock(id) {
-    return $BuiltInRegistries.BLOCK.get($ResourceLocation.tryParse(id))
-}
-
-NativeEvents.onEvent(Java.loadClass('net.neoforged.neoforge.event.level.ChunkEvent$Load'), event => {
-    if (!event.isNewChunk()) return
-
-    const level = event.getLevel()
-    if (level.isClientSide()) return
-
-    const chunkPos = event.getChunk().getPos()
-    const chunkX = chunkPos.x
-    const chunkZ = chunkPos.z
-    const server = level.getServer()
-
-    // ChunkEvent.Load can fire before the LevelChunk is promoted to FULL.
-    // Delay world mutation by one server tick, then inspect only this new chunk.
-    server.scheduleInTicks(1, () => {
-        if (!level.hasChunk(chunkX, chunkZ)) return
-
-        const chunk = level.getChunk(chunkX, chunkZ)
-        const replacements = []
-
-        chunk.findBlocks(
-            state => ruinedReplacement(state) !== null,
-            (pos, state) => {
-                const def = ruinedReplacement(state)
-                replacements.push({
-                    pos: pos.immutable(),
-                    id: def.id,
-                    horizontal: def.horizontal === true,
-                    attachFace: def.attachFace === true,
-                    facing: def.horizontal ? state.getValue(BlockProperties.HORIZONTAL_FACING) : null,
-                    face: def.attachFace ? state.getValue(BlockProperties.ATTACH_FACE) : null
-                })
-            }
-        )
-
-        replacements.forEach(entry => {
-            const target = registeredBlock(`kubejs:${entry.id}`)
-            let targetState = target.defaultBlockState()
-
-            if (entry.horizontal) {
-                targetState = targetState.setValue(BlockProperties.HORIZONTAL_FACING, entry.facing)
-            }
-            if (entry.attachFace) {
-                targetState = targetState.setValue(BlockProperties.ATTACH_FACE, entry.face)
-            }
-
-            level.setBlock(entry.pos, targetState, 3)
-        })
     })
 })
