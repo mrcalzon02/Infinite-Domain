@@ -6,6 +6,10 @@ that Gate B is already passed and that the six narrative/encounter/loot/proof/
 damage planning records for the active target contain their explicit completion
 markers. It then opens Gate-C implementation only if Gate C has not already
 advanced farther. State transitions are monotonic.
+
+When Gate B is still pending, revision-required, or awaiting manual review, this
+recorder returns without mutation so the visual-review workflow can proceed to
+the unresolved Gate-B renderer instead of failing before that gate is produced.
 """
 from __future__ import annotations
 
@@ -39,8 +43,10 @@ def main() -> None:
         raise AssertionError("Heavy-rebuild state has no active target")
 
     gate_b = state.get("visual_review_gates", {}).get("gate_b_intact_state", {})
-    if not str(gate_b.get("status", "")).startswith("passed_"):
-        raise AssertionError(f"{target} Passes 13-18 cannot open Gate C before Gate B passes")
+    gate_b_status = str(gate_b.get("status", ""))
+    if not gate_b_status.startswith("passed_"):
+        print(f"{target} Gate-C planning recorder skipped: Gate B status={gate_b_status!r}")
+        return
 
     records = state.setdefault("planning_records", {})
     for pass_key, (stem, marker) in PASS_FILES.items():

@@ -8,7 +8,8 @@ revision artifact exists. The same guarded bookkeeping works for later OWS targe
 It can also recover from an older workflow bug that downgraded a rendered Gate-B
 state back to planning-ready: recovery is permitted only when the newest persisted
 Gate-B manifest has a matching explicit review. An older review is never applied
-over a newer unreviewed artifact.
+over a newer unreviewed artifact or over a state that explicitly requires a newer
+Gate-B revision.
 """
 from __future__ import annotations
 
@@ -58,6 +59,19 @@ def _resolve_revision(target: str, status: str) -> int | None:
     pending = re.fullmatch(r"r(\d+)_rendered_pending_manual_review", status)
     if pending:
         return int(pending.group(1))
+
+    # A state that explicitly demands revision N is a hard provenance barrier.
+    # Do not fall back to an older manifest/review pair merely because it is the
+    # newest pair currently persisted. This is what previously resurrected an
+    # OWS-008 Gate-B r1 PASS while r2 was required after the stair-route repair.
+    required = re.search(r"revision_required_r(\d+)", status)
+    if required:
+        revision = int(required.group(1))
+        manifests = _manifest_revisions(target)
+        reviews = _review_revisions(target)
+        if revision not in manifests or revision not in reviews:
+            return None
+        return revision
 
     manifests = _manifest_revisions(target)
     reviews = _review_revisions(target)
