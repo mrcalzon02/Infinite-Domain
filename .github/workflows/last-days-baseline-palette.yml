@@ -35,8 +35,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install image dependency
-        run: python -m pip install 'Pillow>=10,<12'
+      - name: Install image dependencies
+        run: python -m pip install 'Pillow>=10,<12' 'numpy>=2,<3'
 
       - name: Apply SHA-gated LAST DAYS baseline palette
         run: python tools/last_days_baseline_palette.py --apply
