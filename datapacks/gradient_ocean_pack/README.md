@@ -8,7 +8,7 @@ Requires `Isekai API 2.1.0` or a compatible release. The pack overrides `minecra
 - Beyond the central continent, east and west prefer recurring large continents and retain Wastelands climate selection.
 - A 500-block-wide blend around each diagonal transitions between the east/west land regime and north/south ocean regime without a hard square seam.
 
-The central continent is radial around `(0,0)`. A guaranteed Wasteland Mountains annulus occupies radius 1,600 through 1,950, enclosing the central wasteland before the radius-2,000 to 2,400 transition toward the outer ocean.
+The central continent is radial around `(0,0)`. A guaranteed Wasteland Mountains annulus occupies radius 3,200 through 3,900, enclosing the expanded central wasteland before the radius-4,000 to 4,800 transition toward the outer ocean. This is the original central geography at exactly 2x linear scale: the guaranteed central-land diameter expands from 4,000 to 8,000 blocks and the complete central transition diameter expands from 4,800 to 9,600 blocks.
 
 The square from X/Z -192 through 191 is reserved for the authored Spawn Hospital. It uses `infinite_domain:spawn_buffer`, a visually matching wasteland-city biome with no decoration features and no structure tags, so world generation cannot place roads, ruins, vegetation, or other structures beneath the hub before its template is installed.
 
