@@ -17,6 +17,8 @@ EXPECTED_ORDER = [
     "SF-REVIEW-002", "SF-REVIEW-003",
     "OSF-005", "OSF-006", "OSF-007", "OSF-019", "OSF-023",
     "OSF-027", "OSF-037", "OSF-045", "OSF-049",
+    "OSF-008", "OSF-009", "OSF-010", "OSF-011", "OSF-012",
+    "OSF-024", "OSF-028", "OSF-029", "OSF-031", "OSF-033",
 ]
 REQUIRED = {
     "planning_id", "name", "registry_id", "faction", "state",
@@ -166,8 +168,8 @@ def validate_systemic_feature(feature: dict) -> None:
 
 
 catalog = load(CATALOG)
-if catalog.get("catalog_version") != 1:
-    fail("catalog_version must be 1")
+if catalog.get("catalog_version") != 2:
+    fail("catalog_version must be 2")
 if catalog.get("process_order") != EXPECTED_ORDER:
     fail("process_order no longer matches the approved review/tranche sequence")
 contract = catalog.get("feature_contract", {})
@@ -227,7 +229,7 @@ for feature in features:
         fail(f"{fid} loot policy risks progression bypass")
 
 print(
-    "[ABYSSAL FEATURE CATALOG PASS] 11 queued features have structural metadata, "
+    f"[ABYSSAL FEATURE CATALOG PASS] {len(features)} queued features have structural metadata, "
     "neutral ownership, geometry contracts, runtime deferrals, and validated live, "
     "variant-family, component, or systemic implementation links where implemented"
 )
