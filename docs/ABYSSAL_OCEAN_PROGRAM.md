@@ -116,6 +116,59 @@ This intentionally strips biological clutter with depth instead of copying ordin
 
 Nine upstream-normal Rift mobs are depth-routed by Infinite Domain. `rift_weaver` and `sludgeling` remain excluded from natural spawning. Risk rises from rare slope incursions to the strongest normal mixtures in hadal terrain. Entity loot is pack-owned under `kubejs/data/ftboceanmobs/loot_table/entities/` and remains progression-safe.
 
+### Spawning index
+
+Spawns are declared directly in each depth biome's `spawners.monster` array (no separate spawn-placement/biome-modifier layer). `minecraft:drowned` is always present as the baseline monster; `creature_spawn_probability` falls with depth (`0.1` slope → `0.04` hadal), and West (Pelagos) and East (Karsic) draw slightly different mixes at the same depth tier.
+
+| Biome | Region | Depth tier | Rift monster spawns (weight) |
+|---|---|---|---|
+| `western_continental_slope` | Pelagos | Slope | `riftling_observer` (1), `abyssal_winged` (1) |
+| `eastern_continental_slope` | Karsic | Slope | `corrosive_craig` (1), `riftling_observer` (1) |
+| `western_abyssal_plain` | Pelagos | Plain | `riftling_observer` (2), `mossback_goliath` (1), `shadow_beast` (1) |
+| `eastern_abyssal_plain` | Karsic | Plain | `corrosive_craig` (2), `mossback_goliath` (1), `abyssal_sludge` (1) |
+| `western_fracture_field` | Pelagos | Fracture | `abyssal_sludge` (2), `shadow_beast` (2), `tentacled_horror` (1) |
+| `eastern_fracture_field` | Karsic | Fracture | `corrosive_craig` (2), `shadow_beast` (2), `rift_minotaur` (1) |
+| `western_hadal_trench` | Pelagos | Hadal | `tentacled_horror` (2), `rift_demon` (1), `rift_minotaur` (1), `abyssal_winged` (1) |
+| `eastern_hadal_trench` | Karsic | Hadal | `rift_demon` (2), `tentacled_horror` (2), `rift_minotaur` (1), `abyssal_sludge` (1) |
+| `western_abyssal_ocean` / `eastern_abyssal_ocean` (compat IDs) | — | — | none; vanilla drowned/cod/salmon/squid/dolphin only |
+
+Per-mob depth range (shallowest → deepest biome it appears in):
+
+| Mob | Depth range | Notes |
+|---|---|---|
+| `riftling_observer` | Slope → Plain | Both regions; scout/scanner archetype |
+| `abyssal_winged` | Slope → Hadal (West only) | Skips Plain/Fracture; flies between shallow and deep |
+| `corrosive_craig` | Slope → Fracture (East only) | Karsic-exclusive corrosive line |
+| `mossback_goliath` | Plain only | Both regions; mid-depth organic tank |
+| `abyssal_sludge` | Plain (East) → Fracture (West) → Hadal (East) | Widest depth spread |
+| `shadow_beast` | Plain (West) → Fracture (both) | Mid-to-deep |
+| `tentacled_horror` | Fracture (West) → Hadal (both) | Deep ambush specialist |
+| `rift_minotaur` | Fracture (East) → Hadal (both) | Deep specialist, Karsic-leaning |
+| `rift_demon` | Hadal only (both) | Deepest, most dangerous; hadal-exclusive |
+
+### Chemical production loot families
+
+Beyond vanilla/ocean drops, each of the nine spawning mobs also carries a small `petrochem` byproduct pool so hadal-tier hunting feeds the Petrochemical Civilization chain (Mekanism is not installed in this pack; `petrochem:sulfur_dust` and `petrochem:salt_dust` are the established cross-mod chemistry hub items, already sold Era-3-gated through the Chemical Cooperative echo trader and bridged 1:1 into `immersiveengineering:dust_sulfur`, `tfmg:sulfur_dust`, and `the_wasteland_reworked:sulfur_dust`). Two families:
+
+- **Sulfur/vent line** (`petrochem:sulfur_dust`, rare `petrochem:petroleum_coke` on the two deepest predators) — corrosive, brimstone, and smoke-themed mobs: `corrosive_craig`, `abyssal_winged`, `shadow_beast`, `rift_minotaur`, `tentacled_horror`, `rift_demon`.
+- **Brine/salt line** (`petrochem:salt_dust`) — ooze, sediment, and filter-feeder mobs: `abyssal_sludge`, `mossback_goliath`, `riftling_observer`, `rift_minotaur`.
+
+Chance and count scale with depth tier (shallow specialists ~0.15 chance ×1, hadal specialists up to ~0.5 chance ×2-3, with `petroleum_coke` capped at 0.08-0.12 chance ×1), matching the reward-bag Era 3 tuning for the same items. These are raw feedstock drops only — no fluid buckets, finished chemicals, or machines — consistent with the loot doctrine below.
+
+Each of the nine mobs also carries one low-chance Era 3 process-equipment component (0.06-0.2 chance, matching the Era Reward Bag doctrine of "useful inputs and subassemblies, never complete gateway machines"), giving hunting a secondary payoff beyond raw dusts:
+
+| Mob | Component drop |
+|---|---|
+| `riftling_observer` | `petrochem:tin_nugget` |
+| `abyssal_winged` | `petrochem:tin_nugget` |
+| `corrosive_craig` | `petrochem:steel_sheet` |
+| `mossback_goliath` | `petrochem:bronze_sheet` |
+| `abyssal_sludge` | `petrochem:steel_fluid_valve` |
+| `shadow_beast` | `petrochem:bronze_sheet` |
+| `rift_minotaur` | `petrochem:steel_fluid_pipe` |
+| `tentacled_horror` | `petrochem:steel_fluid_pipe` |
+| `rift_demon` | `petrochem:steel_fluid_tank` (rarest, 0.06 chance — the deepest/most dangerous mob yields the most valuable salvage) |
+
 ## Core structure program
 
 Slope recovery:
@@ -211,6 +264,8 @@ Shared salvage:
 - `hadal_salvage`
 
 Evidence tables guarantee the required record and add modest salvage. Environmental faction debris reuses `abyssal_plain_salvage`; neutral geological sites contain no chest. No site should provide intact advanced machines, diamonds, netherite or direct era bypasses.
+
+Entity loot (the nine spawning Rift mobs) follows the same doctrine: raw vanilla/ocean materials plus the two `petrochem` chemistry-family dusts described above, never fluid buckets, finished chemicals, or machine parts.
 
 ## Create Aquatic Ambitions disposition
 
