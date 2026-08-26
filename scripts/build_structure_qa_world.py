@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import gzip
 import io
 import json
@@ -25,6 +26,18 @@ MANIFEST = ROOT / "docs" / "wasteland-site-manifest.json"
 ROAD_CATALOG = ROOT / "structure_library" / "roads" / "road-modules.json"
 MODULE_CATALOG = ROOT / "structure_library" / "modules" / "structure-kits.json"
 RESOURCE_ID = re.compile(r"^[a-z0-9_.-]+:[a-z0-9_./-]+$")
+VANILLA_DATA_JAR_CANDIDATES = (
+    Path.home() / "curseforge" / "minecraft" / "Install" / "versions" / "1.21.1" / "1.21.1.jar",
+    Path.home() / "curseforge" / "minecraft" / "Install" / "libraries" / "net" / "minecraft" / "client" / "1.21.1" / "client-1.21.1-official.jar",
+)
+LOOSE_DATA_ROOTS = (
+    ROOT / "kubejs",
+    ROOT / "datapacks",
+    ROOT / "dynamic-data-pack-cache",
+    ROOT / "moonlight-global-datapacks",
+    ROOT / "packdev",
+    ROOT / "data",
+)
 
 CATEGORY_ORDER = (
     "ores",
@@ -50,6 +63,13 @@ class BlockSample:
     path: str
     category: str
     is_fluid: bool = False
+
+
+@dataclass(frozen=True)
+class PlaceableContent:
+    resource_id: str
+    kind: str
+    sources: tuple[str, ...]
 
 
 @dataclass
@@ -307,6 +327,76 @@ def module_names() -> list[str]:
     return [record["module_id"].split(":", 1)[1] for record in catalog["modules"]]
 
 
+def _classify_data_resource(path: str) -> tuple[str, str] | None:
+    """Convert a data-pack path to a directly placeable registry/template id."""
+    normalized = path.replace("\\", "/").lstrip("./")
+    match = re.search(
+        r"(?:^|/)data/([a-z0-9_.-]+)/(structure|structures|worldgen/structure|worldgen/configured_feature)/(.+?)\.(nbt|json)$",
+        normalized,
+    )
+    if not match:
+        return None
+    namespace, folder, resource_path, extension = match.groups()
+    if folder in {"structure", "structures"} and extension == "nbt":
+        kind = "template"
+    elif folder == "worldgen/structure" and extension == "json":
+        kind = "worldgen_structure"
+    elif folder == "worldgen/configured_feature" and extension == "json":
+        kind = "configured_feature"
+    else:
+        return None
+    resource_id = f"{namespace}:{resource_path}"
+    if not RESOURCE_ID.fullmatch(resource_id):
+        return None
+    return kind, resource_id
+
+
+def placeable_content() -> list[PlaceableContent]:
+    """Inventory every data-driven object accepted by a /place subcommand.
+
+    The vanilla client jar supplies Minecraft's built-in data pack, mod jars
+    supply their embedded packs, and the loose roots cover this instance's
+    KubeJS/generated/global data packs. Duplicate resource ids intentionally
+    collapse to the effective registry key while retaining all source labels
+    in the CSV inventory.
+    """
+    found: dict[tuple[str, str], set[str]] = {}
+
+    def record(path: str, source: str) -> None:
+        classified = _classify_data_resource(path)
+        if classified:
+            found.setdefault(classified, set()).add(source)
+
+    archive_paths: set[Path] = set((ROOT / "mods").glob("*.jar"))
+    archive_paths.update(candidate for candidate in VANILLA_DATA_JAR_CANDIDATES if candidate.is_file())
+    for root in LOOSE_DATA_ROOTS:
+        if root.is_dir():
+            archive_paths.update(root.rglob("*.zip"))
+            archive_paths.update(root.rglob("*.jar"))
+
+    for archive_path in sorted(archive_paths, key=lambda item: item.as_posix().lower()):
+        try:
+            with zipfile.ZipFile(archive_path) as archive:
+                source = archive_path.name
+                for name in archive.namelist():
+                    record(name, source)
+        except (OSError, zipfile.BadZipFile):
+            continue
+
+    for root in LOOSE_DATA_ROOTS:
+        if not root.is_dir():
+            continue
+        for candidate in root.rglob("*"):
+            if candidate.is_file() and candidate.suffix.lower() in {".nbt", ".json"}:
+                record(candidate.as_posix(), candidate.relative_to(ROOT).as_posix())
+
+    order = {"template": 0, "worldgen_structure": 1, "configured_feature": 2}
+    return [
+        PlaceableContent(resource_id, kind, tuple(sorted(sources)))
+        for (kind, resource_id), sources in sorted(found.items(), key=lambda item: (order[item[0][0]], item[0][1]))
+    ]
+
+
 def tagged_fluids() -> set[str]:
     """Read fluid tag values from every installed mod instead of guessing only by name."""
     result = {"minecraft:water", "minecraft:lava"}
@@ -382,7 +472,13 @@ def block_samples() -> list[BlockSample]:
     return sorted(samples, key=lambda sample: (sample.namespace != "minecraft", sample.namespace, order.get(sample.category, 99), sample.path))
 
 
-def build_datapack(structures: list[str], roads: list[str], modules: list[str], blocks: list[BlockSample]) -> None:
+def build_datapack(
+    structures: list[str],
+    roads: list[str],
+    modules: list[str],
+    blocks: list[BlockSample],
+    content: list[PlaceableContent],
+) -> None:
     write_text(PACK / "pack.mcmeta", json.dumps({"pack": {"pack_format": 48, "description": "Infinite Domain structure and block QA gallery"}}, indent=2))
     write_text(PACK / "data" / "minecraft" / "tags" / "function" / "load.json", json.dumps({"values": ["infinite_domain_qa:load"]}, indent=2))
 
@@ -592,10 +688,10 @@ def build_datapack(structures: list[str], roads: list[str], modules: list[str], 
         ]
         for rotation, (origin_x, origin_z), (sign_x, sign_z), caption in zip(rotations, origins, sign_positions, ("NORTH / 0", "EAST / 90", "SOUTH / 180", "WEST / 270")):
             commands.append(f"place template infinite_domain:wasteland/{name} {origin_x} {place_y} {origin_z} {rotation} none 1.0 0")
-            commands.append(sign_command(sign_x, 5, sign_z, [label[:15], label[15:30], caption, f"TEST {index + 1:02d}/84"], 0))
+            commands.append(sign_command(sign_x, 5, sign_z, [label[:15], label[15:30], caption, f"TEST {index + 1:02d}/{len(structures):02d}"], 0))
         commands.extend([
             f"tp @p {cell_x + 96} 90 {cell_z + 96}",
-            f"tellraw @p {{\"text\":\"Rotation test {index + 1}/84: {name}. Inspect doors, stairs, rails, block facing and lot fit in all four quadrants.\",\"color\":\"aqua\"}}",
+            f"tellraw @p {{\"text\":\"Rotation test {index + 1}/{len(structures)}: {name}. Inspect doors, stairs, rails, block facing and lot fit in all four quadrants.\",\"color\":\"aqua\"}}",
             f"forceload remove {cell_x} {cell_z} {cell_x + 191} {cell_z + 191}",
         ])
         function(f"rotation/{name}", commands)
@@ -607,7 +703,7 @@ def build_datapack(structures: list[str], roads: list[str], modules: list[str], 
     ])
     function("rotation/reset", [
         "scoreboard players set #rotation_cursor id_qa 0",
-        "tellraw @p {\"text\":\"Structure rotation review reset to test 1/84.\",\"color\":\"yellow\"}",
+        f"tellraw @p {{\"text\":\"Structure rotation review reset to test 1/{len(structures)}.\",\"color\":\"yellow\"}}",
     ])
 
     def compact_rotation_harness(names: list[str], resource_root: str, folder: str, cursor: str, base_x: int, base_z: int, columns: int, noun: str) -> None:
@@ -664,9 +760,9 @@ def build_datapack(structures: list[str], roads: list[str], modules: list[str], 
     hub.extend(command_block(40, 5, 11, "function infinite_domain_qa:module_all/start", "Build all west structure modules"))
     hub.append(sign_command(40, 5, 13, ["BUILD ALL WEST", f"{len(modules)} MODULES", "PORT + MARKET", "INDUSTRIAL"], 0))
     hub.extend(command_block(56, 5, 11, "function infinite_domain_qa:rotation/next", "Build next four-way rotation test"))
-    hub.append(sign_command(56, 5, 13, ["NEXT ROTATION", "ONE STRUCTURE", "FOUR DIRECTIONS", "84-STEP CYCLE"], 0))
+    hub.append(sign_command(56, 5, 13, ["NEXT ROTATION", "ONE STRUCTURE", "FOUR DIRECTIONS", f"{len(structures)}-STEP CYCLE"], 0))
     hub.extend(command_block(72, 5, 11, "function infinite_domain_qa:rotation/reset", "Reset rotation test cycle"))
-    hub.append(sign_command(72, 5, 13, ["RESET ROTATION", "RETURNS TO 1/84", "DOES NOT DELETE", "BUILT TESTS"], 0))
+    hub.append(sign_command(72, 5, 13, ["RESET ROTATION", f"RETURNS TO 1/{len(structures)}", "DOES NOT DELETE", "BUILT TESTS"], 0))
     hub.extend(command_block(88, 5, 11, "function infinite_domain_qa:road_rotation/next", "Build next road rotation test"))
     hub.append(sign_command(88, 5, 13, ["NEXT ROAD TEST", f"{len(clean_roads)} TOPOLOGIES", "FOUR DIRECTIONS", "EAST RANGE"], 0))
     hub.extend(command_block(104, 5, 11, "function infinite_domain_qa:road_rotation/reset", "Reset road rotation cycle"))
@@ -675,14 +771,131 @@ def build_datapack(structures: list[str], roads: list[str], modules: list[str], 
     hub.append(sign_command(120, 5, 13, ["NEXT MODULE", f"{len(modules)} MODULES", "FOUR DIRECTIONS", "WEST RANGE"], 0))
     hub.extend(command_block(136, 5, 11, "function infinite_domain_qa:module_rotation/reset", "Reset module rotation cycle"))
     hub.append(sign_command(136, 5, 13, ["RESET MODULE", "RETURNS TO 1", "PRESERVES BUILDS", "STATIC CELLS"], 0))
+    complete_counts = {kind: sum(item.kind == kind for item in content) for kind in ("template", "worldgen_structure", "configured_feature")}
     hub.extend(command_block(-8, 5, 11, "function infinite_domain_qa:catalog/start", "Build organized block museum"))
     hub.append(sign_command(-8, 5, 13, ["BUILD MUSEUM", f"{len(blocks)} BLOCKS", "MOD + TYPE", "TICK-BATCHED"], 0))
     hub.extend(command_block(8, 5, 11, "tp @p 0 20 245", "Visit organized block field"))
     hub.append(sign_command(8, 5, 13, ["BLOCK FIELD", "SOUTH Z=256", "FLUIDS X=220", "ORES X=430"], 0))
-    hub.append(f"tellraw @a {{\"text\":\"Infinite Domain QA hub ready: {len(structures)} structures, {len(roads)} road modules, {len(modules)} structure modules, {len(blocks)} registered blocks.\",\"color\":\"gold\"}}")
+    hub.extend(command_block(-40, 5, 11, "function infinite_domain_qa:complete_all/start", "Build every template structure and feature"))
+    hub.append(sign_command(-40, 5, 13, ["BUILD COMPLETE", f"{len(content)} ENTRIES", "STRUCTURES +", "FEATURES"], 0))
+    hub.extend(command_block(-56, 5, 11, "tp @p 3000 90 3000", "Visit complete template gallery"))
+    hub.append(sign_command(-56, 5, 13, ["ALL TEMPLATES", f"{complete_counts['template']} TOTAL", "START X/Z 3000", "CSV INDEX"], 0))
+    hub.append(f"tellraw @a {{\"text\":\"Infinite Domain QA hub ready: {len(structures)} curated structures, {complete_counts['template']} templates, {complete_counts['worldgen_structure']} worldgen structures, {complete_counts['configured_feature']} configured features and {len(blocks)} registered blocks. Complete galleries start automatically.\",\"color\":\"gold\"}}")
+    hub.append("schedule function infinite_domain_qa:complete_all/start 2s replace")
+    hub.append("schedule function infinite_domain_qa:catalog/start 4s replace")
     function("build_hub", hub)
 
+    build_complete_content_catalog(content)
     build_catalog_functions(blocks)
+
+
+def build_complete_content_catalog(content: list[PlaceableContent]) -> None:
+    """Build resumable galleries for every directly placeable data-pack entry."""
+    layouts = {
+        "template": (3000, 3000, 24, 160),
+        "worldgen_structure": (-12000, 3000, 12, 240),
+        "configured_feature": (3000, -12000, 20, 80),
+    }
+    grouped = {kind: [item for item in content if item.kind == kind] for kind in layouts}
+    coordinates: dict[tuple[str, str], tuple[int, int, int]] = {}
+
+    function("complete_all/start", [
+        "execute if data storage infinite_domain_qa:state complete_gallery_started run tellraw @p {\"text\":\"Complete structure/feature gallery is already scheduled or built.\",\"color\":\"yellow\"}",
+        "execute unless data storage infinite_domain_qa:state complete_gallery_started run data modify storage infinite_domain_qa:state complete_gallery_started set value 1b",
+        "execute unless data storage infinite_domain_qa:state complete_gallery_scheduled run schedule function infinite_domain_qa:complete_all/template/batch_0000 1t replace",
+        "data modify storage infinite_domain_qa:state complete_gallery_scheduled set value 1b",
+        f"tellraw @a {{\"text\":\"Complete gallery queued: {len(grouped['template'])} templates, {len(grouped['worldgen_structure'])} worldgen structures and {len(grouped['configured_feature'])} configured features.\",\"color\":\"green\"}}",
+    ])
+
+    kind_labels = {
+        "template": "TEMPLATE",
+        "worldgen_structure": "WORLDGEN STRUCT",
+        "configured_feature": "CONFIG FEATURE",
+    }
+    kinds = list(layouts)
+    for kind_index, kind in enumerate(kinds):
+        entries = grouped[kind]
+        base_x, base_z, columns, cell_size = layouts[kind]
+        for index, item in enumerate(entries):
+            cell_x = base_x + (index % columns) * cell_size
+            cell_z = base_z + (index // columns) * cell_size
+            coordinates[(kind, item.resource_id)] = (cell_x, 5, cell_z)
+            namespace, path = item.resource_id.split(":", 1)
+            label = f"{namespace}:{path}".replace("_", " ")
+            place_commands: list[str]
+            if kind == "template":
+                place_commands = [
+                    f"forceload add {cell_x} {cell_z} {cell_x + 159} {cell_z + 159}",
+                    f"fill {cell_x} 4 {cell_z} {cell_x + 159} 4 {cell_z + 159} minecraft:smooth_stone replace",
+                    f"place template {item.resource_id} {cell_x + 8} 5 {cell_z + 8}",
+                    sign_command(cell_x + 3, 5, cell_z + 3, [kind_labels[kind], label[:15], label[15:30], f"{index + 1}/{len(entries)}"], 0),
+                    f"forceload remove {cell_x} {cell_z} {cell_x + 159} {cell_z + 159}",
+                ]
+            elif kind == "worldgen_structure":
+                place_commands = [
+                    f"forceload add {cell_x} {cell_z} {cell_x + 239} {cell_z + 239}",
+                    f"fill {cell_x} 4 {cell_z} {cell_x + 119} 4 {cell_z + 239} minecraft:smooth_stone replace",
+                    f"fill {cell_x + 120} 4 {cell_z} {cell_x + 239} 4 {cell_z + 239} minecraft:smooth_stone replace",
+                    f"place structure {item.resource_id} {cell_x + 120} 5 {cell_z + 120}",
+                    sign_command(cell_x + 3, 5, cell_z + 3, [kind_labels[kind], label[:15], label[15:30], f"{index + 1}/{len(entries)}"], 0),
+                    f"forceload remove {cell_x} {cell_z} {cell_x + 239} {cell_z + 239}",
+                ]
+            else:
+                place_commands = [
+                    f"forceload add {cell_x} {cell_z} {cell_x + 79} {cell_z + 79}",
+                    f"fill {cell_x} 4 {cell_z} {cell_x + 79} 4 {cell_z + 79} minecraft:smooth_stone replace",
+                    f"fill {cell_x + 8} 5 {cell_z + 8} {cell_x + 18} 14 {cell_z + 18} minecraft:stone replace",
+                    f"fill {cell_x + 8} 15 {cell_z + 8} {cell_x + 18} 15 {cell_z + 18} minecraft:grass_block replace",
+                    f"fill {cell_x + 28} 5 {cell_z + 8} {cell_x + 38} 14 {cell_z + 18} minecraft:netherrack replace",
+                    f"fill {cell_x + 28} 15 {cell_z + 8} {cell_x + 38} 15 {cell_z + 18} minecraft:netherrack replace",
+                    f"fill {cell_x + 48} 5 {cell_z + 8} {cell_x + 58} 14 {cell_z + 18} minecraft:end_stone replace",
+                    f"fill {cell_x + 48} 15 {cell_z + 8} {cell_x + 58} 15 {cell_z + 18} minecraft:end_stone replace",
+                    f"fill {cell_x + 28} 5 {cell_z + 48} {cell_x + 38} 14 {cell_z + 58} minecraft:stone replace",
+                    f"fill {cell_x + 28} 15 {cell_z + 48} {cell_x + 38} 20 {cell_z + 58} minecraft:water replace",
+                    f"place feature {item.resource_id} {cell_x + 13} 16 {cell_z + 13}",
+                    f"place feature {item.resource_id} {cell_x + 33} 16 {cell_z + 13}",
+                    f"place feature {item.resource_id} {cell_x + 53} 16 {cell_z + 13}",
+                    f"place feature {item.resource_id} {cell_x + 33} 16 {cell_z + 53}",
+                    sign_command(cell_x + 3, 5, cell_z + 3, [kind_labels[kind], label[:15], label[15:30], f"{index + 1}/{len(entries)}"], 0),
+                    f"forceload remove {cell_x} {cell_z} {cell_x + 79} {cell_z + 79}",
+                ]
+
+            namespace_path = f"{namespace}/{path}"
+            function(f"complete/{kind}/{namespace_path}", place_commands)
+            batch_commands = [f"function infinite_domain_qa:complete/{kind}/{namespace_path}"]
+            if index + 1 < len(entries):
+                batch_commands.append(f"schedule function infinite_domain_qa:complete_all/{kind}/batch_{index + 1:04d} 2t replace")
+            elif kind_index + 1 < len(kinds):
+                next_kind = kinds[kind_index + 1]
+                batch_commands.extend([
+                    f"tellraw @a {{\"text\":\"Complete {kind_labels[kind].lower()} gallery finished: {len(entries)} entries.\",\"color\":\"green\"}}",
+                    f"schedule function infinite_domain_qa:complete_all/{next_kind}/batch_0000 10t replace",
+                ])
+            else:
+                batch_commands.append(f"tellraw @a {{\"text\":\"All complete galleries finished: {len(content)} placeable structures/features processed.\",\"color\":\"gold\"}}")
+            function(f"complete_all/{kind}/batch_{index:04d}", batch_commands)
+
+    output = io.StringIO(newline="")
+    writer = csv.writer(output, lineterminator="\n")
+    writer.writerow(("kind", "index", "resource_id", "namespace", "path", "function", "cell_x", "cell_y", "cell_z", "sources"))
+    kind_indices = {kind: 0 for kind in layouts}
+    for item in content:
+        kind_indices[item.kind] += 1
+        namespace, path = item.resource_id.split(":", 1)
+        cell_x, cell_y, cell_z = coordinates[(item.kind, item.resource_id)]
+        writer.writerow((
+            item.kind,
+            kind_indices[item.kind],
+            item.resource_id,
+            namespace,
+            path,
+            f"infinite_domain_qa:complete/{item.kind}/{namespace}/{path}",
+            cell_x,
+            cell_y,
+            cell_z,
+            ";".join(item.sources),
+        ))
+    write_text(WORLD / "QA_CONTENT_CATALOG.csv", output.getvalue())
 
 
 def build_catalog_functions(blocks: list[BlockSample]) -> None:
@@ -836,15 +1049,27 @@ def build_catalog_functions(blocks: list[BlockSample]) -> None:
     write_text(WORLD / "QA_BLOCK_CATALOG.csv", "\n".join(mapping_rows))
 
 
-def write_readme(structures: list[str], roads: list[str], modules: list[str], blocks: list[BlockSample]) -> None:
+def write_readme(
+    structures: list[str],
+    roads: list[str],
+    modules: list[str],
+    blocks: list[BlockSample],
+    content: list[PlaceableContent],
+) -> None:
     solids = [sample for sample in blocks if not sample.is_fluid]
     fluids = [sample for sample in blocks if sample.is_fluid]
     ores = [sample for sample in solids if sample.category == "ores"]
     namespaces = {sample.namespace for sample in blocks}
+    templates = [item for item in content if item.kind == "template"]
+    worldgen_structures = [item for item in content if item.kind == "worldgen_structure"]
+    configured_features = [item for item in content if item.kind == "configured_feature"]
     text = f"""Infinite Domain Structure QA Flatworld
 
 Minecraft: Java 1.21.1 / NeoForge pack instance
 Structures: {len(structures)}
+All structure templates: {len(templates)}
+All worldgen structures: {len(worldgen_structures)}
+All configured features: {len(configured_features)}
 Road modules: {len(roads)}
 Structure-kit modules: {len(modules)}
 Registered blocks captured: {len(blocks)}
@@ -855,8 +1080,11 @@ LAYOUT
 - North: {len(structures)} structure review cells, each 96 x 96 blocks.
 - East: {len(roads)} road-module review cells, each 48 x 48 blocks, grouped by topology family and condition.
 - West: {len(modules)} port/dock, marketplace and industrial module review cells, each 48 x 48 blocks.
-- Far north: an incremental 84-cell rotation gallery. NEXT ROTATION builds one structure in all four orientations without deleting prior tests.
+- Far north: an incremental {len(structures)}-cell rotation gallery. NEXT ROTATION builds one curated structure in all four orientations without deleting prior tests.
 - Far east and west: compact four-way rotation galleries for the 12 clean road topologies and all {len(modules)} reusable structure modules.
+- Complete template gallery, starting X=3000 Z=3000: all {len(templates)} NBT templates embedded in vanilla, mods and loose data packs.
+- Complete worldgen-structure gallery, starting X=-12000 Z=3000: all {len(worldgen_structures)} registered data-driven structure definitions.
+- Complete configured-feature gallery, starting X=3000 Z=-12000: all {len(configured_features)} directly placeable features, each attempted on grass/stone, Nether, End and water test substrates.
 - South, starting near Z=256: {len(solids)} solid blocks grouped Minecraft-first, then alphabetically by mod, and subdivided by functional type.
 - Fluid laboratory, starting near X=220 Z=256: {len(fluids)} fluids, each in a sealed glass source cube and a glass-sided flow channel.
 - Unified ore wall, starting near X=430 Z=256: all {len(ores)} detected ores in labeled mod panels.
@@ -864,16 +1092,15 @@ LAYOUT
 
 USAGE
 1. Open the world in the Infinite Domain instance.
-2. Press BUILD ALL NORTH to populate all 84 spaced structure cells, or use a labeled structure button to build one template and teleport to it.
-3. Press BUILD ALL EAST to populate all {len(roads)} road-module cells, or use the east control annex to compare one topology/condition at a time.
-4. Press BUILD ALL WEST to populate all {len(modules)} reusable port, market and industrial module cells.
-5. Individual structure, road and module buttons can be pressed again whenever an asset changes.
+2. The complete template, worldgen-structure, configured-feature and block galleries begin automatically in resumable tick-batches on first load.
+3. Press BUILD ALL NORTH to populate all {len(structures)} curated structure cells, or use a labeled structure button to build one template and teleport to it.
+4. Press BUILD ALL EAST/WEST for the road and reusable-module galleries.
+5. Individual curated structure, road and module buttons can be pressed again whenever an asset changes.
 6. Press NEXT ROTATION to build the next authoritative structure in four directions. RESET ROTATION returns the cycle to test 1 without deleting completed cells.
 7. NEXT ROAD TEST and NEXT MODULE provide equivalent four-way review cycles for connector-sensitive assets.
 8. Return with /tp 0 8 0.
-9. Press BUILD MUSEUM once. The field, fluid lab, ore wall and tower are constructed in safe tick-batches.
-10. Use the section signs for broad navigation and Jade for the exact block ID.
-11. QA_BLOCK_CATALOG.csv records namespace, category and every relevant display coordinate.
+9. BUILD COMPLETE and BUILD MUSEUM safely resume their automatic queues if needed.
+10. QA_CONTENT_CATALOG.csv records every template/structure/feature ID, source, function and cell coordinate. QA_BLOCK_CATALOG.csv does the same for blocks.
 
 REVIEW RECORDING
 - Building checklist: structure_library/review/building-production-review.csv
@@ -901,10 +1128,12 @@ def main() -> None:
     roads = road_names()
     modules = module_names()
     blocks = block_samples()
+    content = placeable_content()
     write_level_dat()
-    build_datapack(structures, roads, modules, blocks)
-    write_readme(structures, roads, modules, blocks)
-    print(f"Created {WORLD_NAME}: {len(structures)} structure controls, {len(roads)} road controls, {len(modules)} module controls, {len(blocks)} blocks, {math.ceil(len(blocks) / 256)} tower floors")
+    build_datapack(structures, roads, modules, blocks, content)
+    write_readme(structures, roads, modules, blocks, content)
+    counts = {kind: sum(item.kind == kind for item in content) for kind in ("template", "worldgen_structure", "configured_feature")}
+    print(f"Created {WORLD_NAME}: {len(structures)} curated structure controls, {counts['template']} templates, {counts['worldgen_structure']} worldgen structures, {counts['configured_feature']} configured features, {len(roads)} road controls, {len(modules)} module controls, {len(blocks)} blocks, {math.ceil(len(blocks) / 256)} tower floors")
 
 
 if __name__ == "__main__":

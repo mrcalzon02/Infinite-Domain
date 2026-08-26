@@ -45,6 +45,11 @@ def main() -> None:
     expected_roads = builder.road_names()
     expected_modules = builder.module_names()
     expected_blocks = builder.block_samples()
+    expected_content = builder.placeable_content()
+    expected_by_kind = {
+        kind: [item for item in expected_content if item.kind == kind]
+        for kind in ("template", "worldgen_structure", "configured_feature")
+    }
     failures = []
     structure_functions = function_names(FUNCTIONS / "structure")
     controls_complete = set(structure_functions) == set(expected_structures) and len(structure_functions) == len(expected_structures)
@@ -100,6 +105,34 @@ def main() -> None:
         failures.append("block catalog does not match the current registered-block inventory and ordering")
     if any(row["is_fluid"] == "1" and row["field_x"] for row in rows):
         failures.append("a fluid escaped into the ordinary block field")
+    content_catalog_path = WORLD / "QA_CONTENT_CATALOG.csv"
+    with content_catalog_path.open(encoding="utf-8", newline="") as handle:
+        content_rows = list(csv.DictReader(handle))
+    content_keys = [(row["kind"], row["resource_id"]) for row in content_rows]
+    expected_content_keys = [(item.kind, item.resource_id) for item in expected_content]
+    complete_content_catalog_current = content_keys == expected_content_keys
+    if not complete_content_catalog_current:
+        failures.append("complete content catalog does not match the current template/structure/feature inventory")
+    complete_place_functions = function_names(FUNCTIONS / "complete")
+    expected_place_functions = sorted(
+        f"{item.kind}/{item.resource_id.replace(':', '/', 1)}" for item in expected_content
+    )
+    complete_place_functions_current = complete_place_functions == expected_place_functions
+    if not complete_place_functions_current:
+        failures.append("direct placement functions do not exactly cover the complete content inventory")
+    complete_chains_current = True
+    for kind, items in expected_by_kind.items():
+        chain = sorted((FUNCTIONS / "complete_all" / kind).glob("batch_*.mcfunction"))
+        if len(chain) != len(items):
+            complete_chains_current = False
+            failures.append(f"complete {kind} chain has {len(chain)} batches, expected {len(items)}")
+    build_hub = (FUNCTIONS / "build_hub.mcfunction").read_text(encoding="utf-8")
+    automatic_complete_build = (
+        "schedule function infinite_domain_qa:complete_all/start" in build_hub
+        and "schedule function infinite_domain_qa:catalog/start" in build_hub
+    )
+    if not automatic_complete_build:
+        failures.append("fresh-world load does not automatically schedule the complete content and block galleries")
     level_path = WORLD / "level.dat"
     with gzip.open(level_path, "rb") as handle:
         _name, root = builder.Reader(handle.read()).root()
@@ -107,7 +140,16 @@ def main() -> None:
     if "minecraft:flat" not in strings:
         failures.append("level.dat is not configured with Minecraft's native flat generator")
     readme = (WORLD / "README_QA_WORLD.txt").read_text(encoding="utf-8")
-    for token in (f"Structures: {len(expected_structures)}", f"Road modules: {len(expected_roads)}", f"Structure-kit modules: {len(expected_modules)}", f"Registered blocks captured: {len(expected_blocks)}", "No third-party world save is redistributed"):
+    for token in (
+        f"Structures: {len(expected_structures)}",
+        f"All structure templates: {len(expected_by_kind['template'])}",
+        f"All worldgen structures: {len(expected_by_kind['worldgen_structure'])}",
+        f"All configured features: {len(expected_by_kind['configured_feature'])}",
+        f"Road modules: {len(expected_roads)}",
+        f"Structure-kit modules: {len(expected_modules)}",
+        f"Registered blocks captured: {len(expected_blocks)}",
+        "No third-party world save is redistributed",
+    ):
         if token not in readme:
             failures.append(f"QA README is missing required declaration: {token}")
     report = {
@@ -116,6 +158,9 @@ def main() -> None:
         "road_modules": len(expected_roads),
         "structure_kit_modules": len(expected_modules),
         "registered_blocks": len(expected_blocks),
+        "all_structure_templates": len(expected_by_kind["template"]),
+        "all_worldgen_structures": len(expected_by_kind["worldgen_structure"]),
+        "all_configured_features": len(expected_by_kind["configured_feature"]),
         "solid_blocks": sum(not sample.is_fluid for sample in expected_blocks),
         "fluids": sum(sample.is_fluid for sample in expected_blocks),
         "tower_floors": (sum(not sample.is_fluid for sample in expected_blocks) + 255) // 256,
@@ -127,6 +172,10 @@ def main() -> None:
         "road_rotation_harness_complete": road_rotation_harness_complete,
         "module_rotation_harness_complete": module_rotation_harness_complete,
         "block_catalog_current": catalog_ids == expected_ids,
+        "complete_content_catalog_current": complete_content_catalog_current,
+        "complete_place_functions_current": complete_place_functions_current,
+        "complete_build_chains_current": complete_chains_current,
+        "automatic_complete_build": automatic_complete_build,
         "static_integrity_passed": not failures,
         "runtime_gallery_status": "pending_player_open_build_and_visual_walkthrough",
         "failures": failures,
@@ -134,7 +183,7 @@ def main() -> None:
     REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     if failures:
         raise SystemExit("QA world validation failed:\n- " + "\n- ".join(failures))
-    print(f"Validated QA world: {len(expected_structures)} structure controls, {len(expected_roads)} road controls, {len(expected_modules)} module controls, {len(expected_blocks)} blocks, {report['tower_floors']} tower floors")
+    print(f"Validated QA world: {len(expected_structures)} curated structure controls, {len(expected_by_kind['template'])} templates, {len(expected_by_kind['worldgen_structure'])} worldgen structures, {len(expected_by_kind['configured_feature'])} configured features, {len(expected_roads)} road controls, {len(expected_modules)} module controls, {len(expected_blocks)} blocks, {report['tower_floors']} tower floors")
 
 
 if __name__ == "__main__":
