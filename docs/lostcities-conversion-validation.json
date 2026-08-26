@@ -1,847 +1,857 @@
 {
-  "purpose": "Static Lost Cities asset validation plus lossless block-state/NBT round trip. Runtime codec and visual approval remain separate gates.",
+  "purpose": "Static Lost Cities asset validation plus lossless block-state/NBT round trip. A structure is production_approved automatically once its round trip is lossless; there is no separate manual sign-off gate.",
   "valid": true,
-  "structures_checked": 168,
+  "structures_checked": 170,
   "structures": {
     "infinite_domain:abandoned_bungalow": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:dilapidated_grocery": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_gas_station": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:corporate_warehouse": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_fire_station": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_hospital": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_police_precinct": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_courthouse": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_create_factory": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:bunker_network": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:survivor_cache": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:trade_outpost": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:decayed_farm": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:trailer_park": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:mountain_military_complex": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:mountain_biohazard_lab": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:decayed_logging_camp": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:bombed_data_center": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:hydroelectric_refuge_dam": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:toppled_skyscraper": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:blown_apartment_complex": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_mixed_use_block": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:sunken_city_front": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:pancaked_parking_structure": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:cratered_downtown_intersection": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_motel": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:freight_depot": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:bungalow_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:motel_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:grocery_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:gas_station_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:freight_depot_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:fire_station_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:corporate_warehouse_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:create_factory_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:bunker_network_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:survivor_cache_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:trade_outpost_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:decayed_farm_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:trailer_park_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:mountain_military_complex_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:mountain_biohazard_lab_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:decayed_logging_camp_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:bombed_data_center_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:hydroelectric_refuge_dam_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:toppled_skyscraper_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:blown_apartment_complex_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_mixed_use_block_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:sunken_city_front_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:pancaked_parking_structure_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:cratered_downtown_intersection_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_hospital_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_police_precinct_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_courthouse_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:radio_mast": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:radio_mast_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:wrecked_sedan": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:wrecked_sedan_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:delivery_van": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:delivery_van_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:battle_tank": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:battle_tank_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:service_garage": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:service_garage_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:scrapyard": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:scrapyard_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:military_checkpoint": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:military_checkpoint_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_roadside_diner": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_roadside_diner_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_truck_stop": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_truck_stop_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:wasteland_weigh_station": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:wasteland_weigh_station_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:destroyed_refugee_convoy": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:destroyed_refugee_convoy_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:split_level_house": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:split_level_house_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_culdesac": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_culdesac_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:emergency_relief_shelter": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:emergency_relief_shelter_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:tenement_courtyard": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:tenement_courtyard_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_rowhouse_block": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_rowhouse_block_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:shattered_luxury_condo": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:shattered_luxury_condo_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_city_school": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_city_school_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_community_center": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_community_center_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:decayed_ranch": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:decayed_ranch_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:roadside_church_cemetery": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:roadside_church_cemetery_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_ranger_station": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_ranger_station_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:wasteland_fire_lookout": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:wasteland_fire_lookout_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_shopping_mall": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_shopping_mall_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_department_store": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_department_store_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:bombed_hotel": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:bombed_hotel_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:buried_bank_vault": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:buried_bank_vault_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_office_tower": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_office_tower_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:collapsed_subway_station": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:collapsed_subway_station_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_bus_terminal": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_bus_terminal_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:elevated_rail_collapse": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:elevated_rail_collapse_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:sunken_highway_interchange": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:sunken_highway_interchange_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:collapsed_airship_terminal": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:collapsed_airship_terminal_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:crashed_cargo_airship": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:crashed_cargo_airship_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:warm_industrial_mountain_port": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:warm_industrial_mountain_port_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:cold_industrial_mountain_port": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:cold_industrial_mountain_port_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_quarry": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_quarry_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:collapsed_mine_entrance": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:collapsed_mine_entrance_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:excavator_pit": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:excavator_pit_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_oil_field": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_oil_field_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_orchard_cannery": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:abandoned_orchard_cannery_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_grain_elevator": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_grain_elevator_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:shattered_greenhouse_nursery": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:shattered_greenhouse_nursery_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:remote_sawmill": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:remote_sawmill_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:industrial_facility": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:industrial_facility_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:city_electrical_substation": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:city_electrical_substation_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:city_water_treatment_plant": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:city_water_treatment_plant_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:district_heating_station": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:district_heating_station_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:municipal_incinerator": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:municipal_incinerator_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_fuel_depot": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_fuel_depot_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_cyberware_clinic": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ruined_cyberware_clinic_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ae2_records_archive": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:ae2_records_archive_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:nuclear_research_annex": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:nuclear_research_annex_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:shattered_wind_farm": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:shattered_wind_farm_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:broken_solar_field": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:broken_solar_field_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:wilderness_substation": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:wilderness_substation_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:wasteland_water_tower": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
     },
     "infinite_domain:wasteland_water_tower_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
-      "production_approved": false
+      "production_approved": true
+    },
+    "infinite_domain:mountain_pass_terminator": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:mountain_pass_terminator_clean_master": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
     }
   }
 }

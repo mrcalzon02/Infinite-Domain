@@ -37,11 +37,31 @@ ServerEvents.loaded(event => {
     // 2101 command grammar no longer accepts the former server-team command path.
     // Retry a few times because a brand-new save can finish loading FTB Teams a
     // tick or two before FTB Chunks has made its ownership index writable.
+    // getTeamByName keys off FTB Teams' internal normalized short-name, not the
+    // literal display string, so it never matches 'Admin Spawn' as created below.
+    // That silently failed on every retry and recreated a fresh duplicate server
+    // team each time (confirmed: 6 'Created new server team' log lines on one
+    // load). Look the team up by the DISPLAY_NAME property we set ourselves
+    // instead, since that value is exact and under our control.
+    function findAdminSpawnTeam(manager) {
+        const teams = manager.getTeams().toArray()
+        for (let i = 0; i < teams.length; i++) {
+            const candidate = teams[i]
+            if (!candidate.isServerTeam()) continue
+            const displayName = candidate.getProperty($TeamProperties.DISPLAY_NAME)
+            if (displayName !== null && String(displayName) === 'Admin Spawn') {
+                return candidate
+            }
+        }
+        return null
+    }
+
     function configureSpawnClaims(attempt) {
         const manager = $FTBTeamsAPI.api().getManager()
         const source = server.createCommandSourceStack()
         let team = manager.getTeamByName('Admin Spawn').orElse(null)
         if (team === null) team = manager.getTeamByName('spawn').orElse(null)
+        if (team === null) team = findAdminSpawnTeam(manager)
         if (team === null) {
             try {
                 team = manager.createServerTeam(

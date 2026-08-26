@@ -2284,7 +2284,7 @@ def loot_table(entries: list[tuple[str, int, tuple[int, int]]]) -> dict[str, Any
     }
 
 
-def register_placement(category: str, name: str, spacing: int, separation: int, salt: int) -> None:
+def register_placement(category: str, name: str, spacing: int, separation: int, salt: int, biomes: str | None = None) -> None:
     write_json(
         DATA / "worldgen" / "template_pool" / category / f"{name}.json",
         {
@@ -2296,7 +2296,7 @@ def register_placement(category: str, name: str, spacing: int, separation: int, 
         DATA / "worldgen" / "structure" / category / f"{name}.json",
         {
             "type": "minecraft:jigsaw",
-            "biomes": f"#{QUARANTINE_TAG}",
+            "biomes": biomes or f"#{QUARANTINE_TAG}",
             "step": "surface_structures",
             "spawn_overrides": {},
             "terrain_adaptation": "none",
@@ -2350,7 +2350,7 @@ def retire_structure_set(category: str, name: str, salt: int) -> None:
     )
 
 
-def register_akula_assembly(spacing: int, separation: int, salt: int) -> None:
+def register_akula_assembly(spacing: int, separation: int, salt: int, biomes: str | None = None) -> None:
     """One jigsaw structure: rock outcrop as the start piece, the two hull
     sections as aligned children.
 
@@ -2378,7 +2378,7 @@ def register_akula_assembly(spacing: int, separation: int, salt: int) -> None:
         DATA / "worldgen" / "structure" / "deep_sea" / "akula_wreck_site.json",
         {
             "type": "minecraft:jigsaw",
-            "biomes": f"#{QUARANTINE_TAG}",
+            "biomes": biomes or f"#{QUARANTINE_TAG}",
             "step": "surface_structures",
             "spawn_overrides": {},
             "terrain_adaptation": "none",
@@ -2580,7 +2580,7 @@ def _akula_catalog_entries(stats: dict[str, Any]) -> list[dict[str, Any]]:
             "occupation_state": "hostile_aquatic",
             "source_license": licence,
             "conversion_target": "scattered",
-            "production_status": "quarantined",
+            "production_status": "approved",
         },
         {
             "asset_id": "infinite_domain:deep_sea/akula_wreck_aft",
@@ -2606,7 +2606,7 @@ def _akula_catalog_entries(stats: dict[str, Any]) -> list[dict[str, Any]]:
             "occupation_state": "hostile_aquatic",
             "source_license": licence,
             "conversion_target": "scattered",
-            "production_status": "quarantined",
+            "production_status": "approved",
         },
         {
             "asset_id": "infinite_domain:deep_sea/akula_wreck_spine",
@@ -2619,7 +2619,7 @@ def _akula_catalog_entries(stats: dict[str, Any]) -> list[dict[str, Any]]:
             "source_template": "kubejs/data/infinite_domain/structure/deep_sea/akula_wreck_spine.nbt",
             "placement_ref": "kubejs/data/infinite_domain/worldgen/structure_set/deep_sea/akula_wreck_site.json",
             "source_license": licence,
-            "production_status": "quarantined",
+            "production_status": "approved",
             "notes": (
                 "Start piece of the akula_wreck_site jigsaw assembly, and the reason the wreck has "
                 "two halves. Carries a keel-width gouge along its crown on the boat's own heading "
@@ -2643,7 +2643,7 @@ def _akula_catalog_entries(stats: dict[str, Any]) -> list[dict[str, Any]]:
             "source_template": "kubejs/data/infinite_domain/structure/deep_sea/akula_debris_field.nbt",
             "placement_ref": "kubejs/data/infinite_domain/worldgen/structure_set/deep_sea/akula_debris_field.json",
             "source_license": licence,
-            "production_status": "quarantined",
+            "production_status": "approved",
             "notes": (
                 f"Plating and machinery driven off by the implosion. Reference fragment leaves at "
                 f"{impact['debris']['fragment_launch_ms']} m/s but water drag stops a 40 mm plate in "
@@ -2739,10 +2739,15 @@ def generate() -> dict[str, Any]:
     # submarine is a landmark, not scenery.
     register_child_pool("deep_sea", "akula_wreck_forward")
     register_child_pool("deep_sea", "akula_wreck_aft")
-    register_akula_assembly(spacing=144, separation=88, salt=48217706)
+    # Admitted to eastern_slope_biomes (Karsic territory) by owner directive on
+    # 2026-08-25, bypassing the standard in-game QA walkthrough. See
+    # docs/DEEP_SEA_STRUCTURE_AUDIT.md for the disposition note. Every other
+    # deep-sea asset stays behind QUARANTINE_TAG.
+    AKULA_LIVE_BIOMES = "#infinite_domain:eastern_slope_biomes"
+    register_akula_assembly(spacing=144, separation=88, salt=48217706, biomes=AKULA_LIVE_BIOMES)
     retire_structure_set("deep_sea", "akula_wreck_forward", salt=48217706)
     retire_structure_set("deep_sea", "akula_wreck_aft", salt=48217707)
-    register_placement("deep_sea", "akula_debris_field", spacing=40, separation=18, salt=48217708)
+    register_placement("deep_sea", "akula_debris_field", spacing=40, separation=18, salt=48217708, biomes=AKULA_LIVE_BIOMES)
 
     write_json(
         DATA / "loot_table" / "chests" / "coastal_patrol_wreck.json",
@@ -2889,7 +2894,7 @@ def generate() -> dict[str, Any]:
             "spacing": spacing,
             "separation": separation,
             "salt": salt,
-            "exclusion_zone": "biomes gated to #infinite_domain:disabled_quarantine_deep_sea_structures pending production admission; not yet live against real ocean biomes",
+            "exclusion_zone": "biomes = #infinite_domain:eastern_slope_biomes; admitted by owner directive on 2026-08-25, in-game QA walkthrough skipped -- see docs/DEEP_SEA_STRUCTURE_AUDIT.md",
         }
         for name, spacing, separation, salt in (
             ("akula_wreck_site", "144", "88", "48217706"),

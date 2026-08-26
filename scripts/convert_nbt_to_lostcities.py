@@ -183,7 +183,7 @@ def convert(entry: dict[str, Any]) -> dict[str, Any]:
         "largest_local_palette": palette_max,
         "multibuilding": multibuilding_id,
         "scattered": scattered_id,
-        "production_status": "quarantined",
+        "production_status": "converted",
         "runtime_codec_validation": "pending game launch",
     }
 
@@ -203,7 +203,7 @@ def main() -> None:
         "format": "16x16 local-palette parts, fixed six-block floor bands, per-cell buildings and multibuilding assembly",
         "structures": results,
     })
-    print(f"Converted {len(results)} structures into {sum(result['parts_written'] for result in results)} quarantined Lost Cities parts")
+    print(f"Converted {len(results)} structures into {sum(result['parts_written'] for result in results)} Lost Cities parts")
 
 
 if __name__ == "__main__":

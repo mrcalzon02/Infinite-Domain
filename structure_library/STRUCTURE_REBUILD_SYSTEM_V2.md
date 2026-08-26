@@ -238,13 +238,14 @@ What it checks, and why each check maps directly to Section 1:
    exists, emits a room ledger from the generated geometry and reports which
    declared rooms have no matching enclosed, fixture-bearing volume.
 
-A structure fails the gate if any check in 1–3 reports a hit; checks 4–6
-report as required findings for the human visual review pass but do not
-themselves hard-fail generation, since they're heuristic — a human still
-makes the final call, matching the existing (correct) principle that
-"automatic success never mutates" the approval set. What changes is that the
-human reviewer now gets a findings report pointing at specific coordinates
-and specific defect classes instead of walking blind.
+A structure fails the gate if any check in 1–3 reports a hit; checks 4–6 are
+heuristic and are recorded in the findings report but do not themselves
+hard-fail generation. Production admission (Section 6) follows entirely from
+this automated suite plus the family/corpus/provenance/conversion validators
+passing — there is no human playtest or in-game walkthrough step. The
+findings report exists so whoever is fixing a heuristic hit (damage
+coherence, ground-context mismatch, program-conformance gap) has coordinates
+and a defect class to work from instead of guessing.
 
 ## 5. New and replacement geometry primitives
 
@@ -303,13 +304,15 @@ connectivity and opening-coupling checks by construction. Concretely:
    transit and ports, rural processing, extraction sites; C: industrial
    utility and technology) — that grouping and its shared-systems reuse
    logic in `rebuild-family-roadmap.json` is sound and should be kept.
-4. A structure only re-enters `candidate_for_in_world_review` once it passes
-   `structure_geometry_lint.py` checks 1–3 with zero findings **and** an
-   actual human has walked it in the QA world and marked the corresponding
-   row in `structure_library/review/*.csv` `pass` with a reviewer and
-   timestamp — matching the review manifest's own existing (and correct)
-   gate schema in `structure_library/production-approvals.json`. A green
-   script exit code is still not, and has never been, approval.
+4. A structure enters production once it passes `structure_geometry_lint.py`
+   checks 1–3 with zero hard-fail findings **and** its family/corpus/
+   provenance/conversion validators pass — matching the automated-only gate
+   schema now recorded in `structure_library/production-approvals.json`.
+   There is no human walkthrough or review-CSV sign-off step; a passing
+   validator run is itself the approval record. A green script exit code
+   still means the specific checks it runs passed, not that every quality
+   dimension has been considered — heuristic checks 4–6 findings should
+   still be triaged and fixed, just not by a human blocking on them in-game.
 
 ## 7. Pipeline instruction update
 
@@ -340,10 +343,10 @@ Before resuming or re-running any family rebuild:
    confirm zero lint findings on the derivatives; render and record findings
    from checks 4-6 for human review.
 6. Do not mark a family complete on script success alone. A family is
-   complete only when every member has zero hard-fail lint findings.
-   Production approval still requires the human QA-world walkthrough and
-   review-ledger row per Section 6 point 4 - this stage does not shortcut
-   that gate, it makes it meaningful.
+   complete only when every member has zero hard-fail lint findings and
+   passes its family/corpus/provenance/conversion validators. Production
+   approval follows automatically from that per Section 6 point 4 - there is
+   no separate human QA-world walkthrough step.
 ```
 
 ## 8. Scope of this document

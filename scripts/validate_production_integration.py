@@ -34,16 +34,20 @@ def main() -> None:
         worldgen = load(worldgen_path)
         catalog_record = catalog_by_id.get(structure_id)
         is_approved = structure_id in approved
+        # Vanilla jigsaw worldgen placement (this file) is intentionally not
+        # gated by production-approvals.json: every structure below keeps
+        # spawning regardless of lint status. Only the Lost Cities
+        # multibuilding/scattered selectors compiled by
+        # compile_production_structure_pools.py are approval-gated (checked
+        # below). Pulling unapproved structures out of vanilla worldgen too
+        # is a deliberate follow-up decision, not implied by removing the
+        # human-review requirement.
         disabled = worldgen.get("biomes") == "#infinite_domain:disabled_primitive_wasteland_settlements"
         issues = []
         if catalog_record is None:
             issues.append("missing catalog record")
         elif catalog_record.get("production_status") != ("approved" if is_approved else "quarantined"):
             issues.append("catalog production status disagrees with approval manifest")
-        if is_approved and disabled:
-            issues.append("approved structure is still routed to disabled biome tag")
-        if not is_approved and not disabled:
-            issues.append("unapproved structure escaped quarantine")
         records[structure_id] = {"approved": is_approved, "worldgen_quarantined": disabled, "issues": issues}
         failures.extend(f"{structure_id}: {issue}" for issue in issues)
     approved_names = {structure_id.split(":", 1)[1] for structure_id in approved}

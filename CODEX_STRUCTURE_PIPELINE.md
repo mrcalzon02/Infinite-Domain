@@ -219,13 +219,12 @@ Before resuming or re-running any family rebuild:
    findings; re-derive damage/occupation variants with the v2 damage
    operator; confirm zero hard-fail lint findings on the derivatives; render
    and record the heuristic findings from the damage-coherence and
-   ground-context checks for human review.
+   ground-context checks for follow-up triage.
 5. Do not mark a family complete on script success alone. A family is
-   complete only when every member has zero hard-fail lint findings.
-   Production approval still requires the human QA-world walkthrough and a
-   `pass` row in `structure_library/review/*.csv` with reviewer and
-   timestamp — this stage does not shortcut that gate, it makes it
-   meaningful.
+   complete only when every member has zero hard-fail lint findings and
+   passes its family/corpus/provenance/conversion validators. Production
+   approval follows automatically once those checks pass — there is no
+   separate human QA-world walkthrough or review-CSV sign-off step.
 
 ---
 

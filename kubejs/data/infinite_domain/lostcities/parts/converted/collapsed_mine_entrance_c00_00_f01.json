@@ -39,29 +39,29 @@
       "                "
     ],
     [
-      "                ",
-      "        ''''''''",
-      "        ''''''''",
-      "        ''''''''",
-      "        ''''''''",
-      "        ''''''''",
-      "        ''''''''",
-      "        ''''''''",
-      "                ",
-      "                ",
-      "                ",
-      "                ",
-      "                ",
-      "                ",
-      "                ",
-      "                "
+      "$$$$$)))))$$$$$$",
+      "$$$$$)))++++++++",
+      "$$$$$)))++++++++",
+      "$$$$$)))++++++++",
+      "$$$$$)))++++++++",
+      "%%%%%)))++++++++",
+      "%%%%%)))++++++++",
+      "%%%%%)))++++++++",
+      "%%%%%)))))&&&&&&",
+      "%%%%%)))))&&&&&&",
+      "$$$$$)))))&&&&&$",
+      "$$$$$)))))&&&&&$",
+      "$$$$$)))))&&&&&$",
+      "$$$$$)))))&&&&&$",
+      "$$$$$)))))&&&&&$",
+      "%%%%%)))))))))))"
     ],
     [
       "                ",
       "                ",
       "                ",
       "                ",
-      "          &     ",
+      "          *     ",
       "                ",
       "                ",
       "                ",
@@ -71,8 +71,8 @@
       "                ",
       "                ",
       "                ",
-      "    ((((((((((((",
-      "    (((((((((((("
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,"
     ],
     [
       "                ",
@@ -89,7 +89,7 @@
       "                ",
       "                ",
       "                ",
-      "    !!!!!$!!!!!!",
+      "    !!!!!'!!!!!!",
       "    !           "
     ],
     [
@@ -107,7 +107,7 @@
       "                ",
       "                ",
       "                ",
-      "    !!!!!%!!!!!!",
+      "    !!!!!(!!!!!!",
       "    !           "
     ]
   ],
@@ -119,22 +119,38 @@
       },
       {
         "char": "$",
-        "block": "minecraft:iron_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+        "block": "minecraft:coarse_dirt"
       },
       {
         "char": "%",
-        "block": "minecraft:iron_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+        "block": "minecraft:gravel"
       },
       {
         "char": "&",
-        "block": "minecraft:yellow_concrete"
+        "block": "minecraft:gray_concrete"
       },
       {
         "char": "'",
-        "block": "tfmg:asphalt"
+        "block": "minecraft:iron_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
       },
       {
         "char": "(",
+        "block": "minecraft:iron_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:polished_andesite"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:yellow_concrete"
+      },
+      {
+        "char": "+",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": ",",
         "block": "tfmg:factory_floor"
       }
     ]

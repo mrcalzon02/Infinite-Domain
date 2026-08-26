@@ -1,0 +1,242 @@
+{
+  "inherit": "lostcities:citystyle_common",
+  "style": "lostcities:standard",
+  "stuff_tags": [
+    "rubble"
+  ],
+  "buildingsettings": {
+    "minfloors": 1,
+    "maxfloors": 2,
+    "mincellars": 0,
+    "maxcellars": 1,
+    "buildingchance": 0.15
+  },
+  "streetblocks": {
+    "width": 8,
+    "border": "y",
+    "wall": "w",
+    "street": "S",
+    "streetbase": "b",
+    "streetvariant": "B"
+  },
+  "selectors": {
+    "multibuildings": [
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/abandoned_bungalow"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/abandoned_motel"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/abandoned_oil_field"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/abandoned_oil_field_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/abandoned_orchard_cannery"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/abandoned_orchard_cannery_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/abandoned_quarry"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/abandoned_quarry_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/abandoned_truck_stop"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/abandoned_truck_stop_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/bungalow_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/bunker_network"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/bunker_network_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/collapsed_mine_entrance"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/collapsed_mine_entrance_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/decayed_farm"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/decayed_farm_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/decayed_logging_camp"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/decayed_logging_camp_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/decayed_ranch"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/decayed_ranch_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/hydroelectric_refuge_dam"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/hydroelectric_refuge_dam_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/military_checkpoint"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/military_checkpoint_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/motel_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/mountain_military_complex"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/mountain_military_complex_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/remote_sawmill"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/remote_sawmill_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/roadside_church_cemetery"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/roadside_church_cemetery_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/ruined_grain_elevator"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/ruined_grain_elevator_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/ruined_ranger_station"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/ruined_ranger_station_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/ruined_roadside_diner"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/ruined_roadside_diner_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/shattered_greenhouse_nursery"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/shattered_greenhouse_nursery_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/split_level_house"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/split_level_house_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/survivor_cache"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/survivor_cache_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/trade_outpost"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/trade_outpost_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/trailer_park"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/trailer_park_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/wasteland_water_tower"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/wasteland_water_tower_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/wasteland_weigh_station"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/wasteland_weigh_station_clean_master"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/wilderness_substation"
+      },
+      {
+        "factor": 0.018519,
+        "value": "infinite_domain:converted/wilderness_substation_clean_master"
+      }
+    ]
+  }
+}

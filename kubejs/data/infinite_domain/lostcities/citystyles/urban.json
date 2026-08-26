@@ -1,0 +1,498 @@
+{
+  "inherit": "lostcities:citystyle_common",
+  "style": "lostcities:standard",
+  "stuff_tags": [
+    "rubble"
+  ],
+  "buildingsettings": {
+    "minfloors": 2,
+    "maxfloors": 8,
+    "mincellars": 0,
+    "maxcellars": 2,
+    "buildingchance": 0.45
+  },
+  "streetblocks": {
+    "width": 8,
+    "border": "y",
+    "wall": "w",
+    "street": "S",
+    "streetbase": "b",
+    "streetvariant": "B"
+  },
+  "selectors": {
+    "multibuildings": [
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/abandoned_bungalow"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/abandoned_create_factory"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/abandoned_culdesac"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/abandoned_culdesac_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/abandoned_oil_field"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/abandoned_oil_field_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/abandoned_orchard_cannery"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/abandoned_orchard_cannery_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/abandoned_quarry"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/abandoned_quarry_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ae2_records_archive"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ae2_records_archive_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/blown_apartment_complex"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/blown_apartment_complex_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/bombed_data_center"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/bombed_data_center_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/bombed_hotel"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/bombed_hotel_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/bungalow_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/buried_bank_vault"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/buried_bank_vault_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/city_electrical_substation"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/city_electrical_substation_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/city_water_treatment_plant"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/city_water_treatment_plant_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/cold_industrial_mountain_port"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/cold_industrial_mountain_port_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/collapsed_airship_terminal"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/collapsed_airship_terminal_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/collapsed_mine_entrance"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/collapsed_mine_entrance_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/collapsed_subway_station"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/collapsed_subway_station_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/corporate_warehouse"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/corporate_warehouse_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/cratered_downtown_intersection"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/cratered_downtown_intersection_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/create_factory_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/decayed_logging_camp"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/decayed_logging_camp_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/dilapidated_grocery"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/district_heating_station"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/district_heating_station_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/elevated_rail_collapse"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/elevated_rail_collapse_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/emergency_relief_shelter"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/emergency_relief_shelter_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/excavator_pit"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/excavator_pit_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/fire_station_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/freight_depot"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/freight_depot_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/grocery_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/hydroelectric_refuge_dam"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/hydroelectric_refuge_dam_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/industrial_facility"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/industrial_facility_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/mountain_biohazard_lab"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/mountain_biohazard_lab_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/municipal_incinerator"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/municipal_incinerator_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/nuclear_research_annex"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/nuclear_research_annex_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/pancaked_parking_structure"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/pancaked_parking_structure_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/remote_sawmill"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/remote_sawmill_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/roadside_church_cemetery"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/roadside_church_cemetery_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_bus_terminal"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_bus_terminal_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_city_school"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_city_school_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_community_center"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_community_center_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_courthouse"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_courthouse_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_cyberware_clinic"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_cyberware_clinic_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_department_store"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_department_store_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_fire_station"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_fuel_depot"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_fuel_depot_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_grain_elevator"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_grain_elevator_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_hospital"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_hospital_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_mixed_use_block"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_mixed_use_block_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_office_tower"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_office_tower_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_police_precinct"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_police_precinct_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_rowhouse_block"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_rowhouse_block_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_shopping_mall"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/ruined_shopping_mall_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/scrapyard"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/scrapyard_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/service_garage"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/service_garage_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/shattered_luxury_condo"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/shattered_luxury_condo_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/split_level_house"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/split_level_house_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/sunken_city_front"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/sunken_city_front_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/tenement_courtyard"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/tenement_courtyard_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/toppled_skyscraper"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/toppled_skyscraper_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/trailer_park"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/trailer_park_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/warm_industrial_mountain_port"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/warm_industrial_mountain_port_clean_master"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/wilderness_substation"
+      },
+      {
+        "factor": 0.008475,
+        "value": "infinite_domain:converted/wilderness_substation_clean_master"
+      }
+    ]
+  }
+}

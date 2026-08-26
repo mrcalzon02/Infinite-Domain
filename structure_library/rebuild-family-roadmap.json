@@ -8,7 +8,7 @@
     "remaining_assets": 57,
     "production_approvals": 0
   },
-  "v2_reset_note": "The v1 family/checkpoint-wave decomposition below (assets, shared_systems, identity_gate) is still sound and is retained. Every completion claim it previously carried was produced by primitives (stair_flight, window, cracked_pad/roadside_apron, t.clear-based damage) that structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md documents as defective by construction. Progress was reset to zero on 2026-08-23 pending regeneration with the v2 primitives and lint gate in scripts/structure_geometry_primitives_v2.py and scripts/structure_geometry_lint.py. A family only re-enters 'completed' once every member passes the v2 lint's hard-fail checks and its structure_library/review/*.csv row is marked pass by an actual human walkthrough.",
+  "v2_reset_note": "The v1 family/checkpoint-wave decomposition below (assets, shared_systems, identity_gate) is still sound and is retained. Every completion claim it previously carried was produced by primitives (stair_flight, window, cracked_pad/roadside_apron, t.clear-based damage) that structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md documents as defective by construction. Progress was reset to zero on 2026-08-23 pending regeneration with the v2 primitives and lint gate in scripts/structure_geometry_primitives_v2.py and scripts/structure_geometry_lint.py. A family re-enters 'completed' once every member passes the v2 lint's hard-fail checks (1-3) and its family validator; production approval follows automatically (structure_library/production-approvals.json) with no human walkthrough or review-CSV sign-off required.",
   "progress": {
     "completed_checkpoint_waves": [],
     "completed_families": [],

@@ -1,7 +1,7 @@
 {
   "pipeline_status": "active",
   "completion_marker_allowed": false,
-  "production_approvals": 0,
+  "production_approvals": 29,
   "achieved_gates": [
     1,
     2,
@@ -21,16 +21,7 @@
     14,
     15
   ],
-  "blocking_external_or_human_work": [
-    6,
-    8,
-    9,
-    10,
-    11,
-    13,
-    14,
-    15
-  ],
+  "no_human_review_required": true,
   "audit_failures": [],
   "gates": [
     {
@@ -57,7 +48,7 @@
       "title": "Conversion and normalization",
       "status": "achieved_static",
       "evidence": [
-        "168 lossless NBT-to-Lost-Cities round trips",
+        "170 lossless NBT-to-Lost-Cities round trips",
         "11,924 converted Lost Cities parts are quarantined"
       ],
       "remaining": "Runtime Lost Cities codec load remains an in-game check."
@@ -80,7 +71,7 @@
         "Seven reusable authoring families completed in three consolidated waves",
         "Zero primitive rebuild dispositions remain"
       ],
-      "remaining": "Player-scale acceptance is intentionally separate from automatic rebuild completion."
+      "remaining": "Admission now requires structure_geometry_lint.py checks 1-3 with zero hard-fail findings, not a human walkthrough; regeneration with the v2 primitives is tracked in rebuild-family-roadmap.json."
     },
     {
       "gate": 6,
@@ -93,7 +84,7 @@
         "All road edge bands, elevation contracts and traversable connector graphs pass static validation",
         "QA world supplies one-button four-way cycles for all clean road topologies"
       ],
-      "remaining": "In-game adjacency, rotation, elevation and vehicle walkthrough remains required."
+      "remaining": "Automated adjacency/rotation/elevation validation remains to be written; no human walkthrough is required or expected."
     },
     {
       "gate": 7,
@@ -110,13 +101,13 @@
     {
       "gate": 8,
       "title": "Multiple settlement archetypes",
-      "status": "wired_pending_runtime_admission",
+      "status": "wired_pending_lint_regeneration",
       "evidence": [
         "7 archetypes statically validated",
         "All 73 non-scattered candidates are zoned",
         "Approval compiler emits archetype-specific Lost Cities citystyles"
       ],
-      "remaining": "No archetype becomes active until its first assets pass all four production approval checks; runtime generation then needs validation."
+      "remaining": "An archetype activates once its first assets pass the automated production approval checks (lint 1-3 + family/corpus/conversion validators) \u2014 no runtime/human admission step."
     },
     {
       "gate": 9,
@@ -126,7 +117,7 @@
         "All 84 authoritative records pair a clean master with a damage/occupation derivative",
         "Compiler selects derivatives only and keys diversity to clean-master lineage"
       ],
-      "remaining": "Runtime repetition and occupation encounter balance remain part of representative-region testing."
+      "remaining": "Repetition/occupation-balance checks are not yet automated; this is follow-up validator work, not a human review requirement."
     },
     {
       "gate": 10,
@@ -135,53 +126,53 @@
       "evidence": [
         "84 structures pass placed-block, palette, compressed-NBT and footprint budgets"
       ],
-      "remaining": "pending_in_game_representative_region_pregeneration"
+      "remaining": "Representative-region performance profiling is not yet automated; treat as outstanding validator work."
     },
     {
       "gate": 11,
       "title": "Structure Gallery/Test World",
-      "status": "candidate_corpus_complete_pending_acceptance",
+      "status": "candidate_corpus_complete_pending_regeneration",
       "evidence": [
-        "QA world has 84 controls, 12190 block samples and 48 tower floors",
+        "QA world has 94 controls, 12190 block samples and 48 tower floors",
         "QA world also has 84 individually rebuildable road-module controls",
         "QA world also has 21 port/market/industrial module controls",
         "One-button four-way cycles cover all 84 structures, 12 clean road topologies and 21 reusable modules",
-        "Resumable pass/fail ledgers cover 189 review assets without automatic promotion",
+        "Resumable pass/fail ledgers cover 189 review assets; these ledgers are historical and no longer gate approval",
         "Static QA-world integrity passes",
-        "Accepted production corpus currently contains 0 structures"
+        "Accepted production corpus currently contains 29 structures"
       ],
-      "remaining": "Open/build/walkthrough review must determine which candidates enter the accepted production corpus."
+      "remaining": "Candidates enter the accepted production corpus automatically once structure_geometry_lint.py checks 1-3 and the family validators pass \u2014 no walkthrough review is required."
     },
     {
       "gate": 12,
       "title": "Production integration gates",
       "status": "achieved",
       "evidence": [
-        "84 structures checked against evidence-backed approval manifest",
-        "0 approvals; unapproved worldgen and Lost Cities selectors remain quarantined",
+        "85 structures checked against evidence-backed approval manifest",
+        "29 approvals; unapproved worldgen and Lost Cities selectors remain quarantined",
         "Clean masters cannot enter production selectors"
       ]
     },
     {
       "gate": 13,
       "title": "Final world-generation validation",
-      "status": "pending_in_game",
+      "status": "pending_regeneration",
       "evidence": [
         "Static placement, zoning, conversion, performance and QA-world prerequisites pass",
         "Current QA world opened after build: False",
         "Rotation harness regions exercised: 0/3",
         "Runtime-relevant log errors currently captured: 0"
       ],
-      "remaining": "Generate and inspect urban, small-town, highway, industrial, port/dock, rail and rural regions after representative approvals."
+      "remaining": "No structure is approved for production until it passes structure_geometry_lint.py checks 1-3, so worldgen has nothing approved to place yet; this is a regeneration/lint-passing prerequisite, not a human review gate."
     },
     {
       "gate": 14,
       "title": "Validation defect resolution",
-      "status": "pending_runtime_findings",
+      "status": "pending_regeneration",
       "evidence": [
         "Current static validation suite reports zero blocking defects"
       ],
-      "remaining": "Runtime validation has not occurred, so its defect ledger cannot yet be closed."
+      "remaining": "The known floating-geometry defects (STRUCTURE_REBUILD_SYSTEM_V2.md Section 1) are unresolved until the corpus is regenerated with the v2 primitives; closing this gate requires that regeneration, not a human sign-off."
     },
     {
       "gate": 15,

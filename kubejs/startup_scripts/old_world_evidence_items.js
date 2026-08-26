@@ -13,7 +13,7 @@ StartupEvents.registry('item', event => {
     oldWorldEvidence.items.forEach(item => {
         event.create(item.id)
             .displayName(item.name)
-            .texture(`kubejs:item/${item.id}`)
+            .texture(item.texture || `kubejs:item/${item.id}`)
             .tooltip(`§7Recovered Old World evidence — ${item.site}`)
             .tooltip(`§8${item.institution}`)
     })

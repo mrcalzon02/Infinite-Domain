@@ -4,14 +4,12 @@
 	filename: "era_03_petrochemical_civilization"
 	group: "346E9B7B176D7846"
 	id: "0C8D53A7E1264BF9"
-	icon: "petrochem:distillation_controller"
 	images: [ ]
 	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["5210000000000002"]
-			icon: "petrochem:distillation_controller"
 			id: "5310000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -23,7 +21,6 @@
 		}
 		{
 			dependencies: ["5310000000000001"]
-			icon: "minecraft:diamond_pickaxe"
 			id: "6311000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -36,7 +33,6 @@
 		}
 		{
 			dependencies: ["6311000000000001"]
-			icon: "petrochem:oil_bucket"
 			id: "1310000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -50,7 +46,6 @@
 		}
 		{
 			dependencies: ["1310000000000001"]
-			icon: "petrochem:pumpjack_well"
 			id: "1310000000000002"
 			rewards: [{
 				id: "1330000000000002"
@@ -71,7 +66,6 @@
 		}
 		{
 			dependencies: ["1310000000000002"]
-			icon: "petrochem:steel_pump"
 			id: "1310000000000003"
 			shape: "hexagon"
 			tasks: [{
@@ -85,7 +79,6 @@
 		}
 		{
 			dependencies: ["1310000000000003"]
-			icon: "petrochem:desalted_oil_bucket"
 			id: "1310000000000004"
 			shape: "hexagon"
 			tasks: [{
@@ -99,7 +92,6 @@
 		}
 		{
 			dependencies: ["1310000000000004"]
-			icon: "petrochem:distillation_controller"
 			id: "1310000000000005"
 			rewards: [{
 				id: "1330000000000005"
@@ -120,7 +112,6 @@
 		}
 		{
 			dependencies: ["1310000000000005"]
-			icon: "petrochem:sulfur_dust"
 			id: "1310000000000006"
 			shape: "hexagon"
 			tasks: [{
@@ -134,7 +125,6 @@
 		}
 		{
 			dependencies: ["1310000000000006"]
-			icon: "petrochem:heavy_diesel_bucket"
 			id: "1310000000000007"
 			shape: "hexagon"
 			tasks: [{
@@ -148,7 +138,6 @@
 		}
 		{
 			dependencies: ["1310000000000007"]
-			icon: "kubejs:era3_mining_contribution"
 			id: "1310000000000008"
 			rewards: [{
 				count: 2
@@ -170,7 +159,6 @@
 		}
 		{
 			dependencies: ["6311000000000001"]
-			icon: "createdieselgenerators:plant_oil_bucket"
 			id: "2310000000000001"
 			shape: "heart"
 			tasks: [{
@@ -184,7 +172,6 @@
 		}
 		{
 			dependencies: ["2310000000000001"]
-			icon: "tfmg:rubber_sheet"
 			id: "2310000000000002"
 			rewards: [{
 				id: "2330000000000002"
@@ -206,7 +193,6 @@
 		}
 		{
 			dependencies: ["2310000000000002"]
-			icon: "minecraft:sugar"
 			id: "2310000000000003"
 			shape: "heart"
 			tasks: [{
@@ -220,7 +206,6 @@
 		}
 		{
 			dependencies: ["2310000000000003"]
-			icon: "createdieselgenerators:biodiesel_bucket"
 			id: "2310000000000004"
 			shape: "heart"
 			tasks: [{
@@ -234,7 +219,6 @@
 		}
 		{
 			dependencies: ["2310000000000004"]
-			icon: "tfmg:plastic_sheet"
 			id: "2310000000000005"
 			rewards: [{
 				id: "2330000000000005"
@@ -256,7 +240,6 @@
 		}
 		{
 			dependencies: ["2310000000000005"]
-			icon: "farmersdelight:vegetable_soup"
 			id: "2310000000000006"
 			shape: "heart"
 			tasks: [{
@@ -270,7 +253,6 @@
 		}
 		{
 			dependencies: ["2310000000000006"]
-			icon: "minecraft:slime_ball"
 			id: "2310000000000007"
 			shape: "heart"
 			tasks: [{
@@ -284,7 +266,6 @@
 		}
 		{
 			dependencies: ["2310000000000007"]
-			icon: "kubejs:era3_farming_contribution"
 			id: "2310000000000008"
 			rewards: [{
 				count: 2
@@ -306,7 +287,6 @@
 		}
 		{
 			dependencies: ["6311000000000001"]
-			icon: "minecraft:map"
 			id: "3310000000000001"
 			shape: "diamond"
 			tasks: [{
@@ -320,7 +300,6 @@
 		}
 		{
 			dependencies: ["3310000000000001"]
-			icon: "createdieselgenerators:diesel_bucket"
 			id: "3310000000000002"
 			rewards: [{
 				id: "3330000000000002"
@@ -342,7 +321,6 @@
 		}
 		{
 			dependencies: ["3310000000000002"]
-			icon: "createdieselgenerators:diesel_engine"
 			id: "3310000000000003"
 			shape: "diamond"
 			tasks: [{
@@ -355,7 +333,6 @@
 		}
 		{
 			dependencies: ["3310000000000003"]
-			icon: "petrochem:steel_fluid_tank"
 			id: "3310000000000004"
 			shape: "diamond"
 			tasks: [{
@@ -369,7 +346,6 @@
 		}
 		{
 			dependencies: ["3310000000000004"]
-			icon: "petrochem:kerosene_bucket"
 			id: "3310000000000005"
 			rewards: [{
 				id: "3330000000000005"
@@ -391,7 +367,6 @@
 		}
 		{
 			dependencies: ["3310000000000005"]
-			icon: "tfmg:steel_pipe"
 			id: "3310000000000006"
 			shape: "diamond"
 			tasks: [{
@@ -405,7 +380,6 @@
 		}
 		{
 			dependencies: ["3310000000000006"]
-			icon: "petrochem:diesel_bucket"
 			id: "3310000000000007"
 			shape: "diamond"
 			tasks: [{
@@ -419,7 +393,6 @@
 		}
 		{
 			dependencies: ["3310000000000007"]
-			icon: "kubejs:era3_exploration_contribution"
 			id: "3310000000000008"
 			rewards: [{
 				count: 2
@@ -441,7 +414,6 @@
 		}
 		{
 			dependencies: ["1310000000000002"]
-			icon: "petrochem:pumpjack_arm"
 			id: "4310000000000001"
 			shape: "gear"
 			tasks: [{
@@ -454,7 +426,6 @@
 		}
 		{
 			dependencies: ["1310000000000004"]
-			icon: "petrochem:distillation_output"
 			id: "4310000000000002"
 			shape: "gear"
 			tasks: [{
@@ -467,7 +438,6 @@
 		}
 		{
 			dependencies: ["1310000000000006"]
-			icon: "petrochem:sulfuric_acid_bucket"
 			id: "4310000000000003"
 			rewards: [{
 				id: "4330000000000003"
@@ -488,7 +458,6 @@
 		}
 		{
 			dependencies: ["2310000000000002"]
-			icon: "tfmg:steel_chemical_vat"
 			id: "4310000000000004"
 			shape: "gear"
 			tasks: [{
@@ -501,7 +470,6 @@
 		}
 		{
 			dependencies: ["2310000000000004"]
-			icon: "petrochem:lubricant_bucket"
 			id: "4310000000000005"
 			shape: "gear"
 			tasks: [{
@@ -514,7 +482,6 @@
 		}
 		{
 			dependencies: ["2310000000000006"]
-			icon: "tfmg:rubber_sheet"
 			id: "4310000000000006"
 			rewards: [{
 				id: "4330000000000006"
@@ -535,7 +502,6 @@
 		}
 		{
 			dependencies: ["3310000000000002"]
-			icon: "tfmg:engine_controller"
 			id: "4310000000000007"
 			shape: "gear"
 			tasks: [{
@@ -548,7 +514,6 @@
 		}
 		{
 			dependencies: ["3310000000000004"]
-			icon: "createdieselgenerators:engine_turbocharger"
 			id: "4310000000000008"
 			shape: "gear"
 			tasks: [{
@@ -561,7 +526,6 @@
 		}
 		{
 			dependencies: ["3310000000000006"]
-			icon: "petrochem:distillation_controller"
 			id: "4310000000000009"
 			shape: "gear"
 			tasks: [{
@@ -578,7 +542,6 @@
 				"3310000000000008"
 			]
 			dependency_requirement: "one_completed"
-			icon: "kubejs:chemical_foundation_core"
 			id: "5310000000000002"
 			min_required_dependencies: 1
 			rewards: [
@@ -616,7 +579,6 @@
 		}
 		{
 			dependencies: ["2310000000000003"]
-			icon: "minecraft:sugar"
 			id: "7311000000000001"
 			optional: true
 			shape: "gear"
@@ -634,7 +596,6 @@
 				"7311000000000001"
 				"4310000000000004"
 			]
-			icon: "kubejs:fermented_mash"
 			id: "7311000000000002"
 			optional: true
 			shape: "gear"
@@ -649,7 +610,6 @@
 		}
 		{
 			dependencies: ["7311000000000002"]
-			icon: "kubejs:fermented_acid_wash_bucket"
 			id: "7311000000000003"
 			optional: true
 			rewards: [{
@@ -676,7 +636,6 @@
 				"4310000000000004"
 				"7211000000000006"
 			]
-			icon: "kubejs:conditioned_nickel_mineral"
 			id: "7311000000000004"
 			optional: true
 			shape: "gear"
@@ -694,7 +653,6 @@
 				"7311000000000003"
 				"7311000000000004"
 			]
-			icon: "kubejs:precipitated_nickel_concentrate"
 			id: "7311000000000005"
 			optional: true
 			shape: "gear"
@@ -709,7 +667,6 @@
 		}
 		{
 			dependencies: ["7311000000000005"]
-			icon: "tfmg:nickel_nugget"
 			id: "7311000000000006"
 			optional: true
 			rewards: [{
@@ -736,7 +693,6 @@
 				"6311000000000001"
 				"3210000000000004"
 			]
-			icon: "createreautomatedtraces:trace_finder"
 			id: "6301100000000001"
 			optional: true
 			shape: "gear"
@@ -750,7 +706,6 @@
 		}
 		{
 			dependencies: ["6301100000000001"]
-			icon: "createreautomated:diamond_drill"
 			id: "6301100000000002"
 			optional: true
 			shape: "gear"
@@ -764,7 +719,6 @@
 		}
 		{
 			dependencies: ["6301100000000002"]
-			icon: "createreautomated:advanced_extractor"
 			id: "6301100000000003"
 			optional: true
 			shape: "gear"
@@ -778,7 +732,6 @@
 		}
 		{
 			dependencies: ["6301100000000003"]
-			icon: "createreautomated:copper_bit"
 			id: "6301100000000004"
 			optional: true
 			shape: "gear"
@@ -807,7 +760,6 @@
 		}
 		{
 			dependencies: ["6301100000000004"]
-			icon: "createreautomated:gold_bit"
 			id: "6301100000000005"
 			optional: true
 			shape: "gear"
@@ -830,7 +782,6 @@
 		}
 		{
 			dependencies: ["6301100000000005"]
-			icon: "createreautomated:unbaked_diamond"
 			id: "6301100000000006"
 			optional: true
 			rewards: [{
@@ -861,7 +812,6 @@
 		}
 		{
 			dependencies: ["6301100000000006"]
-			icon: "createreautomated:quartz_bit"
 			id: "6301100000000007"
 			optional: true
 			shape: "gear"
@@ -879,7 +829,6 @@
 				"6301100000000007"
 				"6411000000000001"
 			]
-			icon: "createreautomated:netherite_drill"
 			id: "6301100000000008"
 			optional: true
 			shape: "gear"
@@ -896,7 +845,6 @@
 				"6301100000000008"
 				"6511000000000001"
 			]
-			icon: "createreautomated:stabilizer"
 			id: "6301100000000009"
 			optional: true
 			shape: "gear"
@@ -910,7 +858,6 @@
 		}
 		{
 			dependencies: ["6301100000000009"]
-			icon: "createreautomated:iron_node"
 			id: "630110000000000A"
 			optional: true
 			shape: "gear"
@@ -924,7 +871,6 @@
 		}
 		{
 			dependencies: ["630110000000000A"]
-			icon: "createreautomated:infinite_iron_node"
 			id: "630110000000000B"
 			optional: true
 			rewards: [

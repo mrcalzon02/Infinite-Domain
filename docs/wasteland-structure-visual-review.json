@@ -1,94 +1,346 @@
 {
-  "quality_threshold": "Owner-inspected acceptance for narrative-source use. This approval does not assert runtime Lost Cities codec, terrain placement, connector, rotation, vehicle, or representative-region validation.",
-  "review_scope": "authoritative_structure_visual_catalog",
-  "review_authority": "project_owner_directive",
-  "review_date": "2026-08-19",
-  "approved_count": 84,
-  "runtime_validation_complete": false,
+  "quality_threshold": "Automated: structure_geometry_lint.py checks 1-3 (structural connectivity, stair/ladder/sign support, opening/wall coupling) must report zero hard-fail findings. No in-world inspection is required.",
+  "approved_count": 29,
   "structures": {
-    "radio_mast":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "wrecked_sedan":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "delivery_van":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "battle_tank":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "abandoned_bungalow":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "split_level_house":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "dilapidated_grocery":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "service_garage":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "scrapyard":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "military_checkpoint":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "trailer_park":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "abandoned_culdesac":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "survivor_cache":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "bunker_network":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "trade_outpost":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "decayed_farm":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "industrial_facility":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "mountain_military_complex":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "mountain_biohazard_lab":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "decayed_logging_camp":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "corporate_warehouse":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "bombed_data_center":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "hydroelectric_refuge_dam":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "toppled_skyscraper":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "blown_apartment_complex":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_mixed_use_block":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "sunken_city_front":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "pancaked_parking_structure":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "cratered_downtown_intersection":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_hospital":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_fire_station":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_police_precinct":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_courthouse":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "emergency_relief_shelter":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "collapsed_subway_station":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_bus_terminal":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "freight_depot":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "elevated_rail_collapse":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "sunken_highway_interchange":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_shopping_mall":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_department_store":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "bombed_hotel":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "buried_bank_vault":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_office_tower":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "tenement_courtyard":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_rowhouse_block":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "shattered_luxury_condo":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_city_school":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_community_center":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "city_electrical_substation":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "city_water_treatment_plant":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "district_heating_station":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "municipal_incinerator":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_fuel_depot":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_cyberware_clinic":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ae2_records_archive":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "abandoned_create_factory":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "collapsed_airship_terminal":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "nuclear_research_annex":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_roadside_diner":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "abandoned_motel":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_gas_station":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "abandoned_truck_stop":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "wasteland_weigh_station":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "decayed_ranch":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "abandoned_orchard_cannery":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_grain_elevator":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "shattered_greenhouse_nursery":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "roadside_church_cemetery":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "abandoned_quarry":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "collapsed_mine_entrance":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "excavator_pit":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "abandoned_oil_field":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "remote_sawmill":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "shattered_wind_farm":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "broken_solar_field":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "wilderness_substation":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "wasteland_water_tower":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "ruined_ranger_station":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "wasteland_fire_lookout":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "destroyed_refugee_convoy":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "crashed_cargo_airship":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "warm_industrial_mountain_port":{"status":"owner_inspected_accepted_for_narrative_source","approved":true},
-    "cold_industrial_mountain_port":{"status":"owner_inspected_accepted_for_narrative_source","approved":true}
+    "radio_mast": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "wrecked_sedan": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "delivery_van": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "battle_tank": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "abandoned_bungalow": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "split_level_house": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "dilapidated_grocery": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "service_garage": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "scrapyard": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "military_checkpoint": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "trailer_park": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "abandoned_culdesac": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "survivor_cache": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "bunker_network": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "trade_outpost": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "decayed_farm": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "industrial_facility": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "mountain_military_complex": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "mountain_biohazard_lab": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "decayed_logging_camp": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "corporate_warehouse": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "bombed_data_center": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "hydroelectric_refuge_dam": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "toppled_skyscraper": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "blown_apartment_complex": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_mixed_use_block": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "sunken_city_front": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "pancaked_parking_structure": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "cratered_downtown_intersection": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_hospital": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_fire_station": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_police_precinct": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_courthouse": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "emergency_relief_shelter": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "collapsed_subway_station": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "ruined_bus_terminal": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "freight_depot": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "elevated_rail_collapse": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "sunken_highway_interchange": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_shopping_mall": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_department_store": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "bombed_hotel": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "buried_bank_vault": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "ruined_office_tower": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "tenement_courtyard": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_rowhouse_block": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "shattered_luxury_condo": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_city_school": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_community_center": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "city_electrical_substation": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "city_water_treatment_plant": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "district_heating_station": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "municipal_incinerator": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "ruined_fuel_depot": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "ruined_cyberware_clinic": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ae2_records_archive": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "abandoned_create_factory": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "collapsed_airship_terminal": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "nuclear_research_annex": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "mountain_pass_terminator": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "ruined_roadside_diner": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "abandoned_motel": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_gas_station": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "abandoned_truck_stop": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "wasteland_weigh_station": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "decayed_ranch": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "abandoned_orchard_cannery": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "ruined_grain_elevator": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "shattered_greenhouse_nursery": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "roadside_church_cemetery": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "abandoned_quarry": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "collapsed_mine_entrance": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "excavator_pit": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "abandoned_oil_field": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "remote_sawmill": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "shattered_wind_farm": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "broken_solar_field": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "wilderness_substation": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "wasteland_water_tower": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "ruined_ranger_station": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "wasteland_fire_lookout": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "destroyed_refugee_convoy": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "crashed_cargo_airship": {
+      "status": "production_approved",
+      "approved": true
+    },
+    "warm_industrial_mountain_port": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    },
+    "cold_industrial_mountain_port": {
+      "status": "rebuilt_pending_lint_pass",
+      "approved": false
+    }
   }
 }

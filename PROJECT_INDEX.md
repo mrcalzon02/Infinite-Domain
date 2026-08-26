@@ -1,6 +1,6 @@
 # Infinite Domain — Project Index
 
-*Generated 2026-08-23. This is a map of the instance folder: what lives where, what it's for, and what is/isn't part of the distributable project. See `REPOSITORY_SCOPE.md` for the authoritative tracked/excluded list and `CODEX_STRUCTURE_PIPELINE.md` for the current automation program driving most active work.*
+*Generated 2026-08-23, updated 2026-08-25 (mod list, `packdev/`-vs-`ROOT_tools/` correction, entity ID inventory). This is a map of the instance folder: what lives where, what it's for, and what is/isn't part of the distributable project. See `REPOSITORY_SCOPE.md` for the authoritative tracked/excluded list and `CODEX_STRUCTURE_PIPELINE.md` for the current automation program driving most active work.*
 
 ## What this project is
 
@@ -17,14 +17,15 @@ Infinite Domain is a NeoForge 1.21.1 Minecraft modpack (CurseForge instance) bui
 | `CODEX_STRUCTURE_PIPELINE.md` | The master instruction document for the ongoing autonomous "Codex" work program: finishing the structural audit of built-in schematics, then acquiring/refining a licensed structure corpus for settlement generation. |
 | `.codex/` | Working state for that pipeline: `structure_pipeline_state.md` (large running log), `structure_pipeline_blocked.md`, `phase13_bombed_data_center_plan.md`, `structure_pipeline_logs/`. Local/gitignored. |
 | `minecraftinstance.json` | CurseForge's own instance manifest (mod list, versions) — used to reconstruct the third-party dependency set rather than shipping the jars. |
-| `mods/` | All mod jars actually loaded by the instance (third-party + the project's own). |
-| `ROOT_tools/` | Java source projects for the project's own mods, plus their Gradle build output. |
+| `mods/` | All mod jars actually loaded by the instance (third-party + the project's own) — see [`docs/MOD_LIST.md`](docs/MOD_LIST.md) for the full enumerated list. |
+| `packdev/` | Java **source** for the project's 7 custom mods, plus the in-development `gradient_ocean_pack` datapack and 3 texture-tool-class dirs. Tracked in git — the authoritative source location. |
+| `ROOT_tools/` | **Not mod source** (despite the name) — a gitignored pile of local one-off audit/build/reduce/import scripts and PNG review renders from past texture/asset work. Disposable scratch, not source of truth. |
 | `kubejs/` | KubeJS scripts and the datapack/resourcepack overlay they and hand-authored data live in. |
-| `datapacks/`, `packdev/` | World datapack slot (currently unused) and in-development datapacks (custom worldgen). |
+| `datapacks/` | World datapack slot (currently unused — datapack-equivalent content lives in `kubejs/data/` instead). |
 | `config/`, `defaultconfigs/` | Per-mod configuration; mostly third-party mod tuning, with one project-owned subtree (`config/createcybernetics/tattoos`). |
-| `docs/` | The project's internal design/audit documentation — by far the largest source of "what was decided and why." |
+| `docs/` | The project's internal design/audit documentation — by far the largest source of "what was decided and why." Includes `docs/MOD_LIST.md` and `docs/registry-inventory/` (full item/block/entity ID dumps — check these before re-deriving IDs from jars). |
 | `scripts/` | Python/JS/PowerShell tooling that generates and audits most of `docs/`, `kubejs/`, and `structure_library/`. |
-| `tools/` | One small standalone script (cyberware index builder). |
+| `tools/` | Standalone scripts outside the main `scripts/` tree: cyberware index builder, Last Days baseline-palette tool, and the `abyssal_rebuild`/`abyssal_worldgen` deep-sea/abyssal generation+validation script sets. |
 | `structure_library/` | The structure corpus system: catalogs, provenance, per-structure "programs," review renders — the data backing the Lost Cities structure-replacement effort. |
 | `old_world_narrative/` | A queued (not-yet-executed) narrative/quest-structure content package — canon lore bible plus the automation spec to implement it. |
 | `saves/`, `logs/`, `backups/`, `crash-reports/`, `screenshots/` | Local runtime state — worlds, logs, backups, crash dumps. Gitignored. |
@@ -34,29 +35,39 @@ Infinite Domain is a NeoForge 1.21.1 Minecraft modpack (CurseForge instance) bui
 
 ## `mods/` — the loaded mod set
 
-~150 third-party mod jars (Create ecosystem, AE2, FTB suite, Ice and Fire, Cyberspace, Quark, Sophisticated Storage, Lost Cities, KubeJS, etc.) plus exactly **six project-built jars**, each named `infinite-domain-*`:
+188 jars: 181 third-party (Create ecosystem, AE2, FTB suite, Ice and Fire, Cyberspace, Quark, Sophisticated Storage, Lost Cities, KubeJS, etc.) plus **7 project-built jars**, each named `infinite-domain-*`. **Full list with mod IDs, authors, and item/block counts: [`docs/MOD_LIST.md`](docs/MOD_LIST.md)** — check that file instead of re-discovering the mod set from scratch. Regenerate it (and `docs/registry-inventory/mod-jar-index.json` / `entity-ids.txt`) with `python scripts/build_mod_index.py` any time mods are added, removed, or updated.
 
-- `infinite-domain-create-nuclear-balance-1.0.0.jar`
-- `infinite-domain-cyberware-mastery-1.0.0.jar`
-- `infinite-domain-darknet-worldgen-1.8.0.jar`
-- `infinite-domain-echo-economy-1.0.0.jar`
-- `infinite-domain-stellaris-industry-1.0.0.jar`
-- `infinite-domain-unified-radiation-1.0.0.jar`
+The 7 project-built jars (source in `packdev/`, see below):
 
-Only these six are the project's own compiled output; everything else in `mods/` is reacquired from its original distribution channel per `REPOSITORY_SCOPE.md` and is never modified in place.
+- `infinite-domain-create-nuclear-balance-1.0.0.jar` (`infinite_domain_nuclear_balance`)
+- `infinite-domain-cyberware-mastery-1.0.0.jar` (`infinite_domain_cyberware`)
+- `infinite-domain-darknet-worldgen-1.8.0.jar` (`infinite_domain_darknet_worldgen`)
+- `infinite-domain-echo-economy-1.0.0.jar` (`infinite_domain_echo_economy`)
+- `infinite-domain-lostcities-highway-compat-1.0.0.jar` (`infinite_domain_lostcities_highway_compat`)
+- `infinite-domain-stellaris-industry-1.0.0.jar` (`infinite_domain_space`)
+- `infinite-domain-unified-radiation-1.0.0.jar` (`infinite_domain_radiation`)
 
-## `ROOT_tools/` — source for the six custom mods
+Only these seven are the project's own compiled output; everything else in `mods/` is reacquired from its original distribution channel per `REPOSITORY_SCOPE.md` and is never modified in place.
 
-One subfolder per custom jar above, each a small standalone Gradle project (`src/main/java|resources`, `build/` with fetched dependency jars and compiled classes):
+## `packdev/` — source for the 7 custom mods (+ worldgen datapack, + texture tools)
+
+One subfolder per custom jar above, each a small standalone Gradle project (`src/main/java|resources`):
 
 - `create-nuclear-balance` — rebalances Create: Nuclear reactor output.
 - `cyberware-mastery-expansion` — the branching cyberware item/effect system (`BranchedCyberwareItem`, `CyberwareCatalog`) built on Create Cybernetics.
 - `darknet-worldgen-patch` — Darknet dimension guard/worldgen/dragon-texture mixins bridging Cyberspace and Ice and Fire.
 - `echo-numismatics-bridge` — currency provider bridging FTB Echoes and Create Numismatics.
+- `lostcities-highway-compat` — the newest addition; compatibility layer between the project's Lost Cities settlement generation and highway/road worldgen.
 - `stellaris-space-industry` — space-suit roles/catalog built on the Stellaris mod.
 - `unified-radiation` — a unified radiation-reading system spanning The Wasteland Reworked / Wastelands.
 
-Each also carries its own `neoforge.mods.toml`, mixins config, and (for a few) generated assets/data merged into its jar at build time. `.gitignore` currently excludes all of `ROOT_tools/` as a "local authoring/recovery payload," so despite `REPOSITORY_SCOPE.md` describing source projects as tracked, verify this is intentional before assuming these sources are backed up in git.
+Also under `packdev/`: `gradient_ocean_pack` (the standalone worldgen datapack, see next section) and three one-off compiled Java texture generators moved here from the old `tools/` location — `datavore-texture-tool-classes`, `dragon-texture-tool-classes`, `overlay-texture-tool-classes`.
+
+This directory is tracked in git (unlike the sound-alike `ROOT_tools/` below) — it's the authoritative, backed-up source for everything that ships as a compiled `infinite-domain-*` jar.
+
+## `ROOT_tools/` — local scratch: one-off audit/build/reduce/import scripts and review renders
+
+Despite the name, this is **not** where the custom mod sources live (that moved to `packdev/`, above). It's a flat pile of one-off Python/PowerShell scripts (`audit_*`, `build_*`, `reduce_*`, `import_*`, `convert_*`) and their PNG review outputs from past texture/asset authoring passes (AE2 block conversion, Create/CreateNuclear texture pixel-matching, More Ores More Gems review, vanilla texture reconciliation, etc.), plus working subfolders like `create_authored_sources/`, `darknet_anchor_source/`, `space_industry_authored_sources/`, `vanilla_review_quarantine/`. `.gitignore` excludes all of `ROOT_tools/` as local/regenerable authoring scratch — nothing here is backed up in git, and nothing here should be assumed to still be current; treat it as disposable working state, not source of truth.
 
 ## `kubejs/` — scripts + hand-authored datapack/resourcepack overlay
 
@@ -69,10 +80,9 @@ Each also carries its own `neoforge.mods.toml`, mixins config, and (for a few) g
 
 This is effectively the "live code" layer of the pack — most gameplay systems described in `docs/` are implemented here.
 
-## `datapacks/` and `packdev/`
+## `datapacks/`
 
-- `datapacks/` — the world's datapack slot; currently holds only Fabric's default-resource-pack marker (no custom datapack installed here at the moment — datapack-equivalent content lives in `kubejs/data/` instead).
-- `packdev/gradient_ocean_pack/` — an in-development standalone datapack defining custom worldgen density functions (continent masks, gradients, city/humidity/temperature masks) for the pack's ocean/continent shaping, with its own `README.md` and `pack.mcmeta`.
+The world's datapack slot; currently holds only Fabric's default-resource-pack marker (no custom datapack installed here at the moment — datapack-equivalent content lives in `kubejs/data/` instead). `packdev/gradient_ocean_pack/` (an in-development standalone datapack defining custom worldgen density functions — continent masks, gradients, city/humidity/temperature masks — for the pack's ocean/continent shaping, with its own `README.md` and `pack.mcmeta`) is covered under `packdev/` above.
 
 ## `config/` and `defaultconfigs/`
 
@@ -90,13 +100,14 @@ Hundreds of markdown/CSV/JSON files recording design decisions and audit evidenc
 - **Texture / asset audits** — `texture-audit/` (custom item renders + generated-source PNGs), `last-days-*` files (the Last Days compatibility texture-porting effort backing `resourcepacks/`), `CUSTOM_ITEM_TEXTURE_AUDIT.md`.
 - **Worldgen / biome** — `biome-gating-audit/`, `NORTHERN_BIOME_RESTORATION.md`, `OCEAN_RESTORATION.md`, `GRADIENT_OCEAN_PACK_VALIDATION.md`, `WORLDGEN_STRUCTURE_SAFETY.md`.
 - **Licensing / permissions** — `STRUCTURE_DONOR_LICENSE_RESEARCH.md`, `permissions/` (includes a screenshotted permission grant), `CREATIVELANDS_VISUAL_TRIAGE.md`.
-- **Misc systems** — food/industrial (`INDUSTRIAL_FOOD_SYSTEM.md`), space industry (`stellaris-space-industry.md`), radiation (`unified-radiation-audit.md`), wasteland survival docs, registry inventories (full item/block ID dumps in `registry-inventory/`).
+- **Misc systems** — food/industrial (`INDUSTRIAL_FOOD_SYSTEM.md`), space industry (`stellaris-space-industry.md`), radiation (`unified-radiation-audit.md`), wasteland survival docs.
+- **Mod & registry reference** — `MOD_LIST.md` (every mod in `mods/`, with mod ID/author/item/block counts) and `registry-inventory/` (`item-ids.txt`, `block-ids.txt`, `entity-ids.txt`, `namespace-summary.csv`, plus JSON/CSV forms) — check these before re-deriving mod content or registry IDs from scratch.
 
 Treat `docs/` as the project's decision log and evidence archive rather than code — most files are either a design spec or a generated audit report a script in `scripts/` produced.
 
 ## `scripts/` — the automation layer
 
-~150 Python/JS/PowerShell files, one or a few per system in `docs/`. Naming convention is consistent: `audit_*` inspects/reports, `build_*` or `generate_*` creates content, `validate_*` re-checks generated output, `install_*`/`recolor_*` apply generated textures. Notable heavyweights: `generate_wasteland_sites.py` (400KB+, the core wasteland-structure generator), `validate_structure_programs.py`, `structure_geometry_lint.py` + `structure_geometry_primitives_v2.py` (the current authoritative structure QA gate, see below), `build_structure_qa_world.py` (builds the in-game QA flatworld under `saves/`). A few `.java` files (`CyberwareTextureGenerator.java`, `DarknetOverlayTextureGenerator.java`, `DatavoreSkinGenerator.java`, `DragonTextureGenerator.java`) are compiled ad hoc into `tools/*-texture-tool-classes/` for one-off texture generation, not part of any mod build.
+~150 Python/JS/PowerShell files, one or a few per system in `docs/`. Naming convention is consistent: `audit_*` inspects/reports, `build_*` or `generate_*` creates content, `validate_*` re-checks generated output, `install_*`/`recolor_*` apply generated textures. Notable heavyweights: `generate_wasteland_sites.py` (400KB+, the core wasteland-structure generator), `validate_structure_programs.py`, `structure_geometry_lint.py` + `structure_geometry_primitives_v2.py` (the current authoritative structure QA gate, see below), `build_structure_qa_world.py` (builds the in-game QA flatworld under `saves/`). A few `.java` files (`CyberwareTextureGenerator.java`, `DarknetOverlayTextureGenerator.java`, `DatavoreSkinGenerator.java`, `DragonTextureGenerator.java`) are compiled ad hoc into `packdev/*-texture-tool-classes/` for one-off texture generation, not part of any mod build. Also has its own indexer: `scripts/build_mod_index.py` regenerates `docs/MOD_LIST.md` and `docs/registry-inventory/{mod-jar-index.json,entity-ids.txt}` straight from the jars in `mods/` (no live instance needed) — re-run it whenever the mod set changes.
 
 The deep-sea structure and geological feature system (see `structure_library/`
 below) has its own three-script set, independent of the land-corpus tooling
@@ -109,11 +120,11 @@ not `STRUCTURE_REBUILD_SYSTEM_V2.md`.
 
 ## `tools/`
 
-Just `build_cyberware_system_index.py` — a standalone indexer for the cyberware system, separate from the main `scripts/` tree.
+Standalone, separate from the main `scripts/` tree: `build_cyberware_system_index.py` (cyberware system indexer), `last_days_baseline_palette.py`, and two subfolders of their own generate/validate script pairs — `abyssal_rebuild/` (deep-sea/abyssal environmental site + terrain-feature generators) and `abyssal_worldgen/` (`abyssal_feature_catalog.json` plus its deformation/catalog validators).
 
 ## `structure_library/` — the structure corpus
 
-The authoritative source-of-truth for buildings admitted to the Lost Cities replacement pipeline (see its own `README.md` and `CORPUS_LAYOUT.md`). Lifecycle: `rough_source → clean_master → damage_variant → occupation_variant → approved`; nothing reaches production world-gen without a validated clean master, a rendered review, and human sign-off.
+The authoritative source-of-truth for buildings admitted to the Lost Cities replacement pipeline (see its own `README.md` and `CORPUS_LAYOUT.md`). Lifecycle: `rough_source → clean_master → damage_variant → occupation_variant → approved`; nothing reaches production world-gen without a validated clean master and a passing automated gate (`structure_geometry_lint.py` checks 1-3 plus the family/corpus/provenance/conversion validators) — approval is automated, not human sign-off (`structure_library/production-approvals.json`).
 
 - `STRUCTURE_REBUILD_SYSTEM_V2.md` — current authoritative design doctrine and QA gate (supersedes the older `generated-structure-refinement-policy.json`).
 - `catalog.json`, `corpus-manifest.json` — the active corpus index and path map.
@@ -148,4 +159,4 @@ Per `.gitignore` and `REPOSITORY_SCOPE.md`, none of the following are tracked: `
 
 ## Distribution policy reminder
 
-Per project instructions and `REPOSITORY_SCOPE.md`: third-party jars, base resource-pack ZIPs, and any upstream donor/reference payload are never redistributed or modified in place. Only the project's own KubeJS scripts, datapack/resourcepack overlay, docs, structure-library data, quest data, and the six `infinite-domain-*` mod artifacts (plus, if intended, their `ROOT_tools/` sources) are meant to leave this machine.
+Per project instructions and `REPOSITORY_SCOPE.md`: third-party jars, base resource-pack ZIPs, and any upstream donor/reference payload are never redistributed or modified in place. Only the project's own KubeJS scripts, datapack/resourcepack overlay, docs, structure-library data, quest data, and the seven `infinite-domain-*` mod artifacts (plus their `packdev/` sources) are meant to leave this machine.

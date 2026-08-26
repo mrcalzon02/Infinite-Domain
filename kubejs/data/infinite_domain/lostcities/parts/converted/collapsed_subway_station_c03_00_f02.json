@@ -9,16 +9,16 @@
       "!!!!!!!!!!!!!   ",
       "            !   ",
       "            !   ",
-      "((((((((((( !   ",
-      "((+(((((((( !   ",
-      "((((((((((( !   ",
-      "((((((((((( !   ",
-      "((((((((((( !   ",
-      "((((((((((( !   ",
-      "((((((((((( !   ",
-      "((((((((((( !   ",
-      "((((((((((( !   ",
-      "((((((((((( !   "
+      "))))))))))) !   ",
+      ")&,&))))))) !   ",
+      "))))))))))) !   ",
+      "))))))))))) !   ",
+      "))))))))))) !   ",
+      "))))))))))) !   ",
+      "))))))))))) !   ",
+      "))))))))))) !   ",
+      "))))))))))) !   ",
+      "))))))))))) !   "
     ],
     [
       "                ",
@@ -28,33 +28,33 @@
       "            !   ",
       "            !   ",
       "            !   ",
-      "   -        !   ",
-      "''+-        !   ",
-      "'' - ,  &   !   ",
-      "'' -        !   ",
-      "   -        !   ",
-      "   )        !   ",
-      "   -        !   ",
-      "   $        !   ",
-      "   -        !   "
-    ],
-    [
-      "                ",
-      "                ",
-      "                ",
-      "!!!!!!!!!!!!!   ",
-      "            !   ",
-      "            !   ",
-      "            !   ",
-      "   -        !   ",
-      "'' -        !   ",
-      "''+-        !   ",
-      "'' -        !   ",
-      "   -        !   ",
+      " & &        !   ",
+      "(&,&        !   ",
+      "(( . -  '   !   ",
+      "(( .        !   ",
+      "   .        !   ",
       "   *        !   ",
-      "   -        !   ",
+      "   .        !   ",
+      "   $        !   ",
+      "   .        !   "
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "!!!!!!!!!!!!!   ",
+      "            !   ",
+      "            !   ",
+      "            !   ",
+      " & &        !   ",
+      "(& &        !   ",
+      "(&,&        !   ",
+      "(( .        !   ",
+      "   .        !   ",
+      "   +        !   ",
+      "   .        !   ",
       "   %        !   ",
-      "   -        !   "
+      "   .        !   "
     ],
     [
       "                ",
@@ -64,15 +64,15 @@
       "            !   ",
       "            !   ",
       "            !   ",
-      "   -        !   ",
-      "'' -        !   ",
-      "'' -        !   ",
-      "''+-        !   ",
-      "   -        !   ",
-      "   -        !   ",
-      "   -        !   ",
-      "   -        !   ",
-      "   -        !   "
+      "   .        !   ",
+      "(& &        !   ",
+      "(& &        !   ",
+      "(&,&        !   ",
+      "   .        !   ",
+      "   .        !   ",
+      "   .        !   ",
+      "   .        !   ",
+      "   .        !   "
     ],
     [
       "                ",
@@ -82,15 +82,15 @@
       "            !   ",
       "            !   ",
       "            !   ",
-      "   -        !   ",
-      "'' -        !   ",
-      "'' -        !   ",
-      "'' -        !   ",
-      "  +-        !   ",
-      "   -        !   ",
-      "   -        !   ",
-      "   -        !   ",
-      "   -        !   "
+      "   .        !   ",
+      "(( .        !   ",
+      "(& &        !   ",
+      "(& &        !   ",
+      " &,&        !   ",
+      "   .        !   ",
+      "   .        !   ",
+      "   .        !   ",
+      "   .        !   "
     ],
     [
       "                ",
@@ -103,9 +103,9 @@
       "            !   ",
       "            !   ",
       "            !   ",
-      "            !   ",
-      "            !   ",
-      "  +         !   ",
+      " & &        !   ",
+      " & &        !   ",
+      " &,&        !   ",
       "            !   ",
       "            !   ",
       "            !   "
@@ -127,34 +127,38 @@
       },
       {
         "char": "&",
-        "block": "minecraft:quartz_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+        "block": "minecraft:polished_blackstone_bricks"
       },
       {
         "char": "'",
-        "block": "minecraft:scaffolding"
+        "block": "minecraft:quartz_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
       },
       {
         "char": "(",
-        "block": "minecraft:smooth_stone"
+        "block": "minecraft:scaffolding"
       },
       {
         "char": ")",
-        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+        "block": "minecraft:smooth_stone"
       },
       {
         "char": "*",
-        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
       },
       {
         "char": "+",
-        "block": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
       },
       {
         "char": ",",
-        "block": "minecraft:water_cauldron[level=1]"
+        "block": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
       },
       {
         "char": "-",
+        "block": "minecraft:water_cauldron[level=1]"
+      },
+      {
+        "char": ".",
         "block": "tfmg:cinder_block"
       }
     ]

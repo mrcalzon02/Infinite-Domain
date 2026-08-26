@@ -1,0 +1,36 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "infinite_domain_lostcities_highway_compat"
+version = "1.0.0"
+displayName = "Infinite Domain: Lost Cities Highway Compatibility"
+authors = "Infinite Domain"
+description = '''
+Prevents Lost Cities' intercity highway planner from routing a highway across ocean/abyssal terrain between two land hubs, closing the one gap between Lost Cities' city-potential model and Infinite Domain's continent geography.
+'''
+
+[[mixins]]
+config = "infinite_domain_lostcities_highway_compat.mixins.json"
+
+[[dependencies.infinite_domain_lostcities_highway_compat]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_lostcities_highway_compat]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_lostcities_highway_compat]]
+modId = "lostcities"
+type = "required"
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"

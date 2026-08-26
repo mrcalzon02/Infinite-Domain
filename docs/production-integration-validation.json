@@ -1,436 +1,449 @@
 {
   "required_checks": [
-    "player_scale_walkthrough",
-    "rotation_and_connectors",
-    "terrain_placement_and_feathering",
-    "runtime_lostcities_codec"
+    "structure_geometry_lint_hard_fail_checks",
+    "family_validator",
+    "corpus_and_provenance",
+    "lostcities_conversion"
   ],
-  "structures_checked": 84,
-  "production_approvals": 0,
+  "structures_checked": 85,
+  "production_approvals": 29,
   "all_gates_enforced": true,
   "failures": [],
-  "lostcities_multibuildings": 0,
-  "lostcities_scattered": 0,
-  "active_settlement_archetypes": [],
+  "lostcities_multibuildings": 20,
+  "lostcities_scattered": 9,
+  "active_settlement_archetypes": [
+    "city_district",
+    "highway_service_cluster",
+    "industrial_district",
+    "port_town",
+    "rail_town",
+    "small_town",
+    "suburb"
+  ],
   "structures": {
     "infinite_domain:radio_mast": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:wrecked_sedan": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:delivery_van": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:battle_tank": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:abandoned_bungalow": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:split_level_house": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:dilapidated_grocery": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:service_garage": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:scrapyard": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:military_checkpoint": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:trailer_park": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:abandoned_culdesac": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:survivor_cache": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:bunker_network": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:trade_outpost": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:decayed_farm": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:industrial_facility": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:mountain_military_complex": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:mountain_biohazard_lab": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:decayed_logging_camp": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:corporate_warehouse": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:bombed_data_center": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:hydroelectric_refuge_dam": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:toppled_skyscraper": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:blown_apartment_complex": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_mixed_use_block": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:sunken_city_front": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:pancaked_parking_structure": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:cratered_downtown_intersection": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_hospital": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_fire_station": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_police_precinct": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_courthouse": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:emergency_relief_shelter": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:collapsed_subway_station": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_bus_terminal": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:freight_depot": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:elevated_rail_collapse": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:sunken_highway_interchange": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_shopping_mall": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_department_store": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:bombed_hotel": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:buried_bank_vault": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_office_tower": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:tenement_courtyard": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_rowhouse_block": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:shattered_luxury_condo": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_city_school": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_community_center": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:city_electrical_substation": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:city_water_treatment_plant": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:district_heating_station": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:municipal_incinerator": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_fuel_depot": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_cyberware_clinic": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ae2_records_archive": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:abandoned_create_factory": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:collapsed_airship_terminal": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:nuclear_research_annex": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
+      "issues": []
+    },
+    "infinite_domain:mountain_pass_terminator": {
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_roadside_diner": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:abandoned_motel": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_gas_station": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:abandoned_truck_stop": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:wasteland_weigh_station": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:decayed_ranch": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:abandoned_orchard_cannery": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_grain_elevator": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:shattered_greenhouse_nursery": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:roadside_church_cemetery": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:abandoned_quarry": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:collapsed_mine_entrance": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:excavator_pit": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:abandoned_oil_field": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:remote_sawmill": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:shattered_wind_farm": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:broken_solar_field": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:wilderness_substation": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:wasteland_water_tower": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:ruined_ranger_station": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:wasteland_fire_lookout": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:destroyed_refugee_convoy": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:crashed_cargo_airship": {
-      "approved": false,
-      "worldgen_quarantined": true,
+      "approved": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:warm_industrial_mountain_port": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     },
     "infinite_domain:cold_industrial_mountain_port": {
       "approved": false,
-      "worldgen_quarantined": true,
+      "worldgen_quarantined": false,
       "issues": []
     }
   }

@@ -4,6 +4,52 @@
     "railwayavoidance": "ignore",
     "railpartheight6": 1
   },
+  "parts": {
+    "highways": {
+      "tunnel": [
+        "infinite_domain:highway_tunnel_wasteland"
+      ],
+      "tunnel_bend": [
+        "infinite_domain:highway_tunnel_bend_wasteland"
+      ],
+      "tunnel_bi": [
+        "infinite_domain:highway_tunnel_bi_wasteland"
+      ],
+      "tunnel_t": [
+        "infinite_domain:highway_tunnel_t_wasteland"
+      ],
+      "open": [
+        "infinite_domain:highway_open_wasteland"
+      ],
+      "open_bend": [
+        "infinite_domain:highway_open_bend_wasteland"
+      ],
+      "open_bi": [
+        "infinite_domain:highway_open_bi_wasteland"
+      ],
+      "open_t": [
+        "infinite_domain:highway_open_t_wasteland"
+      ],
+      "bridge": [
+        "infinite_domain:highway_bridge_wasteland"
+      ],
+      "bridge_bend": [
+        "infinite_domain:highway_bridge_bend_wasteland"
+      ],
+      "bridge_bi": [
+        "infinite_domain:highway_bridge_bi_wasteland"
+      ],
+      "bridge_t": [
+        "infinite_domain:highway_bridge_t_wasteland"
+      ]
+    },
+    "railways": {
+      "rails_horizontal_end": [
+        "infinite_domain:railway_terminus_industrial",
+        "infinite_domain:railway_terminus_transit"
+      ]
+    }
+  },
   "multisettings": {
     "areasize": 10,
     "minimum": 1,
@@ -13,17 +59,67 @@
   },
   "scattered": {
     "areasize": 8,
-    "chance": 0.0,
+    "chance": 0.18,
     "weightnone": 100,
-    "list": []
+    "list": [
+      {
+        "name": "infinite_domain:converted/battle_tank",
+        "weight": 10,
+        "maxheightdiff": 12
+      },
+      {
+        "name": "infinite_domain:converted/crashed_cargo_airship",
+        "weight": 10,
+        "maxheightdiff": 12
+      },
+      {
+        "name": "infinite_domain:converted/delivery_van",
+        "weight": 10,
+        "maxheightdiff": 12,
+        "nearhighway": true
+      },
+      {
+        "name": "infinite_domain:converted/destroyed_refugee_convoy",
+        "weight": 10,
+        "maxheightdiff": 12,
+        "nearhighway": true
+      },
+      {
+        "name": "infinite_domain:converted/mountain_pass_terminator",
+        "weight": 10,
+        "maxheightdiff": 12,
+        "nearhighway": true
+      },
+      {
+        "name": "infinite_domain:converted/radio_mast",
+        "weight": 10,
+        "maxheightdiff": 12
+      },
+      {
+        "name": "infinite_domain:converted/ruined_gas_station",
+        "weight": 10,
+        "maxheightdiff": 12,
+        "nearhighway": true
+      },
+      {
+        "name": "infinite_domain:converted/shattered_wind_farm",
+        "weight": 10,
+        "maxheightdiff": 12
+      },
+      {
+        "name": "infinite_domain:converted/wrecked_sedan",
+        "weight": 10,
+        "maxheightdiff": 12,
+        "nearhighway": true
+      }
+    ]
   },
   "citybiomemultipliers": [
     {
       "multiplier": 0.0,
       "biomes": {
         "if_any": [
-          "#minecraft:is_ocean",
-          "#minecraft:is_river"
+          "#infinite_domain:lostcities_city_excluded"
         ]
       }
     },
@@ -50,7 +146,31 @@
   "citystyles": [
     {
       "factor": 1.0,
-      "citystyle": "infinite_domain:wasteland"
+      "citystyle": "infinite_domain:wasteland_highway_service_cluster"
+    },
+    {
+      "factor": 1.0,
+      "citystyle": "infinite_domain:wasteland_small_town"
+    },
+    {
+      "factor": 1.0,
+      "citystyle": "infinite_domain:wasteland_industrial_district"
+    },
+    {
+      "factor": 1.0,
+      "citystyle": "infinite_domain:wasteland_port_town"
+    },
+    {
+      "factor": 1.0,
+      "citystyle": "infinite_domain:wasteland_rail_town"
+    },
+    {
+      "factor": 1.0,
+      "citystyle": "infinite_domain:wasteland_suburb"
+    },
+    {
+      "factor": 1.0,
+      "citystyle": "infinite_domain:wasteland_city_district"
     }
   ]
 }

@@ -1,10 +1,40 @@
 {
-  "production_approvals": 0,
-  "lostcities_multibuildings": 0,
-  "lostcities_scattered": 0,
-  "approved_structure_ids": [],
+  "production_approvals": 29,
+  "lostcities_multibuildings": 20,
+  "lostcities_scattered": 9,
+  "approved_structure_ids": [
+    "infinite_domain:abandoned_bungalow",
+    "infinite_domain:abandoned_quarry",
+    "infinite_domain:abandoned_truck_stop",
+    "infinite_domain:battle_tank",
+    "infinite_domain:buried_bank_vault",
+    "infinite_domain:city_electrical_substation",
+    "infinite_domain:collapsed_airship_terminal",
+    "infinite_domain:collapsed_mine_entrance",
+    "infinite_domain:collapsed_subway_station",
+    "infinite_domain:crashed_cargo_airship",
+    "infinite_domain:delivery_van",
+    "infinite_domain:destroyed_refugee_convoy",
+    "infinite_domain:dilapidated_grocery",
+    "infinite_domain:excavator_pit",
+    "infinite_domain:military_checkpoint",
+    "infinite_domain:mountain_pass_terminator",
+    "infinite_domain:municipal_incinerator",
+    "infinite_domain:radio_mast",
+    "infinite_domain:roadside_church_cemetery",
+    "infinite_domain:ruined_fuel_depot",
+    "infinite_domain:ruined_gas_station",
+    "infinite_domain:ruined_grain_elevator",
+    "infinite_domain:ruined_roadside_diner",
+    "infinite_domain:shattered_greenhouse_nursery",
+    "infinite_domain:shattered_wind_farm",
+    "infinite_domain:wasteland_water_tower",
+    "infinite_domain:wasteland_weigh_station",
+    "infinite_domain:wilderness_substation",
+    "infinite_domain:wrecked_sedan"
+  ],
   "clean_masters_integrated": 0,
-  "active_archetypes": 0,
+  "active_archetypes": 7,
   "archetypes": {
     "highway_service_cluster": {
       "candidate_members": [
@@ -17,8 +47,13 @@
         "infinite_domain:service_garage",
         "infinite_domain:wasteland_weigh_station"
       ],
-      "approved_members": [],
-      "active": false,
+      "approved_members": [
+        "infinite_domain:converted/abandoned_truck_stop",
+        "infinite_domain:converted/dilapidated_grocery",
+        "infinite_domain:converted/ruined_roadside_diner",
+        "infinite_domain:converted/wasteland_weigh_station"
+      ],
+      "active": true,
       "citystyle": "infinite_domain:wasteland_highway_service_cluster"
     },
     "small_town": {
@@ -67,8 +102,19 @@
         "infinite_domain:wasteland_water_tower",
         "infinite_domain:wilderness_substation"
       ],
-      "approved_members": [],
-      "active": false,
+      "approved_members": [
+        "infinite_domain:converted/abandoned_bungalow",
+        "infinite_domain:converted/buried_bank_vault",
+        "infinite_domain:converted/city_electrical_substation",
+        "infinite_domain:converted/collapsed_airship_terminal",
+        "infinite_domain:converted/dilapidated_grocery",
+        "infinite_domain:converted/roadside_church_cemetery",
+        "infinite_domain:converted/ruined_grain_elevator",
+        "infinite_domain:converted/shattered_greenhouse_nursery",
+        "infinite_domain:converted/wasteland_water_tower",
+        "infinite_domain:converted/wilderness_substation"
+      ],
+      "active": true,
       "citystyle": "infinite_domain:wasteland_small_town"
     },
     "industrial_district": {
@@ -102,8 +148,18 @@
         "infinite_domain:warm_industrial_mountain_port",
         "infinite_domain:wilderness_substation"
       ],
-      "approved_members": [],
-      "active": false,
+      "approved_members": [
+        "infinite_domain:converted/abandoned_quarry",
+        "infinite_domain:converted/city_electrical_substation",
+        "infinite_domain:converted/collapsed_airship_terminal",
+        "infinite_domain:converted/collapsed_mine_entrance",
+        "infinite_domain:converted/excavator_pit",
+        "infinite_domain:converted/military_checkpoint",
+        "infinite_domain:converted/municipal_incinerator",
+        "infinite_domain:converted/ruined_fuel_depot",
+        "infinite_domain:converted/wilderness_substation"
+      ],
+      "active": true,
       "citystyle": "infinite_domain:wasteland_industrial_district"
     },
     "port_town": {
@@ -130,8 +186,14 @@
         "infinite_domain:service_garage",
         "infinite_domain:warm_industrial_mountain_port"
       ],
-      "approved_members": [],
-      "active": false,
+      "approved_members": [
+        "infinite_domain:converted/abandoned_quarry",
+        "infinite_domain:converted/city_electrical_substation",
+        "infinite_domain:converted/excavator_pit",
+        "infinite_domain:converted/municipal_incinerator",
+        "infinite_domain:converted/ruined_fuel_depot"
+      ],
+      "active": true,
       "citystyle": "infinite_domain:wasteland_port_town"
     },
     "rail_town": {
@@ -141,8 +203,10 @@
         "infinite_domain:elevated_rail_collapse",
         "infinite_domain:freight_depot"
       ],
-      "approved_members": [],
-      "active": false,
+      "approved_members": [
+        "infinite_domain:converted/collapsed_subway_station"
+      ],
+      "active": true,
       "citystyle": "infinite_domain:wasteland_rail_town"
     },
     "suburb": {
@@ -160,8 +224,11 @@
         "infinite_domain:tenement_courtyard",
         "infinite_domain:trailer_park"
       ],
-      "approved_members": [],
-      "active": false,
+      "approved_members": [
+        "infinite_domain:converted/abandoned_bungalow",
+        "infinite_domain:converted/roadside_church_cemetery"
+      ],
+      "active": true,
       "citystyle": "infinite_domain:wasteland_suburb"
     },
     "city_district": {
@@ -213,8 +280,17 @@
         "infinite_domain:trailer_park",
         "infinite_domain:warm_industrial_mountain_port"
       ],
-      "approved_members": [],
-      "active": false,
+      "approved_members": [
+        "infinite_domain:converted/abandoned_quarry",
+        "infinite_domain:converted/buried_bank_vault",
+        "infinite_domain:converted/city_electrical_substation",
+        "infinite_domain:converted/dilapidated_grocery",
+        "infinite_domain:converted/excavator_pit",
+        "infinite_domain:converted/municipal_incinerator",
+        "infinite_domain:converted/roadside_church_cemetery",
+        "infinite_domain:converted/ruined_fuel_depot"
+      ],
+      "active": true,
       "citystyle": "infinite_domain:wasteland_city_district"
     }
   }

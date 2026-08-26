@@ -1,0 +1,691 @@
+{
+  "schema_version": 1,
+  "purpose": "Worldgen role classification for the 64 Old World jigsaw quest structures, derived from docs/old-world/structure-lineage.json crossed with structure_library/catalog.json category/settlement_types. Determines which biome tag each structure is restricted to and whether Lost Cities must avoid it.",
+  "roles": {
+    "OWS-001": {
+      "archetype": "infinite_domain:corporate_warehouse",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "railway"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_001_vcf_neighborhood_culture_service_depot.json"
+    },
+    "OWS-002": {
+      "archetype": "infinite_domain:ruined_city_school",
+      "category": "civic",
+      "settlement_types": [
+        "residential",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_002_vcf_emergency_community_grow_hall.json"
+    },
+    "OWS-003": {
+      "archetype": "infinite_domain:corporate_warehouse",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "railway"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_003_vcf_cold_chain_culture_nursery.json"
+    },
+    "OWS-004": {
+      "archetype": "infinite_domain:toppled_skyscraper",
+      "category": "commercial",
+      "settlement_types": [
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_004_vcf_mycological_vertical_farm_tower.json"
+    },
+    "OWS-005": {
+      "archetype": "infinite_domain:abandoned_orchard_cannery",
+      "category": "agricultural",
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "role": "RURAL_INTEGRATED",
+      "biomes_tag": "#infinite_domain:wasteland_rural_biomes",
+      "file": "ows_005_vcf_harvest_packaging_annex.json"
+    },
+    "OWS-006": {
+      "archetype": "infinite_domain:mountain_biohazard_lab",
+      "category": "military",
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "role": "INDEPENDENT_MOUNTAIN",
+      "biomes_tag": "#infinite_domain:wasteland_mountain_military_biomes",
+      "file": "ows_006_vcf_pt9_symbiosis_pilot_laboratory.json"
+    },
+    "OWS-007": {
+      "archetype": "infinite_domain:nuclear_research_annex",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_007_vcf_ep7_agricultural_development_laboratory.json"
+    },
+    "OWS-008": {
+      "archetype": "infinite_domain:mountain_biohazard_lab",
+      "category": "military",
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "role": "INDEPENDENT_MOUNTAIN",
+      "biomes_tag": "#infinite_domain:wasteland_mountain_military_biomes",
+      "file": "ows_008_vcf_emergency_persistence_investigation_lab.json"
+    },
+    "OWS-009": {
+      "archetype": "infinite_domain:service_garage",
+      "category": "industrial",
+      "settlement_types": [
+        "highway_frontage",
+        "industrial"
+      ],
+      "role": "HIGHWAY_INTEGRATED",
+      "biomes_tag": "#infinite_domain:wasteland_rural_biomes",
+      "file": "ows_009_atlas_roadside_repair_depot.json"
+    },
+    "OWS-010": {
+      "archetype": "infinite_domain:freight_depot",
+      "category": "railway",
+      "settlement_types": [
+        "industrial",
+        "railway"
+      ],
+      "role": "HIGHWAY_INTEGRATED",
+      "biomes_tag": "#infinite_domain:wasteland_rural_biomes",
+      "file": "ows_010_atlas_conveyor_transfer_hall.json"
+    },
+    "OWS-011": {
+      "archetype": "infinite_domain:service_garage",
+      "category": "industrial",
+      "settlement_types": [
+        "highway_frontage",
+        "industrial"
+      ],
+      "role": "HIGHWAY_INTEGRATED",
+      "biomes_tag": "#infinite_domain:wasteland_rural_biomes",
+      "file": "ows_011_atlas_municipal_machine_service_shop.json"
+    },
+    "OWS-012": {
+      "archetype": "infinite_domain:abandoned_quarry",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "rural"
+      ],
+      "role": "RURAL_INTEGRATED",
+      "biomes_tag": "#infinite_domain:wasteland_rural_biomes",
+      "file": "ows_012_atlas_bulk_crushing_preparation_plant.json"
+    },
+    "OWS-013": {
+      "archetype": "infinite_domain:abandoned_create_factory",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_013_atlas_automated_assembly_hall.json"
+    },
+    "OWS-014": {
+      "archetype": "infinite_domain:bombed_data_center",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_014_atlas_industrial_controls_integration_center.json"
+    },
+    "OWS-015": {
+      "archetype": "infinite_domain:city_water_treatment_plant",
+      "category": "utility_infrastructure",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_015_polycore_utility_seal_failure_station.json"
+    },
+    "OWS-016": {
+      "archetype": "infinite_domain:nuclear_research_annex",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_016_polycore_elastomer_exposure_array.json"
+    },
+    "OWS-017": {
+      "archetype": "infinite_domain:industrial_facility",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_017_polycore_composite_barrier_laboratory.json"
+    },
+    "OWS-018": {
+      "archetype": "infinite_domain:nuclear_research_annex",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_018_polycore_ceramic_isolation_test_center.json"
+    },
+    "OWS-019": {
+      "archetype": "infinite_domain:corporate_warehouse",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "railway"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_019_polycore_emergency_material_substitution_center.json"
+    },
+    "OWS-020": {
+      "archetype": "infinite_domain:mountain_biohazard_lab",
+      "category": "military",
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "role": "INDEPENDENT_MOUNTAIN",
+      "biomes_tag": "#infinite_domain:wasteland_mountain_military_biomes",
+      "file": "ows_020_polycore_deep_barrier_research_facility.json"
+    },
+    "OWS-021": {
+      "archetype": "infinite_domain:freight_depot",
+      "category": "railway",
+      "settlement_types": [
+        "industrial",
+        "railway"
+      ],
+      "role": "HIGHWAY_INTEGRATED",
+      "biomes_tag": "#infinite_domain:wasteland_rural_biomes",
+      "file": "ows_021_pleroma_roadside_freight_depot.json"
+    },
+    "OWS-022": {
+      "archetype": "infinite_domain:corporate_warehouse",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "railway"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_022_pleroma_urban_distribution_warehouse.json"
+    },
+    "OWS-023": {
+      "archetype": "infinite_domain:corporate_warehouse",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "railway"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_023_pleroma_refrigerated_cold_storage_hub.json"
+    },
+    "OWS-024": {
+      "archetype": "infinite_domain:warm_industrial_mountain_port",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial"
+      ],
+      "role": "COASTAL_TERMINAL",
+      "biomes_tag": "#infinite_domain:wasteland_port_interface_biomes",
+      "file": "ows_024_pleroma_intermodal_container_yard.json"
+    },
+    "OWS-025": {
+      "archetype": "infinite_domain:dilapidated_grocery",
+      "category": "commercial",
+      "settlement_types": [
+        "highway_frontage",
+        "town_center"
+      ],
+      "role": "HIGHWAY_INTEGRATED",
+      "biomes_tag": "#infinite_domain:wasteland_rural_biomes",
+      "file": "ows_025_pleroma_automated_market_fulfillment_center.json"
+    },
+    "OWS-026": {
+      "archetype": "infinite_domain:corporate_warehouse",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "railway"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_026_pleroma_quarantine_cargo_warehouse.json"
+    },
+    "OWS-027": {
+      "archetype": "infinite_domain:warm_industrial_mountain_port",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial"
+      ],
+      "role": "COASTAL_TERMINAL",
+      "biomes_tag": "#infinite_domain:wasteland_port_interface_biomes",
+      "file": "ows_027_pleroma_meridian_port_logistics_terminal.json"
+    },
+    "OWS-028": {
+      "archetype": "infinite_domain:ruined_cyberware_clinic",
+      "category": "civic",
+      "settlement_types": [
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_028_aevum_neighborhood_regenerative_clinic.json"
+    },
+    "OWS-029": {
+      "archetype": "infinite_domain:ruined_cyberware_clinic",
+      "category": "civic",
+      "settlement_types": [
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_029_aevum_longevity_treatment_center.json"
+    },
+    "OWS-030": {
+      "archetype": "infinite_domain:ruined_hospital",
+      "category": "civic",
+      "settlement_types": [
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_030_aevum_apl_hospital_recovery_ward.json"
+    },
+    "OWS-031": {
+      "archetype": "infinite_domain:ruined_cyberware_clinic",
+      "category": "civic",
+      "settlement_types": [
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_031_aevum_biologic_pharmacy_cold_store.json"
+    },
+    "OWS-032": {
+      "archetype": "infinite_domain:nuclear_research_annex",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_032_aevum_apl3_research_campus.json"
+    },
+    "OWS-033": {
+      "archetype": "infinite_domain:emergency_relief_shelter",
+      "category": "civic",
+      "settlement_types": [
+        "military",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_033_aevum_evacuation_dependency_ward.json"
+    },
+    "OWS-034": {
+      "archetype": "infinite_domain:city_electrical_substation",
+      "category": "utility_infrastructure",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_034_helion_neighborhood_electrical_substation.json"
+    },
+    "OWS-035": {
+      "archetype": "infinite_domain:city_electrical_substation",
+      "category": "utility_infrastructure",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_035_helion_grid_storage_compound.json"
+    },
+    "OWS-036": {
+      "archetype": "infinite_domain:city_water_treatment_plant",
+      "category": "utility_infrastructure",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_036_helion_coolant_pump_service_station.json"
+    },
+    "OWS-037": {
+      "archetype": "infinite_domain:district_heating_station",
+      "category": "utility_infrastructure",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_037_helion_regional_power_operations_center.json"
+    },
+    "OWS-038": {
+      "archetype": "infinite_domain:nuclear_research_annex",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_038_helion_nuclear_auxiliary_emergency_complex.json"
+    },
+    "OWS-039": {
+      "archetype": "infinite_domain:ae2_records_archive",
+      "category": "civic",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_039_blackglass_street_communications_exchange.json"
+    },
+    "OWS-040": {
+      "archetype": "infinite_domain:ae2_records_archive",
+      "category": "civic",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_040_blackglass_civic_data_relay.json"
+    },
+    "OWS-041": {
+      "archetype": "infinite_domain:abandoned_create_factory",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_041_blackglass_industrial_control_archive.json"
+    },
+    "OWS-042": {
+      "archetype": "infinite_domain:bombed_data_center",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_042_blackglass_regional_data_center.json"
+    },
+    "OWS-043": {
+      "archetype": "infinite_domain:bunker_network",
+      "category": "military",
+      "settlement_types": [
+        "military"
+      ],
+      "role": "FIXED_QUEST_SITE",
+      "biomes_tag": "#infinite_domain:wasteland_site_biomes",
+      "file": "ows_043_blackglass_government_continuity_archive_node.json"
+    },
+    "OWS-044": {
+      "archetype": "infinite_domain:military_checkpoint",
+      "category": "military",
+      "settlement_types": [
+        "highway_frontage",
+        "military"
+      ],
+      "role": "HIGHWAY_INTEGRATED",
+      "biomes_tag": "#infinite_domain:wasteland_rural_biomes",
+      "file": "ows_044_emergency_authority_early_quarantine_checkpoint.json"
+    },
+    "OWS-045": {
+      "archetype": "infinite_domain:mountain_military_complex",
+      "category": "military",
+      "settlement_types": [
+        "military"
+      ],
+      "role": "INDEPENDENT_MOUNTAIN",
+      "biomes_tag": "#infinite_domain:wasteland_mountain_military_biomes",
+      "file": "ows_045_emergency_authority_late_quarantine_fortress.json"
+    },
+    "OWS-046": {
+      "archetype": "infinite_domain:ruined_bus_terminal",
+      "category": "highway",
+      "settlement_types": [
+        "highway_frontage",
+        "town_center"
+      ],
+      "role": "HIGHWAY_INTEGRATED",
+      "biomes_tag": "#infinite_domain:wasteland_rural_biomes",
+      "file": "ows_046_emergency_authority_regional_decontamination_interchange.json"
+    },
+    "OWS-047": {
+      "archetype": "infinite_domain:mountain_biohazard_lab",
+      "category": "military",
+      "settlement_types": [
+        "industrial",
+        "military"
+      ],
+      "role": "INDEPENDENT_MOUNTAIN",
+      "biomes_tag": "#infinite_domain:wasteland_mountain_military_biomes",
+      "file": "ows_047_joint_research_deep_containment_laboratory.json"
+    },
+    "OWS-048": {
+      "archetype": "infinite_domain:mountain_military_complex",
+      "category": "military",
+      "settlement_types": [
+        "military"
+      ],
+      "role": "INDEPENDENT_MOUNTAIN",
+      "biomes_tag": "#infinite_domain:wasteland_mountain_military_biomes",
+      "file": "ows_048_meridian_military_containment_base.json"
+    },
+    "OWS-049": {
+      "archetype": "infinite_domain:bunker_network",
+      "category": "military",
+      "settlement_types": [
+        "military"
+      ],
+      "role": "FIXED_QUEST_SITE",
+      "biomes_tag": "#infinite_domain:wasteland_site_biomes",
+      "file": "ows_049_meridian_firebreak_observation_bunker.json"
+    },
+    "OWS-050": {
+      "archetype": "infinite_domain:cratered_downtown_intersection",
+      "category": "commercial",
+      "settlement_types": [
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_050_meridian_firebreak_crater_command_site.json"
+    },
+    "OWS-051": {
+      "archetype": "infinite_domain:radio_mast",
+      "category": "utility_infrastructure",
+      "settlement_types": [
+        "rural"
+      ],
+      "role": "HIGHWAY_INTEGRATED",
+      "biomes_tag": "#infinite_domain:wasteland_rural_biomes",
+      "file": "ows_051_continuity_science_atmospheric_monitoring_station_19k.json"
+    },
+    "OWS-052": {
+      "archetype": "infinite_domain:ruined_office_tower",
+      "category": "commercial",
+      "settlement_types": [
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_052_continuity_field_office.json"
+    },
+    "OWS-053": {
+      "archetype": "infinite_domain:bunker_network",
+      "category": "military",
+      "settlement_types": [
+        "military"
+      ],
+      "role": "FIXED_QUEST_SITE",
+      "biomes_tag": "#infinite_domain:wasteland_site_biomes",
+      "file": "ows_053_continuity_archive_landmark.json"
+    },
+    "OWS-054": {
+      "archetype": "infinite_domain:emergency_relief_shelter",
+      "category": "civic",
+      "settlement_types": [
+        "military",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_054_civilian_neighborhood_shelter.json"
+    },
+    "OWS-055": {
+      "archetype": "infinite_domain:collapsed_subway_station",
+      "category": "railway",
+      "settlement_types": [
+        "railway",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_055_municipal_transit_closure_station.json"
+    },
+    "OWS-056": {
+      "archetype": "infinite_domain:city_water_treatment_plant",
+      "category": "utility_infrastructure",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_056_municipal_water_waste_failure_plant.json"
+    },
+    "OWS-057": {
+      "archetype": "infinite_domain:blown_apartment_complex",
+      "category": "residential",
+      "settlement_types": [
+        "residential",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_057_civilian_apartment_evacuation_block.json"
+    },
+    "OWS-058": {
+      "archetype": "infinite_domain:ruined_community_center",
+      "category": "civic",
+      "settlement_types": [
+        "residential",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_058_municipal_library_refuge_center.json"
+    },
+    "OWS-059": {
+      "archetype": "infinite_domain:ruined_city_school",
+      "category": "civic",
+      "settlement_types": [
+        "residential",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_059_municipal_school_distribution_relief_point.json"
+    },
+    "OWS-060": {
+      "archetype": "infinite_domain:corporate_warehouse",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "railway"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_060_asterion_launch_support_warehouse.json"
+    },
+    "OWS-061": {
+      "archetype": "infinite_domain:bombed_data_center",
+      "category": "industrial",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_061_asterion_mission_control_relay_center.json"
+    },
+    "OWS-062": {
+      "archetype": "infinite_domain:radio_mast",
+      "category": "utility_infrastructure",
+      "settlement_types": [
+        "rural"
+      ],
+      "role": "HIGHWAY_INTEGRATED",
+      "biomes_tag": "#infinite_domain:wasteland_rural_biomes",
+      "file": "ows_062_asterion_orbital_communications_station.json"
+    },
+    "OWS-063": {
+      "archetype": "infinite_domain:collapsed_airship_terminal",
+      "category": "miscellaneous",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_063_asterion_spacecraft_assembly_facility.json"
+    },
+    "OWS-064": {
+      "archetype": "infinite_domain:collapsed_airship_terminal",
+      "category": "miscellaneous",
+      "settlement_types": [
+        "industrial",
+        "town_center"
+      ],
+      "role": "CITY_INTEGRATED",
+      "biomes_tag": "wastelands:city",
+      "file": "ows_064_asterion_primary_meridian_launch_complex.json"
+    }
+  }
+}

@@ -14,7 +14,12 @@ from typing import Any
 # of scripts/validate_structure_corpus.py (explicit controlled-vocabulary
 # checks, no external schema library) plus the underwater-specific checks
 # the standards document calls out: correct atmosphere-state fluid fill,
-# and that nothing here is live against real ocean biomes yet.
+# and that nothing here is live against real ocean biomes yet -- except
+# akula_wreck_site/akula_debris_field, admitted to eastern_slope_biomes by
+# owner directive on 2026-08-25 with the in-game QA walkthrough explicitly
+# skipped (see docs/DEEP_SEA_STRUCTURE_AUDIT.md). Every other asset in this
+# corpus stays behind the quarantine tag and this validator still enforces
+# that.
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "structure_library" / "deepsea-catalog.json"
@@ -872,6 +877,14 @@ def validate_placement_gate(issues: list[str]) -> dict[str, Any]:
         "infinite_domain:deep_sea/akula_wreck_site",
         "infinite_domain:deep_sea/akula_debris_field",
     )
+    # Admitted to production by owner directive on 2026-08-25 with the
+    # in-game QA walkthrough explicitly skipped -- see
+    # docs/DEEP_SEA_STRUCTURE_AUDIT.md. Every other member of placed_assets
+    # must still be gated behind the quarantine tag.
+    ADMITTED_ASSETS = {
+        "infinite_domain:deep_sea/akula_wreck_site": "#infinite_domain:eastern_slope_biomes",
+        "infinite_domain:deep_sea/akula_debris_field": "#infinite_domain:eastern_slope_biomes",
+    }
     for name in placed_assets:
         gate_report["csv_rows_present"][name] = name in csv_text
         if name not in csv_text:
@@ -879,10 +892,14 @@ def validate_placement_gate(issues: list[str]) -> dict[str, Any]:
         struct_path = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen" / "structure" / "deep_sea" / f"{name.rsplit('/', 1)[-1]}.json"
         if struct_path.is_file():
             doc = json.loads(struct_path.read_text(encoding="utf-8"))
-            gated = doc.get("biomes") == "#infinite_domain:disabled_quarantine_deep_sea_structures"
+            expected_biomes = ADMITTED_ASSETS.get(name, "#infinite_domain:disabled_quarantine_deep_sea_structures")
+            gated = doc.get("biomes") == expected_biomes
             gate_report["biomes_gated"][name] = gated
             if not gated:
-                issues.append(f"{name}: structure biomes selector is not the quarantine tag")
+                if name in ADMITTED_ASSETS:
+                    issues.append(f"{name}: structure biomes selector is not the admitted selector {expected_biomes!r}")
+                else:
+                    issues.append(f"{name}: structure biomes selector is not the quarantine tag")
         else:
             issues.append(f"{name}: worldgen structure json missing")
 

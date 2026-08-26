@@ -371,10 +371,15 @@ rather than being discovered in world.
 `akula_wreck_site` places the whole three-piece assembly on one spread
 (spacing 144, separation 88) and is the rarest thing in this corpus — a 113 m
 nuclear submarine is a landmark, not scenery. `akula_debris_field` stays
-independent on a tighter spread (40 / 18) as ordinary seabed dressing. Both
-are gated to `#infinite_domain:disabled_quarantine_deep_sea_structures` and
-logged in `docs/biome-gating-audit/ocean-structure-sets.csv` with salts
-48217706 and 48217708, checked against every other registrant's salt. The two
+independent on a tighter spread (40 / 18) as ordinary seabed dressing. Unlike
+the rest of this corpus, both are gated to `#infinite_domain:eastern_slope_biomes`
+(Karsic territory) rather than the quarantine tag — admitted by owner
+directive on 2026-08-25 with the standard in-game QA walkthrough explicitly
+skipped; see `docs/DEEP_SEA_STRUCTURE_AUDIT.md`'s disposition ledger. Both
+are logged in `docs/biome-gating-audit/ocean-structure-sets.csv` with salts
+48217706 and 48217708, checked against every other registrant's salt
+(including the pack's other `eastern_slope_biomes` registrant,
+`karsic_patrol_wreck` at salt 78064022 — no collision). The two
 retired per-section rows were removed from that CSV rather than left behind:
 it is the single source of truth for what generates, and a row for a set that
 places nothing is a wrong answer to the question the file exists to answer.
@@ -383,8 +388,16 @@ places nothing is a wrong answer to the question the file exists to answer.
 
 - No in-game walkthrough yet. Everything here is validated against the NBT and
   the renders; nothing has been walked. Production admission still requires
-  the human QA-world pass, and `structure_library/production-approvals.json`
-  stays empty.
+  the human QA-world pass for every asset in this corpus except
+  `akula_wreck_site`/`akula_debris_field`, which were admitted to
+  `#infinite_domain:eastern_slope_biomes` by owner directive on 2026-08-25
+  with that walkthrough explicitly skipped -- see
+  `docs/DEEP_SEA_STRUCTURE_AUDIT.md`. `structure_library/production-approvals.json`
+  is the land corpus's automated-admission ledger (structure_geometry_lint,
+  family/corpus/provenance/conversion validators) and doesn't model deep-sea
+  production state at all; the deep-sea disposition ledger
+  (`docs/DEEP_SEA_STRUCTURE_AUDIT.md`) and `deepsea-catalog.json`'s
+  `production_status` field are the actual source of truth here.
 - The wreck sections' fittings are re-authored after the rotation rather than
   rotated with it, because a block facing cannot express a 13.1°
   roll. Orientation-sensitive furniture is dropped and replaced; on a flooded,

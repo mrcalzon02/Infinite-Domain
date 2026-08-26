@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "#stellaris:mars_biomes",
+    "#stellaris:mercury_biomes",
+    "#stellaris:venus_biomes",
+    "#stellaris:moon_biomes"
+  ],
+  "spawners": {
+    "type": "razor_tyrant:razor_tyrant",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

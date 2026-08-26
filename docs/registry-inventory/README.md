@@ -21,6 +21,10 @@ An ID appearing in both registries is intentionally represented once as an item 
 - `item-ids.txt`: sorted item IDs, one per line
 - `block-ids.txt`: sorted block IDs, one per line
 - `namespace-summary.csv`: item and block counts grouped by registry namespace
+- `entity-ids.txt`: `namespace:name` entity type IDs, one per line — inferred from `entity.<namespace>.<name>` lang keys inside each mod jar (not a live-registry dump like the item/block files, so it's not exhaustive: an entity with no translation override won't appear)
+- `mod-jar-index.json`: per-jar record (file name, mod ID(s), CurseForge display name/author) for every jar in `mods/` — the machine-readable source behind `../MOD_LIST.md`
+
+`entity-ids.txt` and `mod-jar-index.json` are produced by `scripts/build_mod_index.py`, which reads directly out of the jars in `mods/` and needs no running instance. The item/block files above them predate that script and came from a one-time live-registry audit instead (see Reproduction below) — re-running that audit would also refresh those two.
 
 ## Largest namespaces
 
@@ -59,4 +63,6 @@ An ID appearing in both registries is intentionally represented once as an item 
 
 ## Reproduction
 
-The source was a one-time KubeJS server-load audit over `Registry.of('minecraft:item').keys` and `Registry.of('minecraft:block').keys`. The temporary runtime hook was removed after capture. Re-run the audit whenever the installed mod set or startup registrations change.
+`item-ids.txt`, `block-ids.txt`, `item-block-registry.csv/json`, and `namespace-summary.csv` came from a one-time KubeJS server-load audit over `Registry.of('minecraft:item').keys` and `Registry.of('minecraft:block').keys`. The temporary runtime hook was removed after capture. Re-run that audit whenever the installed mod set or startup registrations change enough to matter (it requires actually launching the instance).
+
+`entity-ids.txt` and `mod-jar-index.json` (and `../MOD_LIST.md`) are static-extracted instead — run `python scripts/build_mod_index.py` from the repo root any time mods are added, removed, or updated. No launch required.

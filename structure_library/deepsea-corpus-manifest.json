@@ -27,12 +27,12 @@
     "asset_class_geological_feature": 4,
     "asset_class_structure": 12,
     "families": 4,
-    "production_approved": 0
+    "production_approved": 4
   },
   "sibling_systems": {
     "land_structure_corpus": "structure_library/corpus-manifest.json",
     "relationship": "independent corpus, does not share counts/gates/production_status with the land corpus; see the governing standard's 'Relationship to the heavy-rebuild system' section"
   },
-  "integration_rule": "Only explicitly approved records may be referenced by production worldgen selectors. All sixteen current assets are quarantined behind the empty quarantine_biome_tag pending human in-world review; see disposition_ledger.",
+  "integration_rule": "Only explicitly approved records may be referenced by production worldgen selectors. Twelve of sixteen current assets remain quarantined behind the empty quarantine_biome_tag pending human in-world review. The exception: akula_wreck_forward, akula_wreck_aft, akula_wreck_spine, and akula_debris_field (the four assets reachable through akula_wreck_site/akula_debris_field) were admitted to #infinite_domain:eastern_slope_biomes by owner directive on 2026-08-25, with the standard in-game QA walkthrough explicitly skipped; see disposition_ledger. The three Akula corpus-reference-only records (akula_project971_clean_master, akula_wreck_forward_damaged, akula_wreck_aft_damaged) are unaffected -- they are never placed regardless of production_status.",
   "impact_simulation_report": "docs/deepsea-akula-impact-simulation.json"
 }

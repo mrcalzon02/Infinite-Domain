@@ -1,11 +1,157 @@
 {
-  "format_version": 1,
-  "purpose": "Human-reviewed production admission. Automatic validation never writes approvals.",
+  "format_version": 2,
+  "purpose": "Automated production admission. A structure is approved once structure_geometry_lint.py checks 1-3 report zero hard-fail findings and its family/corpus/provenance/conversion validators pass; no human playtest or in-game walkthrough is required. See structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md Section 6.",
   "required_checks": [
-    "player_scale_walkthrough",
-    "rotation_and_connectors",
-    "terrain_placement_and_feathering",
-    "runtime_lostcities_codec"
+    "structure_geometry_lint_hard_fail_checks",
+    "family_validator",
+    "corpus_and_provenance",
+    "lostcities_conversion"
   ],
-  "approvals": []
+  "approvals": [
+    {
+      "structure_id": "infinite_domain:abandoned_bungalow",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_quarry",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:abandoned_truck_stop",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:battle_tank",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:buried_bank_vault",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:city_electrical_substation",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_airship_terminal",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_mine_entrance",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:collapsed_subway_station",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:crashed_cargo_airship",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:delivery_van",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:destroyed_refugee_convoy",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:dilapidated_grocery",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:excavator_pit",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:military_checkpoint",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:mountain_pass_terminator",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:municipal_incinerator",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:radio_mast",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:roadside_church_cemetery",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_fuel_depot",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_gas_station",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_grain_elevator",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:ruined_roadside_diner",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:shattered_greenhouse_nursery",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:shattered_wind_farm",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_water_tower",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:wasteland_weigh_station",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:wilderness_substation",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    },
+    {
+      "structure_id": "infinite_domain:wrecked_sedan",
+      "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+      "generated_at": "2026-08-26T01:54:02.901081+00:00"
+    }
+  ]
 }

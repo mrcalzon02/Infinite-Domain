@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "infinitedomain.lostcitiescompat.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "IntercityHighwayPlannerMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

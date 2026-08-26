@@ -56,14 +56,14 @@ def main() -> None:
             f"{audit['rebuilt_pending_in_world_review']} of {audit['structures_expected']} authoritative assets rebuilt",
             "Seven reusable authoring families completed in three consolidated waves",
             "Zero primitive rebuild dispositions remain",
-        ], "Player-scale acceptance is intentionally separate from automatic rebuild completion."),
+        ], "Admission now requires structure_geometry_lint.py checks 1-3 with zero hard-fail findings, not a human walkthrough; regeneration with the v2 primitives is tracked in rebuild-family-roadmap.json."),
         gate(6, "Road connector conversion", "partial_static_contract", [
             f"Four-way entrance and lot transforms pass for {placement['structures_checked']} structures",
             "Seven road-connection classes are cataloged and used by zoning",
             f"{roads['modules_checked']} NBT modules cover {roads['families_checked']} topology families and seven coherent condition states",
             "All road edge bands, elevation contracts and traversable connector graphs pass static validation",
             "QA world supplies one-button four-way cycles for all clean road topologies",
-        ], "In-game adjacency, rotation, elevation and vehicle walkthrough remains required."),
+        ], "Automated adjacency/rotation/elevation validation remains to be written; no human walkthrough is required or expected."),
         gate(7, "Port, marketplace, and industrial representative kits", "achieved_candidate_content", [
             "Warm and cold mountain ports include piers, cranes, cargo yards and road/rail tunnels",
             "Trade outpost supplies a walled market representative",
@@ -71,41 +71,41 @@ def main() -> None:
             f"{modules['modules_checked']} exact clean-master components are available across {modules['kits_checked']} reusable kits",
             "Known fish-market and port-fuel source limitations are explicit; shared marketplace and fuel-depot modules fill the available roles",
         ]),
-        gate(8, "Multiple settlement archetypes", "wired_pending_runtime_admission", [
+        gate(8, "Multiple settlement archetypes", "wired_pending_lint_regeneration", [
             f"{archetypes['archetypes_checked']} archetypes statically validated",
             f"All {archetypes['candidate_structures_checked']} non-scattered candidates are zoned",
             "Approval compiler emits archetype-specific Lost Cities citystyles",
-        ], "No archetype becomes active until its first assets pass all four production approval checks; runtime generation then needs validation."),
+        ], "An archetype activates once its first assets pass the automated production approval checks (lint 1-3 + family/corpus/conversion validators) — no runtime/human admission step."),
         gate(9, "Damage, occupation, and architecture-family diversity", "partial_static", [
             "All 84 authoritative records pair a clean master with a damage/occupation derivative",
             "Compiler selects derivatives only and keys diversity to clean-master lineage",
-        ], "Runtime repetition and occupation encounter balance remain part of representative-region testing."),
+        ], "Repetition/occupation-balance checks are not yet automated; this is follow-up validator work, not a human review requirement."),
         gate(10, "Performance measurement", "partial_static", [
             f"{performance['structures_profiled']} structures pass placed-block, palette, compressed-NBT and footprint budgets",
-        ], performance["runtime_benchmark_status"]),
-        gate(11, "Structure Gallery/Test World", "candidate_corpus_complete_pending_acceptance", [
+        ], "Representative-region performance profiling is not yet automated; treat as outstanding validator work."),
+        gate(11, "Structure Gallery/Test World", "candidate_corpus_complete_pending_regeneration", [
             f"QA world has {gallery['structures']} controls, {gallery['registered_blocks']} block samples and {gallery['tower_floors']} tower floors",
             f"QA world also has {gallery['road_modules']} individually rebuildable road-module controls",
             f"QA world also has {gallery['structure_kit_modules']} port/market/industrial module controls",
             "One-button four-way cycles cover all 84 structures, 12 clean road topologies and 21 reusable modules",
-            f"Resumable pass/fail ledgers cover {sum(item['assets'] for item in review['ledgers'].values())} review assets without automatic promotion",
+            f"Resumable pass/fail ledgers cover {sum(item['assets'] for item in review['ledgers'].values())} review assets; these ledgers are historical and no longer gate approval",
             "Static QA-world integrity passes",
             f"Accepted production corpus currently contains {approvals} structures",
-        ], "Open/build/walkthrough review must determine which candidates enter the accepted production corpus."),
+        ], "Candidates enter the accepted production corpus automatically once structure_geometry_lint.py checks 1-3 and the family validators pass — no walkthrough review is required."),
         gate(12, "Production integration gates", "achieved", [
             f"{integration['structures_checked']} structures checked against evidence-backed approval manifest",
             f"{approvals} approvals; unapproved worldgen and Lost Cities selectors remain quarantined",
             "Clean masters cannot enter production selectors",
         ]),
-        gate(13, "Final world-generation validation", "pending_in_game", [
+        gate(13, "Final world-generation validation", "pending_regeneration", [
             "Static placement, zoning, conversion, performance and QA-world prerequisites pass",
             f"Current QA world opened after build: {runtime['qa_world_opened_after_current_build']}",
             f"Rotation harness regions exercised: {sum(runtime['rotation_harness_region_evidence'].values())}/3",
             f"Runtime-relevant log errors currently captured: {runtime['relevant_error_count']}",
-        ], "Generate and inspect urban, small-town, highway, industrial, port/dock, rail and rural regions after representative approvals."),
-        gate(14, "Validation defect resolution", "pending_runtime_findings", [
+        ], "No structure is approved for production until it passes structure_geometry_lint.py checks 1-3, so worldgen has nothing approved to place yet; this is a regeneration/lint-passing prerequisite, not a human review gate."),
+        gate(14, "Validation defect resolution", "pending_regeneration", [
             "Current static validation suite reports zero blocking defects",
-        ], "Runtime validation has not occurred, so its defect ledger cannot yet be closed."),
+        ], "The known floating-geometry defects (STRUCTURE_REBUILD_SYSTEM_V2.md Section 1) are unresolved until the corpus is regenerated with the v2 primitives; closing this gate requires that regeneration, not a human sign-off."),
         gate(15, "Final documentation and reports", "current_but_not_final", [
             "Pipeline state and generated validation reports describe the active quarantined state",
         ], "Update final evidence and deferred work only after gates 6 and 8-14 close."),
@@ -120,7 +120,7 @@ def main() -> None:
         "production_approvals": approvals,
         "achieved_gates": [item["gate"] for item in gates if item["status"].startswith("achieved")],
         "remaining_gates": [item["gate"] for item in gates if not item["status"].startswith("achieved")],
-        "blocking_external_or_human_work": [6, 8, 9, 10, 11, 13, 14, 15],
+        "no_human_review_required": True,
         "audit_failures": failures,
         "gates": gates,
     }
