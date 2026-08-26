@@ -96,7 +96,8 @@ const SPACE_INDUSTRY_ITEMS = [
         ['meridian_core', "Meridian Core", "A silent lunar relic that remains aligned to an unknown celestial meridian", 'archaeology'],
         ['martian_signal_prism', "Martian Signal Prism", "A crystalline transmitter repeating an incomplete coordinate sequence", 'archaeology'],
         ['venusian_pressure_seal', "Venusian Pressure Seal", "An alien seal still holding an impossible internal pressure", 'archaeology'],
-        ['burrower_carapace', "Burrower Carapace", "A heat-scored plate shed by something vast beneath the Martian crust", 'archaeology']
+        ['burrower_carapace', "Burrower Carapace", "A heat-scored plate shed by something vast beneath the Martian crust", 'archaeology'],
+        ['jovian_arena_standard', "Jovian Arena Standard", "A banner-crest salvaged from a coliseum that drifts, empty and silent, in Jupiter's storms", 'archaeology']
 ]
 
 StartupEvents.registry('item', event => {

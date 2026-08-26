@@ -548,5 +548,20 @@
 			x: 16.0d
 			y: 8.0d
 		}
+		{
+			dependencies: ["7C51000000000024"]
+			icon: {
+				id: "kubejs:jovian_arena_standard"
+			}
+			id: "7C51000000000025"
+			shape: "gear"
+			tasks: [{
+				id: "7C52000000000025"
+				item: { count: 1, id: "kubejs:jovian_arena_standard" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 10.0d
+		}
 	]
 }

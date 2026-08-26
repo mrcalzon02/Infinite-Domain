@@ -163,6 +163,7 @@ COMPONENT_FAMILIES = {
             ("martian_signal_prism", "Martian Signal Prism", "A crystalline transmitter repeating an incomplete coordinate sequence"),
             ("venusian_pressure_seal", "Venusian Pressure Seal", "An alien seal still holding an impossible internal pressure"),
             ("burrower_carapace", "Burrower Carapace", "A heat-scored plate shed by something vast beneath the Martian crust"),
+            ("jovian_arena_standard", "Jovian Arena Standard", "A banner-crest salvaged from a coliseum that drifts, empty and silent, in Jupiter's storms"),
         ],
     },
 }
@@ -642,7 +643,7 @@ def generate_quests() -> None:
         ("Martian Industry", ["kubejs:mars_perchlorate_ore", "kubejs:martian_catalyst", "kubejs:mars_transfer_package", "kubejs:martian_chemical_pallet"]),
         ("EVA Engineering", ["surveyor_helmet", "lunar_prospector_helmet", "radiation_helmet", "extended_helmet"]),
         ("Venus Engineering", ["kubejs:venus_tungsten_ore", "kubejs:venus_superalloy", "venusian_helmet", "kubejs:venus_return_package"]),
-        ("Alien Archaeology", ["kubejs:meridian_core", "kubejs:martian_signal_prism", "kubejs:venusian_pressure_seal", "kubejs:burrower_carapace"]),
+        ("Alien Archaeology", ["kubejs:meridian_core", "kubejs:martian_signal_prism", "kubejs:venusian_pressure_seal", "kubejs:burrower_carapace", "kubejs:jovian_arena_standard"]),
     ]
     lang = [(f"chapter.{chapter_id}.title", "Stellaris Space Industrialization"), (f"chapter.{chapter_id}.subtitle", "One space program, many specialized factories")]
     previous = "5710000000000001"

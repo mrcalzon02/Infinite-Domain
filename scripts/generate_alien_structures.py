@@ -266,11 +266,52 @@ def burrower_nest() -> Template:
     return t
 
 
+def void_coliseum() -> Template:
+    t = Template((35, 14, 35))
+    cx = cz = 17
+    # Central pit floor, five-ray glyph inlay and a raised dais at the very centre.
+    disk(t, cx, 1, cz, 9, "minecraft:polished_blackstone")
+    five_ray_glyph(t, cx, 1, cz, 8, "minecraft:oxidized_cut_copper")
+    t.fill((cx - 2, 1, cz - 2), (cx + 2, 2, cz + 2), "minecraft:crying_obsidian")
+    t.fill((cx - 1, 3, cz - 1), (cx + 1, 3, cz + 1), "minecraft:crying_obsidian")
+    ring(t, cx, 3, cz, 2, "minecraft:chain")
+    t.set(cx, 4, cz, "minecraft:end_rod", facing="up")
+    t.chest(cx, 3, cz - 1, "infinite_domain:chests/void_coliseum", "south")
+    # Three ruined, ascending spectator tiers rising toward the rim.
+    tiers = ((10, 12, 2, "minecraft:polished_blackstone_bricks"), (13, 15, 4, "minecraft:cracked_polished_blackstone_bricks"), (16, 17, 7, "minecraft:polished_blackstone_bricks"))
+    for x in range(35):
+        for z in range(35):
+            distance = math.hypot(x - cx, z - cz)
+            angle = math.atan2(z - cz, x - cx)
+            gap = (angle + math.pi) % (math.tau / 5) < 0.22 and distance > 12
+            for r_min, r_max, height, block in tiers:
+                if r_min <= distance <= r_max and not gap:
+                    t.fill((x, 1, z), (x, height, z), block)
+    # Five pylons at the glyph rays, piercing the rim and carrying drifting lanterns.
+    for ray in range(5):
+        angle = -math.pi / 2 + ray * math.tau / 5
+        px, pz = cx + round(math.cos(angle) * 16), cz + round(math.sin(angle) * 16)
+        t.fill((px, 1, pz), (px, 12, pz), "minecraft:polished_blackstone")
+        t.set(px, 6, pz, "minecraft:waxed_oxidized_cut_copper")
+        t.set(px, 13, pz, "minecraft:lightning_rod", facing="up", powered="false")
+        t.fill((px, 10, pz), (px, 10, pz), "minecraft:chain", axis="y")
+        for dx, dz in ((2, 0), (-2, 0), (0, 2), (0, -2)):
+            t.set(px + dx, 9, pz + dz, "minecraft:soul_lantern", hanging="false")
+    # Scattered drifting rubble beyond the rim implies a violent, long-abandoned end.
+    for x, y, z in ((3, 2, 30), (31, 3, 5), (5, 4, 4), (30, 2, 31), (2, 1, 17)):
+        t.set(x, y, z, "minecraft:polished_blackstone_bricks")
+        t.set(x, y + 1, z, "minecraft:crying_obsidian")
+    t.set(9, 1, 9, "minecraft:sculk_sensor", sculk_sensor_phase="inactive", power="0", waterlogged="false")
+    t.set(25, 1, 25, "minecraft:sculk_sensor", sculk_sensor_phase="inactive", power="0", waterlogged="false")
+    return t
+
+
 STRUCTURES = {
     "moon_meridian_monolith": (lunar_monolith, "#stellaris:moon_biomes", 54, 20, 73194511),
     "martian_signal_cairn": (martian_signal_cairn, "#stellaris:mars_biomes", 34, 12, 73194512),
     "venusian_pressure_shrine": (venus_pressure_shrine, "#stellaris:venus_biomes", 48, 18, 73194513),
     "burrower_nest": (burrower_nest, "#stellaris:mars_biomes", 40, 16, 73194514),
+    "void_coliseum": (void_coliseum, ["stellaris:jupiter"], 64, 24, 73194515),
 }
 
 
@@ -279,6 +320,7 @@ LOOT = {
     "martian_signal_cairn": ("kubejs:martian_signal_prism", ["kubejs:martian_catalyst", "minecraft:redstone", "ae2:certus_quartz_crystal"]),
     "venusian_pressure_shrine": ("kubejs:venusian_pressure_seal", ["kubejs:refractory_concentrate", "kubejs:venus_superalloy", "stellaris:heavy_metal_ingot"]),
     "burrower_nest": ("kubejs:burrower_carapace", ["minecraft:bone", "kubejs:perchlorate_salts", "kubejs:nickel_cobalt_concentrate"]),
+    "void_coliseum": ("kubejs:jovian_arena_standard", ["kubejs:venus_superalloy", "stellaris:heavy_metal_ingot", "minecraft:echo_shard"]),
 }
 
 
@@ -317,23 +359,23 @@ def generate() -> None:
                 "elements": [{"weight": 1, "element": {"location": f"infinite_domain:alien/{name}", "processors": "minecraft:empty", "projection": "rigid", "element_type": "minecraft:single_pool_element"}}],
             },
         )
-        write_json(
-            DATA / "worldgen" / "structure" / "alien" / f"{name}.json",
-            {
-                "type": "minecraft:jigsaw",
-                "biomes": biomes,
-                "step": "surface_structures",
-                "spawn_overrides": {},
-                "terrain_adaptation": "beard_box",
-                "start_pool": f"infinite_domain:alien/{name}",
-                "size": 1,
-                "start_height": {"absolute": 0},
-                "max_distance_from_center": 48,
-                "use_expansion_hack": False,
-                "liquid_settings": "ignore_waterlogging",
-                "project_start_to_heightmap": "WORLD_SURFACE_WG",
-            },
-        )
+        void = name == "void_coliseum"
+        structure_json: dict[str, Any] = {
+            "type": "minecraft:jigsaw",
+            "biomes": biomes,
+            "step": "surface_structures",
+            "spawn_overrides": {},
+            "terrain_adaptation": "none" if void else "beard_box",
+            "start_pool": f"infinite_domain:alien/{name}",
+            "size": 1,
+            "start_height": {"absolute": 80} if void else {"absolute": 0},
+            "max_distance_from_center": 80 if void else 48,
+            "use_expansion_hack": False,
+            "liquid_settings": "ignore_waterlogging",
+        }
+        if not void:
+            structure_json["project_start_to_heightmap"] = "WORLD_SURFACE_WG"
+        write_json(DATA / "worldgen" / "structure" / "alien" / f"{name}.json", structure_json)
         write_json(
             DATA / "worldgen" / "structure_set" / "alien" / f"{name}.json",
             {
@@ -363,7 +405,7 @@ def generate() -> None:
 
 Generated by `scripts/generate_alien_structures.py`.
 
-All four structures repeat a five-rayed coordinate glyph, establishing a shared mystery without declaring whether the sites came from one culture or several. Structure templates are ordinary compressed Minecraft NBT and are placed through standard jigsaw pools and random-spread structure sets.
+All five structures repeat a five-rayed coordinate glyph, establishing a shared mystery without declaring whether the sites came from one culture or several. Structure templates are ordinary compressed Minecraft NBT and are placed through standard jigsaw pools and random-spread structure sets.
 
 ## Moon Meridian Monolith
 
@@ -393,7 +435,14 @@ All four structures repeat a five-rayed coordinate glyph, establishing a shared 
 - Contains a guaranteed `Burrower Carapace` relic.
 - Spacing: 40 chunks; separation: 16 chunks.
 
-The four relics form a ninth, fully connected Alien Archaeology branch in the Stellaris quest chapter. They are deliberately non-craftable: progression requires finding the corresponding sites.
+## Void Coliseum
+
+- 35×14×35 vast fighting arena drifting derelict in Jupiter's storm void, with no ground to anchor it — placed directly in the gas giant's atmosphere rather than on any surface.
+- Ascending ruined spectator tiers around a sunken pit floor, five glyph-ray pylons carrying storm-lit lanterns and lightning rods, and a crying-obsidian dais at the centre.
+- Contains a guaranteed `Jovian Arena Standard` relic.
+- Spacing: 64 chunks; separation: 24 chunks. The rarest and largest site in the wave.
+
+The five relics form a ninth, fully connected Alien Archaeology branch in the Stellaris quest chapter. They are deliberately non-craftable: progression requires finding the corresponding sites.
 """
     (ROOT / "docs" / "alien-structures.md").write_text(readme, encoding="utf-8", newline="\n")
     print(f"Generated {len(STRUCTURES)} alien structures with pools, placements and loot")
