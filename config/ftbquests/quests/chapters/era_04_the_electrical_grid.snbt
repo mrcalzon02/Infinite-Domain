@@ -4,12 +4,14 @@
 	filename: "era_04_the_electrical_grid"
 	group: "346E9B7B176D7846"
 	id: "2EE181FAE3A636DA"
+	icon: "powergrid:integrated_circuit"
 	images: [ ]
 	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["5310000000000002"]
+			icon: "powergrid:integrated_circuit"
 			id: "5410000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -21,6 +23,7 @@
 		}
 		{
 			dependencies: ["5410000000000001"]
+			icon: "more_ores_more_gems:electrum_pickaxe"
 			id: "6411000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -33,6 +36,7 @@
 		}
 		{
 			dependencies: ["6411000000000001"]
+			icon: "minecraft:copper_block"
 			id: "1410000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -46,6 +50,7 @@
 		}
 		{
 			dependencies: ["1410000000000001"]
+			icon: "create_new_age:copper_wire"
 			id: "1410000000000002"
 			rewards: [{
 				id: "1430000000000002"
@@ -67,6 +72,7 @@
 		}
 		{
 			dependencies: ["1410000000000002"]
+			icon: "powergrid:insulated_copper_wire"
 			id: "1410000000000003"
 			shape: "hexagon"
 			tasks: [{
@@ -80,6 +86,7 @@
 		}
 		{
 			dependencies: ["1410000000000003"]
+			icon: "powergrid:wire_connector"
 			id: "1410000000000004"
 			shape: "hexagon"
 			tasks: [{
@@ -93,6 +100,7 @@
 		}
 		{
 			dependencies: ["1410000000000004"]
+			icon: "create_new_age:layered_magnet"
 			id: "1410000000000005"
 			rewards: [{
 				id: "1430000000000005"
@@ -114,6 +122,7 @@
 		}
 		{
 			dependencies: ["1410000000000005"]
+			icon: "create_new_age:copper_circuit"
 			id: "1410000000000006"
 			shape: "hexagon"
 			tasks: [{
@@ -127,6 +136,7 @@
 		}
 		{
 			dependencies: ["1410000000000006"]
+			icon: "create_new_age:copper_wire_block"
 			id: "1410000000000007"
 			shape: "hexagon"
 			tasks: [{
@@ -140,6 +150,7 @@
 		}
 		{
 			dependencies: ["1410000000000007"]
+			icon: "kubejs:era4_mining_contribution"
 			id: "1410000000000008"
 			rewards: [{
 				count: 2
@@ -161,6 +172,7 @@
 		}
 		{
 			dependencies: ["6411000000000001"]
+			icon: "minecraft:hay_block"
 			id: "2410000000000001"
 			shape: "heart"
 			tasks: [{
@@ -174,6 +186,7 @@
 		}
 		{
 			dependencies: ["2410000000000001"]
+			icon: "oritech:bio_generator_block"
 			id: "2410000000000002"
 			rewards: [{
 				id: "2430000000000002"
@@ -195,6 +208,7 @@
 		}
 		{
 			dependencies: ["2410000000000002"]
+			icon: "create_new_age:basic_motor"
 			id: "2410000000000003"
 			shape: "heart"
 			tasks: [{
@@ -208,6 +222,7 @@
 		}
 		{
 			dependencies: ["2410000000000003"]
+			icon: "minecraft:golden_carrot"
 			id: "2410000000000004"
 			shape: "heart"
 			tasks: [{
@@ -221,6 +236,7 @@
 		}
 		{
 			dependencies: ["2410000000000004"]
+			icon: "create_new_age:heater"
 			id: "2410000000000005"
 			rewards: [{
 				id: "2430000000000005"
@@ -242,6 +258,7 @@
 		}
 		{
 			dependencies: ["2410000000000005"]
+			icon: "minecraft:water_bucket"
 			id: "2410000000000006"
 			shape: "heart"
 			tasks: [{
@@ -255,6 +272,7 @@
 		}
 		{
 			dependencies: ["2410000000000006"]
+			icon: "wastelands:canned_food"
 			id: "2410000000000007"
 			shape: "heart"
 			tasks: [{
@@ -268,6 +286,7 @@
 		}
 		{
 			dependencies: ["2410000000000007"]
+			icon: "kubejs:era4_farming_contribution"
 			id: "2410000000000008"
 			rewards: [{
 				count: 2
@@ -289,6 +308,7 @@
 		}
 		{
 			dependencies: ["6411000000000001"]
+			icon: "powergrid:multimeter"
 			id: "3410000000000001"
 			shape: "diamond"
 			tasks: [{
@@ -301,6 +321,7 @@
 		}
 		{
 			dependencies: ["3410000000000001"]
+			icon: "powergrid:circuit_board"
 			id: "3410000000000002"
 			rewards: [
 				{
@@ -332,6 +353,7 @@
 		}
 		{
 			dependencies: ["3410000000000002"]
+			icon: "powergrid:integrated_circuit"
 			id: "3410000000000003"
 			shape: "diamond"
 			tasks: [{
@@ -344,6 +366,7 @@
 		}
 		{
 			dependencies: ["3410000000000003"]
+			icon: "powergrid:heavy_wire_connector"
 			id: "3410000000000004"
 			shape: "diamond"
 			tasks: [{
@@ -357,6 +380,7 @@
 		}
 		{
 			dependencies: ["3410000000000004"]
+			icon: "powergrid:transformer_core"
 			id: "3410000000000005"
 			rewards: [{
 				id: "3430000000000005"
@@ -378,6 +402,7 @@
 		}
 		{
 			dependencies: ["3410000000000005"]
+			icon: "powergrid:hv_switch"
 			id: "3410000000000006"
 			shape: "diamond"
 			tasks: [{
@@ -391,6 +416,7 @@
 		}
 		{
 			dependencies: ["3410000000000006"]
+			icon: "powergrid:portable_battery"
 			id: "3410000000000007"
 			shape: "diamond"
 			tasks: [{
@@ -404,6 +430,7 @@
 		}
 		{
 			dependencies: ["3410000000000007"]
+			icon: "kubejs:era4_exploration_contribution"
 			id: "3410000000000008"
 			rewards: [{
 				count: 2
@@ -425,6 +452,7 @@
 		}
 		{
 			dependencies: ["1410000000000002"]
+			icon: "create_new_age:generator_coil"
 			id: "4410000000000001"
 			shape: "gear"
 			tasks: [{
@@ -437,6 +465,7 @@
 		}
 		{
 			dependencies: ["1410000000000004"]
+			icon: "create_new_age:advanced_energiser"
 			id: "4410000000000002"
 			shape: "gear"
 			tasks: [{
@@ -449,6 +478,7 @@
 		}
 		{
 			dependencies: ["1410000000000006"]
+			icon: "create_new_age:overcharged_iron_wire"
 			id: "4410000000000003"
 			rewards: [{
 				id: "4430000000000003"
@@ -469,6 +499,7 @@
 		}
 		{
 			dependencies: ["2410000000000002"]
+			icon: "powergrid:battery"
 			id: "4410000000000004"
 			shape: "gear"
 			tasks: [{
@@ -481,6 +512,7 @@
 		}
 		{
 			dependencies: ["2410000000000004"]
+			icon: "powergrid:integrated_circuit"
 			id: "4410000000000005"
 			shape: "gear"
 			tasks: [{
@@ -492,6 +524,7 @@
 		}
 		{
 			dependencies: ["2410000000000006"]
+			icon: "powergrid:integrated_circuit"
 			id: "4410000000000006"
 			shape: "gear"
 			tasks: [{
@@ -503,6 +536,7 @@
 		}
 		{
 			dependencies: ["3410000000000002"]
+			icon: "powergrid:circuit_design_table"
 			id: "4410000000000007"
 			shape: "gear"
 			tasks: [{
@@ -515,6 +549,7 @@
 		}
 		{
 			dependencies: ["3410000000000004"]
+			icon: "powergrid:mv_switch"
 			id: "4410000000000008"
 			shape: "gear"
 			tasks: [{
@@ -527,6 +562,7 @@
 		}
 		{
 			dependencies: ["3410000000000006"]
+			icon: "ae2:energy_acceptor"
 			id: "4410000000000009"
 			rewards: [{
 				id: "4430000000000009"
@@ -552,6 +588,7 @@
 				"3410000000000008"
 			]
 			dependency_requirement: "one_completed"
+			icon: "kubejs:electrical_foundation_core"
 			id: "5410000000000002"
 			min_required_dependencies: 1
 			rewards: [
@@ -605,6 +642,7 @@
 		}
 		{
 			dependencies: ["2410000000000001"]
+			icon: "minecraft:beetroot_seeds"
 			id: "7411000000000001"
 			optional: true
 			shape: "gear"
@@ -622,6 +660,7 @@
 				"7411000000000001"
 				"4410000000000002"
 			]
+			icon: "kubejs:pressed_seed_cake"
 			id: "7411000000000002"
 			optional: true
 			shape: "gear"
@@ -636,6 +675,7 @@
 		}
 		{
 			dependencies: ["7411000000000002"]
+			icon: "kubejs:saponified_collector_bucket"
 			id: "7411000000000003"
 			optional: true
 			rewards: [{
@@ -662,6 +702,7 @@
 				"4410000000000002"
 				"7311000000000006"
 			]
+			icon: "kubejs:precipitated_electrum_concentrate"
 			id: "7411000000000004"
 			optional: true
 			shape: "gear"
@@ -679,6 +720,7 @@
 				"7411000000000003"
 				"7411000000000004"
 			]
+			icon: "kubejs:high_grade_electrum_concentrate"
 			id: "7411000000000005"
 			optional: true
 			shape: "gear"
@@ -693,6 +735,7 @@
 		}
 		{
 			dependencies: ["7411000000000005"]
+			icon: "more_ores_more_gems:electrum_nugget"
 			id: "7411000000000006"
 			optional: true
 			rewards: [{
@@ -716,6 +759,7 @@
 		}
 		{
 			dependencies: ["4410000000000004"]
+			icon: "powergrid:integrated_circuit"
 			id: "6002100000000004"
 			optional: true
 			shape: "gear"

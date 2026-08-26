@@ -4,12 +4,14 @@
 	filename: "era_08_infinite_domain"
 	group: "346E9B7B176D7846"
 	id: "3A128F94DD7C5061"
+	icon: "kubejs:infinite_domain_core"
 	images: [ ]
 	order_index: 9
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["5710000000000002"]
+			icon: "kubejs:infinite_domain_core"
 			id: "5810000000000001"
 			rewards: [{
 				command: "execute in stellaris:moon run structure_map stellaris:moon_space_base 2"
@@ -29,6 +31,7 @@
 		}
 		{
 			dependencies: ["5810000000000001"]
+			icon: "kubejs:infinite_domain_core"
 			id: "1810000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -40,6 +43,7 @@
 		}
 		{
 			dependencies: ["1810000000000001"]
+			icon: "allthecompressed:cobblestone_5x"
 			id: "1810000000000002"
 			rewards: [{
 				id: "1830000000000002"
@@ -61,6 +65,7 @@
 		}
 		{
 			dependencies: ["1810000000000002"]
+			icon: "tfmg:steel_block"
 			id: "1810000000000003"
 			shape: "hexagon"
 			tasks: [{
@@ -74,6 +79,7 @@
 		}
 		{
 			dependencies: ["1810000000000003"]
+			icon: "minecraft:copper_block"
 			id: "1810000000000004"
 			shape: "hexagon"
 			tasks: [{
@@ -87,6 +93,7 @@
 		}
 		{
 			dependencies: ["1810000000000004"]
+			icon: "stellaris:desh_block"
 			id: "1810000000000005"
 			rewards: [{
 				id: "1830000000000005"
@@ -108,6 +115,7 @@
 		}
 		{
 			dependencies: ["1810000000000005"]
+			icon: "oritech:machine_core_7"
 			id: "1810000000000006"
 			shape: "hexagon"
 			tasks: [{
@@ -121,6 +129,7 @@
 		}
 		{
 			dependencies: ["1810000000000006"]
+			icon: "minecraft:netherite_block"
 			id: "1810000000000007"
 			shape: "hexagon"
 			tasks: [{
@@ -134,6 +143,7 @@
 		}
 		{
 			dependencies: ["1810000000000007"]
+			icon: "kubejs:era8_mining_contribution"
 			id: "1810000000000008"
 			rewards: [{
 				count: 2
@@ -155,6 +165,7 @@
 		}
 		{
 			dependencies: ["5810000000000001"]
+			icon: "kubejs:infinite_domain_core"
 			id: "2810000000000001"
 			shape: "heart"
 			tasks: [{
@@ -166,6 +177,7 @@
 		}
 		{
 			dependencies: ["2810000000000001"]
+			icon: "minecraft:wheat_seeds"
 			id: "2810000000000002"
 			rewards: [{
 				id: "2830000000000002"
@@ -187,6 +199,7 @@
 		}
 		{
 			dependencies: ["2810000000000002"]
+			icon: "minecraft:golden_carrot"
 			id: "2810000000000003"
 			shape: "heart"
 			tasks: [{
@@ -200,6 +213,7 @@
 		}
 		{
 			dependencies: ["2810000000000003"]
+			icon: "wastelands:purified_water"
 			id: "2810000000000004"
 			shape: "heart"
 			tasks: [{
@@ -213,6 +227,7 @@
 		}
 		{
 			dependencies: ["2810000000000004"]
+			icon: "stellaris:big_oxygen_tank"
 			id: "2810000000000005"
 			rewards: [{
 				id: "2830000000000005"
@@ -234,6 +249,7 @@
 		}
 		{
 			dependencies: ["2810000000000005"]
+			icon: "oritech:bio_generator_block"
 			id: "2810000000000006"
 			shape: "heart"
 			tasks: [{
@@ -247,6 +263,7 @@
 		}
 		{
 			dependencies: ["2810000000000006"]
+			icon: "kubejs:infinite_domain_core"
 			id: "2810000000000007"
 			shape: "heart"
 			tasks: [{
@@ -258,6 +275,7 @@
 		}
 		{
 			dependencies: ["2810000000000007"]
+			icon: "kubejs:era8_farming_contribution"
 			id: "2810000000000008"
 			rewards: [{
 				count: 2
@@ -279,6 +297,7 @@
 		}
 		{
 			dependencies: ["5810000000000001"]
+			icon: "kubejs:infinite_domain_core"
 			id: "3810000000000001"
 			shape: "diamond"
 			tasks: [{
@@ -291,6 +310,7 @@
 		}
 		{
 			dependencies: ["3810000000000001"]
+			icon: "ae2:item_storage_cell_256k"
 			id: "3810000000000002"
 			rewards: [{
 				id: "3830000000000002"
@@ -312,6 +332,7 @@
 		}
 		{
 			dependencies: ["3810000000000002"]
+			icon: "ae2:quantum_link"
 			id: "3810000000000003"
 			shape: "diamond"
 			tasks: [{
@@ -325,6 +346,7 @@
 		}
 		{
 			dependencies: ["3810000000000003"]
+			icon: "ae2:wireless_crafting_terminal"
 			id: "3810000000000004"
 			rewards: [{
 				command: "execute in stellaris:mercury run structure_map stellaris:mercury_mining_ship 2"
@@ -346,6 +368,7 @@
 		}
 		{
 			dependencies: ["3810000000000004"]
+			icon: "kubejs:infinite_domain_core"
 			id: "3810000000000005"
 			shape: "diamond"
 			tasks: [{
@@ -358,6 +381,7 @@
 		}
 		{
 			dependencies: ["3810000000000005"]
+			icon: "stellaris:desh_ingot"
 			id: "3810000000000006"
 			rewards: [{
 				command: "execute in stellaris:venus run structure_map stellaris:venus_outpost 2"
@@ -379,6 +403,7 @@
 		}
 		{
 			dependencies: ["3810000000000006"]
+			icon: "kubejs:infinite_domain_core"
 			id: "3810000000000007"
 			shape: "diamond"
 			tasks: [{
@@ -391,6 +416,7 @@
 		}
 		{
 			dependencies: ["3810000000000007"]
+			icon: "kubejs:era8_exploration_contribution"
 			id: "3810000000000008"
 			rewards: [{
 				count: 2
@@ -412,6 +438,7 @@
 		}
 		{
 			dependencies: ["1810000000000002"]
+			icon: "kubejs:infinite_domain_core"
 			id: "4810000000000001"
 			shape: "gear"
 			tasks: [{
@@ -423,6 +450,7 @@
 		}
 		{
 			dependencies: ["1810000000000004"]
+			icon: "ae2:dense_energy_cell"
 			id: "4810000000000002"
 			shape: "gear"
 			tasks: [{
@@ -435,6 +463,7 @@
 		}
 		{
 			dependencies: ["1810000000000006"]
+			icon: "oritech:accelerator_controller"
 			id: "4810000000000003"
 			rewards: [{
 				id: "4830000000000003"
@@ -455,6 +484,7 @@
 		}
 		{
 			dependencies: ["2810000000000002"]
+			icon: "ae2:drive"
 			id: "4810000000000004"
 			shape: "gear"
 			tasks: [{
@@ -467,6 +497,7 @@
 		}
 		{
 			dependencies: ["2810000000000004"]
+			icon: "createcybernetics:netherite_qpu"
 			id: "4810000000000005"
 			shape: "gear"
 			tasks: [{
@@ -479,6 +510,7 @@
 		}
 		{
 			dependencies: ["5810000000000002"]
+			icon: "ae2lt:infinite_storage_cell"
 			id: "4810000000000006"
 			rewards: [{
 				id: "4830000000000006"
@@ -499,6 +531,7 @@
 		}
 		{
 			dependencies: ["3810000000000002"]
+			icon: "ae2:quantum_ring"
 			id: "4810000000000007"
 			shape: "gear"
 			tasks: [{
@@ -511,6 +544,7 @@
 		}
 		{
 			dependencies: ["3810000000000004"]
+			icon: "kubejs:infinite_domain_core"
 			id: "4810000000000008"
 			shape: "gear"
 			tasks: [{
@@ -522,6 +556,7 @@
 		}
 		{
 			dependencies: ["3810000000000006"]
+			icon: "kubejs:infinite_domain_core"
 			id: "4810000000000009"
 			shape: "gear"
 			tasks: [{
@@ -538,6 +573,7 @@
 				"3810000000000008"
 			]
 			dependency_requirement: "one_completed"
+			icon: "kubejs:infinite_domain_core"
 			id: "5810000000000002"
 			min_required_dependencies: 1
 			rewards: [
@@ -575,6 +611,7 @@
 		}
 		{
 			dependencies: ["2810000000000002"]
+			icon: "minecraft:wheat_seeds"
 			id: "7811000000000001"
 			optional: true
 			shape: "gear"
@@ -592,6 +629,7 @@
 				"7811000000000001"
 				"1810000000000006"
 			]
+			icon: "kubejs:regenerative_catalyst_matrix"
 			id: "7811000000000002"
 			optional: true
 			shape: "gear"
@@ -606,6 +644,7 @@
 		}
 		{
 			dependencies: ["7811000000000002"]
+			icon: "kubejs:regenerative_refining_solution_bucket"
 			id: "7811000000000003"
 			optional: true
 			rewards: [{
@@ -632,6 +671,7 @@
 				"1810000000000006"
 				"7711000000000006"
 			]
+			icon: "kubejs:precipitated_iron_concentrate"
 			id: "7811000000000004"
 			optional: true
 			shape: "gear"
@@ -649,6 +689,7 @@
 				"7811000000000003"
 				"7811000000000004"
 			]
+			icon: "kubejs:high_grade_iron_concentrate"
 			id: "7811000000000005"
 			optional: true
 			shape: "gear"
@@ -663,6 +704,7 @@
 		}
 		{
 			dependencies: ["7811000000000005"]
+			icon: "minecraft:iron_nugget"
 			id: "7811000000000006"
 			optional: true
 			rewards: [{
