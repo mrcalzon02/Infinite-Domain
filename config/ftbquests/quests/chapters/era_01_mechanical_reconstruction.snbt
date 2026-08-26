@@ -4,14 +4,12 @@
 	filename: "era_01_mechanical_reconstruction"
 	group: "346E9B7B176D7846"
 	id: "5A1C0E7D93B246F8"
-	icon: "create:andesite_alloy"
 	images: [ ]
 	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["37553E8B6284E8E2"]
-			icon: "create:andesite_alloy"
 			id: "5CED58896AEFF1B9"
 			shape: "octagon"
 			tasks: [{
@@ -23,7 +21,6 @@
 		}
 		{
 			dependencies: ["5100000000000002"]
-			icon: "minecraft:andesite"
 			id: "0FBD84DA6EE9BC4A"
 			shape: "hexagon"
 			tasks: [{
@@ -37,7 +34,6 @@
 		}
 		{
 			dependencies: ["0FBD84DA6EE9BC4A"]
-			icon: "create:andesite_alloy"
 			id: "621272525080C5D4"
 			rewards: [{
 				count: 2
@@ -60,7 +56,6 @@
 		}
 		{
 			dependencies: ["621272525080C5D4"]
-			icon: "create:mechanical_drill"
 			id: "025AD5200EE5F3D8"
 			shape: "hexagon"
 			tasks: [{
@@ -73,7 +68,6 @@
 		}
 		{
 			dependencies: ["025AD5200EE5F3D8"]
-			icon: "create:rope_pulley"
 			id: "22DA14A4938C3EFF"
 			shape: "hexagon"
 			tasks: [{
@@ -86,7 +80,6 @@
 		}
 		{
 			dependencies: ["22DA14A4938C3EFF"]
-			icon: "create:crushed_raw_iron"
 			id: "69C4F2B1AE2210C2"
 			shape: "hexagon"
 			tasks: [{
@@ -100,7 +93,6 @@
 		}
 		{
 			dependencies: ["69C4F2B1AE2210C2"]
-			icon: "allthecompressed:iron_block_1x"
 			id: "3E3CEA4E57FC937C"
 			rewards: [{
 				id: "702C1443B3EC3DC9"
@@ -121,7 +113,6 @@
 		}
 		{
 			dependencies: ["3E3CEA4E57FC937C"]
-			icon: "minecraft:coal_block"
 			id: "0D4648AA45CF0D31"
 			shape: "hexagon"
 			tasks: [
@@ -143,7 +134,6 @@
 		}
 		{
 			dependencies: ["0D4648AA45CF0D31"]
-			icon: "kubejs:era1_mining_contribution"
 			id: "2A949BE9EDFDCE3D"
 			rewards: [{
 				id: "2D1A30A20B898E5A"
@@ -164,7 +154,6 @@
 		}
 		{
 			dependencies: ["5100000000000002"]
-			icon: "minecraft:wheat"
 			id: "08F0F7419B76EB35"
 			shape: "heart"
 			tasks: [
@@ -186,7 +175,6 @@
 		}
 		{
 			dependencies: ["08F0F7419B76EB35"]
-			icon: "farmersdelight:cutting_board"
 			id: "40D7DBB376956DA5"
 			shape: "heart"
 			tasks: [{
@@ -199,7 +187,6 @@
 		}
 		{
 			dependencies: ["40D7DBB376956DA5"]
-			icon: "create:mechanical_harvester"
 			id: "0BC86ADAA59B31E9"
 			shape: "heart"
 			tasks: [{
@@ -212,7 +199,6 @@
 		}
 		{
 			dependencies: ["0BC86ADAA59B31E9"]
-			icon: "create:millstone"
 			id: "7A3ED57EF3B84415"
 			shape: "heart"
 			tasks: [{
@@ -225,7 +211,6 @@
 		}
 		{
 			dependencies: ["7A3ED57EF3B84415"]
-			icon: "farmersdelight:wheat_dough"
 			id: "2261BC6407F84F23"
 			shape: "heart"
 			tasks: [{
@@ -239,7 +224,6 @@
 		}
 		{
 			dependencies: ["2261BC6407F84F23"]
-			icon: "farmersdelight:cooking_pot"
 			id: "3C5CEDB90F212409"
 			rewards: [{
 				id: "3862117EAA24B8CB"
@@ -260,7 +244,6 @@
 		}
 		{
 			dependencies: ["3C5CEDB90F212409"]
-			icon: "minecraft:bread"
 			id: "48D7170CBE2EDFA4"
 			shape: "heart"
 			tasks: [
@@ -288,7 +271,6 @@
 		}
 		{
 			dependencies: ["48D7170CBE2EDFA4"]
-			icon: "kubejs:era1_farming_contribution"
 			id: "49C3DD5DECAD6085"
 			rewards: [{
 				id: "1AE3F38A33CD5B34"
@@ -309,7 +291,6 @@
 		}
 		{
 			dependencies: ["5100000000000002"]
-			icon: "minecraft:compass"
 			id: "5BF84DF2095DD4D9"
 			shape: "diamond"
 			tasks: [{
@@ -322,7 +303,6 @@
 		}
 		{
 			dependencies: ["5BF84DF2095DD4D9"]
-			icon: "minecraft:map"
 			id: "539AA4A2A380D9AF"
 			shape: "diamond"
 			tasks: [{
@@ -335,7 +315,6 @@
 		}
 		{
 			dependencies: ["539AA4A2A380D9AF"]
-			icon: "minecraft:spyglass"
 			id: "036E43E247D9D77C"
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map the_wasteland_reworked:gas_station 2"
@@ -356,7 +335,6 @@
 		}
 		{
 			dependencies: ["036E43E247D9D77C"]
-			icon: "create:andesite_alloy"
 			id: "16DB048C06B376D6"
 			shape: "diamond"
 			tasks: [{
@@ -369,7 +347,6 @@
 		}
 		{
 			dependencies: ["16DB048C06B376D6"]
-			icon: "create:cart_assembler"
 			id: "5A006F02F6E1EC82"
 			shape: "diamond"
 			tasks: [{
@@ -382,7 +359,6 @@
 		}
 		{
 			dependencies: ["5A006F02F6E1EC82"]
-			icon: "create:contraption_controls"
 			id: "41F587157ECAEB78"
 			rewards: [{
 				id: "691BE8964AE831F3"
@@ -403,7 +379,6 @@
 		}
 		{
 			dependencies: ["41F587157ECAEB78"]
-			icon: "create:portable_storage_interface"
 			id: "40FDB379BF5F8BD2"
 			shape: "diamond"
 			tasks: [
@@ -425,7 +400,6 @@
 		}
 		{
 			dependencies: ["40FDB379BF5F8BD2"]
-			icon: "kubejs:era1_exploration_contribution"
 			id: "3B8B04EB60A9B45E"
 			rewards: [{
 				id: "18FE132F43A553D7"
@@ -446,7 +420,6 @@
 		}
 		{
 			dependencies: ["621272525080C5D4"]
-			icon: "create:water_wheel"
 			id: "4CAF7A294C2A99FB"
 			optional: true
 			shape: "gear"
@@ -460,7 +433,6 @@
 		}
 		{
 			dependencies: ["025AD5200EE5F3D8"]
-			icon: "create:shaft"
 			id: "2AD18470CD40A789"
 			optional: true
 			shape: "gear"
@@ -483,7 +455,6 @@
 		}
 		{
 			dependencies: ["22DA14A4938C3EFF"]
-			icon: "create:mechanical_press"
 			id: "7B0BD6C189192D75"
 			optional: true
 			rewards: [{
@@ -505,7 +476,6 @@
 		}
 		{
 			dependencies: ["69C4F2B1AE2210C2"]
-			icon: "create:mechanical_mixer"
 			id: "79D293B19143E993"
 			optional: true
 			shape: "gear"
@@ -526,7 +496,6 @@
 		}
 		{
 			dependencies: ["3E3CEA4E57FC937C"]
-			icon: "create:precision_mechanism"
 			id: "6D9810BDE000D7F6"
 			optional: true
 			rewards: [{
@@ -548,7 +517,6 @@
 		}
 		{
 			dependencies: ["08F0F7419B76EB35"]
-			icon: "sophisticatedstorage:chest"
 			id: "48C4834A084A697D"
 			optional: true
 			shape: "gear"
@@ -569,7 +537,6 @@
 		}
 		{
 			dependencies: ["40D7DBB376956DA5"]
-			icon: "sophisticatedstorage:pickup_upgrade"
 			id: "28D17AA502A74353"
 			optional: true
 			rewards: [{
@@ -598,7 +565,6 @@
 		}
 		{
 			dependencies: ["0BC86ADAA59B31E9"]
-			icon: "sophisticatedstorage:stack_upgrade_tier_1"
 			id: "13B2E88DD6707ABA"
 			optional: true
 			shape: "gear"
@@ -612,7 +578,6 @@
 		}
 		{
 			dependencies: ["7A3ED57EF3B84415"]
-			icon: "sophisticatedstorage:stack_upgrade_tier_2"
 			id: "48BC4708142777F2"
 			optional: true
 			rewards: [{
@@ -634,7 +599,6 @@
 		}
 		{
 			dependencies: ["40D7DBB376956DA5"]
-			icon: "farmersdelight:stove"
 			id: "7C49923166C82685"
 			optional: true
 			shape: "gear"
@@ -648,7 +612,6 @@
 		}
 		{
 			dependencies: ["0BC86ADAA59B31E9"]
-			icon: "farmersdelight:skillet"
 			id: "4CCA9DDD52BF8576"
 			optional: true
 			rewards: [{
@@ -670,7 +633,6 @@
 		}
 		{
 			dependencies: ["7A3ED57EF3B84415"]
-			icon: "farmersdelight:beef_stew"
 			id: "3A30BF9375157C30"
 			optional: true
 			rewards: [{
@@ -694,7 +656,6 @@
 		}
 		{
 			dependencies: ["5CED58896AEFF1B9"]
-			icon: "quark:blackstone_furnace"
 			id: "67F7363108A8449B"
 			optional: true
 			rewards: [{
@@ -716,7 +677,6 @@
 		}
 		{
 			dependencies: ["5CED58896AEFF1B9"]
-			icon: "quark:deepslate_furnace"
 			id: "6AFDB896C63FFE06"
 			optional: true
 			rewards: [{
@@ -738,7 +698,6 @@
 		}
 		{
 			dependencies: ["036E43E247D9D77C"]
-			icon: "create:belt_connector"
 			id: "14C99AF95E39DE33"
 			optional: true
 			shape: "gear"
@@ -753,7 +712,6 @@
 		}
 		{
 			dependencies: ["16DB048C06B376D6"]
-			icon: "create:andesite_funnel"
 			id: "239E78568F697EDA"
 			optional: true
 			shape: "gear"
@@ -776,7 +734,6 @@
 		}
 		{
 			dependencies: ["5A006F02F6E1EC82"]
-			icon: "create:item_vault"
 			id: "08C9F0A01B505526"
 			optional: true
 			rewards: [{
@@ -806,7 +763,6 @@
 		}
 		{
 			dependencies: ["5CED58896AEFF1B9"]
-			icon: "create:shaft"
 			id: "6101000000000001"
 			optional: true
 			rewards: [{
@@ -843,7 +799,6 @@
 		}
 		{
 			dependencies: ["6101000000000001"]
-			icon: "create:hand_crank"
 			id: "6101000000000002"
 			optional: true
 			shape: "gear"
@@ -857,7 +812,6 @@
 		}
 		{
 			dependencies: ["6101000000000002"]
-			icon: "create:gearbox"
 			id: "6101000000000003"
 			optional: true
 			shape: "gear"
@@ -871,7 +825,6 @@
 		}
 		{
 			dependencies: ["6101000000000003"]
-			icon: "create:speedometer"
 			id: "6101000000000004"
 			optional: true
 			rewards: [{
@@ -893,7 +846,6 @@
 		}
 		{
 			dependencies: ["6101000000000004"]
-			icon: "create:stressometer"
 			id: "6101000000000005"
 			optional: true
 			shape: "gear"
@@ -907,7 +859,6 @@
 		}
 		{
 			dependencies: ["6101000000000005"]
-			icon: "create:clutch"
 			id: "6101000000000006"
 			optional: true
 			shape: "gear"
@@ -928,7 +879,6 @@
 		}
 		{
 			dependencies: ["6101000000000006"]
-			icon: "create:encased_chain_drive"
 			id: "6101000000000007"
 			optional: true
 			rewards: [{
@@ -951,7 +901,6 @@
 		}
 		{
 			dependencies: ["6101000000000007"]
-			icon: "create:belt_connector"
 			id: "6101000000000008"
 			optional: true
 			rewards: [{
@@ -979,7 +928,6 @@
 				"3B8B04EB60A9B45E"
 			]
 			dependency_requirement: "one_completed"
-			icon: "kubejs:mechanical_foundation_core"
 			id: "4FC0C1C678C71891"
 			min_required_dependencies: 1
 			rewards: [
@@ -1013,7 +961,6 @@
 		}
 		{
 			dependencies: ["5100000000000001"]
-			icon: "primitivestart:plated_bone_pickaxe"
 			id: "5100000000000002"
 			shape: "hexagon"
 			tasks: [{
@@ -1026,7 +973,6 @@
 		}
 		{
 			dependencies: ["5CED58896AEFF1B9"]
-			icon: "primitivestart:reinforced_bone_pickaxe"
 			id: "5100000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -1039,7 +985,6 @@
 		}
 		{
 			dependencies: ["08F0F7419B76EB35"]
-			icon: "minecraft:wheat"
 			id: "7111000000000001"
 			optional: true
 			shape: "gear"
@@ -1057,7 +1002,6 @@
 				"7111000000000001"
 				"7A3ED57EF3B84415"
 			]
-			icon: "kubejs:fibrous_biomass"
 			id: "7111000000000002"
 			optional: true
 			shape: "gear"
@@ -1072,7 +1016,6 @@
 		}
 		{
 			dependencies: ["7111000000000002"]
-			icon: "kubejs:alkaline_botanical_wash_bucket"
 			id: "7111000000000003"
 			optional: true
 			rewards: [{
@@ -1098,7 +1041,6 @@
 				"69C4F2B1AE2210C2"
 				"7A3ED57EF3B84415"
 			]
-			icon: "kubejs:copper_mineral_dust"
 			id: "7111000000000004"
 			optional: true
 			shape: "gear"
@@ -1116,7 +1058,6 @@
 				"7111000000000003"
 				"7111000000000004"
 			]
-			icon: "kubejs:washed_copper_mineral"
 			id: "7111000000000005"
 			optional: true
 			shape: "gear"
@@ -1131,7 +1072,6 @@
 		}
 		{
 			dependencies: ["7111000000000005"]
-			icon: "create:copper_nugget"
 			id: "7111000000000006"
 			optional: true
 			rewards: [{
@@ -1158,7 +1098,6 @@
 				"79D293B19143E993"
 				"6D9810BDE000D7F6"
 			]
-			icon: "jaffabricate:orange_sapling"
 			id: "6101100000000001"
 			optional: true
 			shape: "gear"
@@ -1180,7 +1119,6 @@
 		}
 		{
 			dependencies: ["6101100000000001"]
-			icon: "jaffabricate:orange_juice_bottle"
 			id: "6101100000000002"
 			optional: true
 			shape: "gear"
@@ -1202,7 +1140,6 @@
 		}
 		{
 			dependencies: ["6101100000000002"]
-			icon: "jaffabricate:jaffa_base"
 			id: "6101100000000003"
 			optional: true
 			shape: "gear"
@@ -1223,7 +1160,6 @@
 		}
 		{
 			dependencies: ["6101100000000003"]
-			icon: "jaffabricate:paperboard"
 			id: "6101100000000004"
 			optional: true
 			shape: "gear"
@@ -1244,7 +1180,6 @@
 		}
 		{
 			dependencies: ["6101100000000004"]
-			icon: "jaffabricate:jaffa_box"
 			id: "6101100000000005"
 			optional: true
 			rewards: [{
@@ -1266,7 +1201,6 @@
 		}
 		{
 			dependencies: ["6101100000000005"]
-			icon: "jaffabricate:pallet_full"
 			id: "6101100000000006"
 			optional: true
 			shape: "gear"
@@ -1280,7 +1214,6 @@
 		}
 		{
 			dependencies: ["6101100000000006"]
-			icon: "jaffabricate:jaffa_pallet"
 			id: "6101100000000007"
 			optional: true
 			shape: "gear"
@@ -1295,7 +1228,6 @@
 		{
 			can_repeat: true
 			dependencies: ["6101100000000007"]
-			icon: "jaffabricate:jaffa_pallet"
 			id: "6101100000000008"
 			optional: true
 			repeat_cooldown: 1

@@ -4,7 +4,7 @@ const foodIndustry = JsonIO.read('kubejs/config/industrial_food.json')
 ServerEvents.tags('item', event => {
     event.add('infinite_domain:juice_fruits', foodIndustry.flavors.map(f => f.crop))
     event.add('infinite_domain:seasoning_crops', ['farmersdelight:onion', 'brewery:hop', 'minecraft:dried_kelp'])
-    event.add('infinite_domain:oilseeds', ['minecraft:wheat_seeds', 'minecraft:pumpkin_seeds', 'minecraft:melon_seeds'])
+    event.add('infinite_domain:oilseeds', ['minecraft:pumpkin_seeds', 'minecraft:melon_seeds'])
     event.add('infinite_domain:industrial_vegetables', ['minecraft:carrot', 'minecraft:potato', 'minecraft:beetroot', 'farmersdelight:cabbage', 'farmersdelight:onion', 'farmersdelight:tomato'])
     event.add('infinite_domain:meal_proteins', ['minecraft:cooked_beef', 'minecraft:cooked_chicken', 'minecraft:cooked_porkchop', 'minecraft:cooked_mutton', 'farmersdelight:cooked_bacon'])
 })

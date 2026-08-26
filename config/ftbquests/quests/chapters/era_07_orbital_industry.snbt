@@ -4,14 +4,12 @@
 	filename: "era_07_orbital_industry"
 	group: "346E9B7B176D7846"
 	id: "79D40B1DF769CB1A"
-	icon: "stellaris:rocket"
 	images: [ ]
 	order_index: 8
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["5610000000000002"]
-			icon: "stellaris:rocket"
 			id: "5710000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -23,7 +21,6 @@
 		}
 		{
 			dependencies: ["5710000000000001"]
-			icon: "stellaris:moon_desh_ore"
 			id: "1710000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -37,7 +34,6 @@
 		}
 		{
 			dependencies: ["1710000000000001"]
-			icon: "stellaris:raw_desh_ingot"
 			id: "1710000000000002"
 			rewards: [{
 				id: "1730000000000002"
@@ -59,7 +55,6 @@
 		}
 		{
 			dependencies: ["1710000000000002"]
-			icon: "stellaris:desh_ingot"
 			id: "1710000000000003"
 			shape: "hexagon"
 			tasks: [{
@@ -73,7 +68,6 @@
 		}
 		{
 			dependencies: ["1710000000000003"]
-			icon: "more_ores_more_gems:adamantite_pickaxe"
 			id: "1710000000000004"
 			shape: "hexagon"
 			tasks: [{
@@ -86,7 +80,6 @@
 		}
 		{
 			dependencies: ["1710000000000004"]
-			icon: "stellaris:mars_ostrum_ore"
 			id: "1710000000000005"
 			rewards: [{
 				id: "1730000000000005"
@@ -108,7 +101,6 @@
 		}
 		{
 			dependencies: ["1710000000000005"]
-			icon: "stellaris:desh_block"
 			id: "1710000000000006"
 			shape: "hexagon"
 			tasks: [{
@@ -122,7 +114,6 @@
 		}
 		{
 			dependencies: ["1710000000000006"]
-			icon: "stellaris:desh_ingot"
 			id: "1710000000000007"
 			shape: "hexagon"
 			tasks: [{
@@ -136,7 +127,6 @@
 		}
 		{
 			dependencies: ["1710000000000007"]
-			icon: "kubejs:era7_mining_contribution"
 			id: "1710000000000008"
 			rewards: [{
 				count: 2
@@ -158,7 +148,6 @@
 		}
 		{
 			dependencies: ["5710000000000001"]
-			icon: "stellaris:oxygen_tank"
 			id: "2710000000000001"
 			shape: "heart"
 			tasks: [{
@@ -172,7 +161,6 @@
 		}
 		{
 			dependencies: ["2710000000000001"]
-			icon: "stellaris:oxygen_distributor"
 			id: "2710000000000002"
 			rewards: [{
 				id: "2730000000000002"
@@ -194,7 +182,6 @@
 		}
 		{
 			dependencies: ["2710000000000002"]
-			icon: "stellaris:space_suit_helmet"
 			id: "2710000000000003"
 			shape: "heart"
 			tasks: [{
@@ -207,7 +194,6 @@
 		}
 		{
 			dependencies: ["2710000000000003"]
-			icon: "stellaris:space_suit_chestplate"
 			id: "2710000000000004"
 			shape: "heart"
 			tasks: [{
@@ -220,7 +206,6 @@
 		}
 		{
 			dependencies: ["2710000000000004"]
-			icon: "minecraft:golden_carrot"
 			id: "2710000000000005"
 			rewards: [{
 				id: "2730000000000005"
@@ -242,7 +227,6 @@
 		}
 		{
 			dependencies: ["2710000000000005"]
-			icon: "minecraft:water_bucket"
 			id: "2710000000000006"
 			shape: "heart"
 			tasks: [{
@@ -256,7 +240,6 @@
 		}
 		{
 			dependencies: ["2710000000000006"]
-			icon: "stellaris:big_oxygen_tank"
 			id: "2710000000000007"
 			shape: "heart"
 			tasks: [{
@@ -270,7 +253,6 @@
 		}
 		{
 			dependencies: ["2710000000000007"]
-			icon: "kubejs:era7_farming_contribution"
 			id: "2710000000000008"
 			rewards: [{
 				count: 2
@@ -292,7 +274,6 @@
 		}
 		{
 			dependencies: ["5710000000000001"]
-			icon: "stellaris:rocket_launch_pad"
 			id: "3710000000000001"
 			shape: "diamond"
 			tasks: [{
@@ -306,7 +287,6 @@
 		}
 		{
 			dependencies: ["3710000000000001"]
-			icon: "stellaris:rocket_engine"
 			id: "3710000000000002"
 			rewards: [{
 				id: "3730000000000002"
@@ -328,7 +308,6 @@
 		}
 		{
 			dependencies: ["3710000000000002"]
-			icon: "stellaris:rocket_nose_cone"
 			id: "3710000000000003"
 			shape: "diamond"
 			tasks: [{
@@ -342,7 +321,6 @@
 		}
 		{
 			dependencies: ["3710000000000003"]
-			icon: "stellaris:rocket_fin"
 			id: "3710000000000004"
 			shape: "diamond"
 			tasks: [{
@@ -356,7 +334,6 @@
 		}
 		{
 			dependencies: ["3710000000000004"]
-			icon: "stellaris:rocket"
 			id: "3710000000000005"
 			rewards: [{
 				command: "execute in stellaris:moon run structure_map stellaris:moon_first_landing 2"
@@ -377,7 +354,6 @@
 		}
 		{
 			dependencies: ["3710000000000005"]
-			icon: "stellaris:rocket"
 			id: "3710000000000006"
 			shape: "diamond"
 			tasks: [{
@@ -390,7 +366,6 @@
 		}
 		{
 			dependencies: ["3710000000000006"]
-			icon: "stellaris:mars_ice_shard_ore"
 			id: "3710000000000007"
 			shape: "diamond"
 			tasks: [{
@@ -404,7 +379,6 @@
 		}
 		{
 			dependencies: ["3710000000000007"]
-			icon: "kubejs:era7_exploration_contribution"
 			id: "3710000000000008"
 			rewards: [{
 				count: 2
@@ -426,7 +400,6 @@
 		}
 		{
 			dependencies: ["1710000000000002"]
-			icon: "stellaris:solar_panel"
 			id: "4710000000000001"
 			shape: "gear"
 			tasks: [{
@@ -439,7 +412,6 @@
 		}
 		{
 			dependencies: ["1710000000000004"]
-			icon: "stellaris:desh_plating_block"
 			id: "4710000000000002"
 			shape: "gear"
 			tasks: [{
@@ -452,7 +424,6 @@
 		}
 		{
 			dependencies: ["1710000000000006"]
-			icon: "stellaris:venus_corronium_ore"
 			id: "4710000000000003"
 			rewards: [{
 				id: "4730000000000003"
@@ -473,7 +444,6 @@
 		}
 		{
 			dependencies: ["2710000000000002"]
-			icon: "stellaris:jet_suit_chestplate"
 			id: "4710000000000004"
 			shape: "gear"
 			tasks: [{
@@ -486,7 +456,6 @@
 		}
 		{
 			dependencies: ["2710000000000004"]
-			icon: "stellaris:rocket"
 			id: "4710000000000005"
 			shape: "gear"
 			tasks: [{
@@ -498,7 +467,6 @@
 		}
 		{
 			dependencies: ["2710000000000006"]
-			icon: "stellaris:rocket"
 			id: "4710000000000006"
 			shape: "gear"
 			tasks: [{
@@ -510,7 +478,6 @@
 		}
 		{
 			dependencies: ["3710000000000002"]
-			icon: "stellaris:rocket_station"
 			id: "4710000000000007"
 			shape: "gear"
 			tasks: [{
@@ -523,7 +490,6 @@
 		}
 		{
 			dependencies: ["3710000000000004"]
-			icon: "stellaris:big_rocket_upgrade"
 			id: "4710000000000008"
 			shape: "gear"
 			tasks: [{
@@ -536,7 +502,6 @@
 		}
 		{
 			dependencies: ["3710000000000006"]
-			icon: "stellaris:rocket"
 			id: "4710000000000009"
 			shape: "gear"
 			tasks: [{
@@ -553,7 +518,6 @@
 				"3710000000000008"
 			]
 			dependency_requirement: "one_completed"
-			icon: "kubejs:orbital_foundation_core"
 			id: "5710000000000002"
 			min_required_dependencies: 1
 			rewards: [
@@ -591,7 +555,6 @@
 		}
 		{
 			dependencies: ["2710000000000005"]
-			icon: "minecraft:chorus_fruit"
 			id: "7711000000000001"
 			optional: true
 			shape: "gear"
@@ -609,7 +572,6 @@
 				"7711000000000001"
 				"2710000000000002"
 			]
-			icon: "kubejs:orbital_biomass"
 			id: "7711000000000002"
 			optional: true
 			shape: "gear"
@@ -624,7 +586,6 @@
 		}
 		{
 			dependencies: ["7711000000000002"]
-			icon: "kubejs:closed_loop_extract_bucket"
 			id: "7711000000000003"
 			optional: true
 			rewards: [{
@@ -651,7 +612,6 @@
 				"2710000000000002"
 				"7611000000000006"
 			]
-			icon: "kubejs:precipitated_platinum_concentrate"
 			id: "7711000000000004"
 			optional: true
 			shape: "gear"
@@ -669,7 +629,6 @@
 				"7711000000000003"
 				"7711000000000004"
 			]
-			icon: "kubejs:high_grade_platinum_concentrate"
 			id: "7711000000000005"
 			optional: true
 			shape: "gear"
@@ -684,7 +643,6 @@
 		}
 		{
 			dependencies: ["7711000000000005"]
-			icon: "more_ores_more_gems:platinum_nugget"
 			id: "7711000000000006"
 			optional: true
 			rewards: [{

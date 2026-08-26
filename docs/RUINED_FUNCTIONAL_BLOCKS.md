@@ -37,20 +37,20 @@ Three new decorative blocks exist under the `infinite_domain` namespace:
 | `infinite_domain:ruined_smoker` | `minecraft:smoker` | → 2× `wastelands:scrap_metal` |
 | `infinite_domain:ruined_blast_furnace` | `minecraft:blast_furnace` | → 4× `wastelands:scrap_metal` |
 
-Each one is visually a normal furnace/smoker/blast furnace with a damage overlay
-(soot, cracks, rust bleed) layered on top, mineable and placeable like any block, but has
-**no block entity, no GUI, no smelting behavior** — it is purely decorative. It can be
-recycled into scrap via a shapeless crafting recipe.
+Each one is visually identical to a normal furnace/smoker/blast furnace, mineable and
+placeable like any block, but has **no block entity, no GUI, no smelting behavior** — it is
+purely decorative. It can be recycled into scrap via a shapeless crafting recipe.
 
 ### How the look stays texture-pack compatible
 
-The block model references the live vanilla texture IDs directly (`minecraft:block/furnace_top`,
-`_side`, `_front`, and `smoker`'s distinct `_bottom`) rather than a baked copy, with a second,
-slightly-inset cube element layering `infinite_domain:block/ruin_overlay/damage_generic` (or
-`damage_scorched` for the blast furnace) on top. Whatever resource pack supplies the base
-furnace textures — including the active LAST DAYS conversion — is what these blocks show
-underneath the damage. If LAST DAYS re-authors the furnace textures later, the ruined
-variants update automatically; nothing here needs to be touched.
+A hand-authored decal overlay (soot/cracks/rust bleed baked as a separate 16×16 texture,
+layered on an inset cube) was tried first and rejected — it clashed badly with any resource
+pack that reskins the base furnace at a different resolution or art style (see the 2026-08-25
+screenshot review). The block model now simply sets `"parent"` to the vanilla block model
+directly (`minecraft:block/furnace`, `minecraft:block/smoker`, `minecraft:block/blast_furnace`)
+with no textures or extra elements of its own. Whatever resource pack reskins the vanilla
+block — including the active LAST DAYS conversion — reskins the ruined variant identically,
+automatically, with zero custom texture assets to keep in sync.
 
 ### Implementation
 

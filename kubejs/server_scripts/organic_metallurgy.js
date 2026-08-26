@@ -23,6 +23,16 @@ ServerEvents.recipes(event => {
             event.recipes.create.crushing(singleItemOutput, era.feedstock).id(extractionId)
         } else if (era.extractionProcess === 'mixing') {
             event.recipes.create.mixing(extractionOutput, [extractionInput, Fluid.of('minecraft:water', 250)]).id(extractionId)
+        } else if (era.feedstock === 'minecraft:wheat') {
+            // create:milling/wheat already claims plain wheat for flour/seeds.
+            // Merge into one recipe instead of silently shadowing it.
+            event.remove({ id: 'create:milling/wheat' })
+            event.recipes.create.milling([
+                'create:wheat_flour',
+                CreateItem.of(Item.of('create:wheat_flour', 2), 0.25),
+                CreateItem.of('minecraft:wheat_seeds', 0.25),
+                singleItemOutput
+            ], era.feedstock).id(extractionId)
         } else {
             event.recipes.create.milling(singleItemOutput, era.feedstock).id(extractionId)
         }
@@ -54,8 +64,11 @@ ServerEvents.recipes(event => {
 
         event.recipes.create.milling(dust, trace)
             .id(`infinite_domain:organic_metallurgy/${metal.id}/mechanical_grinding`)
-        event.recipes.create.splashing(washed, dust)
-            .id(`infinite_domain:organic_metallurgy/${metal.id}/mechanical_washing`)
+
+        const era1 = organicMetallurgy.eras.find(era => era.era === 1)
+        event.recipes.create.mixing(Item.of(washed, batch), [
+            Item.of(dust, batch), Fluid.of(era1.reagent, reagentAmount)
+        ]).id(`infinite_domain:organic_metallurgy/${metal.id}/mechanical_washing`)
         event.recipes.create.compacting(Item.of(metal.nugget, 10), [Item.of(washed, batch), Fluid.of('minecraft:water', 250)])
             .id(`infinite_domain:organic_metallurgy/${metal.id}/mechanical_recovery`)
 

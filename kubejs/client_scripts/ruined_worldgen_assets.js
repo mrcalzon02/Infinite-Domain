@@ -17,41 +17,6 @@ function ruinedCrackFaces() {
     }
 }
 
-function ruinedCubeModel(front, side, top, bottom) {
-    return {
-        parent: 'minecraft:block/block',
-        ambientocclusion: true,
-        textures: {
-            front: front,
-            side: side,
-            top: top,
-            bottom: bottom || top,
-            crack: RUINED_CRACK_TEXTURE,
-            particle: side
-        },
-        elements: [
-            {
-                from: [0, 0, 0],
-                to: [16, 16, 16],
-                faces: {
-                    down:  { texture: '#bottom', cullface: 'down' },
-                    up:    { texture: '#top',    cullface: 'up' },
-                    north: { texture: '#front',  cullface: 'north' },
-                    south: { texture: '#side',   cullface: 'south' },
-                    west:  { texture: '#side',   cullface: 'west' },
-                    east:  { texture: '#side',   cullface: 'east' }
-                }
-            },
-            {
-                from: [-0.02, -0.02, -0.02],
-                to: [16.02, 16.02, 16.02],
-                shade: false,
-                faces: ruinedCrackFaces()
-            }
-        ]
-    }
-}
-
 function crackOverlayModel(boxes) {
     return {
         parent: 'minecraft:block/block',
@@ -66,17 +31,6 @@ function crackOverlayModel(boxes) {
             shade: false,
             faces: ruinedCrackFaces()
         }))
-    }
-}
-
-function horizontalBlockstate(id) {
-    return {
-        variants: {
-            'facing=north': { model: `kubejs:block/${id}` },
-            'facing=east':  { model: `kubejs:block/${id}`, y: 90,  uvlock: true },
-            'facing=south': { model: `kubejs:block/${id}`, y: 180, uvlock: true },
-            'facing=west':  { model: `kubejs:block/${id}`, y: 270, uvlock: true }
-        }
     }
 }
 
@@ -145,35 +99,11 @@ function grindstoneLayeredBlockstate(id) {
     return { multipart: multipart }
 }
 
-const RUINED_FURNACE_ASSETS = [
-    {
-        id: 'ruined_furnace',
-        model: ruinedCubeModel(
-            'minecraft:block/furnace_front',
-            'minecraft:block/furnace_side',
-            'minecraft:block/furnace_top',
-            'minecraft:block/furnace_top'
-        )
-    },
-    {
-        id: 'ruined_smoker',
-        model: ruinedCubeModel(
-            'minecraft:block/smoker_front',
-            'minecraft:block/smoker_side',
-            'minecraft:block/smoker_top',
-            'minecraft:block/smoker_bottom'
-        )
-    },
-    {
-        id: 'ruined_blast_furnace',
-        model: ruinedCubeModel(
-            'minecraft:block/blast_furnace_front',
-            'minecraft:block/blast_furnace_side',
-            'minecraft:block/blast_furnace_top',
-            'minecraft:block/blast_furnace_top'
-        )
-    }
-]
+// ruined_furnace/ruined_smoker/ruined_blast_furnace are NOT generated here.
+// Their blockstate/model live as hand-authored files at
+// kubejs/assets/infinite_domain/{blockstates,models}/ruined_*.json and simply
+// parent to the vanilla furnace/smoker/blast_furnace block model, so any
+// resource pack that reskins those vanilla blocks reskins these automatically.
 
 const RUINED_WORKSTATION_ASSETS = [
     { id: 'ruined_stonecutter', horizontal: true, boxes: [[0,0,0,16,9,16],[1,9,7.9,15,16,8.1]] },
@@ -194,11 +124,6 @@ const RUINED_WORKSTATION_ASSETS = [
 ]
 
 ClientEvents.generateAssets('last', event => {
-    RUINED_FURNACE_ASSETS.forEach(def => {
-        event.json(`kubejs:blockstates/${def.id}.json`, horizontalBlockstate(def.id))
-        event.json(`kubejs:models/block/${def.id}.json`, def.model)
-    })
-
     RUINED_WORKSTATION_ASSETS.forEach(def => {
         let blockstate
         if (def.attachFace) {

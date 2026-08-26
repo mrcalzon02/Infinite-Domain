@@ -53,12 +53,16 @@ StartupEvents.registry('fluid', event => {
     organicMetallurgyConfig.eras.forEach(era => {
         event.create(era.reagent.split(':')[1])
             .displayName(era.reagentName)
+            .stillTexture('minecraft:block/water_still')
+            .flowingTexture('minecraft:block/water_flow')
             .tint(era.fluidColor)
             .translucent()
     })
 
     event.create(organicMetallurgyConfig.shared.spentFluid.split(':')[1])
         .displayName('Spent Process Solution')
+        .stillTexture('minecraft:block/water_still')
+        .flowingTexture('minecraft:block/water_flow')
         .tint(0x6B6657)
         .translucent()
 })

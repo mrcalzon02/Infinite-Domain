@@ -19,6 +19,8 @@ EXPECTED_ORDER = [
     "OSF-027", "OSF-037", "OSF-045", "OSF-049",
     "OSF-008", "OSF-009", "OSF-010", "OSF-011", "OSF-012",
     "OSF-024", "OSF-028", "OSF-029", "OSF-031", "OSF-033",
+    "OSF-001", "OSF-014", "OSF-015", "OSF-032", "OSF-046", "OSF-050",
+    "AGE-004", "AGE-011", "AGE-001", "AGE-002", "AGE-012", "AGE-003", "AGE-013", "AGE-014", "AGE-015",
 ]
 REQUIRED = {
     "planning_id", "name", "registry_id", "faction", "state",

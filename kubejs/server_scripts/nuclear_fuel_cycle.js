@@ -17,6 +17,7 @@ ServerEvents.recipes(event => {
         'createnuclear:enriched/enriched_yellowcake',
         'createnuclear:mechanical_crafting/uranium_rod',
         'createnuclear:crushing/coal',
+        'oritech:crushing/compat/create/coal',
         'createnuclear:pressing/graphene',
         'createnuclear:mechanical_crafting/graphite_rod',
         'createnuclear:smelting/raw_uranium_for_uranium_ore',
@@ -92,8 +93,20 @@ ServerEvents.recipes(event => {
     // Graphite is now an eight-operation carbon industry. In Phase I the
     // installed controller still treats its output as cooling; Phase II will
     // move the item to an explicit moderator profile.
-    event.recipes.create.milling(Item.of(g.carbonFines, 2), Ingredient.of('#minecraft:coals'))
-        .processingTime(160).id('infinite_domain:nuclear/carbon_fines')
+    // create:milling/coal and create:milling/charcoal already claim these
+    // items for dye; merge into one recipe per item instead of shadowing them.
+    event.remove({ id: 'create:milling/coal' })
+    event.remove({ id: 'create:milling/charcoal' })
+    event.recipes.create.milling([
+        Item.of('minecraft:black_dye', 2),
+        CreateItem.of('minecraft:gray_dye', 0.1),
+        Item.of(g.carbonFines, 2)
+    ], 'minecraft:coal').processingTime(160).id('infinite_domain:nuclear/carbon_fines_from_coal')
+    event.recipes.create.milling([
+        'minecraft:black_dye',
+        CreateItem.of(Item.of('minecraft:gray_dye', 2), 0.1),
+        Item.of(g.carbonFines, 2)
+    ], 'minecraft:charcoal').processingTime(160).id('infinite_domain:nuclear/carbon_fines_from_charcoal')
     event.recipes.create.splashing(g.washedCarbon, g.carbonFines)
         .id('infinite_domain:nuclear/washed_carbon')
     event.blasting(g.refinedCarbon, g.washedCarbon).xp(0.05)
