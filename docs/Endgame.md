@@ -710,6 +710,36 @@ Principal results:
 
 Deferred: exact geometry and spans → Phase 3/4; numeric height envelope → C0006; per-band fog and sightline distances → `EG-P05-S04-C0076`; greybox measurement kit and camera list → `EG-P02-S01`.
 
+### Accepted architecture decision — `EG-P00-S03-C0005`
+
+**Status:** `COMPLETE` on 2026-08-27.
+
+**Base:** `3ba15097`
+
+**Supporting file:** `docs/endgame/adr/ADR-0001-hive-world-generation-architecture.md` (alternatives A–F, consequences, and the layer-by-layer rollback path).
+
+ADR-0001 selects a **four-layer hybrid generator**:
+
+1. **Mass & mask** — density functions and noise settings in the Hive datapack own planetary crust, dead-waste terrain, stack-core/apron masks, envelope density, major-void reservations, and the vertical-strata field.
+2. **Macro placement** — Hive-owned deterministic placement owns cluster centres, trunk-axis routes, district anchors, and landmark slots. Vanilla random spread is never used for trunk axes.
+3. **Module assembly** — vanilla jigsaw, template pools, and processors, configured by the Hive datapack, own readable rooms, thresholds, circulation, damage states, and encounters *inside bounded cells only*.
+4. **Runtime services** — a dedicated optional NeoForge companion module (`packdev/hive-world-companion`) owns transactional entry/return/recovery, dimension-scoped atmosphere, PPE adapters, client sky/fog/effects, and telemetry, with graceful absence.
+
+Isekai (biome-source / surface-rule codecs) and Lost Cities (donor ruin grammar inside cells) are optional providers, each gated behind its own acceptance spike, neither owning identity or macro planning. Alternatives A (single NBT), B (pure Lost Cities), C (pure random jigsaw), D (pure density), and E (Isekai assembled structures) are recorded as rejected with reasons in the ADR.
+
+### Accepted height decision — `EG-P00-S03-C0006`
+
+**Status:** `COMPLETE` on 2026-08-27.
+
+**Base:** `3ba15097`
+
+**Supporting file:** `docs/endgame/contracts/height-contract.md` (engine codec bounds, the taller-world adoption criteria, and the evidence method).
+
+- Accepted initial contract: **`-64..319`** — `dimension_type` and `noise_settings` use `min_y: -64`, `height: 384`, `logical_height: 384`; top block Y `319`; provisional `sea_level -40` (acid table in The Drown, refined at `EG-P03-S04-C0044`).
+- Rationale: the base pack already runs this exact envelope (`wastelands` noise settings `min_y -64, height 384`; `cyberspace:darknet_dimension` `min_y -64, height 320`); every downstream system is exercised at this range today; the six accepted bands tile it exactly.
+- Engine bounds recorded: vanilla `DimensionType` permits `min_y ∈ [-2032, 2031]`, `height ∈ [16, 4064]` (both ×16), `min_y + height ≤ 2032`. A taller envelope is engine-permitted; the risk is downstream mod compatibility.
+- Taller-world option **DEFERRED**: not on the critical path; may not be adopted until a dedicated taller-height compatibility checkpoint (eight adoption criteria in the supporting file) is seeded and passed. No Hive `noise_settings` or `dimension_type` may exceed `height 384` before then.
+
 ### Exit gate P00-GATE
 
 - dimension architecture and height contract accepted;
@@ -1022,10 +1052,10 @@ program:
   name: Endgame
   status: ACTIVE
   current_phase: P00
-  current_stage: S03
+  current_stage: S04
   current_gate: P00-GATE
-  next_checkpoint: EG-P00-S03-C0005
-  updated_at: 2026-08-27T14:48:00-08:00
+  next_checkpoint: EG-P00-S04-C0007
+  updated_at: 2026-08-27T15:02:00-08:00
   updated_by: endgame-coordinator
 
 phase_ledger:
@@ -1170,10 +1200,43 @@ completed_checkpoints:
       - traversal rhythm quantified with a measurable release cadence and threshold rule
       - all scale numbers remain provisional and name a later proving checkpoint; no architecture, palette, or height number chosen
     notes: Working contract; frozen only at P02-GATE.
+  - checkpoint_id: EG-P00-S03-C0005
+    phase: P00
+    stage: S03
+    status: COMPLETE
+    owner: endgame-coordinator
+    accepted_at: 2026-08-27T15:02:00-08:00
+    accepted_by: endgame-coordinator
+    base_commit: 3ba15097
+    integration_commit: SELF
+    evidence:
+      - docs/Endgame.md#accepted-architecture-decision--eg-p00-s03-c0005
+      - docs/endgame/adr/ADR-0001-hive-world-generation-architecture.md
+    validation:
+      - ADR names six alternatives (A-F) with rejection reasons; chosen option F matches Endgame.md 2.7 and the C0002 ownership boundary
+      - four layers each have a named owner, implementation, determinism basis, and independent rollback
+      - Isekai and Lost Cities remain optional providers gated behind their own spikes
+  - checkpoint_id: EG-P00-S03-C0006
+    phase: P00
+    stage: S03
+    status: COMPLETE
+    owner: endgame-coordinator
+    accepted_at: 2026-08-27T15:02:00-08:00
+    accepted_by: endgame-coordinator
+    base_commit: 3ba15097
+    integration_commit: SELF
+    evidence:
+      - docs/Endgame.md#accepted-height-decision--eg-p00-s03-c0006
+      - docs/endgame/contracts/height-contract.md
+    validation:
+      - initial contract -64..319 (min_y -64, height 384) matches an envelope the base pack already runs
+      - vanilla DimensionType codec bounds recorded; -64..319 satisfies all four
+      - taller-world option deferred with eight named adoption criteria and an evidence method; no Hive file may exceed height 384 before that checkpoint passes
+    notes: Closes stage S03.
 
 latest_handoff:
-  checkpoint_id: EG-P00-S03-C0005
-  next_safe_action: Write ADR-0001 selecting hybrid density mass plus deterministic macro placement plus bounded jigsaw modules plus an optional companion module, with alternatives, consequences, and a rollback path.
+  checkpoint_id: EG-P00-S04-C0007
+  next_safe_action: Author the hazard contract - the atmosphere/acid/ventilation/PPE/shelter interaction matrix and the non-trivialization rule - honouring the C0002 classifications (EnviroMine dimension toxicity unsuitable as-is, masks/vents usable-with-adapter, TWR acid usable-with-adapter, radiation separate).
 
 journal:
   - at: 2026-08-27T00:00:00-08:00
@@ -1212,6 +1275,10 @@ journal:
     actor: endgame-coordinator
     event: checkpoint_completed
     detail: Accepted EG-P00-S02-C0004 spatial metrics as a working contract; renamed the six §3 bands (The Drown, The Underworks, The Furnace Tiers, The Billet Decks, The Vaulting, The Crown) and the four fields (Stack core, Stack apron, Trunk axis, Dead wastes), quantified the traversal-rhythm cadence, and recorded the consistency check in docs/endgame/contracts/spatial-metrics.md. Closed stage S02; made EG-P00-S03-C0005 ready.
+  - at: 2026-08-27T15:02:00-08:00
+    actor: endgame-coordinator
+    event: checkpoint_completed
+    detail: Accepted EG-P00-S03-C0005 (ADR-0001 four-layer hybrid generator; alternatives A-F recorded) and EG-P00-S03-C0006 (initial height contract -64..319, height 384; taller-world option deferred with eight adoption criteria). Closed stage S03; made EG-P00-S04-C0007 ready.
 ```
 
 <!-- ENDGAME_STATE_END -->
