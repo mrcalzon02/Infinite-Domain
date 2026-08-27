@@ -68,6 +68,10 @@ The program may use the broad concept of vertically stratified arcologies in a d
 
 Density functions and terrain systems create planetary crust, hive envelopes, major voids, and broad horizontal masks. Structures provide readable architecture, circulation, landmark identity, rooms, damage, and encounters. A single enormous NBT, an ordinary random-spread city, or a Lost Cities profile alone is not the world generator.
 
+## 2.8 Dark mineral masonry is the material foundation
+
+The user-approved architectural palette centers on dark gray and black slate and granite families. Chiseled blocks and brick masonry provide deliberate authored detail, thresholds, structural rhythm, and monumental ornament. Later palette checkpoints must select exact registry IDs, ratios, contrast materials, weathering states, and placement rules; they may extend this foundation but may not replace it with a bright or predominantly metallic visual language without a recorded revision.
+
 ---
 
 # 3. Proposed spatial contract
@@ -636,6 +640,56 @@ This audit fixes ownership boundaries without choosing the later identity, spati
 
 This table is a capability boundary, not architecture approval. C0003 may now establish the setting identity without reopening C0001 or C0002.
 
+### Accepted identity contract — `EG-P00-S02-C0003`
+
+**Status:** `COMPLETE` on 2026-08-27 (recorded working assumptions). The player-facing flavour names below are working assumptions the coordinator confirms or replaces at `P00-GATE`; doing so does not reopen the technical identity, the IP boundary, or the placeholder policy.
+
+**Base:** `5df1ea34`
+
+**Supporting file:** `docs/endgame/identity/placeholder-terms.md` (the single placeholder register and the full prohibited-terminology table).
+
+This checkpoint fixes naming tokens, terminology, the IP boundary, and the placeholder policy. It does not choose spatial metrics (C0004), architecture (C0005), numeric height (C0006), hazard tuning (C0007), or final iconography.
+
+#### Technical identity (permanent)
+
+- Dimension ID: `infinite_domain:hive_world` — permanent, engine-facing, never shown to players.
+- All Hive datapack and companion-module content lives under the `infinite_domain:` namespace with the path/registry token `hive_world` (for example `infinite_domain:hive_world` and `infinite_domain:hive_world_arrival`). C0009 fixes the exact tree.
+- The literal substring `hive` is a code token only. It must never appear in any player-facing string: lang files, item or block display names, player-visible dimension-effect strings, advancement titles or descriptions, quest text, book or sign text, or HUD strings.
+
+#### Player-facing identity (working assumption — owner confirms at `P00-GATE`)
+
+| Layer | Working name | Notes |
+|---|---|---|
+| The world | **Ordan** | A dead, airless industrial planet the Old World developed for off-world heavy manufacturing. |
+| The dimension / megastructure | **the Cinderstack** | One continuous engineered city-mass from planetary crust to exosphere; "the Stack" colloquially. This is the name shown in advancements, quests, and the return HUD. |
+| Vertical layers | **tiers** / **decks** | Never "spire", "hab", or "underhive". |
+| Former population (all dead) | **stackers** | Old World work-slang; placeholder under the policy below. |
+| Builder / operator institution | **the Lift Authority** | Placeholder under the policy below. |
+
+Rationale: post-endgame access is reached through orbital industry, so an off-world site is consistent with the canon's continuation "into space" (`old_world_narrative/source/01_CANON_AND_NONNEGOTIABLES.md`). A sulfur / ash / acid, non-breathable signature keeps the Cinderstack clearly distinct from the Overworld spore wasteland. "Industrial density provided abundant substrate" is expressed literally by a planet-scale vertical works.
+
+#### Inspiration and IP boundary
+
+Acknowledged inspiration (per §2.6): the broad idea of vertically stratified arcologies in a dead industrial world. Source-distinctive terminology (hive city / world / cluster, spire as a social stratum, underhive, hab, manufactorum, sump, ash wastes, the source gang and enforcer bodies, and all imperial or ecclesiastical framing and iconography) is **prohibited everywhere in Hive content**, including registry IDs and player-readable comments. Mandatory replacements and the full table are in the supporting file. No traced, copied, or lightly-reskinned geometry, terrain kits, prose, or names from the inspiration's games or art. Monumental detail is original and builds on §2.8.
+
+#### Faction-placeholder policy
+
+1. Every institutional, crew, inhabitant, or place name introduced before `EG-P06-S06-C0093` is a **placeholder**, recorded in `docs/endgame/identity/placeholder-terms.md` with a status tag and its canon anchor.
+2. Placeholders may appear in prototype data, greybox signage, and internal docs. They may **not** appear in committed player-facing lang files, quest chapters, books, advancements, signs, or the resource pack until `C0093` promotes them.
+3. Promotion to canon requires a new entry in the canon source hierarchy or explicit owner approval recorded in the `C0093` handoff.
+4. No placeholder may contradict fixed canon (EP-7 / PT-9, the Firebreak Wars, the corporate roster, Charles's arc).
+5. Working canon hook (assumption, not yet canon): the Cinderstack is an **Atlas** / **Helion** off-world venture (automation and power) with **Pleroma** operating its Earth logistics lifeline; its asphyxiation followed the severance of interplanetary shipping during the collapse. Phase 6 writers start here unless the owner redirects.
+
+#### Consistency check
+
+- "Ordan", "Cinderstack", "stacker", "tier", "deck" are pronounceable, collision-free in this document, and independent of the technical ID.
+- No prohibited term survives in the accepted vocabulary. The placeholder band names in §3 (Sump, Underhive, Forge, Hab, Monumental Interhive, Upper Spire) are replaced by C0004.
+- The uncommitted `docs/hive-strain/` scratch (a Spore-derived "Verdant Strain" enemy roster at 3× health) is compatible and is neither adopted nor blocked here; the enemy roster is `EG-P06-S04-C0089`.
+
+#### Deferred
+
+Band identities and the §3 rename → C0004. Architecture → C0005. Height number → C0006. Hazard model → C0007. Final iconography and colour → a later visual checkpoint. Canonisation of any placeholder → C0093.
+
 ### Exit gate P00-GATE
 
 - dimension architecture and height contract accepted;
@@ -950,8 +1004,8 @@ program:
   current_phase: P00
   current_stage: S02
   current_gate: P00-GATE
-  next_checkpoint: EG-P00-S02-C0003
-  updated_at: 2026-08-27T12:37:14-08:00
+  next_checkpoint: EG-P00-S02-C0004
+  updated_at: 2026-08-27T14:35:00-08:00
   updated_by: endgame-coordinator
 
 phase_ledger:
@@ -992,7 +1046,31 @@ phase_ledger:
     status: NOT_STARTED
     gate: P08-GATE
 
-active_reservations: []
+active_reservations:
+  - checkpoint_id: EG-P00-GATE-RUN
+    phase: P00
+    stage: S02-S06
+    status: RESERVED
+    owner: endgame-coordinator
+    reserved_at: 2026-08-27T14:35:00-08:00
+    lease_expires_at: 2026-08-27T18:35:00-08:00
+    last_heartbeat_at: 2026-08-27T14:35:00-08:00
+    base_commit: 5df1ea34
+    write_scope:
+      - docs/Endgame.md
+      - docs/endgame/**
+    generated_outputs: []
+    read_dependencies:
+      - docs/Endgame.md#accepted-source-inventory--eg-p00-s01-c0001
+      - docs/Endgame.md#accepted-capability-and-constraint-audit--eg-p00-s01-c0002
+    required_outputs:
+      - Documentation-only Phase 0 contracts C0004 through C0011, each a bounded decision with a supporting file under docs/endgame/.
+      - Phase 0 gate evidence assembly (C0012) left at REVIEW_NEEDED for independent integration review.
+    required_validation:
+      - Every contract is internally consistent with C0001, C0002, C0003, and fixed canon.
+      - No contract selects production art, structure geometry, or a taller-than-vanilla height.
+      - The completeness matrix marks every axis PASS, NOT_APPLICABLE, or DEFERRED with a named checkpoint.
+    next_safe_action: Author C0004 spatial metrics and rename the placeholder §3 band identities, then continue sequentially through C0011.
 
 blocked_checkpoints: []
 
@@ -1035,10 +1113,28 @@ completed_checkpoints:
       - high-risk Isekai, EnviroMine, Stellaris, Lost Cities adapter, runtime-log, and evidence-path claims independently spot-checked
       - every row names a runtime test, fallback, and decision owner
       - identity, spatial, architecture, numeric-height, and hazard-policy decisions remain deferred
+  - checkpoint_id: EG-P00-S02-C0003
+    phase: P00
+    stage: S02
+    status: COMPLETE
+    owner: endgame-coordinator
+    accepted_at: 2026-08-27T14:35:00-08:00
+    accepted_by: endgame-coordinator
+    base_commit: 5df1ea34
+    integration_commit: SELF
+    evidence:
+      - docs/Endgame.md#accepted-identity-contract--eg-p00-s02-c0003
+      - docs/endgame/identity/placeholder-terms.md
+    validation:
+      - technical dimension ID and namespace token fixed; the substring "hive" barred from every player-facing string
+      - prohibited source-distinctive terminology enumerated with mandatory replacements; no protected name, faction, prose, or iconography adopted
+      - faction-placeholder policy prevents provisional lore from reaching committed player-facing text before C0093
+      - player-facing flavour names recorded as working assumptions for P00-GATE confirmation; spatial, architecture, height, and hazard decisions remain deferred
+    notes: Evidence class is "recorded working assumptions" per the C0003 row; the flavour name is owner-confirmable at the gate without reopening the technical or IP content.
 
 latest_handoff:
-  checkpoint_id: EG-P00-S02-C0003
-  next_safe_action: Reserve the identity-contract checkpoint and establish original setting terminology, placeholder policy, and IP boundary without changing technical capability decisions.
+  checkpoint_id: EG-P00-S02-C0004
+  next_safe_action: Author the spatial-metrics contract, replace the placeholder §3 band identities with the accepted original names, and record the traversal-rhythm and mask consistency check.
 
 journal:
   - at: 2026-08-27T00:00:00-08:00
@@ -1061,6 +1157,18 @@ journal:
     actor: endgame-coordinator
     event: checkpoint_completed
     detail: Accepted the corrected 22-row capability and constraint audit after schema checks and independent class, config, source, runtime-log, and path spot checks; released C0002 and made EG-P00-S02-C0003 ready.
+  - at: 2026-08-27T13:46:12-08:00
+    actor: endgame-coordinator
+    event: checkpoint_reserved
+    detail: Reserved EG-P00-S02-C0003 read-only at base 5df1ea34 for endgame-identity-contract-worker; lease expires 2026-08-27T15:16:12-08:00.
+  - at: 2026-08-27T14:35:00-08:00
+    actor: endgame-coordinator
+    event: reservation_reconciled
+    detail: Prior identity-contract reservation left no worker output; the coordinator reclaimed it and opened a single sequential documentation run (EG-P00-GATE-RUN) to author the remaining Phase 0 contract checkpoints C0003 through C0011 and assemble the C0012 gate evidence. Write scope docs/Endgame.md and docs/endgame/**.
+  - at: 2026-08-27T14:35:00-08:00
+    actor: endgame-coordinator
+    event: checkpoint_completed
+    detail: Accepted EG-P00-S02-C0003 identity contract on recorded working assumptions; fixed the technical dimension ID and namespace token, barred the substring "hive" from player-facing strings, enumerated prohibited source-distinctive terminology with replacements in docs/endgame/identity/placeholder-terms.md, and set the faction-placeholder policy. Made EG-P00-S02-C0004 ready.
 ```
 
 <!-- ENDGAME_STATE_END -->
