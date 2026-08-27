@@ -78,28 +78,30 @@ The user-approved architectural palette centers on dark gray and black slate and
 
 The first implementation targets the proven vanilla-height range `-64..319`. A taller dimension is an optional later decision and may not be adopted until a compatibility checkpoint proves lighting, structures, portals, claims, maps, mobs, and client rendering at the proposed height.
 
+Checkpoint `EG-P00-S02-C0004` accepted this contract as a working contract and replaced the placeholder band and field identities below with original names (full rationale, traversal-rhythm quantification, and the consistency check are in `docs/endgame/contracts/spatial-metrics.md`). Every number remains provisional until `P02-GATE`.
+
 | Vertical band | Working range | Primary identity | Required traversal |
 |---|---:|---|---|
-| Hive Bottom / Sump | `-64..-33` | acid reservoirs, buried foundations, ancient machinery, structural roots | flooded ledges, maintenance gantries, sealed shafts |
-| Underhive | `-32..47` | collapsed habitation, illegal settlements, tunnels, forgotten transit | short loops, vertical bypasses, unstable crossings |
-| Forge Strata | `48..111` | manufactorums, freight rail, waste conduits, power and ventilation plants | industrial halls, rail axes, service networks |
-| Hab Strata | `112..191` | habitation slabs, markets, institutions, shrines, civic ruins | district streets, stacked interiors, public stairs |
-| Monumental Interhive | `192..255` | cathedral-scale arches, suspended transit, processional voids | long axes, bridges, elevators, major thresholds |
-| Upper Spire | `256..319` | fortified crowns, observatories, command sanctums, capstone sites | exposed ascent, controlled gates, final expedition loop |
+| The Drown | `-64..-33` | acid reservoirs, buried foundations, ancient machinery, structural roots | flooded ledges, maintenance gantries, sealed shafts |
+| The Underworks | `-32..47` | collapsed quarters, unsanctioned settlement, tunnels, abandoned transit | short loops, vertical bypasses, unstable crossings |
+| The Furnace Tiers | `48..111` | manufactories, freight rail, waste conduits, power and ventilation plants | industrial halls, rail axes, service networks |
+| The Billet Decks | `112..191` | residential slabs, markets, institutions, civic monuments, civic ruins | district streets, stacked interiors, public stairs |
+| The Vaulting | `192..255` | cathedral-scale arches, suspended transit, processional voids | long axes, bridges, elevators, major thresholds |
+| The Crown | `256..319` | fortified crowns, observatories, command centres, capstone sites | exposed ascent, controlled gates, final expedition loop |
 
 Horizontal generation uses four world-scale fields:
 
-1. **Hive core** — full-height engineered mass and strata.
-2. **Hive apron** — walls, collapsed suburbs, slag, transport yards, and defense works.
-3. **Interhive axis** — aligned corridors, causeways, rail, pipes, pylons, and monumental arches.
+1. **Stack core** — full-height engineered mass and strata.
+2. **Stack apron** — perimeter walls, collapsed suburbs, slag, transport yards, and defence works.
+3. **Trunk axis** — aligned corridors, causeways, rail, pipes, pylons, and monumental arches between clusters.
 4. **Dead wastes** — dominant planetary terrain separating clusters.
 
 The initial scale targets are provisional and must be proven in Phase 2:
 
-- hive core diameter: 600–1,200 blocks;
-- hive-cluster separation: 2,000–4,000 blocks;
+- stack core diameter: 600–1,200 blocks;
+- stack-cluster separation: 2,000–4,000 blocks;
 - monumental void width: 80–240 blocks;
-- apparent interhive axis length: 500–1,500 blocks across independently aligned segments;
+- apparent trunk-axis length: 500–1,500 blocks across independently aligned segments;
 - repeated arch bay: 48–96 blocks;
 - choked-route clear width: commonly 3–7 blocks, with deliberate passing and encounter chambers;
 - surface wasteland share: at least 70 percent outside reserved test regions.
@@ -690,6 +692,24 @@ Acknowledged inspiration (per §2.6): the broad idea of vertically stratified ar
 
 Band identities and the §3 rename → C0004. Architecture → C0005. Height number → C0006. Hazard model → C0007. Final iconography and colour → a later visual checkpoint. Canonisation of any placeholder → C0093.
 
+### Accepted spatial metrics — `EG-P00-S02-C0004`
+
+**Status:** `COMPLETE` on 2026-08-27 as a working contract. Names, bands, fields, and traversal rhythm are accepted; every scale number is provisional and is frozen only at `P02-GATE`.
+
+**Base:** `f8e2ab35`
+
+**Supporting file:** `docs/endgame/contracts/spatial-metrics.md` (full band table with seam widths, field-to-generator ownership, provisional scale targets with per-metric proving checkpoints, the quantified traversal-rhythm contract, and the consistency check).
+
+Principal results:
+
+- The six placeholder band identities in §3 are replaced with **The Drown**, **The Underworks**, **The Furnace Tiers**, **The Billet Decks**, **The Vaulting**, and **The Crown**. Ranges are unchanged and provisional. The bands tile `-64..319` with no gap (32 + 80 + 64 + 80 + 64 + 64 = 384). Boundaries are 6–16 block architectural seams, not hard planes.
+- The four horizontal fields are renamed **Stack core**, **Stack apron**, **Trunk axis**, and **Dead wastes**. "Trunk axis" replaces "interhive axis".
+- Traversal rhythm is quantified: a monumental release (smallest open dimension ≥ 48 blocks, sightline ≥ 120 blocks) at a cadence between every two bands and every half-band; every release entered through a threshold visible from the preceding constricted network; no constricted run longer than ~140 blocks without a release or a passing chamber. Unbroken corridor and unbroken megacavern both fail.
+- Band identity must be legible without labels (carried into the `P02-GATE` exit criteria).
+- Consistency check passes on all eight axes (band tiling, strata count, prohibited-term avoidance, wasteland dominance, measurable compression/release, authored empty scale, provisional-number discipline, no architecture/height/palette chosen here).
+
+Deferred: exact geometry and spans → Phase 3/4; numeric height envelope → C0006; per-band fog and sightline distances → `EG-P05-S04-C0076`; greybox measurement kit and camera list → `EG-P02-S01`.
+
 ### Exit gate P00-GATE
 
 - dimension architecture and height contract accepted;
@@ -1002,10 +1022,10 @@ program:
   name: Endgame
   status: ACTIVE
   current_phase: P00
-  current_stage: S02
+  current_stage: S03
   current_gate: P00-GATE
-  next_checkpoint: EG-P00-S02-C0004
-  updated_at: 2026-08-27T14:35:00-08:00
+  next_checkpoint: EG-P00-S03-C0005
+  updated_at: 2026-08-27T14:48:00-08:00
   updated_by: endgame-coordinator
 
 phase_ledger:
@@ -1131,10 +1151,29 @@ completed_checkpoints:
       - faction-placeholder policy prevents provisional lore from reaching committed player-facing text before C0093
       - player-facing flavour names recorded as working assumptions for P00-GATE confirmation; spatial, architecture, height, and hazard decisions remain deferred
     notes: Evidence class is "recorded working assumptions" per the C0003 row; the flavour name is owner-confirmable at the gate without reopening the technical or IP content.
+  - checkpoint_id: EG-P00-S02-C0004
+    phase: P00
+    stage: S02
+    status: COMPLETE
+    owner: endgame-coordinator
+    accepted_at: 2026-08-27T14:48:00-08:00
+    accepted_by: endgame-coordinator
+    base_commit: f8e2ab35
+    integration_commit: SELF
+    evidence:
+      - docs/Endgame.md#accepted-spatial-metrics--eg-p00-s02-c0004
+      - docs/endgame/contracts/spatial-metrics.md
+      - docs/Endgame.md §3 band and field identities replaced in place
+    validation:
+      - six bands tile -64..319 with no gap or overlap (32+80+64+80+64+64 = 384)
+      - band and field names verified against the C0003 prohibited-terminology table
+      - traversal rhythm quantified with a measurable release cadence and threshold rule
+      - all scale numbers remain provisional and name a later proving checkpoint; no architecture, palette, or height number chosen
+    notes: Working contract; frozen only at P02-GATE.
 
 latest_handoff:
-  checkpoint_id: EG-P00-S02-C0004
-  next_safe_action: Author the spatial-metrics contract, replace the placeholder §3 band identities with the accepted original names, and record the traversal-rhythm and mask consistency check.
+  checkpoint_id: EG-P00-S03-C0005
+  next_safe_action: Write ADR-0001 selecting hybrid density mass plus deterministic macro placement plus bounded jigsaw modules plus an optional companion module, with alternatives, consequences, and a rollback path.
 
 journal:
   - at: 2026-08-27T00:00:00-08:00
@@ -1169,6 +1208,10 @@ journal:
     actor: endgame-coordinator
     event: checkpoint_completed
     detail: Accepted EG-P00-S02-C0003 identity contract on recorded working assumptions; fixed the technical dimension ID and namespace token, barred the substring "hive" from player-facing strings, enumerated prohibited source-distinctive terminology with replacements in docs/endgame/identity/placeholder-terms.md, and set the faction-placeholder policy. Made EG-P00-S02-C0004 ready.
+  - at: 2026-08-27T14:48:00-08:00
+    actor: endgame-coordinator
+    event: checkpoint_completed
+    detail: Accepted EG-P00-S02-C0004 spatial metrics as a working contract; renamed the six §3 bands (The Drown, The Underworks, The Furnace Tiers, The Billet Decks, The Vaulting, The Crown) and the four fields (Stack core, Stack apron, Trunk axis, Dead wastes), quantified the traversal-rhythm cadence, and recorded the consistency check in docs/endgame/contracts/spatial-metrics.md. Closed stage S02; made EG-P00-S03-C0005 ready.
 ```
 
 <!-- ENDGAME_STATE_END -->
