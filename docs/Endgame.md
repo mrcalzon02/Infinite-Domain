@@ -1138,16 +1138,17 @@ program:
   current_stage: S06
   current_gate: P00-GATE
   next_checkpoint: EG-P00-S06-C0012
-  updated_at: 2026-08-27T16:52:00-08:00
+  updated_at: 2026-08-27T17:40:00-08:00
   updated_by: endgame-coordinator
   notes: >-
     C0001-C0011 COMPLETE. C0012 phase-0 gate is REVIEW_NEEDED (needs an independent
     integration review). By explicit owner direction the coordinator built the Phase 1
-    disposable spike ahead of P00-GATE: C0013 dimension registry, C0014 baseline
-    generator, C0020 safe arrival, and C0019 the reversible enter/exit mechanic, all
-    at spike commit 10121b4a. Every Phase 1 output is EVIDENCE_READY (mechanical checks
-    pass; in-client runtime checks pending), not COMPLETE, and is reversible per C0023.
-    No Phase 1 checkpoint is integrated as COMPLETE until P00-GATE is accepted.
+    disposable spike ahead of P00-GATE: C0013-C0020 (dimension, generator, biomes, 3D
+    routing, acid feature, air-hazard prototype, safe arrival, reversible enter/exit)
+    at spike commits 10121b4a and 74e4010c. Every Phase 1 output is EVIDENCE_READY
+    (mechanical checks pass; in-client runtime checks pending), not COMPLETE, and is
+    reversible per C0023. C0021-C0024 authoring remains. No Phase 1 checkpoint is
+    integrated as COMPLETE until P00-GATE is accepted.
 
 phase_ledger:
   - phase: P00
@@ -1194,23 +1195,23 @@ phase_ledger:
 active_reservations:
   - checkpoint_id: EG-P01-SPIKE-RUN
     phase: P01
-    stage: S01-S04
+    stage: S01-S06
     status: RESERVED
     owner: endgame-coordinator
     reserved_at: 2026-08-27T16:05:00-08:00
-    lease_expires_at: 2026-08-27T20:05:00-08:00
-    last_heartbeat_at: 2026-08-27T16:52:00-08:00
+    lease_expires_at: 2026-08-27T21:30:00-08:00
+    last_heartbeat_at: 2026-08-27T17:40:00-08:00
     base_commit: f9b63030
-    spike_commit: 10121b4a
+    spike_commit: 74e4010c
     write_scope:
       - kubejs/data/infinite_domain/dimension/hive_world.json
       - kubejs/data/infinite_domain/dimension_type/hive_world.json
-      - kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json
-      - kubejs/data/infinite_domain/worldgen/density_function/hive_world/**
+      - kubejs/data/infinite_domain/worldgen/**/hive_world*
       - kubejs/data/infinite_domain/function/hive_world/**
       - kubejs/data/infinite_domain/advancement/hive_world/**
       - kubejs/server_scripts/hive_world_expedition.js
-      - kubejs/assets/infinite_domain/lang/en_us.json (hive_world.* keys only)
+      - kubejs/server_scripts/hive_world_atmosphere_proto.js
+      - kubejs/startup_scripts/hive_world_items.js
       - scripts/endgame/**
       - docs/endgame/**
       - docs/Endgame.md (ledger only)
@@ -1231,11 +1232,12 @@ active_reservations:
       - No shared minecraft:/wastelands:/gradient_ocean_pack worldgen file is modified.
       - No player-facing lang value contains the substring "hive".
     next_safe_action: >-
-      Owner runs the in-client checks: fresh-world datapack load, /forge dimensions
-      lists infinite_domain:hive_world, descend with the Cinderstack Descent Marker,
-      walk the arrival deck, return via the marker and the lodestone, and run the
-      death / disconnect / obstructed-platform cases from the C0002 travel list.
-      Then C0015-C0018 (biomes, routing, acid, air hazard) and C0021-C0024.
+      C0013-C0020 built (commit 74e4010c). Remaining spike authoring: C0021 client
+      effect fields + baseline-capture stub, C0022 finalize the smoke validator,
+      C0023 the removal manifest + procedure, C0024 the Phase 1 gate assembly
+      (REVIEW_NEEDED). Then the owner runs the in-client checks: datapack codec load,
+      fresh generation, /locate biome for both biomes, descend/return round trip,
+      death/disconnect/obstruction cases, acid contact, and the exposure meter.
     note: >-
       Owner-directed disposable spike ahead of P00-GATE. Outputs are EVIDENCE_READY,
       not COMPLETE. Fully reversible per the C0010 removal procedure and C0023.
@@ -1292,6 +1294,53 @@ evidence_ready:
       - death, disconnect-mid-transfer, and stranding paths handled in EntityEvents.death and PlayerEvents.loggedIn
       - validate_hive_world_smoke.py assertion 7 passes (no "hive" in any player-facing string)
     pending: in-client round trip, death, disconnect, missing-destination, passenger, and repeat-use tests
+  - checkpoint_id: EG-P01-S02-C0015
+    name: Spike biomes
+    status: EVIDENCE_READY
+    spike_commit: 74e4010c
+    outputs:
+      - scripts/endgame/generate_hive_world_biomes.py
+      - kubejs/data/infinite_domain/worldgen/biome/hive_world_dead_waste.json
+      - kubejs/data/infinite_domain/worldgen/biome/hive_world_stack_test.json
+    mechanical_validation:
+      - both biomes are schema-valid (11 feature steps, 8 spawner categories, carvers) and parse
+      - no mob spawners (roster is C0089); stack_test carries the acid pool at FLUID_SPRINGS
+    pending: in-client registry listing and /locate biome for both
+  - checkpoint_id: EG-P01-S02-C0016
+    name: 3D routing
+    status: EVIDENCE_READY
+    spike_commit: 74e4010c
+    outputs:
+      - kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json (depth gradient)
+      - kubejs/data/infinite_domain/dimension/hive_world.json (multi_noise biome source)
+    mechanical_validation:
+      - router depth is a y_clamped_gradient (+1.0 at Y-64 to -1.0 at Y319)
+      - multi_noise source splits at depth 0.41 (~Y48); stack_test below, dead_waste above; smoke validator checks the two-entry split
+    pending: in-client biome sampling at the six band-midpoint probes across X/Y/Z
+  - checkpoint_id: EG-P01-S03-C0017
+    name: Acid feature
+    status: EVIDENCE_READY
+    spike_commit: 74e4010c
+    outputs:
+      - scripts/endgame/generate_hive_world_acid.py
+      - kubejs/data/infinite_domain/worldgen/configured_feature/hive_world_acid_pool.json
+      - kubejs/data/infinite_domain/worldgen/placed_feature/hive_world_acid_pool.json
+    mechanical_validation:
+      - minecraft:lake of the verified block the_wasteland_reworked:acid (static, no fluid properties -> zero ongoing updates), barrier minecraft:deepslate
+      - rarity 1/4, heightmap OCEAN_FLOOR_WG, biome-filtered to stack_test; mirrors TWR's own acid_lake pattern
+    pending: in-client generation, spark fluid-tick check (expect 0 in a settled chunk), entity-contact damage recording
+  - checkpoint_id: EG-P01-S03-C0018
+    name: Air hazard prototype
+    status: EVIDENCE_READY
+    spike_commit: 74e4010c
+    outputs:
+      - kubejs/server_scripts/hive_world_atmosphere_proto.js
+      - kubejs/startup_scripts/hive_world_items.js (kubejs:cinderstack_filter)
+    mechanical_validation:
+      - dimension-scoped, per-second, O(players-in-Hive); honours the C0007 shape (per-band rate, PPE reduction, sealed-volume gate, clean-air recovery)
+      - per-band rate Drown 4 / Underworks 2.5 / above 1.5; filter cut to 20%; cartridge wears out; nausea/darkness/damage at 55/85; actionbar readout
+      - node --check passes
+    pending: in-client protected vs unprotected test and spark tick-cost sample against the C0008 companion budget
 
 review_queue:
   - checkpoint_id: EG-P00-S06-C0012
@@ -1585,6 +1634,21 @@ journal:
       Mechanical validation: validate_hive_world_smoke.py PASS (7 assertions), node
       --check PASS. All four checkpoints EVIDENCE_READY; in-client runtime checks and
       P00-GATE acceptance are the remaining blockers to COMPLETE.
+  - at: 2026-08-27T17:40:00-08:00
+    actor: endgame-coordinator
+    event: spike_evidence_ready
+    detail: >-
+      Extended the Phase 1 spike at commit 74e4010c (13 files, path-scoped). C0015
+      two spike biomes (dead_waste open void / stack_test buried low bands, no mob
+      spawners); C0016 3D routing via a router depth gradient + a minecraft:multi_noise
+      biome source split at depth 0.41 (~Y48); C0017 generate_hive_world_acid.py + a
+      bounded minecraft:lake of the static block the_wasteland_reworked:acid wired into
+      stack_test; C0018 hive_world_atmosphere_proto.js dimension-scoped exposure with a
+      per-band rate, a wearing stub filter cartridge, a safe-volume recovery zone, and
+      damage thresholds. validate_hive_world_smoke.py PASS (extended), node --check PASS.
+      C0015-C0018 EVIDENCE_READY. Two accidental over-broad commits during this run were
+      caught and re-scoped with git reset --soft; the pre-existing staged renames were
+      preserved.
 ```
 
 <!-- ENDGAME_STATE_END -->
