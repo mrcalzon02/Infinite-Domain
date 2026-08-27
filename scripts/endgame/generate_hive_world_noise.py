@@ -50,10 +50,14 @@ def build() -> dict:
     roof = y_gradient(296, -2.0, 316, 2.0)            # zero-crossing at ~Y306
     final_density = {"type": "minecraft:max", "argument1": crust, "argument2": roof}
 
+    # depth increases downward; feeds the multi_noise biome source (C0016 routing).
+    # depth ~ +1.0 at Y-64, ~0.41 at Y48, ~0.33 at Y64, ~-1.0 at Y319.
+    depth = y_gradient(MIN_Y, 1.0, 319, -1.0)
+
     router = {
         "barrier": 0,
         "continents": 0,
-        "depth": 0,
+        "depth": depth,
         "erosion": 0,
         "ridges": 0,
         "lava": 0,

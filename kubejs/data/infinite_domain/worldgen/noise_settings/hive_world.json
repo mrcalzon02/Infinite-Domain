@@ -22,7 +22,13 @@
   "noise_router": {
     "barrier": 0,
     "continents": 0,
-    "depth": 0,
+    "depth": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": -64,
+      "to_y": 319,
+      "from_value": 1.0,
+      "to_value": -1.0
+    },
     "erosion": 0,
     "ridges": 0,
     "lava": 0,

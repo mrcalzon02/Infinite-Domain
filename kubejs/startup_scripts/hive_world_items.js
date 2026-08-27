@@ -22,4 +22,14 @@ StartupEvents.registry('item', event => {
         .glow(true)
         .tooltip('§8Issued on arrival.')
         .tooltip('§7Use it inside the Cinderstack to return to your recorded departure point.')
+
+    // EG-P01-S03-C0018 - stub breathing filter for the air-hazard prototype.
+    // The real PPE set is EnviroMine masks + filters adapted at Phase 5 (C0070/C0072).
+    event.create('cinderstack_filter')
+        .displayName('Cinderstack Filter Cartridge')
+        .texture('minecraft:item/dried_kelp')
+        .maxStackSize(16)
+        .tooltip('§8Consumable - Phase 1 spike PPE.')
+        .tooltip('§7Carrying one cuts atmosphere exposure while it lasts.')
+        .tooltip('§7Each cartridge is spent by sustained exposure.')
 })

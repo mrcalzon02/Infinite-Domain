@@ -4,8 +4,33 @@
     "type": "minecraft:noise",
     "settings": "infinite_domain:hive_world",
     "biome_source": {
-      "type": "minecraft:fixed",
-      "biome": "infinite_domain:hive_world_stack_test"
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "infinite_domain:hive_world_dead_waste",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": [-1.0, 0.41],
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "infinite_domain:hive_world_stack_test",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": 0.0,
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": [0.41, 1.0],
+            "offset": 0.0
+          }
+        }
+      ]
     }
   }
 }

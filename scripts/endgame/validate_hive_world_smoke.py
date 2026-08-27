@@ -29,8 +29,11 @@ REG = REPO / "docs/registry-inventory"
 SPIKE_DECLARED = {
     "kubejs:cinderstack_marker",
     "kubejs:cinderstack_return_marker",
+    "kubejs:cinderstack_filter",
     "infinite_domain:hive_world",
     "infinite_domain:hive_world_stack_test",
+    "infinite_domain:hive_world_dead_waste",
+    "infinite_domain:hive_world_acid_pool",
 }
 
 failures: list[str] = []
@@ -53,16 +56,13 @@ def load_json(path: pathlib.Path):
 hive_json = [
     DATA / "dimension/hive_world.json",
     DATA / "dimension_type/hive_world.json",
-    DATA / "worldgen/noise_settings/hive_world.json",
-    DATA / "worldgen/biome/hive_world_stack_test.json",
     DATA / "advancement/hive_world/reach_cinderstack.json",
 ]
-hive_json += sorted((DATA / "worldgen/density_function/hive_world").glob("*.json")) if (
-    DATA / "worldgen/density_function/hive_world"
-).is_dir() else []
+hive_json += sorted(p for p in (DATA / "worldgen").rglob("*hive_world*.json"))
 
 arrival_fn = DATA / "function/hive_world/build_arrival.mcfunction"
 expedition_js = REPO / "kubejs/server_scripts/hive_world_expedition.js"
+atmosphere_js = REPO / "kubejs/server_scripts/hive_world_atmosphere_proto.js"
 items_js = REPO / "kubejs/startup_scripts/hive_world_items.js"
 
 # ---- 1. parse --------------------------------------------------------------
@@ -111,17 +111,23 @@ if dim is not None:
     if not (DATA / "worldgen/noise_settings/hive_world.json").is_file():
         fail("[4] dimension references noise_settings infinite_domain:hive_world but the file is missing")
     bs = gen.get("biome_source", {})
+    referenced_biomes = []
     if bs.get("type") == "minecraft:fixed":
-        biome = bs.get("biome", "")
+        referenced_biomes = [bs.get("biome", "")]
+    elif bs.get("type") == "minecraft:multi_noise":
+        referenced_biomes = [e.get("biome", "") for e in bs.get("biomes", [])]
+        if len(referenced_biomes) < 2:
+            fail("[4] multi_noise biome_source has fewer than 2 entries (routing needs a split)")
+    elif not bs:
+        fail("[4] dimension has no biome_source")
+    for biome in referenced_biomes:
         if biome.startswith("infinite_domain:") and not (
             DATA / f"worldgen/biome/{biome.split(':', 1)[1]}.json"
         ).is_file():
-            fail(f"[4] fixed biome_source references {biome} but the biome file is missing")
-    elif not bs:
-        fail("[4] dimension has no biome_source")
+            fail(f"[4] biome_source references {biome} but the biome file is missing")
 
 # ---- 5. entry pieces exist -----------------------------------------
-for p in (arrival_fn, expedition_js, items_js,
+for p in (arrival_fn, expedition_js, atmosphere_js, items_js,
           DATA / "advancement/hive_world/reach_cinderstack.json"):
     if not p.is_file():
         fail(f"[5] missing entry component: {p.relative_to(REPO)}")
@@ -168,6 +174,7 @@ def scan_string_literals(path: pathlib.Path, label: str) -> None:
 
 scan_lang_values()
 scan_string_literals(expedition_js, "hive_world_expedition.js")
+scan_string_literals(atmosphere_js, "hive_world_atmosphere_proto.js")
 scan_string_literals(items_js, "hive_world_items.js")
 adv = docs.get(DATA / "advancement/hive_world/reach_cinderstack.json")
 if adv is not None and "hive" in json.dumps(adv.get("display", {})).lower():

@@ -1,6 +1,6 @@
 {
   "$note": "Authority: docs/endgame/contracts/namespace-layout.md section 6. Every generated Hive World file maps to exactly one generator. Hand-authored files list generator=null. Manual edits to generated files are forbidden (docs/Endgame.md section 17.3); regenerate instead.",
-  "version": "hive-world-generated-output-manifest-v1",
+  "version": "hive-world-generated-output-manifest-v2",
   "entries": [
     {
       "path": "kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json",
@@ -10,23 +10,44 @@
       "disposable_spike": true
     },
     {
+      "path": "kubejs/data/infinite_domain/worldgen/biome/hive_world_dead_waste.json",
+      "generator": "scripts/endgame/generate_hive_world_biomes.py",
+      "hand_authored": false,
+      "checkpoint": "EG-P01-S02-C0015",
+      "disposable_spike": true
+    },
+    {
+      "path": "kubejs/data/infinite_domain/worldgen/biome/hive_world_stack_test.json",
+      "generator": "scripts/endgame/generate_hive_world_biomes.py",
+      "hand_authored": false,
+      "checkpoint": "EG-P01-S02-C0015",
+      "disposable_spike": true
+    },
+    {
+      "path": "kubejs/data/infinite_domain/worldgen/configured_feature/hive_world_acid_pool.json",
+      "generator": "scripts/endgame/generate_hive_world_acid.py",
+      "hand_authored": false,
+      "checkpoint": "EG-P01-S03-C0017",
+      "disposable_spike": true
+    },
+    {
+      "path": "kubejs/data/infinite_domain/worldgen/placed_feature/hive_world_acid_pool.json",
+      "generator": "scripts/endgame/generate_hive_world_acid.py",
+      "hand_authored": false,
+      "checkpoint": "EG-P01-S03-C0017",
+      "disposable_spike": true
+    },
+    {
       "path": "kubejs/data/infinite_domain/dimension/hive_world.json",
       "generator": null,
       "hand_authored": true,
-      "checkpoint": "EG-P01-S01-C0013"
+      "checkpoint": "EG-P01-S01-C0013 (biome_source updated at EG-P01-S02-C0016)"
     },
     {
       "path": "kubejs/data/infinite_domain/dimension_type/hive_world.json",
       "generator": null,
       "hand_authored": true,
       "checkpoint": "EG-P01-S01-C0013"
-    },
-    {
-      "path": "kubejs/data/infinite_domain/worldgen/biome/hive_world_stack_test.json",
-      "generator": null,
-      "hand_authored": true,
-      "checkpoint": "EG-P01-S01-C0013",
-      "note": "Placeholder biome; replaced by the real dead_waste + stack_test pair at EG-P01-S02-C0015."
     },
     {
       "path": "kubejs/data/infinite_domain/function/hive_world/build_arrival.mcfunction",
@@ -49,24 +70,27 @@
       "note": "Travel logic moves to packdev/hive-world-companion at Phase 5."
     },
     {
+      "path": "kubejs/server_scripts/hive_world_atmosphere_proto.js",
+      "generator": null,
+      "hand_authored": true,
+      "checkpoint": "EG-P01-S03-C0018",
+      "disposable_spike": true,
+      "note": "Data-only stand-in for the companion atmosphere service."
+    },
+    {
       "path": "kubejs/startup_scripts/hive_world_items.js",
       "generator": null,
       "hand_authored": true,
-      "checkpoint": "EG-P01-S04-C0019",
+      "checkpoint": "EG-P01-S04-C0019 (filter item added at EG-P01-S03-C0018)",
       "disposable_spike": true
     }
   ],
   "deferred_generators": [
     {
-      "family": "kubejs/data/infinite_domain/worldgen/density_function/hive_world/**",
+      "family": "kubejs/data/infinite_domain/worldgen/density_function/hive_world_*.json",
       "planned_generator": "scripts/endgame/generate_hive_world_density.py",
       "checkpoint": "EG-P03-S01-C0037",
       "note": "The Phase 1 spike inlines its density in the noise settings; the named density-function family is Phase 3 work."
-    },
-    {
-      "family": "kubejs/data/infinite_domain/worldgen/biome/hive_world_*.json",
-      "planned_generator": "scripts/endgame/generate_hive_world_biomes.py",
-      "checkpoint": "EG-P01-S02-C0015"
     }
   ]
 }
