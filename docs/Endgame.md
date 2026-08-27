@@ -4,7 +4,7 @@
 
 **Document status:** authoritative planning and automation-control document
 
-**Program status:** active; Phase 0 capability audit is in progress
+**Program status:** active; Phase 0 identity contract is ready
 
 **Working dimension ID:** `infinite_domain:hive_world`
 
@@ -559,6 +559,83 @@ C0002 must build its versioned constraint table from these boundaries:
 
 Required C0002 columns are: `capability_or_constraint`, `desired_hive_role`, `evidence_path_or_class`, `installed_version`, `verified_state`, `owning_system`, `data_or_code_boundary`, `compatibility_risk`, `runtime_test_required`, `fallback`, and `decision_owner`.
 
+### Accepted capability and constraint audit — `EG-P00-S01-C0002`
+
+**Audit version:** `EG-P00-S01-C0002-capability-audit-v1`
+
+**Status:** `COMPLETE` on 2026-08-27
+
+**Base:** `07b2bafd`
+
+**Classification vocabulary:** `usable`, `usable-with-adapter`, `unsuitable`, `runtime-unverified`
+
+This audit fixes ownership boundaries without choosing the later identity, spatial hierarchy, numeric height, architectural grammar, visual language, or hazard balance. Coordinator validation corrected stale class names in the worker handoff: installed Isekai uses `com.kuronami.isekaiapi.impl.DimensionResolver`, EnviroMine uses `mc.sayda.enviromine.*`, and Stellaris uses `com.st0x0ef.stellaris.*`. The tables below use the installed class paths and supersede the handoff spellings.
+
+#### Required ownership boundary
+
+- The Hive datapack owns dimension/type JSON, noise and density graphs, biome-source configuration, features, structures, structure sets, pools, tags, and reproducible generated worldgen data.
+- A dedicated Hive NeoForge companion module owns transactional travel and recovery, dimension-scoped atmosphere interoperability, PPE adapters, custom client effects, and runtime telemetry.
+- Isekai is an optional codec/provider layer pending isolated tests; it does not own Hive identity or architecture.
+- Vanilla jigsaw and template pools may assemble bounded modules. Deterministic macro axes and full-city planning require Hive-owned placement logic.
+- Lost Cities is a potential donor grammar/corpus only after live codec, palette, rotation, terrain, and performance acceptance. It does not own the top-level Hive generator.
+- Wastelands `RadiationManager`, reached through `infinite-domain-unified-radiation`, remains the sole radiation-dose authority. Toxicity, oxygen, acid contact, corrosion, and shelter are separate systems.
+- KubeJS owns datapack delivery, recipes, quests, and disposable prototypes, not critical travel transactions or persistent hazard state.
+
+#### Core registry, terrain, and biome constraints
+
+| capability_or_constraint | desired_hive_role | evidence_path_or_class | installed_version | verified_state | owning_system | data_or_code_boundary | compatibility_risk | runtime_test_required | fallback | decision_owner |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Dimension and dimension-type ownership | Register an independent Hive level without replacing vanilla dimensions. | `kubejs/data/cyberspace/dimension/darknet_dimension.json`; matching dimension type; runtime sublevel log | MC 1.21.1; NeoForge 21.1.248; KubeJS 2101.7.2 | usable-with-adapter | Hive datapack; companion module only for runtime services | Registry JSON is data; transfer, recovery, and original effects are code. | Existing world-preset overrides can seize Overworld ownership; Isekai resolver only maps an existing biome-source object to a level. | Load a disposable Hive namespace twice, generate chunks, and prove Overworld, Nether, and End are unchanged. | Minimal vanilla noise dimension with no third-party generator hook. | C0003 identity plus registry implementation checkpoint |
+| Height-contract support | Support the later-selected bottom-to-top extent. | `wastelands:worldgen/noise_settings/wasteland`; Isekai runtime build-height report | MC 1.21.1; Isekai 2.1.0 | runtime-unverified | Hive dimension type and noise settings | `min_y`, `height`, `logical_height`, and density bounds are data; dependent algorithms are code. | Structures, features, lighting, navigation, and hazards may assume a narrower range. | After C0006, probe bottom, transition, sea, upper, and roof bands; relog and pregenerate. | Demonstrated vanilla `-64..319` envelope. | C0006 height decision |
+| Noise settings and density functions | Generate wasteland exterior and macro mass/void masks. | `kubejs/data/wastelands/worldgen/noise_settings/wasteland.json`; `datapacks/gradient_ocean_pack/.../density_function/` | Isekai 2.1.0; KubeJS 2101.7.2 | usable-with-adapter | Hive datapack | Density graphs are data; custom codecs are Isekai code. | Live gradient pack overrides shared worldgen and conflicts with `PROJECT_INDEX.md`. | Codec reload, fixed-seed density probes, border checks, deterministic rerun, and pregeneration timing. | Vanilla density functions and isolated Hive noise router. | Terrain prototype and C0009 ownership |
+| Isekai climate and rule biome sources | Route climate regions and exact Y/mask-based biome bands. | `com.kuronami.isekaiapi.biomesource.ClimateZonesBiomeSource`; `RuleBiomeSource`; zone classes | Isekai 2.1.0 | runtime-unverified | Isekai codecs configured by Hive datapack | Rules, fallback, Y ranges, and thresholds are data; codec behavior and seed binding are code. | Climate zones alone do not prove raw-Y strata; rule source has no local Hive runtime example. | Fixed-seed source with fallback, Y, climate, and 3D-noise rules sampled across restarts. | Vanilla multi-noise for broad routing; companion biome source only if required. | C0016 biome-routing spike |
+
+#### Structure and city constraints
+
+| capability_or_constraint | desired_hive_role | evidence_path_or_class | installed_version | verified_state | owning_system | data_or_code_boundary | compatibility_risk | runtime_test_required | fallback | decision_owner |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Isekai assembled structures | Potential bounded composite exterior sites. | `com.kuronami.isekaiapi.structure.AssembledStructure`; bytecode uses `WORLD_SURFACE_WG` and rejects Y at/below sea level | Isekai 2.1.0 | unsuitable | Isekai | Feature holder set is data; surface-centered assembly is code. | Cannot guarantee full-height axes, internal volume, or below-sea Hive placement. | Only if reused: one bounded site tested for sea rejection, rotation, bounds, and seating. | Vanilla jigsaw or deterministic generated structure data. | Structure-system selection |
+| Isekai grounded-template structures | Potential small exterior landmarks. | `com.kuronami.isekaiapi.structure.GroundedTemplateStructure`; template, clearance, slope, offset codec fields | Isekai 2.1.0 | runtime-unverified | Isekai | Template and constraints are data; corner/center `WORLD_SURFACE_WG` sampling is code. | One-template surface placement cannot assemble a city; no local loaded example exists. | Test flat, sloped, fluid-adjacent, and chunk-border terrain and every codec bound. | Vanilla template-pool placement or bounded placed feature. | Exterior-landmark prototype |
+| Jigsaw, random-spread, and template-pool infrastructure | Assemble bounded modules while macro planning remains deterministic. | `kubejs/data/infinite_domain/worldgen/{structure,structure_set,template_pool}`; 624 NBT templates | Vanilla 1.21.1; 254 structures, 139 sets, 254 pools | usable-with-adapter | Vanilla worldgen configured by Hive datapack | Pools, processors, definitions, and sets are data; placement algorithms are vanilla code. | Random spread cannot guarantee long axes, continuous circulation, or exact district joins. | Codec, seed, rotation, connector, terrain, seam, separation, and pregeneration tests. | Deterministic macro anchors with jigsaw only inside bounded cells. | P04 structure checkpoints |
+| Lost Cities grammar and converted corpus | Supply selected donor parts or bounded ruin grammar. | `config/lostcities/profiles/infinite_domain.json`; `mcjty.lostcities.api.ILostCities`; conversion report and converted parts | Lost Cities 1.21-8.4.1; 14,583 resources; 11,940 converted parts | runtime-unverified | Lost Cities for donor decoding; Hive retains top-level authority | Profiles/parts are data; grid, feature generation, and registration are Lost Cities code. | Surface-city/grid assumptions conflict with full-height Hive; runtime codec gate remains pending. | Minimal isolated profile and corpus slice tested for codecs, palettes, floors, rotation, bounds, and generation time. | Feed selected source NBT to vanilla pools without Lost Cities generation. | Lost Cities acceptance spike |
+| Existing Lost Cities highway adapter | Keep routes out of prohibited regions. | `packdev/lostcities-highway-compat/.../HighwayBarrier.java`; mixin | Local 1.0.0 against Lost Cities 1.21-8.4.1 | unsuitable | Existing compatibility module | Barrier tag is data; interception and sampling are code. | Hardcodes `server.overworld()`, sea-level sampling, and 16-block steps; not dimension-generic. | If redesigned: test Hive level selection, vertical routes, crossings, reroutes, and absent-mod behavior. | Hive-owned deterministic interhive-axis planner. | C0005 and companion-module checkpoint |
+
+#### Environment, travel, and client constraints
+
+| capability_or_constraint | desired_hive_role | evidence_path_or_class | installed_version | verified_state | owning_system | data_or_code_boundary | compatibility_risk | runtime_test_required | fallback | decision_owner |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Acid fluid, feature, contact, and corrosion | Create bounded acidic-water hazards and later-defined material interactions. | TWR `net.mcreator.thewastelandreworked.block.AcidBlock`; collision procedure; acid configured/placed features | File 0.6.0; manifest 1.0.5 | usable-with-adapter | TWR acid plus Hive placement/contact adapter | Lake placement is data; entity damage and water reaction are mod code; corrosion is absent. | Generic damage and water-to-smooth-basalt reaction exist; item, boat, vehicle, PPE, corrosion, and border policy do not. | Player, mob, item, boat, vehicle, PPE, water, updates, flow, reload, and chunk-edge matrix. | Bounded decorative pools plus companion contact handler; corrosion disabled. | C0007 and C0017 |
+| EnviroMine dimension toxicity | Represent choking atmosphere throughout the Hive. | `config/enviromine/enviromine-common.toml`; `mc.sayda.enviromine.procedures.OnPlayerTickProcedure`; `EnviromineUpdateProcedure` | EnviroMine Lite 1.1.3.1 | unsuitable | Current EnviroMine implementation | Threshold/global limit are config; toxicity is internal Y-derived player state. | `LimitOverworld=false` executes in every dimension, but toxicity derives from depth below Y63; no dimension-atmosphere API was found. | If adapted: Hive/Overworld isolation, full Y range, respawn, relog, dimension change, and clean-air behavior. | Companion dimension-scoped atmosphere; adapt EnviroMine UI/equipment only. | C0007 and C0018 |
+| EnviroMine masks, filters, vents, and safe volumes | Provide consumable PPE and bounded refuge. | `mc.sayda.enviromine.procedures.GasMaskOnTickProcedure`; `VentEffectProcedure`; config | EnviroMine Lite 1.1.3.1 | usable-with-adapter | EnviroMine equipment/effect with Hive atmosphere adapter | Drain/range are config; filter state and `CLEAN_AIR` AABB effect are code. | Vent inflates an AABB and does not model walls, sealing, breaches, or airtightness. | Toxicity bands, exhaustion, overlapping vents, walls, power/fluid loss, unload, relog, and breach tests. | Treat vents as explicit safe bubbles; companion owns true sealed volumes. | PPE/shelter checkpoints |
+| Unified radiation | Maintain one radiation-dose authority distinct from atmosphere. | `packdev/unified-radiation/.../InfiniteDomainRadiation.java`; Wastelands `RadiationManager` | Adapter 1.0.0; Wastelands 2.4.0 | usable | Wastelands through unified-radiation | Tags are data; dose, migration, suppression, and protection are code. | Hive radiation must be deliberate; acid/air/oxygen PPE must not imply radiation protection. | Tagged/untagged biomes, stacking, shielding, contamination, death/relog, foreign-effect suppression. | No ambient Hive radiation; retain localized tagged sources. | Radiation-policy checkpoint |
+| Stellaris oxygen | Potentially own non-breathable state and oxygen rooms. | `com.st0x0ef.stellaris.common.data.planets.Planet`; `oxygen.DimensionOxygenManager`; `OxygenRoom` | Stellaris 1.4.25 | runtime-unverified | Provisionally Stellaris after custom-planet acceptance | Planet oxygen flag is data; rooms, breath checks, and distributors are code. | No local custom Hive planet exists; room lifecycle and equipment interop are unproved. | Disposable oxygen-false planet; breathing, rooms, breach, unload, relog, death, and mask/vent interaction. | Companion air budget with explicit Stellaris gear adapters. | Oxygen acceptance spike |
+| Entry travel | Perform endgame-gated server-authoritative transfer to a safe arrival. | Stellaris `com.st0x0ef.stellaris.common.utils.TeleportUtil`; Cyberspace transfer procedures; absence searches | Stellaris 1.4.25; Cyberspace 4.1.1; MC 1.21.1 | usable-with-adapter | Hive companion travel service | Gate definitions may be data; validation, origin capture, safe arrival, cooldown, and transfer are code. | Existing flows are hardcoded to their own dimensions; generic Hive travel does not exist. | Gate, missing level, unsafe/occupied target, passenger, repeat use, restart, and permission failure. | Operator-only fixed-coordinate command in disposable spike. | C0019 entry-loop implementation |
+| Return, death, disconnect, and stranding recovery | Guarantee return without duplication, void loops, or permanent stranding. | `darknet_anchor.js`; `darknet_session_injector.js`; Cyberspace procedures; repository absence search | KubeJS 2101.7.2; Cyberspace 4.1.1 | unsuitable | No generic owner; Hive companion required | Optional gate definitions are data; transactional origin/recovery state is code. | Darknet recovery relies on Cyberspace internals; no generic transaction/watchdog exists. | Normal return, death, transfer disconnect, missing Hive, invalid origin, deleted portal, restart, passenger, repeated activation. | Force verified Overworld spawn and clear incomplete transaction. | C0019 travel/recovery implementation |
+| Client sky, fog, and dimension effects | Render the later visual contract without client crashes or leakage. | Darknet dimension type reuses `minecraft:the_nether`; Cyberspace special-effects classes | MC 1.21.1; Cyberspace 4.1.1 | runtime-unverified | Datapack for existing effect key; companion client registration for original effect | Dimension type chooses an ID in data; original rendering is client code. | Reused vanilla effect is proven; original Hive effect and side safety are not. | Dedicated-server start, join, transitions, height samples, shader/resource-pack compatibility, return cleanup. | Reuse `minecraft:the_nether` during Phase 1. | C0021 and visual-identity checkpoint |
+
+#### Tooling, validation, and repository constraints
+
+| capability_or_constraint | desired_hive_role | evidence_path_or_class | installed_version | verified_state | owning_system | data_or_code_boundary | compatibility_risk | runtime_test_required | fallback | decision_owner |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Companion NeoForge module pattern and build portability | Host runtime services in an isolated, reproducible module. | `packdev/unified-radiation`; `packdev/lostcities-highway-compat`; direct-`javac` build scripts | NeoForge 21.1.248; Java 21; local companion precedents | unsuitable | Future Hive companion module | IDs/config are declarative; events, transfer, persistence, adapters, and client hooks are code. | Current scripts hardcode local paths/JDK/dependencies and destructively replace installed JARs. | Portable clean build twice, copied-instance install, client/server start, optional-mod absence. | Minimal pinned Gradle NeoForge module with no direct install step. | C0009 and C0011 |
+| KubeJS data and scripting roles | Deliver resources, recipes, quests, and temporary hooks. | `kubejs/data`; `kubejs/server_scripts`; runtime script counts | KubeJS 2101.7.2 | usable-with-adapter | KubeJS for data/prototypes | Registries/tags/recipes/loot are data; reload-time JavaScript is not critical transaction storage. | Current server baseline is 20/21; script lifecycle is weak for recovery state. | Restore 21/21, reload twice, dedicated-server start, zero new Hive errors, scoped hook tests. | Phase 1 data-only; critical logic in companion module. | C0009 and implementation checkpoints |
+| Validation, QA worlds, and runtime gates | Produce resumable static, codec, visual, recovery, and performance evidence. | Structure QA builders/validators; three pending validation reports; QA world | Repository suite at base 07b2bafd | usable-with-adapter | Repository validators plus disposable fixed-seed worlds | Fixtures/reports are data; validators are code; experience requires independent evidence. | Existing static passes do not prove launch, walkthrough, terrain, rotation, or pregeneration. | Fixed seeds/coordinates for registry, terrain, structures, hazards, recovery, logs, and timing. | Command-placed fixtures and small probes until integrated generation exists. | Every phase gate and validator |
+| Clean runtime baseline | Make all new Hive warnings and errors attributable. | `logs/latest.log`; KubeJS 20/21; missing loot/resource errors; Isekai warning | Current instance at 07b2bafd | unsuitable | Coordinator and baseline-repair work | Warning allowlist is documentation; corrections span data and code. | Existing errors can conceal Hive codec, resource, and lifecycle failures. | Capture pre-Hive startup/reload baseline; require no new Hive errors and approved unchanged warnings. | Copied minimal instance with required dependencies only. | Baseline-repair and phase-gate coordinator |
+| Namespace and generated-output ownership | Give every artifact one source, generator, validator, and rollback. | `PROJECT_INDEX.md`; live `datapacks/gradient_ocean_pack`; conversion/compilation scripts; misplaced `lyran_research.nbt` | Repository state at 07b2bafd | unsuitable | Unresolved until C0009 | Namespaces/manifests/assets are data; generation/install orchestration is code. | Index conflicts with live pack; output domains overlap; binary NBT occupies a JSON registry directory. | Regenerate twice byte-identically, registry-path lint, reload, removal/rollback proof. | Isolated Hive namespace/output tree with one manifest and generator owner. | C0009 namespace/layout |
+
+#### Clean-baseline prerequisites before Phase 1 evidence
+
+1. Repair the duplicate KubeJS declaration and restore server scripts to `21/21`.
+2. Resolve or explicitly allowlist existing project and third-party reload errors; require zero new Hive-namespaced errors.
+3. Resolve `gradient_ocean_pack` source/installation/index ownership before adding Hive overrides.
+4. Move, remove, or correctly classify the binary NBT under the JSON worldgen registry path.
+5. Establish a disposable fixed-seed Hive QA world with recorded coordinates.
+6. Gate registry reload, entry/return, death/login/disconnect recovery, oxygen/toxicity/radiation separation, acid contacts, structure seams/rotation, and pregeneration timing.
+7. Select a portable, idempotent companion-module build; do not reuse destructive hardcoded scripts unchanged.
+8. Assign every generated output exactly one authoritative generator and forbid manual edits to generated artifacts.
+
+This table is a capability boundary, not architecture approval. C0003 may now establish the setting identity without reopening C0001 or C0002.
+
 ### Exit gate P00-GATE
 
 - dimension architecture and height contract accepted;
@@ -871,10 +948,10 @@ program:
   name: Endgame
   status: ACTIVE
   current_phase: P00
-  current_stage: S01
+  current_stage: S02
   current_gate: P00-GATE
-  next_checkpoint: EG-P00-S01-C0002
-  updated_at: 2026-08-27T12:16:00-08:00
+  next_checkpoint: EG-P00-S02-C0003
+  updated_at: 2026-08-27T12:37:14-08:00
   updated_by: endgame-coordinator
 
 phase_ledger:
@@ -940,10 +1017,28 @@ completed_checkpoints:
       - representative JSON definitions parsed successfully
       - installed Isekai, Lost Cities, and EnviroMine versions matched local artifacts and runtime evidence
       - pre-existing runtime failures recorded as constraints rather than accepted capabilities
+  - checkpoint_id: EG-P00-S01-C0002
+    phase: P00
+    stage: S01
+    status: COMPLETE
+    owner: endgame-capability-constraint-worker
+    accepted_at: 2026-08-27T12:37:14-08:00
+    accepted_by: endgame-coordinator
+    base_commit: 07b2bafd
+    integration_commit: SELF
+    evidence:
+      - docs/Endgame.md#accepted-capability-and-constraint-audit--eg-p00-s01-c0002
+      - 22 rows contain all eleven required fields and use only the four allowed classifications
+      - coordinator corrected class-package evidence against installed JAR entries before acceptance
+    validation:
+      - read-only scope respected; no worker paths changed
+      - high-risk Isekai, EnviroMine, Stellaris, Lost Cities adapter, runtime-log, and evidence-path claims independently spot-checked
+      - every row names a runtime test, fallback, and decision owner
+      - identity, spatial, architecture, numeric-height, and hazard-policy decisions remain deferred
 
 latest_handoff:
-  checkpoint_id: EG-P00-S01-C0002
-  next_safe_action: Reserve a read-only capability-audit worker to produce the versioned constraint table from the accepted C0001 inventory.
+  checkpoint_id: EG-P00-S02-C0003
+  next_safe_action: Reserve the identity-contract checkpoint and establish original setting terminology, placeholder policy, and IP boundary without changing technical capability decisions.
 
 journal:
   - at: 2026-08-27T00:00:00-08:00
@@ -958,6 +1053,14 @@ journal:
     actor: endgame-coordinator
     event: checkpoint_completed
     detail: Accepted the read-only source inventory after independent path, JSON, installed-version, registry-count, configuration, and runtime-log checks; released C0001 and made EG-P00-S01-C0002 ready.
+  - at: 2026-08-27T12:22:52-08:00
+    actor: endgame-coordinator
+    event: checkpoint_reserved
+    detail: Reserved EG-P00-S01-C0002 read-only at base 07b2bafd for endgame-capability-constraint-worker; lease expires 2026-08-27T13:52:52-08:00.
+  - at: 2026-08-27T12:37:14-08:00
+    actor: endgame-coordinator
+    event: checkpoint_completed
+    detail: Accepted the corrected 22-row capability and constraint audit after schema checks and independent class, config, source, runtime-log, and path spot checks; released C0002 and made EG-P00-S02-C0003 ready.
 ```
 
 <!-- ENDGAME_STATE_END -->
@@ -1159,6 +1262,6 @@ Anything less is a milestone, not completion.
 
 # 20. Initial next action
 
-Reserve `EG-P00-S01-C0002`.
+Reserve `EG-P00-S02-C0003`.
 
-Its only task is to convert the accepted C0001 source inventory into the required versioned capability/constraint table. It must inspect codec and API boundaries rather than infer support from installation, distinguish data-driven functions from companion-module work, name runtime tests and fallbacks, and leave the identity, spatial, architecture, height, and hazard decisions to their later checkpoints. It makes no production implementation changes. Its handoff should make `EG-P00-S02-C0003` immediately executable by a different worker.
+Its only task is to establish an original Infinite Domain setting identity for the Hive World: working name, player-facing terminology, faction-placeholder policy, and explicit IP boundary. It may draw on the approved experiential pillars but must not copy protected names, factions, iconography, prose, maps, or distinctive narrative elements from the inspiration. It does not choose spatial metrics, architecture implementation, height, or hazard balance. Its handoff should make `EG-P00-S02-C0004` immediately executable by a different worker.
