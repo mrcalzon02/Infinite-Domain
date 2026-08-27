@@ -798,6 +798,31 @@ Deferred: tuned thresholds and recorded baseline hardware → `C0021`, `C0035`, 
 - **Offline smoke validator** (`scripts/endgame/validate_hive_world_smoke.py`): JSON parse, reference resolution, height-contract match, biome-source reference, arrival IDs, forbidden-shared-path check, and a case-insensitive "no `hive` in any lang value" check — runs with no live instance.
 - **Evidence:** `docs/endgame/evidence/<checkpoint-id>/`. **Removal test:** documented path list, move aside, relaunch, assert other dimensions unchanged (feeds `C0023`).
 
+### Accepted Phase 1 backlog — `EG-P00-S06-C0011`
+
+**Status:** `COMPLETE` on 2026-08-27.
+
+**Base:** `6552b959`
+
+**Supporting file:** `docs/endgame/phase-1-backlog.md` (one expansion block per checkpoint C0013–C0024 with owned paths, dependencies, atomic output, evidence, and validation).
+
+- Every Phase 1 checkpoint has exact owned paths and a single validation, and respects the §4.5 atomic sizing rules.
+- **Fixed Phase 1 constants:** arrival anchor `infinite_domain:hive_world (8, 64, 8)`; Phase 1 reuses `minecraft:the_nether` client effects; the spike entry gate is an operator/creative item + command (no recipe, no automation — the constructible mechanism is Phase 6 `C0084`).
+- **User-priority sequencing recorded:** the coordinator's Phase 1 order is `C0013 → C0014 → C0020 → C0019` (dimension, then safe terrain, then arrival platform, then the reversible entry/return mechanic), *then* `C0015–C0018` (biomes, routing, acid, air hazard), *then* `C0021–C0024`. The dependency graph permits it because C0019/C0020 need only C0013 + C0014 + the fixed anchor.
+
+### Assembled Phase 0 gate — `EG-P00-S06-C0012`
+
+**Status:** `REVIEW_NEEDED` on 2026-08-27. Evidence is assembled; an **independent integration review** is required before Phase 1 advances. The coordinator authored every Phase 0 contract and cannot self-approve this gate (§7.5).
+
+**Base:** `6552b959`
+
+**Supporting file:** `docs/endgame/gates/P00-GATE-evidence.md` (checkpoint completion table, coordinator mechanical review, the §8 completeness matrix, the P00-GATE exit-criteria check, and the open items for the reviewer).
+
+- All eleven Phase 0 contract checkpoints (C0001–C0011) are `COMPLETE` with integration commits.
+- **Completeness matrix:** `PASS` on Performance (budget + method), Documentation, and Distribution (policy); `DEFERRED` with a named future checkpoint on the other twelve axes; no axis silent, none `NOT_APPLICABLE`.
+- **P00-GATE exit criteria:** all five met.
+- **Open items for the reviewer:** confirm/replace the flavour names; confirm the canon hook; confirm the Phase 1 arrival anchor and "reuse Nether effects"; decide whether to seed a taller-height checkpoint.
+
 ### Exit gate P00-GATE
 
 - dimension architecture and height contract accepted;
@@ -1112,19 +1137,30 @@ program:
   current_phase: P00
   current_stage: S06
   current_gate: P00-GATE
-  next_checkpoint: EG-P00-S06-C0011
-  updated_at: 2026-08-27T15:33:00-08:00
+  next_checkpoint: EG-P00-S06-C0012
+  updated_at: 2026-08-27T16:05:00-08:00
   updated_by: endgame-coordinator
+  notes: >-
+    C0001-C0011 COMPLETE. C0012 phase-0 gate is REVIEW_NEEDED (needs an independent
+    integration review). By explicit owner direction the coordinator has also begun
+    the Phase 1 disposable spike (dimension registry, baseline generator, and the
+    enter/exit mechanics) ahead of P00-GATE. Every Phase 1 output lands as
+    EVIDENCE_READY, not COMPLETE, and is reversible per C0023; no Phase 1 checkpoint
+    is integrated as COMPLETE until P00-GATE is accepted.
 
 phase_ledger:
   - phase: P00
     name: Program contract and capability audit
     status: IN_PROGRESS
     gate: P00-GATE
+    note: C0001-C0011 COMPLETE; C0012 gate REVIEW_NEEDED.
   - phase: P01
     name: Minimal technical dimension spike
-    status: NOT_STARTED
+    status: IN_PROGRESS
     gate: P01-GATE
+    note: >-
+      Owner-directed disposable spike started ahead of P00-GATE. Outputs are
+      EVIDENCE_READY only and reversible per C0023; not COMPLETE until P00-GATE passes.
   - phase: P02
     name: Full-height greybox proof
     status: NOT_STARTED
@@ -1155,34 +1191,65 @@ phase_ledger:
     gate: P08-GATE
 
 active_reservations:
-  - checkpoint_id: EG-P00-GATE-RUN
-    phase: P00
-    stage: S02-S06
+  - checkpoint_id: EG-P01-SPIKE-RUN
+    phase: P01
+    stage: S01-S04
     status: RESERVED
     owner: endgame-coordinator
-    reserved_at: 2026-08-27T14:35:00-08:00
-    lease_expires_at: 2026-08-27T18:35:00-08:00
-    last_heartbeat_at: 2026-08-27T14:35:00-08:00
-    base_commit: 5df1ea34
+    reserved_at: 2026-08-27T16:05:00-08:00
+    lease_expires_at: 2026-08-27T20:05:00-08:00
+    last_heartbeat_at: 2026-08-27T16:05:00-08:00
+    base_commit: <S06 commit>
     write_scope:
-      - docs/Endgame.md
+      - kubejs/data/infinite_domain/dimension/hive_world.json
+      - kubejs/data/infinite_domain/dimension_type/hive_world.json
+      - kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json
+      - kubejs/data/infinite_domain/worldgen/density_function/hive_world/**
+      - kubejs/data/infinite_domain/function/hive_world/**
+      - kubejs/data/infinite_domain/advancement/hive_world/**
+      - kubejs/server_scripts/hive_world_expedition.js
+      - kubejs/assets/infinite_domain/lang/en_us.json (hive_world.* keys only)
+      - scripts/endgame/**
       - docs/endgame/**
-    generated_outputs: []
+      - docs/Endgame.md (ledger only)
+    generated_outputs:
+      - kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json
+      - kubejs/data/infinite_domain/worldgen/density_function/hive_world/**
     read_dependencies:
-      - docs/Endgame.md#accepted-source-inventory--eg-p00-s01-c0001
-      - docs/Endgame.md#accepted-capability-and-constraint-audit--eg-p00-s01-c0002
+      - docs/endgame/phase-1-backlog.md
+      - docs/endgame/contracts/namespace-layout.md
+      - docs/endgame/contracts/height-contract.md
     required_outputs:
-      - Documentation-only Phase 0 contracts C0004 through C0011, each a bounded decision with a supporting file under docs/endgame/.
-      - Phase 0 gate evidence assembly (C0012) left at REVIEW_NEEDED for independent integration review.
+      - C0013 dimension + dimension_type registry skeleton.
+      - C0014 baseline noise generator with a safe arrival platform terrain.
+      - C0020 deterministic safe-arrival platform.
+      - C0019 reversible operator entry/return mechanic with death, disconnect, and missing-destination handling.
     required_validation:
-      - Every contract is internally consistent with C0001, C0002, C0003, and fixed canon.
-      - No contract selects production art, structure geometry, or a taller-than-vanilla height.
-      - The completeness matrix marks every axis PASS, NOT_APPLICABLE, or DEFERRED with a named checkpoint.
-    next_safe_action: Author C0004 spatial metrics and rename the placeholder §3 band identities, then continue sequentially through C0011.
+      - scripts/endgame/validate_hive_world_smoke.py passes offline.
+      - No shared minecraft:/wastelands:/gradient_ocean_pack worldgen file is modified.
+      - No player-facing lang value contains the substring "hive".
+    next_safe_action: Author C0013 dimension and dimension_type JSON to the C0006 height contract, then C0014 noise settings, then C0020 arrival, then C0019 entry.
+    note: >-
+      Owner-directed disposable spike ahead of P00-GATE. Outputs are EVIDENCE_READY,
+      not COMPLETE. Fully reversible per the C0010 removal procedure and C0023.
 
 blocked_checkpoints: []
 
-review_queue: []
+review_queue:
+  - checkpoint_id: EG-P00-S06-C0012
+    status: REVIEW_NEEDED
+    review_class: Integration
+    requested_at: 2026-08-27T16:05:00-08:00
+    reviewer: unassigned (independent of the coordinator)
+    evidence: docs/endgame/gates/P00-GATE-evidence.md
+    blocking: >-
+      Phase 1 checkpoints may not be marked COMPLETE until this gate is accepted.
+      The disposable spike build may proceed (owner-directed) but stays EVIDENCE_READY.
+    open_items:
+      - Confirm or replace the working flavour names (Ordan, the Cinderstack, tiers/decks).
+      - Confirm the working canon hook (Atlas/Helion venture, Pleroma logistics) before Phase 6 writing.
+      - Confirm the Phase 1 arrival anchor (8, 64, 8) and the reuse of minecraft:the_nether client effects.
+      - Decide whether to seed a taller-height compatibility checkpoint (C0006 default: off).
 
 completed_checkpoints:
   - checkpoint_id: EG-P00-S01-C0001
@@ -1359,10 +1426,32 @@ completed_checkpoints:
       - offline smoke validator has seven concrete assertions including the no-"hive"-in-lang-values check
       - fresh-worker runbook and removal-test procedure are step-numbered and reproducible
     notes: Closes stage S05.
+  - checkpoint_id: EG-P00-S06-C0011
+    phase: P00
+    stage: S06
+    status: COMPLETE
+    owner: endgame-coordinator
+    accepted_at: 2026-08-27T16:05:00-08:00
+    accepted_by: endgame-coordinator
+    base_commit: 6552b959
+    integration_commit: SELF
+    evidence:
+      - docs/Endgame.md#accepted-phase-1-backlog--eg-p00-s06-c0011
+      - docs/endgame/phase-1-backlog.md
+    validation:
+      - C0013-C0024 each expanded with exact owned paths, dependencies, atomic output, evidence, and one validation
+      - no checkpoint exceeds the section 4.5 atomic sizing rules
+      - fixed Phase 1 constants recorded (arrival anchor, Nether-effects reuse, operator entry gate)
+      - user-priority sequencing recorded: C0013 -> C0014 -> C0020 -> C0019 before biomes/acid/air
 
 latest_handoff:
-  checkpoint_id: EG-P00-S06-C0011
-  next_safe_action: Expand Phase 1 checkpoints C0013-C0024 into exact owned paths, dependencies, and evidence, none exceeding the atomic sizing rules; write docs/endgame/phase-1-backlog.md.
+  checkpoint_id: EG-P00-S06-C0012
+  status: REVIEW_NEEDED
+  next_safe_action: >-
+    An independent integration reviewer accepts or rejects the assembled Phase 0 gate
+    (docs/endgame/gates/P00-GATE-evidence.md) and resolves the four open items. In
+    parallel, the coordinator builds the owner-directed Phase 1 spike (C0013, C0014,
+    C0020, C0019) as EVIDENCE_READY.
 
 journal:
   - at: 2026-08-27T00:00:00-08:00
@@ -1413,6 +1502,18 @@ journal:
     actor: endgame-coordinator
     event: checkpoint_completed
     detail: Accepted EG-P00-S05-C0009 (namespace/layout - full datapack tree, generator ownership manifest, no-shared-override constraint, companion-module build policy) and EG-P00-S05-C0010 (test strategy - reserved seed set, per-band probes, offline smoke validator spec, fresh-worker runbook, removal-test procedure). Closed stage S05; made EG-P00-S06-C0011 ready.
+  - at: 2026-08-27T16:05:00-08:00
+    actor: endgame-coordinator
+    event: checkpoint_completed
+    detail: Accepted EG-P00-S06-C0011 (Phase 1 backlog - C0013-C0024 expanded with exact paths, deps, and evidence; fixed Phase 1 constants; user-priority sequencing recorded). Closed the EG-P00-GATE-RUN documentation reservation.
+  - at: 2026-08-27T16:05:00-08:00
+    actor: endgame-coordinator
+    event: gate_assembled
+    detail: EG-P00-S06-C0012 phase-0 gate evidence assembled in docs/endgame/gates/P00-GATE-evidence.md and set REVIEW_NEEDED - all eleven contract checkpoints COMPLETE, completeness matrix PASS on Performance/Documentation/Distribution and DEFERRED (named) elsewhere, five exit criteria met. Queued for an independent integration review with four open items.
+  - at: 2026-08-27T16:05:00-08:00
+    actor: endgame-coordinator
+    event: checkpoint_reserved
+    detail: Reserved EG-P01-SPIKE-RUN for the owner-directed Phase 1 disposable spike (C0013 registry, C0014 generator, C0020 arrival, C0019 reversible entry/return) ahead of P00-GATE. Outputs land EVIDENCE_READY only, are reversible per C0023, and are not integrated as COMPLETE until P00-GATE is accepted.
 ```
 
 <!-- ENDGAME_STATE_END -->
