@@ -740,6 +740,34 @@ Isekai (biome-source / surface-rule codecs) and Lost Cities (donor ruin grammar 
 - Engine bounds recorded: vanilla `DimensionType` permits `min_y ∈ [-2032, 2031]`, `height ∈ [16, 4064]` (both ×16), `min_y + height ≤ 2032`. A taller envelope is engine-permitted; the risk is downstream mod compatibility.
 - Taller-world option **DEFERRED**: not on the critical path; may not be adopted until a dedicated taller-height compatibility checkpoint (eight adoption criteria in the supporting file) is seeded and passed. No Hive `noise_settings` or `dimension_type` may exceed `height 384` before then.
 
+### Accepted hazard contract — `EG-P00-S04-C0007`
+
+**Status:** `COMPLETE` on 2026-08-27 as a contract. Systems, ownership, the exposure-model shape, the interaction matrix, and the non-trivialization rule are accepted; all numeric tuning is Phase 5.
+
+**Base:** `fef21b51`
+
+**Supporting file:** `docs/endgame/contracts/hazard-contract.md` (full system-ownership table, exposure formula shape, filter economy, and the three-part interaction matrix).
+
+- **Six hazard systems, each with a named owner** honouring the C0002 classifications: atmosphere (Hive companion, dimension-scoped — EnviroMine dimension toxicity is `unsuitable` as-is); acid (TWR fluid + Hive contact adapter, corrosion disabled initially); ventilation/shelter (Hive companion sealed volumes; EnviroMine vents as explicit powered safe bubbles); PPE (EnviroMine mask/filter + adapter); radiation (`unified-radiation` remains the sole dose authority; **no ambient Hive radiation**); oxygen (not adopted — companion atmosphere model is the non-breathable model unless a later spike accepts Stellaris).
+- **Non-trivialization rule:** exposure is a rate, never negated by one item; open-air survival always consumes a depleting logistical resource; no equipment gives unlimited zero-rate open-air survival; shelters need power and fail predictably; hazard layers are independent (air PPE ≠ acid protection ≠ radiation shielding); progression reduces attrition but never makes the dimension safe.
+- **Exposure model shape** with band-ordered `base_band_rate`, PPE reduction, event multiplier, and a sealed-volume gate; recovery only in clean air.
+- **Interaction matrix** for atmosphere × protection state, acid × target, and layered hazards.
+
+Deferred: all rates, thresholds, the PPE registry list, shelter power draw, the corrosion decision, storm frequency, and vehicle behaviour → Phase 5 (`C0069`–`C0074`, `C0077`).
+
+### Accepted performance budget — `EG-P00-S04-C0008`
+
+**Status:** `COMPLETE` on 2026-08-27 as an initial budget. Every threshold is provisional and is proven at `EG-P02-S06-C0035` and Phase 7.
+
+**Base:** `fef21b51`
+
+**Supporting file:** `docs/endgame/contracts/performance-budget.md` (measurement tools, the baseline-capture rule, and every budget table).
+
+- **Measurement method:** `spark` profiler/tps/healthreport, F3 frame graph, fixed-seed pregeneration over radius 512, the structure QA world; a pre-Hive baseline is captured at `EG-P01-S05-C0021` and every budget is both an absolute ceiling and a no-worse-than-+X%-vs-baseline rule.
+- **Initial ceilings:** chunk generation p50 ≤ 25 ms / p95 ≤ 60 ms / p99 ≤ 120 ms, no chunk > 500 ms; ≤ 8 average / ≤ 24 peak ticking block entities per chunk, zero live production machinery in set dressing; ≤ 64 acid fluid ticks per chunk on generation and zero ongoing acid updates in a settled chunk; companion service ≤ 0.30 ms/tick per player in the Hive and O(players-in-Hive); ambient particles ≤ the Nether budget; per module ≤ 128×128×96, ≤ 48,000 non-air blocks, ≤ 6 block entities, ≤ 2 MB NBT; ≤ 512 MB added heap at a 12-chunk radius; client FPS ≥ 90 % of Overworld-wasteland at equal settings.
+
+Deferred: tuned thresholds and recorded baseline hardware → `C0021`, `C0035`, Phase 7; seed-sweep generation distribution → `C0048` / `C0103`.
+
 ### Exit gate P00-GATE
 
 - dimension architecture and height contract accepted;
@@ -1052,10 +1080,10 @@ program:
   name: Endgame
   status: ACTIVE
   current_phase: P00
-  current_stage: S04
+  current_stage: S05
   current_gate: P00-GATE
-  next_checkpoint: EG-P00-S04-C0007
-  updated_at: 2026-08-27T15:02:00-08:00
+  next_checkpoint: EG-P00-S05-C0009
+  updated_at: 2026-08-27T15:18:00-08:00
   updated_by: endgame-coordinator
 
 phase_ledger:
@@ -1233,10 +1261,44 @@ completed_checkpoints:
       - vanilla DimensionType codec bounds recorded; -64..319 satisfies all four
       - taller-world option deferred with eight named adoption criteria and an evidence method; no Hive file may exceed height 384 before that checkpoint passes
     notes: Closes stage S03.
+  - checkpoint_id: EG-P00-S04-C0007
+    phase: P00
+    stage: S04
+    status: COMPLETE
+    owner: endgame-coordinator
+    accepted_at: 2026-08-27T15:18:00-08:00
+    accepted_by: endgame-coordinator
+    base_commit: fef21b51
+    integration_commit: SELF
+    evidence:
+      - docs/Endgame.md#accepted-hazard-contract--eg-p00-s04-c0007
+      - docs/endgame/contracts/hazard-contract.md
+    validation:
+      - six hazard systems each name an owner consistent with the C0002 classification
+      - non-trivialization rule forbids any unlimited zero-rate open-air protection and keeps hazard layers independent
+      - exposure model is a formula shape with band ordering; all numeric tuning routed to Phase 5 checkpoints
+      - interaction matrix covers atmosphere x protection, acid x target, and layered hazards
+  - checkpoint_id: EG-P00-S04-C0008
+    phase: P00
+    stage: S04
+    status: COMPLETE
+    owner: endgame-coordinator
+    accepted_at: 2026-08-27T15:18:00-08:00
+    accepted_by: endgame-coordinator
+    base_commit: fef21b51
+    integration_commit: SELF
+    evidence:
+      - docs/Endgame.md#accepted-performance-budget--eg-p00-s04-c0008
+      - docs/endgame/contracts/performance-budget.md
+    validation:
+      - every budget names a measurable threshold and a spark/F3-based measurement method
+      - a pre-Hive baseline capture is scheduled at C0021; budgets are both absolute ceilings and no-regression rules
+      - generation, block-entity, fluid, ticking, particle, structure-scale, memory, and client-FPS axes all covered
+    notes: Closes stage S04.
 
 latest_handoff:
-  checkpoint_id: EG-P00-S04-C0007
-  next_safe_action: Author the hazard contract - the atmosphere/acid/ventilation/PPE/shelter interaction matrix and the non-trivialization rule - honouring the C0002 classifications (EnviroMine dimension toxicity unsuitable as-is, masks/vents usable-with-adapter, TWR acid usable-with-adapter, radiation separate).
+  checkpoint_id: EG-P00-S05-C0009
+  next_safe_action: Author the namespace/layout contract - the exact Hive file tree, the datapack-vs-companion-module boundary, one authoritative generator per generated output, and the collision/repository-scope check (including the gradient_ocean_pack and misplaced-NBT constraints from C0001).
 
 journal:
   - at: 2026-08-27T00:00:00-08:00
@@ -1279,6 +1341,10 @@ journal:
     actor: endgame-coordinator
     event: checkpoint_completed
     detail: Accepted EG-P00-S03-C0005 (ADR-0001 four-layer hybrid generator; alternatives A-F recorded) and EG-P00-S03-C0006 (initial height contract -64..319, height 384; taller-world option deferred with eight adoption criteria). Closed stage S03; made EG-P00-S04-C0007 ready.
+  - at: 2026-08-27T15:18:00-08:00
+    actor: endgame-coordinator
+    event: checkpoint_completed
+    detail: Accepted EG-P00-S04-C0007 (hazard contract - six systems with owners, non-trivialization rule, exposure-model shape, interaction matrix; tuning deferred to Phase 5) and EG-P00-S04-C0008 (initial performance budget - spark-based measurement, per-axis ceilings, baseline capture scheduled at C0021). Closed stage S04; made EG-P00-S05-C0009 ready.
 ```
 
 <!-- ENDGAME_STATE_END -->
