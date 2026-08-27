@@ -768,6 +768,36 @@ Deferred: all rates, thresholds, the PPE registry list, shelter power draw, the 
 
 Deferred: tuned thresholds and recorded baseline hardware → `C0021`, `C0035`, Phase 7; seed-sweep generation distribution → `C0048` / `C0103`.
 
+### Accepted namespace and layout — `EG-P00-S05-C0009`
+
+**Status:** `COMPLETE` on 2026-08-27.
+
+**Base:** `fef21b51`
+
+**Supporting file:** `docs/endgame/contracts/namespace-layout.md` (the full file tree, the datapack/module boundary, generated-output ownership, and the collision check).
+
+- **Namespace `infinite_domain`, token `hive_world`.** Datapack content in `kubejs/data/infinite_domain/` (matching the rest of the pack); companion mod ID `infinite_domain_hive`.
+- **Hand-authored:** `dimension/hive_world.json`, `dimension_type/hive_world.json`, arrival NBT. **Generated:** everything under `worldgen/**/hive_world*` via one authoritative `scripts/endgame/generate_hive_world_*.py` each, indexed in `docs/endgame/generated-output-manifest.json`.
+- **Hard constraints:** no `world_preset` entry; no modification or override of any `minecraft:`, `wastelands:`, or `gradient_ocean_pack` worldgen file (this keeps the C0001 gradient-pack conflict entirely out of Hive scope); JSON structure defs and binary NBT kept in separate trees (prevents a repeat of C0001 defect 4).
+- **Prototype scripts** (`kubejs/server_scripts/hive_world_*.js`) are Phase 1 only and disposable; nothing critical stays in KubeJS past Phase 1.
+- **Companion module** uses a pinned Gradle NeoForge build with a portable, non-destructive install step — it does not reuse the existing hardcoded `build_*.ps1` pattern (C0002 clean-baseline prerequisite 7).
+- Collision check passes on all six axes.
+
+### Accepted test strategy — `EG-P00-S05-C0010`
+
+**Status:** `COMPLETE` on 2026-08-27.
+
+**Base:** `fef21b51`
+
+**Supporting file:** `docs/endgame/test-strategy.md` (smoke world, seed set, probe coordinates, command catalogue, camera scheme, evidence paths, the offline smoke validator spec, the fresh-worker runbook, and the removal-test procedure).
+
+- **QA world:** `saves/Infinite Domain - Hive World QA` (gitignored, disposable).
+- **Reserved seed set:** `1`, `1234`, `88888888`, `-4206942069`, `2147483647`, `0` — every seed sweep uses exactly these.
+- **Fixed probes:** arrival plus two coordinates per band at the C0004 band midpoints (Drown −48, Underworks 8, Furnace 80, Billet 152, Vaulting 224, Crown 288), chunk-border, and deep-wastes.
+- **Camera scheme:** `hive-cam-<region>-<nn>`; positions frozen at `EG-P02-S01-C0025`.
+- **Offline smoke validator** (`scripts/endgame/validate_hive_world_smoke.py`): JSON parse, reference resolution, height-contract match, biome-source reference, arrival IDs, forbidden-shared-path check, and a case-insensitive "no `hive` in any lang value" check — runs with no live instance.
+- **Evidence:** `docs/endgame/evidence/<checkpoint-id>/`. **Removal test:** documented path list, move aside, relaunch, assert other dimensions unchanged (feeds `C0023`).
+
 ### Exit gate P00-GATE
 
 - dimension architecture and height contract accepted;
@@ -1080,10 +1110,10 @@ program:
   name: Endgame
   status: ACTIVE
   current_phase: P00
-  current_stage: S05
+  current_stage: S06
   current_gate: P00-GATE
-  next_checkpoint: EG-P00-S05-C0009
-  updated_at: 2026-08-27T15:18:00-08:00
+  next_checkpoint: EG-P00-S06-C0011
+  updated_at: 2026-08-27T15:33:00-08:00
   updated_by: endgame-coordinator
 
 phase_ledger:
@@ -1295,10 +1325,44 @@ completed_checkpoints:
       - a pre-Hive baseline capture is scheduled at C0021; budgets are both absolute ceilings and no-regression rules
       - generation, block-entity, fluid, ticking, particle, structure-scale, memory, and client-FPS axes all covered
     notes: Closes stage S04.
+  - checkpoint_id: EG-P00-S05-C0009
+    phase: P00
+    stage: S05
+    status: COMPLETE
+    owner: endgame-coordinator
+    accepted_at: 2026-08-27T15:33:00-08:00
+    accepted_by: endgame-coordinator
+    base_commit: fef21b51
+    integration_commit: SELF
+    evidence:
+      - docs/Endgame.md#accepted-namespace-and-layout--eg-p00-s05-c0009
+      - docs/endgame/contracts/namespace-layout.md
+    validation:
+      - full datapack tree specified; hand-authored vs generated files separated with one generator each and a manifest index
+      - hard constraints forbid world_preset entry and any shared-file override, keeping the gradient_ocean_pack conflict out of Hive scope
+      - JSON and binary NBT kept in separate trees; collision check passes on six axes
+      - companion module build is pinned Gradle with a non-destructive install step
+  - checkpoint_id: EG-P00-S05-C0010
+    phase: P00
+    stage: S05
+    status: COMPLETE
+    owner: endgame-coordinator
+    accepted_at: 2026-08-27T15:33:00-08:00
+    accepted_by: endgame-coordinator
+    base_commit: fef21b51
+    integration_commit: SELF
+    evidence:
+      - docs/Endgame.md#accepted-test-strategy--eg-p00-s05-c0010
+      - docs/endgame/test-strategy.md
+    validation:
+      - reserved six-seed set, fixed per-band probe coordinates at the C0004 midpoints, command catalogue, and camera naming scheme all specified
+      - offline smoke validator has seven concrete assertions including the no-"hive"-in-lang-values check
+      - fresh-worker runbook and removal-test procedure are step-numbered and reproducible
+    notes: Closes stage S05.
 
 latest_handoff:
-  checkpoint_id: EG-P00-S05-C0009
-  next_safe_action: Author the namespace/layout contract - the exact Hive file tree, the datapack-vs-companion-module boundary, one authoritative generator per generated output, and the collision/repository-scope check (including the gradient_ocean_pack and misplaced-NBT constraints from C0001).
+  checkpoint_id: EG-P00-S06-C0011
+  next_safe_action: Expand Phase 1 checkpoints C0013-C0024 into exact owned paths, dependencies, and evidence, none exceeding the atomic sizing rules; write docs/endgame/phase-1-backlog.md.
 
 journal:
   - at: 2026-08-27T00:00:00-08:00
@@ -1345,6 +1409,10 @@ journal:
     actor: endgame-coordinator
     event: checkpoint_completed
     detail: Accepted EG-P00-S04-C0007 (hazard contract - six systems with owners, non-trivialization rule, exposure-model shape, interaction matrix; tuning deferred to Phase 5) and EG-P00-S04-C0008 (initial performance budget - spark-based measurement, per-axis ceilings, baseline capture scheduled at C0021). Closed stage S04; made EG-P00-S05-C0009 ready.
+  - at: 2026-08-27T15:33:00-08:00
+    actor: endgame-coordinator
+    event: checkpoint_completed
+    detail: Accepted EG-P00-S05-C0009 (namespace/layout - full datapack tree, generator ownership manifest, no-shared-override constraint, companion-module build policy) and EG-P00-S05-C0010 (test strategy - reserved seed set, per-band probes, offline smoke validator spec, fresh-worker runbook, removal-test procedure). Closed stage S05; made EG-P00-S06-C0011 ready.
 ```
 
 <!-- ENDGAME_STATE_END -->
