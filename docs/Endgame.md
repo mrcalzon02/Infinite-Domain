@@ -1138,15 +1138,16 @@ program:
   current_stage: S06
   current_gate: P00-GATE
   next_checkpoint: EG-P00-S06-C0012
-  updated_at: 2026-08-27T16:05:00-08:00
+  updated_at: 2026-08-27T16:52:00-08:00
   updated_by: endgame-coordinator
   notes: >-
     C0001-C0011 COMPLETE. C0012 phase-0 gate is REVIEW_NEEDED (needs an independent
-    integration review). By explicit owner direction the coordinator has also begun
-    the Phase 1 disposable spike (dimension registry, baseline generator, and the
-    enter/exit mechanics) ahead of P00-GATE. Every Phase 1 output lands as
-    EVIDENCE_READY, not COMPLETE, and is reversible per C0023; no Phase 1 checkpoint
-    is integrated as COMPLETE until P00-GATE is accepted.
+    integration review). By explicit owner direction the coordinator built the Phase 1
+    disposable spike ahead of P00-GATE: C0013 dimension registry, C0014 baseline
+    generator, C0020 safe arrival, and C0019 the reversible enter/exit mechanic, all
+    at spike commit 10121b4a. Every Phase 1 output is EVIDENCE_READY (mechanical checks
+    pass; in-client runtime checks pending), not COMPLETE, and is reversible per C0023.
+    No Phase 1 checkpoint is integrated as COMPLETE until P00-GATE is accepted.
 
 phase_ledger:
   - phase: P00
@@ -1198,8 +1199,9 @@ active_reservations:
     owner: endgame-coordinator
     reserved_at: 2026-08-27T16:05:00-08:00
     lease_expires_at: 2026-08-27T20:05:00-08:00
-    last_heartbeat_at: 2026-08-27T16:05:00-08:00
-    base_commit: <S06 commit>
+    last_heartbeat_at: 2026-08-27T16:52:00-08:00
+    base_commit: f9b63030
+    spike_commit: 10121b4a
     write_scope:
       - kubejs/data/infinite_domain/dimension/hive_world.json
       - kubejs/data/infinite_domain/dimension_type/hive_world.json
@@ -1228,12 +1230,68 @@ active_reservations:
       - scripts/endgame/validate_hive_world_smoke.py passes offline.
       - No shared minecraft:/wastelands:/gradient_ocean_pack worldgen file is modified.
       - No player-facing lang value contains the substring "hive".
-    next_safe_action: Author C0013 dimension and dimension_type JSON to the C0006 height contract, then C0014 noise settings, then C0020 arrival, then C0019 entry.
+    next_safe_action: >-
+      Owner runs the in-client checks: fresh-world datapack load, /forge dimensions
+      lists infinite_domain:hive_world, descend with the Cinderstack Descent Marker,
+      walk the arrival deck, return via the marker and the lodestone, and run the
+      death / disconnect / obstructed-platform cases from the C0002 travel list.
+      Then C0015-C0018 (biomes, routing, acid, air hazard) and C0021-C0024.
     note: >-
       Owner-directed disposable spike ahead of P00-GATE. Outputs are EVIDENCE_READY,
       not COMPLETE. Fully reversible per the C0010 removal procedure and C0023.
 
 blocked_checkpoints: []
+
+evidence_ready:
+  - checkpoint_id: EG-P01-S01-C0013
+    name: Registry skeleton
+    status: EVIDENCE_READY
+    spike_commit: 10121b4a
+    outputs:
+      - kubejs/data/infinite_domain/dimension/hive_world.json
+      - kubejs/data/infinite_domain/dimension_type/hive_world.json
+      - kubejs/data/infinite_domain/worldgen/biome/hive_world_stack_test.json
+    mechanical_validation:
+      - JSON parses; dimension_type bounds equal the C0006 contract (min_y -64, height 384, logical_height 384)
+      - dimension references noise settings infinite_domain:hive_world and a fixed placeholder biome
+      - validate_hive_world_smoke.py assertions 1, 3, 4 pass
+    pending: in-client datapack codec load; /forge dimensions listing
+  - checkpoint_id: EG-P01-S01-C0014
+    name: Baseline generator
+    status: EVIDENCE_READY
+    spike_commit: 10121b4a
+    outputs:
+      - kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json
+      - scripts/endgame/generate_hive_world_noise.py
+    mechanical_validation:
+      - generator is idempotent; asserts the height contract on emit
+      - crust below ~Y0, hollow middle, bedrock-capped roof ~Y306; no aquifers, ore veins, fluid, or jaggedness
+    pending: in-client fresh chunk generation; height probes at the six band midpoints; informal spark chunk-gen sample
+  - checkpoint_id: EG-P01-S04-C0020
+    name: Safe arrival
+    status: EVIDENCE_READY
+    spike_commit: 10121b4a
+    outputs:
+      - kubejs/data/infinite_domain/function/hive_world/build_arrival.mcfunction
+    mechanical_validation:
+      - deterministic platform at (8, 64, 8); solid floor Y63, 2-tall containment wall, corner lighting, central lodestone
+      - the entry script rebuilds it on every descent, so an obstructed or ungenerated destination is safe
+    pending: in-client repeated-arrival and obstruction tests
+  - checkpoint_id: EG-P01-S04-C0019
+    name: Reversible entry
+    status: EVIDENCE_READY
+    spike_commit: 10121b4a
+    outputs:
+      - kubejs/server_scripts/hive_world_expedition.js
+      - kubejs/startup_scripts/hive_world_items.js
+      - kubejs/data/infinite_domain/advancement/hive_world/reach_cinderstack.json
+    mechanical_validation:
+      - node --check passes both scripts
+      - captures origin dim + pos + rotation; operator/creative gate; force-builds the platform before transfer
+      - return via marker or deck lodestone restores the exact origin; guaranteed-safe overworld fallback on failure
+      - death, disconnect-mid-transfer, and stranding paths handled in EntityEvents.death and PlayerEvents.loggedIn
+      - validate_hive_world_smoke.py assertion 7 passes (no "hive" in any player-facing string)
+    pending: in-client round trip, death, disconnect, missing-destination, passenger, and repeat-use tests
 
 review_queue:
   - checkpoint_id: EG-P00-S06-C0012
@@ -1514,6 +1572,19 @@ journal:
     actor: endgame-coordinator
     event: checkpoint_reserved
     detail: Reserved EG-P01-SPIKE-RUN for the owner-directed Phase 1 disposable spike (C0013 registry, C0014 generator, C0020 arrival, C0019 reversible entry/return) ahead of P00-GATE. Outputs land EVIDENCE_READY only, are reversible per C0023, and are not integrated as COMPLETE until P00-GATE is accepted.
+  - at: 2026-08-27T16:52:00-08:00
+    actor: endgame-coordinator
+    event: spike_evidence_ready
+    detail: >-
+      Built the Phase 1 spike at commit 10121b4a (11 files, path-scoped). C0013
+      dimension + dimension_type + placeholder biome; C0014 generate_hive_world_noise.py
+      + noise settings (deepslate crust, hollow middle, bedrock roof, -64..319); C0020
+      build_arrival.mcfunction platform at (8,64,8); C0019 hive_world_expedition.js +
+      items + advancement (operator-gated descent marker, origin capture, return marker
+      and lodestone return, overworld fallback, death/disconnect/stranding handling).
+      Mechanical validation: validate_hive_world_smoke.py PASS (7 assertions), node
+      --check PASS. All four checkpoints EVIDENCE_READY; in-client runtime checks and
+      P00-GATE acceptance are the remaining blockers to COMPLETE.
 ```
 
 <!-- ENDGAME_STATE_END -->
