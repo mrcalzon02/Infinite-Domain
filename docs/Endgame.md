@@ -1138,17 +1138,17 @@ program:
   current_stage: S06
   current_gate: P00-GATE
   next_checkpoint: EG-P00-S06-C0012
-  updated_at: 2026-08-27T17:40:00-08:00
+  updated_at: 2026-08-27T18:10:00-08:00
   updated_by: endgame-coordinator
   notes: >-
-    C0001-C0011 COMPLETE. C0012 phase-0 gate is REVIEW_NEEDED (needs an independent
-    integration review). By explicit owner direction the coordinator built the Phase 1
-    disposable spike ahead of P00-GATE: C0013-C0020 (dimension, generator, biomes, 3D
-    routing, acid feature, air-hazard prototype, safe arrival, reversible enter/exit)
-    at spike commits 10121b4a and 74e4010c. Every Phase 1 output is EVIDENCE_READY
-    (mechanical checks pass; in-client runtime checks pending), not COMPLETE, and is
-    reversible per C0023. C0021-C0024 authoring remains. No Phase 1 checkpoint is
-    integrated as COMPLETE until P00-GATE is accepted.
+    C0001-C0011 COMPLETE. C0012 (P00-GATE) and C0024 (P01-GATE) are REVIEW_NEEDED.
+    By explicit owner direction the coordinator built the entire Phase 1 disposable
+    spike ahead of P00-GATE - C0013-C0023 - at spike commits 10121b4a, 74e4010c,
+    52a81e78. Every Phase 1 output is EVIDENCE_READY: mechanical checks pass
+    (validate_hive_world_smoke.py, node --check); the in-client runtime table in
+    docs/endgame/gates/P01-GATE-evidence.md and the C0021 baseline capture are the
+    owner's remaining work. No Phase 1 checkpoint is COMPLETE until both gates pass.
+    Nothing further is safely executable without a running client.
 
 phase_ledger:
   - phase: P00
@@ -1200,9 +1200,9 @@ active_reservations:
     owner: endgame-coordinator
     reserved_at: 2026-08-27T16:05:00-08:00
     lease_expires_at: 2026-08-27T21:30:00-08:00
-    last_heartbeat_at: 2026-08-27T17:40:00-08:00
+    last_heartbeat_at: 2026-08-27T18:10:00-08:00
     base_commit: f9b63030
-    spike_commit: 74e4010c
+    spike_commit: 52a81e78
     write_scope:
       - kubejs/data/infinite_domain/dimension/hive_world.json
       - kubejs/data/infinite_domain/dimension_type/hive_world.json
@@ -1232,12 +1232,12 @@ active_reservations:
       - No shared minecraft:/wastelands:/gradient_ocean_pack worldgen file is modified.
       - No player-facing lang value contains the substring "hive".
     next_safe_action: >-
-      C0013-C0020 built (commit 74e4010c). Remaining spike authoring: C0021 client
-      effect fields + baseline-capture stub, C0022 finalize the smoke validator,
-      C0023 the removal manifest + procedure, C0024 the Phase 1 gate assembly
-      (REVIEW_NEEDED). Then the owner runs the in-client checks: datapack codec load,
-      fresh generation, /locate biome for both biomes, descend/return round trip,
-      death/disconnect/obstruction cases, acid contact, and the exposure meter.
+      All Phase 1 spike authoring is done (commits 10121b4a, 74e4010c, 52a81e78).
+      Nothing else is safely executable without a running client. Owner runs the
+      P01-GATE-evidence.md runtime table (datapack codec load, fresh generation,
+      /locate biome, round trip, recovery matrix, acid, exposure, removal), captures
+      the C0021 baseline, then C0024 + C0012 go to an independent integration reviewer.
+      With P00-GATE + P01-GATE accepted, C0013-C0023 flip COMPLETE and Phase 2 opens.
     note: >-
       Owner-directed disposable spike ahead of P00-GATE. Outputs are EVIDENCE_READY,
       not COMPLETE. Fully reversible per the C0010 removal procedure and C0023.
@@ -1341,8 +1341,48 @@ evidence_ready:
       - per-band rate Drown 4 / Underworks 2.5 / above 1.5; filter cut to 20%; cartridge wears out; nausea/darkness/damage at 55/85; actionbar readout
       - node --check passes
     pending: in-client protected vs unprotected test and spark tick-cost sample against the C0008 companion budget
+  - checkpoint_id: EG-P01-S05-C0021
+    name: Client baseline
+    status: EVIDENCE_READY
+    spike_commit: 52a81e78
+    outputs:
+      - kubejs/data/infinite_domain/dimension_type/hive_world.json (effects / ambient_light / fixed_time)
+      - docs/endgame/evidence/EG-P01-S05-C0021/README.md
+    mechanical_validation:
+      - temporary client assumptions recorded (Nether effects, ambient_light 0.1, fixed_time 18000, no skylight/ceiling)
+    pending: owner captures the two cameras, the client-log check, and the pre-Hive spark baseline (the C0008 comparison point)
+  - checkpoint_id: EG-P01-S05-C0022
+    name: Smoke validator
+    status: EVIDENCE_READY
+    spike_commit: 52a81e78
+    outputs:
+      - scripts/endgame/validate_hive_world_smoke.py
+      - docs/endgame/evidence/EG-P01-S05-C0022/smoke-report.json
+    mechanical_validation:
+      - seven assertions pass offline; --json report archived; re-run on a fresh checkout is the only pending step
+    pending: clean pass from a fresh launch (owner runbook step 2)
+  - checkpoint_id: EG-P01-S06-C0023
+    name: Spike removal test
+    status: EVIDENCE_READY
+    spike_commit: 52a81e78
+    outputs:
+      - scripts/endgame/remove_hive_world_spike.py
+      - docs/endgame/hive-world-path-manifest.txt
+    mechanical_validation:
+      - 15-file manifest resolves; dry run clean; keeps validators + docs/endgame/**
+    pending: owner runs --apply on a throwaway checkout, relaunches, confirms Overworld/Nether/End unchanged and no orphaned dimension
 
 review_queue:
+  - checkpoint_id: EG-P01-S06-C0024
+    status: REVIEW_NEEDED
+    review_class: Integration
+    requested_at: 2026-08-27T18:10:00-08:00
+    reviewer: unassigned (independent of the coordinator)
+    evidence: docs/endgame/gates/P01-GATE-evidence.md
+    blocking: >-
+      Blocked behind P00-GATE (C0012). Needs the owner's in-client runtime run (the
+      table in P01-GATE-evidence.md) plus an independent integration review before
+      any Phase 1 checkpoint can be marked COMPLETE.
   - checkpoint_id: EG-P00-S06-C0012
     status: REVIEW_NEEDED
     review_class: Integration
@@ -1649,6 +1689,19 @@ journal:
       C0015-C0018 EVIDENCE_READY. Two accidental over-broad commits during this run were
       caught and re-scoped with git reset --soft; the pre-existing staged renames were
       preserved.
+  - at: 2026-08-27T18:10:00-08:00
+    actor: endgame-coordinator
+    event: spike_authoring_complete
+    detail: >-
+      Finished Phase 1 spike authoring at commit 52a81e78. C0021 client effect fields
+      + owner capture checklist; C0022 smoke validator finalized with a --json report
+      (PASS archived); C0023 remove_hive_world_spike.py + a 15-file path manifest
+      (dry run clean); C0024 assembled docs/endgame/gates/P01-GATE-evidence.md and set
+      REVIEW_NEEDED with the owner runtime table and the completeness matrix. All
+      Phase 1 spike checkpoints C0013-C0023 are EVIDENCE_READY. No further coordinator
+      work is safely executable without a running client - the run stops here per
+      Section 6.7. Blockers: P00-GATE (C0012), P01-GATE (C0024), and the owner's
+      in-client runtime run.
 ```
 
 <!-- ENDGAME_STATE_END -->
