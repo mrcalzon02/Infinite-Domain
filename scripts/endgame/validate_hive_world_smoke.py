@@ -184,6 +184,21 @@ if adv is not None and "hive" in json.dumps(adv.get("display", {})).lower():
 print("Hive World smoke validator")
 for n in notes:
     print(f"  note: {n}")
+
+if "--json" in sys.argv:
+    dest = sys.argv[sys.argv.index("--json") + 1]
+    out = pathlib.Path(dest)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps({
+        "validator": "hive_world_smoke",
+        "passed": not failures,
+        "failure_count": len(failures),
+        "failures": failures,
+        "notes": notes,
+        "files_checked": [str(p.relative_to(REPO)).replace("\\", "/") for p in hive_json],
+    }, indent=2) + "\n", encoding="utf-8")
+    print(f"  report -> {out}")
+
 if failures:
     print(f"\nFAIL ({len(failures)}):")
     for f in failures:

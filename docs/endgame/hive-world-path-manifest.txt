@@ -1,0 +1,23 @@
+# Hive World Phase 1 spike - path manifest (EG-P01-S06-C0023)
+# Regenerate: python scripts/endgame/remove_hive_world_spike.py
+# 15 spike files as of this run
+
+kubejs/data/infinite_domain/dimension/hive_world.json
+kubejs/data/infinite_domain/dimension_type/hive_world.json
+kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json
+kubejs/data/infinite_domain/worldgen/biome/hive_world_dead_waste.json
+kubejs/data/infinite_domain/worldgen/biome/hive_world_stack_test.json
+kubejs/data/infinite_domain/worldgen/configured_feature/hive_world_acid_pool.json
+kubejs/data/infinite_domain/worldgen/placed_feature/hive_world_acid_pool.json
+kubejs/data/infinite_domain/function/hive_world/build_arrival.mcfunction
+kubejs/data/infinite_domain/advancement/hive_world/reach_cinderstack.json
+kubejs/server_scripts/hive_world_expedition.js
+kubejs/server_scripts/hive_world_atmosphere_proto.js
+kubejs/startup_scripts/hive_world_items.js
+scripts/endgame/generate_hive_world_noise.py
+scripts/endgame/generate_hive_world_biomes.py
+scripts/endgame/generate_hive_world_acid.py
+
+# kept (not deleted by --apply):
+#   scripts/endgame/validate_hive_world_smoke.py  (repurposed for the real dimension)
+#   docs/endgame/**  (all contracts and gate evidence)
