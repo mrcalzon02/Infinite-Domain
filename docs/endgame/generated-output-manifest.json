@@ -1,0 +1,72 @@
+{
+  "$note": "Authority: docs/endgame/contracts/namespace-layout.md section 6. Every generated Hive World file maps to exactly one generator. Hand-authored files list generator=null. Manual edits to generated files are forbidden (docs/Endgame.md section 17.3); regenerate instead.",
+  "version": "hive-world-generated-output-manifest-v1",
+  "entries": [
+    {
+      "path": "kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json",
+      "generator": "scripts/endgame/generate_hive_world_noise.py",
+      "hand_authored": false,
+      "checkpoint": "EG-P01-S01-C0014",
+      "disposable_spike": true
+    },
+    {
+      "path": "kubejs/data/infinite_domain/dimension/hive_world.json",
+      "generator": null,
+      "hand_authored": true,
+      "checkpoint": "EG-P01-S01-C0013"
+    },
+    {
+      "path": "kubejs/data/infinite_domain/dimension_type/hive_world.json",
+      "generator": null,
+      "hand_authored": true,
+      "checkpoint": "EG-P01-S01-C0013"
+    },
+    {
+      "path": "kubejs/data/infinite_domain/worldgen/biome/hive_world_stack_test.json",
+      "generator": null,
+      "hand_authored": true,
+      "checkpoint": "EG-P01-S01-C0013",
+      "note": "Placeholder biome; replaced by the real dead_waste + stack_test pair at EG-P01-S02-C0015."
+    },
+    {
+      "path": "kubejs/data/infinite_domain/function/hive_world/build_arrival.mcfunction",
+      "generator": null,
+      "hand_authored": true,
+      "checkpoint": "EG-P01-S04-C0020"
+    },
+    {
+      "path": "kubejs/data/infinite_domain/advancement/hive_world/reach_cinderstack.json",
+      "generator": null,
+      "hand_authored": true,
+      "checkpoint": "EG-P01-S04-C0019"
+    },
+    {
+      "path": "kubejs/server_scripts/hive_world_expedition.js",
+      "generator": null,
+      "hand_authored": true,
+      "checkpoint": "EG-P01-S04-C0019",
+      "disposable_spike": true,
+      "note": "Travel logic moves to packdev/hive-world-companion at Phase 5."
+    },
+    {
+      "path": "kubejs/startup_scripts/hive_world_items.js",
+      "generator": null,
+      "hand_authored": true,
+      "checkpoint": "EG-P01-S04-C0019",
+      "disposable_spike": true
+    }
+  ],
+  "deferred_generators": [
+    {
+      "family": "kubejs/data/infinite_domain/worldgen/density_function/hive_world/**",
+      "planned_generator": "scripts/endgame/generate_hive_world_density.py",
+      "checkpoint": "EG-P03-S01-C0037",
+      "note": "The Phase 1 spike inlines its density in the noise settings; the named density-function family is Phase 3 work."
+    },
+    {
+      "family": "kubejs/data/infinite_domain/worldgen/biome/hive_world_*.json",
+      "planned_generator": "scripts/endgame/generate_hive_world_biomes.py",
+      "checkpoint": "EG-P01-S02-C0015"
+    }
+  ]
+}
