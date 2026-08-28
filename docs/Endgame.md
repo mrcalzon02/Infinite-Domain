@@ -1203,7 +1203,7 @@ active_reservations:
     last_heartbeat_at: 2026-08-27T19:20:00-08:00
     base_commit: f9b63030
     spike_commit: 52a81e78
-    runtime_fix_commit: pending
+    runtime_fix_commit: c8518e06
     write_scope:
       - kubejs/data/infinite_domain/dimension/hive_world.json
       - kubejs/data/infinite_domain/dimension_type/hive_world.json
