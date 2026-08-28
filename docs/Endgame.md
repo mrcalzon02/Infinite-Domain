@@ -1138,8 +1138,9 @@ program:
   current_stage: S06
   current_gate: P00-GATE
   next_checkpoint: EG-P00-S06-C0012
-  updated_at: 2026-08-27T23:05:00-08:00
+  updated_at: 2026-08-28T00:20:00-08:00
   updated_by: endgame-coordinator
+  progress_audit: docs/endgame/PROGRESS-AUDIT.md
   notes: >-
     C0001-C0011 COMPLETE. C0012 (P00-GATE) and C0024 (P01-GATE) are REVIEW_NEEDED.
     By explicit owner direction the coordinator built the entire Phase 1 disposable
@@ -1151,34 +1152,55 @@ program:
     Nothing further is safely executable without a running client.
 
 phase_ledger:
+  # Roll-up: docs/endgame/PROGRESS-AUDIT.md. By repeated owner direction the spike was
+  # built out through P02/P03/P04 territory ahead of the gates; those phases are
+  # IN_PROGRESS at spike scale, none COMPLETE, all gates outstanding.
   - phase: P00
     name: Program contract and capability audit
     status: IN_PROGRESS
     gate: P00-GATE
-    note: C0001-C0011 COMPLETE; C0012 gate REVIEW_NEEDED.
+    note: C0001-C0011 COMPLETE; C0012 gate REVIEW_NEEDED (independent review + 4 open items).
   - phase: P01
     name: Minimal technical dimension spike
     status: IN_PROGRESS
     gate: P01-GATE
     note: >-
-      Owner-directed disposable spike started ahead of P00-GATE. Outputs are
-      EVIDENCE_READY only and reversible per C0023; not COMPLETE until P00-GATE passes.
+      All spike authoring C0013-C0023 done and mechanically green (10-assertion smoke
+      validator + connector validator). C0024 P01-GATE REVIEW_NEEDED: owner's in-client
+      runtime table + independent review. Not COMPLETE until P00-GATE + P01-GATE pass.
   - phase: P02
     name: Full-height greybox proof
-    status: NOT_STARTED
+    status: IN_PROGRESS
     gate: P02-GATE
+    note: >-
+      Leapfrogged - a generated full-height megastructure replaces hand greybox slices.
+      C0025 massing contract authored (docs/endgame/contracts/massing-contract.md).
+      C0036 P02-GATE not started: needs the in-game visual/experiential review that
+      freezes the massing.
   - phase: P03
     name: Planetary and hive-mass generator
-    status: NOT_STARTED
+    status: IN_PROGRESS
     gate: P03-GATE
+    note: >-
+      Within-a-core mass model prototyped (generate_hive_world_density.py: mass, carved
+      network, shafts, hall, 6 band palettes). The planetary macro layer
+      (stack_core/apron/trunk_axis, C0038-C0040) is NOT STARTED - biggest single gap.
   - phase: P04
     name: Modular architectural grammar
-    status: NOT_STARTED
+    status: IN_PROGRESS
     gate: P04-GATE
+    note: >-
+      C0051 module schema + C0052 connector validator authored; a 7-module jigsaw
+      district assembles at spike scale. Per-band families (C0055-C0060), the axis
+      system (C0062), and district assembly (C0065) are NOT STARTED.
   - phase: P05
     name: Environment and ambience
-    status: NOT_STARTED
+    status: IN_PROGRESS
     gate: P05-GATE
+    note: >-
+      Started 2026-08-27. Promoting the C0018 stub into a real exposure / filter /
+      shelter system and enriching per-band ambience. A truly custom sky needs the
+      companion module.
   - phase: P06
     name: Endgame gameplay and progression
     status: NOT_STARTED
@@ -1837,6 +1859,18 @@ journal:
       warnings (after splitting the industrial_bay railing off the doorway). Both
       contracts are EVIDENCE_READY, formally adopted when Phase 2 / Phase 4 open;
       P02-GATE still needs the independent greybox review.
+  - at: 2026-08-28T00:20:00-08:00
+    actor: endgame-coordinator
+    event: progress_audit_and_phase_advance
+    detail: >-
+      Owner direction: review completed phases, audit progress, move to the next phase.
+      Wrote docs/endgame/PROGRESS-AUDIT.md (per-phase roll-up, spike-output ->
+      checkpoint mapping, honest status). Reconciled the phase_ledger: P02/P03/P04 set
+      IN_PROGRESS at spike scale (none COMPLETE, all gates outstanding); the planetary
+      macro layer (C0038-C0040) and per-band module families (C0055-C0060) recorded as
+      the biggest gaps. P00-GATE + P01-GATE + P02-GATE remain the owner's to clear.
+      Advancing to Phase 5 (Environment and ambience) - the next genuinely unstarted
+      phase and the natural layer on top of terrain + structure.
 ```
 
 <!-- ENDGAME_STATE_END -->
