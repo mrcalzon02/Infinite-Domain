@@ -39,5 +39,19 @@ setblock 13 64 3 minecraft:sea_lantern
 setblock 3 64 13 minecraft:sea_lantern
 setblock 13 64 13 minecraft:sea_lantern
 setblock 8 72 8 minecraft:sea_lantern
-# central return beacon - the fixed landmark; the player arrives standing on it
-setblock 8 63 8 minecraft:lodestone
+# central return portal, facing east/west. The player arrives inside its active field.
+# Minimum Nether-portal footprint: 4 wide x 5 tall with a 2 x 3 opening.
+# Bottom row: custom corner actuators, portal core, and structural frame.
+setblock 6 63 8 kubejs:cinderstack_portal_actuator
+setblock 7 63 8 kubejs:cinderstack_portal_core
+setblock 8 63 8 kubejs:cinderstack_portal_frame
+setblock 9 63 8 kubejs:cinderstack_portal_actuator
+# Side pillars.
+fill 6 64 8 6 66 8 kubejs:cinderstack_portal_frame
+fill 9 64 8 9 66 8 kubejs:cinderstack_portal_frame
+# Crown: two more actuators around the frame lintel.
+setblock 6 67 8 kubejs:cinderstack_portal_actuator
+fill 7 67 8 8 67 8 kubejs:cinderstack_portal_frame
+setblock 9 67 8 kubejs:cinderstack_portal_actuator
+# Active 2x3 walk-through field. Its custom block uses the vanilla End Portal sprite.
+fill 7 64 8 8 66 8 kubejs:cinderstack_portal_field

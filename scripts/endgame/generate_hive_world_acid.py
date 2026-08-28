@@ -43,12 +43,11 @@ PLACED = {
     "placement": [
         {"type": "minecraft:rarity_filter", "chance": 3},
         {"type": "minecraft:in_square"},
-        # the whole dimension is a solid mass, so target the low bands directly
-        # (The Drown / low Underworks) and let the lake carve its own bowl
+        # Target the thin planetary waste/crust layer around the Y0 acid-sea datum.
         {"type": "minecraft:height_range", "height": {
             "type": "minecraft:uniform",
-            "min_inclusive": {"absolute": -52},
-            "max_inclusive": {"absolute": 18},
+            "min_inclusive": {"absolute": -56},
+            "max_inclusive": {"absolute": 4},
         }},
         {"type": "minecraft:biome"},
     ],

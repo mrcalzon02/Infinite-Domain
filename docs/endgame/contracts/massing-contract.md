@@ -20,19 +20,21 @@ From `spatial-metrics.md`, pinned here as the massing target:
 
 | # | Band | Y range | Height | Band datum (nominal working level) | Seam zone at the upper boundary |
 |---|---|---:|---:|---:|---:|
-| 1 | The Drown | `-64..-33` | 32 | `-48` | 6-10 blocks |
-| 2 | The Underworks | `-32..47` | 80 | `0` | 8-16 blocks |
-| 3 | The Furnace Tiers | `48..111` | 64 | `72` | 8-16 blocks |
-| 4 | The Billet Decks | `112..191` | 80 | `144` | 8-16 blocks |
-| 5 | The Vaulting | `192..255` | 64 | `216` | 8-12 blocks |
-| 6 | The Crown | `256..319` | 64 | `288` | n/a (world roof) |
+| 1 | The Drown | `-64..-1` | 64 | `-32` | 8-16 blocks |
+| 2 | The Underworks | `0..95` | 96 | `48` | 12-20 blocks |
+| 3 | The Furnace Tiers | `96..207` | 112 | `152` | 12-24 blocks |
+| 4 | The Billet Decks | `208..351` | 144 | `280` | 12-24 blocks |
+| 5 | The Vaulting | `352..479` | 128 | `416` | 12-20 blocks |
+| 6 | The Crown | `480..607` | 128 | `544` | n/a (world roof) |
 
 - The **band datum** is the Y a module family's ground floor sits on and the Y a
   cross-band route is measured from.
 - A **seam zone** is a band-transition region that reads as an architectural join
   (a plant deck, a rubble choke, a transit interchange) — authored at `C0053`/`C0065`,
   not a hard plane.
-- Bands tile `-64..319` exactly (32+80+64+80+64+64 = 384).
+- Bands tile `-64..607` exactly (64+96+112+144+128+128 = 672).
+- Y0 is both the planetary surface and acid-sea datum. Exterior wastes occupy the thin
+  crustal layer down to Y-64; stack envelopes rise from Y0.
 
 ## 2. The mass model (candidate-frozen envelopes)
 
@@ -42,14 +44,14 @@ picks the value, P02-GATE freezes the envelope.
 
 | Parameter | Envelope | Spike value | Role |
 |---|---|---|---|
-| `mass_ceiling` | `Y 280..300` | 292 | top of the buildable mass; above it is open to the roof |
-| `roof_seal` | top `10..20` blocks are bedrock | ~14 (Y306-319) | the sealed cap; nothing breaches it |
+| `mass_ceiling` | `Y 560..596` | 582 | top of the buildable mass; above it is open to the roof |
+| `roof_seal` | top `10..20` blocks are bedrock | ~14 (Y594-607) | the sealed cap; nothing breaches it |
 | `floor_seal` | bottom `9..18` blocks always solid | ~9 (Y-64..-55) | no void reaches the world floor |
 | `network` carve fraction | `8..18 %` of mass volume | ~ (untuned) | informal, "choked" circulation |
 | `network` clear width | commonly `3..7` blocks | noise-driven | per `spatial-metrics.md` §3 |
 | `shaft` bore | `4..9` blocks | ~5-7 | formal vertical circulation |
 | `shaft` reachability | a shaft within `~64` blocks horizontal of any point in a core | noise density | per `spatial-metrics.md` §3 cadence |
-| `hall` band | inside The Vaulting (`192..255`) | Y~200-244 | the monumental release space |
+| `hall` band | inside The Vaulting (`352..479`) | Y~368-464 | the monumental release space |
 | `hall` min open dimension | `>= 48` blocks | window × noise | per `spatial-metrics.md` §4 |
 | `hall` sightline | `>= 120` blocks | untuned | per `spatial-metrics.md` §4 |
 | `hall` column spacing | `12..24` blocks | column noise | keeps the hall from being a plain box |

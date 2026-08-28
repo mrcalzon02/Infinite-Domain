@@ -7,15 +7,12 @@
     "Name": "minecraft:deepslate"
   },
   "default_fluid": {
-    "Name": "minecraft:water",
-    "Properties": {
-      "level": "0"
-    }
+    "Name": "the_wasteland_reworked:acid"
   },
-  "sea_level": -63,
+  "sea_level": 0,
   "noise": {
     "min_y": -64,
-    "height": 384,
+    "height": 672,
     "size_horizontal": 1,
     "size_vertical": 2
   },
@@ -25,7 +22,7 @@
     "depth": {
       "type": "minecraft:y_clamped_gradient",
       "from_y": -64,
-      "to_y": 319,
+      "to_y": 607,
       "from_value": 1.0,
       "to_value": -1.0
     },
@@ -97,7 +94,7 @@
               "invert": {
                 "type": "minecraft:y_above",
                 "anchor": {
-                  "absolute": -32
+                  "absolute": 0
                 },
                 "surface_depth_multiplier": 0,
                 "add_stone_depth": false
@@ -127,7 +124,7 @@
               "invert": {
                 "type": "minecraft:y_above",
                 "anchor": {
-                  "absolute": 48
+                  "absolute": 96
                 },
                 "surface_depth_multiplier": 0,
                 "add_stone_depth": false
@@ -157,7 +154,7 @@
               "invert": {
                 "type": "minecraft:y_above",
                 "anchor": {
-                  "absolute": 112
+                  "absolute": 208
                 },
                 "surface_depth_multiplier": 0,
                 "add_stone_depth": false
@@ -187,7 +184,7 @@
               "invert": {
                 "type": "minecraft:y_above",
                 "anchor": {
-                  "absolute": 192
+                  "absolute": 352
                 },
                 "surface_depth_multiplier": 0,
                 "add_stone_depth": false
@@ -217,7 +214,7 @@
               "invert": {
                 "type": "minecraft:y_above",
                 "anchor": {
-                  "absolute": 256
+                  "absolute": 480
                 },
                 "surface_depth_multiplier": 0,
                 "add_stone_depth": false

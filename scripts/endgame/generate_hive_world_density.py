@@ -10,12 +10,12 @@ Emits (do not hand-edit):
   kubejs/data/infinite_domain/worldgen/noise/hive_world_*.json          (4 noise defs)
   kubejs/data/infinite_domain/worldgen/density_function/hive_world/*.json
 
-Model: the whole dimension is one engineered mass, solid from Y-64 to ~Y292, with
+Model: the whole dimension is one engineered mass, solid from Y-64 to ~Y580, with
 a bedrock-capped roof. Voids are carved OUT of it:
   * a spaghetti-style tunnel/room network (mid-scale noise near zero) - "choked,
     indecipherable" circulation (mission §1);
   * full-height vertical circulation shafts (large-scale noise, no Y variation);
-  * one monumental release hall in the Vaulting band Y~200-246, minus support
+  * one monumental release hall in the Vaulting band Y~368-464, minus support
     columns (mission §2.2 compression -> release);
   * a guaranteed-solid floor and roof so nothing breaches the world edges.
 Band palettes are applied by the noise-settings surface rule (see
@@ -65,7 +65,7 @@ def range_keep(input_ref, half_width):
         "type": "minecraft:range_choice",
         "input": input_ref,
         "min_inclusive": -half_width,
-        "max_inclusive": half_width,
+        "max_exclusive": half_width,
         "when_in_range": -1.0,
         "when_out_of_range": 1.0,
     }
@@ -73,10 +73,10 @@ def range_keep(input_ref, half_width):
 
 # --- density function graph ---------------------------------------------------
 DFS = {
-    # solid everywhere below ~Y292, ramp to void by the roof line
-    "mass": y_grad(278, 1.0, 306, -1.0),
+    # solid throughout the candidate Spire envelope, ramp to void by the roof line
+    "mass": y_grad(568, 1.0, 596, -1.0),
     # forced-solid bedrock-ish roof and floor so voids never breach the edges
-    "roof": y_grad(300, -1.0, 316, 1.0),
+    "roof": y_grad(588, -1.0, 604, 1.0),
     "floor": y_grad(-64, 1.0, -46, -1.0),
 
     # the circulation network: carve where the mid-scale noise crosses zero
@@ -94,8 +94,8 @@ DFS["shaft_keep"] = range_keep(ref("shaft_noise"), 0.055)
 # a Y window that is +1 inside the Vaulting hall band, -1 outside
 DFS["vault_window"] = {
     "type": "minecraft:min",
-    "argument1": y_grad(192, -1.0, 204, 1.0),
-    "argument2": y_grad(238, 1.0, 250, -1.0),
+    "argument1": y_grad(368, -1.0, 384, 1.0),
+    "argument2": y_grad(448, 1.0, 464, -1.0),
 }
 # +1 at a column, -1 between columns
 DFS["column_field"] = range_keep(ref("column_noise"), 0.12)

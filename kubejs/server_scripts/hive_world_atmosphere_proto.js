@@ -29,7 +29,7 @@
     const SCAN_R = 6
 
     function inHive(entity) {
-        return entity.level.dimension().location().toString() === DIM
+        return entity.level.dimension.location().toString() === DIM
     }
 
     function barId(player) {
@@ -38,11 +38,11 @@
 
     // C0069 base_band_rate by Y band (spatial-metrics.md bands)
     function bandRate(y) {
-        if (y < -32) return 4.0   // The Drown
-        if (y < 48) return 2.6    // The Underworks
-        if (y < 112) return 1.9   // The Furnace Tiers
-        if (y < 192) return 1.5   // The Billet Decks
-        if (y < 256) return 1.2   // The Vaulting
+        if (y < 0) return 4.0     // The Drown / planetary crust
+        if (y < 96) return 2.6    // The Underworks
+        if (y < 208) return 1.9   // The Furnace Tiers
+        if (y < 352) return 1.5   // The Billet Decks
+        if (y < 480) return 1.2   // The Vaulting
         return 1.0                // The Crown
     }
 
@@ -75,7 +75,7 @@
                 }
             }
         }
-        return { waystation, fume }
+        return { waystation: waystation, fume: fume }
     }
 
     function ensureBar(player) {

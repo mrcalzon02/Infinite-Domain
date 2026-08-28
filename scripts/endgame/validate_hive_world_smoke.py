@@ -107,14 +107,18 @@ if known_blocks:
 # ---- 3. height contract -------------------------------------------------
 dt = docs.get(DATA / "dimension_type/hive_world.json")
 if dt is not None:
-    for key, want in (("min_y", -64), ("height", 384), ("logical_height", 384)):
+    for key, want in (("min_y", -64), ("height", 672), ("logical_height", 672)):
         if dt.get(key) != want:
             fail(f"[3] dimension_type {key} = {dt.get(key)!r}, height contract requires {want}")
     ns = docs.get(DATA / "worldgen/noise_settings/hive_world.json")
     if ns is not None:
         n = ns.get("noise", {})
-        if n.get("min_y") != -64 or n.get("height") != 384:
+        if n.get("min_y") != -64 or n.get("height") != 672:
             fail(f"[3] noise_settings noise block {n} disagrees with the height contract")
+        if ns.get("sea_level") != 0:
+            fail(f"[3] noise_settings sea_level = {ns.get('sea_level')!r}, planetary datum requires 0")
+        if ns.get("default_fluid", {}).get("Name") != "the_wasteland_reworked:acid":
+            fail("[3] noise_settings default_fluid must be the established static acid block")
 
 # ---- 4. dimension wiring ----------------------------------------------
 dim = docs.get(DATA / "dimension/hive_world.json")
@@ -210,12 +214,17 @@ if adv is not None and "hive" in json.dumps(adv.get("display", {})).lower():
 for js in (expedition_js, atmosphere_js):
     if not js.is_file():
         continue
+    source = js.read_text(encoding="utf-8")
     body = "\n".join(
-        ln for ln in js.read_text(encoding="utf-8").splitlines()
+        ln for ln in source.splitlines()
         if not ln.lstrip().startswith("//")
     ).strip()
     if not re.match(r"\(\s*(?:\(\s*\)\s*=>|function\b)", body):
         fail(f"[8] {js.name} is not wrapped in an IIFE - its top-level consts share global scope")
+    if re.search(r"\breturn\s*\{\s*[A-Za-z_$][\w$]*\s*(?:,\s*[A-Za-z_$][\w$]*\s*)*\}", source):
+        fail(f"[8] {js.name} uses object-property shorthand, which KubeJS Rhino rejects")
+    if ".level.dimension()" in source:
+        fail(f"[8] {js.name} calls level.dimension() even though current KubeJS exposes dimension as a property")
 
 # ---- 9. density-function reference integrity --------------------
 df_dir = DATA / "worldgen/density_function/hive_world"
@@ -233,9 +242,15 @@ if df_dir.is_dir():
     # every density function must parse
     for p in df_dir.glob("*.json"):
         try:
-            json.loads(p.read_text(encoding="utf-8"))
+            density = json.loads(p.read_text(encoding="utf-8"))
         except json.JSONDecodeError as exc:
             fail(f"[9] density function {p.name} does not parse: {exc}")
+            continue
+        if density.get("type") == "minecraft:range_choice":
+            if "max_inclusive" in density:
+                fail(f"[9] density function {p.name} uses obsolete range_choice field max_inclusive")
+            if "max_exclusive" not in density:
+                fail(f"[9] density function {p.name} range_choice is missing max_exclusive")
 else:
     notes.append("no hive_world density_function directory (spike may predate the density graph)")
 

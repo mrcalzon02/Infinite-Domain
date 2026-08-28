@@ -22,12 +22,12 @@ exposure_gain_per_second =
 
 | Band | Y range | `base_band_rate` |
 |---|---:|---:|
-| The Drown | `-64..-33` | 4.0 |
-| The Underworks | `-32..47` | 2.6 |
-| The Furnace Tiers | `48..111` | 1.9 |
-| The Billet Decks | `112..191` | 1.5 |
-| The Vaulting | `192..255` | 1.2 |
-| The Crown | `256..319` | 1.0 |
+| The Drown | `-64..-1` | 4.0 |
+| The Underworks | `0..95` | 2.6 |
+| The Furnace Tiers | `96..207` | 1.9 |
+| The Billet Decks | `208..351` | 1.5 |
+| The Vaulting | `352..479` | 1.2 |
+| The Crown | `480..607` | 1.0 |
 
 - `fume_multiplier` = **1.5** when `the_wasteland_reworked:acid` is within a 6-block
   radius (a fume zone, C0074); **1.0** otherwise.

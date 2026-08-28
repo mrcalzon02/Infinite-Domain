@@ -1,0 +1,26 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "infinite_domain_hive_world"
+version = "0.1.0"
+displayName = "Infinite Domain: Hive World Companion"
+authors = "Infinite Domain"
+description = '''
+Owns the Hive World's height-aware atmosphere, custom client effects, travel, recovery, shelter, and runtime telemetry.
+'''
+
+[[dependencies.infinite_domain_hive_world]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_hive_world]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"

@@ -1,31 +1,35 @@
 # Endgame — height contract
 
 **Authority:** `docs/Endgame.md` §3 and checkpoint `EG-P00-S03-C0006`.
-**Status:** ACCEPTED 2026-08-27.
+**Status:** REOPENED 2026-08-28 as `EG-P00-S03-C0006-R1`; owner-directed extended-height candidate. Runtime compatibility evidence remains required before production acceptance.
 
-## Accepted initial contract
+## Owner-directed candidate contract
 
-The `infinite_domain:hive_world` dimension uses the **proven vanilla envelope
-`-64..319`**.
+The `infinite_domain:hive_world` dimension targets **`-64..607`**. Minecraft requires
+the configured height to be a multiple of 16, so the legal value is `672`: 64 blocks
+below the Y0 planetary surface and 608 blocks above it. This approximately doubles the
+former Y0-to-roof build space while keeping Y0 as an intuitive world datum.
 
 | Field | Value | Where |
 |---|---|---|
 | `min_y` | `-64` | `dimension_type/hive_world.json`, `noise_settings/hive_world.json` |
-| `height` | `384` | same |
-| `logical_height` | `384` | `dimension_type/hive_world.json` |
-| top block Y | `319` | `min_y + height - 1` |
-| `sea_level` | provisional `-40` (acid table in The Drown) | `noise_settings/hive_world.json`, refined at `EG-P03-S04-C0044` |
+| `height` | `672` | same |
+| `logical_height` | `672` | `dimension_type/hive_world.json` |
+| top block Y | `607` | `min_y + height - 1` |
+| planetary surface datum | `Y 0` | dead-waste terrain and Spire bases meet here |
+| `sea_level` | `0` | acid seas use the same datum; refined at `EG-P03-S04-C0044` |
 
 Rationale:
 
-- The base pack already runs this exact envelope: `wastelands` noise settings use
-  `min_y -64, height 384`; `cyberspace:darknet_dimension` runs `min_y -64, height 320`.
-- Every downstream system (light engine, FTB Chunks claims and force-load, installed
-  map/minimap mods, structure spread, mob spawn light checks, client render distance,
-  fog, sky) is exercised at `-64..319` by the base pack today. No new compatibility risk
-  is introduced.
-- The six accepted bands (C0004) tile `-64..319` exactly (32 + 80 + 64 + 80 + 64 + 64 =
-  384).
+- The former `-64..319` contract remains the proven rollback envelope.
+- `height 600` itself is codec-invalid because height must be divisible by 16. `672`
+  is the nearest legal envelope that supplies approximately 600 blocks above Y0.
+- The dead wastes occupy a comparatively thin 64-block planetary layer from Y-64 to
+  Y0. Stack masses begin at the Y0 surface datum and may rise through the remaining
+  608 blocks.
+- Every downstream system (lighting, claims, maps, structures, mobs, client render,
+  fog, sky, serialization, portals) must now be re-proven across the extended range.
+- The six revised bands tile `-64..607` exactly (64 + 96 + 112 + 144 + 128 + 128 = 672).
 
 ## Engine constraints recorded
 
@@ -36,19 +40,19 @@ Vanilla `DimensionType` codec bounds (1.21.1):
 - `min_y + height ≤ 2032`;
 - `logical_height ≤ height`.
 
-`-64..319` (min_y −64, height 384) satisfies all four. A taller envelope is therefore
-**engine-permitted**; the risk of going taller is downstream mod compatibility, not the
-core codec. The Hive dimension type uses the plain vanilla `dimension_type` codec and
+`-64..607` (min_y −64, height 672) satisfies all four. The candidate is therefore
+**engine-permitted**; the risk is downstream mod compatibility, not the core codec.
+The Hive dimension type uses the plain vanilla `dimension_type` codec and
 does **not** depend on Isekai for its bounds (the Isekai build-height report was
 `runtime-unverified` in C0002 and is not on this path).
 
-## Taller-world option — DEFERRED
+## Extended-height acceptance — REQUIRED
 
-A taller dimension is an optional later decision. It **may not be adopted** until a
-dedicated taller-height compatibility checkpoint is seeded and passed. That checkpoint
-is **not on the current critical path** and is only seeded if the owner requests a
-taller Cinderstack. No `noise_settings` or `dimension_type` for the Hive may exceed
-`height 384` before it passes.
+The owner requested the taller Cinderstack on 2026-08-28, so the compatibility
+checkpoint is now seeded and on the critical path. Candidate data may use `height 672`
+for isolated testing, but P02 massing may not freeze and no existing production world
+may be migrated until every adoption criterion passes. Failure rolls the data back to
+the proven `height 384` envelope without changing the Y0 surface design intent.
 
 ### Adoption criteria (all required)
 
@@ -66,6 +70,6 @@ taller Cinderstack. No `noise_settings` or `dimension_type` for the Hive may exc
 
 ### Evidence method
 
-Fixed-seed probe at roof, floor, sea level, and every band transition; relog;
+Fixed-seed probe at roof Y607, floor Y-64, acid-sea/surface Y0, and every band transition; relog;
 region pregeneration; dedicated-server start and join; client log capture. Compare
 against the `-64..319` baseline captured at `EG-P01-S05-C0021`.

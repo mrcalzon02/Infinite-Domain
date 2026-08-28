@@ -1,8 +1,8 @@
-// Endgame EG-P01-S04-C0019 - reversible entry/return for infinite_domain:hive_world.
+// Endgame EG-P06-S01-C0084 - constructed entry/return for infinite_domain:hive_world.
 //
-// DISPOSABLE PHASE 1 SPIKE. Operator/creative-gated. No recipe, no automation.
-// The real constructible access mechanism is Phase 6 EG-P06-S01-C0084; the transactional
-// travel service moves to the packdev/hive-world-companion module at Phase 5.
+// Both travel markers activate at the custom core of a Nether-sized vertical frame.
+// Outer dimensions may be 4x5 through 23x23. Four actuators are mandatory corners;
+// the core replaces any non-corner block on the lower edge. Either cardinal axis works.
 //
 // Handles: origin capture, safe arrival (platform force-built every entry),
 // return, death, disconnect-mid-transfer, and missing/unloaded destination.
@@ -16,6 +16,10 @@
     const ARRIVAL_FN = 'infinite_domain:hive_world/build_arrival'
     const RETURN_ITEM = 'kubejs:cinderstack_return_marker'
     const FALLBACK_DIM = 'minecraft:overworld'
+    const CORE = 'kubejs:cinderstack_portal_core'
+    const FRAME = 'kubejs:cinderstack_portal_frame'
+    const ACTUATOR = 'kubejs:cinderstack_portal_actuator'
+    const FIELD = 'kubejs:cinderstack_portal_field'
 
     const PD = {
         active: 'id_cinderstack_active',
@@ -29,11 +33,77 @@
     }
 
     function dimId(entity) {
-        return entity.level.dimension().location().toString()
+        return entity.level.dimension.location().toString()
     }
 
     function charles(player, message) {
         player.tell('§8[Charles] §7' + message)
+    }
+
+    function blockAt(level, core, across, up, xPlane) {
+        const x = core.x + (xPlane ? across : 0)
+        const z = core.z + (xPlane ? 0 : across)
+        return level.getBlock(x, core.y + up, z).id
+    }
+
+    function isPortalInterior(id) {
+        return id === FIELD || id === 'minecraft:air' || id === 'minecraft:cave_air' || id === 'minecraft:void_air'
+    }
+
+    function findBottomCorner(level, core, xPlane, direction) {
+        for (let distance = 1; distance <= 22; distance++) {
+            const id = blockAt(level, core, direction * distance, 0, xPlane)
+            if (id === ACTUATOR) return direction * distance
+            if (id !== FRAME) return null
+        }
+        return null
+    }
+
+    function portalGeometry(level, core, xPlane) {
+        const left = findBottomCorner(level, core, xPlane, -1)
+        const right = findBottomCorner(level, core, xPlane, 1)
+        if (left === null || right === null) return null
+
+        const width = right - left + 1
+        if (width < 4 || width > 23) return null
+
+        let height = 0
+        for (let up = 1; up <= 22; up++) {
+            const leftId = blockAt(level, core, left, up, xPlane)
+            const rightId = blockAt(level, core, right, up, xPlane)
+            if (leftId === ACTUATOR && rightId === ACTUATOR) {
+                height = up + 1
+                break
+            }
+            if (leftId !== FRAME || rightId !== FRAME) return null
+        }
+        if (height < 5 || height > 23) return null
+
+        const top = height - 1
+        for (let across = left + 1; across < right; across++) {
+            if (blockAt(level, core, across, 0, xPlane) !== (across === 0 ? CORE : FRAME)) return null
+            if (blockAt(level, core, across, top, xPlane) !== FRAME) return null
+        }
+        for (let up = 1; up < top; up++) {
+            for (let across = left + 1; across < right; across++) {
+                if (!isPortalInterior(blockAt(level, core, across, up, xPlane))) return false
+            }
+        }
+        return { xPlane: xPlane, left: left, right: right, height: height }
+    }
+
+    function findPortal(level, core) {
+        return portalGeometry(level, core, true) || portalGeometry(level, core, false)
+    }
+
+    function energizePortal(player, core, portal) {
+        const x1 = core.x + (portal.xPlane ? portal.left + 1 : 0)
+        const x2 = core.x + (portal.xPlane ? portal.right - 1 : 0)
+        const z1 = core.z + (portal.xPlane ? 0 : portal.left + 1)
+        const z2 = core.z + (portal.xPlane ? 0 : portal.right - 1)
+        player.server.runCommandSilent('execute in ' + dimId(player) + ' run fill ' +
+            x1 + ' ' + (core.y + 1) + ' ' + z1 + ' ' +
+            x2 + ' ' + (core.y + portal.height - 2) + ' ' + z2 + ' ' + FIELD)
     }
 
     function captureOrigin(player) {
@@ -63,10 +133,6 @@
         const d = player.persistentData
         if (dimId(player) === HIVE) {
             charles(player, 'You are already inside the Cinderstack. Use the return marker to leave.')
-            return
-        }
-        if (!player.hasPermissions(2) && !player.isCreative()) {
-            charles(player, 'The descent marker is an operator instrument in this build. Access opens for everyone at the constructed gate later.')
             return
         }
         // stale record from a previous run while standing back at an origin - discard it
@@ -131,25 +197,20 @@
 
     // ---- triggers -------------------------------------------------------
 
-    ItemEvents.rightClicked('kubejs:cinderstack_marker', event => {
+    BlockEvents.rightClicked(CORE, event => {
         const player = event.player
         if (!player || event.level.isClientSide()) return
-        descend(player)
-    })
-
-    ItemEvents.rightClicked(RETURN_ITEM, event => {
-        const player = event.player
-        if (!player || event.level.isClientSide()) return
-        ascend(player)
-    })
-
-    BlockEvents.rightClicked('minecraft:lodestone', event => {
-        const player = event.player
-        if (!player || event.level.isClientSide()) return
-        if (event.level.dimension().location().toString() !== HIVE) return
-        // let the item handler own the interaction when the return marker is in hand
-        if (event.item && event.item.id === RETURN_ITEM) return
-        ascend(player)
+        const held = event.item ? event.item.id : ''
+        if (held !== 'kubejs:cinderstack_marker' && held !== RETURN_ITEM) return
+        event.cancel()
+        const portal = findPortal(event.level, event.block)
+        if (!portal) {
+            charles(player, 'Incomplete portal: build a vertical Nether-sized frame (4 x 5 through 23 x 23), place Actuators at all four corners, and put the Portal Core on the lower edge.')
+            return
+        }
+        energizePortal(player, event.block, portal)
+        if (held === RETURN_ITEM) ascend(player)
+        else descend(player)
     })
 
     // ---- recovery ------------------------------------------------------
@@ -188,5 +249,43 @@
                 charles(player, 'You are outside the Cinderstack with an open expedition record. The return marker still points to your departure point.')
             }
         }
+    })
+
+    ServerEvents.recipes(event => {
+        event.shaped('12x kubejs:cinderstack_portal_frame', ['BOB', 'ENE', 'BOB'], {
+            B: 'allthecompressed:blackstone_2x',
+            O: 'allthecompressed:obsidian_2x',
+            E: 'allthecompressed:end_stone_2x',
+            N: 'allthecompressed:netherite_block_2x',
+        }).id('infinite_domain:cinderstack/portal_frame')
+
+        event.shaped('4x kubejs:cinderstack_portal_actuator', ['OEO', 'DQD', 'OEO'], {
+            O: 'allthecompressed:obsidian_2x',
+            E: 'allthecompressed:ender_pearl_block_2x',
+            D: 'allthecompressed:diamond_block_2x',
+            Q: 'ae2:quantum_entangled_singularity',
+        }).id('infinite_domain:cinderstack/portal_actuator')
+
+        event.shaped('kubejs:cinderstack_portal_core', ['NQN', 'EIE', 'NSN'], {
+            N: 'allthecompressed:netherite_block_2x',
+            Q: 'ae2:quantum_entangled_singularity',
+            E: 'allthecompressed:ender_pearl_block_2x',
+            I: 'kubejs:infinite_domain_core',
+            S: 'allthecompressed:nether_star_block_2x',
+        }).id('infinite_domain:cinderstack/portal_core')
+
+        event.shaped('kubejs:cinderstack_marker', ['CEC', 'LNL', 'CEC'], {
+            C: 'minecraft:crying_obsidian',
+            E: 'minecraft:echo_shard',
+            L: 'minecraft:lodestone',
+            N: 'minecraft:nether_star',
+        }).id('infinite_domain:cinderstack/descent_marker')
+
+        event.shaped('kubejs:cinderstack_return_marker', [' E ', 'CLC', ' R '], {
+            C: 'minecraft:crying_obsidian',
+            E: 'minecraft:echo_shard',
+            L: 'minecraft:lodestone',
+            R: 'minecraft:recovery_compass',
+        }).id('infinite_domain:cinderstack/return_marker')
     })
 })()

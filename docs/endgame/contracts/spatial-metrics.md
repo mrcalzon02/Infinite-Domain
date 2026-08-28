@@ -14,19 +14,20 @@ table). Does not depend on: C0005 architecture, C0006 numeric height, C0007 haza
 ## 1. Vertical bands (accepted names)
 
 The six placeholder band identities in `docs/Endgame.md` §3 are replaced as follows.
-The working ranges are unchanged from the source table and remain provisional.
+The ranges were revised by owner direction on 2026-08-28 for the extended-height candidate.
 
 | # | Accepted band name | Working range (Y) | Height | Primary identity | Traversal grammar |
 |---|---|---:|---:|---|---|
-| 1 | **The Drown** | `-64..-33` | 32 | acid reservoirs, buried foundations, ancient machinery, structural roots | flooded ledges, maintenance gantries, sealed shafts |
-| 2 | **The Underworks** | `-32..47` | 80 | collapsed quarters, unsanctioned settlement, tunnels, abandoned transit | short loops, vertical bypasses, unstable crossings |
-| 3 | **The Furnace Tiers** | `48..111` | 64 | manufactories, freight rail, waste conduits, power and ventilation plants | industrial halls, rail axes, service networks |
-| 4 | **The Billet Decks** | `112..191` | 80 | residential slabs, markets, institutions, civic monuments, civic ruins | district streets, stacked interiors, public stairs |
-| 5 | **The Vaulting** | `192..255` | 64 | cathedral-scale arches, suspended transit, processional voids | long axes, bridges, elevators, major thresholds |
-| 6 | **The Crown** | `256..319` | 64 | fortified crowns, observatories, command centres, capstone sites | exposed ascent, controlled gates, final expedition loop |
+| 1 | **The Drown** | `-64..-1` | 64 | thin planetary crust, acid reservoirs, buried foundations, structural roots | flooded ledges, maintenance gantries, sealed shafts |
+| 2 | **The Underworks** | `0..95` | 96 | surface-entry ruins, collapsed quarters, unsanctioned settlement, abandoned transit | short loops, vertical bypasses, unstable crossings |
+| 3 | **The Furnace Tiers** | `96..207` | 112 | manufactories, freight rail, waste conduits, power and ventilation plants | industrial halls, rail axes, service networks |
+| 4 | **The Billet Decks** | `208..351` | 144 | residential slabs, markets, institutions, civic monuments, civic ruins | district streets, stacked interiors, public stairs |
+| 5 | **The Vaulting** | `352..479` | 128 | cathedral-scale arches, suspended transit, processional voids | long axes, bridges, elevators, major thresholds |
+| 6 | **The Crown** | `480..607` | 128 | fortified crowns, observatories, command centres, capstone sites | exposed ascent, controlled gates, final expedition loop |
 
-Total engineered extent: `-64..319` (383 blocks). Band boundaries are *transition
-zones*, not hard planes: each boundary owns a 6–16 block architectural seam
+Total extent: `-64..607` (672 blocks). Y0 is the planetary surface and acid-sea datum;
+the dead wastes between Spires use the thin `-64..0` crustal layer. Band boundaries are *transition
+zones*, not hard planes: each boundary owns a 8–24 block architectural seam
 (a plant deck, a rubble choke, a transit interchange) authored at Phase 4.
 
 Band identity must be legible **without labels** (`P02-GATE` exit criterion): a player
@@ -82,7 +83,7 @@ constricted network` is quantified as a **release cadence**:
 
 | Check | Result |
 |---|---|
-| Bands tile `-64..319` with no gap or overlap | PASS — 32 + 80 + 64 + 80 + 64 + 64 = 384 = height of the `-64..319` envelope |
+| Bands tile `-64..607` with no gap or overlap | PASS — 64 + 96 + 112 + 144 + 128 + 128 = 672 |
 | Band count matches §2.1 "distinct vertical strata" | PASS — 6 distinct strata |
 | Band and field names avoid every C0003 prohibited term | PASS — verified against `docs/endgame/identity/placeholder-terms.md` |
 | Wasteland dominance (§2.4) preserved | PASS — field 4 is the dominant field; ≥ 70 % target retained |

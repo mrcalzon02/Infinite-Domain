@@ -30,12 +30,15 @@ Every seed sweep uses **exactly** these, in this order:
 | Probe | Coordinates | Purpose |
 |---|---|---|
 | arrival | `(0, <arrival_y>, 0)` | safe-arrival repeat test (C0020) |
-| band: The Drown | `(0, -48, 0)` and `(1200, -48, 1200)` | band identity, atmosphere, acid |
-| band: The Underworks | `(0, 8, 0)` and `(1200, 8, 1200)` | band identity, navigation |
-| band: The Furnace Tiers | `(0, 80, 0)` and `(1200, 80, 1200)` | band identity, circulation |
-| band: The Billet Decks | `(0, 152, 0)` and `(1200, 152, 1200)` | band identity, districts |
-| band: The Vaulting | `(0, 224, 0)` and `(1200, 224, 1200)` | monumental scale, sightlines |
-| band: The Crown | `(0, 288, 0)` and `(1200, 288, 1200)` | skyline, ascent |
+| world floor | `(0, -64, 0)` and `(1200, -64, 1200)` | floor seal, fog maximum, serialization |
+| planetary surface / acid sea | `(0, 0, 0)` and `(1200, 0, 1200)` | terrain datum, coastline, Spire seating |
+| band: The Drown | `(0, -32, 0)` and `(1200, -32, 1200)` | band identity, atmosphere, acid |
+| band: The Underworks | `(0, 48, 0)` and `(1200, 48, 1200)` | band identity, navigation |
+| band: The Furnace Tiers | `(0, 152, 0)` and `(1200, 152, 1200)` | band identity, circulation |
+| band: The Billet Decks | `(0, 280, 0)` and `(1200, 280, 1200)` | band identity, districts |
+| band: The Vaulting | `(0, 416, 0)` and `(1200, 416, 1200)` | monumental scale, sightlines |
+| band: The Crown | `(0, 544, 0)` and `(1200, 544, 1200)` | skyline, ascent |
+| world roof | `(0, 607, 0)` and `(1200, 607, 1200)` | roof seal, lighting, client clipping |
 | chunk border | `(16, y, 16)`, `(-1, y, -1)` | seam / continuity |
 | deep wastes | `(6000, <surface>, 0)` | wasteland-share sampling |
 
@@ -75,7 +78,7 @@ Runs with no live instance. Asserts:
 2. every registry reference resolves against `docs/registry-inventory/` plus the Hive's
    own declared IDs;
 3. `dimension_type/hive_world.json` bounds equal the C0006 height contract
-   (`min_y -64`, `height 384`, `logical_height 384`);
+   (`min_y -64`, `height 672`, `logical_height 672`, top block `Y607`, sea level `Y0`);
 4. `dimension/hive_world.json` references a real `noise_settings` and biome source;
 5. the arrival-platform structure and any entry item/advancement IDs exist;
 6. no Hive file writes under a forbidden shared path

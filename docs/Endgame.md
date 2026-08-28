@@ -27,6 +27,7 @@ Build a hostile post-endgame dimension inspired by the vertical and environmenta
 - interhive processional spaces use cathedral-scale arches, transit axes, buttresses, and distant silhouettes;
 - hive clusters stand inside a planet-wide dead wasteland of ash, sulfur, toxic air, and acidic water;
 - height communicates social, environmental, architectural, and gameplay progression;
+- every vertical band carries multiple cloud or fog strata, with visibility and atmospheric density worsening toward the world floor;
 - entry requires endgame preparation, and survival requires logistics rather than a single immunity item;
 - every layer supports purposeful exploration, traversal, risk, recovery, and repeatable endgame value.
 
@@ -72,22 +73,61 @@ Density functions and terrain systems create planetary crust, hive envelopes, ma
 
 The user-approved architectural palette centers on dark gray and black slate and granite families. Chiseled blocks and brick masonry provide deliberate authored detail, thresholds, structural rhythm, and monumental ornament. Later palette checkpoints must select exact registry IDs, ratios, contrast materials, weathering states, and placement rules; they may extend this foundation but may not replace it with a bright or predominantly metallic visual language without a recorded revision.
 
+## 2.9 Atmosphere is vertically layered architecture
+
+The dimension must not use one uniform fog value or a single decorative cloud ceiling. Every accepted vertical band must contain at least two independently tunable cloud, haze, fume, or fog sub-layers, and every major band transition must be legible as an atmospheric threshold. Fog extinction, colour contamination, particle load, and unprotected exposure pressure must increase monotonically as the player descends toward the bedrock floor. The Crown remains the clearest region; The Drown is the densest and most corrosive.
+
+Cloud and fog layers are authored spatial volumes rather than flat opaque planes. They must preserve local route readability, allow monumental silhouettes to emerge and disappear across depth, respect powered shelter and ventilation feedback, and remain within the client performance budget. Biome fog colour alone does not satisfy this pillar.
+
+Rendered cloud surfaces must use camera-proximity occlusion. From a distant overlook a deck may read as a ceiling, horizon band, or poison sea; as the camera approaches and enters that deck, its visible sheet geometry and hard lower edge must fade out before it can appear attached to the player's feet. The same proximity envelope must increase local volumetric fog so the player becomes engulfed by the atmosphere instead of standing on a cloud texture. The Drown and Underworks additionally retain a strong omnipresent baseline fog between their local layers; descending through a gap must never make the lowest world feel cleaner than the tiers above it.
+
 ---
 
 # 3. Proposed spatial contract
 
-The first implementation targets the proven vanilla-height range `-64..319`. A taller dimension is an optional later decision and may not be adopted until a compatibility checkpoint proves lighting, structures, portals, claims, maps, mobs, and client rendering at the proposed height.
+Owner direction on 2026-08-28 selects an extended-height candidate spanning `-64..607` (`min_y: -64`, `height: 672`, `logical_height: 672`). Minecraft height must be divisible by 16, so a literal configured height of 600 is invalid; 672 supplies 64 blocks below the Y0 planetary surface and 608 blocks above it, approximately doubling the former Y0-to-roof build space. Candidate data may use this envelope for isolated testing, but production adoption remains gated by `EG-P00-S03-C0006-R1` compatibility evidence for lighting, structures, portals, claims, maps, mobs, serialization, performance, and client rendering.
 
 Checkpoint `EG-P00-S02-C0004` accepted this contract as a working contract and replaced the placeholder band and field identities below with original names (full rationale, traversal-rhythm quantification, and the consistency check are in `docs/endgame/contracts/spatial-metrics.md`). Every number remains provisional until `P02-GATE`.
 
 | Vertical band | Working range | Primary identity | Required traversal |
 |---|---:|---|---|
-| The Drown | `-64..-33` | acid reservoirs, buried foundations, ancient machinery, structural roots | flooded ledges, maintenance gantries, sealed shafts |
-| The Underworks | `-32..47` | collapsed quarters, unsanctioned settlement, tunnels, abandoned transit | short loops, vertical bypasses, unstable crossings |
-| The Furnace Tiers | `48..111` | manufactories, freight rail, waste conduits, power and ventilation plants | industrial halls, rail axes, service networks |
-| The Billet Decks | `112..191` | residential slabs, markets, institutions, civic monuments, civic ruins | district streets, stacked interiors, public stairs |
-| The Vaulting | `192..255` | cathedral-scale arches, suspended transit, processional voids | long axes, bridges, elevators, major thresholds |
-| The Crown | `256..319` | fortified crowns, observatories, command centres, capstone sites | exposed ascent, controlled gates, final expedition loop |
+| The Drown | `-64..-1` | thin planetary crust, acid reservoirs, buried foundations, ancient machinery, structural roots | flooded ledges, maintenance gantries, sealed shafts |
+| The Underworks | `0..95` | surface-entry ruins, collapsed quarters, unsanctioned settlement, abandoned transit | short loops, vertical bypasses, unstable crossings |
+| The Furnace Tiers | `96..207` | manufactories, freight rail, waste conduits, power and ventilation plants | industrial halls, rail axes, service networks |
+| The Billet Decks | `208..351` | residential slabs, markets, institutions, civic monuments, civic ruins | district streets, stacked interiors, public stairs |
+| The Vaulting | `352..479` | cathedral-scale arches, suspended transit, processional voids | long axes, bridges, elevators, major thresholds |
+| The Crown | `480..607` | fortified crowns, observatories, command centres, capstone sites | exposed ascent, controlled gates, final expedition loop |
+
+### 3.1 Planetary surface and thin-waste datum
+
+- `Y 0` is the canonical planetary surface, shoreline, acid-sea level, and nominal Spire-base datum.
+- The dead-waste terrain between Spires occupies the comparatively thin crustal interval `Y -64..0`; local relief, basins, trenches, foundations, and acid-sea floors remain inside that interval.
+- Stack cores and aprons seat at or through Y0 and rise through the 608-block above-surface envelope. Their roots may penetrate The Drown, but the inter-stack wastes must not become hundreds of blocks of ordinary terrain.
+- Acid seas use `sea_level: 0` and `the_wasteland_reworked:acid` as the Hive noise settings' default fluid. Bounded acid pools and hydrology features elaborate this datum rather than inventing unrelated water levels.
+- Worldgen, structure placement, navigation, and screenshot evidence must distinguish planetary surface Y0 from world floor Y-64.
+
+### 3.2 Vertical atmospheric overlay
+
+The following working targets bind Phase 5 development. Values are provisional until `EG-P05-S04-C0076`, but their ordering and the requirement for multiple layers per band are non-negotiable.
+
+| Vertical band | Required atmospheric composition | Provisional unobstructed landmark visibility |
+|---|---|---:|
+| The Crown | at least two thin high-altitude ash or ice-haze layers; intermittent clear breaks; upper silhouettes visible above lower poison decks | `160–256` blocks |
+| The Vaulting | at least two cold soot or incense-like haze layers crossing monumental voids at different elevations | `120–192` blocks |
+| The Billet Decks | at least two inhabited-smog layers with suspended particulate and warmer institutional light scatter | `88–144` blocks |
+| The Furnace Tiers | at least two sulfur-and-soot layers, including a denser industrial plume deck around major exhaust elevations | `64–112` blocks |
+| The Underworks | at least two low brown-green toxic layers with broken visibility and leakage from shafts and waste conduits | `40–72` blocks |
+| The Drown | at least two dense acid-vapour layers plus near-floor fume accumulation above the bedrock and reservoir zone | `20–48` blocks |
+
+Additional requirements:
+
+- major transition decks near `Y 0`, `96`, `208`, `352`, and `480` must change atmosphere gradually across a bounded vertical blend rather than switching on one block plane;
+- the surface dead wastes retain sulfurous or acidic precipitation and broad poison-cloud cover; those exterior weather systems supplement rather than replace the per-band stack layers;
+- descending visibility must worsen in fixed-camera comparisons under equivalent lighting and weather, while required route markers remain readable at their declared navigation distance;
+- large halls, shafts, exterior faces, and skyline views receive layered depth cues; cramped sealed rooms may suppress visible clouds but must retain the correct band tint and hazard state unless actively ventilated;
+- cloud-deck surface opacity must fall to zero inside its camera-proximity envelope while local fog approaches that deck's maximum density; at-layer and crossing cameras must show no planar cloud surface at the player's feet;
+- The Drown and Underworks must enforce a nonzero dense baseline between layer centres, with stronger near-floor extinction toward `Y -64`; their pressure may fluctuate but may not clear completely outside powered ventilation;
+- the dedicated Hive companion module owns height-aware fog, cloud-volume rendering, blending, shelter suppression, and client telemetry. Datapack biome effects remain fallback ambience only.
 
 Horizontal generation uses four world-scale fields:
 
@@ -472,7 +512,7 @@ Convert the vision into measurable contracts and verify what the current Minecra
 | `EG-P00-S02-C0003` | Identity contract | original setting name, terminology, factions placeholder policy, and IP boundary | written approval or recorded working assumptions |
 | `EG-P00-S02-C0004` | Spatial metrics | accepted vertical bands, core/apron/axis/waste masks, scale ranges, and traversal rhythm | diagram/table and consistency check |
 | `EG-P00-S03-C0005` | Architecture decision | ADR selecting hybrid density + modular structures + companion module | alternatives, reasons, consequences, rollback |
-| `EG-P00-S03-C0006` | Height decision | initial `-64..319` contract and taller-world compatibility test criteria | registry/engine constraints recorded |
+| `EG-P00-S03-C0006-R1` | Extended-height decision | candidate `-64..607` contract, Y0 surface/acid datum, and mandatory taller-world compatibility suite | codec checks plus floor/surface/band/roof probes, pregeneration, client/server and mod-compat evidence |
 | `EG-P00-S04-C0007` | Hazard contract | atmosphere, acid, ventilation, PPE, shelter, and exposure rules | interaction matrix and non-trivialization rule |
 | `EG-P00-S04-C0008` | Performance budget | initial limits for generation, block entities, fluids, ticking, particles, and structure scale | measurable thresholds and measurement method |
 | `EG-P00-S05-C0009` | Namespace/layout | proposed paths, namespaces, module boundary, generated-output ownership | collision and repository-scope check |
@@ -727,9 +767,9 @@ ADR-0001 selects a **four-layer hybrid generator**:
 
 Isekai (biome-source / surface-rule codecs) and Lost Cities (donor ruin grammar inside cells) are optional providers, each gated behind its own acceptance spike, neither owning identity or macro planning. Alternatives A (single NBT), B (pure Lost Cities), C (pure random jigsaw), D (pure density), and E (Isekai assembled structures) are recorded as rejected with reasons in the ADR.
 
-### Accepted height decision — `EG-P00-S03-C0006`
+### Accepted height decision — `EG-P00-S03-C0006` (historical; superseded by R1)
 
-**Status:** `COMPLETE` on 2026-08-27.
+**Status:** `SUPERSEDED` on 2026-08-28 by `EG-P00-S03-C0006-R1`; retained as rollback evidence.
 
 **Base:** `3ba15097`
 
@@ -738,7 +778,22 @@ Isekai (biome-source / surface-rule codecs) and Lost Cities (donor ruin grammar 
 - Accepted initial contract: **`-64..319`** — `dimension_type` and `noise_settings` use `min_y: -64`, `height: 384`, `logical_height: 384`; top block Y `319`; provisional `sea_level -40` (acid table in The Drown, refined at `EG-P03-S04-C0044`).
 - Rationale: the base pack already runs this exact envelope (`wastelands` noise settings `min_y -64, height 384`; `cyberspace:darknet_dimension` `min_y -64, height 320`); every downstream system is exercised at this range today; the six accepted bands tile it exactly.
 - Engine bounds recorded: vanilla `DimensionType` permits `min_y ∈ [-2032, 2031]`, `height ∈ [16, 4064]` (both ×16), `min_y + height ≤ 2032`. A taller envelope is engine-permitted; the risk is downstream mod compatibility.
-- Taller-world option **DEFERRED**: not on the critical path; may not be adopted until a dedicated taller-height compatibility checkpoint (eight adoption criteria in the supporting file) is seeded and passed. No Hive `noise_settings` or `dimension_type` may exceed `height 384` before then.
+- Historical taller-world rule: adoption required a dedicated compatibility checkpoint. The owner's 2026-08-28 direction activates that checkpoint as R1 and authorizes `height 672` candidate data for isolated testing; it does not waive the evidence gate.
+
+### Owner-directed extended-height revision — `EG-P00-S03-C0006-R1`
+
+**Status:** `EVIDENCE_READY` for static data; runtime compatibility review required before production acceptance.
+
+**Requested:** 2026-08-28. This revision supersedes the initial C0006 envelope as the active candidate without rewriting its historical evidence.
+
+- Candidate envelope: `min_y -64`, `height 672`, `logical_height 672`, top block `Y607`.
+- Rationale: configured height must be divisible by 16; `672` provides 608 blocks above Y0, approximately twice the former 320-block above-surface extent, plus the requested 64-block crust below Y0.
+- Canonical planetary datum: `Y0` is dead-waste surface, Spire seating elevation, shoreline, and acid `sea_level`.
+- The dead wastes are intentionally thin in vertical section (`Y-64..0`) even though they remain horizontally dominant between stack clusters.
+- The six revised bands tile the candidate exactly: `64 + 96 + 112 + 144 + 128 + 128 = 672`.
+- Candidate generators, density windows, biome routing, structure placement, atmosphere thresholds, fixed probes, and companion fog anchors must use the revised bounds.
+- Acceptance remains blocked on all eight compatibility criteria in `docs/endgame/contracts/height-contract.md`, including client/server load, lighting, claims/maps, full-range structures/features, fog/sky clipping, serialization, and pregeneration performance.
+- Rollback remains the original `-64..319`, `height 384` envelope. No existing player world is migrated until R1 passes.
 
 ### Accepted hazard contract — `EG-P00-S04-C0007`
 
@@ -821,7 +876,7 @@ Deferred: tuned thresholds and recorded baseline hardware → `C0021`, `C0035`, 
 - All eleven Phase 0 contract checkpoints (C0001–C0011) are `COMPLETE` with integration commits.
 - **Completeness matrix:** `PASS` on Performance (budget + method), Documentation, and Distribution (policy); `DEFERRED` with a named future checkpoint on the other twelve axes; no axis silent, none `NOT_APPLICABLE`.
 - **P00-GATE exit criteria:** all five met.
-- **Open items for the reviewer:** confirm/replace the flavour names; confirm the canon hook; confirm the Phase 1 arrival anchor and "reuse Nether effects"; decide whether to seed a taller-height checkpoint.
+- **Open items for the reviewer:** confirm/replace the flavour names; confirm the canon hook; confirm the Phase 1 arrival anchor; review the custom Hive effects replacement; validate the now-seeded `C0006-R1` extended-height candidate.
 
 ### Exit gate P00-GATE
 
@@ -981,7 +1036,7 @@ Create an original modular structure language that occupies the generated envelo
 
 ### Objective
 
-Turn the accepted geometry into a coherent toxic world through atmosphere, acid, ventilation, shelter, lighting, fog, skies, particles, and sound without hiding navigation or exhausting the server.
+Turn the accepted geometry into a coherent toxic world through atmosphere, acid, ventilation, shelter, lighting, vertically layered cloud and fog volumes, skies, particles, and sound without hiding navigation or exhausting the server. Phase 5 must implement the §2.9 and §3.2 descent gradient; a single global fog colour, one cloud plane, or six recoloured copies of the same fog behavior fails the objective.
 
 ### Multi-stage checkpoint plan
 
@@ -993,9 +1048,9 @@ Turn the accepted geometry into a coherent toxic world through atmosphere, acid,
 | `EG-P05-S02-C0072` | Filter economy | consumption, warning, replacement, and failure feedback | timed survival test |
 | `EG-P05-S03-C0073` | Ventilation/shelter | powered safe volumes and failure behavior | boundary, overlap, power-loss tests |
 | `EG-P05-S03-C0074` | Acid contact | entity, item, block, boat, pipe, and equipment behavior | interaction suite and grief limits |
-| `EG-P05-S04-C0075` | Sky and light | dimension special effects and ambient-light contract | day/time/weather and client review |
-| `EG-P05-S04-C0076` | Fog volumes | distinct visibility by stratum and monumental release | fixed-camera comparisons and navigation review |
-| `EG-P05-S05-C0077` | Particles/weather | sulfur ash and bounded storm events | particle/frame budget and readability review |
+| `EG-P05-S04-C0075` | Sky and light | custom dimension special effects, poison-cloud skyline, light-scattering, camera-proximity cloud-surface occlusion, and ambient-light contract | day/time/weather, above/below/inside-cloud cameras, no-foot-plane crossing proof, and client review |
+| `EG-P05-S04-C0076` | Layered fog volumes | at least two independently tunable layers per band, blended transition decks, monotonic descent-density curve, lower-tier baseline pressure, proximity envelopment, and shelter-aware suppression | fixed-camera comparisons at every band midpoint and seam, at-layer crossings, visibility measurements, navigation review, and client telemetry |
+| `EG-P05-S05-C0077` | Particles/weather | sulfurous or acidic rain in exposed wastes, band-specific ash/fume particles, and bounded storm events | precipitation coverage, shelter occlusion, particle/frame budget, and readability review |
 | `EG-P05-S05-C0078` | Soundscape | waste wind, structure groans, machinery ghosts, transit resonance | positional/looping and fatigue review |
 | `EG-P05-S06-C0079` | Environmental feedback | HUD, sounds, titles, instruments, and warning language | accessibility and multiplayer tests |
 | `EG-P05-S06-C0080` | Failure/recovery | logout, death, respawn, unloaded shelter, and server restart behavior | persistence test |
@@ -1008,6 +1063,11 @@ Turn the accepted geometry into a coherent toxic world through atmosphere, acid,
 - protection consumes or depends on meaningful logistics;
 - powered shelters work and fail predictably;
 - acid is dangerous without causing uncontrolled fluid or grief behavior;
+- every band contains at least two visually distinguishable atmospheric sub-layers and every band seam blends across a bounded transition volume;
+- fixed-camera visibility decreases monotonically from The Crown to The Drown within the §3.2 target envelopes;
+- no camera placed inside or immediately beside a cloud deck can see a planar cloud surface at its feet; surface opacity yields to enveloping fog before intersection;
+- The Drown and Underworks remain visibly pressurized between local fog-layer centres and become denser toward the bedrock floor unless a powered shelter is active;
+- sulfurous or acidic precipitation operates in exposed dead wastes, while cloud and fog strata remain visible within stack exteriors and monumental voids;
 - fog and darkness reinforce scale without making required routes unreadable;
 - environmental systems remain within tick, packet, particle, and sound budgets.
 
@@ -1483,7 +1543,7 @@ review_queue:
       - Confirm or replace the working flavour names (Ordan, the Cinderstack, tiers/decks).
       - Confirm the working canon hook (Atlas/Helion venture, Pleroma logistics) before Phase 6 writing.
       - Confirm the Phase 1 arrival anchor (8, 64, 8) and the reuse of minecraft:the_nether client effects.
-      - Decide whether to seed a taller-height compatibility checkpoint (C0006 default: off).
+      - Validate the owner-requested `C0006-R1` `-64..607` candidate; the decision to seed it is complete, runtime compatibility is not.
 
 completed_checkpoints:
   - checkpoint_id: EG-P00-S01-C0001
@@ -1871,6 +1931,22 @@ journal:
       the biggest gaps. P00-GATE + P01-GATE + P02-GATE remain the owner's to clear.
       Advancing to Phase 5 (Environment and ambience) - the next genuinely unstarted
       phase and the natural layer on top of terrain + structure.
+  - at: 2026-08-28T14:00:00-08:00
+    actor: endgame-coordinator
+    event: layered_atmosphere_directive_and_companion_slice
+    detail: >-
+      Owner direction: every vertical band receives multiple cloud/fog strata with a
+      monotonic descent-density gradient; distant cloud decks use camera-proximity
+      occlusion so their surface vanishes before intersecting the camera and yields to
+      enveloping fog; The Drown and Underworks retain an omnipresent lower-tier fog
+      floor that strengthens toward Y-64. Added non-negotiable pillar 2.9, spatial
+      overlay 3.1, and tightened C0075-C0077/P05-GATE evidence. Corrected the height
+      statement: current -64..319 is the vanilla 384-block envelope, not extended
+      height. Began the companion module at packdev/hive-world-companion, installed
+      infinite-domain-hive-world-companion-0.1.0.jar, registered custom dimension
+      effects, and implemented the first height-aware layered fog profile with two
+      tunable local peaks per band plus lower-tier baseline pressure. Actual multi-deck
+      cloud-surface rendering and in-client cameras remain C0075/C0076 work.
 ```
 
 <!-- ENDGAME_STATE_END -->
