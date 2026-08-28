@@ -13,7 +13,8 @@ Assertions:
   5. the arrival function and the entry item / advancement files exist;
   6. no Hive file is written under a forbidden shared path;
   7. no player-facing lang VALUE contains the substring "hive" (case-insensitive);
-  8. each Hive server script is IIFE-wrapped (KubeJS shares one global scope).
+  8. each Hive server script is IIFE-wrapped (KubeJS shares one global scope);
+  9. every infinite_domain:hive_world/* density-function reference resolves to a file.
 """
 from __future__ import annotations
 
@@ -32,9 +33,16 @@ SPIKE_DECLARED = {
     "kubejs:cinderstack_return_marker",
     "kubejs:cinderstack_filter",
     "infinite_domain:hive_world",
-    "infinite_domain:hive_world_stack_test",
-    "infinite_domain:hive_world_dead_waste",
+    "infinite_domain:hive_world_sump",
+    "infinite_domain:hive_world_works",
+    "infinite_domain:hive_world_vault",
     "infinite_domain:hive_world_acid_pool",
+    "infinite_domain:hive_world_fixture_light",
+    "infinite_domain:hive_world_salvage",
+    "infinite_domain:hive_world_network",
+    "infinite_domain:hive_world_shaft",
+    "infinite_domain:hive_world_hall",
+    "infinite_domain:hive_world_columns",
 }
 
 failures: list[str] = []
@@ -119,6 +127,14 @@ if dim is not None:
         referenced_biomes = [e.get("biome", "") for e in bs.get("biomes", [])]
         if len(referenced_biomes) < 2:
             fail("[4] multi_noise biome_source has fewer than 2 entries (routing needs a split)")
+        # depth windows must tile [-1, 1] with no gap
+        windows = sorted(
+            e["parameters"]["depth"] for e in bs.get("biomes", [])
+            if isinstance(e.get("parameters", {}).get("depth"), list)
+        )
+        for lo, hi in zip(windows, windows[1:]):
+            if abs(lo[1] - hi[0]) > 1e-6:
+                fail(f"[4] multi_noise depth windows have a gap/overlap: {lo} then {hi}")
     elif not bs:
         fail("[4] dimension has no biome_source")
     for biome in referenced_biomes:
@@ -193,6 +209,28 @@ for js in (expedition_js, atmosphere_js):
     ).strip()
     if not re.match(r"\(\s*(?:\(\s*\)\s*=>|function\b)", body):
         fail(f"[8] {js.name} is not wrapped in an IIFE - its top-level consts share global scope")
+
+# ---- 9. density-function reference integrity --------------------
+df_dir = DATA / "worldgen/density_function/hive_world"
+if df_dir.is_dir():
+    df_files = {p.stem for p in df_dir.glob("*.json")}
+    scope = list(df_dir.glob("*.json")) + [DATA / "worldgen/noise_settings/hive_world.json"]
+    for p in scope:
+        try:
+            blob = p.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        for m in re.findall(r'"(infinite_domain:hive_world/([a-z_]+))"', blob):
+            if m[1] not in df_files:
+                fail(f"[9] {p.name} references density function {m[0]} but hive_world/{m[1]}.json is missing")
+    # every density function must parse
+    for p in df_dir.glob("*.json"):
+        try:
+            json.loads(p.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            fail(f"[9] density function {p.name} does not parse: {exc}")
+else:
+    notes.append("no hive_world density_function directory (spike may predate the density graph)")
 
 # ---- report --------------------------------------------------------------
 print("Hive World smoke validator")

@@ -1,96 +1,45 @@
 {
   "$note": "Authority: docs/endgame/contracts/namespace-layout.md section 6. Every generated Hive World file maps to exactly one generator. Hand-authored files list generator=null. Manual edits to generated files are forbidden (docs/Endgame.md section 17.3); regenerate instead.",
-  "version": "hive-world-generated-output-manifest-v2",
-  "entries": [
-    {
-      "path": "kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json",
-      "generator": "scripts/endgame/generate_hive_world_noise.py",
-      "hand_authored": false,
-      "checkpoint": "EG-P01-S01-C0014",
-      "disposable_spike": true
-    },
-    {
-      "path": "kubejs/data/infinite_domain/worldgen/biome/hive_world_dead_waste.json",
-      "generator": "scripts/endgame/generate_hive_world_biomes.py",
-      "hand_authored": false,
-      "checkpoint": "EG-P01-S02-C0015",
-      "disposable_spike": true
-    },
-    {
-      "path": "kubejs/data/infinite_domain/worldgen/biome/hive_world_stack_test.json",
-      "generator": "scripts/endgame/generate_hive_world_biomes.py",
-      "hand_authored": false,
-      "checkpoint": "EG-P01-S02-C0015",
-      "disposable_spike": true
-    },
-    {
-      "path": "kubejs/data/infinite_domain/worldgen/configured_feature/hive_world_acid_pool.json",
-      "generator": "scripts/endgame/generate_hive_world_acid.py",
-      "hand_authored": false,
-      "checkpoint": "EG-P01-S03-C0017",
-      "disposable_spike": true
-    },
-    {
-      "path": "kubejs/data/infinite_domain/worldgen/placed_feature/hive_world_acid_pool.json",
-      "generator": "scripts/endgame/generate_hive_world_acid.py",
-      "hand_authored": false,
-      "checkpoint": "EG-P01-S03-C0017",
-      "disposable_spike": true
-    },
-    {
-      "path": "kubejs/data/infinite_domain/dimension/hive_world.json",
-      "generator": null,
-      "hand_authored": true,
-      "checkpoint": "EG-P01-S01-C0013 (biome_source updated at EG-P01-S02-C0016)"
-    },
-    {
-      "path": "kubejs/data/infinite_domain/dimension_type/hive_world.json",
-      "generator": null,
-      "hand_authored": true,
-      "checkpoint": "EG-P01-S01-C0013"
-    },
-    {
-      "path": "kubejs/data/infinite_domain/function/hive_world/build_arrival.mcfunction",
-      "generator": null,
-      "hand_authored": true,
-      "checkpoint": "EG-P01-S04-C0020"
-    },
-    {
-      "path": "kubejs/data/infinite_domain/advancement/hive_world/reach_cinderstack.json",
-      "generator": null,
-      "hand_authored": true,
-      "checkpoint": "EG-P01-S04-C0019"
-    },
-    {
-      "path": "kubejs/server_scripts/hive_world_expedition.js",
-      "generator": null,
-      "hand_authored": true,
-      "checkpoint": "EG-P01-S04-C0019",
-      "disposable_spike": true,
-      "note": "Travel logic moves to packdev/hive-world-companion at Phase 5."
-    },
-    {
-      "path": "kubejs/server_scripts/hive_world_atmosphere_proto.js",
-      "generator": null,
-      "hand_authored": true,
-      "checkpoint": "EG-P01-S03-C0018",
-      "disposable_spike": true,
-      "note": "Data-only stand-in for the companion atmosphere service."
-    },
-    {
-      "path": "kubejs/startup_scripts/hive_world_items.js",
-      "generator": null,
-      "hand_authored": true,
-      "checkpoint": "EG-P01-S04-C0019 (filter item added at EG-P01-S03-C0018)",
-      "disposable_spike": true
-    }
+  "version": "hive-world-generated-output-manifest-v3",
+  "generators": {
+    "scripts/endgame/generate_hive_world_density.py": [
+      "kubejs/data/infinite_domain/worldgen/noise/hive_world_network.json",
+      "kubejs/data/infinite_domain/worldgen/noise/hive_world_shaft.json",
+      "kubejs/data/infinite_domain/worldgen/noise/hive_world_vault.json",
+      "kubejs/data/infinite_domain/worldgen/noise/hive_world_columns.json",
+      "kubejs/data/infinite_domain/worldgen/density_function/hive_world/*.json"
+    ],
+    "scripts/endgame/generate_hive_world_noise.py": [
+      "kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json"
+    ],
+    "scripts/endgame/generate_hive_world_biomes.py": [
+      "kubejs/data/infinite_domain/worldgen/biome/hive_world_sump.json",
+      "kubejs/data/infinite_domain/worldgen/biome/hive_world_works.json",
+      "kubejs/data/infinite_domain/worldgen/biome/hive_world_vault.json"
+    ],
+    "scripts/endgame/generate_hive_world_acid.py": [
+      "kubejs/data/infinite_domain/worldgen/configured_feature/hive_world_acid_pool.json",
+      "kubejs/data/infinite_domain/worldgen/placed_feature/hive_world_acid_pool.json"
+    ],
+    "scripts/endgame/generate_hive_world_features.py": [
+      "kubejs/data/infinite_domain/worldgen/configured_feature/hive_world_fixture_light.json",
+      "kubejs/data/infinite_domain/worldgen/configured_feature/hive_world_salvage.json",
+      "kubejs/data/infinite_domain/worldgen/placed_feature/hive_world_fixture_light.json",
+      "kubejs/data/infinite_domain/worldgen/placed_feature/hive_world_salvage.json"
+    ]
+  },
+  "hand_authored": [
+    "kubejs/data/infinite_domain/dimension/hive_world.json",
+    "kubejs/data/infinite_domain/dimension_type/hive_world.json",
+    "kubejs/data/infinite_domain/function/hive_world/build_arrival.mcfunction",
+    "kubejs/data/infinite_domain/advancement/hive_world/reach_cinderstack.json",
+    "kubejs/server_scripts/hive_world_expedition.js",
+    "kubejs/server_scripts/hive_world_atmosphere_proto.js",
+    "kubejs/startup_scripts/hive_world_items.js"
   ],
-  "deferred_generators": [
-    {
-      "family": "kubejs/data/infinite_domain/worldgen/density_function/hive_world_*.json",
-      "planned_generator": "scripts/endgame/generate_hive_world_density.py",
-      "checkpoint": "EG-P03-S01-C0037",
-      "note": "The Phase 1 spike inlines its density in the noise settings; the named density-function family is Phase 3 work."
-    }
+  "disposable_spike": true,
+  "notes": [
+    "The density graph (generate_hive_world_density.py) advances Phase 3 mass/strata/void work at spike scale by owner direction; it is refined and re-owned at EG-P03-S01-C0037 onward.",
+    "Travel and atmosphere JS move to packdev/hive-world-companion at Phase 5."
   ]
 }

@@ -24,7 +24,9 @@
     [],
     [],
     [],
-    [],
+    [
+      "infinite_domain:hive_world_fixture_light"
+    ],
     [
       "infinite_domain:hive_world_acid_pool"
     ],
@@ -32,15 +34,26 @@
     []
   ],
   "effects": {
-    "sky_color": 1052697,
-    "fog_color": 2105126,
-    "water_color": 4872746,
-    "water_fog_color": 1909779,
+    "sky_color": 723722,
+    "fog_color": 1315855,
+    "water_color": 5464607,
+    "water_fog_color": 1778184,
     "mood_sound": {
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000,
       "block_search_extent": 8,
       "offset": 2.0
+    },
+    "particle": {
+      "probability": 0.0018,
+      "options": {
+        "type": "minecraft:white_ash"
+      }
+    },
+    "ambient_sound": "minecraft:ambient.basalt_deltas.loop",
+    "additions_sound": {
+      "sound": "minecraft:ambient.basalt_deltas.additions",
+      "tick_chance": 0.0111
     }
   }
 }

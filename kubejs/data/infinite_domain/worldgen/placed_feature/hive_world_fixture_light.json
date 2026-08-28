@@ -1,9 +1,9 @@
 {
-  "feature": "infinite_domain:hive_world_acid_pool",
+  "feature": "infinite_domain:hive_world_fixture_light",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 3
+      "type": "minecraft:count",
+      "count": 11
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:uniform",
         "min_inclusive": {
-          "absolute": -52
+          "absolute": -60
         },
         "max_inclusive": {
-          "absolute": 18
+          "absolute": 300
         }
       }
     },

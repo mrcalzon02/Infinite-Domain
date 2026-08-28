@@ -1,5 +1,5 @@
 {
-  "temperature": 0.9,
+  "temperature": 1.0,
   "downfall": 0.0,
   "has_precipitation": false,
   "carvers": {
@@ -24,21 +24,35 @@
     [],
     [],
     [],
-    [],
+    [
+      "infinite_domain:hive_world_fixture_light",
+      "infinite_domain:hive_world_salvage"
+    ],
     [],
     [],
     []
   ],
   "effects": {
-    "sky_color": 2828838,
-    "fog_color": 3813928,
-    "water_color": 4019296,
-    "water_fog_color": 1055523,
+    "sky_color": 1512464,
+    "fog_color": 2301979,
+    "water_color": 3885647,
+    "water_fog_color": 1054491,
     "mood_sound": {
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000,
       "block_search_extent": 8,
       "offset": 2.0
+    },
+    "particle": {
+      "probability": 0.0025,
+      "options": {
+        "type": "minecraft:white_ash"
+      }
+    },
+    "ambient_sound": "minecraft:ambient.nether_wastes.loop",
+    "additions_sound": {
+      "sound": "minecraft:ambient.nether_wastes.additions",
+      "tick_chance": 0.0111
     }
   }
 }

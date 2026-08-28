@@ -41,9 +41,15 @@ CONFIGURED = {
 PLACED = {
     "feature": "infinite_domain:hive_world_acid_pool",
     "placement": [
-        {"type": "minecraft:rarity_filter", "chance": 4},
+        {"type": "minecraft:rarity_filter", "chance": 3},
         {"type": "minecraft:in_square"},
-        {"type": "minecraft:heightmap", "heightmap": "OCEAN_FLOOR_WG"},
+        # the whole dimension is a solid mass, so target the low bands directly
+        # (The Drown / low Underworks) and let the lake carve its own bowl
+        {"type": "minecraft:height_range", "height": {
+            "type": "minecraft:uniform",
+            "min_inclusive": {"absolute": -52},
+            "max_inclusive": {"absolute": 18},
+        }},
         {"type": "minecraft:biome"},
     ],
 }

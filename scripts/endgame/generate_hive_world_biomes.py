@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
-"""Authoritative generator for the Hive World spike biomes.
+"""Authoritative generator for the Hive World biomes.
 
-Endgame checkpoint EG-P01-S02-C0015 (spike biomes). Also owns the acid feature
-reference wiring for EG-P01-S03-C0017.
-Authority: docs/Endgame.md, docs/endgame/contracts/namespace-layout.md.
+Endgame checkpoint EG-P01-S02-C0015 (spike biomes), extended by owner direction
+to three band-group biomes so the strata read distinctly (fog / light / sound).
+Authority: docs/Endgame.md §3, docs/endgame/contracts/spatial-metrics.md.
 
 Emits (do not hand-edit):
-  kubejs/data/infinite_domain/worldgen/biome/hive_world_dead_waste.json
-  kubejs/data/infinite_domain/worldgen/biome/hive_world_stack_test.json
+  kubejs/data/infinite_domain/worldgen/biome/hive_world_sump.json    (The Drown + The Underworks)
+  kubejs/data/infinite_domain/worldgen/biome/hive_world_works.json   (The Furnace Tiers + The Billet Decks)
+  kubejs/data/infinite_domain/worldgen/biome/hive_world_vault.json   (The Vaulting + The Crown)
 
-DISPOSABLE PHASE 1 SPIKE. Two biomes only: one exterior wasteland, one interior
-stack test volume. No mob spawners (enemy roster is EG-P06-S04-C0089), no
-decoration features except the bounded acid pool (C0017) in the wasteland.
-The real 3D biome family is EG-P03-S05-C0046.
+Routing (C0016) is by the noise-router depth gradient; the multi_noise split is in
+dimension/hive_world.json. No mob spawners yet - the enemy roster is EG-P06-S04-C0089.
 """
 from __future__ import annotations
 
@@ -23,58 +22,88 @@ import sys
 REPO = pathlib.Path(__file__).resolve().parents[2]
 BIOME_DIR = REPO / "kubejs/data/infinite_domain/worldgen/biome"
 
-# GenerationStep.Decoration has 11 indices in 1.21.1
-STEP_COUNT = 11
-STEP_FLUID_SPRINGS = 8  # index of FLUID_SPRINGS - where lake-like features sit
+STEP_COUNT = 11               # GenerationStep.Decoration indices in 1.21.1
+STEP_UNDERGROUND_DECORATION = 7
+STEP_FLUID_SPRINGS = 8
 
 
-def empty_features() -> list[list[str]]:
+def empty_features():
     return [[] for _ in range(STEP_COUNT)]
 
 
-def base(temperature: float, fog: int, sky: int, water: int, water_fog: int) -> dict:
+def biome(temperature, fog, sky, water, water_fog, particle=None, ambient_sound=None,
+          additions_sound=None, features=None):
+    effects = {
+        "sky_color": sky,
+        "fog_color": fog,
+        "water_color": water,
+        "water_fog_color": water_fog,
+        "mood_sound": {
+            "sound": "minecraft:ambient.cave",
+            "tick_delay": 6000,
+            "block_search_extent": 8,
+            "offset": 2.0,
+        },
+    }
+    if particle is not None:
+        effects["particle"] = particle
+    if ambient_sound is not None:
+        effects["ambient_sound"] = ambient_sound
+    if additions_sound is not None:
+        effects["additions_sound"] = additions_sound
     return {
         "temperature": temperature,
         "downfall": 0.0,
         "has_precipitation": False,
         "carvers": {"air": []},
-        "spawners": {
-            "monster": [], "creature": [], "ambient": [], "axolotls": [],
-            "underground_water_creature": [], "water_creature": [],
-            "water_ambient": [], "misc": [],
-        },
+        "spawners": {k: [] for k in (
+            "monster", "creature", "ambient", "axolotls",
+            "underground_water_creature", "water_creature", "water_ambient", "misc",
+        )},
         "spawn_costs": {},
-        "features": empty_features(),
-        "effects": {
-            "sky_color": sky,
-            "fog_color": fog,
-            "water_color": water,
-            "water_fog_color": water_fog,
-            "mood_sound": {
-                "sound": "minecraft:ambient.cave",
-                "tick_delay": 6000,
-                "block_search_extent": 8,
-                "offset": 2.0,
-            },
-        },
+        "features": features if features is not None else empty_features(),
+        "effects": effects,
     }
 
 
-def build() -> dict[str, dict]:
-    # The spike routes these by depth (C0016): stack_test occupies the buried low
-    # bands (roughly Y < 48), dead_waste the open shaft and upper void (Y >= 48).
+def build():
+    # --- The Drown + The Underworks: flooded, acidic, low light -------------
+    sump_feat = empty_features()
+    sump_feat[STEP_FLUID_SPRINGS] = ["infinite_domain:hive_world_acid_pool"]
+    sump_feat[STEP_UNDERGROUND_DECORATION] = ["infinite_domain:hive_world_fixture_light"]
+    sump = biome(
+        temperature=0.7, fog=0x14140F, sky=0x0B0B0A, water=0x53621F, water_fog=0x1B2208,
+        particle={"probability": 0.0018, "options": {"type": "minecraft:white_ash"}},
+        ambient_sound="minecraft:ambient.basalt_deltas.loop",
+        additions_sound={"sound": "minecraft:ambient.basalt_deltas.additions", "tick_chance": 0.0111},
+        features=sump_feat,
+    )
 
-    # low buried interior - carries the bounded acid pool (C0017, "The Drown")
-    stack_test = base(temperature=0.7, fog=0x201F26, sky=0x101019, water=0x4A5A2A, water_fog=0x1D2413)
-    stack_test["features"][STEP_FLUID_SPRINGS] = ["infinite_domain:hive_world_acid_pool"]
+    # --- The Furnace Tiers + The Billet Decks: hot industrial haze ---------
+    works_feat = empty_features()
+    works_feat[STEP_UNDERGROUND_DECORATION] = [
+        "infinite_domain:hive_world_fixture_light",
+        "infinite_domain:hive_world_salvage",
+    ]
+    works = biome(
+        temperature=1.0, fog=0x23201B, sky=0x171410, water=0x3B4A4F, water_fog=0x10171B,
+        particle={"probability": 0.0025, "options": {"type": "minecraft:white_ash"}},
+        ambient_sound="minecraft:ambient.nether_wastes.loop",
+        additions_sound={"sound": "minecraft:ambient.nether_wastes.additions", "tick_chance": 0.0111},
+        features=works_feat,
+    )
 
-    # open vertical void and upper region - hotter, sulfurous fog, no features in the spike
-    dead_waste = base(temperature=0.9, fog=0x3A3228, sky=0x2B2A26, water=0x3D5460, water_fog=0x101B23)
+    # --- The Vaulting + The Crown: cold, thin, echoing monumental space ---
+    vault_feat = empty_features()
+    vault_feat[STEP_UNDERGROUND_DECORATION] = ["infinite_domain:hive_world_fixture_light"]
+    vault = biome(
+        temperature=0.35, fog=0x1B2129, sky=0x0E141B, water=0x33424E, water_fog=0x0E141B,
+        ambient_sound="minecraft:ambient.soul_sand_valley.loop",
+        additions_sound={"sound": "minecraft:ambient.soul_sand_valley.additions", "tick_chance": 0.0111},
+        features=vault_feat,
+    )
 
-    return {
-        "hive_world_dead_waste": dead_waste,
-        "hive_world_stack_test": stack_test,
-    }
+    return {"hive_world_sump": sump, "hive_world_works": works, "hive_world_vault": vault}
 
 
 def main() -> int:
@@ -83,6 +112,12 @@ def main() -> int:
         out = BIOME_DIR / f"{name}.json"
         out.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
         print(f"wrote {out.relative_to(REPO)}")
+    # remove the superseded two-biome spike files if present
+    for old in ("hive_world_dead_waste", "hive_world_stack_test"):
+        p = BIOME_DIR / f"{old}.json"
+        if p.is_file():
+            p.unlink()
+            print(f"removed superseded {p.relative_to(REPO)}")
     return 0
 
 

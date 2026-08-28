@@ -1,0 +1,51 @@
+{
+  "temperature": 0.35,
+  "downfall": 0.0,
+  "has_precipitation": false,
+  "carvers": {
+    "air": []
+  },
+  "spawners": {
+    "monster": [],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "infinite_domain:hive_world_fixture_light"
+    ],
+    [],
+    [],
+    []
+  ],
+  "effects": {
+    "sky_color": 922651,
+    "fog_color": 1777961,
+    "water_color": 3359310,
+    "water_fog_color": 922651,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.0111
+    }
+  }
+}
