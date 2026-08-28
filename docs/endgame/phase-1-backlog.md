@@ -21,7 +21,7 @@ dependencies, and evidence. No checkpoint here exceeds the §4.5 atomic sizing r
 | Owned paths | `kubejs/data/infinite_domain/dimension/hive_world.json`, `kubejs/data/infinite_domain/dimension_type/hive_world.json` |
 | Depends on | C0006 (height), C0009 (layout) |
 | Atomic output | a minimal dimension + dimension_type that load with no error |
-| Evidence | datapack loads clean; `/forge dimensions` lists `infinite_domain:hive_world`; `dimension_type` bounds equal the C0006 contract |
+| Evidence | datapack loads clean; `infinite_domain:hive_world` appears in `/execute in ` tab-completion; `dimension_type` bounds equal the C0006 contract |
 | Validation | `validate_hive_world_smoke.py` assertions 1, 3, 4; in-client `/execute in infinite_domain:hive_world run tp @s 8 64 8` |
 | Not in scope | biomes beyond one placeholder ref, structures, hazards |
 
@@ -112,7 +112,7 @@ dependencies, and evidence. No checkpoint here exceeds the §4.5 atomic sizing r
 |---|---|
 | Owned paths | `scripts/endgame/validate_hive_world_smoke.py` |
 | Depends on | C0013–C0021 |
-| Atomic output | the validator implementing the seven C0010 assertions |
+| Atomic output | the validator implementing the eight C0010 assertions |
 | Evidence | clean pass from a fresh checkout |
 | Validation | run it; it exits 0 with a JSON report in the evidence dir |
 

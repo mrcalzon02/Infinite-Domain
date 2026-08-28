@@ -12,7 +12,8 @@ Assertions:
   4. dimension.json references a real noise_settings and a biome source;
   5. the arrival function and the entry item / advancement files exist;
   6. no Hive file is written under a forbidden shared path;
-  7. no player-facing lang VALUE contains the substring "hive" (case-insensitive).
+  7. no player-facing lang VALUE contains the substring "hive" (case-insensitive);
+  8. each Hive server script is IIFE-wrapped (KubeJS shares one global scope).
 """
 from __future__ import annotations
 
@@ -179,6 +180,19 @@ scan_string_literals(items_js, "hive_world_items.js")
 adv = docs.get(DATA / "advancement/hive_world/reach_cinderstack.json")
 if adv is not None and "hive" in json.dumps(adv.get("display", {})).lower():
     fail('[7] advancement display text contains "hive"')
+
+# ---- 8. server scripts are IIFE-scoped ---------------------------
+# KubeJS server scripts share one global scope; a bare top-level `const` collides
+# across files (this bit the spike once: "redeclaration of const HIVE").
+for js in (expedition_js, atmosphere_js):
+    if not js.is_file():
+        continue
+    body = "\n".join(
+        ln for ln in js.read_text(encoding="utf-8").splitlines()
+        if not ln.lstrip().startswith("//")
+    ).strip()
+    if not re.match(r"\(\s*(?:\(\s*\)\s*=>|function\b)", body):
+        fail(f"[8] {js.name} is not wrapped in an IIFE - its top-level consts share global scope")
 
 # ---- report --------------------------------------------------------------
 print("Hive World smoke validator")

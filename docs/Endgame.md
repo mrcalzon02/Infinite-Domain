@@ -504,7 +504,7 @@ Convert the vision into measurable contracts and verify what the current Minecra
 - `kubejs/data/wastelands/worldgen/world_preset/wasteland.json` and `kubejs/data/minecraft/worldgen/world_preset/normal.json` route the Overworld through `isekai_api:climate_zones`, 68 climate rules, `wastelands:apocalypse`, and `wastelands:wasteland` noise settings.
 - `kubejs/data/wastelands/worldgen/noise_settings/wasteland.json` provides a `min_y=-64`, `height=384`, `sea_level=63` noise generator with aquifers, ore veins, composed density, and embedded surface rules.
 - `kubejs/data/infinite_domain/worldgen/noise_settings/lava_ocean_nether.json` is a second local noise-settings precedent with composed density and embedded surface rules.
-- `datapacks/gradient_ocean_pack` is present and was automatically loaded by the current world. It contains 46 `custom_worldgen` density functions, five custom noises, two configured carvers, vanilla continents/erosion overrides, and Isekai density primitives. Its southern lava mask is documented but deliberately disconnected.
+- `datapacks/gradient_ocean_pack` is present and was automatically loaded by the current world. It contains ~45 `custom_worldgen` density functions, five custom noises, two configured carvers, vanilla `continents` / `erosion` / `depth` overrides, and Isekai density primitives. (The southern lava mask was removed 2026-08-27 — the southern sea stays warm water by owner decision.)
 - Local Infinite Domain resources include safe-zone, Karsic, and east/west abyssal biomes; 20 configured features; 20 placed features; and NeoForge biome modifiers. No standalone local surface-rule registry was found because current rules are embedded in noise settings or supplied by Isekai codecs.
 - Installed dimension examples include Create Abyss, Cyberspace, Ice and Fire, Lost Cities, The Wasteland Reworked, Stellaris planetary/orbital dimensions, and AE2 spatial storage. Presence is reference evidence only.
 
@@ -1138,7 +1138,7 @@ program:
   current_stage: S06
   current_gate: P00-GATE
   next_checkpoint: EG-P00-S06-C0012
-  updated_at: 2026-08-27T18:10:00-08:00
+  updated_at: 2026-08-27T19:20:00-08:00
   updated_by: endgame-coordinator
   notes: >-
     C0001-C0011 COMPLETE. C0012 (P00-GATE) and C0024 (P01-GATE) are REVIEW_NEEDED.
@@ -1200,9 +1200,10 @@ active_reservations:
     owner: endgame-coordinator
     reserved_at: 2026-08-27T16:05:00-08:00
     lease_expires_at: 2026-08-27T21:30:00-08:00
-    last_heartbeat_at: 2026-08-27T18:10:00-08:00
+    last_heartbeat_at: 2026-08-27T19:20:00-08:00
     base_commit: f9b63030
     spike_commit: 52a81e78
+    runtime_fix_commit: pending
     write_scope:
       - kubejs/data/infinite_domain/dimension/hive_world.json
       - kubejs/data/infinite_domain/dimension_type/hive_world.json
@@ -1257,7 +1258,9 @@ evidence_ready:
       - JSON parses; dimension_type bounds equal the C0006 contract (min_y -64, height 384, logical_height 384)
       - dimension references noise settings infinite_domain:hive_world and a fixed placeholder biome
       - validate_hive_world_smoke.py assertions 1, 3, 4 pass
-    pending: in-client datapack codec load; /forge dimensions listing
+    pending: >-
+      in-client datapack codec load (owner 2026-08-27 run - dimension, biomes, and noise
+      settings loaded with zero errors); dimension appears in "/execute in " tab-completion
   - checkpoint_id: EG-P01-S01-C0014
     name: Baseline generator
     status: EVIDENCE_READY
@@ -1339,7 +1342,7 @@ evidence_ready:
     mechanical_validation:
       - dimension-scoped, per-second, O(players-in-Hive); honours the C0007 shape (per-band rate, PPE reduction, sealed-volume gate, clean-air recovery)
       - per-band rate Drown 4 / Underworks 2.5 / above 1.5; filter cut to 20%; cartridge wears out; nausea/darkness/damage at 55/85; actionbar readout
-      - node --check passes
+      - node --check passes; both Hive server scripts IIFE-wrapped after the 2026-08-27 "redeclaration of const HIVE" runtime error (smoke assertion 8)
     pending: in-client protected vs unprotected test and spark tick-cost sample against the C0008 companion budget
   - checkpoint_id: EG-P01-S05-C0021
     name: Client baseline
@@ -1359,7 +1362,7 @@ evidence_ready:
       - scripts/endgame/validate_hive_world_smoke.py
       - docs/endgame/evidence/EG-P01-S05-C0022/smoke-report.json
     mechanical_validation:
-      - seven assertions pass offline; --json report archived; re-run on a fresh checkout is the only pending step
+      - eight assertions pass offline (assertion 8 added after the C0018 IIFE fix); --json report archived
     pending: clean pass from a fresh launch (owner runbook step 2)
   - checkpoint_id: EG-P01-S06-C0023
     name: Spike removal test
@@ -1702,6 +1705,21 @@ journal:
       work is safely executable without a running client - the run stops here per
       Section 6.7. Blockers: P00-GATE (C0012), P01-GATE (C0024), and the owner's
       in-client runtime run.
+  - at: 2026-08-27T19:20:00-08:00
+    actor: endgame-coordinator
+    event: spike_runtime_fix
+    detail: >-
+      Owner started the in-client run. Positives: startup scripts loaded (Cinderstack
+      Descent Marker gave successfully); the datapack loaded with ZERO
+      infinite_domain:hive_world worldgen/dimension/biome/noise errors (log grep clean).
+      Defect: KubeJS reported "redeclaration of const HIVE" - hive_world_expedition.js
+      and hive_world_atmosphere_proto.js both declared bare top-level consts in KubeJS's
+      shared server-script scope (server scripts 21/23). Fix: wrapped both scripts in an
+      IIFE (pack pattern, cf. spawn_hub_hostile_protection.js) and added smoke-validator
+      assertion 8. The pre-existing "redeclaration of const organicMetallurgy" baseline
+      error (C0001 defect 1) is unaffected and remains the owner's to clear. Also
+      corrected the docs: NeoForge 21.1 has no /forge or /neoforge dimensions command;
+      verify registration via "/execute in " tab-completion.
 ```
 
 <!-- ENDGAME_STATE_END -->

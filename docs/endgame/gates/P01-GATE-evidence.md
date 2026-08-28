@@ -24,9 +24,9 @@ Also blocked behind **P00-GATE** acceptance (`EG-P00-S06-C0012`).
 
 ## Mechanical review (coordinator) — PASS
 
-- `python scripts/endgame/validate_hive_world_smoke.py` → PASS (7 assertions incl.
-  multi_noise two-entry split, the acid block reference, the height-contract match, and
-  "no `hive` in any player-facing string").
+- `python scripts/endgame/validate_hive_world_smoke.py` → PASS (8 assertions incl.
+  multi_noise two-entry split, the acid block reference, the height-contract match,
+  "no `hive` in any player-facing string", and IIFE-scoping of the server scripts).
 - `node --check` → PASS on `hive_world_expedition.js`, `hive_world_atmosphere_proto.js`,
   `hive_world_items.js`.
 - All 6 endgame commits for the spike are path-scoped; the 15-file manifest
@@ -38,7 +38,7 @@ Also blocked behind **P00-GATE** acceptance (`EG-P00-S06-C0012`).
 
 | Test | Command / action | Pass condition |
 |---|---|---|
-| datapack codec load | fresh world, check `logs/latest.log` | zero `infinite_domain:hive_world` errors; `/forge dimensions` lists it |
+| datapack codec load | fresh world, check `logs/latest.log`; tab-complete `/execute in ` | zero `infinite_domain:hive_world` errors; the dimension appears in the `/execute in ` completion |
 | fresh generation + height probes | `/execute in infinite_domain:hive_world run tp @s 0 <y> 0` at the six band midpoints | solid crust below ~Y0, air middle, bedrock roof ~Y306–319; arrival anchor solid |
 | biomes + routing | `/locate biome infinite_domain:hive_world_dead_waste` and `..._stack_test`; sample biome at the probes | both resolve; stack_test below ~Y48, dead_waste above |
 | acid | fly to an acid lake; `/tick freeze`; walk a mob/player in | pool is bounded; `spark` shows 0 ongoing fluid ticks in a settled chunk; contact damages |

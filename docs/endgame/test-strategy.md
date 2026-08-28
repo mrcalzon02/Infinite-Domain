@@ -47,7 +47,8 @@ Band midpoints are the accepted C0004 ranges' centres and move only if C0004 cha
 /execute in infinite_domain:hive_world run tp @s 0 <y> 0
 /locate biome infinite_domain:hive_world_<name>
 /data get entity @s Dimension
-/forge dimensions            # or /neoforge dimensions
+# there is no /forge or /neoforge dimensions command on NeoForge 21.1;
+# confirm registration by tab-completing "/execute in " or by the tp above succeeding
 /spark profiler --start ; /spark profiler --stop
 /spark tps ; /spark healthreport
 /tick freeze ; /tick step
@@ -79,7 +80,9 @@ Runs with no live instance. Asserts:
 5. the arrival-platform structure and any entry item/advancement IDs exist;
 6. no Hive file writes under a forbidden shared path
    (`minecraft:`, `wastelands:`, `gradient_ocean_pack`, or `worldgen/.../*.nbt`);
-7. no player-facing lang **value** contains the substring `hive` (case-insensitive).
+7. no player-facing lang **value** contains the substring `hive` (case-insensitive);
+8. each Hive server script is IIFE-wrapped (KubeJS server scripts share one global
+   scope, so a bare top-level `const` collides across files).
 
 ## 8. Runbook (fresh worker)
 
