@@ -542,7 +542,7 @@ The authoritative conversion/compilation precedents are `scripts/convert_nbt_to_
 
 These are not C0001 failures because the checkpoint was read-only inventory. They are mandatory C0002 constraints and must be isolated or repaired before a Phase 1 clean-launch gate can be meaningful:
 
-1. `logs/latest.log` reports KubeJS server scripts `20/21`, caused by redeclaration of `const organicMetallurgy`.
+1. `logs/latest.log` reports KubeJS server scripts `20/21`, caused by redeclaration of `const organicMetallurgy`. **Repaired 2026-08-28:** `organic_metallurgy.js` and `organic_secondary_uses.js` both bound `const organicMetallurgy` at column 0 in KubeJS's shared server-script scope; both are now IIFE-wrapped (pack pattern, cf. `spawn_hub_hostile_protection.js`) and each organic audit gained an IIFE-scope assertion. An in-client run must still confirm `21/21`.
 2. The same runtime contains missing-item loot-table errors and third-party warnings that can confound later smoke evidence.
 3. `docs/lostcities-conversion-report.json`, `docs/structure-qa-world-validation.json`, `docs/structure-placement-contract-validation.json`, and `docs/structure-performance-budget.json` retain named runtime gates.
 4. `kubejs/data/infinite_domain/worldgen/structure/nether/lyran_research.nbt` is a binary NBT file in a JSON registry path and requires classification.
@@ -1138,7 +1138,7 @@ program:
   current_stage: S06
   current_gate: P00-GATE
   next_checkpoint: EG-P00-S06-C0012
-  updated_at: 2026-08-27T19:20:00-08:00
+  updated_at: 2026-08-27T20:40:00-08:00
   updated_by: endgame-coordinator
   notes: >-
     C0001-C0011 COMPLETE. C0012 (P00-GATE) and C0024 (P01-GATE) are REVIEW_NEEDED.
@@ -1200,10 +1200,16 @@ active_reservations:
     owner: endgame-coordinator
     reserved_at: 2026-08-27T16:05:00-08:00
     lease_expires_at: 2026-08-27T21:30:00-08:00
-    last_heartbeat_at: 2026-08-27T19:20:00-08:00
+    last_heartbeat_at: 2026-08-27T20:40:00-08:00
     base_commit: f9b63030
-    spike_commit: 52a81e78
+    spike_commit: bb1a3b3a
     runtime_fix_commit: c8518e06
+    scope_note: >-
+      By repeated owner direction the spike has been built out well past a "minimal
+      technical spike" into a real stratified megastructure - this pulls Phase 3
+      mass/strata/void work (C0037, C0041-C0043) and some Phase 5 ambience forward.
+      These artifacts are spike-grade and untuned; C0037 onward re-owns the density
+      graph. The formal P02-GATE massing approval is still outstanding.
     write_scope:
       - kubejs/data/infinite_domain/dimension/hive_world.json
       - kubejs/data/infinite_domain/dimension_type/hive_world.json
@@ -1264,24 +1270,29 @@ evidence_ready:
   - checkpoint_id: EG-P01-S01-C0014
     name: Baseline generator
     status: EVIDENCE_READY
-    spike_commit: 10121b4a
+    spike_commit: bb1a3b3a
     outputs:
       - kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json
+      - kubejs/data/infinite_domain/worldgen/noise/hive_world_*.json (4)
+      - kubejs/data/infinite_domain/worldgen/density_function/hive_world/*.json (14)
       - scripts/endgame/generate_hive_world_noise.py
+      - scripts/endgame/generate_hive_world_density.py
     mechanical_validation:
-      - generator is idempotent; asserts the height contract on emit
-      - crust below ~Y0, hollow middle, bedrock-capped roof ~Y306; no aquifers, ore veins, fluid, or jaggedness
-    pending: in-client fresh chunk generation; height probes at the six band midpoints; informal spark chunk-gen sample
+      - generators idempotent; noise settings assert the height contract on emit
+      - real density graph (bb1a3b3a): solid engineered mass Y-64..~292, carved by a spaghetti tunnel network, full-height vertical shafts, and a partial monumental hall Y~200-244 with a column lattice; bedrock-forced floor and roof
+      - surface rule paints all six C0004 bands with distinct floor palettes
+      - smoke assertion 9: every infinite_domain:hive_world/* density-function reference resolves
+    pending: in-client fresh generation, height/void probes at the six band midpoints, spark chunk-gen sample against the C0008 budget (density graph is untuned - expect iteration)
   - checkpoint_id: EG-P01-S04-C0020
     name: Safe arrival
     status: EVIDENCE_READY
-    spike_commit: 10121b4a
+    spike_commit: bb1a3b3a
     outputs:
       - kubejs/data/infinite_domain/function/hive_world/build_arrival.mcfunction
     mechanical_validation:
-      - deterministic platform at (8, 64, 8); solid floor Y63, 2-tall containment wall, corner lighting, central lodestone
-      - the entry script rebuilds it on every descent, so an obstructed or ungenerated destination is safe
-    pending: in-client repeated-arrival and obstruction tests
+      - carves a real entry hall at (8,64,8) with a climbable circulation shaft (Y-28..118, ladder + lighting) and two stub tunnels, so the player can leave and explore the mass
+      - deterministic; the entry script rebuilds it on every descent, so an obstructed or ungenerated destination is safe
+    pending: in-client repeated-arrival, obstruction, and shaft-connectivity tests
   - checkpoint_id: EG-P01-S04-C0019
     name: Reversible entry
     status: EVIDENCE_READY
@@ -1300,37 +1311,40 @@ evidence_ready:
   - checkpoint_id: EG-P01-S02-C0015
     name: Spike biomes
     status: EVIDENCE_READY
-    spike_commit: 74e4010c
+    spike_commit: bb1a3b3a
     outputs:
       - scripts/endgame/generate_hive_world_biomes.py
-      - kubejs/data/infinite_domain/worldgen/biome/hive_world_dead_waste.json
-      - kubejs/data/infinite_domain/worldgen/biome/hive_world_stack_test.json
+      - kubejs/data/infinite_domain/worldgen/biome/hive_world_sump.json
+      - kubejs/data/infinite_domain/worldgen/biome/hive_world_works.json
+      - kubejs/data/infinite_domain/worldgen/biome/hive_world_vault.json
     mechanical_validation:
-      - both biomes are schema-valid (11 feature steps, 8 spawner categories, carvers) and parse
-      - no mob spawners (roster is C0089); stack_test carries the acid pool at FLUID_SPRINGS
-    pending: in-client registry listing and /locate biome for both
+      - three band-group biomes (sump Drown+Underworks, works Furnace+Billet, vault Vaulting+Crown), each with distinct fog, sky, particle, ambient loop, and additions sound
+      - schema-valid (11 feature steps, 8 spawner categories, carvers); no mob spawners (roster is C0089)
+      - sump carries the acid pool (FLUID_SPRINGS) and fixture lights; works carries fixture lights + salvage; the superseded dead_waste/stack_test files are deleted
+    pending: in-client registry listing and /locate biome for all three
   - checkpoint_id: EG-P01-S02-C0016
     name: 3D routing
     status: EVIDENCE_READY
-    spike_commit: 74e4010c
+    spike_commit: bb1a3b3a
     outputs:
       - kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json (depth gradient)
-      - kubejs/data/infinite_domain/dimension/hive_world.json (multi_noise biome source)
+      - kubejs/data/infinite_domain/dimension/hive_world.json (3-way multi_noise biome source)
     mechanical_validation:
       - router depth is a y_clamped_gradient (+1.0 at Y-64 to -1.0 at Y319)
-      - multi_noise source splits at depth 0.41 (~Y48); stack_test below, dead_waste above; smoke validator checks the two-entry split
+      - multi_noise splits by depth into sump [0.30,1.0] (~Y<=64), works [-0.34,0.30] (~Y64-192), vault [-1.0,-0.34] (~Y>=192)
+      - smoke assertion 4: the three depth windows tile [-1,1] with no gap
     pending: in-client biome sampling at the six band-midpoint probes across X/Y/Z
   - checkpoint_id: EG-P01-S03-C0017
     name: Acid feature
     status: EVIDENCE_READY
-    spike_commit: 74e4010c
+    spike_commit: bb1a3b3a
     outputs:
       - scripts/endgame/generate_hive_world_acid.py
       - kubejs/data/infinite_domain/worldgen/configured_feature/hive_world_acid_pool.json
       - kubejs/data/infinite_domain/worldgen/placed_feature/hive_world_acid_pool.json
     mechanical_validation:
       - minecraft:lake of the verified block the_wasteland_reworked:acid (static, no fluid properties -> zero ongoing updates), barrier minecraft:deepslate
-      - rarity 1/4, heightmap OCEAN_FLOOR_WG, biome-filtered to stack_test; mirrors TWR's own acid_lake pattern
+      - rarity 1/3, height_range Y-52..18 (the low bands), biome-filtered to hive_world_sump; mirrors TWR's own acid_lake pattern
     pending: in-client generation, spark fluid-tick check (expect 0 in a settled chunk), entity-contact damage recording
   - checkpoint_id: EG-P01-S03-C0018
     name: Air hazard prototype
@@ -1720,6 +1734,26 @@ journal:
       error (C0001 defect 1) is unaffected and remains the owner's to clear. Also
       corrected the docs: NeoForge 21.1 has no /forge or /neoforge dimensions command;
       verify registration via "/execute in " tab-completion.
+  - at: 2026-08-27T20:40:00-08:00
+    actor: endgame-coordinator
+    event: spike_megastructure_built
+    detail: >-
+      Owner direction: build the dimension out into a real, functional place with
+      actual structure. Commit bb1a3b3a (37 files, path-scoped). Turned the hollow
+      test shaft into a stratified megastructure: generate_hive_world_density.py emits
+      4 custom noises + 14 density functions - one solid engineered mass Y-64..~292
+      carved by a spaghetti tunnel network, full-height vertical circulation shafts,
+      and a partial monumental hall (Y~200-244) with a support-column lattice, plus
+      bedrock-forced world edges. Surface rules paint all six C0004 bands with distinct
+      palettes. Biomes went 2 -> 3 band-group biomes (sump/works/vault) with distinct
+      fog, particles, and ambient loops, routed by a 3-way multi_noise depth split.
+      New ambient features: hive_world_fixture_light (sparse still-burning fixtures) and
+      hive_world_salvage. build_arrival now carves a real hall with a climbable shaft
+      and stub tunnels. Smoke validator 9/9 (added density-ref integrity + depth-window
+      tiling). This pulls Phase 3 (C0037/C0041-C0043) and some Phase 5 ambience forward
+      by owner direction; the density graph is spike-grade and untuned, and P02-GATE
+      massing approval is still outstanding. Next: authored NBT room/corridor structures
+      (Phase 4 grammar) and in-client tuning of the carve density.
 ```
 
 <!-- ENDGAME_STATE_END -->
