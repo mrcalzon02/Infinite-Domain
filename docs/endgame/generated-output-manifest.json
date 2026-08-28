@@ -26,6 +26,13 @@
       "kubejs/data/infinite_domain/worldgen/configured_feature/hive_world_salvage.json",
       "kubejs/data/infinite_domain/worldgen/placed_feature/hive_world_fixture_light.json",
       "kubejs/data/infinite_domain/worldgen/placed_feature/hive_world_salvage.json"
+    ],
+    "scripts/endgame/generate_hive_world_structures.py": [
+      "kubejs/data/infinite_domain/structure/hive_world/*.nbt",
+      "kubejs/data/infinite_domain/worldgen/template_pool/hive_world/*.json",
+      "kubejs/data/infinite_domain/worldgen/structure/hive_world_district.json",
+      "kubejs/data/infinite_domain/worldgen/structure_set/hive_world_district.json",
+      "kubejs/data/infinite_domain/loot_table/chests/hive_world_salvage.json"
     ]
   },
   "hand_authored": [
@@ -40,6 +47,8 @@
   "disposable_spike": true,
   "notes": [
     "The density graph (generate_hive_world_density.py) advances Phase 3 mass/strata/void work at spike scale by owner direction; it is refined and re-owned at EG-P03-S01-C0037 onward.",
+    "The jigsaw district (generate_hive_world_structures.py) advances Phase 4 grammar at spike scale by owner direction; the real module schema, connector validator, and per-band families are C0051-C0068.",
+    "generate_hive_world_structures.py imports scripts/generate_wasteland_sites.py for its NBT writer and Template class.",
     "Travel and atmosphere JS move to packdev/hive-world-companion at Phase 5."
   ]
 }

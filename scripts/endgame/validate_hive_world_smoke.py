@@ -14,7 +14,8 @@ Assertions:
   6. no Hive file is written under a forbidden shared path;
   7. no player-facing lang VALUE contains the substring "hive" (case-insensitive);
   8. each Hive server script is IIFE-wrapped (KubeJS shares one global scope);
-  9. every infinite_domain:hive_world/* density-function reference resolves to a file.
+  9. every infinite_domain:hive_world/* density-function reference resolves to a file;
+ 10. the jigsaw district's pools, module NBTs, structure and structure_set resolve.
 """
 from __future__ import annotations
 
@@ -43,6 +44,8 @@ SPIKE_DECLARED = {
     "infinite_domain:hive_world_shaft",
     "infinite_domain:hive_world_hall",
     "infinite_domain:hive_world_columns",
+    "infinite_domain:hive_world_district",
+    "infinite_domain:chests/hive_world_salvage",
 }
 
 failures: list[str] = []
@@ -66,8 +69,11 @@ hive_json = [
     DATA / "dimension/hive_world.json",
     DATA / "dimension_type/hive_world.json",
     DATA / "advancement/hive_world/reach_cinderstack.json",
+    DATA / "loot_table/chests/hive_world_salvage.json",
 ]
 hive_json += sorted(p for p in (DATA / "worldgen").rglob("*hive_world*.json"))
+hive_json += sorted(p for p in (DATA / "worldgen/template_pool/hive_world").glob("*.json")) \
+    if (DATA / "worldgen/template_pool/hive_world").is_dir() else []
 
 arrival_fn = DATA / "function/hive_world/build_arrival.mcfunction"
 expedition_js = REPO / "kubejs/server_scripts/hive_world_expedition.js"
@@ -231,6 +237,38 @@ if df_dir.is_dir():
             fail(f"[9] density function {p.name} does not parse: {exc}")
 else:
     notes.append("no hive_world density_function directory (spike may predate the density graph)")
+
+# ---- 10. jigsaw district integrity ----------------------------
+pool_dir = DATA / "worldgen/template_pool/hive_world"
+struct_nbt_dir = DATA / "structure/hive_world"
+district = DATA / "worldgen/structure/hive_world_district.json"
+if district.is_file():
+    modules = {p.stem for p in struct_nbt_dir.glob("*.nbt")} if struct_nbt_dir.is_dir() else set()
+    pools = {p.stem for p in pool_dir.glob("*.json")} if pool_dir.is_dir() else set()
+    for pj in pool_dir.glob("*.json"):
+        pd = json.loads(pj.read_text(encoding="utf-8"))
+        fb = pd.get("fallback", "")
+        if fb.startswith("infinite_domain:hive_world/") and fb.split("/")[-1] not in pools:
+            fail(f"[10] pool {pj.name} fallback {fb} does not resolve")
+        for el in pd.get("elements", []):
+            loc = el.get("element", {}).get("location", "")
+            if loc.startswith("infinite_domain:hive_world/") and loc.split("/")[-1] not in modules:
+                fail(f"[10] pool {pj.name} element {loc} has no matching NBT")
+    dj = json.loads(district.read_text(encoding="utf-8"))
+    sp = dj.get("start_pool", "")
+    if sp.split("/")[-1] not in pools:
+        fail(f"[10] structure start_pool {sp} does not resolve")
+    for b in dj.get("biomes", []):
+        if b.startswith("infinite_domain:") and not (DATA / f"worldgen/biome/{b.split(':',1)[1]}.json").is_file():
+            fail(f"[10] structure biome {b} missing")
+    ss = DATA / "worldgen/structure_set/hive_world_district.json"
+    if not ss.is_file():
+        fail("[10] hive_world_district structure_set is missing")
+    else:
+        for s in json.loads(ss.read_text(encoding="utf-8")).get("structures", []):
+            sid = s.get("structure", "")
+            if sid.startswith("infinite_domain:") and not (DATA / f"worldgen/structure/{sid.split(':',1)[1]}.json").is_file():
+                fail(f"[10] structure_set references {sid} but no structure file")
 
 # ---- report --------------------------------------------------------------
 print("Hive World smoke validator")
