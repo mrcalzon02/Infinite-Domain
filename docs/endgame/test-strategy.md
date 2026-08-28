@@ -87,7 +87,8 @@ Runs with no live instance. Asserts:
 ## 8. Runbook (fresh worker)
 
 1. Confirm the Hive datapack files are present under `kubejs/data/infinite_domain/`.
-2. `python scripts/endgame/validate_hive_world_smoke.py` — must pass before any launch.
+2. `python scripts/endgame/validate_hive_world_smoke.py` and
+   `python scripts/endgame/validate_hive_world_modules.py` — both must pass before any launch.
 3. Launch the client on the QA world (or a fresh world with a §2 seed).
 4. Check `logs/latest.log` for a clean pre-Hive baseline, then for zero new
    `infinite_domain:hive_world` errors.

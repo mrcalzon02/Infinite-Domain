@@ -32,8 +32,13 @@
       "kubejs/data/infinite_domain/worldgen/template_pool/hive_world/*.json",
       "kubejs/data/infinite_domain/worldgen/structure/hive_world_district.json",
       "kubejs/data/infinite_domain/worldgen/structure_set/hive_world_district.json",
-      "kubejs/data/infinite_domain/loot_table/chests/hive_world_salvage.json"
+      "kubejs/data/infinite_domain/loot_table/chests/hive_world_salvage.json",
+      "docs/endgame/hive-world-module-manifest.json"
     ]
+  },
+  "validators": {
+    "scripts/endgame/validate_hive_world_smoke.py": "10 offline assertions over the whole spike datapack",
+    "scripts/endgame/validate_hive_world_modules.py": "the P04 connector validator - module NBTs vs docs/endgame/contracts/module-schema.md and the module manifest"
   },
   "hand_authored": [
     "kubejs/data/infinite_domain/dimension/hive_world.json",
