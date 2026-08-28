@@ -1,0 +1,1243 @@
+{
+  "structure_id": "ruined_shopping_mall",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_shopping_mall_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/ruined_shopping_mall.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "ruined_shopping_mall_clean_master",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          11,
+          23
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 11, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          11,
+          41
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 11, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          12,
+          23
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 12, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          12,
+          41
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 12, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          13,
+          23
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 13, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          13,
+          41
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 13, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          5,
+          25
+        ],
+        "detail": "minecraft:quartz_stairs at (25, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          6,
+          26
+        ],
+        "detail": "minecraft:quartz_stairs at (25, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          7,
+          27
+        ],
+        "detail": "minecraft:quartz_stairs at (25, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          8,
+          28
+        ],
+        "detail": "minecraft:quartz_stairs at (25, 8, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          9,
+          29
+        ],
+        "detail": "minecraft:quartz_stairs at (25, 9, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          15
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          16
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          17
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          18
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          19
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          20
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          21
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          22
+        ],
+        "detail": "minecraft:bookshelf at (25, 11, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          23
+        ],
+        "detail": "zvhouses:spruce_countertop at (25, 11, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          41
+        ],
+        "detail": "zvhouses:spruce_countertop at (25, 11, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          42
+        ],
+        "detail": "minecraft:bookshelf at (25, 11, 42) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          43
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          44
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          45
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 45) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          46
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 46) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          47
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 47) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          48
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 48) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          49
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          15
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          16
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          17
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          18
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          19
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          20
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          21
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          23
+        ],
+        "detail": "zvhouses:spruce_countertop at (25, 12, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          41
+        ],
+        "detail": "zvhouses:spruce_countertop at (25, 12, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          43
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          44
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "356 additional floating blocks not individually listed (396 total)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          4,
+          11,
+          10
+        ],
+        "detail": "enclosed room of 8396 air blocks (691 floor cells, 11 tall) near (4, 11, 10) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "ruined_shopping_mall",
+    "passed": false,
+    "hard_fail_count": 43,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          11,
+          23
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 11, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          11,
+          41
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 11, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          12,
+          23
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 12, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          12,
+          41
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 12, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          13,
+          23
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 13, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          13,
+          41
+        ],
+        "detail": "zvhouses:spruce_countertop at (24, 13, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          5,
+          25
+        ],
+        "detail": "minecraft:quartz_stairs at (25, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          6,
+          26
+        ],
+        "detail": "minecraft:quartz_stairs at (25, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          7,
+          27
+        ],
+        "detail": "minecraft:quartz_stairs at (25, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          8,
+          28
+        ],
+        "detail": "minecraft:quartz_stairs at (25, 8, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          9,
+          29
+        ],
+        "detail": "minecraft:quartz_stairs at (25, 9, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          15
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          16
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          17
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          18
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          19
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          20
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          21
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          22
+        ],
+        "detail": "minecraft:bookshelf at (25, 11, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          23
+        ],
+        "detail": "zvhouses:spruce_countertop at (25, 11, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          41
+        ],
+        "detail": "zvhouses:spruce_countertop at (25, 11, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          42
+        ],
+        "detail": "minecraft:bookshelf at (25, 11, 42) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          43
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          44
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          45
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 45) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          46
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 46) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          47
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 47) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          48
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 48) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          11,
+          49
+        ],
+        "detail": "minecraft:scaffolding at (25, 11, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          15
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          16
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          17
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          18
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          19
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          20
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          21
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          23
+        ],
+        "detail": "zvhouses:spruce_countertop at (25, 12, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          41
+        ],
+        "detail": "zvhouses:spruce_countertop at (25, 12, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          43
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          12,
+          44
+        ],
+        "detail": "minecraft:scaffolding at (25, 12, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "299 additional floating blocks not individually listed (339 total)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          12,
+          13
+        ],
+        "detail": "minecraft:dark_oak_door at (47, 12, 13) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          11,
+          10
+        ],
+        "detail": "enclosed room of 8395 air blocks (690 floor cells, 11 tall) near (4, 11, 10) has no door anywhere on its boundary \u2014 unreachable (borders a furnishing block)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        20,
+        8,
+        9
+      ],
+      "detail": "minecraft:smooth_stone_slab at (20, 8, 9) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        21,
+        8,
+        9
+      ],
+      "detail": "minecraft:smooth_stone_slab at (21, 8, 9) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        21,
+        8,
+        12
+      ],
+      "detail": "minecraft:smooth_stone_slab at (21, 8, 12) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        8,
+        9
+      ],
+      "detail": "minecraft:smooth_stone_slab at (22, 8, 9) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        8,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (22, 8, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        8,
+        11
+      ],
+      "detail": "minecraft:smooth_stone_slab at (22, 8, 11) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        25,
+        2,
+        49
+      ],
+      "detail": "minecraft:spruce_slab at (25, 2, 49) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        8,
+        5
+      ],
+      "detail": "minecraft:smooth_stone_slab at (27, 8, 5) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        8,
+        6
+      ],
+      "detail": "minecraft:smooth_stone_slab at (27, 8, 6) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (27, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        8,
+        8
+      ],
+      "detail": "minecraft:smooth_stone_slab at (27, 8, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        8,
+        9
+      ],
+      "detail": "minecraft:smooth_stone_slab at (27, 8, 9) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        8,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (27, 8, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        8,
+        11
+      ],
+      "detail": "minecraft:smooth_stone_slab at (27, 8, 11) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        8,
+        12
+      ],
+      "detail": "minecraft:smooth_stone_slab at (27, 8, 12) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        9,
+        12
+      ],
+      "detail": "minecraft:smooth_stone_slab at (27, 9, 12) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        28,
+        9,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (28, 9, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        28,
+        9,
+        11
+      ],
+      "detail": "minecraft:smooth_stone_slab at (28, 9, 11) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        28,
+        9,
+        12
+      ],
+      "detail": "minecraft:smooth_stone_slab at (28, 9, 12) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        29,
+        9,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (29, 9, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        29,
+        9,
+        11
+      ],
+      "detail": "minecraft:smooth_stone_slab at (29, 9, 11) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        29,
+        9,
+        12
+      ],
+      "detail": "minecraft:smooth_stone_slab at (29, 9, 12) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        30,
+        9,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (30, 9, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        30,
+        9,
+        11
+      ],
+      "detail": "minecraft:smooth_stone_slab at (30, 9, 11) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        30,
+        9,
+        12
+      ],
+      "detail": "minecraft:smooth_stone_slab at (30, 9, 12) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        9,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 9, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        9,
+        11
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 9, 11) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        9,
+        12
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 9, 12) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        32,
+        9,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (32, 9, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        32,
+        9,
+        11
+      ],
+      "detail": "minecraft:smooth_stone_slab at (32, 9, 11) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": null,
+      "detail": "58 further slab/stair-in-wall hits not listed (88 total)."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        64,
+        12,
+        16
+      ],
+      "detail": "removed volume (64, 12, 16)->(64, 14, 37) (66 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        54,
+        12,
+        16
+      ],
+      "detail": "removed volume (54, 12, 16)->(54, 14, 37) (66 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        59,
+        12,
+        16
+      ],
+      "detail": "removed volume (59, 12, 16)->(59, 14, 37) (66 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        52,
+        2,
+        8
+      ],
+      "detail": "added debris (52, 2, 8)->(68, 10, 39) is 100% minecraft:gravel, fills 79% of its box, top is 93% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        70,
+        1,
+        7
+      ],
+      "detail": "added debris (70, 1, 7)->(72, 10, 39) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 67% inside the footprint, 100% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        49,
+        1,
+        7
+      ],
+      "detail": "added debris (49, 1, 7)->(50, 7, 11) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 100% inside the footprint, 9% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 41,
+    "variant_hard_fail": 43,
+    "audit_flag_count": 37,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 82,
+      "slab_wall_penetration": 31,
+      "terrain_mismatch_damage": 6,
+      "lint:room_composition:review_flag": 1,
+      "lint:opening_wall_coupling:hard_fail": 1,
+      "lint:room_composition:hard_fail": 1
+    }
+  }
+}

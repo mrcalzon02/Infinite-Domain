@@ -1,0 +1,863 @@
+{
+  "structure_id": "sunken_highway_interchange",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/sunken_highway_interchange_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/sunken_highway_interchange.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "sunken_highway_interchange_clean_master",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          12,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 12, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          12,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 12, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          12,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 12, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          13,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 13, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          13,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 13, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          13,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 13, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          14,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 14, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          14,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 14, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          14,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 14, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          15,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 15, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          15,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 15, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          15,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 15, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          16,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 16, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          16,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 16, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          16,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 16, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          17,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 17, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          17,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 17, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          17,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 17, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          18,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 18, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          18,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 18, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          18,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 18, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          19,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 19, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          19,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 19, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          19,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 19, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          20,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 20, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          20,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 20, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          20,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 20, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          21,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 21, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          21,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 21, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          21,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 21, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          22,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 22, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          22,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 22, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          22,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 22, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          12,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 12, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          12,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 12, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          12,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 12, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          13,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 13, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          13,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 13, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          13,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 13, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          14,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 14, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "464 additional floating blocks not individually listed (504 total)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "sunken_highway_interchange",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          12,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 12, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          12,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 12, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          12,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 12, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          13,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 13, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          13,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 13, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          13,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 13, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          14,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 14, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          14,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 14, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          14,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 14, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          15,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 15, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          15,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 15, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          15,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 15, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          16,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 16, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          16,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 16, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          16,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 16, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          17,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 17, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          17,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 17, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          17,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 17, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          18,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 18, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          18,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 18, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          18,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 18, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          19,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 19, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          19,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 19, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          19,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 19, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          20,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 20, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          20,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 20, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          20,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 20, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          21,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 21, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          21,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 21, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          21,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 21, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          22,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 22, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          22,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 22, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          22,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (20, 22, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          12,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 12, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          12,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 12, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          12,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 12, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          13,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 13, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          13,
+          30
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 13, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          13,
+          31
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 13, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          14,
+          29
+        ],
+        "detail": "minecraft:polished_blackstone_bricks at (21, 14, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "464 additional floating blocks not individually listed (504 total)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        58,
+        7,
+        34
+      ],
+      "detail": "removed volume (58, 7, 34)->(61, 10, 35) (32 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        39,
+        1,
+        36
+      ],
+      "detail": "added debris (39, 1, 36)->(66, 12, 67) is 100% minecraft:gravel, fills 77% of its box, top is 90% one Y, 100% inside the footprint, 80% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 41,
+    "variant_hard_fail": 41,
+    "audit_flag_count": 2,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 82,
+      "terrain_mismatch_damage": 2
+    }
+  }
+}

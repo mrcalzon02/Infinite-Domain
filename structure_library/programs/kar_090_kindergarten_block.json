@@ -1,0 +1,56 @@
+{
+  "structure_id": "infinite_domain:kar_090_kindergarten_block",
+  "culture": "karsic",
+  "building_type": "school_block",
+  "conversion_class": "N",
+  "base_master": null,
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": true,
+  "site_context": "karsic_district_yard",
+  "foundation_profile": "partial_basement",
+  "back_of_house": "behind",
+  "district_role": "district_service",
+  "rail_served": false,
+  "heating_main_connection": "rear_basement",
+  "tiling_asset": false,
+  "signage_series": "KINDERGARTEN (SERIES) 2 / SECTION B",
+  "archetype": "Kindergarten (Series)",
+  "roster_note": "Low two-storey catalogue building with a fenced play yard. Completes the mikrorayon service set with the school and clinic.",
+  "damage_archetype": null,
+  "civic_program": [
+    "a symmetric teaching block with cellular classrooms both sides of a wide corridor",
+    "a central entrance vestibule on the axis of symmetry",
+    "a double-height assembly hall wing",
+    "a gymnasium wing with changing rooms",
+    "a canteen with a serving line and communal tables",
+    "a staff room, a records room and a nurse's room off the ground corridor",
+    "cloakroom bays along the ground corridor",
+    "an asphalt yard with painted markings and a boundary fence",
+    "a basement pipe gallery and boiler substation"
+  ],
+  "circulation": [
+    "a 3-wide double-loaded corridor on every teaching floor",
+    "stair cores at both ends of the corridor, neither a dead end"
+  ],
+  "damage_constraints": [
+    "the hall or gymnasium roof has failed; the teaching block stands",
+    "both stair cores survive",
+    "the yard markings remain readable",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "classrooms read as classrooms rather than repeated empty rooms",
+      "the assembly hall is legibly double-height from inside and out"
+    ]
+  }
+}

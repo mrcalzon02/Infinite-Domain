@@ -76,5 +76,5 @@ FTB Quests to observe directly. Those confirmations have substantial item tasks
 and no reward; the rewarded finale is verified entirely through produced items.
 
 Generation is deterministic through
-`scripts/build_cyberspace_darknet_campaign.py`; validate it with
+`scripts/generators/build_cyberspace_darknet_campaign.py`; validate it with
 `scripts/audit_cyberspace_darknet_campaign.py` and the global FTB quest audit.

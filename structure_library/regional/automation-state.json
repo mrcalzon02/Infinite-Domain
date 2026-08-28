@@ -1,0 +1,296 @@
+{
+  "format_version": 1,
+  "purpose": "Resumable state for the two-region structural automation program. East (Karsic) runs to completion before West (Pelagos) begins, except for shared stages which serve both.",
+  "authority": [
+    "docs/REGIONAL_STRUCTURE_AUTOMATION_PLAN.md",
+    "docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md",
+    "docs/PELAGOS_COMPACT_STRUCTURE_PROGRAM.md"
+  ],
+  "hemisphere_binding": {
+    "karsic": "east",
+    "pelagos": "west",
+    "decided": "2026-08-26",
+    "basis": "owner confirmation, matching pack canon and all live worldgen data"
+  },
+  "salt_ranges": {
+    "karsic": [
+      79100000,
+      79109999
+    ],
+    "pelagos": [
+      79200000,
+      79209999
+    ]
+  },
+  "stages": [
+    {
+      "id": "R0",
+      "name": "Worldgen baseline",
+      "scope": "shared",
+      "status": "complete",
+      "completed": "2026-08-26",
+      "steps": [
+        {
+          "id": "R0.1",
+          "name": "regional_culture_gradient density function",
+          "status": "complete",
+          "artifact": "datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen/density_function/regional_culture_gradient.json"
+        },
+        {
+          "id": "R0.2",
+          "name": "city_humidity repointed at the culture gradient",
+          "status": "complete",
+          "artifact": "datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen/density_function/city_humidity.json"
+        },
+        {
+          "id": "R0.3",
+          "name": "no-op range proven from the files",
+          "status": "complete",
+          "artifact": "docs/regional-culture-gradient-validation.json",
+          "evidence": "14/14 checks; city_humidity differs at 291 probes, max changed radius 4799.0, none beyond 4800"
+        }
+      ]
+    },
+    {
+      "id": "R1",
+      "name": "Shared regional infrastructure",
+      "scope": "shared",
+      "status": "in_progress",
+      "steps": [
+        {
+          "id": "R1.1",
+          "name": "six regional ground contexts in structure_geometry_primitives_v2",
+          "status": "complete",
+          "artifact": "scripts/structure_geometry_primitives_v2.py _GROUND_PALETTES (+6 contexts)"
+        },
+        {
+          "id": "R1.2",
+          "name": "scripts/regional package scaffold",
+          "status": "pending"
+        },
+        {
+          "id": "R1.3",
+          "name": "validate_material_profile.py",
+          "status": "complete",
+          "artifact": "scripts/validate_material_profile.py"
+        },
+        {
+          "id": "R1.4",
+          "name": "validate_regional_assignment.py",
+          "status": "complete",
+          "artifact": "scripts/validate_regional_assignment.py"
+        },
+        {
+          "id": "R1.5",
+          "name": "validate_regional_structures.py harness",
+          "status": "pending"
+        },
+        {
+          "id": "R1.6",
+          "name": "remap_lostcities_palette.py",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "name": "Karsic data foundation",
+      "scope": "east",
+      "status": "complete",
+      "steps": [
+        {
+          "id": "E1.1",
+          "name": "karsic-material-profile.json",
+          "status": "complete",
+          "artifact": "structure_library/regional/karsic-material-profile.json"
+        },
+        {
+          "id": "E1.2",
+          "name": "karsic-assignment.json",
+          "status": "complete",
+          "artifact": "structure_library/regional/karsic-assignment.json"
+        },
+        {
+          "id": "E1.3",
+          "name": "karsic-massing-grammar.json",
+          "status": "complete",
+          "artifact": "structure_library/regional/karsic-massing-grammar.json"
+        },
+        {
+          "id": "E1.4",
+          "name": "five Karsic biomes and four biome tags",
+          "status": "complete",
+          "artifact": "kubejs/data/infinite_domain/worldgen/biome/karsic_*.json + 4 tags"
+        },
+        {
+          "id": "E1.5",
+          "name": "humidity-gated land rules in the Wastelands world preset",
+          "status": "complete",
+          "artifact": "kubejs/data/wastelands/worldgen/world_preset/wasteland.json (+5 rules)"
+        },
+        {
+          "id": "E1.6",
+          "name": "citybiomemultipliers entries",
+          "status": "complete",
+          "artifact": "kubejs/data/lostcities/lostcities/worldstyles/standard.json citybiomemultipliers"
+        }
+      ],
+      "completed": "2026-08-26"
+    },
+    {
+      "id": "E2",
+      "name": "Karsic programs",
+      "scope": "east",
+      "status": "complete",
+      "steps": [
+        {
+          "id": "E2.1",
+          "name": "94 structure_library/programs/kar_*.json",
+          "status": "complete",
+          "artifact": "structure_library/programs/kar_*.json (94 files, 36 building types)"
+        }
+      ],
+      "completed": "2026-08-26"
+    },
+    {
+      "id": "E3",
+      "name": "Karsic generator modules",
+      "scope": "east",
+      "status": "pending",
+      "steps": [
+        {
+          "id": "E3.1",
+          "name": "karsic_material_profile.py role resolver",
+          "status": "pending"
+        },
+        {
+          "id": "E3.2",
+          "name": "karsic_massing.py",
+          "status": "pending"
+        },
+        {
+          "id": "E3.3",
+          "name": "karsic_plan.py",
+          "status": "pending"
+        },
+        {
+          "id": "E3.4",
+          "name": "karsic_dressing.py",
+          "status": "pending"
+        },
+        {
+          "id": "E3.5",
+          "name": "karsic_damage.py",
+          "status": "pending"
+        },
+        {
+          "id": "E3.6",
+          "name": "generate_karsic_sites.py driver",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": "E4",
+      "name": "Karsic wave K-A (KF1 Panel Series, KF2 Standard Site Kit)",
+      "scope": "east",
+      "status": "pending",
+      "assets": 18
+    },
+    {
+      "id": "E5",
+      "name": "Karsic wave K-B (KF4, KF5, KF6)",
+      "scope": "east",
+      "status": "pending",
+      "assets": 31
+    },
+    {
+      "id": "E6",
+      "name": "Karsic wave K-C (KF3, KF7, KF9)",
+      "scope": "east",
+      "status": "pending",
+      "assets": 34
+    },
+    {
+      "id": "E7",
+      "name": "Karsic wave K-D (KF8, KF10)",
+      "scope": "east",
+      "status": "pending",
+      "assets": 11
+    },
+    {
+      "id": "E8",
+      "name": "Karsic Lost Cities wiring",
+      "scope": "east",
+      "status": "pending"
+    },
+    {
+      "id": "E9",
+      "name": "Karsic placement and scattered",
+      "scope": "east",
+      "status": "pending"
+    },
+    {
+      "id": "W1",
+      "name": "Pelagos data foundation",
+      "scope": "west",
+      "status": "blocked",
+      "blocked_by": "E9"
+    },
+    {
+      "id": "W2",
+      "name": "Pelagos programs",
+      "scope": "west",
+      "status": "blocked",
+      "blocked_by": "W1"
+    },
+    {
+      "id": "W3",
+      "name": "Pelagos generator modules",
+      "scope": "west",
+      "status": "blocked",
+      "blocked_by": "W2"
+    },
+    {
+      "id": "W4",
+      "name": "Pelagos wave P-A (PF1, PF2, PF3)",
+      "scope": "west",
+      "status": "blocked",
+      "blocked_by": "W3",
+      "assets": 21
+    },
+    {
+      "id": "W5",
+      "name": "Pelagos wave P-B (PF4, PF5, PF10)",
+      "scope": "west",
+      "status": "blocked",
+      "blocked_by": "W4",
+      "assets": 30
+    },
+    {
+      "id": "W6",
+      "name": "Pelagos wave P-C (PF6, PF7, PF8, PF9)",
+      "scope": "west",
+      "status": "blocked",
+      "blocked_by": "W5",
+      "assets": 44
+    },
+    {
+      "id": "W7",
+      "name": "Pelagos wave P-D (PF11 Londinium, PF12)",
+      "scope": "west",
+      "status": "blocked",
+      "blocked_by": "W6",
+      "assets": 4
+    },
+    {
+      "id": "W8",
+      "name": "Pelagos Lost Cities wiring and placement",
+      "scope": "west",
+      "status": "blocked",
+      "blocked_by": "W7"
+    }
+  ],
+  "production_approvals_policy": "No regional asset is written into structure_library/production-approvals.json until scripts/structure_geometry_lint.py checks 1-3 report zero hard-fail findings and the family, corpus, provenance and conversion validators pass.",
+  "last_updated": "2026-08-26"
+}

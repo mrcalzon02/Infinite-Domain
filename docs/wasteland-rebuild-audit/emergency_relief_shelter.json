@@ -1,0 +1,499 @@
+{
+  "structure_id": "emergency_relief_shelter",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/emergency_relief_shelter_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/emergency_relief_shelter.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "emergency_relief_shelter_clean_master",
+    "passed": false,
+    "hard_fail_count": 12,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          38,
+          3,
+          36
+        ],
+        "detail": "minecraft:lever at (38, 3, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          14,
+          30
+        ],
+        "detail": "minecraft:iron_trapdoor at (42, 14, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          2,
+          30
+        ],
+        "detail": "ladder facing west at (42, 2, 30) has no solid backing block at (43, 2, 30)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          3,
+          30
+        ],
+        "detail": "ladder facing west at (42, 3, 30) has no solid backing block at (43, 3, 30)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          4,
+          30
+        ],
+        "detail": "ladder facing west at (42, 4, 30) has no solid backing block at (43, 4, 30)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          5,
+          30
+        ],
+        "detail": "ladder facing west at (42, 5, 30) has no solid backing block at (43, 5, 30)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          6,
+          30
+        ],
+        "detail": "ladder facing west at (42, 6, 30) has no solid backing block at (43, 6, 30)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          8,
+          30
+        ],
+        "detail": "ladder facing west at (42, 8, 30) has no solid backing block at (43, 8, 30)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          9,
+          30
+        ],
+        "detail": "ladder facing west at (42, 9, 30) has no solid backing block at (43, 9, 30)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          11,
+          30
+        ],
+        "detail": "ladder facing west at (42, 11, 30) has no solid backing block at (43, 11, 30)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          12,
+          30
+        ],
+        "detail": "ladder facing west at (42, 12, 30) has no solid backing block at (43, 12, 30)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          13,
+          30
+        ],
+        "detail": "ladder facing west at (42, 13, 30) has no solid backing block at (43, 13, 30)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "emergency_relief_shelter",
+    "passed": false,
+    "hard_fail_count": 1,
+    "findings": [
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          6,
+          30
+        ],
+        "detail": "ladder facing west at (42, 6, 30) has no solid backing block at (43, 6, 30)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        8,
+        13
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 8, 13) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        8,
+        14
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 8, 14) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        8,
+        15
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 8, 15) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        8,
+        16
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 8, 16) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        8,
+        17
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 8, 17) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (13, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        14,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (14, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        15,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (15, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        16,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (16, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (17, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        8,
+        8
+      ],
+      "detail": "minecraft:smooth_stone_slab at (17, 8, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        8,
+        9
+      ],
+      "detail": "minecraft:smooth_stone_slab at (17, 8, 9) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        8,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (17, 8, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        8,
+        13
+      ],
+      "detail": "minecraft:smooth_stone_slab at (17, 8, 13) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        8,
+        14
+      ],
+      "detail": "minecraft:smooth_stone_slab at (17, 8, 14) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        8,
+        15
+      ],
+      "detail": "minecraft:smooth_stone_slab at (17, 8, 15) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        8,
+        16
+      ],
+      "detail": "minecraft:smooth_stone_slab at (17, 8, 16) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        8,
+        17
+      ],
+      "detail": "minecraft:smooth_stone_slab at (17, 8, 17) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        7,
+        26
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 7, 26) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        7,
+        27
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 7, 27) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        7,
+        28
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 7, 28) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        7,
+        31
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 7, 31) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        8,
+        8
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 8, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        8,
+        9
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 8, 9) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        8,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 8, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        32,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (32, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        33,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (33, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        34,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (34, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        35,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (35, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": null,
+      "detail": "6 further slab/stair-in-wall hits not listed (36 total)."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        36,
+        2,
+        33
+      ],
+      "detail": "added debris (36, 2, 33)->(43, 5, 37) is 100% minecraft:gravel, fills 81% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        35,
+        2,
+        27
+      ],
+      "detail": "added debris (35, 2, 27)->(43, 5, 31) is 100% minecraft:gravel, fills 98% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        34,
+        2,
+        33
+      ],
+      "detail": "added debris (34, 2, 33)->(34, 5, 37) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 12,
+    "variant_hard_fail": 1,
+    "audit_flag_count": 34,
+    "by_check": {
+      "slab_wall_penetration": 31,
+      "lint:ladder_backing:hard_fail": 11,
+      "terrain_mismatch_damage": 3,
+      "lint:structural_connectivity:hard_fail": 2
+    }
+  }
+}

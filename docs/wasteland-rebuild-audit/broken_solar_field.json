@@ -1,0 +1,841 @@
+{
+  "structure_id": "broken_solar_field",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/broken_solar_field_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/broken_solar_field.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "broken_solar_field_clean_master",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          14
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          15
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          25
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          26
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          38
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          39
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          49
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          50
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 50) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          13
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          14
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          24
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          25
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          37
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          38
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          48
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 48) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          49
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          14
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          15
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          25
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          26
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          38
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          39
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          49
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          50
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 50) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          13
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          14
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          24
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          25
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          37
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          38
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          48
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 48) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          49
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          14
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          15
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          25
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          26
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          38
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          39
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          49
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          50
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 50) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "796 additional floating blocks not individually listed (836 total)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "broken_solar_field",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          14
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          15
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          25
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          26
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          38
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          39
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          49
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          50
+        ],
+        "detail": "oritech:big_solar_panel_block at (7, 2, 50) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          13
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          14
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          24
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          25
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          37
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          38
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          48
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 48) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          3,
+          49
+        ],
+        "detail": "minecraft:black_stained_glass at (7, 3, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          14
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          15
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          25
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          26
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          38
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          39
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          49
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          50
+        ],
+        "detail": "oritech:big_solar_panel_block at (8, 2, 50) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          13
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          14
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          24
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          25
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          37
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          38
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          48
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 48) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          49
+        ],
+        "detail": "minecraft:black_stained_glass at (8, 3, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          14
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          15
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          25
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          26
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          38
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          39
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          49
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          50
+        ],
+        "detail": "oritech:big_solar_panel_block at (9, 2, 50) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "579 additional floating blocks not individually listed (619 total)"
+      }
+    ]
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 41,
+    "variant_hard_fail": 41,
+    "audit_flag_count": 0,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 82
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "structure_id": "decayed_farm",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/decayed_farm_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/decayed_farm.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "decayed_farm_clean_master",
+    "passed": false,
+    "hard_fail_count": 5,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          2,
+          10
+        ],
+        "detail": "minecraft:barrel at (24, 2, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          37,
+          2,
+          30
+        ],
+        "detail": "minecraft:dark_oak_door at (37, 2, 30) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          38,
+          2,
+          30
+        ],
+        "detail": "minecraft:dark_oak_door at (38, 2, 30) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          37,
+          3,
+          30
+        ],
+        "detail": "minecraft:dark_oak_door at (37, 3, 30) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          38,
+          3,
+          30
+        ],
+        "detail": "minecraft:dark_oak_door at (38, 3, 30) has no framing wall material on either horizontal axis (floating door)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "decayed_farm",
+    "passed": false,
+    "hard_fail_count": 5,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          2,
+          10
+        ],
+        "detail": "minecraft:barrel at (24, 2, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          37,
+          2,
+          30
+        ],
+        "detail": "minecraft:dark_oak_door at (37, 2, 30) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          38,
+          2,
+          30
+        ],
+        "detail": "minecraft:dark_oak_door at (38, 2, 30) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          37,
+          3,
+          30
+        ],
+        "detail": "minecraft:dark_oak_door at (37, 3, 30) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          38,
+          3,
+          30
+        ],
+        "detail": "minecraft:dark_oak_door at (38, 3, 30) has no framing wall material on either horizontal axis (floating door)"
+      }
+    ]
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 5,
+    "variant_hard_fail": 5,
+    "audit_flag_count": 0,
+    "by_check": {
+      "lint:opening_wall_coupling:hard_fail": 8,
+      "lint:structural_connectivity:hard_fail": 2
+    }
+  }
+}

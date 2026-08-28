@@ -1,0 +1,333 @@
+{
+  "purpose": "Material profile completeness and registry-existence gate. Runs before any fabric pass.",
+  "authority": "docs/KARSIC_*_STRUCTURE_PROGRAM.md section 8.4",
+  "culture": "karsic",
+  "profile": "structure_library/regional/karsic-material-profile.json",
+  "registry": "docs/registry-inventory/block-ids.txt",
+  "registry_block_count": 12171,
+  "strata": [
+    "K-I",
+    "K-II",
+    "K-III",
+    "K-IV",
+    "K-V"
+  ],
+  "role_count": 17,
+  "blocks_checked": 146,
+  "derivatives_resolved": 25,
+  "null_role_slots": 5,
+  "passed": true,
+  "failures": [],
+  "resolution": {
+    "wall_primary": {
+      "K-I": {
+        "block": "minecraft:bricks",
+        "slab": "minecraft:brick_slab"
+      },
+      "K-II": {
+        "block": "immersiveengineering:concrete_sprayed",
+        "slab": "immersiveengineering:slab_concrete",
+        "overridden": [
+          "slab"
+        ]
+      },
+      "K-III": {
+        "block": "immersiveengineering:concrete",
+        "slab": "immersiveengineering:slab_concrete"
+      },
+      "K-IV": {
+        "block": "immersiveengineering:concrete_reinforced",
+        "slab": "immersiveengineering:slab_concrete_reinforced"
+      },
+      "K-V": {
+        "block": "immersiveengineering:sheetmetal_aluminum",
+        "slab": "immersiveengineering:slab_sheetmetal_aluminum"
+      }
+    },
+    "wall_secondary": {
+      "K-I": {
+        "block": "quark:cobblestone_bricks"
+      },
+      "K-II": {
+        "block": "minecraft:white_terracotta"
+      },
+      "K-III": {
+        "block": "immersiveengineering:concrete_tile"
+      },
+      "K-IV": {
+        "block": "immersiveengineering:concrete_chiseled"
+      },
+      "K-V": {
+        "block": "immersiveengineering:sheetmetal_steel"
+      }
+    },
+    "wall_panel_field": {
+      "K-I": null,
+      "K-II": null,
+      "K-III": {
+        "block": "immersiveengineering:concrete_sheet"
+      },
+      "K-IV": null,
+      "K-V": {
+        "block": "tfmg:industrial_aluminum_casing"
+      }
+    },
+    "panel_joint": {
+      "K-I": null,
+      "K-II": null,
+      "K-III": {
+        "block": "immersiveengineering:concrete_brick"
+      },
+      "K-IV": {
+        "block": "immersiveengineering:concrete_pillar"
+      },
+      "K-V": {
+        "block": "create:metal_girder"
+      }
+    },
+    "plinth": {
+      "K-I": {
+        "block": "minecraft:stone_bricks",
+        "slab": "minecraft:stone_brick_slab"
+      },
+      "K-II": {
+        "block": "minecraft:polished_andesite",
+        "slab": "minecraft:polished_andesite_slab"
+      },
+      "K-III": {
+        "block": "tfmg:gray_rebar_concrete",
+        "slab": "tfmg:gray_rebar_concrete_slab"
+      },
+      "K-IV": {
+        "block": "quark:polished_shale",
+        "slab": "quark:polished_shale_slab"
+      },
+      "K-V": {
+        "block": "tfmg:gray_rebar_concrete",
+        "slab": "tfmg:gray_rebar_concrete_slab"
+      }
+    },
+    "pilaster": {
+      "K-I": {
+        "block": "minecraft:brick_wall"
+      },
+      "K-II": {
+        "block": "immersiveengineering:concrete_pillar"
+      },
+      "K-III": {
+        "block": "immersiveengineering:concrete_pillar"
+      },
+      "K-IV": {
+        "block": "immersiveengineering:concrete_pillar"
+      },
+      "K-V": {
+        "block": "create:metal_girder"
+      }
+    },
+    "floor_slab": {
+      "K-I": {
+        "block": "minecraft:bricks",
+        "slab": "minecraft:brick_slab"
+      },
+      "K-II": {
+        "block": "immersiveengineering:concrete",
+        "slab": "immersiveengineering:slab_concrete"
+      },
+      "K-III": {
+        "block": "immersiveengineering:concrete",
+        "slab": "immersiveengineering:slab_concrete"
+      },
+      "K-IV": {
+        "block": "immersiveengineering:concrete_reinforced",
+        "slab": "immersiveengineering:slab_concrete_reinforced"
+      },
+      "K-V": {
+        "block": "immersiveengineering:concrete",
+        "slab": "immersiveengineering:slab_concrete"
+      }
+    },
+    "floor_finish_public": {
+      "K-I": {
+        "block": "minecraft:polished_andesite",
+        "slab": "minecraft:polished_andesite_slab"
+      },
+      "K-II": {
+        "block": "supplementaries:stone_tile",
+        "slab": "supplementaries:stone_tile_slab"
+      },
+      "K-III": {
+        "block": "immersiveengineering:concrete_tile",
+        "slab": "immersiveengineering:slab_concrete_tile"
+      },
+      "K-IV": {
+        "block": "quark:polished_jasper",
+        "slab": "quark:polished_jasper_slab"
+      },
+      "K-V": {
+        "block": "immersiveengineering:concrete_reinforced_tile",
+        "slab": "immersiveengineering:slab_concrete_reinforced_tile"
+      }
+    },
+    "floor_finish_service": {
+      "K-I": {
+        "block": "tfmg:factory_floor"
+      },
+      "K-II": {
+        "block": "tfmg:factory_floor"
+      },
+      "K-III": {
+        "block": "tfmg:factory_floor"
+      },
+      "K-IV": {
+        "block": "tfmg:factory_floor"
+      },
+      "K-V": {
+        "block": "the_wasteland_reworked:aluminium_grate"
+      }
+    },
+    "roof_deck": {
+      "K-I": {
+        "block": "minecraft:bricks",
+        "slab": "minecraft:brick_slab"
+      },
+      "K-II": {
+        "block": "quark:gray_shingles",
+        "slab": "quark:gray_shingles_slab"
+      },
+      "K-III": {
+        "block": "immersiveengineering:concrete_sheet",
+        "slab": "immersiveengineering:slab_concrete",
+        "overridden": [
+          "slab"
+        ]
+      },
+      "K-IV": {
+        "block": "immersiveengineering:concrete_reinforced",
+        "slab": "immersiveengineering:slab_concrete_reinforced"
+      },
+      "K-V": {
+        "block": "immersiveengineering:sheetmetal_aluminum",
+        "slab": "immersiveengineering:slab_sheetmetal_aluminum"
+      }
+    },
+    "internal_column": {
+      "K-I": {
+        "block": "create:metal_girder"
+      },
+      "K-II": {
+        "block": "immersiveengineering:concrete_pillar"
+      },
+      "K-III": {
+        "block": "immersiveengineering:concrete_pillar"
+      },
+      "K-IV": {
+        "block": "immersiveengineering:concrete_pillar"
+      },
+      "K-V": {
+        "block": "create:metal_girder"
+      }
+    },
+    "stair_core_wall": {
+      "K-I": {
+        "block": "minecraft:bricks"
+      },
+      "K-II": {
+        "block": "immersiveengineering:concrete_sprayed"
+      },
+      "K-III": {
+        "block": "immersiveengineering:concrete_brick"
+      },
+      "K-IV": {
+        "block": "immersiveengineering:concrete_reinforced"
+      },
+      "K-V": {
+        "block": "immersiveengineering:concrete_brick"
+      }
+    },
+    "parapet_cap": {
+      "K-I": {
+        "block": "minecraft:brick_slab"
+      },
+      "K-II": {
+        "block": "minecraft:smooth_stone_slab"
+      },
+      "K-III": {
+        "block": "immersiveengineering:slab_concrete"
+      },
+      "K-IV": {
+        "block": "quark:polished_shale_slab"
+      },
+      "K-V": {
+        "block": "immersiveengineering:slab_sheetmetal_aluminum"
+      }
+    },
+    "stair_tread": {
+      "K-I": {
+        "block": "minecraft:brick_stairs"
+      },
+      "K-II": {
+        "block": "minecraft:stone_brick_stairs"
+      },
+      "K-III": {
+        "block": "immersiveengineering:stairs_concrete"
+      },
+      "K-IV": {
+        "block": "immersiveengineering:stairs_concrete"
+      },
+      "K-V": {
+        "block": "immersiveengineering:stairs_concrete_brick"
+      }
+    },
+    "coping": {
+      "K-I": {
+        "block": "minecraft:brick_wall"
+      },
+      "K-II": {
+        "block": "minecraft:stone_brick_wall"
+      },
+      "K-III": {
+        "block": "immersiveengineering:wall_concrete"
+      },
+      "K-IV": {
+        "block": "immersiveengineering:wall_concrete"
+      },
+      "K-V": {
+        "block": "immersiveengineering:wall_concrete_brick"
+      }
+    },
+    "rubble": {
+      "K-I": {
+        "block": "minecraft:gravel"
+      },
+      "K-II": {
+        "block": "minecraft:gravel"
+      },
+      "K-III": {
+        "block": "minecraft:gravel"
+      },
+      "K-IV": {
+        "block": "minecraft:gravel"
+      },
+      "K-V": {
+        "block": "minecraft:gravel"
+      }
+    },
+    "debris_accent": {
+      "K-I": {
+        "block": "quark:cobblestone_bricks"
+      },
+      "K-II": {
+        "block": "minecraft:white_terracotta"
+      },
+      "K-III": {
+        "block": "immersiveengineering:concrete_brick_cracked"
+      },
+      "K-IV": {
+        "block": "immersiveengineering:concrete_chiseled"
+      },
+      "K-V": {
+        "block": "immersiveengineering:sheetmetal_steel"
+      }
+    }
+  }
+}

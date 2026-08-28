@@ -1,0 +1,862 @@
+{
+  "structure_id": "ruined_courthouse",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_courthouse_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/ruined_courthouse.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "ruined_courthouse_clean_master",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (9, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (9, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (9, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (9, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          12,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 12, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          12,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 12, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          13,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 13, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          13,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 13, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          12,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 12, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          12,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 12, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          13,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 13, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          13,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 13, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          12,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 12, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          12,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 12, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          13,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 13, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          13,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 13, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          12,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 12, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          12,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 12, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          13,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 13, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          13,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 13, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (14, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (14, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (14, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (14, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "156 additional floating blocks not individually listed (196 total)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          24,
+          22,
+          15
+        ],
+        "detail": "enclosed room of 1074 air blocks (173 floor cells, 6 tall) near (24, 22, 15) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "ruined_courthouse",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (9, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (9, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (9, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (9, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          12,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 12, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          12,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 12, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          13,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 13, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          13,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (10, 13, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          12,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 12, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          12,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 12, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          13,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 13, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          13,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (11, 13, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          12,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 12, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          12,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 12, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          13,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 13, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          13,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (12, 13, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          12,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 12, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          12,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 12, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          13,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 13, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          13,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (13, 13, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          3,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (14, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          3,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (14, 3, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          4,
+          33
+        ],
+        "detail": "minecraft:dark_oak_planks at (14, 4, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          4,
+          34
+        ],
+        "detail": "minecraft:dark_oak_planks at (14, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "95 additional floating blocks not individually listed (135 total)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          24,
+          22,
+          15
+        ],
+        "detail": "enclosed room of 1074 air blocks (173 floor cells, 6 tall) near (24, 22, 15) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 41,
+    "variant_hard_fail": 41,
+    "audit_flag_count": 0,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 82,
+      "lint:room_composition:review_flag": 2
+    }
+  }
+}

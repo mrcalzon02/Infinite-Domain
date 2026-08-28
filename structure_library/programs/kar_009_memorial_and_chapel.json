@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:kar_009_memorial_and_chapel",
+  "culture": "karsic",
+  "building_type": "memorial",
+  "conversion_class": "A",
+  "base_master": "roadside_church_cemetery",
+  "primary_stratum": "K-I",
+  "secondary_stratum": "K-IV",
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "axial_terminus",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "MEMORIAL AND CHAPEL 1",
+  "archetype": "Memorial and Chapel",
+  "roster_note": "Walled cemetery, small brick chapel, and a concrete obelisk on an axis. Civic memory, not religion, carries the site.",
+  "damage_archetype": "partitioned survivor wing",
+  "civic_program": [
+    "a paved terrace approached on a single axis",
+    "a tall plain obelisk or monolith on the axis",
+    "a wall of names flanking the approach",
+    "an eternal-flame plinth at the foot of the monument",
+    "low planting and benches at the terrace edge",
+    "a boundary of standard fencing and lamp standards"
+  ],
+  "circulation": [
+    "the approach is axial and unobstructed"
+  ],
+  "damage_constraints": [
+    "the flame is out and the plinth is cracked; the monument and the wall of names stand",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the site carries civic weight without any national emblem"
+    ]
+  },
+  "source_metadata": {
+    "category": "civic",
+    "settlement_types": [
+      "rural",
+      "residential"
+    ],
+    "road_connection": "local_road",
+    "base_footprint": {
+      "width": 51,
+      "depth": 49
+    },
+    "base_height": 29,
+    "conversion_target": "multibuilding"
+  }
+}

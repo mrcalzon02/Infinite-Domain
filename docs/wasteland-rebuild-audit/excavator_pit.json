@@ -1,0 +1,50 @@
+{
+  "structure_id": "excavator_pit",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/excavator_pit_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/excavator_pit.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "excavator_pit_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          63,
+          13,
+          31
+        ],
+        "detail": "enclosed room of 216 air blocks (24 floor cells, 9 tall) near (63, 13, 31) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "excavator_pit",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": []
+  },
+  "audit_findings": [
+    {
+      "check": "massing_monotony",
+      "severity": "review_flag",
+      "position": [
+        4,
+        4,
+        40
+      ],
+      "detail": "building mass 14x17x18 at (4, 4, 40) reads as a flat cuboid: roof 100% one plane (y=21); 4/4 facades >=88% a single wall plane (east 93%, north 90%, south 92%, west 91%). Needs setbacks, projecting bays, a pitched/stepped roofline or depth relief."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 0,
+    "audit_flag_count": 1,
+    "by_check": {
+      "massing_monotony": 1,
+      "lint:room_composition:review_flag": 1
+    }
+  }
+}

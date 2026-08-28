@@ -33,6 +33,7 @@ SPIKE_DECLARED = {
     "kubejs:cinderstack_marker",
     "kubejs:cinderstack_return_marker",
     "kubejs:cinderstack_filter",
+    "kubejs:cinderstack_mask",
     "infinite_domain:hive_world",
     "infinite_domain:hive_world_sump",
     "infinite_domain:hive_world_works",

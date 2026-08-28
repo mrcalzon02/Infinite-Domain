@@ -1,0 +1,67 @@
+{
+  "structure_id": "infinite_domain:kar_011_house_of_culture",
+  "culture": "karsic",
+  "building_type": "institutional_hall",
+  "conversion_class": "N",
+  "base_master": "ruined_community_center",
+  "primary_stratum": "K-IV",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "full_basement",
+  "back_of_house": "below",
+  "district_role": "axial_terminus",
+  "rail_served": false,
+  "heating_main_connection": "below_forecourt",
+  "tiling_asset": false,
+  "signage_series": "HOUSE OF CULTURE 1",
+  "archetype": "House of Culture",
+  "roster_note": "The Karsic civic landmark type. Colonnade, auditorium, club rooms, oversized forecourt.",
+  "damage_archetype": "partitioned survivor wing",
+  "civic_program": [
+    "a ceremonial entrance on the central axis reached by a broad flight of steps",
+    "a full-width entrance hall with a cloakroom and an attendant's desk",
+    "a principal double-height hall, chamber or reading room on the axis",
+    "flanking cellular offices or club rooms on both upper floors",
+    "a records or stack room below grade",
+    "a service entrance and plant access from a rear or basement yard",
+    "an oversized paved forecourt at least as deep as the building is tall"
+  ],
+  "circulation": [
+    "the public route is axial and symmetric from forecourt to principal hall",
+    "back-of-house is reached from below, keeping the ceremonial elevation clean"
+  ],
+  "damage_constraints": [
+    "the principal hall roof has partly failed; the entrance sequence survives",
+    "the below-grade records level stays dry and intact",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the approach reads as ceremonial without any added ornament",
+      "the building has no crown; the top is a flat entablature band"
+    ]
+  },
+  "source_metadata": {
+    "category": "civic",
+    "settlement_types": [
+      "town_center",
+      "residential"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 51,
+      "depth": 47
+    },
+    "base_height": 21,
+    "conversion_target": "building"
+  }
+}

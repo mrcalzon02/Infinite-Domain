@@ -1,0 +1,214 @@
+{
+  "structures": [
+    {
+      "structure": "infinite_domain:wasteland/trailer_park",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_culdesac",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/military_checkpoint",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/bunker_network",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/trade_outpost",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/industrial_facility",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/mountain_military_complex",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/mountain_biohazard_lab",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/mountain_pass_terminator",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/decayed_logging_camp",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/corporate_warehouse",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/blown_apartment_complex",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_mixed_use_block",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/pancaked_parking_structure",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/sunken_city_front",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/cratered_downtown_intersection",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_hospital",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_fire_station",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_police_precinct",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_courthouse",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/emergency_relief_shelter",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/collapsed_subway_station",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_bus_terminal",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/freight_depot",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/elevated_rail_collapse",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/sunken_highway_interchange",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_shopping_mall",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_department_store",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/bombed_hotel",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/buried_bank_vault",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_office_tower",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/tenement_courtyard",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_rowhouse_block",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/shattered_luxury_condo",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_city_school",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_community_center",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/city_electrical_substation",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/city_water_treatment_plant",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/district_heating_station",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/municipal_incinerator",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_fuel_depot",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_cyberware_clinic",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ae2_records_archive",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_create_factory",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/collapsed_airship_terminal",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/nuclear_research_annex",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/shattered_wind_farm",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/broken_solar_field",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/wilderness_substation",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/wasteland_water_tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 24,
+    "separation": 14,
+    "salt": 87130404,
+    "exclusion_zone": {
+      "other_set": "infinite_domain:wasteland/wasteland_landmark",
+      "chunk_count": 8
+    }
+  }
+}

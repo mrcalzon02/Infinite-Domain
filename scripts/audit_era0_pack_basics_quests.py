@@ -90,8 +90,57 @@ login_script = (ROOT / "kubejs/server_scripts/main.js").read_text(encoding="utf-
 spawn_bootstrap = (ROOT / "kubejs/data/infinite_domain/function/admin/bootstrap_spawn_hospital.mcfunction").read_text(encoding="utf-8")
 arrival_function = (ROOT / "kubejs/data/infinite_domain/function/admin/complete_pending_spawn_arrival.mcfunction").read_text(encoding="utf-8")
 book_cleanup = (ROOT / "kubejs/data/infinite_domain/function/admin/remove_obsolete_starting_book.mcfunction").read_text(encoding="utf-8")
-spawn_buffer_biome = json.loads((ROOT / "kubejs/data/infinite_domain/worldgen/biome/spawn_buffer.json").read_text(encoding="utf-8"))
-spawn_buffer_mask = (ROOT / "datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen/density_function/start_city_mask.json").read_text(encoding="utf-8")
+safe_zone_biome = json.loads((ROOT / "kubejs/data/infinite_domain/worldgen/biome/safe_zone.json").read_text(encoding="utf-8"))
+safe_zone_mask = (ROOT / "datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen/density_function/start_city_mask.json").read_text(encoding="utf-8")
+safe_zone_mask_json = json.loads(safe_zone_mask)
+
+
+def _safe_zone_is_compact_radial(node: object) -> bool:
+    """The spawn safe-zone mask must be a radial (isekai_api:distance) falloff
+    centred on the world origin, feathering to 0 well within the old +/-192
+    square while still covering the 7x7-chunk admin claim (+/-56 blocks).
+    A hard axis-step square (the pre-2026-08-26 shape) fails this."""
+    if "isekai_api:distance" not in safe_zone_mask:
+        return False
+    if "isekai_api:coordinate" in safe_zone_mask or '"threshold"' in safe_zone_mask:
+        return False  # axis-step square
+
+    def find_distance_refs(n: object):
+        if isinstance(n, dict):
+            if n.get("type") == "isekai_api:distance":
+                yield n
+            for v in n.values():
+                yield from find_distance_refs(v)
+        elif isinstance(n, list):
+            for v in n:
+                yield from find_distance_refs(v)
+
+    refs = list(find_distance_refs(node))
+    if not refs:
+        return False
+    for r in refs:
+        if (r.get("ref_x"), r.get("ref_z")) != (0.0, 0.0):
+            return False
+    # the largest constant in the mask is the outer feather radius; require it
+    # to be a real shrink from 192 and at least the admin-claim half-extent.
+    consts = [
+        c["value"]
+        for c in _iter_constants(node)
+        if isinstance(c.get("value"), (int, float)) and c["value"] > 1.5
+    ]
+    outer = max(consts) if consts else 0
+    return 56 <= outer <= 160
+
+
+def _iter_constants(n: object):
+    if isinstance(n, dict):
+        if n.get("type") == "isekai_api:constant":
+            yield n
+        for v in n.values():
+            yield from _iter_constants(v)
+    elif isinstance(n, list):
+        for v in n:
+            yield from _iter_constants(v)
 wasteland_preset = (ROOT / "kubejs/data/wastelands/worldgen/world_preset/wasteland.json").read_text(encoding="utf-8")
 config = (ROOT / "config/ftbchunks-world.snbt").read_text(encoding="utf-8")
 options = (ROOT / "options.txt").read_text(encoding="utf-8")
@@ -116,10 +165,10 @@ source_checks = {
         token in spawn_claim
         for token in ("verifiedClaims === 49", "claimedChunkManager.getChunk", "configureSpawnClaims(attempt + 1)")
     ),
-    "spawn_buffer_selected": '"biome": "infinite_domain:spawn_buffer"' in wasteland_preset,
-    "spawn_buffer_bounds": '"threshold": -192.0' in spawn_buffer_mask and '"threshold": 192.0' in spawn_buffer_mask,
-    "spawn_buffer_has_no_features": all(not step for step in spawn_buffer_biome["features"]),
-    "spawn_buffer_has_no_mobs": all(not entries for entries in spawn_buffer_biome["spawners"].values()),
+    "safe_zone_selected": "infinite_domain:safe_zone" in wasteland_preset,
+    "safe_zone_bounds": _safe_zone_is_compact_radial(safe_zone_mask_json),
+    "safe_zone_has_no_features": all(not step for step in safe_zone_biome["features"]),
+    "safe_zone_has_no_mobs": all(not entries for entries in safe_zone_biome["spawners"].values()),
     "admin_private": all(
         setting in spawn_claim
         for setting in ("BLOCK_EDIT_MODE", "BLOCK_INTERACT_MODE", "ENTITY_INTERACT_MODE", "$PrivacyMode.PRIVATE")

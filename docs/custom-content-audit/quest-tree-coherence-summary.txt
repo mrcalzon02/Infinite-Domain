@@ -1,0 +1,27 @@
+Quest tree: 38 chapters, 876 quests, 1017 dependency edges, progression_mode=linear
+Task types: {'item': 769, 'checkmark': 84, 'kill': 65, 'structure': 50, 'biome': 34, 'dimension': 8, 'advancement': 2}
+Reward types: {'item': 503, 'command': 47, 'xp': 44, 'custom': 2}
+
+Findings by severity:
+  critical  0
+  warning   52
+  info      228
+
+Findings by category:
+  [warning ] checkmark-outside-prologue   28
+  [warning ] gate-item-structure-loot     19
+  [warning ] third-party-loot-gate        3
+  [warning ] era-regression-dependency    2
+  [info    ] acquisition-unverified       56
+  [info    ] recipe-coverage-gap          39
+  [info    ] chapter-icon-missing         38
+  [info    ] project-item-unverified      34
+  [info    ] backward-dependency-line     21
+  [info    ] checkmark-outside-prologue   20
+  [info    ] weak-authentication          12
+  [info    ] non-legend-shape             7
+  [info    ] unresolved-entity-task       1
+
+CRITICAL findings:
+
+Full report: docs\quest-tree-coherence-audit.json

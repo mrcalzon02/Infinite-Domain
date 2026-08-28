@@ -1,0 +1,109 @@
+{
+  "structure_id": "mountain_pass_terminator",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/mountain_pass_terminator_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/mountain_pass_terminator.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "mountain_pass_terminator_clean_master",
+    "passed": false,
+    "hard_fail_count": 4,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          8
+        ],
+        "detail": "minecraft:stripped_oak_log at (8, 3, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          4,
+          8
+        ],
+        "detail": "minecraft:stripped_oak_log at (8, 4, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          5,
+          8
+        ],
+        "detail": "minecraft:orange_wool at (8, 5, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          1,
+          14
+        ],
+        "detail": "minecraft:iron_door at (6, 1, 14) has no framing wall material on either horizontal axis (floating door)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "mountain_pass_terminator",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "damage_coherence",
+        "severity": "review_flag",
+        "position": null,
+        "detail": "removed volume fills 100% of its bounding box (reads as a clean rectangular cut, not an authored fracture) across 36 blocks"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        11
+      ],
+      "detail": "removed volume (4, 2, 11)->(12, 3, 12) (36 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        5,
+        2,
+        15
+      ],
+      "detail": "added debris (5, 2, 15)->(7, 3, 17) is 75% minecraft:mossy_cobblestone, fills 89% of its box, top is 100% one Y, 100% inside the footprint, 56% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        11
+      ],
+      "detail": "roof hole (4, 2, 11)->(12, 3, 12) (36 blocks) is capped/filled by pile-block material on 32/36 columns - the roof was cut and the void patched with terrain material rather than left open with debris fallen to the floor below."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 4,
+    "variant_hard_fail": 0,
+    "audit_flag_count": 3,
+    "by_check": {
+      "terrain_mismatch_damage": 3,
+      "lint:structural_connectivity:hard_fail": 3,
+      "lint:opening_wall_coupling:hard_fail": 1,
+      "lint:damage_coherence:review_flag": 1
+    }
+  }
+}

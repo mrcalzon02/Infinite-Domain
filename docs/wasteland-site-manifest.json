@@ -3,269 +3,120 @@
   "namespace": "infinite_domain:wasteland",
   "biome_tag": "#infinite_domain:wasteland_site_biomes",
   "families": {
-    "roadside_debris": {
+    "wasteland_landmark": {
       "members": [
-        "radio_mast",
-        "wrecked_sedan",
-        "delivery_van"
-      ],
-      "spacing_chunks": 18,
-      "separation_chunks": 8
-    },
-    "residential_ruins": {
-      "members": [
-        "abandoned_bungalow",
-        "split_level_house"
-      ],
-      "spacing_chunks": 32,
-      "separation_chunks": 13
-    },
-    "commercial_ruins": {
-      "members": [
-        "dilapidated_grocery",
-        "service_garage",
-        "scrapyard"
-      ],
-      "spacing_chunks": 42,
-      "separation_chunks": 18
-    },
-    "major_settlements": {
-      "members": [
-        "trailer_park",
-        "abandoned_culdesac"
-      ],
-      "spacing_chunks": 56,
-      "separation_chunks": 24
-    },
-    "military_remnants": {
-      "members": [
-        "battle_tank",
-        "military_checkpoint"
-      ],
-      "spacing_chunks": 48,
-      "separation_chunks": 20
-    },
-    "buried_sites": {
-      "members": [
-        "survivor_cache",
-        "bunker_network"
-      ],
-      "spacing_chunks": 52,
-      "separation_chunks": 22
-    },
-    "survivor_outposts": {
-      "members": [
-        "trade_outpost"
-      ],
-      "spacing_chunks": 64,
-      "separation_chunks": 28
-    },
-    "rural_ruins": {
-      "members": [
-        "decayed_farm"
-      ],
-      "spacing_chunks": 44,
-      "separation_chunks": 18
-    },
-    "industrial_infrastructure": {
-      "members": [
-        "industrial_facility"
-      ],
-      "spacing_chunks": 58,
-      "separation_chunks": 24
-    },
-    "mountain_military": {
-      "members": [
-        "mountain_military_complex",
-        "mountain_biohazard_lab"
-      ],
-      "spacing_chunks": 54,
-      "separation_chunks": 22
-    },
-    "forest_industry": {
-      "members": [
-        "decayed_logging_camp",
-        "corporate_warehouse"
-      ],
-      "spacing_chunks": 46,
-      "separation_chunks": 19
-    },
-    "lost_data_centers": {
-      "members": [
+        "toppled_skyscraper",
         "bombed_data_center"
       ],
-      "spacing_chunks": 144,
-      "separation_chunks": 56
+      "spacing_chunks": 72,
+      "separation_chunks": 34
     },
-    "hydroelectric_landmarks": {
+    "wasteland_coastal": {
       "members": [
-        "hydroelectric_refuge_dam"
+        "hydroelectric_refuge_dam",
+        "warm_industrial_mountain_port",
+        "cold_industrial_mountain_port"
       ],
-      "spacing_chunks": 192,
+      "spacing_chunks": 176,
       "separation_chunks": 72
     },
-    "ruined_city_blocks": {
+    "wasteland_major": {
       "members": [
+        "trailer_park",
+        "abandoned_culdesac",
+        "military_checkpoint",
+        "bunker_network",
+        "trade_outpost",
+        "industrial_facility",
+        "mountain_military_complex",
+        "mountain_biohazard_lab",
+        "mountain_pass_terminator",
+        "decayed_logging_camp",
+        "corporate_warehouse",
         "blown_apartment_complex",
         "ruined_mixed_use_block",
-        "pancaked_parking_structure"
-      ],
-      "spacing_chunks": 28,
-      "separation_chunks": 11
-    },
-    "ruined_city_streets": {
-      "members": [
+        "pancaked_parking_structure",
         "sunken_city_front",
-        "cratered_downtown_intersection"
-      ],
-      "spacing_chunks": 34,
-      "separation_chunks": 14
-    },
-    "ruined_city_landmarks": {
-      "members": [
-        "toppled_skyscraper"
-      ],
-      "spacing_chunks": 52,
-      "separation_chunks": 21
-    },
-    "expanded_city_civic": {
-      "members": [
+        "cratered_downtown_intersection",
         "ruined_hospital",
         "ruined_fire_station",
         "ruined_police_precinct",
         "ruined_courthouse",
-        "emergency_relief_shelter"
-      ],
-      "spacing_chunks": 22,
-      "separation_chunks": 8
-    },
-    "expanded_city_transit": {
-      "members": [
+        "emergency_relief_shelter",
+        "collapsed_subway_station",
         "ruined_bus_terminal",
         "freight_depot",
         "elevated_rail_collapse",
-        "sunken_highway_interchange"
-      ],
-      "spacing_chunks": 24,
-      "separation_chunks": 9
-    },
-    "expanded_city_subway": {
-      "members": [
-        "collapsed_subway_station"
-      ],
-      "spacing_chunks": 38,
-      "separation_chunks": 15
-    },
-    "expanded_city_commercial": {
-      "members": [
+        "sunken_highway_interchange",
         "ruined_shopping_mall",
         "ruined_department_store",
         "bombed_hotel",
         "buried_bank_vault",
-        "ruined_office_tower"
-      ],
-      "spacing_chunks": 22,
-      "separation_chunks": 8
-    },
-    "expanded_city_residential": {
-      "members": [
+        "ruined_office_tower",
         "tenement_courtyard",
         "ruined_rowhouse_block",
         "shattered_luxury_condo",
         "ruined_city_school",
-        "ruined_community_center"
-      ],
-      "spacing_chunks": 22,
-      "separation_chunks": 8
-    },
-    "expanded_city_utilities": {
-      "members": [
+        "ruined_community_center",
         "city_electrical_substation",
         "city_water_treatment_plant",
         "district_heating_station",
         "municipal_incinerator",
-        "ruined_fuel_depot"
-      ],
-      "spacing_chunks": 27,
-      "separation_chunks": 11
-    },
-    "expanded_city_themed": {
-      "members": [
+        "ruined_fuel_depot",
         "ruined_cyberware_clinic",
         "ae2_records_archive",
         "abandoned_create_factory",
         "collapsed_airship_terminal",
-        "nuclear_research_annex"
-      ],
-      "spacing_chunks": 42,
-      "separation_chunks": 17
-    },
-    "expanded_wilderness_roadside": {
-      "members": [
-        "ruined_roadside_diner",
-        "abandoned_motel",
-        "ruined_gas_station",
-        "abandoned_truck_stop",
-        "wasteland_weigh_station"
-      ],
-      "spacing_chunks": 16,
-      "separation_chunks": 6
-    },
-    "expanded_wilderness_rural": {
-      "members": [
-        "decayed_ranch",
-        "abandoned_orchard_cannery",
-        "ruined_grain_elevator",
-        "shattered_greenhouse_nursery",
-        "roadside_church_cemetery"
-      ],
-      "spacing_chunks": 32,
-      "separation_chunks": 12
-    },
-    "expanded_wilderness_extraction": {
-      "members": [
-        "abandoned_quarry",
-        "collapsed_mine_entrance",
-        "excavator_pit",
-        "abandoned_oil_field",
-        "remote_sawmill"
-      ],
-      "spacing_chunks": 36,
-      "separation_chunks": 14
-    },
-    "expanded_wilderness_energy": {
-      "members": [
+        "nuclear_research_annex",
         "shattered_wind_farm",
         "broken_solar_field",
         "wilderness_substation",
         "wasteland_water_tower"
       ],
-      "spacing_chunks": 38,
-      "separation_chunks": 15
+      "spacing_chunks": 24,
+      "separation_chunks": 14
     },
-    "expanded_wilderness_survival": {
+    "wasteland_common": {
       "members": [
+        "abandoned_bungalow",
+        "split_level_house",
+        "dilapidated_grocery",
+        "service_garage",
+        "scrapyard",
+        "decayed_farm",
+        "survivor_cache",
+        "ruined_roadside_diner",
+        "abandoned_motel",
+        "ruined_gas_station",
+        "abandoned_truck_stop",
+        "wasteland_weigh_station",
+        "decayed_ranch",
+        "abandoned_orchard_cannery",
+        "ruined_grain_elevator",
+        "shattered_greenhouse_nursery",
+        "roadside_church_cemetery",
+        "abandoned_quarry",
+        "collapsed_mine_entrance",
+        "excavator_pit",
+        "abandoned_oil_field",
+        "remote_sawmill",
         "ruined_ranger_station",
         "wasteland_fire_lookout",
         "destroyed_refugee_convoy",
         "crashed_cargo_airship"
       ],
-      "spacing_chunks": 34,
-      "separation_chunks": 13
+      "spacing_chunks": 20,
+      "separation_chunks": 12
     },
-    "warm_industrial_ports": {
+    "wasteland_micro": {
       "members": [
-        "warm_industrial_mountain_port"
+        "radio_mast",
+        "wrecked_sedan",
+        "delivery_van",
+        "battle_tank"
       ],
-      "spacing_chunks": 176,
-      "separation_chunks": 68
-    },
-    "cold_industrial_ports": {
-      "members": [
-        "cold_industrial_mountain_port"
-      ],
-      "spacing_chunks": 176,
-      "separation_chunks": 68
+      "spacing_chunks": 12,
+      "separation_chunks": 7
     }
   },
   "structures": {
@@ -440,8 +291,8 @@
         18
       ],
       "placed_blocks": 1862,
-      "palette_states": 46,
-      "modded_blocks": 458,
+      "palette_states": 45,
+      "modded_blocks": 462,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -477,8 +328,8 @@
         27
       ],
       "placed_blocks": 7078,
-      "palette_states": 42,
-      "modded_blocks": 1029,
+      "palette_states": 41,
+      "modded_blocks": 1034,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -576,7 +427,7 @@
       ],
       "placed_blocks": 9899,
       "palette_states": 63,
-      "modded_blocks": 1986,
+      "modded_blocks": 1990,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -613,7 +464,7 @@
       ],
       "placed_blocks": 10837,
       "palette_states": 32,
-      "modded_blocks": 2421,
+      "modded_blocks": 2425,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -751,7 +602,7 @@
       ],
       "placed_blocks": 5825,
       "palette_states": 34,
-      "modded_blocks": 2535,
+      "modded_blocks": 2536,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -846,7 +697,7 @@
       ],
       "placed_blocks": 29702,
       "palette_states": 92,
-      "modded_blocks": 4637,
+      "modded_blocks": 4668,
       "spawners": 3,
       "entities": 0,
       "structural_lint": {
@@ -903,8 +754,8 @@
         67
       ],
       "placed_blocks": 21495,
-      "palette_states": 40,
-      "modded_blocks": 4149,
+      "palette_states": 39,
+      "modded_blocks": 4161,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -1192,7 +1043,7 @@
       ],
       "placed_blocks": 5207,
       "palette_states": 47,
-      "modded_blocks": 1837,
+      "modded_blocks": 1840,
       "spawners": 4,
       "entities": 0,
       "structural_lint": {
@@ -1360,7 +1211,7 @@
       ],
       "placed_blocks": 17487,
       "palette_states": 70,
-      "modded_blocks": 7786,
+      "modded_blocks": 7796,
       "spawners": 6,
       "entities": 0,
       "structural_lint": {
@@ -1498,7 +1349,7 @@
       ],
       "placed_blocks": 14075,
       "palette_states": 62,
-      "modded_blocks": 1609,
+      "modded_blocks": 1622,
       "spawners": 0,
       "entities": 13,
       "structural_lint": {
@@ -1942,7 +1793,7 @@
       ],
       "placed_blocks": 16839,
       "palette_states": 96,
-      "modded_blocks": 529,
+      "modded_blocks": 541,
       "spawners": 2,
       "entities": 4,
       "structural_lint": {
@@ -2118,7 +1969,7 @@
       ],
       "placed_blocks": 38382,
       "palette_states": 72,
-      "modded_blocks": 10509,
+      "modded_blocks": 10519,
       "spawners": 6,
       "entities": 0,
       "structural_lint": {
@@ -2326,7 +2177,7 @@
       ],
       "placed_blocks": 32182,
       "palette_states": 64,
-      "modded_blocks": 7744,
+      "modded_blocks": 7761,
       "spawners": 5,
       "entities": 0,
       "structural_lint": {
@@ -2614,7 +2465,7 @@
       ],
       "placed_blocks": 33522,
       "palette_states": 68,
-      "modded_blocks": 187,
+      "modded_blocks": 197,
       "spawners": 4,
       "entities": 0,
       "structural_lint": {
@@ -3078,7 +2929,7 @@
       ],
       "placed_blocks": 19327,
       "palette_states": 57,
-      "modded_blocks": 4189,
+      "modded_blocks": 4192,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -3156,7 +3007,7 @@
       ],
       "placed_blocks": 37933,
       "palette_states": 55,
-      "modded_blocks": 6880,
+      "modded_blocks": 6885,
       "spawners": 5,
       "entities": 0,
       "structural_lint": {
@@ -3324,7 +3175,7 @@
       ],
       "placed_blocks": 161611,
       "palette_states": 68,
-      "modded_blocks": 7830,
+      "modded_blocks": 7843,
       "spawners": 4,
       "entities": 0,
       "structural_lint": {
@@ -3532,7 +3383,7 @@
       ],
       "placed_blocks": 68558,
       "palette_states": 50,
-      "modded_blocks": 7190,
+      "modded_blocks": 7197,
       "spawners": 3,
       "entities": 0,
       "structural_lint": {
@@ -3690,7 +3541,7 @@
       ],
       "placed_blocks": 72216,
       "palette_states": 62,
-      "modded_blocks": 2812,
+      "modded_blocks": 2841,
       "spawners": 4,
       "entities": 0,
       "structural_lint": {
@@ -4029,7 +3880,7 @@
                 16,
                 19
               ],
-              "detail": "minecraft:water_cauldron at (43, 16, 19) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (43, 16, 19) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -4463,8 +4314,8 @@
         47
       ],
       "placed_blocks": 61856,
-      "palette_states": 70,
-      "modded_blocks": 3218,
+      "palette_states": 69,
+      "modded_blocks": 3256,
       "spawners": 4,
       "entities": 0,
       "structural_lint": {
@@ -5058,7 +4909,7 @@
       ],
       "placed_blocks": 65606,
       "palette_states": 63,
-      "modded_blocks": 7607,
+      "modded_blocks": 7649,
       "spawners": 4,
       "entities": 0,
       "structural_lint": {
@@ -5562,7 +5413,7 @@
       ],
       "placed_blocks": 76402,
       "palette_states": 58,
-      "modded_blocks": 6351,
+      "modded_blocks": 6353,
       "spawners": 4,
       "entities": 0,
       "structural_lint": {
@@ -6026,7 +5877,7 @@
       ],
       "placed_blocks": 75828,
       "palette_states": 76,
-      "modded_blocks": 11074,
+      "modded_blocks": 11100,
       "spawners": 4,
       "entities": 0,
       "structural_lint": {
@@ -6520,7 +6371,7 @@
       ],
       "placed_blocks": 78038,
       "palette_states": 63,
-      "modded_blocks": 2662,
+      "modded_blocks": 2715,
       "spawners": 5,
       "entities": 0,
       "structural_lint": {
@@ -6737,8 +6588,8 @@
         41
       ],
       "placed_blocks": 18575,
-      "palette_states": 73,
-      "modded_blocks": 3616,
+      "palette_states": 71,
+      "modded_blocks": 3623,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -6826,7 +6677,7 @@
       ],
       "placed_blocks": 32267,
       "palette_states": 59,
-      "modded_blocks": 3918,
+      "modded_blocks": 3922,
       "spawners": 5,
       "entities": 0,
       "structural_lint": {
@@ -7164,7 +7015,7 @@
       ],
       "placed_blocks": 44657,
       "palette_states": 59,
-      "modded_blocks": 2640,
+      "modded_blocks": 2642,
       "spawners": 5,
       "entities": 0,
       "structural_lint": {
@@ -7617,8 +7468,8 @@
         43
       ],
       "placed_blocks": 20694,
-      "palette_states": 46,
-      "modded_blocks": 3686,
+      "palette_states": 45,
+      "modded_blocks": 3689,
       "spawners": 2,
       "entities": 0,
       "structural_lint": {
@@ -7666,7 +7517,7 @@
       ],
       "placed_blocks": 55492,
       "palette_states": 24,
-      "modded_blocks": 6754,
+      "modded_blocks": 6755,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -7724,7 +7575,7 @@
       ],
       "placed_blocks": 36457,
       "palette_states": 39,
-      "modded_blocks": 4203,
+      "modded_blocks": 4205,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -7932,7 +7783,7 @@
       ],
       "placed_blocks": 17989,
       "palette_states": 55,
-      "modded_blocks": 3062,
+      "modded_blocks": 3065,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -8998,7 +8849,7 @@
       ],
       "placed_blocks": 82891,
       "palette_states": 44,
-      "modded_blocks": 8665,
+      "modded_blocks": 8677,
       "spawners": 2,
       "entities": 0,
       "structural_lint": {
@@ -9462,7 +9313,7 @@
       ],
       "placed_blocks": 63371,
       "palette_states": 41,
-      "modded_blocks": 7732,
+      "modded_blocks": 7740,
       "spawners": 2,
       "entities": 0,
       "structural_lint": {
@@ -9759,8 +9610,8 @@
         47
       ],
       "placed_blocks": 56482,
-      "palette_states": 53,
-      "modded_blocks": 2600,
+      "palette_states": 52,
+      "modded_blocks": 2618,
       "spawners": 2,
       "entities": 0,
       "structural_lint": {
@@ -10400,7 +10251,7 @@
       "intended_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
       "production_biomes": "#infinite_domain:wasteland_ruined_city_biomes",
       "production_approved": true,
-      "terrain_adaptation": "beard_box",
+      "terrain_adaptation": "none",
       "size": [
         49,
         31,
@@ -10445,7 +10296,7 @@
       ],
       "placed_blocks": 61889,
       "palette_states": 36,
-      "modded_blocks": 5997,
+      "modded_blocks": 6000,
       "spawners": 2,
       "entities": 0,
       "structural_lint": {
@@ -10932,8 +10783,8 @@
         53
       ],
       "placed_blocks": 46719,
-      "palette_states": 38,
-      "modded_blocks": 2723,
+      "palette_states": 36,
+      "modded_blocks": 2754,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -11340,8 +11191,8 @@
         41
       ],
       "placed_blocks": 44778,
-      "palette_states": 34,
-      "modded_blocks": 3225,
+      "palette_states": 33,
+      "modded_blocks": 3261,
       "spawners": 2,
       "entities": 0,
       "structural_lint": {
@@ -11784,8 +11635,8 @@
         49
       ],
       "placed_blocks": 46996,
-      "palette_states": 46,
-      "modded_blocks": 2425,
+      "palette_states": 45,
+      "modded_blocks": 2442,
       "spawners": 2,
       "entities": 0,
       "structural_lint": {
@@ -12003,7 +11854,7 @@
       ],
       "placed_blocks": 53873,
       "palette_states": 47,
-      "modded_blocks": 6868,
+      "modded_blocks": 6878,
       "spawners": 2,
       "entities": 0,
       "structural_lint": {
@@ -12120,7 +11971,7 @@
         47
       ],
       "placed_blocks": 30757,
-      "palette_states": 57,
+      "palette_states": 56,
       "modded_blocks": 3148,
       "spawners": 1,
       "entities": 0,
@@ -12704,7 +12555,7 @@
       ],
       "placed_blocks": 47689,
       "palette_states": 29,
-      "modded_blocks": 5963,
+      "modded_blocks": 5975,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -13158,7 +13009,7 @@
       ],
       "placed_blocks": 66428,
       "palette_states": 29,
-      "modded_blocks": 9624,
+      "modded_blocks": 9633,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -13284,7 +13135,7 @@
       ],
       "placed_blocks": 35082,
       "palette_states": 36,
-      "modded_blocks": 3593,
+      "modded_blocks": 3596,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -13550,7 +13401,7 @@
       ],
       "placed_blocks": 22940,
       "palette_states": 66,
-      "modded_blocks": 4631,
+      "modded_blocks": 4637,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -14031,7 +13882,7 @@
       ],
       "placed_blocks": 50690,
       "palette_states": 35,
-      "modded_blocks": 8765,
+      "modded_blocks": 8774,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -14512,7 +14363,7 @@
       ],
       "placed_blocks": 10092,
       "palette_states": 48,
-      "modded_blocks": 1382,
+      "modded_blocks": 1384,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -14549,7 +14400,7 @@
       ],
       "placed_blocks": 12226,
       "palette_states": 59,
-      "modded_blocks": 1187,
+      "modded_blocks": 1201,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -14759,7 +14610,7 @@
       "intended_biomes": "#infinite_domain:wasteland_site_biomes",
       "production_biomes": "#infinite_domain:wasteland_site_biomes",
       "production_approved": true,
-      "terrain_adaptation": "beard_box",
+      "terrain_adaptation": "none",
       "size": [
         39,
         28,
@@ -14767,7 +14618,7 @@
       ],
       "placed_blocks": 11751,
       "palette_states": 59,
-      "modded_blocks": 3439,
+      "modded_blocks": 3440,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -14825,7 +14676,7 @@
       ],
       "placed_blocks": 13987,
       "palette_states": 46,
-      "modded_blocks": 2934,
+      "modded_blocks": 2936,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -14862,7 +14713,7 @@
       ],
       "placed_blocks": 6822,
       "palette_states": 30,
-      "modded_blocks": 2053,
+      "modded_blocks": 2054,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -14898,8 +14749,8 @@
         45
       ],
       "placed_blocks": 16916,
-      "palette_states": 36,
-      "modded_blocks": 2599,
+      "palette_states": 34,
+      "modded_blocks": 2614,
       "spawners": 1,
       "entities": 2,
       "structural_lint": {
@@ -14928,7 +14779,7 @@
                 2,
                 34
               ],
-              "detail": "minecraft:water_cauldron at (6, 2, 34) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (6, 2, 34) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -14938,7 +14789,7 @@
                 2,
                 35
               ],
-              "detail": "minecraft:water_cauldron at (6, 2, 35) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (6, 2, 35) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -14948,7 +14799,7 @@
                 2,
                 36
               ],
-              "detail": "minecraft:water_cauldron at (6, 2, 36) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (6, 2, 36) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -14958,7 +14809,7 @@
                 2,
                 34
               ],
-              "detail": "minecraft:water_cauldron at (7, 2, 34) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (7, 2, 34) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -14968,7 +14819,7 @@
                 2,
                 35
               ],
-              "detail": "minecraft:water_cauldron at (7, 2, 35) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (7, 2, 35) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -14978,7 +14829,7 @@
                 2,
                 36
               ],
-              "detail": "minecraft:water_cauldron at (7, 2, 36) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (7, 2, 36) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -14988,7 +14839,7 @@
                 2,
                 34
               ],
-              "detail": "minecraft:water_cauldron at (8, 2, 34) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (8, 2, 34) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -14998,7 +14849,7 @@
                 2,
                 35
               ],
-              "detail": "minecraft:water_cauldron at (8, 2, 35) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (8, 2, 35) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -15008,7 +14859,7 @@
                 2,
                 36
               ],
-              "detail": "minecraft:water_cauldron at (8, 2, 36) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (8, 2, 36) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -15018,7 +14869,7 @@
                 2,
                 34
               ],
-              "detail": "minecraft:water_cauldron at (9, 2, 34) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (9, 2, 34) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -15028,7 +14879,7 @@
                 2,
                 35
               ],
-              "detail": "minecraft:water_cauldron at (9, 2, 35) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (9, 2, 35) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -15038,7 +14889,7 @@
                 2,
                 36
               ],
-              "detail": "minecraft:water_cauldron at (9, 2, 36) is not connected to the ground plate through solid geometry"
+              "detail": "kubejs:ruined_cauldron at (9, 2, 36) is not connected to the ground plate through solid geometry"
             },
             {
               "check": "structural_connectivity",
@@ -15353,7 +15204,7 @@
       ],
       "placed_blocks": 27082,
       "palette_states": 36,
-      "modded_blocks": 3933,
+      "modded_blocks": 3943,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -15549,7 +15400,7 @@
       ],
       "placed_blocks": 20975,
       "palette_states": 30,
-      "modded_blocks": 4876,
+      "modded_blocks": 4897,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -15586,7 +15437,7 @@
       ],
       "placed_blocks": 25195,
       "palette_states": 33,
-      "modded_blocks": 1760,
+      "modded_blocks": 1762,
       "spawners": 2,
       "entities": 0,
       "structural_lint": {
@@ -16606,8 +16457,8 @@
         41
       ],
       "placed_blocks": 16138,
-      "palette_states": 48,
-      "modded_blocks": 2271,
+      "palette_states": 47,
+      "modded_blocks": 2274,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -16654,8 +16505,8 @@
         35
       ],
       "placed_blocks": 10696,
-      "palette_states": 34,
-      "modded_blocks": 1296,
+      "palette_states": 33,
+      "modded_blocks": 1300,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {
@@ -16923,7 +16774,7 @@
       ],
       "placed_blocks": 9391,
       "palette_states": 28,
-      "modded_blocks": 1849,
+      "modded_blocks": 1850,
       "spawners": 2,
       "entities": 0,
       "structural_lint": {
@@ -16960,7 +16811,7 @@
       ],
       "placed_blocks": 38447,
       "palette_states": 19,
-      "modded_blocks": 7218,
+      "modded_blocks": 7220,
       "spawners": 1,
       "entities": 0,
       "structural_lint": {

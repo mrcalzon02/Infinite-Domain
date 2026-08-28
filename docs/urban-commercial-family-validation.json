@@ -1,8 +1,12 @@
 {
   "family": "urban_commercial",
   "asset_pairs": 5,
-  "all_passed": true,
-  "failures": [],
+  "all_passed": false,
+  "failures": [
+    "ruined_shopping_mall: missing identity fixtures: ['minecraft:smoker']",
+    "ruined_department_store: missing identity fixtures: ['minecraft:loom']",
+    "ruined_office_tower: missing identity fixtures: ['minecraft:lectern']"
+  ],
   "structures": {
     "ruined_shopping_mall": {
       "size": [
@@ -27,8 +31,10 @@
         "dense_floor_levels": 16,
         "footprint_variants": 19
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing identity fixtures: ['minecraft:smoker']"
+      ]
     },
     "ruined_department_store": {
       "size": [
@@ -53,8 +59,10 @@
         "dense_floor_levels": 19,
         "footprint_variants": 15
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing identity fixtures: ['minecraft:loom']"
+      ]
     },
     "bombed_hotel": {
       "size": [
@@ -131,8 +139,10 @@
         "dense_floor_levels": 18,
         "footprint_variants": 23
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing identity fixtures: ['minecraft:lectern']"
+      ]
     }
   }
 }

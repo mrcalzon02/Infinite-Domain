@@ -57,6 +57,14 @@
 			dependencies: ["6B01000000000002"]
 			id: "6B01000000000003"
 			optional: true
+			rewards: [{
+				id: "6ADF087B30FE147D"
+				item: {
+					count: 1
+					id: "kubejs:era1_supply_bag"
+				}
+				type: "item"
+			}]
 			tasks: [
 				{
 					count: 4L
@@ -129,6 +137,14 @@
 			dependencies: ["6B01000000000005"]
 			id: "6B01000000000006"
 			optional: true
+			rewards: [{
+				id: "6A04588DE2515DF7"
+				item: {
+					count: 1
+					id: "kubejs:era1_supply_bag"
+				}
+				type: "item"
+			}]
 			tasks: [
 				{
 					count: 4L
@@ -156,6 +172,14 @@
 			dependencies: ["6B01000000000006"]
 			id: "6B01000000000007"
 			optional: true
+			rewards: [{
+				id: "6AC1142281DE60A2"
+				item: {
+					count: 1
+					id: "kubejs:era1_priority_cache"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "6B02000000000011"
 				item: { count: 1, id: "create_winery:wine_cellar" }

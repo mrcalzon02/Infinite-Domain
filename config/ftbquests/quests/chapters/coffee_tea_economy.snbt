@@ -1,6 +1,6 @@
 {
 	default_hide_dependency_lines: false
-	default_quest_shape: ""
+	default_quest_shape: "gear"
 	filename: "coffee_tea_economy"
 	group: "3F00D00000000001"
 	id: "1240CAEABAC9DC56"
@@ -37,6 +37,14 @@
 			dependencies: ["08F11D0000000002"]
 			id: "08F11D0000000003"
 			optional: true
+			rewards: [{
+				id: "6ADF8387906CF932"
+				item: {
+					count: 1
+					id: "kubejs:era1_supply_bag"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				count: 16L
 				id: "08F12D0000000003"
@@ -74,6 +82,14 @@
 			dependencies: ["08F11D0000000005"]
 			id: "08F11D0000000006"
 			optional: true
+			rewards: [{
+				id: "6AF530C41C40E134"
+				item: {
+					count: 1
+					id: "kubejs:era1_supply_bag"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				count: 12L
 				id: "08F12D0000000006"
@@ -111,6 +127,14 @@
 			dependencies: ["08F11D0000000008"]
 			id: "08F11D0000000009"
 			optional: true
+			rewards: [{
+				id: "6AA5E1C95F9F320F"
+				item: {
+					count: 1
+					id: "kubejs:era1_priority_cache"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "08F12D0000000009"
 				item: { count: 1, id: "kubejs:coffee_pallet" }

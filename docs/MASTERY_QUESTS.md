@@ -61,4 +61,4 @@ The Era 8 four-resource total is deliberately only three items below the signed 
 
 The mastery quests live in the separate **Civilization Mastery** chapter group. Each chapter has a central warning/orientation node, four parallel submission branches, and a final prestige node requiring all four submissions. Mastery has no outgoing dependency into the civilization-era spine.
 
-The source generator is `scripts/generate_mastery_quests.js`. It refuses to append duplicate language entries if run again without intentionally removing the generated mastery files and localization keys.
+The source generator is `scripts/generators/generate_mastery_quests.js`. It refuses to append duplicate language entries if run again without intentionally removing the generated mastery files and localization keys.

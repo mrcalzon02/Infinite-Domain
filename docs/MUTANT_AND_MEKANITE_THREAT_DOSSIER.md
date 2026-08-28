@@ -43,5 +43,5 @@ and the final extermination doctrine can award an Era 8 Priority Cache. No
 Mekanite weapon, armor set, or completed combat item is granted directly.
 
 Generation is deterministic and idempotent through
-`scripts/build_mutant_mekanite_threat_quests.py`. Run
+`scripts/generators/build_mutant_mekanite_threat_quests.py`. Run
 `scripts/audit_mutant_mekanite_threats.py` after any roster or dependency edit.

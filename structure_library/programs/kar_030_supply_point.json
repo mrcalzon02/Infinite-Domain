@@ -1,0 +1,66 @@
+{
+  "structure_id": "infinite_domain:kar_030_supply_point",
+  "culture": "karsic",
+  "building_type": "warehouse_depot",
+  "conversion_class": "A",
+  "base_master": "trade_outpost",
+  "primary_stratum": "K-II",
+  "secondary_stratum": "K-III",
+  "repeatable_storey": false,
+  "site_context": "karsic_rail_ballast",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "freight",
+  "rail_served": true,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "DIRECTORATE SUPPLY POINT 6",
+  "archetype": "Directorate Supply Point",
+  "roster_note": "Fenced, rail- or river-fed, numbered stores.",
+  "damage_archetype": "cannibalisation",
+  "logistics_program": [
+    "a long storage hall with numbered bays marked on the floor",
+    "a rail-side loading platform at wagon-floor height under a gantry",
+    "a road-side loading dock with levellers",
+    "a dispatcher's office with a window onto both loading faces",
+    "a sealed goods store with a heavier door",
+    "a staff room and wash block at the workers' entrance",
+    "a rail siding stub reaching the template edge"
+  ],
+  "circulation": [
+    "goods move rail-side to hall to road-side without doubling back"
+  ],
+  "damage_constraints": [
+    "part of the roof has failed over the road-side bays; the rail-side platform is intact",
+    "the numbered bay markings survive",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the bay numbering system is consistent and legible",
+      "the rail siding reaches the template edge"
+    ]
+  },
+  "source_metadata": {
+    "category": "commercial",
+    "settlement_types": [
+      "rural",
+      "highway_frontage"
+    ],
+    "road_connection": "local_road",
+    "base_footprint": {
+      "width": 49,
+      "depth": 49
+    },
+    "base_height": 18,
+    "conversion_target": "multibuilding"
+  }
+}

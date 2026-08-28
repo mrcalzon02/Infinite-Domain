@@ -9,6 +9,18 @@
 	quest_links: [ ]
 	quests: [
 		{
+			id: "4F57000000000000"
+			shape: "octagon"
+			size: 1.5d
+			tasks: [{
+				id: "4F57800000000000"
+				type: "checkmark"
+			}]
+			x: -3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4F57000000000000"]
 			id: "4F57000000000001"
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_009_atlas_roadside_repair_depot 2"
@@ -88,6 +100,14 @@
 		{
 			dependencies: ["4F57000000000003"]
 			id: "4F57000000000004"
+			rewards: [{
+				id: "6A83831B964BD9B1"
+				item: {
+					count: 1
+					id: "kubejs:era3_supply_bag"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "4F57800000000005"
 				structure: "infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall"
@@ -118,6 +138,7 @@
 			y: 6.0d
 		}
 		{
+			dependencies: ["4F57000000000000"]
 			id: "4F57000000000010"
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_001_vcf_neighborhood_culture_service_depot 2"
@@ -178,14 +199,24 @@
 		{
 			dependencies: ["4F57000000000005"]
 			id: "4F57000000000020"
-			rewards: [{
-				command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station 2"
-				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "70E3C732AD87E538"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "execute in minecraft:overworld run structure_map infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70E3C732AD87E538"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "6A9FAF5BC28303C2"
+					item: {
+						count: 1
+						id: "kubejs:era3_supply_bag"
+					}
+					type: "item"
+				}
+			]
 			shape: "gear"
 			tasks: [{
 				id: "4F57800000000020"
@@ -269,6 +300,14 @@
 		{
 			dependencies: ["4F57000000000014"]
 			id: "4F57000000000015"
+			rewards: [{
+				id: "6AC980C574771AB8"
+				item: {
+					count: 1
+					id: "kubejs:era3_supply_bag"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "4F57800000000016"
 				structure: "infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery"
@@ -371,6 +410,14 @@
 		{
 			dependencies: ["4F57000000000031"]
 			id: "4F57000000000032"
+			rewards: [{
+				id: "6A4B22A35E981565"
+				item: {
+					count: 1
+					id: "kubejs:era3_supply_bag"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "4F57800000000032"
 				structure: "infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory"
@@ -395,6 +442,14 @@
 		{
 			dependencies: ["4F57000000000005"]
 			id: "4F57000000000040"
+			rewards: [{
+				id: "6AB9773F7D598DC2"
+				item: {
+					count: 1
+					id: "kubejs:era3_priority_cache"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "4F57800000000040"
 				structure: "infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant"

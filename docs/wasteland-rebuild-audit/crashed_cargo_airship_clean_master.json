@@ -1,0 +1,33 @@
+{
+  "structure_id": "crashed_cargo_airship_clean_master",
+  "clean_master": null,
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/crashed_cargo_airship_clean_master.nbt",
+  "rebase_note": "no clean master on disk - damage variant used as rebase source",
+  "clean_master_lint": null,
+  "variant_lint": {
+    "structure_id": "crashed_cargo_airship_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          26,
+          11,
+          10
+        ],
+        "detail": "enclosed room of 969 air blocks (323 floor cells, 3 tall) near (26, 11, 10) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 0,
+    "audit_flag_count": 0,
+    "by_check": {
+      "lint:room_composition:review_flag": 1
+    }
+  }
+}

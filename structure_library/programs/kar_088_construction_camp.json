@@ -1,0 +1,49 @@
+{
+  "structure_id": "infinite_domain:kar_088_construction_camp",
+  "culture": "karsic",
+  "building_type": "camp_row",
+  "conversion_class": "N",
+  "base_master": null,
+  "primary_stratum": "K-III",
+  "secondary_stratum": "K-V",
+  "repeatable_storey": false,
+  "site_context": "karsic_district_yard",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "temporary_settlement",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "SERIES 2 / BLOCK 35",
+  "archetype": "Construction Camp",
+  "roster_note": "Cabins on blocks, canteen cabin, generator, drying shed. Replaces `trailer_park`; also carries the \"expedition settlement\" reading canon asks for.",
+  "damage_archetype": null,
+  "residential_program": [
+    "rows of identical cabins raised on blocks above the ground",
+    "a canteen cabin larger than the rest",
+    "a generator and fuel store serving the camp",
+    "a drying and boot room cabin",
+    "a wash block and latrine at the row end",
+    "duckboard walkways between the rows"
+  ],
+  "circulation": [
+    "duckboards connect every cabin to the canteen and the wash block"
+  ],
+  "damage_constraints": [
+    "some cabins have been stripped for material to repair others; the canteen survives",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the camp reads as temporary accommodation that stayed too long"
+    ]
+  }
+}

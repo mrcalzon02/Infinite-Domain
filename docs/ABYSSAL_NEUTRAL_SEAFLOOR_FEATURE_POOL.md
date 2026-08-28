@@ -2,7 +2,7 @@
 
 Parent authority: `docs/ABYSSAL_ENVIRONMENTAL_SITES.md`
 
-Status: **required / planned expansion. Existing cold seep, fracture vent field, hadal vent complex, seabed deformation and cave systems remain active; the feature catalog below is not yet mechanically implemented unless separately marked active.**
+Status: **44 of the 64 OSF-* IDs below are mechanically implemented as structure templates** (tracked in `tools/abyssal_worldgen/abyssal_feature_catalog.json`, validated by `validate_abyssal_feature_catalog.py`) — every ID whose implementation doctrine calls for a discrete, localized scene rather than terrain-scale landform work. The remaining 20 IDs need a density-function or placed-feature authoring path distinct from the structure-template pipeline: OSF-009, 011, 012, 024, 028 are catalogued as `"specified"` pending that path; OSF-002, 003, 004, 025, 026, 030, 043 have no catalog record yet; OSF-057–064 (the current-conditioned microfeature family) are ambient placed-feature/surface-rule texture by design, not per-band discoveries, and are tracked in this doc only.
 
 ## Purpose and ownership
 

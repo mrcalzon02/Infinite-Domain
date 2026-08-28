@@ -1,0 +1,61 @@
+{
+  "structure_id": "infinite_domain:kar_032_evacuation_convoy",
+  "culture": "karsic",
+  "building_type": "wreck_scene",
+  "conversion_class": "N",
+  "base_master": "destroyed_refugee_convoy",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "roadside",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "EVACUATION CONVOY / PLATE 135",
+  "archetype": "Evacuation Convoy",
+  "roster_note": "Buses and trucks with a numbered boarding order painted on the road \u2014 the plan existed and failed.",
+  "damage_archetype": "failed assembly point",
+  "infrastructure_program": [
+    "the wrecked vehicles or vessel arranged as a single readable event",
+    "a debris field consistent with the direction of travel",
+    "evidence of the people who were with it",
+    "any barrier, marking or instruction that was in force at the time"
+  ],
+  "circulation": [
+    "the scene can be walked through and read in one direction"
+  ],
+  "damage_constraints": [
+    "the event is the asset; damage is authored as the event itself",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "a player can tell what happened and which way it was going without any text"
+    ]
+  },
+  "source_metadata": {
+    "category": "highway",
+    "settlement_types": [
+      "highway_frontage",
+      "military"
+    ],
+    "road_connection": "highway",
+    "base_footprint": {
+      "width": 43,
+      "depth": 57
+    },
+    "base_height": 13,
+    "conversion_target": "scattered"
+  }
+}

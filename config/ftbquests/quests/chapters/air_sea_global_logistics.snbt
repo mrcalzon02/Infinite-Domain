@@ -66,6 +66,14 @@
 		{
 			dependencies: ["5E00000000000003"]
 			id: "5E00000000000004"
+			rewards: [{
+				id: "6ACEB19F83E00000"
+				item: {
+					count: 1
+					id: "kubejs:era4_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				id: "6E00000000000004"
@@ -126,6 +134,14 @@
 		{
 			dependencies: ["5E00000000000007"]
 			id: "5E00000000000008"
+			rewards: [{
+				id: "6A4F86F4039A1CD6"
+				item: {
+					count: 1
+					id: "kubejs:era4_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 32L
@@ -209,14 +225,24 @@
 				"5810000000000001"
 			]
 			id: "5E0000000000000D"
-			rewards: [{
-				command: "execute in stellaris:moon run structure_map stellaris:moon_space_base 2"
-				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "70E1F7B3005FC030"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "execute in stellaris:moon run structure_map stellaris:moon_space_base 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70E1F7B3005FC030"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "6A460F799FEAFC49"
+					item: {
+						count: 1
+						id: "kubejs:era4_supply_bag"
+					}
+					type: "item"
+				}
+			]
 			shape: "diamond"
 			tasks: [{
 				dimension: "stellaris:moon"
@@ -273,6 +299,14 @@
 		{
 			dependencies: ["5E0000000000001E"]
 			id: "5E00000000000011"
+			rewards: [{
+				id: "6ABD83CD510AE556"
+				item: {
+					count: 1
+					id: "kubejs:era4_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				dimension: "minecraft:the_end"
@@ -349,14 +383,24 @@
 		{
 			dependencies: ["5E00000000000010"]
 			id: "5E00000000000016"
-			rewards: [{
-				command: "execute in minecraft:the_nether run structure_map minecraft:fortress 2"
-				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "70EFE4617F3C1B13"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "execute in minecraft:the_nether run structure_map minecraft:fortress 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70EFE4617F3C1B13"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "6A56847A6EF4AA48"
+					item: {
+						count: 1
+						id: "kubejs:era4_supply_bag"
+					}
+					type: "item"
+				}
+			]
 			shape: "diamond"
 			tasks: [{
 				biome: "minecraft:basalt_deltas"
@@ -431,6 +475,14 @@
 		{
 			dependencies: ["5E00000000000011"]
 			id: "5E0000000000001A"
+			rewards: [{
+				id: "6A562C790CC4F88B"
+				item: {
+					count: 1
+					id: "kubejs:era4_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 4L
@@ -529,6 +581,14 @@
 		{
 			dependencies: ["5E00000000000020"]
 			id: "5E00000000000021"
+			rewards: [{
+				id: "6A7EFCC7135530FD"
+				item: {
+					count: 1
+					id: "kubejs:era4_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				id: "6E00000000000021"
@@ -541,6 +601,14 @@
 		{
 			dependencies: ["5E00000000000021"]
 			id: "5E00000000000022"
+			rewards: [{
+				id: "6A5B44EA7D6B41FC"
+				item: {
+					count: 1
+					id: "kubejs:era4_priority_cache"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "6E00000000000022"

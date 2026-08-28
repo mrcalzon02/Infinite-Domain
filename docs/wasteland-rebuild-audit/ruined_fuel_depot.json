@@ -1,0 +1,129 @@
+{
+  "structure_id": "ruined_fuel_depot",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_fuel_depot_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/ruined_fuel_depot.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "ruined_fuel_depot_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          12,
+          2,
+          18
+        ],
+        "detail": "enclosed room of 621 air blocks (69 floor cells, 9 tall) near (12, 2, 18) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          12,
+          2,
+          41
+        ],
+        "detail": "enclosed room of 621 air blocks (69 floor cells, 9 tall) near (12, 2, 41) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          31,
+          2,
+          18
+        ],
+        "detail": "enclosed room of 621 air blocks (69 floor cells, 9 tall) near (31, 2, 18) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          31,
+          2,
+          41
+        ],
+        "detail": "enclosed room of 621 air blocks (69 floor cells, 9 tall) near (31, 2, 41) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          50,
+          2,
+          18
+        ],
+        "detail": "enclosed room of 621 air blocks (69 floor cells, 9 tall) near (50, 2, 18) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          50,
+          2,
+          41
+        ],
+        "detail": "enclosed room of 621 air blocks (69 floor cells, 9 tall) near (50, 2, 41) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "ruined_fuel_depot",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          12,
+          2,
+          18
+        ],
+        "detail": "enclosed room of 621 air blocks (69 floor cells, 9 tall) near (12, 2, 18) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          12,
+          2,
+          41
+        ],
+        "detail": "enclosed room of 621 air blocks (69 floor cells, 9 tall) near (12, 2, 41) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          31,
+          2,
+          18
+        ],
+        "detail": "enclosed room of 621 air blocks (69 floor cells, 9 tall) near (31, 2, 18) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          50,
+          2,
+          18
+        ],
+        "detail": "enclosed room of 621 air blocks (69 floor cells, 9 tall) near (50, 2, 18) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 0,
+    "audit_flag_count": 0,
+    "by_check": {
+      "lint:room_composition:review_flag": 10
+    }
+  }
+}

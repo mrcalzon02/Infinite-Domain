@@ -81,6 +81,14 @@
 		{
 			dependencies: ["1410000000000003"]
 			id: "1410000000000004"
+			rewards: [{
+				id: "1440000000000004"
+				item: {
+					count: 1
+					id: "powergrid:multimeter"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				count: 16L
@@ -128,6 +136,14 @@
 		{
 			dependencies: ["1410000000000006"]
 			id: "1410000000000007"
+			rewards: [{
+				id: "1470000000000007"
+				item: {
+					count: 1
+					id: "ae2:energy_cell"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				count: 16L
@@ -209,6 +225,14 @@
 		{
 			dependencies: ["2410000000000003"]
 			id: "2410000000000004"
+			rewards: [{
+				id: "2440000000000004"
+				item: {
+					count: 1
+					id: "create_new_age:basic_motor"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 32L
@@ -256,6 +280,14 @@
 		{
 			dependencies: ["2410000000000006"]
 			id: "2410000000000007"
+			rewards: [{
+				id: "2470000000000007"
+				item: {
+					count: 1
+					id: "createcybernetics:eyeupgrades_hudlens"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 32L
@@ -345,6 +377,14 @@
 		{
 			dependencies: ["3410000000000003"]
 			id: "3410000000000004"
+			rewards: [{
+				id: "3440000000000004"
+				item: {
+					count: 1
+					id: "powergrid:portable_battery"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				count: 8L
@@ -392,6 +432,15 @@
 		{
 			dependencies: ["3410000000000006"]
 			id: "3410000000000007"
+			rewards: [{
+				count: 8
+				id: "3470000000000007"
+				item: {
+					count: 1
+					id: "ae2:fluix_glass_cable"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				count: 4L
@@ -470,6 +519,14 @@
 		{
 			dependencies: ["2410000000000002"]
 			id: "4410000000000004"
+			rewards: [{
+				id: "6A2D8235705FFC84"
+				item: {
+					count: 1
+					id: "kubejs:era4_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4420000000000004"
@@ -607,6 +664,14 @@
 			dependencies: ["2410000000000001"]
 			id: "7411000000000001"
 			optional: true
+			rewards: [{
+				id: "6A173C86E25FB443"
+				item: {
+					count: 1
+					id: "kubejs:era4_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 16L
@@ -681,6 +746,14 @@
 			]
 			id: "7411000000000005"
 			optional: true
+			rewards: [{
+				id: "6A93D4970B75930A"
+				item: {
+					count: 1
+					id: "kubejs:era4_priority_cache"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 15L

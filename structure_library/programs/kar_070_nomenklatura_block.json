@@ -1,0 +1,73 @@
+{
+  "structure_id": "infinite_domain:kar_070_nomenklatura_block",
+  "culture": "karsic",
+  "building_type": "panel_slab",
+  "conversion_class": "A",
+  "base_master": "shattered_luxury_condo",
+  "primary_stratum": "K-II",
+  "secondary_stratum": "K-IV",
+  "repeatable_storey": true,
+  "site_context": "karsic_district_yard",
+  "foundation_profile": "full_basement",
+  "back_of_house": "behind",
+  "district_role": "courtyard_slab",
+  "rail_served": false,
+  "heating_main_connection": "north_basement",
+  "tiling_asset": false,
+  "signage_series": "SERIES 6 / BLOCK 9",
+  "archetype": "Nomenklatura Block",
+  "roster_note": "Better-finished brick block with balconies and a gated courtyard. Privilege expressed as *finish*, never as ornament.",
+  "damage_archetype": "partitioned survivor wing",
+  "residential_program": [
+    "identical apartment or office floors repeated the full height of the slab",
+    "two stair cores expressed as projecting towers with a continuous glazing slot",
+    "a landing serving two to four doors at every core on every floor",
+    "ground-floor entrance vestibules with an unheated lobby between two door leaves",
+    "ground-floor mail, pram and refuse stores off the entrance lobby",
+    "a basement pipe gallery running the long axis to the exterior heating main stub",
+    "a basement electrical room and a lockable tenant store bay",
+    "a roof bulkhead over each stair core with the roof plant clustered against it"
+  ],
+  "circulation": [
+    "vertical circulation is two encased stair cores, landing-connected at both ends",
+    "no floor may be reachable only through another dwelling",
+    "the basement gallery connects both cores"
+  ],
+  "damage_constraints": [
+    "the heating main is severed at one visible saddle on the lot",
+    "frost damage, burst risers and boarded openings appear only on the bays downstream of the break",
+    "both stair cores and the basement route survive",
+    "at least one entrance vestibule remains intact and passable",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the panel joint grid is continuous and unbroken across every elevation",
+      "storey bands above the plinth are silhouette-identical",
+      "the plinth reads as one block proud on all four elevations",
+      "the break in the heating main is findable without entering the building"
+    ]
+  },
+  "source_metadata": {
+    "category": "residential",
+    "settlement_types": [
+      "town_center",
+      "residential"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 51,
+      "depth": 49
+    },
+    "base_height": 37,
+    "conversion_target": "multibuilding"
+  }
+}

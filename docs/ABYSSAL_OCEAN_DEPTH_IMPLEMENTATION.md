@@ -2,7 +2,7 @@
 
 Authoritative parent: `docs/ABYSSAL_OCEAN_PROGRAM.md`
 
-Status: **terrain/depth routing is active under an explicit runtime-validation waiver; six reference-pattern seabed motifs plus four derived vertical-relief processes, custom slope/fracture cave carvers, all eight core abyssal structures, five optional environmental structures, the depth-graded seabed feature pass, and both deep quest branches consume the resulting depth bands. Physical seabed measurements remain unobserved.**
+Status: **terrain/depth routing is active under an explicit runtime-validation waiver; six reference-pattern seabed motifs plus four derived vertical-relief processes, a direct seabed-depth channel (2026-08-27), custom slope/fracture cave carvers, all eight core abyssal structures, five optional environmental structures, the depth-graded seabed feature pass, and both deep quest branches consume the resulting depth bands. Physical seabed measurements remain unobserved.**
 
 ## Gate disposition
 
@@ -33,6 +33,11 @@ The active outer-world depth chain now includes the original depth masks, the si
 - `custom_worldgen:western_depth_depression`
 - `custom_worldgen:eastern_depth_depression`
 - `custom_worldgen:abyssal_outer_continents`
+- `custom_worldgen:abyssal_floor_depression` (direct seabed-depth channel; see below)
+
+The direct depth channel additionally overrides `minecraft:overworld/depth`
+(alongside the existing `minecraft:overworld/continents` and
+`minecraft:overworld/erosion` overrides).
 
 `custom_worldgen:continents` uses the abyssal outer branch only outside the protected central-continent mask. The datapack-owned `minecraft:overworld/continents` override delegates to `custom_worldgen:continents`, so vanilla Overworld terrain functions such as `minecraft:overworld/sloped_cheese` consume the custom continentalness signal instead of the system merely changing biome labels. No global `final_density` mutation has been added.
 
@@ -42,6 +47,79 @@ Base continentalness pressure remains:
 3. fracture/hadal `0.28`
 
 The pattern layer is additional and remains inside the same East/West selector + ocean-corridor gate.
+
+## Direct seabed-depth channel (2026-08-27)
+
+Continentalness pressure alone cannot deepen the abyss. The vanilla
+`minecraft:overworld/offset` spline over the continents coordinate is a **flat
+plateau at `-0.2222`** for continentalness `-0.51 .. -1.02`, and it *rises*
+toward `+0.044` past `-1.02`. Every abyssal band (plain `-0.82..-0.60`, fracture
+`-1.02..-0.82`, hadal `-1.20..-1.02`) therefore lands on — or past — that
+plateau, so all of the depression work above only relabels biomes and produces
+essentially **no floor drop** relative to a vanilla deep ocean (seabed ~Y 35).
+Pushing continentalness below `-1.02` for the hadal band was additionally
+counterproductive: the spline there trends upward, so hadal could generate
+*shallower* than the plain.
+
+The fix is a direct, still-gated contribution to terrain height that bypasses the
+saturated spline:
+
+- `custom_worldgen:abyssal_floor_depression` = `flat_cache(cache_2d(clamp(0.0,
+  0.55, 1.0 * max(western_depth_depression, eastern_depth_depression))))`. It
+  reuses the *existing* regional depression signal unchanged, so it carries the
+  same East/West selector, ocean-corridor gate, slope/plain/hadal band grading,
+  and pattern texture. It is `0` everywhere outside the abyss.
+- `data/minecraft/worldgen/density_function/overworld/depth.json` overrides the
+  vanilla `depth` function to `y_clamped_gradient + (overworld/offset - abyssal_floor_depression)`.
+  Because `depth` maps to terrain height at roughly **`-128` blocks per unit**,
+  the clamp ceiling `0.55` bounds the extra drop at about **70 blocks** below the
+  vanilla deep-ocean floor.
+- Both `initial_density_without_jaggedness` and `sloped_cheese` consume
+  `minecraft:overworld/depth`, so the preliminary-surface/aquifer view and the
+  final terrain stay consistent.
+
+Approximate resulting floor, from the vanilla deep-ocean datum (seabed ~Y 35,
+sea level 63); absolute numbers are **unmeasured estimates**, the `-128 b/unit`
+slope and the relative ordering are the reliable parts:
+
+| Band | `abyssal_floor_depression` (typical) | Extra drop | Est. floor |
+| --- | --- | --- | --- |
+| Shelf/slope | ~0.03 ramping | ~4-8 blocks | ~Y 45 -> 30 |
+| Abyssal plain | ~0.17 - 0.22 | ~22-28 blocks | ~Y 8-15 |
+| Fracture field | ~0.35 - 0.50 | ~45-64 blocks | ~Y -10 to -25 |
+| Hadal trench | clamped at 0.55 | ~70 blocks | ~Y -35 (>= ~25 above bedrock) |
+
+### Tuning knobs
+
+- The `1.0` constant multiplier inside `abyssal_floor_depression` is the global
+  depth-gain knob. Raise it to deepen every band proportionally.
+- The `0.55` clamp ceiling is the bedrock guard for the hadal floor. Do not
+  raise it without confirming the hadal seabed stays clear of `-64` in world.
+- Per-band shaping still lives in `western_depth_depression` /
+  `eastern_depth_depression` (the `0.05 / 0.12 / 0.28` mask coefficients) and in
+  `abyssal_pattern_depression`; both now translate to real relief instead of
+  being absorbed by the spline plateau, so their existing amplitudes are worth
+  re-checking against the first in-world observation.
+
+## Seafloor structure seating fix (2026-08-27)
+
+All 64 `kubejs/data/infinite_domain/worldgen/structure/abyssal/*.json` used
+`start_height: {absolute: 32}` together with `project_start_to_heightmap:
+OCEAN_FLOOR_WG`. `start_height` is a **signed offset added to the projected
+seabed height**, not an absolute Y when a heightmap projection is present, so
+every abyssal structure's start piece generated **32 blocks above the seabed**.
+With `terrain_adaptation: bury` the beardifier then filled that piece's bounding
+box (plus a 6-block taper) with solid terrain, which the ocean-floor surface
+rule finished as dirt/gravel: a **floating, chunk-aligned square dirt block
+hanging above the abyssal plain**, repeated at every structure site.
+
+All 64 files are now `start_height: {absolute: 0}` (template `y=0` seats on the
+seabed), matching the `deep_sea/*` seabed convention and every heightmap-projected
+structure elsewhere in the pack. `terrain_adaptation: bury` is unchanged and is
+still recorded in the abyssal feature catalogs; whether `bury` or `none` reads
+better for the taller vent/chimney features is a deferred in-world call.
+`tools/abyssal_worldgen/validate_abyssal_deformation.py` now fails if any
+heightmap-projected abyssal structure regains a non-zero `start_height`.
 
 ## Noise vocabulary derived from the supplied reference patterns
 
@@ -252,7 +330,9 @@ When runtime access returns:
 7. verify East/West routing and transition seam;
 8. inspect the central continent/mountain annulus and confirm no deformation leaks into the protected branch;
 9. inspect north/south oceans for abyssal contamination;
-10. measure seabed Y at shelf, slope, plain, fracture and deepest hadal candidates;
+10. measure seabed Y at shelf, slope, plain, fracture and deepest hadal candidates, and confirm the direct depth channel produces a readable slope -> plain -> fracture -> hadal descent (plain clearly below vanilla deep ocean, hadal well clear of bedrock);
+10a. re-tune the `abyssal_floor_depression` gain (`1.0`) and clamp (`0.55`), and the `western/eastern_depth_depression` band coefficients, against that first measurement;
+10b. confirm no floating square dirt blocks remain above any abyssal structure (the `start_height` 32 -> 0 fix), and decide `bury` vs `none` for the tall vent/chimney features;
 11. inspect both custom cave carvers for frequency, cave-mouth exposure, aquifer flooding and bedrock interaction;
 12. verify all eight core and five optional abyssal structures resolve with `/structure_map` where applicable;
 13. inspect `OCEAN_FLOOR_WG` projection, burial, open-breach flooding and chest accessibility;
@@ -263,4 +343,11 @@ When runtime access returns:
 18. assess submarine clearance through deformed slope/fracture terrain and cave entrances;
 19. measure generation cost.
 
-If continentalness-based deformation later proves too shallow, only a narrowly East/West + ocean + hadal gated final-density contribution may be considered. Global Overworld deepening remains prohibited.
+Continentalness-based deformation proved too shallow (the `-0.2222` offset-spline
+plateau). The response was the narrowly East/West + ocean-corridor + depth-band
+gated `minecraft:overworld/depth` contribution described under **Direct
+seabed-depth channel** above — the sanctioned escape hatch, applied as a
+`depth`/`offset` delta rather than a raw `final_density` term so aquifers and the
+preliminary surface stay consistent. Global Overworld deepening remains
+prohibited: `abyssal_floor_depression` is identically `0` outside the gated
+abyss.

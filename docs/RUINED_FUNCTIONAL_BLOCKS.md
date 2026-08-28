@@ -27,19 +27,35 @@ smaller scale. This is a hard rule going forward, not a style preference.
    through this rule; automated gates that were green under the old policy do not carry
    forward as approval.
 
-## The Ruined Functional Block set (implemented 2026-08-23)
+## The Ruined Functional Block set (implemented 2026-08-23, expanded 2026-08-26)
 
-Three new decorative blocks exist under the `infinite_domain` namespace:
+Eighteen inert decorative blocks are registered by KubeJS under the `kubejs`
+namespace:
 
 | Block | Replaces | Recycling recipe |
 |---|---|---|
-| `infinite_domain:ruined_furnace` | `minecraft:furnace` | → 2× `wastelands:scrap_metal` |
-| `infinite_domain:ruined_smoker` | `minecraft:smoker` | → 2× `wastelands:scrap_metal` |
-| `infinite_domain:ruined_blast_furnace` | `minecraft:blast_furnace` | → 4× `wastelands:scrap_metal` |
+| `kubejs:ruined_furnace` | `minecraft:furnace` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_smoker` | `minecraft:smoker` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_blast_furnace` | `minecraft:blast_furnace` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_stonecutter` | `minecraft:stonecutter` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_smithing_table` | `minecraft:smithing_table` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_grindstone` | `minecraft:grindstone` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_cartography_table` | `minecraft:cartography_table` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_fletching_table` | `minecraft:fletching_table` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_loom` | `minecraft:loom` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_lectern` | `minecraft:lectern` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_brewing_stand` | `minecraft:brewing_stand` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_composter` | `minecraft:composter` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_cauldron` | empty/water/lava/powder-snow cauldrons | → `wastelands:scrap_metal` |
+| `kubejs:ruined_crafting_table` | `minecraft:crafting_table` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_anvil` | intact/chipped/damaged anvils | → `wastelands:scrap_metal` |
+| `kubejs:ruined_campfire` | `minecraft:campfire` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_soul_campfire` | `minecraft:soul_campfire` | → `wastelands:scrap_metal` |
+| `kubejs:ruined_enchanting_table` | `minecraft:enchanting_table` | → `wastelands:scrap_metal` |
 
-Each one is visually identical to a normal furnace/smoker/blast furnace, mineable and
-placeable like any block, but has **no block entity, no GUI, no smelting behavior** — it is
-purely decorative. It can be recycled into scrap via a shapeless crafting recipe.
+Each one derives its visual identity from the matching vanilla workstation, is mineable and
+placeable like any block, but has **no block entity, no GUI, and no workstation behavior** —
+it is purely decorative. It can be recycled into scrap via a shapeless crafting recipe.
 
 ### How the look stays texture-pack compatible
 
@@ -54,16 +70,14 @@ automatically, with zero custom texture assets to keep in sync.
 
 ### Implementation
 
-- `kubejs/startup_scripts/ruined_functional_blocks.js` — registers all three via KubeJS's
-  `cardinal` block type (the same type KubeJS documents for furnace/lectern-style
-  horizontal-facing blocks), hardness/resistance matched to vanilla furnace (3.5/3.5),
-  stone sound, pickaxe-required.
-- `kubejs/assets/infinite_domain/{blockstates,models}/ruined_*.json` — hand-authored so
-  KubeJS's dev-asset auto-generation never overwrites them; the startup script deliberately
-  never calls `.model()`/`.texture()`/`.textureAll()`.
-- `kubejs/assets/infinite_domain/textures/block/ruin_overlay/*.png` — the two overlay
-  textures, 16×16 to match vanilla's native resolution.
+- `kubejs/startup_scripts/ruined_worldgen_furnaces.js` — authoritative registry index for
+  all eighteen inert blocks and their supported orientation properties.
+- `kubejs/client_scripts/ruined_worldgen_assets.js` — generates the KubeJS-namespace
+  blockstates and crack-overlay models for the expanded workstation family.
 - `kubejs/server_scripts/ruined_functional_blocks_recipes.js` — the scrap recipes.
+- `scripts/audit_ruined_functional_blocks.py` — audits/remediates terrestrial surface NBT
+  and converted Lost Cities palettes, validates its targets against the KubeJS index, and
+  writes `docs/ruined-functional-block-structure-audit.json` on `--apply`.
 
 **Needs a restart, not `/reload`.** Custom block registration only takes effect on a full
 client/server relaunch (this is a KubeJS constraint, same as the vanilla-placeholder-tools
@@ -91,7 +105,7 @@ Together those meant seven live `minecraft:blast_furnace` placements sat in
 the deep-sea corpus while the gate reported green: `coastal_patrol_wreck`
 (three variants), `abyssal_mining_rig` (two variants), and the Wave 3
 `akula_project971` turbine room (two). All are now
-`infinite_domain:ruined_blast_furnace`.
+`kubejs:ruined_blast_furnace`.
 
 Fixed by rooting `STRUCTURES` at the whole `structure/` tree and adding an
 explicit `VANILLA_FORBIDDEN` set covering the blocks rule 2 names. The report
@@ -103,9 +117,9 @@ treating the gate as trustworthy again.
 
 ## Backlog
 
-- Only furnace/smoker/blast furnace exist so far. The block-fitness audit
-  (`docs/structure-block-fitness-audit.json`) lists the next highest-volume offenders that
-  need their own ruined-equivalent before any structure using them can pass:
+- The block-fitness audit (`docs/structure-block-fitness-audit.json`) lists the next
+  high-volume *modded machine* offenders that still need their own ruined-equivalent before
+  any structure using them can pass:
   `create:fluid_tank` (6,964 placements), `createnuclear:reactor_casing`/`reactor_core`/
   `reactor_frame` (6,224 combined — `nuclear_research_annex` cannot pass review until this
   exists), `immersiveengineering:capacitor_mv`/`capacitor_hv` (4,291 combined), and

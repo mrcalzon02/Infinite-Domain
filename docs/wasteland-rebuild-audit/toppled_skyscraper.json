@@ -1,0 +1,211 @@
+{
+  "structure_id": "toppled_skyscraper",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/toppled_skyscraper_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/toppled_skyscraper.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "toppled_skyscraper_clean_master",
+    "passed": false,
+    "hard_fail_count": 2,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          15,
+          40,
+          17
+        ],
+        "detail": "the_wasteland_reworked:radio at (15, 40, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          3,
+          9
+        ],
+        "detail": "the_wasteland_reworked:radio at (25, 3, 9) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "toppled_skyscraper",
+    "passed": false,
+    "hard_fail_count": 12,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          23,
+          31
+        ],
+        "detail": "immersiveengineering:concrete_reinforced at (10, 23, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          22,
+          36
+        ],
+        "detail": "immersiveengineering:concrete_reinforced at (11, 22, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          13,
+          24,
+          17
+        ],
+        "detail": "immersiveengineering:concrete_reinforced at (13, 24, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          23,
+          22
+        ],
+        "detail": "immersiveengineering:concrete_reinforced at (14, 23, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          21,
+          32
+        ],
+        "detail": "immersiveengineering:concrete_reinforced at (16, 21, 32) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          24,
+          37
+        ],
+        "detail": "immersiveengineering:concrete_reinforced at (17, 24, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          22,
+          18
+        ],
+        "detail": "immersiveengineering:concrete_reinforced at (19, 22, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          23,
+          33
+        ],
+        "detail": "immersiveengineering:concrete_reinforced at (22, 23, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          22,
+          38
+        ],
+        "detail": "immersiveengineering:concrete_reinforced at (23, 22, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          3,
+          9
+        ],
+        "detail": "the_wasteland_reworked:radio at (25, 3, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          25,
+          24,
+          19
+        ],
+        "detail": "immersiveengineering:concrete_reinforced at (25, 24, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          26,
+          23,
+          24
+        ],
+        "detail": "immersiveengineering:concrete_reinforced at (26, 23, 24) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        30,
+        2,
+        35
+      ],
+      "detail": "added debris (30, 2, 35)->(30, 7, 37) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        43,
+        1,
+        41
+      ],
+      "detail": "added debris (43, 1, 41)->(45, 7, 43) is 98% minecraft:gravel, fills 87% of its box, top is 89% one Y, 100% inside the footprint, 100% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        38,
+        1,
+        11
+      ],
+      "detail": "added debris (38, 1, 11)->(40, 5, 13) is 97% minecraft:gravel, fills 82% of its box, top is 89% one Y, 100% inside the footprint, 100% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        32,
+        1,
+        35
+      ],
+      "detail": "added debris (32, 1, 35)->(32, 7, 37) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 100% inside the footprint, 100% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 2,
+    "variant_hard_fail": 12,
+    "audit_flag_count": 4,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 14,
+      "terrain_mismatch_damage": 4
+    }
+  }
+}

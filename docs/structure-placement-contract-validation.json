@@ -1,250 +1,126 @@
 {
   "scope": "Static four-way footprint/entrance, family selector and terrain-placement contracts.",
-  "structures_checked": 84,
-  "families_checked": 30,
+  "structures_checked": 85,
+  "families_checked": 5,
   "static_contracts_passed": true,
   "failures": [],
   "runtime_rotation_status": "pending_in_game_blockstate_and_connector_walkthrough",
   "runtime_terrain_status": "pending_in_game_representative_biome_placement",
   "families": {
-    "roadside_debris": {
+    "wasteland_landmark": {
       "members": [
-        "delivery_van",
-        "radio_mast",
-        "wrecked_sedan"
-      ],
-      "issues": []
-    },
-    "residential_ruins": {
-      "members": [
-        "abandoned_bungalow",
-        "split_level_house"
-      ],
-      "issues": []
-    },
-    "commercial_ruins": {
-      "members": [
-        "dilapidated_grocery",
-        "scrapyard",
-        "service_garage"
-      ],
-      "issues": []
-    },
-    "major_settlements": {
-      "members": [
-        "abandoned_culdesac",
-        "trailer_park"
-      ],
-      "issues": []
-    },
-    "military_remnants": {
-      "members": [
-        "battle_tank",
-        "military_checkpoint"
-      ],
-      "issues": []
-    },
-    "buried_sites": {
-      "members": [
-        "bunker_network",
-        "survivor_cache"
-      ],
-      "issues": []
-    },
-    "survivor_outposts": {
-      "members": [
-        "trade_outpost"
-      ],
-      "issues": []
-    },
-    "rural_ruins": {
-      "members": [
-        "decayed_farm"
-      ],
-      "issues": []
-    },
-    "industrial_infrastructure": {
-      "members": [
-        "industrial_facility"
-      ],
-      "issues": []
-    },
-    "mountain_military": {
-      "members": [
-        "mountain_biohazard_lab",
-        "mountain_military_complex"
-      ],
-      "issues": []
-    },
-    "forest_industry": {
-      "members": [
-        "corporate_warehouse",
-        "decayed_logging_camp"
-      ],
-      "issues": []
-    },
-    "lost_data_centers": {
-      "members": [
-        "bombed_data_center"
-      ],
-      "issues": []
-    },
-    "hydroelectric_landmarks": {
-      "members": [
-        "hydroelectric_refuge_dam"
-      ],
-      "issues": []
-    },
-    "ruined_city_blocks": {
-      "members": [
-        "blown_apartment_complex",
-        "pancaked_parking_structure",
-        "ruined_mixed_use_block"
-      ],
-      "issues": []
-    },
-    "ruined_city_streets": {
-      "members": [
-        "cratered_downtown_intersection",
-        "sunken_city_front"
-      ],
-      "issues": []
-    },
-    "ruined_city_landmarks": {
-      "members": [
+        "bombed_data_center",
         "toppled_skyscraper"
       ],
       "issues": []
     },
-    "expanded_city_civic": {
+    "wasteland_coastal": {
       "members": [
-        "emergency_relief_shelter",
-        "ruined_courthouse",
-        "ruined_fire_station",
-        "ruined_hospital",
-        "ruined_police_precinct"
+        "cold_industrial_mountain_port",
+        "hydroelectric_refuge_dam",
+        "warm_industrial_mountain_port"
       ],
       "issues": []
     },
-    "expanded_city_transit": {
-      "members": [
-        "elevated_rail_collapse",
-        "freight_depot",
-        "ruined_bus_terminal",
-        "sunken_highway_interchange"
-      ],
-      "issues": []
-    },
-    "expanded_city_subway": {
-      "members": [
-        "collapsed_subway_station"
-      ],
-      "issues": []
-    },
-    "expanded_city_commercial": {
-      "members": [
-        "bombed_hotel",
-        "buried_bank_vault",
-        "ruined_department_store",
-        "ruined_office_tower",
-        "ruined_shopping_mall"
-      ],
-      "issues": []
-    },
-    "expanded_city_residential": {
-      "members": [
-        "ruined_city_school",
-        "ruined_community_center",
-        "ruined_rowhouse_block",
-        "shattered_luxury_condo",
-        "tenement_courtyard"
-      ],
-      "issues": []
-    },
-    "expanded_city_utilities": {
-      "members": [
-        "city_electrical_substation",
-        "city_water_treatment_plant",
-        "district_heating_station",
-        "municipal_incinerator",
-        "ruined_fuel_depot"
-      ],
-      "issues": []
-    },
-    "expanded_city_themed": {
+    "wasteland_major": {
       "members": [
         "abandoned_create_factory",
+        "abandoned_culdesac",
         "ae2_records_archive",
-        "collapsed_airship_terminal",
-        "nuclear_research_annex",
-        "ruined_cyberware_clinic"
-      ],
-      "issues": []
-    },
-    "expanded_wilderness_roadside": {
-      "members": [
-        "abandoned_motel",
-        "abandoned_truck_stop",
-        "ruined_gas_station",
-        "ruined_roadside_diner",
-        "wasteland_weigh_station"
-      ],
-      "issues": []
-    },
-    "expanded_wilderness_rural": {
-      "members": [
-        "abandoned_orchard_cannery",
-        "decayed_ranch",
-        "roadside_church_cemetery",
-        "ruined_grain_elevator",
-        "shattered_greenhouse_nursery"
-      ],
-      "issues": []
-    },
-    "expanded_wilderness_extraction": {
-      "members": [
-        "abandoned_oil_field",
-        "abandoned_quarry",
-        "collapsed_mine_entrance",
-        "excavator_pit",
-        "remote_sawmill"
-      ],
-      "issues": []
-    },
-    "expanded_wilderness_energy": {
-      "members": [
+        "blown_apartment_complex",
+        "bombed_hotel",
         "broken_solar_field",
+        "bunker_network",
+        "buried_bank_vault",
+        "city_electrical_substation",
+        "city_water_treatment_plant",
+        "collapsed_airship_terminal",
+        "collapsed_subway_station",
+        "corporate_warehouse",
+        "cratered_downtown_intersection",
+        "decayed_logging_camp",
+        "district_heating_station",
+        "elevated_rail_collapse",
+        "emergency_relief_shelter",
+        "freight_depot",
+        "industrial_facility",
+        "military_checkpoint",
+        "mountain_biohazard_lab",
+        "mountain_military_complex",
+        "mountain_pass_terminator",
+        "municipal_incinerator",
+        "nuclear_research_annex",
+        "pancaked_parking_structure",
+        "ruined_bus_terminal",
+        "ruined_city_school",
+        "ruined_community_center",
+        "ruined_courthouse",
+        "ruined_cyberware_clinic",
+        "ruined_department_store",
+        "ruined_fire_station",
+        "ruined_fuel_depot",
+        "ruined_hospital",
+        "ruined_mixed_use_block",
+        "ruined_office_tower",
+        "ruined_police_precinct",
+        "ruined_rowhouse_block",
+        "ruined_shopping_mall",
+        "shattered_luxury_condo",
         "shattered_wind_farm",
+        "sunken_city_front",
+        "sunken_highway_interchange",
+        "tenement_courtyard",
+        "trade_outpost",
+        "trailer_park",
         "wasteland_water_tower",
         "wilderness_substation"
       ],
       "issues": []
     },
-    "expanded_wilderness_survival": {
+    "wasteland_common": {
       "members": [
+        "abandoned_bungalow",
+        "abandoned_motel",
+        "abandoned_oil_field",
+        "abandoned_orchard_cannery",
+        "abandoned_quarry",
+        "abandoned_truck_stop",
+        "collapsed_mine_entrance",
         "crashed_cargo_airship",
+        "decayed_farm",
+        "decayed_ranch",
         "destroyed_refugee_convoy",
+        "dilapidated_grocery",
+        "excavator_pit",
+        "remote_sawmill",
+        "roadside_church_cemetery",
+        "ruined_gas_station",
+        "ruined_grain_elevator",
         "ruined_ranger_station",
-        "wasteland_fire_lookout"
+        "ruined_roadside_diner",
+        "scrapyard",
+        "service_garage",
+        "shattered_greenhouse_nursery",
+        "split_level_house",
+        "survivor_cache",
+        "wasteland_fire_lookout",
+        "wasteland_weigh_station"
       ],
       "issues": []
     },
-    "warm_industrial_ports": {
+    "wasteland_micro": {
       "members": [
-        "warm_industrial_mountain_port"
-      ],
-      "issues": []
-    },
-    "cold_industrial_ports": {
-      "members": [
-        "cold_industrial_mountain_port"
+        "battle_tank",
+        "delivery_van",
+        "radio_mast",
+        "wrecked_sedan"
       ],
       "issues": []
     }
   },
   "structures": {
     "abandoned_bungalow": {
-      "family": "residential_ruins",
+      "family": "wasteland_common",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -307,7 +183,7 @@
       "issues": []
     },
     "dilapidated_grocery": {
-      "family": "commercial_ruins",
+      "family": "wasteland_common",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -378,7 +254,7 @@
       "issues": []
     },
     "ruined_gas_station": {
-      "family": "expanded_wilderness_roadside",
+      "family": "wasteland_common",
       "road_connection": "highway",
       "rotations": [
         {
@@ -442,14 +318,14 @@
           ]
         }
       ],
-      "terrain_adaptation": "beard_box",
+      "terrain_adaptation": "none",
       "start_height": {
         "absolute": -7
       },
       "issues": []
     },
     "corporate_warehouse": {
-      "family": "forest_industry",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -524,7 +400,7 @@
       "issues": []
     },
     "ruined_fire_station": {
-      "family": "expanded_city_civic",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -595,7 +471,7 @@
       "issues": []
     },
     "ruined_hospital": {
-      "family": "expanded_city_civic",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -666,7 +542,7 @@
       "issues": []
     },
     "ruined_police_precinct": {
-      "family": "expanded_city_civic",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -741,7 +617,7 @@
       "issues": []
     },
     "ruined_courthouse": {
-      "family": "expanded_city_civic",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -812,7 +688,7 @@
       "issues": []
     },
     "abandoned_create_factory": {
-      "family": "expanded_city_themed",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -887,7 +763,7 @@
       "issues": []
     },
     "bunker_network": {
-      "family": "buried_sites",
+      "family": "wasteland_major",
       "road_connection": "local_road",
       "rotations": [
         {
@@ -958,7 +834,7 @@
       "issues": []
     },
     "survivor_cache": {
-      "family": "buried_sites",
+      "family": "wasteland_common",
       "road_connection": "pedestrian",
       "rotations": [
         {
@@ -1029,7 +905,7 @@
       "issues": []
     },
     "trade_outpost": {
-      "family": "survivor_outposts",
+      "family": "wasteland_major",
       "road_connection": "local_road",
       "rotations": [
         {
@@ -1100,7 +976,7 @@
       "issues": []
     },
     "decayed_farm": {
-      "family": "rural_ruins",
+      "family": "wasteland_common",
       "road_connection": "local_road",
       "rotations": [
         {
@@ -1175,7 +1051,7 @@
       "issues": []
     },
     "trailer_park": {
-      "family": "major_settlements",
+      "family": "wasteland_major",
       "road_connection": "local_road",
       "rotations": [
         {
@@ -1238,7 +1114,7 @@
       "issues": []
     },
     "mountain_military_complex": {
-      "family": "mountain_military",
+      "family": "wasteland_major",
       "road_connection": "local_road",
       "rotations": [
         {
@@ -1301,7 +1177,7 @@
       "issues": []
     },
     "mountain_biohazard_lab": {
-      "family": "mountain_military",
+      "family": "wasteland_major",
       "road_connection": "local_road",
       "rotations": [
         {
@@ -1376,7 +1252,7 @@
       "issues": []
     },
     "decayed_logging_camp": {
-      "family": "forest_industry",
+      "family": "wasteland_major",
       "road_connection": "local_road",
       "rotations": [
         {
@@ -1451,7 +1327,7 @@
       "issues": []
     },
     "bombed_data_center": {
-      "family": "lost_data_centers",
+      "family": "wasteland_landmark",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -1526,7 +1402,7 @@
       "issues": []
     },
     "hydroelectric_refuge_dam": {
-      "family": "hydroelectric_landmarks",
+      "family": "wasteland_coastal",
       "road_connection": "local_road",
       "rotations": [
         {
@@ -1601,7 +1477,7 @@
       "issues": []
     },
     "toppled_skyscraper": {
-      "family": "ruined_city_landmarks",
+      "family": "wasteland_landmark",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -1676,7 +1552,7 @@
       "issues": []
     },
     "blown_apartment_complex": {
-      "family": "ruined_city_blocks",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -1747,7 +1623,7 @@
       "issues": []
     },
     "ruined_mixed_use_block": {
-      "family": "ruined_city_blocks",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -1818,7 +1694,7 @@
       "issues": []
     },
     "sunken_city_front": {
-      "family": "ruined_city_streets",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -1897,7 +1773,7 @@
       "issues": []
     },
     "pancaked_parking_structure": {
-      "family": "ruined_city_blocks",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -1968,7 +1844,7 @@
       "issues": []
     },
     "cratered_downtown_intersection": {
-      "family": "ruined_city_streets",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -2047,7 +1923,7 @@
       "issues": []
     },
     "abandoned_motel": {
-      "family": "expanded_wilderness_roadside",
+      "family": "wasteland_common",
       "road_connection": "highway",
       "rotations": [
         {
@@ -2118,7 +1994,7 @@
       "issues": []
     },
     "freight_depot": {
-      "family": "expanded_city_transit",
+      "family": "wasteland_major",
       "road_connection": "rail_siding",
       "rotations": [
         {
@@ -2193,7 +2069,7 @@
       "issues": []
     },
     "radio_mast": {
-      "family": "roadside_debris",
+      "family": "wasteland_micro",
       "road_connection": "pedestrian",
       "rotations": [
         {
@@ -2256,7 +2132,7 @@
       "issues": []
     },
     "wrecked_sedan": {
-      "family": "roadside_debris",
+      "family": "wasteland_micro",
       "road_connection": "highway",
       "rotations": [
         {
@@ -2319,7 +2195,7 @@
       "issues": []
     },
     "delivery_van": {
-      "family": "roadside_debris",
+      "family": "wasteland_micro",
       "road_connection": "highway",
       "rotations": [
         {
@@ -2382,7 +2258,7 @@
       "issues": []
     },
     "battle_tank": {
-      "family": "military_remnants",
+      "family": "wasteland_micro",
       "road_connection": "local_road",
       "rotations": [
         {
@@ -2445,7 +2321,7 @@
       "issues": []
     },
     "service_garage": {
-      "family": "commercial_ruins",
+      "family": "wasteland_common",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -2516,7 +2392,7 @@
       "issues": []
     },
     "scrapyard": {
-      "family": "commercial_ruins",
+      "family": "wasteland_common",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -2587,7 +2463,7 @@
       "issues": []
     },
     "military_checkpoint": {
-      "family": "military_remnants",
+      "family": "wasteland_major",
       "road_connection": "highway",
       "rotations": [
         {
@@ -2658,7 +2534,7 @@
       "issues": []
     },
     "ruined_roadside_diner": {
-      "family": "expanded_wilderness_roadside",
+      "family": "wasteland_common",
       "road_connection": "highway",
       "rotations": [
         {
@@ -2729,7 +2605,7 @@
       "issues": []
     },
     "abandoned_truck_stop": {
-      "family": "expanded_wilderness_roadside",
+      "family": "wasteland_common",
       "road_connection": "highway",
       "rotations": [
         {
@@ -2800,7 +2676,7 @@
       "issues": []
     },
     "wasteland_weigh_station": {
-      "family": "expanded_wilderness_roadside",
+      "family": "wasteland_common",
       "road_connection": "highway",
       "rotations": [
         {
@@ -2875,7 +2751,7 @@
       "issues": []
     },
     "destroyed_refugee_convoy": {
-      "family": "expanded_wilderness_survival",
+      "family": "wasteland_common",
       "road_connection": "highway",
       "rotations": [
         {
@@ -2946,7 +2822,7 @@
       "issues": []
     },
     "split_level_house": {
-      "family": "residential_ruins",
+      "family": "wasteland_common",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -3009,7 +2885,7 @@
       "issues": []
     },
     "abandoned_culdesac": {
-      "family": "major_settlements",
+      "family": "wasteland_major",
       "road_connection": "local_road",
       "rotations": [
         {
@@ -3072,7 +2948,7 @@
       "issues": []
     },
     "emergency_relief_shelter": {
-      "family": "expanded_city_civic",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -3143,7 +3019,7 @@
       "issues": []
     },
     "tenement_courtyard": {
-      "family": "expanded_city_residential",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -3214,7 +3090,7 @@
       "issues": []
     },
     "ruined_rowhouse_block": {
-      "family": "expanded_city_residential",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -3285,7 +3161,7 @@
       "issues": []
     },
     "shattered_luxury_condo": {
-      "family": "expanded_city_residential",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -3348,7 +3224,7 @@
       "issues": []
     },
     "ruined_city_school": {
-      "family": "expanded_city_residential",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -3423,7 +3299,7 @@
       "issues": []
     },
     "ruined_community_center": {
-      "family": "expanded_city_residential",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -3498,7 +3374,7 @@
       "issues": []
     },
     "decayed_ranch": {
-      "family": "expanded_wilderness_rural",
+      "family": "wasteland_common",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -3569,7 +3445,7 @@
       "issues": []
     },
     "roadside_church_cemetery": {
-      "family": "expanded_wilderness_rural",
+      "family": "wasteland_common",
       "road_connection": "local_road",
       "rotations": [
         {
@@ -3632,7 +3508,7 @@
       "issues": []
     },
     "ruined_ranger_station": {
-      "family": "expanded_wilderness_survival",
+      "family": "wasteland_common",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -3703,7 +3579,7 @@
       "issues": []
     },
     "wasteland_fire_lookout": {
-      "family": "expanded_wilderness_survival",
+      "family": "wasteland_common",
       "road_connection": "pedestrian",
       "rotations": [
         {
@@ -3766,7 +3642,7 @@
       "issues": []
     },
     "ruined_shopping_mall": {
-      "family": "expanded_city_commercial",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -3837,7 +3713,7 @@
       "issues": []
     },
     "ruined_department_store": {
-      "family": "expanded_city_commercial",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -3908,7 +3784,7 @@
       "issues": []
     },
     "bombed_hotel": {
-      "family": "expanded_city_commercial",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -3979,7 +3855,7 @@
       "issues": []
     },
     "buried_bank_vault": {
-      "family": "expanded_city_commercial",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -4047,14 +3923,14 @@
           ]
         }
       ],
-      "terrain_adaptation": "beard_box",
+      "terrain_adaptation": "none",
       "start_height": {
         "absolute": -7
       },
       "issues": []
     },
     "ruined_office_tower": {
-      "family": "expanded_city_commercial",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -4125,7 +4001,7 @@
       "issues": []
     },
     "collapsed_subway_station": {
-      "family": "expanded_city_subway",
+      "family": "wasteland_major",
       "road_connection": "pedestrian",
       "rotations": [
         {
@@ -4202,7 +4078,7 @@
       "issues": []
     },
     "ruined_bus_terminal": {
-      "family": "expanded_city_transit",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -4277,7 +4153,7 @@
       "issues": []
     },
     "elevated_rail_collapse": {
-      "family": "expanded_city_transit",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -4340,7 +4216,7 @@
       "issues": []
     },
     "sunken_highway_interchange": {
-      "family": "expanded_city_transit",
+      "family": "wasteland_major",
       "road_connection": "highway",
       "rotations": [
         {
@@ -4419,7 +4295,7 @@
       "issues": []
     },
     "collapsed_airship_terminal": {
-      "family": "expanded_city_themed",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -4490,7 +4366,7 @@
       "issues": []
     },
     "crashed_cargo_airship": {
-      "family": "expanded_wilderness_survival",
+      "family": "wasteland_common",
       "road_connection": "none",
       "rotations": [
         {
@@ -4553,7 +4429,7 @@
       "issues": []
     },
     "warm_industrial_mountain_port": {
-      "family": "warm_industrial_ports",
+      "family": "wasteland_coastal",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -4624,7 +4500,7 @@
       "issues": []
     },
     "cold_industrial_mountain_port": {
-      "family": "cold_industrial_ports",
+      "family": "wasteland_coastal",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -4695,7 +4571,7 @@
       "issues": []
     },
     "abandoned_quarry": {
-      "family": "expanded_wilderness_extraction",
+      "family": "wasteland_common",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -4766,7 +4642,7 @@
       "issues": []
     },
     "collapsed_mine_entrance": {
-      "family": "expanded_wilderness_extraction",
+      "family": "wasteland_common",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -4829,7 +4705,7 @@
       "issues": []
     },
     "excavator_pit": {
-      "family": "expanded_wilderness_extraction",
+      "family": "wasteland_common",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -4900,7 +4776,7 @@
       "issues": []
     },
     "abandoned_oil_field": {
-      "family": "expanded_wilderness_extraction",
+      "family": "wasteland_common",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -4971,7 +4847,7 @@
       "issues": []
     },
     "abandoned_orchard_cannery": {
-      "family": "expanded_wilderness_rural",
+      "family": "wasteland_common",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -5042,7 +4918,7 @@
       "issues": []
     },
     "ruined_grain_elevator": {
-      "family": "expanded_wilderness_rural",
+      "family": "wasteland_common",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -5113,7 +4989,7 @@
       "issues": []
     },
     "shattered_greenhouse_nursery": {
-      "family": "expanded_wilderness_rural",
+      "family": "wasteland_common",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -5184,7 +5060,7 @@
       "issues": []
     },
     "remote_sawmill": {
-      "family": "expanded_wilderness_extraction",
+      "family": "wasteland_common",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -5255,7 +5131,7 @@
       "issues": []
     },
     "industrial_facility": {
-      "family": "industrial_infrastructure",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -5326,7 +5202,7 @@
       "issues": []
     },
     "city_electrical_substation": {
-      "family": "expanded_city_utilities",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -5397,7 +5273,7 @@
       "issues": []
     },
     "city_water_treatment_plant": {
-      "family": "expanded_city_utilities",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -5468,7 +5344,7 @@
       "issues": []
     },
     "district_heating_station": {
-      "family": "expanded_city_utilities",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -5539,7 +5415,7 @@
       "issues": []
     },
     "municipal_incinerator": {
-      "family": "expanded_city_utilities",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -5610,7 +5486,7 @@
       "issues": []
     },
     "ruined_fuel_depot": {
-      "family": "expanded_city_utilities",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -5681,7 +5557,7 @@
       "issues": []
     },
     "ruined_cyberware_clinic": {
-      "family": "expanded_city_themed",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -5752,7 +5628,7 @@
       "issues": []
     },
     "ae2_records_archive": {
-      "family": "expanded_city_themed",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -5823,7 +5699,7 @@
       "issues": []
     },
     "nuclear_research_annex": {
-      "family": "expanded_city_themed",
+      "family": "wasteland_major",
       "road_connection": "main_road",
       "rotations": [
         {
@@ -5894,7 +5770,7 @@
       "issues": []
     },
     "shattered_wind_farm": {
-      "family": "expanded_wilderness_energy",
+      "family": "wasteland_major",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -5957,7 +5833,7 @@
       "issues": []
     },
     "broken_solar_field": {
-      "family": "expanded_wilderness_energy",
+      "family": "wasteland_major",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -6020,7 +5896,7 @@
       "issues": []
     },
     "wilderness_substation": {
-      "family": "expanded_wilderness_energy",
+      "family": "wasteland_major",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -6083,7 +5959,7 @@
       "issues": []
     },
     "wasteland_water_tower": {
-      "family": "expanded_wilderness_energy",
+      "family": "wasteland_major",
       "road_connection": "driveway",
       "rotations": [
         {
@@ -6137,6 +6013,77 @@
           ],
           "main_entrance": "west",
           "secondary_entrances": []
+        }
+      ],
+      "terrain_adaptation": "beard_box",
+      "start_height": {
+        "absolute": 0
+      },
+      "issues": []
+    },
+    "mountain_pass_terminator": {
+      "family": "wasteland_major",
+      "road_connection": "highway",
+      "rotations": [
+        {
+          "degrees": 0,
+          "footprint": [
+            17,
+            25
+          ],
+          "lot": [
+            25,
+            33
+          ],
+          "main_entrance": "north",
+          "secondary_entrances": [
+            "south"
+          ]
+        },
+        {
+          "degrees": 90,
+          "footprint": [
+            25,
+            17
+          ],
+          "lot": [
+            33,
+            25
+          ],
+          "main_entrance": "east",
+          "secondary_entrances": [
+            "west"
+          ]
+        },
+        {
+          "degrees": 180,
+          "footprint": [
+            17,
+            25
+          ],
+          "lot": [
+            25,
+            33
+          ],
+          "main_entrance": "south",
+          "secondary_entrances": [
+            "north"
+          ]
+        },
+        {
+          "degrees": 270,
+          "footprint": [
+            25,
+            17
+          ],
+          "lot": [
+            33,
+            25
+          ],
+          "main_entrance": "west",
+          "secondary_entrances": [
+            "east"
+          ]
         }
       ],
       "terrain_adaptation": "beard_box",

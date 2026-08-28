@@ -41,7 +41,7 @@ machine may reward useful replacement parts, but never the completed machine.
 
 ## Quest placement
 
-`scripts/assign_era_reward_bags.py` examines gear-shaped technical lessons in
+`scripts/generators/assign_era_reward_bags.py` examines gear-shaped technical lessons in
 each era chapter. It leaves quests with bespoke rewards alone, assigns a common
 bag to approximately every third eligible lesson plus specifically designated
 core tutorials, and assigns the last eligible technical lesson a rare cache. The

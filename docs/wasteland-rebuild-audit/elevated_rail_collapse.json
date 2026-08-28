@@ -1,0 +1,471 @@
+{
+  "structure_id": "elevated_rail_collapse",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/elevated_rail_collapse_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/elevated_rail_collapse.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "elevated_rail_collapse_clean_master",
+    "passed": false,
+    "hard_fail_count": 28,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          12
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 3, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          4,
+          13
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 4, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          5,
+          14
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 5, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          6,
+          15
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 6, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          7,
+          16
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 7, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          8,
+          17
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 8, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          9,
+          18
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 9, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          10,
+          19
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 10, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          11,
+          20
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 11, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          12,
+          21
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 12, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          13,
+          22
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 13, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          14,
+          23
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 14, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          15,
+          24
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 15, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          16,
+          25
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 16, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          3,
+          9
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 3, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          4,
+          10
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 4, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          5,
+          11
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 5, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          6,
+          12
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 6, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          7,
+          13
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 7, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          8,
+          14
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 8, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          9,
+          15
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 9, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          10,
+          16
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 10, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          11,
+          17
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 11, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          12,
+          18
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 12, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          13,
+          19
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 13, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          14,
+          20
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 14, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          15,
+          21
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 15, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          16,
+          22
+        ],
+        "detail": "minecraft:stone_brick_stairs at (47, 16, 22) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "elevated_rail_collapse",
+    "passed": false,
+    "hard_fail_count": 14,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          12
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 3, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          4,
+          13
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 4, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          5,
+          14
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 5, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          6,
+          15
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 6, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          7,
+          16
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 7, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          8,
+          17
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 8, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          9,
+          18
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 9, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          10,
+          19
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 10, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          11,
+          20
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 11, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          12,
+          21
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 12, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          13,
+          22
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 13, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          14,
+          23
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 14, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          15,
+          24
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 15, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          16,
+          25
+        ],
+        "detail": "minecraft:stone_brick_stairs at (17, 16, 25) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        38,
+        1,
+        9
+      ],
+      "detail": "added debris (38, 1, 9)->(60, 13, 35) is 80% minecraft:gravel, fills 82% of its box, top is 94% one Y, 100% inside the footprint, 12% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        38,
+        2,
+        14
+      ],
+      "detail": "added debris (38, 2, 14)->(40, 9, 24) is 100% minecraft:gravel, fills 98% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 28,
+    "variant_hard_fail": 14,
+    "audit_flag_count": 2,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 42,
+      "terrain_mismatch_damage": 2
+    }
+  }
+}

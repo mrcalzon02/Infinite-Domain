@@ -1,0 +1,914 @@
+{
+  "structure_id": "pancaked_parking_structure",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/pancaked_parking_structure_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/pancaked_parking_structure.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "pancaked_parking_structure_clean_master",
+    "passed": false,
+    "hard_fail_count": 43,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          37
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 3, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          4,
+          38
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 4, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          5,
+          39
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 5, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          40
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 6, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          7,
+          41
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 7, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          10,
+          37
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 10, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          11,
+          38
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 11, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          12,
+          39
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 12, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          13,
+          40
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 13, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          14,
+          41
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 14, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          17,
+          37
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 17, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          18,
+          38
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 18, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          19,
+          39
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 19, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          20,
+          40
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 20, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          21,
+          41
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 21, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          24,
+          37
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 24, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          25,
+          38
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 25, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          26,
+          39
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 26, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          27,
+          40
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 27, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          28,
+          41
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 28, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          3,
+          11
+        ],
+        "detail": "minecraft:smooth_stone at (23, 3, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          3,
+          12
+        ],
+        "detail": "minecraft:smooth_stone at (23, 3, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          6,
+          17
+        ],
+        "detail": "minecraft:smooth_stone at (23, 6, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          6,
+          18
+        ],
+        "detail": "minecraft:smooth_stone at (23, 6, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          7,
+          19
+        ],
+        "detail": "minecraft:smooth_stone at (23, 7, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          7,
+          20
+        ],
+        "detail": "minecraft:smooth_stone at (23, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          9,
+          9
+        ],
+        "detail": "minecraft:smooth_stone at (23, 9, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          9,
+          10
+        ],
+        "detail": "minecraft:smooth_stone at (23, 9, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          10,
+          11
+        ],
+        "detail": "minecraft:smooth_stone at (23, 10, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          10,
+          12
+        ],
+        "detail": "minecraft:smooth_stone at (23, 10, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          13,
+          17
+        ],
+        "detail": "minecraft:smooth_stone at (23, 13, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          13,
+          18
+        ],
+        "detail": "minecraft:smooth_stone at (23, 13, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          14,
+          19
+        ],
+        "detail": "minecraft:smooth_stone at (23, 14, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          14,
+          20
+        ],
+        "detail": "minecraft:smooth_stone at (23, 14, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          16,
+          9
+        ],
+        "detail": "minecraft:smooth_stone at (23, 16, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          16,
+          10
+        ],
+        "detail": "minecraft:smooth_stone at (23, 16, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          17,
+          11
+        ],
+        "detail": "minecraft:smooth_stone at (23, 17, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          17,
+          12
+        ],
+        "detail": "minecraft:smooth_stone at (23, 17, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          20,
+          17
+        ],
+        "detail": "minecraft:smooth_stone at (23, 20, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          20,
+          18
+        ],
+        "detail": "minecraft:smooth_stone at (23, 20, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "180 additional floating blocks not individually listed (220 total)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          2,
+          16
+        ],
+        "detail": "minecraft:iron_door at (48, 2, 16) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          3,
+          16
+        ],
+        "detail": "minecraft:iron_door at (48, 3, 16) has no framing wall material on either horizontal axis (floating door)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "pancaked_parking_structure",
+    "passed": false,
+    "hard_fail_count": 43,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          3,
+          37
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 3, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          4,
+          38
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 4, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          5,
+          39
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 5, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          40
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 6, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          7,
+          41
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 7, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          10,
+          37
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 10, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          11,
+          38
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 11, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          12,
+          39
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 12, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          13,
+          40
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 13, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          14,
+          41
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 14, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          17,
+          37
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 17, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          18,
+          38
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 18, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          19,
+          39
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 19, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          20,
+          40
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 20, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          21,
+          41
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 21, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          24,
+          37
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 24, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          25,
+          38
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 25, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          26,
+          39
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 26, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          27,
+          40
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 27, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          28,
+          41
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (8, 28, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          3,
+          11
+        ],
+        "detail": "minecraft:smooth_stone at (23, 3, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          3,
+          12
+        ],
+        "detail": "minecraft:smooth_stone at (23, 3, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          6,
+          17
+        ],
+        "detail": "minecraft:smooth_stone at (23, 6, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          6,
+          18
+        ],
+        "detail": "minecraft:smooth_stone at (23, 6, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          7,
+          19
+        ],
+        "detail": "minecraft:smooth_stone at (23, 7, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          7,
+          20
+        ],
+        "detail": "minecraft:smooth_stone at (23, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          9,
+          9
+        ],
+        "detail": "minecraft:smooth_stone at (23, 9, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          9,
+          10
+        ],
+        "detail": "minecraft:smooth_stone at (23, 9, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          10,
+          11
+        ],
+        "detail": "minecraft:smooth_stone at (23, 10, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          10,
+          12
+        ],
+        "detail": "minecraft:smooth_stone at (23, 10, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          13,
+          17
+        ],
+        "detail": "minecraft:smooth_stone at (23, 13, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          13,
+          18
+        ],
+        "detail": "minecraft:smooth_stone at (23, 13, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          14,
+          19
+        ],
+        "detail": "minecraft:smooth_stone at (23, 14, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          14,
+          20
+        ],
+        "detail": "minecraft:smooth_stone at (23, 14, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          16,
+          9
+        ],
+        "detail": "minecraft:smooth_stone at (23, 16, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          16,
+          10
+        ],
+        "detail": "minecraft:smooth_stone at (23, 16, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          17,
+          11
+        ],
+        "detail": "minecraft:smooth_stone at (23, 17, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          17,
+          12
+        ],
+        "detail": "minecraft:smooth_stone at (23, 17, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          20,
+          17
+        ],
+        "detail": "minecraft:smooth_stone at (23, 20, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          20,
+          18
+        ],
+        "detail": "minecraft:smooth_stone at (23, 20, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "174 additional floating blocks not individually listed (214 total)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          2,
+          16
+        ],
+        "detail": "minecraft:iron_door at (48, 2, 16) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          3,
+          16
+        ],
+        "detail": "minecraft:iron_door at (48, 3, 16) has no framing wall material on either horizontal axis (floating door)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        47,
+        2,
+        26
+      ],
+      "detail": "added debris (47, 2, 26)->(50, 6, 27) is 97% minecraft:gravel, fills 82% of its box, top is 88% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        37,
+        4,
+        46
+      ],
+      "detail": "added debris (37, 4, 46)->(40, 7, 46) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        47,
+        2,
+        29
+      ],
+      "detail": "added debris (47, 2, 29)->(50, 5, 29) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 43,
+    "variant_hard_fail": 43,
+    "audit_flag_count": 3,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 82,
+      "lint:opening_wall_coupling:hard_fail": 4,
+      "terrain_mismatch_damage": 3
+    }
+  }
+}

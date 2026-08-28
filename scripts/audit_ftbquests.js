@@ -11,7 +11,10 @@ const starterCheckmarkRewards = new Set([
   '7D194089522507AB', '6F01000000000001',
   '6002100000000001', '6002100000000002',
   '6F01000000000010', '6F01000000000011', '6F01000000000012',
-  '6F01000000000013', '6F01000000000014'
+  '6F01000000000013', '6F01000000000014',
+  // Domain Compendium capstone: unlocks only after 305 one-of-every-item quests,
+  // so its emblem is earned, not self-certified (docs/DOMAIN_COMPENDIUM_CHAPTER.md).
+  '7C0DE0C0000000FF'
 ])
 const chapterDir = path.join(root, 'config', 'ftbquests', 'quests', 'chapters')
 const lang = fs.readFileSync(path.join(root, 'config', 'ftbquests', 'quests', 'lang', 'en_us.snbt'), 'utf8')

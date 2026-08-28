@@ -1,0 +1,200 @@
+{
+  "structure_id": "ruined_cyberware_clinic",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_cyberware_clinic_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/ruined_cyberware_clinic.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "ruined_cyberware_clinic_clean_master",
+    "passed": false,
+    "hard_fail_count": 8,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          3,
+          26
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 3, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          4,
+          27
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 4, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          5,
+          28
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 5, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          6,
+          29
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 6, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          7,
+          30
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 7, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          8,
+          31
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 8, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          9,
+          32
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 9, 32) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          10,
+          33
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 10, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          30,
+          21,
+          30
+        ],
+        "detail": "enclosed room of 468 air blocks (156 floor cells, 3 tall) near (30, 21, 30) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "ruined_cyberware_clinic",
+    "passed": false,
+    "hard_fail_count": 8,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          3,
+          26
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 3, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          4,
+          27
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 4, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          5,
+          28
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 5, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          6,
+          29
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 6, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          7,
+          30
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 7, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          8,
+          31
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 8, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          9,
+          32
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 9, 32) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          10,
+          33
+        ],
+        "detail": "minecraft:quartz_stairs at (23, 10, 33) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 8,
+    "variant_hard_fail": 8,
+    "audit_flag_count": 0,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 16,
+      "lint:room_composition:review_flag": 1
+    }
+  }
+}

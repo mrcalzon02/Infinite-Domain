@@ -1,0 +1,239 @@
+{
+  "structure_id": "split_level_house",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/split_level_house_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/split_level_house.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "split_level_house_clean_master",
+    "passed": false,
+    "hard_fail_count": 6,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          3,
+          11
+        ],
+        "detail": "minecraft:oak_stairs at (16, 3, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          4,
+          12
+        ],
+        "detail": "minecraft:oak_stairs at (16, 4, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          5,
+          13
+        ],
+        "detail": "minecraft:oak_stairs at (16, 5, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          6,
+          14
+        ],
+        "detail": "minecraft:oak_stairs at (16, 6, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          7,
+          15
+        ],
+        "detail": "minecraft:oak_stairs at (16, 7, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          8,
+          16
+        ],
+        "detail": "minecraft:oak_stairs at (16, 8, 16) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "split_level_house",
+    "passed": false,
+    "hard_fail_count": 6,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          3,
+          11
+        ],
+        "detail": "minecraft:oak_stairs at (16, 3, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          4,
+          12
+        ],
+        "detail": "minecraft:oak_stairs at (16, 4, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          5,
+          13
+        ],
+        "detail": "minecraft:oak_stairs at (16, 5, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          6,
+          14
+        ],
+        "detail": "minecraft:oak_stairs at (16, 6, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          7,
+          15
+        ],
+        "detail": "minecraft:oak_stairs at (16, 7, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          8,
+          16
+        ],
+        "detail": "minecraft:oak_stairs at (16, 8, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "damage_coherence",
+        "severity": "review_flag",
+        "position": null,
+        "detail": "no rubble/debris blocks found adjacent to or fallen below the removed volume"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        15,
+        8
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (13, 15, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        15,
+        9
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (13, 15, 9) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        14,
+        15,
+        8
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (14, 15, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        15,
+        15,
+        8
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (15, 15, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        16,
+        15,
+        8
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (16, 15, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        15,
+        8
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (17, 15, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        18,
+        15,
+        8
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (18, 15, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        22,
+        2,
+        18
+      ],
+      "detail": "added debris (22, 2, 18)->(25, 4, 22) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 6,
+    "variant_hard_fail": 6,
+    "audit_flag_count": 8,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 12,
+      "slab_wall_penetration": 7,
+      "terrain_mismatch_damage": 1,
+      "lint:damage_coherence:review_flag": 1
+    }
+  }
+}

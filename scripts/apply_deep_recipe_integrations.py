@@ -140,24 +140,28 @@ RECIPES = {
         "S": "createbigcannons:steel_block", "C": "stellaris:steel_plating_block",
     }),
     # Era 8 — endgame links orbital materials, atomic control, and Oritech cores into AE2.
-    "ae2:quantum_ring": shaped("ae2:quantum_ring", ["ODO", "RER", "ODO"], {
-        "O": "oritech:machine_core_7", "D": "stellaris:desh_block",
+    # One corner of each recipe's most-repeated part is spent on a fully-compressed
+    # antimatter block instead: these are the pack's final gateway outputs, so each
+    # now also gates on having run the antimatter economy (Oritech particle collision
+    # -> AllTheCompressed x9 compression) all the way to its top tier.
+    "ae2:quantum_ring": shaped("ae2:quantum_ring", ["ADO", "RER", "ODO"], {
+        "A": "allthecompressed:antimatter_block_9x", "O": "oritech:machine_core_7", "D": "stellaris:desh_block",
         "R": "createnuclear:reactor_controller", "E": "ae2:engineering_processor",
     }),
-    "oritech:accelerator_controller": shaped("oritech:accelerator_controller", ["QDQ", "RPR", "QDQ"], {
-        "Q": "ae2:quantum_ring", "D": "stellaris:desh_block",
+    "oritech:accelerator_controller": shaped("oritech:accelerator_controller", ["ADQ", "RPR", "QDQ"], {
+        "A": "allthecompressed:antimatter_block_9x", "Q": "ae2:quantum_ring", "D": "stellaris:desh_block",
         "R": "createnuclear:reactor_controller", "P": "oritech:processing_unit",
     }),
-    "ae2:drive": shaped("ae2:drive", ["ODO", "RER", "ODO"], {
-        "O": "oritech:machine_core_7", "D": "stellaris:desh_plating_block",
+    "ae2:drive": shaped("ae2:drive", ["ADO", "RER", "ODO"], {
+        "A": "allthecompressed:antimatter_block_9x", "O": "oritech:machine_core_7", "D": "stellaris:desh_plating_block",
         "R": "createnuclear:reactor_controller", "E": "ae2:engineering_processor",
     }),
-    "ae2:dense_energy_cell": shaped("ae2:dense_energy_cell", ["ODO", "RER", "ODO"], {
-        "O": "oritech:advanced_battery", "D": "stellaris:desh_block",
+    "ae2:dense_energy_cell": shaped("ae2:dense_energy_cell", ["ADO", "RER", "ODO"], {
+        "A": "allthecompressed:antimatter_block_9x", "O": "oritech:advanced_battery", "D": "stellaris:desh_block",
         "R": "createnuclear:reactor_casing", "E": "ae2:energy_cell",
     }),
-    "ae2:item_storage_cell_256k": shaped("ae2:item_storage_cell_256k", ["ODO", "RCR", "ODO"], {
-        "O": "oritech:machine_core_7", "D": "stellaris:desh_block",
+    "ae2:item_storage_cell_256k": shaped("ae2:item_storage_cell_256k", ["ADO", "RCR", "ODO"], {
+        "A": "allthecompressed:antimatter_block_9x", "O": "oritech:machine_core_7", "D": "stellaris:desh_block",
         "R": "createnuclear:reactor_controller", "C": "ae2:cell_component_256k",
     }),
 }

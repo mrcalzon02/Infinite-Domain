@@ -1,0 +1,343 @@
+{
+  "structure_id": "survivor_cache",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/survivor_cache_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/survivor_cache.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "survivor_cache_clean_master",
+    "passed": false,
+    "hard_fail_count": 11,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          4,
+          12
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (12, 4, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          5,
+          11
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (12, 5, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          6,
+          10
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (12, 6, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          7,
+          9
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (12, 7, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          9,
+          23
+        ],
+        "detail": "minecraft:iron_trapdoor at (23, 9, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          2,
+          23
+        ],
+        "detail": "ladder facing west at (23, 2, 23) has no solid backing block at (24, 2, 23)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          3,
+          23
+        ],
+        "detail": "ladder facing west at (23, 3, 23) has no solid backing block at (24, 3, 23)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          4,
+          23
+        ],
+        "detail": "ladder facing west at (23, 4, 23) has no solid backing block at (24, 4, 23)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          5,
+          23
+        ],
+        "detail": "ladder facing west at (23, 5, 23) has no solid backing block at (24, 5, 23)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          6,
+          23
+        ],
+        "detail": "ladder facing west at (23, 6, 23) has no solid backing block at (24, 6, 23)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          7,
+          23
+        ],
+        "detail": "ladder facing west at (23, 7, 23) has no solid backing block at (24, 7, 23)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "survivor_cache",
+    "passed": false,
+    "hard_fail_count": 13,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          13,
+          0
+        ],
+        "detail": "minecraft:spruce_slab at (8, 13, 0) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          13,
+          0
+        ],
+        "detail": "minecraft:spruce_slab at (9, 13, 0) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          4,
+          12
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (12, 4, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          5,
+          11
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (12, 5, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          6,
+          10
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (12, 6, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          7,
+          9
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (12, 7, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          9,
+          23
+        ],
+        "detail": "minecraft:iron_trapdoor at (23, 9, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          2,
+          23
+        ],
+        "detail": "ladder facing west at (23, 2, 23) has no solid backing block at (24, 2, 23)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          3,
+          23
+        ],
+        "detail": "ladder facing west at (23, 3, 23) has no solid backing block at (24, 3, 23)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          4,
+          23
+        ],
+        "detail": "ladder facing west at (23, 4, 23) has no solid backing block at (24, 4, 23)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          5,
+          23
+        ],
+        "detail": "ladder facing west at (23, 5, 23) has no solid backing block at (24, 5, 23)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          6,
+          23
+        ],
+        "detail": "ladder facing west at (23, 6, 23) has no solid backing block at (24, 6, 23)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          7,
+          23
+        ],
+        "detail": "ladder facing west at (23, 7, 23) has no solid backing block at (24, 7, 23)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        10,
+        14,
+        1
+      ],
+      "detail": "minecraft:smooth_stone_slab at (10, 14, 1) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        11,
+        14,
+        1
+      ],
+      "detail": "minecraft:smooth_stone_slab at (11, 14, 1) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        12,
+        14,
+        1
+      ],
+      "detail": "minecraft:smooth_stone_slab at (12, 14, 1) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        14,
+        1
+      ],
+      "detail": "minecraft:smooth_stone_slab at (13, 14, 1) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        14,
+        14,
+        1
+      ],
+      "detail": "minecraft:smooth_stone_slab at (14, 14, 1) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        15,
+        14,
+        1
+      ],
+      "detail": "minecraft:smooth_stone_slab at (15, 14, 1) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        21,
+        2,
+        14
+      ],
+      "detail": "added debris (21, 2, 14)->(24, 3, 17) is 100% minecraft:gravel, fills 75% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 11,
+    "variant_hard_fail": 13,
+    "audit_flag_count": 7,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 12,
+      "lint:ladder_backing:hard_fail": 12,
+      "slab_wall_penetration": 6,
+      "terrain_mismatch_damage": 1
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:kar_008_fire_rescue_detachment",
+  "culture": "karsic",
+  "building_type": "appliance_hall",
+  "conversion_class": "A",
+  "base_master": "fire_station",
+  "primary_stratum": "K-II",
+  "secondary_stratum": "K-III",
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "partial_basement",
+  "back_of_house": "behind",
+  "district_role": "district_service",
+  "rail_served": false,
+  "heating_main_connection": "rear_basement",
+  "tiling_asset": false,
+  "signage_series": "FIRE AND RESCUE DETACHMENT 3",
+  "archetype": "Fire and Rescue Detachment",
+  "roster_note": "Appliance bays, drill/hose tower, dormitory above.",
+  "damage_archetype": "cannibalisation",
+  "civic_program": [
+    "a run of tall vehicle bays opening directly to the street",
+    "a watch room with sight of the bays and the approach",
+    "a drill or hose tower attached to the rear",
+    "dormitory and mess rooms on the upper floor",
+    "a locker and drying room beside the bays",
+    "a rear yard with a hardstanding and a fuel point"
+  ],
+  "circulation": [
+    "crew reach the bays from the upper floor without crossing the watch room",
+    "vehicles leave forward onto the street without reversing"
+  ],
+  "damage_constraints": [
+    "the bays are empty and their doors are open; the tower stands",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the bays read as vehicle bays, not as a warehouse"
+    ]
+  },
+  "source_metadata": {
+    "category": "civic",
+    "settlement_types": [
+      "town_center"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 43,
+      "depth": 41
+    },
+    "base_height": 21,
+    "conversion_target": "multibuilding"
+  }
+}

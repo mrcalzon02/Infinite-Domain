@@ -1,0 +1,68 @@
+{
+  "structure_id": "infinite_domain:kar_064_deep_metro_station",
+  "culture": "karsic",
+  "building_type": "transit_hall",
+  "conversion_class": "N",
+  "base_master": "collapsed_subway_station",
+  "primary_stratum": "K-IV",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "full_basement",
+  "back_of_house": "below",
+  "district_role": "assembly_point",
+  "rail_served": false,
+  "heating_main_connection": "below_concourse",
+  "tiling_asset": false,
+  "signage_series": "DEEP METRO STATION 1",
+  "archetype": "Deep Metro Station",
+  "roster_note": "Surface vestibule pavilion + escalator incline + deep platform hall with a pilaster order. One of the strongest types in the roster; treat as landmark.",
+  "damage_archetype": "failed assembly point",
+  "transit_program": [
+    "a public concourse with a ticket hall and a departure board",
+    "a covered platform or stand area with a cantilevered canopy",
+    "a waiting room with benches and a stove or radiator bank",
+    "a left-luggage counter and a small buffet",
+    "staff and dispatcher rooms with sight of the platforms",
+    "a below-grade service level with plant and stores",
+    "queue barriers and a numbered boarding order marked on the ground"
+  ],
+  "circulation": [
+    "the route from street to concourse to platform is direct and step-free at least once",
+    "the dispatcher can see the platforms"
+  ],
+  "damage_constraints": [
+    "the concourse shows an evacuation that failed: barriers in place, abandoned baggage, a departure board frozen mid-update",
+    "no vehicle remains at the platforms",
+    "the below-grade service level is intact",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the boarding order painted on the ground is readable and implies a plan that existed",
+      "the canopy reads as cantilevered rather than propped"
+    ]
+  },
+  "source_metadata": {
+    "category": "railway",
+    "settlement_types": [
+      "town_center",
+      "railway"
+    ],
+    "road_connection": "pedestrian",
+    "base_footprint": {
+      "width": 63,
+      "depth": 45
+    },
+    "base_height": 24,
+    "conversion_target": "multibuilding"
+  }
+}

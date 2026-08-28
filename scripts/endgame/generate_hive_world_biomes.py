@@ -32,7 +32,7 @@ def empty_features():
 
 
 def biome(temperature, fog, sky, water, water_fog, particle=None, ambient_sound=None,
-          additions_sound=None, features=None):
+          additions_sound=None, music=None, features=None):
     effects = {
         "sky_color": sky,
         "fog_color": fog,
@@ -51,6 +51,11 @@ def biome(temperature, fog, sky, water, water_fog, particle=None, ambient_sound=
         effects["ambient_sound"] = ambient_sound
     if additions_sound is not None:
         effects["additions_sound"] = additions_sound
+    if music is not None:
+        effects["music"] = {
+            "sound": music, "min_delay": 12000, "max_delay": 24000,
+            "replace_current_music": True,
+        }
     return {
         "temperature": temperature,
         "downfall": 0.0,
@@ -73,9 +78,10 @@ def build():
     sump_feat[STEP_UNDERGROUND_DECORATION] = ["infinite_domain:hive_world_fixture_light"]
     sump = biome(
         temperature=0.7, fog=0x14140F, sky=0x0B0B0A, water=0x53621F, water_fog=0x1B2208,
-        particle={"probability": 0.0018, "options": {"type": "minecraft:white_ash"}},
+        particle={"probability": 0.0022, "options": {"type": "minecraft:white_ash"}},
         ambient_sound="minecraft:ambient.basalt_deltas.loop",
         additions_sound={"sound": "minecraft:ambient.basalt_deltas.additions", "tick_chance": 0.0111},
+        music="minecraft:music.overworld.dripstone_caves",
         features=sump_feat,
     )
 
@@ -87,9 +93,10 @@ def build():
     ]
     works = biome(
         temperature=1.0, fog=0x23201B, sky=0x171410, water=0x3B4A4F, water_fog=0x10171B,
-        particle={"probability": 0.0025, "options": {"type": "minecraft:white_ash"}},
+        particle={"probability": 0.0032, "options": {"type": "minecraft:white_ash"}},
         ambient_sound="minecraft:ambient.nether_wastes.loop",
         additions_sound={"sound": "minecraft:ambient.nether_wastes.additions", "tick_chance": 0.0111},
+        music="minecraft:music.nether.nether_wastes",
         features=works_feat,
     )
 
@@ -98,8 +105,10 @@ def build():
     vault_feat[STEP_UNDERGROUND_DECORATION] = ["infinite_domain:hive_world_fixture_light"]
     vault = biome(
         temperature=0.35, fog=0x1B2129, sky=0x0E141B, water=0x33424E, water_fog=0x0E141B,
+        particle={"probability": 0.0009, "options": {"type": "minecraft:warped_spore"}},
         ambient_sound="minecraft:ambient.soul_sand_valley.loop",
         additions_sound={"sound": "minecraft:ambient.soul_sand_valley.additions", "tick_chance": 0.0111},
+        music="minecraft:music.overworld.deep_dark",
         features=vault_feat,
     )
 

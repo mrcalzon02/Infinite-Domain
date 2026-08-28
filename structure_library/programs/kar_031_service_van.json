@@ -1,0 +1,60 @@
+{
+  "structure_id": "infinite_domain:kar_031_service_van",
+  "culture": "karsic",
+  "building_type": "prop_vehicle",
+  "conversion_class": "N",
+  "base_master": "delivery_van",
+  "primary_stratum": "prop",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "roadside",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "SERVICE VAN / PLATE 179",
+  "archetype": "Service Van",
+  "roster_note": "Cab-over box van. Prop-scale, fabric-led.",
+  "damage_archetype": null,
+  "infrastructure_program": [
+    "a boxy body with a clear cab, load and running-gear division",
+    "wheels or tracks seated on the ground surface",
+    "one opened or missing panel showing the interior",
+    "a numbered plate consistent with the regional signage grammar"
+  ],
+  "circulation": [
+    "not applicable"
+  ],
+  "damage_constraints": [
+    "the vehicle stopped where it failed and was then stripped of anything useful",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the silhouette is regionally distinct at prop scale"
+    ]
+  },
+  "source_metadata": {
+    "category": "highway",
+    "settlement_types": [
+      "highway_frontage"
+    ],
+    "road_connection": "highway",
+    "base_footprint": {
+      "width": 21,
+      "depth": 12
+    },
+    "base_height": 10,
+    "conversion_target": "scattered"
+  }
+}

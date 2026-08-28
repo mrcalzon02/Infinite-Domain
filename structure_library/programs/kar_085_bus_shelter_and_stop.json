@@ -1,0 +1,48 @@
+{
+  "structure_id": "infinite_domain:kar_085_bus_shelter_and_stop",
+  "culture": "karsic",
+  "building_type": "kiosk",
+  "conversion_class": "N",
+  "base_master": null,
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "street_furniture",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "BUS SHELTER 9",
+  "archetype": "Bus Shelter",
+  "roster_note": "Concrete shelter with a panelled back and a numbered route plate. Extremely cheap, extremely legible.",
+  "damage_archetype": null,
+  "utility_program": [
+    "a single small windowless or slot-windowed volume",
+    "a ventilation louvre on at least one face",
+    "one service door with a hasp",
+    "the equipment or shelter function the kiosk exists for",
+    "a hazard plate and a numbered identification plate"
+  ],
+  "circulation": [
+    "one door, opening outward onto a hard surface"
+  ],
+  "damage_constraints": [
+    "the door is forced and the interior stripped; the shell is intact",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "it recurs identically wherever it appears; that recurrence is the point"
+    ]
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "structure_id": "abandoned_culdesac",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/abandoned_culdesac_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/abandoned_culdesac.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "abandoned_culdesac_clean_master",
+    "passed": false,
+    "hard_fail_count": 5,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          3,
+          58
+        ],
+        "detail": "minecraft:lever at (16, 3, 58) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          18
+        ],
+        "detail": "minecraft:lever at (17, 3, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          38,
+          3,
+          61
+        ],
+        "detail": "minecraft:lever at (38, 3, 61) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          59,
+          3,
+          18
+        ],
+        "detail": "minecraft:lever at (59, 3, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          60,
+          3,
+          58
+        ],
+        "detail": "minecraft:lever at (60, 3, 58) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          6,
+          10,
+          46
+        ],
+        "detail": "enclosed room of 503 air blocks (153 floor cells, 6 tall) near (6, 10, 46) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          7,
+          10,
+          6
+        ],
+        "detail": "enclosed room of 503 air blocks (153 floor cells, 6 tall) near (7, 10, 6) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          28,
+          10,
+          49
+        ],
+        "detail": "enclosed room of 503 air blocks (153 floor cells, 6 tall) near (28, 10, 49) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          49,
+          10,
+          6
+        ],
+        "detail": "enclosed room of 473 air blocks (138 floor cells, 6 tall) near (49, 10, 6) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          50,
+          10,
+          46
+        ],
+        "detail": "enclosed room of 473 air blocks (138 floor cells, 6 tall) near (50, 10, 46) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "abandoned_culdesac",
+    "passed": false,
+    "hard_fail_count": 22,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          3,
+          58
+        ],
+        "detail": "minecraft:lever at (16, 3, 58) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          18
+        ],
+        "detail": "minecraft:lever at (17, 3, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          38,
+          3,
+          61
+        ],
+        "detail": "minecraft:lever at (38, 3, 61) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          44
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          45
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 45) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          46
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 46) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          47
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 47) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          48
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 48) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          49
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 49) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          50
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 50) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          51
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 51) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          52
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 52) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          53
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 53) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          54
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 54) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          55
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 55) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          56
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 56) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          57
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 57) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          58
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 58) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          59
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 59) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          60
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 60) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          16,
+          61
+        ],
+        "detail": "minecraft:stripped_dark_oak_log at (55, 16, 61) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          59,
+          3,
+          18
+        ],
+        "detail": "minecraft:lever at (59, 3, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          6,
+          10,
+          46
+        ],
+        "detail": "enclosed room of 503 air blocks (153 floor cells, 6 tall) near (6, 10, 46) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          28,
+          10,
+          49
+        ],
+        "detail": "enclosed room of 503 air blocks (153 floor cells, 6 tall) near (28, 10, 49) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          49,
+          10,
+          6
+        ],
+        "detail": "enclosed room of 473 air blocks (138 floor cells, 6 tall) near (49, 10, 6) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        49,
+        2,
+        47
+      ],
+      "detail": "added debris (49, 2, 47)->(61, 5, 52) is 100% minecraft:gravel, fills 96% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        49,
+        2,
+        54
+      ],
+      "detail": "added debris (49, 2, 54)->(56, 5, 59) is 100% minecraft:gravel, fills 99% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        58,
+        2,
+        54
+      ],
+      "detail": "added debris (58, 2, 54)->(61, 5, 59) is 100% minecraft:gravel, fills 97% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 5,
+    "variant_hard_fail": 22,
+    "audit_flag_count": 3,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 27,
+      "lint:room_composition:review_flag": 8,
+      "terrain_mismatch_damage": 3
+    }
+  }
+}

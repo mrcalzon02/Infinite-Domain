@@ -1,0 +1,502 @@
+{
+  "structure_id": "wasteland_fire_lookout",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/wasteland_fire_lookout_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/wasteland_fire_lookout.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "wasteland_fire_lookout_clean_master",
+    "passed": false,
+    "hard_fail_count": 23,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          3,
+          13
+        ],
+        "detail": "minecraft:oak_stairs at (12, 3, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          4,
+          14
+        ],
+        "detail": "minecraft:oak_stairs at (12, 4, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          5,
+          15
+        ],
+        "detail": "minecraft:oak_stairs at (12, 5, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          6,
+          16
+        ],
+        "detail": "minecraft:oak_stairs at (12, 6, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          15,
+          13
+        ],
+        "detail": "minecraft:oak_stairs at (12, 15, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          16,
+          14
+        ],
+        "detail": "minecraft:oak_stairs at (12, 16, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          17,
+          15
+        ],
+        "detail": "minecraft:oak_stairs at (12, 17, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          18,
+          16
+        ],
+        "detail": "minecraft:oak_stairs at (12, 18, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          19,
+          17
+        ],
+        "detail": "minecraft:oak_stairs at (12, 19, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          20,
+          18
+        ],
+        "detail": "minecraft:oak_stairs at (12, 20, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          8,
+          19
+        ],
+        "detail": "minecraft:oak_stairs at (21, 8, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          9,
+          18
+        ],
+        "detail": "minecraft:oak_stairs at (21, 9, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          10,
+          17
+        ],
+        "detail": "minecraft:oak_stairs at (21, 10, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          11,
+          16
+        ],
+        "detail": "minecraft:oak_stairs at (21, 11, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          12,
+          15
+        ],
+        "detail": "minecraft:oak_stairs at (21, 12, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          13,
+          14
+        ],
+        "detail": "minecraft:oak_stairs at (21, 13, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          21,
+          19
+        ],
+        "detail": "minecraft:oak_stairs at (21, 21, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          22,
+          18
+        ],
+        "detail": "minecraft:oak_stairs at (21, 22, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          23,
+          17
+        ],
+        "detail": "minecraft:oak_stairs at (21, 23, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          24,
+          16
+        ],
+        "detail": "minecraft:oak_stairs at (21, 24, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          25,
+          15
+        ],
+        "detail": "minecraft:oak_stairs at (21, 25, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          29,
+          12
+        ],
+        "detail": "minecraft:lever at (22, 29, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          29,
+          28
+        ],
+        "detail": "minecraft:spruce_door at (18, 29, 28) has no framing wall material on either horizontal axis (floating door)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "wasteland_fire_lookout",
+    "passed": false,
+    "hard_fail_count": 23,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          3,
+          13
+        ],
+        "detail": "minecraft:oak_stairs at (12, 3, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          4,
+          14
+        ],
+        "detail": "minecraft:oak_stairs at (12, 4, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          5,
+          15
+        ],
+        "detail": "minecraft:oak_stairs at (12, 5, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          6,
+          16
+        ],
+        "detail": "minecraft:oak_stairs at (12, 6, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          15,
+          13
+        ],
+        "detail": "minecraft:oak_stairs at (12, 15, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          16,
+          14
+        ],
+        "detail": "minecraft:oak_stairs at (12, 16, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          17,
+          15
+        ],
+        "detail": "minecraft:oak_stairs at (12, 17, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          18,
+          16
+        ],
+        "detail": "minecraft:oak_stairs at (12, 18, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          19,
+          17
+        ],
+        "detail": "minecraft:oak_stairs at (12, 19, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          20,
+          18
+        ],
+        "detail": "minecraft:oak_stairs at (12, 20, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          8,
+          19
+        ],
+        "detail": "minecraft:oak_stairs at (21, 8, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          9,
+          18
+        ],
+        "detail": "minecraft:oak_stairs at (21, 9, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          10,
+          17
+        ],
+        "detail": "minecraft:oak_stairs at (21, 10, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          11,
+          16
+        ],
+        "detail": "minecraft:oak_stairs at (21, 11, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          12,
+          15
+        ],
+        "detail": "minecraft:oak_stairs at (21, 12, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          13,
+          14
+        ],
+        "detail": "minecraft:oak_stairs at (21, 13, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          21,
+          19
+        ],
+        "detail": "minecraft:oak_stairs at (21, 21, 19) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          22,
+          18
+        ],
+        "detail": "minecraft:oak_stairs at (21, 22, 18) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          23,
+          17
+        ],
+        "detail": "minecraft:oak_stairs at (21, 23, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          24,
+          16
+        ],
+        "detail": "minecraft:oak_stairs at (21, 24, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          25,
+          15
+        ],
+        "detail": "minecraft:oak_stairs at (21, 25, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          29,
+          12
+        ],
+        "detail": "minecraft:lever at (22, 29, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          29,
+          28
+        ],
+        "detail": "minecraft:spruce_door at (18, 29, 28) has no framing wall material on either horizontal axis (floating door)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        23,
+        1,
+        22
+      ],
+      "detail": "added debris (23, 1, 22)->(34, 7, 34) is 100% minecraft:gravel, fills 90% of its box, top is 90% one Y, 83% inside the footprint, 81% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 23,
+    "variant_hard_fail": 23,
+    "audit_flag_count": 1,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 44,
+      "lint:opening_wall_coupling:hard_fail": 2,
+      "terrain_mismatch_damage": 1
+    }
+  }
+}

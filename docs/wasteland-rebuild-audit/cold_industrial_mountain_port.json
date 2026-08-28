@@ -1,0 +1,150 @@
+{
+  "structure_id": "cold_industrial_mountain_port",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/cold_industrial_mountain_port_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/cold_industrial_mountain_port.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "cold_industrial_mountain_port_clean_master",
+    "passed": false,
+    "hard_fail_count": 6,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          9,
+          28
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 9, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          10,
+          29
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 10, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          20
+        ],
+        "detail": "minecraft:spruce_door at (7, 6, 20) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          20
+        ],
+        "detail": "minecraft:spruce_door at (8, 6, 20) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          7,
+          20
+        ],
+        "detail": "minecraft:spruce_door at (7, 7, 20) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          7,
+          20
+        ],
+        "detail": "minecraft:spruce_door at (8, 7, 20) has no framing wall material on either horizontal axis (floating door)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "cold_industrial_mountain_port",
+    "passed": false,
+    "hard_fail_count": 6,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          9,
+          28
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 9, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          10,
+          29
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 10, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          20
+        ],
+        "detail": "minecraft:spruce_door at (7, 6, 20) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          20
+        ],
+        "detail": "minecraft:spruce_door at (8, 6, 20) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          7,
+          20
+        ],
+        "detail": "minecraft:spruce_door at (7, 7, 20) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          7,
+          20
+        ],
+        "detail": "minecraft:spruce_door at (8, 7, 20) has no framing wall material on either horizontal axis (floating door)"
+      }
+    ]
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 6,
+    "variant_hard_fail": 6,
+    "audit_flag_count": 0,
+    "by_check": {
+      "lint:opening_wall_coupling:hard_fail": 8,
+      "lint:structural_connectivity:hard_fail": 4
+    }
+  }
+}

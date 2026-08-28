@@ -80,6 +80,14 @@
 		{
 			dependencies: ["1310000000000003"]
 			id: "1310000000000004"
+			rewards: [{
+				id: "1340000000000004"
+				item: {
+					count: 1
+					id: "spore:gas_mask"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				count: 4L
@@ -126,6 +134,15 @@
 		{
 			dependencies: ["1310000000000006"]
 			id: "1310000000000007"
+			rewards: [{
+				count: 8
+				id: "1370000000000007"
+				item: {
+					count: 1
+					id: "ae2:cable_anchor"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				count: 16L
@@ -207,6 +224,15 @@
 		{
 			dependencies: ["2310000000000003"]
 			id: "2310000000000004"
+			rewards: [{
+				count: 4
+				id: "2340000000000004"
+				item: {
+					count: 1
+					id: "farmersdelight:canvas"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 8L
@@ -254,6 +280,14 @@
 		{
 			dependencies: ["2310000000000006"]
 			id: "2310000000000007"
+			rewards: [{
+				id: "2370000000000007"
+				item: {
+					count: 1
+					id: "createcybernetics:organsupgrades_liverfilter"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 32L
@@ -334,6 +368,15 @@
 		{
 			dependencies: ["3310000000000003"]
 			id: "3310000000000004"
+			rewards: [{
+				count: 4
+				id: "3340000000000004"
+				item: {
+					count: 1
+					id: "createdieselgenerators:diesel_bucket"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				count: 4L
@@ -381,6 +424,15 @@
 		{
 			dependencies: ["3310000000000006"]
 			id: "3310000000000007"
+			rewards: [{
+				count: 4
+				id: "3370000000000007"
+				item: {
+					count: 1
+					id: "ae2:fluix_dust"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				count: 16L
@@ -427,6 +479,14 @@
 		{
 			dependencies: ["1310000000000004"]
 			id: "4310000000000002"
+			rewards: [{
+				id: "6ADF420C411FA47D"
+				item: {
+					count: 1
+					id: "kubejs:era3_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4320000000000002"
@@ -459,6 +519,14 @@
 		{
 			dependencies: ["2310000000000002"]
 			id: "4310000000000004"
+			rewards: [{
+				id: "6A8FEF4E81CA8D0E"
+				item: {
+					count: 1
+					id: "kubejs:era3_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4320000000000004"
@@ -515,6 +583,14 @@
 		{
 			dependencies: ["3310000000000004"]
 			id: "4310000000000008"
+			rewards: [{
+				id: "6A268E3DBB75D7BF"
+				item: {
+					count: 1
+					id: "kubejs:era3_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4320000000000008"
@@ -638,6 +714,14 @@
 			]
 			id: "7311000000000004"
 			optional: true
+			rewards: [{
+				id: "6AC10749EBBF4E33"
+				item: {
+					count: 1
+					id: "kubejs:era3_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 9L
@@ -708,6 +792,14 @@
 			dependencies: ["6301100000000001"]
 			id: "6301100000000002"
 			optional: true
+			rewards: [{
+				id: "6A2490A8B4415205"
+				item: {
+					count: 1
+					id: "kubejs:era3_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "6301200000020001"
@@ -762,6 +854,14 @@
 			dependencies: ["6301100000000004"]
 			id: "6301100000000005"
 			optional: true
+			rewards: [{
+				id: "6A270B8B3927A310"
+				item: {
+					count: 1
+					id: "kubejs:era3_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [
 				{
@@ -847,6 +947,14 @@
 			]
 			id: "6301100000000009"
 			optional: true
+			rewards: [{
+				id: "6AF7ED0D4EE4953F"
+				item: {
+					count: 1
+					id: "kubejs:era3_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "6301200000090001"
@@ -860,6 +968,14 @@
 			dependencies: ["6301100000000009"]
 			id: "630110000000000A"
 			optional: true
+			rewards: [{
+				id: "6A7AC2A052FC1682"
+				item: {
+					count: 1
+					id: "kubejs:era3_priority_cache"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "63012000000A0001"

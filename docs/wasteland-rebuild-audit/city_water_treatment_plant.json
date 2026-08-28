@@ -1,0 +1,758 @@
+{
+  "structure_id": "city_water_treatment_plant",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/city_water_treatment_plant_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/city_water_treatment_plant.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "city_water_treatment_plant_clean_master",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          26,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (26, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          26,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (26, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          27,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (27, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          27,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (27, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          28,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (28, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          28,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (28, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          29,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (29, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          29,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (29, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          30,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (30, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          30,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (30, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          4,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (31, 4, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          5,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (31, 5, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          6,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (31, 6, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (31, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (31, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (32, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (32, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (33, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (33, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          34,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (34, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          34,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (34, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          35,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (35, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          35,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (35, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          36,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (36, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          36,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (36, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (43, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (43, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (44, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (44, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          45,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (45, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          45,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (45, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          46,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (46, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          46,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (46, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (47, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (47, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          4,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (48, 4, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          5,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (48, 5, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          6,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (48, 6, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (48, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (48, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "35 additional floating blocks not individually listed (75 total)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          7,
+          2,
+          14
+        ],
+        "detail": "enclosed room of 36 air blocks (18 floor cells, 2 tall) near (7, 2, 14) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          12,
+          2,
+          14
+        ],
+        "detail": "enclosed room of 36 air blocks (18 floor cells, 2 tall) near (12, 2, 14) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          17,
+          2,
+          14
+        ],
+        "detail": "enclosed room of 36 air blocks (18 floor cells, 2 tall) near (17, 2, 14) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "city_water_treatment_plant",
+    "passed": false,
+    "hard_fail_count": 25,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          26,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (26, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          26,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (26, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          27,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (27, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          27,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (27, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          28,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (28, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          28,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (28, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          29,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (29, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          29,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (29, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          30,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (30, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          30,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (30, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          4,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (31, 4, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          5,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (31, 5, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          6,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (31, 6, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (31, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (31, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (32, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (32, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (33, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (33, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          34,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (34, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          34,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (34, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          35,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (35, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          35,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (35, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          36,
+          7,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (36, 7, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          36,
+          8,
+          20
+        ],
+        "detail": "minecraft:oxidized_copper at (36, 8, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          7,
+          2,
+          14
+        ],
+        "detail": "enclosed room of 36 air blocks (18 floor cells, 2 tall) near (7, 2, 14) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          12,
+          2,
+          14
+        ],
+        "detail": "enclosed room of 36 air blocks (18 floor cells, 2 tall) near (12, 2, 14) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          17,
+          2,
+          14
+        ],
+        "detail": "enclosed room of 36 air blocks (18 floor cells, 2 tall) near (17, 2, 14) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "massing_monotony",
+      "severity": "review_flag",
+      "position": [
+        46,
+        4,
+        33
+      ],
+      "detail": "building mass 26x25x12 at (46, 4, 33) reads as a flat cuboid: roof 94% one plane (y=15); 4/4 facades >=88% a single wall plane (east 96%, north 96%, south 96%, west 96%). Needs setbacks, projecting bays, a pitched/stepped roofline or depth relief."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 41,
+    "variant_hard_fail": 25,
+    "audit_flag_count": 1,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 66,
+      "lint:room_composition:review_flag": 6,
+      "massing_monotony": 1
+    }
+  }
+}

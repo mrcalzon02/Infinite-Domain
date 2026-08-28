@@ -1,0 +1,60 @@
+{
+  "structure_id": "destroyed_refugee_convoy",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/destroyed_refugee_convoy_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/destroyed_refugee_convoy.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "destroyed_refugee_convoy_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          19,
+          3,
+          26
+        ],
+        "detail": "enclosed room of 286 air blocks (90 floor cells, 3 tall) near (19, 3, 26) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "destroyed_refugee_convoy",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": []
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        18,
+        3,
+        7
+      ],
+      "detail": "added debris (18, 3, 7)->(24, 4, 16) is 100% minecraft:gravel, fills 70% of its box, top is 100% one Y, 100% inside the footprint, 14% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        22,
+        3,
+        31
+      ],
+      "detail": "added debris (22, 3, 31)->(25, 3, 39) is 100% minecraft:gravel, fills 92% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 0,
+    "audit_flag_count": 2,
+    "by_check": {
+      "terrain_mismatch_damage": 2,
+      "lint:room_composition:review_flag": 1
+    }
+  }
+}

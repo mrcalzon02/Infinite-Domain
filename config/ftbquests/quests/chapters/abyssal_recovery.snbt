@@ -14,7 +14,7 @@
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_survey_wreck 2"
 				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "7EB0550C00000001"
+				id: "70ECFEFA5929C17E"
 				permission_level: 2
 				silent: true
 				type: "command"
@@ -59,7 +59,7 @@
 					type: "item"
 				}
 				{
-					biome: "infinite_domain:spawn_buffer"
+					biome: "infinite_domain:safe_zone"
 					id: "6AB0550C00000004"
 					type: "biome"
 				}
@@ -70,14 +70,24 @@
 		{
 			dependencies: ["5E00000000000006"]
 			id: "5AB0550C00000004"
-			rewards: [{
-				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_patrol_wreck 2"
-				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "7EB0550C00000004"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_patrol_wreck 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70EAC1E97414E5D0"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "6A03101ACE72AACB"
+					item: {
+						count: 1
+						id: "kubejs:era4_supply_bag"
+					}
+					type: "item"
+				}
+			]
 			shape: "diamond"
 			tasks: [{
 				biome: "infinite_domain:eastern_continental_slope"
@@ -118,7 +128,7 @@
 					type: "item"
 				}
 				{
-					biome: "infinite_domain:spawn_buffer"
+					biome: "infinite_domain:safe_zone"
 					id: "6AB0550C00000008"
 					type: "biome"
 				}
@@ -163,7 +173,7 @@
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_abyssal_relay 2"
 				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "7EB0550C00000008"
+				id: "70ED6A9460BC8D99"
 				permission_level: 2
 				silent: true
 				type: "command"
@@ -180,27 +190,30 @@
 		{
 			dependencies: ["5AB0550C00000008"]
 			id: "5AB0550C00000009"
-			rewards: [{
-				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_fracture_observatory 2"
-				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "7EB0550C0000000A"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			shape: "diamond"
-			tasks: [
+			rewards: [
 				{
-					id: "6AB0550C0000000C"
-					structure: "infinite_domain:abyssal/pelagos_abyssal_relay"
-					type: "structure"
+					command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_fracture_observatory 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70EDEC4C84597FA8"
+					permission_level: 2
+					silent: true
+					type: "command"
 				}
 				{
-					id: "6AB0550C00000019"
-					item: { components: { "ftbquests:missing_item": "kubejs:pelagos_bathymetric_log" }, count: 1, id: "ftbquests:missing_item" }
+					id: "6A06F8FF670E9ADE"
+					item: {
+						count: 1
+						id: "kubejs:era4_supply_bag"
+					}
 					type: "item"
 				}
 			]
+			shape: "diamond"
+			tasks: [{
+				id: "6AB0550C0000000C"
+				structure: "infinite_domain:abyssal/pelagos_abyssal_relay"
+				type: "structure"
+			}]
 			x: -6.0d
 			y: 10.0d
 		}
@@ -210,7 +223,7 @@
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_hadal_probe_station 2"
 				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "7EB0550C0000000C"
+				id: "70EE470BEA8F1050"
 				permission_level: 2
 				silent: true
 				type: "command"
@@ -226,11 +239,6 @@
 					id: "6AB0550C0000000E"
 					structure: "infinite_domain:abyssal/pelagos_fracture_observatory"
 					type: "structure"
-				}
-				{
-					id: "6AB0550C0000001A"
-					item: { components: { "ftbquests:missing_item": "kubejs:pelagos_fracture_sensor_core" }, count: 1, id: "ftbquests:missing_item" }
-					type: "item"
 				}
 			]
 			x: -8.0d
@@ -260,11 +268,6 @@
 					structure: "infinite_domain:abyssal/pelagos_hadal_probe_station"
 					type: "structure"
 				}
-				{
-					id: "6AB0550C0000001B"
-					item: { components: { "ftbquests:missing_item": "kubejs:pelagos_hadal_pressure_record" }, count: 1, id: "ftbquests:missing_item" }
-					type: "item"
-				}
 			]
 			x: -10.0d
 			y: 14.0d
@@ -275,7 +278,7 @@
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_abyssal_pipeline_station 2"
 				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "7EB0550C0000000E"
+				id: "70E40C52E42F30C1"
 				permission_level: 2
 				silent: true
 				type: "command"
@@ -292,41 +295,54 @@
 		{
 			dependencies: ["5AB0550C0000000C"]
 			id: "5AB0550C0000000D"
-			rewards: [{
-				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_fracture_listening_post 2"
-				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "7EB0550C00000010"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
-			shape: "diamond"
-			tasks: [
+			rewards: [
 				{
-					id: "6AB0550C00000012"
-					structure: "infinite_domain:abyssal/karsic_abyssal_pipeline_station"
-					type: "structure"
+					command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_fracture_listening_post 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70E0B0E85FFE8E1D"
+					permission_level: 2
+					silent: true
+					type: "command"
 				}
 				{
-					id: "6AB0550C0000001C"
-					item: { components: { "ftbquests:missing_item": "kubejs:karsic_pipeline_telemetry" }, count: 1, id: "ftbquests:missing_item" }
+					id: "6A3553375DF278F4"
+					item: {
+						count: 1
+						id: "kubejs:era4_supply_bag"
+					}
 					type: "item"
 				}
 			]
+			shape: "diamond"
+			tasks: [{
+				id: "6AB0550C00000012"
+				structure: "infinite_domain:abyssal/karsic_abyssal_pipeline_station"
+				type: "structure"
+			}]
 			x: 6.0d
 			y: 10.0d
 		}
 		{
 			dependencies: ["5AB0550C0000000D"]
 			id: "5AB0550C0000000E"
-			rewards: [{
-				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_hadal_blacksite 2"
-				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "7EB0550C00000012"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_hadal_blacksite 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70E25FF3CF63B2CA"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "6A8C951D48F6DAAF"
+					item: {
+						count: 1
+						id: "kubejs:era4_priority_cache"
+					}
+					type: "item"
+				}
+			]
 			shape: "diamond"
 			tasks: [
 				{
@@ -338,11 +354,6 @@
 					id: "6AB0550C00000014"
 					structure: "infinite_domain:abyssal/karsic_fracture_listening_post"
 					type: "structure"
-				}
-				{
-					id: "6AB0550C0000001D"
-					item: { components: { "ftbquests:missing_item": "kubejs:karsic_sonar_archive" }, count: 1, id: "ftbquests:missing_item" }
-					type: "item"
 				}
 			]
 			x: 8.0d
@@ -372,11 +383,6 @@
 					structure: "infinite_domain:abyssal/karsic_hadal_blacksite"
 					type: "structure"
 				}
-				{
-					id: "6AB0550C0000001E"
-					item: { components: { "ftbquests:missing_item": "kubejs:karsic_hadal_blacksite_cipher" }, count: 1, id: "ftbquests:missing_item" }
-					type: "item"
-				}
 			]
 			x: 10.0d
 			y: 14.0d
@@ -387,39 +393,26 @@
 				"5AB0550C0000000F"
 			]
 			id: "5AB0550C00000010"
-			rewards: [
-				{
-					id: "7EB0550C00000014"
-					item: {
-						components: {
-							"ftbquests:missing_item": "kubejs:abyssal_comparative_dossier"
-						}
-						count: 1
-						id: "ftbquests:missing_item"
-					}
-					type: "item"
+			rewards: [{
+				count: 4
+				id: "7EB0550C00000015"
+				item: {
+					count: 1
+					id: "numismatics:cog"
 				}
-				{
-					count: 4
-					id: "7EB0550C00000015"
-					item: {
-						count: 1
-						id: "numismatics:cog"
-					}
-					type: "item"
-				}
-			]
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [
 				{
 					id: "6AB0550C00000017"
-					item: { components: { "ftbquests:missing_item": "kubejs:pelagos_hadal_pressure_record" }, count: 1, id: "ftbquests:missing_item" }
-					type: "item"
+					structure: "infinite_domain:abyssal/pelagos_hadal_probe_station"
+					type: "structure"
 				}
 				{
 					id: "6AB0550C00000018"
-					item: { components: { "ftbquests:missing_item": "kubejs:karsic_hadal_blacksite_cipher" }, count: 1, id: "ftbquests:missing_item" }
-					type: "item"
+					structure: "infinite_domain:abyssal/karsic_hadal_blacksite"
+					type: "structure"
 				}
 			]
 			x: 0.0d

@@ -1,0 +1,171 @@
+{
+  "structure_id": "ruined_gas_station",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/gas_station_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/ruined_gas_station.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "ruined_gas_station_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          13,
+          3,
+          10
+        ],
+        "detail": "enclosed room of 30 air blocks (15 floor cells, 2 tall) near (13, 3, 10) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          22,
+          3,
+          10
+        ],
+        "detail": "enclosed room of 30 air blocks (15 floor cells, 2 tall) near (22, 3, 10) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "ruined_gas_station",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          13,
+          3,
+          10
+        ],
+        "detail": "enclosed room of 30 air blocks (15 floor cells, 2 tall) near (13, 3, 10) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          22,
+          3,
+          10
+        ],
+        "detail": "enclosed room of 30 air blocks (15 floor cells, 2 tall) near (22, 3, 10) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        14,
+        41
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        14,
+        41
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        6,
+        14,
+        41
+      ],
+      "detail": "minecraft:smooth_stone_slab at (6, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        7,
+        14,
+        41
+      ],
+      "detail": "minecraft:smooth_stone_slab at (7, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        8,
+        14,
+        41
+      ],
+      "detail": "minecraft:smooth_stone_slab at (8, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        9,
+        14,
+        41
+      ],
+      "detail": "minecraft:smooth_stone_slab at (9, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        10,
+        14,
+        21
+      ],
+      "detail": "minecraft:smooth_stone_slab at (10, 14, 21) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        10,
+        14,
+        41
+      ],
+      "detail": "minecraft:smooth_stone_slab at (10, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        10,
+        14,
+        42
+      ],
+      "detail": "minecraft:smooth_stone_slab at (10, 14, 42) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        14,
+        21
+      ],
+      "detail": "minecraft:smooth_stone_slab at (13, 14, 21) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 0,
+    "audit_flag_count": 10,
+    "by_check": {
+      "slab_wall_penetration": 10,
+      "lint:room_composition:review_flag": 4
+    }
+  }
+}

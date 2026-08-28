@@ -79,6 +79,14 @@
 		{
 			dependencies: ["1510000000000003"]
 			id: "1510000000000004"
+			rewards: [{
+				id: "1540000000000004"
+				item: {
+					count: 1
+					id: "ae2:certus_quartz_wrench"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				id: "1520000000000004"
@@ -125,6 +133,15 @@
 		{
 			dependencies: ["1510000000000006"]
 			id: "1510000000000007"
+			rewards: [{
+				count: 2
+				id: "1570000000000007"
+				item: {
+					count: 1
+					id: "ae2:printed_logic_processor"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				count: 8L
@@ -206,6 +223,15 @@
 		{
 			dependencies: ["2510000000000003"]
 			id: "2510000000000004"
+			rewards: [{
+				count: 8
+				id: "2540000000000004"
+				item: {
+					count: 1
+					id: "oritech:item_pipe"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 64L
@@ -221,8 +247,10 @@
 			id: "2510000000000005"
 			shape: "heart"
 			tasks: [{
+				count: 64L
 				id: "2520000000000005"
-				type: "checkmark"
+				item: { count: 1, id: "minecraft:cooked_beef" }
+				type: "item"
 			}]
 			x: 0.0d
 			y: 10.0d
@@ -243,6 +271,14 @@
 		{
 			dependencies: ["2510000000000006"]
 			id: "2510000000000007"
+			rewards: [{
+				id: "2570000000000007"
+				item: {
+					count: 1
+					id: "createcybernetics:muscleupgrades_wiredreflexes"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 256L
@@ -322,6 +358,14 @@
 		{
 			dependencies: ["3510000000000003"]
 			id: "3510000000000004"
+			rewards: [{
+				id: "3540000000000004"
+				item: {
+					count: 1
+					id: "ae2:network_tool"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				count: 8L
@@ -368,6 +412,14 @@
 		{
 			dependencies: ["3510000000000006"]
 			id: "3510000000000007"
+			rewards: [{
+				id: "3570000000000007"
+				item: {
+					count: 1
+					id: "ae2:calculation_processor"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				count: 16L
@@ -446,6 +498,14 @@
 		{
 			dependencies: ["2510000000000002"]
 			id: "4510000000000004"
+			rewards: [{
+				id: "6A1566BC34623990"
+				item: {
+					count: 1
+					id: "kubejs:era5_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4520000000000004"
@@ -502,6 +562,14 @@
 		{
 			dependencies: ["3510000000000004"]
 			id: "4510000000000008"
+			rewards: [{
+				id: "6AE7351C4BB27882"
+				item: {
+					count: 1
+					id: "kubejs:era5_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4520000000000008"
@@ -650,6 +718,14 @@
 			]
 			id: "7511000000000004"
 			optional: true
+			rewards: [{
+				id: "6ADAE2347E7F082E"
+				item: {
+					count: 1
+					id: "kubejs:era5_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 9L
@@ -667,6 +743,14 @@
 			]
 			id: "7511000000000005"
 			optional: true
+			rewards: [{
+				id: "6A5C2B1A6077F099"
+				item: {
+					count: 1
+					id: "kubejs:era5_priority_cache"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 16L

@@ -1,0 +1,874 @@
+{
+  "structure_id": "decayed_ranch",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/decayed_ranch_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/decayed_ranch.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "decayed_ranch_clean_master",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          2,
+          34
+        ],
+        "detail": "minecraft:water_cauldron at (6, 2, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          2,
+          35
+        ],
+        "detail": "minecraft:water_cauldron at (6, 2, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          2,
+          36
+        ],
+        "detail": "minecraft:water_cauldron at (6, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          34
+        ],
+        "detail": "minecraft:water_cauldron at (7, 2, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          35
+        ],
+        "detail": "minecraft:water_cauldron at (7, 2, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          36
+        ],
+        "detail": "minecraft:water_cauldron at (7, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          34
+        ],
+        "detail": "minecraft:water_cauldron at (8, 2, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          35
+        ],
+        "detail": "minecraft:water_cauldron at (8, 2, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          36
+        ],
+        "detail": "minecraft:water_cauldron at (8, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          34
+        ],
+        "detail": "minecraft:water_cauldron at (9, 2, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          35
+        ],
+        "detail": "minecraft:water_cauldron at (9, 2, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          36
+        ],
+        "detail": "minecraft:water_cauldron at (9, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          2,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          2,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          2,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 3, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 3, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          2,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          2,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          2,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          3,
+          23
+        ],
+        "detail": "minecraft:lever at (18, 3, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          3,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          3,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 3, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          3,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 3, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          2,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          2,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          2,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          3,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          3,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 3, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          3,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 3, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          2,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          2,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          2,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          3,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          3,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 3, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          3,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 3, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          2,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (21, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          2,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (21, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          2,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (21, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "3 additional floating blocks not individually listed (43 total)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          44,
+          3,
+          37
+        ],
+        "detail": "enclosed room of 32 air blocks (4 floor cells, 8 tall) near (44, 3, 37) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "decayed_ranch",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          2,
+          34
+        ],
+        "detail": "minecraft:water_cauldron at (6, 2, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          2,
+          35
+        ],
+        "detail": "minecraft:water_cauldron at (6, 2, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          2,
+          36
+        ],
+        "detail": "minecraft:water_cauldron at (6, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          34
+        ],
+        "detail": "minecraft:water_cauldron at (7, 2, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          35
+        ],
+        "detail": "minecraft:water_cauldron at (7, 2, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          2,
+          36
+        ],
+        "detail": "minecraft:water_cauldron at (7, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          34
+        ],
+        "detail": "minecraft:water_cauldron at (8, 2, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          35
+        ],
+        "detail": "minecraft:water_cauldron at (8, 2, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          2,
+          36
+        ],
+        "detail": "minecraft:water_cauldron at (8, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          34
+        ],
+        "detail": "minecraft:water_cauldron at (9, 2, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          35
+        ],
+        "detail": "minecraft:water_cauldron at (9, 2, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          2,
+          36
+        ],
+        "detail": "minecraft:water_cauldron at (9, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          2,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          2,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          2,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 3, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (17, 3, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          2,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          2,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          2,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          3,
+          23
+        ],
+        "detail": "minecraft:lever at (18, 3, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          3,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          3,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 3, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          3,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (18, 3, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          2,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          2,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          2,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          3,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          3,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 3, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          19,
+          3,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (19, 3, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          2,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          2,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          2,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          3,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          3,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 3, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          3,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (20, 3, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          2,
+          38
+        ],
+        "detail": "farmersdelight:straw_bale at (21, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          2,
+          39
+        ],
+        "detail": "farmersdelight:straw_bale at (21, 2, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          2,
+          40
+        ],
+        "detail": "farmersdelight:straw_bale at (21, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "3 additional floating blocks not individually listed (43 total)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          44,
+          3,
+          37
+        ],
+        "detail": "enclosed room of 32 air blocks (4 floor cells, 8 tall) near (44, 3, 37) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        38,
+        1,
+        9
+      ],
+      "detail": "added debris (38, 1, 9)->(48, 6, 34) is 100% minecraft:gravel, fills 71% of its box, top is 100% one Y, 87% inside the footprint, 48% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 41,
+    "variant_hard_fail": 41,
+    "audit_flag_count": 1,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 82,
+      "lint:room_composition:review_flag": 2,
+      "terrain_mismatch_damage": 1
+    }
+  }
+}

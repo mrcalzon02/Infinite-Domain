@@ -1,0 +1,49 @@
+{
+  "structure_id": "infinite_domain:kar_083_district_heating_main",
+  "culture": "karsic",
+  "building_type": "linear_infrastructure",
+  "conversion_class": "N",
+  "base_master": null,
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "karsic_district_yard",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "network",
+  "rail_served": false,
+  "heating_main_connection": "through_run",
+  "tiling_asset": true,
+  "signage_series": "DISTRICT HEATING MAIN 6",
+  "archetype": "District Heating Main",
+  "roster_note": "An above-ground insulated run on saddles with a road gantry. This is what stitches separate buildings into a *system*, and it is the highest-value single asset in the roster. Must tile: template edges align so consecutive placements read as one continuous main.",
+  "damage_archetype": null,
+  "infrastructure_program": [
+    "a continuous run whose ends meet the template edge at matching heights and offsets",
+    "regular supports or saddles at a fixed spacing",
+    "one crossing structure where the run steps over a road or track",
+    "an access or inspection point along the run",
+    "hazard marking where the run is at head height"
+  ],
+  "circulation": [
+    "the run is continuous; consecutive placements read as one system"
+  ],
+  "damage_constraints": [
+    "the run is severed at one support, with the break visible and the ends displaced",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "two copies placed end to end read as a single continuous run",
+      "the break is findable and obviously the cause of what failed downstream"
+    ]
+  }
+}

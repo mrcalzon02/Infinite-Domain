@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:kar_065_rail_overpass_collapse",
+  "culture": "karsic",
+  "building_type": "linear_infrastructure",
+  "conversion_class": "A",
+  "base_master": "elevated_rail_collapse",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "karsic_district_yard",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "network",
+  "rail_served": false,
+  "heating_main_connection": "through_run",
+  "tiling_asset": true,
+  "signage_series": "RAIL OVERPASS COLLAPSE 5",
+  "archetype": "Rail Overpass Collapse",
+  "roster_note": "",
+  "damage_archetype": "firebreak edge",
+  "infrastructure_program": [
+    "a continuous run whose ends meet the template edge at matching heights and offsets",
+    "regular supports or saddles at a fixed spacing",
+    "one crossing structure where the run steps over a road or track",
+    "an access or inspection point along the run",
+    "hazard marking where the run is at head height"
+  ],
+  "circulation": [
+    "the run is continuous; consecutive placements read as one system"
+  ],
+  "damage_constraints": [
+    "the run is severed at one support, with the break visible and the ends displaced",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "two copies placed end to end read as a single continuous run",
+      "the break is findable and obviously the cause of what failed downstream"
+    ]
+  },
+  "source_metadata": {
+    "category": "railway",
+    "settlement_types": [
+      "town_center",
+      "railway"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 67,
+      "depth": 39
+    },
+    "base_height": 30,
+    "conversion_target": "multibuilding"
+  }
+}

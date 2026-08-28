@@ -1,0 +1,841 @@
+{
+  "structure_id": "trade_outpost",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/trade_outpost_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/trade_outpost.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "trade_outpost_clean_master",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          11
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          12
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          13
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          14
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          15
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          16
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          17
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          24
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          25
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          26
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          27
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          28
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          29
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          30
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          11
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          12
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          13
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          14
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          15
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          16
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          17
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          24
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          25
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          26
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          27
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          28
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          29
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          30
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          11
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          12
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          13
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          14
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          15
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          16
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          17
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          24
+        ],
+        "detail": "minecraft:green_wool at (9, 6, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          25
+        ],
+        "detail": "minecraft:green_wool at (9, 6, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          26
+        ],
+        "detail": "minecraft:green_wool at (9, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          27
+        ],
+        "detail": "minecraft:green_wool at (9, 6, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          28
+        ],
+        "detail": "minecraft:green_wool at (9, 6, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "72 additional floating blocks not individually listed (112 total)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "trade_outpost",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          11
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          12
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          13
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          14
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          15
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          16
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          17
+        ],
+        "detail": "minecraft:red_wool at (7, 6, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          24
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          25
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          26
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          27
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          28
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          29
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          6,
+          30
+        ],
+        "detail": "minecraft:green_wool at (7, 6, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          11
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          12
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          13
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          14
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          15
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          16
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          17
+        ],
+        "detail": "minecraft:red_wool at (8, 6, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          24
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          25
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          26
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          27
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          28
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          29
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          30
+        ],
+        "detail": "minecraft:green_wool at (8, 6, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          11
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 11) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          12
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          13
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          14
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 14) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          15
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 15) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          16
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          17
+        ],
+        "detail": "minecraft:red_wool at (9, 6, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          24
+        ],
+        "detail": "minecraft:green_wool at (9, 6, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          25
+        ],
+        "detail": "minecraft:green_wool at (9, 6, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          26
+        ],
+        "detail": "minecraft:green_wool at (9, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          27
+        ],
+        "detail": "minecraft:green_wool at (9, 6, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          6,
+          28
+        ],
+        "detail": "minecraft:green_wool at (9, 6, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "51 additional floating blocks not individually listed (91 total)"
+      }
+    ]
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 41,
+    "variant_hard_fail": 41,
+    "audit_flag_count": 0,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 82
+    }
+  }
+}

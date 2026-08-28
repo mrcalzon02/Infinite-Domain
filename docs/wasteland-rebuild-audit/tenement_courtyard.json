@@ -1,0 +1,1116 @@
+{
+  "structure_id": "tenement_courtyard",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/tenement_courtyard_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/tenement_courtyard.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "tenement_courtyard_clean_master",
+    "passed": false,
+    "hard_fail_count": 36,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          3,
+          38
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          4,
+          39
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 4, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          5,
+          40
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 5, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          6,
+          41
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 6, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          7,
+          42
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 7, 42) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          8,
+          43
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 8, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          11,
+          38
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 11, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          12,
+          39
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 12, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          13,
+          40
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 13, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          41
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 14, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          15,
+          42
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 15, 42) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          16,
+          43
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 16, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          3,
+          21
+        ],
+        "detail": "minecraft:lever at (12, 3, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          3,
+          35
+        ],
+        "detail": "minecraft:lever at (12, 3, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          11,
+          21
+        ],
+        "detail": "minecraft:lever at (12, 11, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          11,
+          35
+        ],
+        "detail": "minecraft:lever at (12, 11, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          19,
+          21
+        ],
+        "detail": "minecraft:lever at (12, 19, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          19,
+          35
+        ],
+        "detail": "minecraft:lever at (12, 19, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          3,
+          38
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          4,
+          39
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 4, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          5,
+          40
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 5, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          6,
+          41
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 6, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          7,
+          42
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 7, 42) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          8,
+          43
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 8, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          11,
+          38
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 11, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          12,
+          39
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 12, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          13,
+          40
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 13, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          14,
+          41
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 14, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          15,
+          42
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 15, 42) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          16,
+          43
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 16, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          3,
+          21
+        ],
+        "detail": "minecraft:lever at (48, 3, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          3,
+          35
+        ],
+        "detail": "minecraft:lever at (48, 3, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          11,
+          21
+        ],
+        "detail": "minecraft:lever at (48, 11, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          11,
+          35
+        ],
+        "detail": "minecraft:lever at (48, 11, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          19,
+          21
+        ],
+        "detail": "minecraft:lever at (48, 19, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          19,
+          35
+        ],
+        "detail": "minecraft:lever at (48, 19, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          19,
+          10,
+          36
+        ],
+        "detail": "enclosed room of 1680 air blocks (240 floor cells, 7 tall) near (19, 10, 36) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          19,
+          18,
+          36
+        ],
+        "detail": "enclosed room of 1920 air blocks (240 floor cells, 8 tall) near (19, 18, 36) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "tenement_courtyard",
+    "passed": false,
+    "hard_fail_count": 35,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          3,
+          38
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          4,
+          39
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 4, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          5,
+          40
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 5, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          6,
+          41
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 6, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          7,
+          42
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 7, 42) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          8,
+          43
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 8, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          11,
+          38
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 11, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          12,
+          39
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 12, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          13,
+          40
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 13, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          41
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 14, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          15,
+          42
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 15, 42) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          16,
+          43
+        ],
+        "detail": "minecraft:stone_brick_stairs at (11, 16, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          3,
+          21
+        ],
+        "detail": "minecraft:lever at (12, 3, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          3,
+          35
+        ],
+        "detail": "minecraft:lever at (12, 3, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          11,
+          21
+        ],
+        "detail": "minecraft:lever at (12, 11, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          11,
+          35
+        ],
+        "detail": "minecraft:lever at (12, 11, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          19,
+          21
+        ],
+        "detail": "minecraft:lever at (12, 19, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          12,
+          19,
+          35
+        ],
+        "detail": "minecraft:lever at (12, 19, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          37,
+          10,
+          22
+        ],
+        "detail": "minecraft:bricks at (37, 10, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          3,
+          38
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          4,
+          39
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 4, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          5,
+          40
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 5, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          6,
+          41
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 6, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          7,
+          42
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 7, 42) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          8,
+          43
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 8, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          11,
+          38
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 11, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          12,
+          39
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 12, 39) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          13,
+          40
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 13, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          14,
+          41
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 14, 41) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          15,
+          42
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 15, 42) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          16,
+          43
+        ],
+        "detail": "minecraft:stone_brick_stairs at (44, 16, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          3,
+          35
+        ],
+        "detail": "minecraft:lever at (48, 3, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          11,
+          21
+        ],
+        "detail": "minecraft:lever at (48, 11, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          11,
+          35
+        ],
+        "detail": "minecraft:lever at (48, 11, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          19,
+          35
+        ],
+        "detail": "minecraft:lever at (48, 19, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          19,
+          10,
+          36
+        ],
+        "detail": "enclosed room of 1680 air blocks (240 floor cells, 7 tall) near (19, 10, 36) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          19,
+          18,
+          36
+        ],
+        "detail": "enclosed room of 1920 air blocks (240 floor cells, 8 tall) near (19, 18, 36) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "damage_coherence",
+        "severity": "review_flag",
+        "position": null,
+        "detail": "no rubble/debris blocks found adjacent to or fallen below the removed volume"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        13
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 13) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        14
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 14) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        15
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 15) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        16
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 16) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        28
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 28) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        30
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 30) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        31
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 31) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        44
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 44) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        45
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 45) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        2,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 2, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        13
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 13) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        14
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 14) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        15
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 15) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        16
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 16) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        28
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 28) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        30
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 30) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        31
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 31) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        44
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 44) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        45
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 45) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        10,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 10, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        18,
+        13
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 18, 13) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        18,
+        14
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 18, 14) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        18,
+        15
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 18, 15) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        18,
+        16
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 18, 16) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        18,
+        28
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 18, 28) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        18,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 18, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": null,
+      "detail": "198 further slab/stair-in-wall hits not listed (228 total)."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        54,
+        1,
+        8
+      ],
+      "detail": "added debris (54, 1, 8)->(56, 7, 26) is 100% minecraft:gravel, fills 98% of its box, top is 100% one Y, 66% inside the footprint, 88% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        41,
+        2,
+        8
+      ],
+      "detail": "added debris (41, 2, 8)->(52, 7, 26) is 100% minecraft:gravel, fills 91% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 36,
+    "variant_hard_fail": 35,
+    "audit_flag_count": 33,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 71,
+      "slab_wall_penetration": 31,
+      "lint:room_composition:review_flag": 4,
+      "terrain_mismatch_damage": 2,
+      "lint:damage_coherence:review_flag": 1
+    }
+  }
+}

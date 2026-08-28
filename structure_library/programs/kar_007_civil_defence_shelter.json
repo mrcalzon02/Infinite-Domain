@@ -1,0 +1,67 @@
+{
+  "structure_id": "infinite_domain:kar_007_civil_defence_shelter",
+  "culture": "karsic",
+  "building_type": "bunker",
+  "conversion_class": "A",
+  "base_master": "emergency_relief_shelter",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "wilderness_undisturbed",
+  "foundation_profile": "full_basement",
+  "back_of_house": "behind",
+  "district_role": "restricted",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "CIVIL DEFENCE SHELTER 5",
+  "archetype": "Civil Defence Shelter",
+  "roster_note": "Half-buried, blast doors, filter plant, bunk bays, assembly yard.",
+  "damage_archetype": "failed assembly point",
+  "technical_program": [
+    "a low surface entrance structure that gives away little",
+    "a stair or ramp descending to a blast door",
+    "an airlock lobby with a filter plant room beside it",
+    "a principal below-grade room appropriate to the bunker's purpose",
+    "bunk or store bays off the principal room",
+    "a water tank, latrine and ventilation shaft",
+    "an emergency exit shaft reaching the surface separately from the entrance"
+  ],
+  "circulation": [
+    "two independent ways to the surface",
+    "the blast door is on the route and is passable"
+  ],
+  "damage_constraints": [
+    "the surface structure is damaged; everything below the blast door is dry and intact",
+    "the emergency shaft remains usable",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the below-grade level reads as still habitable",
+      "the two exits are genuinely independent"
+    ]
+  },
+  "source_metadata": {
+    "category": "civic",
+    "settlement_types": [
+      "town_center",
+      "military"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 49,
+      "depth": 43
+    },
+    "base_height": 18,
+    "conversion_target": "building"
+  }
+}

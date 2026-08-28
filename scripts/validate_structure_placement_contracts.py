@@ -23,6 +23,10 @@ EXPECTED_OFFSETS = {
     "collapsed_mine_entrance": -8,
     "excavator_pit": -10,
 }
+# Surface buildings with a hollow sub-grade room: they seat negative but must NOT
+# beard, or beard_box carves the whole bounding box into an open scoop instead of
+# leaving the room buried (docs/TERRAIN_AFFORDANCE_AND_SPAWN_SEPARATION.md A6/OD-2).
+NO_BEARD_BURIED_ROOM = {"ruined_gas_station", "buried_bank_vault"}
 
 
 def load(path: Path):
@@ -97,7 +101,11 @@ def main() -> None:
         element = pool.get("elements", [{}])[0].get("element", {})
         if element.get("location") != f"infinite_domain:wasteland/{name}":
             issues.append("template pool location mismatch")
-        if worldgen.get("terrain_adaptation") not in {"beard_box", "bury"}:
+        adaptation = worldgen.get("terrain_adaptation")
+        if name in NO_BEARD_BURIED_ROOM:
+            if adaptation != "none":
+                issues.append("buried-room site must use terrain_adaptation 'none' (beard_box scoops it out of the ground)")
+        elif adaptation not in {"beard_box", "bury"}:
             issues.append("structure lacks supported terrain feathering mode")
         start_height = worldgen.get("start_height", {})
         if name in EXPECTED_OFFSETS and start_height.get("absolute") != EXPECTED_OFFSETS[name]:

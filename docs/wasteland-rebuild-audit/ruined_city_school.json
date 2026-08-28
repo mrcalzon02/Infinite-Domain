@@ -1,0 +1,740 @@
+{
+  "structure_id": "ruined_city_school",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_city_school_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/ruined_city_school.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "ruined_city_school_clean_master",
+    "passed": false,
+    "hard_fail_count": 31,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          5,
+          25
+        ],
+        "detail": "minecraft:stone_brick_stairs at (8, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          26
+        ],
+        "detail": "minecraft:stone_brick_stairs at (8, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          7,
+          27
+        ],
+        "detail": "minecraft:stone_brick_stairs at (8, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          8,
+          28
+        ],
+        "detail": "minecraft:stone_brick_stairs at (8, 8, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          5,
+          25
+        ],
+        "detail": "minecraft:stone_brick_stairs at (54, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          6,
+          26
+        ],
+        "detail": "minecraft:stone_brick_stairs at (54, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          7,
+          27
+        ],
+        "detail": "minecraft:stone_brick_stairs at (54, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          8,
+          28
+        ],
+        "detail": "minecraft:stone_brick_stairs at (54, 8, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          45,
+          2,
+          46
+        ],
+        "detail": "stair run of 2 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_landing",
+        "severity": "hard_fail",
+        "position": [
+          46,
+          2,
+          46
+        ],
+        "detail": "stair run facing east does not terminate on a solid landing at (47, 2, 46)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          4,
+          38
+        ],
+        "detail": "stair run of 4 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_landing",
+        "severity": "hard_fail",
+        "position": [
+          46,
+          4,
+          38
+        ],
+        "detail": "stair run facing east does not terminate on a solid landing at (47, 4, 38)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          2,
+          38
+        ],
+        "detail": "stair run of 3 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_landing",
+        "severity": "hard_fail",
+        "position": [
+          46,
+          2,
+          38
+        ],
+        "detail": "stair run facing east does not terminate on a solid landing at (47, 2, 38)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          45,
+          4,
+          46
+        ],
+        "detail": "stair run of 2 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_landing",
+        "severity": "hard_fail",
+        "position": [
+          46,
+          4,
+          46
+        ],
+        "detail": "stair run facing east does not terminate on a solid landing at (47, 4, 46)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          3,
+          42
+        ],
+        "detail": "stair run of 3 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_landing",
+        "severity": "hard_fail",
+        "position": [
+          46,
+          3,
+          42
+        ],
+        "detail": "stair run facing east does not terminate on a solid landing at (47, 3, 42)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          45,
+          4,
+          34
+        ],
+        "detail": "stair run of 2 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_landing",
+        "severity": "hard_fail",
+        "position": [
+          46,
+          4,
+          34
+        ],
+        "detail": "stair run facing east does not terminate on a solid landing at (47, 4, 34)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          45,
+          3,
+          38
+        ],
+        "detail": "stair run of 2 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_landing",
+        "severity": "hard_fail",
+        "position": [
+          46,
+          3,
+          38
+        ],
+        "detail": "stair run facing east does not terminate on a solid landing at (47, 3, 38)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          4,
+          34
+        ],
+        "detail": "stair run of 2 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          2,
+          34
+        ],
+        "detail": "stair run of 4 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_landing",
+        "severity": "hard_fail",
+        "position": [
+          46,
+          2,
+          34
+        ],
+        "detail": "stair run facing east does not terminate on a solid landing at (47, 2, 34)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          2,
+          46
+        ],
+        "detail": "stair run of 2 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          45,
+          2,
+          42
+        ],
+        "detail": "stair run of 2 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_landing",
+        "severity": "hard_fail",
+        "position": [
+          46,
+          2,
+          42
+        ],
+        "detail": "stair run facing east does not terminate on a solid landing at (47, 2, 42)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          4,
+          46
+        ],
+        "detail": "stair run of 2 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          2,
+          42
+        ],
+        "detail": "stair run of 2 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      },
+      {
+        "check": "stair_enclosure",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          4,
+          42
+        ],
+        "detail": "stair run of 2 steps facing east has no lateral wall support on either side (not an encased stairwell)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "ruined_city_school",
+    "passed": false,
+    "hard_fail_count": 8,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          5,
+          25
+        ],
+        "detail": "minecraft:stone_brick_stairs at (8, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          6,
+          26
+        ],
+        "detail": "minecraft:stone_brick_stairs at (8, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          7,
+          27
+        ],
+        "detail": "minecraft:stone_brick_stairs at (8, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          8,
+          28
+        ],
+        "detail": "minecraft:stone_brick_stairs at (8, 8, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          5,
+          25
+        ],
+        "detail": "minecraft:stone_brick_stairs at (54, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          6,
+          26
+        ],
+        "detail": "minecraft:stone_brick_stairs at (54, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          7,
+          27
+        ],
+        "detail": "minecraft:stone_brick_stairs at (54, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          8,
+          28
+        ],
+        "detail": "minecraft:stone_brick_stairs at (54, 8, 28) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        8,
+        47
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 8, 47) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        8,
+        48
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 8, 48) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        8,
+        49
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 8, 49) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        6,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (6, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        7,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (7, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        8,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (8, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        9,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (9, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        10,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (10, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        11,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (11, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        12,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (12, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (13, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        14,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (14, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        15,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (15, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        16,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (16, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (17, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        18,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (18, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        19,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (19, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        20,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (20, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        20,
+        9,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (20, 9, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        21,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (21, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        21,
+        9,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (21, 9, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (22, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        9,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (22, 9, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        23,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (23, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        23,
+        9,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (23, 9, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        24,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (24, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        24,
+        9,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (24, 9, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        24,
+        9,
+        8
+      ],
+      "detail": "minecraft:smooth_stone_slab at (24, 9, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        25,
+        8,
+        50
+      ],
+      "detail": "minecraft:smooth_stone_slab at (25, 8, 50) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": null,
+      "detail": "18 further slab/stair-in-wall hits not listed (48 total)."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        44,
+        2,
+        31
+      ],
+      "detail": "added debris (44, 2, 31)->(60, 7, 49) is 100% minecraft:gravel, fills 89% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 31,
+    "variant_hard_fail": 8,
+    "audit_flag_count": 32,
+    "by_check": {
+      "slab_wall_penetration": 31,
+      "lint:structural_connectivity:hard_fail": 16,
+      "lint:stair_enclosure:hard_fail": 14,
+      "lint:stair_landing:hard_fail": 9,
+      "terrain_mismatch_damage": 1
+    }
+  }
+}

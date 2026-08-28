@@ -1,0 +1,90 @@
+{
+  "$schema_note": "Deterministic recolour + emissive-overlay rule for the Hive World Verdant Strain. Consumed by scripts/generate_hive_strain_textures.py and asserted by scripts/validate_hive_strain_assets.py. Authority: docs/HIVE_WORLD_VERDANT_STRAIN.md section 5-6. No randomness anywhere in this file or its consumers.",
+  "version": "verdant-strain-palette-v1",
+  "working_name": "Verdant Strain",
+  "source": {
+    "jar_glob": "mods/spore_*.jar",
+    "texture_roots": [
+      "assets/spore/textures/entity/"
+    ],
+    "recolour_scope": "every .png under the texture roots, recursively, including eyes/ emissive sub-layers",
+    "excluded_basenames": [
+      "blank.png",
+      "empty.png",
+      "db_texture.png",
+      "chains.png"
+    ],
+    "excluded_reason": "1-4 px utility / non-creature sheets with no mycelial content; copied through unchanged so the parallel tree stays complete"
+  },
+  "output": {
+    "base_tree": "build/hive_strain/assets/infinite_domain/textures/entity/hive_strain/",
+    "glow_tree": "build/hive_strain/assets/infinite_domain/textures/entity/hive_strain_glow/",
+    "relative_path_preserved": true,
+    "note": "build/ is gitignored (**/build/). These derivatives are NOT committed pending the Spore author's permission - see docs/HIVE_WORLD_VERDANT_STRAIN.md section 11."
+  },
+  "recolour": {
+    "space": "hsv-classify, srgb-anchor-lerp",
+    "description": "A pixel is remapped only if it falls in the mycelial band. Remapped pixels are replaced by a 3-stop deep-to-bright green ramp indexed by the source pixel's HSV value. All other pixels - bone, teeth, metal, leather, near-black, already-cool hues, and fully transparent pixels - are copied byte-identically.",
+    "mycelial_band": {
+      "hue_ranges_deg": [[325.0, 360.0], [0.0, 28.0]],
+      "saturation_min": 0.30,
+      "value_min": 0.10,
+      "comment": "Saturated crimson/red/magenta-pink only. The saturation floor deliberately spares the desaturated pinkish-grey infected flesh so the creature still reads as flesh; the green identity comes from the mycelial growth plus the emissive overlay."
+    },
+    "green_ramp": {
+      "stops": [
+        { "t": 0.00, "hex": "#071c0c" },
+        { "t": 0.18, "hex": "#0a2a12" },
+        { "t": 0.45, "hex": "#1f7a2e" },
+        { "t": 0.72, "hex": "#3fce43" },
+        { "t": 1.00, "hex": "#5bff3a" }
+      ],
+      "index_by": "source_hsv_value",
+      "interpolation": "linear in 8-bit sRGB between the two bracketing stops",
+      "monotonic_value": true,
+      "hue_envelope_deg": [95.0, 150.0],
+      "hue_envelope_comment": "validator check 4: every remapped output pixel must have hue within this range"
+    },
+    "alpha": "preserved exactly from source",
+    "untouched_guarantee": "validator check 4: for every output texture, the set of pixels whose source is outside mycelial_band must be byte-identical to source"
+  },
+  "overlay": {
+    "purpose": "Emissive bright-green spore / mycelium speckle + faint glow over the remapped mycelial areas. Rendered later by the companion mod with RenderType.entityTranslucentEmissive.",
+    "dimensions": "identical to the base texture",
+    "determinism": {
+      "method": "Python random.Random (Mersenne Twister) with a fixed integer seed - reproducible across runs, machines, and Python builds. No wall-clock, no os RNG.",
+      "seed_formula": "fnv1a_32(relative_texture_path)",
+      "draw_order": "growth_glow (from band mask), then spore_speckle sampling, then spore_core sampling; core writes over speckle",
+      "sampling": "let OPAQUE be the row-major indices of every source texel with alpha != 0. draw floor(len(OPAQUE) / period) picks via OPAQUE[rng.randrange(len(OPAQUE))]; pixel = (i % w, i // w). Restricting to opaque texels keeps emissive dots on the drawn model only. speckle draws first, then core continues the same rng stream."
+    },
+    "layers": [
+      {
+        "name": "growth_glow",
+        "rule": "where the source pixel was inside mycelial_band, write ARGB 0x3341ff52",
+        "argb": "0x3341ff52"
+      },
+      {
+        "name": "spore_speckle",
+        "rule": "floor(w*h/23) sampled pixels get ARGB 0x9963ff4a",
+        "argb": "0x9963ff4a",
+        "period": 23
+      },
+      {
+        "name": "spore_core",
+        "rule": "floor(w*h/211) sampled pixels get ARGB 0xc0b6ffa0 (written after, overriding speckle)",
+        "argb": "0xc0b6ffa0",
+        "period": 211,
+        "overrides": "spore_speckle"
+      }
+    ],
+    "budget": {
+      "growth_glow_coverage": "<= the mycelial-band pixel fraction (glow is a subset of the recoloured area; it may legitimately cover a whole heavily-infested texture)",
+      "max_speckle_core_fraction": 0.09,
+      "comment": "validator check 5 - the faint alpha-0x33 glow wash is bounded by the band mask (already checked by check 4); only the bright speckle + core dots are capped so they stay sparse. period 23 + period 211 => ~4.8% expected, 0.09 leaves RNG margin."
+    }
+  },
+  "hit_points": {
+    "multiplier": 3.0,
+    "note": "Documented here for traceability; applied by runtime code (deferred), not by these scripts. See docs/HIVE_WORLD_VERDANT_STRAIN.md section 7."
+  }
+}

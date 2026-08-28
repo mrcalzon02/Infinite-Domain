@@ -287,8 +287,11 @@ def build_debris(rng: random.Random, p: dict[str, Any]) -> Template:
 
 
 KIND_BUILDERS = {"waypoint": build_waypoint, "wreck": build_wreck, "cache": build_cache, "debris": build_debris}
-KIND_STEP = {"waypoint": 26, "wreck": 22, "cache": 18, "debris": 24}
-KIND_SEP = {"waypoint": 10, "wreck": 9, "cache": 7, "debris": 10}
+# Phase 0 (2026-08-26): raised spacing/separation so the 3-8 salt-decorrelated
+# grids per body (one structure_set each) stop clustering.
+# See docs/TERRAIN_AFFORDANCE_AND_SPAWN_SEPARATION.md §7.1.
+KIND_STEP = {"waypoint": 30, "wreck": 26, "cache": 22, "debris": 28}
+KIND_SEP = {"waypoint": 13, "wreck": 12, "cache": 10, "debris": 12}
 
 FAMILIES: list[tuple[str, str, int]] = [
     ("moon", "waypoint", 3), ("moon", "wreck", 3), ("moon", "cache", 3), ("moon", "debris", 3),

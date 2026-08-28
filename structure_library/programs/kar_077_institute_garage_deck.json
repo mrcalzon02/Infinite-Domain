@@ -1,0 +1,62 @@
+{
+  "structure_id": "infinite_domain:kar_077_institute_garage_deck",
+  "culture": "karsic",
+  "building_type": "open_yard",
+  "conversion_class": "A",
+  "base_master": "pancaked_parking_structure",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "karsic_rail_ballast",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "yard",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "INSTITUTE GARAGE DECK 1",
+  "archetype": "Institute Garage Deck",
+  "roster_note": "The *uncommon* Karsic form; see `kar_089_garage_cooperative` for the common one.",
+  "damage_archetype": "cannibalisation",
+  "logistics_program": [
+    "a large open working surface with a defined vehicle route",
+    "a low workshop or office building at the yard edge",
+    "inspection pits or racking appropriate to what the yard handles",
+    "sorted stacks or rows of the yard's material",
+    "a gate house controlling the single entrance",
+    "a fenced perimeter"
+  ],
+  "circulation": [
+    "one gate, one vehicle loop, no dead ends for a long vehicle"
+  ],
+  "damage_constraints": [
+    "the yard is still sorted; the sorting has simply stopped mid-task",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the sorting logic is inferable from the arrangement of what is stacked"
+    ]
+  },
+  "source_metadata": {
+    "category": "utility_infrastructure",
+    "settlement_types": [
+      "town_center"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 57,
+      "depth": 51
+    },
+    "base_height": 35,
+    "conversion_target": "multibuilding"
+  }
+}

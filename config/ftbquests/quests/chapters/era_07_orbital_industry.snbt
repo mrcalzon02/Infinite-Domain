@@ -69,6 +69,14 @@
 		{
 			dependencies: ["1710000000000003"]
 			id: "1710000000000004"
+			rewards: [{
+				id: "1740000000000004"
+				item: {
+					count: 1
+					id: "stellaris:oxygen_tank"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				id: "1720000000000004"
@@ -115,6 +123,14 @@
 		{
 			dependencies: ["1710000000000006"]
 			id: "1710000000000007"
+			rewards: [{
+				id: "1770000000000007"
+				item: {
+					count: 1
+					id: "ae2:cell_component_16k"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				count: 128L
@@ -195,6 +211,14 @@
 		{
 			dependencies: ["2710000000000003"]
 			id: "2710000000000004"
+			rewards: [{
+				id: "2740000000000004"
+				item: {
+					count: 1
+					id: "stellaris:oxygen_distributor"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				id: "2720000000000004"
@@ -241,6 +265,14 @@
 		{
 			dependencies: ["2710000000000006"]
 			id: "2710000000000007"
+			rewards: [{
+				id: "2770000000000007"
+				item: {
+					count: 1
+					id: "createcybernetics:basecyberware_leftarm"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 8L
@@ -322,6 +354,14 @@
 		{
 			dependencies: ["3710000000000003"]
 			id: "3710000000000004"
+			rewards: [{
+				id: "3740000000000004"
+				item: {
+					count: 1
+					id: "stellaris:space_suit_helmet"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				count: 8L
@@ -367,6 +407,14 @@
 		{
 			dependencies: ["3710000000000006"]
 			id: "3710000000000007"
+			rewards: [{
+				id: "3770000000000007"
+				item: {
+					count: 1
+					id: "ae2:wireless_receiver"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				count: 32L
@@ -445,6 +493,14 @@
 		{
 			dependencies: ["2710000000000002"]
 			id: "4710000000000004"
+			rewards: [{
+				id: "6A2D4D7BD6E5CEB6"
+				item: {
+					count: 1
+					id: "kubejs:era7_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4720000000000004"
@@ -557,6 +613,14 @@
 			dependencies: ["2710000000000005"]
 			id: "7711000000000001"
 			optional: true
+			rewards: [{
+				id: "6A13340ADC39C3EF"
+				item: {
+					count: 1
+					id: "kubejs:era7_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 16L
@@ -631,6 +695,14 @@
 			]
 			id: "7711000000000005"
 			optional: true
+			rewards: [{
+				id: "6A630E18569E3ED8"
+				item: {
+					count: 1
+					id: "kubejs:era7_priority_cache"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 18L

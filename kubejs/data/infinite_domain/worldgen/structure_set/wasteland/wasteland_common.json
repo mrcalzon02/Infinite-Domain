@@ -1,0 +1,118 @@
+{
+  "structures": [
+    {
+      "structure": "infinite_domain:wasteland/abandoned_bungalow",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/split_level_house",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/dilapidated_grocery",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/service_garage",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/scrapyard",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/decayed_farm",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/survivor_cache",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_roadside_diner",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_motel",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_gas_station",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_truck_stop",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/wasteland_weigh_station",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/decayed_ranch",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_orchard_cannery",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_grain_elevator",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/shattered_greenhouse_nursery",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/roadside_church_cemetery",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_quarry",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/collapsed_mine_entrance",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/excavator_pit",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_oil_field",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/remote_sawmill",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_ranger_station",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/wasteland_fire_lookout",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/destroyed_refugee_convoy",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:wasteland/crashed_cargo_airship",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 20,
+    "separation": 12,
+    "salt": 87130402,
+    "exclusion_zone": {
+      "other_set": "infinite_domain:wasteland/wasteland_major",
+      "chunk_count": 4
+    }
+  }
+}

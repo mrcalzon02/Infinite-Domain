@@ -1,0 +1,49 @@
+{
+  "structure_id": "infinite_domain:kar_092_memorial_complex",
+  "culture": "karsic",
+  "building_type": "memorial",
+  "conversion_class": "N",
+  "base_master": null,
+  "primary_stratum": "K-IV",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "surface",
+  "back_of_house": "below",
+  "district_role": "axial_terminus",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "MEMORIAL COMPLEX 7",
+  "archetype": "Memorial Complex",
+  "roster_note": "Standalone obelisk, wall of names, eternal-flame plinth on a paved terrace. Civic gravity without national emblems.",
+  "damage_archetype": null,
+  "civic_program": [
+    "a paved terrace approached on a single axis",
+    "a tall plain obelisk or monolith on the axis",
+    "a wall of names flanking the approach",
+    "an eternal-flame plinth at the foot of the monument",
+    "low planting and benches at the terrace edge",
+    "a boundary of standard fencing and lamp standards"
+  ],
+  "circulation": [
+    "the approach is axial and unobstructed"
+  ],
+  "damage_constraints": [
+    "the flame is out and the plinth is cracked; the monument and the wall of names stand",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the site carries civic weight without any national emblem"
+    ]
+  }
+}

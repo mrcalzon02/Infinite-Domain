@@ -1,0 +1,64 @@
+{
+  "structure_id": "infinite_domain:kar_061_mountain_garrison",
+  "culture": "karsic",
+  "building_type": "barrack_row",
+  "conversion_class": "N",
+  "base_master": "mountain_military_complex",
+  "primary_stratum": "K-II",
+  "secondary_stratum": "K-III",
+  "repeatable_storey": false,
+  "site_context": "karsic_district_yard",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "workers_row",
+  "rail_served": false,
+  "heating_main_connection": "row_end",
+  "tiling_asset": false,
+  "signage_series": "SERIES 9 / BLOCK 13",
+  "archetype": "Mountain Garrison",
+  "roster_note": "Barrack rows, vehicle sheds, parade ground.",
+  "damage_archetype": "cannibalisation",
+  "residential_program": [
+    "a two-storey brick row of repeated single-room dwellings",
+    "external stair flights serving the upper doors directly",
+    "a shared yard behind with outbuildings, a standpipe and a latrine block",
+    "a stove flue per dwelling rising through the roof",
+    "a coal or fuel store at each end of the row"
+  ],
+  "circulation": [
+    "every dwelling is entered from outside; there is no internal corridor",
+    "external stairs land on a real walkway, not in open air"
+  ],
+  "damage_constraints": [
+    "one bay of the row has collapsed, exposing the party walls either side",
+    "the external stairs and the yard route survive",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the row reads as many small dwellings, not one long building",
+      "the stove flue rhythm is regular and matches the dwelling count"
+    ]
+  },
+  "source_metadata": {
+    "category": "military",
+    "settlement_types": [
+      "military"
+    ],
+    "road_connection": "local_road",
+    "base_footprint": {
+      "width": 61,
+      "depth": 61
+    },
+    "base_height": 24,
+    "conversion_target": "multibuilding"
+  }
+}

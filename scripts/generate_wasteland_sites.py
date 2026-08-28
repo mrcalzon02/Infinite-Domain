@@ -12,6 +12,18 @@ from pathlib import Path
 from typing import Any, Callable
 
 import structure_geometry_lint
+# v2 rebuild primitives (structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md sec. 5).
+# Wired in per-building under docs/WASTELAND_STRUCTURE_REBUILD_AUDIT.md, not
+# corpus-wide. Each call site that adopts one is recorded in that document's
+# ledger. Do not route existing buildings through these without an audit entry.
+from structure_geometry_primitives_v2 import (
+    encased_stairwell as v2_encased_stairwell,
+    fracture_breach as v2_fracture_breach,
+    ground_plate as v2_ground_plate,
+    ladder_shaft as v2_ladder_shaft,
+    terrain_footing as v2_terrain_footing,
+    wall_window as v2_wall_window,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
@@ -29,6 +41,49 @@ TAG_COMPOUND = 10
 # enough for connective or axis-sensitive decorative blocks. Keep generated
 # palettes on full, stable blocks instead of disconnected bars/fences or
 # vertically locked framing.
+RUINED_FUNCTIONAL_BLOCK_REPLACEMENTS = {
+    "minecraft:furnace": "kubejs:ruined_furnace",
+    "minecraft:smoker": "kubejs:ruined_smoker",
+    "minecraft:blast_furnace": "kubejs:ruined_blast_furnace",
+    "minecraft:stonecutter": "kubejs:ruined_stonecutter",
+    "minecraft:smithing_table": "kubejs:ruined_smithing_table",
+    "minecraft:grindstone": "kubejs:ruined_grindstone",
+    "minecraft:cartography_table": "kubejs:ruined_cartography_table",
+    "minecraft:fletching_table": "kubejs:ruined_fletching_table",
+    "minecraft:loom": "kubejs:ruined_loom",
+    "minecraft:lectern": "kubejs:ruined_lectern",
+    "minecraft:brewing_stand": "kubejs:ruined_brewing_stand",
+    "minecraft:composter": "kubejs:ruined_composter",
+    "minecraft:cauldron": "kubejs:ruined_cauldron",
+    "minecraft:water_cauldron": "kubejs:ruined_cauldron",
+    "minecraft:lava_cauldron": "kubejs:ruined_cauldron",
+    "minecraft:powder_snow_cauldron": "kubejs:ruined_cauldron",
+    "minecraft:crafting_table": "kubejs:ruined_crafting_table",
+    "minecraft:anvil": "kubejs:ruined_anvil",
+    "minecraft:chipped_anvil": "kubejs:ruined_anvil",
+    "minecraft:damaged_anvil": "kubejs:ruined_anvil",
+    "minecraft:campfire": "kubejs:ruined_campfire",
+    "minecraft:soul_campfire": "kubejs:ruined_soul_campfire",
+    "minecraft:enchanting_table": "kubejs:ruined_enchanting_table",
+}
+
+# KubeJS ruined blocks deliberately expose only the state properties needed to
+# preserve authored orientation/attachment. Functional-only state (lit,
+# bottles, composter level, lectern book/power, cauldron fill, etc.) must never
+# leak into their serialized block states.
+RUINED_FUNCTIONAL_BLOCK_PROPERTIES = {
+    "kubejs:ruined_furnace": frozenset({"facing"}),
+    "kubejs:ruined_smoker": frozenset({"facing"}),
+    "kubejs:ruined_blast_furnace": frozenset({"facing"}),
+    "kubejs:ruined_stonecutter": frozenset({"facing"}),
+    "kubejs:ruined_grindstone": frozenset({"face", "facing"}),
+    "kubejs:ruined_loom": frozenset({"facing"}),
+    "kubejs:ruined_lectern": frozenset({"facing"}),
+    "kubejs:ruined_anvil": frozenset({"facing"}),
+    "kubejs:ruined_campfire": frozenset({"facing"}),
+    "kubejs:ruined_soul_campfire": frozenset({"facing"}),
+}
+
 STRUCTURE_BLOCK_REPLACEMENTS = {
     "oritech:iron_plating_block": "immersiveengineering:sheetmetal_steel",
     "create:metal_girder": "tfmg:steel_block",
@@ -41,6 +96,7 @@ STRUCTURE_BLOCK_REPLACEMENTS = {
     "minecraft:mud_brick_wall": "minecraft:mud_bricks",
     "minecraft:stone_brick_wall": "minecraft:stone_bricks",
     "the_wasteland_reworked:mesh_fence": "minecraft:oxidized_copper_grate",
+    **RUINED_FUNCTIONAL_BLOCK_REPLACEMENTS,
 }
 
 # These vanilla blocks have no block-state properties in Minecraft 1.21.1.
@@ -142,7 +198,11 @@ class Template:
         if 0 <= x < sx and 0 <= y < sy and 0 <= z < sz:
             if name in STRUCTURE_BLOCK_REPLACEMENTS:
                 name = STRUCTURE_BLOCK_REPLACEMENTS[name]
-                properties = {}
+                allowed = RUINED_FUNCTIONAL_BLOCK_PROPERTIES.get(name)
+                properties = ({key: value for key, value in properties.items() if key in allowed}
+                              if allowed is not None else {})
+                if name.startswith("kubejs:ruined_"):
+                    nbt = None
             self.blocks[(x, y, z)] = (self.state(name, **properties), nbt)
 
     def fill(self, a: tuple[int, int, int], b: tuple[int, int, int], name: str, **properties: str) -> None:
@@ -2557,11 +2617,14 @@ def mountain_biohazard_lab() -> Template:
 def decayed_logging_camp_clean_master() -> Template:
     """Intact forest logging operation with complete timber workflow."""
     t = Template((61, 23, 55))
-    for x in range(61):
-        for z in range(55):
-            selector = (x * 23 + z * 11) % 19
-            t.set(x, 0, z, "minecraft:podzol" if selector > 3 else ("minecraft:coarse_dirt" if selector else "minecraft:gravel"))
+    # Coherent patch-based forest floor, not a per-block modulo speckle
+    # (WASTELAND_STRUCTURE_REBUILD_AUDIT.md building 1, D3).
+    v2_ground_plate(t, (0, 0), (60, 54), "forest_camp", y=0, seed=23011, patch_size=6)
     t.clear((1, 1, 1), (59, 3, 53))
+    # Seat each building on a real footing course and grade skirt (D3).
+    for _a, _b in (((4, 4), (20, 18)), ((3, 23), (23, 43)), ((27, 4), (57, 27)), ((35, 34), (57, 51))):
+        v2_terrain_footing(t, _a, _b, foundation_profile="surface", y=1,
+                           footing_block="minecraft:cobblestone", skirt_block="minecraft:coarse_dirt")
 
     # Forest access road, muddy loader loop and separate crew/service branches.
     t.fill((27, 0, 0), (33, 0, 53), "minecraft:gravel")
@@ -2578,9 +2641,9 @@ def decayed_logging_camp_clean_master() -> Template:
     door(t, 13, 2, 18, "south", "spruce")
     partition_x(t, 12, 2, 5, 17, "minecraft:stripped_spruce_wood", 10)
     partition_z(t, 11, 2, 5, 19, "minecraft:stripped_spruce_wood", (8, 16))
-    window(t, 6, 3, 4)
-    window(t, 14, 3, 4)
-    window(t, 4, 3, 8, axis="z")
+    v2_wall_window(t, 6, 3, 4, axis="x", wall_block="minecraft:spruce_planks")
+    v2_wall_window(t, 14, 3, 4, axis="x", wall_block="minecraft:spruce_planks")
+    v2_wall_window(t, 4, 3, 8, axis="z", wall_block="minecraft:spruce_planks")
     desk(t, 6, 2, 8, "north")
     t.set(9, 2, 8, "the_wasteland_reworked:radio")
     desk(t, 14, 2, 8, "north")
@@ -2599,10 +2662,10 @@ def decayed_logging_camp_clean_master() -> Template:
     partition_z(t, 32, 2, 4, 22, "minecraft:stripped_dark_oak_wood", (8, 19))
     partition_x(t, 15, 2, 24, 31, "minecraft:stripped_dark_oak_wood", 28)
     partition_x(t, 13, 2, 33, 42, "minecraft:stripped_dark_oak_wood", 37)
-    window(t, 5, 3, 23)
-    window(t, 17, 3, 23)
-    window(t, 3, 3, 28, axis="z")
-    window(t, 23, 3, 25, axis="z")
+    v2_wall_window(t, 5, 3, 23, axis="x", wall_block="minecraft:dark_oak_planks")
+    v2_wall_window(t, 17, 3, 23, axis="x", wall_block="minecraft:dark_oak_planks")
+    v2_wall_window(t, 3, 3, 28, axis="z", wall_block="minecraft:dark_oak_planks")
+    v2_wall_window(t, 23, 3, 25, axis="z", wall_block="minecraft:dark_oak_planks")
     t.set(5, 2, 26, "minecraft:smoker", facing="south", lit="false")
     t.set(7, 2, 26, "minecraft:furnace", facing="south", lit="false")
     t.set(10, 2, 27, "minecraft:barrel", facing="up", open="false")
@@ -2641,16 +2704,27 @@ def decayed_logging_camp_clean_master() -> Template:
     t.set(50, 2, 24, "minecraft:water_cauldron", level="3")
     t.set(54, 2, 24, "immersiveengineering:metal_barrel")
     t.chest(55, 2, 25, "infinite_domain:chests/wasteland_industrial", "west")
-    # Rear service catwalk overlooks all three production cells.
-    t.fill((29, 8, 23), (55, 8, 25), "minecraft:polished_andesite")
-    t.fill((29, 9, 22), (55, 9, 22), "minecraft:oxidized_copper_grate")
-    stair_flight(t, 54, 2, 17, 6, "south", "minecraft:polished_andesite_stairs")
+    # Rear service catwalk overlooking all three production cells. Carried on
+    # real posts, tied into the rear wall along its full south edge, and
+    # reached by an encased stair that actually lands on the deck - not a
+    # floating slab with a stair that stops a block short of it
+    # (WASTELAND_STRUCTURE_REBUILD_AUDIT.md building 1, D1).
+    for _px in (32, 37, 46, 52):
+        t.fill((_px, 2, 25), (_px, 7, 25), "minecraft:stripped_dark_oak_log", axis="y")
+    t.fill((29, 8, 23), (55, 8, 26), "minecraft:polished_andesite")
+    t.fill((29, 9, 23), (55, 9, 23), "minecraft:oxidized_copper_grate")
+    v2_encased_stairwell(t, 30, 2, 16, 7, "south",
+                         block="minecraft:polished_andesite_stairs",
+                         wall="minecraft:stripped_dark_oak_wood", width=1)
     # Three raised roof monitors create a sawtooth-industrial silhouette.
+    # Capped with a planked deck and a ridge log, not a flat slab lid
+    # (WASTELAND_STRUCTURE_REBUILD_AUDIT.md building 1, monitor-lid).
     for x1, x2 in ((29, 36), (39, 46), (49, 56)):
         t.fill((x1, 14, 8), (x2, 17, 18), "minecraft:spruce_planks")
         t.clear((x1 + 1, 14, 9), (x2 - 1, 16, 17))
         t.fill((x1 + 1, 15, 8), (x2 - 1, 16, 8), "create:framed_glass")
-        t.fill((x1 - 1, 18, 7), (x2 + 1, 18, 19), "minecraft:dark_oak_slab", type="top", waterlogged="false")
+        t.fill((x1, 18, 8), (x2, 18, 18), "minecraft:spruce_planks")
+        t.fill(((x1 + x2) // 2, 19, 8), ((x1 + x2) // 2, 19, 18), "minecraft:stripped_dark_oak_log", axis="z")
 
     # Maintenance/vehicle garage with repair floor, parts and fuel functions.
     shell(t, (35, 1, 34), (57, 11, 51), "minecraft:mud_bricks", "minecraft:stone_bricks", "minecraft:dark_oak_planks")
@@ -2680,7 +2754,10 @@ def decayed_logging_camp_clean_master() -> Template:
             t.fill((x, 1, z), (x + 5, 3, z + 2), "minecraft:spruce_planks")
     for x, z in ((26, 36), (26, 48), (31, 36), (31, 48)):
         t.fill((x, 4, z), (x, 7, z), "minecraft:stripped_oak_log", axis="y")
-    t.fill((25, 8, 35), (36, 8, 51), "minecraft:dark_oak_slab", type="top", waterlogged="false")
+    # Drying-shed roof stops clear of the garage; it no longer drives straight
+    # through the garage west wall (WASTELAND_STRUCTURE_REBUILD_AUDIT.md
+    # building 1, D2).
+    t.fill((25, 8, 35), (33, 8, 51), "minecraft:dark_oak_slab", type="top", waterlogged="false")
     for x, z, height in ((2, 7, 2), (2, 48, 1), (15, 51, 2), (45, 53, 2), (59, 8, 1), (59, 29, 2)):
         t.fill((x, 1, z), (x, height, z), "minecraft:stripped_spruce_log", axis="y")
     return t
@@ -2692,15 +2769,23 @@ def decayed_logging_camp() -> Template:
 
     # East sorting-bay/roof failure and southwest bunk-room collapse remain
     # separate while the central timber workflow and required routes survive.
-    t.clear((47, 7, 3), (59, 21, 17))
-    for x, z, height in ((49, 8, 3), (52, 11, 5), (55, 14, 2)):
-        t.fill((x, 1, z), (x + 2, height, z + 2), "minecraft:gravel")
-        t.set(x + 1, height + 1, z + 1, "minecraft:stripped_dark_oak_log", axis="x")
-    t.clear((2, 6, 31), (11, 20, 44))
-    for x, z, height in ((4, 34, 2), (7, 37, 4), (9, 40, 2)):
-        t.fill((x, 1, z), (x + 1, height, z + 1), "minecraft:gravel")
-        if (x + z) % 2:
-            t.set(x, height + 1, z, "minecraft:weathered_cut_copper")
+    # Authored fractures with debris drifted onto the real floor - not a
+    # rectangular box cut backfilled with a gravel cuboid
+    # (WASTELAND_STRUCTURE_REBUILD_AUDIT.md building 1, V1-V4).
+    v2_fracture_breach(
+        t, (48, 7, 4), (56, 20, 15), 770101,
+        rubble_block="minecraft:cobblestone",
+        debris_blocks=("minecraft:cobblestone", "minecraft:stripped_dark_oak_wood",
+                       "the_wasteland_reworked:decayed_planks", "minecraft:weathered_cut_copper"),
+        jaggedness=3, apron_floor_y=2,
+    )
+    v2_fracture_breach(
+        t, (3, 6, 32), (11, 18, 42), 770102,
+        rubble_block="minecraft:cobblestone",
+        debris_blocks=("minecraft:cobblestone", "minecraft:stripped_spruce_wood",
+                       "the_wasteland_reworked:decayed_planks", "minecraft:weathered_cut_copper"),
+        jaggedness=2, apron_floor_y=2,
+    )
     for x, z in ((24, 28), (18, 48), (33, 31), (58, 24)):
         t.set(x, 1, z, "wastelands:scrap_pile")
     t.spawner(17, 2, 14, "the_wasteland_reworked:ghoul", count=2, nearby=6)
@@ -7171,41 +7256,97 @@ BUILDERS["wilderness_substation"] = wilderness_substation
 BUILDERS["wasteland_water_tower"] = wasteland_water_tower
 
 
-FAMILIES = {
-    "roadside_debris": (["radio_mast", "wrecked_sedan", "delivery_van"], 18, 8, 87130401),
-    "residential_ruins": (["abandoned_bungalow", "split_level_house"], 32, 13, 87130402),
-    "commercial_ruins": (["dilapidated_grocery", "service_garage", "scrapyard"], 42, 18, 87130403),
-    "major_settlements": (["trailer_park", "abandoned_culdesac"], 56, 24, 87130404),
-    "military_remnants": (["battle_tank", "military_checkpoint"], 48, 20, 87130405),
-    "buried_sites": (["survivor_cache", "bunker_network"], 52, 22, 87130406),
-    "survivor_outposts": (["trade_outpost"], 64, 28, 87130407),
-    "rural_ruins": (["decayed_farm"], 44, 18, 87130408),
-    "industrial_infrastructure": (["industrial_facility"], 58, 24, 87130409),
-    "mountain_military": (["mountain_military_complex", "mountain_biohazard_lab"], 54, 22, 87130410),
-    "forest_industry": (["decayed_logging_camp", "corporate_warehouse"], 46, 19, 87130411),
-    "lost_data_centers": (["bombed_data_center"], 144, 56, 87130412),
-    "hydroelectric_landmarks": (["hydroelectric_refuge_dam"], 192, 72, 87130413),
-    "ruined_city_blocks": (["blown_apartment_complex", "ruined_mixed_use_block", "pancaked_parking_structure"], 28, 11, 87130414),
-    "ruined_city_streets": (["sunken_city_front", "cratered_downtown_intersection"], 34, 14, 87130415),
-    "ruined_city_landmarks": (["toppled_skyscraper"], 52, 21, 87130416),
-    "expanded_city_civic": ([name for name, style in CITY_EXPANSION.items() if style == "civic"], 22, 8, 87130417),
-    "expanded_city_transit": ([name for name, style in CITY_EXPANSION.items() if style == "transit" and name != "collapsed_subway_station"], 24, 9, 87130418),
-    "expanded_city_subway": (["collapsed_subway_station"], 38, 15, 87130430),
-    "expanded_city_commercial": ([name for name, style in CITY_EXPANSION.items() if style == "commercial"], 22, 8, 87130419),
-    "expanded_city_residential": ([name for name, style in CITY_EXPANSION.items() if style == "residential"], 22, 8, 87130420),
-    "expanded_city_utilities": ([name for name, style in CITY_EXPANSION.items() if style == "utility"], 27, 11, 87130421),
-    "expanded_city_themed": ([name for name, style in CITY_EXPANSION.items() if style == "themed"], 42, 17, 87130422),
-    "expanded_wilderness_roadside": ([name for name, style in WILDERNESS_EXPANSION.items() if style == "roadside"], 16, 6, 87130423),
-    "expanded_wilderness_rural": ([name for name, style in WILDERNESS_EXPANSION.items() if style == "rural"], 32, 12, 87130424),
-    "expanded_wilderness_extraction": ([name for name, style in WILDERNESS_EXPANSION.items() if style == "extraction"], 36, 14, 87130425),
-    "expanded_wilderness_energy": ([name for name, style in WILDERNESS_EXPANSION.items() if style == "energy"], 38, 15, 87130426),
-    "expanded_wilderness_survival": ([name for name, style in WILDERNESS_EXPANSION.items() if style == "survival"], 34, 13, 87130427),
-    "warm_industrial_ports": (["warm_industrial_mountain_port"], 176, 68, 87130428),
-    "cold_industrial_ports": (["cold_industrial_mountain_port"], 176, 68, 87130429),
+# --- B2: tier consolidation (docs/TERRAIN_AFFORDANCE_AND_SPAWN_SEPARATION.md §6 B2 / §7.5) ---
+# random_spread `separation` only guarantees spacing *within one set*. Phases 0/0.5
+# ran ~30 salt-decorrelated wasteland sets at once, so structures from different
+# sets landed on top of each other regardless of any per-set separation, and the
+# single-spine `exclusion_zone` hub could only clear ground around one structure
+# (toppled_skyscraper). B2 collapses all 85 wasteland structures into 5 sets:
+#
+#   wasteland_landmark  land "wow" pieces (skyscraper, data centre)
+#   wasteland_coastal   ocean/river industrial landmarks (dam, warm/cold ports)
+#   wasteland_major     large ruins - settlements, complexes, every city building
+#   wasteland_common    houses, small commercial, farms, wilderness sites
+#   wasteland_micro     roadside debris and lone vehicles
+#
+# Because each set now shares ONE placement grid, `separation` guarantees a real
+# minimum gap between *any two* of its members (>= separation*16 blocks, and every
+# tier's separation clears its largest member's footprint diagonal with margin).
+# Per-structure biome targeting is unaffected - it lives on each structure's own
+# `biomes` field, not the set - and the weighted retry in ChunkGenerator means a
+# biome-mismatched pick in a cell falls through to another member of the same set.
+#
+# Cross-tier overlap is handled by a shallow (depth <= 2) `exclusion_zone` chain:
+# major vetoes near a landmark, common vetoes near a major, micro vetoes near a
+# major. landmark and coastal are sinks (no exclusion), so the "excludes-against"
+# graph is a DAG - no evaluation cycle, bounded recursion.
+#
+# This replaces the Phase 0/0.5 per-family FAMILIES table and the _exclusion_zone_for
+# single-spine hub. New-world-only. Spacing is the one density knob per tier;
+# separation and the chunk_counts are the separation knobs. See §7.5 for the
+# density delta (wasteland start density ~= halved vs Phase 0.5) and the tunables.
+_MAJOR_MEMBERS = [
+    "trailer_park", "abandoned_culdesac", "military_checkpoint", "bunker_network",
+    "trade_outpost", "industrial_facility",
+    # mountain_pass_terminator: a highway-closure checkpoint restricted to
+    # wastelands:mountains by its own biome tag; it rides the major grid with the
+    # rest of the mountain-military content (its lowland sibling is
+    # military_checkpoint, also here).
+    "mountain_military_complex", "mountain_biohazard_lab", "mountain_pass_terminator",
+    "decayed_logging_camp", "corporate_warehouse",
+    "blown_apartment_complex", "ruined_mixed_use_block", "pancaked_parking_structure",
+    "sunken_city_front", "cratered_downtown_intersection",
+    *CITY_EXPANSION.keys(),  # all 30 city buildings incl. collapsed_subway_station
+    *[name for name, style in WILDERNESS_EXPANSION.items() if style == "energy"],
+]
+_COMMON_MEMBERS = [
+    "abandoned_bungalow", "split_level_house",
+    "dilapidated_grocery", "service_garage", "scrapyard",
+    "decayed_farm", "survivor_cache",
+    *[name for name, style in WILDERNESS_EXPANSION.items()
+      if style in ("roadside", "rural", "extraction", "survival")],
+]
+_MICRO_MEMBERS = ["radio_mast", "wrecked_sedan", "delivery_van", "battle_tank"]
+
+# tier -> (members, spacing, separation, salt, exclusion_zone|None). Salts are
+# carried over from each tier's dominant Phase 0.5 family so a future clean regen
+# reuses known values.
+TIERS = {
+    "wasteland_landmark": (
+        ["toppled_skyscraper", "bombed_data_center"], 72, 34, 87130416, None,
+    ),
+    "wasteland_coastal": (
+        ["hydroelectric_refuge_dam", "warm_industrial_mountain_port", "cold_industrial_mountain_port"],
+        176, 72, 87130413, None,
+    ),
+    "wasteland_major": (
+        _MAJOR_MEMBERS, 24, 14, 87130404,
+        {"other_set": "infinite_domain:wasteland/wasteland_landmark", "chunk_count": 8},
+    ),
+    "wasteland_common": (
+        _COMMON_MEMBERS, 20, 12, 87130402,
+        {"other_set": "infinite_domain:wasteland/wasteland_major", "chunk_count": 4},
+    ),
+    "wasteland_micro": (
+        _MICRO_MEMBERS, 12, 7, 87130401,
+        {"other_set": "infinite_domain:wasteland/wasteland_major", "chunk_count": 2},
+    ),
 }
 
 UNDERGROUND = {"survivor_cache", "bunker_network", "collapsed_subway_station"}
 SURFACE_CUT_OFFSETS = {"abandoned_quarry": -12, "collapsed_mine_entrance": -8, "excavator_pit": -10}
+# Surface buildings that carry a hollow sub-grade room (bank vault, fuel-tank
+# sump). They seat with a negative start_height so the ground-floor slab lands
+# at grade and the room sits underground -- but they must NOT beard. beard_box
+# carves the entire bounding box down to box.minY (the room floor), so instead
+# of being buried the building ends up standing in an open rectangular scoop
+# with the surrounding terrain a storey above its slab (the "gas station on a
+# pedestal" bug seen at spawn). terrain_adaptation "none" leaves the terrain
+# intact so the room is genuinely below ground. Unlike SURFACE_CUT_OFFSETS
+# (quarry / pit / mine), where the scoop *is* the intended excavation.
+# See docs/TERRAIN_AFFORDANCE_AND_SPAWN_SEPARATION.md sec. 5 (A6) / OD-2.
+BURIED_ROOM_SITES = {"ruined_gas_station", "buried_bank_vault"}
+
 STRUCTURE_BIOME_TAGS = {
     "mountain_military_complex": "#infinite_domain:wasteland_mountain_military_biomes",
     "mountain_biohazard_lab": "#infinite_domain:wasteland_mountain_military_biomes",
@@ -7472,14 +7613,14 @@ def generate() -> None:
                 "biomes": intended_biomes,
                 "step": "surface_structures" if surface_anchored_buried_site else ("underground_structures" if name in UNDERGROUND else "surface_structures"),
                 "spawn_overrides": {},
-                "terrain_adaptation": "bury" if name in UNDERGROUND else "beard_box",
+                "terrain_adaptation": "none" if name in BURIED_ROOM_SITES else ("bury" if name in UNDERGROUND else "beard_box"),
                 "start_pool": f"infinite_domain:wasteland/{name}",
                 "size": 1,
                 "start_height": ({"absolute": SURFACE_CUT_OFFSETS[name]} if name in SURFACE_CUT_OFFSETS else ({"absolute": -17 if name == "bunker_network" else -9} if surface_anchored_buried_site else ({
                     "type": "minecraft:uniform",
                     "min_inclusive": {"absolute": 18},
                     "max_inclusive": {"absolute": 34},
-                } if name in UNDERGROUND else {"absolute": -7 if name in {"ruined_gas_station", "buried_bank_vault"} else 0}))),
+                } if name in UNDERGROUND else {"absolute": -7 if name in BURIED_ROOM_SITES else 0}))),
                 "max_distance_from_center": 80,
                 "use_expansion_hack": False,
                 "liquid_settings": "ignore_waterlogging",
@@ -7610,12 +7751,20 @@ def generate() -> None:
     write_json(DATA / "tags" / "worldgen" / "biome" / "wasteland_cold_port_biomes.json", {"replace": False, "values": [
         "minecraft:cold_ocean", "minecraft:deep_cold_ocean", "minecraft:frozen_ocean", "minecraft:deep_frozen_ocean",
     ]})
-    for family, (members, spacing, separation, salt) in FAMILIES.items():
+    for tier, (members, spacing, separation, salt, exclusion) in TIERS.items():
+        placement = {
+            "type": "minecraft:random_spread",
+            "spacing": spacing,
+            "separation": separation,
+            "salt": salt,
+        }
+        if exclusion is not None:
+            placement["exclusion_zone"] = exclusion
         write_json(
-            DATA / "worldgen" / "structure_set" / "wasteland" / f"{family}.json",
+            DATA / "worldgen" / "structure_set" / "wasteland" / f"{tier}.json",
             {
                 "structures": [{"structure": f"infinite_domain:wasteland/{name}", "weight": 1} for name in members],
-                "placement": {"type": "minecraft:random_spread", "spacing": spacing, "separation": separation, "salt": salt},
+                "placement": placement,
             },
         )
     for name, table in LOOT.items():
@@ -7627,8 +7776,8 @@ def generate() -> None:
         "namespace": "infinite_domain:wasteland",
         "biome_tag": "#infinite_domain:wasteland_site_biomes",
         "families": {
-            family: {"members": members, "spacing_chunks": spacing, "separation_chunks": separation}
-            for family, (members, spacing, separation, _) in FAMILIES.items()
+            tier: {"members": list(members), "spacing_chunks": spacing, "separation_chunks": separation}
+            for tier, (members, spacing, separation, _salt, _excl) in TIERS.items()
         },
         "structures": {
             name: {
@@ -7636,7 +7785,7 @@ def generate() -> None:
                 "intended_biomes": STRUCTURE_BIOME_TAGS.get(name, "#infinite_domain:wasteland_site_biomes"),
                 "production_biomes": STRUCTURE_BIOME_TAGS.get(name, "#infinite_domain:wasteland_site_biomes"),
                 "production_approved": name in geometry_lint_passed and geometry_lint_passed[name],
-                "terrain_adaptation": "bury" if name in UNDERGROUND else "beard_box",
+                "terrain_adaptation": "none" if name in BURIED_ROOM_SITES else ("bury" if name in UNDERGROUND else "beard_box"),
                 **statistics[name],
             }
             for name in BUILDERS
@@ -7696,7 +7845,7 @@ def generate() -> None:
         for name in sorted(approved_names)
     ]
     write_json(approvals_path, approvals_document)
-    print(f"Generated {len(BUILDERS)} wasteland structures in {len(FAMILIES)} rarity families")
+    print(f"Generated {len(BUILDERS)} wasteland structures in {len(TIERS)} placement tiers")
     print(f"Automated production approval: {len(approved_names)}/{len(BUILDERS)} structures pass structure_geometry_lint.py checks 1-3")
 
 

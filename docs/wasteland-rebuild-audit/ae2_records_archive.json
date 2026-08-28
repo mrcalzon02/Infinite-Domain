@@ -1,0 +1,373 @@
+{
+  "structure_id": "ae2_records_archive",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/ae2_records_archive_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/ae2_records_archive.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "ae2_records_archive_clean_master",
+    "passed": false,
+    "hard_fail_count": 8,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          4,
+          30
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 4, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          5,
+          31
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 5, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          6,
+          32
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 6, 32) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          7,
+          33
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 7, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          8,
+          34
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 8, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          9,
+          35
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 9, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          10,
+          36
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 10, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          11,
+          37
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 11, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          35,
+          23,
+          34
+        ],
+        "detail": "enclosed room of 605 air blocks (121 floor cells, 5 tall) near (35, 23, 34) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          39,
+          4,
+          31
+        ],
+        "detail": "enclosed room of 225 air blocks (75 floor cells, 3 tall) near (39, 4, 31) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          39,
+          8,
+          31
+        ],
+        "detail": "enclosed room of 225 air blocks (75 floor cells, 3 tall) near (39, 8, 31) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "ae2_records_archive",
+    "passed": false,
+    "hard_fail_count": 8,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          4,
+          30
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 4, 30) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          5,
+          31
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 5, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          6,
+          32
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 6, 32) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          7,
+          33
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 7, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          8,
+          34
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 8, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          9,
+          35
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 9, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          10,
+          36
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 10, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          18,
+          11,
+          37
+        ],
+        "detail": "minecraft:stone_brick_stairs at (18, 11, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          35,
+          23,
+          34
+        ],
+        "detail": "enclosed room of 605 air blocks (121 floor cells, 5 tall) near (35, 23, 34) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          39,
+          4,
+          31
+        ],
+        "detail": "enclosed room of 225 air blocks (75 floor cells, 3 tall) near (39, 4, 31) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          39,
+          8,
+          31
+        ],
+        "detail": "enclosed room of 225 air blocks (75 floor cells, 3 tall) near (39, 8, 31) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        11,
+        8,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (11, 8, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        12,
+        7,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (12, 7, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        12,
+        8,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (12, 8, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        7,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (13, 7, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        8,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (13, 8, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        14,
+        8,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (14, 8, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        19,
+        8,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (19, 8, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        20,
+        7,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (20, 7, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        20,
+        8,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (20, 8, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        21,
+        7,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (21, 7, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        21,
+        8,
+        10
+      ],
+      "detail": "minecraft:smooth_stone_slab at (21, 8, 10) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        18,
+        14,
+        33
+      ],
+      "detail": "removed volume (18, 14, 33)->(31, 14, 48) (224 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 8,
+    "variant_hard_fail": 8,
+    "audit_flag_count": 12,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 16,
+      "slab_wall_penetration": 11,
+      "lint:room_composition:review_flag": 6,
+      "terrain_mismatch_damage": 1
+    }
+  }
+}

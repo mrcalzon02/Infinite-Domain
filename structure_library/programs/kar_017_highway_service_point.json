@@ -1,0 +1,62 @@
+{
+  "structure_id": "infinite_domain:kar_017_highway_service_point",
+  "culture": "karsic",
+  "building_type": "roadside_service",
+  "conversion_class": "A",
+  "base_master": "abandoned_truck_stop",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "roadside",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "HIGHWAY SERVICE POINT 2",
+  "archetype": "Highway Service Point",
+  "roster_note": "Canteen, driver rest block, fuel, inspection pit.",
+  "damage_archetype": "failed assembly point",
+  "commercial_program": [
+    "a forecourt or apron addressing the road directly",
+    "a single-storey service building with a serving counter",
+    "communal tables rather than booths",
+    "a driver rest or dormitory bay",
+    "a wash room and a small kitchen store",
+    "a canopy over the working area of the forecourt"
+  ],
+  "circulation": [
+    "vehicles enter and leave the forecourt without reversing"
+  ],
+  "damage_constraints": [
+    "the canopy has partly collapsed; the service building stands",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the seating reads as communal, never as booths"
+    ]
+  },
+  "source_metadata": {
+    "category": "commercial",
+    "settlement_types": [
+      "highway_frontage"
+    ],
+    "road_connection": "highway",
+    "base_footprint": {
+      "width": 51,
+      "depth": 47
+    },
+    "base_height": 17,
+    "conversion_target": "multibuilding"
+  }
+}

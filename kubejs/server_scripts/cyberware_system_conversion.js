@@ -57,3 +57,32 @@ cyberEnemies.forEach((entityId, entityIndex) => {
         event.addDrop(Item.of(second), 0.12)
     })
 })
+
+// Mekanite mobs (Era 8's mechanized wildlife) are more thoroughly cybernetic
+// than most Create Cybernetics enemies above, so they salvage at higher rates.
+const mekaniteMobs = [
+    'mekanite_mobs:drone',
+    'mekanite_mobs:mekanite_creeper',
+    'mekanite_mobs:mekanite_enderman',
+    'mekanite_mobs:mekanite_illusioner',
+    'mekanite_mobs:mekanite_ravager',
+    'mekanite_mobs:mekanite_skeleton',
+    'mekanite_mobs:mekanite_slime',
+    'mekanite_mobs:mekanite_slime_medio',
+    'mekanite_mobs:mekanite_slime_small',
+    'mekanite_mobs:mekanite_spider',
+    'mekanite_mobs:mekanite_vindicator',
+    'mekanite_mobs:mekanite_witch',
+    'mekanite_mobs:mekanite_zombie',
+    'mekanite_mobs:mekanite_zombie_drowned',
+    'mekanite_mobs:mekanite_zombie_husk'
+]
+
+mekaniteMobs.forEach((entityId, entityIndex) => {
+    EntityEvents.drops(entityId, event => {
+        const first = salvageDrops[(entityIndex * 2) % salvageDrops.length]
+        const second = salvageDrops[(entityIndex * 2 + 1) % salvageDrops.length]
+        event.addDrop(Item.of(first), 0.4)
+        event.addDrop(Item.of(second), 0.25)
+    })
+})

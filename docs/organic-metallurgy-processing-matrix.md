@@ -6,9 +6,9 @@ Generated from the two authoritative KubeJS configuration files. Yields are dete
 
 | Era | Route | Renewable feedstock | Reagent | Nuggets / 9 traces | Recovery | Reagent used / ingot | Returned / batch | Stages | Principal machines |
 |---:|---|---|---|---:|---:|---:|---:|---:|---|
-| 1 | Mechanical Washing | `minecraft:wheat` | Alkaline Botanical Wash | 10 | 111% | 225.0 mB | 0 mB | 3 | Millstone, Encased Fan, Basin Press |
+| 1 | Mechanical Washing | `minecraft:wheat` | Alkaline Botanical Wash | 10 | 111% | 225.0 mB | 0 mB | 3 | Millstone, Mechanical Mixer, Basin Press |
 | 2 | Tannic Conditioning | `minecraft:oak_log` | Tannic Extract | 11 | 122% | 204.5 mB | 0 mB | 5 | Millstone, Mechanical Mixer, Basin Press, Blaze Burner |
-| 3 | Fermented Leaching | `minecraft:sugar` | Fermented Acid Wash | 13 | 144% | 173.1 mB | 0 mB | 7 | Basin, Mechanical Mixer, Encased Fan, Mechanical Press, Blaze Burner |
+| 3 | Fermented Leaching | `minecraft:sugar` | Fermented Acid Wash | 13 | 144% | 173.1 mB | 0 mB | 7 | Basin, Mechanical Mixer, Mechanical Press, Blaze Burner |
 | 4 | Saponified Collection | `minecraft:beetroot_seeds` | Saponified Collector | 15 | 167% | 150.0 mB | 0 mB | 8 | Mechanical Press, Mechanical Mixer, Fluid Tank, Industrial Crucible, Casting Table |
 | 5 | Flocculant Separation | `minecraft:potato` | Flocculating Solution | 16 | 178% | 140.6 mB | 50 mB | 9 | Crushing Wheels, Mechanical Mixer, Centrifuge, Fluid Tank, Industrial Crucible, Casting Table |
 | 6 | Selective Chelation | `minecraft:kelp` | Chelating Broth | 17 | 189% | 132.4 mB | 125 mB | 10 | Millstone, Mechanical Mixer, Centrifuge, Fluid Tank, Industrial Crucible, Casting Table |

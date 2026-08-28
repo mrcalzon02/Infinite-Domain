@@ -1,12 +1,33 @@
 // Infinite Domain — Ruined Functional Block recycling recipes
 //
-// Every Ruined * block breaks down into ordinary scrap instead of being a
-// dead end. Quantities scale with how much metal the vanilla original
-// actually costs to build (a blast furnace costs 5 iron ingots + 3 smooth
-// stone on top of a furnace, so it returns the most).
+// Silk Touch preserves a ruined block through its block loot table. Every
+// preserved block can then be dismantled into the same single piece of
+// Wastelands scrap that ordinary mining would have dropped.
+
+const RUINED_SALVAGE_BLOCKS = [
+  'ruined_furnace',
+  'ruined_smoker',
+  'ruined_blast_furnace',
+  'ruined_stonecutter',
+  'ruined_smithing_table',
+  'ruined_grindstone',
+  'ruined_cartography_table',
+  'ruined_fletching_table',
+  'ruined_loom',
+  'ruined_lectern',
+  'ruined_brewing_stand',
+  'ruined_composter',
+  'ruined_cauldron',
+  'ruined_crafting_table',
+  'ruined_anvil',
+  'ruined_campfire',
+  'ruined_soul_campfire',
+  'ruined_enchanting_table'
+]
 
 ServerEvents.recipes(event => {
-  event.shapeless('wastelands:scrap_metal x2', ['infinite_domain:ruined_furnace']).id('infinite_domain:ruined_furnace_to_scrap')
-  event.shapeless('wastelands:scrap_metal x2', ['infinite_domain:ruined_smoker']).id('infinite_domain:ruined_smoker_to_scrap')
-  event.shapeless('wastelands:scrap_metal x4', ['infinite_domain:ruined_blast_furnace']).id('infinite_domain:ruined_blast_furnace_to_scrap')
+  RUINED_SALVAGE_BLOCKS.forEach(id => {
+    event.shapeless('wastelands:scrap_metal', [`kubejs:${id}`])
+      .id(`infinite_domain:salvage/${id}_to_scrap`)
+  })
 })

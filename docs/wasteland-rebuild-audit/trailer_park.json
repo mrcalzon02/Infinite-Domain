@@ -1,0 +1,70 @@
+{
+  "structure_id": "trailer_park",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/trailer_park_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/trailer_park.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "trailer_park_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": []
+  },
+  "variant_lint": {
+    "structure_id": "trailer_park",
+    "passed": false,
+    "hard_fail_count": 2,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          2,
+          68
+        ],
+        "detail": "minecraft:spawner at (20, 2, 68) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          49,
+          2,
+          46
+        ],
+        "detail": "minecraft:spawner at (49, 2, 46) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        59,
+        2,
+        72
+      ],
+      "detail": "added debris (59, 2, 72)->(63, 3, 75) is 97% minecraft:gravel, fills 78% of its box, top is 94% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        5,
+        2,
+        18
+      ],
+      "detail": "added debris (5, 2, 18)->(7, 3, 21) is 100% minecraft:gravel, fills 83% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 2,
+    "audit_flag_count": 2,
+    "by_check": {
+      "terrain_mismatch_damage": 2,
+      "lint:structural_connectivity:hard_fail": 2
+    }
+  }
+}

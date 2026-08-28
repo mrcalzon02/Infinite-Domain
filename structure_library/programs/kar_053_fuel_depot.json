@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:kar_053_fuel_depot",
+  "culture": "karsic",
+  "building_type": "tank_farm",
+  "conversion_class": "N",
+  "base_master": "ruined_fuel_depot",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "industrial_hardstanding",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "utility_anchor",
+  "rail_served": true,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "FUEL DEPOT 2 / SHOP 15",
+  "archetype": "Fuel Depot",
+  "roster_note": "Tank farm, bunded walls, rail loading rack.",
+  "damage_archetype": "firebreak edge",
+  "industrial_program": [
+    "cylindrical storage tanks inside bunded enclosures",
+    "a rail loading rack with a walkway over the wagons",
+    "a pump house with a manifold and valve set",
+    "a fire water main and monitor positions around the bund",
+    "a control and gauging hut with sight of the loading rack",
+    "a secure perimeter with one gate"
+  ],
+  "circulation": [
+    "the pipe route from tank to pump house to loading rack is traceable above ground"
+  ],
+  "damage_constraints": [
+    "one tank has burnt out and its bund is scorched; adjacent tanks are heat-blistered but standing",
+    "the fire main and monitors are in place and were used",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the fire actually reads as having been fought, not merely as damage"
+    ]
+  },
+  "source_metadata": {
+    "category": "industrial",
+    "settlement_types": [
+      "industrial"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 79,
+      "depth": 65
+    },
+    "base_height": 25,
+    "conversion_target": "multibuilding"
+  }
+}

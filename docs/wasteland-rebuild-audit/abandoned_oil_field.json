@@ -1,0 +1,192 @@
+{
+  "structure_id": "abandoned_oil_field",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/abandoned_oil_field_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/abandoned_oil_field.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "abandoned_oil_field_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          60,
+          4,
+          40
+        ],
+        "detail": "enclosed room of 72 air blocks (9 floor cells, 8 tall) near (60, 4, 40) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          63,
+          4,
+          49
+        ],
+        "detail": "enclosed room of 72 air blocks (9 floor cells, 8 tall) near (63, 4, 49) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          66,
+          4,
+          40
+        ],
+        "detail": "enclosed room of 72 air blocks (9 floor cells, 8 tall) near (66, 4, 40) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "abandoned_oil_field",
+    "passed": false,
+    "hard_fail_count": 9,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          11,
+          44
+        ],
+        "detail": "minecraft:black_concrete at (43, 11, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          11,
+          44
+        ],
+        "detail": "minecraft:black_concrete at (44, 11, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          45,
+          11,
+          44
+        ],
+        "detail": "minecraft:black_concrete at (45, 11, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          10,
+          44
+        ],
+        "detail": "minecraft:polished_blackstone at (55, 10, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          11,
+          44
+        ],
+        "detail": "minecraft:polished_blackstone at (55, 11, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          56,
+          10,
+          44
+        ],
+        "detail": "minecraft:polished_blackstone at (56, 10, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          56,
+          11,
+          44
+        ],
+        "detail": "minecraft:polished_blackstone at (56, 11, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          57,
+          10,
+          44
+        ],
+        "detail": "minecraft:polished_blackstone at (57, 10, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          57,
+          11,
+          44
+        ],
+        "detail": "minecraft:polished_blackstone at (57, 11, 44) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        65,
+        12,
+        39
+      ],
+      "detail": "removed volume (65, 12, 39)->(69, 12, 43) (25 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        59,
+        12,
+        39
+      ],
+      "detail": "removed volume (59, 12, 39)->(63, 12, 43) (25 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        62,
+        12,
+        48
+      ],
+      "detail": "removed volume (62, 12, 48)->(66, 12, 52) (25 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        63,
+        4,
+        49
+      ],
+      "detail": "added debris (63, 4, 49)->(65, 5, 51) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 9,
+    "audit_flag_count": 4,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 9,
+      "terrain_mismatch_damage": 4,
+      "lint:room_composition:review_flag": 3
+    }
+  }
+}

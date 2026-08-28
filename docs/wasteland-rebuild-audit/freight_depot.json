@@ -1,0 +1,934 @@
+{
+  "structure_id": "freight_depot",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/freight_depot_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/freight_depot.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "freight_depot_clean_master",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          14,
+          9
+        ],
+        "detail": "minecraft:bricks at (3, 14, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          14,
+          10
+        ],
+        "detail": "minecraft:bricks at (3, 14, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          14,
+          16
+        ],
+        "detail": "minecraft:bricks at (3, 14, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          14,
+          17
+        ],
+        "detail": "minecraft:bricks at (3, 14, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          14,
+          23
+        ],
+        "detail": "minecraft:bricks at (3, 14, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          14,
+          24
+        ],
+        "detail": "minecraft:bricks at (3, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          15,
+          25
+        ],
+        "detail": "minecraft:bricks at (3, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          15,
+          26
+        ],
+        "detail": "minecraft:bricks at (3, 15, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          16,
+          27
+        ],
+        "detail": "minecraft:bricks at (3, 16, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          16,
+          28
+        ],
+        "detail": "minecraft:bricks at (3, 16, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          17,
+          29
+        ],
+        "detail": "minecraft:bricks at (3, 17, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          14,
+          9
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 14, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          14,
+          10
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 14, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          14,
+          16
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 14, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          14,
+          17
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 14, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          14,
+          23
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 14, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          14,
+          24
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          15,
+          25
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          15,
+          26
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 15, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          16,
+          27
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 16, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          16,
+          28
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 16, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          17,
+          29
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 17, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          14,
+          9
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 14, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          14,
+          10
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 14, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          14,
+          16
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 14, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          14,
+          17
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 14, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          14,
+          23
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 14, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          14,
+          24
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          15,
+          25
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          15,
+          26
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 15, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          16,
+          27
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 16, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          16,
+          28
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 16, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          17,
+          29
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 17, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          14,
+          9
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 14, 9) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          14,
+          10
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 14, 10) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          14,
+          16
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 14, 16) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          14,
+          17
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 14, 17) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          14,
+          23
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 14, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          14,
+          24
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          15,
+          25
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "304 additional floating blocks not individually listed (344 total)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "freight_depot",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          14,
+          24
+        ],
+        "detail": "minecraft:bricks at (3, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          15,
+          25
+        ],
+        "detail": "minecraft:bricks at (3, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          15,
+          26
+        ],
+        "detail": "minecraft:bricks at (3, 15, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          16,
+          27
+        ],
+        "detail": "minecraft:bricks at (3, 16, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          16,
+          28
+        ],
+        "detail": "minecraft:bricks at (3, 16, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          3,
+          17,
+          29
+        ],
+        "detail": "minecraft:bricks at (3, 17, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          14,
+          24
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          15,
+          25
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          15,
+          26
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 15, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          16,
+          27
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 16, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          16,
+          28
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 16, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          4,
+          17,
+          29
+        ],
+        "detail": "minecraft:weathered_cut_copper at (4, 17, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          14,
+          24
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          15,
+          25
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          15,
+          26
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 15, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          16,
+          27
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 16, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          16,
+          28
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 16, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          5,
+          17,
+          29
+        ],
+        "detail": "minecraft:weathered_cut_copper at (5, 17, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          14,
+          24
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          15,
+          25
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          15,
+          26
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 15, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          16,
+          27
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 16, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          16,
+          28
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 16, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          17,
+          29
+        ],
+        "detail": "minecraft:weathered_cut_copper at (6, 17, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          14,
+          24
+        ],
+        "detail": "minecraft:weathered_cut_copper at (7, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          15,
+          25
+        ],
+        "detail": "minecraft:weathered_cut_copper at (7, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          15,
+          26
+        ],
+        "detail": "minecraft:weathered_cut_copper at (7, 15, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          16,
+          27
+        ],
+        "detail": "minecraft:weathered_cut_copper at (7, 16, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          16,
+          28
+        ],
+        "detail": "minecraft:weathered_cut_copper at (7, 16, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          7,
+          17,
+          29
+        ],
+        "detail": "minecraft:weathered_cut_copper at (7, 17, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          14,
+          24
+        ],
+        "detail": "minecraft:weathered_cut_copper at (8, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          15,
+          25
+        ],
+        "detail": "minecraft:weathered_cut_copper at (8, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          15,
+          26
+        ],
+        "detail": "minecraft:weathered_cut_copper at (8, 15, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          16,
+          27
+        ],
+        "detail": "minecraft:weathered_cut_copper at (8, 16, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          16,
+          28
+        ],
+        "detail": "minecraft:weathered_cut_copper at (8, 16, 28) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          8,
+          17,
+          29
+        ],
+        "detail": "minecraft:weathered_cut_copper at (8, 17, 29) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          14,
+          24
+        ],
+        "detail": "minecraft:weathered_cut_copper at (9, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          15,
+          25
+        ],
+        "detail": "minecraft:weathered_cut_copper at (9, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          15,
+          26
+        ],
+        "detail": "minecraft:weathered_cut_copper at (9, 15, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          9,
+          16,
+          27
+        ],
+        "detail": "minecraft:weathered_cut_copper at (9, 16, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "239 additional floating blocks not individually listed (279 total)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        35,
+        7,
+        4
+      ],
+      "detail": "minecraft:smooth_stone_slab at (35, 7, 4) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        36,
+        7,
+        4
+      ],
+      "detail": "minecraft:smooth_stone_slab at (36, 7, 4) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        36,
+        11,
+        3
+      ],
+      "detail": "minecraft:spruce_slab at (36, 11, 3) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        37,
+        7,
+        4
+      ],
+      "detail": "minecraft:smooth_stone_slab at (37, 7, 4) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        38,
+        7,
+        4
+      ],
+      "detail": "minecraft:smooth_stone_slab at (38, 7, 4) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        39,
+        7,
+        4
+      ],
+      "detail": "minecraft:smooth_stone_slab at (39, 7, 4) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        40,
+        7,
+        4
+      ],
+      "detail": "minecraft:smooth_stone_slab at (40, 7, 4) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        3,
+        14,
+        9
+      ],
+      "detail": "removed volume (3, 14, 9)->(15, 14, 10) (26 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        3,
+        14,
+        16
+      ],
+      "detail": "removed volume (3, 14, 16)->(15, 14, 17) (26 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 41,
+    "variant_hard_fail": 41,
+    "audit_flag_count": 9,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 82,
+      "slab_wall_penetration": 7,
+      "terrain_mismatch_damage": 2
+    }
+  }
+}

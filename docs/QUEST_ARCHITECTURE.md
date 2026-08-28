@@ -261,7 +261,7 @@ The authoritative branch map is `docs/THREE_PATH_ERA_QUEST_BLUEPRINT.md`.
 
 ## Implementation status
 
-As of 2026-08-17, the live book contains 812 quest objects across 36 chapters.
+As of 2026-08-27, the live book contains 876 quest objects across 38 chapters in 9 registered chapter groups. (The unused `5B8E…` group was removed; Stellaris Space Industrialization moved out of its standalone group into Civilization Specializations as an Era 7 annex.)
 
 - Era 0 through Era 8 are implemented as connected three-domain graphs with shapes, dependencies, ancillary systems, contribution recipes, and Foundation Core capstones. Explicit icon normalization remains queued for chapters that currently rely on automatic task icons.
 - Applied Energistics Recovery contains a 15-quest ladder from meteorite recovery through AE2LT infinite storage.

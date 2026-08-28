@@ -225,7 +225,17 @@ _GROUND_PALETTES: dict[str, tuple[str, ...]] = {
     "rural_worked": ("minecraft:coarse_dirt", "minecraft:dirt_path", "minecraft:farmland"),
     "industrial_hardstanding": ("minecraft:gray_concrete", "minecraft:polished_andesite", "minecraft:gravel"),
     "wilderness_undisturbed": ("minecraft:grass_block", "minecraft:coarse_dirt", "minecraft:mossy_cobblestone", "minecraft:podzol"),
+    "forest_camp": ("minecraft:podzol", "minecraft:coarse_dirt", "minecraft:dirt_path", "minecraft:gravel", "minecraft:rooted_dirt"),
     "waterfront": ("minecraft:gravel", "minecraft:sand", "minecraft:mossy_cobblestone"),
+    # --- Regional contexts -------------------------------------------------
+    # Karsic (East). See docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md 5.4.
+    "karsic_district_yard": ("tfmg:asphalt", "minecraft:gray_concrete", "minecraft:coarse_dirt", "minecraft:gravel"),
+    "karsic_rail_ballast": ("minecraft:gravel", "tfmg:asphalt", "minecraft:cobblestone", "minecraft:coarse_dirt"),
+    "karsic_frozen_ground": ("minecraft:coarse_dirt", "minecraft:packed_ice", "minecraft:gravel", "quark:permafrost_bricks"),
+    # Pelagos (West). See docs/PELAGOS_COMPACT_STRUCTURE_PROGRAM.md 5.4.
+    "pelagos_pavement": ("minecraft:stone_bricks", "minecraft:andesite", "supplementaries:stone_tile", "tfmg:asphalt"),
+    "pelagos_cobbled_yard": ("minecraft:cobblestone", "minecraft:mossy_cobblestone", "supplementaries:raked_gravel", "minecraft:gravel"),
+    "pelagos_foreshore": ("minecraft:gravel", "minecraft:sand", "minecraft:mud", "minecraft:mossy_cobblestone"),
 }
 
 
@@ -326,20 +336,33 @@ def fracture_breach(
     rubble_block: str = "minecraft:gravel",
     scorch_block: str | None = None,
     jaggedness: int = 2,
+    apron_floor_y: int | None = None,
+    debris_blocks: tuple[str, ...] | None = None,
 ) -> None:
     """An authored fracture-and-debris breach, replacing raw `t.clear()`
     box removal as the primary damage operator.
 
     Produces an irregular boundary (a jittered inset on each face rather
-    than a flat rectangular cut), a gravity-consistent rubble apron below
-    the breach, and automatically resolves any window caught inside via
+    than a flat rectangular cut), a gravity-consistent rubble apron, and
+    automatically resolves any window caught inside via
     `retrofit_window_for_breach` so a breach can never leave floating glass
     behind. `jaggedness` controls how far the boundary jitter reaches (in
     blocks); 0 degrades to a plain box, which is why the default is 2.
+
+    `apron_floor_y` is required whenever the breach does NOT reach the
+    ground: without it the apron is laid one block below the breach bottom,
+    which for an upper-storey or roof breach is mid-air and lints as
+    floating blocks. Give the real interior floor Y and the debris is
+    instead drifted onto that floor as a thinning, sloped pile - dense
+    under the middle of the breach, one block deep and sparse at the
+    edges - which is what a collapse actually leaves. `debris_blocks`
+    varies the pile material (splintered logs, torn roofing, rubble);
+    defaults to `(rubble_block,)`.
     """
     x1, y1, z1 = min(a[0], b[0]), min(a[1], b[1]), min(a[2], b[2])
     x2, y2, z2 = max(a[0], b[0]), max(a[1], b[1]), max(a[2], b[2])
     rng = random.Random(seed)
+    palette = debris_blocks or (rubble_block,)
 
     retrofit_window_for_breach(t, (x1, y1, z1), (x2, y2, z2), rubble_block=rubble_block)
 
@@ -354,16 +377,99 @@ def fracture_breach(
                         continue  # leave this boundary cell intact this pass
                 t.set(x, y, z, "minecraft:air")
 
-    # Gravity-consistent rubble apron: debris lands below the breach, biased
-    # toward the breach's footprint rather than scattered independently of it.
-    apron_y = y1 - 1
-    for x in range(x1 - 1, x2 + 2):
-        for z in range(z1 - 1, z2 + 2):
-            if rng.random() < 0.4:
-                height = rng.randint(1, 2)
-                t.fill((x, apron_y - height + 1, z), (x, apron_y, z), rubble_block)
+    # Shed anything the breach just orphaned. The jittered boundary, and the
+    # removal of interior support, can leave a wall fragment or a run of roof
+    # stairs connected to nothing - which then lints as floating blocks. A
+    # collapse does not leave fragments hanging in the air; they fall. Clear
+    # every solid cell in and just around the breach that no longer connects,
+    # through solid geometry, to the wider structure or the ground.
+    _shed_breach_orphans(t, (x1, y1, z1), (x2, y2, z2))
+
+    if apron_floor_y is None:
+        # breach reaches (or nearly reaches) grade: pile directly below it.
+        apron_y = y1 - 1
+        for x in range(x1 - 1, x2 + 2):
+            for z in range(z1 - 1, z2 + 2):
+                if rng.random() < 0.4:
+                    height = rng.randint(1, 2)
+                    for h in range(height):
+                        t.set(x, apron_y - h, z, rng.choice(palette))
+    else:
+        # elevated breach: drift debris onto the real floor as a sloped,
+        # thinning pile centred under the breach - never a filled cuboid.
+        cx, cz = (x1 + x2) / 2, (z1 + z2) / 2
+        span = max(1.0, max(x2 - x1, z2 - z1) / 2 + 1)
+
+        def _standable(x: int, z: int) -> bool:
+            entry = t.blocks.get((x, apron_floor_y - 1, z))
+            if entry is None:
+                return False
+            name = t.palette[entry[0]]["Name"]
+            return name not in ("minecraft:air", "minecraft:cave_air", "minecraft:void_air", "minecraft:water", "minecraft:lava")
+
+        for x in range(x1 - 1, x2 + 2):
+            for z in range(z1 - 1, z2 + 2):
+                if not _standable(x, z):
+                    continue
+                dist = ((x - cx) ** 2 + (z - cz) ** 2) ** 0.5 / span
+                density = max(0.0, 0.85 - dist)
+                if rng.random() >= density:
+                    continue
+                height = 2 if rng.random() < density * 0.5 else 1
+                for h in range(height):
+                    t.set(x, apron_floor_y + h, z, rng.choice(palette))
     if scorch_block:
+        base = apron_floor_y if apron_floor_y is not None else y1 - 1
         for x in range(x1, x2 + 1):
             for z in range(z1, z2 + 1):
                 if rng.random() < 0.15:
-                    t.set(x, apron_y, z, scorch_block)
+                    t.set(x, base, z, scorch_block)
+
+
+_NON_SOLID = {"minecraft:air", "minecraft:cave_air", "minecraft:void_air", "minecraft:water", "minecraft:lava"}
+
+
+def _shed_breach_orphans(t: Any, lo: Pos3, hi: Pos3) -> None:
+    """Clear solid cells in/around a breach that no longer connect to the
+    wider structure or the ground through solid 6-connected geometry."""
+    x1, y1, z1 = lo
+    x2, y2, z2 = hi
+    X1, Y1, Z1 = x1 - 2, max(0, y1 - 2), z1 - 2
+    X2, Y2, Z2 = x2 + 2, y2 + 2, z2 + 2
+
+    def _solid(p: Pos3) -> bool:
+        entry = t.blocks.get(p)
+        if entry is None:
+            return False
+        return t.palette[entry[0]]["Name"] not in _NON_SOLID
+
+    region = {
+        (x, y, z)
+        for x in range(X1, X2 + 1) for y in range(Y1, Y2 + 1) for z in range(Z1, Z2 + 1)
+        if _solid((x, y, z))
+    }
+    if not region:
+        return
+    deltas = ((1, 0, 0), (-1, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, 1), (0, 0, -1))
+    seeds: set[Pos3] = set()
+    for p in region:
+        if p[1] <= 1:  # resting on the ground / footing course
+            seeds.add(p)
+            continue
+        for dx, dy, dz in deltas:
+            n = (p[0] + dx, p[1] + dy, p[2] + dz)
+            if not (X1 <= n[0] <= X2 and Y1 <= n[1] <= Y2 and Z1 <= n[2] <= Z2) and _solid(n):
+                seeds.add(p)  # anchored to the structure outside the breach zone
+                break
+    seen = set(seeds)
+    stack = list(seeds)
+    while stack:
+        x, y, z = stack.pop()
+        for dx, dy, dz in deltas:
+            n = (x + dx, y + dy, z + dz)
+            if n in region and n not in seen:
+                seen.add(n)
+                stack.append(n)
+    for (x, y, z) in region - seen:
+        if x1 - 1 <= x <= x2 + 1 and y1 - 1 <= y <= y2 + 1 and z1 - 1 <= z <= z2 + 1:
+            t.set(x, y, z, "minecraft:air")

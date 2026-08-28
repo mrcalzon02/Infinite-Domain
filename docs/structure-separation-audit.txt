@@ -1,0 +1,22 @@
+Phase 0.75 (B2 wasteland consolidation) 2026-08-28T04:37Z - regenerate: python scripts/validate_structure_separation.py
+
+==============================================================================
+structure-set separation audit  (docs/TERRAIN_AFFORDANCE_AND_SPAWN_SEPARATION.md)
+==============================================================================
+structure_set files:      138
+  in scope:               65  (excludes ['abyssal', 'deep_sea'])
+  live (structures != []): 65
+  inert (structures: []):  0
+start density by family (starts per 10,000 chunks that share ground):
+  minor              529.2   (36 live sets)
+  planetary          192.9   (10 live sets)
+  wasteland          114.1   (5 live sets)
+  alien               25.1   (5 live sets)
+  offworld            11.9   (4 live sets)
+  spore_scatter        8.2   (3 live sets)
+  nether               6.2   (1 live sets)
+  old_world            0.4   (1 live sets)
+
+--- INFO (1) ---
+  INFO: 62/65 live sets have no exclusion_zone (wasteland/ is B2-consolidated - doc sec. 7.5; minor/* and the small offworld families still run independent grids)
+

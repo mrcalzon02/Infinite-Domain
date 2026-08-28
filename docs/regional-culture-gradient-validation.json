@@ -1,0 +1,125 @@
+{
+  "purpose": "Static proof that custom_worldgen:regional_culture_gradient neutralises the cultural East/West signal inside the central continent while remaining a no-op outside radius 4800.",
+  "authority": [
+    "docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md#12-placement-and-worldgen",
+    "docs/PELAGOS_COMPACT_STRUCTURE_PROGRAM.md#12-placement-and-worldgen"
+  ],
+  "source": "datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen/density_function",
+  "central_core_radius": 4000.0,
+  "central_edge_radius": 4800.0,
+  "noise_samples": [
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0
+  ],
+  "probe_count": 420,
+  "checks": [
+    {
+      "id": "RC-1",
+      "check": "regional_culture_gradient is defined",
+      "passed": true,
+      "detail": "custom_worldgen:regional_culture_gradient present in datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen/density_function"
+    },
+    {
+      "id": "RC-2a",
+      "check": "city_humidity references the culture gradient",
+      "passed": false,
+      "detail": "referrers of custom_worldgen:regional_culture_gradient: none",
+      "evidence": []
+    },
+    {
+      "id": "RC-2b",
+      "check": "the culture gradient is referenced by nothing else",
+      "passed": false,
+      "detail": "must be exactly {city_humidity} so the change cannot leak into another chain",
+      "evidence": []
+    },
+    {
+      "id": "RC-2c",
+      "check": "the old gradient now feeds only the culture gradient",
+      "passed": false,
+      "detail": "referrers of custom_worldgen:regional_east_west_gradient: ['custom_worldgen:city_humidity', 'custom_worldgen:regional_culture_gradient']",
+      "evidence": [
+        "custom_worldgen:city_humidity",
+        "custom_worldgen:regional_culture_gradient"
+      ]
+    },
+    {
+      "id": "RC-3",
+      "check": "no-op outside the central continent (r >= 4800)",
+      "passed": true,
+      "detail": "culture gradient is bit-identical to the pre-change gradient, so the implemented abyssal ocean program is unaffected",
+      "evidence": []
+    },
+    {
+      "id": "RC-4",
+      "check": "central continent neutralised (r <= 4000)",
+      "passed": true,
+      "detail": "culture gradient is exactly 0, so the centre keeps the existing ungated land rules",
+      "evidence": []
+    },
+    {
+      "id": "RC-5",
+      "check": "monotone feather between r = 4000 and r = 4800",
+      "passed": true,
+      "detail": "|culture| never exceeds |base| inside the transition annulus",
+      "evidence": []
+    },
+    {
+      "id": "RC-6",
+      "check": "north/south ocean corridors stay at the seam",
+      "passed": true,
+      "detail": "culture gradient is 0 where |z| - |x| >= 250, so the abyssal corridors keep vanilla routing",
+      "evidence": []
+    },
+    {
+      "id": "RC-7",
+      "check": "eastern lobe lands in the Karsic humidity band for all noise",
+      "passed": true,
+      "detail": "culture gradient within (0.2, 1.0) wherever x > 0 and |x| - |z| >= 250 beyond r = 4800",
+      "evidence": []
+    },
+    {
+      "id": "RC-8",
+      "check": "western lobe lands in the Pelagos humidity band for all noise",
+      "passed": true,
+      "detail": "culture gradient within (-1.0, -0.2) wherever x < 0 and |x| - |z| >= 250 beyond r = 4800",
+      "evidence": []
+    },
+    {
+      "id": "RC-9",
+      "check": "the change is confined to the central continent and its feather",
+      "passed": true,
+      "detail": "city_humidity differs from its pre-change value at 0 sampled probes, none beyond r = 4800 (max changed r = 0.0)",
+      "evidence": {
+        "changed_probe_count": 0,
+        "max_changed_radius": 0.0
+      }
+    },
+    {
+      "id": "RC-10a",
+      "check": "start city still forces humidity 2.0",
+      "passed": true,
+      "detail": "city_humidity at origin = 2.0",
+      "evidence": 2.0
+    },
+    {
+      "id": "RC-10b",
+      "check": "mountain ring still forces humidity 1.25",
+      "passed": true,
+      "detail": "city_humidity at r = 3500 = 1.25",
+      "evidence": 1.25
+    },
+    {
+      "id": "RC-11",
+      "check": "every referenced function is modelled or is a known noise source",
+      "passed": true,
+      "detail": "external references treated as noise: none",
+      "evidence": []
+    }
+  ],
+  "passed": false,
+  "runtime_validation": "This is a static proof over the density-function graph. Actual in-world biome placement, terrain height and chunk generation cost remain unmeasured."
+}

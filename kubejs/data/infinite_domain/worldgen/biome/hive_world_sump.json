@@ -45,7 +45,7 @@
       "offset": 2.0
     },
     "particle": {
-      "probability": 0.0018,
+      "probability": 0.0022,
       "options": {
         "type": "minecraft:white_ash"
       }
@@ -54,6 +54,12 @@
     "additions_sound": {
       "sound": "minecraft:ambient.basalt_deltas.additions",
       "tick_chance": 0.0111
+    },
+    "music": {
+      "sound": "minecraft:music.overworld.dripstone_caves",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": true
     }
   }
 }

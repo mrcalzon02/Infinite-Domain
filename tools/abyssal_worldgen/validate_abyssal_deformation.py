@@ -20,6 +20,8 @@ CARVERS = CUSTOM / "configured_carver"
 BIOMES = ROOT / "kubejs/data/infinite_domain/worldgen/biome"
 NOISE_SETTINGS = ROOT / "kubejs/data/wastelands/worldgen/noise_settings/wasteland.json"
 MC_CONTINENTS = PACK / "minecraft/worldgen/density_function/overworld/continents.json"
+MC_DEPTH = PACK / "minecraft/worldgen/density_function/overworld/depth.json"
+ABYSSAL_STRUCTURES = ROOT / "kubejs/data/infinite_domain/worldgen/structure/abyssal"
 
 
 def fail(message: str) -> None:
@@ -188,6 +190,45 @@ if router.get("continents") != "custom_worldgen:continents":
 if "minecraft:overworld/sloped_cheese" not in serialized(router.get("final_density")):
     fail("Wastelands final_density no longer uses the overworld terrain density chain")
 
+# 8b. Direct seabed-depth channel. Continentalness manipulation alone cannot
+# deepen the abyss: the vanilla minecraft:overworld/offset spline is a flat
+# plateau (value -0.2222) for continentalness -0.51..-1.02, so the entire
+# abyssal-plain/fracture/hadal band collapses to normal deep-ocean floor depth.
+# custom_worldgen:abyssal_floor_depression is subtracted directly inside an
+# override of minecraft:overworld/depth so real seabed relief is produced,
+# still gated by the same East/West + ocean-corridor + depth-band masks.
+require_refs(
+    DF / "abyssal_floor_depression.json",
+    [
+        "custom_worldgen:western_depth_depression",
+        "custom_worldgen:eastern_depth_depression",
+    ],
+)
+floor_depression = load(DF / "abyssal_floor_depression.json")
+if "minecraft:flat_cache" not in serialized(floor_depression):
+    fail("abyssal_floor_depression must stay flat_cache/cache_2d wrapped (2D seabed field)")
+mc_depth = load(MC_DEPTH)
+mc_depth_text = serialized(mc_depth)
+if "minecraft:overworld/offset" not in mc_depth_text:
+    fail("minecraft:overworld/depth override dropped the vanilla offset term")
+if "custom_worldgen:abyssal_floor_depression" not in mc_depth_text:
+    fail("minecraft:overworld/depth override no longer subtracts abyssal_floor_depression")
+if '"argument1":-1.0' not in mc_depth_text and '"argument1": -1.0' not in mc_depth_text:
+    fail("minecraft:overworld/depth override must subtract (mul -1.0) abyssal_floor_depression, not add it")
+
+# 8c. Abyssal seafloor structures project to OCEAN_FLOOR_WG. start_height is a
+# signed offset added to the projected seabed height, so any non-zero value
+# lifts the whole piece (and its terrain_adaptation:bury beard) off the floor
+# and manifests as a floating square dirt/stone block above the seabed.
+for struct_path in sorted(ABYSSAL_STRUCTURES.glob("*.json")):
+    struct = load(struct_path)
+    if struct.get("project_start_to_heightmap") and struct.get("start_height") != {"absolute": 0}:
+        fail(
+            f"{struct_path.relative_to(ROOT)} projects to a heightmap but has "
+            f"start_height={struct.get('start_height')}; must be {{'absolute': 0}} "
+            "or the buried structure floats above the seabed"
+        )
+
 # 9. Purpose-built cave carvers must exist and remain restricted to intended bands.
 load(CARVERS / "abyssal_slope_cave.json")
 load(CARVERS / "abyssal_fracture_cave.json")
@@ -223,5 +264,6 @@ for name in plain_biomes:
 
 print(
     "[ABYSSAL DEFORMATION PASS] six reference motifs, four derived vertical processes, "
-    "two turbidity-transport patterns, terrain bridge, regional gates, and cave-band attachments are intact"
+    "two turbidity-transport patterns, terrain bridge, direct seabed-depth channel, "
+    "regional gates, seafloor-structure seating, and cave-band attachments are intact"
 )

@@ -286,9 +286,11 @@ ServerEvents.recipes(event => {
             }])
     }).id(`infinite_domain:space/sequenced/${out}`)
 
-    // Planetary ore beneficiation: crushing -> separation/washing -> chemical or thermal reduction.
+    // Planetary ore beneficiation: crushing -> separation -> chemical or thermal reduction.
+    // create:splashing is water-only fan washing (no fluid ingredient exists), so it is
+    // kept only for genuinely aqueous steps; airless lunar separation uses milling instead.
     event.recipes.create.crushing([Item.of(I('crushed_ilmenite'), 2), CreateItem.of('stellaris:moon_stone_dust', 0.35)], I('moon_ilmenite_ore')).id('infinite_domain:space/moon/crush_ilmenite')
-    event.recipes.create.splashing([Item.of(I('titanium_concentrate')), CreateItem.of(I('lunar_oxygen_feed'), 0.75)], I('crushed_ilmenite')).id('infinite_domain:space/moon/wash_ilmenite')
+    event.recipes.create.milling([Item.of(I('titanium_concentrate')), CreateItem.of(I('lunar_oxygen_feed'), 0.75)], I('crushed_ilmenite')).id('infinite_domain:space/moon/mill_ilmenite')
     event.recipes.create.crushing([Item.of(I('rare_earth_concentrate'), 2), CreateItem.of('stellaris:moon_stone_dust', 0.5)], I('moon_kreep_ore')).id('infinite_domain:space/moon/crush_kreep')
     event.recipes.create.crushing([Item.of(I('helium3_adsorbate')), Item.of('stellaris:moon_stone_dust', 2)], I('moon_helium_regolith')).id('infinite_domain:space/moon/heat_regolith')
     event.recipes.create.crushing([Item.of(I('lunar_ceramic'), 2), Item.of('tfmg:aluminum_nugget', 3)], I('moon_anorthosite_ore')).id('infinite_domain:space/moon/crush_anorthosite')
@@ -296,7 +298,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing(Item.of(I('sulfate_salts'), 2), I('mars_sulfate_ore')).id('infinite_domain:space/mars/crush_sulfate')
     event.recipes.create.crushing(Item.of(I('perchlorate_salts'), 2), I('mars_perchlorate_ore')).id('infinite_domain:space/mars/crush_perchlorate')
     event.recipes.create.crushing(Item.of(I('nickel_cobalt_concentrate'), 2), I('mars_nickel_cobalt_ore')).id('infinite_domain:space/mars/crush_nickel_cobalt')
-    event.recipes.create.splashing(Item.of(I('brine_salts'), 2), I('mars_brine_ore')).id('infinite_domain:space/mars/wash_brine')
+    event.recipes.create.crushing(Item.of(I('brine_salts'), 2), I('mars_brine_ore')).id('infinite_domain:space/mars/crush_brine')
     event.recipes.create.splashing([Item.of('minecraft:iron_nugget', 8), CreateItem.of(I('sulfate_salts'), 0.25)], I('crushed_hematite')).id('infinite_domain:space/mars/wash_hematite')
     event.recipes.create.crushing(Item.of(I('sulfur_concentrate'), 2), I('venus_sulfur_ore')).id('infinite_domain:space/venus/crush_sulfur')
     event.recipes.create.crushing(Item.of(I('vanadium_concentrate'), 2), I('venus_vanadium_ore')).id('infinite_domain:space/venus/crush_vanadium')

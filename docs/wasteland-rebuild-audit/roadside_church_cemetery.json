@@ -1,0 +1,111 @@
+{
+  "structure_id": "roadside_church_cemetery",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/roadside_church_cemetery_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/roadside_church_cemetery.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "roadside_church_cemetery_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          17,
+          2,
+          32
+        ],
+        "detail": "enclosed room of 1473 air blocks (45 floor cells, 13 tall) near (17, 2, 32) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          18,
+          16,
+          9
+        ],
+        "detail": "enclosed room of 603 air blocks (151 floor cells, 8 tall) near (18, 16, 9) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          18,
+          16,
+          23
+        ],
+        "detail": "enclosed room of 512 air blocks (120 floor cells, 8 tall) near (18, 16, 23) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          18,
+          16,
+          32
+        ],
+        "detail": "enclosed room of 512 air blocks (120 floor cells, 8 tall) near (18, 16, 32) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "roadside_church_cemetery",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          46,
+          2,
+          36
+        ],
+        "detail": "enclosed room of 54 air blocks (9 floor cells, 6 tall) near (46, 2, 36) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        40,
+        2,
+        36
+      ],
+      "detail": "added debris (40, 2, 36)->(45, 7, 44) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 100% inside the footprint, 17% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        29,
+        2,
+        32
+      ],
+      "detail": "added debris (29, 2, 32)->(33, 7, 39) is 100% minecraft:gravel, fills 74% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        29,
+        2,
+        29
+      ],
+      "detail": "added debris (29, 2, 29)->(41, 7, 30) is 100% minecraft:gravel, fills 85% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 0,
+    "audit_flag_count": 3,
+    "by_check": {
+      "lint:room_composition:review_flag": 5,
+      "terrain_mismatch_damage": 3
+    }
+  }
+}

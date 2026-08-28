@@ -80,14 +80,24 @@
 		{
 			dependencies: ["5D00000000000003"]
 			id: "5D00000000000004"
-			rewards: [{
-				command: "execute in minecraft:overworld run structure_map spore:lodge 2"
-				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "70EFD7570CC3C85B"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "execute in minecraft:overworld run structure_map spore:lodge 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70EFD7570CC3C85B"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "6AAFB449800C4A78"
+					item: {
+						count: 1
+						id: "kubejs:era2_supply_bag"
+					}
+					type: "item"
+				}
+			]
 			shape: "diamond"
 			tasks: [{
 				id: "6D00000000000004"
@@ -173,14 +183,24 @@
 		{
 			dependencies: ["5D00000000000007"]
 			id: "5D00000000000008"
-			rewards: [{
-				command: "execute in minecraft:overworld run structure_map spore:hospital 2"
-				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "70ED87D8EFB43E27"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "execute in minecraft:overworld run structure_map spore:hospital 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70ED87D8EFB43E27"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "6AC65438A48B0BB2"
+					item: {
+						count: 1
+						id: "kubejs:era2_supply_bag"
+					}
+					type: "item"
+				}
+			]
 			shape: "diamond"
 			tasks: [{
 				id: "6D00000000000008"
@@ -299,14 +319,24 @@
 				"5410000000000001"
 			]
 			id: "5D0000000000000D"
-			rewards: [{
-				command: "execute in minecraft:overworld run structure_map spore:iceberg_mines 2"
-				feedback_message: "infinite_domain.reward.explorer_map"
-				id: "70E5BB74FDA85A33"
-				permission_level: 2
-				silent: true
-				type: "command"
-			}]
+			rewards: [
+				{
+					command: "execute in minecraft:overworld run structure_map spore:iceberg_mines 2"
+					feedback_message: "infinite_domain.reward.explorer_map"
+					id: "70E5BB74FDA85A33"
+					permission_level: 2
+					silent: true
+					type: "command"
+				}
+				{
+					id: "6A39E6006E8D25A2"
+					item: {
+						count: 1
+						id: "kubejs:era2_supply_bag"
+					}
+					type: "item"
+				}
+			]
 			shape: "diamond"
 			tasks: [{
 				id: "6D0000000000000D"
@@ -363,6 +393,14 @@
 		{
 			dependencies: ["5D00000000000010"]
 			id: "5D00000000000011"
+			rewards: [{
+				id: "6A606503C0C103B4"
+				item: {
+					count: 1
+					id: "kubejs:era2_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				biome: "minecraft:ice_spikes"
@@ -439,6 +477,14 @@
 		{
 			dependencies: ["5D00000000000015"]
 			id: "5D00000000000016"
+			rewards: [{
+				id: "6A43B67F8D749490"
+				item: {
+					count: 1
+					id: "kubejs:era2_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				biome: "minecraft:savanna"
@@ -483,6 +529,14 @@
 		{
 			dependencies: ["5D00000000000018"]
 			id: "5D00000000000019"
+			rewards: [{
+				id: "6AA13DF13FCBA2F0"
+				item: {
+					count: 1
+					id: "kubejs:era2_priority_cache"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				biome: "the_wasteland_reworked:sulfuric_valley"

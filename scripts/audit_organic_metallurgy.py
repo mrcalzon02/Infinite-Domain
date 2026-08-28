@@ -97,6 +97,15 @@ def main() -> None:
     recipes = RECIPE_PATH.read_text(encoding="utf-8")
     bypass = BYPASS_PATH.read_text(encoding="utf-8")
 
+    # KubeJS server scripts share one global scope: a bare top-level `const`
+    # collides across files (this bit the pack once: "redeclaration of const
+    # organicMetallurgy"). The generator must keep its constants inside an IIFE.
+    recipes_code = "\n".join(
+        ln for ln in recipes.splitlines() if not ln.lstrip().startswith("//")
+    ).strip()
+    require(bool(re.match(r"\(\s*(?:\(\s*\)\s*=>|function\b)", recipes_code)),
+            "recipe generator is IIFE-scoped so its constants do not leak into the shared scope")
+
     metals = {metal["id"] for metal in minerals["metals"] if metal.get("processingClass") != "nuclear"}
     profiles = chemistry["metalProfiles"]
     require({profile["id"] for profile in profiles} == metals, "every non-nuclear trace metal has exactly one family/era profile")
@@ -111,8 +120,10 @@ def main() -> None:
     require(len({era["reagent"] for era in eras}) == 8 and len({era["extract"] for era in eras}) == 8, "shared era reagents without metal-specific chemical clutter")
 
     require("StartupEvents.registry('fluid'" in startup and "StartupEvents.registry('item'" in startup, "custom solids and fluids are startup-registered")
-    for marker in ("create.milling", "create.crushing", "create.splashing", "create.mixing", "create.compacting", "create.pressing", "createmetallurgy:melting"):
+    for marker in ("create.milling", "create.crushing", "create.mixing", "create.compacting", "create.pressing", "createmetallurgy:melting"):
         require(marker in recipes, f"recipe generator uses {marker}")
+    require("create.splashing" not in recipes,
+            "no splashing (Encased Fan wash) route - washing is a Mechanical Mixer / compacting step")
     for marker in ("output: metal.nugget", "createmetallurgy:melting/${metal.id}", "createmetallurgy:bulk_melting/${metal.id}"):
         require(marker in bypass, f"bypass removal covers {marker}")
 

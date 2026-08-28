@@ -1,0 +1,60 @@
+{
+  "structure_id": "infinite_domain:kar_045_downed_cargo_airship",
+  "culture": "karsic",
+  "building_type": "wreck_scene",
+  "conversion_class": "A",
+  "base_master": "crashed_cargo_airship",
+  "primary_stratum": "prop",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "roadside",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "DOWNED CARGO AIRSHIP / PLATE 975",
+  "archetype": "Downed Cargo Airship",
+  "roster_note": "",
+  "damage_archetype": "firebreak edge",
+  "infrastructure_program": [
+    "the wrecked vehicles or vessel arranged as a single readable event",
+    "a debris field consistent with the direction of travel",
+    "evidence of the people who were with it",
+    "any barrier, marking or instruction that was in force at the time"
+  ],
+  "circulation": [
+    "the scene can be walked through and read in one direction"
+  ],
+  "damage_constraints": [
+    "the event is the asset; damage is authored as the event itself",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "a player can tell what happened and which way it was going without any text"
+    ]
+  },
+  "source_metadata": {
+    "category": "industrial",
+    "settlement_types": [
+      "industrial"
+    ],
+    "road_connection": "none",
+    "base_footprint": {
+      "width": 71,
+      "depth": 39
+    },
+    "base_height": 29,
+    "conversion_target": "scattered"
+  }
+}

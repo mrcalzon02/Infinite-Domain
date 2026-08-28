@@ -1,0 +1,69 @@
+{
+  "structure_id": "infinite_domain:kar_050_waste_incineration_plant",
+  "culture": "karsic",
+  "building_type": "process_plant",
+  "conversion_class": "A",
+  "base_master": "municipal_incinerator",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "industrial_hardstanding",
+  "foundation_profile": "partial_basement",
+  "back_of_house": "behind",
+  "district_role": "utility_anchor",
+  "rail_served": true,
+  "heating_main_connection": "plant_origin",
+  "tiling_asset": false,
+  "signage_series": "WASTE INCINERATION PLANT 2 / SHOP 9",
+  "archetype": "Waste Incineration Plant",
+  "roster_note": "Tipping hall, furnace hall, tall stack.",
+  "damage_archetype": "cannibalisation",
+  "industrial_program": [
+    "a tall plant hall containing the principal process vessels",
+    "a fuel or feedstock yard with a delivery route into the hall",
+    "a control room at mezzanine level glazed onto the plant hall",
+    "a pump and pipe gallery below the hall floor",
+    "a changing and wash block at the workers' entrance",
+    "a workshop with extensive spare-parts storage",
+    "a tall stack standing clear of the roof",
+    "the origin manifold of the district heating main, leaving the site above ground on saddles"
+  ],
+  "circulation": [
+    "the pipe gallery connects the plant hall to the exterior main",
+    "the control room overlooks the vessels it controls"
+  ],
+  "damage_constraints": [
+    "the same pump or seal has been repaired many times: a stack of replacement parts beside the failed unit and a wall of tally marks",
+    "the plant hall is intact enough to read as recently worked",
+    "the heating main leaves the site and is severed beyond the fence",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the input, process and output route through the site is followable on foot",
+      "the heating main visibly originates here"
+    ]
+  },
+  "source_metadata": {
+    "category": "industrial",
+    "settlement_types": [
+      "town_center",
+      "industrial"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 71,
+      "depth": 59
+    },
+    "base_height": 33,
+    "conversion_target": "multibuilding"
+  }
+}

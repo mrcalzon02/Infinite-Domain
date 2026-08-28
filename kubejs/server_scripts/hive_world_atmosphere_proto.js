@@ -1,130 +1,217 @@
-// Endgame EG-P01-S03-C0018 - dimension-scoped air-hazard prototype for the Cinderstack.
+// Endgame EG-P05 - Cinderstack atmosphere: exposure, PPE, filters, shelter, HUD.
 //
-// DISPOSABLE PHASE 1 SPIKE. A data-only stand-in for the companion module's
-// atmosphere service (C0002: "Phase 1 data-only; critical logic in companion module").
-// Honours the C0007 exposure-model shape: a per-band rate, a PPE reduction, a
-// sealed-volume gate, and recovery only in clean air. Values here are placeholders;
-// tuning is EG-P05-S01-C0069.
+// Promoted from the EG-P01-S03-C0018 prototype. Still a data-only spike stand-in for
+// the companion module's atmosphere service (C0002: "Phase 1 data-only; critical logic
+// in companion module"). Honours the C0007 exposure-model shape: per-band rate, PPE
+// reduction, sealed-volume gate, clean-air recovery, non-trivialisation.
+// Tuned values: docs/endgame/contracts/environment-implementation.md.
 //
 // Player-facing strings never contain the prohibited substring "hive".
-// Wrapped in an IIFE so its constants do not collide with other server scripts.
+// Wrapped in an IIFE (KubeJS server scripts share one global scope).
 (() => {
     const DIM = 'infinite_domain:hive_world'
+    const MASK = 'kubejs:cinderstack_mask'
     const FILTER = 'kubejs:cinderstack_filter'
+    const ACID = 'the_wasteland_reworked:acid'
 
-    // arrival deck lodestone at (8,64,8) counts as the one powered safe volume in the spike
-    const SAFE = { x: 8, y: 64, z: 8, r2: 100 }
-
-    const EXPOSURE = 'id_cinderstack_exposure'
-    const FILTER_WEAR = 'id_cinderstack_filter_wear'
-    const WARNED = 'id_cinderstack_air_warned'
-
-    const MAX_EXPOSURE = 100
-    const WARN_AT = 55
-    const HURT_AT = 85
-    const FILTER_REDUCTION = 0.2      // mask + working filter -> 20% of the open-air rate
-    const FILTER_WEAR_PER_CARTRIDGE = 40
-    const RECOVERY_PER_SEC = 6
+    const PD = {
+        exp: 'id_cinderstack_exposure',
+        wear: 'id_cinderstack_filter_wear',
+        warned: 'id_cinderstack_air_warned',
+        bar: 'id_cinderstack_bar_ready',
+    }
+    const MAX = 100
+    const WARN_AT = 40
+    const HURT_AT = 65
+    const CRIT_AT = 90
+    const RECOVER_PER_SEC = 9
+    const WEAR_PER_CARTRIDGE = 26
+    const SCAN_R = 6
 
     function inHive(entity) {
         return entity.level.dimension().location().toString() === DIM
     }
 
-    function bandRate(y) {
-        if (y < 0) return 4.0        // The Drown
-        if (y < 48) return 2.5      // The Underworks
-        return 1.5                  // Furnace Tiers and above
+    function barId(player) {
+        return 'infinite_domain:air_' + player.username.toLowerCase()
     }
 
-    function findFilterSlot(player) {
+    // C0069 base_band_rate by Y band (spatial-metrics.md bands)
+    function bandRate(y) {
+        if (y < -32) return 4.0   // The Drown
+        if (y < 48) return 2.6    // The Underworks
+        if (y < 112) return 1.9   // The Furnace Tiers
+        if (y < 192) return 1.5   // The Billet Decks
+        if (y < 256) return 1.2   // The Vaulting
+        return 1.0                // The Crown
+    }
+
+    function findItem(player, id) {
         const inv = player.inventory
-        const size = inv.size ? inv.size : 41
-        for (let i = 0; i < size; i++) {
-            const st = inv.getStackInSlot(i)
-            if (st && !st.isEmpty() && st.id === FILTER) return i
+        const n = inv.size ? inv.size : 41
+        for (let i = 0; i < n; i++) {
+            const s = inv.getStackInSlot(i)
+            if (s && !s.isEmpty() && s.id === id) return i
         }
         return -1
     }
 
-    function actionbar(player, text, color) {
-        player.server.runCommandSilent(
-            'title ' + player.username + ' actionbar {"text":"' + text + '","color":"' + color + '"}')
+    // One scan pass: a lodestone in range is a clean-air waystation (spike C0073);
+    // acid in range is a fume zone (C0074 -> exposure event multiplier).
+    function scanEnvironment(player) {
+        const bx = Math.floor(player.x)
+        const by = Math.floor(player.y)
+        const bz = Math.floor(player.z)
+        const lvl = player.level
+        let waystation = false
+        let fume = false
+        for (let dx = -SCAN_R; dx <= SCAN_R; dx++) {
+            for (let dz = -SCAN_R; dz <= SCAN_R; dz++) {
+                if (dx * dx + dz * dz > SCAN_R * SCAN_R) continue
+                for (let dy = -3; dy <= 3; dy++) {
+                    const id = lvl.getBlock(bx + dx, by + dy, bz + dz).id
+                    if (id === 'minecraft:lodestone') waystation = true
+                    else if (id === ACID) fume = true
+                }
+            }
+        }
+        return { waystation, fume }
+    }
+
+    function ensureBar(player) {
+        const id = barId(player)
+        const name = player.username
+        const s = player.server
+        s.runCommandSilent('bossbar add ' + id + ' {"text":"Atmosphere exposure"}')
+        s.runCommandSilent('bossbar set ' + id + ' max 100')
+        s.runCommandSilent('bossbar set ' + id + ' players ' + name)
+        player.persistentData[PD.bar] = true
+    }
+
+    function hideBar(player) {
+        player.server.runCommandSilent('bossbar set ' + barId(player) + ' players')
+    }
+
+    function updateBar(player, exposure, protectedNow) {
+        const id = barId(player)
+        const s = player.server
+        const colour = exposure >= HURT_AT ? 'red' : exposure >= WARN_AT ? 'yellow' : 'green'
+        s.runCommandSilent('bossbar set ' + id + ' value ' + Math.round(exposure))
+        s.runCommandSilent('bossbar set ' + id + ' color ' + colour)
+        s.runCommandSilent('bossbar set ' + id + ' name {"text":"' +
+            (protectedNow ? 'Filtered air ' : 'Atmosphere ') + Math.round(exposure) + '%"}')
+        s.runCommandSilent('bossbar set ' + id + ' visible ' + (exposure > 0 ? 'true' : 'false'))
     }
 
     PlayerEvents.tick(event => {
         const player = event.player
-        if (!player || player.age % 20 !== 0) return
-        if (event.level.isClientSide()) return
+        if (!player || player.age % 20 !== 0 || event.level.isClientSide()) return
         if (!inHive(player)) return
 
         const d = player.persistentData
         if (player.isCreative() || player.isSpectator()) {
-            d[EXPOSURE] = 0
+            if (d[PD.exp]) { d[PD.exp] = 0; hideBar(player) }
+            return
+        }
+        if (!d[PD.bar]) ensureBar(player)
+
+        let exposure = d[PD.exp] || 0
+        const env = scanEnvironment(player)
+
+        if (env.waystation) {
+            exposure = Math.max(0, exposure - RECOVER_PER_SEC)
+            d[PD.exp] = exposure
+            d[PD.warned] = false
+            updateBar(player, exposure, true)
+            if (exposure === 0) hideBar(player)
             return
         }
 
-        let exposure = d[EXPOSURE] || 0
-        const dx = player.x - SAFE.x
-        const dy = player.y - SAFE.y
-        const dz = player.z - SAFE.z
-        const inSafeVolume = (dx * dx + dy * dy + dz * dz) <= SAFE.r2
+        const maskSlot = findItem(player, MASK)
+        const hasMask = maskSlot !== -1
+        const hasFilter = hasMask && findItem(player, FILTER) !== -1
+        const reduction = hasFilter ? 0.84 : hasMask ? 0.35 : 0.0
+        const rate = bandRate(player.y) * (env.fume ? 1.5 : 1.0)
+        const gain = rate * (1 - reduction)
 
-        if (inSafeVolume) {
-            exposure = Math.max(0, exposure - RECOVERY_PER_SEC)
-            d[EXPOSURE] = exposure
-            d[WARNED] = false
-            if (exposure > 0) actionbar(player, 'Filtered air - venting exposure ' + Math.round(exposure), 'aqua')
-            return
-        }
+        exposure = Math.min(MAX, exposure + gain)
+        d[PD.exp] = exposure
 
-        const filterSlot = findFilterSlot(player)
-        const protectedNow = filterSlot !== -1
-        const rate = bandRate(player.y)
-        const gain = rate * (protectedNow ? FILTER_REDUCTION : 1.0)
-
-        exposure = Math.min(MAX_EXPOSURE, exposure + gain)
-        d[EXPOSURE] = exposure
-
-        if (protectedNow) {
-            let wear = (d[FILTER_WEAR] || 0) + gain + rate * 0.15
-            if (wear >= FILTER_WEAR_PER_CARTRIDGE) {
-                wear -= FILTER_WEAR_PER_CARTRIDGE
-                const st = player.inventory.getStackInSlot(filterSlot)
-                st.setCount(st.getCount() - 1)
-                const left = findFilterSlot(player) === -1 ? 0 : 1
-                player.tell('§8[Charles] §7A filter cartridge is spent.' +
-                    (left ? '' : ' §cThat was your last one.'))
+        // filter + mask wear (only while actually filtering)
+        if (hasFilter) {
+            let wear = (d[PD.wear] || 0) + gain + rate * 0.1
+            if (wear >= WEAR_PER_CARTRIDGE) {
+                wear -= WEAR_PER_CARTRIDGE
+                player.inventory.getStackInSlot(findItem(player, FILTER)).count--
+                const last = findItem(player, FILTER) === -1
+                player.tell('§8[Charles] §7Filter cartridge spent.' + (last ? ' §cThat was the last one.' : ''))
             }
-            d[FILTER_WEAR] = wear
+            d[PD.wear] = wear
+            const ms = player.inventory.getStackInSlot(maskSlot)
+            if (ms && ms.id === MASK) {
+                if (ms.damageValue + 1 >= ms.maxDamage) {
+                    ms.count--
+                    player.server.runCommandSilent('playsound minecraft:entity.item.break player ' + player.username)
+                    player.tell('§8[Charles] §7The respirator seal has failed. Replace it.')
+                } else {
+                    ms.damageValue = ms.damageValue + 1
+                }
+            }
         }
 
         const name = player.username
-        if (exposure >= HURT_AT) {
+        if (exposure >= CRIT_AT) {
             player.server.runCommandSilent('effect give ' + name + ' minecraft:nausea 4 0 true')
             player.server.runCommandSilent('effect give ' + name + ' minecraft:darkness 4 0 true')
-            player.server.runCommandSilent('damage ' + name + ' 2 minecraft:magic')
-            actionbar(player, 'ATMOSPHERE CRITICAL ' + Math.round(exposure), 'red')
-        } else if (exposure >= WARN_AT) {
+            player.server.runCommandSilent('effect give ' + name + ' minecraft:slowness 4 1 true')
+            player.server.runCommandSilent('damage ' + name + ' ' + (exposure >= MAX ? 4 : 2) + ' minecraft:magic')
+        } else if (exposure >= HURT_AT) {
             player.server.runCommandSilent('effect give ' + name + ' minecraft:nausea 4 0 true')
-            actionbar(player, 'Atmosphere exposure ' + Math.round(exposure), 'gold')
-            if (!d[WARNED]) {
-                d[WARNED] = true
-                player.tell('§8[Charles] §7The air here is not survivable unfiltered for long. Find clean air or a working cartridge.')
+            player.server.runCommandSilent('effect give ' + name + ' minecraft:weakness 4 0 true')
+            if (!d[PD.warned]) {
+                d[PD.warned] = true
+                player.tell('§8[Charles] §7The air is not survivable unfiltered for long. Reach a waystation - a lodestone marks clean air - or seal a fresh cartridge.')
             }
-        } else {
-            actionbar(player, (protectedNow ? 'Filtered - ' : 'Unfiltered - ') + 'exposure ' + Math.round(exposure),
-                protectedNow ? 'yellow' : 'gold')
         }
+        updateBar(player, exposure, hasFilter)
     })
 
-    // leaving the dimension clears the meter (spike behaviour; persistence is C0080)
+    // dimension leave: fast decay + hide the bar
     PlayerEvents.tick(event => {
         const player = event.player
         if (!player || player.age % 40 !== 0 || event.level.isClientSide()) return
-        if (!inHive(player) && (player.persistentData[EXPOSURE] || 0) !== 0) {
-            player.persistentData[EXPOSURE] = 0
-            player.persistentData[FILTER_WEAR] = 0
-            player.persistentData[WARNED] = false
+        if (inHive(player)) return
+        const d = player.persistentData
+        if ((d[PD.exp] || 0) > 0) {
+            d[PD.exp] = Math.max(0, d[PD.exp] - 25)
+            if (d[PD.exp] === 0) { d[PD.wear] = 0; d[PD.warned] = false }
         }
+        if (d[PD.bar]) { hideBar(player); d[PD.bar] = false }
+    })
+
+    EntityEvents.death('minecraft:player', event => {
+        const player = event.entity
+        const d = player.persistentData
+        d[PD.exp] = 0
+        d[PD.wear] = 0
+        d[PD.warned] = false
+        if (d[PD.bar]) { hideBar(player); d[PD.bar] = false }
+    })
+
+    PlayerEvents.loggedIn(event => {
+        const player = event.player
+        player.persistentData[PD.bar] = false
+        if (!inHive(player)) hideBar(player)
+    })
+
+    ServerEvents.recipes(event => {
+        event.shaped('kubejs:cinderstack_mask', ['GLG', 'IPI', ' L '], {
+            G: 'minecraft:glass_pane', L: 'minecraft:leather',
+            I: 'minecraft:iron_ingot', P: 'minecraft:paper',
+        }).id('infinite_domain:cinderstack/mask')
+        event.shapeless('2x kubejs:cinderstack_filter', [
+            'minecraft:paper', 'minecraft:paper',
+            'minecraft:charcoal', 'minecraft:charcoal', 'minecraft:iron_nugget',
+        ]).id('infinite_domain:cinderstack/filter')
     })
 })()

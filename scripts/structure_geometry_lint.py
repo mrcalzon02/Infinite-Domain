@@ -521,18 +521,32 @@ def check_damage_coherence(
 
     nearby_rubble = 0
     for pos in list(removed)[:2000]:  # bounded scan for very large diffs
+        found = False
         for dx, dy, dz in NEIGHBORS_6:
-            npos = (pos[0] + dx, pos[1] + dy, pos[2] + dz)
-            name, _ = variant_positions.get(npos, ("minecraft:air", {}))
+            name, _ = variant_positions.get((pos[0] + dx, pos[1] + dy, pos[2] + dz), ("minecraft:air", {}))
             if any(term in name for term in rubble_terms):
-                nearby_rubble += 1
+                found = True
                 break
+        # Debris obeys gravity: a wall/roof breach leaves its rubble on the
+        # floor below, not welded to the breach lip. Scan straight down from
+        # each removed cell for a settled debris pile before concluding the
+        # damage added none.
+        if not found:
+            for drop in range(1, 25):
+                name, _ = variant_positions.get((pos[0], pos[1] - drop, pos[2]), ("minecraft:air", {}))
+                if any(term in name for term in rubble_terms):
+                    found = True
+                    break
+                if _is_solid(name) and name not in AIR_LIKE:
+                    break  # hit a real floor/obstruction first
+        if found:
+            nearby_rubble += 1
     if nearby_rubble == 0:
         findings.append(Finding(
             check="damage_coherence",
             severity="review_flag",
             position=None,
-            detail="no rubble/debris blocks found adjacent to the removed volume",
+            detail="no rubble/debris blocks found adjacent to or fallen below the removed volume",
         ))
     return findings
 

@@ -54,6 +54,6 @@ Run the audits from the instance root:
 ```powershell
 node scripts/audit_ftbquests.js
 node scripts/audit_quest_variety.js
-python scripts/localize_quest_item_names.py
-python scripts/apply_charles_voice_templates.py
+python scripts/generators/localize_quest_item_names.py
+python scripts/generators/apply_charles_voice_templates.py
 ```

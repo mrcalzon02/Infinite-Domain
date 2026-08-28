@@ -81,6 +81,15 @@
 		{
 			dependencies: ["1610000000000003"]
 			id: "1610000000000004"
+			rewards: [{
+				count: 3
+				id: "1640000000000004"
+				item: {
+					count: 1
+					id: "wastelands:rad_away"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				count: 8L
@@ -128,6 +137,15 @@
 		{
 			dependencies: ["1610000000000006"]
 			id: "1610000000000007"
+			rewards: [{
+				count: 2
+				id: "1670000000000007"
+				item: {
+					count: 1
+					id: "ae2:printed_engineering_processor"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				count: 8L
@@ -164,8 +182,10 @@
 			id: "2610000000000001"
 			shape: "heart"
 			tasks: [{
+				count: 128L
 				id: "2620000000000001"
-				type: "checkmark"
+				item: { count: 1, id: "minecraft:wheat" }
+				type: "item"
 			}]
 			x: 0.0d
 			y: 2.0d
@@ -207,6 +227,14 @@
 		{
 			dependencies: ["2610000000000003"]
 			id: "2610000000000004"
+			rewards: [{
+				id: "2640000000000004"
+				item: {
+					count: 1
+					id: "createnuclear:black_anti_radiation_helmet"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 16L
@@ -223,7 +251,8 @@
 			shape: "heart"
 			tasks: [{
 				id: "2620000000000005"
-				type: "checkmark"
+				item: { count: 1, id: "createnuclear:black_anti_radiation_chestplate" }
+				type: "item"
 			}]
 			x: 0.0d
 			y: 10.0d
@@ -244,6 +273,15 @@
 		{
 			dependencies: ["2610000000000006"]
 			id: "2610000000000007"
+			rewards: [{
+				count: 2
+				id: "2670000000000007"
+				item: {
+					count: 1
+					id: "createcybernetics:component_synthnerves"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 128L
@@ -323,6 +361,14 @@
 		{
 			dependencies: ["3610000000000003"]
 			id: "3610000000000004"
+			rewards: [{
+				id: "3640000000000004"
+				item: {
+					count: 1
+					id: "wastelands:geiger_counter"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				count: 8L
@@ -378,6 +424,14 @@
 		{
 			dependencies: ["3610000000000006"]
 			id: "3610000000000007"
+			rewards: [{
+				id: "3670000000000007"
+				item: {
+					count: 1
+					id: "ae2lt:lightning_cell_component_i"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				id: "3620000000000007"
@@ -455,6 +509,14 @@
 		{
 			dependencies: ["2610000000000002"]
 			id: "4610000000000004"
+			rewards: [{
+				id: "6A09C0A0DFFAB451"
+				item: {
+					count: 1
+					id: "kubejs:era6_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4620000000000004"
@@ -502,6 +564,14 @@
 		{
 			dependencies: ["3610000000000004"]
 			id: "4610000000000008"
+			rewards: [{
+				id: "6A231900341002AA"
+				item: {
+					count: 1
+					id: "kubejs:era6_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4620000000000008"
@@ -634,6 +704,14 @@
 			]
 			id: "7611000000000004"
 			optional: true
+			rewards: [{
+				id: "6A8DFCB7CAD1D385"
+				item: {
+					count: 1
+					id: "kubejs:era6_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 9L
@@ -651,6 +729,14 @@
 			]
 			id: "7611000000000005"
 			optional: true
+			rewards: [{
+				id: "6AAF9669AACD5FA4"
+				item: {
+					count: 1
+					id: "kubejs:era6_priority_cache"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 17L

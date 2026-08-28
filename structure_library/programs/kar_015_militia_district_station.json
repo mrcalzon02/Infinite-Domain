@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:kar_015_militia_district_station",
+  "culture": "karsic",
+  "building_type": "appliance_hall",
+  "conversion_class": "A",
+  "base_master": "ruined_police_precinct",
+  "primary_stratum": "K-II",
+  "secondary_stratum": "K-III",
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "partial_basement",
+  "back_of_house": "behind",
+  "district_role": "district_service",
+  "rail_served": false,
+  "heating_main_connection": "rear_basement",
+  "tiling_asset": false,
+  "signage_series": "MILITIA DISTRICT STATION 1",
+  "archetype": "Militia District Station",
+  "roster_note": "Duty room, holding block, vehicle yard.",
+  "damage_archetype": "cannibalisation",
+  "civic_program": [
+    "a run of tall vehicle bays opening directly to the street",
+    "a watch room with sight of the bays and the approach",
+    "a drill or hose tower attached to the rear",
+    "dormitory and mess rooms on the upper floor",
+    "a locker and drying room beside the bays",
+    "a rear yard with a hardstanding and a fuel point"
+  ],
+  "circulation": [
+    "crew reach the bays from the upper floor without crossing the watch room",
+    "vehicles leave forward onto the street without reversing"
+  ],
+  "damage_constraints": [
+    "the bays are empty and their doors are open; the tower stands",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the bays read as vehicle bays, not as a warehouse"
+    ]
+  },
+  "source_metadata": {
+    "category": "civic",
+    "settlement_types": [
+      "town_center"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 57,
+      "depth": 49
+    },
+    "base_height": 25,
+    "conversion_target": "multibuilding"
+  }
+}

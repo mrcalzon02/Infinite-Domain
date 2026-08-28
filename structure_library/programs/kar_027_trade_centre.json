@@ -1,0 +1,66 @@
+{
+  "structure_id": "infinite_domain:kar_027_trade_centre",
+  "culture": "karsic",
+  "building_type": "department_store",
+  "conversion_class": "A",
+  "base_master": "ruined_shopping_mall",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": true,
+  "site_context": "urban_paved",
+  "foundation_profile": "full_basement",
+  "back_of_house": "behind",
+  "district_role": "street_frontage",
+  "rail_served": false,
+  "heating_main_connection": "rear_basement",
+  "tiling_asset": false,
+  "signage_series": "TRADE CENTRE 9",
+  "archetype": "Trade Centre",
+  "roster_note": "Concrete-frame market hall with skylights and a covered arcade.",
+  "damage_archetype": "failed assembly point",
+  "commercial_program": [
+    "a concrete-framed trading floor on every level, free of partitions",
+    "a central escalator or stair hall rising the full height",
+    "continuous ribbon glazing to the street on the upper floors",
+    "a goods lift and back-of-house spine along the rear elevation",
+    "stock rooms and a loading dock at the rear",
+    "a basement trading floor and plant room",
+    "a rooftop plant enclosure"
+  ],
+  "circulation": [
+    "the vertical hall is the primary public route and is visible from the entrance",
+    "goods circulation never crosses the trading floor"
+  ],
+  "damage_constraints": [
+    "one corner of the frame has failed, exposing several trading floors at once",
+    "the vertical hall survives",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "trading floors read as open retail, not as offices",
+      "the frame is legible where the corner has gone"
+    ]
+  },
+  "source_metadata": {
+    "category": "commercial",
+    "settlement_types": [
+      "town_center"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 73,
+      "depth": 63
+    },
+    "base_height": 28,
+    "conversion_target": "multibuilding"
+  }
+}

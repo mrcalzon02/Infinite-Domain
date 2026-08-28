@@ -1,8 +1,8 @@
-// Gives Mekanism's SPS antimatter output (mekanism:pellet_antimatter), which has no
-// vanilla use beyond AllTheCompressed's cosmetic compression chain, a real crafting
-// sink: the compressed antimatter block substitutes for AE2LT's overload_singularity
-// recipe (normally ae2:singularity + minecraft:nether_star), so a running SPS becomes
-// an alternate path into the Matter Warping Matrix tier instead of a dead end.
+// allthecompressed:antimatter_block is now producible via the Oritech Particle
+// Accelerator (see data/oritech/recipe/particle/antimatter.json). This gives it a
+// crafting sink: it substitutes for AE2LT's overload_singularity recipe (normally
+// ae2:singularity + minecraft:nether_star), so pushing the accelerator past nether
+// stars becomes an alternate path into the Matter Warping Matrix tier.
 ServerEvents.recipes(event => {
     event.shapeless('ae2lt:overload_singularity', [
         'allthecompressed:antimatter_block',

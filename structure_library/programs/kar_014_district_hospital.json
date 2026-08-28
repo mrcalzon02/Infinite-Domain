@@ -1,0 +1,68 @@
+{
+  "structure_id": "infinite_domain:kar_014_district_hospital",
+  "culture": "karsic",
+  "building_type": "hospital_korpus",
+  "conversion_class": "N",
+  "base_master": "ruined_hospital",
+  "primary_stratum": "K-III",
+  "secondary_stratum": "K-II",
+  "repeatable_storey": true,
+  "site_context": "karsic_district_yard",
+  "foundation_profile": "full_basement",
+  "back_of_house": "behind",
+  "district_role": "district_service",
+  "rail_served": false,
+  "heating_main_connection": "gallery_basement",
+  "tiling_asset": false,
+  "signage_series": "DISTRICT HOSPITAL 5 / SECTION F",
+  "archetype": "District Hospital",
+  "roster_note": "Separate *korpus* blocks linked by heated galleries \u2014 the enclosed link is the identity.",
+  "damage_archetype": "frozen district",
+  "medical_program": [
+    "two or more ward blocks standing apart from each other",
+    "enclosed heated galleries physically linking the blocks at ground level",
+    "repeated ward rooms off a wide double-loaded corridor",
+    "a treatment and examination suite on the ground floor",
+    "an admissions hall with a waiting bay and a records counter",
+    "a laboratory or dispensary wing",
+    "a mortuary and a plant room below grade",
+    "an ambulance apron with a canopy at the admissions entrance"
+  ],
+  "circulation": [
+    "the heated galleries are the primary inter-block route and must be walkable end to end",
+    "every ward floor has two stair cores"
+  ],
+  "damage_constraints": [
+    "one ward block is dark and sealed with improvised partitions; another remains in use",
+    "the heated galleries survive as the route between them",
+    "the basement plant room stays intact",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the enclosed heated link between blocks is the first thing that reads",
+      "wards read as wards, not as repeated empty rooms"
+    ]
+  },
+  "source_metadata": {
+    "category": "civic",
+    "settlement_types": [
+      "town_center"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 67,
+      "depth": 59
+    },
+    "base_height": 36,
+    "conversion_target": "multibuilding"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "structure_id": "infinite_domain:kar_087_village_cottage",
+  "culture": "karsic",
+  "building_type": "detached_small",
+  "conversion_class": "N",
+  "base_master": null,
+  "primary_stratum": "K-I",
+  "secondary_stratum": "K-II",
+  "repeatable_storey": false,
+  "site_context": "rural_worked",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "rural_plot",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "VILLAGE COTTAGE 5",
+  "archetype": "Village Cottage",
+  "roster_note": "Single storey, stove, veranda, garden. Replaces `split_level_house`.",
+  "damage_archetype": null,
+  "residential_program": [
+    "a single-storey dwelling of two or three rooms around a masonry stove",
+    "an enclosed veranda or storm porch at the entrance",
+    "a garden plot with beds, a water butt and a compost corner",
+    "a timber outbuilding for tools and fuel",
+    "a fence of mismatched boards enclosing the plot"
+  ],
+  "circulation": [
+    "one entrance through the storm porch",
+    "the plot is entered from a track, not a road"
+  ],
+  "damage_constraints": [
+    "the roof has partly fallen at the ridge; the stove and its flue still stand",
+    "the garden has gone to seed but its bed lines are still readable",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the building reads as informal and individually built, unlike everything else in the region",
+      "the stove is the obvious centre of the plan"
+    ]
+  }
+}

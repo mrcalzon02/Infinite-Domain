@@ -1,0 +1,62 @@
+{
+  "structure_id": "infinite_domain:kar_056_southern_industrial_port",
+  "culture": "karsic",
+  "building_type": "port_apron",
+  "conversion_class": "N",
+  "base_master": "warm_industrial_mountain_port",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "waterfront",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "freight",
+  "rail_served": true,
+  "heating_main_connection": "quay_basement",
+  "tiling_asset": false,
+  "signage_series": "SOUTHERN INDUSTRIAL PORT 7",
+  "archetype": "Southern Industrial Port",
+  "roster_note": "",
+  "damage_archetype": "cannibalisation",
+  "logistics_program": [
+    "a quay wall with bollards and fenders",
+    "a rail apron running the length of the quay under a gantry crane",
+    "a heated transit warehouse behind the apron",
+    "a port office with sight of the quay",
+    "a fuel and water point for vessels",
+    "a workshop and wash block"
+  ],
+  "circulation": [
+    "quay to apron to warehouse to rail is a continuous handling route"
+  ],
+  "damage_constraints": [
+    "the gantry is derailed at one end of its travel; the quay and warehouse stand",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the handling sequence is followable from the water inland"
+    ]
+  },
+  "source_metadata": {
+    "category": "industrial",
+    "settlement_types": [
+      "industrial"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 47,
+      "depth": 47
+    },
+    "base_height": 31,
+    "conversion_target": "multibuilding"
+  }
+}

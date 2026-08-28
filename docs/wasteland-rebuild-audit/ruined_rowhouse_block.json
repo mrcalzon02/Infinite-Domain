@@ -1,0 +1,1180 @@
+{
+  "structure_id": "ruined_rowhouse_block",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_rowhouse_block_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/ruined_rowhouse_block.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "ruined_rowhouse_block_clean_master",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          3,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (10, 3, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          4,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (10, 4, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          5,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (10, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          6,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (10, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          7,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (10, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          10,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (10, 10, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          11,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (10, 11, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          12,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (10, 12, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          13,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (10, 13, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (10, 14, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          3,
+          31
+        ],
+        "detail": "minecraft:lever at (11, 3, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          10,
+          31
+        ],
+        "detail": "minecraft:lever at (11, 10, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          17,
+          31
+        ],
+        "detail": "minecraft:lever at (11, 17, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          3,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (21, 3, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          4,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (21, 4, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          5,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (21, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          6,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (21, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          7,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (21, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          10,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (21, 10, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          11,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (21, 11, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          12,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (21, 12, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          13,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (21, 13, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          14,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (21, 14, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          3,
+          31
+        ],
+        "detail": "minecraft:lever at (22, 3, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          10,
+          31
+        ],
+        "detail": "minecraft:lever at (22, 10, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          17,
+          31
+        ],
+        "detail": "minecraft:lever at (22, 17, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          3,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (32, 3, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          4,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (32, 4, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          5,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (32, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          6,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (32, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          7,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (32, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          10,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (32, 10, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          11,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (32, 11, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          12,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (32, 12, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          13,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (32, 13, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          14,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (32, 14, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          3,
+          31
+        ],
+        "detail": "minecraft:lever at (33, 3, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          10,
+          31
+        ],
+        "detail": "minecraft:lever at (33, 10, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          17,
+          31
+        ],
+        "detail": "minecraft:lever at (33, 17, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          3,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (43, 3, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "25 additional floating blocks not individually listed (65 total)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "ruined_rowhouse_block",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          3,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (10, 3, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          4,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (10, 4, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          5,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (10, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          6,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (10, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          7,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (10, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          10,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (10, 10, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          11,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (10, 11, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          12,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (10, 12, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          13,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (10, 13, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (10, 14, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          3,
+          31
+        ],
+        "detail": "minecraft:lever at (11, 3, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          10,
+          31
+        ],
+        "detail": "minecraft:lever at (11, 10, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          3,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (21, 3, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          4,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (21, 4, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          5,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (21, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          6,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (21, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          7,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (21, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          10,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (21, 10, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          11,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (21, 11, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          12,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (21, 12, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          13,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (21, 13, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          14,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (21, 14, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          3,
+          31
+        ],
+        "detail": "minecraft:lever at (22, 3, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          10,
+          31
+        ],
+        "detail": "minecraft:lever at (22, 10, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          17,
+          31
+        ],
+        "detail": "minecraft:lever at (22, 17, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          3,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (32, 3, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          4,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (32, 4, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          5,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (32, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          6,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (32, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          7,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (32, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          10,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (32, 10, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          11,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (32, 11, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          12,
+          25
+        ],
+        "detail": "minecraft:oak_stairs at (32, 12, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          13,
+          26
+        ],
+        "detail": "minecraft:oak_stairs at (32, 13, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          32,
+          14,
+          27
+        ],
+        "detail": "minecraft:oak_stairs at (32, 14, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          3,
+          31
+        ],
+        "detail": "minecraft:lever at (33, 3, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          10,
+          31
+        ],
+        "detail": "minecraft:lever at (33, 10, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          17,
+          31
+        ],
+        "detail": "minecraft:lever at (33, 17, 31) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          10,
+          23
+        ],
+        "detail": "minecraft:oak_stairs at (43, 10, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          43,
+          11,
+          24
+        ],
+        "detail": "minecraft:oak_stairs at (43, 11, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "14 additional floating blocks not individually listed (54 total)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        15,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 15, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        15,
+        6
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 15, 6) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        15,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 15, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        23,
+        30
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 23, 30) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        23,
+        31
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 23, 31) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        6,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (6, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        6,
+        15,
+        6
+      ],
+      "detail": "minecraft:smooth_stone_slab at (6, 15, 6) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        6,
+        15,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (6, 15, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        6,
+        23,
+        30
+      ],
+      "detail": "minecraft:smooth_stone_slab at (6, 23, 30) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        6,
+        23,
+        31
+      ],
+      "detail": "minecraft:smooth_stone_slab at (6, 23, 31) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        7,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (7, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        7,
+        15,
+        6
+      ],
+      "detail": "minecraft:smooth_stone_slab at (7, 15, 6) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        7,
+        15,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (7, 15, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        8,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (8, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        8,
+        15,
+        6
+      ],
+      "detail": "minecraft:smooth_stone_slab at (8, 15, 6) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        8,
+        15,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (8, 15, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        9,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (9, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        9,
+        15,
+        6
+      ],
+      "detail": "minecraft:smooth_stone_slab at (9, 15, 6) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        9,
+        15,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (9, 15, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        10,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (10, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        10,
+        15,
+        6
+      ],
+      "detail": "minecraft:smooth_stone_slab at (10, 15, 6) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        10,
+        15,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (10, 15, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        11,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (11, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        11,
+        15,
+        6
+      ],
+      "detail": "minecraft:smooth_stone_slab at (11, 15, 6) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        11,
+        15,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (11, 15, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        12,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (12, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        12,
+        15,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (12, 15, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        15,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (15, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": null,
+      "detail": "111 further slab/stair-in-wall hits not listed (141 total)."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        48,
+        2,
+        8
+      ],
+      "detail": "added debris (48, 2, 8)->(50, 7, 35) is 100% minecraft:gravel, fills 96% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        37,
+        2,
+        8
+      ],
+      "detail": "added debris (37, 2, 8)->(45, 8, 35) is 100% minecraft:gravel, fills 82% of its box, top is 99% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        36,
+        1,
+        37
+      ],
+      "detail": "added debris (36, 1, 37)->(50, 8, 39) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 100% inside the footprint, 100% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 41,
+    "variant_hard_fail": 41,
+    "audit_flag_count": 34,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 82,
+      "slab_wall_penetration": 31,
+      "terrain_mismatch_damage": 3
+    }
+  }
+}

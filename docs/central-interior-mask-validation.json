@@ -1,0 +1,122 @@
+{
+  "purpose": "Static proof that the central-continent interior loses the wastelands:mountains erosion band while the mountain ring and everything beyond radius 4750 are untouched.",
+  "authority": [
+    "docs/GRADIENT_OCEAN_PACK_VALIDATION.md"
+  ],
+  "source": {
+    "masks": "datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen/density_function",
+    "override": "datapacks/gradient_ocean_pack/data/minecraft/worldgen/density_function/overworld/erosion.json"
+  },
+  "mountain_erosion_band_max": -0.55,
+  "ring_radii": [
+    3200.0,
+    3900.0
+  ],
+  "mask_plateau_radius": 4650.0,
+  "mask_edge_radius": 4750.0,
+  "noise_samples": [
+    -1.0,
+    -0.9,
+    -0.7,
+    -0.55,
+    -0.3,
+    0.0,
+    0.5,
+    1.0
+  ],
+  "probe_count": 600,
+  "checks": [
+    {
+      "id": "CIM-1a",
+      "check": "central_interior_mask is defined",
+      "passed": true,
+      "detail": "custom_worldgen:central_interior_mask present in datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen/density_function"
+    },
+    {
+      "id": "CIM-1b",
+      "check": "base_erosion is defined",
+      "passed": true,
+      "detail": "custom_worldgen:base_erosion present in datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen/density_function"
+    },
+    {
+      "id": "CIM-1c",
+      "check": "the vanilla overworld/erosion override exists",
+      "passed": true,
+      "detail": "datapacks/gradient_ocean_pack/data/minecraft/worldgen/density_function/overworld/erosion.json"
+    },
+    {
+      "id": "CIM-2a",
+      "check": "the erosion override consumes only central_interior_mask and base_erosion",
+      "passed": true,
+      "detail": "custom_worldgen references in the override: ['custom_worldgen:base_erosion', 'custom_worldgen:central_interior_mask']",
+      "evidence": [
+        "custom_worldgen:base_erosion",
+        "custom_worldgen:central_interior_mask"
+      ]
+    },
+    {
+      "id": "CIM-2b",
+      "check": "central_interior_mask is a radial plateau gated by the mountain ring",
+      "passed": true,
+      "detail": "references of custom_worldgen:central_interior_mask: ['custom_worldgen:mountain_ring_mask'] (plus an inline radial distance feather)",
+      "evidence": [
+        "custom_worldgen:mountain_ring_mask"
+      ]
+    },
+    {
+      "id": "CIM-3",
+      "check": "wherever the interior mask is saturated the wastelands:mountains erosion band is unreachable",
+      "passed": true,
+      "detail": "effective erosion stays above -0.55 for every bracketing noise sample wherever central_interior_mask > 0.9",
+      "evidence": []
+    },
+    {
+      "id": "CIM-3b",
+      "check": "any residual mountain routing is confined to the outer shoreline feather",
+      "passed": true,
+      "detail": "in the 100-block mask feather the lerp can still admit occasional mountains right at the central shoreline, where the continent has already blended almost entirely to ocean; this check proves none survive inside the ring, the guaranteed-land radius, or the playable interior. nearest residual mountain radius: 4700.0 (plateau ends at 4650)",
+      "evidence": {
+        "nearest_residual_mountain_radius": 4700.0
+      }
+    },
+    {
+      "id": "CIM-4",
+      "check": "mountain ring annulus (3250-3850) keeps the untouched erosion noise",
+      "passed": true,
+      "detail": "central_interior_mask is 0 across the ring, so its guaranteed wastelands:mountains routing is preserved",
+      "evidence": []
+    },
+    {
+      "id": "CIM-5",
+      "check": "no-op outside the central continent (r >= 4750)",
+      "passed": true,
+      "detail": "erosion is bit-identical to vanilla, so the outer directional continents keep their mountains and the abyssal ocean program is unaffected",
+      "evidence": []
+    },
+    {
+      "id": "CIM-6",
+      "check": "the change is confined to the central continent and its feather",
+      "passed": true,
+      "detail": "effective erosion differs from vanilla at 1536 sampled probes, none at or beyond r = 4750 (max changed r = 4750.0)",
+      "evidence": {
+        "changed_probe_count": 1536,
+        "max_changed_radius": 4750.0
+      }
+    },
+    {
+      "id": "CIM-7",
+      "check": "mountain_ring_mask still steps 0 -> 1 -> 0 across the annulus",
+      "passed": true,
+      "detail": "mountain_ring_mask at r=1000/3500/5000 = 0.0/1.0/0.0"
+    },
+    {
+      "id": "CIM-8",
+      "check": "every referenced function is modelled or is a known noise source",
+      "passed": true,
+      "detail": "external references treated as noise: none",
+      "evidence": []
+    }
+  ],
+  "passed": true,
+  "runtime_validation": "Static proof over the density-function graph. Actual in-world biome placement, terrain height and Lost Cities city density remain unmeasured; generate a fresh test world to confirm."
+}

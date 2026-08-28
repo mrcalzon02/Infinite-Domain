@@ -1,0 +1,65 @@
+{
+  "structure_id": "infinite_domain:kar_039_oil_field",
+  "culture": "karsic",
+  "building_type": "extraction_site",
+  "conversion_class": "N",
+  "base_master": "abandoned_oil_field",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "industrial_hardstanding",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "extraction",
+  "rail_served": true,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "OIL FIELD 3 / SHOP 15",
+  "archetype": "Oil Field",
+  "roster_note": "",
+  "damage_archetype": "cannibalisation",
+  "industrial_program": [
+    "an excavation with worked faces, benches and haul route",
+    "a winding, crushing or pumping structure at the excavation edge",
+    "a processing shed with a conveyor to a loading point",
+    "a rail or road loading point with a weigh house",
+    "a changing and wash block for the workforce",
+    "a spoil ridge or tip placed downwind of the workings",
+    "a workshop with spare-parts storage"
+  ],
+  "circulation": [
+    "the haul route from face to processing to loading is continuous and followable"
+  ],
+  "damage_constraints": [
+    "the machinery has been cannibalised for parts; the excavation and haul route remain",
+    "the changing block survives",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the extraction geometry is specific to this material, not a generic hole"
+    ]
+  },
+  "source_metadata": {
+    "category": "industrial",
+    "settlement_types": [
+      "industrial",
+      "rural"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 75,
+      "depth": 61
+    },
+    "base_height": 25,
+    "conversion_target": "multibuilding"
+  }
+}

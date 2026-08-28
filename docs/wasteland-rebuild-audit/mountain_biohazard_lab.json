@@ -1,0 +1,622 @@
+{
+  "structure_id": "mountain_biohazard_lab",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/mountain_biohazard_lab_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/mountain_biohazard_lab.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "mountain_biohazard_lab_clean_master",
+    "passed": false,
+    "hard_fail_count": 25,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          4,
+          32
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 4, 32) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          5,
+          33
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 5, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          6,
+          34
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 6, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          4,
+          13
+        ],
+        "detail": "create:framed_glass at (23, 4, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          4,
+          32
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (23, 4, 32) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          5,
+          13
+        ],
+        "detail": "create:framed_glass at (23, 5, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          5,
+          33
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (23, 5, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          6,
+          34
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (23, 6, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          4,
+          13
+        ],
+        "detail": "create:framed_glass at (24, 4, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          5,
+          13
+        ],
+        "detail": "create:framed_glass at (24, 5, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          2,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (23, 2, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          2,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (24, 2, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          30,
+          2,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (30, 2, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          2,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (31, 2, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          27,
+          2,
+          23
+        ],
+        "detail": "minecraft:spruce_door at (27, 2, 23) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          2,
+          39
+        ],
+        "detail": "minecraft:spruce_door at (16, 2, 39) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          3,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (23, 3, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          3,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (24, 3, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          30,
+          3,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (30, 3, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          3,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (31, 3, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          3,
+          16
+        ],
+        "detail": "minecraft:spruce_door at (42, 3, 16) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          27,
+          3,
+          23
+        ],
+        "detail": "minecraft:spruce_door at (27, 3, 23) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          3,
+          24
+        ],
+        "detail": "minecraft:spruce_door at (42, 3, 24) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          3,
+          39
+        ],
+        "detail": "minecraft:spruce_door at (16, 3, 39) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          5,
+          13
+        ],
+        "detail": "glazed pane/run of 4 block(s) starting at (23, 5, 13) has no wall material touching its boundary anywhere (floating window)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "mountain_biohazard_lab",
+    "passed": false,
+    "hard_fail_count": 25,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          4,
+          32
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 4, 32) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          5,
+          33
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 5, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          6,
+          34
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 6, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          4,
+          13
+        ],
+        "detail": "create:framed_glass at (23, 4, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          4,
+          32
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (23, 4, 32) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          5,
+          13
+        ],
+        "detail": "create:framed_glass at (23, 5, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          5,
+          33
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (23, 5, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          6,
+          34
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (23, 6, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          4,
+          13
+        ],
+        "detail": "create:framed_glass at (24, 4, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          5,
+          13
+        ],
+        "detail": "create:framed_glass at (24, 5, 13) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          2,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (23, 2, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          2,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (24, 2, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          30,
+          2,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (30, 2, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          2,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (31, 2, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          27,
+          2,
+          23
+        ],
+        "detail": "minecraft:spruce_door at (27, 2, 23) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          2,
+          39
+        ],
+        "detail": "minecraft:spruce_door at (16, 2, 39) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          3,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (23, 3, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          24,
+          3,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (24, 3, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          30,
+          3,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (30, 3, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          31,
+          3,
+          14
+        ],
+        "detail": "minecraft:spruce_door at (31, 3, 14) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          3,
+          16
+        ],
+        "detail": "minecraft:spruce_door at (42, 3, 16) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          27,
+          3,
+          23
+        ],
+        "detail": "minecraft:spruce_door at (27, 3, 23) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          42,
+          3,
+          24
+        ],
+        "detail": "minecraft:spruce_door at (42, 3, 24) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          16,
+          3,
+          39
+        ],
+        "detail": "minecraft:spruce_door at (16, 3, 39) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          23,
+          5,
+          13
+        ],
+        "detail": "glazed pane/run of 4 block(s) starting at (23, 5, 13) has no wall material touching its boundary anywhere (floating window)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        23,
+        7,
+        3
+      ],
+      "detail": "minecraft:smooth_stone_slab at (23, 7, 3) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        24,
+        7,
+        3
+      ],
+      "detail": "minecraft:smooth_stone_slab at (24, 7, 3) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        25,
+        7,
+        3
+      ],
+      "detail": "minecraft:smooth_stone_slab at (25, 7, 3) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        26,
+        7,
+        3
+      ],
+      "detail": "minecraft:smooth_stone_slab at (26, 7, 3) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        7,
+        3
+      ],
+      "detail": "minecraft:smooth_stone_slab at (27, 7, 3) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        28,
+        7,
+        3
+      ],
+      "detail": "minecraft:smooth_stone_slab at (28, 7, 3) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        29,
+        7,
+        3
+      ],
+      "detail": "minecraft:smooth_stone_slab at (29, 7, 3) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        30,
+        7,
+        3
+      ],
+      "detail": "minecraft:smooth_stone_slab at (30, 7, 3) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        7,
+        3
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 7, 3) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 25,
+    "variant_hard_fail": 25,
+    "audit_flag_count": 9,
+    "by_check": {
+      "lint:opening_wall_coupling:hard_fail": 30,
+      "lint:structural_connectivity:hard_fail": 20,
+      "slab_wall_penetration": 9
+    }
+  }
+}

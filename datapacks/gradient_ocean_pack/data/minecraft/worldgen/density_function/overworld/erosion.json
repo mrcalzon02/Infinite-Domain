@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:flat_cache",
+  "argument": {
+    "type": "isekai_api:lerp",
+    "t": "custom_worldgen:central_interior_mask",
+    "a": "custom_worldgen:base_erosion",
+    "b": {
+      "type": "isekai_api:max",
+      "a": "custom_worldgen:base_erosion",
+      "b": {
+        "type": "isekai_api:constant",
+        "value": -0.5
+      }
+    }
+  }
+}

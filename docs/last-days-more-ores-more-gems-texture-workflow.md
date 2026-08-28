@@ -49,6 +49,13 @@ generic silhouette.
 - Existing model, blockstate, and texture paths remain untouched. The pass adds
   no model or blockstate overrides.
 
+> **Layered on top, separately:** the render-only gemstone "glitter" effect
+> (`docs/GEMSTONE_GLITTER_EFFECT.md`) *does* add model overrides and an animated
+> emissive overlay sprite for the 63 gem ores + 44 gem storage blocks, shipped in
+> `kubejs/assets/more_ores_more_gems/`. It reads these derived base textures but
+> never writes them; the "no overrides / static machinery" contract above still
+> describes *this* pass.
+
 ## Rebuild and verification
 
 Run `scripts/install_more_ores_more_gems_derived_textures.py` to reproduce all

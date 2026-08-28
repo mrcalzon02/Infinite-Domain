@@ -1,0 +1,12 @@
+{
+  "type": "isekai_api:multiply",
+  "a": "custom_worldgen:regional_east_west_gradient",
+  "b": {
+    "type": "isekai_api:add",
+    "a": { "type": "isekai_api:constant", "value": 1.0 },
+    "b": {
+      "type": "isekai_api:negate",
+      "f": "custom_worldgen:central_continent_mask"
+    }
+  }
+}

@@ -10,7 +10,7 @@ from generate_abyssal_sites import StructureBuilder
 
 EXPECTED_GIT_BLOBS = {
     'karsic_collapsed_cable_run.nbt': '66363c525e845a29e5e3212f007a30414a25a318',
-    'karsic_pipeline_collapse_bridge.nbt': '3f06f650ea2f82aef280a53d40cb47965c18a5c8',
+    'karsic_pipeline_collapse_bridge.nbt': 'b67ef862abd72ca7b72001f274925268d8c9e61e',
     'karsic_trench_wall_gantry.nbt': '954b9fd1027051969f94d1e385b7c395a61dd0a2',
 }
 
@@ -43,6 +43,8 @@ def karsic_pipeline_collapse_bridge():
         sag = int(2 * abs((x - 8) / 8))
         b.set(x, 3 - sag, 2, 'minecraft:oxidized_copper')
     b.cut(7, 1, 2, 9, 2, 2)
+    for x, z in ((1, 1), (15, 3), (7, 0), (9, 4)):
+        b.set(x, 0, z, 'minecraft:gravel')
     return b
 
 

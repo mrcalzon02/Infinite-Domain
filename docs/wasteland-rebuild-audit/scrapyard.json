@@ -1,0 +1,73 @@
+{
+  "structure_id": "scrapyard",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/scrapyard_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/scrapyard.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "scrapyard_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": []
+  },
+  "variant_lint": {
+    "structure_id": "scrapyard",
+    "passed": false,
+    "hard_fail_count": 2,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          29,
+          2,
+          33
+        ],
+        "detail": "the_wasteland_reworked:garbage_bag at (29, 2, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          34,
+          4,
+          24
+        ],
+        "detail": "immersiveengineering:sheetmetal_steel at (34, 4, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "damage_coherence",
+        "severity": "review_flag",
+        "position": null,
+        "detail": "removed volume fills 100% of its bounding box (reads as a clean rectangular cut, not an authored fracture) across 60 blocks"
+      },
+      {
+        "check": "damage_coherence",
+        "severity": "review_flag",
+        "position": null,
+        "detail": "no rubble/debris blocks found adjacent to or fallen below the removed volume"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        37,
+        6,
+        19
+      ],
+      "detail": "removed volume (37, 6, 19)->(41, 8, 22) (60 blocks) fills 100% of its box with 6/6 flat axis-aligned faces - a clean rectangular excision (t.clear box), not an authored fracture with an irregular boundary."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 2,
+    "audit_flag_count": 1,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 2,
+      "lint:damage_coherence:review_flag": 2,
+      "terrain_mismatch_damage": 1
+    }
+  }
+}

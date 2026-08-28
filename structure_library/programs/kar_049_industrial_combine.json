@@ -1,0 +1,69 @@
+{
+  "structure_id": "infinite_domain:kar_049_industrial_combine",
+  "culture": "karsic",
+  "building_type": "machine_hall",
+  "conversion_class": "N",
+  "base_master": "industrial_facility",
+  "primary_stratum": "K-III",
+  "secondary_stratum": "K-V",
+  "repeatable_storey": false,
+  "site_context": "industrial_hardstanding",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "works",
+  "rail_served": true,
+  "heating_main_connection": "ancillary_basement",
+  "tiling_asset": false,
+  "signage_series": "INDUSTRIAL COMBINE 6 / SHOP 10",
+  "archetype": "Industrial Combine",
+  "roster_note": "Multi-shop combine on a numbered shop grid.",
+  "damage_archetype": "heroic maintenance",
+  "industrial_program": [
+    "a clear-span machine hall three storeys tall with a crane rail at eaves level",
+    "a clerestory glazing band in the top two blocks of the hall wall",
+    "a machine access lane running the full length of the hall to a door at each end",
+    "a control room at mezzanine level glazed onto the hall",
+    "a changing and wash block at the workers' entrance",
+    "a repair bay with spare-parts racking",
+    "an attached low ancillary block with offices and a canteen",
+    "a rail siding with a loading gantry over it",
+    "a stack standing clear of the roof mass"
+  ],
+  "circulation": [
+    "the access lane is 4 wide and reaches a door at both ends",
+    "the control room is reached without crossing the hall floor"
+  ],
+  "damage_constraints": [
+    "the hall stands but has been stripped: cut cable ends, empty mountings, drag marks to the doors",
+    "the crane rail survives; the crane does not",
+    "the changing block and control room remain legible",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the hall reads as one large working volume, not as subdivided rooms",
+      "what was removed is inferable from what is left behind"
+    ]
+  },
+  "source_metadata": {
+    "category": "industrial",
+    "settlement_types": [
+      "industrial"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 69,
+      "depth": 57
+    },
+    "base_height": 29,
+    "conversion_target": "multibuilding"
+  }
+}

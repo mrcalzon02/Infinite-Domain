@@ -1,0 +1,66 @@
+{
+  "structure_id": "infinite_domain:kar_023_univermag",
+  "culture": "karsic",
+  "building_type": "department_store",
+  "conversion_class": "N",
+  "base_master": "ruined_department_store",
+  "primary_stratum": "K-III",
+  "secondary_stratum": "K-V",
+  "repeatable_storey": true,
+  "site_context": "urban_paved",
+  "foundation_profile": "full_basement",
+  "back_of_house": "behind",
+  "district_role": "street_frontage",
+  "rail_served": false,
+  "heating_main_connection": "rear_basement",
+  "tiling_asset": false,
+  "signage_series": "UNIVERMAG 3",
+  "archetype": "Univermag",
+  "roster_note": "Concrete frame, ribbon glazing, escalator hall, later cladding graft.",
+  "damage_archetype": "cannibalisation",
+  "commercial_program": [
+    "a concrete-framed trading floor on every level, free of partitions",
+    "a central escalator or stair hall rising the full height",
+    "continuous ribbon glazing to the street on the upper floors",
+    "a goods lift and back-of-house spine along the rear elevation",
+    "stock rooms and a loading dock at the rear",
+    "a basement trading floor and plant room",
+    "a rooftop plant enclosure"
+  ],
+  "circulation": [
+    "the vertical hall is the primary public route and is visible from the entrance",
+    "goods circulation never crosses the trading floor"
+  ],
+  "damage_constraints": [
+    "one corner of the frame has failed, exposing several trading floors at once",
+    "the vertical hall survives",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "trading floors read as open retail, not as offices",
+      "the frame is legible where the corner has gone"
+    ]
+  },
+  "source_metadata": {
+    "category": "commercial",
+    "settlement_types": [
+      "town_center"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 59,
+      "depth": 51
+    },
+    "base_height": 31,
+    "conversion_target": "building"
+  }
+}

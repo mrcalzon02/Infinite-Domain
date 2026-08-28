@@ -1,0 +1,66 @@
+{
+  "structure_id": "infinite_domain:kar_082_remote_substation",
+  "culture": "karsic",
+  "building_type": "switchyard",
+  "conversion_class": "N",
+  "base_master": "wilderness_substation",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "industrial_hardstanding",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "utility_node",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "REMOTE SUBSTATION 4",
+  "archetype": "Remote Substation",
+  "roster_note": "",
+  "damage_archetype": "cannibalisation",
+  "utility_program": [
+    "an open switchyard of gantries, bus bars and insulator stacks",
+    "a brick or concrete control building at the yard edge",
+    "a relay and battery room inside the control building",
+    "transformer bays on bunded plinths",
+    "a cable trench route from the transformers into the control building",
+    "a secure perimeter fence with a single gate and floodlights"
+  ],
+  "circulation": [
+    "the yard is entered through one gate",
+    "the cable trench route is traceable"
+  ],
+  "damage_constraints": [
+    "the yard has been stripped of switchgear: cut cable ends, empty plinths and drag marks toward the gate",
+    "the control building stands and its relay room is intact",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the absence of the removed equipment is the story",
+      "the drag route out of the gate is followable"
+    ]
+  },
+  "source_metadata": {
+    "category": "utility_infrastructure",
+    "settlement_types": [
+      "rural",
+      "industrial"
+    ],
+    "road_connection": "driveway",
+    "base_footprint": {
+      "width": 47,
+      "depth": 43
+    },
+    "base_height": 19,
+    "conversion_target": "multibuilding"
+  }
+}

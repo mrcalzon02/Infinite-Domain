@@ -1004,6 +1004,14 @@
 			]
 			id: "7111000000000002"
 			optional: true
+			rewards: [{
+				id: "6AA0CC76FA716869"
+				item: {
+					count: 1
+					id: "kubejs:era1_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 4L
@@ -1100,6 +1108,14 @@
 			]
 			id: "6101100000000001"
 			optional: true
+			rewards: [{
+				id: "6A472253C0122885"
+				item: {
+					count: 1
+					id: "kubejs:era1_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [
 				{
@@ -1162,6 +1178,14 @@
 			dependencies: ["6101100000000003"]
 			id: "6101100000000004"
 			optional: true
+			rewards: [{
+				id: "6A9300C2FC8B058F"
+				item: {
+					count: 1
+					id: "kubejs:era1_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [
 				{
@@ -1216,6 +1240,14 @@
 			dependencies: ["6101100000000006"]
 			id: "6101100000000007"
 			optional: true
+			rewards: [{
+				id: "6A5959FDB12FF466"
+				item: {
+					count: 1
+					id: "kubejs:era1_priority_cache"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "6101200000070001"

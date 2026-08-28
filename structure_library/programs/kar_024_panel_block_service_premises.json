@@ -1,0 +1,68 @@
+{
+  "structure_id": "infinite_domain:kar_024_panel_block_service_premises",
+  "culture": "karsic",
+  "building_type": "retail_plinth",
+  "conversion_class": "N",
+  "base_master": "ruined_mixed_use_block",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": true,
+  "site_context": "urban_paved",
+  "foundation_profile": "partial_basement",
+  "back_of_house": "behind",
+  "district_role": "street_frontage",
+  "rail_served": false,
+  "heating_main_connection": "rear_basement",
+  "tiling_asset": false,
+  "signage_series": "PANEL BLOCK WITH SERVICE PREMISES 5",
+  "archetype": "Panel Block with Service Premises",
+  "roster_note": "The everyday Karsic street building.",
+  "damage_archetype": "frozen district",
+  "commercial_program": [
+    "a glazed ground-floor retail hall running the full street frontage",
+    "a serving counter run and shelving bays inside the hall",
+    "a back-of-house store, cold room and staff room behind the hall",
+    "a goods entrance from the rear service yard",
+    "identical residential or office floors above the retail plinth",
+    "a separate residential entrance vestibule away from the shop door",
+    "a basement store and pipe gallery"
+  ],
+  "circulation": [
+    "shop and dwellings have entirely separate entrances",
+    "goods reach the store without crossing the retail hall"
+  ],
+  "damage_constraints": [
+    "the retail glazing is gone and the hall is open to the street",
+    "the upper floors and the residential entrance survive",
+    "the back store is partly intact",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the ground floor reads as retail and the floors above read as dwellings",
+      "the plinth offset is unbroken behind the shopfront"
+    ]
+  },
+  "source_metadata": {
+    "category": "commercial",
+    "settlement_types": [
+      "town_center",
+      "residential"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 59,
+      "depth": 47
+    },
+    "base_height": 36,
+    "conversion_target": "multibuilding"
+  }
+}

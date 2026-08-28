@@ -1,0 +1,262 @@
+{
+  "structure_id": "bombed_data_center",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/bombed_data_center_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/bombed_data_center.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "bombed_data_center_clean_master",
+    "passed": false,
+    "hard_fail_count": 7,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          3,
+          22
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 3, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          4,
+          23
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 4, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          5,
+          24
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 5, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          6,
+          25
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 6, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          7,
+          26
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 7, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          3,
+          8
+        ],
+        "detail": "the_wasteland_reworked:radio at (20, 3, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          10,
+          12
+        ],
+        "detail": "the_wasteland_reworked:radio at (20, 10, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          27,
+          18,
+          11
+        ],
+        "detail": "enclosed room of 250 air blocks (125 floor cells, 2 tall) near (27, 18, 11) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          39,
+          18,
+          11
+        ],
+        "detail": "enclosed room of 250 air blocks (125 floor cells, 2 tall) near (39, 18, 11) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "bombed_data_center",
+    "passed": false,
+    "hard_fail_count": 11,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          3,
+          22
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 3, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          4,
+          23
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 4, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          5,
+          24
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 5, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          6,
+          25
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 6, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          6,
+          7,
+          26
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (6, 7, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          3,
+          8
+        ],
+        "detail": "the_wasteland_reworked:radio at (20, 3, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          20,
+          10,
+          12
+        ],
+        "detail": "the_wasteland_reworked:radio at (20, 10, 12) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          49,
+          2,
+          44
+        ],
+        "detail": "minecraft:gravel at (49, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          50,
+          2,
+          43
+        ],
+        "detail": "minecraft:polished_deepslate at (50, 2, 43) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          2,
+          38
+        ],
+        "detail": "minecraft:gravel at (55, 2, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          3,
+          38
+        ],
+        "detail": "minecraft:gravel at (55, 3, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          27,
+          18,
+          11
+        ],
+        "detail": "enclosed room of 250 air blocks (125 floor cells, 2 tall) near (27, 18, 11) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          40,
+          2,
+          28
+        ],
+        "detail": "doored room near (40, 2, 28) has only 1 floor cells (3 tall) \u2014 too small to be fit for a stated purpose"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        41,
+        2,
+        30
+      ],
+      "detail": "added debris (41, 2, 30)->(43, 6, 32) is 97% minecraft:gravel, fills 73% of its box, top is 88% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 7,
+    "variant_hard_fail": 11,
+    "audit_flag_count": 1,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 18,
+      "lint:room_composition:review_flag": 4,
+      "terrain_mismatch_damage": 1
+    }
+  }
+}

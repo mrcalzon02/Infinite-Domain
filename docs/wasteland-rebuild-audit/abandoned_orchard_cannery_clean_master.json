@@ -1,0 +1,267 @@
+{
+  "structure_id": "abandoned_orchard_cannery_clean_master",
+  "clean_master": null,
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/abandoned_orchard_cannery_clean_master.nbt",
+  "rebase_note": "no clean master on disk - damage variant used as rebase source",
+  "clean_master_lint": null,
+  "variant_lint": {
+    "structure_id": "abandoned_orchard_cannery_clean_master",
+    "passed": false,
+    "hard_fail_count": 10,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          5,
+          8
+        ],
+        "detail": "create:framed_glass at (47, 5, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          6,
+          8
+        ],
+        "detail": "create:framed_glass at (47, 6, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          5,
+          8
+        ],
+        "detail": "create:framed_glass at (48, 5, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          6,
+          8
+        ],
+        "detail": "create:framed_glass at (48, 6, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          52,
+          5,
+          8
+        ],
+        "detail": "create:framed_glass at (52, 5, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          52,
+          6,
+          8
+        ],
+        "detail": "create:framed_glass at (52, 6, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          53,
+          5,
+          8
+        ],
+        "detail": "create:framed_glass at (53, 5, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          53,
+          6,
+          8
+        ],
+        "detail": "create:framed_glass at (53, 6, 8) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          6,
+          8
+        ],
+        "detail": "glazed pane/run of 4 block(s) starting at (47, 6, 8) has no wall material touching its boundary anywhere (floating window)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          52,
+          5,
+          8
+        ],
+        "detail": "glazed pane/run of 4 block(s) starting at (52, 5, 8) has no wall material touching its boundary anywhere (floating window)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          53,
+          2,
+          26
+        ],
+        "detail": "enclosed room of 80 air blocks (4 floor cells, 20 tall) near (53, 2, 26) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        45,
+        8,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (45, 8, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        46,
+        8,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (46, 8, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        47,
+        8,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (47, 8, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        48,
+        8,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (48, 8, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        49,
+        8,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (49, 8, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        50,
+        8,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (50, 8, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        51,
+        8,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (51, 8, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        52,
+        8,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (52, 8, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        53,
+        8,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (53, 8, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        54,
+        8,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (54, 8, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        55,
+        8,
+        44
+      ],
+      "detail": "minecraft:smooth_stone_slab at (55, 8, 44) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        55,
+        8,
+        45
+      ],
+      "detail": "minecraft:smooth_stone_slab at (55, 8, 45) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        55,
+        8,
+        46
+      ],
+      "detail": "minecraft:smooth_stone_slab at (55, 8, 46) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 10,
+    "audit_flag_count": 13,
+    "by_check": {
+      "slab_wall_penetration": 13,
+      "lint:structural_connectivity:hard_fail": 8,
+      "lint:opening_wall_coupling:hard_fail": 2,
+      "lint:room_composition:review_flag": 1
+    }
+  }
+}

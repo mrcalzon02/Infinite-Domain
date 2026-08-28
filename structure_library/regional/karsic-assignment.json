@@ -1,0 +1,1119 @@
+{
+  "format_version": 1,
+  "culture": "karsic",
+  "hemisphere": "east",
+  "authority": "docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md#10",
+  "generated_by": "scripts/build_regional_assignment.py",
+  "class_key": {
+    "N": "native - the culture builds this type as core identity",
+    "A": "adapted - an equivalent exists but the program differs materially",
+    "F": "foreign - rare, deliberate, and must communicate why it is there",
+    "X": "excluded - a named native substitute takes its slot"
+  },
+  "counts": {
+    "conversions": 82,
+    "excluded": 3,
+    "by_class": {
+      "A": 35,
+      "N": 45,
+      "X": 3,
+      "F": 2
+    },
+    "natives": 12,
+    "masters_total": 94
+  },
+  "substitutes": {
+    "abandoned_culdesac": "kar_086_courtyard_housing_group",
+    "split_level_house": "kar_087_village_cottage",
+    "trailer_park": "kar_088_construction_camp"
+  },
+  "conversions": [
+    {
+      "base_master": "abandoned_orchard_cannery",
+      "conversion_class": "A",
+      "regional_id": "kar_001_fruit_processing_combine",
+      "identity": "Fruit Processing Combine",
+      "strata": [
+        "K-I",
+        "K-III"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": "Brick canning works with a later concrete cold store bolted on; rail-fed."
+    },
+    {
+      "base_master": "decayed_farm",
+      "conversion_class": "A",
+      "regional_id": "kar_002_state_farm_unit",
+      "identity": "State Farm Unit",
+      "strata": [
+        "K-II",
+        "K-III"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "Long barn rows, machine yard, silo bank, and a workers' block \u2014 all on one axis, all one design."
+    },
+    {
+      "base_master": "decayed_ranch",
+      "conversion_class": "A",
+      "regional_id": "kar_003_livestock_station",
+      "identity": "Livestock Station",
+      "strata": [
+        "K-II"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": "Heated barn with its own boiler stub, feed silo, veterinary hut."
+    },
+    {
+      "base_master": "ruined_grain_elevator",
+      "conversion_class": "N",
+      "regional_id": "kar_004_grain_reception_point",
+      "identity": "Grain Reception Point",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Concrete silo bank, rail scale house, conveyor gallery. Horizon silhouette."
+    },
+    {
+      "base_master": "shattered_greenhouse_nursery",
+      "conversion_class": "N",
+      "regional_id": "kar_005_heated_greenhouse_block",
+      "identity": "Heated Greenhouse Block",
+      "strata": [
+        "K-III",
+        "K-V"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "Steam-heated ranges fed from a boiler on the lot \u2014 the break is visible."
+    },
+    {
+      "base_master": "ae2_records_archive",
+      "conversion_class": "A",
+      "regional_id": "kar_006_state_archive_repository",
+      "identity": "State Archive Repository",
+      "strata": [
+        "K-IV",
+        "K-V"
+      ],
+      "damage_archetype": "sealed basement",
+      "note": "Hardened deep stacks beneath a monumental reading hall."
+    },
+    {
+      "base_master": "emergency_relief_shelter",
+      "conversion_class": "A",
+      "regional_id": "kar_007_civil_defence_shelter",
+      "identity": "Civil Defence Shelter",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "failed assembly point",
+      "note": "Half-buried, blast doors, filter plant, bunk bays, assembly yard."
+    },
+    {
+      "base_master": "fire_station",
+      "conversion_class": "A",
+      "regional_id": "kar_008_fire_rescue_detachment",
+      "identity": "Fire and Rescue Detachment",
+      "strata": [
+        "K-II",
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Appliance bays, drill/hose tower, dormitory above."
+    },
+    {
+      "base_master": "roadside_church_cemetery",
+      "conversion_class": "A",
+      "regional_id": "kar_009_memorial_and_chapel",
+      "identity": "Memorial and Chapel",
+      "strata": [
+        "K-I",
+        "K-IV"
+      ],
+      "damage_archetype": "partitioned survivor wing",
+      "note": "Walled cemetery, small brick chapel, and a concrete obelisk on an axis. Civic memory, not religion, carries the site."
+    },
+    {
+      "base_master": "ruined_city_school",
+      "conversion_class": "N",
+      "regional_id": "kar_010_school_series_block",
+      "identity": "School (Series)",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "Symmetric catalogue school, gymnasium wing, assembly hall, asphalt yard."
+    },
+    {
+      "base_master": "ruined_community_center",
+      "conversion_class": "N",
+      "regional_id": "kar_011_house_of_culture",
+      "identity": "House of Culture",
+      "strata": [
+        "K-IV"
+      ],
+      "damage_archetype": "partitioned survivor wing",
+      "note": "The Karsic civic landmark type. Colonnade, auditorium, club rooms, oversized forecourt."
+    },
+    {
+      "base_master": "ruined_courthouse",
+      "conversion_class": "A",
+      "regional_id": "kar_012_district_administration",
+      "identity": "District Administration",
+      "strata": [
+        "K-IV"
+      ],
+      "damage_archetype": "failed assembly point",
+      "note": "Axial approach, flat entablature, council chamber, records basement. Administration, not a court."
+    },
+    {
+      "base_master": "ruined_cyberware_clinic",
+      "conversion_class": "A",
+      "regional_id": "kar_013_prosthetics_institute",
+      "identity": "Prosthetics and Rehabilitation Institute",
+      "strata": [
+        "K-III",
+        "K-V"
+      ],
+      "damage_archetype": "sealed basement",
+      "note": "Aevum-linked under Directorate numbering (\u00a79.2 rule 5)."
+    },
+    {
+      "base_master": "ruined_hospital",
+      "conversion_class": "N",
+      "regional_id": "kar_014_district_hospital",
+      "identity": "District Hospital",
+      "strata": [
+        "K-III",
+        "K-II"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "Separate *korpus* blocks linked by heated galleries \u2014 the enclosed link is the identity."
+    },
+    {
+      "base_master": "ruined_police_precinct",
+      "conversion_class": "A",
+      "regional_id": "kar_015_militia_district_station",
+      "identity": "Militia District Station",
+      "strata": [
+        "K-II",
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Duty room, holding block, vehicle yard."
+    },
+    {
+      "base_master": "ruined_ranger_station",
+      "conversion_class": "A",
+      "regional_id": "kar_016_forestry_cordon",
+      "identity": "Forestry Cordon",
+      "strata": [
+        "K-I",
+        "K-II"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": "Remote timber-and-brick cordon, watch mast, garage."
+    },
+    {
+      "base_master": "abandoned_truck_stop",
+      "conversion_class": "A",
+      "regional_id": "kar_017_highway_service_point",
+      "identity": "Highway Service Point",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "failed assembly point",
+      "note": "Canteen, driver rest block, fuel, inspection pit."
+    },
+    {
+      "base_master": "bombed_hotel",
+      "conversion_class": "A",
+      "regional_id": "kar_018_state_hotel",
+      "identity": "State Hotel",
+      "strata": [
+        "K-III",
+        "K-IV"
+      ],
+      "damage_archetype": "partitioned survivor wing",
+      "note": "Monumental plinth under a repeating slab tower."
+    },
+    {
+      "base_master": "buried_bank_vault",
+      "conversion_class": "A",
+      "regional_id": "kar_019_state_bank_branch",
+      "identity": "State Bank Branch",
+      "strata": [
+        "K-IV"
+      ],
+      "damage_archetype": "sealed basement",
+      "note": "Stone-faced branch, basement strongroom."
+    },
+    {
+      "base_master": "cratered_downtown_intersection",
+      "conversion_class": "A",
+      "regional_id": "kar_020_administrative_square",
+      "identity": "Administrative Square",
+      "strata": [
+        "K-IV",
+        "K-III"
+      ],
+      "damage_archetype": "firebreak edge",
+      "note": "Axial boulevard, memorial, trolleybus catenary, crater."
+    },
+    {
+      "base_master": "grocery",
+      "conversion_class": "N",
+      "regional_id": "kar_021_gastronom",
+      "identity": "Gastronom",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "State grocery in the glazed ground floor of a panel slab. Core common structure \u2014 this one must be everywhere."
+    },
+    {
+      "base_master": "motel",
+      "conversion_class": "A",
+      "regional_id": "kar_022_roadside_rest_house",
+      "identity": "Roadside Rest House",
+      "strata": [
+        "K-II"
+      ],
+      "damage_archetype": "failed assembly point",
+      "note": "Dormitory rest house with a shared canteen. No individual car doors \u2014 the Directorate does not build motels."
+    },
+    {
+      "base_master": "ruined_department_store",
+      "conversion_class": "N",
+      "regional_id": "kar_023_univermag",
+      "identity": "Univermag",
+      "strata": [
+        "K-III",
+        "K-V"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Concrete frame, ribbon glazing, escalator hall, later cladding graft."
+    },
+    {
+      "base_master": "ruined_mixed_use_block",
+      "conversion_class": "N",
+      "regional_id": "kar_024_panel_block_service_premises",
+      "identity": "Panel Block with Service Premises",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "The everyday Karsic street building."
+    },
+    {
+      "base_master": "ruined_office_tower",
+      "conversion_class": "A",
+      "regional_id": "kar_025_design_institute_tower",
+      "identity": "Design Institute Tower",
+      "strata": [
+        "K-III",
+        "K-V"
+      ],
+      "damage_archetype": "partitioned survivor wing",
+      "note": "Drawing halls, brise-soleil, repeated bays."
+    },
+    {
+      "base_master": "ruined_roadside_diner",
+      "conversion_class": "A",
+      "regional_id": "kar_026_roadside_canteen",
+      "identity": "Roadside Canteen",
+      "strata": [
+        "K-II"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": "Serving line and communal tables. No booths."
+    },
+    {
+      "base_master": "ruined_shopping_mall",
+      "conversion_class": "A",
+      "regional_id": "kar_027_trade_centre",
+      "identity": "Trade Centre",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "failed assembly point",
+      "note": "Concrete-frame market hall with skylights and a covered arcade."
+    },
+    {
+      "base_master": "sunken_city_front",
+      "conversion_class": "A",
+      "regional_id": "kar_028_embankment_front",
+      "identity": "Embankment Front",
+      "strata": [
+        "K-I",
+        "K-III"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "Granite retaining wall, flooded ground floors, mooring rings."
+    },
+    {
+      "base_master": "toppled_skyscraper",
+      "conversion_class": "A",
+      "regional_id": "kar_029_toppled_institute_tower",
+      "identity": "Toppled Institute Tower",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "firebreak edge",
+      "note": "The tower fell across a courtyard district; the courtyard is part of the asset."
+    },
+    {
+      "base_master": "trade_outpost",
+      "conversion_class": "A",
+      "regional_id": "kar_030_supply_point",
+      "identity": "Directorate Supply Point",
+      "strata": [
+        "K-II",
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Fenced, rail- or river-fed, numbered stores."
+    },
+    {
+      "base_master": "delivery_van",
+      "conversion_class": "N",
+      "regional_id": "kar_031_service_van",
+      "identity": "Service Van",
+      "strata": [
+        "prop"
+      ],
+      "damage_archetype": null,
+      "note": "Cab-over box van. Prop-scale, fabric-led."
+    },
+    {
+      "base_master": "destroyed_refugee_convoy",
+      "conversion_class": "N",
+      "regional_id": "kar_032_evacuation_convoy",
+      "identity": "Evacuation Convoy",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "failed assembly point",
+      "note": "Buses and trucks with a numbered boarding order painted on the road \u2014 the plan existed and failed."
+    },
+    {
+      "base_master": "gas_station",
+      "conversion_class": "N",
+      "regional_id": "kar_033_fuel_station",
+      "identity": "Fuel Station",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": "Canopy on concrete columns, kiosk, tank inspection covers."
+    },
+    {
+      "base_master": "mountain_pass_terminator",
+      "conversion_class": "N",
+      "regional_id": "kar_034_avalanche_gallery",
+      "identity": "Pass Avalanche Gallery",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "firebreak edge",
+      "note": "Concrete gallery closing the road end. Cold engineering at road scale."
+    },
+    {
+      "base_master": "ruined_bus_terminal",
+      "conversion_class": "N",
+      "regional_id": "kar_035_bus_station",
+      "identity": "Bus Station",
+      "strata": [
+        "K-III",
+        "K-IV"
+      ],
+      "damage_archetype": "failed assembly point",
+      "note": "Cantilevered concrete canopy over sawtooth stands, departure board, ticket hall."
+    },
+    {
+      "base_master": "sunken_highway_interchange",
+      "conversion_class": "A",
+      "regional_id": "kar_036_grade_separated_interchange",
+      "identity": "Grade-Separated Interchange",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "firebreak edge",
+      "note": ""
+    },
+    {
+      "base_master": "wasteland_weigh_station",
+      "conversion_class": "A",
+      "regional_id": "kar_037_traffic_inspection_post",
+      "identity": "Traffic Inspection Post",
+      "strata": [
+        "K-II"
+      ],
+      "damage_archetype": "failed assembly point",
+      "note": "Barrier, weighbridge, glazed observation post."
+    },
+    {
+      "base_master": "wrecked_sedan",
+      "conversion_class": "N",
+      "regional_id": "kar_038_state_sedan",
+      "identity": "State Sedan",
+      "strata": [
+        "prop"
+      ],
+      "damage_archetype": null,
+      "note": "Boxy three-box saloon."
+    },
+    {
+      "base_master": "abandoned_oil_field",
+      "conversion_class": "N",
+      "regional_id": "kar_039_oil_field",
+      "identity": "Oil Field",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": ""
+    },
+    {
+      "base_master": "abandoned_quarry",
+      "conversion_class": "N",
+      "regional_id": "kar_040_stone_quarry",
+      "identity": "Stone Quarry",
+      "strata": [
+        "K-II",
+        "K-III"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": "Incline, crusher house, rail loading."
+    },
+    {
+      "base_master": "bombed_data_center",
+      "conversion_class": "A",
+      "regional_id": "kar_041_computing_centre",
+      "identity": "Computing Centre",
+      "strata": [
+        "K-III",
+        "K-V"
+      ],
+      "damage_archetype": "sealed basement",
+      "note": "Cabinet hall on a raised floor, suppression bottles, hardened envelope."
+    },
+    {
+      "base_master": "cold_industrial_mountain_port",
+      "conversion_class": "N",
+      "regional_id": "kar_042_northern_industrial_port",
+      "identity": "Northern Industrial Port",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "Ice-class quay, heated warehouse, rail apron. Uses `karsic_frozen_ground`."
+    },
+    {
+      "base_master": "collapsed_mine_entrance",
+      "conversion_class": "N",
+      "regional_id": "kar_043_mine_headframe",
+      "identity": "Mine Headframe",
+      "strata": [
+        "K-I",
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Lattice headframe, winding house, and a full pit bathhouse \u2014 the changing/wash block at its largest."
+    },
+    {
+      "base_master": "corporate_warehouse",
+      "conversion_class": "N",
+      "regional_id": "kar_044_bonded_warehouse",
+      "identity": "Bonded Warehouse",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Rail-served, numbered bays, gantry."
+    },
+    {
+      "base_master": "crashed_cargo_airship",
+      "conversion_class": "A",
+      "regional_id": "kar_045_downed_cargo_airship",
+      "identity": "Downed Cargo Airship",
+      "strata": [
+        "prop"
+      ],
+      "damage_archetype": "firebreak edge",
+      "note": ""
+    },
+    {
+      "base_master": "create_factory",
+      "conversion_class": "N",
+      "regional_id": "kar_046_machine_hall",
+      "identity": "Machine Hall",
+      "strata": [
+        "K-I",
+        "K-V"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": "Brick hall with a crane rail, modern line inside. K-I\u2295K-V pair 1 of 4."
+    },
+    {
+      "base_master": "decayed_logging_camp",
+      "conversion_class": "N",
+      "regional_id": "kar_047_timber_combine",
+      "identity": "Timber Combine",
+      "strata": [
+        "K-II"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Narrow-gauge rail, barracks, sawmill shed."
+    },
+    {
+      "base_master": "excavator_pit",
+      "conversion_class": "N",
+      "regional_id": "kar_048_dragline_pit",
+      "identity": "Dragline Pit",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Walking dragline, conveyor bridge, spoil ridges. Landmark silhouette."
+    },
+    {
+      "base_master": "industrial_facility",
+      "conversion_class": "N",
+      "regional_id": "kar_049_industrial_combine",
+      "identity": "Industrial Combine",
+      "strata": [
+        "K-III",
+        "K-V"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": "Multi-shop combine on a numbered shop grid."
+    },
+    {
+      "base_master": "municipal_incinerator",
+      "conversion_class": "A",
+      "regional_id": "kar_050_waste_incineration_plant",
+      "identity": "Waste Incineration Plant",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Tipping hall, furnace hall, tall stack."
+    },
+    {
+      "base_master": "nuclear_research_annex",
+      "conversion_class": "N",
+      "regional_id": "kar_051_reactor_service_annex",
+      "identity": "Reactor Service Annex",
+      "strata": [
+        "K-IV",
+        "K-V"
+      ],
+      "damage_archetype": "sealed basement",
+      "note": "Hot cells, stack, hardened control, restricted fence."
+    },
+    {
+      "base_master": "remote_sawmill",
+      "conversion_class": "N",
+      "regional_id": "kar_052_forest_sawmill",
+      "identity": "Forest Sawmill",
+      "strata": [
+        "K-I",
+        "K-II"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": ""
+    },
+    {
+      "base_master": "ruined_fuel_depot",
+      "conversion_class": "N",
+      "regional_id": "kar_053_fuel_depot",
+      "identity": "Fuel Depot",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "firebreak edge",
+      "note": "Tank farm, bunded walls, rail loading rack."
+    },
+    {
+      "base_master": "scrapyard",
+      "conversion_class": "N",
+      "regional_id": "kar_054_scrap_reclamation_yard",
+      "identity": "Scrap Reclamation Yard",
+      "strata": [
+        "K-II"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Where the cannibalised parts went. Cross-reference this site's contents against nearby stripped facilities."
+    },
+    {
+      "base_master": "service_garage",
+      "conversion_class": "N",
+      "regional_id": "kar_055_motor_pool",
+      "identity": "Motor Pool",
+      "strata": [
+        "K-II",
+        "K-III"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": "Inspection pits, parts store, dispatcher's office."
+    },
+    {
+      "base_master": "warm_industrial_mountain_port",
+      "conversion_class": "N",
+      "regional_id": "kar_056_southern_industrial_port",
+      "identity": "Southern Industrial Port",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": ""
+    },
+    {
+      "base_master": "battle_tank",
+      "conversion_class": "N",
+      "regional_id": "kar_057_directorate_tank",
+      "identity": "Directorate Tank",
+      "strata": [
+        "prop"
+      ],
+      "damage_archetype": null,
+      "note": ""
+    },
+    {
+      "base_master": "bunker_network",
+      "conversion_class": "N",
+      "regional_id": "kar_058_hardened_command_bunker",
+      "identity": "Hardened Command Bunker",
+      "strata": [
+        "K-IV"
+      ],
+      "damage_archetype": "sealed basement",
+      "note": "Blast doors, filter plant, map room."
+    },
+    {
+      "base_master": "military_checkpoint",
+      "conversion_class": "N",
+      "regional_id": "kar_059_control_post",
+      "identity": "Control Post",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "firebreak edge",
+      "note": "Barrier, guard block, vehicle inspection bay."
+    },
+    {
+      "base_master": "mountain_biohazard_lab",
+      "conversion_class": "N",
+      "regional_id": "kar_060_isolated_biological_institute",
+      "identity": "Isolated Biological Institute",
+      "strata": [
+        "K-III",
+        "K-V"
+      ],
+      "damage_archetype": "sealed basement",
+      "note": "Decontamination suite, incinerator, restricted perimeter."
+    },
+    {
+      "base_master": "mountain_military_complex",
+      "conversion_class": "N",
+      "regional_id": "kar_061_mountain_garrison",
+      "identity": "Mountain Garrison",
+      "strata": [
+        "K-II",
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Barrack rows, vehicle sheds, parade ground."
+    },
+    {
+      "base_master": "collapsed_airship_terminal",
+      "conversion_class": "A",
+      "regional_id": "kar_062_airship_mooring_terminal",
+      "identity": "Airship Mooring Terminal",
+      "strata": [
+        "K-IV"
+      ],
+      "damage_archetype": "failed assembly point",
+      "note": "Mooring mast, hangar, passenger hall."
+    },
+    {
+      "base_master": "survivor_cache",
+      "conversion_class": "A",
+      "regional_id": "kar_063_civil_defence_stores_cache",
+      "identity": "Civil Defence Stores Cache",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "sealed basement",
+      "note": "Buried numbered stores."
+    },
+    {
+      "base_master": "collapsed_subway_station",
+      "conversion_class": "N",
+      "regional_id": "kar_064_deep_metro_station",
+      "identity": "Deep Metro Station",
+      "strata": [
+        "K-IV"
+      ],
+      "damage_archetype": "failed assembly point",
+      "note": "Surface vestibule pavilion + escalator incline + deep platform hall with a pilaster order. One of the strongest types in the roster; treat as landmark."
+    },
+    {
+      "base_master": "elevated_rail_collapse",
+      "conversion_class": "A",
+      "regional_id": "kar_065_rail_overpass_collapse",
+      "identity": "Rail Overpass Collapse",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "firebreak edge",
+      "note": ""
+    },
+    {
+      "base_master": "freight_depot",
+      "conversion_class": "N",
+      "regional_id": "kar_066_classification_yard",
+      "identity": "Classification Yard",
+      "strata": [
+        "K-II",
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Hump yard, control tower, wagon repair shed."
+    },
+    {
+      "base_master": "blown_apartment_complex",
+      "conversion_class": "N",
+      "regional_id": "kar_067_series_panel_block",
+      "identity": "Series Panel Block",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "The flagship repeatable-storey asset (\u00a76.1). One authored building must yield 5-, 7-, and 9-storey variants via `minfloors`/`maxfloors`."
+    },
+    {
+      "base_master": "bungalow",
+      "conversion_class": "A",
+      "regional_id": "kar_068_dacha",
+      "identity": "Dacha",
+      "strata": [
+        "K-I",
+        "K-II"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": "Small detached, stove chimney, veranda, garden plot, fence of scrap boards. The Directorate's one informal building."
+    },
+    {
+      "base_master": "ruined_rowhouse_block",
+      "conversion_class": "A",
+      "regional_id": "kar_069_workers_barrack_row",
+      "identity": "Workers' Barrack Row",
+      "strata": [
+        "K-I"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "Two-storey brick barracks, external stairs, shared outbuildings, a single standpipe in the yard."
+    },
+    {
+      "base_master": "shattered_luxury_condo",
+      "conversion_class": "A",
+      "regional_id": "kar_070_nomenklatura_block",
+      "identity": "Nomenklatura Block",
+      "strata": [
+        "K-II",
+        "K-IV"
+      ],
+      "damage_archetype": "partitioned survivor wing",
+      "note": "Better-finished brick block with balconies and a gated courtyard. Privilege expressed as *finish*, never as ornament."
+    },
+    {
+      "base_master": "tenement_courtyard",
+      "conversion_class": "N",
+      "regional_id": "kar_071_courtyard_block",
+      "identity": "Courtyard Block",
+      "strata": [
+        "K-II"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "Perimeter block around an enclosed yard, entered through a single arched gateway."
+    },
+    {
+      "base_master": "abandoned_culdesac",
+      "conversion_class": "X",
+      "regional_id": "kar_086_courtyard_housing_group",
+      "identity": null,
+      "strata": [],
+      "damage_archetype": null,
+      "note": "The Directorate does not build cul-de-sac suburbia. Substituted."
+    },
+    {
+      "base_master": "split_level_house",
+      "conversion_class": "X",
+      "regional_id": "kar_087_village_cottage",
+      "identity": null,
+      "strata": [],
+      "damage_archetype": null,
+      "note": "Substituted."
+    },
+    {
+      "base_master": "trailer_park",
+      "conversion_class": "X",
+      "regional_id": "kar_088_construction_camp",
+      "identity": null,
+      "strata": [],
+      "damage_archetype": null,
+      "note": "Substituted."
+    },
+    {
+      "base_master": "broken_solar_field",
+      "conversion_class": "F",
+      "regional_id": "kar_072_imported_solar_array",
+      "identity": "Imported Solar Array",
+      "strata": [
+        "K-V"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "Foreign equipment, late, small, behind a Directorate fence with an import plate on the gate. Must communicate *why it is here* (contract C6)."
+    },
+    {
+      "base_master": "city_electrical_substation",
+      "conversion_class": "N",
+      "regional_id": "kar_073_district_substation",
+      "identity": "District Substation",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": ""
+    },
+    {
+      "base_master": "city_water_treatment_plant",
+      "conversion_class": "N",
+      "regional_id": "kar_074_water_treatment_works",
+      "identity": "Water Treatment Works",
+      "strata": [
+        "K-II",
+        "K-III"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": ""
+    },
+    {
+      "base_master": "district_heating_station",
+      "conversion_class": "N",
+      "regional_id": "kar_075_district_heating_station",
+      "identity": "District Heating Station",
+      "strata": [
+        "K-III",
+        "K-I"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "The signature Karsic building. Boiler hall, fuel yard, tall stack, and the origin point of the whole heating-main network. Landmark-adjacent; every Karsic district should be within sight of one."
+    },
+    {
+      "base_master": "hydroelectric_refuge_dam",
+      "conversion_class": "N",
+      "regional_id": "kar_076_hydroelectric_works",
+      "identity": "Hydroelectric Works",
+      "strata": [
+        "K-IV"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": "Landmark."
+    },
+    {
+      "base_master": "pancaked_parking_structure",
+      "conversion_class": "A",
+      "regional_id": "kar_077_institute_garage_deck",
+      "identity": "Institute Garage Deck",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "The *uncommon* Karsic form; see `kar_089_garage_cooperative` for the common one."
+    },
+    {
+      "base_master": "radio_mast",
+      "conversion_class": "N",
+      "regional_id": "kar_078_relay_mast",
+      "identity": "Relay Mast",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": ""
+    },
+    {
+      "base_master": "shattered_wind_farm",
+      "conversion_class": "F",
+      "regional_id": "kar_079_imported_wind_array",
+      "identity": "Imported Wind Array",
+      "strata": [
+        "K-V"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": "As `kar_072`."
+    },
+    {
+      "base_master": "wasteland_fire_lookout",
+      "conversion_class": "A",
+      "regional_id": "kar_080_forestry_watchtower",
+      "identity": "Forestry Watchtower",
+      "strata": [
+        "K-II"
+      ],
+      "damage_archetype": "heroic maintenance",
+      "note": ""
+    },
+    {
+      "base_master": "wasteland_water_tower",
+      "conversion_class": "N",
+      "regional_id": "kar_081_steel_water_tower",
+      "identity": "Steel Water Tower",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "frozen district",
+      "note": "Slender column-and-tank tower. Iconic, cheap, and should be very common \u2014 a top-tier identity-per-block asset."
+    },
+    {
+      "base_master": "wilderness_substation",
+      "conversion_class": "N",
+      "regional_id": "kar_082_remote_substation",
+      "identity": "Remote Substation",
+      "strata": [
+        "K-III"
+      ],
+      "damage_archetype": "cannibalisation",
+      "note": ""
+    }
+  ],
+  "natives": [
+    {
+      "regional_id": "kar_083_district_heating_main",
+      "identity": "District Heating Main",
+      "conversion_target": "scattered",
+      "strata": [
+        "K-III"
+      ],
+      "priority": "Mandatory",
+      "note": "An above-ground insulated run on saddles with a road gantry. This is what stitches separate buildings into a *system*, and it is the highest-value single asset in the roster. Must tile: template edges align so consecutive placements read as one continuous main."
+    },
+    {
+      "regional_id": "kar_084_transformer_kiosk",
+      "identity": "Transformer Kiosk",
+      "conversion_target": "scattered",
+      "strata": [
+        "K-II"
+      ],
+      "priority": "Mandatory",
+      "note": "A tiny freestanding kiosk, windowless, louvred, fenced 3 clear. Highest-frequency identity carrier in the whole program."
+    },
+    {
+      "regional_id": "kar_085_bus_shelter_and_stop",
+      "identity": "Bus Shelter",
+      "conversion_target": "scattered",
+      "strata": [
+        "K-III"
+      ],
+      "priority": "Mandatory",
+      "note": "Concrete shelter with a panelled back and a numbered route plate. Extremely cheap, extremely legible."
+    },
+    {
+      "regional_id": "kar_086_courtyard_housing_group",
+      "identity": "Courtyard Housing Group",
+      "conversion_target": "multibuilding",
+      "strata": [
+        "K-III"
+      ],
+      "priority": "Mandatory (substitute)",
+      "note": "Three slabs around a courtyard with a playground, drying frames, and a boiler stub. Replaces `abandoned_culdesac`. This asset *is* legibility carrier #4."
+    },
+    {
+      "regional_id": "kar_087_village_cottage",
+      "identity": "Village Cottage",
+      "conversion_target": "building",
+      "strata": [
+        "K-I",
+        "K-II"
+      ],
+      "priority": "Mandatory (substitute)",
+      "note": "Single storey, stove, veranda, garden. Replaces `split_level_house`."
+    },
+    {
+      "regional_id": "kar_088_construction_camp",
+      "identity": "Construction Camp",
+      "conversion_target": "multibuilding",
+      "strata": [
+        "K-III",
+        "K-V"
+      ],
+      "priority": "Mandatory (substitute)",
+      "note": "Cabins on blocks, canteen cabin, generator, drying shed. Replaces `trailer_park`; also carries the \"expedition settlement\" reading canon asks for."
+    },
+    {
+      "regional_id": "kar_089_garage_cooperative",
+      "identity": "Garage Cooperative",
+      "conversion_target": "multibuilding",
+      "strata": [
+        "K-III"
+      ],
+      "priority": "High",
+      "note": "Rows of individual metal garages behind a gate. Very common in reality; excellent as scatter and as courtyard-district edge."
+    },
+    {
+      "regional_id": "kar_090_kindergarten_block",
+      "identity": "Kindergarten (Series)",
+      "conversion_target": "multibuilding",
+      "strata": [
+        "K-III"
+      ],
+      "priority": "High",
+      "note": "Low two-storey catalogue building with a fenced play yard. Completes the mikrorayon service set with the school and clinic."
+    },
+    {
+      "regional_id": "kar_091_technical_institute",
+      "identity": "Technical Institute",
+      "conversion_target": "multibuilding",
+      "strata": [
+        "K-III",
+        "K-IV"
+      ],
+      "priority": "Medium",
+      "note": "Lecture block, workshop wing, dormitory."
+    },
+    {
+      "regional_id": "kar_092_memorial_complex",
+      "identity": "Memorial Complex",
+      "conversion_target": "multibuilding",
+      "strata": [
+        "K-IV"
+      ],
+      "priority": "Medium",
+      "note": "Standalone obelisk, wall of names, eternal-flame plinth on a paved terrace. Civic gravity without national emblems."
+    },
+    {
+      "regional_id": "kar_093_seed_storage_bunker",
+      "identity": "Seed Storage Bunker",
+      "conversion_target": "multibuilding",
+      "strata": [
+        "K-III"
+      ],
+      "priority": "Medium",
+      "note": "VCF-linked, hardened, half-buried, cold. Directly serves the EP-7 narrative."
+    },
+    {
+      "regional_id": "kar_094_tracking_station",
+      "identity": "Tracking Station",
+      "conversion_target": "multibuilding",
+      "strata": [
+        "K-IV",
+        "K-V"
+      ],
+      "priority": "Medium",
+      "note": "Dish array, hardened telemetry block, isolated logistics apron. Asterion-linked; explicitly requested by canon \u00a7Directorate institutional variants."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "structure_id": "infinite_domain:kar_044_bonded_warehouse",
+  "culture": "karsic",
+  "building_type": "warehouse_depot",
+  "conversion_class": "N",
+  "base_master": "corporate_warehouse",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "karsic_rail_ballast",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "freight",
+  "rail_served": true,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "BONDED WAREHOUSE 6",
+  "archetype": "Bonded Warehouse",
+  "roster_note": "Rail-served, numbered bays, gantry.",
+  "damage_archetype": "cannibalisation",
+  "logistics_program": [
+    "a long storage hall with numbered bays marked on the floor",
+    "a rail-side loading platform at wagon-floor height under a gantry",
+    "a road-side loading dock with levellers",
+    "a dispatcher's office with a window onto both loading faces",
+    "a sealed goods store with a heavier door",
+    "a staff room and wash block at the workers' entrance",
+    "a rail siding stub reaching the template edge"
+  ],
+  "circulation": [
+    "goods move rail-side to hall to road-side without doubling back"
+  ],
+  "damage_constraints": [
+    "part of the roof has failed over the road-side bays; the rail-side platform is intact",
+    "the numbered bay markings survive",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the bay numbering system is consistent and legible",
+      "the rail siding reaches the template edge"
+    ]
+  },
+  "source_metadata": {
+    "category": "industrial",
+    "settlement_types": [
+      "industrial",
+      "railway"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 49,
+      "depth": 43
+    },
+    "base_height": 16,
+    "conversion_target": "multibuilding"
+  }
+}

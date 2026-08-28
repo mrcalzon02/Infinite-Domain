@@ -1,0 +1,68 @@
+{
+  "structure_id": "infinite_domain:kar_041_computing_centre",
+  "culture": "karsic",
+  "building_type": "hardened_technical",
+  "conversion_class": "A",
+  "base_master": "bombed_data_center",
+  "primary_stratum": "K-III",
+  "secondary_stratum": "K-V",
+  "repeatable_storey": false,
+  "site_context": "industrial_hardstanding",
+  "foundation_profile": "full_basement",
+  "back_of_house": "behind",
+  "district_role": "restricted",
+  "rail_served": false,
+  "heating_main_connection": "below_slab",
+  "tiling_asset": false,
+  "signage_series": "COMPUTING CENTRE 9",
+  "archetype": "Computing Centre",
+  "roster_note": "Cabinet hall on a raised floor, suppression bottles, hardened envelope.",
+  "damage_archetype": "sealed basement",
+  "technical_program": [
+    "a hardened envelope with few openings and a single controlled entrance",
+    "an airlock or double-door screening lobby inside the entrance",
+    "a principal technical hall on a raised floor",
+    "a plant room with air handling and suppression equipment",
+    "a secure store or archive vault below grade",
+    "a control and monitoring room glazed onto the technical hall",
+    "a decontamination or changing suite adjacent to the lobby",
+    "a fenced perimeter with a gate house and floodlights"
+  ],
+  "circulation": [
+    "everyone entering passes the screening lobby; there is no second public way in",
+    "the below-grade vault is reached from inside the envelope only"
+  ],
+  "damage_constraints": [
+    "the public levels are open to the sky; the below-grade vault is dry, sealed and still holding its contents",
+    "the screening lobby remains identifiable",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the building reads as restricted before any sign is read",
+      "the contrast between the ruined upper levels and the intact vault is unmistakable"
+    ]
+  },
+  "source_metadata": {
+    "category": "industrial",
+    "settlement_types": [
+      "industrial",
+      "town_center"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 61,
+      "depth": 55
+    },
+    "base_height": 24,
+    "conversion_target": "multibuilding"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "format_version": 1,
+  "culture": "karsic",
+  "authority": "docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md#6-massing-grammar",
+
+  "modules": {
+    "bay": 4,
+    "bay_rationale": "convert_nbt_to_lostcities.py slices every structure into 16x16 chunk cells. At a 4-block bay the panel joint lands exactly on the cell boundary, so joints can never disagree across a converted seam. At 3 the rhythm walks across the seam and per-cell rounding shows as a kink.",
+    "storey": 6,
+    "storey_rationale": "FLOOR_HEIGHT is hard-coded to 6 in convert_nbt_to_lostcities.py and Lost Cities re-stacks the last authored band when maxfloors exceeds the authored count. Matching the storey to the band lets one authored panel block yield 5-, 7- and 9-storey variants through buildingsettings alone.",
+    "storey_composition": { "slab": 1, "clear": 4, "service_void": 1 },
+    "converter_floor_height_assertion": 6
+  },
+
+  "wall_construction": {
+    "K-I":  { "thickness": 2, "reveal": 1, "opening_head": "segmental", "notes": "segmental head expressed with stair blocks over the opening" },
+    "K-II": { "thickness": 1, "reveal": 1, "opening_head": "flat", "string_course_every_floor": true },
+    "K-III":{ "thickness": 1, "reveal": 1, "opening_head": "flat", "panel_joint_column_every": 4, "panel_joint_course_every_floor": true },
+    "K-IV": { "thickness": 2, "reveal": 2, "opening_head": "flat", "pilaster_every_n_bays": 2, "pilaster_proud": 1 },
+    "K-V":  { "thickness": 1, "reveal": 0, "opening_head": "flush", "cladding_proud_of_host": 1 }
+  },
+
+  "standard_elements": {
+    "plinth": {
+      "mandatory_for": ["K-II", "K-III", "K-IV"],
+      "minimum_storeys": 2,
+      "proud": 1,
+      "note": "The single cheapest and most reliable Karsic read. Ground storey in plinth material, projecting 1 block on all elevations."
+    },
+    "parapet": { "height_above_deck": 2, "capped": true },
+    "bulkhead": {
+      "min_footprint": [3, 3],
+      "institutional_footprint": [5, 5],
+      "height": 3,
+      "placement": "over_stair_core",
+      "note": "Never arbitrarily placed. Roof plant clusters against it, not scattered."
+    },
+    "vestibule": {
+      "mandatory_for_heated": true,
+      "width": 5,
+      "depth": 3,
+      "height": 4,
+      "canopy_at": 4,
+      "canopy_oversail": 1,
+      "lobby_depth": 2,
+      "risers_to_plinth": 3,
+      "outer": "door_public",
+      "inner": "vestibule_inner"
+    },
+    "stair_tower": {
+      "width": 2,
+      "one_per_bays": 4,
+      "minimum_per_building": 2,
+      "expression": "shallow_projection",
+      "glazing": "continuous_vertical_slot",
+      "glazing_role": "glazing_industrial"
+    },
+    "stack": {
+      "K-I": "stack_brick",
+      "K-II": "stack_brick",
+      "K-III": "stack_industrial",
+      "K-IV": "stack_industrial",
+      "K-V": "stack_metal",
+      "note": "Only where there is a real combustion or process reason. Tall and slender, standing clear of the roof mass."
+    }
+  },
+
+  "opening_rhythm": {
+    "default": { "per_bay": 1, "width": 2, "height": 2, "sill_above_slab": 1, "centred": true },
+    "ground_storey": { "height": 1, "guard_when_secure_or_retail": "window_guard" },
+    "ribbon": { "applies_to": ["K-III_institutional", "K-IV"], "height": 2, "mullion_at_bay_line": "panel_joint" },
+    "stair_tower": { "form": "continuous_vertical_slot" },
+    "industrial_clerestory": { "band_height": 2, "position": "top_of_wall" }
+  },
+
+  "roof": {
+    "flat_required_for": ["K-III", "K-IV"],
+    "pitched_permitted_for": ["K-I", "K-II"],
+    "pitched_material_role": "roof_covering_k2",
+    "pitched_material": "quark:gray_shingles",
+    "note": "No pitched roof on K-III or K-IV under any circumstances. The shallow hipped roof is the only pitched roof the Directorate builds."
+  },
+
+  "silhouette": {
+    "residential_slab": { "min_length_to_height_ratio": 3.0, "setbacks_above_plinth": false, "crown": false },
+    "residential_point_block": { "storeys": [8, 14], "cores": 1, "identical_floors": true, "bulkheads": 1 },
+    "institutional": { "symmetric_about_central_axis": true, "entrance": "dead_centre", "forecourt_depth_ge_height": true, "cornice_projection_max": 1 },
+    "industrial_hall": { "clear_span": true, "clerestory": true, "ancillary_block": true, "stack": true, "rail_gantry": true },
+    "utility_kiosk": { "storeys": 1, "plinth_offset": false, "fence_clearance": 3 },
+    "landmark": { "expressed_by": ["size", "approach"], "added_ornament": false }
+  },
+
+  "footprint_drift": {
+    "max_fraction": 0.20,
+    "note": "Beyond +/-20% in either axis, minimum_lot in catalog.json must be re-derived and the settlement archetypes re-checked, because Lost Cities lot fitting is driven from those numbers. Larger drift is allowed but must be recorded in the roster with a reason."
+  },
+
+  "back_of_house": {
+    "K-I": "behind",
+    "K-II": "behind",
+    "K-III": "behind",
+    "K-IV": "below",
+    "K-V": "behind"
+  },
+
+  "circulation": {
+    "institutional_corridor_width": 3,
+    "residential_gallery_width": 2,
+    "industrial_access_lane_width": 4,
+    "basement_pipe_gallery": { "width": 3, "height": 3 },
+    "stairs": "encased_stairwell",
+    "bare_ladder_permitted_for": ["tank_access", "roof_plant", "watchtower"]
+  },
+
+  "room_modules": {
+    "cellular_office":   { "bays": 1, "depth": 5 },
+    "double_room":       { "bays": 2, "depth": 5 },
+    "apartment":         { "bays": 2, "depth": 7 },
+    "assembly_hall":     { "bays": 5, "depth": 11, "storeys_clear": 2 },
+    "machine_hall":      { "bays": 5, "depth": 0, "storeys_clear": 3, "free_span": true },
+    "control_room":      { "bays": 2, "depth": 4, "mezzanine": true },
+    "changing_wash":     { "bays": 3, "depth": 5 }
+  },
+
+  "mandatory_interior_facts": [
+    "every heated building has a basement service level connected to the exterior heating main",
+    "every industrial building has a changing and wash block at the workers' entrance",
+    "every process building has a control room overlooking its volume",
+    "every institution numbers itself",
+    "standardised furniture recurs verbatim across unrelated institutions",
+    "modernisation is layered inside older fabric, never total replacement"
+  ],
+
+  "seed": {
+    "formula": "zlib.crc32(f\"karsic|{structure_id}|{pass_id}|{variant}\".encode()) & 0x7FFFFFFF",
+    "worldgen_salt_range": [79100000, 79109999]
+  }
+}

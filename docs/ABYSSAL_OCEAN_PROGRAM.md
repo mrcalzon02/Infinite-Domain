@@ -37,6 +37,15 @@ West uses negative regional humidity, East positive regional humidity, and `-0.2
 
 The seafloor is no longer shaped only by uniform depth pressure. `custom_worldgen:abyssal_pattern_depression` is added inside the existing Western and Eastern depth-depression functions, after which `abyssal_outer_continents` continues to feed `custom_worldgen:continents`. The datapack-owned `minecraft:overworld/continents` override delegates to that same custom signal, allowing vanilla Overworld terrain-density functions such as `minecraft:overworld/sloped_cheese` to consume the deformation chain. The global Wastelands `final_density` router itself remains unchanged.
 
+Continentalness pressure only relabels biomes and gives the shelf/slope its
+descent — the vanilla `minecraft:overworld/offset` spline is flat for
+continentalness `-0.51 .. -1.02`, so the plain/fracture/hadal bands do not drop
+below a normal deep ocean from continentalness alone. Actual seabed depth for
+those bands comes from `custom_worldgen:abyssal_floor_depression`, subtracted
+directly inside a `minecraft:overworld/depth` override and gated by the same
+East/West selector + ocean corridor + depth-band masks. See
+`docs/ABYSSAL_OCEAN_DEPTH_IMPLEMENTATION.md` (**Direct seabed-depth channel**).
+
 ## Systemic terrain-deformation vocabulary
 
 The six supplied black/white reference-noise motifs are implemented as distinct geological processes rather than one generic noise field:
@@ -100,6 +109,14 @@ Eastern:
 - `eastern_hadal_trench`
 
 Compatibility IDs `western_abyssal_ocean` and `eastern_abyssal_ocean` remain retained.
+
+Each custom biome has a human-readable display name in
+`kubejs/assets/infinite_domain/lang/en_us.json` (`biome.infinite_domain.<path>`)
+so map mods and the F3 screen no longer show the raw translation key. The
+abyssal names are plain directional + geographic-feature strings ("Western
+Abyssal Plain", "Eastern Hadal Trench", …) with no namespace prefix and no
+Pelagos/Karsic faction word, keeping them independent of the open
+hemisphere-binding question.
 
 ## Seabed ecology and geology profile
 
@@ -237,7 +254,7 @@ Convergence:
 
 ## Quest progression and localization
 
-`config/ftbquests/quests/chapters/abyssal_recovery.snbt` depends on Air/Sea quest `5E00000000000006` (`Ballast and Propulsion`). The first two voyages recover physical evidence from the Western and Eastern slope wrecks and return it to `infinite_domain:spawn_buffer`.
+`config/ftbquests/quests/chapters/abyssal_recovery.snbt` depends on Air/Sea quest `5E00000000000006` (`Ballast and Propulsion`). The first two voyages recover physical evidence from the Western and Eastern slope wrecks and return it to `infinite_domain:safe_zone`.
 
 After both are complete, the chapter splits into independent deep expeditions:
 - Pelagos: abyssal plain → relay + physical bathymetric log → fracture observatory + physical sensor core → hadal probe + physical pressure record.
@@ -285,7 +302,12 @@ Do not scatter these as natural abyssal geology or free intact technology. Futur
 ## Deferred observations
 
 Still unmeasured:
-- actual seabed Y by depth band;
+- actual seabed Y by depth band, and whether the direct depth channel
+  (`abyssal_floor_depression`, gain `1.0`, clamp `0.55`) gives a readable
+  slope -> plain -> fracture -> hadal descent without hitting bedrock;
+- confirmation that no floating square dirt blocks remain above abyssal
+  structures after the `start_height` 32 -> 0 seating fix, and whether the taller
+  vent/chimney features should keep `terrain_adaptation: bury` or move to `none`;
 - visual scale/fidelity of the six systemic reference motifs;
 - shelf-edge slump frequency and the visual steepness of exposed continental-break faces;
 - hadal trench-wall scarp scale and continuity;

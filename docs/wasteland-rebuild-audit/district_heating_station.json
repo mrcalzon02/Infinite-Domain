@@ -1,0 +1,862 @@
+{
+  "structure_id": "district_heating_station",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/district_heating_station_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/district_heating_station.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "district_heating_station_clean_master",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          20
+        ],
+        "detail": "create:fluid_tank at (10, 14, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          21
+        ],
+        "detail": "create:fluid_tank at (10, 14, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          22
+        ],
+        "detail": "create:fluid_tank at (10, 14, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          23
+        ],
+        "detail": "create:fluid_tank at (10, 14, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          24
+        ],
+        "detail": "create:fluid_tank at (10, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          25
+        ],
+        "detail": "create:fluid_tank at (10, 14, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          20
+        ],
+        "detail": "create:fluid_tank at (10, 15, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          21
+        ],
+        "detail": "create:fluid_tank at (10, 15, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          22
+        ],
+        "detail": "create:fluid_tank at (10, 15, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          23
+        ],
+        "detail": "create:fluid_tank at (10, 15, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          24
+        ],
+        "detail": "create:fluid_tank at (10, 15, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          25
+        ],
+        "detail": "create:fluid_tank at (10, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          20
+        ],
+        "detail": "create:fluid_tank at (10, 16, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          21
+        ],
+        "detail": "create:fluid_tank at (10, 16, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          22
+        ],
+        "detail": "create:fluid_tank at (10, 16, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          23
+        ],
+        "detail": "create:fluid_tank at (10, 16, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          24
+        ],
+        "detail": "create:fluid_tank at (10, 16, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          25
+        ],
+        "detail": "create:fluid_tank at (10, 16, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          20
+        ],
+        "detail": "create:fluid_tank at (10, 17, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          21
+        ],
+        "detail": "create:fluid_tank at (10, 17, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          22
+        ],
+        "detail": "create:fluid_tank at (10, 17, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          23
+        ],
+        "detail": "create:fluid_tank at (10, 17, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          24
+        ],
+        "detail": "create:fluid_tank at (10, 17, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          25
+        ],
+        "detail": "create:fluid_tank at (10, 17, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          20
+        ],
+        "detail": "create:fluid_tank at (10, 18, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          21
+        ],
+        "detail": "create:fluid_tank at (10, 18, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          22
+        ],
+        "detail": "create:fluid_tank at (10, 18, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          23
+        ],
+        "detail": "create:fluid_tank at (10, 18, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          24
+        ],
+        "detail": "create:fluid_tank at (10, 18, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          25
+        ],
+        "detail": "create:fluid_tank at (10, 18, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          20
+        ],
+        "detail": "create:fluid_tank at (11, 14, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          21
+        ],
+        "detail": "create:fluid_tank at (11, 14, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          22
+        ],
+        "detail": "create:fluid_tank at (11, 14, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          23
+        ],
+        "detail": "create:fluid_tank at (11, 14, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          24
+        ],
+        "detail": "create:fluid_tank at (11, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          25
+        ],
+        "detail": "create:fluid_tank at (11, 14, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          15,
+          20
+        ],
+        "detail": "create:fluid_tank at (11, 15, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          15,
+          21
+        ],
+        "detail": "create:fluid_tank at (11, 15, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          15,
+          22
+        ],
+        "detail": "create:fluid_tank at (11, 15, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          15,
+          23
+        ],
+        "detail": "create:fluid_tank at (11, 15, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "320 additional floating blocks not individually listed (360 total)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          52,
+          2,
+          39
+        ],
+        "detail": "enclosed room of 225 air blocks (9 floor cells, 25 tall) near (52, 2, 39) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "district_heating_station",
+    "passed": false,
+    "hard_fail_count": 41,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          20
+        ],
+        "detail": "create:fluid_tank at (10, 14, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          21
+        ],
+        "detail": "create:fluid_tank at (10, 14, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          22
+        ],
+        "detail": "create:fluid_tank at (10, 14, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          23
+        ],
+        "detail": "create:fluid_tank at (10, 14, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          24
+        ],
+        "detail": "create:fluid_tank at (10, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          14,
+          25
+        ],
+        "detail": "create:fluid_tank at (10, 14, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          20
+        ],
+        "detail": "create:fluid_tank at (10, 15, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          21
+        ],
+        "detail": "create:fluid_tank at (10, 15, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          22
+        ],
+        "detail": "create:fluid_tank at (10, 15, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          23
+        ],
+        "detail": "create:fluid_tank at (10, 15, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          24
+        ],
+        "detail": "create:fluid_tank at (10, 15, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          15,
+          25
+        ],
+        "detail": "create:fluid_tank at (10, 15, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          20
+        ],
+        "detail": "create:fluid_tank at (10, 16, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          21
+        ],
+        "detail": "create:fluid_tank at (10, 16, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          22
+        ],
+        "detail": "create:fluid_tank at (10, 16, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          23
+        ],
+        "detail": "create:fluid_tank at (10, 16, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          24
+        ],
+        "detail": "create:fluid_tank at (10, 16, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          16,
+          25
+        ],
+        "detail": "create:fluid_tank at (10, 16, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          20
+        ],
+        "detail": "create:fluid_tank at (10, 17, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          21
+        ],
+        "detail": "create:fluid_tank at (10, 17, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          22
+        ],
+        "detail": "create:fluid_tank at (10, 17, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          23
+        ],
+        "detail": "create:fluid_tank at (10, 17, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          24
+        ],
+        "detail": "create:fluid_tank at (10, 17, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          17,
+          25
+        ],
+        "detail": "create:fluid_tank at (10, 17, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          20
+        ],
+        "detail": "create:fluid_tank at (10, 18, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          21
+        ],
+        "detail": "create:fluid_tank at (10, 18, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          22
+        ],
+        "detail": "create:fluid_tank at (10, 18, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          23
+        ],
+        "detail": "create:fluid_tank at (10, 18, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          24
+        ],
+        "detail": "create:fluid_tank at (10, 18, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          10,
+          18,
+          25
+        ],
+        "detail": "create:fluid_tank at (10, 18, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          20
+        ],
+        "detail": "create:fluid_tank at (11, 14, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          21
+        ],
+        "detail": "create:fluid_tank at (11, 14, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          22
+        ],
+        "detail": "create:fluid_tank at (11, 14, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          23
+        ],
+        "detail": "create:fluid_tank at (11, 14, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          24
+        ],
+        "detail": "create:fluid_tank at (11, 14, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          14,
+          25
+        ],
+        "detail": "create:fluid_tank at (11, 14, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          15,
+          20
+        ],
+        "detail": "create:fluid_tank at (11, 15, 20) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          15,
+          21
+        ],
+        "detail": "create:fluid_tank at (11, 15, 21) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          15,
+          22
+        ],
+        "detail": "create:fluid_tank at (11, 15, 22) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          11,
+          15,
+          23
+        ],
+        "detail": "create:fluid_tank at (11, 15, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": null,
+        "detail": "320 additional floating blocks not individually listed (360 total)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          52,
+          2,
+          39
+        ],
+        "detail": "enclosed room of 225 air blocks (9 floor cells, 25 tall) near (52, 2, 39) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 41,
+    "variant_hard_fail": 41,
+    "audit_flag_count": 0,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 82,
+      "lint:room_composition:review_flag": 2
+    }
+  }
+}

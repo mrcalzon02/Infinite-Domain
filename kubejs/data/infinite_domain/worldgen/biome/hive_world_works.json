@@ -44,7 +44,7 @@
       "offset": 2.0
     },
     "particle": {
-      "probability": 0.0025,
+      "probability": 0.0032,
       "options": {
         "type": "minecraft:white_ash"
       }
@@ -53,6 +53,12 @@
     "additions_sound": {
       "sound": "minecraft:ambient.nether_wastes.additions",
       "tick_chance": 0.0111
+    },
+    "music": {
+      "sound": "minecraft:music.nether.nether_wastes",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": true
     }
   }
 }

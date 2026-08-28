@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:kar_004_grain_reception_point",
+  "culture": "karsic",
+  "building_type": "silo_bank",
+  "conversion_class": "N",
+  "base_master": "ruined_grain_elevator",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "karsic_rail_ballast",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "freight",
+  "rail_served": true,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "GRAIN RECEPTION POINT 7",
+  "archetype": "Grain Reception Point",
+  "roster_note": "Concrete silo bank, rail scale house, conveyor gallery. Horizon silhouette.",
+  "damage_archetype": "cannibalisation",
+  "agricultural_program": [
+    "a bank of identical cylindrical silos rising well above everything around",
+    "a headhouse above the silos carrying the conveyor gallery",
+    "a conveyor gallery bridging from the headhouse to the rail loading point",
+    "a rail scale house and loading spout over the siding",
+    "an intake pit with a truck tipping ramp",
+    "a control room with sight of the intake and the loading point"
+  ],
+  "circulation": [
+    "grain path from intake to silo to gallery to wagon is continuous and visible"
+  ],
+  "damage_constraints": [
+    "one silo has split down its side and spilled; the gallery and headhouse stand",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the silhouette reads on the horizon from well outside the site"
+    ]
+  },
+  "source_metadata": {
+    "category": "agricultural",
+    "settlement_types": [
+      "rural",
+      "railway"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 55,
+      "depth": 49
+    },
+    "base_height": 35,
+    "conversion_target": "multibuilding"
+  }
+}

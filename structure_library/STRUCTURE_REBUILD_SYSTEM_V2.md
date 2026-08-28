@@ -198,6 +198,21 @@ transition via a foot trail instead, but it must transition, not just stop.
 
 ## 4. New automated QA gate
 
+> **Execution note (2026‑08‑27).** The lint has been run against the whole
+> corpus; the per-building rebuild is under way and is recorded in
+> `docs/WASTELAND_STRUCTURE_REBUILD_AUDIT.md` (the per-building ledger) with
+> `scripts/audit_wasteland_structure.py` as its driver. That driver runs this
+> lint against clean master **and** variant, wires the master↔variant
+> damage-coherence comparison the standalone runner never invokes, and adds
+> three review-flag detectors that operationalise Section 1's remaining
+> complaints: `massing_monotony` (flat cuboid, segmented per building),
+> `slab_wall_penetration` (a slab boxed in wall on all six faces — "slab roofs
+> intruding into wall volumes"), and `terrain_mismatch_damage` (a clean
+> rectangular excision, or a single-material pile-block cuboid backfilled into
+> the footprint — *not* collapse debris). Checks 1–3 here remain the only
+> hard-fail production bar; the audit detectors are must-fix-before-done at
+> rebuild time.
+
 `assess_fidelity()` is retired as the production gate. It stays as one input
 among several inside a new module, `scripts/structure_geometry_lint.py`
 (delivered alongside this document), which actually inspects geometry
@@ -268,7 +283,8 @@ so they are drop-in replacements/additions, not a parallel system:
 - `backed_sign(...)` — same guarantee for signs.
 - `ground_plate(...)` replaces `roadside_apron`/`cracked_pad` as the single
   universal lot kit — takes a `site_context` (`urban_paved`, `rural_worked`,
-  `industrial_hardstanding`, `wilderness_undisturbed`, `waterfront`) and
+  `industrial_hardstanding`, `wilderness_undisturbed`, `forest_camp`,
+  `waterfront`, plus the regional `karsic_*` / `pelagos_*` contexts) and
   produces a coherent, patch-based surface instead of per-block speckle.
 - `terrain_footing(...)` — foundation course, grade-transition skirt, and an
   optional basement cavity/sewer stub, parameterized by a
@@ -277,7 +293,13 @@ so they are drop-in replacements/additions, not a parallel system:
 - `fracture_breach(...)` replaces raw `t.clear()` box damage — produces an
   irregular fracture boundary and a gravity-consistent rubble apron, and
   internally calls `retrofit_window_for_breach` so it can never leave a
-  floating window behind.
+  floating window behind. Extended 2026‑08‑27 while rebuilding the first
+  audited building: `apron_floor_y` drifts debris onto a real floor for an
+  elevated (roof / upper-storey) breach instead of leaving it mid-air where it
+  would lint as floating; `debris_blocks` varies the pile material (splintered
+  timber, torn roofing, rubble); and an internal `_shed_breach_orphans()` pass
+  clears any solid cell the breach just disconnected from the structure or
+  ground, so a fracture can never itself introduce a floating-block hard-fail.
 
 None of these touch third-party mod code or assets; they are additions to
 our own generator scripts, consistent with the project's distributability
@@ -355,7 +377,15 @@ This is a specification and a first implementation of its enforcement
 tooling (Sections 4–5), not a claim that all ~150 corpus assets have been
 rebuilt. Rebuilding the full corpus against this doctrine is exactly the
 multi-session, checkpointed work `CODEX_STRUCTURE_PIPELINE.md` already exists
-to carry out — this document is what it should be carrying out now. The lint
-module has not yet been run against the live corpus in this session; running
-it against every `.nbt` under `kubejs/data/infinite_domain/structure/wasteland/`
-is the correct first action for whoever executes Stage A.5.
+to carry out — this document is what it should be carrying out now.
+
+**Progress (2026‑08‑27).** The lint has been run against the whole wasteland
+corpus (`docs/structure-geometry-lint-baseline.*`, and the deeper
+`docs/wasteland-rebuild-audit/<id>.json` per-building reports). 29 / 84
+structures pass checks 1–3; 55 do not. The per-building rebuild is under way
+and is tracked in `docs/WASTELAND_STRUCTURE_REBUILD_AUDIT.md`. Building 1
+(`decayed_logging_camp`) is rebuilt and verified from disk (41 → 0 hard-fail
+on both master and variant). The v2 primitives are wired into
+`generate_wasteland_sites.py` **per building**, not corpus-wide, so each
+adoption is verified in isolation against a working tree that also carries
+unrelated uncommitted generator work.

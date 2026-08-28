@@ -57,6 +57,14 @@
 		{
 			dependencies: ["5C00000000000003"]
 			id: "5C00000000000004"
+			rewards: [{
+				id: "6AB28E1DB302DE8D"
+				item: {
+					count: 1
+					id: "kubejs:era2_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				biome: "minecraft:swamp"
@@ -114,6 +122,14 @@
 		{
 			dependencies: ["5C00000000000007"]
 			id: "5C00000000000008"
+			rewards: [{
+				id: "6A52995634E48B14"
+				item: {
+					count: 1
+					id: "kubejs:era2_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 16L
@@ -160,6 +176,14 @@
 		{
 			dependencies: ["5C0000000000000A"]
 			id: "5C0000000000000B"
+			rewards: [{
+				id: "6A457D9A1357D256"
+				item: {
+					count: 1
+					id: "kubejs:era2_priority_cache"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 16L

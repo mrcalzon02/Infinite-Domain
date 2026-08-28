@@ -1,0 +1,79 @@
+{
+  "structure_id": "decayed_logging_camp",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/decayed_logging_camp_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/decayed_logging_camp.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "decayed_logging_camp_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          30,
+          14,
+          9
+        ],
+        "detail": "enclosed room of 162 air blocks (54 floor cells, 3 tall) near (30, 14, 9) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          40,
+          14,
+          9
+        ],
+        "detail": "enclosed room of 162 air blocks (54 floor cells, 3 tall) near (40, 14, 9) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          50,
+          14,
+          9
+        ],
+        "detail": "enclosed room of 162 air blocks (54 floor cells, 3 tall) near (50, 14, 9) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "decayed_logging_camp",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          30,
+          14,
+          9
+        ],
+        "detail": "enclosed room of 162 air blocks (54 floor cells, 3 tall) near (30, 14, 9) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          40,
+          14,
+          9
+        ],
+        "detail": "enclosed room of 162 air blocks (54 floor cells, 3 tall) near (40, 14, 9) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 0,
+    "audit_flag_count": 0,
+    "by_check": {
+      "lint:room_composition:review_flag": 5
+    }
+  }
+}

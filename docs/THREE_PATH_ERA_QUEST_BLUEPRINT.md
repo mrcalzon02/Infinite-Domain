@@ -65,7 +65,14 @@ The detailed technical profession chains drafted below are retained as an invent
 
 ## Live implementation summary
 
-All nine eras now exist as connected player-facing graphs. Era 1 contains 43 quests; each of Eras 2 through 8 contains 35 quests: one orientation, three eight-quest resource trunks, nine ancillary technology or civic quests, and one crafted shared capstone. The late-era implementation therefore adds 245 quests and 42 recipes.
+All nine eras now exist as connected player-facing graphs. As of 2026-08-27 the
+live counts are: Era 0 = 35, Era 1 = 67, Era 2 = 42, Era 3 = 53, Era 4 = 43,
+Era 5 = 42, Era 6 = 42, Era 7 = 41, Era 8 = 41. Each Era 2-8 chapter is one
+orientation, three eight-quest resource trunks, a crafted shared capstone, and a
+variable ancillary count (nine base, plus the mineral-trace metallurgy chain and,
+in Era 3, the Re-Automated line). Era 1 grew past its original 43 as the
+metallurgy, Jaffa, and Create-fundamentals ancillary lines were integrated; it is
+hand-authored with hash ids rather than the Era 2-8 `<branch><era>1…` scheme.
 
 Every remaining era follows the same readable visual grammar:
 
@@ -73,7 +80,16 @@ Every remaining era follows the same readable visual grammar:
 - Hearts: Farming and Biological Production.
 - Diamonds: Exploration and Recovery.
 - Gears: ancillary processing, machinery, infrastructure, medicine, or specialist mastery.
+- Rounded squares (`rsquare`): a discrete commissioning or milestone sub-node — a
+  specific machine, multiblock, or facility brought into service, or a single
+  mastery submission step. Distinct from a gear (a process *lesson*) and from an
+  octagon (a *major* convergence). Used in the mastery submission branches, the
+  Parallel Factory "Commission the X" nodes, and equivalent checkpoints.
 - Octagons: shared era orientation and capstone gates.
+
+This six-shape legend is authoritative. Every chapter — era spine and side
+chapters alike — should use it; `circle` (the FTB default) and an empty
+`default_quest_shape` are defects, not styles.
 
 Each era has three separately crafted profession contributions and three alternate recipes for one shared Foundation Core. Only one contribution route is required to advance, but all unfinished routes and side branches remain available. The capstone chain is continuous from the Mechanical Foundation Core through the Infinite Domain Core, and the Era 8 recipes incorporate every preceding Foundation Core.
 
@@ -134,7 +150,7 @@ Shared capstone: **Mechanical Foundation Core**. The era teaches Create fundamen
 
 ### Live implementation
 
-Era 1 now contains 43 quests: one orientation quest, three eight-quest resource trunks, seventeen ancillary machinery quests, and one crafted capstone. Every main quest has an explicit icon and a persistent visual shape: hexagons for Mining, hearts for Farming, diamonds for Exploration, gears for technical side branches, and octagons for shared era gates.
+Era 1 contains 67 quests (2026-08-27): one orientation quest, three eight-quest resource trunks, one crafted capstone, and the remaining ~41 as ancillary machinery, the Jaffa export line, the Create-fundamentals chain, and the mineral-trace metallurgy chain. Every main quest has an explicit icon and a persistent visual shape: hexagons for Mining, hearts for Farming, diamonds for Exploration, gears for technical side branches, rounded squares for commissioning sub-nodes, and octagons for shared era gates.
 
 - **Mining and Extraction:** andesite, Create alloy, mechanical drilling, vertical mine access, crushed iron, compressed iron, and team-scale fuel/feedstock production lead to the Mechanized Extraction Charter.
 - **Farming and Biological Production:** seed reserves, Farmer's Delight preparation, mechanical harvesting, milling, dough, cooking, and settlement food reserves lead to the Renewable Provisioning Charter.

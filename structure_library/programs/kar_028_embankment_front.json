@@ -1,0 +1,62 @@
+{
+  "structure_id": "infinite_domain:kar_028_embankment_front",
+  "culture": "karsic",
+  "building_type": "civic_square",
+  "conversion_class": "A",
+  "base_master": "sunken_city_front",
+  "primary_stratum": "K-I",
+  "secondary_stratum": "K-III",
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "partial_basement",
+  "back_of_house": "behind",
+  "district_role": "axial_terminus",
+  "rail_served": false,
+  "heating_main_connection": "below_square",
+  "tiling_asset": false,
+  "signage_series": "EMBANKMENT FRONT 8",
+  "archetype": "Embankment Front",
+  "roster_note": "Granite retaining wall, flooded ground floors, mooring rings.",
+  "damage_archetype": "frozen district",
+  "civic_program": [
+    "a broad paved square terminating an axial boulevard",
+    "institutional frontages on at least two sides",
+    "a monument or fountain on the axis",
+    "trolleybus or tram catenary poles along the boulevard",
+    "an underpass or service stair below the square",
+    "standard lamp standards, bollards and notice boards"
+  ],
+  "circulation": [
+    "the boulevard axis is unobstructed to the terminating frontage"
+  ],
+  "damage_constraints": [
+    "a crater interrupts the square; the axis and the terminating frontage remain readable",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the square reads as designed around the axis, not as a gap between buildings"
+    ]
+  },
+  "source_metadata": {
+    "category": "commercial",
+    "settlement_types": [
+      "town_center"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 61,
+      "depth": 55
+    },
+    "base_height": 37,
+    "conversion_target": "multibuilding"
+  }
+}

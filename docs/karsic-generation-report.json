@@ -1,0 +1,77 @@
+{
+  "purpose": "Karsic clean-master generation record. Generation is not production approval; assets must still pass scripts/structure_geometry_lint.py checks 1-3 and the regional structure checks before any approval is recorded.",
+  "authority": "docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md",
+  "culture": "karsic",
+  "selected": 3,
+  "generated": 3,
+  "pending_builder": 0,
+  "pending_building_types": [],
+  "results": [
+    {
+      "structure_id": "kar_067_series_panel_block",
+      "building_type": "panel_slab",
+      "status": "generated",
+      "primary_stratum": "K-III",
+      "size": [
+        69,
+        40,
+        61
+      ],
+      "bays": [
+        15,
+        13
+      ],
+      "storeys": 5,
+      "ground_y": 6,
+      "repeatable_storey": true,
+      "placed_blocks": 49586,
+      "palette_states": 29,
+      "modded_blocks": 47148,
+      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_067_series_panel_block_clean_master.nbt"
+    },
+    {
+      "structure_id": "kar_083_district_heating_main",
+      "building_type": "linear_infrastructure",
+      "status": "generated",
+      "primary_stratum": "K-III",
+      "size": [
+        32,
+        14,
+        16
+      ],
+      "bays": [
+        8,
+        4
+      ],
+      "storeys": 1,
+      "ground_y": 0,
+      "repeatable_storey": false,
+      "placed_blocks": 710,
+      "palette_states": 9,
+      "modded_blocks": 426,
+      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_083_district_heating_main_clean_master.nbt"
+    },
+    {
+      "structure_id": "kar_084_transformer_kiosk",
+      "building_type": "kiosk",
+      "status": "generated",
+      "primary_stratum": "K-II",
+      "size": [
+        22,
+        12,
+        22
+      ],
+      "bays": [
+        2,
+        2
+      ],
+      "storeys": 1,
+      "ground_y": 0,
+      "repeatable_storey": false,
+      "placed_blocks": 949,
+      "palette_states": 13,
+      "modded_blocks": 368,
+      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_084_transformer_kiosk_clean_master.nbt"
+    }
+  ]
+}

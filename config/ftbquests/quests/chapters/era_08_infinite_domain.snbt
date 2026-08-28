@@ -75,6 +75,14 @@
 		{
 			dependencies: ["1810000000000003"]
 			id: "1810000000000004"
+			rewards: [{
+				id: "1840000000000004"
+				item: {
+					count: 1
+					id: "ae2:portable_item_cell_1k"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				count: 128L
@@ -122,6 +130,14 @@
 		{
 			dependencies: ["1810000000000006"]
 			id: "1810000000000007"
+			rewards: [{
+				id: "1870000000000007"
+				item: {
+					count: 1
+					id: "ae2:cell_component_64k"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				count: 32L
@@ -201,6 +217,14 @@
 		{
 			dependencies: ["2810000000000003"]
 			id: "2810000000000004"
+			rewards: [{
+				id: "2840000000000004"
+				item: {
+					count: 1
+					id: "ae2:portable_fluid_cell_1k"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 128L
@@ -380,6 +404,15 @@
 		{
 			dependencies: ["3810000000000006"]
 			id: "3810000000000007"
+			rewards: [{
+				count: 2
+				id: "3870000000000007"
+				item: {
+					count: 1
+					id: "ae2:spatial_pylon"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				id: "3820000000000007"
@@ -468,6 +501,14 @@
 		{
 			dependencies: ["2810000000000004"]
 			id: "4810000000000005"
+			rewards: [{
+				id: "6AE149B11E21A5FF"
+				item: {
+					count: 1
+					id: "kubejs:era8_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4820000000000005"
@@ -594,6 +635,14 @@
 			]
 			id: "7811000000000002"
 			optional: true
+			rewards: [{
+				id: "6AEBBA0671977EDC"
+				item: {
+					count: 1
+					id: "kubejs:era8_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 4L
@@ -651,6 +700,14 @@
 			]
 			id: "7811000000000005"
 			optional: true
+			rewards: [{
+				id: "6AE90C28F8EE6D8B"
+				item: {
+					count: 1
+					id: "kubejs:era8_priority_cache"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 19L

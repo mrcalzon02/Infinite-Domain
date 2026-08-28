@@ -1,0 +1,334 @@
+{
+  "structure_id": "ruined_roadside_diner",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_roadside_diner_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/ruined_roadside_diner.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "ruined_roadside_diner_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": []
+  },
+  "variant_lint": {
+    "structure_id": "ruined_roadside_diner",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": []
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        3,
+        7,
+        6
+      ],
+      "detail": "minecraft:smooth_stone_slab at (3, 7, 6) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        7,
+        8
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 7, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        7,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (5, 7, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        6,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (6, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        6,
+        7,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (6, 7, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        7,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (7, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        7,
+        7,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (7, 7, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        8,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (8, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        8,
+        7,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (8, 7, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        9,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (9, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        9,
+        7,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (9, 7, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        10,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (10, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        10,
+        7,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (10, 7, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        11,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (11, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        11,
+        7,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (11, 7, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        12,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (12, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        12,
+        7,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (12, 7, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (13, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        7,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (13, 7, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        14,
+        7,
+        29
+      ],
+      "detail": "minecraft:smooth_stone_slab at (14, 7, 29) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        15,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (15, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        23,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (23, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        25,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (25, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        26,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (26, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (27, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        28,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (28, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        29,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (29, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        30,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (30, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        7,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (31, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": null,
+      "detail": "3 further slab/stair-in-wall hits not listed (33 total)."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 0,
+    "audit_flag_count": 31,
+    "by_check": {
+      "slab_wall_penetration": 31
+    }
+  }
+}

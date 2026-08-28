@@ -1,0 +1,298 @@
+{
+  "format_version": 1,
+  "culture": "karsic",
+  "hemisphere": "east",
+  "authority": "docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md#5-material-system",
+  "notes": [
+    "The generator never names a block. It names a role; this profile resolves the role to a block for the active stratum.",
+    "Derivative naming is not uniform across this pack's mods. Immersive Engineering uses a PREFIX form (slab_concrete, stairs_concrete, wall_concrete); vanilla, Quark, TFMG and Supplementaries use a SUFFIX form. Both schemes are declared in derivative_schemes and resolved in that order.",
+    "Roles that ARE a derivative (parapet_cap, stair_tread, coping) name the concrete block directly and declare no needs.",
+    "A role only declares the derivative kinds the generator is actually allowed to request. Requiring derivatives a role never uses would fail the profile for no reason."
+  ],
+  "strata": ["K-I", "K-II", "K-III", "K-IV", "K-V"],
+  "stratum_names": {
+    "K-I": "Foundry Brick",
+    "K-II": "First Standard",
+    "K-III": "State Series",
+    "K-IV": "Directorate Monumental",
+    "K-V": "Late Retrofit"
+  },
+  "derivative_schemes": [
+    "{ns}:{name}_{kind}",
+    "{ns}:{singular}_{kind}",
+    "{ns}:{kind}_{name}"
+  ],
+
+  "roles": {
+    "wall_primary": {
+      "needs": ["slab"],
+      "by_stratum": {
+        "K-I": "minecraft:bricks",
+        "K-II": "immersiveengineering:concrete_sprayed",
+        "K-III": "immersiveengineering:concrete",
+        "K-IV": "immersiveengineering:concrete_reinforced",
+        "K-V": "immersiveengineering:sheetmetal_aluminum"
+      },
+      "derivative_overrides": {
+        "K-II": { "slab": "immersiveengineering:slab_concrete" }
+      }
+    },
+    "wall_secondary": {
+      "needs": [],
+      "by_stratum": {
+        "K-I": "quark:cobblestone_bricks",
+        "K-II": "minecraft:white_terracotta",
+        "K-III": "immersiveengineering:concrete_tile",
+        "K-IV": "immersiveengineering:concrete_chiseled",
+        "K-V": "immersiveengineering:sheetmetal_steel"
+      }
+    },
+    "wall_panel_field": {
+      "needs": [],
+      "by_stratum": {
+        "K-I": null,
+        "K-II": null,
+        "K-III": "immersiveengineering:concrete_sheet",
+        "K-IV": null,
+        "K-V": "tfmg:industrial_aluminum_casing"
+      }
+    },
+    "panel_joint": {
+      "needs": [],
+      "by_stratum": {
+        "K-I": null,
+        "K-II": null,
+        "K-III": "immersiveengineering:concrete_brick",
+        "K-IV": "immersiveengineering:concrete_pillar",
+        "K-V": "create:metal_girder"
+      }
+    },
+    "plinth": {
+      "needs": ["slab"],
+      "by_stratum": {
+        "K-I": "minecraft:stone_bricks",
+        "K-II": "minecraft:polished_andesite",
+        "K-III": "tfmg:gray_rebar_concrete",
+        "K-IV": "quark:polished_shale",
+        "K-V": "tfmg:gray_rebar_concrete"
+      }
+    },
+    "pilaster": {
+      "needs": [],
+      "by_stratum": {
+        "K-I": "minecraft:brick_wall",
+        "K-II": "immersiveengineering:concrete_pillar",
+        "K-III": "immersiveengineering:concrete_pillar",
+        "K-IV": "immersiveengineering:concrete_pillar",
+        "K-V": "create:metal_girder"
+      }
+    },
+    "floor_slab": {
+      "needs": ["slab"],
+      "by_stratum": {
+        "K-I": "minecraft:bricks",
+        "K-II": "immersiveengineering:concrete",
+        "K-III": "immersiveengineering:concrete",
+        "K-IV": "immersiveengineering:concrete_reinforced",
+        "K-V": "immersiveengineering:concrete"
+      }
+    },
+    "floor_finish_public": {
+      "needs": ["slab"],
+      "by_stratum": {
+        "K-I": "minecraft:polished_andesite",
+        "K-II": "supplementaries:stone_tile",
+        "K-III": "immersiveengineering:concrete_tile",
+        "K-IV": "quark:polished_jasper",
+        "K-V": "immersiveengineering:concrete_reinforced_tile"
+      }
+    },
+    "floor_finish_service": {
+      "needs": [],
+      "by_stratum": {
+        "K-I": "tfmg:factory_floor",
+        "K-II": "tfmg:factory_floor",
+        "K-III": "tfmg:factory_floor",
+        "K-IV": "tfmg:factory_floor",
+        "K-V": "the_wasteland_reworked:aluminium_grate"
+      }
+    },
+    "roof_deck": {
+      "needs": ["slab"],
+      "by_stratum": {
+        "K-I": "minecraft:bricks",
+        "K-II": "quark:gray_shingles",
+        "K-III": "immersiveengineering:concrete_sheet",
+        "K-IV": "immersiveengineering:concrete_reinforced",
+        "K-V": "immersiveengineering:sheetmetal_aluminum"
+      },
+      "derivative_overrides": {
+        "K-III": { "slab": "immersiveengineering:slab_concrete" }
+      }
+    },
+    "internal_column": {
+      "needs": [],
+      "by_stratum": {
+        "K-I": "create:metal_girder",
+        "K-II": "immersiveengineering:concrete_pillar",
+        "K-III": "immersiveengineering:concrete_pillar",
+        "K-IV": "immersiveengineering:concrete_pillar",
+        "K-V": "create:metal_girder"
+      }
+    },
+    "stair_core_wall": {
+      "needs": [],
+      "by_stratum": {
+        "K-I": "minecraft:bricks",
+        "K-II": "immersiveengineering:concrete_sprayed",
+        "K-III": "immersiveengineering:concrete_brick",
+        "K-IV": "immersiveengineering:concrete_reinforced",
+        "K-V": "immersiveengineering:concrete_brick"
+      }
+    },
+
+    "parapet_cap": {
+      "needs": [],
+      "kind": "slab",
+      "by_stratum": {
+        "K-I": "minecraft:brick_slab",
+        "K-II": "minecraft:smooth_stone_slab",
+        "K-III": "immersiveengineering:slab_concrete",
+        "K-IV": "quark:polished_shale_slab",
+        "K-V": "immersiveengineering:slab_sheetmetal_aluminum"
+      }
+    },
+    "stair_tread": {
+      "needs": [],
+      "kind": "stairs",
+      "by_stratum": {
+        "K-I": "minecraft:brick_stairs",
+        "K-II": "minecraft:stone_brick_stairs",
+        "K-III": "immersiveengineering:stairs_concrete",
+        "K-IV": "immersiveengineering:stairs_concrete",
+        "K-V": "immersiveengineering:stairs_concrete_brick"
+      }
+    },
+    "coping": {
+      "needs": [],
+      "kind": "wall",
+      "by_stratum": {
+        "K-I": "minecraft:brick_wall",
+        "K-II": "minecraft:stone_brick_wall",
+        "K-III": "immersiveengineering:wall_concrete",
+        "K-IV": "immersiveengineering:wall_concrete",
+        "K-V": "immersiveengineering:wall_concrete_brick"
+      }
+    },
+    "rubble": {
+      "needs": [],
+      "by_stratum": {
+        "K-I": "minecraft:gravel",
+        "K-II": "minecraft:gravel",
+        "K-III": "minecraft:gravel",
+        "K-IV": "minecraft:gravel",
+        "K-V": "minecraft:gravel"
+      }
+    },
+    "debris_accent": {
+      "needs": [],
+      "by_stratum": {
+        "K-I": "quark:cobblestone_bricks",
+        "K-II": "minecraft:white_terracotta",
+        "K-III": "immersiveengineering:concrete_brick_cracked",
+        "K-IV": "immersiveengineering:concrete_chiseled",
+        "K-V": "immersiveengineering:sheetmetal_steel"
+      }
+    }
+  },
+
+  "openings": {
+    "glazing_residential": "quark:gray_framed_glass",
+    "glazing_residential_pane": "quark:gray_framed_glass_pane",
+    "glazing_institutional": "quark:white_framed_glass",
+    "glazing_industrial": "create:framed_glass",
+    "glazing_retrofit": "minecraft:tinted_glass",
+    "glazing_failed": "quark:dirty_glass_pane",
+    "door_public": "minecraft:iron_door",
+    "door_service": "the_wasteland_reworked:industrial_door",
+    "door_hardened": "the_wasteland_reworked:containment_door",
+    "door_domestic": "minecraft:spruce_door",
+    "vestibule_inner": "minecraft:oak_door",
+    "window_guard": "tfmg:cast_iron_bars"
+  },
+
+  "site_kit": {
+    "heating_main": "tfmg:concrete_encased_industrial_pipe",
+    "heating_main_bare": "tfmg:industrial_pipe",
+    "pipe_saddle": "immersiveengineering:concrete_pillar",
+    "pipe_service": "the_wasteland_reworked:pipe_block",
+    "service_gantry": "tfmg:steel_truss",
+    "catwalk": "immersiveengineering:steel_catwalk",
+    "stack_industrial": "tfmg:concrete_smokestack",
+    "stack_brick": "tfmg:brick_smokestack",
+    "stack_metal": "tfmg:metal_smokestack",
+    "fence_standard": "the_wasteland_reworked:mesh_fence",
+    "fence_secure": "immersiveengineering:steel_fence",
+    "fence_post": "immersiveengineering:steel_post",
+    "barrier_road": "the_wasteland_reworked:barricade",
+    "lamp_street": "tfmg:gas_lamp",
+    "lamp_service": "immersiveengineering:cagelamp",
+    "lamp_flood": "immersiveengineering:floodlight",
+    "lamp_interior": "tfmg:modern_light",
+    "lamp_interior_public": "tfmg:circular_light",
+    "ladder_service": "immersiveengineering:metal_ladder_steel",
+    "scaffold": "immersiveengineering:steel_scaffolding_standard",
+    "support_beam": "the_wasteland_reworked:support_beam",
+    "vent_plant": "the_wasteland_reworked:bunker_fan",
+    "hazard_marking": "tfmg:yellow_caution_block",
+    "hazard_marking_restricted": "tfmg:red_caution_block",
+    "hazard_surface": "the_wasteland_reworked:hazard_concrete",
+    "radiation_sign": "the_wasteland_reworked:radiation_hazard_sign",
+    "road_sign": "the_wasteland_reworked:road_sign",
+    "notice_board": "supplementaries:notice_board",
+    "platform_rail": "bellsandwhistles:station_platform",
+    "transit_cladding": "bellsandwhistles:metro_panel",
+    "transit_cladding_corrugated": "bellsandwhistles:corrugated_metro_panel",
+    "transit_casing": "bellsandwhistles:metro_casing",
+    "transit_window": "bellsandwhistles:metro_window"
+  },
+
+  "furniture": {
+    "desk_counter": "zvhouses:spruce_counter",
+    "desk_top": "zvhouses:spruce_countertop",
+    "bench": "zvhouses:spruce_bench",
+    "table": "zvhouses:spruce_table",
+    "chair": "zvhouses:spruce_chair",
+    "shelf": "supplementaries:item_shelf",
+    "locker": "minecraft:barrel",
+    "records": "minecraft:bookshelf",
+    "record_pile": "supplementaries:book_pile",
+    "board": "supplementaries:blackboard"
+  },
+
+  "ground_contexts": [
+    "karsic_district_yard",
+    "karsic_rail_ballast",
+    "karsic_frozen_ground",
+    "urban_paved",
+    "industrial_hardstanding",
+    "rural_worked",
+    "wilderness_undisturbed",
+    "waterfront"
+  ],
+
+  "decay": {
+    "B": { "wall_crack": "immersiveengineering:concrete_brick_cracked", "crack_rate_denominator": 12 },
+    "C": { "patch": "the_wasteland_reworked:lead_plating", "glazing": "quark:dirty_glass_pane", "route_surface": "the_wasteland_reworked:hazard_concrete" },
+    "D": { "opening_guard": "tfmg:cast_iron_bars", "lane_barrier": "the_wasteland_reworked:barricade", "scorch": "minecraft:blackstone" },
+    "E": { "patch_rusted": "the_wasteland_reworked:rusted_lead_plating", "rubble": "minecraft:gravel", "reclamation": "the_wasteland_reworked:wasteland_moss", "soil": "minecraft:coarse_dirt" }
+  },
+
+  "moss_affinity": {
+    "K-I": 1.0,
+    "K-II": 0.7,
+    "K-III": 0.25,
+    "K-IV": 0.05,
+    "K-V": 0.15
+  }
+}

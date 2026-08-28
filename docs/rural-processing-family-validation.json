@@ -1,8 +1,11 @@
 {
   "family": "rural_processing",
   "asset_pairs": 4,
-  "all_passed": true,
-  "failures": [],
+  "all_passed": false,
+  "failures": [
+    "abandoned_orchard_cannery: missing identity fixtures: ['minecraft:water_cauldron']",
+    "shattered_greenhouse_nursery: missing identity fixtures: ['minecraft:composter']"
+  ],
   "structures": {
     "abandoned_orchard_cannery": {
       "size": [
@@ -27,8 +30,10 @@
         "dense_floor_levels": 10,
         "footprint_variants": 14
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing identity fixtures: ['minecraft:water_cauldron']"
+      ]
     },
     "ruined_grain_elevator": {
       "size": [
@@ -45,7 +50,7 @@
         "visual_review": "required",
         "quality_approved": false,
         "issues": [],
-        "working_doors": 2,
+        "working_doors": 3,
         "orphan_door_halves": 0,
         "window_blocks": 0,
         "functional_fixtures": 4,
@@ -79,8 +84,10 @@
         "dense_floor_levels": 7,
         "footprint_variants": 15
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing identity fixtures: ['minecraft:composter']"
+      ]
     },
     "remote_sawmill": {
       "size": [

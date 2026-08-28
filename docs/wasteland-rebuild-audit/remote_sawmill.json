@@ -1,0 +1,672 @@
+{
+  "structure_id": "remote_sawmill",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/remote_sawmill_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/remote_sawmill.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "remote_sawmill_clean_master",
+    "passed": false,
+    "hard_fail_count": 36,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (47, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (47, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (47, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (48, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (48, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          48,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (48, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          49,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (49, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          49,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (49, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          49,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (49, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          50,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (50, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          50,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (50, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          50,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (50, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          52,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (52, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          52,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (52, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          52,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (52, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          53,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (53, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          53,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (53, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          53,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (53, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (54, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (54, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (54, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (55, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (55, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (55, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          57,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (57, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          57,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (57, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          57,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (57, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          58,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (58, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          58,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (58, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          58,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (58, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          59,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (59, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          59,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (59, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          59,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (59, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          60,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (60, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          60,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (60, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          60,
+          2,
+          44
+        ],
+        "detail": "minecraft:spruce_planks at (60, 2, 44) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          21,
+          18,
+          10
+        ],
+        "detail": "enclosed room of 4752 air blocks (759 floor cells, 12 tall) near (21, 18, 10) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          49,
+          13,
+          13
+        ],
+        "detail": "enclosed room of 425 air blocks (153 floor cells, 5 tall) near (49, 13, 13) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "remote_sawmill",
+    "passed": false,
+    "hard_fail_count": 12,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          52,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (52, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          53,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (53, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          54,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (54, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          55,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (55, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          57,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (57, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          57,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (57, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          58,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (58, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          58,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (58, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          59,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (59, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          59,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (59, 2, 40) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          60,
+          2,
+          36
+        ],
+        "detail": "minecraft:spruce_planks at (60, 2, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          60,
+          2,
+          40
+        ],
+        "detail": "minecraft:spruce_planks at (60, 2, 40) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        19,
+        8,
+        41
+      ],
+      "detail": "minecraft:smooth_stone_slab at (19, 8, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        19,
+        8,
+        42
+      ],
+      "detail": "minecraft:smooth_stone_slab at (19, 8, 42) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        19,
+        8,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (19, 8, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        20,
+        8,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (20, 8, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        21,
+        8,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (21, 8, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        8,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (22, 8, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        23,
+        8,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (23, 8, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        41,
+        8,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (41, 8, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        42,
+        8,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (42, 8, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        43,
+        8,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (43, 8, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        44,
+        8,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (44, 8, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        45,
+        8,
+        41
+      ],
+      "detail": "minecraft:smooth_stone_slab at (45, 8, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        45,
+        8,
+        42
+      ],
+      "detail": "minecraft:smooth_stone_slab at (45, 8, 42) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        45,
+        8,
+        43
+      ],
+      "detail": "minecraft:smooth_stone_slab at (45, 8, 43) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 36,
+    "variant_hard_fail": 12,
+    "audit_flag_count": 14,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 48,
+      "slab_wall_penetration": 14,
+      "lint:room_composition:review_flag": 2
+    }
+  }
+}

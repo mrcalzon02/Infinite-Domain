@@ -1,0 +1,740 @@
+{
+  "structure_id": "ruined_community_center",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_community_center_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/ruined_community_center.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "ruined_community_center_clean_master",
+    "passed": false,
+    "hard_fail_count": 19,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          19,
+          38
+        ],
+        "detail": "minecraft:iron_trapdoor at (44, 19, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          2,
+          38
+        ],
+        "detail": "ladder facing west at (44, 2, 38) has no solid backing block at (45, 2, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          3,
+          38
+        ],
+        "detail": "ladder facing west at (44, 3, 38) has no solid backing block at (45, 3, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          4,
+          38
+        ],
+        "detail": "ladder facing west at (44, 4, 38) has no solid backing block at (45, 4, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          5,
+          38
+        ],
+        "detail": "ladder facing west at (44, 5, 38) has no solid backing block at (45, 5, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          6,
+          38
+        ],
+        "detail": "ladder facing west at (44, 6, 38) has no solid backing block at (45, 6, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          7,
+          38
+        ],
+        "detail": "ladder facing west at (44, 7, 38) has no solid backing block at (45, 7, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          8,
+          38
+        ],
+        "detail": "ladder facing west at (44, 8, 38) has no solid backing block at (45, 8, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          9,
+          38
+        ],
+        "detail": "ladder facing west at (44, 9, 38) has no solid backing block at (45, 9, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          10,
+          38
+        ],
+        "detail": "ladder facing west at (44, 10, 38) has no solid backing block at (45, 10, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          11,
+          38
+        ],
+        "detail": "ladder facing west at (44, 11, 38) has no solid backing block at (45, 11, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          12,
+          38
+        ],
+        "detail": "ladder facing west at (44, 12, 38) has no solid backing block at (45, 12, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          13,
+          38
+        ],
+        "detail": "ladder facing west at (44, 13, 38) has no solid backing block at (45, 13, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          14,
+          38
+        ],
+        "detail": "ladder facing west at (44, 14, 38) has no solid backing block at (45, 14, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          15,
+          38
+        ],
+        "detail": "ladder facing west at (44, 15, 38) has no solid backing block at (45, 15, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          16,
+          38
+        ],
+        "detail": "ladder facing west at (44, 16, 38) has no solid backing block at (45, 16, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          17,
+          38
+        ],
+        "detail": "ladder facing west at (44, 17, 38) has no solid backing block at (45, 17, 38)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          2,
+          25
+        ],
+        "detail": "minecraft:iron_door at (47, 2, 25) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          3,
+          25
+        ],
+        "detail": "minecraft:iron_door at (47, 3, 25) has no framing wall material on either horizontal axis (floating door)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "ruined_community_center",
+    "passed": false,
+    "hard_fail_count": 19,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          19,
+          38
+        ],
+        "detail": "minecraft:iron_trapdoor at (44, 19, 38) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          2,
+          38
+        ],
+        "detail": "ladder facing west at (44, 2, 38) has no solid backing block at (45, 2, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          3,
+          38
+        ],
+        "detail": "ladder facing west at (44, 3, 38) has no solid backing block at (45, 3, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          4,
+          38
+        ],
+        "detail": "ladder facing west at (44, 4, 38) has no solid backing block at (45, 4, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          5,
+          38
+        ],
+        "detail": "ladder facing west at (44, 5, 38) has no solid backing block at (45, 5, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          6,
+          38
+        ],
+        "detail": "ladder facing west at (44, 6, 38) has no solid backing block at (45, 6, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          7,
+          38
+        ],
+        "detail": "ladder facing west at (44, 7, 38) has no solid backing block at (45, 7, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          8,
+          38
+        ],
+        "detail": "ladder facing west at (44, 8, 38) has no solid backing block at (45, 8, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          9,
+          38
+        ],
+        "detail": "ladder facing west at (44, 9, 38) has no solid backing block at (45, 9, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          10,
+          38
+        ],
+        "detail": "ladder facing west at (44, 10, 38) has no solid backing block at (45, 10, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          11,
+          38
+        ],
+        "detail": "ladder facing west at (44, 11, 38) has no solid backing block at (45, 11, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          12,
+          38
+        ],
+        "detail": "ladder facing west at (44, 12, 38) has no solid backing block at (45, 12, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          13,
+          38
+        ],
+        "detail": "ladder facing west at (44, 13, 38) has no solid backing block at (45, 13, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          14,
+          38
+        ],
+        "detail": "ladder facing west at (44, 14, 38) has no solid backing block at (45, 14, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          15,
+          38
+        ],
+        "detail": "ladder facing west at (44, 15, 38) has no solid backing block at (45, 15, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          16,
+          38
+        ],
+        "detail": "ladder facing west at (44, 16, 38) has no solid backing block at (45, 16, 38)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          17,
+          38
+        ],
+        "detail": "ladder facing west at (44, 17, 38) has no solid backing block at (45, 17, 38)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          2,
+          25
+        ],
+        "detail": "minecraft:iron_door at (47, 2, 25) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          47,
+          3,
+          25
+        ],
+        "detail": "minecraft:iron_door at (47, 3, 25) has no framing wall material on either horizontal axis (floating door)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        9,
+        15
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 9, 15) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        9,
+        16
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 9, 16) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        9,
+        17
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 9, 17) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        9,
+        18
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 9, 18) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        9,
+        19
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 9, 19) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        4,
+        9,
+        20
+      ],
+      "detail": "minecraft:smooth_stone_slab at (4, 9, 20) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        18,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (18, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        9,
+        16
+      ],
+      "detail": "minecraft:smooth_stone_slab at (22, 9, 16) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        9,
+        17
+      ],
+      "detail": "minecraft:smooth_stone_slab at (22, 9, 17) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        9,
+        18
+      ],
+      "detail": "minecraft:smooth_stone_slab at (22, 9, 18) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        9,
+        19
+      ],
+      "detail": "minecraft:smooth_stone_slab at (22, 9, 19) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        9,
+        20
+      ],
+      "detail": "minecraft:smooth_stone_slab at (22, 9, 20) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        14,
+        39
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (22, 14, 39) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        14,
+        40
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (22, 14, 40) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (22, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        23,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (23, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        24,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (24, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        25,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (25, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        26,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (26, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (27, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        28,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (28, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        29,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (29, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        30,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (30, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        31,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (31, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        32,
+        8,
+        7
+      ],
+      "detail": "minecraft:smooth_stone_slab at (32, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        32,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (32, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        33,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (33, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        34,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (34, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        35,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (35, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        36,
+        14,
+        41
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (36, 14, 41) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": null,
+      "detail": "12 further slab/stair-in-wall hits not listed (42 total)."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        4,
+        1,
+        42
+      ],
+      "detail": "added debris (4, 1, 42)->(23, 6, 46) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 80% inside the footprint, 88% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        5,
+        2,
+        27
+      ],
+      "detail": "added debris (5, 2, 27)->(21, 6, 40) is 100% minecraft:gravel, fills 89% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 19,
+    "variant_hard_fail": 19,
+    "audit_flag_count": 33,
+    "by_check": {
+      "lint:ladder_backing:hard_fail": 32,
+      "slab_wall_penetration": 31,
+      "lint:opening_wall_coupling:hard_fail": 4,
+      "terrain_mismatch_damage": 2,
+      "lint:structural_connectivity:hard_fail": 2
+    }
+  }
+}

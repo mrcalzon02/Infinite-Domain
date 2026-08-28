@@ -1,0 +1,64 @@
+{
+  "purpose": "Regional assignment gate: every base master classified once, exclusions substituted, ids well-formed, strata and damage archetypes drawn from the declared sets.",
+  "culture": "karsic",
+  "checks": [
+    {
+      "id": "RA-1",
+      "check": "every base clean master is assigned exactly once",
+      "passed": true,
+      "detail": "85 clean masters in catalog, 85 assigned",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "RA-2",
+      "check": "the assignment invents no base master",
+      "passed": true,
+      "detail": "0 unknown base masters",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "RA-3",
+      "check": "every exclusion names a real native substitute",
+      "passed": true,
+      "detail": "3 exclusions",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "RA-4",
+      "check": "no orphaned native additions",
+      "passed": true,
+      "detail": "12 natives",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "RA-5",
+      "check": "regional ids are unique, well-formed and contiguous from 001",
+      "passed": true,
+      "detail": "94 ids, numbers 001..094",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "RA-6",
+      "check": "every non-prop master declares at least 1 stratum/strata",
+      "passed": true,
+      "detail": "minimum for karsic is 1",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "RA-7",
+      "check": "damage archetypes are drawn from the declared set",
+      "passed": true,
+      "detail": "7 archetypes declared for karsic",
+      "problems": [],
+      "problem_count": 0
+    }
+  ],
+  "passed": true,
+  "failure_count": 0
+}

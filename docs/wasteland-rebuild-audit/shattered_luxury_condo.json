@@ -1,0 +1,776 @@
+{
+  "structure_id": "shattered_luxury_condo",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/shattered_luxury_condo_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/shattered_luxury_condo.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "shattered_luxury_condo_clean_master",
+    "passed": false,
+    "hard_fail_count": 19,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          33
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          4,
+          34
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          5,
+          35
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 5, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          6,
+          36
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 6, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          7,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 7, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          10,
+          33
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 10, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          11,
+          34
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 11, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          14,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 14, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          20,
+          36
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 20, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          21,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 21, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          6,
+          36
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 6, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          7,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 7, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          10,
+          33
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 10, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          11,
+          34
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 11, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          14,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 14, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          18,
+          34
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 18, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          19,
+          35
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 19, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          20,
+          36
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 20, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          21,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 21, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          14,
+          31,
+          14
+        ],
+        "detail": "enclosed room of 792 air blocks (264 floor cells, 3 tall) near (14, 31, 14) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          18,
+          31,
+          18
+        ],
+        "detail": "enclosed room of 867 air blocks (289 floor cells, 3 tall) near (18, 31, 18) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "shattered_luxury_condo",
+    "passed": false,
+    "hard_fail_count": 18,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          3,
+          33
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 3, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          4,
+          34
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 4, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          5,
+          35
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 5, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          6,
+          36
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 6, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          7,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 7, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          10,
+          33
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 10, 33) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          11,
+          34
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 11, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          14,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 14, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          20,
+          36
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 20, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          17,
+          21,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (17, 21, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          6,
+          36
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 6, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          7,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 7, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          11,
+          34
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 11, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          14,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 14, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          18,
+          34
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 18, 34) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          19,
+          35
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 19, 35) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          20,
+          36
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 20, 36) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          33,
+          21,
+          37
+        ],
+        "detail": "minecraft:quartz_stairs at (33, 21, 37) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "damage_coherence",
+        "severity": "review_flag",
+        "position": null,
+        "detail": "no rubble/debris blocks found adjacent to or fallen below the removed volume"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        16,
+        17
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 16, 17) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        16,
+        18
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 16, 18) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        16,
+        19
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 16, 19) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        16,
+        20
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 16, 20) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        16,
+        21
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 16, 21) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        16,
+        22
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 16, 22) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        16,
+        23
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 16, 23) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        16,
+        24
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 16, 24) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        16,
+        25
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 16, 25) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        23,
+        17
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 23, 17) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        23,
+        18
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 23, 18) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        23,
+        19
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 23, 19) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        23,
+        20
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 23, 20) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        23,
+        21
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 23, 21) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        23,
+        22
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 23, 22) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        23,
+        23
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 23, 23) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        23,
+        24
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 23, 24) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        23,
+        25
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 23, 25) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        30,
+        17
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 30, 17) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        30,
+        18
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 30, 18) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        30,
+        19
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 30, 19) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        30,
+        20
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 30, 20) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        30,
+        21
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 30, 21) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        30,
+        22
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 30, 22) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        30,
+        23
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 30, 23) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        30,
+        24
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 30, 24) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        30,
+        25
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (13, 30, 25) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        16,
+        16,
+        13
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (16, 16, 13) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        16,
+        23,
+        13
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (16, 23, 13) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        16,
+        30,
+        13
+      ],
+      "detail": "minecraft:smooth_quartz_slab at (16, 30, 13) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": null,
+      "detail": "80 further slab/stair-in-wall hits not listed (110 total)."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        46,
+        1,
+        8
+      ],
+      "detail": "added debris (46, 1, 8)->(50, 10, 33) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 80% inside the footprint, 100% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        29,
+        2,
+        8
+      ],
+      "detail": "added debris (29, 2, 8)->(44, 7, 33) is 100% minecraft:gravel, fills 93% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        29,
+        9,
+        8
+      ],
+      "detail": "added debris (29, 9, 8)->(44, 10, 33) is 100% minecraft:gravel, fills 99% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        29,
+        2,
+        8
+      ],
+      "detail": "added debris (29, 2, 8)->(31, 8, 8) is 100% minecraft:gravel, fills 100% of its box, top is 100% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 19,
+    "variant_hard_fail": 18,
+    "audit_flag_count": 35,
+    "by_check": {
+      "lint:structural_connectivity:hard_fail": 37,
+      "slab_wall_penetration": 31,
+      "terrain_mismatch_damage": 4,
+      "lint:room_composition:review_flag": 2,
+      "lint:damage_coherence:review_flag": 1
+    }
+  }
+}

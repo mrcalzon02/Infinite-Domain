@@ -1,0 +1,52 @@
+{
+  "structure_id": "infinite_domain:kar_086_courtyard_housing_group",
+  "culture": "karsic",
+  "building_type": "courtyard_group",
+  "conversion_class": "N",
+  "base_master": null,
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": true,
+  "site_context": "karsic_district_yard",
+  "foundation_profile": "partial_basement",
+  "back_of_house": "behind",
+  "district_role": "mikrorayon",
+  "rail_served": false,
+  "heating_main_connection": "group_spine",
+  "tiling_asset": false,
+  "signage_series": "SERIES 9 / BLOCK 40",
+  "archetype": "Courtyard Housing Group",
+  "roster_note": "Three slabs around a courtyard with a playground, drying frames, and a boiler stub. Replaces `abandoned_culdesac`. This asset *is* legibility carrier #4.",
+  "damage_archetype": null,
+  "settlement_program": [
+    "three panel slabs placed to enclose a shared courtyard on three sides",
+    "a communal playground with frames and a sand pit",
+    "drying frames and carpet-beating rails",
+    "a small boiler stub serving the group, with its main running to every slab",
+    "a refuse platform and a transformer kiosk at the service road edge",
+    "footpaths entering the courtyard from the road ring"
+  ],
+  "circulation": [
+    "roads pass around the group; footpaths pass through it",
+    "no road enters the courtyard"
+  ],
+  "damage_constraints": [
+    "the group boiler has failed and the slabs show frost damage in step, worst furthest from it",
+    "the playground and footpaths remain legible",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the group reads as one designed district, not three separate buildings",
+      "the heating main visibly links all three slabs to one source"
+    ]
+  }
+}

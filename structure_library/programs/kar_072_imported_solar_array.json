@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:kar_072_imported_solar_array",
+  "culture": "karsic",
+  "building_type": "field_array",
+  "conversion_class": "F",
+  "base_master": "broken_solar_field",
+  "primary_stratum": "K-V",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "rural_worked",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "utility_node",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "IMPORTED SOLAR ARRAY 6",
+  "archetype": "Imported Solar Array",
+  "roster_note": "Foreign equipment, late, small, behind a Directorate fence with an import plate on the gate. Must communicate *why it is here* (contract C6).",
+  "damage_archetype": "cannibalisation",
+  "utility_program": [
+    "a regular array of identical units on a field",
+    "a small inverter or control cabin at the array edge",
+    "a cable route from the array to the cabin",
+    "a perimeter fence with one gate and an import plate",
+    "an access track from the road to the gate"
+  ],
+  "circulation": [
+    "one gate, one track, service lanes between array rows"
+  ],
+  "damage_constraints": [
+    "units are down in a wind-driven pattern rather than at random; the cabin stands",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the equipment reads as foreign to the region and the import plate explains why it is here",
+      "no housing, no heating main, no settlement around it"
+    ]
+  },
+  "source_metadata": {
+    "category": "utility_infrastructure",
+    "settlement_types": [
+      "rural",
+      "industrial"
+    ],
+    "road_connection": "driveway",
+    "base_footprint": {
+      "width": 83,
+      "depth": 69
+    },
+    "base_height": 17,
+    "conversion_target": "scattered"
+  }
+}

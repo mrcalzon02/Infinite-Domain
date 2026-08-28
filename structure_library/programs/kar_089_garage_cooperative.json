@@ -1,0 +1,49 @@
+{
+  "structure_id": "infinite_domain:kar_089_garage_cooperative",
+  "culture": "karsic",
+  "building_type": "open_yard",
+  "conversion_class": "N",
+  "base_master": null,
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "karsic_rail_ballast",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "yard",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "GARAGE COOPERATIVE 3",
+  "archetype": "Garage Cooperative",
+  "roster_note": "Rows of individual metal garages behind a gate. Very common in reality; excellent as scatter and as courtyard-district edge.",
+  "damage_archetype": null,
+  "logistics_program": [
+    "a large open working surface with a defined vehicle route",
+    "a low workshop or office building at the yard edge",
+    "inspection pits or racking appropriate to what the yard handles",
+    "sorted stacks or rows of the yard's material",
+    "a gate house controlling the single entrance",
+    "a fenced perimeter"
+  ],
+  "circulation": [
+    "one gate, one vehicle loop, no dead ends for a long vehicle"
+  ],
+  "damage_constraints": [
+    "the yard is still sorted; the sorting has simply stopped mid-task",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the sorting logic is inferable from the arrangement of what is stacked"
+    ]
+  }
+}

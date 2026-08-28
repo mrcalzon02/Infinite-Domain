@@ -103,6 +103,7 @@ ServerEvents.loaded(event => {
         let claimPosition = null
         let existingClaim = null
         let existingTeamId = null
+        let claimResult = null
         let verifiedClaims = 0
 
         // Idempotent fallback and repair path for existing worlds. Rhino treats
@@ -120,7 +121,20 @@ ServerEvents.loaded(event => {
                     if (!existingTeamId.equals(teamId)) existingClaim.unclaim(source, true)
                 }
 
-                chunkData.claim(source, claimPosition, true)
+                // ChunkTeamData#claim(source, pos, checkOnly): the third argument
+                // is checkOnly. Passing true only SIMULATES the claim and returns
+                // the result without ever registering it (FTB Chunks
+                // ChunkTeamDataImpl.java: `if (checkOnly || !result.isSuccess())
+                // return result;` short-circuits before registerClaim). This
+                // script passed true for years, so it silently verified 0/49 on
+                // every load. Pass false to actually claim, and surface any
+                // non-success ClaimResult instead of discarding it. claimResult
+                // is hoisted to function scope for the same Rhino reason as the
+                // bindings above.
+                claimResult = chunkData.claim(source, claimPosition, false)
+                if (claimResult !== null && !claimResult.isSuccess()) {
+                    console.warn(`[Infinite Domain] Admin Spawn claim at chunk ${chunkX},${chunkZ} returned ${claimResult.getResultId()}`)
+                }
                 existingClaim = claimedChunkManager.getChunk(claimPosition)
                 if (existingClaim !== null && existingClaim.getTeamData().getTeam().getId().equals(teamId)) {
                     verifiedClaims++

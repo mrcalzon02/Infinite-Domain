@@ -1,0 +1,34 @@
+{
+  "structure_id": "shattered_wind_farm",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/shattered_wind_farm_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/shattered_wind_farm.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "shattered_wind_farm_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": []
+  },
+  "variant_lint": {
+    "structure_id": "shattered_wind_farm",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": [
+      {
+        "check": "damage_coherence",
+        "severity": "review_flag",
+        "position": null,
+        "detail": "no rubble/debris blocks found adjacent to or fallen below the removed volume"
+      }
+    ]
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 0,
+    "audit_flag_count": 0,
+    "by_check": {
+      "lint:damage_coherence:review_flag": 1
+    }
+  }
+}

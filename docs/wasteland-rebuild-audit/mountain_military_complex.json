@@ -1,0 +1,384 @@
+{
+  "structure_id": "mountain_military_complex",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/mountain_military_complex_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/mountain_military_complex.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "mountain_military_complex_clean_master",
+    "passed": false,
+    "hard_fail_count": 12,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          3,
+          23
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (22, 3, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          4,
+          24
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (22, 4, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          5,
+          25
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (22, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          6,
+          26
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (22, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          7,
+          27
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (22, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          10,
+          24
+        ],
+        "detail": "ladder facing west at (14, 10, 24) has no solid backing block at (15, 10, 24)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          11,
+          24
+        ],
+        "detail": "ladder facing west at (14, 11, 24) has no solid backing block at (15, 11, 24)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          12,
+          24
+        ],
+        "detail": "ladder facing west at (14, 12, 24) has no solid backing block at (15, 12, 24)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          13,
+          24
+        ],
+        "detail": "ladder facing west at (14, 13, 24) has no solid backing block at (15, 13, 24)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          14,
+          24
+        ],
+        "detail": "ladder facing west at (14, 14, 24) has no solid backing block at (15, 14, 24)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          15,
+          24
+        ],
+        "detail": "ladder facing west at (14, 15, 24) has no solid backing block at (15, 15, 24)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          3,
+          13
+        ],
+        "detail": "minecraft:spruce_door at (44, 3, 13) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          4,
+          9,
+          4
+        ],
+        "detail": "enclosed room of 91 air blocks (15 floor cells, 6 tall) near (4, 9, 4) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          4,
+          9,
+          54
+        ],
+        "detail": "enclosed room of 91 air blocks (15 floor cells, 6 tall) near (4, 9, 54) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          10,
+          18,
+          20
+        ],
+        "detail": "enclosed room of 48 air blocks (24 floor cells, 2 tall) near (10, 18, 20) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          54,
+          9,
+          4
+        ],
+        "detail": "enclosed room of 91 air blocks (15 floor cells, 6 tall) near (54, 9, 4) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          54,
+          9,
+          54
+        ],
+        "detail": "enclosed room of 91 air blocks (15 floor cells, 6 tall) near (54, 9, 54) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "mountain_military_complex",
+    "passed": false,
+    "hard_fail_count": 12,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          3,
+          23
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (22, 3, 23) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          4,
+          24
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (22, 4, 24) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          5,
+          25
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (22, 5, 25) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          6,
+          26
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (22, 6, 26) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          22,
+          7,
+          27
+        ],
+        "detail": "minecraft:polished_andesite_stairs at (22, 7, 27) is not connected to the ground plate through solid geometry"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          10,
+          24
+        ],
+        "detail": "ladder facing west at (14, 10, 24) has no solid backing block at (15, 10, 24)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          11,
+          24
+        ],
+        "detail": "ladder facing west at (14, 11, 24) has no solid backing block at (15, 11, 24)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          12,
+          24
+        ],
+        "detail": "ladder facing west at (14, 12, 24) has no solid backing block at (15, 12, 24)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          13,
+          24
+        ],
+        "detail": "ladder facing west at (14, 13, 24) has no solid backing block at (15, 13, 24)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          14,
+          24
+        ],
+        "detail": "ladder facing west at (14, 14, 24) has no solid backing block at (15, 14, 24)"
+      },
+      {
+        "check": "ladder_backing",
+        "severity": "hard_fail",
+        "position": [
+          14,
+          15,
+          24
+        ],
+        "detail": "ladder facing west at (14, 15, 24) has no solid backing block at (15, 15, 24)"
+      },
+      {
+        "check": "opening_wall_coupling",
+        "severity": "hard_fail",
+        "position": [
+          44,
+          3,
+          13
+        ],
+        "detail": "minecraft:spruce_door at (44, 3, 13) has no framing wall material on either horizontal axis (floating door)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          4,
+          9,
+          4
+        ],
+        "detail": "enclosed room of 91 air blocks (15 floor cells, 6 tall) near (4, 9, 4) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          4,
+          9,
+          54
+        ],
+        "detail": "enclosed room of 91 air blocks (15 floor cells, 6 tall) near (4, 9, 54) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          10,
+          18,
+          20
+        ],
+        "detail": "enclosed room of 48 air blocks (24 floor cells, 2 tall) near (10, 18, 20) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          54,
+          9,
+          4
+        ],
+        "detail": "enclosed room of 91 air blocks (15 floor cells, 6 tall) near (54, 9, 4) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      },
+      {
+        "check": "room_composition",
+        "severity": "review_flag",
+        "position": [
+          54,
+          9,
+          54
+        ],
+        "detail": "enclosed room of 91 air blocks (15 floor cells, 6 tall) near (54, 9, 54) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        52,
+        2,
+        27
+      ],
+      "detail": "added debris (52, 2, 27)->(53, 5, 28) is 92% minecraft:gravel, fills 75% of its box, top is 75% one Y, 100% inside the footprint, 0% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 12,
+    "variant_hard_fail": 12,
+    "audit_flag_count": 1,
+    "by_check": {
+      "lint:ladder_backing:hard_fail": 12,
+      "lint:structural_connectivity:hard_fail": 10,
+      "lint:room_composition:review_flag": 10,
+      "lint:opening_wall_coupling:hard_fail": 2,
+      "terrain_mismatch_damage": 1
+    }
+  }
+}

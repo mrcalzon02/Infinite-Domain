@@ -21,6 +21,9 @@ EXPECTED_ORDER = [
     "OSF-024", "OSF-028", "OSF-029", "OSF-031", "OSF-033",
     "OSF-001", "OSF-014", "OSF-015", "OSF-032", "OSF-046", "OSF-050",
     "AGE-004", "AGE-011", "AGE-001", "AGE-002", "AGE-012", "AGE-003", "AGE-013", "AGE-014", "AGE-015",
+    "OSF-013", "OSF-016", "OSF-017", "OSF-018", "OSF-020", "OSF-021", "OSF-022",
+    "OSF-034", "OSF-035", "OSF-036", "OSF-038", "OSF-039", "OSF-040", "OSF-041", "OSF-042",
+    "OSF-044", "OSF-047", "OSF-048", "OSF-051", "OSF-052", "OSF-053", "OSF-054", "OSF-055", "OSF-056",
 ]
 REQUIRED = {
     "planning_id", "name", "registry_id", "faction", "state",

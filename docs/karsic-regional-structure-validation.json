@@ -1,0 +1,145 @@
+{
+  "purpose": "Cultural geometry checks that the general V2 lint does not cover.",
+  "culture": "karsic",
+  "structures": 3,
+  "failing": 3,
+  "results": [
+    {
+      "structure_id": "kar_067_series_panel_block",
+      "checks": [
+        {
+          "id": "KV-1",
+          "check": "repeatable-storey identity",
+          "status": "fail",
+          "detail": "4 repeatable bands compared at storey height 6",
+          "problems": [
+            "storey band 4 differs from band 1 in 84 cells"
+          ],
+          "problem_count": 1
+        },
+        {
+          "id": "KV-2",
+          "check": "panel joint continuity",
+          "status": "fail",
+          "detail": "joint block immersiveengineering:concrete_brick, bay 4",
+          "problems": [
+            "storey 1: joint spacing not a multiple of the 4-block bay: [2, 3]",
+            "storey 2: joint spacing not a multiple of the 4-block bay: [2, 3]",
+            "storey 3: joint spacing not a multiple of the 4-block bay: [2, 3]",
+            "storey 4: joint spacing not a multiple of the 4-block bay: [3]"
+          ],
+          "problem_count": 4
+        },
+        {
+          "id": "KV-3",
+          "check": "plinth offset",
+          "status": "pass",
+          "detail": "the ground storey must stand one block proud of the body above it",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-4",
+          "check": "vestibule presence",
+          "status": "pass",
+          "detail": "a heated building needs an outer leaf, an unheated lobby and an inner leaf",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-5",
+          "check": "basement service level and main stub",
+          "status": "pass",
+          "detail": "68 heating-main cells, 58 below grade, 2 at the edge",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-10",
+          "check": "heating-main tiling",
+          "status": "skip",
+          "detail": "not a tiling asset",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-12",
+          "check": "roof discipline",
+          "status": "pass",
+          "detail": "K-III must not carry a pitched roof",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-6",
+          "check": "changing and wash block",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-7",
+          "check": "control-room overlook",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-8",
+          "check": "signage grammar",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-9",
+          "check": "stratum pairing",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-11",
+          "check": "prohibited-motif scan",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        }
+      ],
+      "passed": false
+    },
+    {
+      "structure_id": "kar_083_district_heating_main",
+      "checks": [
+        {
+          "id": "KV-0",
+          "check": "generation record",
+          "status": "fail",
+          "detail": "no generation record for this structure",
+          "problems": [],
+          "problem_count": 0
+        }
+      ],
+      "passed": false
+    },
+    {
+      "structure_id": "kar_084_transformer_kiosk",
+      "checks": [
+        {
+          "id": "KV-0",
+          "check": "generation record",
+          "status": "fail",
+          "detail": "no generation record for this structure",
+          "problems": [],
+          "problem_count": 0
+        }
+      ],
+      "passed": false
+    }
+  ]
+}

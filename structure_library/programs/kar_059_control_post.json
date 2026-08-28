@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:kar_059_control_post",
+  "culture": "karsic",
+  "building_type": "checkpoint",
+  "conversion_class": "N",
+  "base_master": "military_checkpoint",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "urban_paved",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "control",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "CONTROL POST 3",
+  "archetype": "Control Post",
+  "roster_note": "Barrier, guard block, vehicle inspection bay.",
+  "damage_archetype": "firebreak edge",
+  "military_program": [
+    "a barrier across the carriageway with a lifting arm",
+    "a glazed observation post with sight of both approaches",
+    "a vehicle inspection bay off the running lane",
+    "a guard block with a stove, bunks and a weapons store",
+    "a documents window facing the queueing side",
+    "concrete blocks and barriers forming a slalom approach"
+  ],
+  "circulation": [
+    "the slalom forces a slow approach past the observation post"
+  ],
+  "damage_constraints": [
+    "the barrier is down and the slalom is still in place; the guard block is abandoned in a hurry",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the approach geometry makes the checkpoint's intent obvious from a distance"
+    ]
+  },
+  "source_metadata": {
+    "category": "military",
+    "settlement_types": [
+      "military",
+      "highway_frontage"
+    ],
+    "road_connection": "highway",
+    "base_footprint": {
+      "width": 45,
+      "depth": 31
+    },
+    "base_height": 15,
+    "conversion_target": "multibuilding"
+  }
+}

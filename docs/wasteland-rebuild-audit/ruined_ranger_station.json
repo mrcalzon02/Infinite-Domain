@@ -1,0 +1,368 @@
+{
+  "structure_id": "ruined_ranger_station",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/ruined_ranger_station_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/ruined_ranger_station.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "ruined_ranger_station_clean_master",
+    "passed": false,
+    "hard_fail_count": 1,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          3,
+          29
+        ],
+        "detail": "minecraft:lever at (21, 3, 29) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "variant_lint": {
+    "structure_id": "ruined_ranger_station",
+    "passed": false,
+    "hard_fail_count": 1,
+    "findings": [
+      {
+        "check": "structural_connectivity",
+        "severity": "hard_fail",
+        "position": [
+          21,
+          3,
+          29
+        ],
+        "detail": "minecraft:lever at (21, 3, 29) is not connected to the ground plate through solid geometry"
+      }
+    ]
+  },
+  "audit_findings": [
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (5, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        8,
+        8
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (5, 8, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        5,
+        8,
+        9
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (5, 8, 9) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        6,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (6, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        7,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (7, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        8,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (8, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        9,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (9, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        10,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (10, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        11,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (11, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        12,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (12, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        7,
+        5
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (13, 7, 5) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        7,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (13, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        13,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (13, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        14,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (14, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        15,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (15, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        16,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (16, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        17,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (17, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        18,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (18, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        19,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (19, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        20,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (20, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        21,
+        7,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (21, 7, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        21,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (21, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        22,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (22, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        23,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (23, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        24,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (24, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        25,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (25, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        26,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (26, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        27,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (27, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        28,
+        8,
+        7
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (28, 8, 7) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": [
+        28,
+        8,
+        8
+      ],
+      "detail": "minecraft:weathered_cut_copper_slab at (28, 8, 8) is fully boxed in by wall material on all 6 faces - a slab where a full wall block belongs, leaving a half-block void in the wall."
+    },
+    {
+      "check": "slab_wall_penetration",
+      "severity": "review_flag",
+      "position": null,
+      "detail": "1 further slab/stair-in-wall hits not listed (31 total)."
+    },
+    {
+      "check": "terrain_mismatch_damage",
+      "severity": "review_flag",
+      "position": [
+        29,
+        1,
+        18
+      ],
+      "detail": "added debris (29, 1, 18)->(42, 6, 40) is 100% minecraft:gravel, fills 75% of its box, top is 100% one Y, 85% inside the footprint, 51% at/above roof line - reads as a solid pile-block cuboid dropped into the structure (procedural backfill), not gravity-settled collapse debris."
+    }
+  ],
+  "summary": {
+    "clean_master_hard_fail": 1,
+    "variant_hard_fail": 1,
+    "audit_flag_count": 32,
+    "by_check": {
+      "slab_wall_penetration": 31,
+      "lint:structural_connectivity:hard_fail": 2,
+      "terrain_mismatch_damage": 1
+    }
+  }
+}

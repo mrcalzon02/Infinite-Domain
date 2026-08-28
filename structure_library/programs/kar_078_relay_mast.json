@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:kar_078_relay_mast",
+  "culture": "karsic",
+  "building_type": "mast_tower",
+  "conversion_class": "N",
+  "base_master": "radio_mast",
+  "primary_stratum": "K-III",
+  "secondary_stratum": null,
+  "repeatable_storey": false,
+  "site_context": "wilderness_undisturbed",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "utility_node",
+  "rail_served": false,
+  "heating_main_connection": null,
+  "tiling_asset": false,
+  "signage_series": "RELAY MAST 7",
+  "archetype": "Relay Mast",
+  "roster_note": "",
+  "damage_archetype": "cannibalisation",
+  "utility_program": [
+    "a slender vertical structure on a substantial concrete footing",
+    "a service ladder with a backing structure the full height",
+    "a head assembly appropriate to the tower's function",
+    "a small equipment hut at the base",
+    "a cable or pipe route from the hut to the head",
+    "a fenced compound three blocks clear of the structure"
+  ],
+  "circulation": [
+    "the ladder reaches a real platform, never open air"
+  ],
+  "damage_constraints": [
+    "the head assembly is damaged; the structure and ladder remain climbable",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the silhouette is legible from a long distance",
+      "the footing is proportionate to the height"
+    ]
+  },
+  "source_metadata": {
+    "category": "utility_infrastructure",
+    "settlement_types": [
+      "rural"
+    ],
+    "road_connection": "pedestrian",
+    "base_footprint": {
+      "width": 15,
+      "depth": 15
+    },
+    "base_height": 28,
+    "conversion_target": "scattered"
+  }
+}

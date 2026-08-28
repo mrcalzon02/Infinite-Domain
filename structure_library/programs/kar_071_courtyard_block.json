@@ -1,0 +1,68 @@
+{
+  "structure_id": "infinite_domain:kar_071_courtyard_block",
+  "culture": "karsic",
+  "building_type": "courtyard_block",
+  "conversion_class": "N",
+  "base_master": "tenement_courtyard",
+  "primary_stratum": "K-II",
+  "secondary_stratum": null,
+  "repeatable_storey": true,
+  "site_context": "karsic_district_yard",
+  "foundation_profile": "full_basement",
+  "back_of_house": "behind",
+  "district_role": "perimeter_block",
+  "rail_served": false,
+  "heating_main_connection": "courtyard_basement",
+  "tiling_asset": false,
+  "signage_series": "SERIES 6 / BLOCK 28",
+  "archetype": "Courtyard Block",
+  "roster_note": "Perimeter block around an enclosed yard, entered through a single arched gateway.",
+  "damage_archetype": "frozen district",
+  "residential_program": [
+    "a continuous perimeter range enclosing a single courtyard",
+    "one arched gateway through the range, the only vehicle way in",
+    "stair cores opening onto the courtyard, not the street",
+    "apartments arranged two per landing on every upper floor",
+    "ground-floor communal laundry, drying room and refuse store",
+    "a courtyard with drying frames, benches and a standpipe",
+    "a basement pipe gallery ringing the courtyard"
+  ],
+  "circulation": [
+    "the gateway is the single vehicle entry and must remain passable",
+    "every core is reached from the courtyard"
+  ],
+  "damage_constraints": [
+    "one range of the perimeter is breached, opening the courtyard to the street",
+    "the gateway survives",
+    "rubble falls into the courtyard and the street, never sealing the gateway",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the courtyard reads as an enclosed outdoor room, not a gap between buildings",
+      "the gateway is the obvious way in"
+    ]
+  },
+  "source_metadata": {
+    "category": "residential",
+    "settlement_types": [
+      "town_center",
+      "residential"
+    ],
+    "road_connection": "main_road",
+    "base_footprint": {
+      "width": 57,
+      "depth": 53
+    },
+    "base_height": 31,
+    "conversion_target": "multibuilding"
+  }
+}

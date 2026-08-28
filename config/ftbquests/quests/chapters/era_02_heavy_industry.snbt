@@ -9,6 +9,7 @@
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["4FC0C1C678C71891"]
 			id: "5210000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -79,6 +80,14 @@
 		{
 			dependencies: ["1210000000000003"]
 			id: "1210000000000004"
+			rewards: [{
+				id: "1240000000000004"
+				item: {
+					count: 1
+					id: "create:goggles"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				id: "1220000000000004"
@@ -125,6 +134,15 @@
 		{
 			dependencies: ["1210000000000006"]
 			id: "1210000000000007"
+			rewards: [{
+				count: 4
+				id: "1270000000000007"
+				item: {
+					count: 1
+					id: "ae2:quartz_fiber"
+				}
+				type: "item"
+			}]
 			shape: "hexagon"
 			tasks: [{
 				count: 16L
@@ -206,6 +224,14 @@
 		{
 			dependencies: ["2210000000000003"]
 			id: "2210000000000004"
+			rewards: [{
+				id: "2240000000000004"
+				item: {
+					count: 1
+					id: "farmersdelight:iron_knife"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 4L
@@ -253,6 +279,14 @@
 		{
 			dependencies: ["2210000000000006"]
 			id: "2210000000000007"
+			rewards: [{
+				id: "2270000000000007"
+				item: {
+					count: 1
+					id: "createcybernetics:eyeupgrades_biomonitor"
+				}
+				type: "item"
+			}]
 			shape: "heart"
 			tasks: [{
 				count: 32L
@@ -332,6 +366,14 @@
 		{
 			dependencies: ["3210000000000003"]
 			id: "3210000000000004"
+			rewards: [{
+				id: "3240000000000004"
+				item: {
+					count: 1
+					id: "create:wrench"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				id: "3220000000000004"
@@ -378,6 +420,15 @@
 		{
 			dependencies: ["3210000000000006"]
 			id: "3210000000000007"
+			rewards: [{
+				count: 4
+				id: "3270000000000007"
+				item: {
+					count: 1
+					id: "ae2:certus_quartz_dust"
+				}
+				type: "item"
+			}]
 			shape: "diamond"
 			tasks: [{
 				count: 32L
@@ -456,6 +507,14 @@
 		{
 			dependencies: ["2210000000000002"]
 			id: "4210000000000004"
+			rewards: [{
+				id: "6AA151E1AD09E5C9"
+				item: {
+					count: 1
+					id: "kubejs:era2_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4220000000000004"
@@ -503,6 +562,14 @@
 		{
 			dependencies: ["3210000000000004"]
 			id: "4210000000000008"
+			rewards: [{
+				id: "6AB9762751EA5AB0"
+				item: {
+					count: 1
+					id: "kubejs:era2_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				id: "4220000000000008"
@@ -634,6 +701,14 @@
 			]
 			id: "7211000000000004"
 			optional: true
+			rewards: [{
+				id: "6AFC1D831C3C0F76"
+				item: {
+					count: 1
+					id: "kubejs:era2_supply_bag"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 9L
@@ -651,6 +726,14 @@
 			]
 			id: "7211000000000005"
 			optional: true
+			rewards: [{
+				id: "6AD85BFB2CDDB4AF"
+				item: {
+					count: 1
+					id: "kubejs:era2_priority_cache"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			tasks: [{
 				count: 11L

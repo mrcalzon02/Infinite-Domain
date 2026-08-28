@@ -23,7 +23,17 @@ NBT = ROOT / "kubejs/data/infinite_domain/structure/abyssal"
 
 EXPECTED_ORDER = [
     "AGE-016", "PEL-DET-002", "PEL-DET-011", "PEL-DET-012", "PEL-DET-017",
+    "AGE-006-PEL", "AGE-007", "AGE-008", "AGE-010-PEL",
+    "PEL-DET-001", "PEL-DET-003", "PEL-DET-004", "PEL-DET-005", "PEL-DET-006",
+    "PEL-DET-007", "PEL-DET-008", "PEL-DET-009", "PEL-DET-010", "PEL-DET-013",
+    "PEL-DET-014", "PEL-DET-015", "PEL-DET-016", "PEL-DET-018", "PEL-DET-019",
+    "PEL-DET-020", "PEL-DET-021", "PEL-DET-022", "PEL-DET-023", "PEL-DET-024",
     "AGE-017", "KAR-DET-001", "KAR-DET-007", "KAR-DET-010", "KAR-DET-017",
+    "AGE-006-KAR", "AGE-009", "AGE-010-KAR",
+    "KAR-DET-002", "KAR-DET-003", "KAR-DET-004", "KAR-DET-005", "KAR-DET-006",
+    "KAR-DET-008", "KAR-DET-009", "KAR-DET-011", "KAR-DET-012", "KAR-DET-013",
+    "KAR-DET-014", "KAR-DET-015", "KAR-DET-016", "KAR-DET-018", "KAR-DET-019",
+    "KAR-DET-020", "KAR-DET-021", "KAR-DET-022", "KAR-DET-023", "KAR-DET-024",
 ]
 REQUIRED = {
     "planning_id", "name", "faction", "state", "implementation_type",

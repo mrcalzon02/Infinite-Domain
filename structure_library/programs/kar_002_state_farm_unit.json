@@ -1,0 +1,62 @@
+{
+  "structure_id": "infinite_domain:kar_002_state_farm_unit",
+  "culture": "karsic",
+  "building_type": "farmstead",
+  "conversion_class": "A",
+  "base_master": "decayed_farm",
+  "primary_stratum": "K-II",
+  "secondary_stratum": "K-III",
+  "repeatable_storey": false,
+  "site_context": "rural_worked",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "rural_unit",
+  "rail_served": false,
+  "heating_main_connection": "barn_end",
+  "tiling_asset": false,
+  "signage_series": "STATE FARM UNIT 6",
+  "archetype": "State Farm Unit",
+  "roster_note": "Long barn rows, machine yard, silo bank, and a workers' block \u2014 all on one axis, all one design.",
+  "damage_archetype": "frozen district",
+  "agricultural_program": [
+    "long parallel barn ranges of identical design on one axis",
+    "a machine yard with a repair shed and a fuel point",
+    "a silo or feed store bank",
+    "a workers' block with a canteen and wash room",
+    "a small boiler house serving the heated barn",
+    "field access tracks leaving the yard"
+  ],
+  "circulation": [
+    "one yard serves every range; tracks leave it to the fields"
+  ],
+  "damage_constraints": [
+    "one range has lost its roof; the boiler house and the machine yard survive",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the site reads as designed as a system, not accumulated over time"
+    ]
+  },
+  "source_metadata": {
+    "category": "agricultural",
+    "settlement_types": [
+      "rural"
+    ],
+    "road_connection": "local_road",
+    "base_footprint": {
+      "width": 49,
+      "depth": 45
+    },
+    "base_height": 22,
+    "conversion_target": "multibuilding"
+  }
+}

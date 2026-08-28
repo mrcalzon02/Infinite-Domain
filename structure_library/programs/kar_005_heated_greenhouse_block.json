@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:kar_005_heated_greenhouse_block",
+  "culture": "karsic",
+  "building_type": "greenhouse_range",
+  "conversion_class": "N",
+  "base_master": "shattered_greenhouse_nursery",
+  "primary_stratum": "K-III",
+  "secondary_stratum": "K-V",
+  "repeatable_storey": false,
+  "site_context": "rural_worked",
+  "foundation_profile": "surface",
+  "back_of_house": "behind",
+  "district_role": "rural_unit",
+  "rail_served": false,
+  "heating_main_connection": "boiler_on_lot",
+  "tiling_asset": false,
+  "signage_series": "HEATED GREENHOUSE BLOCK 8",
+  "archetype": "Heated Greenhouse Block",
+  "roster_note": "Steam-heated ranges fed from a boiler on the lot \u2014 the break is visible.",
+  "damage_archetype": "frozen district",
+  "agricultural_program": [
+    "parallel glazed growing ranges on a shared service spine",
+    "a boiler house on the lot with its main running to every range",
+    "growing beds and irrigation runs inside each range",
+    "a potting and packing shed at the spine head",
+    "a cold store beside the packing shed",
+    "a small office and wash room"
+  ],
+  "circulation": [
+    "the service spine reaches every range without entering the growing beds"
+  ],
+  "damage_constraints": [
+    "the boiler has failed and the ranges furthest from it are frost-killed while the nearest still hold growth",
+    "the glazing is largely gone; the frames stand",
+    "derive all damage and occupation only from the immutable clean master",
+    "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the gradient of survival away from the boiler is visible at a glance"
+    ]
+  },
+  "source_metadata": {
+    "category": "agricultural",
+    "settlement_types": [
+      "rural"
+    ],
+    "road_connection": "driveway",
+    "base_footprint": {
+      "width": 61,
+      "depth": 49
+    },
+    "base_height": 21,
+    "conversion_target": "multibuilding"
+  }
+}

@@ -1,0 +1,33 @@
+Phase 0 baseline 2026-08-27T04:00Z - regenerate: python scripts/validate_structure_seating.py
+
+==============================================================================
+structure seating audit  (docs/TERRAIN_AFFORDANCE_AND_SPAWN_SEPARATION.md)
+==============================================================================
+in-scope jigsaw structures: 141   (['alien', 'minor', 'nether', 'offworld', 'planetary', 'wasteland'])
+with a `seating` block:      0   (Phase 1 target: 141)
+
+(terrain_adaptation, start_height, project_start_to_heightmap) in use:
+   122  beard_box   | absolute 0       | WORLD_SURFACE_WG
+     5  none        | absolute 70      | -
+     3  beard_box   | absolute 0       | OCEAN_FLOOR_WG
+     2  none        | absolute 80      | -
+     2  beard_box   | absolute -7      | WORLD_SURFACE_WG
+     1  none        | absolute 10      | -
+     1  beard_box   | absolute -12     | WORLD_SURFACE_WG
+     1  bury        | absolute -17     | WORLD_SURFACE_WG
+     1  beard_box   | absolute -8      | WORLD_SURFACE_WG
+     1  bury        | uniform          | -
+     1  beard_box   | absolute -10     | WORLD_SURFACE_WG
+     1  bury        | absolute -9      | WORLD_SURFACE_WG
+
+beard_box + grade_y=1 assumption (Phase 1 -> beard_thin + declared grade_y): 125 structures
+  the mechanics in section 4 mean every one of these is mis-seated wherever its
+  authored floor is not exactly one block above the NBT origin.
+
+--- INFO (5) ---
+  INFO: wasteland/abandoned_quarry: beard_box + start_height -12  [expected - A6 buried list]
+  INFO: wasteland/buried_bank_vault: beard_box + start_height -7  [expected - A6 buried list]
+  INFO: wasteland/collapsed_mine_entrance: beard_box + start_height -8  [expected - A6 buried list]
+  INFO: wasteland/excavator_pit: beard_box + start_height -10  [expected - A6 buried list]
+  INFO: wasteland/ruined_gas_station: beard_box + start_height -7  [expected - A6 buried list]
+

@@ -213,6 +213,10 @@ Before resuming or re-running any family rebuild:
    `structure_library/rebuild-phases.json`'s prior status fields — both have
    been reset to `requires_regeneration_v2`/empty progress because their
    prior "completed" state was not evidence-backed.
+   At every global checkpoint, also run
+   `python scripts/audit_ruined_functional_blocks.py`; any affected asset is
+   a gate failure because a live vanilla workstation has re-entered a
+   terrestrial surface NBT or converted Lost Cities palette.
 4. For each family, in the existing checkpoint-wave order: ensure every
    member has an authored `structure_library/programs/<id>.json`; rebuild
    the clean master with the v2 primitives; confirm zero hard-fail lint

@@ -1,0 +1,25 @@
+{
+  "structure_id": "wrecked_sedan",
+  "clean_master": "kubejs/data/infinite_domain/structure/wasteland/masters/wrecked_sedan_clean_master.nbt",
+  "variant": "kubejs/data/infinite_domain/structure/wasteland/wrecked_sedan.nbt",
+  "rebase_note": "",
+  "clean_master_lint": {
+    "structure_id": "wrecked_sedan_clean_master",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": []
+  },
+  "variant_lint": {
+    "structure_id": "wrecked_sedan",
+    "passed": true,
+    "hard_fail_count": 0,
+    "findings": []
+  },
+  "audit_findings": [],
+  "summary": {
+    "clean_master_hard_fail": 0,
+    "variant_hard_fail": 0,
+    "audit_flag_count": 0,
+    "by_check": {}
+  }
+}

@@ -1,0 +1,2381 @@
+{
+  "generator": "scripts/generate_gemstone_glitter.py",
+  "authority": "docs/GEMSTONE_GLITTER_EFFECT.md",
+  "namespace": "more_ores_more_gems",
+  "parameters": {
+    "glint_res": 32,
+    "frames": 6,
+    "sites_base": 8,
+    "sites_jitter": 3,
+    "glint_block_light": 15,
+    "glint_sky_light": 15,
+    "storage_base_block_light": 0,
+    "proud": 0.008,
+    "mcmeta_steps": 10
+  },
+  "counts": {
+    "targets": 107,
+    "gem_ore": 63,
+    "gem_storage_block": 44,
+    "base_from_last_days": 107,
+    "base_from_jar": 0
+  },
+  "targets": [
+    {
+      "registry_id": "more_ores_more_gems:amethyst_ore",
+      "category": "gem_ore",
+      "sprite": "amethyst_ore",
+      "base_ref": "more_ores_more_gems:block/amethyst_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/amethyst_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/amethyst_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/amethyst_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:ametrine_ore",
+      "category": "gem_ore",
+      "sprite": "ametrine_ore",
+      "base_ref": "more_ores_more_gems:block/ametrine_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/ametrine_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/ametrine_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/ametrine_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:aquamarine_ore",
+      "category": "gem_ore",
+      "sprite": "aquamarine_ore",
+      "base_ref": "more_ores_more_gems:block/aquamarine_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/aquamarine_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/aquamarine_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/aquamarine_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:autunite_ore",
+      "category": "gem_ore",
+      "sprite": "autunite_ore",
+      "base_ref": "more_ores_more_gems:block/autunite_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/autunite_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:black_opal_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_black_opal_ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_black_opal_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/black_opal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_black_opal_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_black_opal_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:carnelian_ore",
+      "category": "gem_ore",
+      "sprite": "carnelianore",
+      "base_ref": "more_ores_more_gems:block/carnelianore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/carnelian_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/carnelianore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/carnelianore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:citrine_ore",
+      "category": "gem_ore",
+      "sprite": "citrine_ore_new",
+      "base_ref": "more_ores_more_gems:block/citrine_ore_new",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/citrine_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/citrine_ore_new_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/citrine_ore_new_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_amethyst_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_amethyst_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_amethyst_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_amethyst_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_amethyst_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_amethyst_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_ametrine_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_ametrine_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_ametrine_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_ametrine_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ametrine_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ametrine_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_aquamarine_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_aquamarine_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_aquamarine_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_aquamarine_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_aquamarine_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_aquamarine_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_autunite_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_autunite_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_autunite_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_autunite_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_autunite_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_autunite_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_black_opal_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_deepslate_black_opal_ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_deepslate_black_opal_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_black_opal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_black_opal_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_black_opal_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_carnelian_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_carnelian_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_carnelian_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_carnelian_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_carnelian_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_carnelian_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_ekanite_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_ekanite_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_ekanite_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_ekanite_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ekanite_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ekanite_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_gray_opal_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_deepslate_gray_opal_ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_deepslate_gray_opal_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_gray_opal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_gray_opal_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_gray_opal_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_heliodor_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_heliodor_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_heliodor_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_heliodor_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_heliodor_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_heliodor_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_jade_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_deepslate_jade_ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_deepslate_jade_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_jade_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_jade_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_jade_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_leucosapphire_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_leucosapphire_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_leucosapphire_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_leucosapphire_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_leucosapphire_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_leucosapphire_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_padparadscha_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_padparadscha_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_padparadscha_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_padparadscha_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_padparadscha_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_padparadscha_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_pink_opal_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_pink_opal_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_pink_opal_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_pink_opal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_pink_opal_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_pink_opal_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_rare_sapphire_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_rare_sapphire_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_rare_sapphire_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_rare_sapphire_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_rare_sapphire_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_rare_sapphire_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_sapphire_ore",
+      "category": "gem_ore",
+      "sprite": "deepslatesapphireore",
+      "base_ref": "more_ores_more_gems:block/deepslatesapphireore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_sapphire_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslatesapphireore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslatesapphireore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_sunflare_gem_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_deepslate_of_sunflare_gem",
+      "base_ref": "more_ores_more_gems:block/blocksprite_deepslate_of_sunflare_gem",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_sunflare_gem_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_of_sunflare_gem_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_of_sunflare_gem_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_tanzanite_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_deepslate_tanzanite_ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_deepslate_tanzanite_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_tanzanite_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_tanzanite_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_tanzanite_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_topaz_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_topaz-ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_topaz-ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_topaz_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_topaz-ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_topaz-ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_ussingite_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_ussingite_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_ussingite_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_ussingite_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ussingite_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ussingite_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_white_crystal_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_deepslatewhitecrystalore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_deepslatewhitecrystalore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_white_crystal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslatewhitecrystalore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslatewhitecrystalore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslate_white_opal_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_deepslate_white_opal_ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_deepslate_white_opal_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslate_white_opal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_white_opal_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_white_opal_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:deepslatee_mysticrain_quartz_ore",
+      "category": "gem_ore",
+      "sprite": "deepslate_rainbow_mystic_ore",
+      "base_ref": "more_ores_more_gems:block/deepslate_rainbow_mystic_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/deepslatee_mysticrain_quartz_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_rainbow_mystic_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_rainbow_mystic_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:ekanite_ore",
+      "category": "gem_ore",
+      "sprite": "ekanite_ore",
+      "base_ref": "more_ores_more_gems:block/ekanite_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/ekanite_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/ekanite_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/ekanite_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:fire_opal_ore",
+      "category": "gem_ore",
+      "sprite": "fire_opal_ore",
+      "base_ref": "more_ores_more_gems:block/fire_opal_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/fire_opal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/fire_opal_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/fire_opal_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:fluorite_tier_1_ore",
+      "category": "gem_ore",
+      "sprite": "fluoritetier1ore",
+      "base_ref": "more_ores_more_gems:block/fluoritetier1ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_1_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier1ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier1ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:fluorite_tier_1_ore_deepslate",
+      "category": "gem_ore",
+      "sprite": "fluoritetier1oredeepslate",
+      "base_ref": "more_ores_more_gems:block/fluoritetier1oredeepslate",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_1_ore_deepslate.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier1oredeepslate_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier1oredeepslate_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:fluorite_tier_2_ore",
+      "category": "gem_ore",
+      "sprite": "fluoritetier2ore",
+      "base_ref": "more_ores_more_gems:block/fluoritetier2ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_2_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier2ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier2ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:fluorite_tier_2_ore_deepslate",
+      "category": "gem_ore",
+      "sprite": "fluoritetier2oredeepslate",
+      "base_ref": "more_ores_more_gems:block/fluoritetier2oredeepslate",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_2_ore_deepslate.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier2oredeepslate_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier2oredeepslate_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:fluorite_tier_3_ore",
+      "category": "gem_ore",
+      "sprite": "fluoritetier3ore",
+      "base_ref": "more_ores_more_gems:block/fluoritetier3ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_3_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier3ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier3ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:fluorite_tier_3_ore_deepslate",
+      "category": "gem_ore",
+      "sprite": "fluoritetier3oredeepslate",
+      "base_ref": "more_ores_more_gems:block/fluoritetier3oredeepslate",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_3_ore_deepslate.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier3oredeepslate_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier3oredeepslate_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:frost_opal_ore",
+      "category": "gem_ore",
+      "sprite": "frost_opal_ore",
+      "base_ref": "more_ores_more_gems:block/frost_opal_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/frost_opal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/frost_opal_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/frost_opal_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:gray_opal_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_gray_opal_ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_gray_opal_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/gray_opal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_gray_opal_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_gray_opal_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:heliodor_ore",
+      "category": "gem_ore",
+      "sprite": "heliodor_ore",
+      "base_ref": "more_ores_more_gems:block/heliodor_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/heliodor_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/heliodor_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/heliodor_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:jade_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_jade_ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_jade_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/jade_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_jade_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_jade_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:leucosapphire_ore",
+      "category": "gem_ore",
+      "sprite": "leucosapphire_ore",
+      "base_ref": "more_ores_more_gems:block/leucosapphire_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/leucosapphire_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/leucosapphire_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/leucosapphire_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:luminous_gem_ore",
+      "category": "gem_ore",
+      "sprite": "luminousgemore",
+      "base_ref": "more_ores_more_gems:block/luminousgemore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/luminous_gem_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/luminousgemore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/luminousgemore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:luminous_gem_ore_deepslate",
+      "category": "gem_ore",
+      "sprite": "luminousgemoredeepslate",
+      "base_ref": "more_ores_more_gems:block/luminousgemoredeepslate",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/luminous_gem_ore_deepslate.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/luminousgemoredeepslate_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/luminousgemoredeepslate_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:mysticrain_quartz_ore",
+      "category": "gem_ore",
+      "sprite": "rainbow_mystic_ore",
+      "base_ref": "more_ores_more_gems:block/rainbow_mystic_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/mysticrain_quartz_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/rainbow_mystic_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/rainbow_mystic_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:nether_amethyst_ore",
+      "category": "gem_ore",
+      "sprite": "nether_amethyst_ore",
+      "base_ref": "more_ores_more_gems:block/nether_amethyst_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/nether_amethyst_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/nether_amethyst_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/nether_amethyst_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:nether_opalized_quartz_ore",
+      "category": "gem_ore",
+      "sprite": "nether_opal_quartz_ore_new",
+      "base_ref": "more_ores_more_gems:block/nether_opal_quartz_ore_new",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/nether_opalized_quartz_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/nether_opal_quartz_ore_new_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/nether_opal_quartz_ore_new_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:opalized_quartz_ore",
+      "category": "gem_ore",
+      "sprite": "opal_quartz_ore_new",
+      "base_ref": "more_ores_more_gems:block/opal_quartz_ore_new",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/opalized_quartz_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/opal_quartz_ore_new_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/opal_quartz_ore_new_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:padparadscha_ore",
+      "category": "gem_ore",
+      "sprite": "padparadscha_ore",
+      "base_ref": "more_ores_more_gems:block/padparadscha_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/padparadscha_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/padparadscha_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/padparadscha_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:peridot_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_peridot-ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_peridot-ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/peridot_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_peridot-ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_peridot-ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:peridot_ore_deepslate",
+      "category": "gem_ore",
+      "sprite": "blocksprite_peridot-ore_deepslate",
+      "base_ref": "more_ores_more_gems:block/blocksprite_peridot-ore_deepslate",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/peridot_ore_deepslate.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_peridot-ore_deepslate_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_peridot-ore_deepslate_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:pink_opal_ore",
+      "category": "gem_ore",
+      "sprite": "pink_opal_ore",
+      "base_ref": "more_ores_more_gems:block/pink_opal_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/pink_opal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/pink_opal_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/pink_opal_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:rare_sapphire_ore",
+      "category": "gem_ore",
+      "sprite": "rare_sapphire_ore",
+      "base_ref": "more_ores_more_gems:block/rare_sapphire_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/rare_sapphire_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/rare_sapphire_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/rare_sapphire_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:ruby_ore_deepslate",
+      "category": "gem_ore",
+      "sprite": "ruby_ore_deepslate",
+      "base_ref": "more_ores_more_gems:block/ruby_ore_deepslate",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/ruby_ore_deepslate.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/ruby_ore_deepslate_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/ruby_ore_deepslate_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:ruby_pack_ore",
+      "category": "gem_ore",
+      "sprite": "ruby_ore",
+      "base_ref": "more_ores_more_gems:block/ruby_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/ruby_pack_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/ruby_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/ruby_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:sapphire_ore",
+      "category": "gem_ore",
+      "sprite": "sapphireore",
+      "base_ref": "more_ores_more_gems:block/sapphireore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/sapphire_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/sapphireore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/sapphireore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:sunflare_gem_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_emerald-ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_emerald-ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/sunflare_gem_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_emerald-ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_emerald-ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:tanzanite_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_tanzanite_ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_tanzanite_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/tanzanite_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_tanzanite_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_tanzanite_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:titanium_quartz_ore",
+      "category": "gem_ore",
+      "sprite": "titanium_quartz_ore",
+      "base_ref": "more_ores_more_gems:block/titanium_quartz_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/titanium_quartz_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/titanium_quartz_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/titanium_quartz_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:topaz_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_topaz-ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_topaz-ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/topaz_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_topaz-ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_topaz-ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:ussingite_ore",
+      "category": "gem_ore",
+      "sprite": "ussingite_ore",
+      "base_ref": "more_ores_more_gems:block/ussingite_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/ussingite_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/ussingite_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/ussingite_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:white_crystal_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_whitecrystalore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_whitecrystalore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/white_crystal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_whitecrystalore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_whitecrystalore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:white_opal_ore",
+      "category": "gem_ore",
+      "sprite": "blocksprite_white_opal_ore",
+      "base_ref": "more_ores_more_gems:block/blocksprite_white_opal_ore",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/white_opal_ore.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_white_opal_ore_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_white_opal_ore_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_amethyst",
+      "category": "gem_storage_block",
+      "sprite": "block_of_amethyst_gem",
+      "base_ref": "more_ores_more_gems:block/block_of_amethyst_gem",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_amethyst.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_amethyst_gem_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_amethyst_gem_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_ametrine",
+      "category": "gem_storage_block",
+      "sprite": "block_of_ametrine_gem",
+      "base_ref": "more_ores_more_gems:block/block_of_ametrine_gem",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_ametrine.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ametrine_gem_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ametrine_gem_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_aquamarine",
+      "category": "gem_storage_block",
+      "sprite": "block_aquamarine",
+      "base_ref": "more_ores_more_gems:block/block_aquamarine",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_aquamarine.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_aquamarine_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_aquamarine_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_autunite_234",
+      "category": "gem_storage_block",
+      "sprite": "autunite_234_block",
+      "base_ref": "more_ores_more_gems:block/autunite_234_block",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_autunite_234.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_234_block_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_234_block_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_autunite_235",
+      "category": "gem_storage_block",
+      "sprite": "autunite_235_block",
+      "base_ref": "more_ores_more_gems:block/autunite_235_block",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_autunite_235.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_235_block_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_235_block_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_autunite_238",
+      "category": "gem_storage_block",
+      "sprite": "autunite_238_block",
+      "base_ref": "more_ores_more_gems:block/autunite_238_block",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_autunite_238.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_238_block_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_238_block_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_black_fluorite",
+      "category": "gem_storage_block",
+      "sprite": "blockfl_black",
+      "base_ref": "more_ores_more_gems:block/blockfl_black",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_black_fluorite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_black_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_black_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_black_opal",
+      "category": "gem_storage_block",
+      "sprite": "block_of_black_opal_je3_be2",
+      "base_ref": "more_ores_more_gems:block/block_of_black_opal_je3_be2",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_black_opal.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_black_opal_je3_be2_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_black_opal_je3_be2_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_blood_fluorite",
+      "category": "gem_storage_block",
+      "sprite": "blockfl_blood",
+      "base_ref": "more_ores_more_gems:block/blockfl_blood",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_blood_fluorite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_blood_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_blood_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_carnelian",
+      "category": "gem_storage_block",
+      "sprite": "carnelian_block",
+      "base_ref": "more_ores_more_gems:block/carnelian_block",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_carnelian.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/carnelian_block_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/carnelian_block_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_citrine",
+      "category": "gem_storage_block",
+      "sprite": "block_of_citrine_gem_1",
+      "base_ref": "more_ores_more_gems:block/block_of_citrine_gem_1",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_citrine.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_citrine_gem_1_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_citrine_gem_1_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_ekanite",
+      "category": "gem_storage_block",
+      "sprite": "block_of_ekanite",
+      "base_ref": "more_ores_more_gems:block/block_of_ekanite",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_ekanite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ekanite_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ekanite_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_fire_opal",
+      "category": "gem_storage_block",
+      "sprite": "block_of_fire_opal",
+      "base_ref": "more_ores_more_gems:block/block_of_fire_opal",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_fire_opal.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_fire_opal_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_fire_opal_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_fluorescent_fluorite",
+      "category": "gem_storage_block",
+      "sprite": "blockfl_f",
+      "base_ref": "more_ores_more_gems:block/blockfl_f",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_fluorescent_fluorite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_f_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_f_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_fluorite_phantom",
+      "category": "gem_storage_block",
+      "sprite": "block_of_fluorite_phantom",
+      "base_ref": "more_ores_more_gems:block/block_of_fluorite_phantom",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_fluorite_phantom.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_fluorite_phantom_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_fluorite_phantom_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_gray_opal",
+      "category": "gem_storage_block",
+      "sprite": "gray_opal_block",
+      "base_ref": "more_ores_more_gems:block/gray_opal_block",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_gray_opal.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/gray_opal_block_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/gray_opal_block_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_green_fluorite",
+      "category": "gem_storage_block",
+      "sprite": "blockfl_green",
+      "base_ref": "more_ores_more_gems:block/blockfl_green",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_green_fluorite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_green_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_green_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_heliodor",
+      "category": "gem_storage_block",
+      "sprite": "block_of_heliodor",
+      "base_ref": "more_ores_more_gems:block/block_of_heliodor",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_heliodor.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_heliodor_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_heliodor_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_leucosapphire",
+      "category": "gem_storage_block",
+      "sprite": "block_of_leucosapphire",
+      "base_ref": "more_ores_more_gems:block/block_of_leucosapphire",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_leucosapphire.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_leucosapphire_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_leucosapphire_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_luminous_gem",
+      "category": "gem_storage_block",
+      "sprite": "blockofluminousgem",
+      "base_ref": "more_ores_more_gems:block/blockofluminousgem",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_luminous_gem.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofluminousgem_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofluminousgem_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_opalized_quartz",
+      "category": "gem_storage_block",
+      "sprite": "block_of_opal_quartz",
+      "base_ref": "more_ores_more_gems:block/block_of_opal_quartz",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_opalized_quartz.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_opal_quartz_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_opal_quartz_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_orange_fluorite",
+      "category": "gem_storage_block",
+      "sprite": "blockfl_orange",
+      "base_ref": "more_ores_more_gems:block/blockfl_orange",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_orange_fluorite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_orange_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_orange_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_orange_pink_fluorite",
+      "category": "gem_storage_block",
+      "sprite": "blockfl_orange_pink",
+      "base_ref": "more_ores_more_gems:block/blockfl_orange_pink",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_orange_pink_fluorite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_orange_pink_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_orange_pink_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_padparadscha",
+      "category": "gem_storage_block",
+      "sprite": "block_of_padparadscha",
+      "base_ref": "more_ores_more_gems:block/block_of_padparadscha",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_padparadscha.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_padparadscha_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_padparadscha_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_peridot",
+      "category": "gem_storage_block",
+      "sprite": "peridot_block",
+      "base_ref": "more_ores_more_gems:block/peridot_block",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_peridot.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/peridot_block_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/peridot_block_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_pink_fluorite",
+      "category": "gem_storage_block",
+      "sprite": "blockfl_pink",
+      "base_ref": "more_ores_more_gems:block/blockfl_pink",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_pink_fluorite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_pink_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_pink_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_pink_opal",
+      "category": "gem_storage_block",
+      "sprite": "block_of_pink_opal",
+      "base_ref": "more_ores_more_gems:block/block_of_pink_opal",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_pink_opal.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_pink_opal_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_pink_opal_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_purple_fluorite",
+      "category": "gem_storage_block",
+      "sprite": "blockfl_purple",
+      "base_ref": "more_ores_more_gems:block/blockfl_purple",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_purple_fluorite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_purple_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_purple_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_purple_green_fluorite",
+      "category": "gem_storage_block",
+      "sprite": "blockfl_purple_green",
+      "base_ref": "more_ores_more_gems:block/blockfl_purple_green",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_purple_green_fluorite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_purple_green_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_purple_green_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_rare_sapphire",
+      "category": "gem_storage_block",
+      "sprite": "block_of_rare_sapphire",
+      "base_ref": "more_ores_more_gems:block/block_of_rare_sapphire",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_rare_sapphire.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_rare_sapphire_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_rare_sapphire_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_raw_titanium_quartz",
+      "category": "gem_storage_block",
+      "sprite": "blocksprite_block-of-raw_titanium_quartz",
+      "base_ref": "more_ores_more_gems:block/blocksprite_block-of-raw_titanium_quartz",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_raw_titanium_quartz.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_block-of-raw_titanium_quartz_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_block-of-raw_titanium_quartz_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_sunflare_gem",
+      "category": "gem_storage_block",
+      "sprite": "blockofsunflaregem",
+      "base_ref": "more_ores_more_gems:block/blockofsunflaregem",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_sunflare_gem.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofsunflaregem_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofsunflaregem_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_tanzanite",
+      "category": "gem_storage_block",
+      "sprite": "block_of_tanzanite_je3_be2",
+      "base_ref": "more_ores_more_gems:block/block_of_tanzanite_je3_be2",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_tanzanite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_tanzanite_je3_be2_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_tanzanite_je3_be2_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_titanium_quartz",
+      "category": "gem_storage_block",
+      "sprite": "block_of_titanium_quartz",
+      "base_ref": "more_ores_more_gems:block/block_of_titanium_quartz",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_titanium_quartz.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_titanium_quartz_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_titanium_quartz_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_topaz",
+      "category": "gem_storage_block",
+      "sprite": "dgfdgfdfd",
+      "base_ref": "more_ores_more_gems:block/dgfdgfdfd",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_topaz.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/dgfdgfdfd_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/dgfdgfdfd_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_ussingite",
+      "category": "gem_storage_block",
+      "sprite": "block_of_ussingite",
+      "base_ref": "more_ores_more_gems:block/block_of_ussingite",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_ussingite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ussingite_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ussingite_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_white_crystal",
+      "category": "gem_storage_block",
+      "sprite": "blockofc",
+      "base_ref": "more_ores_more_gems:block/blockofc",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_white_crystal.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofc_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofc_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_white_fluorite",
+      "category": "gem_storage_block",
+      "sprite": "blockfl_white",
+      "base_ref": "more_ores_more_gems:block/blockfl_white",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_white_fluorite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_white_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_white_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:block_of_ytt_fluorite",
+      "category": "gem_storage_block",
+      "sprite": "blockfl_ytt",
+      "base_ref": "more_ores_more_gems:block/blockfl_ytt",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/block_of_ytt_fluorite.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_ytt_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_ytt_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:blockof_jade",
+      "category": "gem_storage_block",
+      "sprite": "blocksprite_block-of-jade",
+      "base_ref": "more_ores_more_gems:block/blocksprite_block-of-jade",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/blockof_jade.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_block-of-jade_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_block-of-jade_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:blockof_mysticrain_quartz",
+      "category": "gem_storage_block",
+      "sprite": "dalle-2024-10-12-.5s8",
+      "base_ref": "more_ores_more_gems:block/dalle-2024-10-12-.5s8",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/blockof_mysticrain_quartz.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/dalle-2024-10-12-.5s8_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/dalle-2024-10-12-.5s8_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:blockof_sapphire",
+      "category": "gem_storage_block",
+      "sprite": "637608873479978555",
+      "base_ref": "more_ores_more_gems:block/637608873479978555",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/blockof_sapphire.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/637608873479978555_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/637608873479978555_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:blockof_white_opal",
+      "category": "gem_storage_block",
+      "sprite": "block_of_white_opal_je3_be2",
+      "base_ref": "more_ores_more_gems:block/block_of_white_opal_je3_be2",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/blockof_white_opal.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_white_opal_je3_be2_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_white_opal_je3_be2_glint.png.mcmeta",
+      "base_source": "last_days"
+    },
+    {
+      "registry_id": "more_ores_more_gems:ruby_pack_block",
+      "category": "gem_storage_block",
+      "sprite": "block_of_ruby_je3_be2",
+      "base_ref": "more_ores_more_gems:block/block_of_ruby_je3_be2",
+      "model": "kubejs/assets/more_ores_more_gems/models/block/ruby_pack_block.json",
+      "glint": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ruby_je3_be2_glint.png",
+      "mcmeta": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ruby_je3_be2_glint.png.mcmeta",
+      "base_source": "last_days"
+    }
+  ],
+  "files": [
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/amethyst_ore.json",
+      "sha256": "ce436d0c6aabd5a92114da1e32b1d9616373806a0a328c066e92f93d8e52fc61"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/ametrine_ore.json",
+      "sha256": "247b6bdec73dfd9a787e551a54c4b4b7f780ef58cc2711050a669c0b934bd0f4"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/aquamarine_ore.json",
+      "sha256": "49d9a9a07ecd2951a6d68c89c74dbfe260850609a714718a816f28de615bf8d4"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/autunite_ore.json",
+      "sha256": "a4472e7e750edb49ceabcb9548a250def1a372a65e5a0ccbe533b1f1697a0b60"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/black_opal_ore.json",
+      "sha256": "1e256c86d4c0b3b957f0e9d493dae032cd77a823d32b39ec368d2898cdaad33c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_amethyst.json",
+      "sha256": "9b526146cdb87d2e23e4142da09833d05c581a9bb7cd52313bf1ad0117d608b2"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_ametrine.json",
+      "sha256": "2436013a41f21ba2978b207364f8e3fe339d3251b2bfc17bfd942be31432760c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_aquamarine.json",
+      "sha256": "f072db06e9a2e43e5720731847f3740632e004ccec19cb9162e7ece6740273f6"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_autunite_234.json",
+      "sha256": "8f6fc2d4b669d68677bbe7e51e90b30fb1155c4e59eaf0b42f9d92795282311e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_autunite_235.json",
+      "sha256": "1166470b38e31fad09964b1f7809d3263de10715ecbf8484458af3d356532516"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_autunite_238.json",
+      "sha256": "f484fff2539ebbad91349433117e838c7883112b4a8f0bea8a4aa880b3f6e1e4"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_black_fluorite.json",
+      "sha256": "ae97493836da0de10843e04c9a1d05166924d2fd3337faf49122f2883c8b9744"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_black_opal.json",
+      "sha256": "671478acb4e964931611f90879a6973a71935e4a2a6c0ebb3e5dc107ddccb3c0"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_blood_fluorite.json",
+      "sha256": "61f24a55350ff824075161d2f7b301d4385375bd28af5d32bc582199a3ae9eae"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_carnelian.json",
+      "sha256": "5690e75ff08ef1fffb08fb587bf4ab8c0d39427e64a0dc20c1a37cb765c8abb8"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_citrine.json",
+      "sha256": "42a777871eed4a699a0263cc61c364e20cba8124e1c46dce5e1ed91411cd6d0e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_ekanite.json",
+      "sha256": "5c466517932b197d53291c7fa020c7bca4e534cc610aab283deaec2b8d7712cf"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_fire_opal.json",
+      "sha256": "65098d3a8554d27b1d991811a22c8d0f6d1bedee1a0e85b72a56f636d450b992"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_fluorescent_fluorite.json",
+      "sha256": "ba8b9474a3fe135882c099b27be6a73420519ab57c6f3b9278325d5d0114b2c1"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_fluorite_phantom.json",
+      "sha256": "9fa89d5b3389e32312746bb37da5369e6e0ca426eb29cacd8adf6ef346f7633d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_gray_opal.json",
+      "sha256": "9579da27a50e81e5b7b0f81ad51dd25ebf8faea30fd6f5858affbca4cb539f3d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_green_fluorite.json",
+      "sha256": "2dabe36b31adf53f1c66e36211c02b00761ae6bc02a0e87e2e06c402695aa366"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_heliodor.json",
+      "sha256": "61782e2afeeb6caf1199a19284bc98306c3cfbf0e707b770e701bbb9aca93361"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_leucosapphire.json",
+      "sha256": "59bc828060417ef1ac9da4e6d21768faa5d85d61801d5317921211a6888dd665"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_luminous_gem.json",
+      "sha256": "c053a8e046d2abe3dcd212a1715068fdfb94e0cae3ab138fc8dd13c12d401be0"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_opalized_quartz.json",
+      "sha256": "f101b959bc763f788af6e2cc2ead8c53c5fbfc1729f7663336a868d95e5115bb"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_orange_fluorite.json",
+      "sha256": "379967c64ac19a78183e42513c57f7cc077ea1f55971b438118193200e701120"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_orange_pink_fluorite.json",
+      "sha256": "0628d01f823e80082ed975a71e8875c3f909067860f54253d66d8762982c528f"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_padparadscha.json",
+      "sha256": "c32bed5a88d957a373fa61be342d21f872f7276e8d3301b7aa74d303940e15f8"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_peridot.json",
+      "sha256": "3e29d29907b6905967ec2bc3fbb46ccf925b6a7ef82238780a8a8209eccceb9d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_pink_fluorite.json",
+      "sha256": "38670637dbab2d4cd56e36b62301dc31a5d16f2dc6d07161eaf28d7460409217"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_pink_opal.json",
+      "sha256": "07917a1a2c81e0cda76b2716db680f2faa550b6dbaa4992a307f79904e19a0bf"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_purple_fluorite.json",
+      "sha256": "4b291ae04c1099ff8c72382c8500957497f0424918a6189dcbf0269387c49e45"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_purple_green_fluorite.json",
+      "sha256": "4c6de28372eb66cf535b7db98ee63e51ce1a2ad9cde6816d445d041ed1b7b659"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_rare_sapphire.json",
+      "sha256": "84b54ffea454226cb5e244a4a079524da857c93f14610857ea220cf3a44d187c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_raw_titanium_quartz.json",
+      "sha256": "07593f2f26900b35bc4a67557e42b22e7d3c01ebfe4cd35909fdaa9843954bb5"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_sunflare_gem.json",
+      "sha256": "ff2e74a45683270903486c7118b77648594ec031474c3427417d723a7f946de4"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_tanzanite.json",
+      "sha256": "40024abdb05976e496321228c1fc739869a8b192ece44972dc4789320bc18d83"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_titanium_quartz.json",
+      "sha256": "550645dc08c96f938250be3252478f29b904aacd42017003acd1ee567010088b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_topaz.json",
+      "sha256": "bebb0c32408b1300c2e702e721fb95a0a8ad866b22f9fbc1fed6cbfb1b9e3584"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_ussingite.json",
+      "sha256": "46f963c428339bb8e3952f029825a0d397103e511bf0424e0b5cbf1521114452"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_white_crystal.json",
+      "sha256": "6e1c8ebaefbd44db3318f238d860ca645453f0ad65ddee74c15ccb245f9b2717"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_white_fluorite.json",
+      "sha256": "92e6899fbf96e73b47fac348032e656c8a09444f4fc692fa649e44aa074cbbfc"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/block_of_ytt_fluorite.json",
+      "sha256": "9b787a31a1ad521858ea56e4bb818dd1207650f272b52efa921e4177139d4561"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/blockof_jade.json",
+      "sha256": "4fff5323cabdc1bd4ab3ad471fb0b8fbd378a9c17a7ee40a4f8e92c744d17cce"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/blockof_mysticrain_quartz.json",
+      "sha256": "a2da26276a5b61176c7831c796c3bcd8281d84fa2fba47585b24bc87e711489b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/blockof_sapphire.json",
+      "sha256": "40f71e053539c57ef26bc672ab72949857e2ae3ba5346cd510c393cb41d1fe53"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/blockof_white_opal.json",
+      "sha256": "2ba1716b90846c5b259e8988dd4a120ec0bc8bad80181b20bbc34d1e7a519c93"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/carnelian_ore.json",
+      "sha256": "3d3e2c5c3db589d218f3a6c028f2789d1d21c90ff4f40a16dca01a9bd0350b8c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/citrine_ore.json",
+      "sha256": "8fd224b2f0e69bf70c34926c718d6237b9c8f08cd42ca242915652778d01c91b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_amethyst_ore.json",
+      "sha256": "08e8f1e8dbf87b8a8284ca5905dd865ba274419ffd8caa0a42ce5ad71afca7e0"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_ametrine_ore.json",
+      "sha256": "ba7a41cebd4fa9b738a3a11939af631ecdb085a064454774479b7741776f9805"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_aquamarine_ore.json",
+      "sha256": "eb99e0da68eded703305fedd6044d61ee5d0b62c8489bddc180805bbdd5d6624"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_autunite_ore.json",
+      "sha256": "51440ef83a7e63bb19201867351af3bc9d29f5db00154f4a96534997bbf65e84"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_black_opal_ore.json",
+      "sha256": "616a95295b264e367737fa3859daa8b4ceceb9040a1c48dea0fc7e1aaf41b823"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_carnelian_ore.json",
+      "sha256": "6d34e3d69ef0d7b99ec3c0ca28e99391c7b3d1b84177f420fb593497e9e03490"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_ekanite_ore.json",
+      "sha256": "bf9f75d79972f2e1a014b15bb9e9ecc88210eaf5a347c26365c49eb029c597b8"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_gray_opal_ore.json",
+      "sha256": "d2d97968e390ac86a46cd29551424334b6df058b9a2d26168f81123506a24088"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_heliodor_ore.json",
+      "sha256": "e3277791b4c9a8ec7f413c7c92b8efaa539da74f410b090a930d30bcaa2d91e7"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_jade_ore.json",
+      "sha256": "6956bb445c8b1130e3820c39cae243ffc063a240a2673f4a482255410ead24fb"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_leucosapphire_ore.json",
+      "sha256": "cfe5eff8519ac3691028dd0d55f00c6816fb0d8b5e1dc979e153ce1c8011b080"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_padparadscha_ore.json",
+      "sha256": "80984fe73a1036114e0ac281d80e3de4a5d5361f36e8aa1fdc1a2dfe32344a99"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_pink_opal_ore.json",
+      "sha256": "f9a28ce205ead0879a313d2561d3f6f19a6fbf02d41bbc5be119967a74e1709a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_rare_sapphire_ore.json",
+      "sha256": "64da46efb5464d3a5c7d5dd9e4450cf9c93802742a5491a3cc057e30fb2f91b7"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_sapphire_ore.json",
+      "sha256": "505a644e3b653ab26957bef62daaf2f12e8bf282ffaf3144efe7cd2ef49aaab3"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_sunflare_gem_ore.json",
+      "sha256": "c14fd656d8e627a37a89fab0680a1b7e78283ab12c4a29d8ca6eb1cb03e9880d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_tanzanite_ore.json",
+      "sha256": "eef77b67bd80fcb9b139947378097c2c8017db9b4c4aa19fb00966eff368b42d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_topaz_ore.json",
+      "sha256": "98c640b34298d021cdbc9b67ee05cf00fbb0c52cc921d72b7f808b8709fcbc68"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_ussingite_ore.json",
+      "sha256": "3867645282cc8b985d3ffcda4742000cf40cf5486e0d23ae32c97816908d0600"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_white_crystal_ore.json",
+      "sha256": "0c4b378c8d884d906441041053108bc5a22122dd794f9f6f56a15f40090ab6eb"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslate_white_opal_ore.json",
+      "sha256": "f163c695db3d382ce061698f4545befb9b927a2cac943285f4b2e9c0971ec3e2"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/deepslatee_mysticrain_quartz_ore.json",
+      "sha256": "c559bc190a526c2d67c8bbc196bd138083b5e3143df515052f30164fba5c7486"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/ekanite_ore.json",
+      "sha256": "07667ce3a5d6b41b0820123e734ffdac621fe56730089f91d3d22a33ac0cedc6"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/fire_opal_ore.json",
+      "sha256": "a18f33c6155b5ebbee85f3b58a88e9cf54bc50fb0914e04126fa311ebd77aaea"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_1_ore.json",
+      "sha256": "a50081b62dd1c2d83834b7aa90fa48001ba261e93849cfdc8b35fb1995d76c70"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_1_ore_deepslate.json",
+      "sha256": "82afdd91b3e8a25df3f37f2b8c86cddd69260894043c6ce9b36d5be0ba46088b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_2_ore.json",
+      "sha256": "ccf213d10694b69e0738fc4059e89fa8bee594e078fc71aa90fc99d54facc0f9"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_2_ore_deepslate.json",
+      "sha256": "375914bd6fd129374846e426a5e7a20e69fba35bdca1b3fdc8bc2b14b9e47fbf"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_3_ore.json",
+      "sha256": "e8c3500dd9d154971d00c06b1485875bde467b9f502f57bbae60d85d06631426"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/fluorite_tier_3_ore_deepslate.json",
+      "sha256": "e5319fa93f89674db4e1f2eb2349ba9e82f85b4a281c0fd10e79006976a83ca2"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/frost_opal_ore.json",
+      "sha256": "39a088af4614f11137c9b15cc064034ffbf788c0993a02079ef69a7bd6ed47be"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/gray_opal_ore.json",
+      "sha256": "e84668f46fb0f3b67808177c3c80690b3cdbeba0b0144b72a35b5263803beb18"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/heliodor_ore.json",
+      "sha256": "9b4460c7b6f9df62d1289d209534a3e1a04d38a4a3bf78bd42653840b564c104"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/jade_ore.json",
+      "sha256": "b98df856b629d4b1d8874092f6dd24255b8f62190f5f75994aea427a27e7736f"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/leucosapphire_ore.json",
+      "sha256": "b72f0e9a77ccd1714a4d5003ecec84b6428e6d2adc5effe47cad13a9fa423dbd"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/luminous_gem_ore.json",
+      "sha256": "aa737147cc92b1a589aa1f58a16b4c29a41fbc15d1ff07ab1e3f3dc1a27392ca"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/luminous_gem_ore_deepslate.json",
+      "sha256": "31a3c785e785de77c729c70a21e1e8b8f995b002d463cc828c416ff43c15ffe7"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/mysticrain_quartz_ore.json",
+      "sha256": "7b29c5541ec8d1d7388ac78dc3a40a8892edcdf62db9c06dc6e5ffcb2dfa34d5"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/nether_amethyst_ore.json",
+      "sha256": "35f3e3f6e288fa40ab1b81745fdf1cf3d67e6b60beabe8f099a85cd70dda5e6f"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/nether_opalized_quartz_ore.json",
+      "sha256": "497b34ee854ba5d3eeedb15f30adc1e8c48e3a78253739cb221ef0a62060697b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/opalized_quartz_ore.json",
+      "sha256": "2afa49da56a0eff29b2b84e41bd7bfe88b3077545a20306c6af3a67a9a431e85"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/padparadscha_ore.json",
+      "sha256": "7c73c861caa98c167d63a8bdf61ea3f8cf4101fcea920923444bad4e8806454c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/peridot_ore.json",
+      "sha256": "061b64f7c8b3b77d56d581b29d9a73fd407db71d0bb342a1492dcd97ccfa55e3"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/peridot_ore_deepslate.json",
+      "sha256": "0aecd643db4b5a710a3b648fb6a4be50f02dd497a43722db2c6cb837dd79a3d6"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/pink_opal_ore.json",
+      "sha256": "17d1ef62e207b69d74c5456b17e4870b11d47f1447ab9e9126e24e9789dd2e88"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/rare_sapphire_ore.json",
+      "sha256": "54cd0c7adf87418b0623826531712b68563854c5517d98d050829483cae8de8c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/ruby_ore_deepslate.json",
+      "sha256": "a84de9ebe7d9e6629238ac74c0275f449098d841fb1641b6872f547f05259abd"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/ruby_pack_block.json",
+      "sha256": "41386f6e408e14f9693ac5386a04f02626d01d74e8578bece641d58283e6a723"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/ruby_pack_ore.json",
+      "sha256": "6c865e48738cddfddf80e2e5d7687ca233d84ff113aeabb39953dcb7caeca431"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/sapphire_ore.json",
+      "sha256": "fab87af0413bdc81c8394ab9b2639f8339e87f580976bfdadc11816f850409dd"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/sunflare_gem_ore.json",
+      "sha256": "9885bad7cd1539d2384ce3863798a955214310a2438ddc48c4d2d3e3e15ec0e6"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/tanzanite_ore.json",
+      "sha256": "04373d44f2f4f1f48ce97fca7fee23fde154553dac80f7c2ae1dde40c3827914"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/titanium_quartz_ore.json",
+      "sha256": "daab5ba874c2ac1d95934561db45c80763f252957057c4bbb5a3a0c1be3cb52c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/topaz_ore.json",
+      "sha256": "82eacc559f03343474f870ab5cf3694d55b778fe633d78319113940200d3a03f"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/ussingite_ore.json",
+      "sha256": "bc764ce5f795cf714e8cbd7161bde55101a4f9526330f830e9e7fdc25640d7c9"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/white_crystal_ore.json",
+      "sha256": "c3dcc7c342b33f1a5739b07420a3fcf0b0d2331c2d25e6c562d69e4dc02c0b6d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/models/block/white_opal_ore.json",
+      "sha256": "9f8167be741076580d561dd15d6ebb82437f34428c56188bcce47c598345765a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/637608873479978555_glint.png",
+      "sha256": "50874d4075a9908e0a4b63c743a10dfb2293e12106658dd8d6455c4032094b86"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/637608873479978555_glint.png.mcmeta",
+      "sha256": "5c3523e3c8aa3cff5d36a318c2f122a8c2dff36ed945bb50d77b9ce5b1fb7d6e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/amethyst_ore_glint.png",
+      "sha256": "b5d63d13be689c8e6a2efbbdc4feba4d6a73975860478136c058c67dfabf332a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/amethyst_ore_glint.png.mcmeta",
+      "sha256": "ae6d12b56b9461d39b8d0bf5c2cc74d8306c8498269a4f9a1e1964981c463dc1"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/ametrine_ore_glint.png",
+      "sha256": "57ad7b38660cd1190c44e607711222f3821f49822b24d6c608abd45eb70d0937"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/ametrine_ore_glint.png.mcmeta",
+      "sha256": "e9bab9d715eb4b9726ad7f0d6d715c4df51becde3e3a40f8c752aaf37314e235"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/aquamarine_ore_glint.png",
+      "sha256": "c5260d8697e7a2918175ffac12ca2a060d43c278246bad3304e1e7d6bf90d25f"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/aquamarine_ore_glint.png.mcmeta",
+      "sha256": "9d13973940bb104aebea0a711d976142cfa187113ec6df08513d79e57a339034"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_234_block_glint.png",
+      "sha256": "891d3c698182f8141a110f2f8b8239c47800ded38d6428455690edce3e7bfc1e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_234_block_glint.png.mcmeta",
+      "sha256": "5b9855df6cae1c21aa26db8ec94f80927822cd7f9b4b7f69981462b5978ae08c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_235_block_glint.png",
+      "sha256": "4f22d1c15519763aaedc8f973afb863ccde6b2434e56ca68cd0ba178563aa477"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_235_block_glint.png.mcmeta",
+      "sha256": "259f0d7e9ddfb8d78ac80bc472cedd55105ddd7efe6c953316442e9e9b9a767e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_238_block_glint.png",
+      "sha256": "3edcb539928b21e593e489bf1c01611f66fe776f8b3335d800ca3d3efe2969fa"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_238_block_glint.png.mcmeta",
+      "sha256": "4ad7636723fdd666ab54f79f7b6b69b243b1b0dae2927d107abba246cdc352f1"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_ore_glint.png",
+      "sha256": "5dc1aab1704a3b9b28e46129dec1a1d7c04528af9efe958bb1a16e5484b4542e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/autunite_ore_glint.png.mcmeta",
+      "sha256": "f8377ccf702e9405d4b5b9f3c7a32cc8ca7db6478f921dad447997c8b64627f5"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_aquamarine_glint.png",
+      "sha256": "472d6b97980d97f7c29979a7d91c2bd80a5510d5266f37cc645fadf93d7cdb5b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_aquamarine_glint.png.mcmeta",
+      "sha256": "c8ad41809e61fd62076c519260aa81ccb66a976c1999c18605231fe8823c0ac9"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_amethyst_gem_glint.png",
+      "sha256": "7934d3fd3b06ef81a8a08bc1c8eaf43d5a976e2d331d5d5dbe100ae210be8cb6"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_amethyst_gem_glint.png.mcmeta",
+      "sha256": "cfe4e4d0a059c4b4369e995851b322f7177d2f2588ef2c57093a330ddf202885"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ametrine_gem_glint.png",
+      "sha256": "108f3f3c62e5c6a71f2dbdbfdb8a90fe9eb458c6d020e1258001313025cedf89"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ametrine_gem_glint.png.mcmeta",
+      "sha256": "7464a8d19d16467c93943f83828996f7422325bd1813a48528aa3f249f971431"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_black_opal_je3_be2_glint.png",
+      "sha256": "888103107db50ef4ce7e6cc1247d777aa0cc0eb4cf522964a710781f96880756"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_black_opal_je3_be2_glint.png.mcmeta",
+      "sha256": "704d77befb9d8a51f2c761262e07558d32e95edcf9906f2cb6cb274871790def"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_citrine_gem_1_glint.png",
+      "sha256": "1ecf83c3e2cf46733a43192694594021932ac0d36f5f00a3255bba334cec4a1a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_citrine_gem_1_glint.png.mcmeta",
+      "sha256": "97d2e02f26761d8a0d8d55b330a9c32c57575c94927042ff54b6f5629e394a9f"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ekanite_glint.png",
+      "sha256": "6ea8388514c55d3992249f9f2bcb1c21bed034149a88b9cef86601c23fede56a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ekanite_glint.png.mcmeta",
+      "sha256": "9d42171d1b3e8334a63eeb29c1b59e631fc336f712450b3acee534defbaccb48"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_fire_opal_glint.png",
+      "sha256": "2a9a3805bce4f7990f1907cdf1b4a83156588204b3269f37406bae45d9d56da1"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_fire_opal_glint.png.mcmeta",
+      "sha256": "d3f3e1a57d57ffe9bc14299fcef1dcd183e2a55e6f1ae7f60506c583ac94d859"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_fluorite_phantom_glint.png",
+      "sha256": "1aca345eccb917bfd4ece8895f363c742d6cf7a4956c8f39cc44b7ae8b5860b7"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_fluorite_phantom_glint.png.mcmeta",
+      "sha256": "c2bb42dab0de984e19aeb25bf97959df922952604767e74e523a31f66587df8c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_heliodor_glint.png",
+      "sha256": "424dc0e8fecd40c2d7dcc239a129500fad954ecce40417d2c2abe907a45204da"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_heliodor_glint.png.mcmeta",
+      "sha256": "56e769deb67669e8a7c76afcd50b1e97cd8a46b3cc5574ec706b3a01d572f197"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_leucosapphire_glint.png",
+      "sha256": "c7da5f381ab4ffe5aeac538b5e224b9ab7158902d1f4abf5d3d87bef58f2ec6e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_leucosapphire_glint.png.mcmeta",
+      "sha256": "47eb80ee031111287a28a2d0635553010b6f223b7a0c5752d651db98da90457e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_opal_quartz_glint.png",
+      "sha256": "0987db08c912ec8effdc8af6b46c58df30b9cf4756abf89510d00c3c94d8189a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_opal_quartz_glint.png.mcmeta",
+      "sha256": "0e3b39cd631b67aff18f2c1730a955b1386726219ff3e8f3ac12a95cadba04fb"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_padparadscha_glint.png",
+      "sha256": "a9d128950977d42162450af62d5c0f9f20a70c76d5526ca263cb4c9cef2ee735"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_padparadscha_glint.png.mcmeta",
+      "sha256": "b029c481ca6343c65cbbbbdc362cf96b3ea10f1b4c076a76cc31cc6de5e4b75a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_pink_opal_glint.png",
+      "sha256": "88cfcaea1fe3480ad6a459b870eba18be83ae6b4cb7042ebfa18edd45a284407"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_pink_opal_glint.png.mcmeta",
+      "sha256": "1c36cea422b7d5dfdd199a3aa4a046b9a5143138f6673731dc0a5121dc744c53"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_rare_sapphire_glint.png",
+      "sha256": "d898a75a993703c153520000b445b42b7741227a3a09ed1941ebec95a622b2f5"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_rare_sapphire_glint.png.mcmeta",
+      "sha256": "a646bdfff13c4322fc183d4c0ad3049c3767d4435a3fc104119ccd76f0f89597"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ruby_je3_be2_glint.png",
+      "sha256": "bf8c679658c0380ef3bae8e2b59cd6d1a3753742d4c88cb7dc066836bd9b101a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ruby_je3_be2_glint.png.mcmeta",
+      "sha256": "2eefb0a657ae2955200ba7090fdd1818fd4bf63e0ef3e97e1dabebd9cb57a85f"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_tanzanite_je3_be2_glint.png",
+      "sha256": "f778f2ab37ec2160e0dfd2b33bef27d6158aabdf622998394adcb1708b9ad058"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_tanzanite_je3_be2_glint.png.mcmeta",
+      "sha256": "abc29fa1fd8d1fb9a82f1ebb12b09927843d0ce846cdfde81dc199e1c53e3252"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_titanium_quartz_glint.png",
+      "sha256": "a1bbbe1221fe045ca3fdf1a5a6288ea04105139c25e47f3b9f531b0dd9b400d0"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_titanium_quartz_glint.png.mcmeta",
+      "sha256": "0b69c7f2ef1c48d8c1d2fc0f9614c181b4c7dec194c6557f5b09a2ddd25d67a9"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ussingite_glint.png",
+      "sha256": "898772cc920c6023365301637865d92ee16b967430246c71e82089b3536a348a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_ussingite_glint.png.mcmeta",
+      "sha256": "1c3fccf21c4018b7f7895a56e77b11bb7a79c242f3264ba31cd99334fcfdf6ed"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_white_opal_je3_be2_glint.png",
+      "sha256": "8852de1f23184006d579289b988a38cb644121e2d7a52cd983338b8c654e7a81"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/block_of_white_opal_je3_be2_glint.png.mcmeta",
+      "sha256": "982aaa6c2de08480bd5126aa9ed553b3ef8adab8b667d7d1f014f01dec1ea5af"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_black_glint.png",
+      "sha256": "2b64d3e6b47c797136a38757de27246e61a0b3eb509bc03fb7a4bcf810dceee7"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_black_glint.png.mcmeta",
+      "sha256": "73e4d5c684cf76de6527ebc7c2018af3cf28e64a709ba9433d079bf25dcf9a5a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_blood_glint.png",
+      "sha256": "ae9e707899a29f1a80cc1b5bc6d28a23bb9ed37b81fbe95d248a8fe80dd1eacb"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_blood_glint.png.mcmeta",
+      "sha256": "4b41c59145be3e32e576228bbdeb6474e753bb4345e845b4fc5a7a9a23fd517e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_f_glint.png",
+      "sha256": "cb9689e715915e68dbb09e1e3d71939d013569457ac519911591f68e99323847"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_f_glint.png.mcmeta",
+      "sha256": "ce151b4c436286190f335cef9c6926869e8cae504b4139241b46dd13f81ee915"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_green_glint.png",
+      "sha256": "7c80c353eb1e26cbcba86a49fde4ed96deaefb986795c02bebe75f33e39f9296"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_green_glint.png.mcmeta",
+      "sha256": "955790fbc3b5df023d6c8ff45144dbb1cd2ca9cd763208a0f012b19a3b78fd39"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_orange_glint.png",
+      "sha256": "213fe82c6636fc3964e131cf2e5d5a006d9c5c573cfbf29c3182a5d76486f153"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_orange_glint.png.mcmeta",
+      "sha256": "590ca6d9488724e7fb68e3f664f5eeab4c389d7d89235fc7c1b1ab493e1872cf"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_orange_pink_glint.png",
+      "sha256": "ed5e99e96f744095b5a54b09d1fa94845934a3705e9c6cfb38e14debe43d8599"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_orange_pink_glint.png.mcmeta",
+      "sha256": "4b5ab7fe5e5c552f948aa201c824841c703fd1383f1fa437c838bb749a2f0c81"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_pink_glint.png",
+      "sha256": "afabc12efc30ff5f3fa8de93cdd9025271497418f4b7bd9aa68a2bcaa3d5cf36"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_pink_glint.png.mcmeta",
+      "sha256": "3ef7622d9b6283c73fa88e1e9506a0aee0b94b91e88ef286806577c1808aba39"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_purple_glint.png",
+      "sha256": "1ed66394de9bc1f8e14694b0478e5402707d11617edde040dbb3d2b77183b206"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_purple_glint.png.mcmeta",
+      "sha256": "54a86cc13eb6e4f69fa0c9e9d9218230ad72d96fe73c2fba9054f69dd70d97b4"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_purple_green_glint.png",
+      "sha256": "557c0ef4a2dc970cc6607cee50250a272c8ff6f29026ee3a6236be41b8258788"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_purple_green_glint.png.mcmeta",
+      "sha256": "9f7846b23fb8de44935a31dfb7c0fa68cd3647437337fe29cc5351a14acd76b3"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_white_glint.png",
+      "sha256": "2785fa8998a60edeadde53e7dba5317d4f7424d11720f2aef09a78a23ce25ac2"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_white_glint.png.mcmeta",
+      "sha256": "9dd7ae658a99f4516d1611a45cdb3471e845088572c1dadfb679c5ce59654d75"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_ytt_glint.png",
+      "sha256": "79ba0b06228a09f1cab73b1b35cf389bf524591dd089773f25f8334445d0e374"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockfl_ytt_glint.png.mcmeta",
+      "sha256": "9344688bdecbd9b0de5908b5457681aa5deaaef82bb28f366e9d54226be0b34e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofc_glint.png",
+      "sha256": "50b5699f830c9ba34e15f87c4e5435e465c52b2d4072352026efbe487ca2ea96"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofc_glint.png.mcmeta",
+      "sha256": "98d475044bcc12628af1ef1d170d8195068c86f99ff9967ead50832aa69a8209"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofluminousgem_glint.png",
+      "sha256": "13dbf49159b3cee8b3dfd49331412cbed77998432ea4fa1b2d391487fb534416"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofluminousgem_glint.png.mcmeta",
+      "sha256": "28ff1cce491c4baa2252e13b6a4ee9e130b4eef431a8528469e387ebc3b53875"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofsunflaregem_glint.png",
+      "sha256": "493ec13cd2d8bc86021066f44dba26dc79600b653e6b47d0405fbf015c1837b4"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blockofsunflaregem_glint.png.mcmeta",
+      "sha256": "fb6ab1a8b1ab6b52b042a746d07997f4569e2fd9e848d2f33674cd711613f6ee"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_black_opal_ore_glint.png",
+      "sha256": "9c8589811e3948a2bc29730e2cdc4a255356a5265f30a6f3f14fb3d0890bdca1"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_black_opal_ore_glint.png.mcmeta",
+      "sha256": "f20caf7c90f387a47e90d910b4c822bdb943507e0d0544de0ebecdeb9e0c146a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_block-of-jade_glint.png",
+      "sha256": "75d6f07b3e882b49b3d67b8aceed525596dd0ed4a30b6124b1d4e61699bdef36"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_block-of-jade_glint.png.mcmeta",
+      "sha256": "ea87b345bb0c57e79c0817a309a0c463617b0b54f7a82a0234549684428d4acb"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_block-of-raw_titanium_quartz_glint.png",
+      "sha256": "715ff701fe40d0aafc38cb4a1547d9fe12be2f35f85be437314f8bf2ca8e0a2b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_block-of-raw_titanium_quartz_glint.png.mcmeta",
+      "sha256": "837e4c4b18490018075618424bb5acac1f85cee36e84058cad90bca513b10163"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_black_opal_ore_glint.png",
+      "sha256": "984db3a4fbf71cba17485e0e068920d57cc113df02cb9d524b42d5886617af0d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_black_opal_ore_glint.png.mcmeta",
+      "sha256": "d664e5e7d0c14d9664747cfb478e8362eab40b6e0da6f3f80a4108a80b4f9434"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_gray_opal_ore_glint.png",
+      "sha256": "85102bc2b51d932b16bf1362b9ff8c6d85b26424e37d9d5b681c5faa92c1972a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_gray_opal_ore_glint.png.mcmeta",
+      "sha256": "45fb0791eee0c954a5e60d8e745df1b4fb5d1a30e126265bf1646ed32e4a1432"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_jade_ore_glint.png",
+      "sha256": "c9e399c594c4beffb6720cf8ec5c1f289d6af7dfeffb05d15f160d63c4156734"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_jade_ore_glint.png.mcmeta",
+      "sha256": "8c45bdc78b268250e740d0bc0a2435c5dcb6ef8072dc9e0c6673ca4dcaa5c7db"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_of_sunflare_gem_glint.png",
+      "sha256": "7b7f6628d8488776e55a6fbc76f7bca14aad316ef39de9d35a462a8b664d5c88"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_of_sunflare_gem_glint.png.mcmeta",
+      "sha256": "6b0bed8f5518ab76e49253c1c668f6959f61f1c4e61f044685f4507d0e4cad69"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_tanzanite_ore_glint.png",
+      "sha256": "97d0571cf9f2e667b882d7ee9c17fe486b813643976f8918e04841f87bd0b393"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_tanzanite_ore_glint.png.mcmeta",
+      "sha256": "eebbf8abe6b5654ba701d79af134a8da3eed9e7a789c95be275a7bd5c8268e77"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_white_opal_ore_glint.png",
+      "sha256": "ad9e40ef94050b2869c787381cb482cc29747464ab8c1569b02d6820a6e40414"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslate_white_opal_ore_glint.png.mcmeta",
+      "sha256": "9575a27cfc618e38cdae3243b7e312a6c8f34b0d8e013eee50fe37999083ab7d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslatewhitecrystalore_glint.png",
+      "sha256": "4a93fc0e708bdea5f5e5eaee2c0d37422a53650247d2064b2e50fc669ac76dbd"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_deepslatewhitecrystalore_glint.png.mcmeta",
+      "sha256": "7ed8878e3f58cc2b8f5948bcb83376ea248eced7b7758b5a8939e7082847012c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_emerald-ore_glint.png",
+      "sha256": "6202952368f7fb2d553ad6ec7c29f54ea7769b25f4e22ce5c385284cab9cfe05"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_emerald-ore_glint.png.mcmeta",
+      "sha256": "938782c430e60645f31adaa0e48c4039bf69a014589f1e4ce5c5d845cd087e33"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_gray_opal_ore_glint.png",
+      "sha256": "f9b869e9d4713f13ef52391d346ec33f1a64b0b5be2d9322697bdb6327a6c073"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_gray_opal_ore_glint.png.mcmeta",
+      "sha256": "3a5ba22265bfa419d8b52a4256a79de33edf8bf97800c7c000ec29a2d60825af"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_jade_ore_glint.png",
+      "sha256": "fb2f731d019866e5802af856fbb87ab4adae47b7bf161db576e5dac5a15e42d0"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_jade_ore_glint.png.mcmeta",
+      "sha256": "7103ded1754f986d8301de3aae2ca5c642deb63209ebde4baba6e55f7c59fc76"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_peridot-ore_deepslate_glint.png",
+      "sha256": "97bb91f89b650946d87c9aae2be6c5f9e93cedf9b5c5cb637a30628e99050aa2"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_peridot-ore_deepslate_glint.png.mcmeta",
+      "sha256": "910a940c7e9ef7ed5a7d853517f8b358a3b9957443251a0e1619e0b394577ca6"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_peridot-ore_glint.png",
+      "sha256": "0412af65013a178b47fa74adfddaf0dda56596354436b6c28ec2b30ce74baf23"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_peridot-ore_glint.png.mcmeta",
+      "sha256": "844d2abd491541247224e13f05ae5dec08cfa9f6b956b68428b026e5bbd5bc4a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_tanzanite_ore_glint.png",
+      "sha256": "1dff26d8d9d9e024ce76fa7e753366c1d1fceeb5f4b967b6785b4426b2428875"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_tanzanite_ore_glint.png.mcmeta",
+      "sha256": "9d16f0654ca09c8aa61836dad3d287637bc66c0f4a1bdccdd464535c468c6afd"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_topaz-ore_glint.png",
+      "sha256": "5ccda558a6fa6930136c6c03b360fae4fa0c1228c71b39563e7d05db1dedc6bc"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_topaz-ore_glint.png.mcmeta",
+      "sha256": "13c11c2d326064f4a08cfe81146acab44d02cb8ce54be575852ff440db7a2705"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_white_opal_ore_glint.png",
+      "sha256": "26266a2a8499d4a9852ca0e535e36e09ab2affa084e1c34c104ddab558a954c7"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_white_opal_ore_glint.png.mcmeta",
+      "sha256": "6dff5e9ad9c39fa94e4727fce17411b9a80d99e7d8a4ed508fb03c03393493de"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_whitecrystalore_glint.png",
+      "sha256": "37822cc5e4960f6cd9c41eb3fe2a317839315596128f8b464e0c3a93f4936f0d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/blocksprite_whitecrystalore_glint.png.mcmeta",
+      "sha256": "d1bb378936e411d197f568a40ba0f52db153f94d73ecb2d4581baa6064cdb562"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/carnelian_block_glint.png",
+      "sha256": "0ab4a08b685ce38c6ef0ebef4f58c90a35ea3dc2214577d63ba6c7c4d1988657"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/carnelian_block_glint.png.mcmeta",
+      "sha256": "ed55ffbc66e50232ea37c2881eb3c5b28aad39b6ccdc9befb238cb0c087556ec"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/carnelianore_glint.png",
+      "sha256": "e364da732bb77e9eff2bcb27f4e2f6cff9fbd3fa711eb0caaa693504e96bc332"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/carnelianore_glint.png.mcmeta",
+      "sha256": "250ddd75a3363edf60a26f1b9d704e8fb75d58a067fc814f8eccb9b70233afed"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/citrine_ore_new_glint.png",
+      "sha256": "6589f7ada91def111f1a15d2f5127444672f8e362e9273714731876f689d48f2"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/citrine_ore_new_glint.png.mcmeta",
+      "sha256": "f021d1846b6724a9eacec2a6dba041969b2786c52c5e078daf970433337b7628"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/dalle-2024-10-12-.5s8_glint.png",
+      "sha256": "95e5862489fc6ddad65a954b433ebcbce8f7343ef7442913ab821ce12b14069b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/dalle-2024-10-12-.5s8_glint.png.mcmeta",
+      "sha256": "f3a861931b9d0efceda5a45b3f173bc0fcb0d303168df83c27c556fb034341f7"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_amethyst_ore_glint.png",
+      "sha256": "ab6f69b8ab9e29905dff7d923176c00a7ff08036f722b80a8ad843bf76223f8d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_amethyst_ore_glint.png.mcmeta",
+      "sha256": "d80e682757a1a1eb53589f97f3fa3bdd009c06163e9a9913dd3a41f6d9bdff9c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ametrine_ore_glint.png",
+      "sha256": "4add1c582dd34f1d1d11ae64014ef7e7c1a1f3743fdfc91d384182c1f76584bf"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ametrine_ore_glint.png.mcmeta",
+      "sha256": "88c58793c83a26e702fe9f423eed311fe293a3fc3420477a3126e59f992d731e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_aquamarine_ore_glint.png",
+      "sha256": "b73e650f6dbca220b482fe6b18562dea55917d3e0b9499d987f37baa9a787f8c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_aquamarine_ore_glint.png.mcmeta",
+      "sha256": "42dc54be0845a374cbf80d6e60267cd422244743fc980a579632e8bba519b841"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_autunite_ore_glint.png",
+      "sha256": "241441e8c771c1f721cae36d567cc7048c0896669eb2afb751772895b2db8fbd"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_autunite_ore_glint.png.mcmeta",
+      "sha256": "38bac53d5d30e47cc462eb464ea5d6dd819f1a83501be39dfe8a9b417903754a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_carnelian_ore_glint.png",
+      "sha256": "122fe21f11c0a9f52d828c7b935aaef92354b266ca44d9f8696984099774ff5d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_carnelian_ore_glint.png.mcmeta",
+      "sha256": "b6c5139d8bee297395ed8c9a4df5e364ed969314e67103623f4661f0c8caf5c5"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ekanite_ore_glint.png",
+      "sha256": "96164fdcc42385cb4d6cce16b6b00ede60df6edf5ee952fd8a17570c0eca1cc6"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ekanite_ore_glint.png.mcmeta",
+      "sha256": "1ea1e530f189c827a32d90d5c6691d2154725f1191524cadc5f55db767ee65dc"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_heliodor_ore_glint.png",
+      "sha256": "20cfbf90b46b335995e149357d7ba2e0daedb71556c7cb206cf7bad2473e2c92"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_heliodor_ore_glint.png.mcmeta",
+      "sha256": "f71ab3bb7bf2b1b4f2136cbdefd0c248c9d8874f7a0b48250a1178d6fc7417da"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_leucosapphire_ore_glint.png",
+      "sha256": "6efcb0eeb060cebef2f85ea507842c15edfa85d0c9317d85ab37cf4afb856957"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_leucosapphire_ore_glint.png.mcmeta",
+      "sha256": "b84569acb27019dcf14d95ecb45f569b50ea2e74ae7a90a29bb16e56ed32b066"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_padparadscha_ore_glint.png",
+      "sha256": "e65681bd70fb532ac3606e2184fbacd8ff45beae96067645817a882a06460513"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_padparadscha_ore_glint.png.mcmeta",
+      "sha256": "9be60cadb153b27e10ce2b2159c35af00414c7bdf36a27ddf1a492a523878338"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_pink_opal_ore_glint.png",
+      "sha256": "36bfd261c80d009e7029209ad639d4009b1c301baefb46916610a6dfbbdeaf9d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_pink_opal_ore_glint.png.mcmeta",
+      "sha256": "cf4e53c7d8c0480272702e8e1bb795e8cd26350f6ba8b0e0ff33f9d430c3c240"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_rainbow_mystic_ore_glint.png",
+      "sha256": "2bc0c644b4eac149aaf42863a039bc0d8011da26381ebacf94dcd53a579c39ad"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_rainbow_mystic_ore_glint.png.mcmeta",
+      "sha256": "09f574ff2365c6963e7e102e7f33e8a65a6caa214d85eafdf5e07ac540052129"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_rare_sapphire_ore_glint.png",
+      "sha256": "478a7c00500a12c0fb81fbbd254df03483b0c229e7ef41412162958e612ee571"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_rare_sapphire_ore_glint.png.mcmeta",
+      "sha256": "12abb5e5701c4cbbf8c9af6d4af944d27e287c027126add93db93490b47f4517"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_topaz-ore_glint.png",
+      "sha256": "7d620a211fa71275094a2d44d047d47746b8b755d834b858d4b57b30d49872e1"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_topaz-ore_glint.png.mcmeta",
+      "sha256": "cc594d0c142dd5766de9b1e659267bcaf1276d2eebd8b4a6507a5d46d2f54db7"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ussingite_ore_glint.png",
+      "sha256": "0723bb5d0be6ee7eae554e996ccf5e260d7ea716702285fd2e808f574fdbc8c0"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslate_ussingite_ore_glint.png.mcmeta",
+      "sha256": "77912281e1c404d73d2efc778e12fb1ec570bd7bf2464897930506e77e737500"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslatesapphireore_glint.png",
+      "sha256": "88080d015718912234eb43e7b2134cc6bcd1862e2e460ee7dc8ca25233b2184b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/deepslatesapphireore_glint.png.mcmeta",
+      "sha256": "45d59a3149e9d7cdf907c0078931125dbe6576fde4db13958a0dd380afad3d56"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/dgfdgfdfd_glint.png",
+      "sha256": "22a23ecbc4da2ea149033fd9c6441d6a75316f67233c793956f48bf2bbace324"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/dgfdgfdfd_glint.png.mcmeta",
+      "sha256": "c320e07f0eccba5a91bd7be6ee4741eb21bc68f24de3034cf439e472fd9a8791"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/ekanite_ore_glint.png",
+      "sha256": "66d991093279af502012dbd8ee12e2a6b9c97514b4e812e9f16dba180953ed13"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/ekanite_ore_glint.png.mcmeta",
+      "sha256": "b73ea88ca41b18f8bc8ade69aa56e0103c844397a20d2bd1c93569c5b1b266c7"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fire_opal_ore_glint.png",
+      "sha256": "7ee29296566affaf08e93f728cee3a1365d69edc82024f4d4a7278b854320c93"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fire_opal_ore_glint.png.mcmeta",
+      "sha256": "5f41a68d7c2d11ab39a0c3e78372abebb1aa559fbaf0bb2796ff8dd631ac6d84"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier1ore_glint.png",
+      "sha256": "712790e66666af07dbc29bb943743e6e1f0aceee4a7e5b0167c79d2ce0a008e8"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier1ore_glint.png.mcmeta",
+      "sha256": "932e315440bb1c845c3699a9c1f7303001cfce84ea1dd06e5f13116120442cf0"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier1oredeepslate_glint.png",
+      "sha256": "6f9ab08ade1df22ee4923aa30898baac04386f6796ae90df079e1d809bb6f942"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier1oredeepslate_glint.png.mcmeta",
+      "sha256": "26c3ad351e9f309174a0574581d3109af72acccabed2a4aa28ee44717b81843a"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier2ore_glint.png",
+      "sha256": "85047093ee75df81a47f3ebbacba9c8cabcb61c2598a4cb73762ddac5264768b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier2ore_glint.png.mcmeta",
+      "sha256": "3dcb99d84b18690580cc9265e3d825d1b5725b020ff7b28a43d17460d97b9c35"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier2oredeepslate_glint.png",
+      "sha256": "1332e1a4f7ea504991925aabd14e7d379a91a08880e1d5371574086f5e1f6102"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier2oredeepslate_glint.png.mcmeta",
+      "sha256": "3e24778bdf3c71803bb33ca9b6393dd67067d5b6b64282d87e325b90ba144b6f"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier3ore_glint.png",
+      "sha256": "dc9a8da34a75e59e4328db6d98fda301c2c5943b8be934e60504899e853f0994"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier3ore_glint.png.mcmeta",
+      "sha256": "91a6fe4881f0dd50d8c503fdb54b5fc7feca75c380e2c2e1a0e60716df751f0c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier3oredeepslate_glint.png",
+      "sha256": "0839d7001e64d283142598e9a6358580739e91377b9302b067c4ec8aedc4738d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/fluoritetier3oredeepslate_glint.png.mcmeta",
+      "sha256": "043def71afc79f3cf787175774963ce0b13066d29310605073d62dc451266846"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/frost_opal_ore_glint.png",
+      "sha256": "c70fba0cca5ad95a46d655fee84facbe8c2d3c4589157586b74be110b2b36be0"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/frost_opal_ore_glint.png.mcmeta",
+      "sha256": "6e6f8bee2aa48b3b28989f2fd0b1e77b5b8537bd00dbde3b4ac88f574d0cf4b2"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/gray_opal_block_glint.png",
+      "sha256": "23e5027d680a87a787eaf56a59d3791cb022b202a258efc4871c2efd62920c2c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/gray_opal_block_glint.png.mcmeta",
+      "sha256": "e4010d08725e608b68e6100654ffd3402e3ffba3bc9e6756a7377cb6b0e46020"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/heliodor_ore_glint.png",
+      "sha256": "ba320627f2b13770e66964b7bd6a6e4936f68830dc88852be5ef93cf5788d8b0"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/heliodor_ore_glint.png.mcmeta",
+      "sha256": "938aa81315b90e59093dcabed76201135822effc7bb73abf443ccddb09cc2cef"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/leucosapphire_ore_glint.png",
+      "sha256": "252e13d92cc9a7c1e8612f0e5ecdfeb9bfc83e220209c42767313125fa3a9216"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/leucosapphire_ore_glint.png.mcmeta",
+      "sha256": "669f41230d23fe4e595b31343d646f05553b3375473ea91205ae10e0006eb5e6"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/luminousgemore_glint.png",
+      "sha256": "685cc21298e5f958e3f26fd88ef533d64cf89877251c6bce76bd31d64c3c84b6"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/luminousgemore_glint.png.mcmeta",
+      "sha256": "3ec3266eff3a62284f310accd1ecf626ab59590a2d2e67adc379463124cf948f"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/luminousgemoredeepslate_glint.png",
+      "sha256": "ad8a36fa34ded8b2af83cd43bcd310254c39bf249c2b7a2091ef15d6bbaf56b1"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/luminousgemoredeepslate_glint.png.mcmeta",
+      "sha256": "6f2405a35f71174074efd6514777db880f33ba8de0c6e64ba578614aa4e76a57"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/nether_amethyst_ore_glint.png",
+      "sha256": "cc10cad90c5c7361d37a5699223a1de482eedc6af839db4d24d17aa5b63867ce"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/nether_amethyst_ore_glint.png.mcmeta",
+      "sha256": "380de24cb2f931be330141b3de72611358dff42c5fbfc7c87cff196efc25b7c2"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/nether_opal_quartz_ore_new_glint.png",
+      "sha256": "5665642b1f650eaf0c91057284d1dae229c96e109578027cdd7f8a9f9ec1e639"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/nether_opal_quartz_ore_new_glint.png.mcmeta",
+      "sha256": "3e50170f4ae36db984e50d82537fe920c756ea11795cae2f5bf1dacc67df5b3b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/opal_quartz_ore_new_glint.png",
+      "sha256": "24fdefcc76d6c9e708119df9914a8bdd10dc48b2081b2ffa40871a496427a161"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/opal_quartz_ore_new_glint.png.mcmeta",
+      "sha256": "20f045d3b296cca03303dff2b316f942cf0b03d1376f5edcd21ca26071269ef4"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/padparadscha_ore_glint.png",
+      "sha256": "ada8f190f8fc4ea90eed7ad26a4d0d691c1ae203065ce010ccc10771973d2e1c"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/padparadscha_ore_glint.png.mcmeta",
+      "sha256": "3da382ccea807e133927eb9e8d3e30de050e239bdb19bed066a9d8842882e4c6"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/peridot_block_glint.png",
+      "sha256": "7f1c646904ba579752dc67c1225b7a64496099e24a3aaa81a2f1b553e7d7304d"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/peridot_block_glint.png.mcmeta",
+      "sha256": "cacfed07b6b2b2d409fa783b17039573498ded74a2f5f5df8e442c3076bbaa22"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/pink_opal_ore_glint.png",
+      "sha256": "c4398d4849da799c915429c42b65e65123b6d95486ef4f292113276fe20014ce"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/pink_opal_ore_glint.png.mcmeta",
+      "sha256": "0fdcc1d1b97e467c4a46871bfc171b3b9222db9b1474cdcb0e535716ba130317"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/rainbow_mystic_ore_glint.png",
+      "sha256": "75a6cb9b39e8940fc9c8e06e4ad44a7f4534bc5760e5c3217827f785ea738a0e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/rainbow_mystic_ore_glint.png.mcmeta",
+      "sha256": "48b42ce565c800c2edf26502f3a4c5f1e78600d6f4050dcb2a1d7f6dd27f0614"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/rare_sapphire_ore_glint.png",
+      "sha256": "7a1ee08867971e19cccf92d5b517bfb56db8e2a3cecec9986259d2decdb712b9"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/rare_sapphire_ore_glint.png.mcmeta",
+      "sha256": "1bb9a78d984d9f125de049c2c3f77ad5fb125670c49011c2de2eac57f5a50e8f"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/ruby_ore_deepslate_glint.png",
+      "sha256": "b6d3ddee496c47fc23ccce1fb91381a55bafe1815e48777638dd7c1d766cecf8"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/ruby_ore_deepslate_glint.png.mcmeta",
+      "sha256": "3cb6cdc88015694597f6f6a7c158b643a036fcb57f9b461ae98b13f01b4027fb"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/ruby_ore_glint.png",
+      "sha256": "bc99ed3f546839c520cf4e7137a5a83d111c507b81fb68294a1022d128239c9e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/ruby_ore_glint.png.mcmeta",
+      "sha256": "f2deb9af3b1e3a94b7c0ff2b22c3751a7af18a336185ff76ed0e47b55791422e"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/sapphireore_glint.png",
+      "sha256": "ad91f09e24cc80fbc92b899309dd0ca4273beed2d01dafb9ab495ecf6462dfcb"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/sapphireore_glint.png.mcmeta",
+      "sha256": "318dee562e60df88671e4885a827e8897ab243ea73d7ae359416aa5741b8b3ea"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/titanium_quartz_ore_glint.png",
+      "sha256": "56e816880cd0ef53cf21d1e34f54fc0dad1d3eaadbb38105ca16a78b055fd1b0"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/titanium_quartz_ore_glint.png.mcmeta",
+      "sha256": "18b13b62f91cbfaf097b94d9dce890558cba5e5014e85a8642952a970f6393df"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/ussingite_ore_glint.png",
+      "sha256": "4e9b97d1b0943bc7bb38cda5481305e982829eeed938998ea1a5f00701d9d81b"
+    },
+    {
+      "path": "kubejs/assets/more_ores_more_gems/textures/block/glint/ussingite_ore_glint.png.mcmeta",
+      "sha256": "e7bcb0717060f41093e959df5936a03c93876ddcaedff632811167eb9f6c3ee0"
+    }
+  ]
+}
