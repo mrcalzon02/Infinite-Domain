@@ -1138,7 +1138,7 @@ program:
   current_stage: S06
   current_gate: P00-GATE
   next_checkpoint: EG-P00-S06-C0012
-  updated_at: 2026-08-27T21:55:00-08:00
+  updated_at: 2026-08-27T23:05:00-08:00
   updated_by: endgame-coordinator
   notes: >-
     C0001-C0011 COMPLETE. C0012 (P00-GATE) and C0024 (P01-GATE) are REVIEW_NEEDED.
@@ -1199,10 +1199,10 @@ active_reservations:
     status: RESERVED
     owner: endgame-coordinator
     reserved_at: 2026-08-27T16:05:00-08:00
-    lease_expires_at: 2026-08-27T23:30:00-08:00
-    last_heartbeat_at: 2026-08-27T21:55:00-08:00
+    lease_expires_at: 2026-08-28T01:00:00-08:00
+    last_heartbeat_at: 2026-08-27T23:05:00-08:00
     base_commit: f9b63030
-    spike_commit: 6ca386c4
+    spike_commit: 282fefb2
     runtime_fix_commit: c8518e06
     scope_note: >-
       By repeated owner direction the spike has been built out well past a "minimal
@@ -1378,6 +1378,34 @@ evidence_ready:
       - pool topology: start -> branch (weighted) -> {re-branch | leaf | bulkhead fallback}; smoke assertion 10 checks every pool/module/structure/set reference resolves
       - minecraft:jigsaw structure, underground_structures step, terrain_adaptation none, start_height uniform Y44-176, size 6, all 3 hive biomes; random_spread spacing 20 / separation 8
     pending: in-client generation, assembly connectivity (do modules connect and stay in-bounds), rotation quirks, overlap-rejection rate, block-entity budget vs C0008
+  - checkpoint_id: EG-P02-S01-C0025
+    name: Massing contract (P02 candidate)
+    status: EVIDENCE_READY
+    spike_commit: 282fefb2
+    note: authored ahead of Phase 2 by owner direction; formally adopted as C0025 when Phase 2 opens
+    outputs:
+      - docs/endgame/contracts/massing-contract.md
+    mechanical_validation:
+      - six band Y ranges + datums + seam zones pinned; bands tile -64..319
+      - solid-mass model with named carve fields (network/shafts/hall), tuning envelopes, and a frozen combine rule
+      - macro layer (stack_core/apron/trunk_axis) explicitly deferred to C0038-C0040 with a single-core spike scope
+      - band-identity "reads without labels" table, traversal-rhythm binding, six-row spike-deviation table, seven-point P02-GATE freeze criteria
+    pending: P02-GATE - independent visual/experiential review of the greybox; freezes the Y bands, datums, seam widths, mass_ceiling, sealed edges, and carve-fraction envelopes on acceptance
+  - checkpoint_id: EG-P04-S01-C0051
+    name: Module and connector schema (P04 candidate)
+    status: EVIDENCE_READY
+    spike_commit: 282fefb2
+    note: authored ahead of Phase 4 by owner direction; formally adopted as C0051 (schema) + C0052 (validator) when Phase 4 opens
+    outputs:
+      - docs/endgame/contracts/module-schema.md
+      - scripts/endgame/validate_hive_world_modules.py
+      - docs/endgame/hive-world-module-manifest.json (emitted by generate_hive_world_structures.py)
+    mechanical_validation:
+      - three connector types (door 1x3 / hall 3x4 / service 1x2) with jigsaw name=target, joint, and final_state rules
+      - connector floor datum + level/transition module distinction; start/branch/terminal pool contract; dark-mineral palette-by-band table
+      - the connector validator runs the 10 schema checks (size/BE budget, connector types, opening geometry, floor-datum consistency, role vs count, pool resolution, manifest-vs-NBT); PASS on all 7 spike modules with 0 warnings
+      - inherited generate_wasteland_sites block replacement (ruined functional blocks) kept - satisfies the C0064 inert-machine intent
+    pending: formal Phase 4 adoption; the connector validator is extended for seam continuity across placed pairs at C0052
   - checkpoint_id: EG-P01-S05-C0021
     name: Client baseline
     status: EVIDENCE_READY
@@ -1791,6 +1819,24 @@ journal:
       grammar (C0051-C0068) at spike scale; the module schema, connector validator, and
       per-band families are still the formal Phase 4 work. In-client assembly
       connectivity and rotation behaviour are untested.
+  - at: 2026-08-27T23:05:00-08:00
+    actor: endgame-coordinator
+    event: contracts_authored
+    detail: >-
+      Owner direction: the P02/P04 contracts. Commit 282fefb2. Authored
+      docs/endgame/contracts/massing-contract.md (P02 / C0025 candidate) - pins the six
+      band Y ranges/datums/seam zones, the solid-mass model with named carve fields and
+      tuning envelopes, the frozen combine rule, the deferred macro layer, the
+      band-identity table, the traversal-rhythm binding, and the P02-GATE freeze
+      criteria. Authored docs/endgame/contracts/module-schema.md (P04 / C0051+C0052
+      candidate) - three connector types, the jigsaw name/target/joint/final_state
+      rules, floor-datum and level/transition modules, the pool contract, the
+      palette-by-band table, and 10 connector-validator checks. Built the connector
+      validator scripts/endgame/validate_hive_world_modules.py + the emitted
+      docs/endgame/hive-world-module-manifest.json; PASS on all 7 spike modules, 0
+      warnings (after splitting the industrial_bay railing off the doorway). Both
+      contracts are EVIDENCE_READY, formally adopted when Phase 2 / Phase 4 open;
+      P02-GATE still needs the independent greybox review.
 ```
 
 <!-- ENDGAME_STATE_END -->
