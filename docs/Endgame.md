@@ -1138,7 +1138,7 @@ program:
   current_stage: S06
   current_gate: P00-GATE
   next_checkpoint: EG-P00-S06-C0012
-  updated_at: 2026-08-27T20:40:00-08:00
+  updated_at: 2026-08-27T21:55:00-08:00
   updated_by: endgame-coordinator
   notes: >-
     C0001-C0011 COMPLETE. C0012 (P00-GATE) and C0024 (P01-GATE) are REVIEW_NEEDED.
@@ -1199,17 +1199,19 @@ active_reservations:
     status: RESERVED
     owner: endgame-coordinator
     reserved_at: 2026-08-27T16:05:00-08:00
-    lease_expires_at: 2026-08-27T21:30:00-08:00
-    last_heartbeat_at: 2026-08-27T20:40:00-08:00
+    lease_expires_at: 2026-08-27T23:30:00-08:00
+    last_heartbeat_at: 2026-08-27T21:55:00-08:00
     base_commit: f9b63030
-    spike_commit: bb1a3b3a
+    spike_commit: 6ca386c4
     runtime_fix_commit: c8518e06
     scope_note: >-
       By repeated owner direction the spike has been built out well past a "minimal
-      technical spike" into a real stratified megastructure - this pulls Phase 3
-      mass/strata/void work (C0037, C0041-C0043) and some Phase 5 ambience forward.
-      These artifacts are spike-grade and untuned; C0037 onward re-owns the density
-      graph. The formal P02-GATE massing approval is still outstanding.
+      technical spike" into a real stratified megastructure with authored architecture -
+      this pulls Phase 3 mass/strata/void work (C0037, C0041-C0043), a Phase 4 jigsaw
+      district grammar spike (C0051-C0068), and some Phase 5 ambience forward. These
+      artifacts are spike-grade and untuned; C0037/C0051 onward re-own them. The formal
+      P02-GATE massing approval and P04 connector/coordinate contracts are still
+      outstanding.
     write_scope:
       - kubejs/data/infinite_domain/dimension/hive_world.json
       - kubejs/data/infinite_domain/dimension_type/hive_world.json
@@ -1358,6 +1360,24 @@ evidence_ready:
       - per-band rate Drown 4 / Underworks 2.5 / above 1.5; filter cut to 20%; cartridge wears out; nausea/darkness/damage at 55/85; actionbar readout
       - node --check passes; both Hive server scripts IIFE-wrapped after the 2026-08-27 "redeclaration of const HIVE" runtime error (smoke assertion 8)
     pending: in-client protected vs unprotected test and spark tick-cost sample against the C0008 companion budget
+  - checkpoint_id: EG-P04-SPIKE-DISTRICT
+    name: Jigsaw hive district (Phase 4 grammar spike)
+    status: EVIDENCE_READY
+    spike_commit: 6ca386c4
+    note: advances C0051-C0068 at spike scale by owner direction; not a formal Phase 4 checkpoint
+    outputs:
+      - scripts/endgame/generate_hive_world_structures.py
+      - kubejs/data/infinite_domain/structure/hive_world/*.nbt (7 modules)
+      - kubejs/data/infinite_domain/worldgen/template_pool/hive_world/{start,branch,terminal}.json
+      - kubejs/data/infinite_domain/worldgen/structure/hive_world_district.json
+      - kubejs/data/infinite_domain/worldgen/structure_set/hive_world_district.json
+      - kubejs/data/infinite_domain/loot_table/chests/hive_world_salvage.json
+    mechanical_validation:
+      - 7 jigsaw modules (transit_hub start, corridor, corridor_bend, habitation_cell leaf, industrial_bay, stair_shaft, bulkhead terminal)
+      - NBT verified well-formed (DataVersion 3955, palette + blocks + jigsaw BEs with pool/name/target/final_state/joint)
+      - pool topology: start -> branch (weighted) -> {re-branch | leaf | bulkhead fallback}; smoke assertion 10 checks every pool/module/structure/set reference resolves
+      - minecraft:jigsaw structure, underground_structures step, terrain_adaptation none, start_height uniform Y44-176, size 6, all 3 hive biomes; random_spread spacing 20 / separation 8
+    pending: in-client generation, assembly connectivity (do modules connect and stay in-bounds), rotation quirks, overlap-rejection rate, block-entity budget vs C0008
   - checkpoint_id: EG-P01-S05-C0021
     name: Client baseline
     status: EVIDENCE_READY
@@ -1754,6 +1774,23 @@ journal:
       by owner direction; the density graph is spike-grade and untuned, and P02-GATE
       massing approval is still outstanding. Next: authored NBT room/corridor structures
       (Phase 4 grammar) and in-client tuning of the carve density.
+  - at: 2026-08-27T21:55:00-08:00
+    actor: endgame-coordinator
+    event: spike_jigsaw_district
+    detail: >-
+      Owner direction: actual authored architecture. Commit 6ca386c4 (17 files,
+      path-scoped). generate_hive_world_structures.py (reuses scripts/generate_wasteland_sites.py
+      for its NBT writer + Template) emits 7 jigsaw modules - transit_hub (start),
+      corridor, corridor_bend, habitation_cell, industrial_bay (+ salvage chest),
+      stair_shaft, bulkhead (sealed-door terminal) - assembled via start -> branch
+      (weighted) -> re-branch/leaf/bulkhead-fallback. minecraft:jigsaw structure
+      hive_world_district (underground_structures, start_height Y44-176, size 6, all 3
+      hive biomes), random_spread spacing 20/separation 8; infinite_domain:chests/hive_world_salvage
+      loot table. NBT verified well-formed (DataVersion 3955). Smoke validator assertion
+      10 (pool/module/structure/set reference integrity); 10/10 PASS. Advances Phase 4
+      grammar (C0051-C0068) at spike scale; the module schema, connector validator, and
+      per-band families are still the formal Phase 4 work. In-client assembly
+      connectivity and rotation behaviour are untested.
 ```
 
 <!-- ENDGAME_STATE_END -->
