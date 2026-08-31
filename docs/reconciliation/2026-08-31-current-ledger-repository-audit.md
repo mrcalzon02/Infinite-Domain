@@ -65,7 +65,9 @@ The expansion pools are wired into planetary jigsaw structures and structure set
 
 The repository contains substantial static Lost Cities activation evidence, including Karsic resource resolution, semantic conversion, collision avoidance, and regional isolation checks. Those gates explicitly retain fresh-world frequency, rotation, terrain seating, skyline/distribution, visual quality, and/or performance as runtime checks.
 
-**Status:** OPEN — static integration is materially implemented, but actual fresh-world runtime acceptance is not proven by repository evidence.
+Runtime evidence instrumentation is now committed. Commit `3c1e0cd1ad1de2df676f4fa0d29f6dad4936c258` records whether `lostcities` loads in the isolated NeoForge runtime while fresh fixed-seed chunks are generated. Commit `5fd9089de0936243afe0d1f60d0364319ac87a1c` promotes those observations into the machine-readable `acceptance` section of `result.json`. Commit `b2879ef0f561ecf96c7a7b580174919ff63bc685` defines the retained acceptance contract and explicitly prevents headless load success from being misrepresented as visual/distribution approval.
+
+**Status:** OPEN — acceptance machinery is committed, but an actual retained runtime run and subsequent Lost Cities visual/distribution review are still required.
 
 ### 4. Heavy Rebuild final production admission
 
@@ -75,17 +77,17 @@ The authoritative Heavy Rebuild state currently scopes `OWS-001` through `OWS-06
 
 ### 5. Arise / Arise 7 Seas natural generation
 
-The baseline reconciliation commit contains no Arise-specific verification record found in the reviewed commit evidence. Natural-generation verification cannot be inferred merely from mod presence or static registration.
+Runtime verification instrumentation is now committed. Commit `3c1e0cd1ad1de2df676f4fa0d29f6dad4936c258` records whether `dungeons_arise` and `dungeons_arise_seven_seas` are loaded, snapshots each namespace in the live `STRUCTURE` and `STRUCTURE_SET` registries, and inventories valid generated structure starts by namespace in every generated benchmark tile. Commit `5fd9089de0936243afe0d1f60d0364319ac87a1c` distinguishes `runtimeRegistryReady` from `naturalGenerationObserved`, so registry presence cannot be mistaken for actual placement. Commit `b2879ef0f561ecf96c7a7b580174919ff63bc685` documents the evidence standard.
 
-**Status:** OPEN — fresh-world natural-generation observation and retained evidence required.
+**Status:** OPEN — the instrumentation is complete, but direct natural-generation observation still requires the retained fixed-seed runtime run. Only `naturalGenerationObserved: true` is sufficient direct placement evidence for the tested region.
 
 ### 6. Runtime packaging/load-boundary audit after reconciliation
 
 The static repository/package half is completed by this audit: high-risk runtime/local paths were checked against the baseline payload and repository exclusion policy; the isolated worldgen harness preserves the ordinary instance boundary.
 
-Actual client/dedicated-server load verification is not available from repository-only access in this run and therefore is not claimed.
+The same retained runtime evidence path now records mod loading and acceptance-probe failures during fresh isolated world generation, providing the missing live-load evidence channel without contaminating the ordinary instance.
 
-**Status:** PARTIAL — STATIC PACKAGE/LOAD BOUNDARY VERIFIED; LIVE LOAD ACCEPTANCE PENDING.
+**Status:** PARTIAL — STATIC PACKAGE/LOAD BOUNDARY VERIFIED; live-load instrumentation is committed; ACTUAL RETAINED LIVE LOAD ACCEPTANCE PENDING.
 
 ### 7. Continuity Works separation
 
@@ -95,10 +97,65 @@ The boundary is now also explicit in `REPOSITORY_SCOPE.md`: Continuity Works too
 
 **Status:** VERIFIED — repository boundary preserved and explicitly enforced by the scope contract.
 
+## Process endpoint and resume contract
+
+### Last verified authoritative endpoint
+
+The reconciliation process last reached and verified authoritative `main` at commit `b2879ef0f561ecf96c7a7b580174919ff63bc685` (`docs: define retained runtime acceptance evidence`). The immediately preceding runtime-acceptance commits are:
+
+1. `3c1e0cd1ad1de2df676f4fa0d29f6dad4936c258` — retain runtime structure acceptance evidence in the benchmark controller.
+2. `5fd9089de0936243afe0d1f60d0364319ac87a1c` — analyze the evidence and emit conservative acceptance state in `result.json`.
+3. `b2879ef0f561ecf96c7a7b580174919ff63bc685` — define the retained runtime acceptance contract and the one-pass reconciliation run.
+
+No later Wasteland hex-cave implementation commit was observed after that endpoint when this handoff was reconstructed. Any cave geometry discussed or prepared outside the repository must therefore be treated as uncommitted working material until it is reconstructed against the authoritative generation path, committed, and read back from `main`.
+
+### What the process was allowed to advance without a live Minecraft instance
+
+Repository-only access was sufficient to:
+
+- reconcile and correct the planetary structure inventory;
+- enforce the Infinite Domain / Continuity Works repository boundary;
+- perform the static packaging/load-boundary audit;
+- add the runtime evidence probes and analysis required for Lost Cities, Arise, Arise 7 Seas, and live-load verification;
+- define a retained fixed-seed acceptance run that does not alter the ordinary instance.
+
+Repository-only access was **not** sufficient to claim:
+
+- actual Lost Cities fresh-world visual/distribution acceptance;
+- actual Arise or Seven Seas natural structure placement;
+- actual client/dedicated-server load acceptance;
+- runtime production admission for Heavy Rebuild structures;
+- visible in-world conformance of the Wasteland hex-cave doctrine.
+
+Those claims require execution and observation in a real NeoForge/Minecraft runtime.
+
+### Intended progress from the endpoint
+
+**Runtime track — first executable action on the authoritative instance:**
+
+```powershell
+.\scripts\run_worldgen_benchmark.ps1 -Variant baseline -Suite standard -Repetitions 1 -KeepRuntime
+```
+
+Retain the resulting runtime and `result.json`. Use it to advance, in order:
+
+1. item 6 live-load acceptance if the run completes with no acceptance-probe errors;
+2. item 5 Arise / Seven Seas registry readiness and, only where observed starts exist, natural-generation verification;
+3. item 3 Lost Cities headless fresh-world load acceptance, followed by visual/distribution inspection of the retained runtime before final acceptance.
+
+**Repository implementation track — strongest outstanding code omission:**
+
+Implement item 1 directly in the authoritative Wasteland cave-generation path. The generated cave network must preserve recognizable hexagonal cells/corridors as literal carved geometry while deterministic seed-driven fractal/plasma fields interrupt, occlude, thicken, thin, distort, and locally erase portions of that geometry. Do not substitute generic cave carvers, an invisible hex organizational scaffold, or a stamped source image. Do not attach speculative cave assets until their authoritative biome/worldgen registration path is identified and validated.
+
+**Heavy Rebuild track:**
+
+After or alongside the runtime evidence pass, reconcile the requested 84-target scope against the current authoritative 64-target Heavy Rebuild registry. Do not silently invent targets or call 64 equal to 84. Once scope is authoritative, continue sequential production admission from the current active target and require retained runtime-quality evidence before adding entries to `runtime_quality_approved`.
+
 ## Next executable priority
 
-The strongest next evidence-producing action is to execute the existing isolated fixed-seed NeoForge world-generation harness from the authoritative instance and retain the resulting load/generation evidence. That run can simultaneously advance the live half of item 6 and provide an evidence platform for item 3, item 5, and later structure-placement admission work without contaminating the ordinary instance.
+The strongest immediate action depends on environment capability:
 
-Separately, item 1 remains the strongest implementation task: build the visible fractally occluded hex-grid cave geometry into the authoritative Wasteland cave-generation path, then validate it with fixed-seed generation evidence rather than treating a design description as implementation.
+- **If the authoritative Minecraft instance is available:** run the retained one-pass benchmark above, because it can advance items 3, 5, and 6 simultaneously.
+- **If only repository access is available:** locate and implement the actual Wasteland cave-generation path for item 1, then commit only after static validation and authoritative read-back.
 
-Until those runtime observations exist, no static record should promote Lost Cities, Arise/Arise 7 Seas, or Heavy Rebuild production/runtime acceptance to complete.
+Until those runtime observations exist, no static record should promote Lost Cities, Arise/Arise 7 Seas, Heavy Rebuild runtime admission, or live-load acceptance to complete.
