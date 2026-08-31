@@ -1,0 +1,190 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "graveyard_gateway_containment"
+	group: "4E65FAAC62D57D4A"
+	id: "6F50000000000003"
+	icon: "gateway_of_doom:portal_ward_3"
+	images: [ ]
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5CED58896AEFF1B9"]
+			icon: "graveyard:candle_holder"
+			id: "6F30000000000001"
+			optional: true
+			shape: "diamond"
+			rewards: [{ command: "execute in minecraft:overworld run structure_map infinite_domain:wasteland/roadside_church_cemetery 2", feedback_message: "infinite_domain.reward.explorer_map", id: "70E31D31A3D08DCA", permission_level: 2, silent: true, type: "command" }]
+			tasks: [{ count: 4L, item: { count: 1, id: "graveyard:candle_holder" }, id: "7F30000000000001", type: "item" } { item: { count: 1, id: "graveyard:gravestone" }, id: "7F40000000000011", type: "item" }]
+			x: -4.0d
+			y: 0.0d
+		}
+
+		{
+			dependencies: ["6F30000000000001"]
+			icon: "minecraft:dark_oak_sapling"
+			id: "6F30000000000002"
+			optional: true
+			shape: "diamond"
+			tasks: [{ structure: "infinite_domain:wasteland/roadside_church_cemetery", id: "7F30000000000002", type: "structure" }]
+			x: -8.0d
+			y: 2.0d
+		}
+
+		{
+			dependencies: ["6F30000000000001"]
+			icon: "graveyard:corruption"
+			id: "6F30000000000003"
+			optional: true
+			shape: "diamond"
+			rewards: [{ id: "8F30000000000003", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
+			tags: ["terminal_warning"]
+			tasks: [{ entity: "graveyard:ghoul", value: 1L, id: "7F30000000000003", type: "kill" } { entity: "graveyard:revenant", value: 1L, id: "7F40000000000031", type: "kill" } { entity: "graveyard:reaper", value: 1L, id: "7F40000000000032", type: "kill" } { entity: "graveyard:skeleton_creeper", value: 1L, id: "7F40000000000033", type: "kill" }]
+			x: -2.0d
+			y: 2.0d
+		}
+
+		{
+			dependencies: ["6F30000000000003"]
+			icon: "graveyard:corruption"
+			id: "6F30000000000004"
+			optional: true
+			shape: "diamond"
+			tasks: [{ count: 8L, item: { count: 1, id: "graveyard:corruption" }, id: "7F30000000000004", type: "item" }]
+			x: -2.0d
+			y: 4.0d
+		}
+
+		{
+			dependencies: ["6F30000000000004", "5210000000000001"]
+			icon: "graveyard:dark_iron_door"
+			id: "6F30000000000005"
+			optional: true
+			shape: "gear"
+			rewards: [{ id: "8F30000000000005", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
+			tasks: [{ count: 16L, item: { count: 1, id: "graveyard:dark_iron_ingot" }, id: "7F30000000000005", type: "item" } { count: 16L, item: { count: 1, id: "graveyard:dark_iron_bars" }, id: "7F40000000000051", type: "item" } { count: 2L, item: { count: 1, id: "graveyard:dark_iron_door" }, id: "7F40000000000052", type: "item" } { count: 2L, item: { count: 1, id: "graveyard:dark_iron_trapdoor" }, id: "7F40000000000053", type: "item" }]
+			x: -2.0d
+			y: 6.0d
+		}
+
+		{
+			dependencies: ["6F30000000000005"]
+			icon: "minecraft:zombie_head"
+			id: "6F30000000000006"
+			optional: true
+			shape: "diamond"
+			rewards: [{ id: "8F30000000000006", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
+			tags: ["terminal_warning"]
+			tasks: [{ advancement: "graveyard:graveyard/kill_horde", id: "7F30000000000006", type: "advancement" }]
+			x: -2.0d
+			y: 8.0d
+		}
+
+		{
+			dependencies: ["6F30000000000002", "6F30000000000006"]
+			icon: "graveyard:soul_fire_brazier"
+			id: "6F30000000000007"
+			optional: true
+			shape: "diamond"
+			tags: ["terminal_warning"]
+			tasks: [{ id: "7F30000000000007", type: "checkmark" }]
+			x: -4.0d
+			y: 10.0d
+		}
+
+		{
+			dependencies: ["5310000000000001", "5B00000000000011"]
+			icon: "gateway_of_doom:devil_eye_blue"
+			id: "6F30000000000008"
+			optional: true
+			shape: "gear"
+			tasks: [{ item: { count: 1, id: "gateway_of_doom:portal_ward_1" }, id: "7F30000000000008", type: "item" } { item: { count: 1, id: "gateway_of_doom:devil_eye_blue" }, id: "7F40000000000081", type: "item" }]
+			x: 4.0d
+			y: 0.0d
+		}
+
+		{
+			dependencies: ["6F30000000000008"]
+			icon: "gateway_of_doom:portal_ward_1"
+			id: "6F30000000000009"
+			optional: true
+			shape: "gear"
+			tags: ["terminal_warning"]
+			tasks: [{ id: "7F30000000000009", type: "checkmark" }]
+			x: 4.0d
+			y: 2.0d
+		}
+
+		{
+			dependencies: ["6F30000000000009", "5510000000000001"]
+			icon: "gateway_of_doom:devil_eye_red"
+			id: "6F3000000000000A"
+			optional: true
+			shape: "gear"
+			rewards: [{ id: "8F3000000000000A", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
+			tasks: [{ item: { count: 1, id: "gateway_of_doom:portal_ward_2" }, id: "7F3000000000000A", type: "item" } { item: { count: 1, id: "gateway_of_doom:devil_eye_red" }, id: "7F400000000000A1", type: "item" }]
+			x: 4.0d
+			y: 4.0d
+		}
+
+		{
+			dependencies: ["6F3000000000000A"]
+			icon: "gateway_of_doom:portal_ward_2"
+			id: "6F3000000000000B"
+			optional: true
+			shape: "gear"
+			tags: ["terminal_warning"]
+			tasks: [{ id: "7F3000000000000B", type: "checkmark" }]
+			x: 4.0d
+			y: 6.0d
+		}
+
+		{
+			dependencies: ["6F3000000000000B", "5610000000000001"]
+			icon: "gateway_of_doom:devil_eye_violet"
+			id: "6F3000000000000C"
+			optional: true
+			shape: "gear"
+			tasks: [{ item: { count: 1, id: "gateway_of_doom:portal_ward_3" }, id: "7F3000000000000C", type: "item" } { item: { count: 1, id: "gateway_of_doom:devil_eye_violet" }, id: "7F400000000000C1", type: "item" }]
+			x: 4.0d
+			y: 8.0d
+		}
+
+		{
+			dependencies: ["6F3000000000000C"]
+			icon: "gateway_of_doom:portal_ward_3"
+			id: "6F3000000000000D"
+			optional: true
+			shape: "gear"
+			tags: ["terminal_warning"]
+			tasks: [{ id: "7F3000000000000D", type: "checkmark" }]
+			x: 4.0d
+			y: 10.0d
+		}
+
+		{
+			dependencies: ["6F3000000000000D", "5710000000000001"]
+			icon: "gateway_of_doom:portal_ward_5"
+			id: "6F3000000000000E"
+			optional: true
+			shape: "gear"
+			rewards: [{ id: "8F3000000000000E", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
+			tasks: [{ item: { count: 1, id: "gateway_of_doom:portal_ward_4" }, id: "7F3000000000000E", type: "item" } { item: { count: 1, id: "gateway_of_doom:portal_ward_5" }, id: "7F400000000000E1", type: "item" }]
+			x: 4.0d
+			y: 12.0d
+		}
+
+		{
+			dependencies: ["6F30000000000007", "6F3000000000000E"]
+			icon: "gateway_of_doom:portal_ward_5"
+			id: "6F3000000000000F"
+			optional: true
+			shape: "octagon"
+			tags: ["terminal_warning"]
+			tasks: [{ id: "7F3000000000000F", type: "checkmark" }]
+			x: 0.0d
+			y: 14.0d
+		}
+	]
+}

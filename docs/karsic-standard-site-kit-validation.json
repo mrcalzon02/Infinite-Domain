@@ -1,0 +1,108 @@
+{
+  "purpose": "End-to-end static gate for the first production Karsic regional structure family.",
+  "authority": [
+    "docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md",
+    "docs/WORLDGEN_STRUCTURE_SAFETY.md",
+    "structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md"
+  ],
+  "passed": true,
+  "checks": [
+    {
+      "id": "KS-1",
+      "check": "the utility trio has specific authored programs",
+      "passed": true,
+      "detail": "heating main, transformer kiosk, and bus shelter use three distinct building types",
+      "evidence": []
+    },
+    {
+      "id": "KS-2",
+      "check": "clean masters and authored damage variants pass hard geometry lint",
+      "passed": true,
+      "detail": "six NBT templates checked; damage is derived from equal-size clean masters",
+      "evidence": {
+        "issues": [],
+        "sha256": {
+          "kar_083_district_heating_main": {
+            "clean": "568deee570170c0645dd854efbc71cb502e0454a9efbad222bf9f8d51d65a26c",
+            "damage": "00f130c99a8aa1b99900ccd399b11352de7e92a899b536be81467cfbf8f9d137"
+          },
+          "kar_084_transformer_kiosk": {
+            "clean": "933080363dcb3b06706467d801d07417190b5e8b1cdf89804274991e69c73c49",
+            "damage": "cab285c020cca0affd9494922082579c80e6c3b61ecbcb11836f420d9ff41c3a"
+          },
+          "kar_085_bus_shelter_and_stop": {
+            "clean": "231a5f7c06ecf2a1067fde709d3a7f46e23b42cd2e68db4a38e94d483f148ec2",
+            "damage": "e0f35ad36437d891b0e7529ed0aaf6788cc83f2370302cac27957c02ac612263"
+          }
+        }
+      }
+    },
+    {
+      "id": "KS-3",
+      "check": "the three mandatory Karsic identity checks pass",
+      "passed": true,
+      "detail": "tiling main, fenced transformer kiosk, and open-front transit shelter remain distinct",
+      "evidence": []
+    },
+    {
+      "id": "KS-4",
+      "check": "catalog lineage and Lost Cities scattered conversion resolve",
+      "passed": true,
+      "detail": "six catalog records and 22 generated Lost Cities parts/wrappers",
+      "evidence": []
+    },
+    {
+      "id": "KS-5",
+      "check": "all structure pools resolve and seat on Karsic land only",
+      "passed": true,
+      "detail": "three rigid, surface-projected jigsaw structures use #infinite_domain:karsic_region_biomes",
+      "evidence": []
+    },
+    {
+      "id": "KS-6",
+      "check": "standard random-spread placement uses the reserved Karsic contract",
+      "passed": true,
+      "detail": "spacing 14, separation 8, 2:4:4 weights, unique salt 79100083, major-site exclusion",
+      "evidence": {
+        "entries": {
+          "kar_083_district_heating_main": 2,
+          "kar_084_transformer_kiosk": 4,
+          "kar_085_bus_shelter_and_stop": 4
+        },
+        "duplicate_salt_files": []
+      }
+    },
+    {
+      "id": "KS-7",
+      "check": "Lost Cities collision avoidance includes all three starts",
+      "passed": true,
+      "detail": "avoidStructures protects the Karsic site kit before adjacent city generation",
+      "evidence": []
+    },
+    {
+      "id": "KS-8",
+      "check": "structure spawning is quest-independent and multiplayer-safe",
+      "passed": true,
+      "detail": "biome tags plus a datapack random-spread set own every start; quests own none",
+      "evidence": {
+        "gated_worldgen": [],
+        "scripted_quest_bridges": []
+      }
+    },
+    {
+      "id": "KS-9",
+      "check": "production approval and project-owned provenance are current",
+      "passed": true,
+      "detail": "three approved damage variants with source hashes and conversion evidence",
+      "evidence": []
+    },
+    {
+      "id": "KS-10",
+      "check": "central Lost Cities compilation preserves regional isolation",
+      "passed": true,
+      "detail": "approved Karsic assets remain outside the global Wastelands scattered selector",
+      "evidence": []
+    }
+  ],
+  "runtime_validation": "Static registration, geometry, placement ownership, conversion and collision contracts are proven. Fresh-world frequency, rotation, terrain seating and visual quality remain runtime checks."
+}

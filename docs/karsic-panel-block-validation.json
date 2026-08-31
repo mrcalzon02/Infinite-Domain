@@ -1,0 +1,354 @@
+{
+  "purpose": "End-to-end structural-designer and active regional-citystyle gate for the Karsic flagship panel slab.",
+  "passed": true,
+  "checks": [
+    {
+      "id": "KP-1",
+      "check": "the authored program declares a basement-fed repeatable residential slab",
+      "passed": true,
+      "detail": "full basement, district heat, accepted footprint exception and explicit 5-9 storey contract",
+      "evidence": {
+        "repeatable_contract": {
+          "minfloors": 5,
+          "maxfloors": 9,
+          "cellar_bands": 1,
+          "ground_bands": 1,
+          "repeat_source_band": 2,
+          "top_bands": 1
+        },
+        "footprint_exception": {
+          "accepted": true,
+          "reason": "The 61x53 source lot is near-square, but the Karsic residential-slab rule requires length >= 3x inhabited height and a viable double-loaded plan. The regional designer preserves the five-storey height, expands length to the next four-block panel bay that meets the ratio, and reduces depth to seven bays (12-block rooms + 3-block corridor + 12-block rooms).",
+          "rule": "length >= 3 * (storeys * 6); depth = 7 * 4 + 1"
+        }
+      }
+    },
+    {
+      "id": "KP-2",
+      "check": "clean and damaged slabs have equal bounds and zero lint findings",
+      "passed": true,
+      "detail": "both 101x40x37 templates clear hard failures and review flags",
+      "evidence": {
+        "clean_sha256": "1dec6f158326521246eecfedb5504a78336b67334232ed23539386acd8c4f652",
+        "damage_sha256": "f43efc84d244b9747378fe602a0e4217162dc61184f8794711b4bde81fa8f847",
+        "clean_findings": [],
+        "damage_findings": []
+      }
+    },
+    {
+      "id": "KP-3",
+      "check": "the panel designer produces the required long-slab silhouette and core cadence",
+      "passed": true,
+      "detail": "93x29 body, five inhabited storeys and six stair cores at no more than four-bay intervals",
+      "evidence": {
+        "generation": {
+          "structure_id": "kar_067_series_panel_block",
+          "building_type": "panel_slab",
+          "status": "generated",
+          "primary_stratum": "K-III",
+          "size": [
+            101,
+            40,
+            37
+          ],
+          "bays": [
+            23,
+            7
+          ],
+          "storeys": 5,
+          "ground_y": 6,
+          "repeatable_storey": true,
+          "placed_blocks": 59020,
+          "palette_states": 48,
+          "modded_blocks": 52271,
+          "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_067_series_panel_block_clean_master.nbt",
+          "damage_variant_path": "kubejs/data/infinite_domain/structure/karsic/kar_067_series_panel_block.nbt",
+          "damage_variant_blocks": 59040,
+          "damage_variant_palette_states": 53,
+          "damage_variant_modded_blocks": 52130
+        },
+        "body": [
+          93,
+          29
+        ],
+        "expected_cores": 6
+      }
+    },
+    {
+      "id": "KP-4",
+      "check": "repeatable floors contain reachable homes and visible communal services",
+      "passed": true,
+      "detail": "48 furnished upper dwellings, 60 domestic/service rooms, 30 core fire doors and a pipe basement",
+      "evidence": {
+        "selected_block_counts": {
+          "minecraft:gray_bed": 96,
+          "minecraft:spruce_door": 120,
+          "the_wasteland_reworked:industrial_door": 64,
+          "zvhouses:spruce_table": 48,
+          "zvhouses:spruce_chair": 48,
+          "supplementaries:item_shelf": 60,
+          "the_wasteland_reworked:pipe_block": 144
+        }
+      }
+    },
+    {
+      "id": "KP-5",
+      "check": "Karsic regional identity checks pass",
+      "passed": true,
+      "detail": "repeatable bands, panel joints, plinth, vestibule, basement main and roof discipline are intact",
+      "evidence": [
+        {
+          "id": "KV-1",
+          "check": "repeatable-storey identity",
+          "status": "pass",
+          "detail": "4 repeatable bands compared at storey height 6",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-2",
+          "check": "panel joint continuity",
+          "status": "pass",
+          "detail": "joint block immersiveengineering:concrete_brick, bay 4",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-3",
+          "check": "plinth offset",
+          "status": "pass",
+          "detail": "the ground storey must stand one block proud of the body above it",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-4",
+          "check": "vestibule presence",
+          "status": "pass",
+          "detail": "a heated building needs an outer leaf, an unheated lobby and an inner leaf",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-5",
+          "check": "basement service level and main stub",
+          "status": "pass",
+          "detail": "101 heating-main cells, 91 below grade, 2 at the edge",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-10",
+          "check": "heating-main tiling",
+          "status": "skip",
+          "detail": "not a tiling asset",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-13",
+          "check": "mandatory utility identity",
+          "status": "skip",
+          "detail": "not one of the three mandatory native infrastructure assets",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-14",
+          "check": "mast-tower utility identity",
+          "status": "skip",
+          "detail": "not a mast-tower type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-12",
+          "check": "roof discipline",
+          "status": "pass",
+          "detail": "K-III must not carry a pitched roof",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-6",
+          "check": "changing and wash block",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-7",
+          "check": "control-room overlook",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-8",
+          "check": "signage grammar",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-9",
+          "check": "stratum pairing",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-11",
+          "check": "prohibited-motif scan",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        }
+      ]
+    },
+    {
+      "id": "KP-6",
+      "check": "damage is a localized frozen-district systems failure",
+      "passed": true,
+      "detail": "boarded downstream bays, ice, an exposed dropped main and caution marking preserve homes and every core",
+      "evidence": {
+        "clean": {
+          "kubejs:ruined_cauldron": 1,
+          "tfmg:gray_rebar_concrete": 1369,
+          "immersiveengineering:concrete": 11573,
+          "tfmg:factory_floor": 4893,
+          "minecraft:cobblestone": 3,
+          "immersiveengineering:concrete_brick": 20572,
+          "immersiveengineering:cagelamp": 2,
+          "the_wasteland_reworked:industrial_door": 64,
+          "tfmg:concrete_encased_industrial_pipe": 101,
+          "immersiveengineering:stairs_concrete": 154,
+          "minecraft:gravel": 133,
+          "minecraft:gray_concrete": 160,
+          "minecraft:coarse_dirt": 361,
+          "tfmg:asphalt": 138,
+          "immersiveengineering:concrete_tile": 9151,
+          "immersiveengineering:concrete_pillar": 31,
+          "minecraft:iron_door": 2,
+          "supplementaries:notice_board": 1,
+          "minecraft:oak_door": 2,
+          "the_wasteland_reworked:road_sign": 1,
+          "minecraft:barrel": 60,
+          "supplementaries:item_shelf": 60,
+          "zvhouses:spruce_bench": 12,
+          "minecraft:spruce_door": 120,
+          "minecraft:bookshelf": 1,
+          "create:framed_glass": 90,
+          "tfmg:circular_light": 1,
+          "tfmg:gas_lamp": 9,
+          "immersiveengineering:slab_concrete": 261,
+          "the_wasteland_reworked:pipe_block": 144,
+          "minecraft:gray_bed": 96,
+          "zvhouses:spruce_chair": 48,
+          "zvhouses:spruce_table": 48,
+          "quark:gray_framed_glass": 848,
+          "immersiveengineering:concrete_sheet": 2697,
+          "the_wasteland_reworked:bunker_fan": 2
+        },
+        "damage": {
+          "kubejs:ruined_cauldron": 1,
+          "tfmg:gray_rebar_concrete": 1367,
+          "immersiveengineering:concrete": 11573,
+          "tfmg:factory_floor": 4893,
+          "minecraft:cobblestone": 3,
+          "immersiveengineering:concrete_brick": 20556,
+          "immersiveengineering:cagelamp": 2,
+          "the_wasteland_reworked:industrial_door": 64,
+          "tfmg:concrete_encased_industrial_pipe": 94,
+          "immersiveengineering:stairs_concrete": 154,
+          "tfmg:asphalt": 181,
+          "minecraft:gray_concrete": 125,
+          "minecraft:gravel": 82,
+          "minecraft:coarse_dirt": 406,
+          "immersiveengineering:concrete_tile": 9151,
+          "immersiveengineering:concrete_pillar": 31,
+          "minecraft:iron_door": 2,
+          "tfmg:yellow_caution_block": 1,
+          "minecraft:packed_ice": 5,
+          "supplementaries:notice_board": 1,
+          "minecraft:oak_door": 2,
+          "the_wasteland_reworked:road_sign": 1,
+          "minecraft:barrel": 60,
+          "supplementaries:item_shelf": 60,
+          "zvhouses:spruce_bench": 12,
+          "minecraft:spruce_door": 120,
+          "minecraft:bookshelf": 1,
+          "create:framed_glass": 90,
+          "tfmg:industrial_pipe": 8,
+          "tfmg:circular_light": 1,
+          "tfmg:gas_lamp": 9,
+          "immersiveengineering:slab_concrete": 261,
+          "the_wasteland_reworked:pipe_block": 144,
+          "minecraft:gray_bed": 96,
+          "zvhouses:spruce_chair": 48,
+          "zvhouses:spruce_table": 48,
+          "minecraft:ice": 4,
+          "quark:gray_framed_glass": 680,
+          "minecraft:spruce_planks": 192,
+          "immersiveengineering:concrete_sheet": 2697,
+          "the_wasteland_reworked:bunker_fan": 2
+        }
+      }
+    },
+    {
+      "id": "KP-7",
+      "check": "two independent in-memory builds are deterministic",
+      "passed": true,
+      "detail": "CRC32-seeded pass streams reproduce clean and damage geometry byte-for-byte at the semantic level",
+      "evidence": {
+        "clean_master": [
+          "e2c2462a762b1ada22f3013ceb489606910102d47e6bc603b522a477872058de",
+          "e2c2462a762b1ada22f3013ceb489606910102d47e6bc603b522a477872058de"
+        ],
+        "damage_variant": [
+          "249d1eec67004ac39ec7d5436a24650cc9545cf476dd0a1cc8aa677b19e85135",
+          "249d1eec67004ac39ec7d5436a24650cc9545cf476dd0a1cc8aa677b19e85135"
+        ]
+      }
+    },
+    {
+      "id": "KP-8",
+      "check": "catalog lineage and semantic Lost Cities conversion resolve losslessly",
+      "passed": true,
+      "detail": "each 7x3 multibuilding uses 84 cellar/ground/repeat/top parts and can produce 5-9 storeys",
+      "evidence": []
+    },
+    {
+      "id": "KP-9",
+      "check": "fixed-camera evidence shows the exterior, service basement and real storey bands",
+      "passed": true,
+      "detail": "the reviewer uses authored planes instead of mistaking stair landings for dwelling floors",
+      "evidence": []
+    },
+    {
+      "id": "KP-10",
+      "check": "the approved slab is regional, citystyle-active and multiplayer-safe",
+      "passed": true,
+      "detail": "the eastern-biome citystyle owns placement with no quest/player bridge or open-country selector",
+      "evidence": {
+        "active_worldgen_references": [],
+        "scripted_quest_bridges": [],
+        "citystyle_members": [
+          "infinite_domain:converted/kar_024_panel_block_service_premises",
+          "infinite_domain:converted/kar_067_series_panel_block"
+        ],
+        "expected_citystyle_members": [
+          "infinite_domain:converted/kar_024_panel_block_service_premises",
+          "infinite_domain:converted/kar_067_series_panel_block"
+        ],
+        "isolation_issues": []
+      }
+    }
+  ],
+  "runtime_validation": "Static geometry, deterministic design, lossless semantic conversion, visual evidence, lineage and multiplayer-safe ownership are proven. Fresh-world 5/7/9 skyline distribution remains deferred until the Karsic citystyle is implemented."
+}

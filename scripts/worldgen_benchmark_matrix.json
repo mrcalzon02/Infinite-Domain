@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "seed": "-7046029254386353131",
+  "worldName": "Infinite Domain - Worldgen Benchmark",
+  "defaults": {
+    "warmupTicks": 200,
+    "cooldownTicks": 100,
+    "pollIntervalTicks": 20,
+    "tileTimeoutSeconds": 1800,
+    "maxHeapGiB": 8
+  },
+  "suites": {
+    "smoke": [
+      {"name": "central_wasteland_smoke", "dimension": "minecraft:overworld", "minChunkX": 64, "minChunkZ": 64, "widthChunks": 4, "depthChunks": 4}
+    ],
+    "standard": [
+      {"name": "central_wasteland", "dimension": "minecraft:overworld", "minChunkX": 64, "minChunkZ": 64, "widthChunks": 16, "depthChunks": 16},
+      {"name": "mountain_ring", "dimension": "minecraft:overworld", "minChunkX": 211, "minChunkZ": -8, "widthChunks": 16, "depthChunks": 16},
+      {"name": "east_outer_continent", "dimension": "minecraft:overworld", "minChunkX": 430, "minChunkZ": -8, "widthChunks": 16, "depthChunks": 16},
+      {"name": "west_outer_continent", "dimension": "minecraft:overworld", "minChunkX": -445, "minChunkZ": -8, "widthChunks": 16, "depthChunks": 16},
+      {"name": "east_abyssal_corridor", "dimension": "minecraft:overworld", "minChunkX": 555, "minChunkZ": -8, "widthChunks": 16, "depthChunks": 16},
+      {"name": "west_abyssal_corridor", "dimension": "minecraft:overworld", "minChunkX": -570, "minChunkZ": -8, "widthChunks": 16, "depthChunks": 16},
+      {"name": "north_control_ocean", "dimension": "minecraft:overworld", "minChunkX": -8, "minChunkZ": 555, "widthChunks": 16, "depthChunks": 16}
+    ],
+    "terrain": [
+      {"name": "mountain_ring", "dimension": "minecraft:overworld", "minChunkX": 211, "minChunkZ": -8, "widthChunks": 16, "depthChunks": 16},
+      {"name": "east_abyssal_corridor", "dimension": "minecraft:overworld", "minChunkX": 555, "minChunkZ": -8, "widthChunks": 16, "depthChunks": 16},
+      {"name": "west_abyssal_corridor", "dimension": "minecraft:overworld", "minChunkX": -570, "minChunkZ": -8, "widthChunks": 16, "depthChunks": 16},
+      {"name": "north_control_ocean", "dimension": "minecraft:overworld", "minChunkX": -8, "minChunkZ": 555, "widthChunks": 16, "depthChunks": 16}
+    ]
+  },
+  "variants": {
+    "baseline": {},
+    "optimized_heightmap": {
+      "toml": [
+        {"path": "config/lostcities/common.toml", "key": "optimizedHeightmap", "value": "true"}
+      ]
+    },
+    "height_sample_6": {
+      "toml": [
+        {"path": "config/lostcities/common.toml", "key": "heightSampleSize", "value": "6"}
+      ]
+    },
+    "no_adjacent_avoidance": {
+      "toml": [
+        {"path": "config/lostcities-server.toml", "key": "avoidStructuresAdjacent", "value": "false"},
+        {"path": "config/lostcities-server.toml", "key": "avoidVillagesAdjacent", "value": "false"},
+        {"path": "defaultconfigs/lostcities-server.toml", "key": "avoidStructuresAdjacent", "value": "false"},
+        {"path": "defaultconfigs/lostcities-server.toml", "key": "avoidVillagesAdjacent", "value": "false"}
+      ]
+    },
+    "no_abyssal_structures": {
+      "remove": ["kubejs/data/infinite_domain/worldgen/structure_set/abyssal"]
+    },
+    "no_custom_structures": {
+      "remove": ["kubejs/data/infinite_domain/worldgen/structure_set"]
+    },
+    "no_gradient_ocean": {
+      "remove": ["datapacks/gradient_ocean_pack"]
+    },
+    "no_lostcities": {
+      "omitMods": ["lostcities-*.jar"]
+    }
+  }
+}

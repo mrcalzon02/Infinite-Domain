@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:add",
+  "argument1": "infinite_domain:hive_world/waste_base",
+  "argument2": {
+    "type": "minecraft:mul",
+    "argument1": "infinite_domain:hive_world/waste_noise",
+    "argument2": 0.35
+  }
+}

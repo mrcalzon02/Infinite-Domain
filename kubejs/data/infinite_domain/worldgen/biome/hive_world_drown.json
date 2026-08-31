@@ -1,0 +1,65 @@
+{
+  "temperature": 0.62,
+  "downfall": 0.0,
+  "has_precipitation": false,
+  "carvers": {
+    "air": []
+  },
+  "spawners": {
+    "monster": [],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "infinite_domain:hive_world_fixture_light"
+    ],
+    [
+      "infinite_domain:hive_world_acid_pool"
+    ],
+    [],
+    []
+  ],
+  "effects": {
+    "sky_color": 526599,
+    "fog_color": 1512713,
+    "water_color": 5202709,
+    "water_fog_color": 1384196,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "particle": {
+      "probability": 0.0028,
+      "options": {
+        "type": "minecraft:white_ash"
+      }
+    },
+    "ambient_sound": "minecraft:ambient.basalt_deltas.loop",
+    "additions_sound": {
+      "sound": "minecraft:ambient.basalt_deltas.additions",
+      "tick_chance": 0.014
+    },
+    "music": {
+      "sound": "minecraft:music.overworld.dripstone_caves",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": true
+    }
+  }
+}

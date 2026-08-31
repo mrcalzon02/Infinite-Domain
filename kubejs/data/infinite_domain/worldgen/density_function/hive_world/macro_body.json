@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:range_choice",
+  "input": "infinite_domain:hive_world/core_shape",
+  "min_inclusive": 0.0,
+  "max_exclusive": 2.0,
+  "when_in_range": "infinite_domain:hive_world/spire_shell",
+  "when_out_of_range": "infinite_domain:hive_world/apron_or_waste"
+}

@@ -1,0 +1,32 @@
+{
+  "fallback": "infinite_domain:hive_world/underworks_terminal",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "infinite_domain:hive_world/underworks_gallery",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "infinite_domain:hive_world/underworks_crossing",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 4,
+      "element": {
+        "location": "infinite_domain:hive_world/underworks_chamber",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

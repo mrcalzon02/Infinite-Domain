@@ -1,0 +1,131 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "gear"
+	filename: "grid_storage_and_recovery"
+	group: "4E65FAAC62D57D4A"
+	id: "6C00D00000000001"
+	icon: "powergrid_batteries:small_battery"
+	images: [ ]
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4410000000000004"]
+			id: "6C01000000000001"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				id: "6C02000000000001"
+				item: { count: 1, id: "powergrid_batteries:small_battery" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6C01000000000001"]
+			id: "6C01000000000002"
+			optional: true
+			rewards: [{
+				id: "6C03000000000001"
+				item: {
+					count: 1
+					id: "kubejs:era4_supply_bag"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6C02000000000002"
+				item: { count: 1, id: "powergrid_batteries:medium_battery" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6C01000000000002"]
+			id: "6C01000000000003"
+			optional: true
+			rewards: [
+				{
+					id: "6C03000000000002"
+					item: {
+						count: 1
+						id: "kubejs:era4_priority_cache"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "6C03000000000003"
+					item: {
+						count: 1
+						id: "numismatics:cog"
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			tasks: [{
+				id: "6C02000000000003"
+				item: { count: 1, id: "powergrid_batteries:high_voltage_battery" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6C01000000000003"]
+			icon: "powergrid:hv_switch"
+			id: "6C01000000000004"
+			optional: true
+			shape: "rsquare"
+			tasks: [
+				{
+					count: 4L
+					id: "6C02000000000004"
+					item: { count: 1, id: "powergrid:hv_switch" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6C02000000000005"
+					item: { count: 1, id: "powergrid:transformer_core" }
+					type: "item"
+				}
+				{
+					id: "6C02000000000006"
+					item: { count: 1, id: "powergrid:multimeter" }
+					type: "item"
+				}
+				{
+					id: "6C02000000000007"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6C01000000000004"]
+			icon: "powergrid_batteries:substation_battery"
+			id: "6C01000000000005"
+			optional: true
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "6C02000000000008"
+					item: { count: 1, id: "powergrid_batteries:substation_battery" }
+					type: "item"
+				}
+				{
+					id: "6C02000000000009"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 8.0d
+		}
+	]
+}

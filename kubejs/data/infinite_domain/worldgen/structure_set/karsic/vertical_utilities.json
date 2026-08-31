@@ -1,0 +1,22 @@
+{
+  "structures": [
+    {
+      "structure": "infinite_domain:karsic/kar_078_relay_mast",
+      "weight": 1
+    },
+    {
+      "structure": "infinite_domain:karsic/kar_081_steel_water_tower",
+      "weight": 3
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 28,
+    "separation": 12,
+    "salt": 79100078,
+    "exclusion_zone": {
+      "other_set": "infinite_domain:wasteland/wasteland_major",
+      "chunk_count": 2
+    }
+  }
+}

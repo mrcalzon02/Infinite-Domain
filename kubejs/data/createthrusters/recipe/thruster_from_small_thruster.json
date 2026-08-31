@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "HGH",
+    "MOM",
+    "HCH"
+  ],
+  "key": {
+    "H": {
+      "item": "tfmg:heavy_plate"
+    },
+    "G": {
+      "item": "createthrusters:fuel_oxidizer"
+    },
+    "M": {
+      "item": "create_new_age:advanced_motor"
+    },
+    "O": {
+      "item": "create:blaze_burner"
+    },
+    "C": {
+      "item": "powergrid:integrated_circuit"
+    }
+  },
+  "result": {
+    "id": "createthrusters:thruster",
+    "count": 1
+  }
+}

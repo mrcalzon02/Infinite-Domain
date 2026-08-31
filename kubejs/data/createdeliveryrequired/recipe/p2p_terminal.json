@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AEA",
+    "DPD",
+    "VIV"
+  ],
+  "key": {
+    "A": {
+      "item": "ae2:interface"
+    },
+    "E": {
+      "item": "ae2:engineering_processor"
+    },
+    "D": {
+      "item": "create:display_board"
+    },
+    "P": {
+      "item": "powergrid:integrated_circuit"
+    },
+    "V": {
+      "item": "create:item_vault"
+    },
+    "I": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "result": {
+    "id": "createdeliveryrequired:p2p_terminal",
+    "count": 1
+  }
+}

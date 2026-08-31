@@ -1,0 +1,194 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "!!%%%!!!!!!!!!!!",
+      "%%%%%%%%%%%%%%%%",
+      "%%%%%%%%%%%%%%%%",
+      "%%%%%%%%%%%%%%%%",
+      "!!!!!!!!!!!!!!!!",
+      "!!!!!!!111111111",
+      "!!!!!!!111111111",
+      "!!!!!!!111111111",
+      "!!!!!!!111111111",
+      "!!!!!!!111111111",
+      "!!!!!!!111111111",
+      "!!!!!!!111111111",
+      "!!!!!!!111111111",
+      "!!!!!!!111111111",
+      "!!!!!!!111111111",
+      "!!!!!!!111111111"
+    ],
+    [
+      " $   $ %%%%.%%%%",
+      " $   $     2    ",
+      " $   $    *+    ",
+      "                ",
+      "       %%%%,%%%%",
+      "       %       %",
+      "       %'     0%",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %(    45%",
+      "       %)      %",
+      "       %       %",
+      "       %      3%"
+    ],
+    [
+      " $   $ %%%%/%%%%",
+      " $   $          ",
+      " $   $          ",
+      "                ",
+      "       %%%%-%%%%",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %      3%"
+    ],
+    [
+      " $   $ %%%%%%%%%",
+      " $   $          ",
+      " $   $          ",
+      "                ",
+      "       %%%%%%%%%",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %      3%"
+    ],
+    [
+      " $   $ %%%%%%%%%",
+      " $   $          ",
+      " $   $          ",
+      "                ",
+      "       %%%%%%%%%",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %",
+      "       %       %"
+    ],
+    [
+      " $$&$$          ",
+      " $   $          ",
+      " $   $          ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "immersiveengineering:concrete"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:concrete_brick"
+      },
+      {
+        "char": "%",
+        "block": "immersiveengineering:concrete_tile"
+      },
+      {
+        "char": "&",
+        "block": "immersiveengineering:stairs_concrete[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:barrel"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:gray_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:gray_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:ice"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:packed_ice"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:spruce_door[facing=north,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "-",
+        "block": "minecraft:spruce_door[facing=north,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "/",
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "2",
+        "block": "tfmg:industrial_pipe"
+      },
+      {
+        "char": "3",
+        "block": "the_wasteland_reworked:pipe_block"
+      },
+      {
+        "char": "4",
+        "block": "zvhouses:spruce_chair"
+      },
+      {
+        "char": "5",
+        "block": "zvhouses:spruce_table"
+      }
+    ]
+  }
+}

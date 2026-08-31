@@ -1,0 +1,190 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "+++.....,,,,,...",
+      "+++.....,,,,,...",
+      "++++++++++++++++",
+      "$$$$$$$$$$$$$$$$",
+      "$$$$$$$$$$$$$$$$",
+      "$$//////$$$$$$$$",
+      "$$//////$$$$$$$$",
+      "$$//////$$$$$$$$",
+      "$$//////$$$$$$$$",
+      "$$//////$$'''$$$",
+      "$$//////$$'''$$$",
+      "$$//////$$'''$$$",
+      "$$//////$$'''$$$",
+      "$$//////$$'''$$$",
+      "$$//////$$'''$$$",
+      "$$//////$$'''$$$"
+    ],
+    [
+      "                ",
+      "      &         ",
+      "                ",
+      "%11111111%%%%%11",
+      "%        %   %  ",
+      "% '    ' %   %  ",
+      "% '*  -' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %%2%%  ",
+      "% '    ' %   %  ",
+      "% '    ' %%)%%  ",
+      "% '    ' %   %  ",
+      "% ' 4  ' %   %  ",
+      "% '    ' %   %  "
+    ],
+    [
+      "                ",
+      "      &         ",
+      "                ",
+      "%11111111%%!%%11",
+      "%        %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %%3%%  ",
+      "% '    ' %   %  ",
+      "% '    ' %% %%  ",
+      "% '    ' %%)%%  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  "
+    ],
+    [
+      "                ",
+      "      &         ",
+      "                ",
+      "%11111111%%!%%11",
+      "%        %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %%%%%  ",
+      "% '    ' %   %  ",
+      "% '    ' %% %%  ",
+      "% '    ' %% %%  ",
+      "% '    ' %%)%%  ",
+      "% '    ' %   %  "
+    ],
+    [
+      "                ",
+      "      0         ",
+      "                ",
+      "%11111111%%!%%11",
+      "%        %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %%%%%  ",
+      "% '    ' %   %  ",
+      "% '    ' %   %  ",
+      "% '    ' %% %%  ",
+      "% '    ' %% %%  ",
+      "% '    ' %%)%%  "
+    ],
+    [
+      "               (",
+      "               (",
+      "               (",
+      "%11111111%%%%%11",
+      "%        %   %  ",
+      "%        %   %  ",
+      "%        %   %  ",
+      "%        %   %  ",
+      "%        %   %  ",
+      "%        %   %  ",
+      "%        %   %  ",
+      "%        %   %  ",
+      "%        %   %  ",
+      "%        %   %  ",
+      "%        %% %%  ",
+      "%        %% %%  "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:concrete"
+      },
+      {
+        "char": "%",
+        "block": "immersiveengineering:concrete_brick"
+      },
+      {
+        "char": "&",
+        "block": "immersiveengineering:concrete_pillar"
+      },
+      {
+        "char": "'",
+        "block": "immersiveengineering:concrete_tile"
+      },
+      {
+        "char": "(",
+        "block": "immersiveengineering:slab_concrete"
+      },
+      {
+        "char": ")",
+        "block": "immersiveengineering:stairs_concrete[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:barrel"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": ",",
+        "block": "minecraft:gray_concrete"
+      },
+      {
+        "char": "-",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": ".",
+        "block": "tfmg:asphalt"
+      },
+      {
+        "char": "/",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "0",
+        "block": "tfmg:gas_lamp"
+      },
+      {
+        "char": "1",
+        "block": "tfmg:gray_rebar_concrete"
+      },
+      {
+        "char": "2",
+        "block": "the_wasteland_reworked:industrial_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "3",
+        "block": "the_wasteland_reworked:industrial_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "4",
+        "block": "zvhouses:spruce_bench"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FAF",
+    "HTH",
+    "PCP"
+  ],
+  "key": {
+    "F": {
+      "item": "create_hypertube:hypertube_funnel"
+    },
+    "A": {
+      "item": "ae2:calculation_processor"
+    },
+    "H": {
+      "item": "create_hypertube:hypertube"
+    },
+    "T": {
+      "item": "tfmg:heavy_plate"
+    },
+    "P": {
+      "item": "powergrid:integrated_circuit"
+    },
+    "C": {
+      "item": "create:brass_sheet"
+    }
+  },
+  "result": {
+    "id": "create_hypertube:hypertube_junction",
+    "count": 1
+  }
+}

@@ -1,0 +1,472 @@
+{
+  "contract": "EG-P03-S05-C0046-static-candidate-v1",
+  "passed": true,
+  "check_count": 7,
+  "failure_count": 0,
+  "runtime_acceptance": "pending in-client codec load, /locate biome sampling, chunk seams, and P03-GATE",
+  "checks": [
+    {
+      "id": "HBR-1",
+      "check": "fresh generation exposes two horizontal and six vertical biome roles",
+      "passed": true,
+      "detail": "multi_noise routing order and cardinality match the C0046 contract",
+      "evidence": {
+        "actual": [
+          "infinite_domain:hive_world_wastes",
+          "infinite_domain:hive_world_apron",
+          "infinite_domain:hive_world_drown",
+          "infinite_domain:hive_world_underworks",
+          "infinite_domain:hive_world_furnace",
+          "infinite_domain:hive_world_billet",
+          "infinite_domain:hive_world_vaulting",
+          "infinite_domain:hive_world_crown"
+        ],
+        "expected": [
+          "infinite_domain:hive_world_wastes",
+          "infinite_domain:hive_world_apron",
+          "infinite_domain:hive_world_drown",
+          "infinite_domain:hive_world_underworks",
+          "infinite_domain:hive_world_furnace",
+          "infinite_domain:hive_world_billet",
+          "infinite_domain:hive_world_vaulting",
+          "infinite_domain:hive_world_crown"
+        ]
+      }
+    },
+    {
+      "id": "HBR-2",
+      "check": "biome depth consumes the accepted full-height gradient",
+      "passed": true,
+      "detail": "depth maps Y-64..607 monotonically from +1 to -1",
+      "evidence": {
+        "type": "minecraft:y_clamped_gradient",
+        "from_y": -64,
+        "to_y": 607,
+        "from_value": 1.0,
+        "to_value": -1.0
+      }
+    },
+    {
+      "id": "HBR-3",
+      "check": "six depth windows tile the bands at half-block boundaries",
+      "passed": true,
+      "detail": "rounded half-block thresholds are shared exactly, with no gap between core bands",
+      "evidence": {
+        "depth_windows": {
+          "infinite_domain:hive_world_drown": [
+            0.811,
+            1.0
+          ],
+          "infinite_domain:hive_world_underworks": [
+            0.525,
+            0.811
+          ],
+          "infinite_domain:hive_world_furnace": [
+            0.191,
+            0.525
+          ],
+          "infinite_domain:hive_world_billet": [
+            -0.238,
+            0.191
+          ],
+          "infinite_domain:hive_world_vaulting": [
+            -0.62,
+            -0.238
+          ],
+          "infinite_domain:hive_world_crown": [
+            -1.0,
+            -0.62
+          ]
+        },
+        "half_block_boundary_samples": {
+          "-0.5": 0.811,
+          "95.5": 0.525,
+          "207.5": 0.191,
+          "351.5": -0.238,
+          "479.5": -0.62
+        }
+      }
+    },
+    {
+      "id": "HBR-4",
+      "check": "sampled biome volumes separate masks and every vertical midpoint",
+      "passed": true,
+      "detail": "18 horizontal/vertical samples each resolve to exactly one intended biome",
+      "evidence": [
+        {
+          "region": "wastes",
+          "band": "drown",
+          "y": -33,
+          "continentalness": -1.0,
+          "depth": 0.907601,
+          "expected": "infinite_domain:hive_world_wastes",
+          "actual": [
+            "infinite_domain:hive_world_wastes"
+          ],
+          "passed": true
+        },
+        {
+          "region": "apron",
+          "band": "drown",
+          "y": -33,
+          "continentalness": -0.2,
+          "depth": 0.907601,
+          "expected": "infinite_domain:hive_world_apron",
+          "actual": [
+            "infinite_domain:hive_world_apron"
+          ],
+          "passed": true
+        },
+        {
+          "region": "core",
+          "band": "drown",
+          "y": -33,
+          "continentalness": 0.5,
+          "depth": 0.907601,
+          "expected": "infinite_domain:hive_world_drown",
+          "actual": [
+            "infinite_domain:hive_world_drown"
+          ],
+          "passed": true
+        },
+        {
+          "region": "wastes",
+          "band": "underworks",
+          "y": 47,
+          "continentalness": -1.0,
+          "depth": 0.669151,
+          "expected": "infinite_domain:hive_world_wastes",
+          "actual": [
+            "infinite_domain:hive_world_wastes"
+          ],
+          "passed": true
+        },
+        {
+          "region": "apron",
+          "band": "underworks",
+          "y": 47,
+          "continentalness": -0.2,
+          "depth": 0.669151,
+          "expected": "infinite_domain:hive_world_apron",
+          "actual": [
+            "infinite_domain:hive_world_apron"
+          ],
+          "passed": true
+        },
+        {
+          "region": "core",
+          "band": "underworks",
+          "y": 47,
+          "continentalness": 0.5,
+          "depth": 0.669151,
+          "expected": "infinite_domain:hive_world_underworks",
+          "actual": [
+            "infinite_domain:hive_world_underworks"
+          ],
+          "passed": true
+        },
+        {
+          "region": "wastes",
+          "band": "furnace",
+          "y": 151,
+          "continentalness": -1.0,
+          "depth": 0.359165,
+          "expected": "infinite_domain:hive_world_wastes",
+          "actual": [
+            "infinite_domain:hive_world_wastes"
+          ],
+          "passed": true
+        },
+        {
+          "region": "apron",
+          "band": "furnace",
+          "y": 151,
+          "continentalness": -0.2,
+          "depth": 0.359165,
+          "expected": "infinite_domain:hive_world_apron",
+          "actual": [
+            "infinite_domain:hive_world_apron"
+          ],
+          "passed": true
+        },
+        {
+          "region": "core",
+          "band": "furnace",
+          "y": 151,
+          "continentalness": 0.5,
+          "depth": 0.359165,
+          "expected": "infinite_domain:hive_world_furnace",
+          "actual": [
+            "infinite_domain:hive_world_furnace"
+          ],
+          "passed": true
+        },
+        {
+          "region": "wastes",
+          "band": "billet",
+          "y": 279,
+          "continentalness": -1.0,
+          "depth": -0.022355,
+          "expected": "infinite_domain:hive_world_wastes",
+          "actual": [
+            "infinite_domain:hive_world_wastes"
+          ],
+          "passed": true
+        },
+        {
+          "region": "apron",
+          "band": "billet",
+          "y": 279,
+          "continentalness": -0.2,
+          "depth": -0.022355,
+          "expected": "infinite_domain:hive_world_apron",
+          "actual": [
+            "infinite_domain:hive_world_apron"
+          ],
+          "passed": true
+        },
+        {
+          "region": "core",
+          "band": "billet",
+          "y": 279,
+          "continentalness": 0.5,
+          "depth": -0.022355,
+          "expected": "infinite_domain:hive_world_billet",
+          "actual": [
+            "infinite_domain:hive_world_billet"
+          ],
+          "passed": true
+        },
+        {
+          "region": "wastes",
+          "band": "vaulting",
+          "y": 415,
+          "continentalness": -1.0,
+          "depth": -0.42772,
+          "expected": "infinite_domain:hive_world_wastes",
+          "actual": [
+            "infinite_domain:hive_world_wastes"
+          ],
+          "passed": true
+        },
+        {
+          "region": "apron",
+          "band": "vaulting",
+          "y": 415,
+          "continentalness": -0.2,
+          "depth": -0.42772,
+          "expected": "infinite_domain:hive_world_apron",
+          "actual": [
+            "infinite_domain:hive_world_apron"
+          ],
+          "passed": true
+        },
+        {
+          "region": "core",
+          "band": "vaulting",
+          "y": 415,
+          "continentalness": 0.5,
+          "depth": -0.42772,
+          "expected": "infinite_domain:hive_world_vaulting",
+          "actual": [
+            "infinite_domain:hive_world_vaulting"
+          ],
+          "passed": true
+        },
+        {
+          "region": "wastes",
+          "band": "crown",
+          "y": 543,
+          "continentalness": -1.0,
+          "depth": -0.80924,
+          "expected": "infinite_domain:hive_world_wastes",
+          "actual": [
+            "infinite_domain:hive_world_wastes"
+          ],
+          "passed": true
+        },
+        {
+          "region": "apron",
+          "band": "crown",
+          "y": 543,
+          "continentalness": -0.2,
+          "depth": -0.80924,
+          "expected": "infinite_domain:hive_world_apron",
+          "actual": [
+            "infinite_domain:hive_world_apron"
+          ],
+          "passed": true
+        },
+        {
+          "region": "core",
+          "band": "crown",
+          "y": 543,
+          "continentalness": 0.5,
+          "depth": -0.80924,
+          "expected": "infinite_domain:hive_world_crown",
+          "actual": [
+            "infinite_domain:hive_world_crown"
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "HBR-5",
+      "check": "each band has a distinct fallback identity and bounded feature vocabulary",
+      "passed": true,
+      "detail": "six unique fog colours; no native spawns; acid only in The Drown; salvage only in middle inhabited/industrial bands",
+      "evidence": {
+        "drown": {
+          "valid": true,
+          "temperature": 0.62,
+          "fog_color": 1512713,
+          "particle_probability": 0.0028,
+          "decoration": [
+            "infinite_domain:hive_world_fixture_light"
+          ],
+          "fluid_springs": [
+            "infinite_domain:hive_world_acid_pool"
+          ],
+          "spawners_empty": true
+        },
+        "underworks": {
+          "valid": true,
+          "temperature": 0.78,
+          "fog_color": 1842450,
+          "particle_probability": 0.0024,
+          "decoration": [
+            "infinite_domain:hive_world_fixture_light",
+            "infinite_domain:hive_world_salvage"
+          ],
+          "fluid_springs": [],
+          "spawners_empty": true
+        },
+        "furnace": {
+          "valid": true,
+          "temperature": 1.25,
+          "fog_color": 2826260,
+          "particle_probability": 0.0038,
+          "decoration": [
+            "infinite_domain:hive_world_fixture_light",
+            "infinite_domain:hive_world_salvage"
+          ],
+          "fluid_springs": [],
+          "spawners_empty": true
+        },
+        "billet": {
+          "valid": true,
+          "temperature": 0.88,
+          "fog_color": 2433565,
+          "particle_probability": 0.0021,
+          "decoration": [
+            "infinite_domain:hive_world_fixture_light",
+            "infinite_domain:hive_world_salvage"
+          ],
+          "fluid_springs": [],
+          "spawners_empty": true
+        },
+        "vaulting": {
+          "valid": true,
+          "temperature": 0.45,
+          "fog_color": 1777961,
+          "particle_probability": 0.0012,
+          "decoration": [
+            "infinite_domain:hive_world_fixture_light"
+          ],
+          "fluid_springs": [],
+          "spawners_empty": true
+        },
+        "crown": {
+          "valid": true,
+          "temperature": 0.2,
+          "fog_color": 2108214,
+          "particle_probability": 0.0006,
+          "decoration": [
+            "infinite_domain:hive_world_fixture_light"
+          ],
+          "fluid_springs": [],
+          "spawners_empty": true
+        }
+      }
+    },
+    {
+      "id": "HBR-6",
+      "check": "band districts and band biomes share exact placement ownership",
+      "passed": true,
+      "detail": "each Y-bounded district is eligible only in its matching core biome",
+      "evidence": {
+        "drown": {
+          "expected": [
+            "infinite_domain:hive_world_drown"
+          ],
+          "actual": [
+            "infinite_domain:hive_world_drown"
+          ],
+          "passed": true
+        },
+        "underworks": {
+          "expected": [
+            "infinite_domain:hive_world_underworks"
+          ],
+          "actual": [
+            "infinite_domain:hive_world_underworks"
+          ],
+          "passed": true
+        },
+        "furnace": {
+          "expected": [
+            "infinite_domain:hive_world_furnace"
+          ],
+          "actual": [
+            "infinite_domain:hive_world_furnace"
+          ],
+          "passed": true
+        },
+        "billet": {
+          "expected": [
+            "infinite_domain:hive_world_billet"
+          ],
+          "actual": [
+            "infinite_domain:hive_world_billet"
+          ],
+          "passed": true
+        },
+        "vaulting": {
+          "expected": [
+            "infinite_domain:hive_world_vaulting"
+          ],
+          "actual": [
+            "infinite_domain:hive_world_vaulting"
+          ],
+          "passed": true
+        },
+        "crown": {
+          "expected": [
+            "infinite_domain:hive_world_crown"
+          ],
+          "actual": [
+            "infinite_domain:hive_world_crown"
+          ],
+          "passed": true
+        }
+      }
+    },
+    {
+      "id": "HBR-7",
+      "check": "legacy three-way biome IDs remain loadable but cannot own fresh generation",
+      "passed": true,
+      "detail": "sump/works/vault compatibility files exist outside the routing and structure selectors",
+      "evidence": {
+        "aliases": [
+          "infinite_domain:hive_world_sump",
+          "infinite_domain:hive_world_works",
+          "infinite_domain:hive_world_vault"
+        ],
+        "present": true,
+        "unrouted": true,
+        "unplaced": true
+      }
+    }
+  ]
+}

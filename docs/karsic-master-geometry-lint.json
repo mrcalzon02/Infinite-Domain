@@ -1,0 +1,53 @@
+{
+  "templates_scanned": 6,
+  "structures_with_hard_fail": 0,
+  "results": [
+    {
+      "structure_id": "kar_067_series_panel_block_clean_master",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "kar_078_relay_mast_clean_master",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "kar_081_steel_water_tower_clean_master",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": [
+        {
+          "check": "room_composition",
+          "severity": "review_flag",
+          "position": [
+            20,
+            36,
+            20
+          ],
+          "detail": "enclosed room of 125 air blocks (25 floor cells, 5 tall) near (20, 36, 20) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+        }
+      ]
+    },
+    {
+      "structure_id": "kar_083_district_heating_main_clean_master",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "kar_084_transformer_kiosk_clean_master",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "kar_085_bus_shelter_and_stop_clean_master",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    }
+  ]
+}

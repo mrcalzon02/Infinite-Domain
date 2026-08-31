@@ -1,0 +1,22 @@
+{
+  "inherit": "lostcities:citystyle_common",
+  "style": "infinite_domain:karsic_standard",
+  "stuff_tags": [
+    "rubble"
+  ],
+  "buildingsettings": {
+    "minfloors": 3,
+    "maxfloors": 9,
+    "mincellars": 1,
+    "maxcellars": 2,
+    "buildingchance": 0.4
+  },
+  "streetblocks": {
+    "width": 10,
+    "border": "y",
+    "wall": "w",
+    "street": "S",
+    "streetbase": "b",
+    "streetvariant": "B"
+  }
+}

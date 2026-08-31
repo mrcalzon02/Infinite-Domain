@@ -1,0 +1,242 @@
+{
+  "purpose": "Static activation gate for the eastern Karsic Lost Cities district fabric.",
+  "passed": true,
+  "checks": [
+    {
+      "id": "KC-1",
+      "rule": "the Karsic style resource family exists and parses",
+      "passed": true,
+      "evidence": {
+        "missing": [],
+        "parse_failures": []
+      }
+    },
+    {
+      "id": "KC-2",
+      "rule": "every style palette reference resolves in project data or the installed Lost Cities jar",
+      "passed": true,
+      "evidence": {
+        "lostcities_jars": [
+          "lostcities-1.21-8.4.1.jar"
+        ],
+        "palette_refs": [
+          "lostcities:common",
+          "infinite_domain:karsic_default",
+          "infinite_domain:karsic_concrete_series",
+          "infinite_domain:karsic_concrete_monumental",
+          "infinite_domain:karsic_foundry_brick",
+          "infinite_domain:karsic_first_standard",
+          "lostcities:glass_pane_gray",
+          "lostcities:glass_full_gray",
+          "lostcities:glass_pane_light_blue",
+          "infinite_domain:karsic_glass_side_concrete",
+          "infinite_domain:karsic_glass_side_panel"
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "KC-3",
+      "rule": "the five-slot style uses registered blocks and the authored 6/1/2/2 stratum weighting",
+      "passed": true,
+      "evidence": {
+        "slot_count": 5,
+        "wall_weights": {
+          "infinite_domain:karsic_concrete_series": 6.0,
+          "infinite_domain:karsic_concrete_monumental": 1.0,
+          "infinite_domain:karsic_foundry_brick": 2.0,
+          "infinite_domain:karsic_first_standard": 2.0
+        },
+        "invalid_blocks": []
+      }
+    },
+    {
+      "id": "KC-4",
+      "rule": "the base citystyle encodes boulevard, basement, density, and height doctrine",
+      "passed": true,
+      "evidence": {
+        "inherit": "lostcities:citystyle_common",
+        "style": "infinite_domain:karsic_standard",
+        "stuff_tags": [
+          "rubble"
+        ],
+        "buildingsettings": {
+          "minfloors": 3,
+          "maxfloors": 9,
+          "mincellars": 1,
+          "maxcellars": 2,
+          "buildingchance": 0.4
+        },
+        "streetblocks": {
+          "width": 10,
+          "border": "y",
+          "wall": "w",
+          "street": "S",
+          "streetbase": "b",
+          "streetvariant": "B"
+        }
+      }
+    },
+    {
+      "id": "KC-5",
+      "rule": "the compiler activates only approved Karsic fabric in the culture-matched archetype",
+      "passed": true,
+      "evidence": {
+        "definition": {
+          "culture": "karsic",
+          "lostcities_citystyle": "infinite_domain:karsic_mikrorayon",
+          "settlement_types": [
+            "town_center",
+            "residential"
+          ],
+          "categories": [
+            "residential",
+            "commercial"
+          ],
+          "road_connections": [
+            "main_road",
+            "local_road",
+            "pedestrian"
+          ],
+          "explicit_include": [
+            "infinite_domain:kar_067_series_panel_block",
+            "infinite_domain:kar_024_panel_block_service_premises"
+          ],
+          "selection_factors": {
+            "infinite_domain:kar_067_series_panel_block": 3.0,
+            "infinite_domain:kar_024_panel_block_service_premises": 1.0
+          }
+        },
+        "compiled": {
+          "culture": "karsic",
+          "candidate_members": [
+            "infinite_domain:kar_024_panel_block_service_premises",
+            "infinite_domain:kar_067_series_panel_block"
+          ],
+          "approved_members": [
+            "infinite_domain:converted/kar_024_panel_block_service_premises",
+            "infinite_domain:converted/kar_067_series_panel_block"
+          ],
+          "active": true,
+          "citystyle": "infinite_domain:karsic_mikrorayon",
+          "citystyle_file": "kubejs/data/infinite_domain/lostcities/citystyles/karsic_mikrorayon.json",
+          "selector_biomes": [
+            "#infinite_domain:karsic_region_biomes"
+          ]
+        },
+        "members": [
+          "infinite_domain:converted/kar_024_panel_block_service_premises",
+          "infinite_domain:converted/kar_067_series_panel_block"
+        ],
+        "member_factors": {
+          "infinite_domain:converted/kar_024_panel_block_service_premises": 1.0,
+          "infinite_domain:converted/kar_067_series_panel_block": 3.0
+        }
+      }
+    },
+    {
+      "id": "KC-6",
+      "rule": "regional selectors and city density are biome-owned while all central styles exclude Karsic land",
+      "passed": true,
+      "evidence": {
+        "regional": [
+          {
+            "factor": 1.0,
+            "citystyle": "infinite_domain:karsic_mikrorayon",
+            "biomes": {
+              "if_any": [
+                "#infinite_domain:karsic_region_biomes"
+              ]
+            }
+          }
+        ],
+        "central_count": 7,
+        "central_exclusions": [
+          {
+            "excluding": [
+              "#infinite_domain:karsic_region_biomes"
+            ]
+          },
+          {
+            "excluding": [
+              "#infinite_domain:karsic_region_biomes"
+            ]
+          },
+          {
+            "excluding": [
+              "#infinite_domain:karsic_region_biomes"
+            ]
+          },
+          {
+            "excluding": [
+              "#infinite_domain:karsic_region_biomes"
+            ]
+          },
+          {
+            "excluding": [
+              "#infinite_domain:karsic_region_biomes"
+            ]
+          },
+          {
+            "excluding": [
+              "#infinite_domain:karsic_region_biomes"
+            ]
+          },
+          {
+            "excluding": [
+              "#infinite_domain:karsic_region_biomes"
+            ]
+          }
+        ],
+        "multipliers_ok": true
+      }
+    },
+    {
+      "id": "KC-7",
+      "rule": "the selector tag resolves exactly to the five eastern Karsic land biomes",
+      "passed": true,
+      "evidence": {
+        "tag_values": [
+          "infinite_domain:karsic_district",
+          "infinite_domain:karsic_industrial_belt",
+          "infinite_domain:karsic_steppe_waste",
+          "infinite_domain:karsic_taiga_margin",
+          "infinite_domain:karsic_uplands"
+        ],
+        "missing_biome_files": []
+      }
+    },
+    {
+      "id": "KC-8",
+      "rule": "the active 5-9-storey fabric remains approval-owned and multiplayer-safe",
+      "passed": true,
+      "evidence": {
+        "fabric": {
+          "kar_024_panel_block_service_premises": {
+            "catalog": {
+              "production_status": "approved",
+              "placement_owner": "karsic_citystyle",
+              "worldgen_status": "citystyle_active"
+            },
+            "building_cells": 24,
+            "expected_cells": 24,
+            "open_country_registration": false
+          },
+          "kar_067_series_panel_block": {
+            "catalog": {
+              "production_status": "approved",
+              "placement_owner": "karsic_citystyle",
+              "worldgen_status": "citystyle_active"
+            },
+            "building_cells": 21,
+            "expected_cells": 21,
+            "open_country_registration": false
+          }
+        },
+        "semantic_issues": [],
+        "forbidden_keys": []
+      }
+    }
+  ],
+  "runtime_validation": "Fresh-world placement, 5/7/9-storey frequency, street seating, rotation, and render review remain required."
+}

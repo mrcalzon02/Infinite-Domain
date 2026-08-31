@@ -1,0 +1,225 @@
+{
+  "purpose": "Static contract for Infinite Domain's central continent, north/south zones, east/west continents and Abyssal oceans, plus multiplayer-safe quest-independent structure spawning.",
+  "authority": [
+    "datapacks/gradient_ocean_pack/README.md",
+    "docs/GRADIENT_OCEAN_PACK_VALIDATION.md",
+    "docs/ABYSSAL_OCEAN_PROGRAM.md",
+    "docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md",
+    "docs/WORLDGEN_STRUCTURE_SAFETY.md"
+  ],
+  "checks": [
+    {
+      "id": "OG-1",
+      "check": "the maintained normal preset and gradient datapack are globally active",
+      "passed": true,
+      "detail": "Moonlight points at datapacks; normal and extended tags expose only minecraft:normal; pack format is 48"
+    },
+    {
+      "id": "OG-2",
+      "check": "minecraft:normal owns the Wastelands overworld routing",
+      "passed": true,
+      "detail": "noise settings wastelands:wasteland with the Isekai climate-zone source and Wastelands fallback"
+    },
+    {
+      "id": "OG-3",
+      "check": "vanilla Overworld terrain consumes the custom continent and abyssal-depth chains",
+      "passed": true,
+      "detail": "overworld/continents delegates to custom_worldgen:continents and overworld/depth subtracts abyssal_floor_depression",
+      "evidence": {
+        "continent_override": {
+          "type": "minecraft:cache_2d",
+          "argument": "custom_worldgen:continents"
+        },
+        "depth_custom_refs": [
+          "custom_worldgen:abyssal_floor_depression"
+        ]
+      }
+    },
+    {
+      "id": "OG-4",
+      "check": "the central main continent is guaranteed through radius 4000 and feathers to ocean by 4800",
+      "passed": true,
+      "detail": "radial mask is 1/1/0.5/0 at r=0/4000/4400/4800 and the central branch never falls below continentalness 0.05",
+      "evidence": {
+        "mask": {
+          "0": 1.0,
+          "4000": 1.0,
+          "4400": 0.5,
+          "4800": 0.0,
+          "8000": 0.0
+        },
+        "central_land_bracket": {
+          "-1.0": 0.05,
+          "-0.5": 0.05,
+          "0.0": 0.28,
+          "0.5": 0.78,
+          "1.0": 1.28
+        }
+      }
+    },
+    {
+      "id": "OG-5",
+      "check": "east/west prefer recurring large continents while north/south remain ocean-separated",
+      "passed": true,
+      "detail": "the directional mask selects opposite branches on cardinal axes; the east/west branch is exactly 0.50 more land-biased under identical noise",
+      "evidence": {
+        "direction_mask": {
+          "east": 1.0,
+          "west": 1.0,
+          "south": 0.0,
+          "north": 0.0,
+          "diagonal": 0.5
+        },
+        "continentalness_brackets": {
+          "-1.0": {
+            "east": -0.92,
+            "west": -0.92,
+            "south": -1.42,
+            "north": -1.42
+          },
+          "-0.5": {
+            "east": -0.42,
+            "west": -0.42,
+            "south": -0.9199999999999999,
+            "north": -0.9199999999999999
+          },
+          "0.0": {
+            "east": 0.08000000000000002,
+            "west": 0.08000000000000002,
+            "south": -0.42,
+            "north": -0.42
+          },
+          "0.5": {
+            "east": 0.58,
+            "west": 0.58,
+            "south": 0.08000000000000002,
+            "north": 0.08000000000000002
+          },
+          "1.0": {
+            "east": 1.08,
+            "west": 1.08,
+            "south": 0.5800000000000001,
+            "north": 0.5800000000000001
+          }
+        }
+      }
+    },
+    {
+      "id": "OG-6",
+      "check": "north is cold, south is hot, and the central/east/west land regimes stay temperate",
+      "passed": true,
+      "detail": "regional_temperature resolves to -1/+1 on the north/south axes and 0 on center/east/west",
+      "evidence": {
+        "center": 0.0,
+        "east": 0.0,
+        "west": 0.0,
+        "south": 1.0,
+        "north": -1.0
+      }
+    },
+    {
+      "id": "OG-7",
+      "check": "Pelagos and Karsic abyssal deformation is confined to the west/east ocean corridors",
+      "passed": true,
+      "detail": "the corridor mask is active only on the X axis; side selectors are mutually exclusive; both continent pressure and direct floor depth consume the paired depressions",
+      "evidence": {
+        "corridor": {
+          "east": 0.99,
+          "west": 0.99,
+          "south": 0.0,
+          "north": 0.0
+        },
+        "selectors": {
+          "west_at_west": 1.0,
+          "east_at_west": 0.0,
+          "west_at_east": 0.0,
+          "east_at_east": 1.0
+        }
+      }
+    },
+    {
+      "id": "OG-8",
+      "check": "all eight depth-graded abyssal biomes and the neutral seam are routable",
+      "passed": true,
+      "detail": "four Pelagos/Karsic band pairs keep exact humidity and continentalness ranges; -0.2..0.2 stays vanilla deep ocean",
+      "evidence": {
+        "invalid_biomes": [],
+        "neutral_seam_bands": [
+          [
+            -1.2,
+            -1.02
+          ],
+          [
+            -1.02,
+            -0.82
+          ],
+          [
+            -0.82,
+            -0.6
+          ],
+          [
+            -0.6,
+            -0.455
+          ]
+        ]
+      }
+    },
+    {
+      "id": "OG-9",
+      "check": "the implemented eastern Karsic land zone is reachable without changing the central continent",
+      "passed": true,
+      "detail": "five humidity-gated Karsic rules and biome files precede the ungated temperate Wastelands fallback; Pelagos land remains plan-deferred",
+      "evidence": {
+        "invalid_biomes": [],
+        "fallback_index": 68
+      }
+    },
+    {
+      "id": "OG-10",
+      "check": "cold northern and hot southern land/ocean biome families remain complete",
+      "passed": true,
+      "detail": "required polar and warm biome families remain represented in their saturated temperature bands",
+      "evidence": {
+        "missing_north": [],
+        "missing_south": []
+      }
+    },
+    {
+      "id": "OG-11",
+      "check": "high-fanout horizontal geography fields retain chunk-local caches",
+      "passed": true,
+      "detail": "central/directional continents, climate routing, and abyssal band masks are cache_2d or flat_cache wrapped",
+      "evidence": {
+        "uncached": [],
+        "checked": [
+          "continents",
+          "outer_directional_continents",
+          "east_west_continent_mask",
+          "small_continents",
+          "large_continents",
+          "city_humidity",
+          "regional_temperature",
+          "abyssal_ocean_mask",
+          "abyssal_plain_mask",
+          "abyssal_fracture_mask",
+          "hadal_trench_mask",
+          "abyssal_slope_band_mask"
+        ]
+      }
+    },
+    {
+      "id": "OG-12",
+      "check": "structure spawning is datapack-owned and independent of quests, players, and teams",
+      "passed": true,
+      "detail": "289 structures and 146 structure sets use standard worldgen placement with registered references; no scripted quest-placement bridge exists",
+      "evidence": {
+        "gated_json": [],
+        "invalid_placements": [],
+        "missing_structure_references": [],
+        "scripted_quest_placement": []
+      }
+    }
+  ],
+  "passed": true,
+  "runtime_validation": "This gate proves file-backed topology, routing, registration, and multiplayer ownership. Fresh-world terrain appearance, structure placement quality, and generation performance remain runtime checks."
+}

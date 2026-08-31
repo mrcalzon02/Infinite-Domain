@@ -1,0 +1,58 @@
+#Voxy x Simple Clouds compatibility
+[voxy_simpleclouds]
+	#Match Simple Clouds' render distance to Voxy's render distance.
+	matchRenderDistance = true
+	#When matching is on, render clouds out to this percent of Voxy's render distance.
+	#100 = exactly Voxy's distance; 50 = half (clouds end well before the LOD horizon); 200 = double.
+	#Simple Clouds still clamps to its own cloud-area maximum, so very high values cap out there.
+	# Default: 100
+	# Range: 10 ~ 400
+	cloudRenderPercent = 100
+	#Hard cap on the matched cloud render distance, in blocks (applied AFTER the percent above).
+	#0 = no cap (let clouds follow Voxy all the way out). Voxy's LOD reaches very far (its default
+	#16 sections = 8192 blocks), and matching clouds that far means Simple Clouds meshes a huge cloud
+	#volume every frame. Lowering this trims the far cloud chunks for extra headroom. Try ~4096 if you
+	#want clouds far but not all the way to the LOD horizon.
+	# Default: 0
+	# Range: 0 ~ 16384
+	cloudRenderDistanceMaxBlocks = 0
+	#Render clouds behind Voxy's LOD terrain (force the depth-tested, draw-after-terrain pipeline
+	#so distant LOD terrain occludes the clouds).
+	cloudsBehindLodTerrain = true
+	#Under an Iris shaderpack, force Simple Clouds to render BEHIND Voxy's LOD terrain by writing the
+	#LOD depth into the buffer the clouds depth-test against. Without this, the cloud layer draws over
+	#distant LOD mountains. This is a 'behind LOD' fallback, not perfect depth: on shaderpacks that
+	#don't natively support Voxy (e.g. Complementary) the projection isn't a perfect match, so a cloud
+	#right in front of a near LOD hill can also be hidden. Turn off to let clouds draw over LOD instead.
+	#Requires Iris.
+	cloudsBehindLodWithShaders = true
+
+#Voxy LOD transition smoothing
+[voxy_lod]
+	#Aligns Voxy's LOD-cull edge with where vanilla actually stops rendering, to remove the ring of
+	#missing chunks (void) at the render-distance edge. Voxy masks LOD by a chunk's NEAREST CORNER
+	#while Sodium renders by ~chunk CENTRE, a ~half-chunk (8-block) mismatch that leaves a void. This
+	#pulls Voxy's cull radius inward by this many blocks. ~8 is the sweet spot for most render
+	#distances: too low still shows the void; too high (~16+) makes LOD overlap INTO the vanilla edge
+	#and you see a border/seam (worst through water). Nudge by 2-4 if your render distance shows either.
+	#0 = off (Voxy default void).
+	# Default: 8
+	# Range: 0 ~ 256
+	lodEdgeOverlapBlocks = 8
+
+#Voxy x LittleTiles LOD
+[voxy_littletiles]
+	#Render LittleTiles blocks in Voxy's distant LOD terrain. Voxy bakes each LittleTiles block into
+	#the LOD as ONE FULL voxel of its biggest tile's material. Turn off to leave LittleTiles out of
+	#the LOD entirely (they still render normally inside the vanilla render distance). Applies as
+	#chunks are scanned into the LOD - already-baked LOD data only updates when its chunks are next
+	#loaded/changed.
+	renderInLod = true
+	#Only bake a LittleTiles block into the LOD if its tiles fill at least this percent of the block's
+	#volume. Because any included block becomes a FULL voxel at distance, sparse decorations (cables,
+	#trims, thin poles) otherwise bloat into solid blocks in the LOD. 0 = bake every LittleTiles block
+	#(Voxy's default behaviour); ~10-25 keeps substantial builds while dropping thin decor; 100 = only
+	#completely filled blocks.
+	# Default: 0
+	# Range: 0 ~ 100
+	minFillPercent = 0

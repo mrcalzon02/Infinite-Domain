@@ -1,0 +1,29 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "infinite_domain_spawn_biome_preview"
+version = "1.0.0"
+displayName = "Infinite Domain: Spawn Biome Preview"
+authors = "Infinite Domain"
+description = '''
+Samples the resolved world-seeded biome source around spawn without generating distant chunks and renders the result on a dedicated 4x4 survey painting.
+'''
+
+[[mixins]]
+config = "infinite_domain_spawn_biome_preview.mixins.json"
+
+[[dependencies.infinite_domain_spawn_biome_preview]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_spawn_biome_preview]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"

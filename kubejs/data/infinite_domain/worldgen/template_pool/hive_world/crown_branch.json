@@ -1,0 +1,32 @@
+{
+  "fallback": "infinite_domain:hive_world/crown_terminal",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "infinite_domain:hive_world/crown_gallery",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "infinite_domain:hive_world/crown_crossing",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 8,
+      "element": {
+        "location": "infinite_domain:hive_world/crown_chamber",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

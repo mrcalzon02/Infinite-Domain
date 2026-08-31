@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": [
+    "infinite_domain:hive_world_billet"
+  ],
+  "step": "underground_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none",
+  "start_pool": "infinite_domain:hive_world/billet_start",
+  "size": 5,
+  "start_height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+      "absolute": 224
+    },
+    "max_inclusive": {
+      "absolute": 336
+    }
+  },
+  "max_distance_from_center": 96,
+  "use_expansion_hack": false,
+  "liquid_settings": "ignore_waterlogging"
+}

@@ -1,0 +1,186 @@
+{
+  "xsize": 16,
+  "zsize": 16,
+  "slices": [
+    [
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "$$$$$$$$$$$$$$$$",
+      "...$$$$$$$......",
+      "...$$$$$$$......",
+      "...$$$$$$$......",
+      "...$$$$$$$......",
+      "...$$&&&$$......",
+      "...$$&&&$$......",
+      "...$$&&&$$......",
+      "...$$&&&$$......",
+      "...$$&&&$$......",
+      "...$$&&&$$......",
+      "...$$&&&$$......"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "    %%%%%       ",
+      "%%%%%   %%%%%%%%",
+      " 1& %   % &   1&",
+      "  & %   % &    &",
+      "23& %   % &) 23&",
+      "  & %   % &*   &",
+      "  & %   % &    &",
+      "  & %%/%% &    &",
+      "  & %   % &    &",
+      "  & %%'%% &    &",
+      "  & %   % &    &",
+      " -& %   % &(  -&",
+      "  & %   % &    &"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "    %%!%%       ",
+      "%,,$%   %++$%++$",
+      " 1& %   % &   1&",
+      "  & %   % &    &",
+      "  & %   % &    &",
+      "  & %   % &    &",
+      "  & %   % &    &",
+      "  & %%0%% &    &",
+      "  & %   % &    &",
+      "  & %% %% &    &",
+      "  & %%'%% &    &",
+      "  & %   % &    &",
+      "  & %   % &    &"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "    %%!%%       ",
+      "%,,$%   %++$%++$",
+      " 1& %   % &   1&",
+      "  & %   % &    &",
+      "  & %   % &    &",
+      "  & %   % &    &",
+      "  & %   % &    &",
+      "  & %%%%% &    &",
+      "  & %   % &    &",
+      "  & %% %% &    &",
+      "  & %% %% &    &",
+      "  & %%'%% &    &",
+      "  & %   % &    &"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "    %%!%%       ",
+      "%$$$%   %$$$%$$$",
+      "  & %   % &    &",
+      "  & %   % &    &",
+      "  & %   % &    &",
+      "  & %   % &    &",
+      "  & %   % &    &",
+      "  & %%%%% &    &",
+      "  & %   % &    &",
+      "  & %   % &    &",
+      "  & %% %% &    &",
+      "  & %% %% &    &",
+      "  & %%'%% &    &"
+    ],
+    [
+      "                ",
+      "                ",
+      "                ",
+      "    %%%%%       ",
+      "%$$$%   %$$$%$$$",
+      "    %   %       ",
+      "    %   %       ",
+      "    %   %       ",
+      "    %   %       ",
+      "    %   %       ",
+      "    %   %       ",
+      "    %   %       ",
+      "    %   %       ",
+      "    %   %       ",
+      "    %% %%       ",
+      "    %% %%       "
+    ]
+  ],
+  "palette": {
+    "palette": [
+      {
+        "char": "!",
+        "block": "create:framed_glass"
+      },
+      {
+        "char": "$",
+        "block": "immersiveengineering:concrete"
+      },
+      {
+        "char": "%",
+        "block": "immersiveengineering:concrete_brick"
+      },
+      {
+        "char": "&",
+        "block": "immersiveengineering:concrete_tile"
+      },
+      {
+        "char": "'",
+        "block": "immersiveengineering:stairs_concrete[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:barrel"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:gray_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:gray_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": ",",
+        "block": "quark:gray_framed_glass"
+      },
+      {
+        "char": "-",
+        "block": "supplementaries:item_shelf"
+      },
+      {
+        "char": ".",
+        "block": "tfmg:factory_floor"
+      },
+      {
+        "char": "/",
+        "block": "the_wasteland_reworked:industrial_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "0",
+        "block": "the_wasteland_reworked:industrial_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+        "char": "1",
+        "block": "the_wasteland_reworked:pipe_block"
+      },
+      {
+        "char": "2",
+        "block": "zvhouses:spruce_chair"
+      },
+      {
+        "char": "3",
+        "block": "zvhouses:spruce_table"
+      }
+    ]
+  }
+}

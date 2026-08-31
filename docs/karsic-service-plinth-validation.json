@@ -1,0 +1,315 @@
+{
+  "purpose": "End-to-end structural, review, conversion, and multiplayer-safe activation gate for the Karsic mixed-use service plinth.",
+  "passed": true,
+  "checks": [
+    {
+      "id": "KS-1",
+      "check": "the authored program declares mixed-use circulation and repeatable city fabric",
+      "passed": true,
+      "detail": "K-III retail plinth, partial service cellar, separate approaches, and 5-9-storey contract",
+      "evidence": {
+        "contract": {
+          "minfloors": 5,
+          "maxfloors": 9,
+          "cellar_bands": 1,
+          "ground_bands": 1,
+          "repeat_source_band": 2,
+          "top_bands": 1
+        },
+        "footprint_exception": {
+          "accepted": true,
+          "reason": "The 59x47 source lot cannot express a six-storey Karsic panel slab at the required length-to-height ratio. The regional designer preserves the recorded height, expands the street frontage to the first four-block panel bay meeting length >= 3x inhabited height, and reduces depth to a viable double-loaded residential plan over the retail plinth.",
+          "rule": "length >= 3 * (storeys * 6); depth = 7 * 4 + 1"
+        }
+      }
+    },
+    {
+      "id": "KS-2",
+      "check": "clean and damaged plinths have equal bounds and zero lint findings",
+      "passed": true,
+      "detail": "both shipping templates clear hard failures and review flags",
+      "evidence": {
+        "clean_sha256": "ca0c6244499be98fc558ab65a9b012871d6f424395849333b0c2c2804577c1d7",
+        "damage_sha256": "ea72cd0fce64b3e45b6427069297a381a0715f0f6393cf8ba3bc19efee9d6832",
+        "clean_findings": [],
+        "damage_findings": []
+      }
+    },
+    {
+      "id": "KS-3",
+      "check": "the designer produces the authored long mixed-use slab and core cadence",
+      "passed": true,
+      "detail": "109x29 body, one cellar, six inhabited bands, and seven stair cores",
+      "evidence": {
+        "generation": {
+          "structure_id": "kar_024_panel_block_service_premises",
+          "building_type": "retail_plinth",
+          "status": "generated",
+          "primary_stratum": "K-III",
+          "size": [
+            117,
+            46,
+            37
+          ],
+          "bays": [
+            27,
+            7
+          ],
+          "storeys": 6,
+          "ground_y": 6,
+          "repeatable_storey": true,
+          "placed_blocks": 78019,
+          "palette_states": 57,
+          "modded_blocks": 68919,
+          "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_024_panel_block_service_premises_clean_master.nbt",
+          "damage_variant_path": "kubejs/data/infinite_domain/structure/karsic/kar_024_panel_block_service_premises.nbt",
+          "damage_variant_blocks": 78063,
+          "damage_variant_palette_states": 65,
+          "damage_variant_modded_blocks": 68778
+        },
+        "body": [
+          109,
+          29
+        ],
+        "core_count": 7
+      }
+    },
+    {
+      "id": "KS-4",
+      "check": "retail, residential, and goods programs are furnished and independently approachable",
+      "passed": true,
+      "detail": "three direct ground-floor routes, 80 furnished homes, staffed counter, stock shelving, and service heat",
+      "evidence": {
+        "blocked_routes": {
+          "residential_vestibule_to_spine": [],
+          "shop_door_to_sales_floor": [],
+          "goods_door_to_stock_room": []
+        },
+        "entrances": {
+          "(10, 7, 0)": "minecraft:iron_door",
+          "(10, 7, 3)": "minecraft:oak_door",
+          "(53, 7, 3)": "minecraft:iron_door",
+          "(54, 7, 3)": "minecraft:iron_door",
+          "(14, 7, 33)": "the_wasteland_reworked:industrial_door",
+          "(15, 7, 33)": "the_wasteland_reworked:industrial_door"
+        },
+        "selected_block_counts": {
+          "minecraft:gray_bed": 160,
+          "minecraft:spruce_door": 160,
+          "the_wasteland_reworked:industrial_door": 110,
+          "zvhouses:spruce_counter": 10,
+          "zvhouses:spruce_countertop": 10,
+          "supplementaries:item_shelf": 113,
+          "zvhouses:spruce_table": 81,
+          "zvhouses:spruce_chair": 81,
+          "the_wasteland_reworked:pipe_block": 240
+        }
+      }
+    },
+    {
+      "id": "KS-5",
+      "check": "Karsic regional identity checks pass",
+      "passed": true,
+      "detail": "repeat bands, basement main, plinth offset, vestibule, and roof discipline remain intact",
+      "evidence": [
+        {
+          "id": "KV-1",
+          "check": "repeatable-storey identity",
+          "status": "pass",
+          "detail": "5 repeatable bands compared at storey height 6",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-2",
+          "check": "panel joint continuity",
+          "status": "skip",
+          "detail": "not a panel-jointed stratum or type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-3",
+          "check": "plinth offset",
+          "status": "skip",
+          "detail": "single-storey or non-slab type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-4",
+          "check": "vestibule presence",
+          "status": "skip",
+          "detail": "not a heated slab",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-5",
+          "check": "basement service level and main stub",
+          "status": "pass",
+          "detail": "117 heating-main cells, 107 below grade, 2 at the edge",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-10",
+          "check": "heating-main tiling",
+          "status": "skip",
+          "detail": "not a tiling asset",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-13",
+          "check": "mandatory utility identity",
+          "status": "skip",
+          "detail": "not one of the three mandatory native infrastructure assets",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-14",
+          "check": "mast-tower utility identity",
+          "status": "skip",
+          "detail": "not a mast-tower type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-12",
+          "check": "roof discipline",
+          "status": "pass",
+          "detail": "K-III must not carry a pitched roof",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-6",
+          "check": "changing and wash block",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-7",
+          "check": "control-room overlook",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-8",
+          "check": "signage grammar",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-9",
+          "check": "stratum pairing",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-11",
+          "check": "prohibited-motif scan",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        }
+      ]
+    },
+    {
+      "id": "KS-6",
+      "check": "damage opens and freezes the retail frontage while preserving housing and service access",
+      "passed": true,
+      "detail": "all display glass and unsupported fascia shed; upper homes, rear goods route, and residential spine survive",
+      "evidence": {
+        "preserved_route_failures": {
+          "residential_vestibule_to_spine": [],
+          "goods_door_to_stock_room": []
+        },
+        "selected_clean_counts": {
+          "quark:white_framed_glass": 62,
+          "minecraft:gray_bed": 160,
+          "minecraft:spruce_door": 160,
+          "the_wasteland_reworked:industrial_door": 110
+        },
+        "selected_damage_counts": {
+          "quark:white_framed_glass": 0,
+          "quark:dirty_glass_pane": 9,
+          "minecraft:glass_pane": 6,
+          "tfmg:industrial_pipe": 9,
+          "minecraft:ice": 11,
+          "minecraft:packed_ice": 11,
+          "the_wasteland_reworked:road_sign": 1,
+          "supplementaries:notice_board": 1,
+          "minecraft:gray_bed": 160,
+          "minecraft:spruce_door": 160,
+          "the_wasteland_reworked:industrial_door": 110
+        }
+      }
+    },
+    {
+      "id": "KS-7",
+      "check": "two independent in-memory builds are deterministic",
+      "passed": true,
+      "detail": "pass-seeded clean and damaged geometry reproduce byte-for-byte at the semantic level",
+      "evidence": {
+        "clean_master": [
+          "7aa318bbfdc2500edc8c5e827dfafcab2ebb05fbe83cb2568c79107505b6898d",
+          "7aa318bbfdc2500edc8c5e827dfafcab2ebb05fbe83cb2568c79107505b6898d"
+        ],
+        "damage_variant": [
+          "fa8e01ed5afd591b80237657f246068ce53c74dbecdf2eb13a78f63baf607d9e",
+          "fa8e01ed5afd591b80237657f246068ce53c74dbecdf2eb13a78f63baf607d9e"
+        ]
+      }
+    },
+    {
+      "id": "KS-8",
+      "check": "catalog lineage and 8x3 semantic conversion resolve losslessly",
+      "passed": true,
+      "detail": "each cell carries cellar/ground/repeat/top roles and the damage variant is citystyle-active",
+      "evidence": []
+    },
+    {
+      "id": "KS-9",
+      "check": "persisted review shows both fa\u00e7ades, the retail plan, cellar, and real dwelling bands",
+      "passed": true,
+      "detail": "authored Y planes replace false stair-landing slices and both clean/damaged camera sets are approved",
+      "evidence": []
+    },
+    {
+      "id": "KS-10",
+      "check": "the approved plinth is eastern-citystyle-owned and multiplayer-safe",
+      "passed": true,
+      "detail": "the Karsic biome selector owns placement with no open-country or quest/player bridge",
+      "evidence": {
+        "active_worldgen_references": [],
+        "scripted_quest_bridges": [],
+        "citystyle_members": [
+          "infinite_domain:converted/kar_024_panel_block_service_premises",
+          "infinite_domain:converted/kar_067_series_panel_block"
+        ],
+        "citystyle_factors": {
+          "infinite_domain:converted/kar_024_panel_block_service_premises": 1.0,
+          "infinite_domain:converted/kar_067_series_panel_block": 3.0
+        },
+        "approved_citystyle_members": [
+          "infinite_domain:converted/kar_024_panel_block_service_premises",
+          "infinite_domain:converted/kar_067_series_panel_block"
+        ],
+        "isolation_issues": []
+      }
+    }
+  ],
+  "runtime_validation": "Static geometry, deterministic design, authored damage, lossless repeat conversion, fixed-camera review, lineage, and quest-independent ownership are proven. Fresh-world street seating, rotation, height distribution, and performance remain pending."
+}

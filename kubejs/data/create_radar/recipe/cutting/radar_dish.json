@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SDS",
+    "PMP",
+    "STS"
+  ],
+  "key": {
+    "S": {
+      "item": "tfmg:steel_block"
+    },
+    "D": {
+      "item": "create_radar:data_link"
+    },
+    "P": {
+      "item": "ae2:calculation_processor"
+    },
+    "M": {
+      "item": "oritech:machine_core_3"
+    },
+    "T": {
+      "item": "powergrid:integrated_circuit"
+    }
+  },
+  "result": {
+    "id": "create_radar:radar_dish_block",
+    "count": 1
+  }
+}

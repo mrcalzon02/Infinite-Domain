@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PSP",
+    "MFM",
+    "CHC"
+  ],
+  "key": {
+    "P": {
+      "item": "create:precision_mechanism"
+    },
+    "S": {
+      "item": "powergrid:servo"
+    },
+    "M": {
+      "item": "createbigcannons:cast_iron_block"
+    },
+    "F": {
+      "item": "createbigcannons:fixed_cannon_mount"
+    },
+    "C": {
+      "item": "powergrid:contactor"
+    },
+    "H": {
+      "item": "tfmg:heavy_plate"
+    }
+  },
+  "result": {
+    "id": "createbigcannons:cannon_mount",
+    "count": 1
+  }
+}

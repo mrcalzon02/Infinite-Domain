@@ -1,0 +1,98 @@
+{
+  "purpose": "End-to-end static gate for the Karsic vertical-utility family slice.",
+  "passed": true,
+  "checks": [
+    {
+      "id": "KU-1",
+      "check": "both skyline utilities have complete authored programs",
+      "passed": true,
+      "detail": "mast programs require a footing, backed service route, head, hut and compound",
+      "evidence": []
+    },
+    {
+      "id": "KU-2",
+      "check": "clean masters and authored damage pass geometry and KV-14",
+      "passed": true,
+      "detail": "two equal-size clean/damage pairs preserve climbable platforms and distinct heads",
+      "evidence": {
+        "issues": [],
+        "sha256": {
+          "kar_078_relay_mast": {
+            "clean": "f01289c5914af59b52fbe32cb65b489735bd2f8424d47da306ce8751ee72effb",
+            "damage": "31919452ac5e01b35c8dfc8219aca70e4daa9437f954aed64d3bd5f639f270e0"
+          },
+          "kar_081_steel_water_tower": {
+            "clean": "8732e6473c4f5314feb930c0063f8183222429b7bed04f74ea7f709ea9ea6cce",
+            "damage": "7a31ad321c82891c5a91f129d0965adea48cac6397053e28e6fea4a69b3dd756"
+          }
+        }
+      }
+    },
+    {
+      "id": "KU-3",
+      "check": "fixed-camera review is persisted",
+      "passed": true,
+      "detail": "exterior A/B, cutaway and floor-slice reviews approve both silhouettes",
+      "evidence": []
+    },
+    {
+      "id": "KU-4",
+      "check": "catalog lineage and Lost Cities conversions resolve",
+      "passed": true,
+      "detail": "relay converts as scattered; water tower converts as a district multibuilding",
+      "evidence": []
+    },
+    {
+      "id": "KU-5",
+      "check": "both jigsaw starts resolve on eastern Karsic land",
+      "passed": true,
+      "detail": "rigid, surface-projected starts use #infinite_domain:karsic_region_biomes",
+      "evidence": []
+    },
+    {
+      "id": "KU-6",
+      "check": "vertical utility placement has an independent sparse contract",
+      "passed": true,
+      "detail": "spacing 28, separation 12, 1:3 relay/water weights, unique reserved salt, major-site exclusion",
+      "evidence": {
+        "entries": {
+          "kar_078_relay_mast": 1,
+          "kar_081_steel_water_tower": 3
+        },
+        "duplicate_salts": []
+      }
+    },
+    {
+      "id": "KU-7",
+      "check": "Lost Cities yields to both vertical starts",
+      "passed": true,
+      "detail": "collision avoidance prevents district flattening over the utility compounds",
+      "evidence": []
+    },
+    {
+      "id": "KU-8",
+      "check": "placement is quest-independent and multiplayer-safe",
+      "passed": true,
+      "detail": "biome tag plus random-spread worldgen owns every start; quests own none",
+      "evidence": {
+        "gated_worldgen": [],
+        "scripted_quest_bridges": []
+      }
+    },
+    {
+      "id": "KU-9",
+      "check": "production approvals and project-owned provenance are current",
+      "passed": true,
+      "detail": "two visually reviewed damage variants retain current source hashes",
+      "evidence": []
+    },
+    {
+      "id": "KU-10",
+      "check": "central compilation preserves regional isolation",
+      "passed": true,
+      "detail": "approved Karsic utilities remain outside global Wastelands selectors",
+      "evidence": []
+    }
+  ],
+  "runtime_validation": "Static geometry, visual review, registration, collision and multiplayer ownership are proven. Fresh-world frequency, rotation, terrain seating and sightline quality remain runtime checks."
+}
