@@ -1,9 +1,9 @@
 {
   "contract": "EG-P03-S05-C0046-static-candidate-v2",
   "passed": true,
-  "check_count": 8,
+  "check_count": 9,
   "failure_count": 0,
-  "runtime_acceptance": "pending in-client codec load, /locate biome sampling, chunk seams, and P03-GATE",
+  "runtime_acceptance": "pending dedicated-server codec load, /locate biome sampling, chunk seams, and P03-GATE",
   "checks": [
     {
       "id": "HBR-1",
@@ -597,6 +597,21 @@
             "salt": 927132
           }
         }
+      }
+    },
+    {
+      "id": "HBR-9",
+      "check": "installed companion owns the custom density-function codecs",
+      "passed": true,
+      "detail": "source registration, packaged codec classes, bytecode wiring, and jar integrity are all required before JSON may reference the custom types",
+      "evidence": {
+        "jar": "mods\\infinite-domain-hive-world-companion-0.1.0.jar",
+        "missing_entries": [],
+        "zip_integrity": true,
+        "source_registration_call": true,
+        "source_codec_registrations": true,
+        "installed_bytecode_registration_reference": true,
+        "installed_client_atmosphere_references": true
       }
     }
   ]

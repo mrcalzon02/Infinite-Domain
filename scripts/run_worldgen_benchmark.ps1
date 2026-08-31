@@ -322,7 +322,8 @@ for ($repetition = 1; $repetition -le $Repetitions; $repetition++) {
     $planPath = Join-Path $runtime 'kubejs\config\worldgen_benchmark.json'
     [IO.File]::WriteAllText($planPath, ($plan | ConvertTo-Json -Depth 8), [Text.UTF8Encoding]::new($false))
 
-    $worldDatapacks = Join-Path $runtime 'world\datapacks'
+    $benchmarkWorldName = [string]$matrix.worldName
+    $worldDatapacks = Join-Path $runtime (Join-Path $benchmarkWorldName 'datapacks')
     New-Item -ItemType Directory -Path $worldDatapacks -Force | Out-Null
     $globalDatapacks = Join-Path $runtime 'datapacks'
     if (Test-Path -LiteralPath $globalDatapacks) {
@@ -342,13 +343,14 @@ enable-status=false
 enforce-secure-profile=false
 gamemode=spectator
 generate-structures=true
-level-name=world
+level-name=$benchmarkWorldName
 level-seed=$($matrix.seed)
 level-type=minecraft:normal
 max-players=1
 max-tick-time=-1
 motd=Infinite Domain automated worldgen benchmark
 online-mode=false
+server-port=0
 simulation-distance=2
 spawn-protection=0
 sync-chunk-writes=true

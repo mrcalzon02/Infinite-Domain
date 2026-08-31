@@ -33,7 +33,29 @@ final class LayeredFogProfile {
             new FogLayer(576.0, 12.0, 0.09F, 0.17F, 0.20F, 0.24F)
     );
 
+    // Two broken, independently drifting surfaces per vertical band. Each deck
+    // shares the tint of its local fog maximum and yields to that volume before
+    // the camera intersects the rendered surface.
+    private static final List<CloudDeck> CLOUD_DECKS = List.of(
+            new CloudDeck(-52.0, 0.54F, 0.16F, 0.18F, 0.08F, 7.0, 18.0, 0.010, -0.004),
+            new CloudDeck(-16.0, 0.48F, 0.18F, 0.20F, 0.09F, 7.0, 20.0, -0.006, 0.009),
+            new CloudDeck(24.0, 0.42F, 0.20F, 0.19F, 0.10F, 8.0, 22.0, 0.007, 0.003),
+            new CloudDeck(72.0, 0.37F, 0.22F, 0.20F, 0.11F, 8.0, 22.0, -0.004, -0.008),
+            new CloudDeck(124.0, 0.40F, 0.25F, 0.19F, 0.09F, 9.0, 24.0, 0.012, 0.004),
+            new CloudDeck(180.0, 0.46F, 0.24F, 0.17F, 0.09F, 9.0, 25.0, -0.009, 0.006),
+            new CloudDeck(240.0, 0.32F, 0.20F, 0.18F, 0.14F, 10.0, 27.0, 0.006, -0.005),
+            new CloudDeck(320.0, 0.29F, 0.18F, 0.18F, 0.16F, 10.0, 28.0, -0.004, 0.005),
+            new CloudDeck(384.0, 0.25F, 0.13F, 0.16F, 0.20F, 11.0, 30.0, 0.004, 0.003),
+            new CloudDeck(448.0, 0.22F, 0.14F, 0.17F, 0.22F, 11.0, 30.0, -0.003, -0.004),
+            new CloudDeck(512.0, 0.18F, 0.16F, 0.19F, 0.23F, 12.0, 32.0, 0.003, -0.002),
+            new CloudDeck(576.0, 0.15F, 0.17F, 0.20F, 0.24F, 12.0, 34.0, -0.002, 0.003)
+    );
+
     private LayeredFogProfile() {}
+
+    static List<CloudDeck> cloudDecks() {
+        return CLOUD_DECKS;
+    }
 
     static Sample sample(double y) {
         BandAnchor lower = BAND_ANCHORS.get(0);
@@ -110,6 +132,10 @@ final class LayeredFogProfile {
     }
 
     record Sample(float nearDistance, float farDistance, float red, float green, float blue) {}
+
+    record CloudDeck(double y, float opacity, float red, float green, float blue,
+                     double innerFadeDistance, double outerFadeDistance,
+                     double driftX, double driftZ) {}
 
     private record BandAnchor(double y, float visibility, float red, float green, float blue) {}
 

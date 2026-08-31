@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import sys
+import zipfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -27,6 +28,15 @@ POOL_DIR = DATA / "worldgen/template_pool/hive_world"
 NBT_DIR = DATA / "structure/hive_world"
 REPORT = ROOT / "docs/endgame/hive-world-biome-routing.json"
 OWNERSHIP = ROOT / "docs/endgame/generated-output-manifest.json"
+COMPANION_MAIN = ROOT / (
+    "packdev/hive-world-companion/src/main/java/infinitedomain/hiveworld/"
+    "HiveWorldCompanion.java"
+)
+COMPANION_REGISTRY = ROOT / (
+    "packdev/hive-world-companion/src/main/java/infinitedomain/hiveworld/"
+    "worldgen/HiveDensityFunctions.java"
+)
+COMPANION_JAR = ROOT / "mods/infinite-domain-hive-world-companion-0.1.0.jar"
 
 MIN_Y = -64
 MAX_Y = 607
@@ -487,12 +497,81 @@ def main() -> int:
         },
     )
 
+    required_companion_entries = {
+        "META-INF/neoforge.mods.toml",
+        "infinitedomain/hiveworld/HiveWorldCompanion.class",
+        "infinitedomain/hiveworld/client/HiveAtmosphereClient.class",
+        "infinitedomain/hiveworld/client/HiveAtmosphereClient$HiveDimensionEffects.class",
+        "infinitedomain/hiveworld/client/HiveCloudRenderer.class",
+        "infinitedomain/hiveworld/client/HiveSulfurRain.class",
+        "infinitedomain/hiveworld/client/LayeredFogProfile.class",
+        "infinitedomain/hiveworld/worldgen/HiveDensityFunctions.class",
+        "infinitedomain/hiveworld/worldgen/HiveMacroLayout.class",
+        "infinitedomain/hiveworld/worldgen/HiveStackField.class",
+        "infinitedomain/hiveworld/worldgen/HiveTrunkAxis.class",
+    }
+    companion_evidence: dict[str, Any] = {}
+    companion_ok = False
+    try:
+        main_source = COMPANION_MAIN.read_text(encoding="utf-8")
+        registry_source = COMPANION_REGISTRY.read_text(encoding="utf-8")
+        with zipfile.ZipFile(COMPANION_JAR) as archive:
+            entries = set(archive.namelist())
+            main_class = archive.read(
+                "infinitedomain/hiveworld/HiveWorldCompanion.class"
+            )
+            atmosphere_class = archive.read(
+                "infinitedomain/hiveworld/client/"
+                "HiveAtmosphereClient$HiveDimensionEffects.class"
+            )
+            bad_member = archive.testzip()
+        missing_entries = sorted(required_companion_entries - entries)
+        source_wired = "HiveDensityFunctions.register(modBus);" in main_source
+        registry_wired = (
+            'TYPES.register("stack_field"' in registry_source
+            and 'TYPES.register("trunk_axis"' in registry_source
+        )
+        bytecode_wired = (
+            b"infinitedomain/hiveworld/worldgen/HiveDensityFunctions" in main_class
+            and b"register" in main_class
+        )
+        client_bytecode_wired = (
+            b"infinitedomain/hiveworld/client/HiveCloudRenderer" in atmosphere_class
+            and b"infinitedomain/hiveworld/client/HiveSulfurRain" in atmosphere_class
+        )
+        companion_ok = (
+            not missing_entries
+            and bad_member is None
+            and source_wired
+            and registry_wired
+            and bytecode_wired
+            and client_bytecode_wired
+        )
+        companion_evidence = {
+            "jar": str(COMPANION_JAR.relative_to(ROOT)),
+            "missing_entries": missing_entries,
+            "zip_integrity": bad_member is None,
+            "source_registration_call": source_wired,
+            "source_codec_registrations": registry_wired,
+            "installed_bytecode_registration_reference": bytecode_wired,
+            "installed_client_atmosphere_references": client_bytecode_wired,
+        }
+    except (OSError, KeyError, zipfile.BadZipFile) as exc:
+        companion_evidence = {"error": str(exc)}
+    record(
+        "HBR-9",
+        "installed companion owns the custom density-function codecs",
+        companion_ok,
+        "source registration, packaged codec classes, bytecode wiring, and jar integrity are all required before JSON may reference the custom types",
+        companion_evidence,
+    )
+
     report = {
         "contract": "EG-P03-S05-C0046-static-candidate-v2",
         "passed": not failures,
         "check_count": len(checks),
         "failure_count": len(failures),
-        "runtime_acceptance": "pending in-client codec load, /locate biome sampling, chunk seams, and P03-GATE",
+        "runtime_acceptance": "pending dedicated-server codec load, /locate biome sampling, chunk seams, and P03-GATE",
         "checks": checks,
     }
     REPORT.parent.mkdir(parents=True, exist_ok=True)

@@ -1,7 +1,9 @@
 package infinitedomain.hiveworld.client;
 
 import com.mojang.blaze3d.shaders.FogShape;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Camera;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.material.FogType;
@@ -9,7 +11,9 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.client.event.RegisterDimensionSpecialEffectsEvent;
 import net.neoforged.neoforge.client.event.ViewportEvent;
+import net.neoforged.neoforge.client.extensions.IDimensionSpecialEffectsExtension;
 import net.neoforged.neoforge.common.NeoForge;
+import org.joml.Matrix4f;
 
 public final class HiveAtmosphereClient {
     private static final ResourceLocation HIVE_DIMENSION =
@@ -50,11 +54,28 @@ public final class HiveAtmosphereClient {
                 && HIVE_DIMENSION.equals(camera.getEntity().level().dimension().location());
     }
 
-    private static final class HiveDimensionEffects extends DimensionSpecialEffects {
+    private static final class HiveDimensionEffects extends DimensionSpecialEffects
+            implements IDimensionSpecialEffectsExtension {
         private HiveDimensionEffects() {
-            // The vanilla poison-cloud prototype sits at the Vaulting threshold Y352. Multiple rendered
-            // cloud decks are the next C0075 client slice; fog volumes already layer.
+            // This height is retained only as a compatibility fallback. The extension
+            // renders the twelve accepted local decks itself.
             super(352.0F, true, SkyType.NORMAL, false, false);
+        }
+
+        @Override
+        public boolean renderClouds(ClientLevel level, int ticks, float partialTick,
+                                    PoseStack poseStack, double cameraX, double cameraY,
+                                    double cameraZ, Matrix4f modelViewMatrix,
+                                    Matrix4f projectionMatrix) {
+            HiveCloudRenderer.render(ticks, partialTick, poseStack,
+                    cameraX, cameraY, cameraZ);
+            return true;
+        }
+
+        @Override
+        public boolean tickRain(ClientLevel level, int ticks, Camera camera) {
+            HiveSulfurRain.tick(level, ticks, camera);
+            return true;
         }
 
         @Override

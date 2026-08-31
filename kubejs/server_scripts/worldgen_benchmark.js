@@ -169,7 +169,7 @@ function worldgenBenchmarkStructureStarts(server, dimension, bounds) {
 function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
     if (!WorldgenBenchmark.active) return
     if (tileIndex >= config.tiles.length) {
-        const elapsedMs = Date.now() - state.startedAtMs
+        const completionElapsedMs = Date.now() - state.startedAtMs
         worldgenBenchmarkLog({
             event: 'benchmark_completed',
             runId: String(config.runId),
@@ -179,7 +179,7 @@ function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
             tiles: Number(config.tiles.length),
             chunks: state.completedChunks,
             generationMs: state.generationMs,
-            wallClockMs: elapsedMs,
+            wallClockMs: completionElapsedMs,
             chunksPerSecond: state.generationMs > 0 ? state.completedChunks * 1000.0 / state.generationMs : 0
         })
         WorldgenBenchmark.active = false
@@ -294,7 +294,11 @@ ServerEvents.loaded(event => {
     }
 
     WorldgenBenchmark.active = true
-    const runtime = Java.loadClass('java.lang.Runtime').getRuntime()
+    let plannedChunks = 0
+    for (let plannedTileIndex = 0; plannedTileIndex < config.tiles.length; plannedTileIndex++) {
+        plannedChunks += Number(config.tiles[plannedTileIndex].widthChunks)
+            * Number(config.tiles[plannedTileIndex].depthChunks)
+    }
     worldgenBenchmarkLog({
         event: 'benchmark_started',
         runId: runId,
@@ -303,8 +307,7 @@ ServerEvents.loaded(event => {
         worldName: actualWorldName,
         seed: actualSeed,
         tiles: Number(config.tiles.length),
-        plannedChunks: config.tiles.reduce((sum, tile) => sum + Number(tile.widthChunks) * Number(tile.depthChunks), 0),
-        maxHeapBytes: Number(runtime.maxMemory())
+        plannedChunks: plannedChunks
     })
 
     worldgenBenchmarkModSnapshot(config)

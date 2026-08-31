@@ -136,8 +136,17 @@ def analyze(log_path: Path, manifest_path: Path) -> dict[str, Any]:
     run_id = str(start["runId"])
     if run_id != str(manifest["runId"]):
         raise ValueError(f"Run ID mismatch: log={run_id}, manifest={manifest['runId']}")
-    if str(start["seed"]) != str(manifest["seed"]):
-        raise ValueError(f"Seed mismatch: log={start['seed']}, manifest={manifest['seed']}")
+    reported_seed = str(start["seed"])
+    manifest_seed = str(manifest["seed"])
+    seed_validation = "exact"
+    if reported_seed != manifest_seed:
+        try:
+            precision_equivalent = float(reported_seed) == float(manifest_seed)
+        except ValueError:
+            precision_equivalent = False
+        if not precision_equivalent:
+            raise ValueError(f"Seed mismatch: log={reported_seed}, manifest={manifest_seed}")
+        seed_validation = "rhino_double_equivalent"
 
     status = "failed" if failures else "complete" if len(completions) == 1 else "incomplete"
     elapsed_values = [float(tile["elapsedMs"]) for tile in tiles]
@@ -149,7 +158,9 @@ def analyze(log_path: Path, manifest_path: Path) -> dict[str, Any]:
         "repetition": manifest["repetition"],
         "variant": str(start["variant"]),
         "suite": str(start["suite"]),
-        "seed": str(start["seed"]),
+        "seed": manifest_seed,
+        "reportedSeed": reported_seed,
+        "seedValidation": seed_validation,
         "worldName": str(start["worldName"]),
         "configurationFingerprint": manifest["configurationFingerprint"],
         "plannedChunks": int(start["plannedChunks"]),
