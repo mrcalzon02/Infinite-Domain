@@ -4,7 +4,6 @@ This regimen measures fresh chunk generation without opening a client or manuall
 
 The ordinary instance, `saves`, configurations, and mod jars are never modified. A failed run keeps its isolated runtime for diagnosis.
 
-<<<<<<< HEAD
 ## One-time dedicated-server bootstrap
 
 The CurseForge client installation does not contain NeoForge's patched dedicated-server jar or authoritative server argument file. Following the [official NeoForge server installation contract](https://docs.neoforged.net/user/docs/server/), install the pinned 21.1.248 runtime once before the first benchmark:
@@ -19,19 +18,9 @@ The bootstrap downloads the official NeoForge installer, verifies its pinned SHA
 
 The PowerShell preflight verifies the required launch arguments and every referenced library. The Python audit additionally checks ZIP integrity and the Minecraft server, BootstrapLauncher, and ModLauncher entry points. These are static launcher checks; only a completed smoke run with benchmark markers proves pack bootstrap, datapack loading, and chunk generation.
 
-The isolated server does not blindly load client-only bootstrap services. Evidenced
-headless incompatibilities live in
-`scripts/worldgen_benchmark_server_mod_policy.json`; every exclusion needs a
-single matching local jar, a reason, and observed failure evidence. The current
-policy removes Sodium because its early rendering service loads LWJGL before
-NeoForge can apply ordinary distribution guards, and Barebones McQoy because its
-mod-construction subscriber loads a client GUI class on the dedicated-server
-distribution. Benchmark manifests record the policy hash and every omitted jar,
-so server-side content cannot disappear silently. Variant-specific omissions
-remain separate and are labelled as such.
-=======
-In addition to timing data, every run now records runtime acceptance evidence needed by the reconciliation ledger. The controller records whether `lostcities`, `dungeons_arise`, and `dungeons_arise_seven_seas` were actually loaded by NeoForge; snapshots the live `STRUCTURE` and `STRUCTURE_SET` registries for both Arise namespaces; and inspects every generated benchmark chunk for valid structure starts, grouped by namespace. `result.json` preserves those observations under `acceptance`.
->>>>>>> origin/main
+The isolated server does not blindly load client-only bootstrap services. Evidenced headless incompatibilities live in `scripts/worldgen_benchmark_server_mod_policy.json`; every exclusion needs a single matching local jar, a reason, and observed failure evidence. The current policy removes Sodium because its early rendering service loads LWJGL before NeoForge can apply ordinary distribution guards, and Barebones McQoy because its mod-construction subscriber loads a client GUI class on the dedicated-server distribution. Benchmark manifests record the policy hash and every omitted jar, so server-side content cannot disappear silently. Variant-specific omissions remain separate and are labelled as such.
+
+In addition to timing data, every run records runtime acceptance evidence needed by the Infinite Domain reconciliation ledger. The controller records whether `lostcities`, `dungeons_arise`, and `dungeons_arise_seven_seas` were actually loaded by NeoForge; snapshots the live `STRUCTURE` and `STRUCTURE_SET` registries for both Arise namespaces; and inspects every generated benchmark chunk for valid structure starts, grouped by namespace. `result.json` preserves those observations under `acceptance`.
 
 ## First smoke test
 
