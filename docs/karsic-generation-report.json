@@ -2,32 +2,114 @@
   "purpose": "Karsic clean-master generation record. Generation is not production approval; assets must still pass scripts/structure_geometry_lint.py checks 1-3 and the regional structure checks before any approval is recorded.",
   "authority": "docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md",
   "culture": "karsic",
-  "selected": 3,
-  "generated": 3,
+  "selected": 7,
+  "generated": 7,
   "pending_builder": 0,
   "pending_building_types": [],
   "results": [
+    {
+      "structure_id": "kar_024_panel_block_service_premises",
+      "building_type": "retail_plinth",
+      "status": "generated",
+      "primary_stratum": "K-III",
+      "size": [
+        117,
+        46,
+        37
+      ],
+      "bays": [
+        27,
+        7
+      ],
+      "storeys": 6,
+      "ground_y": 6,
+      "repeatable_storey": true,
+      "placed_blocks": 78019,
+      "palette_states": 57,
+      "modded_blocks": 68919,
+      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_024_panel_block_service_premises_clean_master.nbt",
+      "damage_variant_path": "kubejs/data/infinite_domain/structure/karsic/kar_024_panel_block_service_premises.nbt",
+      "damage_variant_blocks": 78063,
+      "damage_variant_palette_states": 65,
+      "damage_variant_modded_blocks": 68778
+    },
     {
       "structure_id": "kar_067_series_panel_block",
       "building_type": "panel_slab",
       "status": "generated",
       "primary_stratum": "K-III",
       "size": [
-        69,
+        101,
         40,
-        61
+        37
       ],
       "bays": [
-        15,
-        13
+        23,
+        7
       ],
       "storeys": 5,
       "ground_y": 6,
       "repeatable_storey": true,
-      "placed_blocks": 49586,
-      "palette_states": 29,
-      "modded_blocks": 47148,
-      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_067_series_panel_block_clean_master.nbt"
+      "placed_blocks": 59020,
+      "palette_states": 48,
+      "modded_blocks": 52271,
+      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_067_series_panel_block_clean_master.nbt",
+      "damage_variant_path": "kubejs/data/infinite_domain/structure/karsic/kar_067_series_panel_block.nbt",
+      "damage_variant_blocks": 59040,
+      "damage_variant_palette_states": 53,
+      "damage_variant_modded_blocks": 52130
+    },
+    {
+      "structure_id": "kar_078_relay_mast",
+      "building_type": "mast_tower",
+      "status": "generated",
+      "primary_stratum": "K-III",
+      "size": [
+        27,
+        36,
+        27
+      ],
+      "bays": [
+        4,
+        4
+      ],
+      "storeys": 1,
+      "ground_y": 0,
+      "repeatable_storey": false,
+      "placed_blocks": 1332,
+      "palette_states": 19,
+      "modded_blocks": 589,
+      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_078_relay_mast_clean_master.nbt",
+      "damage_variant_path": "kubejs/data/infinite_domain/structure/karsic/kar_078_relay_mast.nbt",
+      "damage_variant_blocks": 1335,
+      "damage_variant_palette_states": 20,
+      "damage_variant_modded_blocks": 591
+    },
+    {
+      "structure_id": "kar_081_steel_water_tower",
+      "building_type": "mast_tower",
+      "status": "generated",
+      "primary_stratum": "K-III",
+      "size": [
+        45,
+        44,
+        45
+      ],
+      "bays": [
+        9,
+        9
+      ],
+      "storeys": 1,
+      "ground_y": 0,
+      "repeatable_storey": false,
+      "placed_blocks": 2948,
+      "palette_states": 21,
+      "modded_blocks": 989,
+      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_081_steel_water_tower_clean_master.nbt",
+      "damage_variant_path": "kubejs/data/infinite_domain/structure/karsic/kar_081_steel_water_tower.nbt",
+      "damage_variant_blocks": 2953,
+      "damage_variant_palette_states": 23,
+      "damage_variant_modded_blocks": 984
     },
     {
       "structure_id": "kar_083_district_heating_main",
@@ -49,7 +131,11 @@
       "placed_blocks": 710,
       "palette_states": 9,
       "modded_blocks": 426,
-      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_083_district_heating_main_clean_master.nbt"
+      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_083_district_heating_main_clean_master.nbt",
+      "damage_variant_path": "kubejs/data/infinite_domain/structure/karsic/kar_083_district_heating_main.nbt",
+      "damage_variant_blocks": 715,
+      "damage_variant_palette_states": 12,
+      "damage_variant_modded_blocks": 392
     },
     {
       "structure_id": "kar_084_transformer_kiosk",
@@ -71,7 +157,37 @@
       "placed_blocks": 949,
       "palette_states": 13,
       "modded_blocks": 368,
-      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_084_transformer_kiosk_clean_master.nbt"
+      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_084_transformer_kiosk_clean_master.nbt",
+      "damage_variant_path": "kubejs/data/infinite_domain/structure/karsic/kar_084_transformer_kiosk.nbt",
+      "damage_variant_blocks": 950,
+      "damage_variant_palette_states": 15,
+      "damage_variant_modded_blocks": 351
+    },
+    {
+      "structure_id": "kar_085_bus_shelter_and_stop",
+      "building_type": "bus_shelter",
+      "status": "generated",
+      "primary_stratum": "K-III",
+      "size": [
+        21,
+        10,
+        17
+      ],
+      "bays": [
+        3,
+        1
+      ],
+      "storeys": 1,
+      "ground_y": 0,
+      "repeatable_storey": false,
+      "placed_blocks": 533,
+      "palette_states": 15,
+      "modded_blocks": 375,
+      "path": "kubejs/data/infinite_domain/structure/karsic/masters/kar_085_bus_shelter_and_stop_clean_master.nbt",
+      "damage_variant_path": "kubejs/data/infinite_domain/structure/karsic/kar_085_bus_shelter_and_stop.nbt",
+      "damage_variant_blocks": 533,
+      "damage_variant_palette_states": 18,
+      "damage_variant_modded_blocks": 395
     }
   ]
 }

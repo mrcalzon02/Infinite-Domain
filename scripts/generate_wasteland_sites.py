@@ -7836,6 +7836,22 @@ def generate() -> None:
             ],
         }
     generated_at = datetime.now(timezone.utc).isoformat()
+    # Rebuilding the central corpus must not revoke independently validated
+    # regional approvals. Preserve every existing approval whose catalog source
+    # is outside the central wasteland tree, then replace only the central list.
+    try:
+        catalog_document = json.loads((ROOT / "structure_library" / "catalog.json").read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        catalog_document = {"structures": []}
+    regional_ids = {
+        entry.get("structure_id")
+        for entry in catalog_document.get("structures", [])
+        if "/structure/karsic/" in entry.get("source_template", "").replace("\\", "/")
+    }
+    preserved_regional = [
+        entry for entry in approvals_document.get("approvals", [])
+        if entry.get("structure_id") in regional_ids
+    ]
     approvals_document["approvals"] = [
         {
             "structure_id": f"infinite_domain:{name}",
@@ -7843,7 +7859,7 @@ def generate() -> None:
             "generated_at": generated_at,
         }
         for name in sorted(approved_names)
-    ]
+    ] + preserved_regional
     write_json(approvals_path, approvals_document)
     print(f"Generated {len(BUILDERS)} wasteland structures in {len(TIERS)} placement tiers")
     print(f"Automated production approval: {len(approved_names)}/{len(BUILDERS)} structures pass structure_geometry_lint.py checks 1-3")

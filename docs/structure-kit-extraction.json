@@ -18,6 +18,8 @@
   "modules": [
     {
       "module_id": "infinite_domain:harbor_loading_pier_warm",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         21,
         22,
@@ -31,6 +33,8 @@
     },
     {
       "module_id": "infinite_domain:harbor_loading_pier_cold",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         21,
         22,
@@ -44,19 +48,23 @@
     },
     {
       "module_id": "infinite_domain:port_customs_warehouse",
+      "boundary_refinement": "port_customs_mezzanine",
+      "geometry_hard_fail_count": 0,
       "size": [
         15,
         14,
         17
       ],
       "placed_blocks": 3315,
-      "palette_states": 20,
-      "modded_blocks": 905,
+      "palette_states": 24,
+      "modded_blocks": 947,
       "spawners": 0,
       "entities": 0
     },
     {
       "module_id": "infinite_domain:port_tunnel_control",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         14,
         13,
@@ -70,6 +78,8 @@
     },
     {
       "module_id": "infinite_domain:mountain_transport_tunnel_warm",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         15,
         14,
@@ -83,6 +93,8 @@
     },
     {
       "module_id": "infinite_domain:mountain_transport_tunnel_cold",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         15,
         14,
@@ -96,6 +108,8 @@
     },
     {
       "module_id": "infinite_domain:fuel_tank_containment_cell",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         17,
         13,
@@ -109,6 +123,8 @@
     },
     {
       "module_id": "infinite_domain:fuel_loading_rack",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         18,
         12,
@@ -122,58 +138,68 @@
     },
     {
       "module_id": "infinite_domain:market_stall_provisions",
+      "boundary_refinement": "market_stall_gable_frame",
+      "geometry_hard_fail_count": 0,
       "size": [
         10,
         9,
         9
       ],
-      "placed_blocks": 420,
-      "palette_states": 8,
-      "modded_blocks": 61,
+      "placed_blocks": 428,
+      "palette_states": 9,
+      "modded_blocks": 62,
       "spawners": 0,
       "entities": 0
     },
     {
       "module_id": "infinite_domain:market_stall_medicine",
+      "boundary_refinement": "market_stall_gable_frame",
+      "geometry_hard_fail_count": 0,
       "size": [
         10,
         9,
         9
       ],
-      "placed_blocks": 420,
-      "palette_states": 8,
-      "modded_blocks": 61,
+      "placed_blocks": 428,
+      "palette_states": 9,
+      "modded_blocks": 62,
       "spawners": 0,
       "entities": 0
     },
     {
       "module_id": "infinite_domain:market_stall_repair",
+      "boundary_refinement": "market_stall_gable_frame",
+      "geometry_hard_fail_count": 0,
       "size": [
         10,
         9,
         9
       ],
-      "placed_blocks": 420,
-      "palette_states": 8,
-      "modded_blocks": 61,
+      "placed_blocks": 428,
+      "palette_states": 9,
+      "modded_blocks": 62,
       "spawners": 0,
       "entities": 0
     },
     {
       "module_id": "infinite_domain:market_stall_livestock",
+      "boundary_refinement": "market_stall_gable_frame",
+      "geometry_hard_fail_count": 0,
       "size": [
         10,
         9,
         9
       ],
-      "placed_blocks": 420,
-      "palette_states": 8,
-      "modded_blocks": 59,
+      "placed_blocks": 428,
+      "palette_states": 9,
+      "modded_blocks": 60,
       "spawners": 0,
       "entities": 0
     },
     {
       "module_id": "infinite_domain:market_trade_lodge",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         21,
         18,
@@ -181,12 +207,14 @@
       ],
       "placed_blocks": 3626,
       "palette_states": 32,
-      "modded_blocks": 228,
+      "modded_blocks": 233,
       "spawners": 0,
       "entities": 0
     },
     {
       "module_id": "infinite_domain:market_square_well",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         9,
         5,
@@ -200,6 +228,8 @@
     },
     {
       "module_id": "infinite_domain:industrial_office_annex",
+      "boundary_refinement": "industrial_office_stair",
+      "geometry_hard_fail_count": 0,
       "size": [
         18,
         16,
@@ -207,12 +237,14 @@
       ],
       "placed_blocks": 4486,
       "palette_states": 42,
-      "modded_blocks": 733,
+      "modded_blocks": 781,
       "spawners": 0,
       "entities": 0
     },
     {
       "module_id": "infinite_domain:industrial_truck_dock_bank",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         35,
         16,
@@ -226,6 +258,8 @@
     },
     {
       "module_id": "infinite_domain:industrial_storage_rack_bay",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         26,
         15,
@@ -239,6 +273,8 @@
     },
     {
       "module_id": "infinite_domain:industrial_rail_loading_platform",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         33,
         13,
@@ -252,6 +288,8 @@
     },
     {
       "module_id": "infinite_domain:industrial_dispatch_annex",
+      "boundary_refinement": "industrial_dispatch_stair",
+      "geometry_hard_fail_count": 0,
       "size": [
         14,
         14,
@@ -259,25 +297,29 @@
       ],
       "placed_blocks": 3031,
       "palette_states": 38,
-      "modded_blocks": 930,
+      "modded_blocks": 978,
       "spawners": 0,
       "entities": 0
     },
     {
       "module_id": "infinite_domain:industrial_process_line",
+      "boundary_refinement": "industrial_process_gantry",
+      "geometry_hard_fail_count": 0,
       "size": [
         20,
         11,
         22
       ],
       "placed_blocks": 4840,
-      "palette_states": 23,
-      "modded_blocks": 1172,
+      "palette_states": 24,
+      "modded_blocks": 1187,
       "spawners": 0,
       "entities": 0
     },
     {
       "module_id": "infinite_domain:industrial_powerhouse",
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "size": [
         12,
         27,
@@ -285,7 +327,7 @@
       ],
       "placed_blocks": 3216,
       "palette_states": 26,
-      "modded_blocks": 1185,
+      "modded_blocks": 1187,
       "spawners": 0,
       "entities": 0
     }

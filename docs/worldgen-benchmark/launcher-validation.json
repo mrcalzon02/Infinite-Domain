@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "neoforge_version": "21.1.248",
+  "minecraft_version": "1.21.1",
+  "status": "pass",
+  "checks": {
+    "required_arguments": true,
+    "referenced_libraries": true,
+    "single_modlauncher": true,
+    "single_bootstraplauncher": true,
+    "artifact_integrity": true,
+    "server_mod_policy": true
+  },
+  "referenced_library_count": 66,
+  "missing_arguments": [],
+  "missing_libraries": [],
+  "artifact_failures": [],
+  "artifacts": {
+    "argument_file": {
+      "path": "libraries/net/neoforged/neoforge/21.1.248/win_args.txt",
+      "bytes": 6119,
+      "sha256": "eb15063cd3551f588c6dd211826da06b7f2d5a26f1eb5321ee6d40ab8d4b0ac3"
+    },
+    "server_jar": {
+      "path": "libraries/net/neoforged/neoforge/21.1.248/neoforge-21.1.248-server.jar",
+      "bytes": 5675624,
+      "sha256": "1808fab692dc44b2d474295d1cdd9f1fe8a7dceab4f594210873646fafdf1359",
+      "zip_integrity": true,
+      "missing_entries": []
+    },
+    "modlauncher": {
+      "path": "libraries/cpw/mods/modlauncher/11.0.5/modlauncher-11.0.5.jar",
+      "bytes": 116486,
+      "sha256": "fd9b9fc7cf043d2264ea0113eac6b258f0a71fece5b00e831bfbdf9726c78a24",
+      "zip_integrity": true,
+      "missing_entries": []
+    },
+    "bootstraplauncher": {
+      "path": "libraries/cpw/mods/bootstraplauncher/2.0.2/bootstraplauncher-2.0.2.jar",
+      "bytes": 11116,
+      "sha256": "d3f29309140540570fd6c709509706aa8fb133c1c8aef24491688f1a3f4e1d49",
+      "zip_integrity": true,
+      "missing_entries": []
+    }
+  },
+  "server_mod_policy": {
+    "path": "scripts/worldgen_benchmark_server_mod_policy.json",
+    "schema_version": 1,
+    "source_mod_count": 191,
+    "excluded_mod_count": 2,
+    "matches": [
+      {
+        "pattern": "sodium-neoforge-*.jar",
+        "jar": "sodium-neoforge-0.8.12+mc1.21.1.jar",
+        "reason": "Client rendering service requires LWJGL during early bootstrap and aborts the official headless NeoForge server before mod discovery.",
+        "evidence": "2026-08-31 dedicated smoke: sodium_service NoClassDefFoundError org/lwjgl/Version",
+        "sha256": "2f9e69ec9521e657100ef83b3bdf3f18dba6078d57f9853722d7643a577b2266"
+      },
+      {
+        "pattern": "mcqoy-*.jar",
+        "jar": "mcqoy-0.4.1+neo-1.21.jar",
+        "reason": "Client interface event subscriber loads a Minecraft GUI Screen class while constructing mods on a dedicated server.",
+        "evidence": "2026-08-31 dedicated smoke: RuntimeDistCleaner rejected net/minecraft/client/gui/screens/Screen for DEDICATED_SERVER",
+        "sha256": "5e5ae5d9eb18ec94dede5d5a9d00303708316be939f23cfe4722dfbf5bdb73ef"
+      }
+    ],
+    "errors": [],
+    "sha256": "5ddface9462f4fbbbdb2ae27ca6ca222821b1d2018c4971c26529aa80aeebf8f"
+  },
+  "scope": "archive, official argument contract, and evidenced headless-mod exclusions; does not claim a server boot or world-generation result"
+}

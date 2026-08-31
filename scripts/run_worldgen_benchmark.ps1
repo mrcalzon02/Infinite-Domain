@@ -8,6 +8,8 @@ param(
     [ValidateRange(4, 32)]
     [int]$MaxHeapGiB = 8,
     [string]$BatchId = '',
+    [string]$ServerLauncherRoot = '',
+    [switch]$ValidateLauncher,
     [switch]$KeepRuntime
 )
 
@@ -17,7 +19,15 @@ Set-StrictMode -Version Latest
 $instance = Split-Path -Parent $PSScriptRoot
 $matrixPath = Join-Path $PSScriptRoot 'worldgen_benchmark_matrix.json'
 $analyzer = Join-Path $PSScriptRoot 'analyze_worldgen_benchmark.py'
+$serverModPolicyPath = Join-Path $PSScriptRoot 'worldgen_benchmark_server_mod_policy.json'
 $matrix = Get-Content -LiteralPath $matrixPath -Raw | ConvertFrom-Json
+$serverModPolicy = Get-Content -LiteralPath $serverModPolicyPath -Raw | ConvertFrom-Json
+$neoForgeVersion = '21.1.248'
+$runsRoot = [IO.Path]::GetFullPath((Join-Path $instance 'benchmark_runs'))
+if (-not $ServerLauncherRoot) {
+    $ServerLauncherRoot = Join-Path $runsRoot ".launcher-cache\neoforge-$neoForgeVersion-server"
+}
+$ServerLauncherRoot = [IO.Path]::GetFullPath($ServerLauncherRoot)
 
 if (-not $BatchId) {
     $BatchId = '{0}_{1}_{2}' -f (Get-Date -Format 'yyyyMMdd-HHmmss'), $Variant, $Suite
@@ -26,7 +36,6 @@ if ($BatchId -notmatch '^[A-Za-z0-9._-]+$') {
     throw 'BatchId may contain only letters, digits, dots, underscores, and hyphens.'
 }
 
-$runsRoot = [IO.Path]::GetFullPath((Join-Path $instance 'benchmark_runs'))
 $batchRoot = [IO.Path]::GetFullPath((Join-Path $runsRoot $BatchId))
 if (-not $batchRoot.StartsWith($runsRoot + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
     throw 'Resolved batch directory escaped benchmark_runs.'
@@ -34,8 +43,6 @@ if (-not $batchRoot.StartsWith($runsRoot + [IO.Path]::DirectorySeparatorChar, [S
 if (Test-Path -LiteralPath $batchRoot) {
     throw "Benchmark batch already exists: $batchRoot"
 }
-New-Item -ItemType Directory -Path $batchRoot | Out-Null
-
 function Resolve-RuntimePath {
     param([string]$RuntimeRoot, [string]$RelativePath)
     $resolvedRoot = [IO.Path]::GetFullPath($RuntimeRoot)
@@ -45,6 +52,64 @@ function Resolve-RuntimePath {
         throw "Variant path escaped the isolated runtime: $RelativePath"
     }
     return $resolved
+}
+
+function New-IsolatedServerLibraries {
+    param([string]$RuntimeRoot, [string]$LauncherRoot)
+    $sourceRoot = Join-Path $LauncherRoot 'libraries'
+    $destinationRoot = Join-Path $RuntimeRoot 'libraries'
+    New-Item -ItemType Directory -Path $destinationRoot | Out-Null
+    foreach ($source in Get-ChildItem -LiteralPath $sourceRoot -Recurse -File) {
+        $relative = $source.FullName.Substring($sourceRoot.Length).TrimStart('\')
+        $destination = Resolve-RuntimePath $RuntimeRoot (Join-Path 'libraries' $relative)
+        $parent = Split-Path -Parent $destination
+        if (-not (Test-Path -LiteralPath $parent)) {
+            New-Item -ItemType Directory -Path $parent -Force | Out-Null
+        }
+        # Some Maven coordinates exceed legacy MAX_PATH once nested beneath a
+        # descriptive batch ID. PowerShell's hard-link provider accepts the
+        # Win32 extended-path prefix while Java consumes the ordinary path.
+        $extendedDestination = '\\?\' + $destination
+        $extendedSource = '\\?\' + $source.FullName
+        New-Item -ItemType HardLink -Path $extendedDestination -Target $extendedSource | Out-Null
+    }
+}
+
+function Test-IsolatedServerLibraries {
+    param([string]$LauncherRoot)
+    $testRoot = [IO.Path]::GetFullPath((Join-Path $runsRoot ('.launcher-isolation-validation-' + ('x' * 48))))
+    if (-not $testRoot.StartsWith($runsRoot + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
+        throw 'Resolved launcher-isolation validation directory escaped benchmark_runs.'
+    }
+    if (Test-Path -LiteralPath $testRoot) {
+        throw "Launcher-isolation validation directory already exists: $testRoot"
+    }
+    New-Item -ItemType Directory -Path $testRoot | Out-Null
+    try {
+        New-IsolatedServerLibraries $testRoot $LauncherRoot
+        $sourceRoot = Join-Path $LauncherRoot 'libraries'
+        $sourceFiles = @(Get-ChildItem -LiteralPath $sourceRoot -Recurse -File)
+        $destinationFiles = @(Get-ChildItem -LiteralPath (Join-Path $testRoot 'libraries') -Recurse -File)
+        if ($sourceFiles.Count -ne $destinationFiles.Count) {
+            throw "Isolated launcher copied $($destinationFiles.Count) of $($sourceFiles.Count) server-library files"
+        }
+        $missing = @($sourceFiles | Where-Object {
+            $relative = $_.FullName.Substring($sourceRoot.Length).TrimStart('\')
+            -not (Test-Path -LiteralPath (Join-Path (Join-Path $testRoot 'libraries') $relative) -PathType Leaf)
+        })
+        if ($missing.Count -gt 0) {
+            throw "Isolated launcher is missing $($missing.Count) server-library file(s)"
+        }
+        $longestPath = ($destinationFiles | Sort-Object { $_.FullName.Length } -Descending | Select-Object -First 1).FullName.Length
+        if ($longestPath -lt 260) {
+            throw "Launcher-isolation validation did not exercise an extended-length path (longest: $longestPath)"
+        }
+        return [pscustomobject]@{ files = $destinationFiles.Count; longestPath = $longestPath }
+    } finally {
+        if (Test-Path -LiteralPath $testRoot) {
+            Remove-Item -LiteralPath $testRoot -Recurse -Force
+        }
+    }
 }
 
 function Set-IsolatedTomlValue {
@@ -72,20 +137,46 @@ function Copy-IsolatedDirectory {
 }
 
 function New-IsolatedModDirectory {
-    param([string]$RuntimeRoot, [object[]]$OmitPatterns)
+    param([string]$RuntimeRoot, [object[]]$OmitPatterns, [object]$ServerModPolicy)
     $destination = Join-Path $RuntimeRoot 'mods'
     New-Item -ItemType Directory -Path $destination | Out-Null
-    foreach ($mod in Get-ChildItem -LiteralPath (Join-Path $instance 'mods') -File) {
+    $sourceMods = @(Get-ChildItem -LiteralPath (Join-Path $instance 'mods') -Filter '*.jar' -File | Sort-Object Name)
+    $omitted = [Collections.Generic.List[object]]::new()
+    foreach ($entry in @($ServerModPolicy.exclusions)) {
+        $matches = @($sourceMods | Where-Object { $_.Name -like [string]$entry.pattern })
+        if ($matches.Count -ne 1) {
+            throw "Dedicated-server exclusion '$($entry.pattern)' matched $($matches.Count) mod jars; expected exactly one"
+        }
+    }
+    foreach ($mod in $sourceMods) {
         $omit = $false
+        $source = ''
+        $reason = ''
+        foreach ($entry in @($ServerModPolicy.exclusions)) {
+            if ($mod.Name -like [string]$entry.pattern) {
+                $omit = $true
+                $source = 'dedicated_server_policy'
+                $reason = [string]$entry.reason
+                break
+            }
+        }
         foreach ($pattern in $OmitPatterns) {
             if ($mod.Name -like [string]$pattern) {
                 $omit = $true
+                $source = 'benchmark_variant'
+                $reason = "variant pattern: $pattern"
                 break
             }
         }
         if (-not $omit) {
             New-Item -ItemType HardLink -Path (Join-Path $destination $mod.Name) -Target $mod.FullName | Out-Null
+        } else {
+            $omitted.Add([pscustomobject]@{ name = $mod.Name; source = $source; reason = $reason })
         }
+    }
+    return [pscustomobject]@{
+        included = @(Get-ChildItem -LiteralPath $destination -Filter '*.jar' -File | Sort-Object Name)
+        omitted = @($omitted)
     }
 }
 
@@ -123,34 +214,46 @@ function Get-ConfigurationEntries {
 }
 
 function Get-Launcher {
+    param([string]$LauncherRoot)
     $install = 'C:\Users\Admin\curseforge\minecraft\Install'
-    $libraries = Join-Path $install 'libraries'
-    $base = Get-Content -LiteralPath (Join-Path $install 'versions\1.21.1\1.21.1.json') -Raw | ConvertFrom-Json
-    $forge = Get-Content -LiteralPath (Join-Path $install 'versions\neoforge-21.1.248\neoforge-21.1.248.json') -Raw | ConvertFrom-Json
-    $classpath = [Collections.Generic.List[string]]::new()
-    foreach ($library in @($base.libraries) + @($forge.libraries)) {
-        if ($null -ne $library.downloads.artifact.path) {
-            $candidate = Join-Path $libraries ($library.downloads.artifact.path -replace '/', '\')
-            if (Test-Path -LiteralPath $candidate) {
-                $classpath.Add($candidate)
-            }
+    $java = Join-Path $install 'java\Jre_21\bin\java.exe'
+    $argumentRelative = "libraries/net/neoforged/neoforge/$neoForgeVersion/win_args.txt"
+    $argumentFile = Join-Path $LauncherRoot ($argumentRelative -replace '/', '\')
+    $serverJar = Join-Path $LauncherRoot "libraries\net\neoforged\neoforge\$neoForgeVersion\neoforge-$neoForgeVersion-server.jar"
+    $bootstrap = Join-Path $PSScriptRoot 'bootstrap_worldgen_benchmark_server.ps1'
+    if (-not (Test-Path -LiteralPath $java -PathType Leaf)) {
+        throw "Java 21 runtime is missing: $java"
+    }
+    if (-not (Test-Path -LiteralPath $argumentFile -PathType Leaf) -or -not (Test-Path -LiteralPath $serverJar -PathType Leaf)) {
+        throw "The official NeoForge dedicated-server runtime is missing or incomplete at $LauncherRoot. Run: .\scripts\bootstrap_worldgen_benchmark_server.ps1"
+    }
+    $argumentText = Get-Content -LiteralPath $argumentFile -Raw
+    foreach ($required in @(
+        '-DlegacyClassPath=',
+        'cpw.mods.bootstraplauncher.BootstrapLauncher',
+        '--launchTarget forgeserver',
+        "--fml.neoForgeVersion $neoForgeVersion",
+        '--fml.mcVersion 1.21.1'
+    )) {
+        if (-not $argumentText.Contains($required)) {
+            throw "NeoForge server argument file is missing '$required': $argumentFile. Repair it with $bootstrap"
         }
     }
-    $modulePath = @(
-        'cpw\mods\bootstraplauncher\2.0.2\bootstraplauncher-2.0.2.jar',
-        'cpw\mods\securejarhandler\3.0.8\securejarhandler-3.0.8.jar',
-        'org\ow2\asm\asm-commons\9.10.1\asm-commons-9.10.1.jar',
-        'org\ow2\asm\asm-util\9.10.1\asm-util-9.10.1.jar',
-        'org\ow2\asm\asm-analysis\9.10.1\asm-analysis-9.10.1.jar',
-        'org\ow2\asm\asm-tree\9.10.1\asm-tree-9.10.1.jar',
-        'org\ow2\asm\asm\9.10.1\asm-9.10.1.jar',
-        'net\neoforged\JarJarFileSystems\0.4.1\JarJarFileSystems-0.4.1.jar'
-    ) | ForEach-Object { Join-Path $libraries $_ }
+    $libraryReferences = @([regex]::Matches($argumentText, 'libraries/[A-Za-z0-9_.+@/-]+\.jar') | ForEach-Object { $_.Value } | Sort-Object -Unique)
+    $missingLibraries = @($libraryReferences | Where-Object {
+        -not (Test-Path -LiteralPath (Join-Path $LauncherRoot ($_ -replace '/', '\')) -PathType Leaf)
+    })
+    if ($missingLibraries.Count -gt 0) {
+        throw "NeoForge server runtime is missing $($missingLibraries.Count) referenced library file(s). Repair it with $bootstrap"
+    }
     return [pscustomobject]@{
-        java = Join-Path $install 'java\Jre_21\bin\java.exe'
-        libraries = $libraries
-        classpath = @($classpath | Select-Object -Unique)
-        modulePath = $modulePath
+        java = $java
+        root = $LauncherRoot
+        argumentRelative = $argumentRelative
+        argumentFile = $argumentFile
+        argumentFileSha256 = (Get-FileHash -LiteralPath $argumentFile -Algorithm SHA256).Hash.ToLowerInvariant()
+        serverJarSha256 = (Get-FileHash -LiteralPath $serverJar -Algorithm SHA256).Hash.ToLowerInvariant()
+        referencedLibraries = $libraryReferences.Count
     }
 }
 
@@ -159,7 +262,16 @@ if ($LASTEXITCODE -ne 0) {
     throw 'Benchmark matrix validation failed.'
 }
 
-$launcher = Get-Launcher
+$launcher = Get-Launcher $ServerLauncherRoot
+if ($ValidateLauncher) {
+    $isolation = Test-IsolatedServerLibraries $launcher.root
+    Write-Host "NeoForge $neoForgeVersion dedicated-server launcher is valid."
+    Write-Host "Root: $($launcher.root)"
+    Write-Host "Referenced libraries: $($launcher.referencedLibraries)"
+    Write-Host "Isolated library files: $($isolation.files); longest exercised path: $($isolation.longestPath) characters"
+    exit 0
+}
+New-Item -ItemType Directory -Path $batchRoot | Out-Null
 $variantConfig = $matrix.variants.$Variant
 $suiteTiles = @($matrix.suites.$Suite)
 
@@ -168,6 +280,7 @@ for ($repetition = 1; $repetition -le $Repetitions; $repetition++) {
     $runRoot = Join-Path $batchRoot $runId
     $runtime = Join-Path $runRoot 'runtime'
     New-Item -ItemType Directory -Path $runtime | Out-Null
+    New-IsolatedServerLibraries $runtime $launcher.root
 
     foreach ($directory in @('config', 'defaultconfigs', 'kubejs', 'datapacks')) {
         Copy-IsolatedDirectory $directory $runtime
@@ -176,7 +289,7 @@ for ($repetition = 1; $repetition -le $Repetitions; $repetition++) {
     if ($null -ne $variantConfig -and $null -ne $variantConfig.PSObject.Properties['omitMods']) {
         $omitMods = @($variantConfig.omitMods)
     }
-    New-IsolatedModDirectory $runtime $omitMods
+    $stagedMods = New-IsolatedModDirectory $runtime $omitMods $serverModPolicy
 
     if ($null -ne $variantConfig -and $null -ne $variantConfig.PSObject.Properties['toml']) {
         foreach ($edit in @($variantConfig.toml)) {
@@ -267,9 +380,20 @@ white-list=true
         maxHeapGiB = $MaxHeapGiB
         createdUtc = [DateTime]::UtcNow.ToString('o')
         gitHead = [string]$gitHead
+        launcher = [ordered]@{
+            neoForgeVersion = $neoForgeVersion
+            argumentFileSha256 = $launcher.argumentFileSha256
+            serverJarSha256 = $launcher.serverJarSha256
+            referencedLibraries = $launcher.referencedLibraries
+        }
+        serverModPolicy = [ordered]@{
+            path = 'scripts/worldgen_benchmark_server_mod_policy.json'
+            sha256 = (Get-FileHash -LiteralPath $serverModPolicyPath -Algorithm SHA256).Hash.ToLowerInvariant()
+            omitted = @($stagedMods.omitted)
+        }
         configurationFingerprint = $configurationFingerprint
         configurationFiles = $configurationEntries
-        mods = @(Get-ChildItem -LiteralPath (Join-Path $runtime 'mods') -File | Sort-Object Name | ForEach-Object {
+        mods = @($stagedMods.included | ForEach-Object {
             [ordered]@{ name = $_.Name; bytes = $_.Length }
         })
         plan = $plan
@@ -278,26 +402,15 @@ white-list=true
     [IO.File]::WriteAllText($manifestPath, ($manifest | ConvertTo-Json -Depth 12), [Text.UTF8Encoding]::new($false))
 
     $jvmArgs = @(
-        '-Xms2G', "-Xmx${MaxHeapGiB}G",
-        '-Djava.net.preferIPv6Addresses=system', '-DignoreList=client-extra,neoforge-21.1.248.jar',
-        "-DlibraryDirectory=$($launcher.libraries)", '-p', ($launcher.modulePath -join ';'), '--add-modules', 'ALL-MODULE-PATH',
-        '--add-opens', 'java.base/java.util.jar=cpw.mods.securejarhandler',
-        '--add-opens', 'java.base/java.lang.invoke=cpw.mods.securejarhandler',
-        '--add-exports', 'java.base/sun.security.util=cpw.mods.securejarhandler',
-        '--add-exports', 'jdk.naming.dns/com.sun.jndi.dns=java.naming',
-        '-cp', ($launcher.classpath -join ';')
+        '-Xms2G', "-Xmx${MaxHeapGiB}G"
     )
-    $gameArgs = @(
-        '--fml.neoForgeVersion', '21.1.248', '--fml.fmlVersion', '4.0.43',
-        '--fml.mcVersion', '1.21.1', '--fml.neoFormVersion', '20240808.144430',
-        '--launchTarget', 'forgeserver', 'nogui'
-    )
+    $argumentFile = '@' + $launcher.argumentRelative
 
     Write-Host "Starting fixed-seed benchmark $runId ..."
     $consoleLog = Join-Path $runRoot 'server-console.log'
     Push-Location $runtime
     try {
-        & $launcher.java @jvmArgs 'cpw.mods.bootstraplauncher.BootstrapLauncher' @gameArgs 2>&1 | Tee-Object -FilePath $consoleLog
+        & $launcher.java @jvmArgs $argumentFile 'nogui' 2>&1 | Tee-Object -FilePath $consoleLog
         $serverExitCode = $LASTEXITCODE
     } finally {
         Pop-Location
@@ -305,13 +418,16 @@ white-list=true
 
     $latestLog = Join-Path $runtime 'logs\latest.log'
     if (-not (Test-Path -LiteralPath $latestLog)) {
-        throw "Benchmark server produced no latest.log (exit code $serverExitCode). Runtime retained at $runtime"
+        throw "Benchmark server produced no latest.log (exit code $serverExitCode). Inspect $consoleLog; runtime retained at $runtime"
     }
     Copy-Item -LiteralPath $latestLog -Destination (Join-Path $runRoot 'latest.log')
+    if ($serverExitCode -ne 0) {
+        throw "Benchmark server exited with code $serverExitCode. Inspect $consoleLog and $(Join-Path $runRoot 'latest.log'); runtime retained at $runtime"
+    }
     $resultPath = Join-Path $runRoot 'result.json'
     & python $analyzer analyze --log (Join-Path $runRoot 'latest.log') --manifest $manifestPath --output $resultPath
     $analysisExitCode = $LASTEXITCODE
-    if ($serverExitCode -ne 0 -or $analysisExitCode -ne 0) {
+    if ($analysisExitCode -ne 0) {
         throw "Benchmark $runId failed. Runtime retained at $runtime"
     }
 

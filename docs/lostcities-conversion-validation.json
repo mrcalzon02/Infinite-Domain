@@ -1,7 +1,7 @@
 {
   "purpose": "Static Lost Cities asset validation plus lossless block-state/NBT round trip. A structure is production_approved automatically once its round trip is lossless; there is no separate manual sign-off gate.",
   "valid": true,
-  "structures_checked": 170,
+  "structures_checked": 184,
   "structures": {
     "infinite_domain:abandoned_bungalow": {
       "lossless_round_trip": true,
@@ -849,6 +849,76 @@
       "production_approved": true
     },
     "infinite_domain:mountain_pass_terminator_clean_master": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_024_panel_block_service_premises": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_024_panel_block_service_premises_clean_master": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_067_series_panel_block": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_067_series_panel_block_clean_master": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_078_relay_mast": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_078_relay_mast_clean_master": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_081_steel_water_tower": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_081_steel_water_tower_clean_master": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_083_district_heating_main": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_083_district_heating_main_clean_master": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_084_transformer_kiosk": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_084_transformer_kiosk_clean_master": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_085_bus_shelter_and_stop": {
+      "lossless_round_trip": true,
+      "issues": [],
+      "production_approved": true
+    },
+    "infinite_domain:kar_085_bus_shelter_and_stop_clean_master": {
       "lossless_round_trip": true,
       "issues": [],
       "production_approved": true

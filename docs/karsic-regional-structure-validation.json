@@ -1,48 +1,41 @@
 {
   "purpose": "Cultural geometry checks that the general V2 lint does not cover.",
   "culture": "karsic",
-  "structures": 3,
-  "failing": 3,
+  "structures": 7,
+  "failing": 0,
   "results": [
     {
-      "structure_id": "kar_067_series_panel_block",
+      "structure_id": "kar_024_panel_block_service_premises",
       "checks": [
         {
           "id": "KV-1",
           "check": "repeatable-storey identity",
-          "status": "fail",
-          "detail": "4 repeatable bands compared at storey height 6",
-          "problems": [
-            "storey band 4 differs from band 1 in 84 cells"
-          ],
-          "problem_count": 1
+          "status": "pass",
+          "detail": "5 repeatable bands compared at storey height 6",
+          "problems": [],
+          "problem_count": 0
         },
         {
           "id": "KV-2",
           "check": "panel joint continuity",
-          "status": "fail",
-          "detail": "joint block immersiveengineering:concrete_brick, bay 4",
-          "problems": [
-            "storey 1: joint spacing not a multiple of the 4-block bay: [2, 3]",
-            "storey 2: joint spacing not a multiple of the 4-block bay: [2, 3]",
-            "storey 3: joint spacing not a multiple of the 4-block bay: [2, 3]",
-            "storey 4: joint spacing not a multiple of the 4-block bay: [3]"
-          ],
-          "problem_count": 4
+          "status": "skip",
+          "detail": "not a panel-jointed stratum or type",
+          "problems": [],
+          "problem_count": 0
         },
         {
           "id": "KV-3",
           "check": "plinth offset",
-          "status": "pass",
-          "detail": "the ground storey must stand one block proud of the body above it",
+          "status": "skip",
+          "detail": "single-storey or non-slab type",
           "problems": [],
           "problem_count": 0
         },
         {
           "id": "KV-4",
           "check": "vestibule presence",
-          "status": "pass",
-          "detail": "a heated building needs an outer leaf, an unheated lobby and an inner leaf",
+          "status": "skip",
+          "detail": "not a heated slab",
           "problems": [],
           "problem_count": 0
         },
@@ -50,7 +43,7 @@
           "id": "KV-5",
           "check": "basement service level and main stub",
           "status": "pass",
-          "detail": "68 heating-main cells, 58 below grade, 2 at the edge",
+          "detail": "117 heating-main cells, 107 below grade, 2 at the edge",
           "problems": [],
           "problem_count": 0
         },
@@ -59,6 +52,22 @@
           "check": "heating-main tiling",
           "status": "skip",
           "detail": "not a tiling asset",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-13",
+          "check": "mandatory utility identity",
+          "status": "skip",
+          "detail": "not one of the three mandatory native infrastructure assets",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-14",
+          "check": "mast-tower utility identity",
+          "status": "skip",
+          "detail": "not a mast-tower type",
           "problems": [],
           "problem_count": 0
         },
@@ -111,35 +120,715 @@
           "problem_count": 0
         }
       ],
-      "passed": false
+      "passed": true
+    },
+    {
+      "structure_id": "kar_067_series_panel_block",
+      "checks": [
+        {
+          "id": "KV-1",
+          "check": "repeatable-storey identity",
+          "status": "pass",
+          "detail": "4 repeatable bands compared at storey height 6",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-2",
+          "check": "panel joint continuity",
+          "status": "pass",
+          "detail": "joint block immersiveengineering:concrete_brick, bay 4",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-3",
+          "check": "plinth offset",
+          "status": "pass",
+          "detail": "the ground storey must stand one block proud of the body above it",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-4",
+          "check": "vestibule presence",
+          "status": "pass",
+          "detail": "a heated building needs an outer leaf, an unheated lobby and an inner leaf",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-5",
+          "check": "basement service level and main stub",
+          "status": "pass",
+          "detail": "101 heating-main cells, 91 below grade, 2 at the edge",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-10",
+          "check": "heating-main tiling",
+          "status": "skip",
+          "detail": "not a tiling asset",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-13",
+          "check": "mandatory utility identity",
+          "status": "skip",
+          "detail": "not one of the three mandatory native infrastructure assets",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-14",
+          "check": "mast-tower utility identity",
+          "status": "skip",
+          "detail": "not a mast-tower type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-12",
+          "check": "roof discipline",
+          "status": "pass",
+          "detail": "K-III must not carry a pitched roof",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-6",
+          "check": "changing and wash block",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-7",
+          "check": "control-room overlook",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-8",
+          "check": "signage grammar",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-9",
+          "check": "stratum pairing",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-11",
+          "check": "prohibited-motif scan",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "structure_id": "kar_078_relay_mast",
+      "checks": [
+        {
+          "id": "KV-1",
+          "check": "repeatable-storey identity",
+          "status": "skip",
+          "detail": "structure does not declare repeatable_storey",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-2",
+          "check": "panel joint continuity",
+          "status": "skip",
+          "detail": "not a panel-jointed stratum or type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-3",
+          "check": "plinth offset",
+          "status": "skip",
+          "detail": "single-storey or non-slab type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-4",
+          "check": "vestibule presence",
+          "status": "skip",
+          "detail": "not a heated slab",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-5",
+          "check": "basement service level and main stub",
+          "status": "skip",
+          "detail": "no heating main declared",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-10",
+          "check": "heating-main tiling",
+          "status": "skip",
+          "detail": "not a tiling asset",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-13",
+          "check": "mandatory utility identity",
+          "status": "skip",
+          "detail": "not one of the three mandatory native infrastructure assets",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-14",
+          "check": "mast-tower utility identity",
+          "status": "pass",
+          "detail": "braced chassis, backed ladder, real platform, equipment hut, cable route and distinct head",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-12",
+          "check": "roof discipline",
+          "status": "pass",
+          "detail": "K-III must not carry a pitched roof",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-6",
+          "check": "changing and wash block",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-7",
+          "check": "control-room overlook",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-8",
+          "check": "signage grammar",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-9",
+          "check": "stratum pairing",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-11",
+          "check": "prohibited-motif scan",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "structure_id": "kar_081_steel_water_tower",
+      "checks": [
+        {
+          "id": "KV-1",
+          "check": "repeatable-storey identity",
+          "status": "skip",
+          "detail": "structure does not declare repeatable_storey",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-2",
+          "check": "panel joint continuity",
+          "status": "skip",
+          "detail": "not a panel-jointed stratum or type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-3",
+          "check": "plinth offset",
+          "status": "skip",
+          "detail": "single-storey or non-slab type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-4",
+          "check": "vestibule presence",
+          "status": "skip",
+          "detail": "not a heated slab",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-5",
+          "check": "basement service level and main stub",
+          "status": "skip",
+          "detail": "no heating main declared",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-10",
+          "check": "heating-main tiling",
+          "status": "skip",
+          "detail": "not a tiling asset",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-13",
+          "check": "mandatory utility identity",
+          "status": "skip",
+          "detail": "not one of the three mandatory native infrastructure assets",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-14",
+          "check": "mast-tower utility identity",
+          "status": "pass",
+          "detail": "braced chassis, backed ladder, real platform, equipment hut, cable route and distinct head",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-12",
+          "check": "roof discipline",
+          "status": "pass",
+          "detail": "K-III must not carry a pitched roof",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-6",
+          "check": "changing and wash block",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-7",
+          "check": "control-room overlook",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-8",
+          "check": "signage grammar",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-9",
+          "check": "stratum pairing",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-11",
+          "check": "prohibited-motif scan",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        }
+      ],
+      "passed": true
     },
     {
       "structure_id": "kar_083_district_heating_main",
       "checks": [
         {
-          "id": "KV-0",
-          "check": "generation record",
-          "status": "fail",
-          "detail": "no generation record for this structure",
+          "id": "KV-1",
+          "check": "repeatable-storey identity",
+          "status": "skip",
+          "detail": "structure does not declare repeatable_storey",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-2",
+          "check": "panel joint continuity",
+          "status": "skip",
+          "detail": "not a panel-jointed stratum or type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-3",
+          "check": "plinth offset",
+          "status": "skip",
+          "detail": "single-storey or non-slab type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-4",
+          "check": "vestibule presence",
+          "status": "skip",
+          "detail": "not a heated slab",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-5",
+          "check": "basement service level and main stub",
+          "status": "skip",
+          "detail": "no heating main declared",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-10",
+          "check": "heating-main tiling",
+          "status": "pass",
+          "detail": "consecutive placements must read as one continuous run",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-13",
+          "check": "mandatory utility identity",
+          "status": "pass",
+          "detail": "continuous insulated main, regular saddles, road gantry and inspection point",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-14",
+          "check": "mast-tower utility identity",
+          "status": "skip",
+          "detail": "not a mast-tower type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-12",
+          "check": "roof discipline",
+          "status": "pass",
+          "detail": "K-III must not carry a pitched roof",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-6",
+          "check": "changing and wash block",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-7",
+          "check": "control-room overlook",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-8",
+          "check": "signage grammar",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-9",
+          "check": "stratum pairing",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-11",
+          "check": "prohibited-motif scan",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
           "problems": [],
           "problem_count": 0
         }
       ],
-      "passed": false
+      "passed": true
     },
     {
       "structure_id": "kar_084_transformer_kiosk",
       "checks": [
         {
-          "id": "KV-0",
-          "check": "generation record",
-          "status": "fail",
-          "detail": "no generation record for this structure",
+          "id": "KV-1",
+          "check": "repeatable-storey identity",
+          "status": "skip",
+          "detail": "structure does not declare repeatable_storey",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-2",
+          "check": "panel joint continuity",
+          "status": "skip",
+          "detail": "not a panel-jointed stratum or type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-3",
+          "check": "plinth offset",
+          "status": "skip",
+          "detail": "single-storey or non-slab type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-4",
+          "check": "vestibule presence",
+          "status": "skip",
+          "detail": "not a heated slab",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-5",
+          "check": "basement service level and main stub",
+          "status": "skip",
+          "detail": "no heating main declared",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-10",
+          "check": "heating-main tiling",
+          "status": "skip",
+          "detail": "not a tiling asset",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-13",
+          "check": "mandatory utility identity",
+          "status": "pass",
+          "detail": "windowless transformer kiosk, service door, hazard plate and fenced compound",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-14",
+          "check": "mast-tower utility identity",
+          "status": "skip",
+          "detail": "not a mast-tower type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-12",
+          "check": "roof discipline",
+          "status": "skip",
+          "detail": "K-II permits a shallow hipped roof",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-6",
+          "check": "changing and wash block",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-7",
+          "check": "control-room overlook",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-8",
+          "check": "signage grammar",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-9",
+          "check": "stratum pairing",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-11",
+          "check": "prohibited-motif scan",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
           "problems": [],
           "problem_count": 0
         }
       ],
-      "passed": false
+      "passed": true
+    },
+    {
+      "structure_id": "kar_085_bus_shelter_and_stop",
+      "checks": [
+        {
+          "id": "KV-1",
+          "check": "repeatable-storey identity",
+          "status": "skip",
+          "detail": "structure does not declare repeatable_storey",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-2",
+          "check": "panel joint continuity",
+          "status": "skip",
+          "detail": "not a panel-jointed stratum or type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-3",
+          "check": "plinth offset",
+          "status": "skip",
+          "detail": "single-storey or non-slab type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-4",
+          "check": "vestibule presence",
+          "status": "skip",
+          "detail": "not a heated slab",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-5",
+          "check": "basement service level and main stub",
+          "status": "skip",
+          "detail": "no heating main declared",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-10",
+          "check": "heating-main tiling",
+          "status": "skip",
+          "detail": "not a tiling asset",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-13",
+          "check": "mandatory utility identity",
+          "status": "pass",
+          "detail": "open-front shelter, panelled back, fixed bench, pull-in strip and route post",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-14",
+          "check": "mast-tower utility identity",
+          "status": "skip",
+          "detail": "not a mast-tower type",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-12",
+          "check": "roof discipline",
+          "status": "pass",
+          "detail": "K-III must not carry a pitched roof",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-6",
+          "check": "changing and wash block",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-7",
+          "check": "control-room overlook",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-8",
+          "check": "signage grammar",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-9",
+          "check": "stratum pairing",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        },
+        {
+          "id": "KV-11",
+          "check": "prohibited-motif scan",
+          "status": "not_implemented",
+          "detail": "depends on the interior (P5) and dressing (P7) passes, which are not yet built",
+          "problems": [],
+          "problem_count": 0
+        }
+      ],
+      "passed": true
     }
   ]
 }

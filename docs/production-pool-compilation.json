@@ -1,6 +1,24 @@
 {
-  "production_approvals": 29,
+  "production_approvals": 36,
+  "central_wasteland_approvals": 29,
+  "regional_approvals": [
+    "infinite_domain:kar_024_panel_block_service_premises",
+    "infinite_domain:kar_067_series_panel_block",
+    "infinite_domain:kar_078_relay_mast",
+    "infinite_domain:kar_081_steel_water_tower",
+    "infinite_domain:kar_083_district_heating_main",
+    "infinite_domain:kar_084_transformer_kiosk",
+    "infinite_domain:kar_085_bus_shelter_and_stop"
+  ],
   "lostcities_multibuildings": 20,
+  "regional_lostcities_multibuildings": 2,
+  "regional_citystyle_resources": [
+    "infinite_domain:converted/kar_024_panel_block_service_premises",
+    "infinite_domain:converted/kar_067_series_panel_block"
+  ],
+  "active_regional_cultures": [
+    "karsic"
+  ],
   "lostcities_scattered": 9,
   "approved_structure_ids": [
     "infinite_domain:abandoned_bungalow",
@@ -34,9 +52,12 @@
     "infinite_domain:wrecked_sedan"
   ],
   "clean_masters_integrated": 0,
-  "active_archetypes": 7,
+  "active_archetypes": 8,
+  "active_central_archetypes": 7,
+  "active_regional_archetypes": 1,
   "archetypes": {
     "highway_service_cluster": {
+      "culture": "wasteland",
       "candidate_members": [
         "infinite_domain:abandoned_motel",
         "infinite_domain:abandoned_truck_stop",
@@ -54,9 +75,12 @@
         "infinite_domain:converted/wasteland_weigh_station"
       ],
       "active": true,
-      "citystyle": "infinite_domain:wasteland_highway_service_cluster"
+      "citystyle": "infinite_domain:wasteland_highway_service_cluster",
+      "citystyle_file": "kubejs/data/infinite_domain/lostcities/citystyles/wasteland_highway_service_cluster.json",
+      "selector_biomes": null
     },
     "small_town": {
+      "culture": "wasteland",
       "candidate_members": [
         "infinite_domain:abandoned_bungalow",
         "infinite_domain:abandoned_orchard_cannery",
@@ -115,9 +139,12 @@
         "infinite_domain:converted/wilderness_substation"
       ],
       "active": true,
-      "citystyle": "infinite_domain:wasteland_small_town"
+      "citystyle": "infinite_domain:wasteland_small_town",
+      "citystyle_file": "kubejs/data/infinite_domain/lostcities/citystyles/wasteland_small_town.json",
+      "selector_biomes": null
     },
     "industrial_district": {
+      "culture": "wasteland",
       "candidate_members": [
         "infinite_domain:abandoned_create_factory",
         "infinite_domain:abandoned_oil_field",
@@ -160,9 +187,12 @@
         "infinite_domain:converted/wilderness_substation"
       ],
       "active": true,
-      "citystyle": "infinite_domain:wasteland_industrial_district"
+      "citystyle": "infinite_domain:wasteland_industrial_district",
+      "citystyle_file": "kubejs/data/infinite_domain/lostcities/citystyles/wasteland_industrial_district.json",
+      "selector_biomes": null
     },
     "port_town": {
+      "culture": "wasteland",
       "candidate_members": [
         "infinite_domain:abandoned_create_factory",
         "infinite_domain:abandoned_oil_field",
@@ -194,9 +224,12 @@
         "infinite_domain:converted/ruined_fuel_depot"
       ],
       "active": true,
-      "citystyle": "infinite_domain:wasteland_port_town"
+      "citystyle": "infinite_domain:wasteland_port_town",
+      "citystyle_file": "kubejs/data/infinite_domain/lostcities/citystyles/wasteland_port_town.json",
+      "selector_biomes": null
     },
     "rail_town": {
+      "culture": "wasteland",
       "candidate_members": [
         "infinite_domain:collapsed_subway_station",
         "infinite_domain:corporate_warehouse",
@@ -207,9 +240,12 @@
         "infinite_domain:converted/collapsed_subway_station"
       ],
       "active": true,
-      "citystyle": "infinite_domain:wasteland_rail_town"
+      "citystyle": "infinite_domain:wasteland_rail_town",
+      "citystyle_file": "kubejs/data/infinite_domain/lostcities/citystyles/wasteland_rail_town.json",
+      "selector_biomes": null
     },
     "suburb": {
+      "culture": "wasteland",
       "candidate_members": [
         "infinite_domain:abandoned_bungalow",
         "infinite_domain:abandoned_culdesac",
@@ -229,9 +265,12 @@
         "infinite_domain:converted/roadside_church_cemetery"
       ],
       "active": true,
-      "citystyle": "infinite_domain:wasteland_suburb"
+      "citystyle": "infinite_domain:wasteland_suburb",
+      "citystyle_file": "kubejs/data/infinite_domain/lostcities/citystyles/wasteland_suburb.json",
+      "selector_biomes": null
     },
     "city_district": {
+      "culture": "wasteland",
       "candidate_members": [
         "infinite_domain:abandoned_create_factory",
         "infinite_domain:abandoned_culdesac",
@@ -291,7 +330,26 @@
         "infinite_domain:converted/ruined_fuel_depot"
       ],
       "active": true,
-      "citystyle": "infinite_domain:wasteland_city_district"
+      "citystyle": "infinite_domain:wasteland_city_district",
+      "citystyle_file": "kubejs/data/infinite_domain/lostcities/citystyles/wasteland_city_district.json",
+      "selector_biomes": null
+    },
+    "karsic_mikrorayon": {
+      "culture": "karsic",
+      "candidate_members": [
+        "infinite_domain:kar_024_panel_block_service_premises",
+        "infinite_domain:kar_067_series_panel_block"
+      ],
+      "approved_members": [
+        "infinite_domain:converted/kar_024_panel_block_service_premises",
+        "infinite_domain:converted/kar_067_series_panel_block"
+      ],
+      "active": true,
+      "citystyle": "infinite_domain:karsic_mikrorayon",
+      "citystyle_file": "kubejs/data/infinite_domain/lostcities/citystyles/karsic_mikrorayon.json",
+      "selector_biomes": [
+        "#infinite_domain:karsic_region_biomes"
+      ]
     }
   }
 }

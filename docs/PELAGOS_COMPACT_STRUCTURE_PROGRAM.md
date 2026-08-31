@@ -35,7 +35,7 @@ Evidence, all currently in the repository:
 | `docs/ABYSSAL_OCEAN_PROGRAM.md` §Regional identity | "**Western Abyss — Pelagos.**" |
 | `kubejs/data/infinite_domain/tags/worldgen/structure/western_*_sites.json` | All four western site tags contain only `infinite_domain:abyssal/pelagos_*` structures. |
 | `tools/abyssal_worldgen/abyssal_factional_debris_catalog.json` `pool_contract` | `"pelagos_pool_must_stay_western_only": true`. |
-| `kubejs/data/wastelands/worldgen/world_preset/wasteland.json` | `infinite_domain:western_*` biomes are all gated on `humidity [-1.0, -0.2]`, the **negative** (western, −X) side of `custom_worldgen:east_west_gradient`. |
+| `kubejs/data/minecraft/worldgen/world_preset/normal.json` | `infinite_domain:western_*` biomes are all gated on `humidity [-1.0, -0.2]`, the **negative** (western, −X) side of `custom_worldgen:east_west_gradient`. |
 | `config/ftbquests/quests/lang/en_us.snbt` | "Take the pressure-capable submarine beyond the **western** shelf… the **Pelagos**-facing continental slope." |
 
 The planning request that produced this document described the arrangement the other way round (English-inspired culture in the **East**, Russian-inspired culture in the **West**). That is the opposite of every artefact listed above. This document therefore uses the **pack-canonical** binding — Pelagos = West — and is named by **faction**, not by hemisphere, so a later reversal is a routing change rather than a rewrite.
@@ -44,7 +44,7 @@ The planning request that produced this document described the arrangement the o
 
 Nothing in §4–§12 changes; the culture is defined by faction, not by compass. Reversal touches exactly five things, all outside this file:
 
-1. `kubejs/data/wastelands/worldgen/world_preset/wasteland.json` — swap the `humidity` bands on the Pelagos and Karsic **land** rules added by §12.
+1. `kubejs/data/minecraft/worldgen/world_preset/normal.json` — swap the `humidity` bands on the Pelagos and Karsic **land** rules added by §12.
 2. `kubejs/data/infinite_domain/tags/worldgen/biome/pelagos_region_biomes.json` — repoint at the eastern biome set.
 3. The `biomes` matcher on the Pelagos city-style selectors in the worldstyle (§11.5).
 4. The `abyssal_factional_debris_catalog.json` `pool_contract` flags plus the eight `eastern_*`/`western_*` abyssal site tags — **this drags the entire implemented deep-ocean program with it**, and is the expensive part.
@@ -1080,7 +1080,7 @@ The western lobe also has one geographic asset the eastern lobe does not: it is 
 
 ### 12.2 The gap, and the one worldgen change required
 
-`kubejs/data/wastelands/worldgen/world_preset/wasteland.json` routes the **ocean** bands by humidity — West `[-1.0, -0.2]`, seam `[-0.2, 0.2]`, East `[0.2, 1.0]` — which is how the abyssal program achieves its East/West split. The **land** rules at the end of the rule list carry **no humidity gate at all**:
+`kubejs/data/minecraft/worldgen/world_preset/normal.json` routes the **ocean** bands by humidity — West `[-1.0, -0.2]`, seam `[-0.2, 0.2]`, East `[0.2, 1.0]` — which is how the abyssal program achieves its East/West split. The **land** rules at the end of the rule list carry **no humidity gate at all**:
 
 ```
 wastelands:mountains    erosion [-1.0, -0.55]

@@ -72,6 +72,54 @@ Static proof over the density-function graph:
 `python scripts/validate_central_interior_mask.py`
 (report: `docs/central-interior-mask-validation.json`).
 
+## Pack-wide geography and multiplayer ownership gate
+
+Run `python scripts/validate_overworld_geography.py` after changing the world
+preset, regional routing, density graph, Abyssal depth chain, or structure sets.
+Its generated report is `docs/overworld-geography-validation.json`.
+
+The gate proves from live files that `minecraft:normal` is the only advertised
+Overworld preset; the central continent is guaranteed through radius 4,000 and
+feathers by 4,800; north/south retain their cold/hot ocean-separated regimes;
+east/west retain recurring large continents and Pelagos/Karsic Abyssal
+corridors; Karsic surface biomes remain eastern-only; high-fanout 2D routing
+and feature masks stay cached; and structure placement is ordinary datapack
+worldgen independent of quests, players, teams, advancements, scoreboards, and
+game stages.
+
+The canonical preset, Karsic routing, and cache wrappers are one contract. If a
+merge preserves the validator but drops those generated/data edits, this gate
+must fail rather than silently falling back to generic temperate land or an
+alternate preset.
+
+## Dedicated-server benchmark launcher
+
+The fixed-seed benchmark now uses the official NeoForge 21.1.248 dedicated-server
+installation contract instead of reconstructing a server classpath from the
+CurseForge client manifest. `scripts/bootstrap_worldgen_benchmark_server.ps1`
+downloads the pinned installer, verifies its SHA-256, and installs the patched
+server jar plus `win_args.txt` beneath ignored `benchmark_runs/.launcher-cache/`.
+Each run receives a disposable hard-linked copy of the server libraries and its
+manifest records the server-jar and argument-file hashes.
+
+Dedicated staging also applies the narrow, evidence-backed exclusions in
+`scripts/worldgen_benchmark_server_mod_policy.json`. The policy currently removes
+Sodium after a real headless smoke reached ModLauncher and failed in
+`sodium_service` on the absent LWJGL runtime, plus Barebones McQoy after the next
+smoke reached mod construction and its subscriber loaded a client GUI class on
+the dedicated-server distribution. Every exclusion must match exactly one
+installed jar, retain its reason and observed evidence, and is written with the
+policy hash into the per-run manifest; diagnostic variant omissions are tracked
+separately.
+
+Run `python scripts/validate_worldgen_benchmark_launcher.py --output
+docs/worldgen-benchmark/launcher-validation.json` for the archive-level gate. It
+proves all referenced libraries are present, the three launcher/server archives
+are intact, and the required BootstrapLauncher, ModLauncher, and Minecraft server
+entry points exist. This does not replace `-Suite smoke`: only a completed run
+with `benchmark_started`, `tile_completed`, and `benchmark_completed` markers
+proves registry/datapack load and real chunk generation.
+
 ## Deliberately not claimed complete
 
 The removed `custom_worldgen:overworld` noise-settings file was invalid and unreferenced. It omitted a surface rule, used constant final density, and could not generate the requested terrain.

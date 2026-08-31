@@ -1,10 +1,20 @@
 from __future__ import annotations
 
+import errno
 import json
+import time
 from pathlib import Path
 from typing import Any
 
-from convert_nbt_to_lostcities import ASSETS, CATALOG, FLOOR_HEIGHT, REPORT, ROOT, load_structure
+from convert_nbt_to_lostcities import (
+    ASSETS,
+    CATALOG,
+    FLOOR_HEIGHT,
+    REPORT,
+    ROOT,
+    load_structure,
+    stabilized_source_value,
+)
 
 
 VALIDATION_REPORT = ROOT / "docs" / "lostcities-conversion-validation.json"
@@ -14,9 +24,29 @@ def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def write_json(path: Path, value: Any) -> None:
+    """Write validation evidence through the same bounded Windows retry as
+    the converter.
+
+    The game/launcher scanner can briefly hold a freshly regenerated JSON
+    path and make Windows return EINVAL. Retry only that transient condition;
+    permission, path, and disk failures remain immediate errors.
+    """
+    content = json.dumps(value, indent=2) + "\n"
+    for attempt in range(12):
+        try:
+            path.write_text(content, encoding="utf-8", newline="\n")
+            return
+        except OSError as error:
+            if error.errno != errno.EINVAL or attempt == 11:
+                raise
+            time.sleep(min(0.25, 0.05 * (attempt + 1)))
+
+
 def validate_structure(entry: dict[str, Any], conversion: dict[str, Any]) -> list[str]:
     issues: list[str] = []
     source_size, source_blocks = load_structure(ROOT / entry["source_template"])
+    source_blocks = {pos: stabilized_source_value(value) for pos, value in source_blocks.items()}
     sx, sy, sz = source_size
     dimx, dimz = conversion["chunk_footprint"]
     rebuilt: dict[tuple[int, int, int], tuple[str, dict[str, Any] | None]] = {}
@@ -39,11 +69,56 @@ def validate_structure(entry: dict[str, Any], conversion: dict[str, Any]) -> lis
                 continue
             building = load_json(building_path)
             refs = building.get("parts", [])
-            expected_floors = list(range(conversion["floor_bands"]))
-            if sorted(ref.get("floor") for ref in refs) != expected_floors:
-                issues.append(f"{building_id}: floor references are incomplete")
-            for ref in refs:
-                floor = ref["floor"]
+            repeatable = conversion.get("repeatable_storey")
+            authored_refs: list[tuple[int, dict[str, Any]]] = []
+            if repeatable:
+                cellar_refs = [ref for ref in refs if ref.get("cellar") is True]
+                ground_refs = [ref for ref in refs if ref.get("ground") is True]
+                top_refs = [ref for ref in refs if ref.get("top") is True]
+                repeat_refs = [
+                    ref for ref in refs
+                    if ref.get("cellar") is False
+                    and ref.get("ground") is False
+                    and ref.get("top") is False
+                ]
+                semantic_ok = (
+                    len(refs) == 4
+                    and all(len(group) == 1 for group in (cellar_refs, ground_refs, repeat_refs, top_refs))
+                    and all("part" in ref and "floor" not in ref for ref in refs)
+                    and building.get("mincellars") == 1
+                    and building.get("maxcellars") == 1
+                    and building.get("minfloors") == repeatable["minfloors"]
+                    and building.get("maxfloors") == repeatable["maxfloors"]
+                )
+                if not semantic_ok:
+                    issues.append(f"{building_id}: repeatable cellar/ground/storey/top roles are invalid")
+                    continue
+                authored_refs = [(repeatable["cellar_band"], cellar_refs[0])]
+                authored_refs.append((repeatable["ground_band"], ground_refs[0]))
+                authored_refs.extend(
+                    (floor, repeat_refs[0])
+                    for floor in range(repeatable["repeat_source_band"], repeatable["top_band"])
+                )
+                authored_refs.append((repeatable["top_band"], top_refs[0]))
+            else:
+                expected_floors = list(range(conversion["floor_bands"]))
+                # Older approved conversions may carry one final floor-less
+                # repeat-slice fallback. It is not an authored floor and must
+                # not enter the NBT round-trip coordinates.
+                floored_refs = [ref for ref in refs if isinstance(ref.get("floor"), int)]
+                fallback_refs = [ref for ref in refs if "floor" not in ref]
+                malformed_refs = [
+                    ref for ref in refs
+                    if "floor" in ref and not isinstance(ref.get("floor"), int)
+                ]
+                if (malformed_refs or len(fallback_refs) > 1
+                        or any("part" not in ref for ref in fallback_refs)):
+                    issues.append(f"{building_id}: invalid repeat-slice fallback reference")
+                if sorted(ref["floor"] for ref in floored_refs) != expected_floors:
+                    issues.append(f"{building_id}: floor references are incomplete")
+                authored_refs = [(ref["floor"], ref) for ref in floored_refs]
+
+            for floor, ref in authored_refs:
                 part_id = ref["part"]
                 part_path = ASSETS / "parts" / f"{part_id.split(':', 1)[1]}.json"
                 if not part_path.is_file():
@@ -108,7 +183,7 @@ def main() -> None:
         "structures_checked": len(results),
         "structures": results,
     }
-    VALIDATION_REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
+    write_json(VALIDATION_REPORT, report)
     if not report["valid"]:
         raise SystemExit("\n".join(f"{name}: {', '.join(result['issues'])}" for name, result in results.items() if result["issues"]))
     print(f"Validated {len(results)} lossless NBT-to-Lost-Cities round trips; runtime codec validation still pending")

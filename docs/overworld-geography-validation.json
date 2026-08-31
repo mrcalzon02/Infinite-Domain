@@ -188,7 +188,7 @@
       "id": "OG-11",
       "check": "high-fanout horizontal geography fields retain chunk-local caches",
       "passed": true,
-      "detail": "central/directional continents, climate routing, and abyssal band masks are cache_2d or flat_cache wrapped",
+      "detail": "central/directional continents, climate routing, abyssal band masks, and repeated feature patterns are cache_2d or flat_cache wrapped",
       "evidence": {
         "uncached": [],
         "checked": [
@@ -203,7 +203,13 @@
           "abyssal_plain_mask",
           "abyssal_fracture_mask",
           "hadal_trench_mask",
-          "abyssal_slope_band_mask"
+          "abyssal_slope_band_mask",
+          "abyssal_coarse_fracture_pattern",
+          "abyssal_diffuse_roughness_pattern",
+          "abyssal_fine_fracture_pattern",
+          "abyssal_mottled_collapse_pattern",
+          "abyssal_turbidity_channel_pattern",
+          "abyssal_vent_caldera_pattern"
         ]
       }
     },
@@ -211,7 +217,7 @@
       "id": "OG-12",
       "check": "structure spawning is datapack-owned and independent of quests, players, and teams",
       "passed": true,
-      "detail": "289 structures and 146 structure sets use standard worldgen placement with registered references; no scripted quest-placement bridge exists",
+      "detail": "290 structures and 147 structure sets use standard worldgen placement with registered references; no scripted quest-placement bridge exists",
       "evidence": {
         "gated_json": [],
         "invalid_placements": [],

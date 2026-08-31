@@ -21,11 +21,11 @@ C0006 (height contract).
 
 ```
 kubejs/data/infinite_domain/
-  dimension/hive_world.json                         # hand-authored
+  dimension/hive_world.json                         # generated (…generate_hive_world_biome_routing.py)
   dimension_type/hive_world.json                    # hand-authored
   worldgen/
     noise_settings/hive_world.json                  # generated (scripts/endgame/generate_hive_world_noise.py)
-    density_function/hive_world/*.json               # generated (…generate_hive_world_density.py)
+    density_function/hive_world/*.json               # generator-partitioned density + biome routing fields
     biome/hive_world_*.json                          # generated (…generate_hive_world_biomes.py)
     configured_feature/hive_world/*.json             # generated
     placed_feature/hive_world/*.json                 # generated
@@ -98,7 +98,7 @@ saves/Infinite Domain - Hive World QA/ # gitignored QA world
 
 `docs/endgame/generated-output-manifest.json` is the single index. Every file under a
 "generated" path in §2 has exactly one `generator` entry. Hand-authored files
-(`dimension/hive_world.json`, `dimension_type/hive_world.json`, arrival NBT) are listed
+(`dimension_type/hive_world.json`, arrival NBT, and authored band modules) are listed
 with `"generator": null` and `"hand_authored": true`. Manual edits to generated files
 are forbidden (`docs/Endgame.md` §17.3); regenerate instead.
 

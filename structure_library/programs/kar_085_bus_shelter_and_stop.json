@@ -1,7 +1,7 @@
 {
   "structure_id": "infinite_domain:kar_085_bus_shelter_and_stop",
   "culture": "karsic",
-  "building_type": "kiosk",
+  "building_type": "bus_shelter",
   "conversion_class": "N",
   "base_master": null,
   "primary_stratum": "K-III",
@@ -18,18 +18,19 @@
   "archetype": "Bus Shelter",
   "roster_note": "Concrete shelter with a panelled back and a numbered route plate. Extremely cheap, extremely legible.",
   "damage_archetype": null,
-  "utility_program": [
-    "a single small windowless or slot-windowed volume",
-    "a ventilation louvre on at least one face",
-    "one service door with a hasp",
-    "the equipment or shelter function the kiosk exists for",
-    "a hazard plate and a numbered identification plate"
+  "transit_program": [
+    "an open-front concrete shelter with a panel-jointed back wall",
+    "a continuous weather canopy over the waiting bay",
+    "a fixed bench visible from the road",
+    "a numbered route plate on a freestanding stop post",
+    "a paved pull-in strip and raised waiting curb"
   ],
   "circulation": [
-    "one door, opening outward onto a hard surface"
+    "the full road-facing edge stays open and step-free",
+    "the waiting bay remains passable from either end"
   ],
   "damage_constraints": [
-    "the door is forced and the interior stripped; the shell is intact",
+    "one side screen is broken but the canopy, bench and route post remain legible",
     "derive all damage and occupation only from the immutable clean master",
     "use an authored fracture with a gravity-consistent rubble apron, never a cleared box and never per-block random deletion"
   ],
@@ -42,7 +43,8 @@
       "floor_slices"
     ],
     "required_manual_checks": [
-      "it recurs identically wherever it appears; that recurrence is the point"
+      "the silhouette reads as a transit shelter rather than an equipment kiosk",
+      "the route post and bench remain visible from the road-facing approach"
     ]
   }
 }

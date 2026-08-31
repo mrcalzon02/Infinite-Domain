@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "exclusions": [
+    {
+      "pattern": "sodium-neoforge-*.jar",
+      "reason": "Client rendering service requires LWJGL during early bootstrap and aborts the official headless NeoForge server before mod discovery.",
+      "evidence": "2026-08-31 dedicated smoke: sodium_service NoClassDefFoundError org/lwjgl/Version"
+    },
+    {
+      "pattern": "mcqoy-*.jar",
+      "reason": "Client interface event subscriber loads a Minecraft GUI Screen class while constructing mods on a dedicated server.",
+      "evidence": "2026-08-31 dedicated smoke: RuntimeDistCleaner rejected net/minecraft/client/gui/screens/Screen for DEDICATED_SERVER"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
-  "contract": "EG-P03-S05-C0046-static-candidate-v1",
+  "contract": "EG-P03-S05-C0046-static-candidate-v2",
   "passed": true,
-  "check_count": 7,
+  "check_count": 8,
   "failure_count": 0,
   "runtime_acceptance": "pending in-client codec load, /locate biome sampling, chunk seams, and P03-GATE",
   "checks": [
@@ -35,15 +35,33 @@
     },
     {
       "id": "HBR-2",
-      "check": "biome depth consumes the accepted full-height gradient",
+      "check": "biome routing consumes the horizontal mask and full-height depth gradient",
       "passed": true,
-      "detail": "depth maps Y-64..607 monotonically from +1 to -1",
+      "detail": "continents emits discrete wastes/apron/core values; depth maps Y-64..607 monotonically from +1 to -1",
       "evidence": {
-        "type": "minecraft:y_clamped_gradient",
-        "from_y": -64,
-        "to_y": 607,
-        "from_value": 1.0,
-        "to_value": -1.0
+        "continents": "infinite_domain:hive_world/biome_region",
+        "biome_region": {
+          "type": "minecraft:range_choice",
+          "input": "infinite_domain:hive_world/core_mask",
+          "min_inclusive": 0.0,
+          "max_exclusive": 2.0,
+          "when_in_range": 0.5,
+          "when_out_of_range": {
+            "type": "minecraft:range_choice",
+            "input": "infinite_domain:hive_world/apron_mask",
+            "min_inclusive": 0.0,
+            "max_exclusive": 2.0,
+            "when_in_range": -0.2,
+            "when_out_of_range": -1.0
+          }
+        },
+        "depth": {
+          "type": "minecraft:y_clamped_gradient",
+          "from_y": -64,
+          "to_y": 607,
+          "from_value": 1.0,
+          "to_value": -1.0
+        }
       }
     },
     {
@@ -392,63 +410,153 @@
     },
     {
       "id": "HBR-6",
-      "check": "band districts and band biomes share exact placement ownership",
+      "check": "band districts, pools, modules, and biomes share exact placement ownership",
       "passed": true,
-      "detail": "each Y-bounded district is eligible only in its matching core biome",
+      "detail": "each Y-bounded district uses its matching biome, exact authored modules, and a unique deterministic salt",
       "evidence": {
         "drown": {
-          "expected": [
+          "passed": true,
+          "biome": [
             "infinite_domain:hive_world_drown"
           ],
-          "actual": [
-            "infinite_domain:hive_world_drown"
-          ],
-          "passed": true
+          "start_height": {
+            "type": "minecraft:uniform",
+            "min_inclusive": {
+              "absolute": -48
+            },
+            "max_inclusive": {
+              "absolute": -8
+            }
+          },
+          "size": 4,
+          "placement": {
+            "type": "minecraft:random_spread",
+            "spacing": 28,
+            "separation": 12,
+            "salt": 927133
+          },
+          "pool_roles_exact": true,
+          "missing_modules": []
         },
         "underworks": {
-          "expected": [
+          "passed": true,
+          "biome": [
             "infinite_domain:hive_world_underworks"
           ],
-          "actual": [
-            "infinite_domain:hive_world_underworks"
-          ],
-          "passed": true
+          "start_height": {
+            "type": "minecraft:uniform",
+            "min_inclusive": {
+              "absolute": 12
+            },
+            "max_inclusive": {
+              "absolute": 84
+            }
+          },
+          "size": 4,
+          "placement": {
+            "type": "minecraft:random_spread",
+            "spacing": 28,
+            "separation": 12,
+            "salt": 935052
+          },
+          "pool_roles_exact": true,
+          "missing_modules": []
         },
         "furnace": {
-          "expected": [
+          "passed": true,
+          "biome": [
             "infinite_domain:hive_world_furnace"
           ],
-          "actual": [
-            "infinite_domain:hive_world_furnace"
-          ],
-          "passed": true
+          "start_height": {
+            "type": "minecraft:uniform",
+            "min_inclusive": {
+              "absolute": 112
+            },
+            "max_inclusive": {
+              "absolute": 192
+            }
+          },
+          "size": 5,
+          "placement": {
+            "type": "minecraft:random_spread",
+            "spacing": 28,
+            "separation": 12,
+            "salt": 942971
+          },
+          "pool_roles_exact": true,
+          "missing_modules": []
         },
         "billet": {
-          "expected": [
+          "passed": true,
+          "biome": [
             "infinite_domain:hive_world_billet"
           ],
-          "actual": [
-            "infinite_domain:hive_world_billet"
-          ],
-          "passed": true
+          "start_height": {
+            "type": "minecraft:uniform",
+            "min_inclusive": {
+              "absolute": 224
+            },
+            "max_inclusive": {
+              "absolute": 336
+            }
+          },
+          "size": 5,
+          "placement": {
+            "type": "minecraft:random_spread",
+            "spacing": 28,
+            "separation": 12,
+            "salt": 950890
+          },
+          "pool_roles_exact": true,
+          "missing_modules": []
         },
         "vaulting": {
-          "expected": [
+          "passed": true,
+          "biome": [
             "infinite_domain:hive_world_vaulting"
           ],
-          "actual": [
-            "infinite_domain:hive_world_vaulting"
-          ],
-          "passed": true
+          "start_height": {
+            "type": "minecraft:uniform",
+            "min_inclusive": {
+              "absolute": 368
+            },
+            "max_inclusive": {
+              "absolute": 464
+            }
+          },
+          "size": 6,
+          "placement": {
+            "type": "minecraft:random_spread",
+            "spacing": 28,
+            "separation": 12,
+            "salt": 958809
+          },
+          "pool_roles_exact": true,
+          "missing_modules": []
         },
         "crown": {
-          "expected": [
+          "passed": true,
+          "biome": [
             "infinite_domain:hive_world_crown"
           ],
-          "actual": [
-            "infinite_domain:hive_world_crown"
-          ],
-          "passed": true
+          "start_height": {
+            "type": "minecraft:uniform",
+            "min_inclusive": {
+              "absolute": 496
+            },
+            "max_inclusive": {
+              "absolute": 584
+            }
+          },
+          "size": 6,
+          "placement": {
+            "type": "minecraft:random_spread",
+            "spacing": 28,
+            "separation": 12,
+            "salt": 966728
+          },
+          "pool_roles_exact": true,
+          "missing_modules": []
         }
       }
     },
@@ -466,6 +574,29 @@
         "present": true,
         "unrouted": true,
         "unplaced": true
+      }
+    },
+    {
+      "id": "HBR-8",
+      "check": "generator ownership is complete and the legacy placement set is inert",
+      "passed": true,
+      "detail": "all active biome/district JSON has one generator; band NBT is declared authored input; the unrouted compatibility district cannot schedule starts",
+      "evidence": {
+        "ownership_exact": true,
+        "legacy_structure_biomes": [
+          "infinite_domain:hive_world_sump",
+          "infinite_domain:hive_world_works",
+          "infinite_domain:hive_world_vault"
+        ],
+        "legacy_set": {
+          "structures": [],
+          "placement": {
+            "type": "minecraft:random_spread",
+            "spacing": 20,
+            "separation": 8,
+            "salt": 927132
+          }
+        }
       }
     }
   ]

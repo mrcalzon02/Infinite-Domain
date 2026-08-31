@@ -61,6 +61,21 @@
       "categories": ["residential", "commercial", "civic", "industrial", "utility_infrastructure"],
       "road_connections": ["main_road", "local_road", "pedestrian"],
       "explicit_include": []
+    },
+    "karsic_mikrorayon": {
+      "culture": "karsic",
+      "lostcities_citystyle": "infinite_domain:karsic_mikrorayon",
+      "settlement_types": ["town_center", "residential"],
+      "categories": ["residential", "commercial"],
+      "road_connections": ["main_road", "local_road", "pedestrian"],
+      "explicit_include": [
+        "infinite_domain:kar_067_series_panel_block",
+        "infinite_domain:kar_024_panel_block_service_premises"
+      ],
+      "selection_factors": {
+        "infinite_domain:kar_067_series_panel_block": 3.0,
+        "infinite_domain:kar_024_panel_block_service_premises": 1.0
+      }
     }
   }
 }

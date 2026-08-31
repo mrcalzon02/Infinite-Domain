@@ -8,9 +8,10 @@ from collections import Counter
 from pathlib import Path
 
 from build_structure_qa_world import NbtList, Reader, Tag
-from convert_nbt_to_lostcities import state_string, tag_value
+from convert_nbt_to_lostcities import load_structure, state_string, tag_value
 from generate_wasteland_sites import STRUCTURE_BLOCK_REPLACEMENTS, Template
 import extract_modular_structure_kits as extractor
+from structure_geometry_lint import lint_structure, positions_from_load_structure
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "structure_library" / "modules" / "structure-kits.json"
@@ -99,15 +100,28 @@ def main() -> None:
         sx, sy, sz = source.size
         if not (0 <= x1 <= x2 < sx and 0 <= y1 <= y2 < sy and 0 <= z1 <= z2 < sz):
             issues.append("extraction bounds leave the source template")
-        expected = extractor.crop(source, tuple(record["source_bounds_inclusive"]))
+        expected = extractor.extract_module(spec, source)
         path = ROOT / record["source_template"]
         size, actual = actual_snapshot(path)
         if size != tuple(record["size"]) or size != expected.size:
             issues.append("catalog, source crop and output NBT dimensions disagree")
         if actual != expected_snapshot(expected):
-            issues.append("output NBT is not an exact stabilized crop of the declared clean master")
+            issues.append("output NBT is not the exact refined module derived from the declared clean master")
+        if record.get("boundary_refinement") != spec.refinement:
+            issues.append("catalog boundary refinement disagrees with extraction specification")
         if hashlib.sha256(path.read_bytes()).hexdigest() != record.get("source_sha256"):
             issues.append("output NBT hash disagrees with catalog")
+        loaded_size, loaded_blocks = load_structure(path)
+        lint = lint_structure(
+            spec.module_id,
+            loaded_size,
+            positions_from_load_structure(loaded_size, loaded_blocks),
+        )
+        if not lint.passed:
+            issues.append(f"geometry gate reports {lint.hard_fail_count} hard-fail finding(s)")
+        catalog_gate = record.get("geometry_gate", {})
+        if catalog_gate.get("passed") is not True or catalog_gate.get("hard_fail_count") != 0:
+            issues.append("catalog does not record a zero-hard-fail geometry gate")
         palette = {state.split("[", 1)[0] for state, _nbt in actual.values()}
         prohibited = sorted(palette & set(STRUCTURE_BLOCK_REPLACEMENTS))
         if prohibited:
@@ -134,6 +148,8 @@ def main() -> None:
             "size": list(size),
             "placed_records_including_air": len(actual),
             "palette_blocks": len(palette),
+            "boundary_refinement": spec.refinement,
+            "geometry_hard_fail_count": lint.hard_fail_count,
             "issues": issues,
         }
     for kit, required in REQUIRED_ROLE_PREFIXES.items():
@@ -141,7 +157,7 @@ def main() -> None:
         if missing:
             failures.append(f"{kit}: missing representative module roles: {', '.join(missing)}")
     report = {
-        "scope": "Exact clean-master crop, stabilized palette, connector declaration, licensing and representative kit-role validation.",
+        "scope": "Deterministic clean-master extraction plus boundary refinement, zero-hard-fail geometry, stabilized palette, connector declaration, licensing and representative kit-role validation.",
         "kits_checked": len(kit_roles),
         "modules_checked": len(records),
         "source_clean_masters": len({record["source_clean_master"] for record in records}),

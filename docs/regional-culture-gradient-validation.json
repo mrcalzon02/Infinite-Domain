@@ -25,24 +25,27 @@
     {
       "id": "RC-2a",
       "check": "city_humidity references the culture gradient",
-      "passed": false,
-      "detail": "referrers of custom_worldgen:regional_culture_gradient: none",
-      "evidence": []
+      "passed": true,
+      "detail": "referrers of custom_worldgen:regional_culture_gradient: ['custom_worldgen:city_humidity']",
+      "evidence": [
+        "custom_worldgen:city_humidity"
+      ]
     },
     {
       "id": "RC-2b",
       "check": "the culture gradient is referenced by nothing else",
-      "passed": false,
+      "passed": true,
       "detail": "must be exactly {city_humidity} so the change cannot leak into another chain",
-      "evidence": []
+      "evidence": [
+        "custom_worldgen:city_humidity"
+      ]
     },
     {
       "id": "RC-2c",
       "check": "the old gradient now feeds only the culture gradient",
-      "passed": false,
-      "detail": "referrers of custom_worldgen:regional_east_west_gradient: ['custom_worldgen:city_humidity', 'custom_worldgen:regional_culture_gradient']",
+      "passed": true,
+      "detail": "referrers of custom_worldgen:regional_east_west_gradient: ['custom_worldgen:regional_culture_gradient']",
       "evidence": [
-        "custom_worldgen:city_humidity",
         "custom_worldgen:regional_culture_gradient"
       ]
     },
@@ -92,10 +95,10 @@
       "id": "RC-9",
       "check": "the change is confined to the central continent and its feather",
       "passed": true,
-      "detail": "city_humidity differs from its pre-change value at 0 sampled probes, none beyond r = 4800 (max changed r = 0.0)",
+      "detail": "city_humidity differs from its pre-change value at 291 sampled probes, none beyond r = 4800 (max changed r = 4799.0)",
       "evidence": {
-        "changed_probe_count": 0,
-        "max_changed_radius": 0.0
+        "changed_probe_count": 291,
+        "max_changed_radius": 4799.0
       }
     },
     {
@@ -120,6 +123,6 @@
       "evidence": []
     }
   ],
-  "passed": false,
+  "passed": true,
   "runtime_validation": "This is a static proof over the density-function graph. Actual in-world biome placement, terrain height and chunk generation cost remain unmeasured."
 }

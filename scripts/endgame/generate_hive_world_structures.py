@@ -13,6 +13,11 @@ Emits (do not hand-edit):
   kubejs/data/infinite_domain/worldgen/structure_set/hive_world_district.json
   kubejs/data/infinite_domain/loot_table/chests/hive_world_salvage.json
 
+This is the compatibility/spike grammar. Fresh generation is owned by the six
+band-specific districts from generate_hive_world_band_districts.py. The legacy
+structure definition remains loadable for existing level data, while its set is
+deliberately inert.
+
 Topology: transit_hub (start) -> 4 connectors draw from the `branch` pool
 {corridor, corridor_bend, habitation_cell, industrial_bay, stair_shaft}, fallback
 `terminal` {bulkhead}. Corridors, bays and stairs re-draw from `branch`; rooms are
@@ -323,11 +328,14 @@ def main() -> int:
         "liquid_settings": "ignore_waterlogging",
     })
     base.write_json(DATA / "worldgen/structure_set/hive_world_district.json", {
-        "structures": [{"structure": "infinite_domain:hive_world_district", "weight": 1}],
-        "placement": {"type": "minecraft:random_spread", "spacing": 20, "separation": 8, "salt": 927133},
+        "structures": [],
+        "placement": {"type": "minecraft:random_spread", "spacing": 20, "separation": 8, "salt": 927132},
     })
     base.write_json(DATA / "loot_table/chests/hive_world_salvage.json", LOOT)
-    print(f"wrote {len(MODULES)} modules {placed}, {len(POOLS)} pools, 1 structure + set + loot table")
+    print(
+        f"wrote {len(MODULES)} compatibility modules {placed}, {len(POOLS)} pools, "
+        "1 loadable structure + retired set + loot table"
+    )
     return 0
 
 

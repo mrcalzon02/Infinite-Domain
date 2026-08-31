@@ -1,7 +1,7 @@
 {
-  "scope": "Seven settlement grammars with catalog-driven candidate zoning and approval-gated Lost Cities compilation.",
-  "archetypes_checked": 7,
-  "candidate_structures_checked": 73,
+  "scope": "Culture-aware settlement grammars with catalog-driven zoning and approval-gated Lost Cities compilation.",
+  "archetypes_checked": 8,
+  "candidate_structures_checked": 75,
   "all_candidates_zoned": true,
   "static_wiring_passed": true,
   "production_admission": "evidence_backed_approvals_only",
@@ -25,6 +25,8 @@
         "main_road"
       ],
       "lostcities_citystyle": "infinite_domain:wasteland_highway_service_cluster",
+      "culture": "wasteland",
+      "selection_factors": {},
       "production_activation": "approval_compiler"
     },
     "small_town": {
@@ -81,6 +83,8 @@
         "pedestrian"
       ],
       "lostcities_citystyle": "infinite_domain:wasteland_small_town",
+      "culture": "wasteland",
+      "selection_factors": {},
       "production_activation": "approval_compiler"
     },
     "industrial_district": {
@@ -123,6 +127,8 @@
         "rail_siding"
       ],
       "lostcities_citystyle": "infinite_domain:wasteland_industrial_district",
+      "culture": "wasteland",
+      "selection_factors": {},
       "production_activation": "approval_compiler"
     },
     "port_town": {
@@ -156,6 +162,8 @@
         "rail_siding"
       ],
       "lostcities_citystyle": "infinite_domain:wasteland_port_town",
+      "culture": "wasteland",
+      "selection_factors": {},
       "production_activation": "approval_compiler"
     },
     "rail_town": {
@@ -172,6 +180,8 @@
         "rail_siding"
       ],
       "lostcities_citystyle": "infinite_domain:wasteland_rail_town",
+      "culture": "wasteland",
+      "selection_factors": {},
       "production_activation": "approval_compiler"
     },
     "suburb": {
@@ -196,6 +206,8 @@
         "main_road"
       ],
       "lostcities_citystyle": "infinite_domain:wasteland_suburb",
+      "culture": "wasteland",
+      "selection_factors": {},
       "production_activation": "approval_compiler"
     },
     "city_district": {
@@ -253,6 +265,25 @@
         "main_road"
       ],
       "lostcities_citystyle": "infinite_domain:wasteland_city_district",
+      "culture": "wasteland",
+      "selection_factors": {},
+      "production_activation": "approval_compiler"
+    },
+    "karsic_mikrorayon": {
+      "candidate_count": 2,
+      "candidate_members": [
+        "infinite_domain:kar_024_panel_block_service_premises",
+        "infinite_domain:kar_067_series_panel_block"
+      ],
+      "road_connector_classes": [
+        "main_road"
+      ],
+      "lostcities_citystyle": "infinite_domain:karsic_mikrorayon",
+      "culture": "karsic",
+      "selection_factors": {
+        "infinite_domain:kar_067_series_panel_block": 3.0,
+        "infinite_domain:kar_024_panel_block_service_premises": 1.0
+      },
       "production_activation": "approval_compiler"
     }
   }

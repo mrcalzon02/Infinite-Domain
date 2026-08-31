@@ -3,108 +3,108 @@
   "zsize": 16,
   "slices": [
     [
-      "***(****%****   ",
-      "*%***(****%**   ",
-      "***%***(****%   ",
-      "%****%***(***   ",
-      "**%****%***(*   ",
-      "****%****%***   ",
-      "*%****%****%*   ",
-      "***%****%****   ",
-      "(****%****%**   ",
-      "**(****%****%   ",
-      "%***(****%***   ",
-      "**%***(****%*   ",
-      "****%***(****   ",
-      "))))))))))(**   ",
-      "))))))))))**(   ",
-      "))))))))))%**   "
+      "(((((((((((''   ",
+      "(((((((((((''   ",
+      "((((((((((('+   ",
+      "((((((((((('+   ",
+      "((((((((((('+   ",
+      "((((((((((('+   ",
+      "((((((((((('+   ",
+      "((((((((((('+   ",
+      "((((((((((('-   ",
+      "((((((((((('-   ",
+      "((((((((((('-   ",
+      "((((((((((('-   ",
+      "((((((((((('-   ",
+      ",,,,,,,,,,''-   ",
+      ",,,,,,,,,,//-   ",
+      ",,,,,,,,,,//-   "
     ],
     [
-      ",,,,,,,,,,      ",
-      ",,,,,,,,,,      ",
-      ",,,,,,,,,,      ",
-      ",,,,,,,,,,      ",
-      ",,,,,,,,,,      ",
-      ",,,,,,,,,,      ",
-      ",,,,,,,,,,      ",
-      ",,,,,,,,,,      ",
-      ",,,,,,,,,,      ",
-      ",,,,,,,,,,      ",
-      ",,,,,,,,,,      ",
-      ",,,,,,,,,,      ",
+      "..........      ",
+      "..........      ",
+      "..........      ",
+      "..........      ",
+      "..........      ",
+      "..........      ",
+      "..........      ",
+      "..........      ",
+      "..........      ",
+      "..........      ",
+      "..........      ",
+      "..........      ",
       "                ",
-      "           2    ",
+      "           5    ",
       "                ",
       "                "
     ],
     [
-      " /////// 1      ",
-      "      +  1      ",
-      "         1      ",
-      "    0    1      ",
-      "         1      ",
-      "3333-33331      ",
-      "         1      ",
-      "         1      ",
-      "  4   !  &      ",
-      "       $ 1      ",
-      "         1      ",
-      "1111111111      ",
+      " 2222222 4      ",
+      "         4      ",
+      "         4      ",
+      "    %    4      ",
+      "         4      ",
+      "6666066664      ",
+      "         4      ",
+      "         4      ",
+      "  $   !  )      ",
+      "    3  & 4      ",
+      "         4      ",
+      "4444444444      ",
       "                ",
-      "           2    ",
-      "                ",
-      "                "
-    ],
-    [
-      "         1      ",
-      "         1      ",
-      "      +  1      ",
-      "         1      ",
-      "         1      ",
-      "3333.33331      ",
-      "         1      ",
-      "         1      ",
-      "         '      ",
-      "         1      ",
-      "         1      ",
-      "1111111111      ",
-      "                ",
-      "                ",
+      "           5    ",
       "                ",
       "                "
     ],
     [
-      "         1      ",
-      "         1      ",
-      "         1      ",
-      "      +  1      ",
-      "         1      ",
-      "3333333331      ",
-      "         1      ",
-      "         1      ",
-      "         1      ",
-      "         1      ",
-      "         1      ",
-      "1111111111      ",
+      "         4      ",
+      "         4      ",
+      "         4      ",
+      "         4      ",
+      "         4      ",
+      "6666166664      ",
+      "         4      ",
+      "         4      ",
+      "         *      ",
+      "    3    4      ",
+      "         4      ",
+      "4444444444      ",
       "                ",
       "                ",
       "                ",
       "                "
     ],
     [
-      "         1      ",
-      "         1      ",
-      "         1      ",
-      "         1      ",
-      "      +  1      ",
-      "3333333331      ",
-      "         1      ",
-      "         1      ",
-      "         1      ",
-      "         1      ",
-      "         1      ",
-      "1111111111      ",
+      "         4      ",
+      "         4      ",
+      "         4      ",
+      "         4      ",
+      "         4      ",
+      "6666666664      ",
+      "         4      ",
+      "         4      ",
+      "         4      ",
+      "    3    4      ",
+      "         4      ",
+      "4444444444      ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "         4      ",
+      "         4      ",
+      "         4      ",
+      "         4      ",
+      "         4      ",
+      "6666666664      ",
+      "         4      ",
+      "         4      ",
+      "         4      ",
+      "    3    4      ",
+      "         4      ",
+      "4444444444      ",
       "                ",
       "                ",
       "                ",
@@ -119,6 +119,14 @@
       },
       {
         "char": "$",
+        "block": "kubejs:ruined_cauldron"
+      },
+      {
+        "char": "%",
+        "block": "kubejs:ruined_stonecutter[facing=north]"
+      },
+      {
+        "char": "&",
         "block": "minecraft:chest[facing=west,type=single,waterlogged=false]",
         "tag": {
           "id": "minecraft:chest",
@@ -126,68 +134,68 @@
         }
       },
       {
-        "char": "%",
+        "char": "'",
         "block": "minecraft:coarse_dirt"
       },
       {
-        "char": "&",
-        "block": "minecraft:dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
-      },
-      {
-        "char": "'",
-        "block": "minecraft:dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
-      },
-      {
         "char": "(",
-        "block": "minecraft:gravel"
+        "block": "minecraft:cobblestone"
       },
       {
         "char": ")",
-        "block": "minecraft:mud"
+        "block": "minecraft:dark_oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
       },
       {
         "char": "*",
-        "block": "minecraft:podzol"
+        "block": "minecraft:dark_oak_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
       },
       {
         "char": "+",
-        "block": "minecraft:polished_andesite_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+        "block": "minecraft:gravel"
       },
       {
         "char": ",",
-        "block": "minecraft:polished_deepslate"
+        "block": "minecraft:mud"
       },
       {
         "char": "-",
-        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+        "block": "minecraft:podzol"
       },
       {
         "char": ".",
-        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+        "block": "minecraft:polished_deepslate"
       },
       {
         "char": "/",
-        "block": "minecraft:spruce_planks"
+        "block": "minecraft:rooted_dirt"
       },
       {
         "char": "0",
-        "block": "kubejs:ruined_stonecutter[facing=north]"
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
       },
       {
         "char": "1",
-        "block": "minecraft:stripped_dark_oak_wood"
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
       },
       {
         "char": "2",
-        "block": "minecraft:stripped_spruce_log[axis=y]"
+        "block": "minecraft:spruce_planks"
       },
       {
         "char": "3",
-        "block": "minecraft:stripped_spruce_wood"
+        "block": "minecraft:stripped_dark_oak_log[axis=y]"
       },
       {
         "char": "4",
-        "block": "kubejs:ruined_cauldron"
+        "block": "minecraft:stripped_dark_oak_wood"
+      },
+      {
+        "char": "5",
+        "block": "minecraft:stripped_spruce_log[axis=y]"
+      },
+      {
+        "char": "6",
+        "block": "minecraft:stripped_spruce_wood"
       }
     ]
   }

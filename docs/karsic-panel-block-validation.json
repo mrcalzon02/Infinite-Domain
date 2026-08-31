@@ -29,8 +29,8 @@
       "passed": true,
       "detail": "both 101x40x37 templates clear hard failures and review flags",
       "evidence": {
-        "clean_sha256": "1dec6f158326521246eecfedb5504a78336b67334232ed23539386acd8c4f652",
-        "damage_sha256": "f43efc84d244b9747378fe602a0e4217162dc61184f8794711b4bde81fa8f847",
+        "clean_sha256": "1935cf61f064ca3f3915576adacd6c64e5ed2cfd5fb29309ade67b11a1853752",
+        "damage_sha256": "669e22cf88e1a5065a590e3409727f8486a71a7e1145cf255c106e8cb2133336",
         "clean_findings": [],
         "damage_findings": []
       }
@@ -222,7 +222,7 @@
           "tfmg:gray_rebar_concrete": 1369,
           "immersiveengineering:concrete": 11573,
           "tfmg:factory_floor": 4893,
-          "minecraft:cobblestone": 3,
+          "minecraft:cobblestone_stairs": 3,
           "immersiveengineering:concrete_brick": 20572,
           "immersiveengineering:cagelamp": 2,
           "the_wasteland_reworked:industrial_door": 64,
@@ -260,7 +260,7 @@
           "tfmg:gray_rebar_concrete": 1367,
           "immersiveengineering:concrete": 11573,
           "tfmg:factory_floor": 4893,
-          "minecraft:cobblestone": 3,
+          "minecraft:cobblestone_stairs": 3,
           "immersiveengineering:concrete_brick": 20556,
           "immersiveengineering:cagelamp": 2,
           "the_wasteland_reworked:industrial_door": 64,
@@ -307,12 +307,12 @@
       "detail": "CRC32-seeded pass streams reproduce clean and damage geometry byte-for-byte at the semantic level",
       "evidence": {
         "clean_master": [
-          "e2c2462a762b1ada22f3013ceb489606910102d47e6bc603b522a477872058de",
-          "e2c2462a762b1ada22f3013ceb489606910102d47e6bc603b522a477872058de"
+          "10ab819bbe057d0f472894abf12d716b9ad3b70a0ce82b9f9112e12c4929041f",
+          "10ab819bbe057d0f472894abf12d716b9ad3b70a0ce82b9f9112e12c4929041f"
         ],
         "damage_variant": [
-          "249d1eec67004ac39ec7d5436a24650cc9545cf476dd0a1cc8aa677b19e85135",
-          "249d1eec67004ac39ec7d5436a24650cc9545cf476dd0a1cc8aa677b19e85135"
+          "25477f3a640b06198d73374d37ca4c3c02c776181102ae06dce3ae4631d2b5dd",
+          "25477f3a640b06198d73374d37ca4c3c02c776181102ae06dce3ae4631d2b5dd"
         ]
       }
     },

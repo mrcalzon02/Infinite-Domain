@@ -29,8 +29,8 @@
       "passed": true,
       "detail": "both shipping templates clear hard failures and review flags",
       "evidence": {
-        "clean_sha256": "ca0c6244499be98fc558ab65a9b012871d6f424395849333b0c2c2804577c1d7",
-        "damage_sha256": "ea72cd0fce64b3e45b6427069297a381a0715f0f6393cf8ba3bc19efee9d6832",
+        "clean_sha256": "3671347e1dc8b04b141ff326b22e7a05a894ff5563a5ed3c4e4a0be4e527d690",
+        "damage_sha256": "e3461f1d8c43a1c69ebd0bfc37cbb33fe6ce47eabeabb4cd86925c6fe26234f5",
         "clean_findings": [],
         "damage_findings": []
       }
@@ -264,12 +264,12 @@
       "detail": "pass-seeded clean and damaged geometry reproduce byte-for-byte at the semantic level",
       "evidence": {
         "clean_master": [
-          "7aa318bbfdc2500edc8c5e827dfafcab2ebb05fbe83cb2568c79107505b6898d",
-          "7aa318bbfdc2500edc8c5e827dfafcab2ebb05fbe83cb2568c79107505b6898d"
+          "5f6fb4765c1588b2c89919984dfa032e9c13eb4a624fde848ee326ed896a02b6",
+          "5f6fb4765c1588b2c89919984dfa032e9c13eb4a624fde848ee326ed896a02b6"
         ],
         "damage_variant": [
-          "fa8e01ed5afd591b80237657f246068ce53c74dbecdf2eb13a78f63baf607d9e",
-          "fa8e01ed5afd591b80237657f246068ce53c74dbecdf2eb13a78f63baf607d9e"
+          "717f85b8dc2d0317ebd2b93b3e1fff636655469f406bfd96a757a2c5701f8d05",
+          "717f85b8dc2d0317ebd2b93b3e1fff636655469f406bfd96a757a2c5701f8d05"
         ]
       }
     },

@@ -1,0 +1,143 @@
+{
+  "templates_scanned": 21,
+  "structures_with_hard_fail": 0,
+  "results": [
+    {
+      "structure_id": "fuel_loading_rack",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "fuel_tank_containment_cell",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": [
+        {
+          "check": "room_composition",
+          "severity": "review_flag",
+          "position": [
+            4,
+            1,
+            6
+          ],
+          "detail": "enclosed room of 621 air blocks (69 floor cells, 9 tall) near (4, 1, 6) has no door anywhere on its boundary \u2014 unreachable (no furnishing found \u2014 may be a roof cavity or an intentionally sealed vessel, verify)"
+        }
+      ]
+    },
+    {
+      "structure_id": "harbor_loading_pier_cold",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "harbor_loading_pier_warm",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "industrial_dispatch_annex",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "industrial_office_annex",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "industrial_powerhouse",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "industrial_process_line",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "industrial_rail_loading_platform",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "industrial_storage_rack_bay",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "industrial_truck_dock_bank",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "market_square_well",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "market_stall_livestock",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "market_stall_medicine",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "market_stall_provisions",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "market_stall_repair",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "market_trade_lodge",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "mountain_transport_tunnel_cold",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "mountain_transport_tunnel_warm",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "port_customs_warehouse",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    },
+    {
+      "structure_id": "port_tunnel_control",
+      "passed": true,
+      "hard_fail_count": 0,
+      "findings": []
+    }
+  ]
+}

@@ -97,9 +97,10 @@ differ from **both** its neighbours on at least **three** of these axes:
 | The Vaulting | polished blackstone | mid, directional | thin, deep, long throw | cathedral-scale, columns | the monumental hall, bridges | soul-sand-valley loop |
 | The Crown | deepslate bricks | mid, cold | thin, cold blue | fortified, capped | observatories, capstone | soul-sand-valley loop |
 
-The spike currently delivers the palette column (surface rule) and a 3-biome grouping
-of the fog/sound column. The per-band split (6 biomes or a rule biome source), light,
-and ceiling character are Phase 3/5.
+The active C0046 candidate now delivers the palette column, six distinct core
+biomes, and separate Wastes/Apron exterior roles. Each core band has its own fog,
+particle, feature, and sound identity. Per-band light and authored ceiling
+character remain Phase 4/5 work and still require in-client review.
 
 ## 5. Traversal-rhythm binding
 
@@ -122,7 +123,7 @@ Carried from `spatial-metrics.md` §4, restated as a massing requirement:
 | `hall` is noise-gated and partial, not an authored single release space | `hive_world/hall_keep` | `C0043` / `C0059` |
 | Shaft placement is noise, not deterministic anchors | `hive_world/shaft_*` | `C0037` / `C0043` |
 | Only one monumental release on the full route (contract wants a cadence) | density graph | `C0033` / `C0043` |
-| Band identity: only palette + a 3-biome fog grouping (contract wants 6-way, +light +ceiling) | biomes / surface rule | `C0046` / Phase 5 |
+| Band identity has six-way biome/fog/feature routing but still lacks accepted light and ceiling proof | biomes / surface rule | Phase 4 / Phase 5 |
 | Carve fractions untuned — no measured % of volume | density graph | `C0035` / `C0049` |
 
 ## 7. Freeze criteria (what P02-GATE checks)

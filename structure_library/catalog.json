@@ -6126,7 +6126,7 @@
       "supports_intact": true,
       "supports_damage_variants": true,
       "supports_occupation_variants": false,
-      "refinement_intensity": "moderate",
+      "refinement_intensity": "standard",
       "source_license": {
         "origin": "Infinite Domain project-generated source",
         "license": "project-owned",
@@ -6161,7 +6161,7 @@
       "supports_intact": true,
       "supports_damage_variants": true,
       "supports_occupation_variants": false,
-      "refinement_intensity": "moderate",
+      "refinement_intensity": "standard",
       "source_license": {
         "origin": "Infinite Domain project-generated clean master",
         "license": "project-owned",
@@ -6171,6 +6171,520 @@
       "production_status": "converted",
       "derived_variants": [
         "infinite_domain:mountain_pass_terminator"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:kar_024_panel_block_service_premises",
+      "category": "commercial",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/kar_024_panel_block_service_premises.nbt",
+      "footprint": {
+        "width": 117,
+        "depth": 37
+      },
+      "height": 46,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 125,
+        "depth": 45
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "approved",
+      "placement_owner": "karsic_citystyle",
+      "worldgen_status": "citystyle_active",
+      "clean_master": "infinite_domain:kar_024_panel_block_service_premises_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:kar_024_panel_block_service_premises_clean_master",
+      "category": "commercial",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/masters/kar_024_panel_block_service_premises_clean_master.nbt",
+      "footprint": {
+        "width": 117,
+        "depth": 37
+      },
+      "height": 46,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 125,
+        "depth": 45
+      },
+      "settlement_types": [
+        "town_center",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:kar_024_panel_block_service_premises"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:kar_067_series_panel_block",
+      "category": "residential",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/kar_067_series_panel_block.nbt",
+      "footprint": {
+        "width": 101,
+        "depth": 37
+      },
+      "height": 40,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 109,
+        "depth": 45
+      },
+      "settlement_types": [
+        "town_center",
+        "residential",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "approved",
+      "placement_owner": "karsic_citystyle",
+      "worldgen_status": "citystyle_active",
+      "clean_master": "infinite_domain:kar_067_series_panel_block_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:kar_067_series_panel_block_clean_master",
+      "category": "residential",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/masters/kar_067_series_panel_block_clean_master.nbt",
+      "footprint": {
+        "width": 101,
+        "depth": 37
+      },
+      "height": 40,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "main_road",
+      "minimum_lot": {
+        "width": 109,
+        "depth": 45
+      },
+      "settlement_types": [
+        "town_center",
+        "residential",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:kar_067_series_panel_block"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:kar_078_relay_mast",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/kar_078_relay_mast.nbt",
+      "footprint": {
+        "width": 27,
+        "depth": 27
+      },
+      "height": 36,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 35,
+        "depth": 35
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "approved",
+      "clean_master": "infinite_domain:kar_078_relay_mast_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:kar_078_relay_mast_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/masters/kar_078_relay_mast_clean_master.nbt",
+      "footprint": {
+        "width": 27,
+        "depth": 27
+      },
+      "height": 36,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 35,
+        "depth": 35
+      },
+      "settlement_types": [
+        "rural",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:kar_078_relay_mast"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:kar_081_steel_water_tower",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/kar_081_steel_water_tower.nbt",
+      "footprint": {
+        "width": 45,
+        "depth": 45
+      },
+      "height": 44,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 53,
+        "depth": 53
+      },
+      "settlement_types": [
+        "rural",
+        "industrial",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "approved",
+      "clean_master": "infinite_domain:kar_081_steel_water_tower_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:kar_081_steel_water_tower_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/masters/kar_081_steel_water_tower_clean_master.nbt",
+      "footprint": {
+        "width": 45,
+        "depth": 45
+      },
+      "height": 44,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "driveway",
+      "minimum_lot": {
+        "width": 53,
+        "depth": 53
+      },
+      "settlement_types": [
+        "rural",
+        "industrial",
+        "residential"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "multibuilding",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:kar_081_steel_water_tower"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:kar_083_district_heating_main",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/kar_083_district_heating_main.nbt",
+      "footprint": {
+        "width": 32,
+        "depth": 16
+      },
+      "height": 14,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 40,
+        "depth": 24
+      },
+      "settlement_types": [
+        "residential",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "approved",
+      "clean_master": "infinite_domain:kar_083_district_heating_main_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:kar_083_district_heating_main_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/masters/kar_083_district_heating_main_clean_master.nbt",
+      "footprint": {
+        "width": 32,
+        "depth": 16
+      },
+      "height": 14,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "south"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 40,
+        "depth": 24
+      },
+      "settlement_types": [
+        "residential",
+        "industrial"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:kar_083_district_heating_main"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:kar_084_transformer_kiosk",
+      "category": "utility_infrastructure",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/kar_084_transformer_kiosk.nbt",
+      "footprint": {
+        "width": 22,
+        "depth": 22
+      },
+      "height": 12,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 30,
+        "depth": 30
+      },
+      "settlement_types": [
+        "residential",
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "approved",
+      "clean_master": "infinite_domain:kar_084_transformer_kiosk_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:kar_084_transformer_kiosk_clean_master",
+      "category": "utility_infrastructure",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/masters/kar_084_transformer_kiosk_clean_master.nbt",
+      "footprint": {
+        "width": 22,
+        "depth": 22
+      },
+      "height": 12,
+      "main_entrance": "north",
+      "secondary_entrances": [],
+      "road_connection": "pedestrian",
+      "minimum_lot": {
+        "width": 30,
+        "depth": 30
+      },
+      "settlement_types": [
+        "residential",
+        "industrial",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:kar_084_transformer_kiosk"
+      ]
+    },
+    {
+      "structure_id": "infinite_domain:kar_085_bus_shelter_and_stop",
+      "category": "highway",
+      "source_role": "damage_variant",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/kar_085_bus_shelter_and_stop.nbt",
+      "footprint": {
+        "width": 21,
+        "depth": 17
+      },
+      "height": 10,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "west"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 29,
+        "depth": 25
+      },
+      "settlement_types": [
+        "residential",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "approved",
+      "clean_master": "infinite_domain:kar_085_bus_shelter_and_stop_clean_master"
+    },
+    {
+      "structure_id": "infinite_domain:kar_085_bus_shelter_and_stop_clean_master",
+      "category": "highway",
+      "source_role": "clean_master",
+      "source_template": "kubejs/data/infinite_domain/structure/karsic/masters/kar_085_bus_shelter_and_stop_clean_master.nbt",
+      "footprint": {
+        "width": 21,
+        "depth": 17
+      },
+      "height": 10,
+      "main_entrance": "north",
+      "secondary_entrances": [
+        "east",
+        "west"
+      ],
+      "road_connection": "local_road",
+      "minimum_lot": {
+        "width": 29,
+        "depth": 25
+      },
+      "settlement_types": [
+        "residential",
+        "rural"
+      ],
+      "supports_intact": true,
+      "supports_damage_variants": true,
+      "supports_occupation_variants": false,
+      "refinement_intensity": "heavy",
+      "source_license": {
+        "origin": "Infinite Domain Karsic regional generator clean master",
+        "license": "project-owned",
+        "redistributable": true
+      },
+      "conversion_target": "scattered",
+      "production_status": "quarantined",
+      "derived_variants": [
+        "infinite_domain:kar_085_bus_shelter_and_stop"
       ]
     }
   ]

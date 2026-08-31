@@ -29,6 +29,7 @@ HEIGHT = 672          # top block Y = 607; 608 blocks of build space above Y0
 SEA_LEVEL = 0         # planetary waste/acid-sea datum
 
 FINAL_DENSITY = "infinite_domain:hive_world/final"
+BIOME_REGION = "infinite_domain:hive_world/biome_region"
 
 # C0004 band ceilings (exclusive upper Y) -> floor-skin block
 BAND_SKINS = [
@@ -130,7 +131,8 @@ def surface_rule():
 def build() -> dict:
     router = {
         "barrier": 0,
-        "continents": 0,
+        # Discrete wastes/apron/core climate value for the C0046 biome source.
+        "continents": BIOME_REGION,
         # depth increases downward; feeds the multi_noise biome source (C0016 routing)
         "depth": y_gradient(MIN_Y, 1.0, 607, -1.0),
         "erosion": 0,
@@ -165,8 +167,16 @@ def build() -> dict:
 def main() -> int:
     data = build()
     assert data["noise"]["min_y"] == -64 and data["noise"]["height"] == 672, "height contract violation"
+    expected = json.dumps(data, indent=2) + "\n"
+    if "--check" in sys.argv:
+        actual = OUT.read_text(encoding="utf-8") if OUT.is_file() else None
+        if actual != expected:
+            print(f"FAIL - Hive noise-settings generator drift: {OUT.relative_to(REPO)}")
+            return 1
+        print("PASS - Hive noise settings match the authoritative generator")
+        return 0
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    OUT.write_text(expected, encoding="utf-8")
     print(f"wrote {OUT.relative_to(REPO)}")
     return 0
 

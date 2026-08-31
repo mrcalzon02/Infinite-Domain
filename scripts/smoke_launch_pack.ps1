@@ -19,6 +19,11 @@ foreach ($library in @($base.libraries) + @($forge.libraries)) {
         if (Test-Path -LiteralPath $candidate) { $classpath.Add($candidate) }
     }
 }
+$gameJar = Join-Path $install 'versions\neoforge-21.1.248\neoforge-21.1.248.jar'
+if (-not (Test-Path -LiteralPath $gameJar -PathType Leaf)) {
+    throw "NeoForge game jar is missing: $gameJar"
+}
+$classpath.Add($gameJar)
 $classpath = @($classpath | Select-Object -Unique)
 
 $modulePath = @(

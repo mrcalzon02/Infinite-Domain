@@ -1,8 +1,10 @@
 {
   "family": "transit_and_ports",
   "asset_pairs": 8,
-  "all_passed": true,
-  "failures": [],
+  "all_passed": false,
+  "failures": [
+    "ruined_bus_terminal: missing identity fixtures: ['minecraft:smoker']"
+  ],
   "structures": {
     "collapsed_subway_station": {
       "size": [
@@ -53,8 +55,10 @@
         "dense_floor_levels": 9,
         "footprint_variants": 9
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing identity fixtures: ['minecraft:smoker']"
+      ]
     },
     "elevated_rail_collapse": {
       "size": [

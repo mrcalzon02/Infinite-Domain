@@ -12,6 +12,8 @@ The central continent is radial around `(0,0)`. A guaranteed Wasteland Mountains
 
 Inside the central continent, mountains are confined to that ring. `overworld/erosion` is overridden through `custom_worldgen:central_interior_mask` so the erosion parameter cannot enter the `wastelands:mountains` band anywhere inside radius 4,650 except the ring itself; the interior fills with the other Wasteland land biomes and Lost Cities can generate there. See `docs/GRADIENT_OCEAN_PACK_VALIDATION.md`.
 
+The complete file-backed geography contract is checked by `python scripts/validate_overworld_geography.py`. It locks the canonical `minecraft:normal` activation, radial center, north/south climate zones, east/west continents and Abyssal corridors, Karsic land routing, cache coverage, and quest-independent multiplayer structure ownership.
+
 `overworld/depth` is overridden to subtract `custom_worldgen:abyssal_floor_depression`, the direct seabed-depth channel for the East/West abyssal ocean. Continentalness pressure alone cannot deepen the plain/fracture/hadal bands (the vanilla offset spline is a flat plateau there), so real floor relief is applied as a `depth` delta, gated by the same East/West + ocean-corridor + depth-band masks and clamped for a bedrock margin. It is `0` outside the abyssal corridor. See `docs/ABYSSAL_OCEAN_DEPTH_IMPLEMENTATION.md`.
 
 The square from X/Z -192 through 191 is reserved for the authored Spawn Hospital. It uses `infinite_domain:safe_zone`, a visually matching open-wasteland biome with no decoration features and no structure tags, so world generation cannot place roads, ruins, vegetation, or other structures beneath the hub before its template is installed.

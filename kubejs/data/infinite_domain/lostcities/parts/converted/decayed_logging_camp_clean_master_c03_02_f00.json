@@ -3,112 +3,112 @@
   "zsize": 16,
   "slices": [
     [
-      "''''''''''))$   ",
-      "'''''''''')))   ",
-      ")%))))$))))$)   ",
-      ")))%))))$))))   ",
-      ")$)))%))))$))   ",
-      ")))$)))%))))$   ",
-      "$))))$)))%)))   ",
-      "))$))))$)))%)   ",
-      "))))$))))$)))   ",
-      ")$))))$))))$)   ",
-      ")))$))))$))))   ",
-      "%))))$))))$))   ",
-      "))%))))$))))$   ",
-      "%%%%%%%%%%%))   ",
-      "%%%%%%%%%%%$)   ",
-      "%%%%%%%%%%%))   "
+      "))))))))))&&+   ",
+      "))))))))))'&+   ",
+      "'''''''''''&+   ",
+      "'''''''''''&+   ",
+      "'''''''''''&,   ",
+      "'''''''''''&,   ",
+      "'''''''''''&,   ",
+      "'''''''''''&,   ",
+      "'''''''''''&,   ",
+      "'''''''''''&,   ",
+      "'''''''''''&,   ",
+      "'''''''''''&,   ",
+      "'''''''''''&,   ",
+      "(((((((((((&,   ",
+      "(((((((((((&,   ",
+      "(((((((((((&,   "
     ],
     [
       "                ",
       "                ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      ",
-      "//////////      "
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      ",
+      "1111111111      "
     ],
     [
       "                ",
       "                ",
-      "       (((      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      " *  &    (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "00-000000(      ",
-      "         +      ",
-      "         (      ",
-      "  !   1  (      "
+      "       ***      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      " %  $    *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "22/222222*      ",
+      "         -      ",
+      "         *      ",
+      "  !   3  *      "
     ],
     [
       "                ",
       "                ",
-      "       (((      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "00.000000(      ",
-      "         ,      ",
-      "         (      ",
-      "         (      "
+      "       ***      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "220222222*      ",
+      "         .      ",
+      "         *      ",
+      "         *      "
     ],
     [
       "                ",
       "                ",
-      "       (((      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "000000000(      ",
-      "         (      ",
-      "         (      ",
-      "         (      "
+      "       ***      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "222222222*      ",
+      "         *      ",
+      "         *      ",
+      "         *      "
     ],
     [
       "                ",
       "                ",
-      "       (((      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "         (      ",
-      "000000000(      ",
-      "         (      ",
-      "         (      ",
-      "         (      "
+      "       ***      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "         *      ",
+      "222222222*      ",
+      "         *      ",
+      "         *      ",
+      "         *      "
     ]
   ],
   "palette": {
@@ -119,58 +119,66 @@
       },
       {
         "char": "$",
-        "block": "minecraft:coarse_dirt"
-      },
-      {
-        "char": "%",
-        "block": "minecraft:gravel"
-      },
-      {
-        "char": "&",
         "block": "kubejs:ruined_grindstone[face=floor,facing=south]"
       },
       {
-        "char": "'",
-        "block": "minecraft:mud"
-      },
-      {
-        "char": "(",
-        "block": "minecraft:mud_bricks"
-      },
-      {
-        "char": ")",
-        "block": "minecraft:podzol"
-      },
-      {
-        "char": "*",
+        "char": "%",
         "block": "kubejs:ruined_smithing_table"
       },
       {
+        "char": "&",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:cobblestone"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:gravel"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:mud"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:mud_bricks"
+      },
+      {
         "char": "+",
-        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+        "block": "minecraft:podzol"
       },
       {
         "char": ",",
-        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+        "block": "minecraft:rooted_dirt"
       },
       {
         "char": "-",
-        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
       },
       {
         "char": ".",
-        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
       },
       {
         "char": "/",
-        "block": "minecraft:stone_bricks"
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
       },
       {
         "char": "0",
-        "block": "minecraft:stripped_spruce_wood"
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
       },
       {
         "char": "1",
+        "block": "minecraft:stone_bricks"
+      },
+      {
+        "char": "2",
+        "block": "minecraft:stripped_spruce_wood"
+      },
+      {
+        "char": "3",
         "block": "the_wasteland_reworked:rusted_barrel"
       }
     ]

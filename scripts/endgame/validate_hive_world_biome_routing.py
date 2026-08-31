@@ -22,7 +22,11 @@ DIMENSION = DATA / "dimension/hive_world.json"
 NOISE_SETTINGS = DATA / "worldgen/noise_settings/hive_world.json"
 BIOME_DIR = DATA / "worldgen/biome"
 STRUCTURE_DIR = DATA / "worldgen/structure"
+STRUCTURE_SET_DIR = DATA / "worldgen/structure_set"
+POOL_DIR = DATA / "worldgen/template_pool/hive_world"
+NBT_DIR = DATA / "structure/hive_world"
 REPORT = ROOT / "docs/endgame/hive-world-biome-routing.json"
+OWNERSHIP = ROOT / "docs/endgame/generated-output-manifest.json"
 
 MIN_Y = -64
 MAX_Y = 607
@@ -62,6 +66,15 @@ LEGACY_ALIASES = (
     "infinite_domain:hive_world_works",
     "infinite_domain:hive_world_vault",
 )
+DISTRICT_CONFIG = {
+    "drown": (-48, -8, 4, 927133, 3),
+    "underworks": (12, 84, 4, 935052, 4),
+    "furnace": (112, 192, 5, 942971, 5),
+    "billet": (224, 336, 5, 950890, 6),
+    "vaulting": (368, 464, 6, 958809, 7),
+    "crown": (496, 584, 6, 966728, 8),
+}
+MODULE_ROLES = ("anchor", "gallery", "crossing", "chamber", "bulkhead")
 
 
 def load(path: Path) -> Any:
@@ -127,7 +140,8 @@ def main() -> int:
         {"actual": routed, "expected": expected_routed},
     )
 
-    depth_node = noise_settings.get("noise_router", {}).get("depth", {})
+    router = noise_settings.get("noise_router", {})
+    depth_node = router.get("depth", {})
     depth_ok = depth_node == {
         "type": "minecraft:y_clamped_gradient",
         "from_y": MIN_Y,
@@ -135,12 +149,33 @@ def main() -> int:
         "from_value": 1.0,
         "to_value": -1.0,
     }
+    continents_node = router.get("continents")
+    region_path = DATA / "worldgen/density_function/hive_world/biome_region.json"
+    try:
+        region_node = load(region_path)
+    except (OSError, json.JSONDecodeError) as exc:
+        region_node = {"error": str(exc)}
+    region_ok = region_node == {
+        "type": "minecraft:range_choice",
+        "input": "infinite_domain:hive_world/core_mask",
+        "min_inclusive": 0.0,
+        "max_exclusive": 2.0,
+        "when_in_range": 0.5,
+        "when_out_of_range": {
+            "type": "minecraft:range_choice",
+            "input": "infinite_domain:hive_world/apron_mask",
+            "min_inclusive": 0.0,
+            "max_exclusive": 2.0,
+            "when_in_range": -0.2,
+            "when_out_of_range": -1.0,
+        },
+    }
     record(
         "HBR-2",
-        "biome depth consumes the accepted full-height gradient",
-        depth_ok,
-        "depth maps Y-64..607 monotonically from +1 to -1",
-        depth_node,
+        "biome routing consumes the horizontal mask and full-height depth gradient",
+        depth_ok and continents_node == "infinite_domain:hive_world/biome_region" and region_ok,
+        "continents emits discrete wastes/apron/core values; depth maps Y-64..607 monotonically from +1 to -1",
+        {"continents": continents_node, "biome_region": region_node, "depth": depth_node},
     )
 
     actual_depths = {
@@ -248,22 +283,111 @@ def main() -> int:
 
     structure_evidence: dict[str, Any] = {}
     structures_ok = True
+    live_salts: list[int] = []
     for band in BANDS:
-        path = STRUCTURE_DIR / f"hive_world_district_{band.slug}.json"
+        min_y, max_y, size, salt, chamber_weight = DISTRICT_CONFIG[band.slug]
+        structure_path = STRUCTURE_DIR / f"hive_world_district_{band.slug}.json"
+        set_path = STRUCTURE_SET_DIR / f"hive_world_district_{band.slug}.json"
+        expected_structure = {
+            "type": "minecraft:jigsaw",
+            "biomes": [band.biome],
+            "step": "underground_structures",
+            "spawn_overrides": {},
+            "terrain_adaptation": "none",
+            "start_pool": f"infinite_domain:hive_world/{band.slug}_start",
+            "size": size,
+            "start_height": {
+                "type": "minecraft:uniform",
+                "min_inclusive": {"absolute": min_y},
+                "max_inclusive": {"absolute": max_y},
+            },
+            "max_distance_from_center": 96,
+            "use_expansion_hack": False,
+            "liquid_settings": "ignore_waterlogging",
+        }
+        expected_set = {
+            "structures": [{
+                "structure": f"infinite_domain:hive_world_district_{band.slug}",
+                "weight": 1,
+            }],
+            "placement": {
+                "type": "minecraft:random_spread",
+                "spacing": 28,
+                "separation": 12,
+                "salt": salt,
+            },
+        }
+        prefix = f"infinite_domain:hive_world/{band.slug}"
+
+        def pool_element(role: str, weight: int) -> dict[str, Any]:
+            return {
+                "weight": weight,
+                "element": {
+                    "location": f"{prefix}_{role}",
+                    "processors": "minecraft:empty",
+                    "projection": "rigid",
+                    "element_type": "minecraft:single_pool_element",
+                },
+            }
+
+        expected_pools = {
+            "start": {
+                "fallback": "minecraft:empty",
+                "elements": [pool_element("anchor", 1)],
+            },
+            "branch": {
+                "fallback": f"{prefix}_terminal",
+                "elements": [
+                    pool_element("gallery", 5),
+                    pool_element("crossing", 3),
+                    pool_element("chamber", chamber_weight),
+                ],
+            },
+            "terminal": {
+                "fallback": "minecraft:empty",
+                "elements": [pool_element("bulkhead", 1)],
+            },
+        }
         try:
-            payload = load(path)
-            actual = payload.get("biomes")
+            actual_structure = load(structure_path)
+            actual_set = load(set_path)
+            actual_pools = {
+                role: load(POOL_DIR / f"{band.slug}_{role}.json")
+                for role in ("start", "branch", "terminal")
+            }
         except (OSError, json.JSONDecodeError) as exc:
-            actual = {"error": str(exc)}
-        expected = [band.biome]
-        passed = actual == expected
+            actual_structure = {"error": str(exc)}
+            actual_set = {"error": str(exc)}
+            actual_pools = {"error": str(exc)}
+        missing_modules = [
+            f"{band.slug}_{role}.nbt"
+            for role in MODULE_ROLES
+            if not (NBT_DIR / f"{band.slug}_{role}.nbt").is_file()
+        ]
+        passed = (
+            actual_structure == expected_structure
+            and actual_set == expected_set
+            and actual_pools == expected_pools
+            and not missing_modules
+        )
         structures_ok = structures_ok and passed
-        structure_evidence[band.slug] = {"expected": expected, "actual": actual, "passed": passed}
+        if actual_set == expected_set:
+            live_salts.append(salt)
+        structure_evidence[band.slug] = {
+            "passed": passed,
+            "biome": actual_structure.get("biomes"),
+            "start_height": actual_structure.get("start_height"),
+            "size": actual_structure.get("size"),
+            "placement": actual_set.get("placement"),
+            "pool_roles_exact": actual_pools == expected_pools,
+            "missing_modules": missing_modules,
+        }
+    structures_ok = structures_ok and len(live_salts) == len(set(live_salts)) == len(BANDS)
     record(
         "HBR-6",
-        "band districts and band biomes share exact placement ownership",
+        "band districts, pools, modules, and biomes share exact placement ownership",
         structures_ok,
-        "each Y-bounded district is eligible only in its matching core biome",
+        "each Y-bounded district uses its matching biome, exact authored modules, and a unique deterministic salt",
         structure_evidence,
     )
 
@@ -291,8 +415,80 @@ def main() -> int:
         },
     )
 
+    legacy_structure_path = STRUCTURE_DIR / "hive_world_district.json"
+    legacy_set_path = STRUCTURE_SET_DIR / "hive_world_district.json"
+    try:
+        legacy_structure = load(legacy_structure_path)
+        legacy_set = load(legacy_set_path)
+        ownership = load(OWNERSHIP)
+    except (OSError, json.JSONDecodeError) as exc:
+        legacy_structure = {"error": str(exc)}
+        legacy_set = {"error": str(exc)}
+        ownership = {}
+    generators = ownership.get("generators", {})
+    band_owner = set(generators.get(
+        "scripts/endgame/generate_hive_world_band_districts.py", []
+    ))
+    biome_owner = set(generators.get("scripts/endgame/generate_hive_world_biomes.py", []))
+    routing_owner = set(generators.get(
+        "scripts/endgame/generate_hive_world_biome_routing.py", []
+    ))
+    hand_authored = set(ownership.get("hand_authored", []))
+    expected_band_outputs = {
+        f"kubejs/data/infinite_domain/worldgen/template_pool/hive_world/{band.slug}_{role}.json"
+        for band in BANDS
+        for role in ("start", "branch", "terminal")
+    } | {
+        f"kubejs/data/infinite_domain/worldgen/structure/hive_world_district_{band.slug}.json"
+        for band in BANDS
+    } | {
+        f"kubejs/data/infinite_domain/worldgen/structure_set/hive_world_district_{band.slug}.json"
+        for band in BANDS
+    }
+    expected_biome_outputs = {
+        f"kubejs/data/infinite_domain/worldgen/biome/hive_world_{slug}.json"
+        for slug in (
+            "wastes", "apron", "drown", "underworks", "furnace", "billet",
+            "vaulting", "crown", "sump", "works", "vault",
+        )
+    }
+    expected_band_modules = {
+        f"kubejs/data/infinite_domain/structure/hive_world/{band.slug}_{role}.nbt"
+        for band in BANDS
+        for role in MODULE_ROLES
+    }
+    expected_routing_outputs = {
+        "kubejs/data/infinite_domain/worldgen/density_function/hive_world/stack_field.json",
+        "kubejs/data/infinite_domain/worldgen/density_function/hive_world/core_mask.json",
+        "kubejs/data/infinite_domain/worldgen/density_function/hive_world/apron_mask.json",
+        "kubejs/data/infinite_domain/worldgen/density_function/hive_world/biome_region.json",
+        "kubejs/data/infinite_domain/dimension/hive_world.json",
+    }
+    ownership_ok = (
+        band_owner == expected_band_outputs
+        and biome_owner == expected_biome_outputs
+        and routing_owner == expected_routing_outputs
+        and expected_band_modules <= hand_authored
+    )
+    legacy_ok = (
+        legacy_structure.get("biomes") == list(LEGACY_ALIASES)
+        and legacy_set.get("structures") == []
+        and legacy_set.get("placement", {}).get("salt") == 927132
+    )
+    record(
+        "HBR-8",
+        "generator ownership is complete and the legacy placement set is inert",
+        ownership_ok and legacy_ok,
+        "all active biome/district JSON has one generator; band NBT is declared authored input; the unrouted compatibility district cannot schedule starts",
+        {
+            "ownership_exact": ownership_ok,
+            "legacy_structure_biomes": legacy_structure.get("biomes"),
+            "legacy_set": legacy_set,
+        },
+    )
+
     report = {
-        "contract": "EG-P03-S05-C0046-static-candidate-v1",
+        "contract": "EG-P03-S05-C0046-static-candidate-v2",
         "passed": not failures,
         "check_count": len(checks),
         "failure_count": len(failures),

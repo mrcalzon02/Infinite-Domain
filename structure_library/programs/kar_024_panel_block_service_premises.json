@@ -64,5 +64,18 @@
     },
     "base_height": 36,
     "conversion_target": "multibuilding"
+  },
+  "lostcities_repeatable_contract": {
+    "minfloors": 5,
+    "maxfloors": 9,
+    "cellar_bands": 1,
+    "ground_bands": 1,
+    "repeat_source_band": 2,
+    "top_bands": 1
+  },
+  "footprint_drift_exception": {
+    "accepted": true,
+    "reason": "The 59x47 source lot cannot express a six-storey Karsic panel slab at the required length-to-height ratio. The regional designer preserves the recorded height, expands the street frontage to the first four-block panel bay meeting length >= 3x inhabited height, and reduces depth to a viable double-loaded residential plan over the retail plinth.",
+    "rule": "length >= 3 * (storeys * 6); depth = 7 * 4 + 1"
   }
 }

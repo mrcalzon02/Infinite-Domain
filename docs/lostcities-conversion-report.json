@@ -370,7 +370,7 @@
       "floor_height": 6,
       "floor_bands": 4,
       "parts_written": 64,
-      "largest_local_palette": 21,
+      "largest_local_palette": 24,
       "multibuilding": "infinite_domain:converted/decayed_logging_camp",
       "scattered": null,
       "production_status": "converted",
@@ -942,7 +942,7 @@
       "floor_height": 6,
       "floor_bands": 4,
       "parts_written": 64,
-      "largest_local_palette": 20,
+      "largest_local_palette": 23,
       "multibuilding": "infinite_domain:converted/decayed_logging_camp_clean_master",
       "scattered": null,
       "production_status": "converted",
@@ -3739,6 +3739,346 @@
       "largest_local_palette": 16,
       "multibuilding": "infinite_domain:converted/mountain_pass_terminator_clean_master",
       "scattered": "infinite_domain:converted/mountain_pass_terminator_clean_master",
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:kar_024_panel_block_service_premises",
+      "source_role": "damage_variant",
+      "source_size": [
+        117,
+        46,
+        37
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        8,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 8,
+      "parts_written": 96,
+      "largest_local_palette": 24,
+      "multibuilding": "infinite_domain:converted/kar_024_panel_block_service_premises",
+      "scattered": null,
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch",
+      "repeatable_storey": {
+        "cellar_band": 0,
+        "ground_band": 1,
+        "repeat_source_band": 2,
+        "top_band": 7,
+        "minfloors": 5,
+        "maxfloors": 9
+      }
+    },
+    {
+      "structure_id": "infinite_domain:kar_024_panel_block_service_premises_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        117,
+        46,
+        37
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        8,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 8,
+      "parts_written": 96,
+      "largest_local_palette": 26,
+      "multibuilding": "infinite_domain:converted/kar_024_panel_block_service_premises_clean_master",
+      "scattered": null,
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch",
+      "repeatable_storey": {
+        "cellar_band": 0,
+        "ground_band": 1,
+        "repeat_source_band": 2,
+        "top_band": 7,
+        "minfloors": 5,
+        "maxfloors": 9
+      }
+    },
+    {
+      "structure_id": "infinite_domain:kar_067_series_panel_block",
+      "source_role": "damage_variant",
+      "source_size": [
+        101,
+        40,
+        37
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        7,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 84,
+      "largest_local_palette": 21,
+      "multibuilding": "infinite_domain:converted/kar_067_series_panel_block",
+      "scattered": null,
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch",
+      "repeatable_storey": {
+        "cellar_band": 0,
+        "ground_band": 1,
+        "repeat_source_band": 2,
+        "top_band": 6,
+        "minfloors": 5,
+        "maxfloors": 9
+      }
+    },
+    {
+      "structure_id": "infinite_domain:kar_067_series_panel_block_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        101,
+        40,
+        37
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        7,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 7,
+      "parts_written": 84,
+      "largest_local_palette": 22,
+      "multibuilding": "infinite_domain:converted/kar_067_series_panel_block_clean_master",
+      "scattered": null,
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch",
+      "repeatable_storey": {
+        "cellar_band": 0,
+        "ground_band": 1,
+        "repeat_source_band": 2,
+        "top_band": 6,
+        "minfloors": 5,
+        "maxfloors": 9
+      }
+    },
+    {
+      "structure_id": "infinite_domain:kar_078_relay_mast",
+      "source_role": "damage_variant",
+      "source_size": [
+        27,
+        36,
+        27
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 24,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/kar_078_relay_mast",
+      "scattered": "infinite_domain:converted/kar_078_relay_mast",
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:kar_078_relay_mast_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        27,
+        36,
+        27
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 6,
+      "parts_written": 24,
+      "largest_local_palette": 14,
+      "multibuilding": "infinite_domain:converted/kar_078_relay_mast_clean_master",
+      "scattered": "infinite_domain:converted/kar_078_relay_mast_clean_master",
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:kar_081_steel_water_tower",
+      "source_role": "damage_variant",
+      "source_size": [
+        45,
+        44,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 8,
+      "parts_written": 72,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/kar_081_steel_water_tower",
+      "scattered": null,
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:kar_081_steel_water_tower_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        45,
+        44,
+        45
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        3,
+        3
+      ],
+      "floor_height": 6,
+      "floor_bands": 8,
+      "parts_written": 72,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/kar_081_steel_water_tower_clean_master",
+      "scattered": null,
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:kar_083_district_heating_main",
+      "source_role": "damage_variant",
+      "source_size": [
+        32,
+        14,
+        16
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        1
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 6,
+      "largest_local_palette": 10,
+      "multibuilding": "infinite_domain:converted/kar_083_district_heating_main",
+      "scattered": "infinite_domain:converted/kar_083_district_heating_main",
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:kar_083_district_heating_main_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        32,
+        14,
+        16
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        1
+      ],
+      "floor_height": 6,
+      "floor_bands": 3,
+      "parts_written": 6,
+      "largest_local_palette": 9,
+      "multibuilding": "infinite_domain:converted/kar_083_district_heating_main_clean_master",
+      "scattered": "infinite_domain:converted/kar_083_district_heating_main_clean_master",
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:kar_084_transformer_kiosk",
+      "source_role": "damage_variant",
+      "source_size": [
+        22,
+        12,
+        22
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 2,
+      "parts_written": 8,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/kar_084_transformer_kiosk",
+      "scattered": "infinite_domain:converted/kar_084_transformer_kiosk",
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:kar_084_transformer_kiosk_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        22,
+        12,
+        22
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 2,
+      "parts_written": 8,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/kar_084_transformer_kiosk_clean_master",
+      "scattered": "infinite_domain:converted/kar_084_transformer_kiosk_clean_master",
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:kar_085_bus_shelter_and_stop",
+      "source_role": "damage_variant",
+      "source_size": [
+        21,
+        10,
+        17
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 2,
+      "parts_written": 8,
+      "largest_local_palette": 13,
+      "multibuilding": "infinite_domain:converted/kar_085_bus_shelter_and_stop",
+      "scattered": "infinite_domain:converted/kar_085_bus_shelter_and_stop",
+      "production_status": "converted",
+      "runtime_codec_validation": "pending game launch"
+    },
+    {
+      "structure_id": "infinite_domain:kar_085_bus_shelter_and_stop_clean_master",
+      "source_role": "clean_master",
+      "source_size": [
+        21,
+        10,
+        17
+      ],
+      "road_facing": "north",
+      "chunk_footprint": [
+        2,
+        2
+      ],
+      "floor_height": 6,
+      "floor_bands": 2,
+      "parts_written": 8,
+      "largest_local_palette": 12,
+      "multibuilding": "infinite_domain:converted/kar_085_bus_shelter_and_stop_clean_master",
+      "scattered": "infinite_domain:converted/kar_085_bus_shelter_and_stop_clean_master",
       "production_status": "converted",
       "runtime_codec_validation": "pending game launch"
     }

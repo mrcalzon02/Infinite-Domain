@@ -3,10 +3,10 @@
   "zsize": 16,
   "slices": [
     [
-      "!!!!!!!!!!!!!!!!",
-      "!!!!!!!!!!!!!!!!",
-      "!!!!!!!!!!!!!!!!",
-      "!!!!!!!!!!!!!!!!",
+      "!!!!!  !!!!!!!! ",
+      "!!!!!  !!!!!!!! ",
+      "!!!!!  !!!!!!!! ",
+      "                ",
       "                ",
       "                ",
       "                ",
@@ -21,9 +21,9 @@
       "                "
     ],
     [
-      "                ",
-      "                ",
-      "                ",
+      "$         $     ",
+      "$         $     ",
+      "$         $     ",
       "                ",
       "                ",
       "                ",
@@ -97,7 +97,11 @@
     "palette": [
       {
         "char": "!",
-        "block": "minecraft:dark_oak_slab[type=top,waterlogged=false]"
+        "block": "minecraft:spruce_planks"
+      },
+      {
+        "char": "$",
+        "block": "minecraft:stripped_dark_oak_log[axis=z]"
       }
     ]
   }

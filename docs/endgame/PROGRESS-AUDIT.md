@@ -66,9 +66,9 @@ full-height megastructure**. The Phase 2 *contract* was written:
 | Checkpoint | Status |
 |---|---|
 | C0025 slice / massing contract | EVIDENCE_READY — `docs/endgame/contracts/massing-contract.md` |
-| C0026-C0032 greybox kit + band slices | N/A — replaced by the generator; band identity is delivered by surface-rule palettes + 3 biomes |
+| C0026-C0032 greybox kit + band slices | N/A — replaced by the generator; band identity is delivered by surface-rule palettes plus six core and two exterior biomes |
 | C0033 full route | pending in-client — the carved network + shafts + hall exist but continuity is untested |
-| C0034 sightline / fog | partial — biome fog per band group; per-band tuning is Phase 5 |
+| C0034 sightline / fog | partial — distinct fallback fog per band exists; in-client visibility and transition tuning remain Phase 5 |
 | C0035 greybox performance | pending in-client — the density graph is **untuned**, carve fractions unmeasured |
 | **C0036 P02-GATE** | **not started** — needs an independent visual/experiential review of the megastructure in-game; on acceptance it **freezes** the massing per `massing-contract.md` §7 |
 
@@ -87,7 +87,7 @@ Spike-scale, by owner direction (`generate_hive_world_density.py`):
 | monumental hall + column lattice | DONE (spike, noise-gated / partial) |
 | 6 band palettes (surface rule) | DONE (spike) |
 | **stack_core / apron / trunk_axis macro layer** | **NOT STARTED** — needs ADR-0001 layer 2; the spike is single-core with no wastes (C0038-C0040) |
-| 3D biome source refinement (6-way / rule source) | NOT STARTED (C0046) |
+| 3D biome source refinement | EVIDENCE_READY static candidate — Wastes/Apron plus six exact core bands, six matching districts, complete generator ownership, 8/8 routing gate; runtime codec/seam sampling pending (C0046) |
 | seed sweep + determinism + generation optimization | NOT STARTED (C0048-C0049) |
 | **C0050 P03-GATE** | not started |
 
@@ -102,9 +102,9 @@ Spike-scale, by owner direction:
 |---|---|
 | C0051 module schema | EVIDENCE_READY — `docs/endgame/contracts/module-schema.md` |
 | C0052 connector validator | EVIDENCE_READY — `validate_hive_world_modules.py`, 10 checks, PASS on 7 modules |
-| jigsaw district (7 modules, 3 pools, structure + set + loot) | DONE (spike) — `generate_hive_world_structures.py` |
+| compatibility jigsaw district (7 modules, 3 pools, structure + loot) | DONE (spike) — definition retained, placement set now inert; `generate_hive_world_structures.py` |
 | C0053-C0054 structural + vertical circulation kits | partial — modules reuse a shared palette; `stair_shaft` uses a ladder |
-| C0055-C0060 per-band module families | NOT STARTED |
+| C0055-C0060 per-band module families | EVIDENCE_READY static candidate — 30 authored NBT modules, 18 generated pools, six generated structures/unique-salt sets; assembly/runtime review pending |
 | C0061 apron / wasteland kit | NOT STARTED (needs the macro layer) |
 | C0062 axis placement system | NOT STARTED |
 | C0063 damage-state system | partial — inherited `kubejs:ruined_*` replacement gives a derelict read for free |

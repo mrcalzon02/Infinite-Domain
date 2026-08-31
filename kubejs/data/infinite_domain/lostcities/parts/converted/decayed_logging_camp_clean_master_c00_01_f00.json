@@ -3,112 +3,112 @@
   "zsize": 16,
   "slices": [
     [
-      "****%****%***(**",
-      "*%****%****%***(",
-      "***%****%****%**",
-      "(****%****%****%",
-      "**(****%****%***",
-      "%***(****%****%*",
-      "**%***(****%****",
-      "****%***(****%**",
-      "*%****%***(****%",
-      "***%****%***(***",
-      "%****%****%***(*",
-      "**%****%****%***",
-      "****%****%****%*",
-      "*(****%****%****",
-      "***(****%****%**",
-      "*%***(****%****%"
+      "**'(((((((((((((",
+      "**'(((((((((((((",
+      "++'(((((((((((((",
+      "++'(((((((((((((",
+      "++''''''''''''''",
+      "+'''''''''''''''",
+      "+'((((((((((((((",
+      "+'((((((((((((((",
+      "*'((((((((((((((",
+      "*'((((((((((((((",
+      "*'((((((((((((((",
+      "*'((((((((((((((",
+      "*'((((((((((((((",
+      "*'((((((((((((((",
+      "+'((((((((((((((",
+      "+'(((((((((((((("
     ],
     [
-      "    ))))))))))))",
-      "    ))))))))))))",
-      "    ))))))))))))",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
+      "    ,,,,,,,,,,,,",
       "                ",
-      "    333333333333",
+      "    444444444444",
       "                ",
-      "    333333333333",
-      "   0000000000000",
-      "   0000000000000",
-      "   0000000000000",
-      "   0000000000000",
-      "   0000000000000",
-      "   0000000000000",
-      "   0000000000000",
-      "   0000000000000",
-      "   0000000000000"
+      "    444444444444",
+      "   1111111111111",
+      "   1111111111111",
+      "   1111111111111",
+      "   1111111111111",
+      "   1111111111111",
+      "   1111111111111",
+      "   1111111111111",
+      "   1111111111111",
+      "   1111111111111"
     ],
     [
-      "    0       4   ",
-      "    0       4   ",
-      "    000000000.00",
+      "    1       5   ",
+      "    1       5   ",
+      "    111111111/11",
       "                ",
-      "     33333333333",
+      "     44444444444",
       "                ",
-      "     33333333333",
-      "   &&&&&&&&&&&&&",
-      "   &           2",
-      "   &           2",
-      "   & + '       2",
-      "   &      $    2",
-      "   &           ,",
-      "   &           2",
-      "   & 1111111   2",
-      "   &           2"
+      "     44444444444",
+      "   )))))))))))))",
+      "   )           3",
+      "   )           3",
+      "   ) % $       3",
+      "   )      &    3",
+      "   )           -",
+      "   )           3",
+      "   ) 2222222   3",
+      "   )           3"
     ],
     [
-      "    0       4   ",
-      "    0       4   ",
-      "    000000000/00",
+      "    1       5   ",
+      "    1       5   ",
+      "    111111111011",
       "                ",
-      "      3333333333",
+      "      4444444444",
       "                ",
-      "      3333333333",
-      "   &&!!&&&&&&&&&",
-      "   &           2",
-      "   &           2",
-      "   &           2",
-      "   &           2",
-      "   !           -",
-      "   !           2",
-      "   &           2",
-      "   &           2"
+      "      4444444444",
+      "   ))!!)))))))))",
+      "   )           3",
+      "   )           3",
+      "   )           3",
+      "   )           3",
+      "   !           .",
+      "   !           3",
+      "   )           3",
+      "   )           3"
     ],
     [
-      "    0       4   ",
-      "    0       4   ",
-      "    000000000000",
+      "    1       5   ",
+      "    1       5   ",
+      "    111111111111",
       "                ",
       "                ",
       "                ",
       "                ",
-      "   &&!!&&&&&&&&&",
-      "   &           2",
-      "   &           2",
-      "   &           2",
-      "   &           2",
-      "   !           2",
-      "   !           2",
-      "   &           2",
-      "   &           2"
+      "   ))!!)))))))))",
+      "   )           3",
+      "   )           3",
+      "   )           3",
+      "   )           3",
+      "   !           3",
+      "   !           3",
+      "   )           3",
+      "   )           3"
     ],
     [
-      "    0       4   ",
-      "    0       4   ",
-      "    000000000000",
+      "    1       5   ",
+      "    1       5   ",
+      "    111111111111",
       "                ",
       "                ",
       "                ",
       "                ",
-      "   &&&&&&&&&&&&&",
-      "   &           2",
-      "   &           2",
-      "   &           2",
-      "   &           2",
-      "   &           2",
-      "   &           2",
-      "   &           2",
-      "   &           2"
+      "   )))))))))))))",
+      "   )           3",
+      "   )           3",
+      "   )           3",
+      "   )           3",
+      "   )           3",
+      "   )           3",
+      "   )           3",
+      "   )           3"
     ]
   ],
   "palette": {
@@ -119,70 +119,74 @@
       },
       {
         "char": "$",
-        "block": "minecraft:barrel[facing=up,open=false]"
-      },
-      {
-        "char": "%",
-        "block": "minecraft:coarse_dirt"
-      },
-      {
-        "char": "&",
-        "block": "minecraft:dark_oak_planks"
-      },
-      {
-        "char": "'",
         "block": "kubejs:ruined_furnace[facing=south]"
       },
       {
-        "char": "(",
-        "block": "minecraft:gravel"
-      },
-      {
-        "char": ")",
-        "block": "minecraft:oak_planks"
-      },
-      {
-        "char": "*",
-        "block": "minecraft:podzol"
-      },
-      {
-        "char": "+",
+        "char": "%",
         "block": "kubejs:ruined_smoker[facing=south]"
       },
       {
+        "char": "&",
+        "block": "minecraft:barrel[facing=up,open=false]"
+      },
+      {
+        "char": "'",
+        "block": "minecraft:coarse_dirt"
+      },
+      {
+        "char": "(",
+        "block": "minecraft:cobblestone"
+      },
+      {
+        "char": ")",
+        "block": "minecraft:dark_oak_planks"
+      },
+      {
+        "char": "*",
+        "block": "minecraft:dirt_path"
+      },
+      {
+        "char": "+",
+        "block": "minecraft:gravel"
+      },
+      {
         "char": ",",
-        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+        "block": "minecraft:oak_planks"
       },
       {
         "char": "-",
-        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
       },
       {
         "char": ".",
-        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
       },
       {
         "char": "/",
-        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+        "block": "minecraft:spruce_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
       },
       {
         "char": "0",
-        "block": "minecraft:spruce_planks"
+        "block": "minecraft:spruce_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
       },
       {
         "char": "1",
-        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
+        "block": "minecraft:spruce_planks"
       },
       {
         "char": "2",
-        "block": "minecraft:stripped_dark_oak_wood"
+        "block": "minecraft:spruce_slab[type=bottom,waterlogged=false]"
       },
       {
         "char": "3",
-        "block": "minecraft:stripped_spruce_log[axis=x]"
+        "block": "minecraft:stripped_dark_oak_wood"
       },
       {
         "char": "4",
+        "block": "minecraft:stripped_spruce_log[axis=x]"
+      },
+      {
+        "char": "5",
         "block": "minecraft:stripped_spruce_wood"
       }
     ]

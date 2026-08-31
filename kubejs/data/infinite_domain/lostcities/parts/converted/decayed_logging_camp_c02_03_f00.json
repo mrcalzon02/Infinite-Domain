@@ -3,13 +3,13 @@
   "zsize": 16,
   "slices": [
     [
-      "%%%%%%%%%%%%%%%%",
-      "%%%%%%%%%%%%%%%%",
-      "%%$''''$'''%''''",
-      "%%''$''''$'''%''",
-      "%%''''$''''$'''%",
-      "%%'$''''$''''$''",
-      "%''''$''''$''''$",
+      "&&&&&&&&&&&&&&&&",
+      "&&&&&&&&&&&&&&&&",
+      "&&%%%%%%%%%%%%%%",
+      "&&%%%%%%%%%%%%%%",
+      "&&%%%%%%%%%%%%%%",
+      "&&$$$$$$$$$$$$$$",
+      "&&&&))))))((((((",
       "                ",
       "                ",
       "                ",
@@ -21,30 +21,12 @@
       "                "
     ],
     [
-      "   +++++++++++++",
-      "****++++++++++++",
-      "****++++++++++++",
-      "****++++++++++++",
+      "   -------------",
+      ",,,,------------",
+      ",,,,------------",
+      ",,,,------------",
       "                ",
-      "             ,  ",
-      "                ",
-      "                ",
-      "                ",
-      "                ",
-      "                ",
-      "                ",
-      "                ",
-      "                ",
-      "                ",
-      "                "
-    ],
-    [
-      "   & !!!!!!!!  (",
-      "**** !!!!!!!!  -",
-      "****           -",
-      "****&&&&&&&&&&&&",
-      "                ",
-      "             ,  ",
+      "             .  ",
       "                ",
       "                ",
       "                ",
@@ -57,12 +39,12 @@
       "                "
     ],
     [
-      "   & !!!!!!!!  )",
-      "**** !!!!!!!!  -",
-      "****           -",
-      "****&&&&&&&&&&&&",
+      "   ' !!!!!!!!  *",
+      ",,,, !!!!!!!!  /",
+      ",,,,           /",
+      ",,,,''''''''''''",
       "                ",
-      "                ",
+      "             .  ",
       "                ",
       "                ",
       "                ",
@@ -75,10 +57,10 @@
       "                "
     ],
     [
-      "   &           -",
-      "   &           -",
-      "   &           -",
-      "   &&&&&&&&&&&&&",
+      "   ' !!!!!!!!  +",
+      ",,,, !!!!!!!!  /",
+      ",,,,           /",
+      ",,,,''''''''''''",
       "                ",
       "                ",
       "                ",
@@ -93,10 +75,28 @@
       "                "
     ],
     [
-      "   &           -",
-      "   &           -",
-      "   &           -",
-      "   &&&&&&&&&&&&&",
+      "   '           /",
+      "   '           /",
+      "   '           /",
+      "   '''''''''''''",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                ",
+      "                "
+    ],
+    [
+      "   '           /",
+      "   '           /",
+      "   '           /",
+      "   '''''''''''''",
       "                ",
       "                ",
       "                ",
@@ -123,38 +123,46 @@
       },
       {
         "char": "%",
-        "block": "minecraft:gravel"
+        "block": "minecraft:cobblestone"
       },
       {
         "char": "&",
-        "block": "minecraft:mud_bricks"
+        "block": "minecraft:gravel"
       },
       {
         "char": "'",
-        "block": "minecraft:podzol"
+        "block": "minecraft:mud_bricks"
       },
       {
         "char": "(",
-        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+        "block": "minecraft:podzol"
       },
       {
         "char": ")",
-        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
+        "block": "minecraft:rooted_dirt"
       },
       {
         "char": "*",
-        "block": "minecraft:spruce_planks"
+        "block": "minecraft:spruce_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
       },
       {
         "char": "+",
-        "block": "minecraft:stone_bricks"
+        "block": "minecraft:spruce_door[facing=east,half=upper,hinge=left,open=false,powered=false]"
       },
       {
         "char": ",",
-        "block": "minecraft:stripped_spruce_log[axis=y]"
+        "block": "minecraft:spruce_planks"
       },
       {
         "char": "-",
+        "block": "minecraft:stone_bricks"
+      },
+      {
+        "char": ".",
+        "block": "minecraft:stripped_spruce_log[axis=y]"
+      },
+      {
+        "char": "/",
         "block": "minecraft:stripped_spruce_wood"
       }
     ]

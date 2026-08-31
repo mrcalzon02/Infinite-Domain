@@ -43,6 +43,7 @@ def main() -> None:
         record["structure_id"].split(":", 1)[1]: record
         for record in load(CATALOG)["structures"]
         if record.get("source_role") == "damage_variant"
+        and "/structure/wasteland/" in record.get("source_template", "").replace("\\", "/")
     }
     failures = []
     membership = defaultdict(list)

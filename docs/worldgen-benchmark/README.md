@@ -4,6 +4,31 @@ This regimen measures fresh chunk generation without opening a client or manuall
 
 The ordinary instance, `saves`, configurations, and mod jars are never modified. A failed run keeps its isolated runtime for diagnosis.
 
+## One-time dedicated-server bootstrap
+
+The CurseForge client installation does not contain NeoForge's patched dedicated-server jar or authoritative server argument file. Following the [official NeoForge server installation contract](https://docs.neoforged.net/user/docs/server/), install the pinned 21.1.248 runtime once before the first benchmark:
+
+```powershell
+.\scripts\bootstrap_worldgen_benchmark_server.ps1
+.\scripts\run_worldgen_benchmark.ps1 -ValidateLauncher
+python .\scripts\validate_worldgen_benchmark_launcher.py --output .\docs\worldgen-benchmark\launcher-validation.json
+```
+
+The bootstrap downloads the official NeoForge installer, verifies its pinned SHA-256, and installs into ignored `benchmark_runs/.launcher-cache/`. Benchmark runs hard-link that immutable library tree into each isolated runtime; they do not improvise a classpath from client artifacts and do not modify the playable instance. Use `-ServerLauncherRoot` only to point at an equivalent official 21.1.248 server installation.
+
+The PowerShell preflight verifies the required launch arguments and every referenced library. The Python audit additionally checks ZIP integrity and the Minecraft server, BootstrapLauncher, and ModLauncher entry points. These are static launcher checks; only a completed smoke run with benchmark markers proves pack bootstrap, datapack loading, and chunk generation.
+
+The isolated server does not blindly load client-only bootstrap services. Evidenced
+headless incompatibilities live in
+`scripts/worldgen_benchmark_server_mod_policy.json`; every exclusion needs a
+single matching local jar, a reason, and observed failure evidence. The current
+policy removes Sodium because its early rendering service loads LWJGL before
+NeoForge can apply ordinary distribution guards, and Barebones McQoy because its
+mod-construction subscriber loads a client GUI class on the dedicated-server
+distribution. Benchmark manifests record the policy hash and every omitted jar,
+so server-side content cannot disappear silently. Variant-specific omissions
+remain separate and are labelled as such.
+
 ## First smoke test
 
 From the instance directory:

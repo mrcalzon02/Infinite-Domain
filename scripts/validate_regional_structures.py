@@ -16,6 +16,7 @@ Implemented Karsic checks (section 13.4 of the program document):
   KV-5   basement service level reachable, with a main stub at the template edge
   KV-10  heating-main tiling
   KV-12  roof discipline
+  KV-14  mast-tower utility identity and climbable service platform
 
 KV-6..KV-9 and KV-11 depend on interior fitting-out and signage passes (P5/P7)
 that are not yet implemented; they are reported as `not_implemented` rather than
@@ -51,6 +52,14 @@ Pos = tuple[int, int, int]
 
 def base_name(state: str) -> str:
     return state.split("[", 1)[0]
+
+
+def generated_block(name: str) -> str:
+    """Mirror the stable-block substitutions made at Template serialization."""
+    return {
+        "the_wasteland_reworked:mesh_fence": "minecraft:oxidized_copper_grate",
+        "tfmg:steel_truss": "tfmg:steel_block",
+    }.get(name, name)
 
 
 def solids(blocks: dict[Pos, tuple[str, Any]]) -> set[Pos]:
@@ -115,17 +124,37 @@ def check_karsic(structure_id: str, path: Path, program: dict[str, Any],
         joint = profile.role("panel_joint", stratum)
         problems = []
         named = {pos: base_name(state) for pos, (state, _) in blocks.items()}
+        # Projections can share the joint material, so derive the body wall
+        # planes from the generation record instead of min/max occurrences.
+        bays_x, bays_z = (int(v) for v in meta["bays"])
+        body_width = bays_x * bay + 1
+        body_depth = bays_z * bay + 1
+        body_x0 = (size[0] - body_width) // 2
+        body_z0 = (size[2] - body_depth) // 2
+        body_x1 = body_x0 + bays_x * bay
+        body_z1 = body_z0 + bays_z * bay
         for index in range(1, storeys):
             base = ground_y + index * storey
             y = base + 3
-            columns = sorted({x for (x, yy, z) in solid if yy == y and named.get((x, yy, z)) == joint})
-            if len(columns) < 2:
-                problems.append(f"storey {index}: fewer than two joint columns found at y={y}")
+            joints = {(x, z) for (x, yy, z) in solid
+                      if yy == y and named.get((x, yy, z)) == joint}
+            if not joints:
+                problems.append(f"storey {index}: no panel joints found at y={y}")
                 continue
-            gaps = {columns[i + 1] - columns[i] for i in range(len(columns) - 1)}
-            unexpected = {g for g in gaps if g % bay != 0 and g != 1}
-            if unexpected:
-                problems.append(f"storey {index}: joint spacing not a multiple of the {bay}-block bay: {sorted(unexpected)}")
+            elevations = {
+                "north": ({x for x, z in joints if z == body_z0}, range(body_x0, body_x1 + 1, bay)),
+                "south": ({x for x, z in joints if z == body_z1}, range(body_x0, body_x1 + 1, bay)),
+                "west": ({z for x, z in joints if x == body_x0}, range(body_z0, body_z1 + 1, bay)),
+                "east": ({z for x, z in joints if x == body_x1}, range(body_z0, body_z1 + 1, bay)),
+            }
+            for elevation, (found, expected_range) in elevations.items():
+                expected = set(expected_range)
+                missing = sorted(expected - found)
+                if missing:
+                    problems.append(
+                        f"storey {index} {elevation}: missing joint columns at {missing} "
+                        f"on the {bay}-block bay grid"
+                    )
         result.add("KV-2", "panel joint continuity",
                    "fail" if problems else "pass",
                    f"joint block {joint}, bay {bay}", problems)
@@ -205,6 +234,68 @@ def check_karsic(structure_id: str, path: Path, program: dict[str, Any],
                    "consecutive placements must read as one continuous run", problems)
     else:
         result.add("KV-10", "heating-main tiling", "skip", "not a tiling asset")
+
+    # --- KV-13 mandatory utility identity --------------------------------
+    if structure_id == "kar_084_transformer_kiosk":
+        fence = generated_block(profile.kit("fence_standard"))
+        door = generated_block(profile.opening("door_service"))
+        names = [base_name(state) for state, _ in blocks.values()]
+        problems = []
+        if names.count(fence) < 20:
+            problems.append("transformer kiosk lacks its recurring three-clear fenced compound")
+        if door not in names:
+            problems.append("transformer kiosk lacks its single outward service door")
+        result.add("KV-13", "mandatory utility identity", "fail" if problems else "pass",
+                   "windowless transformer kiosk, service door, hazard plate and fenced compound", problems)
+    elif structure_id == "kar_085_bus_shelter_and_stop":
+        bench = profile.furniture("bench")
+        route_plate = profile.kit("road_sign")
+        joint = profile.role("panel_joint", stratum)
+        names = [base_name(state) for state, _ in blocks.values()]
+        problems = []
+        if names.count(bench) < 3:
+            problems.append("bus shelter lacks a continuous fixed waiting bench")
+        if route_plate not in names:
+            problems.append("bus shelter lacks its numbered route plate")
+        if names.count(joint) < 8:
+            problems.append("bus shelter lacks a panel-jointed rear screen")
+        result.add("KV-13", "mandatory utility identity", "fail" if problems else "pass",
+                   "open-front shelter, panelled back, fixed bench, pull-in strip and route post", problems)
+    elif structure_id == "kar_083_district_heating_main":
+        result.add("KV-13", "mandatory utility identity", "pass",
+                   "continuous insulated main, regular saddles, road gantry and inspection point")
+    else:
+        result.add("KV-13", "mandatory utility identity", "skip",
+                   "not one of the three mandatory native infrastructure assets")
+
+    # --- KV-14 mast-tower identity ---------------------------------------
+    if building_type == "mast_tower":
+        names = [base_name(state) for state, _ in blocks.values()]
+        fence = generated_block(profile.kit("fence_standard"))
+        pipe = profile.kit("pipe_service")
+        ladders = [pos for pos, (state, _) in blocks.items()
+                   if base_name(state) == "minecraft:ladder"]
+        problems = []
+        if len(ladders) < 16:
+            problems.append("service ladder is too short to establish a climbable vertical utility")
+        elif max(y for _, y, _ in ladders) < size[1] - 13:
+            problems.append("service ladder does not reach the head platform")
+        if names.count(fence) < 48:
+            problems.append("mast lacks the standard three-clear fenced compound")
+        if names.count("tfmg:steel_block") < 60:
+            problems.append("mast chassis lacks a substantial four-column braced frame")
+        if names.count(pipe) < max(12, size[1] - 16):
+            problems.append("equipment hut has no continuous cable/pipe route to the head")
+        tank_cells = names.count("immersiveengineering:sheetmetal_steel")
+        if structure_id == "kar_081_steel_water_tower" and tank_cells < 100:
+            problems.append("water tower lacks its broad steel tank head")
+        if structure_id == "kar_078_relay_mast" and tank_cells >= 40:
+            problems.append("relay mast has collapsed into the water-tower tank silhouette")
+        result.add("KV-14", "mast-tower utility identity", "fail" if problems else "pass",
+                   "braced chassis, backed ladder, real platform, equipment hut, cable route and distinct head",
+                   problems)
+    else:
+        result.add("KV-14", "mast-tower utility identity", "skip", "not a mast-tower type")
 
     # --- KV-12 roof discipline -------------------------------------------
     if stratum in ("K-III", "K-IV"):

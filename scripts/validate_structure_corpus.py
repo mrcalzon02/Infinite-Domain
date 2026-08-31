@@ -11,6 +11,7 @@ from build_structure_qa_world import NbtList, Reader
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "structure_library" / "catalog.json"
+APPROVALS = ROOT / "structure_library" / "production-approvals.json"
 REPORT = ROOT / "docs" / "structure-corpus-validation.json"
 RESOURCE_ID = re.compile(r"^[a-z0-9_.-]+:[a-z0-9_./-]+$")
 CATEGORIES = {"residential", "commercial", "civic", "industrial", "agricultural", "highway", "railway", "utility_infrastructure", "military", "miscellaneous"}
@@ -91,6 +92,8 @@ def validate_entry(entry: dict[str, Any]) -> list[str]:
 def main() -> None:
     document = json.loads(CATALOG.read_text(encoding="utf-8"))
     structures = document.get("structures", [])
+    approvals = json.loads(APPROVALS.read_text(encoding="utf-8")).get("approvals", [])
+    approved_ids = {entry.get("structure_id") for entry in approvals}
     results: dict[str, Any] = {}
     seen: set[str] = set()
     for index, entry in enumerate(structures):
@@ -100,18 +103,34 @@ def main() -> None:
             issues.append("duplicate structure_id")
         seen.add(structure_id)
         results[structure_id] = {"metadata_valid": not issues, "issues": issues}
+    catalog_by_id = {entry.get("structure_id"): entry for entry in structures}
+    for structure_id in sorted(approved_ids):
+        entry = catalog_by_id.get(structure_id)
+        if entry is None:
+            results[structure_id] = {
+                "metadata_valid": False,
+                "issues": ["production approval has no catalog record"],
+            }
+        elif entry.get("source_role") != "damage_variant" or entry.get("production_status") != "approved":
+            results[structure_id]["metadata_valid"] = False
+            results[structure_id]["issues"].append(
+                "production approval requires an approved damage-variant catalog record"
+            )
     report = {
         "purpose": "Corpus metadata and source-NBT dimension validation. This is not visual approval.",
         "structures_checked": len(structures),
         "valid": all(result["metadata_valid"] for result in results.values()),
-        "production_approved": 0,
+        "production_approved": len(approved_ids),
         "structures": results,
     }
     REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
     if not report["valid"]:
         failures = [f"{name}: {', '.join(result['issues'])}" for name, result in results.items() if result["issues"]]
         raise SystemExit("\n".join(failures))
-    print(f"Validated {len(structures)} corpus records against source NBT dimensions; 0 production approvals")
+    print(
+        f"Validated {len(structures)} corpus records against source NBT dimensions; "
+        f"{len(approved_ids)} production approvals resolve to approved damage variants"
+    )
 
 
 if __name__ == "__main__":

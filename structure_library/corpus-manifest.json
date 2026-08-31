@@ -5,6 +5,7 @@
   "metadata_catalog": "structure_library/catalog.json",
   "provenance_manifest": "structure_library/licensing/provenance.json",
   "clean_master_storage": "kubejs/data/infinite_domain/structure/wasteland/masters",
+  "regional_clean_master_storage": "kubejs/data/infinite_domain/structure/<culture>/masters",
   "generated_variant_storage": "kubejs/data/infinite_domain/structure/wasteland",
   "programs": "structure_library/programs",
   "variant_descriptions": "structure_library/variants",
@@ -15,13 +16,9 @@
   "extracted_review_storage": "structure_library/extracted",
   "counts": {
     "inbuilt_variants_and_sources": 84,
-    "clean_masters": 84,
-    "provenance_records": 246,
-    "production_approved": 0
+    "clean_masters": 92,
+    "provenance_records": 262,
+    "production_approved": 36
   },
-  "integration_rule": "Only explicitly approved records may be referenced by production Lost Cities or custom worldgen selectors.",
-  "sibling_systems": {
-    "deep_sea_structure_corpus": "structure_library/deepsea-corpus-manifest.json",
-    "relationship": "independent corpus for underwater structures/geological features, governed by docs/DEEP_SEA_STRUCTURE_AND_GEOLOGICAL_FEATURE_STANDARDS.md and validated by scripts/validate_deep_sea_structures.py -- not part of this manifest's counts or gates"
-  }
+  "integration_rule": "Only explicitly approved records may be referenced by production Lost Cities or custom worldgen selectors."
 }

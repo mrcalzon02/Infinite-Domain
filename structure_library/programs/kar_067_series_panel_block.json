@@ -20,7 +20,7 @@
   "damage_archetype": "frozen district",
   "residential_program": [
     "identical apartment or office floors repeated the full height of the slab",
-    "two stair cores expressed as projecting towers with a continuous glazing slot",
+    "one stair core per four bays of slab length, minimum two, expressed as projecting towers with a continuous glazing slot",
     "a landing serving two to four doors at every core on every floor",
     "ground-floor entrance vestibules with an unheated lobby between two door leaves",
     "ground-floor mail, pram and refuse stores off the entrance lobby",
@@ -29,7 +29,7 @@
     "a roof bulkhead over each stair core with the roof plant clustered against it"
   ],
   "circulation": [
-    "vertical circulation is two encased stair cores, landing-connected at both ends",
+    "vertical circulation uses encased stair cores at no more than four-bay intervals, landing-connected at both ends",
     "no floor may be reachable only through another dwelling",
     "the basement gallery connects both cores"
   ],
@@ -69,5 +69,18 @@
     },
     "base_height": 31,
     "conversion_target": "multibuilding"
+  },
+  "lostcities_repeatable_contract": {
+    "minfloors": 5,
+    "maxfloors": 9,
+    "cellar_bands": 1,
+    "ground_bands": 1,
+    "repeat_source_band": 2,
+    "top_bands": 1
+  },
+  "footprint_drift_exception": {
+    "accepted": true,
+    "reason": "The 61x53 source lot is near-square, but the Karsic residential-slab rule requires length >= 3x inhabited height and a viable double-loaded plan. The regional designer preserves the five-storey height, expands length to the next four-block panel bay that meets the ratio, and reduces depth to seven bays (12-block rooms + 3-block corridor + 12-block rooms).",
+    "rule": "length >= 3 * (storeys * 6); depth = 7 * 4 + 1"
   }
 }

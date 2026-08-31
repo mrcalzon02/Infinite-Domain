@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Insert the regional land-biome rules into the Wastelands world preset.
+"""Insert the regional land-biome rules into the canonical Overworld preset.
 
 The preset routes ocean bands by humidity (West -1.0..-0.2, seam -0.2..0.2,
 East 0.2..1.0) but its temperate *land* rules carry no humidity gate at all, so
@@ -33,7 +33,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-PRESET = ROOT / "kubejs" / "data" / "wastelands" / "worldgen" / "world_preset" / "wasteland.json"
+PRESET = ROOT / "kubejs" / "data" / "minecraft" / "worldgen" / "world_preset" / "normal.json"
 
 TEMPERATE = [-0.99, 0.99]
 LAND_CONTINENTALNESS = [-0.19, 1.2]

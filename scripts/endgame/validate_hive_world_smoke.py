@@ -138,14 +138,25 @@ if dim is not None:
         referenced_biomes = [e.get("biome", "") for e in bs.get("biomes", [])]
         if len(referenced_biomes) < 2:
             fail("[4] multi_noise biome_source has fewer than 2 entries (routing needs a split)")
-        # depth windows must tile [-1, 1] with no gap
-        windows = sorted(
-            e["parameters"]["depth"] for e in bs.get("biomes", [])
-            if isinstance(e.get("parameters", {}).get("depth"), list)
-        )
-        for lo, hi in zip(windows, windows[1:]):
-            if abs(lo[1] - hi[0]) > 1e-6:
-                fail(f"[4] multi_noise depth windows have a gap/overlap: {lo} then {hi}")
+        # Every horizontal climate role must cover the full depth range. Exterior
+        # roles do that with one [-1, 1] window; the core tiles it with six bands.
+        windows_by_horizontal = {}
+        for entry in bs.get("biomes", []):
+            params = entry.get("parameters", {})
+            depth = params.get("depth")
+            horizontal = params.get("continentalness")
+            if isinstance(depth, list) and isinstance(horizontal, list):
+                windows_by_horizontal.setdefault(tuple(horizontal), []).append(depth)
+        for horizontal, windows in windows_by_horizontal.items():
+            windows = sorted(windows)
+            if not windows or windows[0][0] != -1.0 or windows[-1][1] != 1.0:
+                fail(f"[4] continentalness {horizontal} does not cover depth [-1, 1]: {windows}")
+            for lo, hi in zip(windows, windows[1:]):
+                if abs(lo[1] - hi[0]) > 1e-6:
+                    fail(
+                        f"[4] continentalness {horizontal} depth windows have a "
+                        f"gap/overlap: {lo} then {hi}"
+                    )
     elif not bs:
         fail("[4] dimension has no biome_source")
     for biome in referenced_biomes:
@@ -257,8 +268,14 @@ else:
 # ---- 10. jigsaw district integrity ----------------------------
 pool_dir = DATA / "worldgen/template_pool/hive_world"
 struct_nbt_dir = DATA / "structure/hive_world"
-district = DATA / "worldgen/structure/hive_world_district.json"
-if district.is_file():
+structure_dir = DATA / "worldgen/structure"
+set_dir = DATA / "worldgen/structure_set"
+district_files = sorted(structure_dir.glob("hive_world_district*.json"))
+expected_band_districts = {
+    f"hive_world_district_{slug}"
+    for slug in ("drown", "underworks", "furnace", "billet", "vaulting", "crown")
+}
+if district_files:
     modules = {p.stem for p in struct_nbt_dir.glob("*.nbt")} if struct_nbt_dir.is_dir() else set()
     pools = {p.stem for p in pool_dir.glob("*.json")} if pool_dir.is_dir() else set()
     for pj in pool_dir.glob("*.json"):
@@ -270,21 +287,40 @@ if district.is_file():
             loc = el.get("element", {}).get("location", "")
             if loc.startswith("infinite_domain:hive_world/") and loc.split("/")[-1] not in modules:
                 fail(f"[10] pool {pj.name} element {loc} has no matching NBT")
-    dj = json.loads(district.read_text(encoding="utf-8"))
-    sp = dj.get("start_pool", "")
-    if sp.split("/")[-1] not in pools:
-        fail(f"[10] structure start_pool {sp} does not resolve")
-    for b in dj.get("biomes", []):
-        if b.startswith("infinite_domain:") and not (DATA / f"worldgen/biome/{b.split(':',1)[1]}.json").is_file():
-            fail(f"[10] structure biome {b} missing")
-    ss = DATA / "worldgen/structure_set/hive_world_district.json"
-    if not ss.is_file():
-        fail("[10] hive_world_district structure_set is missing")
-    else:
-        for s in json.loads(ss.read_text(encoding="utf-8")).get("structures", []):
+    actual_band_districts = {path.stem for path in district_files if path.stem != "hive_world_district"}
+    missing_band_districts = sorted(expected_band_districts - actual_band_districts)
+    extra_band_districts = sorted(actual_band_districts - expected_band_districts)
+    if missing_band_districts or extra_band_districts:
+        fail(
+            f"[10] six-band district inventory drift: missing={missing_band_districts}, "
+            f"extra={extra_band_districts}"
+        )
+    for district in district_files:
+        dj = json.loads(district.read_text(encoding="utf-8"))
+        sp = dj.get("start_pool", "")
+        if sp.split("/")[-1] not in pools:
+            fail(f"[10] {district.name} start_pool {sp} does not resolve")
+        for b in dj.get("biomes", []):
+            if b.startswith("infinite_domain:") and not (DATA / f"worldgen/biome/{b.split(':',1)[1]}.json").is_file():
+                fail(f"[10] {district.name} biome {b} missing")
+        ss = set_dir / district.name
+        if not ss.is_file():
+            fail(f"[10] {district.stem} structure_set is missing")
+            continue
+        structures = json.loads(ss.read_text(encoding="utf-8")).get("structures", [])
+        if district.stem == "hive_world_district":
+            if structures:
+                fail("[10] unrouted compatibility district structure_set must remain inert")
+            continue
+        expected_structure = f"infinite_domain:{district.stem}"
+        if structures != [{"structure": expected_structure, "weight": 1}]:
+            fail(f"[10] {district.name} structure_set does not exclusively own {expected_structure}")
+        for s in structures:
             sid = s.get("structure", "")
             if sid.startswith("infinite_domain:") and not (DATA / f"worldgen/structure/{sid.split(':',1)[1]}.json").is_file():
                 fail(f"[10] structure_set references {sid} but no structure file")
+else:
+    fail("[10] no Hive World district structures are present")
 
 # ---- report --------------------------------------------------------------
 print("Hive World smoke validator")

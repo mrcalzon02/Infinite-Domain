@@ -387,13 +387,16 @@ def run_checks(graph: Graph) -> tuple[list[dict[str, Any]], list[dict[str, Any]]
         "small_continents", "large_continents", "city_humidity", "regional_temperature",
         "abyssal_ocean_mask", "abyssal_plain_mask", "abyssal_fracture_mask",
         "hadal_trench_mask", "abyssal_slope_band_mask",
+        "abyssal_coarse_fracture_pattern", "abyssal_diffuse_roughness_pattern",
+        "abyssal_fine_fracture_pattern", "abyssal_mottled_collapse_pattern",
+        "abyssal_turbidity_channel_pattern", "abyssal_vent_caldera_pattern",
     ]
     uncached = [name for name in cached_nodes if graph.nodes[f"custom_worldgen:{name}"].get("type") not in CACHE_TYPES]
     record(
         "OG-11",
         "high-fanout horizontal geography fields retain chunk-local caches",
         not uncached,
-        "central/directional continents, climate routing, and abyssal band masks are cache_2d or flat_cache wrapped",
+        "central/directional continents, climate routing, abyssal band masks, and repeated feature patterns are cache_2d or flat_cache wrapped",
         {"uncached": uncached, "checked": cached_nodes},
     )
 

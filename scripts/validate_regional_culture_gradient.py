@@ -37,14 +37,14 @@ from typing import Any, Callable
 
 ROOT = Path(__file__).resolve().parents[1]
 DF_DIR = ROOT / "datapacks" / "gradient_ocean_pack" / "data" / "custom_worldgen" / "worldgen" / "density_function"
-WORLD_PRESET = ROOT / "kubejs" / "data" / "wastelands" / "worldgen" / "world_preset" / "wasteland.json"
+WORLD_PRESET = ROOT / "kubejs" / "data" / "minecraft" / "worldgen" / "world_preset" / "normal.json"
 REPORT = ROOT / "docs" / "regional-culture-gradient-validation.json"
 
 NAMESPACE = "custom_worldgen"
 
 # The land lobes reach full strength once |x| - |z| >= 250 (east_west_continent_mask
 # saturates) and the culture gradient saturates once |x| >= 500. Regional biome
-# rules key on the humidity bands below, taken from the Wastelands world preset.
+# rules key on the humidity bands below, taken from the canonical normal preset.
 WEST_BAND = (-1.0, -0.2)
 EAST_BAND = (0.2, 1.0)
 
@@ -133,6 +133,10 @@ class Graph:
         if kind == "isekai_api:step":
             value = ev("value")
             return ev("high") if value >= float(node["threshold"]) else ev("low")
+        if kind in ("minecraft:cache_2d", "minecraft:flat_cache", "minecraft:cache_once"):
+            # Cache markers are semantically transparent to this point evaluator.
+            # Runtime Minecraft replaces them with chunk-local memoizing wrappers.
+            return ev("argument")
         if kind in ("minecraft:shifted_noise", "minecraft:noise"):
             return noise(node["noise"], x, y, z)
 

@@ -5,10 +5,10 @@ It inventories authored overlays as well as native Infinite Domain namespaces.
 
 ## Scope totals
 
-- Datapack files: 5217
-- Asset files: 456
-- Active KubeJS and maintenance scripts: 133
-- Installed Infinite Domain companion mods: 6
+- Datapack files: 22295
+- Asset files: 795
+- Active KubeJS and maintenance scripts: 443
+- Installed Infinite Domain companion mods: 8
 - Baseline path/JSON/manifest findings: 0
 
 ## Datapack namespaces
@@ -31,62 +31,65 @@ It inventories authored overlays as well as native Infinite Domain namespaces.
 | `create_aeronautics_toolgun` | 1 | recipe (1) |
 | `create_aquatic_ambitions` | 2 | recipe (2) |
 | `create_chimneys` | 3 | recipe (3) |
-| `create_hypertube` | 1 | recipe (1) |
+| `create_hypertube` | 2 | recipe (2) |
 | `create_mtg` | 1 | recipe (1) |
 | `create_new_age` | 14 | recipe (14) |
-| `create_radar` | 7 | recipe (7) |
+| `create_radar` | 8 | recipe (8) |
 | `create_structures_overhaul` | 1 | loot_table (1) |
 | `create_submarine` | 7 | recipe (7) |
 | `create_ultimate_factory` | 3 | recipe (3) |
 | `create_winery` | 7 | recipe (7) |
 | `createappliedkinetics` | 1 | recipe (1) |
-| `createbigcannons` | 21 | recipe (21) |
+| `createbigcannons` | 22 | recipe (22) |
 | `createcybernetics` | 69 | recipe (69) |
-| `createdeliveryrequired` | 3 | recipe (3) |
+| `createdeliveryrequired` | 4 | recipe (4) |
 | `createdieselgenerators` | 25 | recipe (23), loot_table (1), tags (1) |
 | `createmetallurgy` | 13 | recipe (13) |
 | `createnuclear` | 59 | recipe (59) |
 | `createoritechcompat` | 14 | recipe (14) |
 | `createpropulsion` | 13 | recipe (13) |
 | `createreautomated` | 4 | recipe (4) |
-| `createthrusters` | 23 | recipe (23) |
+| `createthrusters` | 24 | recipe (24) |
 | `custom_worldgen` | 1 | tags (1) |
 | `cyber_ware_port` | 12 | recipe (12) |
 | `cyberchems` | 1 | tags (1) |
 | `cyberspace` | 10 | recipe (7), dimension (1), dimension_type (1), loot_table (1) |
 | `dungeons_arise` | 1 | worldgen (1) |
 | `dungeons_arise_seven_seas` | 5 | worldgen (5) |
-| `enviromine` | 12 | recipe (12) |
+| `enviromine` | 13 | recipe (12), neoforge (1) |
 | `exdeorum` | 1795 | recipe (1795) |
 | `farmersdelight` | 21 | recipe (21) |
 | `ftbchunks` | 1 | tags (1) |
 | `ftbfiltersystem` | 1 | recipe (1) |
+| `ftboceanmobs` | 9 | loot_table (9) |
 | `ftbquests` | 2 | recipe (2) |
 | `gateway_of_doom` | 8 | recipe (8) |
 | `gearbox` | 16 | recipe (16) |
 | `graveyard` | 24 | recipe (24) |
 | `iceandfire` | 124 | recipe (121), tags (3) |
 | `immersiveengineering` | 114 | recipe (114) |
-| `infinite_domain` | 482 | recipe (321), worldgen (53), neoforge (38), tags (32), function (17) |
+| `infinite_domain` | 17512 | lostcities (15347), worldgen (855), structure (696), recipe (321), loot_table (128) |
 | `infinite_domain_radiation` | 3 | tags (3) |
 | `infinite_domain_space` | 36 | recipe (36) |
 | `jaffabricate` | 4 | recipe (3), tags (1) |
-| `kubejs` | 4 | loot_table (4) |
+| `kubejs` | 22 | loot_table (22) |
 | `linearbearing` | 5 | recipe (5) |
+| `lostcities` | 1 | lostcities (1) |
 | `mekanite_mobs` | 14 | recipe (14) |
-| `minecraft` | 393 | recipe (371), loot_table (13), tags (9) |
+| `minecraft` | 400 | recipe (371), tags (14), loot_table (13), worldgen (2) |
 | `mininggadgets` | 26 | recipe (26) |
 | `more_ores_more_gems` | 651 | recipe (651) |
 | `mutantmonsters` | 1 | recipe (1) |
 | `netherdepthsupgrade` | 2 | recipe (2) |
 | `numismatics` | 17 | recipe (17) |
-| `oritech` | 97 | recipe (97) |
+| `oritech` | 98 | recipe (98) |
 | `peaks` | 1 | worldgen (1) |
 | `petrochem` | 5 | recipe (5) |
 | `powergrid` | 30 | recipe (30) |
 | `powergrid_batteries` | 9 | recipe (9) |
 | `primitivestart` | 29 | recipe (29) |
 | `quark` | 153 | recipe (153) |
+| `razor_tyrant` | 2 | neoforge (1), tags (1) |
 | `rechiseled` | 1 | recipe (1) |
 | `refuellinghose` | 5 | recipe (3), loot_table (2) |
 | `rpg_companions_tiny_dragons` | 1 | recipe (1) |
@@ -97,7 +100,7 @@ It inventories authored overlays as well as native Infinite Domain namespaces.
 | `stellaris` | 63 | recipe (62), tags (1) |
 | `supplementaries` | 123 | recipe (123) |
 | `tfmg` | 87 | recipe (86), worldgen (1) |
-| `the_wasteland_reworked` | 27 | recipe (18), loot_table (5), worldgen (3), neoforge (1) |
+| `the_wasteland_reworked` | 31 | recipe (18), worldgen (7), loot_table (5), neoforge (1) |
 | `tracks` | 3 | loot_table (3) |
 | `wandofvariance` | 1 | recipe (1) |
 | `wastelands` | 17 | loot_table (9), recipe (6), worldgen (2) |
@@ -113,6 +116,8 @@ It inventories authored overlays as well as native Infinite Domain namespaces.
 | `infinite-domain-cyberware-mastery-1.0.0.jar` | `infinite_domain_cyberware` | 241 | 5 | 154 | 64 |
 | `infinite-domain-darknet-worldgen-1.8.0.jar` | `infinite_domain_darknet_worldgen` | 403 | 30 | 7 | 340 |
 | `infinite-domain-echo-economy-1.0.0.jar` | `infinite_domain_echo_economy` | 10 | 3 | 1 | 0 |
+| `infinite-domain-hive-world-companion-0.1.0.jar` | `infinite_domain_hive_world` | 13 | 7 | 0 | 0 |
+| `infinite-domain-lostcities-highway-compat-1.0.0.jar` | `infinite_domain_lostcities_highway_compat` | 10 | 3 | 1 | 0 |
 | `infinite-domain-stellaris-industry-1.0.0.jar` | `infinite_domain_space` | 95 | 8 | 38 | 36 |
 | `infinite-domain-unified-radiation-1.0.0.jar` | `infinite_domain_radiation` | 37 | 2 | 19 | 0 |
 

@@ -18,7 +18,7 @@
   },
   "noise_router": {
     "barrier": 0,
-    "continents": 0,
+    "continents": "infinite_domain:hive_world/biome_region",
     "depth": {
       "type": "minecraft:y_clamped_gradient",
       "from_y": -64,

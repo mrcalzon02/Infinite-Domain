@@ -26,6 +26,7 @@
         23,
         19
       ],
+      "boundary_refinement": "none",
       "size": [
         21,
         22,
@@ -42,7 +43,11 @@
       "source_sha256": "1dbc1c32e50f9d647cc5fdba7d97afc42945ac429f9e08d85b133d5703a26596",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:harbor_loading_pier_cold",
@@ -57,6 +62,7 @@
         23,
         19
       ],
+      "boundary_refinement": "none",
       "size": [
         21,
         22,
@@ -73,7 +79,11 @@
       "source_sha256": "58b9a2e25081f5444f7b27a7ee60b352fc4015d06d677221f564483e9e5c3068",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:port_customs_warehouse",
@@ -88,6 +98,7 @@
         17,
         35
       ],
+      "boundary_refinement": "port_customs_mezzanine",
       "size": [
         15,
         14,
@@ -100,10 +111,14 @@
       "placement_context": "surface_module",
       "terrain_adaptation_requirement": "contextual_lot_feathering",
       "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/port_customs_warehouse.nbt",
-      "source_sha256": "a743944000cbe844114cbde4debad1126af867c9a0eebc7a9ab89fcc346413e5",
+      "source_sha256": "6a9afafa83ef816b187970362537f77e2eb2bc853d7da51e14506897d7393b02",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:port_tunnel_control",
@@ -118,6 +133,7 @@
         16,
         35
       ],
+      "boundary_refinement": "none",
       "size": [
         14,
         13,
@@ -133,7 +149,11 @@
       "source_sha256": "9a217647f6f59817d131535d7df780434f2d86ab4defe8e8de540d23c21226b8",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:mountain_transport_tunnel_warm",
@@ -148,6 +168,7 @@
         15,
         46
       ],
+      "boundary_refinement": "none",
       "size": [
         15,
         14,
@@ -163,7 +184,11 @@
       "source_sha256": "444dac92cf261ccf382a77221ae1b09fa8cbfa16aeb37acb9b8644deef2e7b4a",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:mountain_transport_tunnel_cold",
@@ -178,6 +203,7 @@
         15,
         46
       ],
+      "boundary_refinement": "none",
       "size": [
         15,
         14,
@@ -193,7 +219,11 @@
       "source_sha256": "5c7f5dcd5824b3dcda67eb4d9d98743f368361fd87ff859852bfe27f4a78f2dc",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:fuel_tank_containment_cell",
@@ -208,6 +238,7 @@
         13,
         28
       ],
+      "boundary_refinement": "none",
       "size": [
         17,
         13,
@@ -223,7 +254,11 @@
       "source_sha256": "4a9e32b9a06e88887a0d03447925214caf5df4e40ff2b667566bd4a76a63b665",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:fuel_loading_rack",
@@ -238,6 +273,7 @@
         12,
         58
       ],
+      "boundary_refinement": "none",
       "size": [
         18,
         12,
@@ -253,7 +289,11 @@
       "source_sha256": "a8c87ec26ef75ca3b87aa15905482f165342b9878a1b8ec168c0417ad1870e2c",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:market_stall_provisions",
@@ -268,6 +308,7 @@
         8,
         18
       ],
+      "boundary_refinement": "market_stall_gable_frame",
       "size": [
         10,
         9,
@@ -279,10 +320,14 @@
       "placement_context": "surface_module",
       "terrain_adaptation_requirement": "contextual_lot_feathering",
       "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/market_stall_provisions.nbt",
-      "source_sha256": "477ab63144b235481797d2dd8331702b025d617b7830aecb50479d1f7bb009b7",
+      "source_sha256": "c8d449a001e65d775ba2a1e5b7cd943ed0120a1aecb37a156eaa6f0dfe609a0e",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:market_stall_medicine",
@@ -297,6 +342,7 @@
         8,
         18
       ],
+      "boundary_refinement": "market_stall_gable_frame",
       "size": [
         10,
         9,
@@ -308,10 +354,14 @@
       "placement_context": "surface_module",
       "terrain_adaptation_requirement": "contextual_lot_feathering",
       "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/market_stall_medicine.nbt",
-      "source_sha256": "516646713fb23f8993ad03aba3652e56a025bb748aafcca070d178bba39eda11",
+      "source_sha256": "5dd2e472051df23cc9a6b2ddd3cef99e6fb88a550ad183f06287d9adc526ca46",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:market_stall_repair",
@@ -326,6 +376,7 @@
         8,
         31
       ],
+      "boundary_refinement": "market_stall_gable_frame",
       "size": [
         10,
         9,
@@ -337,10 +388,14 @@
       "placement_context": "surface_module",
       "terrain_adaptation_requirement": "contextual_lot_feathering",
       "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/market_stall_repair.nbt",
-      "source_sha256": "a1086b38621b618c34c41eec39ac2ff68048f876befe3123884c4638685fd527",
+      "source_sha256": "3314cc10ef0cc932c2adb5fa073b0021a7b7df9bf5a7ef20a0025401a3e9f27b",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:market_stall_livestock",
@@ -355,6 +410,7 @@
         8,
         31
       ],
+      "boundary_refinement": "market_stall_gable_frame",
       "size": [
         10,
         9,
@@ -366,10 +422,14 @@
       "placement_context": "surface_module",
       "terrain_adaptation_requirement": "contextual_lot_feathering",
       "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/market_stall_livestock.nbt",
-      "source_sha256": "722d266900d1ae612f0f8a6fe7dc27e7d34ca91033a5972ed727d1fdb57ed65e",
+      "source_sha256": "bff4653de8b36bb5deb7fde67196b7b32a3eece2ca7b52d6c96802ea9eaac858",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:market_trade_lodge",
@@ -384,6 +444,7 @@
         17,
         30
       ],
+      "boundary_refinement": "none",
       "size": [
         21,
         18,
@@ -396,10 +457,14 @@
       "placement_context": "surface_module",
       "terrain_adaptation_requirement": "contextual_lot_feathering",
       "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/market_trade_lodge.nbt",
-      "source_sha256": "220c70178e8e18cd99648620fa2fd7619e226a5000e830d40af8f46ec737dd3b",
+      "source_sha256": "3268bcd342774a272973109b3605799adcb6d6801486339512afdbca65aeef02",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:market_square_well",
@@ -414,6 +479,7 @@
         4,
         34
       ],
+      "boundary_refinement": "none",
       "size": [
         9,
         5,
@@ -431,7 +497,11 @@
       "source_sha256": "2cc4346e65ec98f51eaf04d916581fd768bb5d59acbb22426f428bbcec1c3be4",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:industrial_office_annex",
@@ -446,6 +516,7 @@
         15,
         23
       ],
+      "boundary_refinement": "industrial_office_stair",
       "size": [
         18,
         16,
@@ -458,10 +529,14 @@
       "placement_context": "surface_module",
       "terrain_adaptation_requirement": "contextual_lot_feathering",
       "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/industrial_office_annex.nbt",
-      "source_sha256": "da4d39619ba1b7ade1cf89c4acd7f7bd09ec9ce4bf823579c787a9f8602f9c31",
+      "source_sha256": "64d9fe04ea3d9b3baf9f2c92c23b32c5fda1b8572570b88ff17886dd83997f73",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:industrial_truck_dock_bank",
@@ -476,6 +551,7 @@
         15,
         42
       ],
+      "boundary_refinement": "none",
       "size": [
         35,
         16,
@@ -491,7 +567,11 @@
       "source_sha256": "63d07fd419171e53d355725c9d9c9ad5011e9627be7b7e2462a0c18bf0125a51",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:industrial_storage_rack_bay",
@@ -506,6 +586,7 @@
         14,
         30
       ],
+      "boundary_refinement": "none",
       "size": [
         26,
         15,
@@ -522,7 +603,11 @@
       "source_sha256": "a2b6bb129fd11b4df00189ad4c7f0fa2d050e53a7d9ed251d9e1991dcfb87957",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:industrial_rail_loading_platform",
@@ -537,6 +622,7 @@
         12,
         36
       ],
+      "boundary_refinement": "none",
       "size": [
         33,
         13,
@@ -553,7 +639,11 @@
       "source_sha256": "5969805b111a3eee813bbe0f84c02de7ff3a59efc870b70c3e10b0962065dabd",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:industrial_dispatch_annex",
@@ -568,6 +658,7 @@
         13,
         21
       ],
+      "boundary_refinement": "industrial_dispatch_stair",
       "size": [
         14,
         14,
@@ -581,10 +672,14 @@
       "placement_context": "surface_module",
       "terrain_adaptation_requirement": "contextual_lot_feathering",
       "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/industrial_dispatch_annex.nbt",
-      "source_sha256": "dac1673cade221aaf46775fdbee7e9dd5728e282eee340f6308d2d74e8a3baa8",
+      "source_sha256": "395b18af64a9aa8fa543a4af2a10b5d279cccb52a0e76132877a4d7416f1c5bc",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:industrial_process_line",
@@ -599,6 +694,7 @@
         10,
         29
       ],
+      "boundary_refinement": "industrial_process_gantry",
       "size": [
         20,
         11,
@@ -612,10 +708,14 @@
       "placement_context": "surface_module",
       "terrain_adaptation_requirement": "contextual_lot_feathering",
       "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/industrial_process_line.nbt",
-      "source_sha256": "0f17878b79abe8771c50161cd70316ece3fc9b8d377612338f0dcd2f72d31322",
+      "source_sha256": "5ec29a6f21e25e62904203cc25b5474d2b4aee59d3d5daa310ab020d2697a3e5",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     },
     {
       "module_id": "infinite_domain:industrial_powerhouse",
@@ -630,6 +730,7 @@
         26,
         34
       ],
+      "boundary_refinement": "none",
       "size": [
         12,
         27,
@@ -642,10 +743,14 @@
       "placement_context": "surface_module",
       "terrain_adaptation_requirement": "contextual_lot_feathering",
       "source_template": "kubejs/data/infinite_domain/structure/wasteland/modules/industrial_powerhouse.nbt",
-      "source_sha256": "a6e0476d4846c8e4bddf55430c0c189982e7d242f0ec19195e3c6df730a9ccc5",
+      "source_sha256": "e18ccf27edd9d3d43c1a370623312bb1b8a5a9fef9a4888e50f140bede9c5f85",
       "source_license": "Infinite Domain original work; distributable with the modpack",
       "extraction_tool": "scripts/extract_modular_structure_kits.py",
-      "production_status": "quarantined_pending_module_review"
+      "production_status": "quarantined_pending_module_review",
+      "geometry_gate": {
+        "passed": true,
+        "hard_fail_count": 0
+      }
     }
   ]
 }

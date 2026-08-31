@@ -6,20 +6,98 @@
     "lostcities_conversion"
   ],
   "structures_checked": 85,
-  "production_approvals": 29,
+  "production_approvals": 36,
+  "central_wasteland_approvals": 29,
+  "regional_approvals": [
+    "infinite_domain:kar_024_panel_block_service_premises",
+    "infinite_domain:kar_067_series_panel_block",
+    "infinite_domain:kar_078_relay_mast",
+    "infinite_domain:kar_081_steel_water_tower",
+    "infinite_domain:kar_083_district_heating_main",
+    "infinite_domain:kar_084_transformer_kiosk",
+    "infinite_domain:kar_085_bus_shelter_and_stop"
+  ],
   "all_gates_enforced": true,
   "failures": [],
   "lostcities_multibuildings": 20,
+  "regional_lostcities_multibuildings": 2,
   "lostcities_scattered": 9,
+  "global_selector_regional_leaks": [],
   "active_settlement_archetypes": [
     "city_district",
     "highway_service_cluster",
     "industrial_district",
+    "karsic_mikrorayon",
     "port_town",
     "rail_town",
     "small_town",
     "suburb"
   ],
+  "regional_structures": {
+    "infinite_domain:kar_024_panel_block_service_premises": {
+      "culture": "karsic",
+      "placement_owner": "karsic_citystyle",
+      "worldgen_status": "citystyle_active",
+      "worldgen_biomes": "#infinite_domain:karsic_region_biomes",
+      "global_selector_excluded": true,
+      "regional_citystyle_selected": true,
+      "issues": []
+    },
+    "infinite_domain:kar_067_series_panel_block": {
+      "culture": "karsic",
+      "placement_owner": "karsic_citystyle",
+      "worldgen_status": "citystyle_active",
+      "worldgen_biomes": "#infinite_domain:karsic_region_biomes",
+      "global_selector_excluded": true,
+      "regional_citystyle_selected": true,
+      "issues": []
+    },
+    "infinite_domain:kar_078_relay_mast": {
+      "culture": "karsic",
+      "placement_owner": "datapack_worldgen",
+      "worldgen_status": "active",
+      "worldgen_biomes": "#infinite_domain:karsic_region_biomes",
+      "global_selector_excluded": true,
+      "regional_citystyle_selected": false,
+      "issues": []
+    },
+    "infinite_domain:kar_081_steel_water_tower": {
+      "culture": "karsic",
+      "placement_owner": "datapack_worldgen",
+      "worldgen_status": "active",
+      "worldgen_biomes": "#infinite_domain:karsic_region_biomes",
+      "global_selector_excluded": true,
+      "regional_citystyle_selected": false,
+      "issues": []
+    },
+    "infinite_domain:kar_083_district_heating_main": {
+      "culture": "karsic",
+      "placement_owner": "datapack_worldgen",
+      "worldgen_status": "active",
+      "worldgen_biomes": "#infinite_domain:karsic_region_biomes",
+      "global_selector_excluded": true,
+      "regional_citystyle_selected": false,
+      "issues": []
+    },
+    "infinite_domain:kar_084_transformer_kiosk": {
+      "culture": "karsic",
+      "placement_owner": "datapack_worldgen",
+      "worldgen_status": "active",
+      "worldgen_biomes": "#infinite_domain:karsic_region_biomes",
+      "global_selector_excluded": true,
+      "regional_citystyle_selected": false,
+      "issues": []
+    },
+    "infinite_domain:kar_085_bus_shelter_and_stop": {
+      "culture": "karsic",
+      "placement_owner": "datapack_worldgen",
+      "worldgen_status": "active",
+      "worldgen_biomes": "#infinite_domain:karsic_region_biomes",
+      "global_selector_excluded": true,
+      "regional_citystyle_selected": false,
+      "issues": []
+    }
+  },
   "structures": {
     "infinite_domain:radio_mast": {
       "approved": true,

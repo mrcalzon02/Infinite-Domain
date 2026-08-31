@@ -76,6 +76,19 @@ CUTAWAY_OVERRIDES = {
     "infinite_domain:ruined_courthouse_clean_master": 11,
     "infinite_domain:ruined_courthouse": 11,
 }
+FLOOR_SLICE_OVERRIDES = {
+    # Six-block Karsic repeatable bands. The generic density detector can
+    # mistake the stair landing at the top of each band for the next floor and
+    # then suppress the real slab two blocks later. These planes show the
+    # basement plus the ground and four repeatable dwelling storeys.
+    "infinite_domain:kar_067_series_panel_block_clean_master": [3, 7, 13, 19, 25, 31],
+    "infinite_domain:kar_067_series_panel_block": [3, 7, 13, 19, 25, 31],
+    # One cellar, a retail plinth at Y=6, and five residential bands above.
+    # Generic density detection otherwise chooses the intermediate stair
+    # landings (Y=11/17/...) and hides the actual dwelling plans.
+    "infinite_domain:kar_024_panel_block_service_premises_clean_master": [3, 7, 13, 19, 25, 31, 37],
+    "infinite_domain:kar_024_panel_block_service_premises": [3, 7, 13, 19, 25, 31, 37],
+}
 
 
 def unpack_structure(path: Path) -> tuple[tuple[int, int, int], dict[tuple[int, int, int], str]]:
@@ -153,7 +166,12 @@ def isometric(size: tuple[int, int, int], source: dict[tuple[int, int, int], str
     return image
 
 
-def floor_slices(size: tuple[int, int, int], blocks: dict[tuple[int, int, int], str], title: str) -> Image.Image:
+def floor_slices(
+    size: tuple[int, int, int],
+    blocks: dict[tuple[int, int, int], str],
+    title: str,
+    selected_override: list[int] | None = None,
+) -> Image.Image:
     sx, sy, sz = size
     counts = {y: sum(1 for _, py, _ in blocks if py == y) for y in range(sy)}
     area = sx * sz
@@ -171,14 +189,15 @@ def floor_slices(size: tuple[int, int, int], blocks: dict[tuple[int, int, int], 
     for level in candidates:
         if not supports or level - supports[-1] > 2:
             supports.append(level)
-    selected = [level + 1 for level in supports]
+    selected = list(selected_override) if selected_override is not None else [level + 1 for level in supports]
     if not selected:
         selected = [min(sy - 1, max(counts, key=counts.get) + 1)]
     # A deliberately raised surface plane indicates a buried program. Include
     # an explicit basement slice so tanks, bunkers and service vaults are not
     # hidden by an otherwise correct above-ground floor selection.
     dominant_support = max(counts, key=counts.get)
-    if dominant_support >= 4 and any(y < dominant_support - 1 and count >= 8 for y, count in counts.items()):
+    if (selected_override is None and dominant_support >= 4
+            and any(y < dominant_support - 1 and count >= 8 for y, count in counts.items())):
         basement_slice = max(1, dominant_support // 2)
         selected = [basement_slice, *[level for level in selected if level != basement_slice]]
     cell = 5
@@ -228,7 +247,12 @@ def render(entry: dict[str, Any], output_root: Path = OUTPUT) -> dict[str, Any]:
     isometric(size, blocks, False, f"{name} — exterior A").save(files["exterior_a"])
     isometric(size, blocks, True, f"{name} — exterior B").save(files["exterior_b"])
     isometric(size, cutaway, False, f"{name} — roof-off cutaway at Y={cutoff}").save(files["roof_off_cutaway"])
-    floor_slices(size, blocks, name).save(files["floor_slices"])
+    floor_slices(
+        size,
+        blocks,
+        name,
+        FLOOR_SLICE_OVERRIDES.get(entry["structure_id"]),
+    ).save(files["floor_slices"])
     return {"structure_id": entry["structure_id"], "source_size": size, "cutaway_y": cutoff, "renders": {key: str(path.relative_to(ROOT)).replace("\\", "/") for key, path in files.items()}, "visual_approval": False}
 
 

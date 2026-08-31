@@ -141,36 +141,105 @@
           "the_wasteland_reworked:decayed_forest"
         ]
       }
+    },
+    {
+      "multiplier": 1.35,
+      "biomes": {
+        "if_any": [
+          "infinite_domain:karsic_district",
+          "infinite_domain:karsic_taiga_margin"
+        ]
+      }
+    },
+    {
+      "multiplier": 1.2,
+      "biomes": {
+        "if_any": [
+          "infinite_domain:karsic_industrial_belt"
+        ]
+      }
+    },
+    {
+      "multiplier": 0.75,
+      "biomes": {
+        "if_any": [
+          "infinite_domain:karsic_steppe_waste"
+        ]
+      }
     }
   ],
   "citystyles": [
     {
       "factor": 1.0,
-      "citystyle": "infinite_domain:wasteland_highway_service_cluster"
+      "citystyle": "infinite_domain:wasteland_highway_service_cluster",
+      "biomes": {
+        "excluding": [
+          "#infinite_domain:karsic_region_biomes"
+        ]
+      }
     },
     {
       "factor": 1.0,
-      "citystyle": "infinite_domain:wasteland_small_town"
+      "citystyle": "infinite_domain:wasteland_small_town",
+      "biomes": {
+        "excluding": [
+          "#infinite_domain:karsic_region_biomes"
+        ]
+      }
     },
     {
       "factor": 1.0,
-      "citystyle": "infinite_domain:wasteland_industrial_district"
+      "citystyle": "infinite_domain:wasteland_industrial_district",
+      "biomes": {
+        "excluding": [
+          "#infinite_domain:karsic_region_biomes"
+        ]
+      }
     },
     {
       "factor": 1.0,
-      "citystyle": "infinite_domain:wasteland_port_town"
+      "citystyle": "infinite_domain:wasteland_port_town",
+      "biomes": {
+        "excluding": [
+          "#infinite_domain:karsic_region_biomes"
+        ]
+      }
     },
     {
       "factor": 1.0,
-      "citystyle": "infinite_domain:wasteland_rail_town"
+      "citystyle": "infinite_domain:wasteland_rail_town",
+      "biomes": {
+        "excluding": [
+          "#infinite_domain:karsic_region_biomes"
+        ]
+      }
     },
     {
       "factor": 1.0,
-      "citystyle": "infinite_domain:wasteland_suburb"
+      "citystyle": "infinite_domain:wasteland_suburb",
+      "biomes": {
+        "excluding": [
+          "#infinite_domain:karsic_region_biomes"
+        ]
+      }
     },
     {
       "factor": 1.0,
-      "citystyle": "infinite_domain:wasteland_city_district"
+      "citystyle": "infinite_domain:wasteland_city_district",
+      "biomes": {
+        "excluding": [
+          "#infinite_domain:karsic_region_biomes"
+        ]
+      }
+    },
+    {
+      "factor": 1.0,
+      "citystyle": "infinite_domain:karsic_mikrorayon",
+      "biomes": {
+        "if_any": [
+          "#infinite_domain:karsic_region_biomes"
+        ]
+      }
     }
   ]
 }

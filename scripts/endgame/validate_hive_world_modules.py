@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Connector validator for the Hive World jigsaw modules.
+"""Connector validator for the legacy/compatibility Hive World jigsaw grammar.
+
+Only pools declared by docs/endgame/hive-world-module-manifest.json belong to this
+seven-module schema. The six active band families use authored modules with a
+separate exact registry/placement contract enforced by
+validate_hive_world_biome_routing.py.
 
 Endgame checkpoint EG-P04-S01-C0052 (connector validator), authored ahead of Phase 4.
 Contract: docs/endgame/contracts/module-schema.md.
@@ -240,9 +245,14 @@ def main() -> int:
         print("FAIL: no manifest")
         return 1
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    managed_pool_ids = set(manifest.get("pools", {}))
     pools = {}
-    for pj in sorted(POOL_DIR.glob("*.json")):
-        pools[pj.stem] = json.loads(pj.read_text(encoding="utf-8"))
+    for pool_id in sorted(managed_pool_ids):
+        pj = POOL_DIR / f"{pool_id}.json"
+        if not pj.is_file():
+            fail(f"[8] manifest-managed pool {pool_id} is missing")
+            continue
+        pools[pool_id] = json.loads(pj.read_text(encoding="utf-8"))
     module_ids = {m["id"].split("/")[-1] for m in manifest["modules"]}
 
     check_pools(pools, module_ids)

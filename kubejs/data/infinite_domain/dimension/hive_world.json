@@ -7,24 +7,147 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "infinite_domain:hive_world_sump",
+          "biome": "infinite_domain:hive_world_wastes",
           "parameters": {
-            "temperature": 0.0, "humidity": 0.0, "continentalness": 0.0,
-            "erosion": 0.0, "weirdness": 0.0, "depth": [0.523, 1.0], "offset": 0.0
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": [
+              -1.0,
+              -0.6
+            ],
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": [
+              -1.0,
+              1.0
+            ],
+            "offset": 0.0
           }
         },
         {
-          "biome": "infinite_domain:hive_world_works",
+          "biome": "infinite_domain:hive_world_apron",
           "parameters": {
-            "temperature": 0.0, "humidity": 0.0, "continentalness": 0.0,
-            "erosion": 0.0, "weirdness": 0.0, "depth": [-0.240, 0.523], "offset": 0.0
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": [
+              -0.6,
+              0.2
+            ],
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": [
+              -1.0,
+              1.0
+            ],
+            "offset": 0.0
           }
         },
         {
-          "biome": "infinite_domain:hive_world_vault",
+          "biome": "infinite_domain:hive_world_drown",
           "parameters": {
-            "temperature": 0.0, "humidity": 0.0, "continentalness": 0.0,
-            "erosion": 0.0, "weirdness": 0.0, "depth": [-1.0, -0.240], "offset": 0.0
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": [
+              0.2,
+              1.0
+            ],
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": [
+              0.811,
+              1.0
+            ],
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "infinite_domain:hive_world_underworks",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": [
+              0.2,
+              1.0
+            ],
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": [
+              0.525,
+              0.811
+            ],
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "infinite_domain:hive_world_furnace",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": [
+              0.2,
+              1.0
+            ],
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": [
+              0.191,
+              0.525
+            ],
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "infinite_domain:hive_world_billet",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": [
+              0.2,
+              1.0
+            ],
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": [
+              -0.238,
+              0.191
+            ],
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "infinite_domain:hive_world_vaulting",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": [
+              0.2,
+              1.0
+            ],
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": [
+              -0.62,
+              -0.238
+            ],
+            "offset": 0.0
+          }
+        },
+        {
+          "biome": "infinite_domain:hive_world_crown",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 0.0,
+            "continentalness": [
+              0.2,
+              1.0
+            ],
+            "erosion": 0.0,
+            "weirdness": 0.0,
+            "depth": [
+              -1.0,
+              -0.62
+            ],
+            "offset": 0.0
           }
         }
       ]

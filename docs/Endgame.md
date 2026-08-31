@@ -980,6 +980,16 @@ Generate the dead planet, hive cluster masks, hive envelopes, vertical strata, m
 | `EG-P03-S07-C0049` | Generation optimization | cached/reused fields and bounded codec complexity | chunk-generation budget comparison |
 | `EG-P03-S07-C0050` | Phase 3 gate | generator freeze for structure integration | seed sweep, codec, performance, and completeness matrix |
 
+Current C0046 static candidate: the exterior Wastes/Apron roles and all six core
+height bands are emitted by `generate_hive_world_biomes.py`; each core band owns
+one exact jigsaw district emitted by `generate_hive_world_band_districts.py`.
+The six live sets use distinct salts and ordinary biome-owned datapack placement.
+The old sump/works/vault IDs and generic district remain loadable for existing
+level data, but are unrouted and the generic structure set is inert. Generator
+drift, pool/module resolution, height windows, and ownership are enforced by
+`validate_hive_world_biome_routing.py`. This is static evidence only; codec load,
+chunk-border transitions, `/locate` sampling, and performance remain P03-GATE work.
+
 ### Exit gate P03-GATE
 
 - hive cores, aprons, axes, and wastes are measurable and deterministic;
@@ -1449,16 +1459,20 @@ evidence_ready:
     note: advances C0051-C0068 at spike scale by owner direction; not a formal Phase 4 checkpoint
     outputs:
       - scripts/endgame/generate_hive_world_structures.py
+      - scripts/endgame/generate_hive_world_band_districts.py
       - kubejs/data/infinite_domain/structure/hive_world/*.nbt (7 modules)
+      - kubejs/data/infinite_domain/structure/hive_world/{drown,underworks,furnace,billet,vaulting,crown}_*.nbt (30 authored band modules)
       - kubejs/data/infinite_domain/worldgen/template_pool/hive_world/{start,branch,terminal}.json
+      - kubejs/data/infinite_domain/worldgen/template_pool/hive_world/{band}_{start,branch,terminal}.json
       - kubejs/data/infinite_domain/worldgen/structure/hive_world_district.json
       - kubejs/data/infinite_domain/worldgen/structure_set/hive_world_district.json
+      - kubejs/data/infinite_domain/worldgen/{structure,structure_set}/hive_world_district_{band}.json
       - kubejs/data/infinite_domain/loot_table/chests/hive_world_salvage.json
     mechanical_validation:
       - 7 jigsaw modules (transit_hub start, corridor, corridor_bend, habitation_cell leaf, industrial_bay, stair_shaft, bulkhead terminal)
       - NBT verified well-formed (DataVersion 3955, palette + blocks + jigsaw BEs with pool/name/target/final_state/joint)
-      - pool topology: start -> branch (weighted) -> {re-branch | leaf | bulkhead fallback}; smoke assertion 10 checks every pool/module/structure/set reference resolves
-      - minecraft:jigsaw structure, underground_structures step, terrain_adaptation none, start_height uniform Y44-176, size 6, all 3 hive biomes; random_spread spacing 20 / separation 8
+      - pool topology: start -> branch (weighted) -> {re-branch | leaf | bulkhead fallback}; smoke assertion 10 checks every compatibility and band pool/module/structure/set reference resolves
+      - six active minecraft:jigsaw structures have band-contained height windows, matching exact biomes, sizes 4-6, spacing 28 / separation 12, and unique salts; the older all-band compatibility structure remains loadable while its set is inert
     pending: in-client generation, assembly connectivity (do modules connect and stay in-bounds), rotation quirks, overlap-rejection rate, block-entity budget vs C0008
   - checkpoint_id: EG-P02-S01-C0025
     name: Massing contract (P02 candidate)

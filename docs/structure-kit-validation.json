@@ -1,5 +1,5 @@
 {
-  "scope": "Exact clean-master crop, stabilized palette, connector declaration, licensing and representative kit-role validation.",
+  "scope": "Deterministic clean-master extraction plus boundary refinement, zero-hard-fail geometry, stabilized palette, connector declaration, licensing and representative kit-role validation.",
   "kits_checked": 3,
   "modules_checked": 21,
   "source_clean_masters": 7,
@@ -28,6 +28,8 @@
       ],
       "placed_records_including_air": 2316,
       "palette_blocks": 9,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:harbor_loading_pier_cold": {
@@ -41,6 +43,8 @@
       ],
       "placed_records_including_air": 2316,
       "palette_blocks": 9,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:port_customs_warehouse": {
@@ -53,7 +57,9 @@
         17
       ],
       "placed_records_including_air": 3315,
-      "palette_blocks": 13,
+      "palette_blocks": 17,
+      "boundary_refinement": "port_customs_mezzanine",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:port_tunnel_control": {
@@ -67,6 +73,8 @@
       ],
       "placed_records_including_air": 2870,
       "palette_blocks": 10,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:mountain_transport_tunnel_warm": {
@@ -80,6 +88,8 @@
       ],
       "placed_records_including_air": 6056,
       "palette_blocks": 6,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:mountain_transport_tunnel_cold": {
@@ -93,6 +103,8 @@
       ],
       "placed_records_including_air": 6056,
       "palette_blocks": 6,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:fuel_tank_containment_cell": {
@@ -106,6 +118,8 @@
       ],
       "placed_records_including_air": 880,
       "palette_blocks": 3,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:fuel_loading_rack": {
@@ -119,6 +133,8 @@
       ],
       "placed_records_including_air": 1191,
       "palette_blocks": 3,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:market_stall_provisions": {
@@ -130,8 +146,10 @@
         9,
         9
       ],
-      "placed_records_including_air": 420,
+      "placed_records_including_air": 428,
       "palette_blocks": 8,
+      "boundary_refinement": "market_stall_gable_frame",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:market_stall_medicine": {
@@ -143,8 +161,10 @@
         9,
         9
       ],
-      "placed_records_including_air": 420,
+      "placed_records_including_air": 428,
       "palette_blocks": 8,
+      "boundary_refinement": "market_stall_gable_frame",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:market_stall_repair": {
@@ -156,8 +176,10 @@
         9,
         9
       ],
-      "placed_records_including_air": 420,
+      "placed_records_including_air": 428,
       "palette_blocks": 8,
+      "boundary_refinement": "market_stall_gable_frame",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:market_stall_livestock": {
@@ -169,8 +191,10 @@
         9,
         9
       ],
-      "placed_records_including_air": 420,
+      "placed_records_including_air": 428,
       "palette_blocks": 8,
+      "boundary_refinement": "market_stall_gable_frame",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:market_trade_lodge": {
@@ -184,6 +208,8 @@
       ],
       "placed_records_including_air": 3626,
       "palette_blocks": 20,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:market_square_well": {
@@ -197,6 +223,8 @@
       ],
       "placed_records_including_air": 234,
       "palette_blocks": 11,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:industrial_office_annex": {
@@ -210,6 +238,8 @@
       ],
       "placed_records_including_air": 4486,
       "palette_blocks": 32,
+      "boundary_refinement": "industrial_office_stair",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:industrial_truck_dock_bank": {
@@ -223,6 +253,8 @@
       ],
       "placed_records_including_air": 3822,
       "palette_blocks": 14,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:industrial_storage_rack_bay": {
@@ -236,6 +268,8 @@
       ],
       "placed_records_including_air": 8701,
       "palette_blocks": 17,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:industrial_rail_loading_platform": {
@@ -249,6 +283,8 @@
       ],
       "placed_records_including_air": 1682,
       "palette_blocks": 13,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:industrial_dispatch_annex": {
@@ -262,6 +298,8 @@
       ],
       "placed_records_including_air": 3031,
       "palette_blocks": 29,
+      "boundary_refinement": "industrial_dispatch_stair",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:industrial_process_line": {
@@ -274,7 +312,9 @@
         22
       ],
       "placed_records_including_air": 4840,
-      "palette_blocks": 22,
+      "palette_blocks": 23,
+      "boundary_refinement": "industrial_process_gantry",
+      "geometry_hard_fail_count": 0,
       "issues": []
     },
     "infinite_domain:industrial_powerhouse": {
@@ -288,6 +328,8 @@
       ],
       "placed_records_including_air": 3216,
       "palette_blocks": 24,
+      "boundary_refinement": "none",
+      "geometry_hard_fail_count": 0,
       "issues": []
     }
   }
