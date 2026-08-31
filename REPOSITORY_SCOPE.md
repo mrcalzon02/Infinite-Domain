@@ -19,18 +19,10 @@ Intentionally excluded content includes:
 - the combined resource-pack working tree pending file-by-file license clearance;
 - local worlds, backups, logs, crash reports, caches, downloads, and player identity;
 - compiled dependency caches and generated build directories;
-- upstream donor/reference payloads not required in the distributable project source.
+- upstream donor/reference payloads not required in the distributable project source;
+- implementation state, tooling state, issue state, release state, or deliverables belonging to any other repository.
 
-## Cross-repository boundary
-
-Continuity Works (`mrcalzon02/Continuity-Works`) is a separate project and repository.
-Its structure-generation tools, base NBT corpus, audits, commits, issues, release
-state, and other obligations are not Infinite Domain implementation state merely
-because Infinite Domain consumes, references, or benefits from them. Work is counted
-as completed for Infinite Domain only when the required Infinite Domain-side change
-or evidence exists in this repository on the authoritative branch. Conversely,
-Infinite Domain commits must never be presented as satisfying outstanding Continuity
-Works repository obligations.
+Only changes and evidence committed to this repository on the authoritative branch count as Infinite Domain repository state. External repository work must remain external unless a required Infinite Domain-side artifact is deliberately imported and committed here.
 
 Third-party mods must be reacquired from their original distribution channels using
 the CurseForge instance metadata. The local resource-pack working tree remains the
