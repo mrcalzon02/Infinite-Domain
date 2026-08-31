@@ -19,7 +19,10 @@ Intentionally excluded content includes:
 - the combined resource-pack working tree pending file-by-file license clearance;
 - local worlds, backups, logs, crash reports, caches, downloads, and player identity;
 - compiled dependency caches and generated build directories;
-- upstream donor/reference payloads not required in the distributable project source.
+- upstream donor/reference payloads not required in the distributable project source;
+- implementation state, tooling state, issue state, release state, or deliverables belonging to any other repository.
+
+Only changes and evidence committed to this repository on the authoritative branch count as Infinite Domain repository state. External repository work must remain external unless a required Infinite Domain-side artifact is deliberately imported and committed here.
 
 Third-party mods must be reacquired from their original distribution channels using
 the CurseForge instance metadata. The local resource-pack working tree remains the

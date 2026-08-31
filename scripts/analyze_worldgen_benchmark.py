@@ -9,6 +9,8 @@ from pathlib import Path
 from typing import Any
 
 PREFIX = "[ID-WORLDGEN-BENCH] "
+ACCEPTANCE_MODS = ("lostcities", "dungeons_arise", "dungeons_arise_seven_seas")
+ARISE_NAMESPACES = ("dungeons_arise", "dungeons_arise_seven_seas")
 
 
 def percentile(values: list[float], quantile: float) -> float:
@@ -39,6 +41,87 @@ def read_markers(log_path: Path) -> list[dict[str, Any]]:
     return markers
 
 
+def summarize_acceptance(markers: list[dict[str, Any]], tiles: list[dict[str, Any]]) -> dict[str, Any]:
+    mod_events = [event for event in markers if event.get("event") == "mod_snapshot"]
+    registry_events = [event for event in markers if event.get("event") == "registry_namespace_snapshot"]
+    probe_errors = [event for event in markers if event.get("event") == "acceptance_probe_error"]
+
+    loaded_mods: dict[str, bool | None] = {mod_id: None for mod_id in ACCEPTANCE_MODS}
+    if mod_events:
+        loaded = mod_events[-1].get("loaded", {})
+        for mod_id in ACCEPTANCE_MODS:
+            if mod_id in loaded:
+                loaded_mods[mod_id] = bool(loaded[mod_id])
+
+    registries: dict[str, dict[str, Any]] = {}
+    for namespace in ARISE_NAMESPACES:
+        matching = [event for event in registry_events if event.get("namespace") == namespace]
+        if not matching:
+            registries[namespace] = {
+                "structureCount": None,
+                "structureSetCount": None,
+                "structureSample": [],
+                "structureSetSample": [],
+            }
+            continue
+        event = matching[-1]
+        registries[namespace] = {
+            "structureCount": int(event.get("structureCount", 0)),
+            "structureSetCount": int(event.get("structureSetCount", 0)),
+            "structureSample": list(event.get("structureSample", [])),
+            "structureSetSample": list(event.get("structureSetSample", [])),
+        }
+
+    starts_by_namespace: dict[str, int] = {}
+    total_valid_starts = 0
+    for tile in tiles:
+        total_valid_starts += int(tile.get("validStructureStarts", 0))
+        for namespace, count in dict(tile.get("structureStartsByNamespace", {})).items():
+            starts_by_namespace[str(namespace)] = starts_by_namespace.get(str(namespace), 0) + int(count)
+
+    arise: dict[str, dict[str, Any]] = {}
+    for namespace in ARISE_NAMESPACES:
+        registry = registries[namespace]
+        structure_count = registry["structureCount"]
+        structure_set_count = registry["structureSetCount"]
+        observed_starts = starts_by_namespace.get(namespace, 0)
+        arise[namespace] = {
+            "modLoaded": loaded_mods.get(namespace),
+            "structureCount": structure_count,
+            "structureSetCount": structure_set_count,
+            "observedNaturalStarts": observed_starts,
+            "runtimeRegistryReady": (
+                loaded_mods.get(namespace) is True
+                and structure_count is not None
+                and structure_count > 0
+                and structure_set_count is not None
+                and structure_set_count > 0
+            ),
+            "naturalGenerationObserved": observed_starts > 0,
+            "structureSample": registry["structureSample"],
+            "structureSetSample": registry["structureSetSample"],
+        }
+
+    lostcities_loaded = loaded_mods.get("lostcities")
+    return {
+        "probeErrors": probe_errors,
+        "loadedMods": loaded_mods,
+        "totalValidStructureStarts": total_valid_starts,
+        "structureStartsByNamespace": dict(sorted(starts_by_namespace.items())),
+        "arise": arise,
+        "lostCities": {
+            "modLoaded": lostcities_loaded,
+            "freshWorldGenerated": bool(tiles),
+            "runtimeLoadAccepted": lostcities_loaded is True and bool(tiles) and not probe_errors,
+            "visualDistributionAccepted": False,
+            "note": (
+                "Headless evidence proves the mod loaded during fresh fixed-seed generation. "
+                "It does not by itself approve Lost Cities skyline, rotation, terrain seating, or visual distribution."
+            ),
+        },
+    }
+
+
 def analyze(log_path: Path, manifest_path: Path) -> dict[str, Any]:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     markers = read_markers(log_path)
@@ -59,7 +142,7 @@ def analyze(log_path: Path, manifest_path: Path) -> dict[str, Any]:
     status = "failed" if failures else "complete" if len(completions) == 1 else "incomplete"
     elapsed_values = [float(tile["elapsedMs"]) for tile in tiles]
     result: dict[str, Any] = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "status": status,
         "runId": run_id,
         "batchId": manifest["batchId"],
@@ -77,6 +160,7 @@ def analyze(log_path: Path, manifest_path: Path) -> dict[str, Any]:
         "tileMaxMs": max(elapsed_values, default=0),
         "tiles": tiles,
         "failure": failures[-1] if failures else None,
+        "acceptance": summarize_acceptance(markers, tiles),
     }
     if completions:
         completion = completions[0]
