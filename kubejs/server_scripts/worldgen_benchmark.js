@@ -72,6 +72,100 @@ function worldgenBenchmarkAllChunksLoaded(server, dimension, bounds) {
     return true
 }
 
+function worldgenBenchmarkModSnapshot(config) {
+    const requested = ['lostcities', 'dungeons_arise', 'dungeons_arise_seven_seas']
+    try {
+        const ModList = Java.loadClass('net.neoforged.fml.ModList')
+        const loaded = {}
+        requested.forEach(modId => loaded[modId] = Boolean(ModList.get().isLoaded(modId)))
+        worldgenBenchmarkLog({
+            event: 'mod_snapshot',
+            runId: String(config.runId),
+            loaded: loaded
+        })
+    } catch (error) {
+        worldgenBenchmarkLog({
+            event: 'acceptance_probe_error',
+            runId: String(config.runId),
+            stage: 'mod_snapshot',
+            detail: String(error)
+        })
+    }
+}
+
+function worldgenBenchmarkRegistrySnapshot(server, config) {
+    const namespaces = ['dungeons_arise', 'dungeons_arise_seven_seas']
+    try {
+        const Registries = Java.loadClass('net.minecraft.core.registries.Registries')
+        const access = server.registryAccess()
+        const structureRegistry = access.registryOrThrow(Registries.STRUCTURE)
+        const structureSetRegistry = access.registryOrThrow(Registries.STRUCTURE_SET)
+
+        namespaces.forEach(namespace => {
+            const structures = []
+            const structureSets = []
+            structureRegistry.keySet().forEach(key => {
+                const text = String(key)
+                if (text.startsWith(namespace + ':')) structures.push(text)
+            })
+            structureSetRegistry.keySet().forEach(key => {
+                const text = String(key)
+                if (text.startsWith(namespace + ':')) structureSets.push(text)
+            })
+            structures.sort()
+            structureSets.sort()
+            worldgenBenchmarkLog({
+                event: 'registry_namespace_snapshot',
+                runId: String(config.runId),
+                namespace: namespace,
+                structureCount: structures.length,
+                structureSetCount: structureSets.length,
+                structureSample: structures.slice(0, 12),
+                structureSetSample: structureSets.slice(0, 12)
+            })
+        })
+    } catch (error) {
+        worldgenBenchmarkLog({
+            event: 'acceptance_probe_error',
+            runId: String(config.runId),
+            stage: 'registry_snapshot',
+            detail: String(error)
+        })
+    }
+}
+
+function worldgenBenchmarkStructureStarts(server, dimension, bounds) {
+    const counts = {}
+    let validStarts = 0
+    try {
+        const Registries = Java.loadClass('net.minecraft.core.registries.Registries')
+        const ResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
+        const ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
+        const dimensionLocation = ResourceLocation.parse(String(dimension))
+        const dimensionKey = ResourceKey.create(Registries.DIMENSION, dimensionLocation)
+        const level = server.getLevel(dimensionKey)
+        if (level === null || level === undefined) throw new Error('dimension unavailable: ' + dimension)
+        const structureRegistry = server.registryAccess().registryOrThrow(Registries.STRUCTURE)
+
+        for (let chunkX = bounds.minChunkX; chunkX <= bounds.maxChunkX; chunkX++) {
+            for (let chunkZ = bounds.minChunkZ; chunkZ <= bounds.maxChunkZ; chunkZ++) {
+                const starts = level.getChunk(chunkX, chunkZ).getAllStarts()
+                starts.forEach((start, structure) => {
+                    if (start === null || start === undefined || !start.isValid()) return
+                    const key = structureRegistry.getKey(structure)
+                    if (key === null || key === undefined) return
+                    const namespace = String(key.getNamespace())
+                    counts[namespace] = (counts[namespace] || 0) + 1
+                    validStarts++
+                })
+            }
+        }
+        return { ok: true, validStarts: validStarts, byNamespace: counts }
+    } catch (error) {
+        return { ok: false, validStarts: 0, byNamespace: {}, error: String(error) }
+    }
+}
+
 function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
     if (!WorldgenBenchmark.active) return
     if (tileIndex >= config.tiles.length) {
@@ -135,6 +229,17 @@ function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
             return
         }
 
+        const structureStarts = worldgenBenchmarkStructureStarts(server, dimension, bounds)
+        if (!structureStarts.ok) {
+            worldgenBenchmarkLog({
+                event: 'acceptance_probe_error',
+                runId: String(config.runId),
+                stage: 'structure_starts',
+                tile: String(tile.name),
+                detail: String(structureStarts.error)
+            })
+        }
+
         server.runCommandSilent(worldgenBenchmarkForceloadCommand('remove', dimension, bounds))
         state.completedChunks += bounds.chunks
         state.generationMs += elapsedMs
@@ -147,7 +252,9 @@ function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
             chunks: bounds.chunks,
             elapsedMs: elapsedMs,
             chunksPerSecond: elapsedMs > 0 ? bounds.chunks * 1000.0 / elapsedMs : 0,
-            polls: polls
+            polls: polls,
+            validStructureStarts: Number(structureStarts.validStarts),
+            structureStartsByNamespace: structureStarts.byNamespace
         })
         server.scheduleInTicks(Number(config.cooldownTicks), () =>
             worldgenBenchmarkRunTile(server, config, state, tileIndex + 1))
@@ -199,6 +306,9 @@ ServerEvents.loaded(event => {
         plannedChunks: config.tiles.reduce((sum, tile) => sum + Number(tile.widthChunks) * Number(tile.depthChunks), 0),
         maxHeapBytes: Number(runtime.maxMemory())
     })
+
+    worldgenBenchmarkModSnapshot(config)
+    worldgenBenchmarkRegistrySnapshot(server, config)
 
     const state = { startedAtMs: Date.now(), completedChunks: 0, generationMs: 0 }
     server.scheduleInTicks(Number(config.warmupTicks), () => worldgenBenchmarkRunTile(server, config, state, 0))
