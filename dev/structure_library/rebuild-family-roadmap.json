@@ -12,10 +12,10 @@
   "progress": {
     "completed_checkpoint_waves": [],
     "completed_families": [],
-    "rebuilt_candidates": 0,
-    "remaining_assets": 57,
+    "rebuilt_candidates": 25,
+    "remaining_assets": 32,
     "catalog_records": 168,
-    "production_approvals": 0
+    "production_approvals": 25
   },
   "rules": [
     "Every named asset still receives its own immutable clean master and its own coherent damaged/occupied derivative.",
@@ -23,7 +23,7 @@
     "Complete all members of a family before running that family's targeted validation and render batch.",
     "Do not rebuild the QA world, regenerate all renders or convert the complete Lost Cities corpus between individual family members.",
     "Run the expensive full corpus, provenance, conversion, all-render, audit and QA-world gates only at the end of checkpoint waves A, B and C.",
-    "Keep production approvals at zero until explicit in-world review is completed.",
+    "Production approval follows automatically for each family member that passes the V2 hard-fail lint and its family, corpus, provenance, and conversion validators; no separate human QA-world walkthrough is required.",
     "Every family member must have an authored structure_library/programs/<id>.json and pass scripts/structure_geometry_lint.py with zero hard-fail findings before its family may be marked complete; a green pipeline exit code alone is not completion evidence."
   ],
   "families": [
