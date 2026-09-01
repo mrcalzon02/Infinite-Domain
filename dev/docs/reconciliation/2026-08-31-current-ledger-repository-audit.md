@@ -50,13 +50,15 @@ Headless runtime success must not be promoted into skyline, rotation, terrain-se
 
 ## 4. Heavy Rebuild final production admission
 
-The authoritative Heavy Rebuild population is the **84-structure wasteland rebuild corpus**, not the Old World `OWS-*` narrative series. The previous 84-vs-64 discrepancy in this ledger was a category error caused by treating `OWS-001` through `OWS-064` as the Heavy Rebuild registry.
+The authoritative Heavy Rebuild population is the **84-structure wasteland rebuild corpus**, not the Old World `OWS-*` narrative series. The previous 84-vs-64 discrepancy was a category error.
 
-`dev/docs/WASTELAND_STRUCTURE_REBUILD_AUDIT.md` records the actual Heavy Rebuild state: **29 / 84** wasteland structures pass the mechanical geometry gate and **55** still have hard-fail geometry. The same audit records `decayed_logging_camp` as the first structure rebuilt, regenerated, and re-audited from disk under the v2 doctrine. `dev/structure_library/rebuild-phases.json` remains deliberately conservative: every phase is `requires_regeneration_v2` and `production_approvals` is still empty.
+`dev/docs/WASTELAND_STRUCTURE_REBUILD_AUDIT.md` records **29 / 84** wasteland structures at zero mechanical hard-fail and **55** with remaining hard-fail geometry. `dev/structure_library/production-approvals.json` independently records **29 wasteland production approvals** before its later Karsic-only entries. Therefore the Heavy Rebuild production-approval count is not zero.
 
-Mechanical-gate success is not production admission. The governing rebuild doctrine requires the remaining structures to be rebuilt/re-audited and final production approval to be backed by the required human QA-world walkthrough/review evidence. No approval may be invented merely because a structure passes static lint.
+The authoritative v2 doctrine in `dev/structure_library/STRUCTURE_REBUILD_SYSTEM_V2.md` Section 6 defines production admission as automated: a structure enters production when geometry checks 1–3 are zero hard-fail and its required family/corpus/provenance/conversion validators pass. It explicitly states that there is **no separate human QA-world walkthrough or review-CSV sign-off gate**. Older roadmap text requiring an in-world review is superseded and must not be used to block otherwise valid production admission.
 
-**Status:** OPEN — scope reconciled to the authoritative 84-structure corpus; 29/84 currently pass the mechanical gate, 55 require further v2 rebuild work, and final production approvals remain at zero pending required QA-world evidence.
+`decayed_logging_camp` is rebuilt, regenerated, and re-audited from disk with 0 / 0 master/variant hard-fail and zero audit flags, but it is not yet listed in `production-approvals.json`. Repository-only evidence in this pass does not prove that its full family/corpus/provenance/conversion validator set has been rerun after the rebuild, so no new approval is invented here.
+
+**Status:** OPEN — scope reconciled; **29 / 84 are already production-approved**, 55 retain hard-fail geometry, and `decayed_logging_camp` is mechanically ready for the remaining required validator pass before production admission.
 
 ## 5. Arise / Arise 7 Seas natural generation
 
@@ -91,7 +93,7 @@ No named external project belongs in this ledger or in Infinite Domain repositor
 
 The locally reconciled history has reached the authoritative repository. The merge sequence incorporated local development state with the reconciliation commits rather than discarding that work. During inspection, the worldgen benchmark README was found to contain literal Git conflict markers left by that merge; those markers were subsequently resolved while preserving both valid sides of the documentation.
 
-The reconciliation process must continue from the current authoritative `main`, not from the earlier `b2879ef0...` checkpoint.
+The reconciliation process must continue from the current authoritative `main`, not from an earlier checkpoint.
 
 ## Next executable work
 
@@ -111,4 +113,4 @@ Retain the runtime and `result.json`. Use observed evidence to advance items 6, 
 
 ### Heavy Rebuild track
 
-The population discrepancy is resolved: Heavy Rebuild is the 84-structure wasteland corpus. Continue the v2 rebuild/audit sequence from the authoritative audit state, reducing the remaining 55 hard-fail structures. Production approvals must remain empty until the required QA-world walkthrough/review evidence exists; after that evidence is available, admit structures incrementally rather than bulk-populating approvals.
+Continue the v2 rebuild/audit sequence against the remaining 55 hard-fail structures. For `decayed_logging_camp`, rerun the required family/corpus/provenance/conversion validators after the verified rebuild; if they pass, add its production approval under the automated v2 gate. Do not wait for a separate human walkthrough that the authoritative v2 doctrine no longer requires.
