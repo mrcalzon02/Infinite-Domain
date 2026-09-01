@@ -1,0 +1,61 @@
+{
+  "structure_id": "infinite_domain:ruined_city_school_clean_master",
+  "archetype": "urban public school with a legible main entrance and administration threshold, classroom wings, specialist teaching rooms, assembly and food-service spaces, student circulation, staff/service infrastructure, exterior activity areas and a gravity-coherent partial ruin story",
+  "ground_program": [
+    "prominent public-facing main entrance with weather protection, vestibule and reception or administration control point rather than an uncontrolled opening directly into teaching space",
+    "administration suite near the principal entrance with reception, offices, records or counseling functions positioned to supervise visitor access and the primary student circulation spine",
+    "classroom wings organized around real corridors with repeated but non-identical teaching rooms, storage, sanitation and staff support rather than a decorative grid of empty cells",
+    "specialist ground-floor teaching spaces such as science, art, workshop, music or library rooms use layouts and fixtures that distinguish their instructional purpose from ordinary classrooms",
+    "cafeteria or dining space connects credibly to kitchen, dry storage, cold storage, waste handling and a service entrance without routing deliveries through student classrooms",
+    "assembly, gymnasium or multipurpose volume is structurally and spatially distinct where footprint permits, with usable entrances, support rooms and clear-span logic rather than unsupported oversized voids",
+    "student and staff sanitation blocks are placed along circulation with believable access, partitions and service adjacency instead of isolated decorative fixtures",
+    "foundation edges, stairs, ramps, retaining conditions, drainage and exterior hardscape seat the school into surrounding grade without a monolithic artificial platform"
+  ],
+  "upper_program": [
+    "upper teaching floors continue coherent classroom and specialist-room organization around supported corridors rather than stacking unrelated decorative rooms",
+    "at least one vertically continuous enclosed stair core lands on every occupied level with supported stairs, usable landings and uninterrupted player headroom; larger footprints should retain a second independent egress route",
+    "classrooms retain plausible teaching zones, teacher position, storage and exterior glazing relationships while avoiding copy-pasted identical furnishing patterns across the entire building",
+    "library, science, art, music or staff functions may occupy upper levels where circulation and structural spans support them, but each must remain reachable from common corridors without passing through other classrooms",
+    "mechanical, electrical, janitorial and service spaces align with credible risers, roof plant and maintenance access rather than appearing as disconnected machinery closets",
+    "roof geometry distinguishes classroom wings, larger assembly volumes and mechanical zones while maintaining drainage and structural support",
+    "windows, corridor ends and stair landings correspond to actual interior spaces so the exterior reads as the envelope of a functioning institutional building rather than a pasted facade"
+  ],
+  "circulation": [
+    "visitors move from the principal entrance through reception or administration before reaching general student areas, preserving a clear public-to-controlled transition",
+    "students move between classrooms, sanitation, dining, library, assembly and exterior activity areas through common corridors and stairs without routing through staff-only service rooms",
+    "staff and deliveries can reach kitchen, maintenance, refuse, storage and mechanical areas from service access without crossing the principal visitor entrance or teaching rooms",
+    "every occupied level retains a continuous player-scale route to at least one supported stair core and an exterior exit direction",
+    "larger assembly, gymnasium, cafeteria or library spaces have circulation sized and arranged for their institutional use rather than single narrow decorative doorways",
+    "damage variants must preserve at least one complete entrance-to-classroom route and one viable vertical egress path through the surviving portion of the school"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must remain immediately recognizable as a school through surviving classrooms, corridors, administration, specialist spaces and institutional circulation rather than becoming a generic ruined civic shell",
+    "favor localized roof failure, corridor collapse, shattered glazing, fire damage, water intrusion, breached classroom walls and one major structural failure zone over repeated rectangular deletion masks",
+    "major collapse may expose stacked classrooms or a gymnasium edge, but surviving slabs, beams, walls, stair cores and debris must communicate one gravity-coherent failure story",
+    "where floors or roofs fail, associated partitions, doors, glazing, fixtures and furniture must fail consistently so unsupported fragments do not float",
+    "preserve enough intact teaching rooms, administration, circulation signage cues, cafeteria or specialist spaces for educational purpose to remain inferable during exploration",
+    "at least one stair route must remain physically continuous through the surviving occupied portion; alternate stairs may be blocked or severed only where the ruin story clearly supports it",
+    "kitchen, mechanical, sanitation and service infrastructure may be exposed by damage but must remain spatially related to the rooms and risers they served",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "main_entrance_elevation",
+      "classroom_wing_elevation",
+      "major_collapse_zone",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the structure reads immediately as an urban public school rather than an office block, hospital, apartment building or generic institutional shell",
+      "main entrance, administration, classroom wings, specialist teaching spaces, dining or assembly functions and service infrastructure form a believable educational program",
+      "classrooms and specialist rooms differ meaningfully by function while still sharing a coherent institutional construction language",
+      "stairs are vertically supported, land on real floors and provide continuous player-scale headroom to every surviving occupied level",
+      "student circulation remains legible and does not require passage through kitchens, mechanical rooms, private offices or unrelated classrooms",
+      "the principal ruin exposes coherent school anatomy and gravity-driven damage rather than arbitrary missing cubes",
+      "at least one complete entrance-to-classroom route and one viable vertical egress route survive the damage state",
+      "the school meets surrounding grade through believable entrances, stairs, ramps, retaining edges and hardscape without floating foundations or buried public access"
+    ]
+  }
+}
