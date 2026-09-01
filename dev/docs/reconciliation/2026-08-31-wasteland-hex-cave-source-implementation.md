@@ -26,7 +26,7 @@ The custom namespace biome modifier intentionally avoids a compile-time dependen
 
 ## OBSERVE
 
-The exact proposed source/resource payload was checked with a deterministic static/reference validator before repository admission.
+The exact source/resource payload was checked with the retained deterministic validator `dev/scripts/validate_wasteland_hex_caves.py`. The validator mirrors Java signed-`long` overflow and unsigned-shift behavior so the reference noise field matches the committed Java implementation rather than a Python-only approximation.
 
 Deterministic reference field: seed `123456789`, 512 x 512 block domain sampled every two blocks.
 
@@ -39,7 +39,7 @@ Observed coverage:
 | actually occluded/interrupted grid | 6.0% |
 | larger fractal chamber field | 4.3% |
 
-The validation also parses the configured-feature, placed-feature, and biome-modifier JSON and checks the world-seed, literal-hex, surface-margin, natural-material, target-namespace, and underground-generation source contracts.
+The validation also parses the configured-feature, placed-feature, and biome-modifier JSON and checks the world-seed, literal-hex, surface-margin, natural-material, target-namespace, and underground-generation source contracts. Commit `1bc11942ea7cbec454f5b6b849406442237732fd` contains the final occlusion/chamber tuning used by the retained validator.
 
 ## VERIFY
 
