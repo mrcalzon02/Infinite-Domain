@@ -50,11 +50,13 @@ Headless runtime success must not be promoted into skyline, rotation, terrain-se
 
 ## 4. Heavy Rebuild final production admission
 
-The authoritative Heavy Rebuild registry currently scopes `OWS-001` through `OWS-064`, while the requested reconciliation target is 84 structures. `OWS-001` through `OWS-007` are recorded as statically completed, `OWS-008` is the active target, and no entries are currently recorded in `runtime_quality_approved`.
+The authoritative Heavy Rebuild population is the **84-structure wasteland rebuild corpus**, not the Old World `OWS-*` narrative series. The previous 84-vs-64 discrepancy in this ledger was a category error caused by treating `OWS-001` through `OWS-064` as the Heavy Rebuild registry.
 
-The 84-vs-64 discrepancy must be resolved explicitly before claiming completion. Existing structures must then proceed through the production-admission path rather than remaining permanently at static validation.
+`dev/docs/WASTELAND_STRUCTURE_REBUILD_AUDIT.md` records the actual Heavy Rebuild state: **29 / 84** wasteland structures pass the mechanical geometry gate and **55** still have hard-fail geometry. The same audit records `decayed_logging_camp` as the first structure rebuilt, regenerated, and re-audited from disk under the v2 doctrine. `dev/structure_library/rebuild-phases.json` remains deliberately conservative: every phase is `requires_regeneration_v2` and `production_approvals` is still empty.
 
-**Status:** OPEN — reconcile scope, then continue sequential final production admission with retained runtime-quality evidence.
+Mechanical-gate success is not production admission. The governing rebuild doctrine requires the remaining structures to be rebuilt/re-audited and final production approval to be backed by the required human QA-world walkthrough/review evidence. No approval may be invented merely because a structure passes static lint.
+
+**Status:** OPEN — scope reconciled to the authoritative 84-structure corpus; 29/84 currently pass the mechanical gate, 55 require further v2 rebuild work, and final production approvals remain at zero pending required QA-world evidence.
 
 ## 5. Arise / Arise 7 Seas natural generation
 
@@ -87,7 +89,7 @@ No named external project belongs in this ledger or in Infinite Domain repositor
 
 ## Reconciliation and merge recovery
 
-The locally reconciled history has reached the authoritative repository. The merge sequence incorporated local development state with the reconciliation commits rather than discarding that work. During inspection, `docs/worldgen-benchmark/README.md` was found to contain literal Git conflict markers left by that merge; those markers were subsequently resolved while preserving both valid sides of the documentation.
+The locally reconciled history has reached the authoritative repository. The merge sequence incorporated local development state with the reconciliation commits rather than discarding that work. During inspection, the worldgen benchmark README was found to contain literal Git conflict markers left by that merge; those markers were subsequently resolved while preserving both valid sides of the documentation.
 
 The reconciliation process must continue from the current authoritative `main`, not from the earlier `b2879ef0...` checkpoint.
 
@@ -95,7 +97,7 @@ The reconciliation process must continue from the current authoritative `main`, 
 
 ### Repository implementation track
 
-The strongest unresolved implementation omission is item 1. Locate the actual Wasteland biome/cave registration path, implement literal visible hex-grid cave geometry with deterministic fractal/plasma occlusion directly in that authoritative path, statically validate all registrations/codecs/resources, then commit and read back the resulting `main` state.
+The strongest unresolved implementation omission remains item 1. The current repository does not expose a generic wasteland `configured_carver` registration that can safely receive the doctrine as a drop-in asset. The overworld wasteland sits inside the existing overworld/gradient-worldgen and Lost Cities integration, while the custom density-function codec implementation currently present belongs to a different dimension. Do not transplant that dimension-specific machinery into the overworld merely to create a nominal implementation. The next implementation step is to identify the overworld noise-router/biome generation hook that owns wasteland cave carving, then integrate literal visible hex-grid geometry there and validate the resulting codec/resource graph before runtime acceptance.
 
 ### Runtime evidence track
 
@@ -109,4 +111,4 @@ Retain the runtime and `result.json`. Use observed evidence to advance items 6, 
 
 ### Heavy Rebuild track
 
-Resolve the requested 84-target scope against the current 64-target registry, then continue production admission from the current active structure. Runtime-quality approvals must be backed by retained evidence rather than automatically populated.
+The population discrepancy is resolved: Heavy Rebuild is the 84-structure wasteland corpus. Continue the v2 rebuild/audit sequence from the authoritative audit state, reducing the remaining 55 hard-fail structures. Production approvals must remain empty until the required QA-world walkthrough/review evidence exists; after that evidence is available, admit structures incrementally rather than bulk-populating approvals.
