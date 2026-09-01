@@ -1,0 +1,63 @@
+{
+  "structure_id": "infinite_domain:tenement_courtyard_clean_master",
+  "archetype": "dense urban perimeter-block tenement organized around a shared internal courtyard, with street-facing dwelling wings, controlled resident circulation, service access and communal utility space",
+  "ground_program": [
+    "continuous street-facing building edge with one clearly legible principal resident entrance and a separate service or refuse access where footprint permits",
+    "entrance vestibule and small resident lobby connecting directly to a protected stair core rather than opening into a private dwelling",
+    "ground-floor dwelling units with recognizable kitchen, living, sleeping and sanitation zones arranged around real internal circulation",
+    "shared internal courtyard large enough to function as resident outdoor space, daylight well and secondary circulation focus rather than a decorative void",
+    "courtyard access from the common circulation system without forcing residents through a private apartment",
+    "laundry, boiler, electrical or other communal utility rooms grouped near a service edge and separated from dwelling interiors",
+    "refuse and maintenance area with a credible route to the street or alley that does not cross the principal resident lobby",
+    "secure storage or caretaker room positioned near shared circulation and service spaces",
+    "rear or side emergency egress from the courtyard or secondary stair system where the footprint supports it",
+    "terrain feathering, stoops, areaways and drainage that seat the perimeter block into the surrounding street grade without a monolithic raised slab"
+  ],
+  "upper_program": [
+    "repeatable dwelling bands arranged along exterior and courtyard walls with windows serving actual occupied rooms rather than blind decorative facades",
+    "at least two vertically continuous common stair cores for a large perimeter block, each with supported landings, continuous headroom and meaningful destinations",
+    "common corridors kept short and legible, with apartment doors opening from shared circulation rather than through neighboring units",
+    "dwelling layouts vary enough at corners, stairs and courtyard returns to respond to geometry instead of cloning one rectangular apartment everywhere",
+    "upper floors retain a readable hierarchy of living rooms, kitchens, bedrooms and bathrooms with plausible adjacency and circulation",
+    "roof access occurs through a real stair-head or maintenance route where rooftop equipment, tanks, vents or laundry structures are present",
+    "roof mass follows the perimeter-block wings and courtyard void, preserving a legible urban silhouette rather than capping the whole footprint with one featureless rectangle"
+  ],
+  "circulation": [
+    "residents move from street entrance to lobby, stair core, common landing or corridor and individual dwelling without crossing service-only rooms",
+    "courtyard circulation connects the principal residential wings and at least one secondary egress route while remaining distinct from private dwelling interiors",
+    "service staff can reach refuse, utility and maintenance spaces from a service-side approach without hauling waste through the main lobby",
+    "every occupied upper floor has a continuous player-scale route to a supported stair and exterior exit direction",
+    "stairs, landings, corridor turns and door clearances remain usable at Minecraft player scale with uninterrupted headroom",
+    "damage variants must preserve at least one complete street-to-dwelling route and one courtyard-to-egress route"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must remain recognizable as a perimeter tenement surrounding a shared courtyard rather than degrading into unrelated wall fragments",
+    "favor localized fire damage, roof failure, courtyard-wall collapse, failed utilities, boarded units and weather intrusion over repeated rectangular deletion masks",
+    "preserve at least one intact stair core and one partially damaged but physically coherent secondary circulation core",
+    "where floors collapse, remove or damage the supporting floor, wall and furnishing relationships together so no doors, windows, stairs or fixtures float",
+    "retain enough furnished dwelling evidence on multiple levels for the residential program to remain inferable",
+    "keep courtyard access, refuse/service logic and communal utilities partially legible even where individual apartments are heavily damaged",
+    "allow localized facade shear or corner collapse only where debris, exposed floor edges and surviving support geometry tell the same structural story",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "courtyard_view",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the structure reads immediately as a dense multi-family tenement organized around a genuine internal courtyard",
+      "street entrance, common stairs, corridors, courtyard access, dwellings, utilities and refuse/service routes form a believable residential circulation system",
+      "dwelling units contain inferable domestic room programs rather than empty repeated cells",
+      "stair cores are vertically supported, land on real floors and provide continuous player-scale headroom to every occupied level",
+      "courtyard dimensions, openings and surrounding windows make it function as shared resident space and daylight access rather than a decorative shaft",
+      "roof geometry and rooftop services are supported by the perimeter wings and reachable where maintenance access is implied",
+      "damage remains localized and gravity-coherent while preserving the perimeter-block silhouette, courtyard identity and at least one usable residential route",
+      "the building meets street, alley and courtyard grades without floating foundations, buried doors or a rectangular artificial platform"
+    ]
+  }
+}

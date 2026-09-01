@@ -1,0 +1,60 @@
+{
+  "structure_id": "infinite_domain:service_garage_clean_master",
+  "archetype": "single-storey roadside vehicle service garage with customer office, multi-bay workshop and rear service yard",
+  "ground_program": [
+    "north-facing customer entrance from a main-road forecourt with a protected pedestrian path separate from vehicle bay approaches",
+    "customer reception and waiting room with direct sightline to the forecourt and service-bay doors",
+    "service counter connecting reception to a secure parts store and staff circulation",
+    "three vehicle service bays with full-width roll-up door openings and clear drive-through working envelopes",
+    "one two-post lift bay for underbody work and one inspection bay with a recessed service pit",
+    "mechanics workbench and tool-storage wall shared by the service bays without blocking vehicle circulation",
+    "parts store with shelving, tire rack and controlled access from both the counter and workshop",
+    "manager office with visibility into reception and workshop circulation",
+    "staff locker and washroom zone separated from the customer waiting area",
+    "compressor, electrical and fluids utility room isolated from public circulation",
+    "east-side secondary staff door to a fenced rear service yard with waste-oil storage, scrap bins and tire staging",
+    "graded paved forecourt tying the north bay doors and customer parking into the declared main-road connection",
+    "foundation course, drainage channel and utility stub connecting the workshop floor and service yard to surrounding grade"
+  ],
+  "upper_program": [
+    "partial parts-storage mezzanine above the rear support rooms, reached by an enclosed stair with landings at both ends",
+    "roof mechanical exhaust and make-up-air equipment positioned over the workshop and utility zones",
+    "no occupied upper floor above the vehicle bays so lift and vehicle clearances remain unobstructed"
+  ],
+  "circulation": [
+    "customer pedestrians move from the north forecourt to reception and waiting without crossing active service-bay work zones",
+    "vehicles enter each service bay independently from the north forecourt and can reverse to the forecourt without crossing customer parking",
+    "staff move from reception through the service counter to parts storage, office and the workshop through controlled doors",
+    "mechanics can circulate continuously behind the three service bays to tools, parts, utilities, lockers and the east service-yard exit",
+    "the enclosed mezzanine stair connects a real workshop-side landing to the parts mezzanine and does not terminate in open air",
+    "waste oil, tires and scrap move from workshop support spaces through the east staff door to the rear service yard without crossing the customer lobby"
+  ],
+  "damage_constraints": [
+    "preserve the north customer entrance, reception-to-workshop controlled route and at least two usable service-bay approaches",
+    "preserve the enclosed mezzanine stair and both of its landings wherever the mezzanine survives",
+    "concentrate primary roof failure over the eastern service bay and adjacent utility corner rather than deleting a rectangular volume",
+    "break the eastern bay facade with an irregular supported fracture and gravity-led rubble apron below failed wall and roof members",
+    "keep the western lift bay structurally legible with its lift or service equipment still identifiable",
+    "retain the rear service-yard route and enough fluids, tire and scrap handling evidence for the site's purpose to remain inferable",
+    "damage doors, windows and attached fixtures together with their supporting wall geometry so no floating openings or attachments remain",
+    "derive damaged and occupied variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the site reads immediately as a vehicle service garage from the main road rather than as a generic industrial shed",
+      "customer, vehicle and staff/service-yard circulation are visibly distinct and player-scale usable",
+      "all three service bays have credible vehicle working envelopes and operationally legible tools, parts and support spaces",
+      "the lift bay, inspection pit, parts store, utility room and rear fluids/tire handling form a coherent repair workflow",
+      "the mezzanine stair is enclosed, supported, has headroom and lands on real walkable floors at both ends",
+      "the paved forecourt, foundation, drainage and east service yard transition credibly into surrounding grade",
+      "damage preserves the garage program while following structural gravity and leaving no floating windows, doors, stairs, signs or roof fragments"
+    ]
+  }
+}

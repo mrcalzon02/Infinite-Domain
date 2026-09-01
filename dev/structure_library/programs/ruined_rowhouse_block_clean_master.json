@@ -1,0 +1,61 @@
+{
+  "structure_id": "infinite_domain:ruined_rowhouse_block_clean_master",
+  "archetype": "continuous urban rowhouse block composed of individually legible attached dwellings, with stoops, party walls, narrow domestic floorplates, rear service yards and coherent street-to-home circulation",
+  "ground_program": [
+    "continuous street wall broken into multiple individually legible rowhouse frontages rather than one undifferentiated facade",
+    "each dwelling has its own principal street entrance, stoop or short raised approach, and a recognizable threshold sequence into a domestic hall or front room",
+    "front living or reception room, rear kitchen or dining zone, and compact sanitation/service space arranged around an actual internal circulation path",
+    "party walls remain continuous enough to make each dwelling a distinct attached unit while still allowing occasional historically plausible shared service penetrations",
+    "rear doors connect kitchens or service halls to small fenced yards, alleys, sheds, bins, wash areas or utility fixtures without routing service traffic through neighboring homes",
+    "cellar or under-stair storage is used where vertical grade and footprint permit, with supported access rather than decorative trapdoors or sealed voids",
+    "street drainage, stoops, basement areaways, rear-yard grade and alley transitions seat the entire block into terrain without a monolithic platform",
+    "corner or end units react to exposed side walls with different openings, room proportions, yard access or service placement instead of duplicating interior units unchanged"
+  ],
+  "upper_program": [
+    "each dwelling contains a vertically continuous domestic stair with supported landings, uninterrupted player headroom and destinations on every occupied floor",
+    "upper floors contain inferable bedroom, small study or nursery, and sanitation zones rather than empty repeated boxes",
+    "party-wall alignment remains consistent floor to floor so attached homes read as separate structural bays within one block",
+    "front and rear windows serve real occupied rooms and align plausibly with floor levels rather than floating as facade decoration",
+    "roof form is divided by dwelling bay using parapets, chimneys, dormers, party-wall upstands or stepped ridge lines so the block remains legible as many homes",
+    "attic or roof service access appears only where a real stair, hatch or maintenance route supports it",
+    "end and corner units receive distinct side-wall conditions, roof returns or circulation adjustments appropriate to their exposed geometry"
+  ],
+  "circulation": [
+    "every dwelling provides a continuous route from its own street entrance through domestic rooms to its rear service exit without passing through another dwelling",
+    "domestic stairs connect every occupied level with supported treads, landings and adequate headroom at turns",
+    "rear yards and alley routes remain distinct from principal residential entry paths and provide a believable refuse, delivery and maintenance route",
+    "adjacent dwellings remain separated by party walls except where a deliberate breach, shared passage or damage event is authored",
+    "corner units preserve a coherent route despite their different footprint and do not inherit impossible corridor geometry from middle units",
+    "damage variants must preserve at least one complete street-to-rear route in multiple surviving dwellings and at least one usable vertical route through the block"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must still read as a continuous rowhouse block made of multiple attached homes, not as a generic rubble strip",
+    "favor localized fire spread, roof loss, party-wall exposure, partial facade collapse, burst utilities, boarded openings and yard overgrowth over repeated rectangular deletion masks",
+    "damage may propagate across one or two neighboring dwellings, but surviving units must retain clear individual boundaries and domestic programs",
+    "where a floor or roof collapses, associated walls, stairs, windows, furnishings and debris must tell the same gravity-coherent structural story",
+    "preserve enough intact stairs, kitchens, bedrooms, stoops and rear yards across the block for residential identity to remain immediately inferable",
+    "party-wall breaches must expose believable neighboring interiors rather than arbitrary holes into empty cells",
+    "rear yards, alleys, sheds and service fixtures should show localized abandonment or damage while remaining connected to their associated dwellings",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "street_elevation_a",
+      "street_elevation_b",
+      "rear_yards",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the structure reads immediately as several distinct attached urban rowhouses rather than one apartment building or one long generic shell",
+      "each dwelling has a believable front entrance, domestic room sequence, vertical stair and rear service connection",
+      "party walls, floorplates and roof divisions preserve individual dwelling identity while still forming a continuous urban street wall",
+      "stairs are vertically supported, land on real floors and provide continuous player-scale headroom",
+      "front and rear windows correspond to actual occupied rooms and floor levels",
+      "rear yards and alley/service routes belong to specific dwellings and remain spatially legible",
+      "damage is localized and gravity-coherent while preserving multiple readable homes and at least one complete vertical route",
+      "the block meets street, sidewalk, areaway, rear-yard and alley grades without floating foundations, buried entrances or a rectangular artificial podium"
+    ]
+  }
+}

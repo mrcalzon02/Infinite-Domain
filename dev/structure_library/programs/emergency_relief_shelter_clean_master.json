@@ -1,0 +1,62 @@
+{
+  "structure_id": "infinite_domain:emergency_relief_shelter_clean_master",
+  "archetype": "temporary-to-semi-permanent civilian emergency relief shelter organized for intake, triage, sleeping, sanitation, food distribution, staff control and protected utility service",
+  "ground_program": [
+    "clearly marked public arrival and intake zone connected directly to the site approach without forcing civilians through staff or utility spaces",
+    "registration and information desk with short controlled queueing space and visible access to the principal shelter hall",
+    "first-aid and triage room adjacent to intake but separable from the main sleeping population for privacy and infection control",
+    "large subdivided sleeping hall using believable bed or cot bays with continuous aisles, emergency egress and no sealed sleeping pockets",
+    "family or vulnerable-person sleeping area separated from the general hall by lightweight partitions or a distinct room while retaining supervised access",
+    "food distribution and simple warming kitchen with dry storage, potable-water access and a service path that does not cross sleeping bays",
+    "dining or common area sized as a real shared-use space rather than decorative furniture scattered through circulation routes",
+    "male, female and accessible sanitation provisions represented with toilets, wash points and privacy partitions where footprint permits",
+    "staff office and records station positioned to supervise intake and the principal shelter circulation spine",
+    "secure supply store for blankets, medicine, food and emergency equipment with staff-only access",
+    "utility or mechanical room containing the shelter's power, water or heating service representation and reachable from a service-side approach",
+    "waste and dirty-service exit separated from public intake and food distribution",
+    "covered exterior waiting or overflow zone tied to the entrance without blocking emergency access",
+    "terrain feathering and drainage that seat the shelter, service apron and approach into surrounding wasteland rather than placing the complex on a monolithic slab"
+  ],
+  "upper_program": [
+    "prefer a single-storey relief-shelter mass unless the authoritative footprint requires a second level",
+    "where an upper level exists, reserve it for staff rest, records, light storage or additional sleeping space reached by a supported stair and real landing",
+    "roof volume may carry vents, compact mechanical equipment, water storage or emergency communications only where structurally supported and accessible for maintenance",
+    "no decorative inaccessible mezzanines, floating roof equipment or disconnected upper rooms"
+  ],
+  "circulation": [
+    "public movement follows an intelligible sequence from arrival to intake, triage as needed, sleeping/common areas, sanitation and exit",
+    "staff can reach intake, medical, supply, kitchen and utility spaces without crossing sleeping bays unnecessarily",
+    "food and clean-supply movement remains separated from waste removal and dirty-service circulation wherever the footprint permits",
+    "every occupied room connects to a continuous player-scale route with adequate doorway width, headroom and destination at both ends",
+    "at least two credible emergency egress directions serve the principal sleeping hall when footprint size makes a single exit implausible",
+    "exterior service access reaches utility and supply zones without cutting through the civilian arrival queue"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must remain recognizable as an emergency shelter through surviving intake, sleeping, sanitation and supply organization",
+    "favor localized roof leaks, damaged partitions, abandoned cots, depleted supplies, failed utilities and weather intrusion over indiscriminate wall deletion",
+    "preserve at least one continuous traversable route through intake, the principal shelter hall and a secondary functional zone",
+    "damage sanitation, kitchen and utility systems together with their supporting pipes, walls, fixtures or service routes so functional remnants do not float",
+    "allow one localized fire, impact or partial roof-collapse event only where adjacent structure and debris tell the same physical story",
+    "do not repeat identical missing-wall or rubble masks across sleeping bays",
+    "retain emergency signage, supply organization and civilian-use evidence sufficient to distinguish the site from a generic warehouse or barracks",
+    "derive damaged, contaminated or occupied variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the structure reads immediately as a civilian emergency relief shelter rather than a warehouse, prison or military barracks",
+      "intake, triage, sleeping, sanitation, food, staff, supply and utility functions are spatially distinct and connected by believable circulation",
+      "civilian, staff, clean-supply and dirty-service paths do not create obvious functional contradictions",
+      "sleeping aisles, doors, stairs if present and emergency exits remain player-scale usable with continuous headroom",
+      "kitchen, sanitation and utility fixtures have credible supporting rooms and service relationships rather than decorative placement",
+      "damage remains localized and physically coherent while preserving enough program evidence to infer the shelter's original operation",
+      "the building, entrance, service edge and drainage meet surrounding terrain without floating slabs, severe steps or a rectangular artificial platform"
+    ]
+  }
+}

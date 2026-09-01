@@ -1,0 +1,26 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "infinite_domain_wasteland_hex_caves"
+version = "1.0.0"
+displayName = "Infinite Domain: Wasteland Hex Caves"
+authors = "Infinite Domain"
+description = '''
+Adds deterministic, visibly hexagonal cave networks to Wasteland biomes. The literal hex lattice remains carved geometry while seed-driven fractal and plasma fields warp, widen, occlude, interrupt, and locally open the grid into larger cave regions.
+'''
+
+[[dependencies.infinite_domain_wasteland_hex_caves]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_wasteland_hex_caves]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
