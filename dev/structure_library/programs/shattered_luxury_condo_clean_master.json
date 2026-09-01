@@ -1,0 +1,62 @@
+{
+  "structure_id": "infinite_domain:shattered_luxury_condo_clean_master",
+  "archetype": "high-end urban condominium tower or stepped mid-rise with a legible resident lobby, secure vertical circulation, differentiated luxury dwelling plans, balconies or terraces, shared amenity space, service infrastructure and a gravity-coherent partial structural failure story",
+  "ground_program": [
+    "formal street-facing resident entrance with weather protection, vestibule and staffed or formerly staffed lobby rather than a direct opening into private dwelling space",
+    "secure transition from lobby to elevator/stair core with mail, parcel, reception or concierge functions positioned along the public-to-private threshold",
+    "separate service/loading entrance connected to refuse, maintenance, utility and freight circulation without routing deliveries through the principal lobby",
+    "ground-floor amenity or management spaces such as resident lounge, fitness room, office, storage or building services arranged around real circulation and exterior access",
+    "parking, loading or lower service zones are present only where supported by the footprint and grade, with credible ramps, stairs or doors rather than sealed decorative voids",
+    "principal structural bays, shear walls, columns and core geometry remain legible enough to support the upper massing and to make later damage physically interpretable",
+    "street setback, planters, drop-off apron, retaining walls, drainage and foundation edges seat the building into terrain without a monolithic artificial podium",
+    "corner conditions react to surrounding streets or open space with differentiated glazing, entrances, amenity frontage or service placement rather than repeating one facade on every side"
+  ],
+  "upper_program": [
+    "multiple condominium units per occupied floor with individually legible entrances from common circulation and coherent living, kitchen, sleeping, sanitation and storage zones",
+    "larger corner or premium units use additional exposure, balconies, terraces or expanded living space so luxury status is expressed through plan and circulation rather than palette alone",
+    "at least one vertically continuous enclosed stair core with supported landings, uninterrupted player headroom and destinations on every occupied level; larger footprints should retain a second independent egress core",
+    "elevator shafts, if represented, remain vertically aligned and terminate in real lobby, machine, service or penthouse zones rather than floating or stopping arbitrarily",
+    "common corridors remain short, secure and legible, with unit doors opening from shared circulation and no route passing through neighboring residences",
+    "balconies and terraces are supported by slabs, walls, brackets or structural edges and connect to actual occupied rooms through usable doors",
+    "mechanical, electrical, water and rooftop plant spaces are grouped around credible service risers and maintenance routes rather than scattered as decorative machinery",
+    "roofline, penthouse, terrace and mechanical massing create a distinct upscale residential silhouette without collapsing into a featureless rectangular cap"
+  ],
+  "circulation": [
+    "residents move from street entrance through lobby and secure common circulation to individual units without crossing loading, refuse or utility spaces",
+    "service staff can move from loading or service entry to freight/service circulation, utility rooms and refuse areas without passing through private residences",
+    "every occupied level retains a continuous player-scale route to at least one supported stair core and an exterior exit direction",
+    "premium amenities, roof terraces or penthouse spaces are reachable only through real resident or service circulation and not by decorative inaccessible shafts",
+    "unit interiors preserve coherent circulation from entry to living, sleeping, sanitation and balcony/terrace spaces without impossible overlaps or one-block choke points",
+    "damage variants must preserve at least one complete lobby-to-unit route and one viable vertical egress path through a surviving portion of the building"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must remain immediately recognizable as a luxury condominium building with surviving units, common circulation and amenity/service zoning rather than a generic ruined tower shell",
+    "favor localized facade peel, balcony failure, fire spread, shattered glazing, partial floor collapse, burst utilities, water damage and one major structural breach over repeated rectangular deletion masks",
+    "a major shattered section may expose several stacked units, but surviving slab edges, columns, shear walls, core walls and debris must tell one gravity-coherent failure story",
+    "where floors or balconies fail, associated partitions, doors, furnishings, glazing and service lines must fail consistently so unsupported fragments do not float",
+    "preserve enough intact premium dwellings, lobby elements, balconies or terraces and amenity/service rooms for upscale residential identity to remain inferable",
+    "at least one stair core must remain physically continuous through the surviving occupied portion; a second core may be severed only where the damage story clearly supports it",
+    "service risers, elevator shafts and mechanical spaces may be exposed by damage but must remain vertically aligned and structurally related to the surviving core",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "street_elevation_a",
+      "street_elevation_b",
+      "shattered_facade",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the structure reads immediately as an upscale multi-unit condominium rather than a generic apartment block, hotel or office tower",
+      "resident lobby, secure common circulation, dwelling units, amenities, service/loading functions and rooftop or mechanical spaces form a believable building program",
+      "premium units differ meaningfully through plan, exposure, balconies, terraces or room scale rather than simple material substitution",
+      "stairs are vertically supported, land on real floors and provide continuous player-scale headroom to every surviving occupied level",
+      "balconies, terraces, glazing and facade openings correspond to real occupied rooms and remain structurally supported where intact",
+      "the shattered section exposes coherent stacked residential anatomy and gravity-driven damage rather than arbitrary missing cubes",
+      "at least one complete lobby-to-unit route and one viable vertical egress route survive the damage state",
+      "the building meets street, setback, loading and grade conditions without floating foundations, buried entrances or a rectangular artificial platform"
+    ]
+  }
+}
