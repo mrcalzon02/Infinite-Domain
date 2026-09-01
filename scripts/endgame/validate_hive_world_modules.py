@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
-"""Connector validator for the legacy/compatibility Hive World jigsaw grammar.
+"""Connector validator for every Hive World jigsaw module.
 
-Only pools declared by docs/endgame/hive-world-module-manifest.json belong to this
-seven-module schema. The six active band families use authored modules with a
-separate exact registry/placement contract enforced by
-validate_hive_world_biome_routing.py.
+Two families are covered:
+
+* the legacy/compatibility seven-module grammar declared by
+  docs/endgame/hive-world-module-manifest.json (manifest is authoritative, so
+  manifest-vs-NBT agreement is checked); and
+* the six active per-band families (30 authored modules), whose NBT is itself the
+  authored source of truth, so their schema entry is derived from the NBT and the
+  same structural checks are applied.
+
+validate_hive_world_biome_routing.py owns the band registry/placement contract but
+never reads NBT; module geometry is enforced here and only here.
 
 Endgame checkpoint EG-P04-S01-C0052 (connector validator), authored ahead of Phase 4.
 Contract: docs/endgame/contracts/module-schema.md.
@@ -32,6 +39,21 @@ FACING_DELTA = {"north": (0, 0, -1), "south": (0, 0, 1), "east": (1, 0, 0), "wes
 SPIKE_MAX = (48, 32, 48)
 BUDGET_NON_AIR = 48_000
 BUDGET_BE = 6
+
+# Per-band authored families (generate_hive_world_band_districts.py owns their
+# registry files and asserts presence; geometry is enforced here).
+BAND_SLUGS = ("drown", "underworks", "furnace", "billet", "vaulting", "crown")
+BAND_ROLE_MAP = {
+    "anchor": "start",
+    "gallery": "branch",
+    "crossing": "branch",
+    "chamber": "leaf",
+    "bulkhead": "terminal",
+}
+_ORIENT_FACING = {
+    "north_up": "north", "south_up": "south",
+    "east_up": "east", "west_up": "west",
+}
 
 failures: list[str] = []
 warnings: list[str] = []
@@ -224,6 +246,55 @@ def check_module(entry: dict, pools: dict) -> None:
             fail(f"[7] {mid}: terminal connector must seal (final_state != air)")
 
 
+def derive_entry(path: pathlib.Path, slug: str, role_word: str) -> dict | None:
+    """Build a schema entry straight from an authored band-module NBT.
+
+    The NBT is the source of truth for these, so the [9] manifest-agreement checks
+    are satisfied by construction and the structural checks do the real work.
+    """
+    try:
+        root = read_nbt(path)
+    except Exception as exc:  # noqa: BLE001
+        fail(f"[1] {path.stem}: NBT does not parse: {exc}")
+        return None
+
+    palette = [b["Name"] for b in root["palette"]]
+    props = [b.get("Properties", {}) for b in root["palette"]]
+    non_air = 0
+    block_entities = 0
+    connectors = []
+    for b in root["blocks"]:
+        name = palette[b["state"]]
+        if name != "minecraft:air":
+            non_air += 1
+        bnbt = b.get("nbt")
+        if not (bnbt and "id" in bnbt):
+            continue
+        if name == "minecraft:jigsaw":
+            orient = props[b["state"]].get("orientation", "north_up")
+            connectors.append({
+                "type": bnbt["name"].split("/")[-1],
+                "local_pos": list(b["pos"]),
+                "facing": _ORIENT_FACING.get(orient, orient),
+                "pool": bnbt.get("pool", ""),
+                "final_state": bnbt.get("final_state", ""),
+            })
+        else:
+            block_entities += 1
+
+    return {
+        "id": f"infinite_domain:hive_world/{path.stem}",
+        "nbt": str(path.relative_to(REPO)).replace("\\", "/"),
+        "size": list(root.get("size", [])),
+        "band": slug,
+        "role": BAND_ROLE_MAP[role_word],
+        "floor_data": sorted({c["local_pos"][1] for c in connectors}) or [1],
+        "non_air": non_air,
+        "block_entities": block_entities,
+        "connectors": sorted(connectors, key=lambda c: c["local_pos"]),
+    }
+
+
 def check_pools(pools: dict, module_ids: set) -> None:
     for name, pj in pools.items():
         fb = pj.get("fallback", "")
@@ -258,17 +329,54 @@ def main() -> int:
     check_pools(pools, module_ids)
     for entry in manifest["modules"]:
         check_module(entry, pools)
+    legacy_count = len(manifest["modules"])
+
+    # ---- per-band authored families -------------------------------------
+    band_pools = {}
+    for pj in sorted(POOL_DIR.glob("*.json")):
+        if pj.stem.split("_")[0] in BAND_SLUGS:
+            band_pools[pj.stem] = json.loads(pj.read_text(encoding="utf-8"))
+
+    band_modules = {p.stem for p in NBT_DIR.glob("*.nbt")}
+    band_count = 0
+    for slug in BAND_SLUGS:
+        for role_word in BAND_ROLE_MAP:
+            name = f"{slug}_{role_word}"
+            path = NBT_DIR / f"{name}.nbt"
+            if not path.is_file():
+                fail(f"[1] {name}: authored band module NBT is missing")
+                continue
+            entry = derive_entry(path, slug, role_word)
+            if entry is None:
+                continue
+            check_module(entry, band_pools)
+            band_count += 1
+
+    # band pool integrity (elements + fallbacks resolve to real modules/pools)
+    for pool_id, pj in sorted(band_pools.items()):
+        fb = pj.get("fallback", "")
+        if fb.startswith("infinite_domain:hive_world/") and fb.split("/")[-1] not in band_pools:
+            fail(f"[8] band pool {pool_id}: fallback {fb} does not resolve")
+        for el in pj.get("elements", []):
+            loc = el.get("element", {}).get("location", "")
+            if loc.split("/")[-1] not in band_modules:
+                fail(f"[8] band pool {pool_id}: element {loc} has no module NBT")
 
     print("Hive World module / connector validator")
     for w in warnings:
         print(f"  warn {w}")
     if failures:
-        print(f"\nFAIL ({len(failures)}):")
+        print("")
+        print(f"FAIL ({len(failures)}):")
         for f in failures:
             print(f"  {f}")
         return 1
-    print(f"\nPASS - {len(manifest['modules'])} modules, {len(pools)} pools, "
-          f"{len(warnings)} warning(s)")
+    print("")
+    print(
+        f"PASS - {legacy_count} legacy + {band_count} band modules "
+        f"({legacy_count + band_count} total), {len(pools)} legacy + "
+        f"{len(band_pools)} band pools, {len(warnings)} warning(s)"
+    )
     return 0
 
 

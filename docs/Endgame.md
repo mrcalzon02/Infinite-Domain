@@ -1208,7 +1208,7 @@ program:
   current_stage: S06
   current_gate: P00-GATE
   next_checkpoint: EG-P00-S06-C0012
-  updated_at: 2026-08-28T00:20:00-08:00
+  updated_at: 2026-08-31T16:10:00-08:00
   updated_by: endgame-coordinator
   progress_audit: docs/endgame/PROGRESS-AUDIT.md
   notes: >-
@@ -1961,6 +1961,24 @@ journal:
       effects, and implemented the first height-aware layered fog profile with two
       tunable local peaks per band plus lower-tier baseline pressure. Actual multi-deck
       cloud-surface rendering and in-client cameras remain C0075/C0076 work.
+  - at: 2026-08-31T16:10:00-08:00
+    actor: endgame-coordinator
+    event: module_geometry_coverage_closed
+    detail: >-
+      Resumption audit found a real coverage gap: the six per-band families (30 authored
+      module NBTs, 18 pools) had NO geometry validation. validate_hive_world_modules.py
+      only read the 7-module legacy manifest, and validate_hive_world_biome_routing.py -
+      which its docstring credited with band coverage - never opens an NBT at all
+      (registry/placement ownership only). Extended the connector validator to derive a
+      schema entry straight from each authored band NBT (anchor->start,
+      gallery/crossing->branch, chamber->leaf, bulkhead->terminal) and run checks 1-8
+      over all 37 modules plus band-pool element/fallback resolution. Result PASS -
+      7 legacy + 30 band modules, 3 legacy + 18 band pools, 0 warnings. Negative-tested
+      twice (dangling pool element; palette air->tnt blocking two openings) and both
+      fired correctly, so the pass is real coverage rather than a silent skip. Corrected
+      the validator docstring and module-schema.md section 7 coverage note; closed the
+      "only one branch pool" spike deviation. No generated artifact changed - this is
+      validation-only.
 ```
 
 <!-- ENDGAME_STATE_END -->

@@ -114,6 +114,18 @@ is a real jigsaw block at that position/orientation, and vice versa).
 
 ## 7. Connector validator checks (`validate_hive_world_modules.py`)
 
+**Coverage (2026-08-31):** the validator enforces both module families — the 7
+legacy/compatibility modules (manifest-authoritative, so check 9 compares manifest to
+NBT) and the **30 authored per-band modules** (6 bands x anchor/gallery/crossing/
+chamber/bulkhead). Band modules have no manifest: their NBT *is* the authored source of
+truth, so their schema entry is derived from the NBT and checks 1-8 do the real work.
+`validate_hive_world_biome_routing.py` owns the band registry/placement contract but
+never opens an NBT; module geometry is enforced here and only here.
+
+Band role mapping: `anchor` -> `start`, `gallery`/`crossing` -> `branch`,
+`chamber` -> `leaf`, `bulkhead` -> `terminal`.
+
+
 1. NBT parses; `size`, `palette`, `blocks` well-formed; `DataVersion` = 3955.
 2. Size and block/BE counts within §1 budget.
 3. Every jigsaw block: `name` = `target` and in the §2 type set; `final_state` legal;
@@ -148,11 +160,11 @@ deliberate damage-state system (`EG-P04-S06-C0063`) supersedes this later.
 
 | Deviation | Modules | Closes at |
 |---|---|---|
-| No `band` tag / palette binding — all modules are generic `works`-ish | all 7 | `C0055`-`C0060` |
+| No `band` tag / palette binding — generic `works`-ish palette | the 7 legacy modules only | `C0055`-`C0060` (band families have landed and are band-tagged) |
 | `stair_shaft` uses a ladder, not authored stairs | `stair_shaft` | `C0054` |
 | No `service` (crawlway) connector type used yet | — | `C0056` |
 | Sizes not on a strict grid (13, 9, 13 etc.) | all | acceptable — schema uses connector alignment, not a grid |
-| Only one `branch` pool — no per-band `branch` variants | pools | `C0065` (district assembly) |
+| ~~Only one `branch` pool~~ — **closed**: 6 per-band `start`/`branch`/`terminal` pool triples now exist | pools | closed 2026-08-31 |
 | `industrial_bay` has 4 block entities near the manifest budget headroom | `industrial_bay` | monitor at `C0067` |
 
 ## 9. Rollback

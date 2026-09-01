@@ -1,6 +1,6 @@
 # Endgame — progress audit
 
-**As of:** 2026-08-27, 22 `endgame(...)` commits on `main` (5df1ea34 → f15b1701), all
+**As of:** 2026-08-31 (module-geometry coverage pass); base roll-up 2026-08-27, 22 `endgame(...)` commits on `main` (5df1ea34 → f15b1701), all
 path-scoped; the repository's pre-existing staged work is untouched.
 
 **Authority:** `docs/Endgame.md` §11 ledger is the source of truth for state; this file
@@ -101,10 +101,10 @@ Spike-scale, by owner direction:
 | Piece | Status |
 |---|---|
 | C0051 module schema | EVIDENCE_READY — `docs/endgame/contracts/module-schema.md` |
-| C0052 connector validator | EVIDENCE_READY — `validate_hive_world_modules.py`, 10 checks, PASS on 7 modules |
+| C0052 connector validator | EVIDENCE_READY — `validate_hive_world_modules.py`, 10 checks, PASS on **all 37 modules** (7 legacy + 30 band) and 21 pools; negative-tested |
 | compatibility jigsaw district (7 modules, 3 pools, structure + loot) | DONE (spike) — definition retained, placement set now inert; `generate_hive_world_structures.py` |
 | C0053-C0054 structural + vertical circulation kits | partial — modules reuse a shared palette; `stair_shaft` uses a ladder |
-| C0055-C0060 per-band module families | EVIDENCE_READY static candidate — 30 authored NBT modules, 18 generated pools, six generated structures/unique-salt sets; assembly/runtime review pending |
+| C0055-C0060 per-band module families | EVIDENCE_READY static candidate — 30 authored NBT modules, 18 generated pools, six generated structures/unique-salt sets; **geometry now schema-validated (2026-08-31)**; assembly/runtime review pending |
 | C0061 apron / wasteland kit | NOT STARTED (needs the macro layer) |
 | C0062 axis placement system | NOT STARTED |
 | C0063 damage-state system | partial — inherited `kubejs:ruined_*` replacement gives a derelict read for free |
