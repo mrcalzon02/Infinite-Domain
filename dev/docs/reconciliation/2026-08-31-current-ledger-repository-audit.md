@@ -12,11 +12,11 @@ The post-reconciliation repository boundary is defined by `REPOSITORY_SCOPE.md` 
 
 ## 1. Visible fractally occluded hex-grid wasteland caves
 
-The authoritative source/resource implementation is now committed under `dev/packdev/wasteland-hex-caves/` in commit `b62b5e444b825ea0eac9ccd47327346fd10902db`.
+The project-owned source/resource implementation now lives under `dev/packdev/wasteland-hex-caves/`. Commit `b62b5e444b825ea0eac9ccd47327346fd10902db` admitted the initial module and data registration; commit `1bc11942ea7cbec454f5b6b849406442237732fd` contains the final reference-field tuning.
 
 The implementation preserves literal recognizable hexagonal corridors/cells as carved geometry rather than using an invisible organizational scaffold or stamped source image. World-seed deterministic fBm/plasma fields warp the grid, vary corridor width and depth, interrupt/occlude portions of the lattice, and open larger low-noise chambers. A custom NeoForge biome modifier injects the feature only into biome registry namespaces `the_wasteland_reworked` and `wastelands`, avoiding direct modification of either third-party jar.
 
-Static/reference validation passed before repository admission. The retained reconciliation record is `dev/docs/reconciliation/2026-08-31-wasteland-hex-cave-source-implementation.md`; its deterministic 512 x 512 reference field retained 22.5% visible hex-grid coverage after 6.0% actual grid interruption, with 4.3% larger fractal chamber coverage.
+The retained validator `dev/scripts/validate_wasteland_hex_caves.py` mirrors Java signed-`long` overflow and unsigned-shift behavior and checks the source/resource contracts. Its deterministic seed `123456789` 512 x 512 reference field measures 28.5% raw literal hex-grid coverage, 22.5% surviving visible grid, 6.0% actually interrupted grid, and 4.3% larger fractal chamber coverage. The retained evidence record is `dev/docs/reconciliation/2026-08-31-wasteland-hex-cave-source-implementation.md`.
 
 The current repository does not provide a per-module compiler/Gradle wrapper for `dev/packdev/*`, and this environment does not expose the authoritative NeoForge runtime. Therefore source presence is not promoted into bytecode compilation, JAR installation, mod loading, fresh-world generation, or visual acceptance.
 
