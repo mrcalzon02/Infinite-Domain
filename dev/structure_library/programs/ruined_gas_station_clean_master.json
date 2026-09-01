@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_gas_station",
+  "family": "industrial_utility_technology",
+  "purpose": "Heavy Rebuild v2 clean-master architectural and service program for the authoritative ruined gas station asset, preserving a legible roadside retail-fuel site with canopy, pump islands, underground or protected fuel storage, convenience retail, service access, vehicle circulation, safety systems, terrain seating and coherent damage behavior.",
+  "ground_program": [
+    "roadside entrance and exit geometry supports passenger vehicles and light service traffic without forcing unrealistic turns across pump islands or pedestrian approaches",
+    "fuel forecourt contains multiple protected pump islands connected to a credible buried or protected fuel-delivery system rather than isolated decorative dispensers",
+    "canopy covers the principal fueling positions and uses columns, foundations and beam relationships that visibly support the roof without obstructing required vehicle clearances",
+    "fuel storage is represented by buried tanks, protected above-ground tanks or another plausible system with fill points, vents, inspection access and a believable connection to the dispensing network",
+    "convenience-store or cashier building includes public sales space, counter, storage, staff/service area, sanitation and back-of-house access appropriate to a roadside fuel retailer",
+    "delivery and refuse access reaches the store and fuel-service systems without requiring trucks to occupy the primary customer fueling path for normal operations",
+    "emergency shutoff, fire extinguishing, spill-response and vehicle-impact protection are located where they would plausibly protect pumps, storefronts and fuel infrastructure",
+    "signage, price-board base, lighting supports, curbs, drainage and edge treatments reinforce the site identity without becoming unsupported decorative clutter",
+    "service access reaches pumps, tank fill points, vents, canopy systems, electrical equipment and store utilities without relying on inaccessible maintenance spaces",
+    "grading, curbs, drainage, retaining features and slab transitions seat the forecourt and store into terrain without floating paving, buried doors or disconnected road elevations"
+  ],
+  "upper_program": [
+    "the canopy roof preserves supported spans, drainage and maintenance access while avoiding impossible unsupported overhangs",
+    "store roof equipment, vents or small service platforms remain structurally supported and reachable by plausible maintenance access",
+    "any occupied mezzanine or second-floor space uses a supported enclosed stair and usable landing rather than ladders intended for equipment access",
+    "pole signs, lighting and elevated branding structures use foundations and mast or frame logic sufficient for their visible height and wind exposure"
+  ],
+  "circulation": [
+    "customer vehicles can enter, choose a pump position, maneuver around occupied islands and exit without unavoidable conflicts with the store entrance or delivery zone",
+    "pedestrian circulation connects parking and pump areas to the store entrance using protected or legible paths across the forecourt",
+    "staff circulation connects sales floor, counter, storage, sanitation, service yard and utility access without requiring passage through hazardous fuel-service zones",
+    "fuel-delivery access reaches tank fill points while preserving a plausible tanker position and minimizing blockage of the entire customer forecourt",
+    "maintenance circulation reaches dispensers, canopy supports, electrical equipment, vents, fill points and drainage features",
+    "equipment-only ladders do not substitute for architectural stairs in occupied spaces"
+  ],
+  "damage_constraints": [
+    "the ruined derivative must remain immediately recognizable as a gas station through surviving pump-island, canopy, storefront, fuel-storage and roadside-sign relationships",
+    "favor localized canopy collapse, vehicle impact, pump fire, storefront breach, roof failure, fuel staining, broken glazing, corrosion, vandalism and vegetation intrusion over uniform random deletion",
+    "canopy collapse must follow gravity from failed columns, beams or roof sections and resolve attached lights, signs, gutters and fascia so floating fragments are not left behind",
+    "pump or fuel-system damage may include scorched islands, displaced dispensers, ruptured housings or spill evidence but should retain enough of the distribution layout to communicate the site's former function",
+    "store damage should preserve at least one legible public-to-counter-to-back-of-house relationship and one viable exploration route",
+    "road, forecourt, curbs and drainage should remain spatially coherent after damage rather than becoming an arbitrary field of disconnected slabs",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": true,
+    "required_hard_fail_checks": [
+      "structure_geometry_lint_checks_1_3_zero_findings",
+      "industrial_utility_technology_family_validator",
+      "corpus_and_provenance_validation",
+      "lostcities_conversion_validation"
+    ],
+    "heuristic_findings_to_retain": [
+      "damage_coherence",
+      "ground_context",
+      "program_conformance"
+    ],
+    "identity_requirements": [
+      "roadside_forecourt_store_and_fueling_relationship_is_legible",
+      "pump_islands_connect_to_a_plausible_fuel_storage_and_delivery_system",
+      "canopy_has_real_structural_support_and_vehicle_clearance",
+      "store_has_public_staff_storage_and_service_functions",
+      "customer_delivery_staff_and_maintenance_circulation_are_believable",
+      "terrain_grading_drainage_curbs_and_road_connections_are_coherent"
+    ]
+  },
+  "production_admission": {
+    "status": "approved",
+    "registry_entry": "infinite_domain:ruined_gas_station",
+    "approved_at": "2026-08-27T07:27:19.682226+00:00",
+    "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+    "note": "Approval state is reconciled to the pre-existing authoritative entry in dev/structure_library/production-approvals.json. This program file does not create a new approval or claim additional validator evidence beyond what the registry records."
+  }
+}
