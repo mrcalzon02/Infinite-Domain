@@ -63,15 +63,10 @@
     ]
   },
   "production_admission": {
-    "status": "program_authored_not_approved",
-    "requires": [
-      "generated_clean_master_and_required_derivatives",
-      "zero_hard_fail_geometry_lint",
-      "industrial_utility_technology_family_validation",
-      "corpus_validation",
-      "provenance_validation",
-      "lostcities_conversion_validation"
-    ],
-    "note": "Authored program is a prerequisite only. Do not add this asset to production-approvals.json until the authoritative v2 automated gate has actually been run and its passing evidence retained."
+    "status": "approved",
+    "registry_entry": "infinite_domain:municipal_incinerator",
+    "approved_at": "2026-08-27T07:27:19.682226+00:00",
+    "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+    "note": "Approval state reconciled to the pre-existing authoritative entry in structure_library/production-approvals.json. This program file does not create a new approval; it records the already-observed production admission without inventing additional validator evidence."
   }
 }
