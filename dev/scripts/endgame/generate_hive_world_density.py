@@ -27,7 +27,7 @@ import json
 import pathlib
 import sys
 
-REPO = pathlib.Path(__file__).resolve().parents[2]
+REPO = pathlib.Path(__file__).resolve().parents[3]
 NOISE_DIR = REPO / "kubejs/data/infinite_domain/worldgen/noise"
 DF_DIR = REPO / "kubejs/data/infinite_domain/worldgen/density_function/hive_world"
 

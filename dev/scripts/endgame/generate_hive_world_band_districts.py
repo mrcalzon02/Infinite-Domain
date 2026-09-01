@@ -15,7 +15,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = Path(__file__).resolve().parents[3]
 DATA = REPO / "kubejs/data/infinite_domain"
 POOL_DIR = DATA / "worldgen/template_pool/hive_world"
 STRUCTURE_DIR = DATA / "worldgen/structure"

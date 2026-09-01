@@ -20,7 +20,7 @@ import json
 import pathlib
 import sys
 
-REPO = pathlib.Path(__file__).resolve().parents[2]
+REPO = pathlib.Path(__file__).resolve().parents[3]
 CF_DIR = REPO / "kubejs/data/infinite_domain/worldgen/configured_feature"
 PF_DIR = REPO / "kubejs/data/infinite_domain/worldgen/placed_feature"
 

@@ -15,7 +15,7 @@ import json
 import sys
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = Path(__file__).resolve().parents[3]
 DATA = REPO / "kubejs/data/infinite_domain"
 DF_DIR = DATA / "worldgen/density_function/hive_world"
 DIMENSION = DATA / "dimension/hive_world.json"

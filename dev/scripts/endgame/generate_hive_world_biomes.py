@@ -22,7 +22,7 @@ import pathlib
 import sys
 from dataclasses import dataclass
 
-REPO = pathlib.Path(__file__).resolve().parents[2]
+REPO = pathlib.Path(__file__).resolve().parents[3]
 BIOME_DIR = REPO / "kubejs/data/infinite_domain/worldgen/biome"
 
 STEP_COUNT = 11

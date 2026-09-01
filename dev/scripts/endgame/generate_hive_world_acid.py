@@ -20,7 +20,7 @@ import json
 import pathlib
 import sys
 
-REPO = pathlib.Path(__file__).resolve().parents[2]
+REPO = pathlib.Path(__file__).resolve().parents[3]
 CF = REPO / "kubejs/data/infinite_domain/worldgen/configured_feature/hive_world_acid_pool.json"
 PF = REPO / "kubejs/data/infinite_domain/worldgen/placed_feature/hive_world_acid_pool.json"
 

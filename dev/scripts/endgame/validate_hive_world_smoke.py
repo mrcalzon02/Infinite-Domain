@@ -24,10 +24,10 @@ import pathlib
 import re
 import sys
 
-REPO = pathlib.Path(__file__).resolve().parents[2]
+REPO = pathlib.Path(__file__).resolve().parents[3]
 DATA = REPO / "kubejs/data/infinite_domain"
 ASSETS = REPO / "kubejs/assets"
-REG = REPO / "docs/registry-inventory"
+REG = REPO / "dev/docs/registry-inventory"
 
 SPIKE_DECLARED = {
     "kubejs:cinderstack_marker",

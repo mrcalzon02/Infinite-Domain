@@ -19,7 +19,7 @@ from __future__ import annotations
 import pathlib
 import sys
 
-REPO = pathlib.Path(__file__).resolve().parents[2]
+REPO = pathlib.Path(__file__).resolve().parents[3]
 
 # Every path the spike owns. Globs are expanded relative to REPO.
 SPIKE_GLOBS = [
@@ -47,7 +47,7 @@ KEEP_NOTE = [
     "docs/endgame/**  (all contracts and gate evidence)",
 ]
 
-MANIFEST = REPO / "docs/endgame/hive-world-path-manifest.txt"
+MANIFEST = REPO / "dev/docs/endgame/hive-world-path-manifest.txt"
 
 
 def resolve() -> list[pathlib.Path]:

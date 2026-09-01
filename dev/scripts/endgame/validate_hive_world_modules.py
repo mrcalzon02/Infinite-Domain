@@ -26,11 +26,11 @@ import pathlib
 import struct
 import sys
 
-REPO = pathlib.Path(__file__).resolve().parents[2]
+REPO = pathlib.Path(__file__).resolve().parents[3]
 DATA = REPO / "kubejs/data/infinite_domain"
 NBT_DIR = DATA / "structure/hive_world"
 POOL_DIR = DATA / "worldgen/template_pool/hive_world"
-MANIFEST = REPO / "docs/endgame/hive-world-module-manifest.json"
+MANIFEST = REPO / "dev/docs/endgame/hive-world-module-manifest.json"
 
 CONNECTOR_HEIGHT = {"door": 3, "hall": 4, "service": 2}
 CONNECTOR_WIDTH = {"door": 1, "hall": 3, "service": 1}

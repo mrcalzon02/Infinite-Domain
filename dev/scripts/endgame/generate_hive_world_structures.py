@@ -30,12 +30,12 @@ import json
 import pathlib
 import sys
 
-REPO = pathlib.Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(REPO / "scripts"))
+REPO = pathlib.Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(REPO / "dev/scripts"))
 import generate_wasteland_sites as base  # noqa: E402
 
 DATA = REPO / "kubejs/data/infinite_domain"
-MANIFEST = REPO / "docs/endgame/hive-world-module-manifest.json"
+MANIFEST = REPO / "dev/docs/endgame/hive-world-module-manifest.json"
 
 # module id -> (band, role) per docs/endgame/contracts/module-schema.md §4
 MODULE_META = {

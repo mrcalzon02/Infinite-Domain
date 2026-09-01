@@ -21,7 +21,7 @@ import json
 import pathlib
 import sys
 
-REPO = pathlib.Path(__file__).resolve().parents[2]
+REPO = pathlib.Path(__file__).resolve().parents[3]
 OUT = REPO / "kubejs/data/infinite_domain/worldgen/noise_settings/hive_world.json"
 
 MIN_Y = -64

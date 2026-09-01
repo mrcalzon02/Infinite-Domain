@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 DATA = ROOT / "kubejs/data/infinite_domain"
 DIMENSION = DATA / "dimension/hive_world.json"
 NOISE_SETTINGS = DATA / "worldgen/noise_settings/hive_world.json"
@@ -26,14 +26,14 @@ STRUCTURE_DIR = DATA / "worldgen/structure"
 STRUCTURE_SET_DIR = DATA / "worldgen/structure_set"
 POOL_DIR = DATA / "worldgen/template_pool/hive_world"
 NBT_DIR = DATA / "structure/hive_world"
-REPORT = ROOT / "docs/endgame/hive-world-biome-routing.json"
-OWNERSHIP = ROOT / "docs/endgame/generated-output-manifest.json"
+REPORT = ROOT / "dev/docs/endgame/hive-world-biome-routing.json"
+OWNERSHIP = ROOT / "dev/docs/endgame/generated-output-manifest.json"
 COMPANION_MAIN = ROOT / (
-    "packdev/hive-world-companion/src/main/java/infinitedomain/hiveworld/"
+    "dev/packdev/hive-world-companion/src/main/java/infinitedomain/hiveworld/"
     "HiveWorldCompanion.java"
 )
 COMPANION_REGISTRY = ROOT / (
-    "packdev/hive-world-companion/src/main/java/infinitedomain/hiveworld/"
+    "dev/packdev/hive-world-companion/src/main/java/infinitedomain/hiveworld/"
     "worldgen/HiveDensityFunctions.java"
 )
 COMPANION_JAR = ROOT / "mods/infinite-domain-hive-world-companion-0.1.0.jar"
