@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_fuel_depot",
+  "family": "industrial_utility_technology",
+  "purpose": "Heavy Rebuild v2 clean-master architectural and process program for the authoritative ruined fuel depot asset, preserving a legible bulk-fuel receiving, storage, transfer, dispensing and safety-containment system with believable vehicle access, operator control, maintenance circulation, terrain seating and coherent damage behavior.",
+  "ground_program": [
+    "controlled service-road approach with gate or inspection point, tanker access, staff access and turning geometry appropriate to a bulk-fuel facility rather than a generic paved yard",
+    "fuel receiving area includes tanker unloading positions, hose or hard-pipe connections, spill-control surfaces and a credible route into the bulk-storage system",
+    "bulk-storage zone contains separated tanks or tank groups with visible transfer piping, valves, vents, foundations and secondary containment such as bunds, berms or curbed basins",
+    "pump and manifold area provides a legible transition between receiving, storage and dispensing or export lines without decorative dead-end pipework",
+    "dispensing or loadout area supports service vehicles, generators or distribution tankers with protected islands, hose points and vehicle clearances that do not conflict with bulk-storage containment",
+    "operator office or control room overlooks the receiving and transfer functions and contains alarm, shutdown, records and communications functions appropriate to hazardous-fuel handling",
+    "electrical, backup-power and control equipment are physically separated from the most hazardous transfer and storage zones while retaining believable cable and conduit routes",
+    "fire-protection provisions include hydrant, foam, water, extinguisher or emergency-isolation features positioned to protect tank, pump and transfer hazards",
+    "maintenance workshop, spares, spill-response equipment and service staging provide credible access to pumps, valves, tanks, vents, meters and transfer systems",
+    "drainage, grading, retaining features, tank foundations, containment berms and road elevations seat the depot into terrain without floating tanks, unsupported pipes or a single monolithic slab"
+  ],
+  "upper_program": [
+    "tank roofs, elevated valves, vents and inspection points use supported stairs, platforms, ladders and guardrails appropriate to equipment access rather than general occupied floors",
+    "any elevated pipe racks or transfer bridges are structurally supported at credible intervals and connect actual process endpoints",
+    "occupied control or administrative upper levels, if present, use enclosed supported stairs with usable landings and direct egress",
+    "roof zones preserve drainage, equipment access and separation from ignition-sensitive transfer areas"
+  ],
+  "circulation": [
+    "tanker traffic forms a believable entry, unloading and exit loop with adequate turning space and without crossing principal staff circulation where avoidable",
+    "staff circulation connects gate, operator control, storage observation, pump manifold, dispensing and maintenance areas while respecting containment barriers",
+    "maintenance circulation reaches tank bases, valves, pumps, pipe racks, electrical equipment, fire-protection systems and inspection platforms without requiring passage through active tanker lanes",
+    "emergency access remains possible to tank groups, pump areas and transfer zones from more than one direction where site geometry permits",
+    "equipment-only ladders do not substitute for architectural stairs in occupied spaces"
+  ],
+  "damage_constraints": [
+    "the ruined derivative must remain immediately recognizable as a fuel depot through surviving tank, containment, pump, manifold, transfer, control and vehicle-service relationships",
+    "favor localized tank fire, overpressure damage, pipe rupture, pump-house fire, spill staining, berm breach, corrosion, vehicle impact and vegetation intrusion over uniform random deletion",
+    "major tank or pipe failures must produce gravity-consistent debris, displaced panels, fallen pipe sections, scorched containment surfaces and localized spill evidence around the failed system",
+    "damage to tanks, racks, platforms, walls or roofs must resolve attached pipes, valves, ladders, railings, signs and fixtures so floating remnants are not left behind",
+    "preserve at least one legible exploration route from site entry through control, storage and transfer or dispensing functions",
+    "damage may disable individual tanks or transfer lines but must not erase the receiving-to-storage-to-transfer story or reduce the site to generic industrial clutter",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": true,
+    "required_hard_fail_checks": [
+      "structure_geometry_lint_checks_1_3_zero_findings",
+      "industrial_utility_technology_family_validator",
+      "corpus_and_provenance_validation",
+      "lostcities_conversion_validation"
+    ],
+    "heuristic_findings_to_retain": [
+      "damage_coherence",
+      "ground_context",
+      "program_conformance"
+    ],
+    "identity_requirements": [
+      "fuel_receiving_to_storage_to_transfer_or_dispensing_sequence_is_legible",
+      "bulk_storage_has_foundations_secondary_containment_and_real_transfer_connections",
+      "pump_manifold_control_and_safety_functions_are_present",
+      "vehicle_and_staff_circulation_are_believable_and_separated_where_practical",
+      "tanks_pipe_racks_platforms_and_service_access_are_structurally_supported",
+      "terrain_grading_drainage_and_containment_transitions_are_believable"
+    ]
+  },
+  "production_admission": {
+    "status": "approved",
+    "registry_entry": "infinite_domain:ruined_fuel_depot",
+    "approved_at": "2026-08-27T07:27:19.682226+00:00",
+    "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+    "note": "Approval state is reconciled to the pre-existing authoritative entry in dev/structure_library/production-approvals.json. This program file does not create a new approval or claim additional validator evidence beyond what the registry records."
+  }
+}
