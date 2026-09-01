@@ -12,11 +12,15 @@ The post-reconciliation repository boundary is defined by `REPOSITORY_SCOPE.md` 
 
 ## 1. Visible fractally occluded hex-grid wasteland caves
 
-The required doctrine remains unfulfilled in authoritative worldgen evidence. Wasteland caves must preserve recognizable hexagonal corridors and cells as literal carved geometry. Deterministic seed-driven fractal/plasma fields may interrupt, occlude, thicken, thin, distort, and locally erase portions of the grid, but the hex geometry must remain visibly legible in the resulting cave system.
+The authoritative source/resource implementation is now committed under `dev/packdev/wasteland-hex-caves/` in commit `b62b5e444b825ea0eac9ccd47327346fd10902db`.
 
-Generic cave carvers, an invisible organizational hex scaffold, or a stamped source image do not satisfy this requirement.
+The implementation preserves literal recognizable hexagonal corridors/cells as carved geometry rather than using an invisible organizational scaffold or stamped source image. World-seed deterministic fBm/plasma fields warp the grid, vary corridor width and depth, interrupt/occlude portions of the lattice, and open larger low-noise chambers. A custom NeoForge biome modifier injects the feature only into biome registry namespaces `the_wasteland_reworked` and `wastelands`, avoiding direct modification of either third-party jar.
 
-**Status:** OPEN — authoritative implementation and fixed-seed in-world evidence still required.
+Static/reference validation passed before repository admission. The retained reconciliation record is `dev/docs/reconciliation/2026-08-31-wasteland-hex-cave-source-implementation.md`; its deterministic 512 x 512 reference field retained 22.5% visible hex-grid coverage after 6.0% actual grid interruption, with 4.3% larger fractal chamber coverage.
+
+The current repository does not provide a per-module compiler/Gradle wrapper for `dev/packdev/*`, and this environment does not expose the authoritative NeoForge runtime. Therefore source presence is not promoted into bytecode compilation, JAR installation, mod loading, fresh-world generation, or visual acceptance.
+
+**Status:** PARTIAL — authoritative source/resources are implemented and statically/reference validated; compile into the project-owned runtime JAR outside `dev/`, load it in the authoritative NeoForge 1.21.1 instance, and retain fixed-seed in-world visual/runtime evidence before final acceptance.
 
 ## 2. Planetary worlds: 30 sites / 15 major sites each
 
@@ -93,13 +97,15 @@ No named external project belongs in this ledger or in Infinite Domain repositor
 
 The locally reconciled history has reached the authoritative repository. The merge sequence incorporated local development state with the reconciliation commits rather than discarding that work. During inspection, the worldgen benchmark README was found to contain literal Git conflict markers left by that merge; those markers were subsequently resolved while preserving both valid sides of the documentation.
 
+During the current hex-cave admission pass, a connector write-path error temporarily replaced this ledger with a one-line placeholder in commit `1280a4ed168f082838d27f7d1ccc2892ea04c1d6`. The exact prior blob was immediately restored in commit `d497f4e2b1f0fca878c707a7ac34f4f315bb2a01`, producing the same repository tree as before the erroneous write. The cave implementation was then rebased onto that repaired head and fast-forwarded without a forced ref update.
+
 The reconciliation process must continue from the current authoritative `main`, not from an earlier checkpoint.
 
 ## Next executable work
 
-### Repository implementation track
+### Wasteland hex-cave admission track
 
-The strongest unresolved implementation omission remains item 1. The current repository does not expose a generic wasteland `configured_carver` registration that can safely receive the doctrine as a drop-in asset. The overworld wasteland sits inside the existing overworld/gradient-worldgen and Lost Cities integration, while the custom density-function codec implementation currently present belongs to a different dimension. Do not transplant that dimension-specific machinery into the overworld merely to create a nominal implementation. The next implementation step is to identify the overworld noise-router/biome generation hook that owns wasteland cave carving, then integrate literal visible hex-grid geometry there and validate the resulting codec/resource graph before runtime acceptance.
+Compile the committed `dev/packdev/wasteland-hex-caves/` source with the established local custom-mod build process, place the resulting project-owned JAR in the runtime `mods/` set outside `dev/`, and run a fresh fixed-seed Wasteland generation pass. Retain evidence that the mod loads, the biome modifier resolves, recognizable hex corridors/cells survive in-world, fractal/plasma interruption is visible, the ten-block surface margin holds, and fluids/structures are not damaged. Until those observations exist, item 1 remains PARTIAL rather than complete.
 
 ### Runtime evidence track
 
