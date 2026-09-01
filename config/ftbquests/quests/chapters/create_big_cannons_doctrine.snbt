@@ -8,6 +8,7 @@
 	images: [ ]
 	order_index: 9
 	quest_links: [ ]
+	title: "Create Big Cannons Doctrine"
 	quests: [
 		{
 			dependencies: ["5410000000000001"]
@@ -15,6 +16,7 @@
 			id: "6F10000000000001"
 			optional: true
 			shape: "gear"
+			title: "Establish the Cannon Foundry"
 			tasks: [{ item: { count: 1, id: "createbigcannons:basin_foundry_lid" }, id: "7F10000000000001", type: "item" } { count: 64L, item: { count: 1, id: "createbigcannons:casting_sand" }, id: "7F20000000000011", type: "item" } { count: 2L, item: { count: 1, id: "createbigcannons:small_cast_mould" }, id: "7F20000000000012", type: "item" } { item: { count: 1, id: "createbigcannons:sliding_breech_cast_mould" }, id: "7F20000000000013", type: "item" }]
 			x: 0.0d
 			y: 0.0d
@@ -26,6 +28,7 @@
 			id: "6F10000000000002"
 			optional: true
 			shape: "gear"
+			title: "Machine the Barrel Works"
 			tasks: [{ item: { count: 1, id: "createbigcannons:cannon_drill" }, id: "7F10000000000002", type: "item" } { item: { count: 1, id: "createbigcannons:cannon_builder" }, id: "7F20000000000021", type: "item" }]
 			x: 0.0d
 			y: 2.0d
@@ -37,6 +40,7 @@
 			id: "6F10000000000003"
 			optional: true
 			shape: "gear"
+			title: "Cast the First Cannon"
 			rewards: [{ id: "8F10000000000003", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
 			tasks: [{ count: 2L, item: { count: 1, id: "createbigcannons:cast_iron_cannon_barrel" }, id: "7F10000000000003", type: "item" } { item: { count: 1, id: "createbigcannons:cast_iron_cannon_chamber" }, id: "7F20000000000031", type: "item" } { item: { count: 1, id: "createbigcannons:cast_iron_sliding_breech" }, id: "7F20000000000032", type: "item" } { item: { count: 1, id: "createbigcannons:block_armor_inspection_tool" }, id: "7F20000000000033", type: "item" }]
 			x: 0.0d
@@ -49,6 +53,7 @@
 			id: "6F10000000000004"
 			optional: true
 			shape: "gear"
+			title: "Inspect the Gun Assembly"
 			tasks: [{ id: "7F10000000000004", type: "checkmark" }]
 			x: 0.0d
 			y: 6.0d
@@ -60,6 +65,7 @@
 			id: "6F10000000000005"
 			optional: true
 			shape: "gear"
+			title: "Fit the Breechblock"
 			tasks: [{ item: { count: 1, id: "createbigcannons:cast_iron_sliding_breechblock" }, id: "7F10000000000005", type: "item" }]
 			x: 0.0d
 			y: 8.0d
@@ -71,6 +77,7 @@
 			id: "6F10000000000006"
 			optional: true
 			shape: "gear"
+			title: "Build the Loading Train"
 			tasks: [{ item: { count: 1, id: "createbigcannons:cannon_loader" }, id: "7F10000000000006", type: "item" } { item: { count: 1, id: "createbigcannons:ram_rod" }, id: "7F20000000000061", type: "item" } { item: { count: 1, id: "createbigcannons:worm" }, id: "7F20000000000062", type: "item" }]
 			x: -4.0d
 			y: 10.0d
@@ -82,6 +89,7 @@
 			id: "6F10000000000007"
 			optional: true
 			shape: "gear"
+			title: "Mount the Artillery"
 			rewards: [{ id: "8F10000000000007", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
 			tasks: [{ item: { count: 1, id: "createbigcannons:fixed_cannon_mount" }, id: "7F10000000000007", type: "item" } { item: { count: 1, id: "createbigcannons:cannon_carriage" }, id: "7F20000000000071", type: "item" }]
 			x: 4.0d
@@ -94,6 +102,7 @@
 			id: "6F10000000000008"
 			optional: true
 			shape: "gear"
+			title: "Produce Solid Shot"
 			tasks: [{ count: 8L, item: { count: 1, id: "createbigcannons:solid_shot" }, id: "7F10000000000008", type: "item" }]
 			x: -4.0d
 			y: 12.0d
@@ -105,6 +114,7 @@
 			id: "6F10000000000009"
 			optional: true
 			shape: "gear"
+			title: "Standardize Powder Charges"
 			tasks: [{ count: 8L, item: { count: 1, id: "createbigcannons:powder_charge" }, id: "7F10000000000009", type: "item" }]
 			x: -4.0d
 			y: 14.0d
@@ -116,6 +126,7 @@
 			id: "6F1000000000000A"
 			optional: true
 			shape: "gear"
+			title: "Establish Misfire Procedure"
 			tasks: [{ id: "7F1000000000000A", type: "checkmark" }]
 			x: -4.0d
 			y: 16.0d
@@ -127,6 +138,7 @@
 			id: "6F1000000000000B"
 			optional: true
 			shape: "gear"
+			title: "Prove the Firing Drill"
 			tasks: [{ id: "7F1000000000000B", type: "checkmark" }]
 			x: 0.0d
 			y: 18.0d
@@ -138,6 +150,7 @@
 			id: "6F1000000000000C"
 			optional: true
 			shape: "gear"
+			title: "Automate Traverse and Elevation"
 			rewards: [{ id: "8F1000000000000C", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
 			tasks: [{ item: { count: 1, id: "createbigcannons:cannon_mount" }, id: "7F1000000000000C", type: "item" } { count: 2L, item: { count: 1, id: "createbigcannons:cannon_mount_extension" }, id: "7F200000000000C1", type: "item" }]
 			x: 4.0d
@@ -150,6 +163,7 @@
 			id: "6F1000000000000D"
 			optional: true
 			shape: "gear"
+			title: "Develop Fuzed Ammunition"
 			tasks: [{ count: 4L, item: { count: 1, id: "createbigcannons:smoke_shell" }, id: "7F1000000000000D", type: "item" } { count: 4L, item: { count: 1, id: "createbigcannons:timed_fuze" }, id: "7F200000000000D1", type: "item" }]
 			x: 0.0d
 			y: 20.0d
@@ -161,6 +175,7 @@
 			id: "6F1000000000000E"
 			optional: true
 			shape: "gear"
+			title: "Commission the Autocannon Line"
 			rewards: [{ id: "8F1000000000000E", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
 			tasks: [{ item: { count: 1, id: "createbigcannons:cast_iron_autocannon_barrel" }, id: "7F1000000000000E", type: "item" } { item: { count: 1, id: "createbigcannons:cast_iron_autocannon_breech" }, id: "7F200000000000E1", type: "item" } { item: { count: 1, id: "createbigcannons:cast_iron_autocannon_recoil_spring" }, id: "7F200000000000E2", type: "item" } { item: { count: 1, id: "createbigcannons:autocannon_ammo_container" }, id: "7F200000000000E3", type: "item" } { count: 32L, item: { count: 1, id: "createbigcannons:ap_autocannon_round" }, id: "7F200000000000E4", type: "item" }]
 			x: -4.0d
@@ -173,6 +188,7 @@
 			id: "6F1000000000000F"
 			optional: true
 			shape: "gear"
+			title: "Artillery Battery Commissioned"
 			tasks: [{ id: "7F1000000000000F", type: "checkmark" }]
 			x: 0.0d
 			y: 24.0d
