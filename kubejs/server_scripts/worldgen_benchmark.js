@@ -1,7 +1,8 @@
 // Headless, fixed-seed world-generation benchmark controller.
 // This script is inert in ordinary worlds. The isolated benchmark launcher
 // replaces kubejs/config/worldgen_benchmark.json with an enabled run plan.
-
+// Wrapped because KubeJS evaluates server scripts in one shared Rhino scope.
+(() => {
 const WorldgenBenchmark = {
     configPath: 'kubejs/config/worldgen_benchmark.json',
     prefix: '[ID-WORLDGEN-BENCH] ',
@@ -36,20 +37,20 @@ function worldgenBenchmarkChunkBlock(chunkCoordinate) {
 }
 
 function worldgenBenchmarkTileBounds(tile) {
-    const minChunkX = Number(tile.minChunkX)
-    const minChunkZ = Number(tile.minChunkZ)
-    const width = Number(tile.widthChunks)
-    const depth = Number(tile.depthChunks)
+    const boundsMinChunkX = Number(tile.minChunkX)
+    const boundsMinChunkZ = Number(tile.minChunkZ)
+    const boundsWidth = Number(tile.widthChunks)
+    const boundsDepth = Number(tile.depthChunks)
     return {
-        minChunkX: minChunkX,
-        minChunkZ: minChunkZ,
-        maxChunkX: minChunkX + width - 1,
-        maxChunkZ: minChunkZ + depth - 1,
-        minBlockX: worldgenBenchmarkChunkBlock(minChunkX),
-        minBlockZ: worldgenBenchmarkChunkBlock(minChunkZ),
-        maxBlockX: worldgenBenchmarkChunkBlock(minChunkX + width) - 1,
-        maxBlockZ: worldgenBenchmarkChunkBlock(minChunkZ + depth) - 1,
-        chunks: width * depth
+        minChunkX: boundsMinChunkX,
+        minChunkZ: boundsMinChunkZ,
+        maxChunkX: boundsMinChunkX + boundsWidth - 1,
+        maxChunkZ: boundsMinChunkZ + boundsDepth - 1,
+        minBlockX: worldgenBenchmarkChunkBlock(boundsMinChunkX),
+        minBlockZ: worldgenBenchmarkChunkBlock(boundsMinChunkZ),
+        maxBlockX: worldgenBenchmarkChunkBlock(boundsMinChunkX + boundsWidth) - 1,
+        maxBlockZ: worldgenBenchmarkChunkBlock(boundsMinChunkZ + boundsDepth) - 1,
+        chunks: boundsWidth * boundsDepth
     }
 }
 
@@ -60,13 +61,13 @@ function worldgenBenchmarkForceloadCommand(action, dimension, bounds) {
 }
 
 function worldgenBenchmarkAllChunksLoaded(server, dimension, bounds) {
-    for (let chunkX = bounds.minChunkX; chunkX <= bounds.maxChunkX; chunkX++) {
-        for (let chunkZ = bounds.minChunkZ; chunkZ <= bounds.maxChunkZ; chunkZ++) {
-            const blockX = worldgenBenchmarkChunkBlock(chunkX) + 8
-            const blockZ = worldgenBenchmarkChunkBlock(chunkZ) + 8
-            const command = 'execute in ' + dimension + ' positioned ' + blockX + ' 0 ' + blockZ +
+    for (let loadedChunkX = bounds.minChunkX; loadedChunkX <= bounds.maxChunkX; loadedChunkX++) {
+        for (let loadedChunkZ = bounds.minChunkZ; loadedChunkZ <= bounds.maxChunkZ; loadedChunkZ++) {
+            const loadedBlockX = worldgenBenchmarkChunkBlock(loadedChunkX) + 8
+            const loadedBlockZ = worldgenBenchmarkChunkBlock(loadedChunkZ) + 8
+            const loadedCommand = 'execute in ' + dimension + ' positioned ' + loadedBlockX + ' 0 ' + loadedBlockZ +
                 ' if loaded ~ ~ ~ run function infinite_domain:worldgen_benchmark/probe'
-            if (server.runCommandSilent(command) <= 0) return false
+            if (server.runCommandSilent(loadedCommand) <= 0) return false
         }
     }
     return true
@@ -75,9 +76,11 @@ function worldgenBenchmarkAllChunksLoaded(server, dimension, bounds) {
 function worldgenBenchmarkModSnapshot(config) {
     const requested = ['lostcities', 'dungeons_arise', 'dungeons_arise_seven_seas']
     try {
-        const ModList = Java.loadClass('net.neoforged.fml.ModList')
-        const loaded = {}
-        requested.forEach(modId => loaded[modId] = Boolean(ModList.get().isLoaded(modId)))
+        // Rhino's KubeJS wrapper re-enters try-block lexical environments when
+        // scheduled server callbacks run. Function-scoped var avoids a false
+        // "redeclaration" while remaining isolated by this helper function.
+        var loaded = {}
+        requested.forEach(modId => loaded[modId] = Boolean(Platform.isLoaded(modId)))
         worldgenBenchmarkLog({
             event: 'mod_snapshot',
             runId: String(config.runId),
@@ -96,21 +99,21 @@ function worldgenBenchmarkModSnapshot(config) {
 function worldgenBenchmarkRegistrySnapshot(server, config) {
     const namespaces = ['dungeons_arise', 'dungeons_arise_seven_seas']
     try {
-        const Registries = Java.loadClass('net.minecraft.core.registries.Registries')
-        const access = server.registryAccess()
-        const structureRegistry = access.registryOrThrow(Registries.STRUCTURE)
-        const structureSetRegistry = access.registryOrThrow(Registries.STRUCTURE_SET)
+        var snapshotRegistryKeys = Java.loadClass('net.minecraft.core.registries.Registries')
+        var snapshotAccess = server.registryAccess()
+        var snapshotStructureRegistry = snapshotAccess.registryOrThrow(snapshotRegistryKeys.STRUCTURE)
+        var snapshotStructureSetRegistry = snapshotAccess.registryOrThrow(snapshotRegistryKeys.STRUCTURE_SET)
 
         namespaces.forEach(namespace => {
-            const structures = []
-            const structureSets = []
-            structureRegistry.keySet().forEach(key => {
-                const text = String(key)
-                if (text.startsWith(namespace + ':')) structures.push(text)
+            var structures = []
+            var structureSets = []
+            snapshotStructureRegistry.keySet().forEach(key => {
+                var snapshotStructureText = String(key)
+                if (snapshotStructureText.startsWith(namespace + ':')) structures.push(snapshotStructureText)
             })
-            structureSetRegistry.keySet().forEach(key => {
-                const text = String(key)
-                if (text.startsWith(namespace + ':')) structureSets.push(text)
+            snapshotStructureSetRegistry.keySet().forEach(key => {
+                var snapshotSetText = String(key)
+                if (snapshotSetText.startsWith(namespace + ':')) structureSets.push(snapshotSetText)
             })
             structures.sort()
             structureSets.sort()
@@ -138,24 +141,24 @@ function worldgenBenchmarkStructureStarts(server, dimension, bounds) {
     const counts = {}
     let validStarts = 0
     try {
-        const Registries = Java.loadClass('net.minecraft.core.registries.Registries')
-        const ResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
-        const ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
-        const dimensionLocation = ResourceLocation.parse(String(dimension))
-        const dimensionKey = ResourceKey.create(Registries.DIMENSION, dimensionLocation)
-        const level = server.getLevel(dimensionKey)
-        if (level === null || level === undefined) throw new Error('dimension unavailable: ' + dimension)
-        const structureRegistry = server.registryAccess().registryOrThrow(Registries.STRUCTURE)
+        var startRegistryKeys = Java.loadClass('net.minecraft.core.registries.Registries')
+        var startResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
+        var startResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
+        var startDimensionLocation = startResourceLocation.parse(String(dimension))
+        var startDimensionKey = startResourceKey.create(startRegistryKeys.DIMENSION, startDimensionLocation)
+        var startLevel = server.getLevel(startDimensionKey)
+        if (startLevel === null || startLevel === undefined) throw new Error('dimension unavailable: ' + dimension)
+        var startStructureRegistry = server.registryAccess().registryOrThrow(startRegistryKeys.STRUCTURE)
 
-        for (let chunkX = bounds.minChunkX; chunkX <= bounds.maxChunkX; chunkX++) {
-            for (let chunkZ = bounds.minChunkZ; chunkZ <= bounds.maxChunkZ; chunkZ++) {
-                const starts = level.getChunk(chunkX, chunkZ).getAllStarts()
+        for (var startChunkX = bounds.minChunkX; startChunkX <= bounds.maxChunkX; startChunkX++) {
+            for (var startChunkZ = bounds.minChunkZ; startChunkZ <= bounds.maxChunkZ; startChunkZ++) {
+                var starts = startLevel.getChunk(startChunkX, startChunkZ).getAllStarts()
                 starts.forEach((start, structure) => {
                     if (start === null || start === undefined || !start.isValid()) return
-                    const key = structureRegistry.getKey(structure)
-                    if (key === null || key === undefined) return
-                    const namespace = String(key.getNamespace())
-                    counts[namespace] = (counts[namespace] || 0) + 1
+                    var startKey = startStructureRegistry.getKey(structure)
+                    if (startKey === null || startKey === undefined) return
+                    var startNamespace = String(startKey.getNamespace())
+                    counts[startNamespace] = (counts[startNamespace] || 0) + 1
                     validStarts++
                 })
             }
@@ -169,7 +172,9 @@ function worldgenBenchmarkStructureStarts(server, dimension, bounds) {
 function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
     if (!WorldgenBenchmark.active) return
     if (tileIndex >= config.tiles.length) {
-        const completionElapsedMs = Date.now() - state.startedAtMs
+        // KubeJS may retain the scheduled callback's Rhino activation between
+        // invocations; var is intentionally restart-safe here.
+        var completionElapsedMs = Date.now() - state.startedAtMs
         worldgenBenchmarkLog({
             event: 'benchmark_completed',
             runId: String(config.runId),
@@ -187,16 +192,16 @@ function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
         return
     }
 
-    const tile = config.tiles[tileIndex]
-    const dimension = String(tile.dimension)
-    const bounds = worldgenBenchmarkTileBounds(tile)
+    var tile = config.tiles[tileIndex]
+    var dimension = String(tile.dimension)
+    var bounds = worldgenBenchmarkTileBounds(tile)
     if (bounds.chunks < 1 || bounds.chunks > 256) {
         worldgenBenchmarkFail(server, config, 'invalid_tile_size', 'Each tile must contain between 1 and 256 chunks.', String(tile.name))
         return
     }
 
-    const startedAtMs = Date.now()
-    const addResult = server.runCommandSilent(worldgenBenchmarkForceloadCommand('add', dimension, bounds))
+    var startedAtMs = Date.now()
+    var addResult = server.runCommandSilent(worldgenBenchmarkForceloadCommand('add', dimension, bounds))
     worldgenBenchmarkLog({
         event: 'tile_started',
         runId: String(config.runId),
@@ -211,14 +216,14 @@ function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
         forceloadResult: addResult
     })
 
-    const timeoutMs = Number(config.tileTimeoutSeconds) * 1000
-    const pollIntervalTicks = Number(config.pollIntervalTicks)
-    let polls = 0
+    var timeoutMs = Number(config.tileTimeoutSeconds) * 1000
+    var pollIntervalTicks = Number(config.pollIntervalTicks)
+    var polls = 0
 
     function poll() {
         if (!WorldgenBenchmark.active) return
         polls++
-        const elapsedMs = Date.now() - startedAtMs
+        var elapsedMs = Date.now() - startedAtMs
         if (elapsedMs > timeoutMs) {
             server.runCommandSilent(worldgenBenchmarkForceloadCommand('remove', dimension, bounds))
             worldgenBenchmarkFail(server, config, 'tile_timeout', 'Tile generation exceeded its timeout.', String(tile.name))
@@ -229,7 +234,7 @@ function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
             return
         }
 
-        const structureStarts = worldgenBenchmarkStructureStarts(server, dimension, bounds)
+        var structureStarts = worldgenBenchmarkStructureStarts(server, dimension, bounds)
         if (!structureStarts.ok) {
             worldgenBenchmarkLog({
                 event: 'acceptance_probe_error',
@@ -316,3 +321,4 @@ ServerEvents.loaded(event => {
     const state = { startedAtMs: Date.now(), completedChunks: 0, generationMs: 0 }
     server.scheduleInTicks(Number(config.warmupTicks), () => worldgenBenchmarkRunTile(server, config, state, 0))
 })
+})()

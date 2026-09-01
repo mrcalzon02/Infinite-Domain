@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Build and render the OWS-008 Gate-B r2 intact operating candidate.
 
-The model starts from the exact independently accepted Gate-A r1 massing and
+The model starts from the exact independently accepted Gate-A r2 massing and
 adds Passes 7-12 only. It contains no proof loot, encounters, damage, decay, or
 final microdetail, and never writes shared state or authoritative shipping NBT.
 """
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 import subprocess
@@ -16,14 +17,14 @@ from pathlib import Path
 import generate_wasteland_sites as base
 import old_world_ows008_final as final_builder
 from render_old_world_heavy_rebuild_review import OUTPUT_ROOT, ROOT, render_review_set
-from render_ows008_gate_a_massing import build_gate_a_massing
+from render_ows008_gate_a_massing_r2 import build_gate_a_massing_r2
 from render_structure_review import unpack_structure
 
 
 TARGET = "OWS-008"
 SIZE = (55, 22, 49)
 CAMERA_SET = "ows008_fixed_v1"
-GATE_A_MODEL_SHA256 = "ec12e9ad5de5da223cac21e3f51efacb34776ef068890f0e38a2479b29988b48"
+GATE_A_MODEL_DECOMPRESSED_SHA256 = "22bca95829c4497cdf810b13be3d0e2c4a01c2df406b9cec8339f9c8d0773894"
 TEMP_GATE_A_NAME = "_heavy_review_ows008_gate_a_freeze_check"
 TEMP_NAME = "_heavy_review_ows008_gate_b_intact_r2"
 OUTPUT_DIR = OUTPUT_ROOT / TARGET / "gate_b_intact" / "r2"
@@ -37,6 +38,8 @@ SHIPPING_PATH = (
     / "old_world"
     / "ows_008_vcf_emergency_persistence_investigation_lab.nbt"
 )
+STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+GATE_A_R2_REVIEW = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-008_GATE_A_R2_REVIEW.md"
 
 
 def _double_iron_door_z(t: base.Template, x: int, y: int, z: int, facing: str) -> None:
@@ -376,7 +379,7 @@ def _pass12_institutional_identity(t: base.Template) -> None:
 
 
 def build_gate_b_intact() -> base.Template:
-    t = build_gate_a_massing()
+    t = build_gate_a_massing_r2()
     _pass7_structural_system(t)
     _pass8_circulation_and_access(t)
     _pass9_exterior_architecture(t)
@@ -396,18 +399,30 @@ def _name_at(t: base.Template, pos: tuple[int, int, int]) -> str | None:
 
 
 def _assert_gate_a_source_freeze() -> None:
-    gate_a = build_gate_a_massing()
+    state = json.loads(STATE_PATH.read_text(encoding="utf-8"))
+    gate = state.get("visual_review_gates", {}).get("gate_a_massing", {})
+    if gate.get("status") != "passed_r2":
+        raise AssertionError("Gate B refused: OWS-008 Gate A r2 is not independently approved")
+    if not GATE_A_R2_REVIEW.is_file():
+        raise AssertionError("Gate B refused: explicit OWS-008 Gate-A r2 review is missing")
+    review = GATE_A_R2_REVIEW.read_text(encoding="utf-8")
+    if "**Decision:** **PASSED**" not in review or "**OWS-008 GATE A r2: PASSED.**" not in review:
+        raise AssertionError("Gate B refused: OWS-008 Gate-A r2 review lacks an explicit PASSED decision")
+
+    gate_a = build_gate_a_massing_r2()
     original_data = base.DATA
     try:
         with tempfile.TemporaryDirectory(prefix="ows008-gate-a-freeze-") as temp_dir:
             base.DATA = Path(temp_dir)
             gate_a.save(TEMP_GATE_A_NAME)
             temp_nbt = base.DATA / "structure" / "wasteland" / f"{TEMP_GATE_A_NAME}.nbt"
-            actual = hashlib.sha256(temp_nbt.read_bytes()).hexdigest()
+            actual = hashlib.sha256(gzip.decompress(temp_nbt.read_bytes())).hexdigest()
     finally:
         base.DATA = original_data
-    if actual != GATE_A_MODEL_SHA256:
-        raise AssertionError(f"Accepted Gate-A source drifted: {actual} != {GATE_A_MODEL_SHA256}")
+    if actual != GATE_A_MODEL_DECOMPRESSED_SHA256:
+        raise AssertionError(
+            f"Accepted Gate-A r2 source drifted: {actual} != {GATE_A_MODEL_DECOMPRESSED_SHA256}"
+        )
 
 
 def _assert_intact_contracts(t: base.Template) -> None:
@@ -536,7 +551,7 @@ def main() -> None:
             )
         manifest["review_model_nbt_sha256"] = hashlib.sha256(model_bytes).hexdigest()
         manifest["review_builder_sha256"] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
-        manifest["gate_a_model_sha256"] = GATE_A_MODEL_SHA256
+        manifest["gate_a_model_decompressed_sha256"] = GATE_A_MODEL_DECOMPRESSED_SHA256
         manifest["placed_positions"] = len(blocks)
         manifest["gate_a_frozen_aspects_asserted"] = 9
         manifest["gate_b_obligations_implemented"] = 6

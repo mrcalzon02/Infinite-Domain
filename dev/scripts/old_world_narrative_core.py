@@ -43,6 +43,33 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
 AUDIO_DIARY_REGISTRY = ROOT / "kubejs" / "config" / "old_world_audio_diaries.json"
 AUDIO_DIARY_BOOK_DIR = ROOT / "old_world_narrative" / "audio_diary_books"
+WORLDGEN_ROLE_REGISTRY = ROOT / "docs" / "old-world" / "structure-worldgen-roles.json"
+
+
+def _load_worldgen_roles() -> dict[str, dict]:
+    document = json.loads(WORLDGEN_ROLE_REGISTRY.read_text(encoding="utf-8"))
+    roles = document.get("roles")
+    if document.get("schema_version") != 1 or not isinstance(roles, dict):
+        raise ValueError("Old World worldgen-role registry is missing or malformed")
+    return roles
+
+
+WORLDGEN_ROLES = _load_worldgen_roles()
+
+
+def _worldgen_role(spec) -> dict:
+    role = WORLDGEN_ROLES.get(spec.target)
+    if not isinstance(role, dict):
+        raise ValueError(f"{spec.target} has no authoritative Old World worldgen role")
+    if role.get("file") != f"{spec.name}.json":
+        raise ValueError(
+            f"{spec.target} worldgen-role filename drift: "
+            f"{role.get('file')!r} != {spec.name + '.json'!r}"
+        )
+    biomes_tag = role.get("biomes_tag")
+    if not isinstance(biomes_tag, str) or not biomes_tag:
+        raise ValueError(f"{spec.target} has no authoritative worldgen biome selector")
+    return role
 
 
 def _book_cover(entry: dict) -> tuple[str, str]:
@@ -181,6 +208,7 @@ def loot_table(spec):
 
 
 def generate(spec):
+    worldgen_role = _worldgen_role(spec)
     template = BUILDERS[spec.target]()
     base.stabilize_door_pairs(template)
     metrics = base.assess_fidelity(spec.source_profile, template)
@@ -216,7 +244,7 @@ def generate(spec):
         DATA / "worldgen" / "structure" / "old_world" / f"{spec.name}.json",
         {
             "type": "minecraft:jigsaw",
-            "biomes": "#infinite_domain:wasteland_site_biomes",
+            "biomes": worldgen_role["biomes_tag"],
             "step": "surface_structures",
             "spawn_overrides": {},
             "terrain_adaptation": "beard_box",

@@ -8,6 +8,7 @@ architecture. It never writes shared state or authoritative shipping NBT.
 """
 from __future__ import annotations
 
+import gzip
 import hashlib
 import json
 import os
@@ -337,6 +338,7 @@ def main() -> None:
     try:
         model_bytes = TEMP_NBT.read_bytes()
         model_hash = hashlib.sha256(model_bytes).hexdigest()
+        model_decompressed_hash = hashlib.sha256(gzip.decompress(model_bytes)).hexdigest()
         if model_hash == R1_MODEL_SHA256:
             raise AssertionError("OWS-008 Gate-A r2 did not change from revision-required r1")
         size, blocks = unpack_structure(TEMP_NBT)
@@ -358,6 +360,7 @@ def main() -> None:
         )
         used_names = [t.palette[state_index]["Name"] for state_index, _ in t.blocks.values()]
         manifest["review_model_nbt_sha256"] = model_hash
+        manifest["review_model_decompressed_nbt_sha256"] = model_decompressed_hash
         manifest["review_builder_sha256"] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
         manifest["frozen_r1_builder_sha256"] = r1_builder_hash
         manifest["revision_required_r1_model_sha256"] = R1_MODEL_SHA256

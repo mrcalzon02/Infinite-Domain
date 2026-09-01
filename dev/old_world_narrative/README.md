@@ -14,7 +14,19 @@ Implementation remains incremental:
 6. validate static contracts on every slice;
 7. record runtime/worldgen checks as pending until they are actually run.
 
-Current representative slice: OWS-009, the Atlas Kinetic Roadside Automated Repair Depot, implementing the opening `THEY WERE HERE FIRST` investigation.
+The two corpus counts are intentionally different. The 84 structures are the
+authoritative Wasteland source-template inventory. The Old World narrative
+program selects and transforms that inventory into exactly 64 descendants,
+`OWS-001` through `OWS-064`; it does not define `OWS-065` through `OWS-084`.
+`docs/old-world/structure-worldgen-roles.json` owns each descendant's biome
+selector independently of whether that staged structure has been admitted to a
+structure set.
+
+Current heavy-rebuild slice: OWS-008, the VCF Emergency Persistence
+Investigation Laboratory. Its fixed-camera Gate-A r2 candidate is rendered and
+awaits an explicit independent decision before Gate B can advance. OWS-009
+remains the representative functional investigation for the opening
+`THEY WERE HERE FIRST` quest.
 
 Build after importing the supplied package:
 

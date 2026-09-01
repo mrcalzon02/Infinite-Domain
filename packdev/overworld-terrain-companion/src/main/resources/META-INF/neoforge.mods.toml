@@ -1,0 +1,26 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "infinite_domain_worldgen"
+version = "1.0.0"
+displayName = "Infinite Domain: Overworld Terrain Companion"
+authors = "Infinite Domain"
+description = '''
+Owns deterministic terrain density codecs used by Infinite Domain's canonical Overworld.
+'''
+
+[[dependencies.infinite_domain_worldgen]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_worldgen]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"

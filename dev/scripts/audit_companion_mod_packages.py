@@ -14,6 +14,9 @@ PROJECTS = {
     "cyberware-mastery-expansion": "infinite-domain-cyberware-mastery-1.0.0.jar",
     "darknet-worldgen-patch": "infinite-domain-darknet-worldgen-1.8.0.jar",
     "echo-numismatics-bridge": "infinite-domain-echo-economy-1.0.0.jar",
+    "hive-world-companion": "infinite-domain-hive-world-companion-0.1.0.jar",
+    "lostcities-highway-compat": "infinite-domain-lostcities-highway-compat-1.0.0.jar",
+    "overworld-terrain-companion": "infinite-domain-overworld-terrain-1.0.0.jar",
     "stellaris-space-industry": "infinite-domain-stellaris-industry-1.0.0.jar",
     "unified-radiation": "infinite-domain-unified-radiation-1.0.0.jar",
 }

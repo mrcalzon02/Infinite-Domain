@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:range_choice",
+  "input": "custom_worldgen:continents",
+  "min_inclusive": -0.19,
+  "max_exclusive": 1.21,
+  "when_in_range": {
+    "type": "minecraft:max",
+    "argument1": "custom_worldgen:wasteland_hex_geometry",
+    "argument2": "custom_worldgen:wasteland_hex_plasma_barrier"
+  },
+  "when_out_of_range": 1.0
+}

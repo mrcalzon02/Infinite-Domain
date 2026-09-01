@@ -22,6 +22,8 @@ The isolated server does not blindly load client-only bootstrap services. Eviden
 
 In addition to timing data, every run records runtime acceptance evidence needed by the Infinite Domain reconciliation ledger. The controller records whether `lostcities`, `dungeons_arise`, and `dungeons_arise_seven_seas` were actually loaded by NeoForge; snapshots the live `STRUCTURE` and `STRUCTURE_SET` registries for both Arise namespaces; and inspects every generated benchmark chunk for valid structure starts, grouped by namespace. `result.json` preserves those observations under `acceptance`.
 
+KubeJS evaluates server scripts through a shared Rhino environment. The controller is isolated in an IIFE and uses function-scoped declarations in re-entered scheduled and guarded callbacks; `scripts/test_worldgen_benchmark.py` protects those compatibility choices. Any `acceptance_probe_error` still invalidates probe-dependent conclusions even when the main generation marker completes.
+
 ## First smoke test
 
 From the instance directory:

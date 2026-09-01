@@ -21,7 +21,9 @@ PROJECT_SOURCES = {
     "infinite-domain-cyberware-mastery-1.0.0.jar": "packdev/cyberware-mastery-expansion",
     "infinite-domain-darknet-worldgen-1.8.0.jar": "packdev/darknet-worldgen-patch",
     "infinite-domain-echo-economy-1.0.0.jar": "packdev/echo-numismatics-bridge",
+    "infinite-domain-hive-world-companion-0.1.0.jar": "packdev/hive-world-companion",
     "infinite-domain-lostcities-highway-compat-1.0.0.jar": "packdev/lostcities-highway-compat",
+    "infinite-domain-overworld-terrain-1.0.0.jar": "packdev/overworld-terrain-companion",
     "infinite-domain-stellaris-industry-1.0.0.jar": "packdev/stellaris-space-industry",
     "infinite-domain-unified-radiation-1.0.0.jar": "packdev/unified-radiation",
 }

@@ -35,6 +35,19 @@ Wastelands preset. They apply only while generating new chunks.
   networks use a 112-block maximum radius instead of 128 so the road plus its
   terrain-adaptation margin remains inside Minecraft's 128-block codec limit.
 
+## Wasteland caves
+
+- The canonical Wastelands noise router carves a literal three-stratum hex-grid
+  system only on continental land. Ocean density, including both Abyssal
+  corridors, resolves to the prior terrain graph unchanged.
+- The Spawn Hospital has an unconditional 288-block radial exclusion in the
+  project-owned density codec. The exclusion is coordinate-owned and cannot vary
+  by player or team.
+- Four-octave world-seeded plasma noise may close portions of the grid, but it is
+  combined with authored hex geometry rather than replacing that geometry.
+- No quest, player, team, advancement, scoreboard, or game-stage state owns cave
+  generation. New chunks are deterministic for the world seed.
+
 ## Peaks resource deposits
 
 - Peaks deposits retain their original enormous resource yield.

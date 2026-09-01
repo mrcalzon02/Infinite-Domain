@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "purpose": "Worldgen role classification for the 64 Old World jigsaw quest structures, derived from docs/old-world/structure-lineage.json crossed with structure_library/catalog.json category/settlement_types. Determines which biome tag each structure is restricted to and whether Lost Cities must avoid it.",
+  "purpose": "Worldgen role classification for the 64 Old World jigsaw narrative structures, derived from docs/old-world/structure-lineage.json crossed with structure_library/catalog.json category/settlement_types. Determines which biome tag each structure is restricted to and whether Lost Cities must avoid it. Roles describe physical placement only; quests, players, teams and progression state never own structure spawning.",
   "roles": {
     "OWS-001": {
       "archetype": "infinite_domain:corporate_warehouse",
@@ -460,7 +460,7 @@
       "settlement_types": [
         "military"
       ],
-      "role": "FIXED_QUEST_SITE",
+      "role": "INDEPENDENT_LANDMARK",
       "biomes_tag": "#infinite_domain:wasteland_site_biomes",
       "file": "ows_043_blackglass_government_continuity_archive_node.json"
     },
@@ -523,7 +523,7 @@
       "settlement_types": [
         "military"
       ],
-      "role": "FIXED_QUEST_SITE",
+      "role": "INDEPENDENT_LANDMARK",
       "biomes_tag": "#infinite_domain:wasteland_site_biomes",
       "file": "ows_049_meridian_firebreak_observation_bunker.json"
     },
@@ -563,7 +563,7 @@
       "settlement_types": [
         "military"
       ],
-      "role": "FIXED_QUEST_SITE",
+      "role": "INDEPENDENT_LANDMARK",
       "biomes_tag": "#infinite_domain:wasteland_site_biomes",
       "file": "ows_053_continuity_archive_landmark.json"
     },

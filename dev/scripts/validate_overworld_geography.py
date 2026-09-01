@@ -33,6 +33,8 @@ STRUCTURES = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen" / "struct
 STRUCTURE_SETS = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen" / "structure_set"
 SERVER_SCRIPTS = ROOT / "kubejs" / "server_scripts"
 REPORT = ROOT / "docs" / "overworld-geography-validation.json"
+WASTELAND_SETTINGS = ROOT / "kubejs/data/wastelands/worldgen/noise_settings/wasteland.json"
+WORLDGEN_COMPANION = ROOT / "mods/infinite-domain-overworld-terrain-1.0.0.jar"
 
 CACHE_TYPES = {"minecraft:cache_2d", "minecraft:flat_cache", "minecraft:cache_once"}
 STANDARD_PLACEMENTS = {"minecraft:random_spread", "minecraft:concentric_rings"}
@@ -442,6 +444,55 @@ def run_checks(graph: Graph) -> tuple[list[dict[str, Any]], list[dict[str, Any]]
         },
     )
 
+    # OG-13: the canonical Wastelands terrain router must retain the literal
+    # honeycomb field, land/ocean gate, world-seeded plasma occlusion, and
+    # project-owned codec provider. This is terrain generation; quest state must
+    # not enter the graph any more than it may enter structure placement.
+    wasteland_settings = load(WASTELAND_SETTINGS)
+    final_density = wasteland_settings.get("noise_router", {}).get("final_density", {})
+    base_density = final_density.get("argument1", {}) if isinstance(final_density, dict) else {}
+    hex_geometry = load(DF_DIR / "wasteland_hex_geometry.json")
+    hex_caves = load(DF_DIR / "wasteland_hex_caves.json")
+    plasma_barrier = load(DF_DIR / "wasteland_hex_plasma_barrier.json")
+    plasma_noise = load(DATA / "custom_worldgen/worldgen/noise/wasteland_hex_plasma.json")
+    cave_text = "\n".join(
+        path.read_text(encoding="utf-8")
+        for path in (
+            WASTELAND_SETTINGS,
+            DF_DIR / "wasteland_hex_geometry.json",
+            DF_DIR / "wasteland_hex_caves.json",
+            DF_DIR / "wasteland_hex_plasma_barrier.json",
+        )
+    )
+    cave_ok = (
+        final_density.get("type") == "minecraft:min"
+        and final_density.get("argument2") == "custom_worldgen:wasteland_hex_caves"
+        and base_density.get("type") == "minecraft:min"
+        and base_density.get("argument2") == "minecraft:overworld/caves/noodle"
+        and hex_geometry.get("type") == "infinite_domain_worldgen:hex_grid_cave"
+        and hex_geometry.get("origin_exclusion_radius") == 288.0
+        and hex_caves.get("input") == "custom_worldgen:continents"
+        and hex_caves.get("min_inclusive") == -0.19
+        and hex_caves.get("when_out_of_range") == 1.0
+        and plasma_barrier.get("type") == "minecraft:cache_once"
+        and plasma_noise.get("amplitudes") == [1.0, 0.55, 0.3, 0.15]
+        and WORLDGEN_COMPANION.is_file()
+        and FORBIDDEN_WORLDGEN_GATE.search(cave_text) is None
+    )
+    record(
+        "OG-13",
+        "land-only Wasteland caves retain literal hex geometry and world-seeded plasma occlusion",
+        cave_ok,
+        "the canonical final-density graph consumes the project-owned hex codec only on land, protects radius 288, and contains no quest/player/team gate",
+        {
+            "codec": hex_geometry.get("type"),
+            "land_range": [hex_caves.get("min_inclusive"), hex_caves.get("max_exclusive")],
+            "origin_exclusion_radius": hex_geometry.get("origin_exclusion_radius"),
+            "plasma_octaves": plasma_noise.get("amplitudes"),
+            "companion_jar": WORLDGEN_COMPANION.relative_to(ROOT).as_posix(),
+        },
+    )
+
     return checks, failures
 
 
@@ -459,6 +510,7 @@ def main() -> int:
             "docs/GRADIENT_OCEAN_PACK_VALIDATION.md",
             "docs/ABYSSAL_OCEAN_PROGRAM.md",
             "docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md",
+            "docs/WASTELAND_HEX_CAVE_SYSTEM.md",
             "docs/WORLDGEN_STRUCTURE_SAFETY.md",
         ],
         "checks": checks,

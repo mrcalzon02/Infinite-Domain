@@ -27,7 +27,15 @@ def main() -> None:
     assert ".reduce(" not in controller_source
     assert "plannedChunks += Number(config.tiles[plannedTileIndex].widthChunks)" in controller_source
     assert "const plannedTile" not in controller_source
-    assert controller_source.count("const tile = config.tiles[tileIndex]") == 1
+    assert controller_source.lstrip().startswith("// Headless")
+    assert "(() => {" in controller_source and controller_source.rstrip().endswith("})()")
+    assert "Platform.isLoaded(modId)" in controller_source
+    assert "net.neoforged.fml.ModList" not in controller_source
+    assert "var loaded = {}" in controller_source
+    assert "var snapshotRegistryKeys = Java.loadClass" in controller_source
+    assert "var startRegistryKeys = Java.loadClass" in controller_source
+    assert controller_source.count("var tile = config.tiles[tileIndex]") == 1
+    assert "var completionElapsedMs" in controller_source
     declarations = re.findall(r"\b(?:const|let|var)\s+([A-Za-z_$][A-Za-z0-9_$]*)", controller_source)
     duplicates = sorted(name for name in set(declarations) if declarations.count(name) > 1)
     assert duplicates == [], f"Rhino-incompatible duplicate controller declarations: {duplicates}"

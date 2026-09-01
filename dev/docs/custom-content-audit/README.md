@@ -7,8 +7,8 @@ It inventories authored overlays as well as native Infinite Domain namespaces.
 
 - Datapack files: 22295
 - Asset files: 795
-- Active KubeJS and maintenance scripts: 443
-- Installed Infinite Domain companion mods: 8
+- Active KubeJS and maintenance scripts: 450
+- Installed Infinite Domain companion mods: 9
 - Baseline path/JSON/manifest findings: 0
 
 ## Datapack namespaces
@@ -116,8 +116,9 @@ It inventories authored overlays as well as native Infinite Domain namespaces.
 | `infinite-domain-cyberware-mastery-1.0.0.jar` | `infinite_domain_cyberware` | 241 | 5 | 154 | 64 |
 | `infinite-domain-darknet-worldgen-1.8.0.jar` | `infinite_domain_darknet_worldgen` | 403 | 30 | 7 | 340 |
 | `infinite-domain-echo-economy-1.0.0.jar` | `infinite_domain_echo_economy` | 10 | 3 | 1 | 0 |
-| `infinite-domain-hive-world-companion-0.1.0.jar` | `infinite_domain_hive_world` | 13 | 7 | 0 | 0 |
+| `infinite-domain-hive-world-companion-0.1.0.jar` | `infinite_domain_hive_world` | 23 | 16 | 0 | 0 |
 | `infinite-domain-lostcities-highway-compat-1.0.0.jar` | `infinite_domain_lostcities_highway_compat` | 10 | 3 | 1 | 0 |
+| `infinite-domain-overworld-terrain-1.0.0.jar` | `infinite_domain_worldgen` | 12 | 6 | 0 | 0 |
 | `infinite-domain-stellaris-industry-1.0.0.jar` | `infinite_domain_space` | 95 | 8 | 38 | 36 |
 | `infinite-domain-unified-radiation-1.0.0.jar` | `infinite_domain_radiation` | 37 | 2 | 19 | 0 |
 

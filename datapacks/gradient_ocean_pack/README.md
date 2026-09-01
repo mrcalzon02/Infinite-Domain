@@ -14,6 +14,14 @@ Inside the central continent, mountains are confined to that ring. `overworld/er
 
 The complete file-backed geography contract is checked by `python scripts/validate_overworld_geography.py`. It locks the canonical `minecraft:normal` activation, radial center, north/south climate zones, east/west continents and Abyssal corridors, Karsic land routing, cache coverage, and quest-independent multiplayer structure ownership.
 
+The same canonical `wastelands:wasteland` noise router now consumes
+`custom_worldgen:wasteland_hex_caves`: a land-only, three-stratum honeycomb of
+literal hexagonal corridors and chambers, selectively closed by world-seeded
+four-octave plasma noise. It preserves the previous vanilla cave graph, returns
+solid-preserving density in all ocean bands, and excludes radius 288 around the
+Spawn Hospital. See `docs/WASTELAND_HEX_CAVE_SYSTEM.md` and run
+`python scripts/validate_wasteland_hex_caves.py`.
+
 `overworld/depth` is overridden to subtract `custom_worldgen:abyssal_floor_depression`, the direct seabed-depth channel for the East/West abyssal ocean. Continentalness pressure alone cannot deepen the plain/fracture/hadal bands (the vanilla offset spline is a flat plateau there), so real floor relief is applied as a `depth` delta, gated by the same East/West + ocean-corridor + depth-band masks and clamped for a bedrock margin. It is `0` outside the abyssal corridor. See `docs/ABYSSAL_OCEAN_DEPTH_IMPLEMENTATION.md`.
 
 The square from X/Z -192 through 191 is reserved for the authored Spawn Hospital. It uses `infinite_domain:safe_zone`, a visually matching open-wasteland biome with no decoration features and no structure tags, so world generation cannot place roads, ruins, vegetation, or other structures beneath the hub before its template is installed.

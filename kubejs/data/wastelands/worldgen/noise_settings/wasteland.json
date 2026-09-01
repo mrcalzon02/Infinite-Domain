@@ -30,6 +30,8 @@
                          "final_density":  {
                                                "type":  "minecraft:min",
                                                "argument1":  {
+                                               "type":  "minecraft:min",
+                                               "argument1":  {
                                                                  "type":  "minecraft:squeeze",
                                                                  "argument":  {
                                                                                   "type":  "minecraft:mul",
@@ -165,6 +167,8 @@
                                                                               }
                                                              },
                                                "argument2":  "minecraft:overworld/caves/noodle"
+                                           },
+                                               "argument2":  "custom_worldgen:wasteland_hex_caves"
                                            },
                          "fluid_level_floodedness":  {
                                                          "type":  "minecraft:noise",

@@ -5,6 +5,7 @@
     "docs/GRADIENT_OCEAN_PACK_VALIDATION.md",
     "docs/ABYSSAL_OCEAN_PROGRAM.md",
     "docs/KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md",
+    "docs/WASTELAND_HEX_CAVE_SYSTEM.md",
     "docs/WORLDGEN_STRUCTURE_SAFETY.md"
   ],
   "checks": [
@@ -223,6 +224,27 @@
         "invalid_placements": [],
         "missing_structure_references": [],
         "scripted_quest_placement": []
+      }
+    },
+    {
+      "id": "OG-13",
+      "check": "land-only Wasteland caves retain literal hex geometry and world-seeded plasma occlusion",
+      "passed": true,
+      "detail": "the canonical final-density graph consumes the project-owned hex codec only on land, protects radius 288, and contains no quest/player/team gate",
+      "evidence": {
+        "codec": "infinite_domain_worldgen:hex_grid_cave",
+        "land_range": [
+          -0.19,
+          1.21
+        ],
+        "origin_exclusion_radius": 288.0,
+        "plasma_octaves": [
+          1.0,
+          0.55,
+          0.3,
+          0.15
+        ],
+        "companion_jar": "mods/infinite-domain-overworld-terrain-1.0.0.jar"
       }
     }
   ],

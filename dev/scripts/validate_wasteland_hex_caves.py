@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
+<<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
 """Static/reference validator for Infinite Domain's wasteland hex-cave source module."""
+=======
+"""Validate the canonical Wasteland hex-grid cave implementation."""
+>>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
 
 from __future__ import annotations
 
 import json
 import math
+<<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
 import sys
 from pathlib import Path
 
@@ -293,6 +298,280 @@ def main() -> int:
 
     print("PASS")
     return 0
+=======
+import re
+import sys
+import zipfile
+from pathlib import Path
+from typing import Any
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PACK = ROOT / "datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen"
+DENSITY = PACK / "density_function"
+NOISE = PACK / "noise"
+SETTINGS = ROOT / "kubejs/data/wastelands/worldgen/noise_settings/wasteland.json"
+JAR = ROOT / "mods/infinite-domain-overworld-terrain-1.0.0.jar"
+REPORT = ROOT / "docs/wasteland-hex-cave-validation.json"
+FORBIDDEN_GATE = re.compile(
+    r"quest|ftbquests|player|team|advancement|scoreboard|game_?stage|gamestage",
+    re.IGNORECASE,
+)
+
+
+def load(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def nearest_cell(x: float, z: float, radius: float) -> tuple[int, int]:
+    q = (2.0 / 3.0 * x) / radius
+    r = (-x / 3.0 + math.sqrt(3.0) / 3.0 * z) / radius
+    cube_x, cube_z = q, r
+    cube_y = -cube_x - cube_z
+    rx, ry, rz = round(cube_x), round(cube_y), round(cube_z)
+    dx, dy, dz = abs(rx - cube_x), abs(ry - cube_y), abs(rz - cube_z)
+    if dx > dy and dx > dz:
+        rx = -ry - rz
+    elif dy > dz:
+        ry = -rx - rz
+    else:
+        rz = -rx - ry
+    return rx, rz
+
+
+def signed_hex(x: float, z: float, radius: float) -> float:
+    normal_x = math.sqrt(3.0) * 0.5
+    return max(abs(x) * normal_x + abs(z) * 0.5, abs(z)) - radius * normal_x
+
+
+def sample(params: dict[str, Any], x: int, y: int, z: int) -> float:
+    if (
+        y < params["min_y"]
+        or y > params["max_y"]
+        or math.hypot(x, z) < params["origin_exclusion_radius"]
+    ):
+        return 1.0
+    radius = params["cell_radius"]
+    q, r = nearest_cell(x, z, radius)
+    cx = radius * 1.5 * q
+    cz = radius * math.sqrt(3.0) * (r + q * 0.5)
+    local_x, local_z = x - cx, z - cz
+    edge = -signed_hex(local_x, local_z, radius) - params["corridor_half_width"]
+    chamber = signed_hex(local_x, local_z, params["chamber_radius"])
+    horizontal = min(edge, chamber)
+    layer = round((y - params["layer_offset"]) / params["layer_spacing"])
+    center_y = params["layer_offset"] + layer * params["layer_spacing"]
+    vertical = abs(y - center_y) - params["layer_half_height"]
+    return max(-1.0, min(1.0, max(horizontal, vertical) / params["feather"]))
+
+
+def main() -> int:
+    checks: list[dict[str, Any]] = []
+    failures: list[dict[str, Any]] = []
+
+    def record(check_id: str, name: str, passed: bool, detail: str, evidence: Any = None) -> None:
+        entry: dict[str, Any] = {
+            "id": check_id,
+            "check": name,
+            "passed": passed,
+            "detail": detail,
+        }
+        if evidence is not None:
+            entry["evidence"] = evidence
+        checks.append(entry)
+        if not passed:
+            failures.append(entry)
+
+    geometry = load(DENSITY / "wasteland_hex_geometry.json")
+    caves = load(DENSITY / "wasteland_hex_caves.json")
+    barrier = load(DENSITY / "wasteland_hex_plasma_barrier.json")
+    noise = load(NOISE / "wasteland_hex_plasma.json")
+    settings = load(SETTINGS)
+
+    expected_geometry = {
+        "type": "infinite_domain_worldgen:hex_grid_cave",
+        "cell_radius": 48.0,
+        "corridor_half_width": 4.0,
+        "chamber_radius": 12.0,
+        "layer_spacing": 44,
+        "layer_offset": -40,
+        "layer_half_height": 5.0,
+        "min_y": -48,
+        "max_y": 58,
+        "origin_exclusion_radius": 288.0,
+        "feather": 4.0,
+    }
+    record(
+        "WHC-1",
+        "the custom codec has one exact bounded geometry contract",
+        geometry == expected_geometry,
+        "48-block cells carry 8-block corridors, 24-block chambers, three 11-block-high strata, and a 288-block protected origin",
+        geometry,
+    )
+
+    final_density = settings.get("noise_router", {}).get("final_density", {})
+    base_density = final_density.get("argument1", {}) if isinstance(final_density, dict) else {}
+    integration_ok = (
+        final_density.get("type") == "minecraft:min"
+        and final_density.get("argument2") == "custom_worldgen:wasteland_hex_caves"
+        and base_density.get("type") == "minecraft:min"
+        and base_density.get("argument2") == "minecraft:overworld/caves/noodle"
+    )
+    record(
+        "WHC-2",
+        "the canonical Wastelands final-density router consumes the cave field",
+        integration_ok,
+        "the new field wraps, rather than replaces, the prior terrain and vanilla cave/noodle density graph",
+    )
+
+    land_gate_ok = (
+        caves.get("type") == "minecraft:range_choice"
+        and caves.get("input") == "custom_worldgen:continents"
+        and caves.get("min_inclusive") == -0.19
+        and caves.get("max_exclusive") == 1.21
+        and caves.get("when_out_of_range") == 1.0
+        and caves.get("when_in_range") == {
+            "type": "minecraft:max",
+            "argument1": "custom_worldgen:wasteland_hex_geometry",
+            "argument2": "custom_worldgen:wasteland_hex_plasma_barrier",
+        }
+    )
+    record(
+        "WHC-3",
+        "hex caves carve land without cutting the Abyssal oceans",
+        land_gate_ok,
+        "continentalness -0.19..1.21 owns the carve; ocean values resolve to positive solid-preserving density",
+        caves,
+    )
+
+    noise_node = barrier.get("argument", {}).get("input", {}).get("argument2", {})
+    plasma_ok = (
+        noise.get("firstOctave") == -7
+        and noise.get("amplitudes") == [1.0, 0.55, 0.3, 0.15]
+        and barrier.get("type") == "minecraft:cache_once"
+        and barrier.get("argument", {}).get("type") == "minecraft:clamp"
+        and barrier.get("argument", {}).get("input", {}).get("argument1") == -0.58
+        and noise_node == {
+            "type": "minecraft:noise",
+            "noise": "custom_worldgen:wasteland_hex_plasma",
+            "xz_scale": 0.018,
+            "y_scale": 0.055,
+        }
+    )
+    record(
+        "WHC-4",
+        "world-seeded multi-octave plasma selectively occludes the literal grid",
+        plasma_ok,
+        "four NormalNoise octaves close only high positive lobes while lower values preserve or narrow the authored corridors",
+        {"noise": noise, "barrier": barrier},
+    )
+
+    # Probe one exact remote axial cell (q=14,r=-7) and all six neighbours.
+    radius = geometry["cell_radius"]
+    origin_q, origin_r = 14, -7
+
+    def center(q: int, r: int) -> tuple[float, float]:
+        return radius * 1.5 * q, radius * math.sqrt(3.0) * (r + q * 0.5)
+
+    origin_x, origin_z = center(origin_q, origin_r)
+    directions = [(1, 0), (1, -1), (0, -1), (-1, 0), (-1, 1), (0, 1)]
+    center_samples: list[float] = []
+    edge_samples: list[float] = []
+    wall_samples: list[float] = []
+    for dq, dr in [(0, 0), *directions]:
+        x, z = center(origin_q + dq, origin_r + dr)
+        center_samples.append(sample(geometry, round(x), 4, round(z)))
+    for dq, dr in directions:
+        x, z = center(origin_q + dq, origin_r + dr)
+        edge_samples.append(sample(geometry, round((origin_x + x) * 0.5), 4, round((origin_z + z) * 0.5)))
+        wall_samples.append(sample(geometry, round(origin_x + (x - origin_x) * 0.28), 4, round(origin_z + (z - origin_z) * 0.28)))
+    topology_ok = (
+        all(value < 0.0 for value in center_samples)
+        and all(value < 0.0 for value in edge_samples)
+        and all(value > 0.0 for value in wall_samples)
+    )
+    record(
+        "WHC-5",
+        "sampled geometry contains literal chambers, six-sided corridors, and intervening walls",
+        topology_ok,
+        "seven adjacent chamber centers and all six shared edges carve while six chamber-to-edge wall samples remain solid",
+        {"centers": center_samples, "shared_edges": edge_samples, "walls": wall_samples},
+    )
+
+    layer_samples = {
+        str(y): sample(geometry, round(origin_x), y, round(origin_z))
+        for y in (-48, -45, -40, -35, -18, -1, 4, 9, 26, 43, 48, 53, 58, 59)
+    }
+    layers_ok = (
+        all(layer_samples[str(y)] <= 0.0 for y in (-45, -40, -35, -1, 4, 9, 43, 48, 53))
+        and all(layer_samples[str(y)] > 0.0 for y in (-48, -18, 26, 58, 59))
+        and sample(geometry, 0, 4, 0) == 1.0
+    )
+    record(
+        "WHC-6",
+        "three cave strata and the spawn-hospital exclusion remain bounded",
+        layers_ok,
+        "carve bands center at Y -40, 4, and 48; rock separates them; the field is inert above Y58 and within radius 288",
+        layer_samples,
+    )
+
+    required_entries = {
+        "META-INF/neoforge.mods.toml",
+        "infinitedomain/worldgen/InfiniteDomainWorldgen.class",
+        "infinitedomain/worldgen/density/OverworldDensityFunctions.class",
+        "infinitedomain/worldgen/density/HexGridCaveGeometry.class",
+        "infinitedomain/worldgen/density/WastelandHexGridCave.class",
+    }
+    jar_evidence: dict[str, Any]
+    jar_ok = False
+    try:
+        with zipfile.ZipFile(JAR) as archive:
+            entries = set(archive.namelist())
+            manifest = archive.read("META-INF/neoforge.mods.toml").decode("utf-8")
+        missing = sorted(required_entries - entries)
+        jar_ok = not missing and 'modId = "infinite_domain_worldgen"' in manifest and 'version = "1.0.0"' in manifest
+        jar_evidence = {"path": JAR.relative_to(ROOT).as_posix(), "missing_entries": missing}
+    except (OSError, KeyError, zipfile.BadZipFile) as exc:
+        jar_evidence = {"error": str(exc)}
+    record(
+        "WHC-7",
+        "the installed project-owned companion supplies the registered codec",
+        jar_ok,
+        "the installed JAR has the NeoForge mod entry point, registry class, geometry, and density-function implementation",
+        jar_evidence,
+    )
+
+    owned_paths = [
+        DENSITY / "wasteland_hex_geometry.json",
+        DENSITY / "wasteland_hex_plasma_barrier.json",
+        DENSITY / "wasteland_hex_caves.json",
+        NOISE / "wasteland_hex_plasma.json",
+        SETTINGS,
+    ]
+    gated = [path.relative_to(ROOT).as_posix() for path in owned_paths if FORBIDDEN_GATE.search(path.read_text(encoding="utf-8"))]
+    record(
+        "WHC-8",
+        "cave generation is worldgen-owned and multiplayer-safe",
+        not gated,
+        "no quest, player, team, advancement, scoreboard, or game-stage token participates in the terrain graph",
+        {"gated_paths": gated},
+    )
+
+    report = {
+        "purpose": "Static and geometric proof for Infinite Domain's visible, fractally occluded Wasteland hex-grid cave system.",
+        "checks": checks,
+        "passed": not failures,
+        "runtime_validation": "This gate proves codec packaging, graph reachability, exact geometry, land/spawn bounds, and multiplayer ownership. A fresh-world visual and performance pass remains required.",
+    }
+    REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
+    for check in checks:
+        print(f"{'PASS' if check['passed'] else 'FAIL'}  {check['id']:<6} {check['check']}")
+        print(f"               {check['detail']}")
+    print()
+    print(f"{len(checks) - len(failures)}/{len(checks)} checks passed")
+    print(f"report: {REPORT.relative_to(ROOT).as_posix()}")
+    return 1 if failures else 0
+>>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
 
 
 if __name__ == "__main__":

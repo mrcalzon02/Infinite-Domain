@@ -21,6 +21,12 @@ The original vanilla-only scaffold has been migrated to Isekai API 2.1.0 for Neo
 - `data/minecraft/worldgen/density_function/overworld/erosion.json` overrides the vanilla erosion parameter inside the central continent (see **Central-continent interior: no mountains** below).
 - `data/minecraft/worldgen/density_function/overworld/depth.json` overrides the vanilla depth parameter to subtract `custom_worldgen:abyssal_floor_depression` — the direct seabed-depth channel for the East/West abyssal ocean. Continentalness manipulation alone saturates on the flat `-0.2222` offset-spline plateau, so the abyssal plain/fracture/hadal bands need a `depth` delta to actually sink. It is `0` outside the gated abyssal corridor and clamped so the hadal floor keeps a bedrock margin. Authority: `docs/ABYSSAL_OCEAN_DEPTH_IMPLEMENTATION.md`.
 - Moonlight's global datapack folder now points at the instance `datapacks` directory, so the pack is offered to every world rather than sitting unused at instance level.
+- The canonical Wastelands final-density router now wraps its prior terrain and
+  vanilla cave graph with `custom_worldgen:wasteland_hex_caves`. The project-owned
+  codec carves literal six-sided corridor loops and chamber cells on three strata;
+  a world-seeded four-octave NormalNoise barrier locally occludes the network.
+  Continentalness limits it to land and the codec protects radius 288 around the
+  Spawn Hospital. Authority: `docs/WASTELAND_HEX_CAVE_SYSTEM.md`.
 
 ## Central-continent expansion
 
@@ -91,6 +97,11 @@ The canonical preset, Karsic routing, and cache wrappers are one contract. If a
 merge preserves the validator but drops those generated/data edits, this gate
 must fail rather than silently falling back to generic temperate land or an
 alternate preset.
+
+`OG-13` also locks the Wasteland cave consumer, codec type, land gate, protected
+origin, seeded plasma octave contract, installed companion artifact, and absence
+of quest/player/team terrain gating. Run the focused geometric gate with
+`python scripts/validate_wasteland_hex_caves.py` before the pack-wide gate.
 
 ## Dedicated-server benchmark launcher
 

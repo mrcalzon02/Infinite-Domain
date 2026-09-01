@@ -16,15 +16,16 @@
 - damage state: D0 intact massing only;
 - fixed camera set: `ows008_fixed_v1`;
 - artifact manifest: `old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r2/review_manifest.json`;
-- review-model NBT SHA-256: `b0ee1303b68064fba9b355328ee83b3b27cdb19f06d77ec66bac7bf568a479f7`;
-- review-builder SHA-256: `1b9b1fbfd6ea01d672b19bc063516b1a8f03960d9da4bea2ed547bd60764e081`;
+- review-model NBT SHA-256: `ed07ca71f8cfe8aecc474fd9846decd20af6688559713b210fd34567d5be5418`;
+- review-model decompressed NBT SHA-256: `22bca95829c4497cdf810b13be3d0e2c4a01c2df406b9cec8339f9c8d0773894`;
+- review-builder SHA-256: `5c67a4bcd610f87a9b80e4073e4989165cfea5f376a323733e2eda119e77bc76`;
 - frozen r1 builder SHA-256: `252a7898afba6d8cd6cfe76aa84ef398765e1c612ea8f3112aa62f27bbe20d81`;
 - revision-required r1 model SHA-256: `23d7bc96c3f3ade8566aedad0c7d3a731cf4eeac55c9adcd365ed295ca59f361`;
 - review-model block entries: 32,049 total, including 14,615 non-air and 17,434 explicit-air entries;
 - palette states: 13;
 - block entities / entities: 0 / 0;
-- shipping Git blob before render: `6646d96d5723bb8d1b611de8354dea41396cb6df`;
-- shipping Git blob after render: `6646d96d5723bb8d1b611de8354dea41396cb6df`;
+- shipping Git blob before render: `40fbc76475bf677ee9aa34c8471b2672719c02f2`;
+- shipping Git blob after render: `40fbc76475bf677ee9aa34c8471b2672719c02f2`;
 - authoritative shipping modified: no;
 - temporary review NBT retained: no.
 

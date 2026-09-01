@@ -2,6 +2,8 @@
 """[SYSTEM REPORT] Static contract validation for the Old World narrative automation."""
 from __future__ import annotations
 
+import argparse
+import csv
 import gzip
 import hashlib
 import json
@@ -22,6 +24,10 @@ ITEM_TEXTURES = ROOT / "kubejs" / "assets" / "kubejs" / "textures" / "item"
 PREPARED_SITE_QUESTS = PROGRAM / "quests" / "prepared_site_surveys.snbt"
 PREPARED_SITE_LANG = PROGRAM / "quests" / "prepared_site_surveys_lang.snbt"
 SITE_QUEST_CATALOG = REGISTRY / "site_quest_catalog.json"
+WORLDGEN_ROLE_REGISTRY = ROOT / "docs" / "old-world" / "structure-worldgen-roles.json"
+WASTELAND_CORPUS_MANIFEST = ROOT / "structure_library" / "corpus-manifest.json"
+PHASE_STATE = ROOT / "docs" / "old-world" / "phase-state.json"
+REVISION_MATRIX = PROGRAM / "source" / "04_STRUCTURE_REVISION_MATRIX.csv"
 CANON = "eec4d3149e5e5823b330d5b01127b8f6e592d1938ef4e491f719617e507bf182"
 DIMENSIONS = {
     "silhouette_exterior_identity",
@@ -79,6 +85,14 @@ def prepared_map_reward_id(target: str) -> str:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--scope-worldgen-only",
+        action="store_true",
+        help="Validate the 84-source/64-descendant boundary and placement ownership without the legacy serialized-block audit.",
+    )
+    args = parser.parse_args()
+
     expected_targets = [f"OWS-{i:03d}" for i in range(1, 65)]
     spec_targets = [spec.target for spec in SPECS]
     require(len(SPECS) == 64, f"authoritative generator must expose 64 specs, found {len(SPECS)}")
@@ -90,8 +104,38 @@ def main() -> None:
 
     registry = read_json(REGISTRY / "structure_targets.json")
     targets = registry["targets"]
+    require(registry.get("target_count") == 64, "Old World registry target_count must remain 64")
     require(len(targets) == 64, "structure registry must contain 64 targets")
     require([row["id"] for row in targets] == expected_targets, "unstable OWS ID sequence")
+    with REVISION_MATRIX.open(encoding="utf-8", newline="") as handle:
+        matrix_targets = [row["id"] for row in csv.DictReader(handle)]
+    require(matrix_targets == expected_targets, "canonical revision matrix must contain OWS-001 through OWS-064 exactly once")
+
+    phase_state = read_json(PHASE_STATE)
+    corpus_manifest = read_json(WASTELAND_CORPUS_MANIFEST)
+    require(
+        phase_state["prerequisite_handoff"].get("accepted_source_structures") == 84,
+        "Old World prerequisite handoff must retain the 84-template Wasteland source corpus",
+    )
+    require(
+        corpus_manifest["counts"].get("inbuilt_variants_and_sources") == 84,
+        "authoritative Wasteland source corpus must retain 84 templates",
+    )
+
+    worldgen_roles = read_json(WORLDGEN_ROLE_REGISTRY).get("roles", {})
+    require(list(worldgen_roles) == expected_targets, "worldgen-role registry must cover OWS-001 through OWS-064 in order")
+    require(
+        {row.get("role") for row in worldgen_roles.values()}
+        <= {
+            "CITY_INTEGRATED",
+            "RURAL_INTEGRATED",
+            "HIGHWAY_INTEGRATED",
+            "INDEPENDENT_MOUNTAIN",
+            "COASTAL_TERMINAL",
+            "INDEPENDENT_LANDMARK",
+        },
+        "worldgen-role registry contains an unknown placement role",
+    )
     require(read_json(REGISTRY / "lore_seed.json")["seed_count"] == 36, "lore seed count changed")
     spine = read_json(REGISTRY / "quest_spine.json")
     require(spine["major_quest_count"] == 13 and spine["quests"][0]["title"] == "THEY WERE HERE FIRST", "canonical quest spine changed")
@@ -171,6 +215,16 @@ def main() -> None:
         "Old World natural worldgen must remain gated to the PT-9 controlled probe",
     )
     structure_sets = {path.stem: read_json(path) for path in structure_set_paths}
+    controlled_set = structure_sets["controlled_pt9_probe"]
+    require(
+        controlled_set.get("placement", {}).get("type") == "minecraft:random_spread",
+        "Old World controlled placement must use ordinary datapack random-spread ownership",
+    )
+    serialized_control = json.dumps(controlled_set, sort_keys=True).lower()
+    require(
+        not any(token in serialized_control for token in ("quest", "player", "team", "advancement", "scoreboard", "game_stage", "gamestage")),
+        "Old World controlled placement must not depend on quest or player progression state",
+    )
     registered = {
         entry["structure"]
         for value in structure_sets.values()
@@ -285,22 +339,25 @@ def main() -> None:
 
         pool = read_json(DATA / "worldgen" / "template_pool" / "old_world" / f"{spec.name}.json")
         worldgen = read_json(DATA / "worldgen" / "structure" / "old_world" / f"{spec.name}.json")
+        worldgen_role = worldgen_roles[spec.target]
+        require(worldgen_role["file"] == f"{spec.name}.json", f"{spec.target} worldgen-role filename is stale")
         require(worldgen["start_pool"] == f"infinite_domain:old_world/{spec.name}", f"{spec.target} start pool is stale")
-        require(worldgen["biomes"] == "#infinite_domain:wasteland_site_biomes", f"{spec.target} staged worldgen definition is stale")
+        require(worldgen["biomes"] == worldgen_role["biomes_tag"], f"{spec.target} staged worldgen biome role is stale")
         require(pool["elements"][0]["element"]["location"] == f"infinite_domain:wasteland/old_world/{spec.name}", f"{spec.target} template is stale")
 
         mandatory = {spec.proof} | ({spec.lore} if spec.lore else set())
         loot = read_json(DATA / "loot_table" / "chests" / "old_world" / f"{spec.name}.json")
         require(mandatory.issubset(deterministic_items(loot)), f"{spec.target} proof loot is not deterministic")
 
-        raw = gzip.decompress((DATA / "structure" / "wasteland" / "old_world" / f"{spec.name}.nbt").read_bytes())
-        require(spec.loot_id.encode() in raw, f"{spec.target} NBT lacks its proof chest")
-        for block in spec.required_blocks:
-            serialized_block = structure_base.STRUCTURE_BLOCK_REPLACEMENTS.get(block, block)
-            require(
-                serialized_block.encode() in raw,
-                f"{spec.target} lacks required serialized block {serialized_block} (declared {block})",
-            )
+        if not args.scope_worldgen_only:
+            raw = gzip.decompress((DATA / "structure" / "wasteland" / "old_world" / f"{spec.name}.nbt").read_bytes())
+            require(spec.loot_id.encode() in raw, f"{spec.target} NBT lacks its proof chest")
+            for block in spec.required_blocks:
+                serialized_block = structure_base.STRUCTURE_BLOCK_REPLACEMENTS.get(block, block)
+                require(
+                    serialized_block.encode() in raw,
+                    f"{spec.target} lacks required serialized block {serialized_block} (declared {block})",
+                )
 
         require(spec.structure_id in renders, f"{spec.target} has no static review renders")
         require(len(renders[spec.structure_id]["renders"]) == 4, f"{spec.target} needs four review views")
@@ -322,10 +379,27 @@ def main() -> None:
     require(len(DARKNET_RETURN_TARGETS) >= 5, "at least five earlier sites must reserve meaningful Darknet return visits")
     require(set(DARKNET_RETURN_TARGETS).issubset(set(expected_targets)), "Darknet return hook references an unimplemented site")
 
+    heavy_state = read_json(REGISTRY / "heavy_rebuild_state.json")
+    require(heavy_state.get("scope") == "OWS-001 through OWS-064", "heavy-rebuild scope drifted from the 64-target narrative program")
+    require(not heavy_state.get("runtime_quality_approved"), "runtime-quality approvals require retained in-world evidence")
+    if heavy_state.get("active_target") == "OWS-008":
+        gate_a = heavy_state.get("visual_review_gates", {}).get("gate_a_massing", {})
+        require(
+            gate_a.get("status") in {"r2_rendered_pending_manual_review", "passed_r2"},
+            "OWS-008 Gate-A state must track the r2 candidate rather than the revision-required r1 artifact",
+        )
+        r1_review = (PROGRAM / "reviews" / "heavy_rebuild" / "OWS-008_GATE_A_R1_REVIEW.md").read_text(encoding="utf-8")
+        require("OWS-008 GATE A r1: REVISION REQUIRED" in r1_review, "OWS-008 Gate-A r1 rejection record is missing")
+        if gate_a.get("status") != "passed_r2":
+            r2_candidate = (PROGRAM / "reviews" / "heavy_rebuild" / "OWS-008_GATE_A_R2_CANDIDATE.md").read_text(encoding="utf-8")
+            require("GATE A R2: REVIEW NEEDED" in r2_candidate, "OWS-008 Gate-A r2 pending-review boundary is missing")
+
     print(
-        f"Old World static validation passed: 64 structures, 64 activation-gated site quests, "
+        f"Old World static validation passed: 84 source templates, 64 narrative structures, "
+        f"64 activation-gated site quests, "
         f"13 canonical major quests, {len(registered)} controlled worldgen target, "
-        f"{integrated_count} live early-site integrations, {len(DARKNET_RETURN_TARGETS)} Darknet return hooks."
+        f"{integrated_count} live early-site integrations, {len(DARKNET_RETURN_TARGETS)} Darknet return hooks; "
+        f"mode={'scope_worldgen' if args.scope_worldgen_only else 'full'}."
     )
 
 

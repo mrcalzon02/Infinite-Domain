@@ -18,10 +18,10 @@ Infinite Domain is a NeoForge 1.21.1 Minecraft modpack (CurseForge instance) bui
 | `.codex/` | Working state for that pipeline: `structure_pipeline_state.md` (large running log), `structure_pipeline_blocked.md`, `phase13_bombed_data_center_plan.md`, `structure_pipeline_logs/`. Local/gitignored. |
 | `minecraftinstance.json` | CurseForge's own instance manifest (mod list, versions) — used to reconstruct the third-party dependency set rather than shipping the jars. |
 | `mods/` | All mod jars actually loaded by the instance (third-party + the project's own) — see [`docs/MOD_LIST.md`](docs/MOD_LIST.md) for the full enumerated list. |
-| `packdev/` | Java **source** for the project's 7 custom mods, plus the in-development `gradient_ocean_pack` datapack and 3 texture-tool-class dirs. Tracked in git — the authoritative source location. |
+| `packdev/` | Java **source** for the project's 9 custom mods plus 3 texture-tool-class dirs. Tracked in git — the authoritative source location. |
 | `ROOT_tools/` | **Not mod source** (despite the name) — a gitignored pile of local one-off audit/build/reduce/import scripts and PNG review renders from past texture/asset work. Disposable scratch, not source of truth. |
 | `kubejs/` | KubeJS scripts and the datapack/resourcepack overlay they and hand-authored data live in. |
-| `datapacks/` | World datapack slot (currently unused — datapack-equivalent content lives in `kubejs/data/` instead). |
+| `datapacks/` | World datapack slot containing the globally loaded `gradient_ocean_pack`, which owns the canonical continent/climate/Abyssal density graph and Wasteland hex-cave fields. |
 | `config/`, `defaultconfigs/` | Per-mod configuration; mostly third-party mod tuning, with one project-owned subtree (`config/createcybernetics/tattoos`). |
 | `docs/` | The project's internal design/audit documentation — by far the largest source of "what was decided and why." Includes `docs/MOD_LIST.md` and `docs/registry-inventory/` (full item/block/entity ID dumps — check these before re-deriving IDs from jars). |
 | `scripts/` | Python/JS/PowerShell tooling that generates and audits most of `docs/`, `kubejs/`, and `structure_library/`. |
@@ -35,33 +35,37 @@ Infinite Domain is a NeoForge 1.21.1 Minecraft modpack (CurseForge instance) bui
 
 ## `mods/` — the loaded mod set
 
-188 jars: 181 third-party (Create ecosystem, AE2, FTB suite, Ice and Fire, Cyberspace, Quark, Sophisticated Storage, Lost Cities, KubeJS, etc.) plus **7 project-built jars**, each named `infinite-domain-*`. **Full list with mod IDs, authors, and item/block counts: [`docs/MOD_LIST.md`](docs/MOD_LIST.md)** — check that file instead of re-discovering the mod set from scratch. Regenerate it (and `docs/registry-inventory/mod-jar-index.json` / `entity-ids.txt`) with `python scripts/build_mod_index.py` any time mods are added, removed, or updated.
+192 jars: 183 third-party (Create ecosystem, AE2, FTB suite, Ice and Fire, Cyberspace, Quark, Sophisticated Storage, Lost Cities, KubeJS, etc.) plus **9 project-built jars**, each named `infinite-domain-*`. **Full list with mod IDs, authors, and item/block counts: [`docs/MOD_LIST.md`](docs/MOD_LIST.md)** — check that file instead of re-discovering the mod set from scratch. Regenerate it (and `docs/registry-inventory/mod-jar-index.json` / `entity-ids.txt`) with `python scripts/build_mod_index.py` any time mods are added, removed, or updated.
 
-The 7 project-built jars (source in `packdev/`, see below):
+The 9 project-built jars (source in `packdev/`, see below):
 
 - `infinite-domain-create-nuclear-balance-1.0.0.jar` (`infinite_domain_nuclear_balance`)
 - `infinite-domain-cyberware-mastery-1.0.0.jar` (`infinite_domain_cyberware`)
 - `infinite-domain-darknet-worldgen-1.8.0.jar` (`infinite_domain_darknet_worldgen`)
 - `infinite-domain-echo-economy-1.0.0.jar` (`infinite_domain_echo_economy`)
+- `infinite-domain-hive-world-companion-0.1.0.jar` (`infinite_domain_hive_world`)
 - `infinite-domain-lostcities-highway-compat-1.0.0.jar` (`infinite_domain_lostcities_highway_compat`)
+- `infinite-domain-overworld-terrain-1.0.0.jar` (`infinite_domain_worldgen`)
 - `infinite-domain-stellaris-industry-1.0.0.jar` (`infinite_domain_space`)
 - `infinite-domain-unified-radiation-1.0.0.jar` (`infinite_domain_radiation`)
 
-Only these seven are the project's own compiled output; everything else in `mods/` is reacquired from its original distribution channel per `REPOSITORY_SCOPE.md` and is never modified in place.
+Only these nine are the project's own compiled output; everything else in `mods/` is reacquired from its original distribution channel per `REPOSITORY_SCOPE.md` and is never modified in place.
 
-## `packdev/` — source for the 7 custom mods (+ worldgen datapack, + texture tools)
+## `packdev/` — source for the 9 custom mods (+ texture tools)
 
-One subfolder per custom jar above, each a small standalone Gradle project (`src/main/java|resources`):
+One source project per custom jar above, with `src/main/java|resources` and a matching build script under `scripts/`:
 
 - `create-nuclear-balance` — rebalances Create: Nuclear reactor output.
 - `cyberware-mastery-expansion` — the branching cyberware item/effect system (`BranchedCyberwareItem`, `CyberwareCatalog`) built on Create Cybernetics.
 - `darknet-worldgen-patch` — Darknet dimension guard/worldgen/dragon-texture mixins bridging Cyberspace and Ice and Fire.
 - `echo-numismatics-bridge` — currency provider bridging FTB Echoes and Create Numismatics.
+- `hive-world-companion` — Hive World density codecs, atmosphere, clouds, weather, and client effects.
 - `lostcities-highway-compat` — the newest addition; compatibility layer between the project's Lost Cities settlement generation and highway/road worldgen.
+- `overworld-terrain-companion` — canonical Overworld terrain codecs, beginning with the land-only Wasteland hex-grid cave field.
 - `stellaris-space-industry` — space-suit roles/catalog built on the Stellaris mod.
 - `unified-radiation` — a unified radiation-reading system spanning The Wasteland Reworked / Wastelands.
 
-Also under `packdev/`: `gradient_ocean_pack` (the standalone worldgen datapack, see next section) and three one-off compiled Java texture generators moved here from the old `tools/` location — `datavore-texture-tool-classes`, `dragon-texture-tool-classes`, `overlay-texture-tool-classes`.
+Also under `packdev/`: three one-off compiled Java texture generators moved here from the old `tools/` location — `datavore-texture-tool-classes`, `dragon-texture-tool-classes`, `overlay-texture-tool-classes`. The active `gradient_ocean_pack` lives under `datapacks/`.
 
 This directory is tracked in git (unlike the sound-alike `ROOT_tools/` below) — it's the authoritative, backed-up source for everything that ships as a compiled `infinite-domain-*` jar.
 
@@ -160,4 +164,4 @@ Per `.gitignore` and `REPOSITORY_SCOPE.md`, none of the following are tracked: `
 
 ## Distribution policy reminder
 
-Per project instructions and `REPOSITORY_SCOPE.md`: third-party jars, base resource-pack ZIPs, and any upstream donor/reference payload are never redistributed or modified in place. Only the project's own KubeJS scripts, datapack/resourcepack overlay, docs, structure-library data, quest data, and the seven `infinite-domain-*` mod artifacts (plus their `packdev/` sources) are meant to leave this machine.
+Per project instructions and `REPOSITORY_SCOPE.md`: third-party jars, base resource-pack ZIPs, and any upstream donor/reference payload are never redistributed or modified in place. Only the project's own KubeJS scripts, datapack/resourcepack overlay, docs, structure-library data, quest data, and the nine `infinite-domain-*` mod artifacts (plus their `packdev/` sources) are meant to leave this machine.
