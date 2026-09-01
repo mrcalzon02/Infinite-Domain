@@ -1,0 +1,59 @@
+{
+  "structure_id": "infinite_domain:abandoned_culdesac_clean_master",
+  "archetype": "small suburban cul-de-sac cluster with several distinct detached homes, shared turning bulb, driveways, utility edge and neglected communal streetscape",
+  "ground_program": [
+    "single feeder road entering a widened turning bulb sized for ordinary residential vehicle circulation rather than a decorative circular plaza",
+    "five detached residential lots arranged around the bulb with individually oriented front doors, driveways and setbacks",
+    "each house receives a distinct ground-floor domestic arrangement using living, kitchen/dining, utility and circulation modules without becoming a renamed clone",
+    "at least three attached or detached garages distributed across the lots with full driveway connections to the street",
+    "side-yard and rear-yard access paths preserving clear lot boundaries and service circulation",
+    "mailbox or shared delivery point near the feeder-road entrance without blocking the roadway",
+    "storm-drain, curb or ditch treatment following the bulb and feeder road so runoff has a coherent downhill route",
+    "street lighting and utility distribution following the road edge with service drops or connections to individual lots",
+    "small neglected play or sitting area on one widened verge to establish community use without replacing residential lots",
+    "front walks connecting every surviving principal entrance to its driveway or street edge",
+    "terrain feathering that preserves individual lot grades instead of placing the entire neighborhood on one flat platform"
+  ],
+  "upper_program": [
+    "a mix of single-storey and two-storey or raised-roof houses so the street silhouette varies across the cluster",
+    "upper bedroom and bathroom zones only where supported by a coherent stair and lower-floor circulation core",
+    "roof forms vary by house footprint while remaining structurally supported by surviving exterior and interior walls",
+    "no disconnected decorative upper rooms or inaccessible attic boxes"
+  ],
+  "circulation": [
+    "vehicles enter from the feeder road, circulate around the bulb and can reach each driveway without crossing private yards",
+    "pedestrians can move from every principal entrance to the street and between neighboring frontages without walking through garages",
+    "each multi-storey dwelling uses a supported stair with real landings, continuous headroom and a destination on both ends",
+    "rear and side service routes remain lot-specific rather than forming an implausible continuous alley unless the terrain explicitly supports one",
+    "utility and drainage routes follow the public edge or lot boundaries and do not cut through primary rooms"
+  ],
+  "damage_constraints": [
+    "preserve the feeder road, turning bulb and at least three recognizable residential lots so the scene remains a cul-de-sac rather than isolated house ruins",
+    "vary damage severity and mechanism by lot: one partial roof failure, one facade/garage impact, one fire-damaged interior, and lighter abandonment elsewhere",
+    "do not apply identical missing-wall masks, rubble patterns or roof failures across multiple houses",
+    "keep at least one fully navigable house and several partially navigable homes to preserve neighborhood-scale exploration",
+    "allow localized pavement cracking, vegetation intrusion and curb failure without erasing the underlying road geometry",
+    "damage doors, windows, stairs, roofs, fences and utility attachments together with their supporting structure so no floating fragments remain",
+    "retain enough domestic furnishing and lot-specific service evidence that each surviving dwelling reads as a home rather than an empty shell",
+    "preserve credible foundation and driveway contact at all surviving buildings",
+    "derive damaged and occupied variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the complete site reads immediately as a residential cul-de-sac with a functional turning bulb and distinct private lots",
+      "individual houses differ in footprint, roofline, circulation and damage story rather than appearing as rotated clones",
+      "roads, driveways, front walks and lot access are player-scale usable and meet terrain without severe steps or floating slabs",
+      "multi-storey houses have supported stairs, sufficient headroom and real landings at both ends",
+      "utility, drainage and streetscape elements reinforce the neighborhood layout without obstructing circulation",
+      "damage varies coherently across the cluster while preserving at least three recognizable homes and the street plan",
+      "the site transitions into surrounding wasteland terrain without a monolithic rectangular foundation or artificial neighborhood platform"
+    ]
+  }
+}
