@@ -12,15 +12,17 @@ The post-reconciliation repository boundary is defined by `REPOSITORY_SCOPE.md` 
 
 ## 1. Visible fractally occluded hex-grid wasteland caves
 
-The project-owned source/resource implementation now lives under `dev/packdev/wasteland-hex-caves/`. Commit `b62b5e444b825ea0eac9ccd47327346fd10902db` admitted the initial module and data registration; commit `1bc11942ea7cbec454f5b6b849406442237732fd` contains the final reference-field tuning.
+The Wasteland hex-cave system is now implemented as both authoritative source and a game-facing project-owned runtime mod.
+
+Authoritative source lives at `dev/packdev/wasteland-hex-caves/`. The compiled shipping artifact lives outside `dev/` at `mods/infinite-domain-wasteland-hex-caves-1.0.0.jar`, following the same runtime boundary as the other Infinite Domain custom mods. Commit `5d3719b9549b39bdefa33e185f1faaa6c050adc0` admitted the runtime JAR; its Git blob SHA is `6b4a78dfbd33fefc6f1b7496f65d978210213cff` and its SHA-256 is `b046e705662e7a03e61e815529ad0e1ad55dd871b273697ad928756b3f749a91`.
 
 The implementation preserves literal recognizable hexagonal corridors/cells as carved geometry rather than using an invisible organizational scaffold or stamped source image. World-seed deterministic fBm/plasma fields warp the grid, vary corridor width and depth, interrupt/occlude portions of the lattice, and open larger low-noise chambers. A custom NeoForge biome modifier injects the feature only into biome registry namespaces `the_wasteland_reworked` and `wastelands`, avoiding direct modification of either third-party jar.
 
-The retained validator `dev/scripts/validate_wasteland_hex_caves.py` mirrors Java signed-`long` overflow and unsigned-shift behavior and checks the source/resource contracts. Its deterministic seed `123456789` 512 x 512 reference field measures 28.5% raw literal hex-grid coverage, 22.5% surviving visible grid, 6.0% actually interrupted grid, and 4.3% larger fractal chamber coverage. The retained evidence record is `dev/docs/reconciliation/2026-08-31-wasteland-hex-cave-source-implementation.md`.
+The retained validator `dev/scripts/validate_wasteland_hex_caves.py` mirrors Java signed-`long` overflow and unsigned-shift behavior and checks the source/resource contracts. Its deterministic seed `123456789` 512 x 512 reference field measures 28.5% raw literal hex-grid coverage, 22.5% surviving visible grid, 6.0% actually interrupted grid, and 4.3% larger fractal chamber coverage. The runtime JAR contains the compiled feature, biome modifier and registration classes plus `neoforge.mods.toml` and all configured-feature, placed-feature and biome-modifier resources; no development/stub classes are packaged.
 
-The current repository does not provide a per-module compiler/Gradle wrapper for `dev/packdev/*`, and this environment does not expose the authoritative NeoForge runtime. Therefore source presence is not promoted into bytecode compilation, JAR installation, mod loading, fresh-world generation, or visual acceptance.
+**Implementation status:** VERIFIED / PACKAGED — the required system is compiled and present in the shipping `mods/` boundary.
 
-**Status:** PARTIAL — authoritative source/resources are implemented and statically/reference validated; compile into the project-owned runtime JAR outside `dev/`, load it in the authoritative NeoForge 1.21.1 instance, and retain fixed-seed in-world visual/runtime evidence before final acceptance.
+**Acceptance status:** OPEN — execute a fresh fixed-seed Wasteland generation run and retain direct evidence that NeoForge loads the mod, the modifier resolves, the hex lattice is visibly legible in-world, the intended fractal/plasma interruption is present, the ten-block surface margin holds, and fluids/structures are not damaged. This is runtime acceptance evidence, not unfinished implementation.
 
 ## 2. Planetary worlds: 30 sites / 15 major sites each
 
@@ -97,15 +99,17 @@ No named external project belongs in this ledger or in Infinite Domain repositor
 
 The locally reconciled history has reached the authoritative repository. The merge sequence incorporated local development state with the reconciliation commits rather than discarding that work. During inspection, the worldgen benchmark README was found to contain literal Git conflict markers left by that merge; those markers were subsequently resolved while preserving both valid sides of the documentation.
 
-During the current hex-cave admission pass, a connector write-path error temporarily replaced this ledger with a one-line placeholder in commit `1280a4ed168f082838d27f7d1ccc2892ea04c1d6`. The exact prior blob was immediately restored in commit `d497f4e2b1f0fca878c707a7ac34f4f315bb2a01`, producing the same repository tree as before the erroneous write. The cave implementation was then rebased onto that repaired head and fast-forwarded without a forced ref update.
+During the earlier hex-cave source-admission pass, a connector write-path error temporarily replaced this ledger with a one-line placeholder in commit `1280a4ed168f082838d27f7d1ccc2892ea04c1d6`. The exact prior blob was immediately restored in commit `d497f4e2b1f0fca878c707a7ac34f4f315bb2a01`, producing the same repository tree as before the erroneous write.
+
+During runtime packaging, a mistaken connector call created `dev/.runtime-jar-placeholder` in commit `de0b429c97869728cca6f7ed643a4e0ce4523705`; commit `5251bd361fb3246dd41d04e43e3341fe857716b9` immediately removed that exact file. It is not present in the final tree and did not become part of the runtime package.
 
 The reconciliation process must continue from the current authoritative `main`, not from an earlier checkpoint.
 
 ## Next executable work
 
-### Wasteland hex-cave admission track
+### Wasteland hex-cave runtime acceptance track
 
-Compile the committed `dev/packdev/wasteland-hex-caves/` source with the established local custom-mod build process, place the resulting project-owned JAR in the runtime `mods/` set outside `dev/`, and run a fresh fixed-seed Wasteland generation pass. Retain evidence that the mod loads, the biome modifier resolves, recognizable hex corridors/cells survive in-world, fractal/plasma interruption is visible, the ten-block surface margin holds, and fluids/structures are not damaged. Until those observations exist, item 1 remains PARTIAL rather than complete.
+The cave implementation and packaging step is complete. Do **not** create another source-only or staging implementation. On the authoritative Minecraft instance, generate a fresh fixed-seed Wasteland region with `infinite-domain-wasteland-hex-caves-1.0.0.jar` present in `mods/`. Retain evidence of mod loading, biome-modifier resolution, visible hex geometry, fractal/plasma interruption, surface clearance, fluid safety, and structure safety. If runtime evidence exposes a defect, repair the authoritative source, rebuild the runtime JAR, replace the shipped artifact, and repeat acceptance.
 
 ### Runtime evidence track
 
