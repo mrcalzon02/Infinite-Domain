@@ -1,0 +1,57 @@
+{
+  "structure_id": "infinite_domain:split_level_house_clean_master",
+  "archetype": "suburban split-level detached house with offset living and sleeping floors, attached garage and sloped residential lot",
+  "ground_program": [
+    "street-facing front walk rising from the sidewalk or roadside verge to a sheltered main entrance at the intermediate landing level",
+    "entry foyer forming the central split point between the upper living/sleeping level and lower utility/recreation level",
+    "attached single-car garage with a full vehicle approach, internal mudroom door and rear service access",
+    "lower recreation room with exterior-grade windows, storage and direct relation to the rear yard",
+    "laundry and mechanical room grouped near the garage and lower stair without occupying a circulation route",
+    "lower half-bath or utility washroom accessible from the recreation and service spaces",
+    "rear patio or stoop connected to the lower level and feathered into the sloped yard",
+    "foundation, retaining and drainage elements responding to the split-level grade rather than flattening the lot into a generic slab"
+  ],
+  "upper_program": [
+    "upper living room oriented toward the street with a coherent furniture zone clear of stair landings",
+    "kitchen and dining area sharing a functional service relationship and direct rear-facing light or yard outlook",
+    "short hall connecting three compact bedrooms and a full bathroom without routing through private rooms",
+    "primary bedroom with a distinct storage wall or closet zone",
+    "secondary bedrooms sized and furnished as actual sleeping rooms rather than empty boxes",
+    "roof volume following the offset floor massing with a legible ridge and attached-garage roof relationship"
+  ],
+  "circulation": [
+    "the main entrance lands at a real intermediate floor from which one supported stair flight rises to living spaces and one descends to lower service/recreation spaces",
+    "both stair flights have continuous headroom, supported landings and guard conditions where exposed",
+    "garage occupants can reach the mudroom, foyer and house interior without crossing through the vehicle bay",
+    "upper bedrooms and bathroom connect through a common hall independent of the living-room furniture zone",
+    "rear-yard access remains available from the lower level even when the front approach is damaged"
+  ],
+  "damage_constraints": [
+    "preserve the defining split-level section, central intermediate landing and at least one usable stair connection between each surviving occupied level",
+    "concentrate primary failure on one rear or side corner so the house remains recognizable rather than reducing it by rectangular deletion",
+    "allow partial roof collapse to follow rafters, ridge and supporting wall failure with rubble accumulating below the failed span",
+    "keep the attached garage legible with its vehicle opening, slab and interior service relationship even if its outer corner is damaged",
+    "damage windows, doors, railings and roof fragments together with their supporting geometry so no floating attachments remain",
+    "retain enough kitchen, bedroom, bathroom and utility evidence for the domestic program to remain inferable",
+    "preserve terrain contact, retaining conditions and drainage cues around surviving foundation edges",
+    "derive damaged and occupied variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the structure reads immediately as a split-level suburban house rather than a stacked rectangular two-storey box",
+      "the entrance landing, upper flight and lower flight connect actual walkable floors with supported stairs and sufficient headroom",
+      "garage, mudroom, laundry/mechanical and rear-yard service circulation are coherent and player-scale usable",
+      "living, kitchen/dining, bedrooms and bathroom form a plausible domestic layout with meaningful furnishing zones",
+      "the offset floor masses and roof geometry visibly express the split-level section from exterior views",
+      "foundation and yard grading meet the structure without floating walls, buried doors or unsupported slabs",
+      "damage follows structural gravity while preserving the defining split-level circulation and domestic identity"
+    ]
+  }
+}
