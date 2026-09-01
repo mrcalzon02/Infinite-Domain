@@ -99,13 +99,13 @@ public final class HexCaveFeature extends Feature<NoneFeatureConfiguration> {
         double macro = fbm(seed ^ MACRO_SALT, x, z, 180.0, 5);
         double plasma = fbm(seed ^ PLASMA_SALT, x - 911.0, z + 613.0, 54.0, 4);
         double widthNoise = fbm(seed ^ WIDTH_SALT, x + 83.0, z + 47.0, 72.0, 3);
-        double localWidth = 2.4 + (widthNoise + 1.0) * 1.3;
+        double localWidth = 2.48 + (widthNoise + 1.0) * 1.3;
 
-        boolean macroOccluded = macro > 0.18;
-        boolean plasmaOccluded = plasma > 0.38 && macro > -0.25;
+        boolean macroOccluded = macro > 0.43;
+        boolean plasmaOccluded = plasma > 0.41 && macro > -0.15;
         boolean visibleHex = hex.boundaryDistance() <= localWidth && !macroOccluded && !plasmaOccluded;
-        boolean fractalChamber = macro < -0.38
-                && plasma < 0.22
+        boolean fractalChamber = macro < -0.20
+                && plasma < 0.30
                 && hex.centerDistance() < HEX_SIZE * 0.72;
 
         double depthNoise = fbm(seed ^ DEPTH_SALT, x - 29.0, z + 101.0, 144.0, 4);
