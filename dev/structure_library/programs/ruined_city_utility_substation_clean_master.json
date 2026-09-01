@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_city_utility_substation",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild clean-master architectural program for a ruined urban electrical utility substation with legible perimeter security, switching yard, transformer, control, cable, and maintenance functions.",
+  "program": {
+    "site_security": ["perimeter_fence_or_wall", "controlled_vehicle_gate", "personnel_gate", "clearance_zone"],
+    "electrical_yard": ["incoming_line_or_bus_interface", "switchgear_rows", "transformer_bays", "buswork_corridors", "outgoing_feeder_interface"],
+    "control": ["control_building", "relay_or_switch_room", "communications_or_monitoring", "battery_or_backup_power_room"],
+    "service": ["maintenance_storage", "service_vehicle_route", "oil_or_spill_control_zone", "utility_trench_or_cable_route"],
+    "circulation": ["safe_maintenance_aisles", "control_to_yard", "gate_to_service_route"]
+  },
+  "architectural_rules": [
+    "The electrical yard must preserve ordered equipment bays and clearance aisles rather than arbitrary machinery scatter.",
+    "Transformer and switchgear positions must connect visually and spatially through plausible buswork or cable-route logic.",
+    "The control building must have a controlled relationship to the yard and a clear service route from the perimeter gate.",
+    "Perimeter security must define the site without eliminating a deliberate exploration entrance or breach.",
+    "Equipment foundations, gantries, poles, and frames must be structurally seated and may not float over terrain."
+  ],
+  "terrain_seating": {
+    "require_equipment_pads": true,
+    "require_service_vehicle_grade": true,
+    "require_drainage_or_spill_control_cue": true,
+    "forbid_floating_electrical_equipment": true
+  },
+  "damage_doctrine": {
+    "intent": "Failed electrical distribution site with localized blast, fire, weather, and abandonment damage while retaining recognizable power-flow organization.",
+    "allowed": ["localized_transformer_damage", "broken_buswork", "fence_breach", "control_building_damage", "fallen_insulator_or_frame", "burned_equipment_bay"],
+    "forbidden": ["all_power_flow_relationships_erased", "floating_transformers", "impassable_entire_yard", "random_equipment_noise", "uniform_damage"]
+  },
+  "review_gate": {
+    "must_read_as": "ruined_city_utility_substation",
+    "required_routes": ["service_gate_to_yard", "yard_to_control_building", "maintenance_route_between_equipment_bays"],
+    "hard_failures": ["utility_identity_missing", "equipment_layout_incoherent", "unsupported_major_equipment", "service_access_impossible", "control_relationship_missing"]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": ["generated_structure_asset", "zero_hard_fail_geometry_lint", "family_validation", "corpus_validation", "provenance_validation", "conversion_validation_where_applicable", "retained_visual_or_runtime_evidence"]
+  }
+}
