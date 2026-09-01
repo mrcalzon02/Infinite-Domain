@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_city_police_station",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild clean-master architectural program for a ruined municipal police station with coherent public, administrative, evidence, secure-processing, and service zones.",
+  "program": {
+    "public_zone": ["public_entry", "front_desk", "public_waiting", "interview_room"],
+    "operations": ["briefing_room", "officer_workroom", "supervisor_office", "records_room", "communications_room"],
+    "secure_processing": ["controlled_sally_port", "search_processing_area", "temporary_holding", "secure_corridor"],
+    "evidence_support": ["evidence_intake", "secure_evidence_storage", "armory_or_equipment_room"],
+    "staff_support": ["locker_room", "break_room", "washrooms", "mechanical_room"],
+    "circulation": ["public_route", "staff_route", "secure_route", "supported_vertical_egress_if_multilevel"]
+  },
+  "architectural_rules": [
+    "Public circulation must stop at controlled reception/interview functions and must not freely penetrate secure operations.",
+    "The sally-port route must connect exterior secure vehicle access to processing and holding without crossing the public lobby.",
+    "Evidence intake and storage must form a controlled chain separated from unrestricted public circulation.",
+    "Operations, records, communications, and staff support must remain mutually accessible through a coherent staff circulation network.",
+    "Secure doors, barriers, and corridors must express zoning without making the structure globally impassable for exploration."
+  ],
+  "terrain_seating": {
+    "require_supported_foundation": true,
+    "require_public_entry_grade_access": true,
+    "require_sally_port_vehicle_access": true,
+    "forbid_floating_secure_wings": true
+  },
+  "damage_doctrine": {
+    "intent": "Civic-security building abandoned under disaster conditions while preserving readable controlled-zone relationships.",
+    "allowed": ["localized_facade_breach", "roof_damage", "debris_blockage_with_bypass", "broken_security_glazing", "damaged_holding_cell", "water_or_fire_damage"],
+    "forbidden": ["public_secure_zoning_erased", "all_secure_routes_severed", "unsupported_major_mass", "randomized_cell_layout", "uniform_noise_damage"]
+  },
+  "review_gate": {
+    "must_read_as": "ruined_city_police_station",
+    "required_routes": ["public_entry_to_front_desk", "staff_entry_to_operations", "sally_port_to_processing", "evidence_intake_to_storage"],
+    "hard_failures": ["secure_zoning_unreadable", "sally_port_route_impossible", "generic_office_read", "unsupported_major_mass", "evidence_chain_missing"]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": ["generated_structure_asset", "zero_hard_fail_geometry_lint", "family_validation", "corpus_validation", "provenance_validation", "conversion_validation_where_applicable", "retained_visual_or_runtime_evidence"]
+  }
+}
