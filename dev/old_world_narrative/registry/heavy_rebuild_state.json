@@ -10,7 +10,7 @@
   "active_target": "OWS-008",
   "active_target_name": "Emergency Investigation & Persistence Lab",
   "active_institution": "Verdant Continuum Foods",
-  "active_status": "gate_a_r2_rendered_pending_independent_review_shipping_builder_synchronized",
+  "active_status": "gate_a_r2_passed_pass_7_structural_system_ready",
   "active_shipping_repairs": {
     "west_command_archive_stair": {
       "status": "verified_already_present_in_prior_shipping_geometry",
@@ -196,8 +196,8 @@
     "precedent_research": "complete",
     "program_and_adjacency": "complete",
     "scale_translation": "complete_for_gate_a_study",
-    "massing": "complete_gate_a_r2_candidate",
-    "visual_gate_a_massing": "r2_rendered_pending_manual_review",
+    "massing": "complete_gate_a_r2",
+    "visual_gate_a_massing": "passed_r2",
     "structural_system": "staged_unapproved_blocked_by_gate_a_r2",
     "circulation_and_access": "route_repair_verified_in_shipping_blocked_by_gate_a_r2",
     "exterior_architecture": "staged_unapproved_blocked_by_gate_a_r2",
@@ -244,7 +244,8 @@
     "gate_c_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-008_GATE_C_R1_REVIEW.md",
     "pass_19_micro_detail": "old_world_narrative/reviews/heavy_rebuild/OWS-008_PASS19_MICRODETAIL.md",
     "gate_d_r1_candidate": "old_world_narrative/reviews/heavy_rebuild/OWS-008_GATE_D_R1_CANDIDATE.md",
-    "gate_d_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-008_GATE_D_R1_REVIEW.md"
+    "gate_d_r1_review": "old_world_narrative/reviews/heavy_rebuild/OWS-008_GATE_D_R1_REVIEW.md",
+    "gate_a_r2_review": "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r2/INDEPENDENT_REVIEW.md"
   },
   "visual_review_gates": {
     "baseline": {
@@ -267,7 +268,7 @@
       "significant_findings_corrected_or_justified": false
     },
     "gate_a_massing": {
-      "status": "r2_rendered_pending_manual_review",
+      "status": "passed_r2",
       "required": true,
       "damage_state": "D0 intact massing",
       "fixed_camera_set": "ows008_fixed_v1",
@@ -275,7 +276,7 @@
       "rule": "Prove a modern emergency fungal persistence-investigation laboratory with a low public bar, four stepped process volumes, distinct clean/dirty/waste approaches, continuous rear inspection spine, raised command mass and consolidated plant core inside the retained 55x22x49 envelope.",
       "r1_artifact_manifest": "old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r1/review_manifest.json",
       "review_stage_source": "scripts/render_ows008_gate_a_massing_r2.py",
-      "decision": "PENDING",
+      "decision": "PASSED",
       "r1_review_record": "old_world_narrative/reviews/heavy_rebuild/OWS-008_GATE_A_R1_REVIEW.md",
       "r1_review_model_sha256": "23d7bc96c3f3ade8566aedad0c7d3a731cf4eeac55c9adcd365ed295ca59f361",
       "r1_decision": "REVISION REQUIRED",
@@ -283,10 +284,11 @@
       "r2_candidate_record": "old_world_narrative/reviews/heavy_rebuild/OWS-008_GATE_A_R2_CANDIDATE.md",
       "r2_review_model_sha256": "ed07ca71f8cfe8aecc474fd9846decd20af6688559713b210fd34567d5be5418",
       "r2_review_model_decompressed_sha256": "22bca95829c4497cdf810b13be3d0e2c4a01c2df406b9cec8339f9c8d0773894",
-      "significant_findings_corrected_or_justified": false
+      "significant_findings_corrected_or_justified": true,
+      "r2_review_record": "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_a_massing/r2/INDEPENDENT_REVIEW.md"
     },
     "gate_b_intact_state": {
-      "status": "blocked_by_gate_a_r2_review",
+      "status": "blocked_by_passes_7_12",
       "required": true,
       "damage_state": "D0 intact / operational",
       "fixed_camera_set": "ows008_fixed_v1",
