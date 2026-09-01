@@ -1,0 +1,159 @@
+{
+  "purpose": "Static and geometric proof for Infinite Domain's visible, fractally occluded Wasteland hex-grid cave system.",
+  "checks": [
+    {
+      "id": "WHC-1",
+      "check": "the custom codec has one exact bounded geometry contract",
+      "passed": true,
+      "detail": "48-block cells carry 8-block corridors, 24-block chambers, three 11-block-high strata, and a 288-block protected origin",
+      "evidence": {
+        "type": "infinite_domain_worldgen:hex_grid_cave",
+        "cell_radius": 48.0,
+        "corridor_half_width": 4.0,
+        "chamber_radius": 12.0,
+        "layer_spacing": 44,
+        "layer_offset": -40,
+        "layer_half_height": 5.0,
+        "min_y": -48,
+        "max_y": 58,
+        "origin_exclusion_radius": 288.0,
+        "feather": 4.0
+      }
+    },
+    {
+      "id": "WHC-2",
+      "check": "the canonical Wastelands final-density router consumes the cave field",
+      "passed": true,
+      "detail": "the new field wraps, rather than replaces, the prior terrain and vanilla cave/noodle density graph"
+    },
+    {
+      "id": "WHC-3",
+      "check": "hex caves carve land without cutting the Abyssal oceans",
+      "passed": true,
+      "detail": "continentalness -0.19..1.21 owns the carve; ocean values resolve to positive solid-preserving density",
+      "evidence": {
+        "type": "minecraft:range_choice",
+        "input": "custom_worldgen:continents",
+        "min_inclusive": -0.19,
+        "max_exclusive": 1.21,
+        "when_in_range": {
+          "type": "minecraft:max",
+          "argument1": "custom_worldgen:wasteland_hex_geometry",
+          "argument2": "custom_worldgen:wasteland_hex_plasma_barrier"
+        },
+        "when_out_of_range": 1.0
+      }
+    },
+    {
+      "id": "WHC-4",
+      "check": "world-seeded multi-octave plasma selectively occludes the literal grid",
+      "passed": true,
+      "detail": "four NormalNoise octaves close only high positive lobes while lower values preserve or narrow the authored corridors",
+      "evidence": {
+        "noise": {
+          "firstOctave": -7,
+          "amplitudes": [
+            1.0,
+            0.55,
+            0.3,
+            0.15
+          ]
+        },
+        "barrier": {
+          "type": "minecraft:cache_once",
+          "argument": {
+            "type": "minecraft:clamp",
+            "input": {
+              "type": "minecraft:add",
+              "argument1": -0.58,
+              "argument2": {
+                "type": "minecraft:noise",
+                "noise": "custom_worldgen:wasteland_hex_plasma",
+                "xz_scale": 0.018,
+                "y_scale": 0.055
+              }
+            },
+            "min": -1.0,
+            "max": 1.0
+          }
+        }
+      }
+    },
+    {
+      "id": "WHC-5",
+      "check": "sampled geometry contains literal chambers, six-sided corridors, and intervening walls",
+      "passed": true,
+      "detail": "seven adjacent chamber centers and all six shared edges carve while six chamber-to-edge wall samples remain solid",
+      "evidence": {
+        "centers": [
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "shared_edges": [
+          -0.973076211353316,
+          -0.973076211353316,
+          -0.892304845413264,
+          -0.973076211353316,
+          -0.973076211353316,
+          -0.892304845413264
+        ],
+        "walls": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "id": "WHC-6",
+      "check": "three cave strata and the spawn-hospital exclusion remain bounded",
+      "passed": true,
+      "detail": "carve bands center at Y -40, 4, and 48; rock separates them; the field is inert above Y58 and within radius 288",
+      "evidence": {
+        "-48": 0.75,
+        "-45": 0.0,
+        "-40": -1.0,
+        "-35": 0.0,
+        "-18": 1.0,
+        "-1": 0.0,
+        "4": -1.0,
+        "9": 0.0,
+        "26": 1.0,
+        "43": 0.0,
+        "48": -1.0,
+        "53": 0.0,
+        "58": 1.0,
+        "59": 1.0
+      }
+    },
+    {
+      "id": "WHC-7",
+      "check": "the installed project-owned companion supplies the registered codec",
+      "passed": true,
+      "detail": "the installed JAR has the NeoForge mod entry point, registry class, geometry, and density-function implementation",
+      "evidence": {
+        "path": "mods/infinite-domain-overworld-terrain-1.0.0.jar",
+        "missing_entries": []
+      }
+    },
+    {
+      "id": "WHC-8",
+      "check": "cave generation is worldgen-owned and multiplayer-safe",
+      "passed": true,
+      "detail": "no quest, player, team, advancement, scoreboard, or game-stage token participates in the terrain graph",
+      "evidence": {
+        "gated_paths": []
+      }
+    }
+  ],
+  "passed": true,
+  "runtime_validation": "This gate proves codec packaging, graph reachability, exact geometry, land/spawn bounds, and multiplayer ownership. A fresh-world visual and performance pass remains required."
+}

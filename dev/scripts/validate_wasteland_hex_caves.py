@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 <<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
+<<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
 """Static/reference validator for Infinite Domain's wasteland hex-cave source module."""
+=======
+"""Validate the canonical Wasteland hex-grid cave implementation."""
+>>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
 =======
 """Validate the canonical Wasteland hex-grid cave implementation."""
 >>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
@@ -9,6 +13,7 @@ from __future__ import annotations
 
 import json
 import math
+<<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
 <<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
 import sys
 from pathlib import Path
@@ -299,6 +304,8 @@ def main() -> int:
     print("PASS")
     return 0
 =======
+=======
+>>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
 import re
 import sys
 import zipfile
@@ -571,6 +578,9 @@ def main() -> int:
     print(f"{len(checks) - len(failures)}/{len(checks)} checks passed")
     print(f"report: {REPORT.relative_to(ROOT).as_posix()}")
     return 1 if failures else 0
+<<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
+>>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
+=======
 >>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
 
 
