@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "asset_id": "wasteland_weigh_station",
+  "family": "roadside_mobility_security",
+  "purpose": "Heavy Rebuild v2 clean-master architectural and inspection program for the authoritative wasteland weigh station asset, preserving a recognizable roadside commercial-vehicle inspection site with scale lanes, bypass control, inspection functions, staff space, utilities, signage, terrain seating and coherent abandonment damage.",
+  "ground_program": [
+    "highway approach visibly separates commercial-vehicle inspection traffic from through traffic, with deceleration, queue and merge geometry appropriate to heavy vehicles",
+    "primary weigh lane contains a legible scale deck or equivalent weighing platform aligned to truck wheel paths and connected to the inspection/control function",
+    "bypass lane remains distinct from the active inspection lane and reconnects to the roadway without impossible crossings or abrupt elevation changes",
+    "inspection building provides staff entrance, public or driver contact point, control/work area, records or equipment storage, sanitation and basic break space as footprint permits",
+    "secondary inspection apron or pull-off area provides room for stopped commercial vehicles without blocking the scale lane or highway merge",
+    "barriers, bollards, signs, lane markings, lighting and any gate hardware are placed to support traffic control rather than decorative clutter",
+    "electrical service, communications, drainage, heating/mechanical equipment and scale-service access are represented as maintainable infrastructure",
+    "paving, shoulders, drainage ditches, sign foundations, scale pit edges and retaining features seat the station into terrain without floating slabs, buried doors or disconnected road grades"
+  ],
+  "upper_program": [
+    "roof structure supports lights, antennas, vents and mechanical equipment with plausible curbs, frames or service access",
+    "any inspection canopy uses visible columns and beams and maintains adequate clearance over commercial vehicles",
+    "freestanding highway signage uses foundations and support frames appropriate to roadside wind exposure and long-distance visibility",
+    "raised observation or signal equipment, if present, has a safe maintenance route and does not substitute for occupied circulation",
+    "rooftop or elevated service equipment remains physically supported and reachable for maintenance"
+  ],
+  "circulation": [
+    "commercial vehicles can decelerate, queue, enter the scale lane, stop for inspection, use a secondary inspection area when required and merge back to the highway without impossible turns",
+    "through or bypass traffic remains spatially separate from queued inspection traffic wherever the site layout permits",
+    "drivers can reach the contact or inspection point without crossing uncontrolled high-speed lanes",
+    "staff circulation connects control, records, sanitation, equipment, inspection apron and exterior service points as a coherent work network",
+    "maintenance access reaches the scale mechanism, signs, lighting, communications, drainage and building utilities without blocking the only traffic lane",
+    "pedestrian routes and guardrails prevent routine movement through active truck wheel paths",
+    "equipment ladders do not substitute for architectural stairs in occupied spaces"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must remain immediately recognizable as a weigh station through the surviving highway approach, scale lane, inspection building, signage and merge geometry",
+    "favor localized pavement failure, scale damage, vehicle impact, canopy or sign collapse, vandalism, scavenging, electrical fire and weather exposure over uniform random deletion",
+    "damage to the scale should expose or disrupt weighing infrastructure without erasing the scale-lane relationship that communicates site function",
+    "sign, canopy and roof failures must follow identifiable support loss and resolve attached fixtures so floating fragments are not left behind",
+    "building damage should preserve at least one viable exploration path through the control or inspection spaces",
+    "road connections, queue lanes, bypass lane and drainage should remain spatially coherent after damage rather than becoming disconnected slabs",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": true,
+    "required_hard_fail_checks": [
+      "structure_geometry_lint_checks_1_3_zero_findings",
+      "roadside_mobility_security_family_validator",
+      "corpus_and_provenance_validation",
+      "lostcities_conversion_validation"
+    ],
+    "heuristic_findings_to_retain": [
+      "damage_coherence",
+      "ground_context",
+      "program_conformance"
+    ],
+    "identity_requirements": [
+      "weigh_station_identity_is_legible_from_highway_approach_and_site_layout",
+      "scale_lane_queue_bypass_and_merge_relationships_are_physically_plausible",
+      "inspection_control_staff_and_secondary_inspection_functions_are_distinct_and_connected",
+      "truck_driver_staff_and_maintenance_circulation_do_not_create_impossible_conflicts",
+      "scale_utilities_signage_drainage_and_terrain_connections_are_coherent"
+    ]
+  },
+  "production_admission": {
+    "status": "approved",
+    "registry_entry": "infinite_domain:wasteland_weigh_station",
+    "approved_at": "2026-08-27T07:27:19.682226+00:00",
+    "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+    "note": "Approval state is reconciled to the pre-existing authoritative entry in dev/structure_library/production-approvals.json. This program file does not create a new approval or claim additional validator evidence beyond what the registry records."
+  }
+}
