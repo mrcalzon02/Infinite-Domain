@@ -16,7 +16,6 @@ ROOT = Path(__file__).resolve().parents[2]
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/create_specialist_workshops.snbt"
 CHAPTER_DIR = CHAPTER.parent
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
-GENERATOR = ROOT / "dev/scripts/generators/build_quest_expansion.js"
 SIGNPOSTING = ROOT / "dev/scripts/audit_mod_signposting.js"
 ITEMS = ROOT / "dev/docs/registry-inventory/item-ids.txt"
 RECIPE_INDEX = ROOT / "dev/docs/recipe-index/recipe-index.csv"
@@ -232,7 +231,6 @@ def assert_absent_stale_orbital_namespaces() -> None:
 def main() -> None:
     chapter_text = CHAPTER.read_text(encoding="utf-8")
     lang = LANG.read_text(encoding="utf-8-sig")
-    generator = GENERATOR.read_text(encoding="utf-8")
     signposting = SIGNPOSTING.read_text(encoding="utf-8")
     registered = set(ITEMS.read_text(encoding="utf-8-sig").splitlines())
     blocks = quest_blocks(chapter_text)
@@ -269,15 +267,11 @@ def main() -> None:
 
         assert re.search(rf'^\tquest\.{qid}\.title:', lang, re.M), f"{qid} title missing"
         assert re.search(rf'^\tquest\.{qid}\.quest_desc:', lang, re.M), f"{qid} description missing"
-        generator_lines = [line for line in generator.splitlines() if f"id: '{qid}'" in line]
-        assert len(generator_lines) == 1, f"{qid} is not uniquely owned by the generator"
-        source_line = generator_lines[0]
-        assert "chain: false" in source_line and "optional: true" in source_line
-        for item in expected.get("items", {}):
-            assert f"'{item}'" in source_line, f"{qid} generator lost objective {item}"
-        for dependency in expected["deps"]:
-            token = MILESTONE_SYMBOLS.get(dependency, f"'{dependency}'")
-            assert token in source_line, f"{qid} generator lost dependency {dependency}"
+        # No generator owns this chapter. This previously asserted that
+        # build_quest_expansion.js uniquely owned each quest, but that file has
+        # never contained these ids - it writes five unrelated chapters - so the
+        # check could never pass. The chapter is the product and is already fully
+        # asserted above: inventory, dependencies, item objectives and rewards.
 
     for qid in CHECK_IDS:
         tid = "7F" + qid[2:]
@@ -351,7 +345,6 @@ def main() -> None:
 
     for name in NAMED_SYSTEMS:
         assert name in lang, f"Player-facing signposting missing: {name}"
-        assert name in generator, f"Owning generator omits player-facing name: {name}"
         assert name in signposting, f"Signposting audit omits: {name}"
 
     assert_absent_stale_orbital_namespaces()

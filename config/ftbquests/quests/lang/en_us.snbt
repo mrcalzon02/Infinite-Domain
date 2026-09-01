@@ -3350,4 +3350,75 @@
 	quest.6F4000000000000E.title: "Public Systems Continuity Drill"
 	quest.6F4000000000000E.quest_desc: ["With two players, send one labelled control state through the relay line, verify the matching light level and posted Speaker alert, interrupt and restore power, open and relock the Safe with both authorized Keys, then confirm every route and instruction still works without admin commands or quest-triggered placement." "Complete and record the witnessed operating procedure, then acknowledge it manually. The checkmark gives no material reward."]
 	task.7F4000000000000E.title: "Public Systems Continuity Drill"
+	chapter.6F50000000000001.title: "Create Specialist Workshops"
+	chapter.6F50000000000001.subtitle: "Compact motion, public transit and accountable delivery systems"
+	chapter.6C00D00000000001.title: "Grid Storage and Recovery"
+	chapter.6C00D00000000001.subtitle: "Buffered power, switching discipline and substation continuity"
+	quest.6F00000000000001.title: "Specialist Workshop Charter"
+	quest.6F00000000000001.quest_desc: ["The specialist workshops are where Create stops being one factory and becomes several trades. Before any bench is commissioned, the charter requires a single maintained wrench of record: every workshop below is registered against it, and every acceptance in this chapter is signed off by the same hand that holds it." "Objective: obtain 1 × create:wrench. Items are detected and not consumed."]
+	quest.6F00000000000002.title: "Exhaust Stack Fabrication"
+	quest.6F00000000000002.quest_desc: ["Contained combustion needs somewhere for the exhaust to go. Fabricate both stack patterns - the iron stack for machine rooms, the brick stack for civil frontage - so that flue runs can be routed without improvising the last metre." "Objective: obtain 8 × create_chimneys:chimney_iron plus 8 × create_chimneys:chimney_bricks. Items are detected and not consumed."]
+	quest.6F00000000000003.title: "Flue Draft Acceptance"
+	quest.6F00000000000003.quest_desc: ["Light the stack and watch it draw. Acceptance is the observation itself: a flue that pulls cleanly under load, with no spill into the workshop and no back-pressure at the machine." "Complete and record the witnessed operating procedure, then acknowledge it manually. The checkmark gives no material reward."]
+	quest.6F00000000000004.title: "Cardan Shaft Coupling"
+	quest.6F00000000000004.quest_desc: ["Rotation rarely arrives on the axis it is needed. The cardan connector transmits drive through an angle, so a single source can serve benches that no straight shaft could reach." "Objective: obtain 4 × sable_kardanwelle:cardan_connector. Items are detected and not consumed."]
+	quest.6F00000000000005.title: "Linear Bearing Assembly"
+	quest.6F00000000000005.quest_desc: ["Where rotation must become travel, the linear bearing and its casing carry the load along a fixed path. Assemble one of each before any moving platform is trusted with weight." "Objective: obtain 2 × linearbearing:linear_bearing plus 8 × linearbearing:linear_casing. Items are detected and not consumed."]
+	quest.6F00000000000006.title: "Magnetic Port and Torsional Anchor"
+	quest.6F00000000000006.quest_desc: ["Longer travel needs holding as well as moving. The magnetic port hands off a moving assembly cleanly, and the torsional anchor takes the reaction that would otherwise twist the frame apart." "Objective: obtain 1 × numismatics:cog plus 2 × linearbearing:magnetic_port plus 2 × linearbearing:torsional_anchor. Items are detected and not consumed."]
+	quest.6F00000000000007.title: "Linear Motion Qualification"
+	quest.6F00000000000007.quest_desc: ["Run the completed linear assembly end to end under load and witness it. Qualification covers travel, hand-off and anchorage together - a stage that moves but cannot be stopped safely is not qualified." "Complete and record the witnessed operating procedure, then acknowledge it manually. The checkmark gives no material reward."]
+	quest.6F00000000000008.title: "Walkway Step Fabrication"
+	quest.6F00000000000008.quest_desc: ["Workshops that stack need a way to walk them. Fabricate both step patterns, timber for temporary works and metal for permanent installation, before any level is opened to foot traffic." "Objective: obtain 2 × escalated:wooden_walkway_steps plus 2 × escalated:metal_walkway_steps. Items are detected and not consumed."]
+	quest.6F00000000000009.title: "Walkway Commissioning"
+	quest.6F00000000000009.quest_desc: ["A walkway is commissioned by being used, not by being built. Complete the installation in normal service and let the advancement record it." "Objective: earn the escalated:walkway advancement in normal service."]
+	quest.6F0000000000000A.title: "Continuous Escalator Service"
+	quest.6F0000000000000A.quest_desc: ["Sustained vertical movement is a different discipline from a single flight: continuous service means the run keeps carrying without intervention. The advancement records the distance actually travelled." "Objective: earn the escalated:escalator_100 advancement in normal service."]
+	quest.6F0000000000000B.title: "Station Platform Fittings"
+	quest.6F0000000000000B.quest_desc: ["Public transit begins at the platform edge. Fit the platform itself, the headlight that makes an approach visible, and the grab rails that make boarding survivable." "Objective: obtain 16 × bellsandwhistles:station_platform plus 4 × bellsandwhistles:headlight plus 8 × bellsandwhistles:brass_grab_rails. Items are detected and not consumed."]
+	quest.6F0000000000000C.title: "Announcement and Signal Equipment"
+	quest.6F0000000000000C.quest_desc: ["A platform without information is a hazard. The announcement box carries the timetable to passengers and the signal carries the same intent to the train, so both sides of the platform agree on what happens next." "Objective: obtain 1 × numismatics:cog plus 2 × create_mtg:announcement_box plus 3 × create_mtg:empty_train_signal. Items are detected and not consumed."]
+	quest.6F0000000000000D.title: "Public Transit Acceptance"
+	quest.6F0000000000000D.quest_desc: ["Run a service with passengers present and witness it: approach, announcement, signal, boarding, departure. Acceptance is the whole sequence working once, unaided." "Complete and record the witnessed operating procedure, then acknowledge it manually. The checkmark gives no material reward."]
+	quest.6F0000000000000E.title: "Compact Gearbox Instrument"
+	quest.6F0000000000000E.quest_desc: ["Where four directions of drive are needed in one block, the compact gearbox replaces a cabinet of shafts. Commission one as the reference instrument before building the controlled variant." "Objective: obtain 1 × compactgearbox:compact_gearbox. Items are detected and not consumed."]
+	quest.6F0000000000000F.title: "Sequential Gearbox Control"
+	quest.6F0000000000000F.quest_desc: ["The sequential gearbox and its controller turn a drivetrain into something that can be ordered about: outputs engage in a defined sequence rather than all at once." "Objective: obtain 1 × numismatics:cog plus 1 × compactgearbox:gearbox_controller plus 1 × compactgearbox:sequential_gearbox. Items are detected and not consumed."]
+	quest.6F00000000000010.title: "Compact Drivetrain Qualification"
+	quest.6F00000000000010.quest_desc: ["Drive the sequenced gearbox through its full order and witness it. Qualification is the sequence holding under load, not merely the gearbox turning." "Complete and record the witnessed operating procedure, then acknowledge it manually. The checkmark gives no material reward."]
+	quest.6F00000000000011.title: "Delivery Contracting Office"
+	quest.6F00000000000011.quest_desc: ["Accountable delivery starts with paperwork. The contractor issues the work, the delivery marker fixes where it lands, and the clipboard is the record that ties the two together." "Objective: obtain 1 × createdeliveryrequired:contractor plus 2 × createdeliveryrequired:delivery_marker plus 2 × create:clipboard. Items are detected and not consumed."]
+	quest.6F00000000000012.title: "Contract Handling Acceptance"
+	quest.6F00000000000012.quest_desc: ["Issue a contract, fulfil it, and witness the closure. Acceptance covers the paper trail as much as the freight - an undocumented delivery is not a delivery." "Complete and record the witnessed operating procedure, then acknowledge it manually. The checkmark gives no material reward."]
+	quest.6F00000000000013.title: "Public Market and Valuation"
+	quest.6F00000000000013.quest_desc: ["The market opens the contracting office to the public, and the monocle makes valuation legible at the counter. Together they turn private haulage into a trade anyone can audit." "Objective: obtain 1 × createdeliveryrequired:market plus 1 × createdeliveryrequired:numismatics_monocle. Items are detected and not consumed."]
+	quest.6F00000000000014.title: "Point-to-Point Consignment"
+	quest.6F00000000000014.quest_desc: ["Point-to-point terminals and links bind a named origin to a named destination, so a consignment is addressed rather than merely dispatched into the network." "Objective: obtain 1 × numismatics:cog plus 1 × createdeliveryrequired:p2p_terminal plus 2 × createdeliveryrequired:p2p_link. Items are detected and not consumed."]
+	quest.6F00000000000015.title: "Consignment Continuity Trial"
+	quest.6F00000000000015.quest_desc: ["Send a consignment across a linked pair and witness it arrive intact and correctly addressed. The trial proves continuity, not throughput." "Complete and record the witnessed operating procedure, then acknowledge it manually. The checkmark gives no material reward."]
+	quest.6F00000000000016.title: "Hypertube Transit Works"
+	quest.6F00000000000016.quest_desc: ["Hypertube is the long-haul answer where rail cannot go. Lay the tube, the entrance that admits traffic, and the accelerator that makes the distance worth attempting." "Objective: obtain 32 × create_hypertube:hypertube plus 2 × create_hypertube:hypertube_entrance plus 2 × create_hypertube:hypertube_accelerator. Items are detected and not consumed."]
+	quest.6F00000000000017.title: "Hypertube Junction Control"
+	quest.6F00000000000017.quest_desc: ["A network needs decisions. The junction splits the route, the scanner reports what passes, and the redstone detector lets the rest of the works respond to traffic." "Objective: obtain 1 × numismatics:cog plus 2 × create_hypertube:hypertube_junction plus 2 × create_hypertube:tube_scanner_attachment plus 2 × create_hypertube:redstone_detector_tube_attachment. Items are detected and not consumed."]
+	quest.6F00000000000018.title: "Hypertube Network Acceptance"
+	quest.6F00000000000018.quest_desc: ["Route a passage through a controlled junction and witness it. Acceptance is the network choosing correctly and reporting what it did - a tube that only ever goes one way is not a network." "Complete and record the witnessed operating procedure, then acknowledge it manually. The checkmark gives no material reward."]
+	quest.6C01000000000001.title: "Small Battery Instrument"
+	quest.6C01000000000001.quest_desc: ["Grid storage begins at instrument scale. A single small battery is the reference cell: it proves the chemistry works on this grid before any capacity is committed to it." "Objective: obtain 1 × powergrid_batteries:small_battery. Items are detected and not consumed."]
+	quest.6C01000000000002.title: "Medium Battery Provisioning"
+	quest.6C01000000000002.quest_desc: ["Provisioning is the step between a cell and a bank. Draw the era supply allocation and commission a medium battery against it, so stored capacity is accounted for rather than improvised." "Objective: obtain 1 × kubejs:era4_supply_bag plus 1 × powergrid_batteries:medium_battery. Items are detected and not consumed."]
+	quest.6C01000000000003.title: "High-Voltage Storage Bank"
+	quest.6C01000000000003.quest_desc: ["High-voltage storage is where the grid stops being a convenience and becomes infrastructure. The priority cache covers the parts that cannot be fabricated on demand." "Objective: obtain 1 × kubejs:era4_priority_cache plus 2 × numismatics:cog plus 1 × powergrid_batteries:high_voltage_battery. Items are detected and not consumed."]
+	quest.6C01000000000004.title: "Switching and Metering Acceptance"
+	quest.6C01000000000004.quest_desc: ["Storage without switching and measurement is a hazard, not an asset. Commission the high-voltage switch, the transformer core and the multimeter, then witness an isolation and a reading taken on the live bank." "Objective: obtain 4 × powergrid:hv_switch plus 4 × powergrid:transformer_core plus 1 × powergrid:multimeter. Items are detected and not consumed. Complete and record the witnessed operating procedure, then acknowledge it manually. The checkmark gives no material reward."]
+	quest.6C01000000000005.title: "Substation Continuity Trial"
+	quest.6C01000000000005.quest_desc: ["The substation battery is the point at which the grid can ride through a loss of generation. Witness a transfer onto stored power and back without interrupting the load." "Objective: obtain 1 × powergrid_batteries:substation_battery. Items are detected and not consumed. Complete and record the witnessed operating procedure, then acknowledge it manually. The checkmark gives no material reward."]
+	task.7F00000000000003.title: "Flue Draft Acceptance"
+	task.7F00000000000007.title: "Linear Motion Qualification"
+	task.7F0000000000000D.title: "Public Transit Acceptance"
+	task.7F00000000000010.title: "Compact Drivetrain Qualification"
+	task.7F00000000000012.title: "Contract Handling Acceptance"
+	task.7F00000000000015.title: "Consignment Continuity Trial"
+	task.7F00000000000018.title: "Hypertube Network Acceptance"
+	task.6C02000000000007.title: "Switching and Metering Acceptance"
+	task.6C02000000000009.title: "Substation Continuity Trial"
 }

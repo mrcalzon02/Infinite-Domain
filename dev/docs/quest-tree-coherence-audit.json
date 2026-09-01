@@ -183,7 +183,7 @@
       "from_title": "Scheduled Delivery",
       "to_quest": "6F00000000000011",
       "to_file": "create_specialist_workshops",
-      "to_title": null,
+      "to_title": "Delivery Contracting Office",
       "direction": "same"
     },
     {
@@ -192,7 +192,7 @@
       "from_title": "The Mechanical Foundation",
       "to_quest": "6F00000000000001",
       "to_file": "create_specialist_workshops",
-      "to_title": null,
+      "to_title": "Specialist Workshop Charter",
       "direction": "same"
     },
     {
@@ -201,7 +201,7 @@
       "from_title": "Era 2: Heavy Industry",
       "to_quest": "6F00000000000004",
       "to_file": "create_specialist_workshops",
-      "to_title": null,
+      "to_title": "Cardan Shaft Coupling",
       "direction": "same"
     },
     {
@@ -210,7 +210,7 @@
       "from_title": "Era 2: Heavy Industry",
       "to_quest": "6F00000000000008",
       "to_file": "create_specialist_workshops",
-      "to_title": null,
+      "to_title": "Walkway Step Fabrication",
       "direction": "same"
     },
     {
@@ -219,7 +219,7 @@
       "from_title": "Era 3: Petrochemical Civilization",
       "to_quest": "6F0000000000000B",
       "to_file": "create_specialist_workshops",
-      "to_title": null,
+      "to_title": "Station Platform Fittings",
       "direction": "same"
     },
     {
@@ -228,7 +228,7 @@
       "from_title": "Era 3: Petrochemical Civilization",
       "to_quest": "6F0000000000000E",
       "to_file": "create_specialist_workshops",
-      "to_title": null,
+      "to_title": "Compact Gearbox Instrument",
       "direction": "same"
     },
     {
@@ -237,7 +237,7 @@
       "from_title": "Era 3: Petrochemical Civilization",
       "to_quest": "6F00000000000011",
       "to_file": "create_specialist_workshops",
-      "to_title": null,
+      "to_title": "Delivery Contracting Office",
       "direction": "same"
     },
     {
@@ -246,7 +246,7 @@
       "from_title": "Era 5: Automated Industry",
       "to_quest": "6F00000000000014",
       "to_file": "create_specialist_workshops",
-      "to_title": null,
+      "to_title": "Point-to-Point Consignment",
       "direction": "same"
     },
     {
@@ -255,7 +255,7 @@
       "from_title": "Era 5: Automated Industry",
       "to_quest": "6F00000000000016",
       "to_file": "create_specialist_workshops",
-      "to_title": null,
+      "to_title": "Hypertube Transit Works",
       "direction": "same"
     },
     {
@@ -741,7 +741,7 @@
       "from_title": "Battery Buffer",
       "to_quest": "6C01000000000001",
       "to_file": "grid_storage_and_recovery",
-      "to_title": null,
+      "to_title": "Small Battery Instrument",
       "direction": "same"
     },
     {
@@ -3010,7 +3010,7 @@
       "quest": "6F00000000000003",
       "file": "create_specialist_workshops",
       "era": null,
-      "title": null,
+      "title": "Flue Draft Acceptance",
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -3021,7 +3021,7 @@
       "quest": "6F00000000000007",
       "file": "create_specialist_workshops",
       "era": null,
-      "title": null,
+      "title": "Linear Motion Qualification",
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -3032,7 +3032,7 @@
       "quest": "6F0000000000000D",
       "file": "create_specialist_workshops",
       "era": null,
-      "title": null,
+      "title": "Public Transit Acceptance",
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -3043,7 +3043,7 @@
       "quest": "6F00000000000010",
       "file": "create_specialist_workshops",
       "era": null,
-      "title": null,
+      "title": "Compact Drivetrain Qualification",
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -3054,7 +3054,7 @@
       "quest": "6F00000000000012",
       "file": "create_specialist_workshops",
       "era": null,
-      "title": null,
+      "title": "Contract Handling Acceptance",
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -3065,7 +3065,7 @@
       "quest": "6F00000000000015",
       "file": "create_specialist_workshops",
       "era": null,
-      "title": null,
+      "title": "Consignment Continuity Trial",
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -3076,7 +3076,7 @@
       "quest": "6F00000000000018",
       "file": "create_specialist_workshops",
       "era": null,
-      "title": null,
+      "title": "Hypertube Network Acceptance",
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -4298,7 +4298,7 @@
       "reward_quests": 5,
       "roots": [],
       "findings": {
-        "warning": 31
+        "warning": 7
       }
     },
     {
@@ -4718,9 +4718,7 @@
       "checkmark_quests": 0,
       "reward_quests": 2,
       "roots": [],
-      "findings": {
-        "warning": 5
-      }
+      "findings": {}
     },
     {
       "file": "lets_get_started_shall_we",
@@ -5231,7 +5229,7 @@
   ],
   "finding_counts": {
     "by_severity": {
-      "warning": 101,
+      "warning": 72,
       "info": 778
     },
     "by_category": {
@@ -5240,7 +5238,6 @@
       "info/recipe-coverage-gap": 39,
       "info/chapter-icon-missing": 38,
       "info/project-item-unverified": 34,
-      "warning/missing-title": 29,
       "info/checkmark-outside-prologue": 22,
       "info/backward-dependency-line": 21,
       "warning/gate-item-structure-loot": 19,
@@ -5283,49 +5280,49 @@
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "create_specialist_workshops: 6F00000000000003 'None' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
+      "message": "create_specialist_workshops: 6F00000000000003 'Flue Draft Acceptance' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
       "quest": "6F00000000000003",
       "note": "self-certified checkmark outside prologue"
     },
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "create_specialist_workshops: 6F00000000000007 'None' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
+      "message": "create_specialist_workshops: 6F00000000000007 'Linear Motion Qualification' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
       "quest": "6F00000000000007",
       "note": "self-certified checkmark outside prologue"
     },
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "create_specialist_workshops: 6F0000000000000D 'None' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
+      "message": "create_specialist_workshops: 6F0000000000000D 'Public Transit Acceptance' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
       "quest": "6F0000000000000D",
       "note": "self-certified checkmark outside prologue"
     },
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "create_specialist_workshops: 6F00000000000010 'None' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
+      "message": "create_specialist_workshops: 6F00000000000010 'Compact Drivetrain Qualification' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
       "quest": "6F00000000000010",
       "note": "self-certified checkmark outside prologue"
     },
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "create_specialist_workshops: 6F00000000000012 'None' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=1)",
+      "message": "create_specialist_workshops: 6F00000000000012 'Contract Handling Acceptance' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=1)",
       "quest": "6F00000000000012",
       "note": "self-certified checkmark outside prologue"
     },
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "create_specialist_workshops: 6F00000000000015 'None' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
+      "message": "create_specialist_workshops: 6F00000000000015 'Consignment Continuity Trial' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
       "quest": "6F00000000000015",
       "note": "self-certified checkmark outside prologue"
     },
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "create_specialist_workshops: 6F00000000000018 'None' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
+      "message": "create_specialist_workshops: 6F00000000000018 'Hypertube Network Acceptance' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
       "quest": "6F00000000000018",
       "note": "self-certified checkmark outside prologue"
     },
@@ -5732,180 +5729,6 @@
       "message": "stellaris_space_industrialization: 7C51000000000024 'Burrower Carapace' gates 1 quest(s) on kubejs:burrower_carapace; craftless but a guaranteed drop in kubejs\\data\\infinite_domain\\loot_table\\chests\\burrower_nest.json (verify explorer-map handoff and single-chest exhaustion risk)",
       "quest": "7C51000000000024",
       "item": "kubejs:burrower_carapace"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000001 has no localized title",
-      "quest": "6F00000000000001"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000002 has no localized title",
-      "quest": "6F00000000000002"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000003 has no localized title",
-      "quest": "6F00000000000003"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000004 has no localized title",
-      "quest": "6F00000000000004"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000005 has no localized title",
-      "quest": "6F00000000000005"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000006 has no localized title",
-      "quest": "6F00000000000006"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000007 has no localized title",
-      "quest": "6F00000000000007"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000008 has no localized title",
-      "quest": "6F00000000000008"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000009 has no localized title",
-      "quest": "6F00000000000009"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F0000000000000A has no localized title",
-      "quest": "6F0000000000000A"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F0000000000000B has no localized title",
-      "quest": "6F0000000000000B"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F0000000000000C has no localized title",
-      "quest": "6F0000000000000C"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F0000000000000D has no localized title",
-      "quest": "6F0000000000000D"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F0000000000000E has no localized title",
-      "quest": "6F0000000000000E"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F0000000000000F has no localized title",
-      "quest": "6F0000000000000F"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000010 has no localized title",
-      "quest": "6F00000000000010"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000011 has no localized title",
-      "quest": "6F00000000000011"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000012 has no localized title",
-      "quest": "6F00000000000012"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000013 has no localized title",
-      "quest": "6F00000000000013"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000014 has no localized title",
-      "quest": "6F00000000000014"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000015 has no localized title",
-      "quest": "6F00000000000015"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000016 has no localized title",
-      "quest": "6F00000000000016"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000017 has no localized title",
-      "quest": "6F00000000000017"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "create_specialist_workshops: 6F00000000000018 has no localized title",
-      "quest": "6F00000000000018"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "grid_storage_and_recovery: 6C01000000000001 has no localized title",
-      "quest": "6C01000000000001"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "grid_storage_and_recovery: 6C01000000000002 has no localized title",
-      "quest": "6C01000000000002"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "grid_storage_and_recovery: 6C01000000000003 has no localized title",
-      "quest": "6C01000000000003"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "grid_storage_and_recovery: 6C01000000000004 has no localized title",
-      "quest": "6C01000000000004"
-    },
-    {
-      "severity": "warning",
-      "category": "missing-title",
-      "message": "grid_storage_and_recovery: 6C01000000000005 has no localized title",
-      "quest": "6C01000000000005"
     },
     {
       "severity": "warning",
@@ -15565,7 +15388,7 @@
       "x": 0.0,
       "y": 0.0,
       "optional": true,
-      "title": null,
+      "title": "Specialist Workshop Charter",
       "dependencies": [
         "4FC0C1C678C71891"
       ],
@@ -15600,7 +15423,7 @@
       "x": -12.0,
       "y": 4.0,
       "optional": true,
-      "title": null,
+      "title": "Exhaust Stack Fabrication",
       "dependencies": [
         "6F00000000000001"
       ],
@@ -15638,7 +15461,7 @@
       "x": -12.0,
       "y": 6.0,
       "optional": true,
-      "title": null,
+      "title": "Flue Draft Acceptance",
       "dependencies": [
         "6F00000000000002"
       ],
@@ -15665,7 +15488,7 @@
       "x": -8.0,
       "y": 10.0,
       "optional": true,
-      "title": null,
+      "title": "Cardan Shaft Coupling",
       "dependencies": [
         "6F00000000000001",
         "5210000000000001"
@@ -15695,7 +15518,7 @@
       "x": -8.0,
       "y": 12.0,
       "optional": true,
-      "title": null,
+      "title": "Linear Bearing Assembly",
       "dependencies": [
         "6F00000000000004"
       ],
@@ -15733,7 +15556,7 @@
       "x": -8.0,
       "y": 14.0,
       "optional": true,
-      "title": null,
+      "title": "Magnetic Port and Torsional Anchor",
       "dependencies": [
         "6F00000000000005"
       ],
@@ -15779,7 +15602,7 @@
       "x": -8.0,
       "y": 16.0,
       "optional": true,
-      "title": null,
+      "title": "Linear Motion Qualification",
       "dependencies": [
         "6F00000000000006"
       ],
@@ -15806,7 +15629,7 @@
       "x": -4.0,
       "y": 10.0,
       "optional": true,
-      "title": null,
+      "title": "Walkway Step Fabrication",
       "dependencies": [
         "6F00000000000001",
         "5210000000000001"
@@ -15845,7 +15668,7 @@
       "x": -4.0,
       "y": 12.0,
       "optional": true,
-      "title": null,
+      "title": "Walkway Commissioning",
       "dependencies": [
         "6F00000000000008"
       ],
@@ -15874,7 +15697,7 @@
       "x": -4.0,
       "y": 14.0,
       "optional": true,
-      "title": null,
+      "title": "Continuous Escalator Service",
       "dependencies": [
         "6F00000000000009"
       ],
@@ -15901,7 +15724,7 @@
       "x": 0.0,
       "y": 20.0,
       "optional": true,
-      "title": null,
+      "title": "Station Platform Fittings",
       "dependencies": [
         "6F00000000000001",
         "5310000000000001"
@@ -15949,7 +15772,7 @@
       "x": 0.0,
       "y": 22.0,
       "optional": true,
-      "title": null,
+      "title": "Announcement and Signal Equipment",
       "dependencies": [
         "6F0000000000000B"
       ],
@@ -15995,7 +15818,7 @@
       "x": 0.0,
       "y": 24.0,
       "optional": true,
-      "title": null,
+      "title": "Public Transit Acceptance",
       "dependencies": [
         "6F0000000000000C"
       ],
@@ -16022,7 +15845,7 @@
       "x": 4.0,
       "y": 20.0,
       "optional": true,
-      "title": null,
+      "title": "Compact Gearbox Instrument",
       "dependencies": [
         "6F00000000000001",
         "5310000000000001"
@@ -16052,7 +15875,7 @@
       "x": 4.0,
       "y": 22.0,
       "optional": true,
-      "title": null,
+      "title": "Sequential Gearbox Control",
       "dependencies": [
         "6F0000000000000E"
       ],
@@ -16098,7 +15921,7 @@
       "x": 4.0,
       "y": 24.0,
       "optional": true,
-      "title": null,
+      "title": "Compact Drivetrain Qualification",
       "dependencies": [
         "6F0000000000000F"
       ],
@@ -16125,7 +15948,7 @@
       "x": 8.0,
       "y": 20.0,
       "optional": true,
-      "title": null,
+      "title": "Delivery Contracting Office",
       "dependencies": [
         "6F00000000000001",
         "5E00000000000002",
@@ -16174,7 +15997,7 @@
       "x": 8.0,
       "y": 22.0,
       "optional": true,
-      "title": null,
+      "title": "Contract Handling Acceptance",
       "dependencies": [
         "6F00000000000011"
       ],
@@ -16203,7 +16026,7 @@
       "x": 8.0,
       "y": 24.0,
       "optional": true,
-      "title": null,
+      "title": "Public Market and Valuation",
       "dependencies": [
         "6F00000000000012"
       ],
@@ -16241,7 +16064,7 @@
       "x": 8.0,
       "y": 30.0,
       "optional": true,
-      "title": null,
+      "title": "Point-to-Point Consignment",
       "dependencies": [
         "6F00000000000013",
         "5510000000000001"
@@ -16288,7 +16111,7 @@
       "x": 8.0,
       "y": 32.0,
       "optional": true,
-      "title": null,
+      "title": "Consignment Continuity Trial",
       "dependencies": [
         "6F00000000000014"
       ],
@@ -16315,7 +16138,7 @@
       "x": 12.0,
       "y": 30.0,
       "optional": true,
-      "title": null,
+      "title": "Hypertube Transit Works",
       "dependencies": [
         "6F00000000000001",
         "5510000000000001"
@@ -16363,7 +16186,7 @@
       "x": 12.0,
       "y": 32.0,
       "optional": true,
-      "title": null,
+      "title": "Hypertube Junction Control",
       "dependencies": [
         "6F00000000000016"
       ],
@@ -16418,7 +16241,7 @@
       "x": 12.0,
       "y": 34.0,
       "optional": true,
-      "title": null,
+      "title": "Hypertube Network Acceptance",
       "dependencies": [
         "6F00000000000017"
       ],
@@ -129672,7 +129495,7 @@
       "x": 0.0,
       "y": 0.0,
       "optional": true,
-      "title": null,
+      "title": "Small Battery Instrument",
       "dependencies": [
         "4410000000000004"
       ],
@@ -129701,7 +129524,7 @@
       "x": 0.0,
       "y": 2.0,
       "optional": true,
-      "title": null,
+      "title": "Medium Battery Provisioning",
       "dependencies": [
         "6C01000000000001"
       ],
@@ -129738,7 +129561,7 @@
       "x": 0.0,
       "y": 4.0,
       "optional": true,
-      "title": null,
+      "title": "High-Voltage Storage Bank",
       "dependencies": [
         "6C01000000000002"
       ],
@@ -129782,7 +129605,7 @@
       "x": 0.0,
       "y": 6.0,
       "optional": true,
-      "title": null,
+      "title": "Switching and Metering Acceptance",
       "dependencies": [
         "6C01000000000003"
       ],
@@ -129838,7 +129661,7 @@
       "x": 0.0,
       "y": 8.0,
       "optional": true,
-      "title": null,
+      "title": "Substation Continuity Trial",
       "dependencies": [
         "6C01000000000004"
       ],
