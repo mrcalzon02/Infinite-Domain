@@ -1,0 +1,62 @@
+{
+  "structure_id": "infinite_domain:ruined_community_center_clean_master",
+  "archetype": "municipal neighborhood community center with a legible public entrance, reception and information threshold, flexible meeting and recreation rooms, social-service and staff functions, food and event support, exterior gathering space, service infrastructure and a gravity-coherent partial ruin story",
+  "ground_program": [
+    "prominent public-facing entrance with weather protection, vestibule, reception or information desk and a visible transition into the principal commons rather than an uncontrolled opening directly into activity rooms",
+    "central lobby or commons acts as the orientation hub for visitors and connects directly to multipurpose rooms, meeting spaces, sanitation and the primary vertical circulation without becoming an oversized empty atrium",
+    "at least one large flexible hall supports community meetings, classes, meals, performances, emergency assembly or recreation with credible clear-span structure, storage and multiple usable access points",
+    "smaller meeting, club, classroom, counseling or social-service rooms branch from common circulation and differ in scale and furnishing according to function rather than repeating identical empty cells",
+    "kitchen or warming kitchen connects credibly to pantry, event storage, refuse handling and a service entrance so food and event supplies do not have to cross private counseling rooms or the main reception threshold",
+    "administrative and staff functions include office, records, staff workroom or volunteer coordination space positioned to supervise the public entrance and support scheduled community use",
+    "public sanitation and janitorial/service spaces are reachable from common circulation and sized for a civic assembly building rather than represented by isolated decorative fixtures",
+    "exterior program includes a plaza, courtyard, small play or recreation area, memorial/garden space or sheltered gathering edge tied directly to the public interior rather than leftover terrain around a freestanding box",
+    "foundation edges, steps, accessible approach, retaining conditions, drainage and exterior hardscape seat the building into surrounding grade without a monolithic artificial platform"
+  ],
+  "upper_program": [
+    "where a second level exists, it contains additional meeting, club, studio, office or community-service rooms arranged around supported common circulation rather than unrelated decorative chambers",
+    "at least one vertically continuous enclosed stair core lands on every occupied level with supported stairs, usable landings and uninterrupted player headroom; larger footprints should retain a second independent egress route",
+    "balconies, overlooks or mezzanines may address the lobby or multipurpose hall only when their slabs, guard edges and access routes are structurally supported and usable",
+    "special-purpose rooms such as craft studios, computer rooms, rehearsal rooms or youth spaces must retain fixtures, storage and proportions that distinguish their community function from generic offices",
+    "mechanical, electrical, janitorial and service spaces align with credible risers, roof plant and maintenance access rather than appearing as disconnected machinery closets",
+    "roof geometry distinguishes the larger assembly volume, smaller room wings and mechanical zones while maintaining drainage and structural support",
+    "windows, corridor ends and stair landings correspond to actual interior spaces so the exterior reads as the envelope of a functioning neighborhood civic building rather than a pasted facade"
+  ],
+  "circulation": [
+    "visitors move from the principal entrance through reception or the commons before reaching meeting, recreation, social-service or event spaces, preserving a clear public orientation sequence",
+    "large events can move people between the multipurpose hall, sanitation, kitchen support, exterior gathering areas and exits without forcing traffic through staff offices or counseling rooms",
+    "staff, volunteers and deliveries can reach administration, kitchen, storage, refuse, maintenance and mechanical areas from service access without crossing sensitive social-service rooms or congesting the main entrance",
+    "private or semi-private counseling, records and administrative spaces remain accessible from controlled common circulation without becoming required shortcuts between public rooms",
+    "every occupied level retains a continuous player-scale route to at least one supported stair core and an exterior exit direction",
+    "damage variants must preserve at least one complete main-entrance-to-commons-to-activity-room route and one viable vertical egress path through the surviving occupied portion"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must remain immediately recognizable as a community center through the surviving reception/commons, flexible hall, meeting rooms, civic support spaces and public circulation rather than becoming a generic ruined school or office shell",
+    "favor localized roof failure over the assembly hall, facade breach, fire damage, water intrusion, shattered glazing, partial floor collapse and one major structural failure zone over repeated rectangular deletion masks",
+    "major collapse may expose the commons, hall or stacked meeting rooms, but surviving slabs, beams, walls, stair cores and debris must communicate one gravity-coherent failure story",
+    "where floors or roofs fail, associated partitions, doors, glazing, fixtures and furniture must fail consistently so unsupported fragments do not float",
+    "preserve enough intact reception, meeting/recreation space, kitchen or event support, sanitation and administrative cues for neighborhood civic purpose to remain inferable during exploration",
+    "at least one stair route must remain physically continuous through the surviving occupied portion; alternate stairs may be blocked or severed only where the ruin story clearly supports it",
+    "kitchen, mechanical, sanitation and service infrastructure may be exposed by damage but must remain spatially related to the rooms and risers they served",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "main_entrance_elevation",
+      "commons_and_hall_elevation",
+      "major_collapse_zone",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the structure reads immediately as a neighborhood community center rather than a school, church, office block, apartment building or generic institutional shell",
+      "main entrance, reception or information point, commons, flexible hall, smaller meeting/recreation rooms, administration and service support form a believable civic program",
+      "large assembly space and smaller community rooms differ meaningfully by function while sharing a coherent municipal construction language",
+      "event, public, staff and service circulation remain legible and do not require passage through private counseling rooms, staff offices, kitchens or mechanical rooms as shortcuts",
+      "stairs are vertically supported, land on real floors and provide continuous player-scale headroom to every surviving occupied level",
+      "the principal ruin exposes coherent civic-building anatomy and gravity-driven damage rather than arbitrary missing cubes",
+      "at least one complete entrance-to-commons-to-activity-room route and one viable vertical egress route survive the damage state",
+      "the center meets surrounding grade through believable public approach, steps or accessible route, retaining edges and gathering hardscape without floating foundations or buried public access"
+    ]
+  }
+}
