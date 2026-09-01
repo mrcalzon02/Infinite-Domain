@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_roadside_diner",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild v2 clean-master architectural and service program for the authoritative ruined roadside diner asset, preserving a recognizable roadside food-service building with customer dining, counter service, commercial kitchen, storage, sanitation, deliveries, utilities, parking, signage, terrain seating and coherent damage behavior.",
+  "ground_program": [
+    "roadside entrance, parking and pedestrian approach form a legible arrival sequence without forcing customers through delivery or refuse areas",
+    "public entrance leads into a dining room with booth, table or counter seating arranged around usable circulation rather than decorative furniture blocking aisles",
+    "service counter connects customer-facing ordering or payment space to the commercial kitchen and pass-through without requiring staff to cross the public dining floor for routine service",
+    "commercial kitchen contains a believable preparation, cooking, washing and cold-storage sequence with ventilation and utility connections appropriate to food service",
+    "dry storage, refrigeration, staff service space and refuse handling sit behind or beside the kitchen with a direct back-of-house delivery route",
+    "public sanitation is reachable from the dining area without crossing active food-preparation zones",
+    "mechanical, electrical, grease, water and exhaust systems are represented as serviceable infrastructure rather than inaccessible decorative blocks",
+    "parking, curbs, drainage, slab transitions, sign foundations and any retaining features seat the diner into terrain without floating paving, buried doors or disconnected road elevations"
+  ],
+  "upper_program": [
+    "roof structure supports exhaust hoods, vents, signs and mechanical equipment with plausible curbs, frames or service platforms",
+    "any rooftop equipment has a credible maintenance access path and does not rely on public architectural stairs unless the space is intentionally occupiable",
+    "freestanding or roof-mounted roadside signage uses foundations, mast or frame support appropriate to its visible height and wind exposure",
+    "any occupied second-floor or mezzanine area uses supported stairs, landings and guard relationships rather than equipment ladders"
+  ],
+  "circulation": [
+    "customers can move from parking to entrance, seating, counter and sanitation without unavoidable conflicts with kitchen or delivery traffic",
+    "staff circulation connects counter, kitchen, wash area, cold and dry storage, sanitation and service exit as a compact back-of-house loop",
+    "delivery circulation reaches food storage and kitchen support spaces without passing through the public dining room",
+    "refuse and grease-service access remains separated from the principal customer entrance and outdoor seating where present",
+    "maintenance access reaches electrical, plumbing, refrigeration, exhaust and roof-service equipment",
+    "equipment-only ladders do not substitute for architectural stairs in occupied spaces"
+  ],
+  "damage_constraints": [
+    "the ruined derivative must remain immediately recognizable as a roadside diner through surviving dining-room, service-counter, kitchen, roadside-sign and parking relationships",
+    "favor localized roof failure, storefront glazing loss, kitchen fire, vehicle impact, sign damage, water intrusion, vandalism and vegetation intrusion over uniform random deletion",
+    "roof or sign collapse must follow identifiable structural failure and resolve attached lights, ducts, fascia and supports so floating fragments are not left behind",
+    "kitchen damage may expose equipment and utilities but should preserve enough of the preparation-cooking-service relationship to communicate the former function",
+    "dining-room damage should retain at least one viable public exploration path from entrance toward counter or seating",
+    "parking, curbs, drainage and road connection should remain spatially coherent after damage rather than becoming disconnected slabs",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": true,
+    "required_hard_fail_checks": [
+      "structure_geometry_lint_checks_1_3_zero_findings",
+      "habitation_and_community_family_validator",
+      "corpus_and_provenance_validation",
+      "lostcities_conversion_validation"
+    ],
+    "heuristic_findings_to_retain": [
+      "damage_coherence",
+      "ground_context",
+      "program_conformance"
+    ],
+    "identity_requirements": [
+      "roadside_diner_identity_is_legible_from_arrival_and_interior_layout",
+      "dining_counter_kitchen_and_storage_relationships_support_real_food_service",
+      "customer_staff_delivery_and_refuse_circulation_are_separated_where_required",
+      "kitchen_exhaust_refrigeration_plumbing_and_electrical_service_are_plausible",
+      "road_parking_signage_drainage_and_terrain_connections_are_coherent"
+    ]
+  },
+  "production_admission": {
+    "status": "approved",
+    "registry_entry": "infinite_domain:ruined_roadside_diner",
+    "approved_at": "2026-08-27T07:27:19.682226+00:00",
+    "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+    "note": "Approval state is reconciled to the pre-existing authoritative entry in dev/structure_library/production-approvals.json. This program file does not create a new approval or claim additional validator evidence beyond what the registry records."
+  }
+}
