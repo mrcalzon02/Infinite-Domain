@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_city_civic_center",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild clean-master architectural program for a ruined civic center combining public assembly, municipal administration, service counters, records, and support infrastructure.",
+  "program": {
+    "public_arrival": ["civic_plaza_or_forecourt", "main_entry", "security_or_information", "public_lobby"],
+    "public_services": ["service_counter_hall", "public_records_access", "meeting_room", "public_washrooms"],
+    "assembly": ["council_or_hearing_chamber", "public_gallery", "pre_function_space"],
+    "administration": ["municipal_offices", "executive_or_clerk_office", "records_storage", "staff_workroom"],
+    "support": ["loading_service_entry", "storage", "mechanical_room", "electrical_room", "staff_break_area"],
+    "circulation": ["public_route", "staff_route", "service_route", "supported_vertical_egress_if_multilevel"]
+  },
+  "architectural_rules": [
+    "The principal entrance must establish a clear civic axis from forecourt or street into a public lobby.",
+    "Public service counters and records access must be reachable without requiring entry into staff-only administration.",
+    "The council/hearing chamber must retain a recognizable public gallery and controlled staff/dais relationship.",
+    "Administrative and records areas must have coherent staff circulation and a plausible connection to service/support space.",
+    "Exterior massing and interior hierarchy must read as municipal civic architecture rather than generic commercial offices."
+  ],
+  "terrain_seating": {
+    "require_supported_foundation": true,
+    "require_civic_entry_grade_connection": true,
+    "allow_monumental_steps_with_accessible_alternate_route": true,
+    "forbid_floating_wings": true
+  },
+  "damage_doctrine": {
+    "intent": "Municipal center ruined by abandonment and localized structural failure while retaining civic hierarchy and public-function evidence.",
+    "allowed": ["localized_roof_collapse", "facade_breach", "damaged_council_chamber", "debris_in_lobby", "weathered_records_area", "broken_glazing"],
+    "forbidden": ["civic_axis_erased", "all_public_service_access_severed", "unsupported_major_mass", "generic_random_rooming", "uniform_noise_damage"]
+  },
+  "review_gate": {
+    "must_read_as": "ruined_city_civic_center",
+    "required_routes": ["forecourt_to_public_lobby", "lobby_to_service_counters", "lobby_to_assembly", "staff_area_to_service_support"],
+    "hard_failures": ["civic_identity_missing", "public_service_route_impossible", "assembly_function_unreadable", "unsupported_major_mass", "public_and_staff_zoning_collapsed"]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": ["generated_structure_asset", "zero_hard_fail_geometry_lint", "family_validation", "corpus_validation", "provenance_validation", "conversion_validation_where_applicable", "retained_visual_or_runtime_evidence"]
+  }
+}
