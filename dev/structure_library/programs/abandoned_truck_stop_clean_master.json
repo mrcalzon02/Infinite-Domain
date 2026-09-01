@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "asset_id": "abandoned_truck_stop",
+  "family": "roadside_mobility_security",
+  "purpose": "Heavy Rebuild v2 clean-master architectural and service program for the authoritative abandoned truck stop asset, preserving a recognizable long-haul roadside service complex with truck circulation, fueling, parking, driver amenities, food service, maintenance support, deliveries, utilities, signage, terrain seating and coherent abandonment damage.",
+  "ground_program": [
+    "highway or arterial approach separates heavy-truck ingress and egress from passenger-vehicle access where practical, with turning geometry that visibly accommodates articulated vehicles rather than treating the site as a generic parking lot",
+    "truck forecourt contains fuel lanes, canopy or weather protection where appropriate, pump/service islands and a clear pull-through relationship between road access, fueling and long-haul parking",
+    "long-haul parking provides recognizable tractor-trailer bays, circulation aisles and pedestrian routes toward the principal building without forcing drivers through active fueling lanes",
+    "principal building provides public entrance, cashier or service counter, convenience retail, driver lounge or waiting space, food-service area and public sanitation as a coherent roadside-service program",
+    "driver-support spaces include showers, laundry or equivalent long-haul amenities where footprint permits, separated from food preparation and public retail circulation",
+    "back-of-house program includes food and retail storage, refrigeration where required, staff/service space, refuse handling and direct delivery access that does not depend on the public entrance",
+    "service or maintenance component, when present, provides vehicle-accessible bays, tool or parts storage and a safe relationship to truck circulation without blocking the fueling forecourt",
+    "fuel storage, electrical service, water, drainage, wastewater, grease/refuse and mechanical systems are represented as serviceable infrastructure with plausible protected access",
+    "parking aprons, curbs, drainage, sign foundations, utility pads and any retaining features seat the complex into terrain without floating paving, buried doors or disconnected road elevations"
+  ],
+  "upper_program": [
+    "roof structure supports exhausts, vents, signs and mechanical equipment with plausible curbs, frames or service platforms",
+    "canopies over fueling or pedestrian areas use columns, beams or equivalent visible support and do not terminate in unsupported floating roof planes",
+    "freestanding truck-stop signage uses a foundation, mast and sign frame appropriate to roadside visibility and wind exposure",
+    "any occupied second-floor, motel-like or mezzanine program uses supported architectural stairs, landings and guards rather than equipment ladders",
+    "rooftop service equipment retains a credible maintenance route from an interior service point or dedicated external access"
+  ],
+  "circulation": [
+    "tractor-trailers can enter, fuel, reach parking or service bays and exit without impossible turning paths or routine reversing through customer pedestrian zones",
+    "passenger vehicles have a distinct practical route to public parking and the principal entrance",
+    "pedestrian circulation connects truck parking and passenger parking to the building while minimizing crossings of active fueling and heavy-vehicle lanes",
+    "staff circulation connects cashier, retail, food service, storage, sanitation, deliveries and service exits as a coherent back-of-house network",
+    "delivery and refuse routes reach their service areas without passing through customer dining, lounge or retail spaces",
+    "maintenance access reaches fuel, electrical, plumbing, wastewater, mechanical, canopy and roof-service infrastructure",
+    "equipment-only ladders do not substitute for architectural stairs in occupied spaces"
+  ],
+  "damage_constraints": [
+    "the abandoned derivative must remain immediately recognizable as a truck stop through surviving heavy-vehicle circulation, fuel-lane, long-haul parking, principal-building and roadside-sign relationships",
+    "favor localized canopy failure, pump damage, vehicle impact, storefront loss, kitchen or electrical fire, water intrusion, vandalism, scavenging and vegetation encroachment over uniform random deletion",
+    "canopy, sign or roof collapse must follow identifiable structural failure and resolve attached lights, ducts, fascia and supports so floating fragments are not left behind",
+    "fuel-system damage may expose pumps, piping or storage infrastructure but must preserve enough of the receiving-storage-dispensing relationship to communicate the former function",
+    "building damage should preserve at least one viable exploration route from a public entrance toward the service counter and driver-support spaces",
+    "truck lanes, parking aprons, drainage and highway connection should remain spatially coherent after damage rather than becoming disconnected slabs or impassable decorative clutter",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": true,
+    "required_hard_fail_checks": [
+      "structure_geometry_lint_checks_1_3_zero_findings",
+      "roadside_mobility_security_family_validator",
+      "corpus_and_provenance_validation",
+      "lostcities_conversion_validation"
+    ],
+    "heuristic_findings_to_retain": [
+      "damage_coherence",
+      "ground_context",
+      "program_conformance"
+    ],
+    "identity_requirements": [
+      "truck_stop_identity_is_legible_from_road_approach_and_site_layout",
+      "heavy_vehicle_fueling_parking_and_exit_relationships_are_physically_plausible",
+      "driver_amenities_retail_food_service_and_back_of_house_programs_are_distinct_and_connected",
+      "truck_passenger_pedestrian_delivery_and_refuse_circulation_are_separated_where_required",
+      "fuel_utilities_drainage_signage_and_terrain_connections_are_coherent"
+    ]
+  },
+  "production_admission": {
+    "status": "approved",
+    "registry_entry": "infinite_domain:abandoned_truck_stop",
+    "approved_at": "2026-08-27T07:27:19.682226+00:00",
+    "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+    "note": "Approval state is reconciled to the pre-existing authoritative entry in dev/structure_library/production-approvals.json. This program file does not create a new approval or claim additional validator evidence beyond what the registry records."
+  }
+}
