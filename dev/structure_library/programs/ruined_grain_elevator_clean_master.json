@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_grain_elevator",
+  "family": "industrial_utility_technology",
+  "purpose": "Heavy Rebuild v2 clean-master architectural and process program for the authoritative ruined grain elevator asset, preserving a legible bulk-grain receiving, vertical handling, storage and dispatch complex with structurally supported bins, headhouse equipment, service circulation, dust-control features, terrain seating and coherent damage behavior.",
+  "ground_program": [
+    "truck or wagon receiving approach provides a believable road connection, queueing and turning path into a protected unloading pit without forcing vehicles through occupied building space",
+    "receiving pit, hopper and conveyor or bucket-elevator intake form a continuous material path from delivered grain into the vertical handling system rather than acting as disconnected decorative machinery",
+    "silo or bin foundations visibly carry the mass of the storage cells into the ground and maintain plausible separation from vehicle lanes, doors and occupied service spaces",
+    "dispatch loading area connects stored grain back to truck, rail or other bulk transport through a credible spout, conveyor or hopper arrangement with sufficient vehicle clearance",
+    "operator office, scale or control position has sight or instrument access to receiving and dispatch operations and includes a plausible staff entrance and basic service space",
+    "electrical, motor, gearbox and transfer equipment is grouped in reachable service zones rather than hidden inside inaccessible solid masses",
+    "dust collection, venting, fire separation and explosion-relief logic is represented where enclosed grain handling would otherwise create an implausibly hazardous sealed volume",
+    "service yard, drainage, retaining features, hardstand and slab transitions seat the elevator into surrounding terrain without floating foundations, buried doors or disconnected transport elevations"
+  ],
+  "upper_program": [
+    "headhouse or gallery contains the upper conveyor, distributor and bucket-elevator discharge relationships needed to route grain into individual storage bins",
+    "bin tops, catwalks and service galleries use supported beams, guard relationships and maintenance clearances rather than unsupported decorative bridges",
+    "vertical service circulation reaches the headhouse, gallery and principal equipment levels by enclosed stair or a combination of stair and equipment-only ladder appropriate to occupancy",
+    "roof vents, dust-control equipment, spouting and transfer machinery remain structurally supported and accessible for maintenance",
+    "elevated loading spouts or conveyor bridges maintain believable support frames and clearance over road or rail paths"
+  ],
+  "circulation": [
+    "bulk-delivery vehicles can approach, unload and leave without an unavoidable conflict with dispatch traffic or staff entrances",
+    "dispatch vehicles can align beneath loading equipment and exit without clipping structural supports or requiring impossible turning radii",
+    "staff circulation connects office or control space, receiving equipment, vertical circulation, headhouse and dispatch systems without requiring routine travel through active grain pits",
+    "maintenance circulation reaches motors, bearings, conveyors, elevator legs, bin-top equipment, dust-control systems and electrical equipment",
+    "guarded platforms and catwalks provide usable access around elevated machinery while ladders remain restricted to equipment-service roles",
+    "emergency egress from occupied upper levels remains legible and does not depend on a single exposed ladder adjacent to hazardous machinery"
+  ],
+  "damage_constraints": [
+    "the ruined derivative must remain immediately recognizable as a grain elevator through surviving silo or bin massing, receiving geometry, headhouse or conveyor relationships and bulk-loading infrastructure",
+    "favor localized bin-wall failure, conveyor collapse, roof or headhouse damage, vehicle impact, corrosion, fire, grain spill and vegetation intrusion over uniform random deletion",
+    "collapsed elevated conveyors, galleries or loading spouts must fail from identifiable supports and resolve attached machinery, railings and roof sections so floating fragments are not left behind",
+    "silo damage may breach one or more cells and expose internal grain or structural surfaces but should preserve enough intact storage geometry to communicate the former bulk-handling function",
+    "receiving and dispatch damage should retain at least one legible material-flow relationship from intake through vertical handling or storage to loading",
+    "occupied service spaces must retain at least one viable exploration and egress path after damage unless a deliberately sealed hazard variant is explicitly authored",
+    "terrain, hardstand, drainage and transport interfaces should remain coherent after damage rather than becoming disconnected pads or arbitrary pits",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": true,
+    "required_hard_fail_checks": [
+      "structure_geometry_lint_checks_1_3_zero_findings",
+      "industrial_utility_technology_family_validator",
+      "corpus_and_provenance_validation",
+      "lostcities_conversion_validation"
+    ],
+    "heuristic_findings_to_retain": [
+      "damage_coherence",
+      "ground_context",
+      "program_conformance"
+    ],
+    "identity_requirements": [
+      "bulk_grain_receiving_storage_and_dispatch_relationship_is_legible",
+      "material_path_connects_receiving_to_vertical_handling_and_storage",
+      "silos_bins_headhouse_and_elevated_galleries_have_real_structural_support",
+      "operator_and_maintenance_access_reaches_principal_process_equipment",
+      "dust_control_venting_and_hazard_separation_are_plausible",
+      "terrain_hardstand_and_transport_connections_are_coherent"
+    ]
+  },
+  "production_admission": {
+    "status": "approved",
+    "registry_entry": "infinite_domain:ruined_grain_elevator",
+    "approved_at": "2026-08-27T07:27:19.682226+00:00",
+    "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+    "note": "Approval state is reconciled to the pre-existing authoritative entry in dev/structure_library/production-approvals.json. This program file does not create a new approval or claim additional validator evidence beyond what the registry records."
+  }
+}
