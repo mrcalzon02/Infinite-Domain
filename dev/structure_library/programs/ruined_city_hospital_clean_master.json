@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_city_hospital",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild clean-master architectural program for a ruined urban hospital that remains legibly medical, navigable, and structurally coherent under catastrophic decay.",
+  "program": {
+    "public_arrival": ["ambulance_emergency_entry", "public_main_entry", "reception_and_triage", "waiting_area"],
+    "clinical_core": ["emergency_treatment_bays", "exam_rooms", "nurses_stations", "patient_wards", "isolation_room", "operating_suite", "recovery_area"],
+    "diagnostic_support": ["imaging_room", "laboratory", "pharmacy", "sterile_supply"],
+    "staff_support": ["staff_station", "on_call_room", "locker_room", "administration"],
+    "service_backbone": ["loading_service_entry", "laundry", "waste_holding", "kitchen_or_nutrition", "mechanical_room", "electrical_room"],
+    "circulation": ["public_corridors", "clinical_corridors", "service_corridors", "supported_stairs", "elevator_core"]
+  },
+  "architectural_rules": [
+    "Emergency arrival must connect directly to triage and treatment without routing through public inpatient circulation.",
+    "Operating, recovery, sterile supply, and clinical support spaces must form a plausible restricted-care cluster.",
+    "Patient wards must retain identifiable room repetition, nurse oversight, sanitation access, and corridor logic.",
+    "Service circulation must provide a plausible route from loading and utilities to clinical support without becoming the primary public path.",
+    "At least one supported vertical-egress route must remain traceable through every occupied floor represented by the rebuild.",
+    "Exterior massing must read as a civic medical complex rather than a generic office or apartment shell."
+  ],
+  "terrain_seating": {
+    "require_supported_foundation": true,
+    "forbid_floating_wings": true,
+    "allow_partial_basement_exposure": true,
+    "require_service_grade_access": true
+  },
+  "damage_doctrine": {
+    "intent": "Catastrophic abandonment and structural failure while preserving medical identity and traversable evidence paths.",
+    "allowed": ["localized_floor_collapse", "facade_breach", "roof_failure", "water_damage", "debris_choked_corridor", "shattered_glazing", "abandoned_equipment_zones"],
+    "forbidden": ["unsupported_large_overhangs", "random_damage_that_erases_all_department_identity", "total_vertical_circulation_severance", "uniform_noise_damage"]
+  },
+  "review_gate": {
+    "must_read_as": "ruined_city_hospital",
+    "required_routes": ["public_entry_to_reception", "ambulance_entry_to_emergency_treatment", "clinical_core_to_patient_ward", "occupied_floor_to_vertical_egress"],
+    "hard_failures": ["unreadable_medical_function", "impossible_primary_circulation", "unsupported_major_mass", "missing_service_backbone", "damage_erases_all_clinical_zoning"]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": ["generated_structure_asset", "zero_hard_fail_geometry_lint", "family_validation", "corpus_validation", "provenance_validation", "conversion_validation_where_applicable", "retained_visual_or_runtime_evidence"]
+  }
+}

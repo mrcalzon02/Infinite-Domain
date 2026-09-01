@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_city_transit_station",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild clean-master architectural program for a ruined urban transit station whose passenger, platform, service, and vertical-circulation logic remains legible.",
+  "program": {
+    "street_interface": ["station_entry", "ticket_or_gate_hall", "information_point", "public_concourse"],
+    "passenger_zone": ["paid_concourse", "platform_access", "platform", "waiting_area"],
+    "operations": ["station_office", "control_or_signal_room", "staff_room"],
+    "service": ["maintenance_room", "electrical_room", "utility_corridor", "service_access"],
+    "circulation": ["stairs", "supported_escalator_volume", "elevator_or_accessible_route", "emergency_egress"]
+  },
+  "architectural_rules": [
+    "Street entry must progress coherently through ticket/gate space to passenger circulation and platform access.",
+    "Platform geometry must clearly imply a transport right-of-way even when track or guideway sections are ruined.",
+    "At least two distinguishable egress paths must exist where the footprint and station type plausibly require them.",
+    "Operations and utility spaces must be adjacent to but controlled from public passenger circulation.",
+    "Vertical circulation openings must be structurally framed and must not terminate into solid floors or unsupported voids.",
+    "The station must read as transit infrastructure rather than a generic underground hall."
+  ],
+  "terrain_seating": {
+    "require_supported_station_shell": true,
+    "require_street_entry_connection": true,
+    "require_right_of_way_continuity_cue": true,
+    "allow_cut_and_cover_exposure": true
+  },
+  "damage_doctrine": {
+    "intent": "Transit infrastructure damaged and abandoned while preserving route legibility and strong infrastructural identity.",
+    "allowed": ["localized_platform_collapse", "ceiling_breach", "flooded_low_area", "broken_gate_line", "debris_blockage_with_alternate_route", "damaged_track_bed"],
+    "forbidden": ["all_platform_access_severed", "vertical_route_to_nowhere", "unsupported_concourse_span", "right_of_way_identity_erased", "uniform_noise_damage"]
+  },
+  "review_gate": {
+    "must_read_as": "ruined_city_transit_station",
+    "required_routes": ["street_to_concourse", "concourse_to_platform", "platform_to_emergency_egress", "operations_to_service_access"],
+    "hard_failures": ["transit_identity_missing", "platform_unreachable", "egress_impossible", "unsupported_major_span", "circulation_terminates_in_solid_geometry"]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": ["generated_structure_asset", "zero_hard_fail_geometry_lint", "family_validation", "corpus_validation", "provenance_validation", "conversion_validation_where_applicable", "retained_visual_or_runtime_evidence"]
+  }
+}

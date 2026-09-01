@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_city_parking_garage",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild clean-master architectural program for a ruined multi-level parking garage with coherent vehicle circulation, pedestrian egress, structural bays, ramps, and service functions.",
+  "program": {
+    "vehicle_interface": ["entry_lane", "exit_lane", "control_or_gate_point", "street_connection"],
+    "parking_decks": ["structural_bays", "parking_rows", "drive_aisles", "turning_zones"],
+    "vertical_vehicle_circulation": ["supported_ramp_up", "supported_ramp_down", "ramp_landings"],
+    "pedestrian": ["protected_stair_core", "secondary_stair_or_egress", "elevator_core_or_accessible_route", "street_level_exit"],
+    "support": ["attendant_or_security_room", "electrical_room", "mechanical_or_ventilation_space", "maintenance_storage"]
+  },
+  "architectural_rules": [
+    "Vehicle entry must connect continuously through drive aisles and supported ramps to represented parking levels.",
+    "Ramps must maintain drivable width, headroom, landing support, and plausible turning geometry.",
+    "Pedestrian egress must be distinct from primary vehicle ramps and provide at least one traceable protected route to street level.",
+    "Columns, shear walls, beams, and deck edges must establish a credible repetitive parking-structure grid.",
+    "Localized deck failure must terminate at plausible structural boundaries rather than producing arbitrary floating slabs."
+  ],
+  "terrain_seating": {
+    "require_supported_foundation": true,
+    "require_vehicle_street_connection": true,
+    "allow_split_level_seating": true,
+    "forbid_floating_deck_edges": true
+  },
+  "damage_doctrine": {
+    "intent": "Partially collapsed parking structure whose repetitive structural grid and circulation remain readable and traversable.",
+    "allowed": ["localized_deck_collapse", "broken_parapet", "spalled_columns", "blocked_drive_aisle_with_bypass", "damaged_ramp_edge", "abandoned_vehicle_debris"],
+    "forbidden": ["unsupported_whole_deck", "ramp_to_nowhere", "all_pedestrian_egress_severed", "structural_grid_erased", "uniform_noise_damage"]
+  },
+  "review_gate": {
+    "must_read_as": "ruined_city_parking_garage",
+    "required_routes": ["street_to_entry_lane", "entry_to_upper_or_lower_deck", "parking_deck_to_pedestrian_egress", "egress_to_street"],
+    "hard_failures": ["vehicle_circulation_impossible", "unsupported_major_deck", "pedestrian_egress_missing", "parking_grid_unreadable", "ramp_geometry_invalid"]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": ["generated_structure_asset", "zero_hard_fail_geometry_lint", "family_validation", "corpus_validation", "provenance_validation", "conversion_validation_where_applicable", "retained_visual_or_runtime_evidence"]
+  }
+}

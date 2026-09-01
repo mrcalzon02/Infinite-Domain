@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_city_church",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild clean-master architectural program for a ruined urban church whose worship, congregation, pastoral, service, and vertical landmark functions remain spatially coherent.",
+  "program": {
+    "public_arrival": ["forecourt_or_steps", "narthex_or_vestibule", "main_entry"],
+    "worship": ["nave_or_main_hall", "aisles", "altar_or_chancel", "choir_or_music_area"],
+    "community": ["meeting_or_fellowship_room", "small_classroom_or_counseling_room", "public_washrooms"],
+    "pastoral_support": ["office_or_vestry", "storage", "preparation_room"],
+    "service": ["utility_room", "mechanical_space", "rear_service_access"],
+    "circulation": ["central_processional_route", "side_aisles", "supported_stair_to_gallery_or_tower_if_present", "secondary_egress"]
+  },
+  "architectural_rules": [
+    "The principal entry must establish a strong axial or intentionally composed route toward the primary worship focus.",
+    "Nave/main hall, altar/chancel, and congregation seating geometry must remain mutually legible despite ruin.",
+    "Community and pastoral rooms must connect plausibly without overwhelming or replacing the primary worship volume.",
+    "Tower, gallery, or upper landmark volumes, when present, must have supported access and credible load paths.",
+    "Damage may challenge traversal but must preserve enough spatial hierarchy for the building to remain recognizably ecclesiastical."
+  ],
+  "terrain_seating": {
+    "require_supported_foundation": true,
+    "require_entry_connection": true,
+    "allow_raised_sanctuary": true,
+    "forbid_floating_tower_or_apse": true
+  },
+  "damage_doctrine": {
+    "intent": "Urban worship building weathered and structurally wounded while preserving its dominant sacred/civic spatial hierarchy.",
+    "allowed": ["partial_roof_collapse", "broken_tower_section", "facade_breach", "fallen_pews_or_furnishings", "shattered_glazing", "localized_floor_failure"],
+    "forbidden": ["worship_axis_erased", "unsupported_tower_mass", "all_egress_severed", "generic_random_rooming", "uniform_noise_damage"]
+  },
+  "review_gate": {
+    "must_read_as": "ruined_city_church",
+    "required_routes": ["entry_to_main_worship_space", "worship_space_to_primary_focus", "main_space_to_secondary_egress", "community_space_to_public_route"],
+    "hard_failures": ["ecclesiastical_identity_missing", "primary_worship_space_unreadable", "unsupported_landmark_mass", "all_primary_routes_severed", "generic_hall_read"]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": ["generated_structure_asset", "zero_hard_fail_geometry_lint", "family_validation", "corpus_validation", "provenance_validation", "conversion_validation_where_applicable", "retained_visual_or_runtime_evidence"]
+  }
+}

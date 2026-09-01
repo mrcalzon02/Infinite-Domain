@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_city_supermarket",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild clean-master architectural program for a ruined urban supermarket with legible customer, sales-floor, checkout, receiving, storage, cold-chain, and staff functions.",
+  "program": {
+    "customer_arrival": ["parking_or_street_forecourt", "main_entry", "cart_or_basket_zone", "checkout_front_end"],
+    "sales_floor": ["grocery_aisles", "produce_area", "refrigerated_or_frozen_run", "bakery_or_prepared_food_counter", "general_merchandise_edge"],
+    "back_of_house": ["receiving_dock", "stockroom", "cold_storage", "waste_compactor_or_refuse", "staff_room", "manager_office"],
+    "utilities": ["mechanical_room", "electrical_room", "refrigeration_service_area"],
+    "circulation": ["customer_aisles", "checkout_exit", "stocking_routes", "receiving_to_storage", "emergency_egress"]
+  },
+  "architectural_rules": [
+    "Customer entry and exit must resolve through a recognizable front-end checkout zone rather than directly into receiving or storage.",
+    "Sales aisles must preserve regular retail circulation and sightline logic while allowing localized ruin and blockage.",
+    "Receiving must connect directly to stockroom and cold-storage functions through a plausible stocking route.",
+    "Cold-chain areas must be adjacent to service/refrigeration infrastructure and must not appear as arbitrary isolated rooms.",
+    "The large-span retail shell must retain credible structural support even where localized roof collapse is represented."
+  ],
+  "terrain_seating": {
+    "require_supported_slab": true,
+    "require_customer_entry_grade_access": true,
+    "require_receiving_dock_grade_logic": true,
+    "forbid_floating_retail_slab": true
+  },
+  "damage_doctrine": {
+    "intent": "Looted and weather-damaged food retail shell with partial roof and fixture failure while preserving retail and logistics identity.",
+    "allowed": ["localized_roof_collapse", "fallen_shelving", "broken_refrigeration", "shattered_storefront", "debris_choked_aisle_with_bypass", "damaged_loading_dock"],
+    "forbidden": ["all_customer_routes_severed", "receiving_logistics_erased", "unsupported_large_roof_mass", "random_shelf_noise", "uniform_damage"]
+  },
+  "review_gate": {
+    "must_read_as": "ruined_city_supermarket",
+    "required_routes": ["entry_to_sales_floor", "sales_floor_to_checkout", "receiving_to_stockroom", "stockroom_to_sales_floor"],
+    "hard_failures": ["retail_identity_missing", "checkout_front_end_missing", "receiving_route_impossible", "unsupported_major_span", "sales_floor_circulation_incoherent"]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": ["generated_structure_asset", "zero_hard_fail_geometry_lint", "family_validation", "corpus_validation", "provenance_validation", "conversion_validation_where_applicable", "retained_visual_or_runtime_evidence"]
+  }
+}

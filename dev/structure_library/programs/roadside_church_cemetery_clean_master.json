@@ -1,0 +1,62 @@
+{
+  "structure_id": "infinite_domain:roadside_church_cemetery_clean_master",
+  "archetype": "small roadside church and attached cemetery complex with a legible worship program, sacral and service zoning, burial-ground organization, roadside arrival sequence, caretaker functions and a coherent long-abandonment ruin story",
+  "ground_program": [
+    "roadside approach provides a recognizable pull-off, footpath or modest parking edge leading to a principal public entrance without routing visitors through graves, service yards or caretaker work areas",
+    "church interior contains a legible vestibule or narthex, primary nave or worship hall, focal sanctuary or chancel and a clear congregational orientation rather than an undifferentiated open room",
+    "sanctuary area includes a raised, framed or otherwise spatially distinct ceremonial focus with believable access for clergy while preserving congregation sightlines",
+    "one sacristy, vestry or clergy preparation room adjoins the sanctuary or rear worship zone and remains distinguishable from public circulation through placement, storage and furnishings",
+    "a small office, meeting room or multipurpose fellowship space supports administration, counseling or community use without displacing the primary worship function",
+    "sanitation and utility spaces are accessible from public or staff circulation without opening directly into the sanctuary focal area",
+    "caretaker storage, grounds equipment or maintenance functions occupy a shed, rear room or service edge with direct exterior access so cemetery upkeep does not require moving equipment through worship space",
+    "cemetery forms a coherent field of grave rows, family plots or clustered burials connected by walkable paths, with headstones and plot orientation following a deliberate site order rather than random scatter",
+    "burial ground includes at least one recognizable focal or service element such as a memorial cross, small mausoleum, family monument, cremation wall, burial shelter or grave-preparation access point appropriate to the site's scale",
+    "church, cemetery, path network, roadside arrival, drainage and any boundary wall, fence or tree line share a single terrain-seated site plan without an oversized flat platform"
+  ],
+  "upper_program": [
+    "if a bell tower, steeple, choir loft or balcony is present, it is supported by continuous structure and connected by a believable stair, ladder-equivalent service route or enclosed access appropriate to its function",
+    "choir lofts or balconies retain player-scale headroom, guard edges where intact and a direct relationship to the nave rather than existing as decorative floating slabs",
+    "bell or tower chambers align vertically with the tower mass and contain plausible framing, access and openings instead of unsupported exterior ornament",
+    "roof volumes distinguish nave, sanctuary, porch or narthex, tower and attached support rooms while remaining structurally coherent at intersections",
+    "upper windows, clerestory openings, vents and tower louvers correspond to actual interior volumes and lighting or ventilation needs",
+    "no surviving roof, tower segment, balcony, loft or steeple fragment may remain gravity-defying after damage derivation"
+  ],
+  "circulation": [
+    "public circulation connects roadside arrival to vestibule, nave, sanctuary-adjacent meeting or fellowship space and sanitation without requiring passage through clergy-only rooms",
+    "clergy or staff circulation connects sacristy or preparation space to the sanctuary and service exit without forcing routine preparation through the center of the congregation",
+    "cemetery paths connect the church entrance zone to principal grave rows and memorial elements through walkable routes that do not require stepping across grave markers",
+    "grounds-maintenance circulation reaches storage, cemetery edges and burial-service access from an exterior service route without crossing the sanctuary as its only path",
+    "where a tower, loft or balcony is intended to be accessible, it retains a supported player-scale route back to grade",
+    "damage variants must preserve at least one complete roadside-to-worship route and one viable church-to-cemetery path so the site's religious and funerary relationship remains explorable"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must remain immediately recognizable as a church-and-cemetery site through surviving nave or sanctuary geometry, tower or roof silhouette where applicable, ordered graves, memorial elements and their shared path network",
+    "favor long-term roof leakage, timber or masonry weathering, localized steeple or tower failure, collapsed porch sections, vandalized glazing, overgrowth, toppled markers, subsidence and limited fire damage over repeated rectangular deletion masks",
+    "major structural failure should affect one coherent portion of the church at a time and preserve gravity-consistent debris, supported surviving walls and understandable load paths",
+    "if tower, roof or balcony elements fail, associated framing, walls, glazing, fixtures and debris must fail consistently so isolated fragments do not float",
+    "cemetery damage may include tilted or fallen markers, vegetation intrusion, eroded paths, breached fencing and localized ground settlement, but grave-row organization must remain inferable",
+    "do not use broad crater or trench damage that indiscriminately erases graves unless the site's explicit narrative calls for that event and resulting burial disturbance is represented coherently",
+    "preserve enough sanctuary, congregation space, sacristy or support zoning for the former worship workflow to remain legible during exploration",
+    "derive damaged, occupied, contaminated or repurposed variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "roadside_church_elevation",
+      "cemetery_and_path_elevation",
+      "sanctuary_and_nave_cutaway",
+      "major_decay_zone",
+      "site_plan"
+    ],
+    "required_manual_checks": [
+      "the structure reads immediately as a roadside church with an associated cemetery rather than a generic hall beside decorative gravestones",
+      "vestibule or public threshold, nave or worship hall, sanctuary or chancel, clergy preparation space and supporting rooms form a believable religious program",
+      "grave rows, paths, memorial elements and site boundaries form a deliberate burial-ground layout with walkable access that does not treat graves as random scenery",
+      "public, clergy and grounds-maintenance circulation are distinguishable and remain functional without implausible shortcuts through sanctuary focal space or across graves",
+      "tower, loft, balcony and roof elements are structurally supported and retain usable access where they are intended to be traversable",
+      "the decay story reads as prolonged abandonment, weather exposure, localized structural failure and cemetery neglect rather than arbitrary missing cubes",
+      "at least one roadside-to-worship route and one church-to-cemetery route survive the damaged state",
+      "church foundations, cemetery paths, grave rows, drainage, roadside pull-off and boundary features meet surrounding grade without floating buildings, buried doors or a single artificial mesa"
+    ]
+  }
+}

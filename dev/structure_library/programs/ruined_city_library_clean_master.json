@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_city_library",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild clean-master architectural program for a ruined public library with legible civic entry, collections, reading, staff, archive, and service functions.",
+  "program": {
+    "public_arrival": ["main_entry", "vestibule", "information_or_checkout", "public_lobby"],
+    "collections": ["general_stacks", "reference_area", "periodicals_or_media", "special_collection_or_local_history"],
+    "public_use": ["reading_room", "study_area", "community_room", "public_computing_or_worktables", "washrooms"],
+    "staff_archive": ["staff_workroom", "office", "closed_archive", "processing_room"],
+    "support": ["loading_or_book_delivery", "storage", "mechanical_room", "electrical_room"],
+    "circulation": ["public_stack_routes", "staff_route", "supported_stairs", "accessible_vertical_route_if_multilevel"]
+  },
+  "architectural_rules": [
+    "The entry sequence must resolve naturally to information/checkout before branching into major public collections.",
+    "Stacks must form readable aisles and collection zones rather than arbitrary dense block fields.",
+    "Reading and study spaces must receive plausible daylight or civic interior emphasis and remain distinct from service/storage zones.",
+    "Closed archive and processing spaces must connect to staff circulation and delivery without becoming unrestricted public shortcuts.",
+    "If multilevel, public vertical circulation must connect actual collection or reading destinations and retain supported landings."
+  ],
+  "terrain_seating": {
+    "require_supported_foundation": true,
+    "require_public_entry_grade_connection": true,
+    "allow_partial_basement_archive": true,
+    "forbid_floating_reading_wings": true
+  },
+  "damage_doctrine": {
+    "intent": "Public library abandoned and partially collapsed while retaining collection geometry, civic reading spaces, and discoverable archival evidence.",
+    "allowed": ["localized_stack_collapse", "roof_leak_damage", "facade_breach", "fallen_shelving", "debris_blockage_with_bypass", "water_damaged_archive_edge"],
+    "forbidden": ["all_collection_geometry_erased", "archive_fully_exposed_to_public_route", "unsupported_major_span", "randomized_shelf_noise", "uniform_damage"]
+  },
+  "review_gate": {
+    "must_read_as": "ruined_city_library",
+    "required_routes": ["entry_to_information", "information_to_general_stacks", "stacks_to_reading_area", "delivery_to_staff_processing"],
+    "hard_failures": ["library_identity_missing", "collection_aisles_impossible", "public_circulation_incoherent", "unsupported_major_mass", "staff_archive_relationship_missing"]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": ["generated_structure_asset", "zero_hard_fail_geometry_lint", "family_validation", "corpus_validation", "provenance_validation", "conversion_validation_where_applicable", "retained_visual_or_runtime_evidence"]
+  }
+}

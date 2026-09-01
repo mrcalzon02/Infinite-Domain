@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "asset_id": "district_heating_station",
+  "family": "industrial_utility_technology",
+  "purpose": "Heavy Rebuild v2 clean-master architectural and process program for the authoritative district heating station asset, preserving a legible fuel-or-primary-heat to boiler/heat-exchanger to pumped hot-water distribution workflow, operator control, maintenance access, terrain seating, and coherent damage behavior.",
+  "ground_program": [
+    "controlled utility-site approach with staff entry, service-vehicle access and a road connection appropriate to a district energy plant rather than a generic paved apron",
+    "fuel receiving or primary-heat interface visibly precedes the generation stage; where combustion is used, unloading, storage and feed systems connect credibly to boiler equipment",
+    "boiler or primary heat-production hall contains supported major equipment, combustion or heat-source service clearances, feed systems and exhaust or heat-rejection routing appropriate to the selected technology",
+    "heat-exchanger and circulation-pump zones follow heat production and connect directly to paired district supply and return mains so the input-process-output sequence is inferable from layout",
+    "water treatment, makeup-water and expansion/pressure-control functions connect credibly to the closed-loop heating network instead of appearing as unrelated tanks",
+    "control room and operator workspace overlook or directly access the principal generation and distribution equipment and contain monitoring, alarm, records and operating functions",
+    "electrical switchgear, motor-control and backup-power spaces are segregated from wet process areas while retaining credible cable routes to pumps, fans and plant equipment",
+    "mechanical workshop, parts storage and maintenance staging provide believable access to boilers, exchangers, pumps, valves and heavy components",
+    "service yard supports deliveries, ash or waste handling where applicable, maintenance laydown and emergency access without crossing principal staff circulation",
+    "foundations, trenches, buried-main transitions, drainage and grade changes seat the plant into terrain without floating pipework, unsupported machinery or a monolithic artificial platform"
+  ],
+  "upper_program": [
+    "supported galleries and catwalks provide maintenance access to boiler tops, headers, valves, fans and elevated pipework with continuous player headroom and guarded edges",
+    "any occupied upper operator, electrical or administration spaces connect through an enclosed supported stair core with usable landings",
+    "chimneys, stacks or exhaust structures are structurally seated, connected to the relevant heat-production equipment and provided with believable maintenance access",
+    "pipe racks and utility bridges follow supported routes between generation equipment and district-main interfaces and do not terminate in open air",
+    "roof zones distinguish boiler hall, pump/exchanger volumes, control spaces and service plant while retaining drainage and maintenance access"
+  ],
+  "circulation": [
+    "operator circulation forms a continuous route from staff entry and control functions through heat production, heat exchange, pumping and district-main monitoring points",
+    "maintenance circulation reaches boilers, exchangers, pumps, valves, electrical rooms, water-treatment equipment and stack bases without requiring passage through controlled operator offices",
+    "fuel-delivery or primary-energy service routes remain distinct from ordinary staff movement wherever the site layout permits",
+    "service vehicles can reach delivery, maintenance and waste-handling areas through believable yard geometry and turning clearances",
+    "every occupied elevated level and service gallery retains a supported route to grade through architectural stairs, with ladders reserved for equipment-only access"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must remain immediately recognizable as a district heating plant through surviving generation equipment, heat exchangers or pumps, paired supply-return mains, control functions and distribution relationships",
+    "favor localized boiler or pipe rupture, steam or water damage, corrosion, pump failure, roof collapse, electrical fire, stack damage and vegetation intrusion over uniform random deletion",
+    "major structural breaches must use irregular fracture geometry with gravity-consistent rubble, failed pipework or displaced equipment below and around the affected zone",
+    "damage to a wall, platform, pipe rack or opening must resolve attached glazing, doors, signs, ladders and fixtures so no floating remnants remain",
+    "preserve at least one legible exploration route spanning the heat source or receiving zone, generation equipment, exchanger/pump systems, control functions and district supply-return interface",
+    "damage may disable individual plant stages but must not erase the generation-to-distribution story or reduce the site to an arbitrary industrial shell",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": true,
+    "required_hard_fail_checks": [
+      "structure_geometry_lint_checks_1_3_zero_findings",
+      "industrial_utility_technology_family_validator",
+      "corpus_and_provenance_validation",
+      "lostcities_conversion_validation"
+    ],
+    "heuristic_findings_to_retain": [
+      "damage_coherence",
+      "ground_context",
+      "program_conformance"
+    ],
+    "identity_requirements": [
+      "heat_source_to_generation_to_exchange_and_pumped_distribution_sequence_is_legible",
+      "paired_district_supply_and_return_mains_are_present_and_connected",
+      "operator_control_and_maintenance_functions_are_present",
+      "major_boilers_exchangers_pumps_pipework_and_stacks_are_structurally_supported",
+      "terrain_foundation_and_buried_main_transitions_are_believable"
+    ]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": [
+      "generated_clean_master_and_required_derivatives",
+      "zero_hard_fail_geometry_lint",
+      "industrial_utility_technology_family_validation",
+      "corpus_validation",
+      "provenance_validation",
+      "lostcities_conversion_validation"
+    ],
+    "note": "Authored program is a prerequisite only. Do not add this asset to production-approvals.json until the authoritative v2 automated gate has actually been run and its passing evidence retained."
+  }
+}

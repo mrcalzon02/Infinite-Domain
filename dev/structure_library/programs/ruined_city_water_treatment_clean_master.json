@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_city_water_treatment",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild clean-master architectural program for a ruined municipal water-treatment plant with legible intake, treatment, pumping, laboratory, residuals-handling, and maintenance functions.",
+  "program": {
+    "site_access": ["controlled_vehicle_gate", "staff_entry", "service_yard", "perimeter_security"],
+    "process_flow": ["raw_water_intake_interface", "screening_stage", "settling_stage", "clarifier_basin", "filtration_stage", "disinfection_stage", "finished_water_storage", "distribution_pump_interface"],
+    "operations": ["control_room", "water_quality_lab", "operator_workspace", "monitoring_space"],
+    "residuals": ["sludge_collection", "dewatering_area", "residuals_service_route"],
+    "maintenance": ["mechanical_shop", "parts_storage", "pump_room", "service_vehicle_access"],
+    "circulation": ["operator_route_through_process_stages", "service_route_to_mechanical_spaces", "safe_basin_perimeter_walkways"]
+  },
+  "architectural_rules": [
+    "The plant must read as a sequential treatment process rather than an arbitrary collection of tanks and industrial props.",
+    "Major basins, filters, pumping functions, and finished-water spaces must have plausible adjacency and visible process-flow relationships.",
+    "Operator, laboratory, and control spaces must connect meaningfully to the treatment process.",
+    "Basin walls, machinery foundations, walkways, and service roads must be structurally seated and terrain-aware.",
+    "At least one coherent exploration path through the principal treatment sequence must remain legible."
+  ],
+  "terrain_seating": {
+    "require_basin_foundations": true,
+    "require_service_vehicle_grade": true,
+    "require_drainage_and_overflow_cues": true,
+    "require_pump_and_mechanical_foundations": true,
+    "forbid_floating_process_equipment": true
+  },
+  "damage_doctrine": {
+    "intent": "Abandoned municipal treatment works with localized flooding, corrosion, settlement, mechanical failure, and structural breach while preserving process logic.",
+    "allowed": ["partially_flooded_basin", "collapsed_walkway_segment", "broken_pipe_gallery", "localized_filter_failure", "pump_room_flooding", "perimeter_breach", "vegetation_intrusion"],
+    "forbidden": ["all_process_sequence_erased", "random_tank_scatter", "floating_basin_walls", "uniform_total_collapse", "all_operator_access_removed"]
+  },
+  "review_gate": {
+    "must_read_as": "ruined_city_water_treatment",
+    "required_routes": ["site_entry_to_control_area", "control_area_to_primary_treatment", "primary_treatment_to_filtration_or_disinfection", "service_route_to_pump_or_mechanical_area"],
+    "hard_failures": ["water_treatment_identity_missing", "process_flow_incoherent", "unsupported_major_basin_or_equipment", "operator_circulation_impossible", "service_access_impossible"]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": ["generated_structure_asset", "zero_hard_fail_geometry_lint", "family_validation", "corpus_validation", "provenance_validation", "conversion_validation_where_applicable", "retained_visual_or_runtime_evidence"]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "asset_id": "municipal_incinerator",
+  "family": "industrial_utility_technology",
+  "purpose": "Heavy Rebuild v2 clean-master architectural and process program for the authoritative municipal incinerator asset, preserving a legible municipal-waste receiving to controlled combustion to flue-gas treatment and residue handling workflow, with operator control, maintenance access, terrain seating, and coherent damage behavior.",
+  "ground_program": [
+    "controlled municipal-service approach with staff entry, waste-hauler access, weigh or inspection control and a road connection appropriate to a civic waste-processing site rather than a generic industrial apron",
+    "waste receiving hall or tipping floor visibly precedes combustion; vehicle unloading, bunker or staging space, and feed equipment connect credibly to the furnace line",
+    "waste bunker, crane or feed system provides a clear controlled transition from received refuse into the furnace or combustion chamber without dead-end decorative machinery",
+    "furnace and boiler hall contains supported primary combustion equipment, refractory or containment volumes, ash-drop or grate relationships, combustion-air systems, and maintenance clearances",
+    "energy-recovery equipment, where present, follows the furnace and connects credibly to steam, hot-water, turbine or heat-export equipment without obscuring the incinerator's primary waste-destruction function",
+    "flue-gas treatment train follows combustion and includes legible particulate, scrubber, reagent, filtration or equivalent pollution-control stages before the exhaust stack",
+    "bottom-ash and fly-ash handling routes remain separated from incoming waste and connect to enclosed collection, quench, transfer, storage or loadout areas appropriate to hazardous residues",
+    "control room and operator workspace overlook or directly monitor waste receiving, combustion, emissions treatment and residue systems and contain alarm, records and process-control functions",
+    "electrical switchgear, motor-control, reagent storage, water-treatment and backup-power spaces are segregated according to wet, chemical, dust and electrical hazards while retaining credible utility routes",
+    "maintenance workshop, parts storage, washdown and service staging provide believable access to cranes, conveyors, furnaces, fans, pumps, filters, ash systems and stack equipment",
+    "foundations, trenches, drainage, bunker depths, vehicle grades and stack base seat the facility into terrain without floating machinery, unsupported ducts or a monolithic artificial slab"
+  ],
+  "upper_program": [
+    "supported galleries and catwalks provide maintenance access to furnace fronts, boiler surfaces, crane rails, ducts, fans, filters, scrubbers and elevated ash or reagent equipment with continuous headroom and guarded edges",
+    "any occupied upper control, administration or electrical spaces connect through enclosed supported stairs with usable landings and clear egress",
+    "overhead waste cranes or feed machinery have structurally supported rails, bridges and service access consistent with the receiving bunker geometry",
+    "flue-gas ducts and process bridges follow supported routes from furnace to treatment stages to induced-draft equipment and stack rather than terminating in open air",
+    "the exhaust stack is structurally seated, connected to the final treatment stage and provided with believable inspection or maintenance access",
+    "roof zones distinguish receiving hall, furnace/boiler hall, emissions-treatment volumes, service plant and administration while retaining drainage and maintenance access"
+  ],
+  "circulation": [
+    "waste-hauler circulation forms a one-way or otherwise believable route from site control to unloading and back to exit without crossing principal staff access",
+    "operator circulation connects staff entry and control functions to receiving oversight, furnace operations, emissions treatment and ash-handling monitoring points",
+    "maintenance circulation reaches cranes, feed systems, furnaces, boilers, fans, filters, scrubbers, reagent systems, ash equipment, electrical rooms and stack base without requiring passage through waste-hauler lanes",
+    "hazardous residue and chemical-handling routes remain distinct from ordinary public or staff circulation wherever the site layout permits",
+    "every occupied elevated level and process gallery retains a supported route to grade through architectural stairs, with ladders reserved for equipment-only access"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must remain immediately recognizable as a municipal incinerator through surviving waste-receiving, furnace, flue-gas treatment, ash-handling, control and stack relationships",
+    "favor localized bunker fire, furnace breach, boiler or duct failure, ash spill, filter collapse, scrubber leak, electrical fire, corrosion, stack damage and vegetation intrusion over uniform random deletion",
+    "major structural breaches must use irregular fracture geometry with gravity-consistent rubble, displaced ducts, failed catwalks or equipment debris below and around the affected zone",
+    "damage to a wall, platform, duct, opening or roof must resolve attached glazing, doors, signs, pipes, railings, ladders and fixtures so no floating remnants remain",
+    "preserve at least one legible exploration route spanning waste receiving, feed or bunker space, combustion, emissions treatment, control functions and residue handling",
+    "damage may disable individual process stages but must not erase the received-waste-to-combustion-to-cleaned-exhaust-and-residue story or reduce the site to a generic factory shell",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": true,
+    "required_hard_fail_checks": [
+      "structure_geometry_lint_checks_1_3_zero_findings",
+      "industrial_utility_technology_family_validator",
+      "corpus_and_provenance_validation",
+      "lostcities_conversion_validation"
+    ],
+    "heuristic_findings_to_retain": [
+      "damage_coherence",
+      "ground_context",
+      "program_conformance"
+    ],
+    "identity_requirements": [
+      "waste_receiving_to_feed_to_combustion_sequence_is_legible",
+      "flue_gas_treatment_connects_combustion_to_stack",
+      "bottom_and_fly_ash_handling_are_present_and_separated_from_incoming_waste",
+      "operator_control_and_maintenance_functions_are_present",
+      "major_furnace_boiler_duct_filter_scrubber_crane_and_stack_elements_are_structurally_supported",
+      "terrain_foundation_bunker_and_vehicle_transitions_are_believable"
+    ]
+  },
+  "production_admission": {
+    "status": "approved",
+    "registry_entry": "infinite_domain:municipal_incinerator",
+    "approved_at": "2026-08-27T07:27:19.682226+00:00",
+    "basis": "structure_geometry_lint.py checks 1-3 zero hard-fail findings",
+    "note": "Approval state reconciled to the pre-existing authoritative entry in structure_library/production-approvals.json. This program file does not create a new approval; it records the already-observed production admission without inventing additional validator evidence."
+  }
+}
