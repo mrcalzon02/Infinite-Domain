@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "asset_id": "city_water_treatment_plant",
+  "family": "industrial_utility_technology",
+  "purpose": "Heavy Rebuild v2 clean-master architectural and process program for the authoritative municipal water-treatment plant asset, preserving a legible raw-water-to-distribution workflow, operator functions, maintenance access, residuals handling, terrain seating, and coherent damage behavior.",
+  "ground_program": [
+    "controlled site approach with perimeter security, staff entry, service-vehicle gate and a road connection appropriate to a municipal utility rather than a generic paved apron",
+    "raw-water intake interface and screening/headworks zone visibly precede downstream treatment so the process direction is inferable from player-scale circulation and equipment placement",
+    "coagulation or mixing and settling functions lead into clarifier or equivalent primary-treatment basins with supported walls, access walkways and drainage cues",
+    "filtration and disinfection zones follow primary treatment and connect credibly to finished-water storage and distribution pumping rather than appearing as unrelated tanks or machinery props",
+    "control room and operator workspace overlook or connect directly to principal process stages and contain monitoring, records and operating fixtures appropriate to a continuously staffed utility",
+    "water-quality laboratory and sample-handling area connect to operator circulation without interrupting chemical, maintenance or service routes",
+    "chemical storage and dosing spaces are segregated from ordinary public or staff circulation and include containment, service access and process-side connections",
+    "residuals and sludge handling include collection, dewatering or transfer functions and a service route that does not cross the principal clean-water workflow",
+    "mechanical shop, pump room, parts storage and maintenance staging support the process equipment through credible doors, lifting/service clearances and vehicle or cart access",
+    "foundations, basin edges, drainage channels, pipe trenches and grade transitions seat the plant into terrain without floating tanks, unsupported process equipment or a monolithic artificial platform"
+  ],
+  "upper_program": [
+    "elevated galleries, catwalks and basin walkways exist only where supported by columns, walls, trusses or process structures and retain guard edges and continuous player headroom",
+    "any second-floor operator, laboratory, electrical or administration rooms connect through an enclosed supported stair core with usable landings at every occupied level",
+    "roof and upper service zones distinguish process halls, pump buildings, chemical spaces and control volumes while preserving drainage and maintenance access",
+    "pipe racks, cable routes and utility bridges follow credible supported paths between process stages and do not terminate in open air or pass arbitrarily through occupied rooms",
+    "large tanks, clarifiers and filter structures may rise above grade, but their shells, access stairs and service platforms must remain structurally seated and functionally connected to the plant workflow"
+  ],
+  "circulation": [
+    "operator circulation forms a continuous route from staff entry and control functions through the principal treatment stages, sampling points and finished-water systems",
+    "maintenance circulation reaches pumps, valves, filters, basins, electrical rooms and mechanical spaces without requiring passage through laboratories or controlled chemical storage",
+    "chemical-delivery and residuals-removal routes remain distinct from ordinary staff movement wherever the site layout permits",
+    "service vehicles can reach maintenance, chemical and residuals areas through believable yard geometry and turning/clearance space",
+    "every occupied elevated level and service gallery retains a supported route to grade through architectural stairs, ladders only where genuinely appropriate to equipment access"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must remain immediately recognizable as a municipal water-treatment plant through surviving basins, filters, pumping, control/lab functions and process-flow relationships",
+    "favor localized flooding, corrosion, pipe failure, basin-wall breach, collapsed walkway, roof failure, electrical damage, chemical-area damage and vegetation intrusion over uniform random deletion",
+    "major structural breaches must use irregular fracture geometry with gravity-consistent rubble or failed equipment below and around the affected zone",
+    "damage to a wall, platform, pipe rack or opening must resolve all attached glazing, doors, signs, ladders and supported fixtures so no floating remnants remain",
+    "preserve at least one legible exploration route spanning intake or primary treatment, downstream filtration/disinfection, control functions and finished-water or pumping systems",
+    "damage may disable individual treatment stages but must not erase the entire input-process-output story or turn the site into an arbitrary collection of tanks",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": true,
+    "required_hard_fail_checks": [
+      "structure_geometry_lint_checks_1_3_zero_findings",
+      "industrial_utility_technology_family_validator",
+      "corpus_and_provenance_validation",
+      "lostcities_conversion_validation"
+    ],
+    "heuristic_findings_to_retain": [
+      "damage_coherence",
+      "ground_context",
+      "program_conformance"
+    ],
+    "identity_requirements": [
+      "raw_water_to_finished_water_process_sequence_is_legible",
+      "operator_control_and_water_quality_functions_are_present",
+      "maintenance_chemical_and_residuals_routes_are_credible",
+      "major_basins_equipment_walkways_and_pipe_routes_are_structurally_supported",
+      "terrain_and_foundation_transition_is_believable"
+    ]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": [
+      "generated_clean_master_and_required_derivatives",
+      "zero_hard_fail_geometry_lint",
+      "industrial_utility_technology_family_validation",
+      "corpus_validation",
+      "provenance_validation",
+      "lostcities_conversion_validation"
+    ],
+    "note": "Authored program is a prerequisite only. Do not add this asset to production-approvals.json until the authoritative v2 automated gate has actually been run and its passing evidence retained."
+  }
+}
