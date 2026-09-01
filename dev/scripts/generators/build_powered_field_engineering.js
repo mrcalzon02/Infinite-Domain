@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const root = path.resolve(__dirname, '..', '..')
+const root = path.resolve(__dirname, '..', '..', '..')
 const questRoot = path.join(root, 'config', 'ftbquests', 'quests')
 const chapterFile = path.join(questRoot, 'chapters', 'powered_field_engineering.snbt')
 const langFile = path.join(questRoot, 'lang', 'en_us.snbt')

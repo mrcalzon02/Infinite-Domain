@@ -4,7 +4,7 @@ const path = require('path')
 // The onboarding and Spawn Hub lessons now live in another_lost_soul.snbt.
 // Force-loading belongs to Era 4. This builder owns only the three optional
 // Pack Basics lessons that remain actionable during Era 0.
-const root = path.resolve(__dirname, '..', '..')
+const root = path.resolve(__dirname, '..', '..', '..')
 const chapterFile = path.join(root, 'config', 'ftbquests', 'quests', 'chapters', 'lets_get_started_shall_we.snbt')
 const introQuest = '3AFBE38263D3351E'
 

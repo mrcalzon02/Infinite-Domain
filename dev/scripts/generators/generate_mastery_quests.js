@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const root = path.resolve(__dirname, '..', '..')
+const root = path.resolve(__dirname, '..', '..', '..')
 const chapterDir = path.join(root, 'config', 'ftbquests', 'quests', 'chapters')
 const langFile = path.join(root, 'config', 'ftbquests', 'quests', 'lang', 'en_us.snbt')
 // Keep generated IDs positive when parsed as signed Java longs.

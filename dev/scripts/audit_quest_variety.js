@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const root = path.resolve(__dirname, '..')
+const root = path.resolve(__dirname, '..', '..')
 const chapterDir = path.join(root, 'config', 'ftbquests', 'quests', 'chapters')
 const lang = fs.readFileSync(path.join(root, 'config', 'ftbquests', 'quests', 'lang', 'en_us.snbt'), 'utf8')
 const titleMap = new Map([...lang.matchAll(/^\tquest\.([0-9A-F]{16})\.title:\s*"([^"]*)"/gm)].map(m => [m[1], m[2]]))

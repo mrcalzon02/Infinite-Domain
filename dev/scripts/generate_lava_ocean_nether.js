@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const { execFileSync } = require('child_process')
 
-const instanceRoot = path.resolve(__dirname, '..')
+const instanceRoot = path.resolve(__dirname, '..', '..')
 const minecraftRoot = path.resolve(instanceRoot, '..', '..')
 const vanillaJar = path.join(minecraftRoot, 'Install', 'versions', '1.21.1', '1.21.1.jar')
 const vanillaEntry = 'data/minecraft/worldgen/noise_settings/nether.json'
