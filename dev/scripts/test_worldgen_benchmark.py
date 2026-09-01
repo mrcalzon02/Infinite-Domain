@@ -45,6 +45,29 @@ def main() -> None:
         body = controller_source[start:controller_source.index(chr(10) + "function ", start + 1)]
         assert "var " not in body, probe + " reintroduced a try-block var"
     assert controller_source.count("var tile = config.tiles[tileIndex]") == 1
+    # KubeJS' Rhino never gives a `const` a fresh binding when its block is
+    # re-entered: in a loop body it silently keeps the first iteration's value, and
+    # in a try body it raises "redeclaration of var" on the second entry. Only
+    # function bodies rebind, so every const must sit directly in one.
+    body_indents: list[int] = []
+    for number, line in enumerate(controller_source.splitlines(), 1):
+        stripped = line.strip()
+        if not stripped:
+            continue
+        indent = len(line) - len(line.lstrip())
+        while body_indents and indent < body_indents[-1]:
+            body_indents.pop()
+        if stripped.startswith("const "):
+            assert body_indents and indent == body_indents[-1], (
+                f"controller line {number} declares a const inside a re-entered block, "
+                f"which this engine does not rebind: {stripped}"
+            )
+        if stripped == "(() => {":
+            body_indents.append(indent)
+        elif stripped.endswith("{") and (
+            stripped.startswith("function ") or "=> {" in stripped or "function (" in stripped
+        ):
+            body_indents.append(indent + 4)
     assert "var completionElapsedMs" in controller_source
     declarations = re.findall(r"\b(?:const|let|var)\s+([A-Za-z_$][A-Za-z0-9_$]*)", controller_source)
     duplicates = sorted(name for name in set(declarations) if declarations.count(name) > 1)
