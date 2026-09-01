@@ -162,11 +162,18 @@
 			dependencies: ["5A00000000000009"]
 			id: "5A0000000000000A"
 			shape: "gear"
-			tasks: [{
-				id: "6A0000000000000A"
-				item: { count: 1, id: "ae2:terminal" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "6A0000000000000A"
+					item: { count: 1, id: "ae2:terminal" }
+					type: "item"
+				}
+				{
+					id: "6A00000000000010"
+					item: { count: 1, id: "ae2:drive" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 18.0d
 		}
