@@ -1,0 +1,60 @@
+{
+  "structure_id": "infinite_domain:scrapyard_clean_master",
+  "archetype": "fenced industrial vehicle scrapyard with intake office, dismantling shop, parts warehouse and sorted salvage yards",
+  "ground_program": [
+    "north main-road entrance with gatehouse and inbound vehicle inspection lane",
+    "customer and hauler office with reception window, records desk and staff-only yard access",
+    "vehicle scale and intake lane positioned before the dismantling and storage yards",
+    "covered dismantling workshop with two vehicle work bays, fluid-drain station and tool storage",
+    "secure reusable-parts warehouse with shelving, tagged component racks and loading door",
+    "outdoor incoming-vehicle rows separated from stripped-shell and processed-scrap zones",
+    "sorted ferrous, non-ferrous, tire and reusable-component storage areas with physical separation",
+    "mobile-crane or material-handler work zone with a clear swing envelope and reinforced hardstanding",
+    "battery, fuel, oil and coolant quarantine area protected from ordinary scrap piles",
+    "staff locker, washroom and break space attached to the office/workshop complex",
+    "south secondary service gate providing an independent hauler exit and emergency access",
+    "perimeter fencing, lighting and service paths that keep public customers out of active dismantling zones",
+    "graded industrial hardstanding with drainage channels, containment sumps and a road apron feathered into surrounding terrain"
+  ],
+  "upper_program": [
+    "partial office mezzanine overlooking the intake scale and main yard circulation",
+    "parts-warehouse catwalk serving high storage racks without crossing vehicle work bays",
+    "no general occupied upper floor over the open scrap-processing yard"
+  ],
+  "circulation": [
+    "incoming vehicles enter from the north gate, pass inspection and scale, then follow a one-way yard loop to intake, dismantling or storage",
+    "outbound haulers leave through the south service gate so loaded trucks do not reverse through the customer entrance",
+    "customers remain in the office and designated parts-pickup edge while staff use controlled doors into the yard",
+    "mechanics move directly between dismantling bays, fluid quarantine, tools and reusable-parts warehouse",
+    "material-handling equipment has a continuous yard route linking vehicle rows, processing zones and sorted scrap piles without crossing pedestrian waiting space",
+    "the office mezzanine and warehouse catwalk use supported stairs with real landings and continuous headroom"
+  ],
+  "damage_constraints": [
+    "preserve both north and south gates and enough of the one-way yard loop to keep the site's intake-to-processing flow legible",
+    "preserve at least one dismantling bay, the parts warehouse and the hazardous-fluid quarantine area",
+    "concentrate major building failure on one workshop/warehouse corner with an irregular fracture and gravity-led debris rather than rectangular deletion",
+    "allow localized fence collapse and displaced scrap to spill toward damaged edges without blocking every surviving route",
+    "keep crane or material-handler remains structurally supported and associated with its reinforced work zone",
+    "damage catwalks, stairs, signs and attached fixtures together with their supporting structure so no floating fragments remain",
+    "retain differentiated vehicle, shell, metal, tire and hazardous-material zones after damage",
+    "derive damaged and occupied variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "exterior_a",
+      "exterior_b",
+      "roof_off_cutaway",
+      "floor_slices"
+    ],
+    "required_manual_checks": [
+      "the site reads as an operating scrapyard and dismantling business rather than a random field of scrap blocks",
+      "intake, scale, dismantling, reusable-parts, processed-scrap and hazardous-fluid functions are spatially distinguishable",
+      "customer, staff, hauler and material-handler circulation are coherent and player-scale usable",
+      "the north entrance and south service gate connect to a believable one-way industrial yard flow",
+      "stairs and catwalks are supported, enclosed where required, have headroom and terminate on real floors or platforms",
+      "hardstanding, drainage, containment and perimeter treatments transition credibly into surrounding terrain",
+      "damage follows structural gravity while preserving enough operational evidence to infer the original scrap-processing workflow"
+    ]
+  }
+}
