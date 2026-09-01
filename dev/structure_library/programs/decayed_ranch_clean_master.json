@@ -1,0 +1,61 @@
+{
+  "structure_id": "infinite_domain:decayed_ranch_clean_master",
+  "archetype": "working rural ranchstead with a legible dwelling core, livestock and feed functions, equipment and utility support, fenced outdoor working areas, service circulation and a coherent long-abandonment ruin story",
+  "ground_program": [
+    "primary ranch dwelling presents a recognizable front or side domestic entrance with porch, mudroom or sheltered threshold before entering living space rather than opening directly into agricultural service areas",
+    "domestic core includes differentiated kitchen, dining, living, sleeping and sanitation spaces sized and furnished as a modest rural residence rather than repeated generic rooms",
+    "mudroom or utility transition links the dwelling to exterior work circulation and provides credible storage for boots, tools, protective clothing and daily ranch equipment",
+    "detached or attached barn provides a clear livestock/feed program with stalls or pens, feed storage, tack or equipment storage and at least one vehicle- or livestock-scale access opening",
+    "one workshop, machinery shed or service bay supports repair and storage of ranch equipment and remains distinguishable from the barn through floor plan, access and fixtures",
+    "exterior working program includes fenced paddock or corral space, gates, loading or handling area, trough or water point and a route tying these areas to the barn without forcing livestock through domestic space",
+    "feed, hay or bulk-storage areas are positioned for direct service access and maintain believable separation from dwelling interiors, sanitation and ignition-prone workshop functions",
+    "waste, drainage, water supply and utility features are placed as functional parts of the site rather than decorative isolated blocks",
+    "foundation edges, porch steps, yard grading, tracks, drainage and fence lines seat the ranch into surrounding terrain without a single oversized artificial platform"
+  ],
+  "upper_program": [
+    "where the dwelling includes an upper or loft level, it contains sleeping, storage or small work rooms connected by a supported stair with usable landings and uninterrupted player headroom",
+    "barn lofts or elevated hay storage must be structurally supported, accessible by believable stairs, ladder-equivalent route or hoist arrangement and remain physically related to feed handling below",
+    "roof volumes differentiate dwelling, barn, workshop and utility structures so the ranch reads as an accumulated working site rather than one monolithic building",
+    "upper windows, dormers, vents and loft openings correspond to real interior spaces and agricultural ventilation needs rather than pasted facade decoration",
+    "chimney, flue, water, electrical and mechanical routes align with the rooms or equipment they serve and remain maintainable from surviving circulation",
+    "no elevated floor, balcony, loft or roof fragment may remain unsupported in either the clean master or derived damage state"
+  ],
+  "circulation": [
+    "residents can move between dwelling entrance, kitchen, mudroom, yard and principal work buildings without passing through livestock stalls or machinery hazards as the only route",
+    "livestock circulation connects paddock or corral, handling gate, barn and loading edge through openings sized for the represented animals and does not require passage through the dwelling",
+    "service vehicles can reach workshop, feed storage and barn service edges from an exterior track or yard without crossing the principal domestic porch or fenced animal holding area unnecessarily",
+    "feed and equipment handling routes remain short and direct between storage, barn and exterior work areas while preserving a distinguishable domestic zone",
+    "every occupied upper or loft level retains a physically supported player-scale route back to grade",
+    "damage variants must preserve at least one complete dwelling-to-yard-to-barn route and one viable route between the principal livestock area and surviving shelter"
+  ],
+  "damage_constraints": [
+    "the damaged derivative must remain immediately recognizable as a ranchstead through the surviving dwelling, barn, fences or corrals, feed/equipment areas and working-yard relationships rather than becoming a generic ruined farmhouse",
+    "favor long-term roof failure, rot, weather exposure, sagging or breached barn walls, collapsed fence sections, overgrowth, localized fire or equipment damage and gradual foundation distress over repeated rectangular deletion masks",
+    "major structural failure should affect one coherent portion of the ranch at a time and preserve gravity-consistent debris, supported surviving walls and understandable load paths",
+    "where roofs, lofts or floors fail, associated partitions, doors, glazing, fixtures, hay/feed storage and equipment must fail consistently so unsupported fragments do not float",
+    "preserve enough domestic room identity and agricultural infrastructure for the former household-and-ranch workflow to remain inferable during exploration",
+    "fences may be broken and gates jammed or missing, but surviving alignments must still reveal paddock, corral and livestock movement patterns",
+    "barn, workshop, feed storage and utility damage may expose their interiors but must preserve their distinct functions and spatial relationship to the working yard",
+    "derive damaged, occupied or contaminated variants only from this immutable clean master"
+  ],
+  "review_gate": {
+    "automatic_checks_are_approval": false,
+    "required_previews": [
+      "dwelling_and_yard_elevation",
+      "barn_and_corral_elevation",
+      "major_decay_zone",
+      "roof_off_cutaway",
+      "site_plan"
+    ],
+    "required_manual_checks": [
+      "the structure reads immediately as a working ranchstead rather than a generic farmhouse, suburban house, roadside business or decorative barn",
+      "dwelling, barn, livestock handling, feed storage, workshop or equipment support and fenced working areas form a believable rural production program",
+      "domestic, livestock and vehicle/service circulation remain distinguishable and do not depend on implausible shortcuts through bedrooms, stalls or machinery bays",
+      "barn stalls, feed areas, gates, corrals, troughs and service openings are dimensioned and connected as functional agricultural spaces rather than scenery",
+      "stairs, loft access and elevated storage are structurally supported and provide usable player-scale clearance where ordinary movement is intended",
+      "the decay story reads as prolonged abandonment and weathering with localized failures rather than arbitrary missing cubes",
+      "at least one dwelling-to-yard-to-barn route and one livestock-area-to-shelter route survive the damaged state",
+      "the ranch meets surrounding grade through believable tracks, yard drainage, porch/foundation transitions, fence lines and paddock edges without floating structures or buried access"
+    ]
+  }
+}
