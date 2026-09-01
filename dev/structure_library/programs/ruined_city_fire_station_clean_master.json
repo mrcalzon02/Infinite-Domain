@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "asset_id": "ruined_city_fire_station",
+  "family": "habitation_and_community",
+  "purpose": "Heavy Rebuild clean-master architectural program for a ruined municipal fire station with legible apparatus, crew, command, and service functions.",
+  "program": {
+    "apparatus_zone": ["apparatus_bays", "vehicle_apron", "turnout_gear_area", "equipment_storage", "hose_service_area"],
+    "operations": ["watch_desk", "dispatch_or_radio_room", "station_office", "incident_planning_area"],
+    "crew_living": ["day_room", "kitchen", "dining", "bunk_room", "washrooms", "lockers"],
+    "support": ["workshop", "utility_room", "mechanical_room", "rear_service_yard"],
+    "circulation": ["apparatus_to_apron", "crew_to_apparatus", "public_to_watch_desk", "supported_stair_if_multilevel"]
+  },
+  "architectural_rules": [
+    "Apparatus bays must dominate the street-facing operational identity and connect directly to a usable apron.",
+    "Crew quarters must have a short, unobstructed response route to turnout gear and apparatus bays.",
+    "Public access must terminate at a watch desk or office rather than opening directly into crew sleeping space.",
+    "Workshop, hose, utility, and equipment functions must connect plausibly to apparatus operations and rear service access.",
+    "If the station is multilevel, stairs and any pole/drop representation must remain structurally supported and circulation must not depend solely on a damaged shortcut."
+  ],
+  "terrain_seating": {
+    "require_supported_foundation": true,
+    "require_apparatus_apron_grade": true,
+    "forbid_bay_threshold_cliffs": true,
+    "allow_rear_service_grade_change": true
+  },
+  "damage_doctrine": {
+    "intent": "Municipal station abandoned after disaster, with operational identity preserved despite localized collapse and exposure.",
+    "allowed": ["bay_door_failure", "roof_breach", "localized_wall_collapse", "debris_in_apparatus_bay", "burn_damage", "shattered_windows", "weathered_crew_quarters"],
+    "forbidden": ["all_bays_blocked", "response_route_erased", "unsupported_roof_mass", "uniform_random_ruin"]
+  },
+  "review_gate": {
+    "must_read_as": "ruined_city_fire_station",
+    "required_routes": ["street_to_watch_desk", "crew_quarters_to_apparatus", "apparatus_bay_to_apron", "apparatus_to_service_support"],
+    "hard_failures": ["apparatus_identity_missing", "bay_apron_unusable", "crew_response_route_impossible", "unsupported_major_mass", "generic_warehouse_read"]
+  },
+  "production_admission": {
+    "status": "program_authored_not_approved",
+    "requires": ["generated_structure_asset", "zero_hard_fail_geometry_lint", "family_validation", "corpus_validation", "provenance_validation", "conversion_validation_where_applicable", "retained_visual_or_runtime_evidence"]
+  }
+}
