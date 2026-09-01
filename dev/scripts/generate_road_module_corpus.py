@@ -8,9 +8,9 @@ from pathlib import Path
 
 from generate_wasteland_sites import DATA, STRUCTURE_BLOCK_REPLACEMENTS, Template
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "roads" / "road-modules.json"
-REPORT = ROOT / "docs" / "road-module-generation.json"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "roads" / "road-modules.json"
+REPORT = ROOT / "dev/docs" / "road-module-generation.json"
 
 CONDITIONS = ("clean", "cracked", "buried", "cratered", "overgrown", "flooded", "burned")
 DIRECTIONS = ("north", "east", "south", "west")

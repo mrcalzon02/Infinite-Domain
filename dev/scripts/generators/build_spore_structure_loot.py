@@ -7,10 +7,10 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "kubejs/data/spore/loot_table/chests"
-REPORT = ROOT / "docs/spore-structure-loot"
-REGISTRY = ROOT / "docs/registry-inventory/item-ids.txt"
+REPORT = ROOT / "dev/docs/spore-structure-loot"
+REGISTRY = ROOT / "dev/docs/registry-inventory/item-ids.txt"
 
 
 def entry(name: str, weight: int, minimum: int = 1, maximum: int = 1) -> dict:

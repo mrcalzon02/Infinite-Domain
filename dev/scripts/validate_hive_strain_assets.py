@@ -40,14 +40,14 @@ from generate_hive_strain_textures import (  # noqa: E402
     load_rule,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
-ENTITY_IDS = ROOT / "docs" / "registry-inventory" / "entity-ids.txt"
-MANIFEST = ROOT / "docs" / "hive-strain" / "roster-manifest.json"
-PALETTE = ROOT / "docs" / "hive-strain" / "palette-map.json"
+ROOT = Path(__file__).resolve().parents[2]
+ENTITY_IDS = ROOT / "dev/docs" / "registry-inventory" / "entity-ids.txt"
+MANIFEST = ROOT / "dev/docs" / "hive-strain" / "roster-manifest.json"
+PALETTE = ROOT / "dev/docs" / "hive-strain" / "palette-map.json"
 BUILD = ROOT / "build" / "hive_strain" / "assets" / "infinite_domain" / "textures" / "entity"
 BASE_DIR = BUILD / "hive_strain"
 GLOW_DIR = BUILD / "hive_strain_glow"
-GENERATOR = ROOT / "scripts" / "generate_hive_strain_textures.py"
+GENERATOR = ROOT / "dev/scripts" / "generate_hive_strain_textures.py"
 
 EXCLUDE_SUFFIX = ("_arm", "_head", "_seg", "_tail", "_round")
 EXCLUDE_PREFIX = ("thrown_",)

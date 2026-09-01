@@ -9,11 +9,11 @@ from zipfile import ZipFile
 from PIL import Image
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 MOD = ROOT / "mods" / "momg-1.1.9-release-neoforge-1.21.1.jar"
 PACK = ROOT / "resourcepacks" / "LAST_DAYS_INFINITE_DOMAIN_1_21_1"
-SCOPE = ROOT / "docs" / "more-ores-more-gems-texture-scope.csv"
-MANIFEST = ROOT / "docs" / "more-ores-more-gems-derived-textures.json"
+SCOPE = ROOT / "dev/docs" / "more-ores-more-gems-texture-scope.csv"
+MANIFEST = ROOT / "dev/docs" / "more-ores-more-gems-derived-textures.json"
 SIZE = 128
 GEM_ORE_SIZE = 32
 GEM_ORE_MASTERS = (

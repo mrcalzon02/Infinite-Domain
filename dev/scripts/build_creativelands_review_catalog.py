@@ -7,11 +7,11 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 
-ROOT = Path(__file__).resolve().parents[1]
-PROVENANCE = ROOT / "structure_library" / "licensing" / "creativelands-extracted-provenance.json"
-REVIEW_ROOT = ROOT / "structure_library" / "reviews" / "creativelands_cc0"
+ROOT = Path(__file__).resolve().parents[2]
+PROVENANCE = ROOT / "dev/structure_library" / "licensing" / "creativelands-extracted-provenance.json"
+REVIEW_ROOT = ROOT / "dev/structure_library" / "reviews" / "creativelands_cc0"
 RENDER_MANIFEST = REVIEW_ROOT / "render-manifest.json"
-VALIDATION = ROOT / "structure_library" / "extracted" / "creativelands_cc0" / "validation-report.json"
+VALIDATION = ROOT / "dev/structure_library" / "extracted" / "creativelands_cc0" / "validation-report.json"
 JSON_CATALOG = REVIEW_ROOT / "catalog.json"
 MARKDOWN_CATALOG = REVIEW_ROOT / "CATALOG.md"
 CONTACT_SHEET = REVIEW_ROOT / "contact_sheet.png"

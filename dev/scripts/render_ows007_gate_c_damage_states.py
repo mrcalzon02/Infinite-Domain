@@ -20,8 +20,8 @@ from render_ows007_gate_b_intact import _assert_intact_contracts
 from render_ows007_gate_b_intact_r2 import build_gate_b_intact_r2
 
 
-ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_ROOT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
+ROOT = Path(__file__).resolve().parents[2]
+OUTPUT_ROOT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
 OUTPUT_DIR = OUTPUT_ROOT / "OWS-007" / "gate_c_damage_states" / "r1"
 SHIPPING_PATH = (
     ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland" /
@@ -62,7 +62,7 @@ def _count_block(t: base.Template, name: str) -> int:
 
 
 def _assert_history_authorized() -> None:
-    review_dir = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild"
+    review_dir = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild"
     review = review_dir / "OWS-007_GATE_B_R2_REVIEW.md"
     if not review.exists() or "OWS-007 GATE B r2: PASSED" not in review.read_text(encoding="utf-8"):
         raise AssertionError("Gate C refused: explicit OWS-007 Gate-B r2 PASSED review is missing")

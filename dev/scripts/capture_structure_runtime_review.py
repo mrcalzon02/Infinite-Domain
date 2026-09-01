@@ -6,11 +6,11 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 WORLD = ROOT / "saves" / "Infinite Domain - Structure QA Flatworld"
 LOG = ROOT / "logs" / "latest.log"
-REPORT = ROOT / "docs" / "structure-runtime-review.json"
-REVIEW = ROOT / "structure_library" / "review"
+REPORT = ROOT / "dev/docs" / "structure-runtime-review.json"
+REVIEW = ROOT / "dev/structure_library" / "review"
 
 STAMP = re.compile(r"^\[(?P<stamp>\d{1,2}[A-Za-z]{3}\d{4} \d{2}:\d{2}:\d{2}\.\d{3})\]")
 RELEVANT = re.compile(r"infinite_domain|lostcit|structure|template|jigsaw|road_module|structure_module|datapack|mcfunction", re.I)

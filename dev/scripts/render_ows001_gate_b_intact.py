@@ -18,7 +18,7 @@ from render_old_world_heavy_rebuild_review import OUTPUT_ROOT, ROOT, render_revi
 from render_ows001_gate_a_massing import build_gate_a_massing
 from render_structure_review import unpack_structure
 
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 TEMP_NAME = "_heavy_review_ows001_gate_b_intact_r3"
 TEMP_NBT = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland" / f"{TEMP_NAME}.nbt"
 OUTPUT_DIR = OUTPUT_ROOT / "OWS-001" / "gate_b_intact" / "r3"

@@ -8,7 +8,7 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 PROJECTS = {
     "create-nuclear-balance": "infinite-domain-create-nuclear-balance-1.0.0.jar",
     "cyberware-mastery-expansion": "infinite-domain-cyberware-mastery-1.0.0.jar",
@@ -43,7 +43,7 @@ def main() -> int:
     summaries: list[str] = []
     available_mods = installed_mod_ids()
     for project_name, jar_name in PROJECTS.items():
-        project = ROOT / "packdev" / project_name
+        project = ROOT / "dev/packdev" / project_name
         jar_path = ROOT / "mods" / jar_name
         resource_root = project / "src/main/resources"
         java_root = project / "src/main/java"

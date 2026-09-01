@@ -5,9 +5,9 @@ from collections import Counter
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-ROADMAP = ROOT / "structure_library" / "rebuild-family-roadmap.json"
-AUDIT = ROOT / "docs" / "inbuilt-structure-audit.json"
+ROOT = Path(__file__).resolve().parents[2]
+ROADMAP = ROOT / "dev/structure_library" / "rebuild-family-roadmap.json"
+AUDIT = ROOT / "dev/docs" / "inbuilt-structure-audit.json"
 
 
 def main() -> None:

@@ -8,9 +8,9 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 JAR = ROOT / "mods/infinite-domain-darknet-worldgen-1.8.0.jar"
-SOURCE_ROOT = ROOT / "packdev/darknet-worldgen-patch/src/main"
+SOURCE_ROOT = ROOT / "dev/packdev/darknet-worldgen-patch/src/main"
 TRADER_SOURCE = SOURCE_ROOT / "java/infinitedomain/darknet/entity/DarknetTrader.java"
 ENTITY_SOURCE = SOURCE_ROOT / "java/infinitedomain/darknet/entity/DarknetEntities.java"
 RENDERER_SOURCE = SOURCE_ROOT / "java/infinitedomain/darknet/client/DarknetTraderRenderer.java"
@@ -129,11 +129,11 @@ if language.get("entity.infinite_domain_darknet_worldgen.darknet_trader") != "Da
     raise SystemExit("Darknet Broker lost its localized entity name")
 
 art_files = [
-    ROOT / "docs/art-direction/darknet-broker-reference.png",
-    ROOT / "docs/art-direction/darknet-broker-reference.prompt.txt",
-    ROOT / "docs/art-direction/darknet-broker-items-reference.png",
-    ROOT / "docs/art-direction/darknet-broker-items-reference.prompt.txt",
-    ROOT / "scripts/generate_darknet_broker_art.ps1",
+    ROOT / "dev/docs/art-direction/darknet-broker-reference.png",
+    ROOT / "dev/docs/art-direction/darknet-broker-reference.prompt.txt",
+    ROOT / "dev/docs/art-direction/darknet-broker-items-reference.png",
+    ROOT / "dev/docs/art-direction/darknet-broker-items-reference.prompt.txt",
+    ROOT / "dev/scripts/generate_darknet_broker_art.ps1",
 ]
 for path in art_files:
     if not path.is_file():
@@ -162,7 +162,7 @@ duplicates = sorted(path.name for path in (ROOT / "mods").glob("infinite-domain-
 if duplicates:
     raise SystemExit("Duplicate Darknet companion mods: " + ", ".join(duplicates))
 
-documentation = " ".join((ROOT / "docs/DARKNET_BROKER.md").read_text(encoding="utf-8").split())
+documentation = " ".join((ROOT / "dev/docs/DARKNET_BROKER.md").read_text(encoding="utf-8").split())
 for token in [
     "Darknet Broker", "72,000 ticks", "384 blocks", "Darknet Scrip",
     "Ghost-Market Cipher", "Black-Ledger Writ", "64 Darknet Scrip plus eight Root Authority Keys",

@@ -21,7 +21,7 @@ from render_structure_review import unpack_structure
 
 TARGET = "OWS-005"
 EXPECTED_SHIPPING_SHA256 = "3f11c4d6af6b09507e6a05c018d57d408b1ce71244914e619160ff3916ad1208"
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 OUTPUT_DIR = OUTPUT_ROOT / TARGET / "gate_d_final" / "r1"
 SPEC = generation.BY_TARGET[TARGET]
 SHIPPING_NBT = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland" / "old_world" / f"{SPEC.name}.nbt"

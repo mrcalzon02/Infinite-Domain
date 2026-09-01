@@ -11,9 +11,9 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-REVIEW_ROOT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild"
+ROOT = Path(__file__).resolve().parents[2]
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+REVIEW_ROOT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild"
 R4_ROOT = REVIEW_ROOT / "visual" / "OWS-004" / "gate_c_damage_states" / "r4"
 MANIFEST_PATH = R4_ROOT / "gate_c_manifest.json"
 REVIEW_PATH = REVIEW_ROOT / "OWS-004_GATE_C_R4_REVIEW.md"

@@ -9,14 +9,14 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CONFIG = ROOT / "kubejs/config/nuclear_fuel_cycle.json"
 MINERALS = ROOT / "kubejs/config/mineral_trace_ore_processing.json"
 STARTUP = ROOT / "kubejs/startup_scripts/nuclear_fuel_cycle_items.js"
 RECIPES = ROOT / "kubejs/server_scripts/nuclear_fuel_cycle.js"
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/era_06_high_energy_and_nuclear_engineering.snbt"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
-REPORT = ROOT / "docs/create-nuclear-phase-i-investigation.md"
+REPORT = ROOT / "dev/docs/create-nuclear-phase-i-investigation.md"
 
 
 def require(value: bool, message: str) -> None:

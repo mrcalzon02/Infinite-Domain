@@ -10,7 +10,7 @@ def snbt(value: object) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 MODIFIERS = ROOT / "kubejs/data/infinite_domain/neoforge/biome_modifier"
 RECIPES = ROOT / "kubejs/data/infinite_domain/recipe"
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/darknet_draconic_convergence.snbt"

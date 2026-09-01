@@ -39,10 +39,10 @@ import structure_geometry_lint as L
 
 Pos = tuple[int, int, int]
 
-REPO = Path(__file__).resolve().parents[1]
+REPO = Path(__file__).resolve().parents[2]
 WASTELAND = REPO / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland"
 MASTERS = WASTELAND / "masters"
-OUT_DIR = REPO / "docs" / "wasteland-rebuild-audit"
+OUT_DIR = REPO / "dev/docs" / "wasteland-rebuild-audit"
 
 # Damage / collapse debris that is legitimately loose granular material. A
 # component made almost entirely of these, if it is also compact and flat-

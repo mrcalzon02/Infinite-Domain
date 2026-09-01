@@ -5,9 +5,9 @@ import re
 import zipfile
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 JAR = ROOT / "mods/infinite-domain-cyberware-mastery-1.0.0.jar"
-REGISTRY = set((ROOT / "docs/registry-inventory/item-ids.txt").read_text(encoding="utf-8").splitlines())
+REGISTRY = set((ROOT / "dev/docs/registry-inventory/item-ids.txt").read_text(encoding="utf-8").splitlines())
 NS = "infinite_domain_cyberware"
 
 regions = [

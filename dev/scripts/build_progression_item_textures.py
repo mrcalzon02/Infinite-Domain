@@ -10,7 +10,7 @@ from PIL import Image, ImageDraw
 from install_generated_item_texture import install
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "kubejs/assets/kubejs/textures/item"
 
 ERA = {
@@ -193,7 +193,7 @@ def main() -> None:
         path = OUT / f"{name}.png"
         with Image.open(path) as image:
             keep_largest_foreground(image).save(path)
-    approved_sources = ROOT / "docs/texture-audit/generated-sources"
+    approved_sources = ROOT / "dev/docs/texture-audit/generated-sources"
     approved = 0
     if approved_sources.exists():
         for source in approved_sources.glob("*.png"):

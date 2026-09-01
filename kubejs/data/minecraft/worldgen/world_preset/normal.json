@@ -1,1 +1,1086 @@
-{"dimensions": {"minecraft:overworld": {"type": "minecraft:overworld", "generator": {"type": "minecraft:noise", "biome_source": {"type": "isekai_api:climate_zones", "fallback": "wastelands:apocalypse", "rules": [{"biome": "infinite_domain:safe_zone", "humidity": [1.99, 2.0]}, {"biome": "wastelands:city", "humidity": [1.5, 2.0]}, {"biome": "wastelands:mountains", "humidity": [1.2, 1.3], "continentalness": [-0.19, 1.2]}, {"biome": "minecraft:deep_dark", "temperature": [-1.0, -0.99], "depth": [0.8, 2.0], "weirdness": [-1.0, -0.34]}, {"biome": "minecraft:dripstone_caves", "temperature": [-1.0, -0.99], "depth": [0.8, 2.0], "weirdness": [-0.34, 0.34]}, {"biome": "minecraft:lush_caves", "temperature": [-1.0, -0.99], "depth": [0.8, 2.0], "weirdness": [0.34, 1.0]}, {"biome": "minecraft:deep_frozen_ocean", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "continentalness": [-1.2, -0.455]}, {"biome": "minecraft:deep_cold_ocean", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "continentalness": [-1.2, -0.455]}, {"biome": "minecraft:frozen_ocean", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "continentalness": [-0.455, -0.19]}, {"biome": "minecraft:cold_ocean", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "continentalness": [-0.455, -0.19]}, {"biome": "infinite_domain:western_hadal_trench", "temperature": [-0.99, 0.99], "humidity": [-1.0, -0.2], "continentalness": [-1.2, -1.02]}, {"biome": "minecraft:deep_ocean", "temperature": [-0.99, 0.99], "humidity": [-0.2, 0.2], "continentalness": [-1.2, -1.02]}, {"biome": "infinite_domain:eastern_hadal_trench", "temperature": [-0.99, 0.99], "humidity": [0.2, 1.0], "continentalness": [-1.2, -1.02]}, {"biome": "infinite_domain:western_fracture_field", "temperature": [-0.99, 0.99], "humidity": [-1.0, -0.2], "continentalness": [-1.02, -0.82]}, {"biome": "minecraft:deep_ocean", "temperature": [-0.99, 0.99], "humidity": [-0.2, 0.2], "continentalness": [-1.02, -0.82]}, {"biome": "infinite_domain:eastern_fracture_field", "temperature": [-0.99, 0.99], "humidity": [0.2, 1.0], "continentalness": [-1.02, -0.82]}, {"biome": "infinite_domain:western_abyssal_plain", "temperature": [-0.99, 0.99], "humidity": [-1.0, -0.2], "continentalness": [-0.82, -0.6]}, {"biome": "minecraft:deep_ocean", "temperature": [-0.99, 0.99], "humidity": [-0.2, 0.2], "continentalness": [-0.82, -0.6]}, {"biome": "infinite_domain:eastern_abyssal_plain", "temperature": [-0.99, 0.99], "humidity": [0.2, 1.0], "continentalness": [-0.82, -0.6]}, {"biome": "infinite_domain:western_continental_slope", "temperature": [-0.99, 0.99], "humidity": [-1.0, -0.2], "continentalness": [-0.6, -0.455]}, {"biome": "minecraft:deep_ocean", "temperature": [-0.99, 0.99], "humidity": [-0.2, 0.2], "continentalness": [-0.6, -0.455]}, {"biome": "infinite_domain:eastern_continental_slope", "temperature": [-0.99, 0.99], "humidity": [0.2, 1.0], "continentalness": [-0.6, -0.455]}, {"biome": "minecraft:ocean", "temperature": [-0.99, 0.99], "continentalness": [-0.455, -0.19]}, {"biome": "minecraft:deep_lukewarm_ocean", "temperature": [0.99, 1.0], "continentalness": [-1.2, -0.455]}, {"biome": "minecraft:warm_ocean", "temperature": [0.99, 1.0], "continentalness": [-0.455, -0.19]}, {"biome": "minecraft:snowy_taiga", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "erosion": [-1.0, -0.6]}, {"biome": "minecraft:grove", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "erosion": [-0.6, -0.35]}, {"biome": "minecraft:taiga", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "erosion": [-0.35, -0.1]}, {"biome": "minecraft:old_growth_spruce_taiga", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "erosion": [-0.1, 0.1]}, {"biome": "minecraft:old_growth_pine_taiga", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "erosion": [0.1, 0.3]}, {"biome": "minecraft:dark_forest", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "erosion": [0.3, 0.48], "weirdness": [-1.0, 0.0]}, {"biome": "minecraft:birch_forest", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "erosion": [0.3, 0.48], "weirdness": [0.0, 1.0]}, {"biome": "minecraft:forest", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "erosion": [0.48, 0.72]}, {"biome": "minecraft:snowy_plains", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "erosion": [0.72, 0.86]}, {"biome": "minecraft:plains", "temperature": [-1.0, -0.99], "humidity": [-1.0, 0.0], "erosion": [0.86, 1.0]}, {"biome": "minecraft:ice_spikes", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "erosion": [-1.0, -0.72]}, {"biome": "minecraft:snowy_slopes", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "erosion": [-0.72, -0.48]}, {"biome": "minecraft:jagged_peaks", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "erosion": [-0.48, -0.24]}, {"biome": "minecraft:frozen_peaks", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "erosion": [-0.24, 0.0]}, {"biome": "minecraft:frozen_river", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "erosion": [0.0, 0.2]}, {"biome": "minecraft:snowy_beach", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "erosion": [0.2, 0.4]}, {"biome": "minecraft:meadow", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "erosion": [0.4, 0.6]}, {"biome": "minecraft:snowy_taiga", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "erosion": [0.6, 0.8]}, {"biome": "minecraft:grove", "temperature": [-1.0, -0.99], "humidity": [0.0, 1.0], "erosion": [0.8, 1.0]}, {"biome": "minecraft:mangrove_swamp", "temperature": [0.99, 1.0], "humidity": [0.2, 1.0], "erosion": [-1.0, -0.72]}, {"biome": "minecraft:jungle", "temperature": [0.99, 1.0], "humidity": [0.2, 1.0], "erosion": [-0.72, -0.4]}, {"biome": "minecraft:bamboo_jungle", "temperature": [0.99, 1.0], "humidity": [0.2, 1.0], "erosion": [-0.4, -0.12]}, {"biome": "minecraft:sparse_jungle", "temperature": [0.99, 1.0], "humidity": [0.2, 1.0], "erosion": [-0.12, 0.16]}, {"biome": "minecraft:savanna_plateau", "temperature": [0.99, 1.0], "humidity": [-1.0, 0.2], "erosion": [0.0, 0.16]}, {"biome": "minecraft:badlands", "temperature": [0.99, 1.0], "erosion": [-1.0, -0.78]}, {"biome": "minecraft:wooded_badlands", "temperature": [0.99, 1.0], "erosion": [-0.78, -0.58]}, {"biome": "minecraft:eroded_badlands", "temperature": [0.99, 1.0], "erosion": [-0.58, -0.4]}, {"biome": "minecraft:desert", "temperature": [0.99, 1.0], "erosion": [-0.4, -0.18]}, {"biome": "minecraft:savanna", "temperature": [0.99, 1.0], "erosion": [-0.18, 0.0]}, {"biome": "minecraft:windswept_savanna", "temperature": [0.99, 1.0], "erosion": [0.0, 0.16]}, {"biome": "wastelands:desert", "temperature": [0.99, 1.0], "erosion": [0.16, 0.3]}, {"biome": "wastelands:city", "temperature": [0.99, 1.0], "erosion": [0.3, 0.42]}, {"biome": "the_wasteland_reworked:sulfuric_valley", "temperature": [0.99, 1.0], "erosion": [0.42, 0.55]}, {"biome": "the_wasteland_reworked:radioactive_wasteland", "temperature": [0.99, 1.0], "erosion": [0.55, 0.67]}, {"biome": "the_wasteland_reworked:decayed_forest", "temperature": [0.99, 1.0], "erosion": [0.67, 0.78]}, {"biome": "wastelands:mountains", "temperature": [0.99, 1.0], "erosion": [0.78, 0.87]}, {"biome": "wastelands:forest", "temperature": [0.99, 1.0], "erosion": [0.87, 0.94]}, {"biome": "wastelands:apocalypse", "temperature": [0.99, 1.0], "erosion": [0.94, 1.0]}, {"biome": "infinite_domain:karsic_uplands", "temperature": [-0.99, 0.99], "humidity": [0.2, 1.0], "continentalness": [-0.19, 1.2], "erosion": [-1.0, -0.55]}, {"biome": "infinite_domain:karsic_district", "temperature": [-0.99, 0.99], "humidity": [0.2, 1.0], "continentalness": [-0.19, 1.2], "erosion": [-0.55, -0.15]}, {"biome": "infinite_domain:karsic_taiga_margin", "temperature": [-0.99, 0.99], "humidity": [0.2, 1.0], "continentalness": [-0.19, 1.2], "erosion": [-0.15, 0.2]}, {"biome": "infinite_domain:karsic_industrial_belt", "temperature": [-0.99, 0.99], "humidity": [0.2, 1.0], "continentalness": [-0.19, 1.2], "erosion": [0.2, 0.5]}, {"biome": "infinite_domain:karsic_steppe_waste", "temperature": [-0.99, 0.99], "humidity": [0.2, 1.0], "continentalness": [-0.19, 1.2], "erosion": [0.5, 1.0]}, {"biome": "wastelands:mountains", "temperature": [-0.99, 0.99], "erosion": [-1.0, -0.55]}, {"biome": "wastelands:city", "temperature": [-0.99, 0.99], "erosion": [-0.55, -0.15]}, {"biome": "wastelands:forest", "temperature": [-0.99, 0.99], "erosion": [-0.15, 0.2]}, {"biome": "wastelands:city", "temperature": [-0.99, 0.99], "erosion": [0.2, 0.5]}, {"biome": "wastelands:apocalypse", "temperature": [-0.99, 0.99], "erosion": [0.5, 1.0]}]}, "settings": "wastelands:wasteland"}}, "minecraft:the_end": {"type": "minecraft:the_end", "generator": {"type": "minecraft:noise", "biome_source": {"type": "minecraft:the_end"}, "settings": "minecraft:end"}}, "minecraft:the_nether": {"type": "minecraft:the_nether", "generator": {"type": "minecraft:noise", "biome_source": {"type": "minecraft:multi_noise", "preset": "minecraft:nether"}, "settings": "infinite_domain:lava_ocean_nether"}}}}
+{
+  "dimensions": {
+    "minecraft:overworld": {
+      "type": "minecraft:overworld",
+      "generator": {
+        "type": "minecraft:noise",
+        "biome_source": {
+          "type": "isekai_api:climate_zones",
+          "fallback": "wastelands:apocalypse",
+          "rules": [
+            {
+              "biome": "infinite_domain:safe_zone",
+              "humidity": [
+                1.99,
+                2.0
+              ]
+            },
+            {
+              "biome": "wastelands:city",
+              "humidity": [
+                1.5,
+                2.0
+              ]
+            },
+            {
+              "biome": "minecraft:beach",
+              "humidity": [
+                1.19,
+                1.23
+              ],
+              "continentalness": [
+                -0.19,
+                -0.05
+              ]
+            },
+            {
+              "biome": "infinite_domain:polluted_shore",
+              "humidity": [
+                1.23,
+                1.27
+              ],
+              "continentalness": [
+                -0.19,
+                -0.05
+              ]
+            },
+            {
+              "biome": "minecraft:snowy_beach",
+              "humidity": [
+                1.27,
+                1.31
+              ],
+              "continentalness": [
+                -0.19,
+                -0.05
+              ]
+            },
+            {
+              "biome": "wastelands:mountains",
+              "humidity": [
+                1.19,
+                1.31
+              ],
+              "continentalness": [
+                -0.05,
+                1.2
+              ]
+            },
+            {
+              "biome": "minecraft:deep_dark",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "depth": [
+                0.8,
+                2.0
+              ],
+              "weirdness": [
+                -1.0,
+                -0.34
+              ]
+            },
+            {
+              "biome": "minecraft:dripstone_caves",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "depth": [
+                0.8,
+                2.0
+              ],
+              "weirdness": [
+                -0.34,
+                0.34
+              ]
+            },
+            {
+              "biome": "minecraft:lush_caves",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "depth": [
+                0.8,
+                2.0
+              ],
+              "weirdness": [
+                0.34,
+                1.0
+              ]
+            },
+            {
+              "biome": "minecraft:deep_frozen_ocean",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "continentalness": [
+                -1.2,
+                -0.455
+              ]
+            },
+            {
+              "biome": "minecraft:deep_cold_ocean",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                0.0,
+                1.0
+              ],
+              "continentalness": [
+                -1.2,
+                -0.455
+              ]
+            },
+            {
+              "biome": "minecraft:frozen_ocean",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "continentalness": [
+                -0.455,
+                -0.19
+              ]
+            },
+            {
+              "biome": "minecraft:cold_ocean",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                0.0,
+                1.0
+              ],
+              "continentalness": [
+                -0.455,
+                -0.19
+              ]
+            },
+            {
+              "biome": "infinite_domain:western_hadal_trench",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                -1.0,
+                -0.2
+              ],
+              "continentalness": [
+                -1.2,
+                -1.02
+              ]
+            },
+            {
+              "biome": "minecraft:deep_ocean",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                -0.2,
+                0.2
+              ],
+              "continentalness": [
+                -1.2,
+                -1.02
+              ]
+            },
+            {
+              "biome": "infinite_domain:eastern_hadal_trench",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "continentalness": [
+                -1.2,
+                -1.02
+              ]
+            },
+            {
+              "biome": "infinite_domain:western_fracture_field",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                -1.0,
+                -0.2
+              ],
+              "continentalness": [
+                -1.02,
+                -0.82
+              ]
+            },
+            {
+              "biome": "minecraft:deep_ocean",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                -0.2,
+                0.2
+              ],
+              "continentalness": [
+                -1.02,
+                -0.82
+              ]
+            },
+            {
+              "biome": "infinite_domain:eastern_fracture_field",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "continentalness": [
+                -1.02,
+                -0.82
+              ]
+            },
+            {
+              "biome": "infinite_domain:western_abyssal_plain",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                -1.0,
+                -0.2
+              ],
+              "continentalness": [
+                -0.82,
+                -0.6
+              ]
+            },
+            {
+              "biome": "minecraft:deep_ocean",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                -0.2,
+                0.2
+              ],
+              "continentalness": [
+                -0.82,
+                -0.6
+              ]
+            },
+            {
+              "biome": "infinite_domain:eastern_abyssal_plain",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "continentalness": [
+                -0.82,
+                -0.6
+              ]
+            },
+            {
+              "biome": "infinite_domain:western_continental_slope",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                -1.0,
+                -0.2
+              ],
+              "continentalness": [
+                -0.6,
+                -0.455
+              ]
+            },
+            {
+              "biome": "minecraft:deep_ocean",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                -0.2,
+                0.2
+              ],
+              "continentalness": [
+                -0.6,
+                -0.455
+              ]
+            },
+            {
+              "biome": "infinite_domain:eastern_continental_slope",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "continentalness": [
+                -0.6,
+                -0.455
+              ]
+            },
+            {
+              "biome": "minecraft:ocean",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "continentalness": [
+                -0.455,
+                -0.19
+              ]
+            },
+            {
+              "biome": "minecraft:deep_lukewarm_ocean",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "continentalness": [
+                -1.2,
+                -0.455
+              ]
+            },
+            {
+              "biome": "minecraft:warm_ocean",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "continentalness": [
+                -0.455,
+                -0.19
+              ]
+            },
+            {
+              "biome": "minecraft:snowy_taiga",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "erosion": [
+                -1.0,
+                -0.6
+              ]
+            },
+            {
+              "biome": "minecraft:grove",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "erosion": [
+                -0.6,
+                -0.35
+              ]
+            },
+            {
+              "biome": "minecraft:taiga",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "erosion": [
+                -0.35,
+                -0.1
+              ]
+            },
+            {
+              "biome": "minecraft:old_growth_spruce_taiga",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "erosion": [
+                -0.1,
+                0.1
+              ]
+            },
+            {
+              "biome": "minecraft:old_growth_pine_taiga",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "erosion": [
+                0.1,
+                0.3
+              ]
+            },
+            {
+              "biome": "minecraft:dark_forest",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "erosion": [
+                0.3,
+                0.48
+              ],
+              "weirdness": [
+                -1.0,
+                0.0
+              ]
+            },
+            {
+              "biome": "minecraft:birch_forest",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "erosion": [
+                0.3,
+                0.48
+              ],
+              "weirdness": [
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "biome": "minecraft:forest",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "erosion": [
+                0.48,
+                0.72
+              ]
+            },
+            {
+              "biome": "minecraft:snowy_plains",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "erosion": [
+                0.72,
+                0.86
+              ]
+            },
+            {
+              "biome": "minecraft:plains",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                -1.0,
+                0.0
+              ],
+              "erosion": [
+                0.86,
+                1.0
+              ]
+            },
+            {
+              "biome": "minecraft:ice_spikes",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                0.0,
+                1.0
+              ],
+              "erosion": [
+                -1.0,
+                -0.72
+              ]
+            },
+            {
+              "biome": "minecraft:snowy_slopes",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                0.0,
+                1.0
+              ],
+              "erosion": [
+                -0.72,
+                -0.48
+              ]
+            },
+            {
+              "biome": "minecraft:jagged_peaks",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                0.0,
+                1.0
+              ],
+              "erosion": [
+                -0.48,
+                -0.24
+              ]
+            },
+            {
+              "biome": "minecraft:frozen_peaks",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                0.0,
+                1.0
+              ],
+              "erosion": [
+                -0.24,
+                0.0
+              ]
+            },
+            {
+              "biome": "minecraft:frozen_river",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                0.0,
+                1.0
+              ],
+              "erosion": [
+                0.0,
+                0.2
+              ]
+            },
+            {
+              "biome": "minecraft:snowy_beach",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                0.0,
+                1.0
+              ],
+              "erosion": [
+                0.2,
+                0.4
+              ]
+            },
+            {
+              "biome": "minecraft:meadow",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                0.0,
+                1.0
+              ],
+              "erosion": [
+                0.4,
+                0.6
+              ]
+            },
+            {
+              "biome": "minecraft:snowy_taiga",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                0.0,
+                1.0
+              ],
+              "erosion": [
+                0.6,
+                0.8
+              ]
+            },
+            {
+              "biome": "minecraft:grove",
+              "temperature": [
+                -1.0,
+                -0.99
+              ],
+              "humidity": [
+                0.0,
+                1.0
+              ],
+              "erosion": [
+                0.8,
+                1.0
+              ]
+            },
+            {
+              "biome": "minecraft:mangrove_swamp",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "erosion": [
+                -1.0,
+                -0.72
+              ]
+            },
+            {
+              "biome": "minecraft:jungle",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "erosion": [
+                -0.72,
+                -0.4
+              ]
+            },
+            {
+              "biome": "minecraft:bamboo_jungle",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "erosion": [
+                -0.4,
+                -0.12
+              ]
+            },
+            {
+              "biome": "minecraft:sparse_jungle",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "erosion": [
+                -0.12,
+                0.16
+              ]
+            },
+            {
+              "biome": "minecraft:savanna_plateau",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "humidity": [
+                -1.0,
+                0.2
+              ],
+              "erosion": [
+                0.0,
+                0.16
+              ]
+            },
+            {
+              "biome": "minecraft:badlands",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                -1.0,
+                -0.78
+              ]
+            },
+            {
+              "biome": "minecraft:wooded_badlands",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                -0.78,
+                -0.58
+              ]
+            },
+            {
+              "biome": "minecraft:eroded_badlands",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                -0.58,
+                -0.4
+              ]
+            },
+            {
+              "biome": "minecraft:desert",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                -0.4,
+                -0.18
+              ]
+            },
+            {
+              "biome": "minecraft:savanna",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                -0.18,
+                0.0
+              ]
+            },
+            {
+              "biome": "minecraft:windswept_savanna",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                0.0,
+                0.16
+              ]
+            },
+            {
+              "biome": "wastelands:desert",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                0.16,
+                0.3
+              ]
+            },
+            {
+              "biome": "wastelands:city",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                0.3,
+                0.42
+              ]
+            },
+            {
+              "biome": "the_wasteland_reworked:sulfuric_valley",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                0.42,
+                0.55
+              ]
+            },
+            {
+              "biome": "the_wasteland_reworked:radioactive_wasteland",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                0.55,
+                0.67
+              ]
+            },
+            {
+              "biome": "the_wasteland_reworked:decayed_forest",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                0.67,
+                0.78
+              ]
+            },
+            {
+              "biome": "wastelands:mountains",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                0.78,
+                0.87
+              ]
+            },
+            {
+              "biome": "wastelands:forest",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                0.87,
+                0.94
+              ]
+            },
+            {
+              "biome": "wastelands:apocalypse",
+              "temperature": [
+                0.99,
+                1.0
+              ],
+              "erosion": [
+                0.94,
+                1.0
+              ]
+            },
+            {
+              "biome": "infinite_domain:karsic_uplands",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "continentalness": [
+                -0.19,
+                1.2
+              ],
+              "erosion": [
+                -1.0,
+                -0.55
+              ]
+            },
+            {
+              "biome": "infinite_domain:karsic_district",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "continentalness": [
+                -0.19,
+                1.2
+              ],
+              "erosion": [
+                -0.55,
+                -0.15
+              ]
+            },
+            {
+              "biome": "infinite_domain:karsic_taiga_margin",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "continentalness": [
+                -0.19,
+                1.2
+              ],
+              "erosion": [
+                -0.15,
+                0.2
+              ]
+            },
+            {
+              "biome": "infinite_domain:karsic_industrial_belt",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "continentalness": [
+                -0.19,
+                1.2
+              ],
+              "erosion": [
+                0.2,
+                0.5
+              ]
+            },
+            {
+              "biome": "infinite_domain:karsic_steppe_waste",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "humidity": [
+                0.2,
+                1.0
+              ],
+              "continentalness": [
+                -0.19,
+                1.2
+              ],
+              "erosion": [
+                0.5,
+                1.0
+              ]
+            },
+            {
+              "biome": "wastelands:mountains",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "erosion": [
+                -1.0,
+                -0.55
+              ]
+            },
+            {
+              "biome": "wastelands:city",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "erosion": [
+                -0.55,
+                -0.15
+              ]
+            },
+            {
+              "biome": "wastelands:forest",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "erosion": [
+                -0.15,
+                0.2
+              ]
+            },
+            {
+              "biome": "wastelands:city",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "erosion": [
+                0.2,
+                0.5
+              ]
+            },
+            {
+              "biome": "wastelands:apocalypse",
+              "temperature": [
+                -0.99,
+                0.99
+              ],
+              "erosion": [
+                0.5,
+                1.0
+              ]
+            }
+          ]
+        },
+        "settings": "wastelands:wasteland"
+      }
+    },
+    "minecraft:the_end": {
+      "type": "minecraft:the_end",
+      "generator": {
+        "type": "minecraft:noise",
+        "biome_source": {
+          "type": "minecraft:the_end"
+        },
+        "settings": "minecraft:end"
+      }
+    },
+    "minecraft:the_nether": {
+      "type": "minecraft:the_nether",
+      "generator": {
+        "type": "minecraft:noise",
+        "biome_source": {
+          "type": "minecraft:multi_noise",
+          "preset": "minecraft:nether"
+        },
+        "settings": "infinite_domain:lava_ocean_nether"
+      }
+    }
+  }
+}

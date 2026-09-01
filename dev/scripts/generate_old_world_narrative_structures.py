@@ -23,9 +23,9 @@ import old_world_ows007_final as ows007_final
 import old_world_ows008_final as ows008_final
 
 base = core.base
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
-PROGRAM = ROOT / "old_world_narrative"
+PROGRAM = ROOT / "dev/old_world_narrative"
 REGISTRY = PROGRAM / "registry"
 
 # PT-9 is the first controlled runtime-generation target. This is not runtime

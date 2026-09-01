@@ -6,9 +6,9 @@ import struct
 import zipfile
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 JAR = ROOT / "mods/infinite-domain-darknet-worldgen-1.8.0.jar"
-SOURCE = ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/entity/DatavoreDragon.java"
+SOURCE = ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/entity/DatavoreDragon.java"
 
 with zipfile.ZipFile(JAR) as archive:
     entries = set(archive.namelist())
@@ -31,7 +31,7 @@ for required in [
     "ServerBossEvent", "BossBarOverlay.NOTCHED_20", "getDeadLootTable", "setPersistenceRequired",
     "inflate(512.0)", "DatavoreDragon::canSpawn",
 ]:
-    if required not in source and required not in (ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/entity/DarknetEntities.java").read_text(encoding="utf-8"):
+    if required not in source and required not in (ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/entity/DarknetEntities.java").read_text(encoding="utf-8"):
         raise SystemExit(f"Datavore source lost required behavior: {required}")
 
 modifier = json.loads((ROOT / "kubejs/data/infinite_domain/neoforge/biome_modifier/darknet_datavore_dragon.json").read_text(encoding="utf-8"))
@@ -58,7 +58,7 @@ for reward in reward_ids[:6]:
     if reward.removeprefix("kubejs:") not in startup:
         raise SystemExit(f"Datavore reward item is not registered: {reward}")
 
-texture_root = ROOT / "packdev/darknet-worldgen-patch/src/main/resources/assets/infinite_domain/textures/entity/datavore"
+texture_root = ROOT / "dev/packdev/darknet-worldgen-patch/src/main/resources/assets/infinite_domain/textures/entity/datavore"
 dimensions = []
 for name in ["datavore.png", "datavore_eyes.png", "datavore_skeleton.png"]:
     data = (texture_root / name).read_bytes()

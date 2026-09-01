@@ -5,20 +5,20 @@ Generated from Minecraft 1.21.1, every installed mod JAR, and the current
 
 | Measure | Count |
 |---|---:|
-| Unique recipe IDs | 21095 |
-| Enabled effective recipes | 21017 |
+| Unique recipe IDs | 21096 |
+| Enabled effective recipes | 21018 |
 | Deliberately disabled recipes | 78 |
-| Effective KubeJS overrides | 4936 |
-| IDs with multiple definitions | 4664 |
-| Cross-mod integration candidates | 4734 |
+| Effective KubeJS overrides | 4951 |
+| IDs with multiple definitions | 4677 |
+| Cross-mod integration candidates | 4737 |
 | JSON parse failures | 0 |
-| Recipes with normalized inputs and outputs | 20332 |
+| Recipes with normalized inputs and outputs | 20333 |
 
 ## Scaling coverage
 
 | Classification | Recipes |
 |---|---:|
-| `unscaled` | 16916 |
+| `unscaled` | 16917 |
 | `crafting_material_scaling` | 2276 |
 | `ex_deorum_probability_scaling` | 1692 |
 | `dimension_tiered_smelting` | 90 |
@@ -32,8 +32,8 @@ Top 40 types are shown here; `recipe-index.csv` contains every type.
 
 | Type | Recipes |
 |---|---:|
-| `minecraft:crafting_shaped` | 7755 |
-| `minecraft:crafting_shapeless` | 3808 |
+| `minecraft:crafting_shaped` | 7757 |
+| `minecraft:crafting_shapeless` | 3807 |
 | `minecraft:stonecutting` | 1498 |
 | `exdeorum:sieve` | 1063 |
 | `exdeorum:compressed_sieve` | 846 |
@@ -44,7 +44,7 @@ Top 40 types are shown here; `recipe-index.csv` contains every type.
 | `createmetallurgy:melting` | 231 |
 | `createcybernetics:engineering_table` | 227 |
 | `create:deploying` | 184 |
-| `create:mechanical_crafting` | 145 |
+| `create:mechanical_crafting` | 144 |
 | `oritech:pulverizer` | 124 |
 | `create:mixing` | 120 |
 | `farmersdelight:cutting` | 120 |

@@ -7,9 +7,9 @@ from pathlib import Path
 from validate_structure_corpus import nbt_size
 
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "catalog.json"
-SPECS = ROOT / "structure_library" / "rebuild-family-catalog-specs.json"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+SPECS = ROOT / "dev/structure_library" / "rebuild-family-catalog-specs.json"
 
 
 def entry(spec: dict[str, object], *, master: bool) -> dict[str, object]:

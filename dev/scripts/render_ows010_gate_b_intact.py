@@ -33,7 +33,7 @@ SHIPPING_PATH = ROOT / (
     "kubejs/data/infinite_domain/structure/wasteland/old_world/"
     "ows_010_atlas_conveyor_transfer_hall.nbt"
 )
-GATE_A_REVIEW = ROOT / "old_world_narrative/reviews/heavy_rebuild/OWS-010_GATE_A_R2_REVIEW.md"
+GATE_A_REVIEW = ROOT / "dev/old_world_narrative/reviews/heavy_rebuild/OWS-010_GATE_A_R2_REVIEW.md"
 AIR = {None, "minecraft:air", "minecraft:cave_air", "minecraft:void_air", "minecraft:structure_void"}
 
 

@@ -10,13 +10,13 @@ from zipfile import ZipFile
 from PIL import Image
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 MOD = ROOT / "mods" / "momg-1.1.9-release-neoforge-1.21.1.jar"
 MINECRAFT = Path(
     r"C:\Users\Admin\curseforge\minecraft\Install\versions\1.21.1\1.21.1.jar"
 )
-SCOPE = ROOT / "docs" / "more-ores-more-gems-texture-scope.csv"
-OUTPUT = ROOT / "docs" / "more-ores-more-gems-ore-host-analysis.csv"
+SCOPE = ROOT / "dev/docs" / "more-ores-more-gems-texture-scope.csv"
+OUTPUT = ROOT / "dev/docs" / "more-ores-more-gems-ore-host-analysis.csv"
 HOSTS = {
     "stone": "assets/minecraft/textures/block/stone.png",
     "deepslate": "assets/minecraft/textures/block/deepslate.png",

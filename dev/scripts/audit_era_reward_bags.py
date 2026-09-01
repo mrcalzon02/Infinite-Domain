@@ -7,12 +7,12 @@ import re
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 STARTUP = ROOT / "kubejs/startup_scripts/main.js"
 SERVER = ROOT / "kubejs/server_scripts/era_reward_bags.js"
-REGISTRY = ROOT / "docs/registry-inventory/item-ids.txt"
-ASSIGNMENTS = ROOT / "docs/era-reward-bags/reward-assignments.csv"
-OUT = ROOT / "docs/era-reward-bags/bag-loot-index.csv"
+REGISTRY = ROOT / "dev/docs/registry-inventory/item-ids.txt"
+ASSIGNMENTS = ROOT / "dev/docs/era-reward-bags/reward-assignments.csv"
+OUT = ROOT / "dev/docs/era-reward-bags/bag-loot-index.csv"
 
 
 def main() -> None:

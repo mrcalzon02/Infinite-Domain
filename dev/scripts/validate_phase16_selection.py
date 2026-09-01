@@ -5,9 +5,9 @@ from collections import Counter
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "reviews" / "creativelands_cc0" / "catalog.json"
-SELECTION = ROOT / "structure_library" / "refinement" / "phase16-selection.json"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "reviews" / "creativelands_cc0" / "catalog.json"
+SELECTION = ROOT / "dev/structure_library" / "refinement" / "phase16-selection.json"
 ALLOWED = {"architectural_clean_reference", "module_quarry", "reference_only"}
 
 

@@ -19,8 +19,8 @@ from convert_nbt_to_lostcities import load_structure
 # block was vanilla so the modded-only filter below would have skipped it even
 # if it had not been.
 STRUCTURES = ROOT / "kubejs" / "data" / "infinite_domain" / "structure"
-REPORT = ROOT / "docs" / "structure-block-fitness-audit.json"
-ALLOWLIST = ROOT / "structure_library" / "approved-functional-block-exceptions.json"
+REPORT = ROOT / "dev/docs" / "structure-block-fitness-audit.json"
+ALLOWLIST = ROOT / "dev/structure_library" / "approved-functional-block-exceptions.json"
 DIRECTIONAL = {"facing", "axis", "orientation", "horizontal_facing", "face"}
 FUNCTIONAL_TERMS = {
     "basin", "bearing", "boiler", "burner", "cable", "capacitor", "chute", "compressor",

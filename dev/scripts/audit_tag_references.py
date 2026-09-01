@@ -6,9 +6,9 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs/data"
-REGISTRY = ROOT / "docs/registry-inventory"
+REGISTRY = ROOT / "dev/docs/registry-inventory"
 CUSTOM_NAMESPACES = {
     "kubejs",
     "infinite_domain",

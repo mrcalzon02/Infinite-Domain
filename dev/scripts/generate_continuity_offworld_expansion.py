@@ -14,7 +14,7 @@ from typing import Any
 # Continuity off-world family onto Mercury and Venus, the two Stellaris planets
 # that previously had no discoverable structures at all.
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
 DATA_VERSION = 3955  # Minecraft 1.21.1
 

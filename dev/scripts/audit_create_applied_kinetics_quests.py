@@ -7,18 +7,18 @@ from pathlib import Path
 from zipfile import ZipFile
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 AE2_CHAPTER = ROOT / "config/ftbquests/quests/chapters/applied_energistics_recovery.snbt"
 ERA5_CHAPTER = ROOT / "config/ftbquests/quests/chapters/era_05_automated_industry.snbt"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
 CONFIG = ROOT / "config/createappliedkinetics-common.toml"
-REGISTRY = ROOT / "docs/registry-inventory/item-ids.txt"
-RECIPE_OUTPUTS = ROOT / "docs/recipe-index/recipe-outputs.csv"
+REGISTRY = ROOT / "dev/docs/registry-inventory/item-ids.txt"
+RECIPE_OUTPUTS = ROOT / "dev/docs/recipe-index/recipe-outputs.csv"
 ME_PROXY_RECIPE = ROOT / "kubejs/data/createappliedkinetics/recipe/me_proxy.json"
 INSCRIBER_RECIPE = ROOT / "kubejs/data/ae2/recipe/network/blocks/inscribers.json"
 MOD_JAR = ROOT / "mods/createappliedkinetics-1.5.3-1.21.1.jar"
-AE2_GENERATOR = ROOT / "scripts/generators/build_quest_expansion.js"
-ERA_GENERATOR = ROOT / "scripts/generators/generate_eras_2_8.js"
+AE2_GENERATOR = ROOT / "dev/scripts/generators/build_quest_expansion.js"
+ERA_GENERATOR = ROOT / "dev/scripts/generators/generate_eras_2_8.js"
 
 
 def quest_block(source: str, quest_id: str) -> str:

@@ -9,9 +9,9 @@ from analyze_worldgen_benchmark import analyze, validate_matrix
 
 
 def main() -> None:
-    root = Path(__file__).resolve().parents[1]
-    validate_matrix(root / "scripts" / "worldgen_benchmark_matrix.json")
-    launcher_source = (root / "scripts" / "run_worldgen_benchmark.ps1").read_text(
+    root = Path(__file__).resolve().parents[2]
+    validate_matrix(root / "dev/scripts" / "worldgen_benchmark_matrix.json")
+    launcher_source = (root / "dev/scripts" / "run_worldgen_benchmark.ps1").read_text(
         encoding="utf-8"
     )
     assert "$benchmarkWorldName = [string]$matrix.worldName" in launcher_source
@@ -31,9 +31,19 @@ def main() -> None:
     assert "(() => {" in controller_source and controller_source.rstrip().endswith("})()")
     assert "Platform.isLoaded(modId)" in controller_source
     assert "net.neoforged.fml.ModList" not in controller_source
-    assert "var loaded = {}" in controller_source
-    assert "var snapshotRegistryKeys = Java.loadClass" in controller_source
-    assert "var startRegistryKeys = Java.loadClass" in controller_source
+    # The three acceptance probes must declare at function scope. A `var` inside
+    # their try blocks hoists out and collides with the binding left by the
+    # previous entry when a scheduled callback re-enters, which Rhino reports as
+    # "redeclaration of var" - silently zeroing every probe-dependent result.
+    assert "let loaded = {}" in controller_source
+    assert "let snapshotRegistryKeys, snapshotAccess" in controller_source
+    assert "let startRegistryKeys, startResourceKey" in controller_source
+    for probe in ("worldgenBenchmarkModSnapshot",
+                  "worldgenBenchmarkRegistrySnapshot",
+                  "worldgenBenchmarkStructureStarts"):
+        start = controller_source.index("function " + probe)
+        body = controller_source[start:controller_source.index(chr(10) + "function ", start + 1)]
+        assert "var " not in body, probe + " reintroduced a try-block var"
     assert controller_source.count("var tile = config.tiles[tileIndex]") == 1
     assert "var completionElapsedMs" in controller_source
     declarations = re.findall(r"\b(?:const|let|var)\s+([A-Za-z_$][A-Za-z0-9_$]*)", controller_source)

@@ -75,11 +75,13 @@ function worldgenBenchmarkAllChunksLoaded(server, dimension, bounds) {
 
 function worldgenBenchmarkModSnapshot(config) {
     const requested = ['lostcities', 'dungeons_arise', 'dungeons_arise_seven_seas']
+    // Rhino re-enters the try block's lexical environment when scheduled server
+    // callbacks run, and a `var` hoisted out of that block collides with the
+    // binding left by the previous entry ("redeclaration of var"). Declaring at
+    // function scope and assigning inside the try avoids the hoist entirely.
+    let loaded = {}
     try {
-        // Rhino's KubeJS wrapper re-enters try-block lexical environments when
-        // scheduled server callbacks run. Function-scoped var avoids a false
-        // "redeclaration" while remaining isolated by this helper function.
-        var loaded = {}
+        loaded = {}
         requested.forEach(modId => loaded[modId] = Boolean(Platform.isLoaded(modId)))
         worldgenBenchmarkLog({
             event: 'mod_snapshot',
@@ -98,21 +100,23 @@ function worldgenBenchmarkModSnapshot(config) {
 
 function worldgenBenchmarkRegistrySnapshot(server, config) {
     const namespaces = ['dungeons_arise', 'dungeons_arise_seven_seas']
+    // Declared at function scope; see worldgenBenchmarkModSnapshot for why.
+    let snapshotRegistryKeys, snapshotAccess, snapshotStructureRegistry, snapshotStructureSetRegistry
     try {
-        var snapshotRegistryKeys = Java.loadClass('net.minecraft.core.registries.Registries')
-        var snapshotAccess = server.registryAccess()
-        var snapshotStructureRegistry = snapshotAccess.registryOrThrow(snapshotRegistryKeys.STRUCTURE)
-        var snapshotStructureSetRegistry = snapshotAccess.registryOrThrow(snapshotRegistryKeys.STRUCTURE_SET)
+        snapshotRegistryKeys = Java.loadClass('net.minecraft.core.registries.Registries')
+        snapshotAccess = server.registryAccess()
+        snapshotStructureRegistry = snapshotAccess.registryOrThrow(snapshotRegistryKeys.STRUCTURE)
+        snapshotStructureSetRegistry = snapshotAccess.registryOrThrow(snapshotRegistryKeys.STRUCTURE_SET)
 
         namespaces.forEach(namespace => {
-            var structures = []
-            var structureSets = []
+            const structures = []
+            const structureSets = []
             snapshotStructureRegistry.keySet().forEach(key => {
-                var snapshotStructureText = String(key)
+                const snapshotStructureText = String(key)
                 if (snapshotStructureText.startsWith(namespace + ':')) structures.push(snapshotStructureText)
             })
             snapshotStructureSetRegistry.keySet().forEach(key => {
-                var snapshotSetText = String(key)
+                const snapshotSetText = String(key)
                 if (snapshotSetText.startsWith(namespace + ':')) structureSets.push(snapshotSetText)
             })
             structures.sort()
@@ -140,24 +144,27 @@ function worldgenBenchmarkRegistrySnapshot(server, config) {
 function worldgenBenchmarkStructureStarts(server, dimension, bounds) {
     const counts = {}
     let validStarts = 0
+    // Declared at function scope; see worldgenBenchmarkModSnapshot for why.
+    let startRegistryKeys, startResourceKey, startResourceLocation
+    let startDimensionLocation, startDimensionKey, startLevel, startStructureRegistry
     try {
-        var startRegistryKeys = Java.loadClass('net.minecraft.core.registries.Registries')
-        var startResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
-        var startResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
-        var startDimensionLocation = startResourceLocation.parse(String(dimension))
-        var startDimensionKey = startResourceKey.create(startRegistryKeys.DIMENSION, startDimensionLocation)
-        var startLevel = server.getLevel(startDimensionKey)
+        startRegistryKeys = Java.loadClass('net.minecraft.core.registries.Registries')
+        startResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
+        startResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
+        startDimensionLocation = startResourceLocation.parse(String(dimension))
+        startDimensionKey = startResourceKey.create(startRegistryKeys.DIMENSION, startDimensionLocation)
+        startLevel = server.getLevel(startDimensionKey)
         if (startLevel === null || startLevel === undefined) throw new Error('dimension unavailable: ' + dimension)
-        var startStructureRegistry = server.registryAccess().registryOrThrow(startRegistryKeys.STRUCTURE)
+        startStructureRegistry = server.registryAccess().registryOrThrow(startRegistryKeys.STRUCTURE)
 
-        for (var startChunkX = bounds.minChunkX; startChunkX <= bounds.maxChunkX; startChunkX++) {
-            for (var startChunkZ = bounds.minChunkZ; startChunkZ <= bounds.maxChunkZ; startChunkZ++) {
-                var starts = startLevel.getChunk(startChunkX, startChunkZ).getAllStarts()
+        for (let startChunkX = bounds.minChunkX; startChunkX <= bounds.maxChunkX; startChunkX++) {
+            for (let startChunkZ = bounds.minChunkZ; startChunkZ <= bounds.maxChunkZ; startChunkZ++) {
+                const starts = startLevel.getChunk(startChunkX, startChunkZ).getAllStarts()
                 starts.forEach((start, structure) => {
                     if (start === null || start === undefined || !start.isValid()) return
-                    var startKey = startStructureRegistry.getKey(structure)
+                    const startKey = startStructureRegistry.getKey(structure)
                     if (startKey === null || startKey === undefined) return
-                    var startNamespace = String(startKey.getNamespace())
+                    const startNamespace = String(startKey.getNamespace())
                     counts[startNamespace] = (counts[startNamespace] || 0) + 1
                     validStarts++
                 })

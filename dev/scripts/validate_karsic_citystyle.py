@@ -16,15 +16,15 @@ import zipfile
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain" / "lostcities"
 WORLDSTYLE = ROOT / "kubejs" / "data" / "lostcities" / "lostcities" / "worldstyles" / "standard.json"
-ARCHETYPES = ROOT / "structure_library" / "settlement-archetypes.json"
-CATALOG = ROOT / "structure_library" / "catalog.json"
-COMPILATION = ROOT / "docs" / "production-pool-compilation.json"
-REGISTRY = ROOT / "docs" / "registry-inventory" / "block-ids.txt"
+ARCHETYPES = ROOT / "dev/structure_library" / "settlement-archetypes.json"
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+COMPILATION = ROOT / "dev/docs" / "production-pool-compilation.json"
+REGISTRY = ROOT / "dev/docs" / "registry-inventory" / "block-ids.txt"
 BIOME_TAG = ROOT / "kubejs" / "data" / "infinite_domain" / "tags" / "worldgen" / "biome" / "karsic_region_biomes.json"
-REPORT = ROOT / "docs" / "karsic-citystyle-validation.json"
+REPORT = ROOT / "dev/docs" / "karsic-citystyle-validation.json"
 
 STYLE_ID = "infinite_domain:karsic_standard"
 CITYSTYLE_ID = "infinite_domain:karsic_mikrorayon"

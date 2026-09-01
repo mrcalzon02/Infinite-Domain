@@ -8,9 +8,9 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 JAR = ROOT / "mods/infinite-domain-darknet-worldgen-1.8.0.jar"
-SOURCE = ROOT / "packdev/darknet-worldgen-patch/src/main"
+SOURCE = ROOT / "dev/packdev/darknet-worldgen-patch/src/main"
 JAVA = SOURCE / "java/infinitedomain/darknet"
 RESOURCES = SOURCE / "resources"
 VANILLA = Path(r"C:\Users\Admin\curseforge\minecraft\Install\versions\1.21.1\1.21.1.jar")
@@ -197,10 +197,10 @@ for entity_id in entities:
 
 for path in [
     ROOT / "DARKNET-ASSETS-LICENSE.md",
-    ROOT / "docs/DARKNET_ECOLOGY.md",
-    ROOT / "docs/art-direction/darknet-ecology-reference.png",
-    ROOT / "docs/art-direction/darknet-ecology-reference.prompt.txt",
-    ROOT / "scripts/generate_darknet_ecology_art.ps1",
+    ROOT / "dev/docs/DARKNET_ECOLOGY.md",
+    ROOT / "dev/docs/art-direction/darknet-ecology-reference.png",
+    ROOT / "dev/docs/art-direction/darknet-ecology-reference.prompt.txt",
+    ROOT / "dev/scripts/generate_darknet_ecology_art.ps1",
 ]:
     if not path.is_file():
         raise SystemExit(f"Missing reproducible ecology asset: {path}")

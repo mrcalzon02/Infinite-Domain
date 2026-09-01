@@ -34,7 +34,7 @@ SHIPPING_PATH = (
     / "old_world"
     / "ows_008_vcf_emergency_persistence_investigation_lab.nbt"
 )
-R1_BUILDER_PATH = ROOT / "scripts" / "render_ows008_gate_a_massing.py"
+R1_BUILDER_PATH = ROOT / "dev/scripts" / "render_ows008_gate_a_massing.py"
 R1_BUILDER_SHA256 = "252a7898afba6d8cd6cfe76aa84ef398765e1c612ea8f3112aa62f27bbe20d81"
 R1_MODEL_SHA256 = "23d7bc96c3f3ade8566aedad0c7d3a731cf4eeac55c9adcd365ed295ca59f361"
 

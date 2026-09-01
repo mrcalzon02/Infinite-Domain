@@ -13,7 +13,7 @@ import generate_wasteland_sites as base
 import old_world_ows008_final as final_builder
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 SHIPPING_NBT = (
     ROOT
     / "kubejs/data/infinite_domain/structure/wasteland/old_world"

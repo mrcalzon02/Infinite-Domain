@@ -11,14 +11,14 @@ from pathlib import Path
 import generate_wasteland_sites as base
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TARGET = "OWS-009"
 SOURCE_PATH = ROOT / "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_009_atlas_roadside_repair_depot.nbt"
 FROZEN_SOURCE_SHA256 = "d80dfca574d8f96eca633ac515e810f02f52e7eab2f36195977b42708068fe0d"
 FROZEN_SOURCE_BLOB = "4b2df6f6d8bcb5a58511318f0fe78f9f5fc1d44a"
 TEMP_NAME = "_heavy_review_ows009_gate_a_massing_r1"
 TEMP_NBT = ROOT / "kubejs/data/infinite_domain/structure/wasteland" / f"{TEMP_NAME}.nbt"
-OUTPUT_DIR = ROOT / "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r1"
+OUTPUT_DIR = ROOT / "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r1"
 REQUIRED_RECORDS = (
     "OWS-009_PHASE0_BASELINE_REVIEW.md",
     "OWS-009_PASS2_FUNCTIONAL_DEFINITION.md",
@@ -204,7 +204,7 @@ def main() -> None:
     from render_old_world_heavy_rebuild_review import render_review_set
     from render_structure_review import unpack_structure
 
-    review_dir = ROOT / "old_world_narrative/reviews/heavy_rebuild"
+    review_dir = ROOT / "dev/old_world_narrative/reviews/heavy_rebuild"
     missing = [name for name in REQUIRED_RECORDS if not (review_dir / name).is_file()]
     if missing:
         raise AssertionError(f"OWS-009 Gate-A prerequisites missing: {missing}")

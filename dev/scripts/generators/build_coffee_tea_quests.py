@@ -1,6 +1,6 @@
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "config/ftbquests/quests/chapters/coffee_tea_economy.snbt"
 CHAPTER = "1240CAEABAC9DC56"
 GROUP = "3F00D00000000001"

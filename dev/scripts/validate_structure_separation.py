@@ -21,7 +21,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[1]
+REPO = Path(__file__).resolve().parents[2]
 SS_ROOT = REPO / "kubejs" / "data" / "infinite_domain" / "worldgen" / "structure_set"
 STRUCT_ROOT = REPO / "kubejs" / "data" / "infinite_domain" / "worldgen" / "structure"
 POOL_ROOT = REPO / "kubejs" / "data" / "infinite_domain" / "worldgen" / "template_pool"

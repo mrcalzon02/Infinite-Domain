@@ -7,9 +7,9 @@ import re
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 LOG = ROOT / "logs/latest.log"
-OUT = ROOT / "docs/custom-content-audit/runtime-recipe-warnings.csv"
+OUT = ROOT / "dev/docs/custom-content-audit/runtime-recipe-warnings.csv"
 
 
 def main() -> int:

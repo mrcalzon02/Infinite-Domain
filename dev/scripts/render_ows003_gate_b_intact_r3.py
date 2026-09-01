@@ -20,7 +20,7 @@ import render_ows003_gate_b_intact_r2 as r2
 from render_old_world_heavy_rebuild_review import OUTPUT_ROOT, ROOT, render_review_set
 from render_structure_review import unpack_structure
 
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 TEMP_NAME = "_heavy_review_ows003_gate_b_intact_r3"
 TEMP_NBT = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland" / f"{TEMP_NAME}.nbt"
 OUTPUT_DIR = OUTPUT_ROOT / "OWS-003" / "gate_b_intact" / "r3"
@@ -105,7 +105,7 @@ def main() -> None:
         TEMP_NBT.unlink(missing_ok=True)
 
     # Clear stale failed-attempt diagnostics only after r3 reaches rendered state.
-    failure_path = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-003_GATE_B_FAILURE.log"
+    failure_path = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-003_GATE_B_FAILURE.log"
     failure_path.unlink(missing_ok=True)
 
     state["active_status"] = "gate_b_r3_intact_rendered_pending_review"

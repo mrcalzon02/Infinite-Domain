@@ -12,15 +12,15 @@ import generate_wasteland_sites as base
 import render_ows009_gate_a_massing as r1
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TARGET = "OWS-009"
 SOURCE_PATH = r1.SOURCE_PATH
 FROZEN_SOURCE_SHA256 = r1.FROZEN_SOURCE_SHA256
 FROZEN_SOURCE_BLOB = r1.FROZEN_SOURCE_BLOB
 TEMP_NAME = "_heavy_review_ows009_gate_a_massing_r2"
 TEMP_NBT = ROOT / "kubejs/data/infinite_domain/structure/wasteland" / f"{TEMP_NAME}.nbt"
-OUTPUT_DIR = ROOT / "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r2"
-R1_REVIEW = ROOT / "old_world_narrative/reviews/heavy_rebuild/OWS-009_GATE_A_R1_REVIEW.md"
+OUTPUT_DIR = ROOT / "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_a_massing/r2"
+R1_REVIEW = ROOT / "dev/old_world_narrative/reviews/heavy_rebuild/OWS-009_GATE_A_R1_REVIEW.md"
 AIR = r1.AIR
 
 

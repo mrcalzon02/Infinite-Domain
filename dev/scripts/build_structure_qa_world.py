@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 SOURCE_LEVEL = ROOT / "saves" / "New World Charlie" / "level.dat"
 WORLD_NAME = "Infinite Domain - Structure QA Flatworld"
 WORLD = ROOT / "saves" / WORLD_NAME
@@ -22,9 +22,9 @@ PACK_NAME = "Infinite_Domain_QA_Gallery"
 PACK = WORLD / "datapacks" / PACK_NAME
 FUNCTIONS = PACK / "data" / "infinite_domain_qa" / "function"
 BLOCK_CONFIG = ROOT / "config" / "submarine_hull.json"
-MANIFEST = ROOT / "docs" / "wasteland-site-manifest.json"
-ROAD_CATALOG = ROOT / "structure_library" / "roads" / "road-modules.json"
-MODULE_CATALOG = ROOT / "structure_library" / "modules" / "structure-kits.json"
+MANIFEST = ROOT / "dev/docs" / "wasteland-site-manifest.json"
+ROAD_CATALOG = ROOT / "dev/structure_library" / "roads" / "road-modules.json"
+MODULE_CATALOG = ROOT / "dev/structure_library" / "modules" / "structure-kits.json"
 RESOURCE_ID = re.compile(r"^[a-z0-9_.-]+:[a-z0-9_./-]+$")
 VANILLA_DATA_JAR_CANDIDATES = (
     Path.home() / "curseforge" / "minecraft" / "Install" / "versions" / "1.21.1" / "1.21.1.jar",
@@ -35,7 +35,7 @@ LOOSE_DATA_ROOTS = (
     ROOT / "datapacks",
     ROOT / "dynamic-data-pack-cache",
     ROOT / "moonlight-global-datapacks",
-    ROOT / "packdev",
+    ROOT / "dev/packdev",
     ROOT / "data",
 )
 

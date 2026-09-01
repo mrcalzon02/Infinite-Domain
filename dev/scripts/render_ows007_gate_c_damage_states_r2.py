@@ -33,14 +33,14 @@ from render_ows007_gate_c_damage_states import (
 
 
 OUTPUT_DIR = (
-    ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" /
+    ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" /
     "OWS-007" / "gate_c_damage_states" / "r2"
 )
 R1_GATE_MANIFEST = (
-    ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" /
+    ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" /
     "OWS-007" / "gate_c_damage_states" / "r1" / "gate_c_manifest.json"
 )
-R1_CANDIDATE = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-007_GATE_C_R1_CANDIDATE.md"
+R1_CANDIDATE = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-007_GATE_C_R1_CANDIDATE.md"
 R1_D0_SHA256 = "b116ad94acd595414ca670d4f5205bed69e4116724167a6397a8504acb0ba67a"
 R1_D1_SHA256 = "7bb865d6d06682dca0b986234c639cc859c7c15be47cd342215b21f3e2ef952f"
 R1_D3_SHA256 = "6d6e1743219299d34e23a3f385f597bff1b26c679490c8b43d31f4f82911cef4"

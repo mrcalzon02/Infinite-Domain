@@ -14,9 +14,9 @@ from pathlib import Path
 
 from PIL import Image, ImageChops
 
-ROOT = Path(__file__).resolve().parents[1]
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-BASE = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-001"
+ROOT = Path(__file__).resolve().parents[2]
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+BASE = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-001"
 GATE_C = BASE / "gate_c_damage_states" / "r1" / "d3"
 GATE_D = BASE / "gate_d_final" / "r1"
 SYNC_PATH = GATE_D / "authoritative_sync.json"

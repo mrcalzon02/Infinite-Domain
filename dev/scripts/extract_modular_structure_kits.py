@@ -11,9 +11,9 @@ import structure_geometry_primitives_v2 as v2p
 from generate_wasteland_sites import DATA, Template
 from structure_geometry_lint import lint_structure, positions_from_template
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "modules" / "structure-kits.json"
-REPORT = ROOT / "docs" / "structure-kit-extraction.json"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "modules" / "structure-kits.json"
+REPORT = ROOT / "dev/docs" / "structure-kit-extraction.json"
 
 
 @dataclass(frozen=True)

@@ -25,7 +25,7 @@ from structure_geometry_primitives_v2 import (
     wall_window as v2_wall_window,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
 DATA_VERSION = 3955  # Minecraft 1.21.1
 
@@ -7563,7 +7563,7 @@ REBUILT_PENDING_VISUAL_REVIEW.update({"industrial_facility", "city_electrical_su
 # validate_production_integration.py) don't have to rebuild the whole corpus
 # to see it. There is no human sign-off step anywhere in this path.
 def _load_quality_approved_for_production() -> set[str]:
-    path = ROOT / "structure_library" / "production-approvals.json"
+    path = ROOT / "dev/structure_library" / "production-approvals.json"
     try:
         document = json.loads(path.read_text(encoding="utf-8"))
     except (FileNotFoundError, json.JSONDecodeError):
@@ -7791,10 +7791,10 @@ def generate() -> None:
             for name in BUILDERS
         },
     }
-    write_json(ROOT / "docs" / "wasteland-site-manifest.json", manifest)
+    write_json(ROOT / "dev/docs" / "wasteland-site-manifest.json", manifest)
     approved_names = {name for name, passed in geometry_lint_passed.items() if passed}
     write_json(
-        ROOT / "docs" / "wasteland-structure-visual-review.json",
+        ROOT / "dev/docs" / "wasteland-structure-visual-review.json",
         {
             "quality_threshold": "Automated: structure_geometry_lint.py checks 1-3 (structural connectivity, stair/ladder/sign support, opening/wall coupling) must report zero hard-fail findings. No in-world inspection is required.",
             "approved_count": len(approved_names),
@@ -7808,7 +7808,7 @@ def generate() -> None:
         },
     )
     write_json(
-        ROOT / "docs" / "wasteland-structure-structural-lint.json",
+        ROOT / "dev/docs" / "wasteland-structure-structural-lint.json",
         {
             "purpose": "Mechanical fault detection: paired doors, minimum fixtures, windows and possible vertical access (assess_fidelity), plus structural connectivity, stair/ladder/sign support and opening/wall coupling (structure_geometry_lint.py). Zero hard-fail findings in both is the complete, automated production-approval bar.",
             "structures_checked": len(structural_lint_report),
@@ -7821,7 +7821,7 @@ def generate() -> None:
             "structures": structural_lint_report,
         },
     )
-    approvals_path = ROOT / "structure_library" / "production-approvals.json"
+    approvals_path = ROOT / "dev/structure_library" / "production-approvals.json"
     try:
         approvals_document = json.loads(approvals_path.read_text(encoding="utf-8"))
     except (FileNotFoundError, json.JSONDecodeError):
@@ -7840,7 +7840,7 @@ def generate() -> None:
     # regional approvals. Preserve every existing approval whose catalog source
     # is outside the central wasteland tree, then replace only the central list.
     try:
-        catalog_document = json.loads((ROOT / "structure_library" / "catalog.json").read_text(encoding="utf-8"))
+        catalog_document = json.loads((ROOT / "dev/structure_library" / "catalog.json").read_text(encoding="utf-8"))
     except (FileNotFoundError, json.JSONDecodeError):
         catalog_document = {"structures": []}
     regional_ids = {

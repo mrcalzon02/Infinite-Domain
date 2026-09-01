@@ -8,11 +8,11 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "resourcepacks/LAST_DAYS_INFINITE_DOMAIN_1_21_1/assets"
 KUBE_ITEMS = ROOT / "kubejs/assets/kubejs/textures/item"
 TARGET = KUBE_ITEMS / "space_industry"
-LEDGER = ROOT / "docs/space-industry-reused-item-textures.csv"
+LEDGER = ROOT / "dev/docs/space-industry-reused-item-textures.csv"
 REVIEW_DIR = ROOT / "ROOT_tools/space_industry_reuse_reviews"
 
 

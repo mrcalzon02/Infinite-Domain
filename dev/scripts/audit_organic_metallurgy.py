@@ -6,7 +6,7 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 MINERAL_PATH = ROOT / "kubejs/config/mineral_trace_ore_processing.json"
 CHEMISTRY_PATH = ROOT / "kubejs/config/organic_metallurgy.json"
 STARTUP_PATH = ROOT / "kubejs/startup_scripts/mineral_trace_items.js"
@@ -14,7 +14,7 @@ RECIPE_PATH = ROOT / "kubejs/server_scripts/organic_metallurgy.js"
 BYPASS_PATH = ROOT / "kubejs/server_scripts/mineral_trace_ore_processing.js"
 CHAPTER_DIR = ROOT / "config/ftbquests/quests/chapters"
 LANG_PATH = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
-REPORT_PATH = ROOT / "docs/organic-metallurgy-processing-matrix.md"
+REPORT_PATH = ROOT / "dev/docs/organic-metallurgy-processing-matrix.md"
 
 
 def require(value: bool, message: str) -> None:

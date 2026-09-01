@@ -10,9 +10,9 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 ITEM_DIR = ROOT / "kubejs/assets/kubejs/textures/item"
-OUT = ROOT / "docs/texture-audit"
+OUT = ROOT / "dev/docs/texture-audit"
 MAIN = ROOT / "kubejs/startup_scripts/main.js"
 
 

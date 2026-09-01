@@ -7,9 +7,9 @@ from collections import Counter
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DEFINITIONS = ROOT / "kubejs/data/infinite_domain/echo_definitions"
-REGISTRY = ROOT / "docs/registry-inventory/item-ids.txt"
+REGISTRY = ROOT / "dev/docs/registry-inventory/item-ids.txt"
 BRIDGE = ROOT / "mods/infinite-domain-echo-economy-1.0.0.jar"
 CYBERWARE_EXPANSION = ROOT / "mods/infinite-domain-cyberware-mastery-1.0.0.jar"
 EXPECTED_VENDORS = {

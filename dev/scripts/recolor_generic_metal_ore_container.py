@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw, ImageFont
 import install_more_ores_more_gems_derived_textures as pipeline
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 MOD = ROOT / "mods" / "momg-1.1.9-release-neoforge-1.21.1.jar"
 MINECRAFT = Path(r"C:\Users\Admin\curseforge\minecraft\Install\versions\1.21.1\1.21.1.jar")
 GENERIC = (
@@ -28,7 +28,7 @@ RUNTIME = (
     ROOT / "resourcepacks" / "LAST_DAYS_INFINITE_DOMAIN_1_21_1"
     / "assets" / "more_ores_more_gems" / "textures"
 )
-MAPPING = ROOT / "docs" / "more-ores-more-gems-generic-metal-container-recolors.csv"
+MAPPING = ROOT / "dev/docs" / "more-ores-more-gems-generic-metal-container-recolors.csv"
 REVIEW = ROOT / "ROOT_tools" / "more_ores_more_gems_generic_metal_container_review"
 SIZE = 32
 

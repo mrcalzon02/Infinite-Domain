@@ -18,8 +18,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "dev/scripts"))
 
 import generate_karsic_sites as generator  # noqa: E402
 import generate_wasteland_sites as base  # noqa: E402
@@ -35,13 +35,13 @@ from validate_regional_structures import check_karsic  # noqa: E402
 NAME = "kar_024_panel_block_service_premises"
 SID = f"infinite_domain:{NAME}"
 CLEAN_ID = f"{SID}_clean_master"
-REPORT = ROOT / "docs" / "karsic-service-plinth-validation.json"
-PROGRAM = ROOT / "structure_library" / "programs" / f"{NAME}.json"
-CATALOG = ROOT / "structure_library" / "catalog.json"
-APPROVALS = ROOT / "structure_library" / "production-approvals.json"
-PROVENANCE = ROOT / "structure_library" / "licensing" / "provenance.json"
-CONVERSION = ROOT / "docs" / "lostcities-conversion-report.json"
-RENDERS = ROOT / "structure_library" / "reviews" / "render-manifest.json"
+REPORT = ROOT / "dev/docs" / "karsic-service-plinth-validation.json"
+PROGRAM = ROOT / "dev/structure_library" / "programs" / f"{NAME}.json"
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+APPROVALS = ROOT / "dev/structure_library" / "production-approvals.json"
+PROVENANCE = ROOT / "dev/structure_library" / "licensing" / "provenance.json"
+CONVERSION = ROOT / "dev/docs" / "lostcities-conversion-report.json"
+RENDERS = ROOT / "dev/structure_library" / "reviews" / "render-manifest.json"
 NBT_ROOT = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "karsic"
 WORLDGEN = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen"
 SERVER_SCRIPTS = ROOT / "kubejs" / "server_scripts"
@@ -182,7 +182,7 @@ def main() -> int:
     )
 
     generation = next(
-        entry for entry in load(ROOT / "docs" / "karsic-generation-report.json")["results"]
+        entry for entry in load(ROOT / "dev/docs" / "karsic-generation-report.json")["results"]
         if entry["structure_id"] == NAME
     )
     core_count = max(2, math.ceil(generation["bays"][0] / 4))

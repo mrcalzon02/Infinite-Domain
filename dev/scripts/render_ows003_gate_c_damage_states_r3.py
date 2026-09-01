@@ -16,7 +16,7 @@ from render_old_world_heavy_rebuild_review import OUTPUT_ROOT, ROOT
 
 r1 = r2.r1
 OUTPUT_DIR = OUTPUT_ROOT / "OWS-003" / "gate_c_damage_states" / "r3"
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 
 
 def build_d3_r3():

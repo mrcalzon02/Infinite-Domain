@@ -9,10 +9,10 @@ from collections import defaultdict
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CHAPTERS = ROOT / "config" / "ftbquests" / "quests" / "chapters"
-INDEX = ROOT / "docs" / "recipe-index" / "recipe-index.csv"
-OUT = ROOT / "docs" / "recipe-integration-audit"
+INDEX = ROOT / "dev/docs" / "recipe-index" / "recipe-index.csv"
+OUT = ROOT / "dev/docs" / "recipe-integration-audit"
 
 ERA_FILES = {
     0: "lets_get_started_shall_we.snbt",

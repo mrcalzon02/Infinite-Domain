@@ -10,8 +10,18 @@ EXCLUDED_NAMESPACES, and writes:
   (fenced by markers so re-runs replace only that block)
 * the chapter group entry in config/ftbquests/quests/chapter_groups.snbt
 
-Everything is a pure function of the candidate CSV and the constants below, so
-re-running after a registry / asset change produces a clean diff.
+Only ids with an *item* form are eligible: item and block are separate
+registries, so fluids and item-less blocks (minecraft:lava, petrochem:gasoline)
+would be rewritten to ftbquests:missing_item the first time the game loads the
+chapter. The candidate CSV gates on this and ItemOracle re-checks it here.
+
+Task and section ids come from docs/domain-compendium/quest-id-ledger.csv, which
+binds an id to its *content* rather than its position in the file. FTB Quests
+keys player progress on task id, so without the ledger any change to the
+candidate list would renumber the tasks after it and silently wipe completion.
+
+Output is a pure function of the candidate CSV, the ledger and the constants
+below, so re-running after a registry / asset change produces a clean diff.
 
 Authority: docs/DOMAIN_COMPENDIUM_CHAPTER.md
 """
@@ -21,16 +31,21 @@ from __future__ import annotations
 import csv
 import json
 import re
+import sys
 from collections import defaultdict
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from pack_content_oracle import ItemOracle  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[2]
-CANDIDATES = ROOT / "docs/domain-compendium/candidate-inventory.csv"
+
+ROOT = Path(__file__).resolve().parents[3]
+CANDIDATES = ROOT / "dev/docs/domain-compendium/candidate-inventory.csv"
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/domain_compendium.snbt"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
 GROUPS = ROOT / "config/ftbquests/quests/chapter_groups.snbt"
-MOD_INDEX = ROOT / "docs/registry-inventory/mod-jar-index.json"
+MOD_INDEX = ROOT / "dev/docs/registry-inventory/mod-jar-index.json"
+LEDGER = ROOT / "dev/docs/domain-compendium/quest-id-ledger.csv"
 
 # Decision 1 (docs/DOMAIN_COMPENDIUM_CHAPTER.md §8): chisel re-texture palettes
 # are catalogued through a future collapsed pass, not one task per variant.
@@ -74,12 +89,73 @@ def mod_names() -> dict[str, str]:
     return names
 
 
-def section_hex(index: int) -> str:
-    return f"7C0DE1{index:010X}"
+ID_PREFIX = {"section": "7C0DE1", "task": "7C0DE2"}
 
 
-def task_hex(index: int) -> str:
-    return f"7C0DE2{index:010X}"
+class IdLedger:
+    """Binds quest/task ids to content so regeneration cannot reset progress.
+
+    Keys are the item id (tasks) and "<namespace>#<part>" (section quests).
+    Retired keys are kept, so an item that leaves the candidate list and later
+    returns reclaims its original id instead of colliding with a reissued one.
+    """
+
+    def __init__(self, path: Path):
+        self.path = path
+        self.ids: dict[tuple[str, str], str] = {}
+        if path.exists():
+            with path.open(encoding="utf-8", newline="") as handle:
+                for row in csv.DictReader(handle):
+                    self.ids[(row["kind"], row["key"])] = row["id"]
+        self.issued = 0
+        self._next = {
+            kind: max(
+                (int(value[len(prefix):], 16)
+                 for (k, _), value in self.ids.items() if k == kind),
+                default=0,
+            ) + 1
+            for kind, prefix in ID_PREFIX.items()
+        }
+
+    def get(self, kind: str, key: str) -> str:
+        known = self.ids.get((kind, key))
+        if known is not None:
+            return known
+        index = self._next[kind]
+        self._next[kind] = index + 1
+        self.issued += 1
+        value = f"{ID_PREFIX[kind]}{index:010X}"
+        self.ids[(kind, key)] = value
+        return value
+
+    def save(self) -> None:
+        with self.path.open("w", encoding="utf-8", newline="") as handle:
+            writer = csv.writer(handle)
+            writer.writerow(["kind", "key", "id"])
+            writer.writerows(
+                [kind, key, value] for (kind, key), value in sorted(self.ids.items())
+            )
+
+
+def assert_items_exist(included: dict[str, list[str]]) -> None:
+    """Refuse to emit a task whose item no player could ever hand in."""
+    oracle = ItemOracle()
+    broken = sorted(
+        item_id
+        for ids in included.values()
+        for item_id in ids
+        if not oracle.exists(item_id)
+    )
+    if broken:
+        shown = "
+".join(f"  {i} - {oracle.why_missing(i)}" for i in broken[:20])
+        more = f"
+  ... and {len(broken) - 20} more" if len(broken) > 20 else ""
+        raise SystemExit(
+            f"refusing to write {CHAPTER.name}: {len(broken)} task item(s) have no "
+            f"item form and would load as ftbquests:missing_item:
+{shown}{more}"
+        )
 
 
 def load_included() -> dict[str, list[str]]:
@@ -89,6 +165,11 @@ def load_included() -> dict[str, list[str]]:
             if row["decision"] != "include":
                 continue
             if row["namespace"] in EXCLUDED_NAMESPACES:
+                continue
+            # Block-registry-only ids (fluids, item-less blocks) cannot be handed
+            # in. The CSV decides this too; re-checked here so a stale or
+            # hand-edited inventory cannot reintroduce uncompletable tasks.
+            if row["is_item"] != "True":
                 continue
             by_namespace[row["namespace"]].append(row["id"])
     for ids in by_namespace.values():

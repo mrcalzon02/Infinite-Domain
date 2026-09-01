@@ -29,13 +29,13 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-REGISTRY = ROOT / "docs/registry-inventory"
-GRAPH_EDGES = ROOT / "docs/progression-graph/graph-edges.csv"
+ROOT = Path(__file__).resolve().parents[2]
+REGISTRY = ROOT / "dev/docs/registry-inventory"
+GRAPH_EDGES = ROOT / "dev/docs/progression-graph/graph-edges.csv"
 KUBEJS_ASSETS = ROOT / "kubejs/assets"
 MODS = ROOT / "mods"
 RESOURCEPACKS = ROOT / "resourcepacks"
-OUT_DIR = ROOT / "docs/domain-compendium"
+OUT_DIR = ROOT / "dev/docs/domain-compendium"
 # The vanilla client jar is not under mods/; it supplies minecraft: models and
 # textures that mod models inherit from. Path mirrors audit_authored_asset_references.py.
 VANILLA_JAR = ROOT.parents[1] / "Install/versions/1.21.1/1.21.1.jar"
@@ -328,7 +328,14 @@ def main() -> int:
         verdict, detail = textured_status(index, identifier, is_block)
 
         obtain_ok = bool(kinds)
-        if verdict == "yes" and obtain_ok:
+        # Item and block are separate registries. Fluids and item-less blocks
+        # (minecraft:lava, create:honey, petrochem:gasoline) exist only as blocks,
+        # so a "submit one" task naming them can never be completed - FTB Quests
+        # rewrites them to ftbquests:missing_item on load. No amount of texture or
+        # obtainment evidence makes them collectable, so this gate runs first.
+        if not is_item:
+            decision, reason = "exclude", "no item form (block/fluid registry only)"
+        elif verdict == "yes" and obtain_ok:
             decision, reason = "include", "textured + obtainable"
         elif verdict == "yes" and not obtain_ok:
             decision, reason = "review", "textured but no static obtainment route"

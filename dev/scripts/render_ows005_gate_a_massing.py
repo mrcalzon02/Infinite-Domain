@@ -10,8 +10,8 @@ from pathlib import Path
 from old_world_ows005_geometry import build_gate_a_massing
 
 
-ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_ROOT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
+ROOT = Path(__file__).resolve().parents[2]
+OUTPUT_ROOT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
 TEMP_NAME = "_heavy_review_ows005_gate_a_massing_r1"
 TEMP_NBT = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland" / f"{TEMP_NAME}.nbt"
 OUTPUT_DIR = OUTPUT_ROOT / "OWS-005" / "gate_a_massing" / "r1"

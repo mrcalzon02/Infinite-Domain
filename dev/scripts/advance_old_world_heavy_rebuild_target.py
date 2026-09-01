@@ -15,8 +15,8 @@ import json
 import os
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+ROOT = Path(__file__).resolve().parents[2]
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 
 INSTITUTIONS = {
     "vcf": "Verdant Continuum Foods",
@@ -34,7 +34,7 @@ INSTITUTIONS = {
 def _display_name(target: str) -> tuple[str, str]:
     # Import lazily so the transition tool does not participate in normal worldgen.
     import sys
-    sys.path.insert(0, str(ROOT / "scripts"))
+    sys.path.insert(0, str(ROOT / "dev/scripts"))
     import old_world_narrative_core as core
 
     spec = next((row for row in core.SPECS if row.target == target), None)

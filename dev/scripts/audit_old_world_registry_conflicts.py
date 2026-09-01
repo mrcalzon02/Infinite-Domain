@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "kubejs" / "config" / "old_world_evidence.json"
 STARTUP = ROOT / "kubejs" / "startup_scripts"
 AUTHORITATIVE = STARTUP / "old_world_evidence_items.js"

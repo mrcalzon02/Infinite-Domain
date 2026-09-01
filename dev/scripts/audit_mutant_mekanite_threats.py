@@ -3,9 +3,9 @@
 from pathlib import Path
 import re
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/mutant_and_mekanite_threat_dossier.snbt"
-ITEMS = set((ROOT / "docs/registry-inventory/item-ids.txt").read_text(encoding="utf-8").splitlines())
+ITEMS = set((ROOT / "dev/docs/registry-inventory/item-ids.txt").read_text(encoding="utf-8").splitlines())
 text = CHAPTER.read_text(encoding="utf-8")
 
 mutants = {

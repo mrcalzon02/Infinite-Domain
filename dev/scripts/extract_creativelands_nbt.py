@@ -10,10 +10,10 @@ from generate_wasteland_sites import DATA_VERSION, NbtList, TAG_COMPOUND, TAG_IN
 from inventory_creativelands import ARCHIVE, BLOCK, COMMIT, ROOT, ROOT_PREFIX, coordinate
 
 
-INVENTORY = ROOT / "structure_library" / "sources" / "quarantine" / "creativelands_cc0" / "inventory.json"
-OUTPUT_ROOT = ROOT / "structure_library" / "extracted" / "creativelands_cc0"
+INVENTORY = ROOT / "dev/structure_library" / "sources" / "quarantine" / "creativelands_cc0" / "inventory.json"
+OUTPUT_ROOT = ROOT / "dev/structure_library" / "extracted" / "creativelands_cc0"
 REPORT = OUTPUT_ROOT / "conversion-report.json"
-PROVENANCE = ROOT / "structure_library" / "licensing" / "creativelands-extracted-provenance.json"
+PROVENANCE = ROOT / "dev/structure_library" / "licensing" / "creativelands-extracted-provenance.json"
 SAFE = re.compile(r"[^a-z0-9_./-]+")
 
 

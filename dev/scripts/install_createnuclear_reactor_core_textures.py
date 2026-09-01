@@ -8,7 +8,7 @@ from zipfile import ZipFile
 from PIL import Image, ImageEnhance, ImageFilter
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 SOURCE = ROOT / "ROOT_tools" / "createnuclear_authored_sources"
 TARGET = (
     ROOT
@@ -24,7 +24,7 @@ TARGET = (
 SIZE = 128
 FRAMES = 6
 FRAME_TIME = 5
-MANIFEST = ROOT / "docs" / "last-days-createnuclear-derived-textures.json"
+MANIFEST = ROOT / "dev/docs" / "last-days-createnuclear-derived-textures.json"
 MODEL_PATH = "assets/createnuclear/models/block/reactor/core/block.json"
 MODEL_TEXTURES = {
     "1": "createnuclear:block/reactor/core/reactor_core_casing",

@@ -17,11 +17,11 @@ from generate_wasteland_sites import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "catalog.json"
-PROGRAMS = ROOT / "structure_library" / "programs"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+PROGRAMS = ROOT / "dev/structure_library" / "programs"
 ASSETS = ROOT / "kubejs" / "data" / "infinite_domain" / "lostcities"
-REPORT = ROOT / "docs" / "lostcities-conversion-report.json"
+REPORT = ROOT / "dev/docs" / "lostcities-conversion-report.json"
 FLOOR_HEIGHT = 6
 
 # Space means generated air in a Lost Cities slice. These characters are safe

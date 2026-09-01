@@ -10,14 +10,14 @@ from generate_wasteland_sites import STRUCTURE_BLOCK_REPLACEMENTS
 from build_structure_qa_world import Reader
 
 
-ROOT = Path(__file__).resolve().parents[1]
-SITE_MANIFEST = ROOT / "docs" / "wasteland-site-manifest.json"
-LINT_REPORT = ROOT / "docs" / "wasteland-structure-structural-lint.json"
-VISUAL_REPORT = ROOT / "docs" / "wasteland-structure-visual-review.json"
-RENDER_MANIFEST = ROOT / "structure_library" / "audit_renders" / "render-manifest.json"
-REGISTRY = ROOT / "docs" / "registry-inventory" / "block-ids.txt"
-JSON_REPORT = ROOT / "docs" / "inbuilt-structure-audit.json"
-MARKDOWN_REPORT = ROOT / "docs" / "INBUILT_STRUCTURE_AUDIT.md"
+ROOT = Path(__file__).resolve().parents[2]
+SITE_MANIFEST = ROOT / "dev/docs" / "wasteland-site-manifest.json"
+LINT_REPORT = ROOT / "dev/docs" / "wasteland-structure-structural-lint.json"
+VISUAL_REPORT = ROOT / "dev/docs" / "wasteland-structure-visual-review.json"
+RENDER_MANIFEST = ROOT / "dev/structure_library" / "audit_renders" / "render-manifest.json"
+REGISTRY = ROOT / "dev/docs" / "registry-inventory" / "block-ids.txt"
+JSON_REPORT = ROOT / "dev/docs" / "inbuilt-structure-audit.json"
+MARKDOWN_REPORT = ROOT / "dev/docs" / "INBUILT_STRUCTURE_AUDIT.md"
 REBUILT = {"abandoned_bungalow", "abandoned_motel", "dilapidated_grocery", "ruined_gas_station", "freight_depot", "ruined_fire_station", "corporate_warehouse", "abandoned_create_factory", "bunker_network", "survivor_cache", "trade_outpost", "decayed_farm", "trailer_park", "mountain_military_complex", "mountain_biohazard_lab", "decayed_logging_camp", "bombed_data_center", "hydroelectric_refuge_dam", "toppled_skyscraper", "blown_apartment_complex", "ruined_mixed_use_block", "sunken_city_front", "pancaked_parking_structure", "cratered_downtown_intersection", "ruined_hospital", "ruined_police_precinct", "ruined_courthouse"}
 REBUILT.update({"radio_mast", "wrecked_sedan", "delivery_van", "battle_tank", "service_garage", "scrapyard", "military_checkpoint", "ruined_roadside_diner", "abandoned_truck_stop", "wasteland_weigh_station", "destroyed_refugee_convoy", "split_level_house", "abandoned_culdesac", "emergency_relief_shelter", "tenement_courtyard", "ruined_rowhouse_block", "shattered_luxury_condo", "ruined_city_school", "ruined_community_center", "decayed_ranch", "roadside_church_cemetery", "ruined_ranger_station", "wasteland_fire_lookout"})
 REBUILT.update({"ruined_shopping_mall", "ruined_department_store", "bombed_hotel", "buried_bank_vault", "ruined_office_tower"})

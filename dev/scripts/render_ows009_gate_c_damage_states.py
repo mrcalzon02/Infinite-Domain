@@ -20,11 +20,11 @@ from render_old_world_heavy_rebuild_review import contact_sheet, render_review_s
 from render_structure_review import isometric, unpack_structure
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TARGET = "OWS-009"
 SIZE = (49, 18, 41)
 CAMERA_SET = "ows009_fixed_v1"
-OUTPUT_DIR = ROOT / "old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_c_damage_states/r1"
+OUTPUT_DIR = ROOT / "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_c_damage_states/r1"
 SHIPPING_PATH = ROOT / "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_009_atlas_roadside_repair_depot.nbt"
 FROZEN_SHIPPING_SHA256 = "d80dfca574d8f96eca633ac515e810f02f52e7eab2f36195977b42708068fe0d"
 FROZEN_SHIPPING_BLOB = "4b2df6f6d8bcb5a58511318f0fe78f9f5fc1d44a"
@@ -65,7 +65,7 @@ def _diff_positions(a: base.Template, b: base.Template) -> set[tuple[int, int, i
 
 
 def _assert_authorized() -> None:
-    review_dir = ROOT / "old_world_narrative/reviews/heavy_rebuild"
+    review_dir = ROOT / "dev/old_world_narrative/reviews/heavy_rebuild"
     review = review_dir / "OWS-009_GATE_B_R1_REVIEW.md"
     text = review.read_text(encoding="utf-8") if review.is_file() else ""
     if "OWS-009 GATE B r1: PASSED" not in text or ACCEPTED_GATE_B_SHA256 not in text:

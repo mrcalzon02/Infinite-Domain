@@ -39,11 +39,11 @@ BUILDERS["OWS-006"] = ows006_final.build_006
 BUILDERS["OWS-007"] = ows007_final.build_007
 BUILDERS["OWS-008"] = ows008_final.build_008
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
 AUDIO_DIARY_REGISTRY = ROOT / "kubejs" / "config" / "old_world_audio_diaries.json"
-AUDIO_DIARY_BOOK_DIR = ROOT / "old_world_narrative" / "audio_diary_books"
-WORLDGEN_ROLE_REGISTRY = ROOT / "docs" / "old-world" / "structure-worldgen-roles.json"
+AUDIO_DIARY_BOOK_DIR = ROOT / "dev/old_world_narrative" / "audio_diary_books"
+WORLDGEN_ROLE_REGISTRY = ROOT / "dev/docs" / "old-world" / "structure-worldgen-roles.json"
 
 
 def _load_worldgen_roles() -> dict[str, dict]:
@@ -262,7 +262,7 @@ def generate(spec):
         loot_table(spec),
     )
     base.write_json(
-        ROOT / "old_world_narrative" / "structures"
+        ROOT / "dev/old_world_narrative" / "structures"
         / f"{spec.target.lower()}-{spec.name[8:].replace('_', '-')}.json",
         {
             "format_version": 1,

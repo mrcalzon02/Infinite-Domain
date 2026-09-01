@@ -9,8 +9,8 @@ import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "dev/scripts"))
 
 from render_old_world_heavy_rebuild_review import extract_historical_nbt, render_review_set  # noqa: E402
 from render_structure_review import unpack_structure  # noqa: E402
@@ -24,7 +24,7 @@ SOURCE_PATH = (
 )
 CAMERA_SET = "ows010_fixed_v1"
 OUTPUT_DIR = (
-    ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
+    ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
     / TARGET / "baseline" / "r0_pre_heavy_rebuild"
 )
 

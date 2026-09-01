@@ -25,10 +25,10 @@ from generate_wasteland_sites import (
     RUINED_FUNCTIONAL_BLOCK_REPLACEMENTS,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
 KUBEJS_INDEX = ROOT / "kubejs" / "startup_scripts" / "ruined_worldgen_furnaces.js"
-REPORT = ROOT / "docs" / "ruined-functional-block-structure-audit.json"
+REPORT = ROOT / "dev/docs" / "ruined-functional-block-structure-audit.json"
 NBT_ROOTS = (
     DATA / "structure" / "wasteland",
     DATA / "structure" / "karsic",

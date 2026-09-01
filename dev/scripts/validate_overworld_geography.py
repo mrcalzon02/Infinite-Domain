@@ -24,7 +24,7 @@ from typing import Any
 from validate_regional_culture_gradient import Graph, make_noise
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 PACK = ROOT / "datapacks" / "gradient_ocean_pack"
 DATA = PACK / "data"
 DF_DIR = DATA / "custom_worldgen" / "worldgen" / "density_function"
@@ -32,7 +32,7 @@ PRESET = ROOT / "kubejs" / "data" / "minecraft" / "worldgen" / "world_preset" / 
 STRUCTURES = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen" / "structure"
 STRUCTURE_SETS = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen" / "structure_set"
 SERVER_SCRIPTS = ROOT / "kubejs" / "server_scripts"
-REPORT = ROOT / "docs" / "overworld-geography-validation.json"
+REPORT = ROOT / "dev/docs" / "overworld-geography-validation.json"
 WASTELAND_SETTINGS = ROOT / "kubejs/data/wastelands/worldgen/noise_settings/wasteland.json"
 WORLDGEN_COMPANION = ROOT / "mods/infinite-domain-overworld-terrain-1.0.0.jar"
 

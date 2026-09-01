@@ -23,12 +23,12 @@ from render_old_world_heavy_rebuild_review import contact_sheet, render_review_s
 from render_structure_review import isometric, unpack_structure
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TARGET = "OWS-008"
 SIZE = (55, 22, 49)
 CAMERA_SET = "ows008_fixed_v1"
 OUTPUT_DIR = (
-    ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" /
+    ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" /
     TARGET / "gate_c_damage_states" / "r2"
 )
 SHIPPING_PATH = (
@@ -75,7 +75,7 @@ def _diff_positions(a: base.Template, b: base.Template) -> set[tuple[int, int, i
 
 
 def _assert_history_authorized() -> None:
-    review_dir = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild"
+    review_dir = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild"
     review = review_dir / "OWS-008_GATE_B_R2_REVIEW.md"
     if not review.exists() or "OWS-008 GATE B r2: PASSED" not in review.read_text(encoding="utf-8"):
         raise AssertionError("Gate C refused: explicit OWS-008 Gate-B r2 PASSED review is missing")

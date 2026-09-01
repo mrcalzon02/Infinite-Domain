@@ -6,8 +6,8 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-PROJECT = ROOT / "packdev" / "unified-radiation"
+ROOT = Path(__file__).resolve().parents[2]
+PROJECT = ROOT / "dev/packdev" / "unified-radiation"
 RESOURCES = PROJECT / "src" / "main" / "resources"
 SOURCE = PROJECT / "src" / "main" / "java" / "infinitedomain" / "radiation" / "InfiniteDomainRadiation.java"
 OUTPUT = ROOT / "mods" / "infinite-domain-unified-radiation-1.0.0.jar"

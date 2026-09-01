@@ -4,11 +4,15 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-REGISTRY = ROOT / "docs/registry-inventory/item-ids.txt"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from pack_content_oracle import ItemOracle  # noqa: E402
+
+ROOT = Path(__file__).resolve().parents[2]
+REGISTRY = ROOT / "dev/docs/registry-inventory/item-ids.txt"
 OLD_WORLD_EVIDENCE = ROOT / "kubejs/config/old_world_evidence.json"
 LOOT_ROOT = ROOT / "kubejs/data"
 
@@ -31,27 +35,23 @@ def visit(value: object, path: Path, known_items: set[str], failures: list[str])
         visit(child, path, known_items, failures)
 
 
+class _OracleSet:
+    """Membership adapter so visit() can keep using `in`."""
+
+    def __init__(self, oracle: ItemOracle):
+        self._oracle = oracle
+
+    def __contains__(self, item_id: object) -> bool:
+        return isinstance(item_id, str) and self._oracle.exists(item_id)
+
+
 def main() -> int:
-    known_items = {
-        line.strip() for line in REGISTRY.read_text(encoding="utf-8").splitlines()
-        if line.strip()
-    }
-    # The checked-in registry snapshot predates some generated KubeJS items.
-    # Include startup definitions so this audit remains useful before relaunch.
-    for script in (ROOT / "kubejs/startup_scripts").glob("*.js"):
-        source = script.read_text(encoding="utf-8")
-        for item_id in re.findall(r"event\.create\(['\"]([a-z0-9_./-]+)['\"]\)", source):
-            known_items.add(f"kubejs:{item_id}")
-        if "StartupEvents.registry('item'" in source or 'StartupEvents.registry("item"' in source:
-            for item_id in re.findall(r"\[['\"]([a-z0-9_./-]+)['\"]\s*,", source):
-                known_items.add(f"kubejs:{item_id}")
-    # Old World proof items are data-driven: the startup script loops over this
-    # JSON registry, so source regexes cannot discover the concrete IDs.
-    evidence = json.loads(OLD_WORLD_EVIDENCE.read_text(encoding="utf-8"))
-    for item in evidence.get("items", []):
-        item_id = item.get("id")
-        if isinstance(item_id, str) and item_id:
-            known_items.add(f"kubejs:{item_id}")
+    # The shared oracle resolves mod jars, the lagging registry snapshot,
+    # KubeJS block registrations and template-composed ids. Rebuilding that
+    # knowledge here is what made this audit report registered items as unknown.
+    oracle = ItemOracle()
+    known_items = _OracleSet(oracle)
+
     loot_tables = sorted(LOOT_ROOT.glob("*/loot_table/**/*.json"))
     failures: list[str] = []
     for path in loot_tables:

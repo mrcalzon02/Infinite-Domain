@@ -8,8 +8,8 @@ from collections import Counter
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-SOURCE_DIR = ROOT / "structure_library" / "sources" / "quarantine" / "creativelands_cc0"
+ROOT = Path(__file__).resolve().parents[2]
+SOURCE_DIR = ROOT / "dev/structure_library" / "sources" / "quarantine" / "creativelands_cc0"
 COMMIT = "e47d755a90437a881afb3fd410e63cff8eba894c"
 ARCHIVE = SOURCE_DIR / f"creativelands-{COMMIT}.zip"
 JSON_REPORT = SOURCE_DIR / "inventory.json"

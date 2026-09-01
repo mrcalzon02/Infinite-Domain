@@ -15,8 +15,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "dev/scripts"))
 
 from compile_production_structure_pools import partition_approvals  # noqa: E402
 from convert_nbt_to_lostcities import load_structure  # noqa: E402
@@ -25,16 +25,16 @@ from structure_geometry_lint import lint_structure, positions_from_load_structur
 from validate_overworld_geography import FORBIDDEN_WORLDGEN_GATE, SCRIPTED_QUEST_PLACEMENT  # noqa: E402
 from validate_regional_structures import check_karsic  # noqa: E402
 
-REPORT = ROOT / "docs" / "karsic-vertical-utilities-validation.json"
-PROGRAMS = ROOT / "structure_library" / "programs"
+REPORT = ROOT / "dev/docs" / "karsic-vertical-utilities-validation.json"
+PROGRAMS = ROOT / "dev/structure_library" / "programs"
 NBT_ROOT = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "karsic"
 WORLDGEN = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen"
 SET_PATH = WORLDGEN / "structure_set" / "karsic" / "vertical_utilities.json"
-CATALOG = ROOT / "structure_library" / "catalog.json"
-APPROVALS = ROOT / "structure_library" / "production-approvals.json"
-PROVENANCE = ROOT / "structure_library" / "licensing" / "provenance.json"
-CONVERSION = ROOT / "docs" / "lostcities-conversion-report.json"
-RENDERS = ROOT / "structure_library" / "reviews" / "render-manifest.json"
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+APPROVALS = ROOT / "dev/structure_library" / "production-approvals.json"
+PROVENANCE = ROOT / "dev/structure_library" / "licensing" / "provenance.json"
+CONVERSION = ROOT / "dev/docs" / "lostcities-conversion-report.json"
+RENDERS = ROOT / "dev/structure_library" / "reviews" / "render-manifest.json"
 LOST_CITIES_CONFIG = ROOT / "defaultconfigs" / "lostcities-server.toml"
 SERVER_SCRIPTS = ROOT / "kubejs" / "server_scripts"
 

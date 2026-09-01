@@ -35,9 +35,9 @@ Infinite Domain is a NeoForge 1.21.1 Minecraft modpack (CurseForge instance) bui
 
 ## `mods/` — the loaded mod set
 
-192 jars: 183 third-party (Create ecosystem, AE2, FTB suite, Ice and Fire, Cyberspace, Quark, Sophisticated Storage, Lost Cities, KubeJS, etc.) plus **9 project-built jars**, each named `infinite-domain-*`. **Full list with mod IDs, authors, and item/block counts: [`docs/MOD_LIST.md`](docs/MOD_LIST.md)** — check that file instead of re-discovering the mod set from scratch. Regenerate it (and `docs/registry-inventory/mod-jar-index.json` / `entity-ids.txt`) with `python scripts/build_mod_index.py` any time mods are added, removed, or updated.
+193 jars: 183 third-party (Create ecosystem, AE2, FTB suite, Ice and Fire, Cyberspace, Quark, Sophisticated Storage, Lost Cities, KubeJS, etc.) plus **10 project-built jars**, each named `infinite-domain-*`. **Full list with mod IDs, authors, and item/block counts: [`docs/MOD_LIST.md`](docs/MOD_LIST.md)** — check that file instead of re-discovering the mod set from scratch. Regenerate it (and `docs/registry-inventory/mod-jar-index.json` / `entity-ids.txt`) with `python dev/scripts/build_mod_index.py` any time mods are added, removed, or updated, then revalidate every index with `python dev/scripts/validate_pack_index.py`.
 
-The 9 project-built jars (source in `packdev/`, see below):
+The 10 project-built jars (source in `dev/packdev/`, see below — except `overworld-terrain-companion`, whose sources are still at the repo root in `packdev/`):
 
 - `infinite-domain-create-nuclear-balance-1.0.0.jar` (`infinite_domain_nuclear_balance`)
 - `infinite-domain-cyberware-mastery-1.0.0.jar` (`infinite_domain_cyberware`)
@@ -48,8 +48,9 @@ The 9 project-built jars (source in `packdev/`, see below):
 - `infinite-domain-overworld-terrain-1.0.0.jar` (`infinite_domain_worldgen`)
 - `infinite-domain-stellaris-industry-1.0.0.jar` (`infinite_domain_space`)
 - `infinite-domain-unified-radiation-1.0.0.jar` (`infinite_domain_radiation`)
+- `infinite-domain-wasteland-hex-caves-1.0.0.jar` (`infinite_domain_wasteland_hex_caves`)
 
-Only these nine are the project's own compiled output; everything else in `mods/` is reacquired from its original distribution channel per `REPOSITORY_SCOPE.md` and is never modified in place.
+Only these ten are the project's own compiled output; everything else in `mods/` is reacquired from its original distribution channel per `REPOSITORY_SCOPE.md` and is never modified in place.
 
 ## `packdev/` — source for the 9 custom mods (+ texture tools)
 
@@ -112,7 +113,7 @@ Treat `docs/` as the project's decision log and evidence archive rather than cod
 
 ## `scripts/` — the automation layer
 
-~150 Python/JS/PowerShell files, one or a few per system in `docs/`. Naming convention is consistent: `audit_*` inspects/reports, `build_*` or `generate_*` creates content, `validate_*` re-checks generated output, `install_*`/`recolor_*` apply generated textures. Notable heavyweights: `generate_wasteland_sites.py` (400KB+, the core wasteland-structure generator), `validate_structure_programs.py`, `structure_geometry_lint.py` + `structure_geometry_primitives_v2.py` (the current authoritative structure QA gate, see below), `build_structure_qa_world.py` (builds the in-game QA flatworld under `saves/`). A few `.java` files (`CyberwareTextureGenerator.java`, `DarknetOverlayTextureGenerator.java`, `DatavoreSkinGenerator.java`, `DragonTextureGenerator.java`) are compiled ad hoc into `packdev/*-texture-tool-classes/` for one-off texture generation, not part of any mod build. Also has its own indexer: `scripts/build_mod_index.py` regenerates `docs/MOD_LIST.md` and `docs/registry-inventory/{mod-jar-index.json,entity-ids.txt}` straight from the jars in `mods/` (no live instance needed) — re-run it whenever the mod set changes.
+~150 Python/JS/PowerShell files, one or a few per system in `docs/`. Naming convention is consistent: `audit_*` inspects/reports, `build_*` or `generate_*` creates content, `validate_*` re-checks generated output, `install_*`/`recolor_*` apply generated textures. Notable heavyweights: `generate_wasteland_sites.py` (400KB+, the core wasteland-structure generator), `validate_structure_programs.py`, `structure_geometry_lint.py` + `structure_geometry_primitives_v2.py` (the current authoritative structure QA gate, see below), `build_structure_qa_world.py` (builds the in-game QA flatworld under `saves/`). A few `.java` files (`CyberwareTextureGenerator.java`, `DarknetOverlayTextureGenerator.java`, `DatavoreSkinGenerator.java`, `DragonTextureGenerator.java`) are compiled ad hoc into `packdev/*-texture-tool-classes/` for one-off texture generation, not part of any mod build. Also has its own indexers: `dev/scripts/build_mod_index.py` regenerates `docs/MOD_LIST.md` and `docs/registry-inventory/{mod-jar-index.json,entity-ids.txt}` straight from the jars in `mods/`, `dev/scripts/build_effective_recipe_index.py` rebuilds `docs/recipe-index/` from every jar plus `kubejs/data`, and `dev/scripts/validate_pack_index.py` revalidates all of them against what is installed (none need a live instance) — re-run them whenever the mod set changes.
 
 The deep-sea structure and geological feature system (see `structure_library/`
 below) has its own three-script set, independent of the land-corpus tooling

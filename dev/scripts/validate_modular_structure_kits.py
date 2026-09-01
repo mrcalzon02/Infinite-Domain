@@ -13,10 +13,10 @@ from generate_wasteland_sites import STRUCTURE_BLOCK_REPLACEMENTS, Template
 import extract_modular_structure_kits as extractor
 from structure_geometry_lint import lint_structure, positions_from_load_structure
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "modules" / "structure-kits.json"
-MAIN_CATALOG = ROOT / "structure_library" / "catalog.json"
-REPORT = ROOT / "docs" / "structure-kit-validation.json"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "modules" / "structure-kits.json"
+MAIN_CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+REPORT = ROOT / "dev/docs" / "structure-kit-validation.json"
 CONNECTOR = re.compile(r"^[a-z]+_(north|east|south|west|any)$")
 
 REQUIRED_ROLE_PREFIXES = {

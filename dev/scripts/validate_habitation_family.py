@@ -7,8 +7,8 @@ from pathlib import Path
 import generate_wasteland_sites as g
 
 
-ROOT = Path(__file__).resolve().parents[1]
-REPORT = ROOT / "docs" / "habitation-family-validation.json"
+ROOT = Path(__file__).resolve().parents[2]
+REPORT = ROOT / "dev/docs" / "habitation-family-validation.json"
 PAIRS = {
     "split_level_house": (g.split_level_house_clean_master, g.split_level_house),
     "abandoned_culdesac": (g.abandoned_culdesac_clean_master, g.culdesac),

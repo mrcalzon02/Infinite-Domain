@@ -22,10 +22,10 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[2]
-REGIONAL = ROOT / "structure_library" / "regional"
-PROGRAMS = ROOT / "structure_library" / "programs"
-REGISTRY = ROOT / "docs" / "registry-inventory" / "block-ids.txt"
+ROOT = Path(__file__).resolve().parents[3]
+REGIONAL = ROOT / "dev/structure_library" / "regional"
+PROGRAMS = ROOT / "dev/structure_library" / "programs"
+REGISTRY = ROOT / "dev/docs" / "registry-inventory" / "block-ids.txt"
 
 DERIVATIVE_KINDS = ("slab", "stairs", "wall")
 

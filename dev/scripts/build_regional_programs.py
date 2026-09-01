@@ -30,10 +30,10 @@ import sys
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-REGIONAL = ROOT / "structure_library" / "regional"
-PROGRAMS = ROOT / "structure_library" / "programs"
-CATALOG = ROOT / "structure_library" / "catalog.json"
+ROOT = Path(__file__).resolve().parents[2]
+REGIONAL = ROOT / "dev/structure_library" / "regional"
+PROGRAMS = ROOT / "dev/structure_library" / "programs"
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
 
 # --------------------------------------------------------------------------
 # Karsic building types

@@ -19,10 +19,10 @@ import re
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 CHAPTERS = ROOT / "config/ftbquests/quests/chapters"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
-REPORT = ROOT / "docs/era-reward-bags/reward-assignments.csv"
+REPORT = ROOT / "dev/docs/era-reward-bags/reward-assignments.csv"
 FORCED_COMMON = {
     # The refinery output bank is the explicit Era 3 multiblock lesson and
     # should demonstrate the common-bag convention even between cadence slots.

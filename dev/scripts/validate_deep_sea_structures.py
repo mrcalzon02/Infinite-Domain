@@ -21,10 +21,10 @@ from typing import Any
 # corpus stays behind the quarantine tag and this validator still enforces
 # that.
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "deepsea-catalog.json"
-REPORT = ROOT / "docs" / "deepsea-structure-validation.json"
-CSV_PATH = ROOT / "docs" / "biome-gating-audit" / "ocean-structure-sets.csv"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "deepsea-catalog.json"
+REPORT = ROOT / "dev/docs" / "deepsea-structure-validation.json"
+CSV_PATH = ROOT / "dev/docs" / "biome-gating-audit" / "ocean-structure-sets.csv"
 QUARANTINE_TAG_PATH = ROOT / "kubejs" / "data" / "infinite_domain" / "tags" / "worldgen" / "biome" / "disabled_quarantine_deep_sea_structures.json"
 
 ASSET_CLASSES = {"geological_macro", "geological_feature", "structure"}
@@ -345,7 +345,7 @@ def validate_render_color_fidelity(issues: list[str]) -> dict[str, Any]:
 # generator source.
 
 STRUCTURE_DIR = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "deep_sea"
-IMPACT_REPORT = ROOT / "docs" / "deepsea-akula-impact-simulation.json"
+IMPACT_REPORT = ROOT / "dev/docs" / "deepsea-akula-impact-simulation.json"
 
 AK_SEDIMENT_NAMES = {"minecraft:sand", "minecraft:gravel"}
 AK_VOID_NAMES = {"minecraft:air", "minecraft:water"}

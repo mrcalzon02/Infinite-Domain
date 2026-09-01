@@ -4,7 +4,7 @@ import math
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / "kubejs/data/infinite_domain/function/admin/prepare_spawn_hospital_terrain.mcfunction"
 
 # The authored hospital entrance meets the world at Y=61. The surrounding

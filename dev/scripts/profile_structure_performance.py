@@ -4,9 +4,9 @@ import json
 import math
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / "docs" / "wasteland-site-manifest.json"
-REPORT = ROOT / "docs" / "structure-performance-budget.json"
+ROOT = Path(__file__).resolve().parents[2]
+MANIFEST = ROOT / "dev/docs" / "wasteland-site-manifest.json"
+REPORT = ROOT / "dev/docs" / "structure-performance-budget.json"
 
 BUDGETS = {
     "placed_blocks": 180_000,

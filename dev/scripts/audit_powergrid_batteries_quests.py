@@ -6,12 +6,12 @@ import re
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/grid_storage_and_recovery.snbt"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
-REGISTRY = ROOT / "docs/registry-inventory/item-ids.txt"
+REGISTRY = ROOT / "dev/docs/registry-inventory/item-ids.txt"
 RECIPE_ROOT = ROOT / "kubejs/data/powergrid_batteries/recipe"
-RECIPE_OUTPUTS = ROOT / "docs/recipe-index/recipe-outputs.csv"
+RECIPE_OUTPUTS = ROOT / "dev/docs/recipe-index/recipe-outputs.csv"
 
 
 chapter = CHAPTER.read_text(encoding="utf-8")

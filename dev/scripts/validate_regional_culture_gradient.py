@@ -35,10 +35,10 @@ import sys
 from pathlib import Path
 from typing import Any, Callable
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DF_DIR = ROOT / "datapacks" / "gradient_ocean_pack" / "data" / "custom_worldgen" / "worldgen" / "density_function"
 WORLD_PRESET = ROOT / "kubejs" / "data" / "minecraft" / "worldgen" / "world_preset" / "normal.json"
-REPORT = ROOT / "docs" / "regional-culture-gradient-validation.json"
+REPORT = ROOT / "dev/docs" / "regional-culture-gradient-validation.json"
 
 NAMESPACE = "custom_worldgen"
 

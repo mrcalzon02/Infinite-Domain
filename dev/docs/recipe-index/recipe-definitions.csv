@@ -7036,7 +7036,8 @@ create_hypertube:hyper_accelerator_small_cogwheel,1,True,mod_jar,create_hypertub
 create_hypertube:hypertube,1,True,mod_jar,create_hypertube-0.6.0-NEOFORGE.jar,data/create_hypertube/recipe/hypertube.json
 create_hypertube:hypertube_entrance,1,True,mod_jar,create_hypertube-0.6.0-NEOFORGE.jar,data/create_hypertube/recipe/hypertube_entrance.json
 create_hypertube:hypertube_funnel,1,True,mod_jar,create_hypertube-0.6.0-NEOFORGE.jar,data/create_hypertube/recipe/hypertube_funnel.json
-create_hypertube:hypertube_junction,1,True,mod_jar,create_hypertube-0.6.0-NEOFORGE.jar,data/create_hypertube/recipe/hypertube_junction.json
+create_hypertube:hypertube_junction,1,False,mod_jar,create_hypertube-0.6.0-NEOFORGE.jar,data/create_hypertube/recipe/hypertube_junction.json
+create_hypertube:hypertube_junction,2,True,kubejs_override,Infinite Domain,kubejs/data/create_hypertube/recipe/hypertube_junction.json
 create_hypertube:redstone_detector_tube_attachment,1,False,mod_jar,create_hypertube-0.6.0-NEOFORGE.jar,data/create_hypertube/recipe/redstone_detector_tube_attachment.json
 create_hypertube:redstone_detector_tube_attachment,2,True,kubejs_override,Infinite Domain,kubejs/data/create_hypertube/recipe/redstone_detector_tube_attachment.json
 create_hypertube:sequenced_assembly/tube_scanner,1,True,mod_jar,create_hypertube-0.6.0-NEOFORGE.jar,data/create_hypertube/recipe/sequenced_assembly/tube_scanner.json
@@ -7144,7 +7145,8 @@ create_radar:crafting/radar_safe_zone_designator,1,False,mod_jar,create_radar-0.
 create_radar:crafting/radar_safe_zone_designator,2,True,kubejs_override,Infinite Domain,kubejs/data/create_radar/recipe/crafting/radar_safe_zone_designator.json
 create_radar:crafting/target_filter_item,1,False,mod_jar,create_radar-0.4.9.2-1.21.1.jar,data/create_radar/recipe/crafting/target_filter_item.json
 create_radar:crafting/target_filter_item,2,True,kubejs_override,Infinite Domain,kubejs/data/create_radar/recipe/crafting/target_filter_item.json
-create_radar:cutting/radar_dish,1,True,mod_jar,create_radar-0.4.9.2-1.21.1.jar,data/create_radar/recipe/cutting/radar_dish.json
+create_radar:cutting/radar_dish,1,False,mod_jar,create_radar-0.4.9.2-1.21.1.jar,data/create_radar/recipe/cutting/radar_dish.json
+create_radar:cutting/radar_dish,2,True,kubejs_override,Infinite Domain,kubejs/data/create_radar/recipe/cutting/radar_dish.json
 create_radar:cutting/radar_plate,1,True,mod_jar,create_radar-0.4.9.2-1.21.1.jar,data/create_radar/recipe/cutting/radar_plate.json
 create_submarine:ballast_tank,1,False,mod_jar,create_submarine-2.2.4.jar,data/create_submarine/recipe/ballast_tank.json
 create_submarine:ballast_tank,2,True,kubejs_override,Infinite Domain,kubejs/data/create_submarine/recipe/ballast_tank.json
@@ -7185,11 +7187,13 @@ create_submarine:water_thruster,2,True,kubejs_override,Infinite Domain,kubejs/da
 create_ultimate_factory:compacting_asurine,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compacting_asurine.json
 create_ultimate_factory:compacting_blazepowder,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compacting_blazepowder.json
 create_ultimate_factory:compacting_calcite,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compacting_calcite.json
-create_ultimate_factory:compacting_coalblock,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compacting_coalblock.json
+create_ultimate_factory:compacting_coalblock,1,False,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compacting_coalblock.json
+create_ultimate_factory:compacting_coalblock,2,True,kubejs_override,Infinite Domain,kubejs/data/create_ultimate_factory/recipe/compacting_coalblock.json
 create_ultimate_factory:compacting_crimsite,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compacting_crimsite.json
 create_ultimate_factory:compacting_deepslate,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compacting_deepslate.json
 create_ultimate_factory:compacting_ochrum,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compacting_ochrum.json
-create_ultimate_factory:compacting_tuff,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compacting_tuff.json
+create_ultimate_factory:compacting_tuff,1,False,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compacting_tuff.json
+create_ultimate_factory:compacting_tuff,2,True,kubejs_override,Infinite Domain,kubejs/data/create_ultimate_factory/recipe/compacting_tuff.json
 create_ultimate_factory:compacting_veridium,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compacting_veridium.json
 create_ultimate_factory:compat/aeronautics_crushing_endstone,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compat/aeronautics_crushing_endstone.json
 create_ultimate_factory:compat/aeronautics_mixing_endstonepowder,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/compat/aeronautics_mixing_endstonepowder.json
@@ -7216,7 +7220,8 @@ create_ultimate_factory:haunting_witherrose,1,True,mod_jar,create_ultimate_facto
 create_ultimate_factory:mixing_dripstone,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/mixing_dripstone.json
 create_ultimate_factory:mixing_gunpowder,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/mixing_gunpowder.json
 create_ultimate_factory:mixing_redstone,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/mixing_redstone.json
-create_ultimate_factory:splashing_magma_cream,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/splashing_magma_cream.json
+create_ultimate_factory:splashing_magma_cream,1,False,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/splashing_magma_cream.json
+create_ultimate_factory:splashing_magma_cream,2,True,kubejs_override,Infinite Domain,kubejs/data/create_ultimate_factory/recipe/splashing_magma_cream.json
 create_ultimate_factory:splashing_packed_ice,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/splashing_packed_ice.json
 create_ultimate_factory:splashing_terracotta,1,True,mod_jar,create_ultimate_factory-2.2.4-neoforge-1.21.1.jar,data/create_ultimate_factory/recipe/splashing_terracotta.json
 create_winery:apple_juice_recipe,1,True,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/apple_juice_recipe.json
@@ -7226,11 +7231,16 @@ create_winery:cabernet_sauvignon_recipe,1,True,mod_jar,create_winery-2.0.2-neofo
 create_winery:champaign_recipe,1,True,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/champaign_recipe.json
 create_winery:chardonnay_recipe,1,True,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/chardonnay_recipe.json
 create_winery:cider_recipe,1,True,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/cider_recipe.json
-create_winery:create/compacting_apples,1,True,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/create/compacting_apples.json
-create_winery:create/compacting_red_grapes,1,True,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/create/compacting_red_grapes.json
-create_winery:create/compacting_white_grapes,1,True,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/create/compacting_white_grapes.json
-create_winery:create/mixing_apple_must,1,True,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/create/mixing_apple_must.json
-create_winery:create/mixing_grape_pomace,1,True,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/create/mixing_grape_pomace.json
+create_winery:create/compacting_apples,1,False,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/create/compacting_apples.json
+create_winery:create/compacting_apples,2,True,kubejs_override,Infinite Domain,kubejs/data/create_winery/recipe/create/compacting_apples.json
+create_winery:create/compacting_red_grapes,1,False,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/create/compacting_red_grapes.json
+create_winery:create/compacting_red_grapes,2,True,kubejs_override,Infinite Domain,kubejs/data/create_winery/recipe/create/compacting_red_grapes.json
+create_winery:create/compacting_white_grapes,1,False,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/create/compacting_white_grapes.json
+create_winery:create/compacting_white_grapes,2,True,kubejs_override,Infinite Domain,kubejs/data/create_winery/recipe/create/compacting_white_grapes.json
+create_winery:create/mixing_apple_must,1,False,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/create/mixing_apple_must.json
+create_winery:create/mixing_apple_must,2,True,kubejs_override,Infinite Domain,kubejs/data/create_winery/recipe/create/mixing_apple_must.json
+create_winery:create/mixing_grape_pomace,1,False,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/create/mixing_grape_pomace.json
+create_winery:create/mixing_grape_pomace,2,True,kubejs_override,Infinite Domain,kubejs/data/create_winery/recipe/create/mixing_grape_pomace.json
 create_winery:create/wine_cellar_recipe,1,False,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/create/wine_cellar_recipe.json
 create_winery:create/wine_cellar_recipe,2,True,kubejs_override,Infinite Domain,kubejs/data/create_winery/recipe/create/wine_cellar_recipe.json
 create_winery:merlot_recipe,1,True,mod_jar,create_winery-2.0.2-neoforge-1.21.1.jar,data/create_winery/recipe/merlot_recipe.json
@@ -7278,7 +7288,8 @@ createbigcannons:cannon_carriage,1,True,mod_jar,createbigcannons-5.11.7+mc.1.21.
 createbigcannons:cannon_drill,1,False,mod_jar,createbigcannons-5.11.7+mc.1.21.1.jar,data/createbigcannons/recipe/cannon_drill.json
 createbigcannons:cannon_drill,2,True,kubejs_override,Infinite Domain,kubejs/data/createbigcannons/recipe/cannon_drill.json
 createbigcannons:cannon_loader,1,True,mod_jar,createbigcannons-5.11.7+mc.1.21.1.jar,data/createbigcannons/recipe/cannon_loader.json
-createbigcannons:cannon_mount,1,True,mod_jar,createbigcannons-5.11.7+mc.1.21.1.jar,data/createbigcannons/recipe/cannon_mount.json
+createbigcannons:cannon_mount,1,False,mod_jar,createbigcannons-5.11.7+mc.1.21.1.jar,data/createbigcannons/recipe/cannon_mount.json
+createbigcannons:cannon_mount,2,True,kubejs_override,Infinite Domain,kubejs/data/createbigcannons/recipe/cannon_mount.json
 createbigcannons:cannon_mount_extension,1,True,mod_jar,createbigcannons-5.11.7+mc.1.21.1.jar,data/createbigcannons/recipe/cannon_mount_extension.json
 createbigcannons:cannon_welder,1,True,mod_jar,createbigcannons-5.11.7+mc.1.21.1.jar,data/createbigcannons/recipe/cannon_welder.json
 createbigcannons:cartridge_assembly,1,True,mod_jar,createbigcannons-5.11.7+mc.1.21.1.jar,data/createbigcannons/recipe/cartridge_assembly.json
@@ -8102,7 +8113,8 @@ createdeliveryrequired:numismatics_monocle,1,False,mod_jar,createdeliveryrequire
 createdeliveryrequired:numismatics_monocle,2,True,kubejs_override,Infinite Domain,kubejs/data/createdeliveryrequired/recipe/numismatics_monocle.json
 createdeliveryrequired:p2p_link,1,False,mod_jar,createdeliveryrequired-1.0.2.jar,data/createdeliveryrequired/recipe/p2p_link.json
 createdeliveryrequired:p2p_link,2,True,kubejs_override,Infinite Domain,kubejs/data/createdeliveryrequired/recipe/p2p_link.json
-createdeliveryrequired:p2p_terminal,1,True,mod_jar,createdeliveryrequired-1.0.2.jar,data/createdeliveryrequired/recipe/p2p_terminal.json
+createdeliveryrequired:p2p_terminal,1,False,mod_jar,createdeliveryrequired-1.0.2.jar,data/createdeliveryrequired/recipe/p2p_terminal.json
+createdeliveryrequired:p2p_terminal,2,True,kubejs_override,Infinite Domain,kubejs/data/createdeliveryrequired/recipe/p2p_terminal.json
 createdieselgenerators:basin_fermenting/dough,1,True,mod_jar,createdieselgenerators-1.21.1-1.3.15.jar,data/createdieselgenerators/recipe/basin_fermenting/dough.json
 createdieselgenerators:basin_fermenting/fermentable,1,True,mod_jar,createdieselgenerators-1.21.1-1.3.15.jar,data/createdieselgenerators/recipe/basin_fermenting/fermentable.json
 createdieselgenerators:basin_fermenting/fermented_spider_eye,1,True,mod_jar,createdieselgenerators-1.21.1-1.3.15.jar,data/createdieselgenerators/recipe/basin_fermenting/fermented_spider_eye.json
@@ -9184,7 +9196,8 @@ createreautomated:mechanical_crafting/infinite_gold_node,1,True,mod_jar,createre
 createreautomated:mechanical_crafting/infinite_iron_node,1,True,mod_jar,createreautomated-0.3.2-mc1.21.1-neoforge.jar,data/createreautomated/recipe/mechanical_crafting/infinite_iron_node.json
 createreautomated:mechanical_crafting/infinite_quartz_node,1,True,mod_jar,createreautomated-0.3.2-mc1.21.1-neoforge.jar,data/createreautomated/recipe/mechanical_crafting/infinite_quartz_node.json
 createreautomated:mechanical_crafting/infinite_zinc_node,1,True,mod_jar,createreautomated-0.3.2-mc1.21.1-neoforge.jar,data/createreautomated/recipe/mechanical_crafting/infinite_zinc_node.json
-createreautomated:netherite_drill_upgrade,1,True,mod_jar,createreautomated-0.3.2-mc1.21.1-neoforge.jar,data/createreautomated/recipe/netherite_drill_upgrade.json
+createreautomated:netherite_drill_upgrade,1,False,mod_jar,createreautomated-0.3.2-mc1.21.1-neoforge.jar,data/createreautomated/recipe/netherite_drill_upgrade.json
+createreautomated:netherite_drill_upgrade,2,True,kubejs_override,Infinite Domain,kubejs/data/createreautomated/recipe/netherite_drill_upgrade.json
 createreautomated:sequenced_assembly/unbaked_diamond_from_bits,1,True,mod_jar,createreautomated-0.3.2-mc1.21.1-neoforge.jar,data/createreautomated/recipe/sequenced_assembly/unbaked_diamond_from_bits.json
 createreautomated:stabilizer,1,True,mod_jar,createreautomated-0.3.2-mc1.21.1-neoforge.jar,data/createreautomated/recipe/stabilizer.json
 createreautomatedtraces:trace_finder,1,True,mod_jar,createreautomatedtraces-0.3.0.jar,data/createreautomatedtraces/recipe/trace_finder.json
@@ -9258,7 +9271,8 @@ createthrusters:small_thruster,1,True,mod_jar,createthrusters-bundled-V1.1.3.jar
 createthrusters:thruster,1,False,mod_jar,createthrusters-bundled-V1.1.3.jar,data/createthrusters/recipe/thruster.json
 createthrusters:thruster,2,True,kubejs_override,Infinite Domain,kubejs/data/createthrusters/recipe/thruster.json
 createthrusters:thruster_bearing,1,True,mod_jar,createthrusters-bundled-V1.1.3.jar,data/createthrusters/recipe/thruster_bearing.json
-createthrusters:thruster_from_small_thruster,1,True,mod_jar,createthrusters-bundled-V1.1.3.jar,data/createthrusters/recipe/thruster_from_small_thruster.json
+createthrusters:thruster_from_small_thruster,1,False,mod_jar,createthrusters-bundled-V1.1.3.jar,data/createthrusters/recipe/thruster_from_small_thruster.json
+createthrusters:thruster_from_small_thruster,2,True,kubejs_override,Infinite Domain,kubejs/data/createthrusters/recipe/thruster_from_small_thruster.json
 createthrusters:thruster_lense,1,False,mod_jar,createthrusters-bundled-V1.1.3.jar,data/createthrusters/recipe/thruster_lense.json
 createthrusters:thruster_lense,2,True,kubejs_override,Infinite Domain,kubejs/data/createthrusters/recipe/thruster_lense.json
 createthrusters:thruster_lense_mixing,1,True,mod_jar,createthrusters-bundled-V1.1.3.jar,data/createthrusters/recipe/thruster_lense_mixing.json
@@ -21105,6 +21119,7 @@ oritech:nickel_nugget,1,True,mod_jar,oritech-neoforge-1.21.1-1.2.10.jar,data/ori
 oritech:nickel_nugget_from_blasting_small_nickel_dust,1,True,mod_jar,oritech-neoforge-1.21.1-1.2.10.jar,data/oritech/recipe/nickel_nugget_from_blasting_small_nickel_dust.json
 oritech:nickel_nugget_from_smelting_small_nickel_dust,1,True,mod_jar,oritech-neoforge-1.21.1-1.2.10.jar,data/oritech/recipe/nickel_nugget_from_smelting_small_nickel_dust.json
 oritech:packed_wheat,1,True,mod_jar,oritech-neoforge-1.21.1-1.2.10.jar,data/oritech/recipe/packed_wheat.json
+oritech:particle/antimatter,1,True,kubejs_override,Infinite Domain,kubejs/data/oritech/recipe/particle/antimatter.json
 oritech:particle/diamond,1,True,mod_jar,oritech-neoforge-1.21.1-1.2.10.jar,data/oritech/recipe/particle/diamond.json
 oritech:particle/echo_shard,1,True,mod_jar,oritech-neoforge-1.21.1-1.2.10.jar,data/oritech/recipe/particle/echo_shard.json
 oritech:particle/elytra,1,True,mod_jar,oritech-neoforge-1.21.1-1.2.10.jar,data/oritech/recipe/particle/elytra.json
@@ -23249,8 +23264,7 @@ refuellinghose:pump_control_panel,1,False,mod_jar,refuellinghose-1.0.0.jar,data/
 refuellinghose:pump_control_panel,2,True,kubejs_override,Infinite Domain,kubejs/data/refuellinghose/recipe/pump_control_panel.json
 refuellinghose:pump_reel,1,False,mod_jar,refuellinghose-1.0.0.jar,data/refuellinghose/recipe/pump_reel.json
 refuellinghose:pump_reel,2,True,kubejs_override,Infinite Domain,kubejs/data/refuellinghose/recipe/pump_reel.json
-rpg_companions_tiny_dragons:rcp_dragon_trainers_staff,1,False,mod_jar,rpg_companions_tiny_dragons-0.0.5-neoforge-1.21.1.jar,data/rpg_companions_tiny_dragons/recipe/rcp_dragon_trainers_staff.json
-rpg_companions_tiny_dragons:rcp_dragon_trainers_staff,2,True,kubejs_override,Infinite Domain,kubejs/data/rpg_companions_tiny_dragons/recipe/rcp_dragon_trainers_staff.json
+rpg_companions_tiny_dragons:rcp_dragon_trainers_staff,1,True,kubejs_override,Infinite Domain,kubejs/data/rpg_companions_tiny_dragons/recipe/rcp_dragon_trainers_staff.json
 sable_kardanwelle:cardan_connector,1,True,mod_jar,create_cardan_shafts-0.1.6.jar,data/sable_kardanwelle/recipe/cardan_connector.json
 someassemblyrequired:campfire_cooking/burger_bun,1,True,mod_jar,someassemblyrequired-5.2.8.jar,data/someassemblyrequired/recipe/campfire_cooking/burger_bun.json
 someassemblyrequired:campfire_cooking/toasted_bread_slice,1,True,mod_jar,someassemblyrequired-5.2.8.jar,data/someassemblyrequired/recipe/campfire_cooking/toasted_bread_slice.json

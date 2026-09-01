@@ -7,10 +7,10 @@ from pathlib import Path
 
 import build_structure_qa_world as builder
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 WORLD = ROOT / "saves" / builder.WORLD_NAME
 FUNCTIONS = WORLD / "datapacks" / builder.PACK_NAME / "data" / "infinite_domain_qa" / "function"
-REPORT = ROOT / "docs" / "structure-qa-world-validation.json"
+REPORT = ROOT / "dev/docs" / "structure-qa-world-validation.json"
 
 
 def string_values(tag):

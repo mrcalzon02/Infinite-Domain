@@ -10,8 +10,14 @@
       "mode": "xz"
     },
     "threshold": 3200.0,
-    "low": { "type": "isekai_api:constant", "value": 0.0 },
-    "high": { "type": "isekai_api:constant", "value": 1.0 }
+    "low": {
+      "type": "isekai_api:constant",
+      "value": 0.0
+    },
+    "high": {
+      "type": "isekai_api:constant",
+      "value": 1.0
+    }
   },
   "b": {
     "type": "isekai_api:step",
@@ -22,8 +28,14 @@
       "ref_z": 0.0,
       "mode": "xz"
     },
-    "threshold": 3900.0,
-    "low": { "type": "isekai_api:constant", "value": 1.0 },
-    "high": { "type": "isekai_api:constant", "value": 0.0 }
+    "threshold": 4600.0,
+    "low": {
+      "type": "isekai_api:constant",
+      "value": 1.0
+    },
+    "high": {
+      "type": "isekai_api:constant",
+      "value": 0.0
+    }
   }
 }

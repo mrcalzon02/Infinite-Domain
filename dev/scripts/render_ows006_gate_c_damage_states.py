@@ -17,8 +17,8 @@ import generate_wasteland_sites as base
 import render_ows006_gate_b_intact as gate_b
 
 
-ROOT = Path(__file__).resolve().parents[1]
-GATE_ROOT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-006" / "gate_c_damage_states"
+ROOT = Path(__file__).resolve().parents[2]
+GATE_ROOT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-006" / "gate_c_damage_states"
 R1_DIR = GATE_ROOT / "r1"
 OUTPUT_DIR = GATE_ROOT / "r2"
 ACCEPTED_GATE_B_SHA256 = "fb1a6c530a3731794547c429e56ab47d93e7082b1157ca255f2790b900a5749e"
@@ -57,7 +57,7 @@ def _diff_positions(a: base.Template, b: base.Template) -> set[tuple[int, int, i
 
 
 def _assert_history_authorized() -> None:
-    review_dir = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild"
+    review_dir = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild"
     review = review_dir / "OWS-006_GATE_B_R1_REVIEW.md"
     if not review.exists() or "OWS-006 GATE B r1: PASSED" not in review.read_text(encoding="utf-8"):
         raise AssertionError("Gate C refused: explicit OWS-006 Gate-B r1 PASSED review is missing")

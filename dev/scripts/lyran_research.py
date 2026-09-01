@@ -38,9 +38,9 @@ import generate_wasteland_sites as WS  # Template, shell, door, partition_*, des
 import structure_geometry_primitives_v2 as V2
 
 Template = WS.Template
-ROOT = Path(__file__).resolve().parents[1]
-PLAN_PATH = ROOT / "structure_library" / "programs" / "lyran_research_level1_plan.json"
-PROGRAM_PATH = ROOT / "structure_library" / "programs" / "lyran_research.json"
+ROOT = Path(__file__).resolve().parents[2]
+PLAN_PATH = ROOT / "dev/structure_library" / "programs" / "lyran_research_level1_plan.json"
+PROGRAM_PATH = ROOT / "dev/structure_library" / "programs" / "lyran_research.json"
 OUT_NBT = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen" / "structure" / "nether" / "lyran_research.nbt"
 
 N = 91

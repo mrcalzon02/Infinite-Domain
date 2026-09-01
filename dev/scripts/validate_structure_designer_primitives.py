@@ -15,8 +15,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "dev/scripts"))
 
 import generate_wasteland_sites as base  # noqa: E402
 import structure_geometry_primitives_v2 as prim  # noqa: E402
@@ -24,7 +24,7 @@ from regional import load_program  # noqa: E402
 from regional import karsic_massing  # noqa: E402
 from structure_geometry_lint import lint_structure, positions_from_template  # noqa: E402
 
-REPORT = ROOT / "docs" / "structure-designer-validation.json"
+REPORT = ROOT / "dev/docs" / "structure-designer-validation.json"
 
 
 def state_name(entry: dict[str, Any]) -> str:

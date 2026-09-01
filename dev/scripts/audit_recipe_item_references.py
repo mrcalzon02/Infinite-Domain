@@ -8,9 +8,9 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs/data"
-ITEMS = ROOT / "docs/registry-inventory/item-ids.txt"
+ITEMS = ROOT / "dev/docs/registry-inventory/item-ids.txt"
 VANILLA_ITEM_OUTPUT_TYPES = {
     "minecraft:crafting_shaped", "minecraft:crafting_shapeless",
     "minecraft:smelting", "minecraft:blasting", "minecraft:smoking",

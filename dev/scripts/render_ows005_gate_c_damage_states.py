@@ -19,8 +19,8 @@ from old_world_ows005_geometry import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_ROOT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
+ROOT = Path(__file__).resolve().parents[2]
+OUTPUT_ROOT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
 OUTPUT_DIR = OUTPUT_ROOT / "OWS-005" / "gate_c_damage_states" / "r1"
 REQUIRED_DOCS = (
     "OWS-005_PASS13_HISTORICAL_LAYERING.md",
@@ -33,7 +33,7 @@ REQUIRED_DOCS = (
 
 
 def _assert_history_authorized() -> None:
-    review_dir = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild"
+    review_dir = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild"
     review = review_dir / "OWS-005_GATE_B_R1_REVIEW.md"
     if not review.exists() or "OWS-005 GATE B r1: PASSED" not in review.read_text(encoding="utf-8"):
         raise AssertionError("Gate C refused: explicit OWS-005 Gate-B r1 PASSED review is missing")

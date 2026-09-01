@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 
-root = Path(__file__).resolve().parents[1]
+root = Path(__file__).resolve().parents[2]
 path = root / "config/gateway_of_doom.json"
 data = json.loads(path.read_text(encoding="utf-8"))
 automatic = data["automaticGateways"]
@@ -31,7 +31,7 @@ if rule["triggerMode"] != "timer" or rule["profileId"] != "hard":
     raise SystemExit("Cyberspace automatic rule lost its timed hard-profile settings")
 
 recipe_dir = root / "kubejs/data/gateway_of_doom/recipe"
-registered_items = set((root / "docs/registry-inventory/item-ids.txt").read_text(encoding="utf-8").splitlines())
+registered_items = set((root / "dev/docs/registry-inventory/item-ids.txt").read_text(encoding="utf-8").splitlines())
 for tier in range(1, 6):
     recipe = json.loads((recipe_dir / f"portal_ward_{tier}.json").read_text(encoding="utf-8"))
     if recipe["result"]["id"] != f"gateway_of_doom:portal_ward_{tier}":

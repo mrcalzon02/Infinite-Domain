@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/the_rot_spore_threat_dossier.snbt"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
 BEGIN = "\t// BEGIN GENERATED SPORE THREAT DOSSIER"

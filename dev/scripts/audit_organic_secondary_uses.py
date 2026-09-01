@@ -6,7 +6,7 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CHEMISTRY_PATH = ROOT / "kubejs/config/organic_metallurgy.json"
 MINERAL_PATH = ROOT / "kubejs/config/mineral_trace_ore_processing.json"
 FOOD_PATH = ROOT / "kubejs/config/industrial_food.json"
@@ -15,9 +15,9 @@ SECONDARY_PATH = ROOT / "kubejs/config/organic_secondary_uses.json"
 GENERATOR_PATH = ROOT / "kubejs/server_scripts/organic_secondary_uses.js"
 STARTUP_DIR = ROOT / "kubejs/startup_scripts"
 SERVER_DIR = ROOT / "kubejs/server_scripts"
-REGISTRY_PATH = ROOT / "docs/registry-inventory/item-ids.txt"
+REGISTRY_PATH = ROOT / "dev/docs/registry-inventory/item-ids.txt"
 MODS_DIR = ROOT / "mods"
-REPORT_PATH = ROOT / "docs/ORGANIC_CHEMICAL_SECONDARY_USES.md"
+REPORT_PATH = ROOT / "dev/docs/ORGANIC_CHEMICAL_SECONDARY_USES.md"
 
 SHAPES = ("reduction", "concentration", "multiplier")
 

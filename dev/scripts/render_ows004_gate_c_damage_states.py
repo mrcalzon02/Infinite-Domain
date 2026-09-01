@@ -21,7 +21,7 @@ import render_ows004_gate_b_intact_r4 as gate_b
 from render_old_world_heavy_rebuild_review import OUTPUT_ROOT, ROOT, render_review_set
 from render_structure_review import unpack_structure
 
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 OUTPUT_DIR = OUTPUT_ROOT / "OWS-004" / "gate_c_damage_states" / "r1"
 PROOF_LOOT_TABLE = "infinite_domain:chests/old_world/ows_004_vcf_mycological_vertical_farm_tower"
 PROOF_POS = (32, 2, 12)
@@ -54,7 +54,7 @@ def _count_block(t: base.Template, name: str) -> int:
 
 
 def _assert_history_authorized() -> None:
-    review = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-004_GATE_B_R4_REVIEW.md"
+    review = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-004_GATE_B_R4_REVIEW.md"
     if not review.exists() or "OWS-004 GATE B r4: PASSED" not in review.read_text(encoding="utf-8"):
         raise AssertionError("Gate C refused: explicit OWS-004 Gate-B r4 PASSED review is missing")
     base_dir = review.parent

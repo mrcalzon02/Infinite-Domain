@@ -18,8 +18,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "dev/scripts"))
 
 from convert_nbt_to_lostcities import load_structure  # noqa: E402
 from compile_production_structure_pools import partition_approvals  # noqa: E402
@@ -33,14 +33,14 @@ from validate_overworld_geography import (  # noqa: E402
 from validate_regional_structures import check_karsic  # noqa: E402
 
 
-REPORT = ROOT / "docs" / "karsic-standard-site-kit-validation.json"
-PROGRAMS = ROOT / "structure_library" / "programs"
+REPORT = ROOT / "dev/docs" / "karsic-standard-site-kit-validation.json"
+PROGRAMS = ROOT / "dev/structure_library" / "programs"
 NBT_ROOT = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "karsic"
 WORLDGEN = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen"
 SET_PATH = WORLDGEN / "structure_set" / "karsic" / "standard_site_kit.json"
-CATALOG = ROOT / "structure_library" / "catalog.json"
-PROVENANCE = ROOT / "structure_library" / "licensing" / "provenance.json"
-APPROVALS = ROOT / "structure_library" / "production-approvals.json"
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+PROVENANCE = ROOT / "dev/structure_library" / "licensing" / "provenance.json"
+APPROVALS = ROOT / "dev/structure_library" / "production-approvals.json"
 LOST_CITIES = ROOT / "kubejs" / "data" / "infinite_domain" / "lostcities"
 LOST_CITIES_CONFIG = ROOT / "defaultconfigs" / "lostcities-server.toml"
 SERVER_SCRIPTS = ROOT / "kubejs" / "server_scripts"
@@ -136,7 +136,7 @@ def main() -> int:
 
     # KS-4: catalog and focused Lost Cities conversion are complete.
     catalog = {entry["structure_id"]: entry for entry in load_json(CATALOG)["structures"]}
-    conversion_report = load_json(ROOT / "docs" / "lostcities-conversion-report.json")
+    conversion_report = load_json(ROOT / "dev/docs" / "lostcities-conversion-report.json")
     converted = {entry["structure_id"]: entry for entry in conversion_report.get("structures", [])}
     assembly_issues: list[str] = []
     for name in ASSETS:

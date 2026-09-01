@@ -17,7 +17,7 @@ import render_ows004_gate_c_damage_states as r1
 import render_ows004_gate_c_damage_states_r3 as r3
 from render_old_world_heavy_rebuild_review import OUTPUT_ROOT, ROOT
 
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 OUTPUT_DIR = OUTPUT_ROOT / "OWS-004" / "gate_c_damage_states" / "r4"
 
 

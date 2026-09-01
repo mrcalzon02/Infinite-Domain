@@ -19,8 +19,8 @@ from generate_old_world_narrative_structures import (
     SPECS,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
-PROGRAM = ROOT / "old_world_narrative"
+ROOT = Path(__file__).resolve().parents[2]
+PROGRAM = ROOT / "dev/old_world_narrative"
 REGISTRY = PROGRAM / "registry"
 PREPARED_QUEST_DIR = PROGRAM / "quests"
 PREPARED_SITE_QUESTS = PREPARED_QUEST_DIR / "prepared_site_surveys.snbt"

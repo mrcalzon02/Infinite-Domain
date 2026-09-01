@@ -23,8 +23,8 @@ from render_structure_review import isometric, unpack_structure
 TARGET = "OWS-008"
 EXPECTED_SHIPPING_SHA256 = "62f7246e8d93d2a4bba9bba4224c4ca7131eccce63d9537b5ecab79a0e63b55a"
 EXPECTED_GATE_C_R2_D3_SHA256 = "d451e9bcdd00a4937d02011da18a1a8cdf95bb541a1339f5b167486e6828e000"
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-GATE_C_R2_REVIEW = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-008_GATE_C_R2_REVIEW.md"
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+GATE_C_R2_REVIEW = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-008_GATE_C_R2_REVIEW.md"
 OUTPUT_DIR = OUTPUT_ROOT / TARGET / "gate_d_final" / "r2"
 SPEC = generation.BY_TARGET[TARGET]
 SHIPPING_NBT = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland" / "old_world" / f"{SPEC.name}.nbt"

@@ -11,8 +11,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "docs/custom-content-audit"
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "dev/docs/custom-content-audit"
 RESOURCE_PATH = re.compile(r"^[a-z0-9_.-]+(?:/[a-z0-9_.-]+)*$")
 CUSTOM_JAR_PREFIX = "infinite-domain-"
 

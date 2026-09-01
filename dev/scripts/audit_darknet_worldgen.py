@@ -7,7 +7,7 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TAG_ROOT = ROOT / "kubejs/data/iceandfire/tags/worldgen/biome/structure_gen"
 DRAGON_TAGS = {"fire", "ice", "lightning"}
 DARKNET = "cyberspace:darknet_biome"
@@ -36,7 +36,7 @@ for path in ROOT.glob("kubejs/data/**/tags/worldgen/biome/**/*.json"):
     if DARKNET in data.get("values", []) and path.parent != TAG_ROOT:
         raise SystemExit(f"Unapproved structure-biome tag admits the Darknet: {path}")
 
-documentation = (ROOT / "docs/DARKNET_WORLDGEN.md").read_text(encoding="utf-8")
+documentation = (ROOT / "dev/docs/DARKNET_WORLDGEN.md").read_text(encoding="utf-8")
 for required in [
     "Y=2", "Y=0 through Y=128", "Data Entity", "Obligator",
     "Dragon Roost", "Dragon Cave", "Y=80", "Y=31 through Y=60", "begins at Y=7",
@@ -83,19 +83,19 @@ with zipfile.ZipFile(patch_jar) as archive:
     if int.from_bytes(class_bytes[6:8], "big") != 65:
         raise SystemExit("Darknet worldgen companion mod is not compiled for Java 21")
 
-mixin_source = (ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/LegacyGeneratedStructureMixin.java").read_text(encoding="utf-8")
+mixin_source = (ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/LegacyGeneratedStructureMixin.java").read_text(encoding="utf-8")
 for required in ["OCEAN_FLOOR_WG", "darknet_biome", "DARKNET_CAVE_VIRTUAL_SURFACE_Y = 80"]:
     if required not in mixin_source:
         raise SystemExit(f"Darknet cave-height source lost its scope guard: {required}")
 
-guard_source = (ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/DragonUtilsMixin.java").read_text(encoding="utf-8")
-explosion_source = (ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/IafDragonDestructionManagerMixin.java").read_text(encoding="utf-8")
+guard_source = (ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/DragonUtilsMixin.java").read_text(encoding="utf-8")
+explosion_source = (ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/IafDragonDestructionManagerMixin.java").read_text(encoding="utf-8")
 if "canGrief" not in guard_source or "callback.setReturnValue(false)" not in guard_source:
     raise SystemExit("Darknet dragon griefing guard is incomplete")
 if "destroyAreaCharge" not in explosion_source or "ExplosionInteraction.NONE" not in explosion_source:
     raise SystemExit("Darknet charged-breath explosion guard is incomplete")
 
-foundation_source = (ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/Darknetblock1Mixin.java").read_text(encoding="utf-8")
+foundation_source = (ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/Darknetblock1Mixin.java").read_text(encoding="utf-8")
 for required in ["DARKNET_FOUNDATION_HARDNESS = 12.0F", "DARKNET_FOUNDATION_BLAST_RESISTANCE = 1200.0F"]:
     if required not in foundation_source:
         raise SystemExit(f"Darknet foundation mining properties changed unexpectedly: {required}")
@@ -117,7 +117,7 @@ foundation_loot = json.loads((ROOT / "kubejs/data/cyberspace/loot_table/blocks/d
 if "cyberspace:darknetblock_1" not in json.dumps(foundation_loot):
     raise SystemExit("Mineable Darknet foundation does not drop itself")
 
-dragon_texture_root = ROOT / "packdev/darknet-worldgen-patch/src/main/resources/assets/infinite_domain/textures/entity/darknet/models"
+dragon_texture_root = ROOT / "dev/packdev/darknet-worldgen-patch/src/main/resources/assets/infinite_domain/textures/entity/darknet/models"
 dragon_textures = list(dragon_texture_root.glob("*dragon/*.png"))
 if len(dragon_textures) != 326:
     raise SystemExit(f"Digitized dragon texture family is incomplete: expected 326, found {len(dragon_textures)}")
@@ -128,9 +128,9 @@ for representative in [
 ]:
     if not representative.is_file():
         raise SystemExit(f"Missing representative digitized dragon skin: {representative}")
-texture_mixin_source = (ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/EnumDragonTexturesMixin.java").read_text(encoding="utf-8")
-renderer_source = (ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/LegacyDragonRendererMixin.java").read_text(encoding="utf-8")
-armor_source = (ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/LegacyDragonArmorFeatureMixin.java").read_text(encoding="utf-8")
+texture_mixin_source = (ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/EnumDragonTexturesMixin.java").read_text(encoding="utf-8")
+renderer_source = (ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/LegacyDragonRendererMixin.java").read_text(encoding="utf-8")
+armor_source = (ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/LegacyDragonArmorFeatureMixin.java").read_text(encoding="utf-8")
 for required in ["getTextureFromDragon", "getEyeTextureFromDragon", "getFireDragonSkullTextures", "getIceDragonSkullTextures", "getLightningDragonSkullTextures"]:
     if required not in texture_mixin_source:
         raise SystemExit(f"Darknet dragon full-entity texture redirect lost required hook: {required}")
@@ -140,9 +140,9 @@ for required in ["LegacyDragonArmorFeature", "ResourceLocation;toString", "digit
     if required not in armor_source:
         raise SystemExit(f"Darknet dragon armor redirect lost required behavior: {required}")
 
-entity_overlay_source = (ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/client/DarknetEntityOverlayLayer.java").read_text(encoding="utf-8")
-living_renderer_source = (ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/LivingEntityRendererMixin.java").read_text(encoding="utf-8")
-humanoid_armor_source = (ROOT / "packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/HumanoidArmorLayerMixin.java").read_text(encoding="utf-8")
+entity_overlay_source = (ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/client/DarknetEntityOverlayLayer.java").read_text(encoding="utf-8")
+living_renderer_source = (ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/LivingEntityRendererMixin.java").read_text(encoding="utf-8")
+humanoid_armor_source = (ROOT / "dev/packdev/darknet-worldgen-patch/src/main/java/infinitedomain/darknet/mixin/HumanoidArmorLayerMixin.java").read_text(encoding="utf-8")
 for required in ["entity.isInvisible()", "DarknetGuard.isDarknet", "CIRCUITRY", "SHIMMER", "entityTranslucentEmissive"]:
     if required not in entity_overlay_source:
         raise SystemExit(f"Living-entity Darknet overlay lost required behavior: {required}")

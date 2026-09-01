@@ -18,9 +18,9 @@ from PIL import Image, ImageDraw
 # actual rendered evidence rather than a parse-only pass. A closer parity
 # pass with the land renderer is future work, noted in the ledger.
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 STRUCTURE_DIR = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "deep_sea"
-OUTPUT_DIR = ROOT / "structure_library" / "audit_renders" / "deep_sea"
+OUTPUT_DIR = ROOT / "dev/structure_library" / "audit_renders" / "deep_sea"
 
 TILE_W = 10
 TILE_H = 6

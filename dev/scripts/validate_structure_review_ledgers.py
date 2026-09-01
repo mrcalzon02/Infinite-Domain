@@ -7,9 +7,9 @@ from pathlib import Path
 
 import build_structure_review_ledgers as ledgers
 
-ROOT = Path(__file__).resolve().parents[1]
-REVIEW = ROOT / "structure_library" / "review"
-REPORT = ROOT / "docs" / "structure-review-ledger-validation.json"
+ROOT = Path(__file__).resolve().parents[2]
+REVIEW = ROOT / "dev/structure_library" / "review"
+REPORT = ROOT / "dev/docs" / "structure-review-ledger-validation.json"
 ALLOWED = {"pending", "pass", "fail"}
 
 

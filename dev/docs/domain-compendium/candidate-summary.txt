@@ -4,18 +4,18 @@ with an obtainment route (recipe/loot/worldgen): 15,047
 textured=yes: 15,438   no: 978   unknown: 861
 
 decision totals:
-  include   13,869
-  review     1,788
-  exclude    1,620
+  include   13,761
+  exclude    2,004
+  review     1,512
 
 reason breakdown:
-  13,869  textured + obtainable
-   1,569  textured but no static obtainment route
-     642  no obtainment route and texture unverified
+  13,761  textured + obtainable
+   1,304  textured but no static obtainment route
+     725  no item form (block/fluid registry only)
+     314  no obtainment route and texture unverified
      151  texture unverified (model has no static texture (blockstate/runtime only))
-      68  texture unverified (no model file found (runtime-generated or blockstate only))
+      57  texture unverified (no model file found (runtime-generated or blockstate only))
       45  missing texture (missing:xycraft_core:block/cloudfx,xycraft_world:block/connected/xychorium_storage_single)
-      12  missing texture (missing:brewery:block/empty_liquid)
        9  missing texture (missing:allthemodium:block/allthemodium_block)
        9  missing texture (missing:alltheores:block/aluminum_block)
        9  missing texture (missing:allthemodium:block/ancient_log_0,allthemodium:block/ancient_log_0_top)
@@ -154,7 +154,6 @@ reason breakdown:
        2  missing texture (missing:biomesoplenty:block/willow_log)
        2  missing texture (missing:mekanism_mobs:item/texture_mekanitepistolfusion)
        2  missing texture (missing:mekanitetrident:item/texture_mekanitetridentglow)
-       1  missing texture (missing:create_aeronautics_toolgun:item/portable_structure_container_empty)
        1  missing texture (missing:createthrusters:block/alternator/alternator_main)
        1  missing texture (missing:simulated:block/rope_winch/winch)
        1  missing texture (missing:cyberspace:block/scanner_normal)
@@ -168,86 +167,86 @@ AllTheCompressed families: 199  base texture resolves: 103  -> 927 tier blocks i
 namespace                    total  include  review  exclude
 rechiseled                   3,628    3,628       0        0
 allthecompressed             1,794      930       0      864
-minecraft                    1,480    1,217     198       65
-more_ores_more_gems          1,079    1,064      15        0
-quark                          833      760      66        7
-create                         752      664      68       20
-immersiveengineering           665      470     139       56
-tfmg                           608      542      49       17
-iceandfire                     587      404     175        8
-createcybernetics              392      277     112        3
+minecraft                    1,480    1,212     120      148
+more_ores_more_gems          1,079    1,064      14        1
+quark                          833      760      31       42
+create                         752      662      37       53
+immersiveengineering           665      470     137       58
+tfmg                           608      526      41       41
+iceandfire                     587      404     173       10
+createcybernetics              392      277     111        4
 ae2                            364      333      25        6
-spore                          340      171     162        7
-oritech                        330      234      68       28
-supplementaries                308      196      67       45
-stellaris                      278      250      25        3
+spore                          340      171     154       15
+oritech                        330      234      53       43
+supplementaries                308      195      57       56
+stellaris                      278      245      22       11
 rechiseledcreate               242      242       0        0
-exdeorum                       236      141       7       88
-farmersdelight                 226      177       9       40
-createbigcannons               203      164      38        1
-zvhouses                       191      190       1        0
+exdeorum                       236      141       6       89
+farmersdelight                 226      177       8       41
+createbigcannons               203      160      34        9
+zvhouses                       191      190       0        1
 ae2lt                          183      168      15        0
 graveyard                      152      100      52        0
-the_wasteland_reworked         141      125      15        1
-brewery                        127       68      44       15
+the_wasteland_reworked         141      123      15        3
+brewery                        127       68       4       55
 sophisticatedstorage           124       75      49        0
-createnuclear                  122      117       4        1
-createmetallurgy               121       94      27        0
-powergrid                      105       89      10        6
+createnuclear                  122      116       4        2
+createmetallurgy               121       71      27       23
+powergrid                      105       88      10        7
 simulated                      104        0       0      104
-petrochem                      102       46      53        3
-createdieselgenerators         101       58      25       18
+petrochem                      102       26      37       39
+createdieselgenerators         101       37      22       42
 cyber_ware_port                 94       69      24        1
 kubejs                          86        0      52       34
 bno                             85       85       0        0
-createthrusters                 69       51       7       11
+createthrusters                 69       51       6       12
 infinite_domain_cyberware       64       64       0        0
 rocketnautics                   56        0       0       56
 create_new_age                  54       50       4        0
-netherdepthsupgrade             53       27      24        2
+netherdepthsupgrade             53       27      22        4
 aeronautics                     47        0       1       46
-createpropulsion                46       36      10        0
+createpropulsion                46       35       8        3
 numismatics                     45       38       7        0
 mekanite_mobs                   37        9      24        4
 bellsandwhistles                36       36       0        0
 cyberspace                      36       23      11        2
 createreautomated               35       34       1        0
-jaffabricate                    35       27       8        0
+jaffabricate                    35       21       6        8
 yagm                            31       30       1        0
 create_winery                   30       22       8        0
-mininggadgets                   30       27       3        0
+mininggadgets                   30       27       2        1
 primitivestart                  24       24       0        0
-escalated                       22        2       2       18
+escalated                       22        2       0       20
 mutantmonsters                  22       12       9        1
 create_radar                    20       20       0        0
 create_submarine                18       16       2        0
 rpg_companions_tiny_dragons      18        0       4       14
 someassemblyrequired            17       16       1        0
-enviromine                      16       13       3        0
+enviromine                      16       13       2        1
 ftboceanmobs                    16        1      13        2
 ftbquests                       14        7       6        1
 createappliedkinetics           13        2      11        0
 create_mtg                      12       12       0        0
 aeronautics_utility_objects      11        9       1        1
-buildinggadgets2                 9        6       3        0
+buildinggadgets2                 9        6       2        1
 create_hypertube                 9        7       1        1
 gateway_of_doom                  9        8       1        0
 create_aquatic_ambitions         8        7       0        1
 create_chimneys                  8        8       0        0
-spells_and_spellcrafting         8        5       2        1
+spells_and_spellcrafting         8        5       1        2
 tracks                           8        7       1        0
 wastelands                       8        8       0        0
 create_aeronautics_toolgun       7        0       3        4
 createdeliveryrequired           7        7       0        0
-linearbearing                    7        6       1        0
+linearbearing                    7        6       0        1
 offroad                          7        0       0        7
 cyberchems                       6        6       0        0
 create_aero_radar                5        4       1        0
-create_aeronautics_automated_logistics       5        4       1        0
+create_aeronautics_automated_logistics       5        4       0        1
 taxtg                            5        0       5        0
 createaeronauticscarworks        4        3       1        0
 powergrid_batteries              4        4       0        0
-refuellinghose                   4        3       1        0
+refuellinghose                   4        3       0        1
 zombievillage                    4        4       0        0
 cable_facades                    3        1       2        0
 compactgearbox                   3        3       0        0

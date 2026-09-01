@@ -33,11 +33,11 @@ from zipfile import ZipFile
 
 from PIL import Image
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 MOD = ROOT / "mods" / "momg-1.1.9-release-neoforge-1.21.1.jar"
 NAMESPACE = "more_ores_more_gems"
-SCOPE = ROOT / "docs" / "more-ores-more-gems-texture-scope.csv"
-LEDGER = ROOT / "docs" / "more-ores-more-gems-derived-textures.csv"
+SCOPE = ROOT / "dev/docs" / "more-ores-more-gems-texture-scope.csv"
+LEDGER = ROOT / "dev/docs" / "more-ores-more-gems-derived-textures.csv"
 LAST_DAYS_TEX = (
     ROOT
     / "resourcepacks"
@@ -49,7 +49,7 @@ LAST_DAYS_TEX = (
 OVERLAY = ROOT / "kubejs" / "assets" / NAMESPACE
 GLINT_DIR = OVERLAY / "textures" / "block" / "glint"
 MODEL_DIR = OVERLAY / "models" / "block"
-MANIFEST = ROOT / "docs" / "gemstone-glitter-manifest.json"
+MANIFEST = ROOT / "dev/docs" / "gemstone-glitter-manifest.json"
 
 # ---- parameters (see docs/GEMSTONE_GLITTER_EFFECT.md) -----------------------
 GLINT_RES = 32

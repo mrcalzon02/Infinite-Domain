@@ -313,13 +313,13 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 PACK = ROOT / "datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen"
 DENSITY = PACK / "density_function"
 NOISE = PACK / "noise"
 SETTINGS = ROOT / "kubejs/data/wastelands/worldgen/noise_settings/wasteland.json"
 JAR = ROOT / "mods/infinite-domain-overworld-terrain-1.0.0.jar"
-REPORT = ROOT / "docs/wasteland-hex-cave-validation.json"
+REPORT = ROOT / "dev/docs/wasteland-hex-cave-validation.json"
 FORBIDDEN_GATE = re.compile(
     r"quest|ftbquests|player|team|advancement|scoreboard|game_?stage|gamestage",
     re.IGNORECASE,

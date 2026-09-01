@@ -29,8 +29,8 @@ from pathlib import Path
 
 from PIL import Image, ImageChops
 
-ROOT = Path(__file__).resolve().parents[1]
-PALETTE = ROOT / "docs" / "hive-strain" / "palette-map.json"
+ROOT = Path(__file__).resolve().parents[2]
+PALETTE = ROOT / "dev/docs" / "hive-strain" / "palette-map.json"
 OUT_ROOT = ROOT / "build" / "hive_strain" / "assets" / "infinite_domain" / "textures" / "entity"
 TEXTURE_ROOT = "assets/spore/textures/entity/"
 

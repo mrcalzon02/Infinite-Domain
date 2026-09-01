@@ -11,14 +11,14 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-GATE_D_REVIEW = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-004_GATE_D_R1_REVIEW.md"
-FINAL_REPORT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-004_FINAL_REBUILD_REPORT.md"
-SYNC_PATH = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-004" / "gate_d_final" / "r1" / "authoritative_sync.json"
-METRICS_PATH = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-004" / "gate_d_final" / "r1" / "visual_regression_metrics.json"
-STRUCTURE_RECORD = ROOT / "old_world_narrative" / "structures" / "ows-004-vcf-mycological-vertical-farm-tower.json"
-FAILURE_LOG = ROOT / "old_world_narrative" / "reviews" / "static-build-failure.log"
+ROOT = Path(__file__).resolve().parents[2]
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+GATE_D_REVIEW = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-004_GATE_D_R1_REVIEW.md"
+FINAL_REPORT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-004_FINAL_REBUILD_REPORT.md"
+SYNC_PATH = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-004" / "gate_d_final" / "r1" / "authoritative_sync.json"
+METRICS_PATH = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-004" / "gate_d_final" / "r1" / "visual_regression_metrics.json"
+STRUCTURE_RECORD = ROOT / "dev/old_world_narrative" / "structures" / "ows-004-vcf-mycological-vertical-farm-tower.json"
+FAILURE_LOG = ROOT / "dev/old_world_narrative" / "reviews" / "static-build-failure.log"
 EXPECTED_HASH = "3c75be18613208a59daa0bb90d5810f10564fa018d77b87870f413d01d890b62"
 EXPECTED_BYTES = 1505368
 EXPECTED_SCORE = 95

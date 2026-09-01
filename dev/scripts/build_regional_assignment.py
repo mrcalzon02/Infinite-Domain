@@ -26,12 +26,12 @@ import sys
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-REGIONAL = ROOT / "structure_library" / "regional"
+ROOT = Path(__file__).resolve().parents[2]
+REGIONAL = ROOT / "dev/structure_library" / "regional"
 
 DOCS = {
-    "karsic": ROOT / "docs" / "KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md",
-    "pelagos": ROOT / "docs" / "PELAGOS_COMPACT_STRUCTURE_PROGRAM.md",
+    "karsic": ROOT / "dev/docs" / "KARSIC_DIRECTORATE_STRUCTURE_PROGRAM.md",
+    "pelagos": ROOT / "dev/docs" / "PELAGOS_COMPACT_STRUCTURE_PROGRAM.md",
 }
 PREFIX = {"karsic": "kar", "pelagos": "pel"}
 HEMISPHERE = {"karsic": "east", "pelagos": "west"}

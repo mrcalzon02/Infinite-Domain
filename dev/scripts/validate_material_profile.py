@@ -37,9 +37,9 @@ import sys
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-REGIONAL = ROOT / "structure_library" / "regional"
-DEFAULT_REGISTRY = ROOT / "docs" / "registry-inventory" / "block-ids.txt"
+ROOT = Path(__file__).resolve().parents[2]
+REGIONAL = ROOT / "dev/structure_library" / "regional"
+DEFAULT_REGISTRY = ROOT / "dev/docs" / "registry-inventory" / "block-ids.txt"
 
 DERIVATIVE_KINDS = ("slab", "stairs", "wall")
 
@@ -142,7 +142,7 @@ def validate(culture: str, registry_path: Path, dump: bool) -> tuple[dict[str, A
                     failures.append(f"decay.{phase}.{name}: block not in registry: {value}")
 
     # --- ground contexts must exist in the primitives module ---------------
-    primitives = (ROOT / "scripts" / "structure_geometry_primitives_v2.py").read_text(encoding="utf-8")
+    primitives = (ROOT / "dev/scripts" / "structure_geometry_primitives_v2.py").read_text(encoding="utf-8")
     for context in profile.get("ground_contexts", []):
         if f'"{context}"' not in primitives:
             failures.append(
@@ -185,7 +185,7 @@ def main() -> int:
     args = parser.parse_args()
 
     report, failures = validate(args.culture, args.registry, args.dump_resolution)
-    out = ROOT / "docs" / f"{args.culture}-material-profile-validation.json"
+    out = ROOT / "dev/docs" / f"{args.culture}-material-profile-validation.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
 

@@ -30,7 +30,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 BIOME_DIR = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen" / "biome"
 TAG_DIR = ROOT / "kubejs" / "data" / "infinite_domain" / "tags" / "worldgen" / "biome"
 

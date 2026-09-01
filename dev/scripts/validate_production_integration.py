@@ -6,12 +6,12 @@ from pathlib import Path
 import generate_wasteland_sites as g
 from compile_production_structure_pools import partition_approvals
 
-ROOT = Path(__file__).resolve().parents[1]
-APPROVALS = ROOT / "structure_library" / "production-approvals.json"
-CATALOG = ROOT / "structure_library" / "catalog.json"
-ARCHETYPES = ROOT / "structure_library" / "settlement-archetypes.json"
-COMPILATION = ROOT / "docs" / "production-pool-compilation.json"
-REPORT = ROOT / "docs" / "production-integration-validation.json"
+ROOT = Path(__file__).resolve().parents[2]
+APPROVALS = ROOT / "dev/structure_library" / "production-approvals.json"
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+ARCHETYPES = ROOT / "dev/structure_library" / "settlement-archetypes.json"
+COMPILATION = ROOT / "dev/docs" / "production-pool-compilation.json"
+REPORT = ROOT / "dev/docs" / "production-integration-validation.json"
 CITYSTYLE = ROOT / "kubejs" / "data" / "infinite_domain" / "lostcities" / "citystyles" / "wasteland.json"
 WORLDSTYLE = ROOT / "kubejs" / "data" / "lostcities" / "lostcities" / "worldstyles" / "standard.json"
 

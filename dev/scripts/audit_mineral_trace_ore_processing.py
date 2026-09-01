@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CONFIG_PATH = ROOT / "kubejs/config/mineral_trace_ore_processing.json"
 STARTUP_PATH = ROOT / "kubejs/startup_scripts/mineral_trace_items.js"
 SERVER_PATH = ROOT / "kubejs/server_scripts/mineral_trace_ore_processing.js"

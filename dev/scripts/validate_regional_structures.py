@@ -36,13 +36,13 @@ import sys
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "dev/scripts"))
 
 from convert_nbt_to_lostcities import load_structure  # noqa: E402
 from regional import MaterialProfile, load_grammar  # noqa: E402
 
-PROGRAMS = ROOT / "structure_library" / "programs"
+PROGRAMS = ROOT / "dev/structure_library" / "programs"
 MASTERS = {
     "karsic": ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "karsic" / "masters",
 }
@@ -92,7 +92,7 @@ def check_karsic(structure_id: str, path: Path, program: dict[str, Any],
     bay = int(grammar["modules"]["bay"])
     building_type = program.get("building_type")
 
-    report = json.loads((ROOT / "docs" / "karsic-generation-report.json").read_text(encoding="utf-8"))
+    report = json.loads((ROOT / "dev/docs" / "karsic-generation-report.json").read_text(encoding="utf-8"))
     meta = next((r for r in report["results"] if r["structure_id"] == structure_id), None)
     if meta is None or meta.get("status") != "generated":
         result.add("KV-0", "generation record", "fail", "no generation record for this structure")
@@ -355,7 +355,7 @@ def main() -> int:
                 for problem in check["problems"]:
                     print(f"              - {problem}")
 
-    out = ROOT / "docs" / f"{args.culture}-regional-structure-validation.json"
+    out = ROOT / "dev/docs" / f"{args.culture}-regional-structure-validation.json"
     out.write_text(json.dumps({
         "purpose": "Cultural geometry checks that the general V2 lint does not cover.",
         "culture": args.culture,

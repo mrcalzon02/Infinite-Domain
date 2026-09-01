@@ -1,0 +1,4098 @@
+{
+  "central_continent_temperature": 0.0,
+  "central_continent_biomes": [
+    "infinite_domain:eastern_abyssal_plain",
+    "infinite_domain:eastern_continental_slope",
+    "infinite_domain:eastern_fracture_field",
+    "infinite_domain:eastern_hadal_trench",
+    "infinite_domain:polluted_shore",
+    "infinite_domain:safe_zone",
+    "infinite_domain:western_abyssal_plain",
+    "infinite_domain:western_continental_slope",
+    "infinite_domain:western_fracture_field",
+    "infinite_domain:western_hadal_trench",
+    "minecraft:beach",
+    "minecraft:deep_ocean",
+    "minecraft:ocean",
+    "minecraft:snowy_beach",
+    "wastelands:apocalypse",
+    "wastelands:city",
+    "wastelands:forest",
+    "wastelands:mountains"
+  ],
+  "generated_biomes": 58,
+  "structures_checked": 194,
+  "findings": [
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:abyssal/karsic_abyssal_detritus",
+      "message": "infinite_domain:abyssal/karsic_abyssal_detritus: biome filter lists biomes no rule generates (infinite_domain:eastern_abyssal_ocean)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:abyssal/pelagos_abyssal_detritus",
+      "message": "infinite_domain:abyssal/pelagos_abyssal_detritus: biome filter lists biomes no rule generates (infinite_domain:western_abyssal_ocean)"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "infinite_domain:deep_sea/abyssal_mining_rig",
+      "message": "infinite_domain:deep_sea/abyssal_mining_rig: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "infinite_domain:deep_sea/abyssal_vent_field",
+      "message": "infinite_domain:deep_sea/abyssal_vent_field: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "infinite_domain:deep_sea/coastal_patrol_debris_field",
+      "message": "infinite_domain:deep_sea/coastal_patrol_debris_field: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "infinite_domain:deep_sea/coastal_patrol_wreck",
+      "message": "infinite_domain:deep_sea/coastal_patrol_wreck: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "infinite_domain:deep_sea/flooded_relay_shelter",
+      "message": "infinite_domain:deep_sea/flooded_relay_shelter: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "infinite_domain:nether/lyran_research",
+      "message": "infinite_domain:nether/lyran_research: declares no biome filter"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:old_world/ows_009_atlas_roadside_repair_depot",
+      "message": "infinite_domain:old_world/ows_009_atlas_roadside_repair_depot: biome filter lists biomes no rule generates (minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall",
+      "message": "infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall: biome filter lists biomes no rule generates (minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant",
+      "message": "infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant: biome filter lists biomes no rule generates (minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:old_world/ows_043_blackglass_government_continuity_archive_node",
+      "message": "infinite_domain:old_world/ows_043_blackglass_government_continuity_archive_node: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:old_world/ows_049_meridian_firebreak_observation_bunker",
+      "message": "infinite_domain:old_world/ows_049_meridian_firebreak_observation_bunker: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:old_world/ows_053_continuity_archive_landmark",
+      "message": "infinite_domain:old_world/ows_053_continuity_archive_landmark: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/abandoned_bungalow",
+      "message": "infinite_domain:wasteland/abandoned_bungalow: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/abandoned_culdesac",
+      "message": "infinite_domain:wasteland/abandoned_culdesac: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/abandoned_motel",
+      "message": "infinite_domain:wasteland/abandoned_motel: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/abandoned_orchard_cannery",
+      "message": "infinite_domain:wasteland/abandoned_orchard_cannery: biome filter lists biomes no rule generates (minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/abandoned_truck_stop",
+      "message": "infinite_domain:wasteland/abandoned_truck_stop: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/battle_tank",
+      "message": "infinite_domain:wasteland/battle_tank: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/bunker_network",
+      "message": "infinite_domain:wasteland/bunker_network: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/decayed_farm",
+      "message": "infinite_domain:wasteland/decayed_farm: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/decayed_ranch",
+      "message": "infinite_domain:wasteland/decayed_ranch: biome filter lists biomes no rule generates (minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/delivery_van",
+      "message": "infinite_domain:wasteland/delivery_van: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/dilapidated_grocery",
+      "message": "infinite_domain:wasteland/dilapidated_grocery: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "STRUCT-BIOME-OFF-CONTINENT",
+      "severity": "warning",
+      "structure": "infinite_domain:wasteland/hydroelectric_refuge_dam",
+      "message": "infinite_domain:wasteland/hydroelectric_refuge_dam: reachable only outside the central landmass (minecraft:frozen_river)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/hydroelectric_refuge_dam",
+      "message": "infinite_domain:wasteland/hydroelectric_refuge_dam: biome filter lists biomes no rule generates (minecraft:river)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/industrial_facility",
+      "message": "infinite_domain:wasteland/industrial_facility: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/military_checkpoint",
+      "message": "infinite_domain:wasteland/military_checkpoint: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/radio_mast",
+      "message": "infinite_domain:wasteland/radio_mast: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/roadside_church_cemetery",
+      "message": "infinite_domain:wasteland/roadside_church_cemetery: biome filter lists biomes no rule generates (minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/ruined_gas_station",
+      "message": "infinite_domain:wasteland/ruined_gas_station: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/ruined_grain_elevator",
+      "message": "infinite_domain:wasteland/ruined_grain_elevator: biome filter lists biomes no rule generates (minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/ruined_roadside_diner",
+      "message": "infinite_domain:wasteland/ruined_roadside_diner: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/scrapyard",
+      "message": "infinite_domain:wasteland/scrapyard: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/service_garage",
+      "message": "infinite_domain:wasteland/service_garage: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/shattered_greenhouse_nursery",
+      "message": "infinite_domain:wasteland/shattered_greenhouse_nursery: biome filter lists biomes no rule generates (minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/split_level_house",
+      "message": "infinite_domain:wasteland/split_level_house: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/survivor_cache",
+      "message": "infinite_domain:wasteland/survivor_cache: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/trade_outpost",
+      "message": "infinite_domain:wasteland/trade_outpost: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/trailer_park",
+      "message": "infinite_domain:wasteland/trailer_park: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/wasteland_weigh_station",
+      "message": "infinite_domain:wasteland/wasteland_weigh_station: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "TAG-ENTRY-INERT",
+      "severity": "info",
+      "structure": "infinite_domain:wasteland/wrecked_sedan",
+      "message": "infinite_domain:wasteland/wrecked_sedan: biome filter lists biomes no rule generates (minecraft:flower_forest, minecraft:old_growth_birch_forest, minecraft:sunflower_plains)"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "spore:biomass_tower",
+      "message": "spore:biomass_tower: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "spore:cathedral",
+      "message": "spore:cathedral: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "spore:cell",
+      "message": "spore:cell: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "spore:celltower",
+      "message": "spore:celltower: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "spore:church",
+      "message": "spore:church: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "spore:hospital",
+      "message": "spore:hospital: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-OFF-CONTINENT",
+      "severity": "warning",
+      "structure": "spore:iceberg_mines",
+      "message": "spore:iceberg_mines: reachable only outside the central landmass (minecraft:frozen_ocean)"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "spore:lab",
+      "message": "spore:lab: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "spore:lodge",
+      "message": "spore:lodge: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "spore:mass_grave",
+      "message": "spore:mass_grave: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "spore:military_camp",
+      "message": "spore:military_camp: declares no biome filter"
+    },
+    {
+      "code": "STRUCT-BIOME-UNFILTERED",
+      "severity": "info",
+      "structure": "spore:prison",
+      "message": "spore:prison: declares no biome filter"
+    }
+  ],
+  "structures": [
+    {
+      "structure": "dungeons_arise_seven_seas:corsair_corvette",
+      "sets": [
+        "minor_structures"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "minecraft:deep_ocean"
+      ],
+      "biomes_central": [
+        "minecraft:deep_ocean"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "dungeons_arise_seven_seas:pirate_junk",
+      "sets": [
+        "minor_structures"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "minecraft:deep_ocean"
+      ],
+      "biomes_central": [
+        "minecraft:deep_ocean"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "dungeons_arise_seven_seas:small_yacht",
+      "sets": [
+        "minor_structures"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "minecraft:deep_ocean"
+      ],
+      "biomes_central": [
+        "minecraft:deep_ocean"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "dungeons_arise_seven_seas:unicorn_galleon",
+      "sets": [
+        "minor_structures"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "minecraft:deep_ocean"
+      ],
+      "biomes_central": [
+        "minecraft:deep_ocean"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/abyssal_cold_seep",
+      "sets": [
+        "abyssal_cold_seep"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/abyssal_sediment_pond",
+      "sets": [
+        "abyssal_sediment_pond"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/basaltic_flow_lobes",
+      "sets": [
+        "basaltic_flow_lobes"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/black_smoker_chimney_cluster",
+      "sets": [
+        "black_smoker_chimney_cluster"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/bone_bed_patch",
+      "sets": [
+        "bone_bed_patch"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/brine_pool_analogue",
+      "sets": [
+        "brine_pool_analogue"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/calcite_chalk_ooze_patch",
+      "sets": [
+        "calcite_chalk_ooze_patch"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/canyon_mouth_talus_fan",
+      "sets": [
+        "canyon_mouth_talus_fan"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/carbonate_seep_mound_large",
+      "sets": [
+        "carbonate_seep_mound_large"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/chemosynthetic_mat_field",
+      "sets": [
+        "chemosynthetic_mat_field"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/chemosynthetic_seep_fauna_garden",
+      "sets": [
+        "chemosynthetic_seep_fauna_garden"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/cliff_cave_mouth_geology",
+      "sets": [
+        "cliff_cave_mouth_geology"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/cold_water_coral_garden",
+      "sets": [
+        "cold_water_coral_garden"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/cooled_lava_tube_system",
+      "sets": [
+        "cooled_lava_tube_system"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:western_fracture_field"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:western_fracture_field"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/coral_rubble_field",
+      "sets": [
+        "coral_rubble_field"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/cratered_seep",
+      "sets": [
+        "cratered_seep"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/debris_flow_boulder_train",
+      "sets": [
+        "debris_flow_boulder_train"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_continental_slope",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_continental_slope",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/deep_sponge_garden",
+      "sets": [
+        "deep_sponge_garden"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/diffuse_hydrothermal_vent_field",
+      "sets": [
+        "diffuse_hydrothermal_vent_field"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/exposed_bedrock_pavement",
+      "sets": [
+        "exposed_bedrock_pavement"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/extinct_chimney_field",
+      "sets": [
+        "extinct_chimney_field"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/ferromanganese_crust_patch",
+      "sets": [
+        "ferromanganese_crust_patch"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/filter_feeder_crinoid_field",
+      "sets": [
+        "filter_feeder_crinoid_field"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/fracture_fissure_field",
+      "sets": [
+        "fracture_fissure_field"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/fracture_vent_field",
+      "sets": [
+        "fracture_vent_field"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:western_fracture_field"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:western_fracture_field"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/hadal_ponded_sediment_basin",
+      "sets": [
+        "hadal_ponded_sediment_basin"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/hadal_vent_complex",
+      "sets": [
+        "hadal_vent_complex"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/hydrothermal_vent_chain",
+      "sets": [
+        "hydrothermal_vent_chain"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/karsic_abyssal_detritus",
+      "sets": [
+        "karsic_abyssal_detritus"
+      ],
+      "biomes_declared": 5,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench"
+      ],
+      "biomes_inert": [
+        "infinite_domain:eastern_abyssal_ocean"
+      ]
+    },
+    {
+      "structure": "infinite_domain:abyssal/karsic_abyssal_pipeline_station",
+      "sets": [
+        "karsic_abyssal_pipeline_station"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/karsic_fracture_listening_post",
+      "sets": [
+        "karsic_fracture_listening_post"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/karsic_hadal_blacksite",
+      "sets": [
+        "karsic_hadal_blacksite"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:eastern_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/karsic_patrol_wreck",
+      "sets": [
+        "karsic_patrol_wreck"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/karsic_pipeline_breach",
+      "sets": [
+        "karsic_pipeline_breach"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/kelp_detritus_fall",
+      "sets": [
+        "kelp_detritus_fall"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/linear_fissure_seep",
+      "sets": [
+        "linear_fissure_seep"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/mature_whale_fall_bone_reef",
+      "sets": [
+        "mature_whale_fall_bone_reef"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/mineral_chimney_cluster",
+      "sets": [
+        "mineral_chimney_cluster"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/mineral_veined_fracture_face",
+      "sets": [
+        "mineral_veined_fracture_face"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/mud_volcano_diapir",
+      "sets": [
+        "mud_volcano_diapir"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/nodule_field",
+      "sets": [
+        "nodule_field"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/pelagos_abyssal_detritus",
+      "sets": [
+        "pelagos_abyssal_detritus"
+      ],
+      "biomes_declared": 5,
+      "biomes_generated": [
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_continental_slope",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_continental_slope",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": [
+        "infinite_domain:western_abyssal_ocean"
+      ]
+    },
+    {
+      "structure": "infinite_domain:abyssal/pelagos_abyssal_relay",
+      "sets": [
+        "pelagos_abyssal_relay"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/pelagos_fracture_observatory",
+      "sets": [
+        "pelagos_fracture_observatory"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:western_fracture_field"
+      ],
+      "biomes_central": [
+        "infinite_domain:western_fracture_field"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/pelagos_hadal_probe_station",
+      "sets": [
+        "pelagos_hadal_probe_station"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/pelagos_sensor_debris",
+      "sets": [
+        "pelagos_sensor_debris"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/pelagos_survey_wreck",
+      "sets": [
+        "pelagos_survey_wreck"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/pillow_lava_field",
+      "sets": [
+        "pillow_lava_field"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/red_clay_abyssal_patch",
+      "sets": [
+        "red_clay_abyssal_patch"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/scarp_talus_field",
+      "sets": [
+        "scarp_talus_field"
+      ],
+      "biomes_declared": 6,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_continental_slope",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_continental_slope",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/sediment_scour_pit",
+      "sets": [
+        "sediment_scour_pit"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/seep_mound",
+      "sets": [
+        "seep_mound"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/shelf_edge_slump_debris",
+      "sets": [
+        "shelf_edge_slump_debris"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/shelf_sand_wave_field",
+      "sets": [
+        "shelf_sand_wave_field"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/shell_hash_bed",
+      "sets": [
+        "shell_hash_bed"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:western_abyssal_plain"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/slump_block",
+      "sets": [
+        "slump_block"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/small_fish_fall",
+      "sets": [
+        "small_fish_fall"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/submarine_volcanic_cone",
+      "sets": [
+        "submarine_volcanic_cone"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/sulfide_mound_analogue",
+      "sets": [
+        "sulfide_mound_analogue"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/trench_wall_collapse_debris",
+      "sets": [
+        "trench_wall_collapse_debris"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/trench_wall_landslide_scar",
+      "sets": [
+        "trench_wall_landslide_scar"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/volcanic_rubble_apron",
+      "sets": [
+        "volcanic_rubble_apron"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_fracture_field",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_fracture_field",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/whale_fall",
+      "sets": [
+        "whale_fall"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_hadal_trench",
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_hadal_trench"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:abyssal/wood_fall",
+      "sets": [
+        "wood_fall"
+      ],
+      "biomes_declared": 4,
+      "biomes_generated": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_abyssal_plain",
+        "infinite_domain:eastern_continental_slope",
+        "infinite_domain:western_abyssal_plain",
+        "infinite_domain:western_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:deep_sea/abyssal_mining_rig",
+      "sets": [
+        "abyssal_mining_rig"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:deep_sea/abyssal_vent_field",
+      "sets": [
+        "abyssal_vent_field"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:deep_sea/akula_debris_field",
+      "sets": [
+        "akula_debris_field"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:deep_sea/akula_wreck_site",
+      "sets": [
+        "akula_wreck_site"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "infinite_domain:eastern_continental_slope"
+      ],
+      "biomes_central": [
+        "infinite_domain:eastern_continental_slope"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:deep_sea/coastal_patrol_debris_field",
+      "sets": [
+        "coastal_patrol_debris_field"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:deep_sea/coastal_patrol_wreck",
+      "sets": [
+        "coastal_patrol_wreck"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:deep_sea/flooded_relay_shelter",
+      "sets": [
+        "flooded_relay_shelter"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:nether/lyran_research",
+      "sets": [
+        "lyran_research"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_001_vcf_neighborhood_culture_service_depot",
+      "sets": [
+        "old_world_city_sites"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_002_vcf_emergency_community_grow_hall",
+      "sets": [
+        "old_world_city_sites"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery",
+      "sets": [
+        "old_world_city_sites"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_004_vcf_mycological_vertical_farm_tower",
+      "sets": [
+        "old_world_city_sites"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
+      "sets": [
+        "controlled_pt9_probe"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_008_vcf_emergency_persistence_investigation_lab",
+      "sets": [
+        "old_world_mountain_sites"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_009_atlas_roadside_repair_depot",
+      "sets": [
+        "old_world_rural_sites"
+      ],
+      "biomes_declared": 8,
+      "biomes_generated": [
+        "minecraft:meadow",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall",
+      "sets": [
+        "old_world_rural_sites"
+      ],
+      "biomes_declared": 8,
+      "biomes_generated": [
+        "minecraft:meadow",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant",
+      "sets": [
+        "old_world_rural_sites"
+      ],
+      "biomes_declared": 8,
+      "biomes_generated": [
+        "minecraft:meadow",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station",
+      "sets": [
+        "old_world_city_sites"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array",
+      "sets": [
+        "old_world_city_sites"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_020_polycore_deep_barrier_research_facility",
+      "sets": [
+        "old_world_mountain_sites"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_024_pleroma_intermodal_container_yard",
+      "sets": [
+        "old_world_port_sites"
+      ],
+      "biomes_declared": 3,
+      "biomes_generated": [
+        "infinite_domain:polluted_shore",
+        "minecraft:beach",
+        "minecraft:snowy_beach"
+      ],
+      "biomes_central": [
+        "infinite_domain:polluted_shore",
+        "minecraft:beach",
+        "minecraft:snowy_beach"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_027_pleroma_meridian_port_logistics_terminal",
+      "sets": [
+        "old_world_port_sites"
+      ],
+      "biomes_declared": 3,
+      "biomes_generated": [
+        "infinite_domain:polluted_shore",
+        "minecraft:beach",
+        "minecraft:snowy_beach"
+      ],
+      "biomes_central": [
+        "infinite_domain:polluted_shore",
+        "minecraft:beach",
+        "minecraft:snowy_beach"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_043_blackglass_government_continuity_archive_node",
+      "sets": [
+        "old_world_landmark_sites"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_045_emergency_authority_late_quarantine_fortress",
+      "sets": [
+        "old_world_mountain_sites"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_047_joint_research_deep_containment_laboratory",
+      "sets": [
+        "old_world_mountain_sites"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_048_meridian_military_containment_base",
+      "sets": [
+        "old_world_mountain_sites"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_049_meridian_firebreak_observation_bunker",
+      "sets": [
+        "old_world_landmark_sites"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:old_world/ows_053_continuity_archive_landmark",
+      "sets": [
+        "old_world_landmark_sites"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_bungalow",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_create_factory",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_culdesac",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_motel",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_oil_field",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 7,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:desert",
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_orchard_cannery",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 8,
+      "biomes_generated": [
+        "minecraft:meadow",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_quarry",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 7,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:desert",
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/abandoned_truck_stop",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/ae2_records_archive",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/battle_tank",
+      "sets": [
+        "wasteland_micro"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/blown_apartment_complex",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/bombed_data_center",
+      "sets": [
+        "wasteland_landmark"
+      ],
+      "biomes_declared": 6,
+      "biomes_generated": [
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest",
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest",
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/bombed_hotel",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/broken_solar_field",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 6,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:desert",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:desert"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/bunker_network",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/buried_bank_vault",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/city_electrical_substation",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/city_water_treatment_plant",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/cold_industrial_mountain_port",
+      "sets": [
+        "wasteland_coastal"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "minecraft:snowy_beach"
+      ],
+      "biomes_central": [
+        "minecraft:snowy_beach"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/collapsed_airship_terminal",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/collapsed_mine_entrance",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 7,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:desert",
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/collapsed_subway_station",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/corporate_warehouse",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:forest"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/crashed_cargo_airship",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 10,
+      "biomes_generated": [
+        "minecraft:forest",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:taiga",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:desert",
+        "wastelands:forest",
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest",
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/cratered_downtown_intersection",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/decayed_farm",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/decayed_logging_camp",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:forest"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/decayed_ranch",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 8,
+      "biomes_generated": [
+        "minecraft:meadow",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/delivery_van",
+      "sets": [
+        "wasteland_micro"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/destroyed_refugee_convoy",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 10,
+      "biomes_generated": [
+        "minecraft:forest",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:taiga",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:desert",
+        "wastelands:forest",
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest",
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/dilapidated_grocery",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/district_heating_station",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/elevated_rail_collapse",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/emergency_relief_shelter",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/excavator_pit",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 7,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:desert",
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/freight_depot",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/hydroelectric_refuge_dam",
+      "sets": [
+        "wasteland_coastal"
+      ],
+      "biomes_declared": 2,
+      "biomes_generated": [
+        "minecraft:frozen_river"
+      ],
+      "biomes_central": [],
+      "biomes_inert": [
+        "minecraft:river"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/industrial_facility",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/military_checkpoint",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/mountain_biohazard_lab",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/mountain_military_complex",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/mountain_pass_terminator",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/municipal_incinerator",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/nuclear_research_annex",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/pancaked_parking_structure",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/radio_mast",
+      "sets": [
+        "wasteland_micro"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/remote_sawmill",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 7,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:desert",
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/roadside_church_cemetery",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 8,
+      "biomes_generated": [
+        "minecraft:meadow",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_bus_terminal",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_city_school",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_community_center",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_courthouse",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_cyberware_clinic",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_department_store",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_fire_station",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_fuel_depot",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_gas_station",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_grain_elevator",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 8,
+      "biomes_generated": [
+        "minecraft:meadow",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_hospital",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_mixed_use_block",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_office_tower",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_police_precinct",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_ranger_station",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 10,
+      "biomes_generated": [
+        "minecraft:forest",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:taiga",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:desert",
+        "wastelands:forest",
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest",
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_roadside_diner",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_rowhouse_block",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/ruined_shopping_mall",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/scrapyard",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/service_garage",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/shattered_greenhouse_nursery",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 8,
+      "biomes_generated": [
+        "minecraft:meadow",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/shattered_luxury_condo",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/shattered_wind_farm",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 6,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:desert",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:desert"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/split_level_house",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/sunken_city_front",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/sunken_highway_interchange",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/survivor_cache",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/tenement_courtyard",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/toppled_skyscraper",
+      "sets": [
+        "wasteland_landmark"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "wastelands:city"
+      ],
+      "biomes_central": [
+        "wastelands:city"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/trade_outpost",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/trailer_park",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/warm_industrial_mountain_port",
+      "sets": [
+        "wasteland_coastal"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "minecraft:beach"
+      ],
+      "biomes_central": [
+        "minecraft:beach"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/wasteland_fire_lookout",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 10,
+      "biomes_generated": [
+        "minecraft:forest",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:taiga",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "wastelands:apocalypse",
+        "wastelands:desert",
+        "wastelands:forest",
+        "wastelands:mountains"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:forest",
+        "wastelands:mountains"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/wasteland_water_tower",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 6,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:desert",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:desert"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/wasteland_weigh_station",
+      "sets": [
+        "wasteland_common"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "infinite_domain:wasteland/wilderness_substation",
+      "sets": [
+        "wasteland_major"
+      ],
+      "biomes_declared": 6,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:desert",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:desert"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "infinite_domain:wasteland/wrecked_sedan",
+      "sets": [
+        "wasteland_micro"
+      ],
+      "biomes_declared": 25,
+      "biomes_generated": [
+        "minecraft:badlands",
+        "minecraft:birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:desert",
+        "minecraft:eroded_badlands",
+        "minecraft:forest",
+        "minecraft:meadow",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:sparse_jungle",
+        "minecraft:taiga",
+        "minecraft:windswept_savanna",
+        "minecraft:wooded_badlands",
+        "the_wasteland_reworked:decayed_forest",
+        "the_wasteland_reworked:radioactive_wasteland",
+        "the_wasteland_reworked:sulfuric_valley",
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_central": [
+        "wastelands:apocalypse",
+        "wastelands:city",
+        "wastelands:forest"
+      ],
+      "biomes_inert": [
+        "minecraft:flower_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:sunflower_plains"
+      ]
+    },
+    {
+      "structure": "spore:biomass_tower",
+      "sets": [
+        "biomass_tower",
+        "surface_sites"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:cathedral",
+      "sets": [
+        "cathedral",
+        "surface_sites"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:cell",
+      "sets": [
+        "cell",
+        "surface_sites"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:celltower",
+      "sets": [
+        "celltower",
+        "surface_sites"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:church",
+      "sets": [
+        "church",
+        "surface_sites"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:hospital",
+      "sets": [
+        "hospital",
+        "surface_sites"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:iceberg_mines",
+      "sets": [
+        "iceberg_mines",
+        "iceberg_mines"
+      ],
+      "biomes_declared": 1,
+      "biomes_generated": [
+        "minecraft:frozen_ocean"
+      ],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:lab",
+      "sets": [
+        "lab",
+        "surface_sites"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:lodge",
+      "sets": [
+        "lodge",
+        "surface_sites"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:mass_grave",
+      "sets": [
+        "mass_grave",
+        "surface_sites"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:military_camp",
+      "sets": [
+        "military_camp",
+        "surface_sites"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:mines",
+      "sets": [
+        "cold_mines",
+        "mines"
+      ],
+      "biomes_declared": 7,
+      "biomes_generated": [
+        "minecraft:frozen_peaks",
+        "minecraft:ice_spikes",
+        "minecraft:jagged_peaks",
+        "minecraft:snowy_beach",
+        "minecraft:snowy_plains",
+        "minecraft:snowy_slopes",
+        "minecraft:snowy_taiga"
+      ],
+      "biomes_central": [
+        "minecraft:snowy_beach"
+      ],
+      "biomes_inert": []
+    },
+    {
+      "structure": "spore:prison",
+      "sets": [
+        "prison",
+        "surface_sites"
+      ],
+      "biomes_declared": 0,
+      "biomes_generated": [],
+      "biomes_central": [],
+      "biomes_inert": []
+    }
+  ]
+}

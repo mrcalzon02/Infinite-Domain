@@ -30,7 +30,7 @@ TEMP_NAME = "_heavy_review_ows009_gate_b_intact_r1"
 TEMP_NBT = ROOT / "kubejs/data/infinite_domain/structure/wasteland" / f"{TEMP_NAME}.nbt"
 OUTPUT_DIR = OUTPUT_ROOT / TARGET / "gate_b_intact" / "r1"
 SHIPPING_PATH = ROOT / "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_009_atlas_roadside_repair_depot.nbt"
-GATE_A_REVIEW = ROOT / "old_world_narrative/reviews/heavy_rebuild/OWS-009_GATE_A_R2_REVIEW.md"
+GATE_A_REVIEW = ROOT / "dev/old_world_narrative/reviews/heavy_rebuild/OWS-009_GATE_A_R2_REVIEW.md"
 AIR = {None, "minecraft:air", "minecraft:cave_air", "minecraft:void_air", "minecraft:structure_void"}
 
 

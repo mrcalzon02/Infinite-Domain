@@ -12,9 +12,9 @@ import json
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-REVIEW_ROOT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild"
+ROOT = Path(__file__).resolve().parents[2]
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+REVIEW_ROOT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild"
 
 EARLY_REQUIRED = {
     "phase_0_baseline_review": "OWS-004_PHASE0_BASELINE_REVIEW.md",
@@ -200,7 +200,7 @@ def main() -> None:
     # advanced Gate-B state. The generic recorder is itself monotonic.
     STATE_PATH.write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8", newline="\n")
     if _intact_records_present():
-        sys.path.insert(0, str(ROOT / "scripts"))
+        sys.path.insert(0, str(ROOT / "dev/scripts"))
         import record_old_world_intact_planning_passes
         record_old_world_intact_planning_passes.main()
         state = json.loads(STATE_PATH.read_text(encoding="utf-8"))

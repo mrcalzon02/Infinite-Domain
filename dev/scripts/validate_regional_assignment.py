@@ -33,9 +33,9 @@ import sys
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-REGIONAL = ROOT / "structure_library" / "regional"
-CATALOG = ROOT / "structure_library" / "catalog.json"
+ROOT = Path(__file__).resolve().parents[2]
+REGIONAL = ROOT / "dev/structure_library" / "regional"
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
 
 PREFIX = {"karsic": "kar", "pelagos": "pel"}
 MIN_STRATA = {"karsic": 1, "pelagos": 2}
@@ -191,7 +191,7 @@ def main() -> int:
         "passed": not failures,
         "failure_count": len(failures),
     }
-    out = ROOT / "docs" / f"{args.culture}-assignment-validation.json"
+    out = ROOT / "dev/docs" / f"{args.culture}-assignment-validation.json"
     out.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
 
     for check in checks:

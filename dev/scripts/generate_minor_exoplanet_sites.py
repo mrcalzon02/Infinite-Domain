@@ -18,7 +18,7 @@ from typing import Any
 # distinct variants from one shared builder, in the same Template/NBT style as
 # scripts/generate_alien_structures.py and generate_continuity_offworld_expansion.py.
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
 DATA_VERSION = 3955
 
@@ -357,7 +357,7 @@ def generate() -> None:
             }
             total_by_planet[planet] = total_by_planet.get(planet, 0) + 1
 
-    write_json(ROOT / "docs" / "exoplanet-minor-sites-manifest.json", {"totals_added_by_planet": total_by_planet, "sites": manifest})
+    write_json(ROOT / "dev/docs" / "exoplanet-minor-sites-manifest.json", {"totals_added_by_planet": total_by_planet, "sites": manifest})
     print(f"Generated {len(manifest)} minor exoplanet sites across {len(total_by_planet)} planets")
     for planet, count in total_by_planet.items():
         print(f"  {planet}: +{count}")

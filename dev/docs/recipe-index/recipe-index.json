@@ -3666,13 +3666,18 @@
       },
       {
         "kind": "item",
+        "id": "allthecompressed:antimatter_block_9x",
+        "count": 1
+      },
+      {
+        "kind": "item",
         "id": "createnuclear:reactor_casing",
         "count": 2
       },
       {
         "kind": "item",
         "id": "oritech:advanced_battery",
-        "count": 4
+        "count": 3
       },
       {
         "kind": "item",
@@ -4181,13 +4186,18 @@
       },
       {
         "kind": "item",
+        "id": "allthecompressed:antimatter_block_9x",
+        "count": 1
+      },
+      {
+        "kind": "item",
         "id": "createnuclear:reactor_controller",
         "count": 2
       },
       {
         "kind": "item",
         "id": "oritech:machine_core_7",
-        "count": 4
+        "count": 3
       },
       {
         "kind": "item",
@@ -4396,13 +4406,18 @@
       },
       {
         "kind": "item",
+        "id": "allthecompressed:antimatter_block_9x",
+        "count": 1
+      },
+      {
+        "kind": "item",
         "id": "createnuclear:reactor_controller",
         "count": 2
       },
       {
         "kind": "item",
         "id": "oritech:machine_core_7",
-        "count": 4
+        "count": 3
       },
       {
         "kind": "item",
@@ -7550,13 +7565,18 @@
       },
       {
         "kind": "item",
+        "id": "allthecompressed:antimatter_block_9x",
+        "count": 1
+      },
+      {
+        "kind": "item",
         "id": "createnuclear:reactor_controller",
         "count": 2
       },
       {
         "kind": "item",
         "id": "oritech:machine_core_7",
-        "count": 4
+        "count": 3
       },
       {
         "kind": "item",
@@ -7588,13 +7608,18 @@
       },
       {
         "kind": "item",
+        "id": "allthecompressed:antimatter_block_9x",
+        "count": 1
+      },
+      {
+        "kind": "item",
         "id": "createnuclear:reactor_controller",
         "count": 2
       },
       {
         "kind": "item",
         "id": "oritech:machine_core_7",
-        "count": 4
+        "count": 3
       },
       {
         "kind": "item",
@@ -104963,6 +104988,11 @@
         "kind": "item",
         "id": "create:andesite_alloy_block",
         "count": 2
+      },
+      {
+        "kind": "item",
+        "id": "minecraft:andesite",
+        "count": 4
       }
     ],
     "outputs": [
@@ -164627,10 +164657,15 @@
   {
     "recipe_id": "create_hypertube:hypertube_junction",
     "enabled": true,
-    "recipe_type": "create:mechanical_crafting",
-    "winning_source_path": "data/create_hypertube/recipe/hypertube_junction.json",
+    "recipe_type": "minecraft:crafting_shaped",
+    "winning_source_path": "kubejs/data/create_hypertube/recipe/hypertube_junction.json",
     "recommended_override_path": "kubejs/data/create_hypertube/recipe/hypertube_junction.json",
     "inputs": [
+      {
+        "kind": "item",
+        "id": "ae2:calculation_processor",
+        "count": 1
+      },
       {
         "kind": "item",
         "id": "create:brass_sheet",
@@ -164638,17 +164673,22 @@
       },
       {
         "kind": "item",
-        "id": "create:transmitter",
-        "count": 1
-      },
-      {
-        "kind": "item",
         "id": "create_hypertube:hypertube",
-        "count": 1
+        "count": 2
       },
       {
         "kind": "item",
         "id": "create_hypertube:hypertube_funnel",
+        "count": 2
+      },
+      {
+        "kind": "item",
+        "id": "powergrid:integrated_circuit",
+        "count": 2
+      },
+      {
+        "kind": "item",
+        "id": "tfmg:heavy_plate",
         "count": 1
       }
     ],
@@ -167163,18 +167203,33 @@
     "recipe_id": "create_radar:cutting/radar_dish",
     "enabled": true,
     "recipe_type": "minecraft:crafting_shaped",
-    "winning_source_path": "data/create_radar/recipe/cutting/radar_dish.json",
+    "winning_source_path": "kubejs/data/create_radar/recipe/cutting/radar_dish.json",
     "recommended_override_path": "kubejs/data/create_radar/recipe/cutting/radar_dish.json",
     "inputs": [
       {
         "kind": "item",
-        "id": "minecraft:iron_bars",
+        "id": "ae2:calculation_processor",
         "count": 2
       },
       {
-        "kind": "tag",
-        "id": "#c:plates/iron",
-        "count": 3
+        "kind": "item",
+        "id": "create_radar:data_link",
+        "count": 1
+      },
+      {
+        "kind": "item",
+        "id": "oritech:machine_core_3",
+        "count": 1
+      },
+      {
+        "kind": "item",
+        "id": "powergrid:integrated_circuit",
+        "count": 1
+      },
+      {
+        "kind": "item",
+        "id": "tfmg:steel_block",
+        "count": 4
       }
     ],
     "outputs": [
@@ -168165,7 +168220,7 @@
     "recipe_id": "create_ultimate_factory:compacting_coalblock",
     "enabled": true,
     "recipe_type": "create:compacting",
-    "winning_source_path": "data/create_ultimate_factory/recipe/compacting_coalblock.json",
+    "winning_source_path": "kubejs/data/create_ultimate_factory/recipe/compacting_coalblock.json",
     "recommended_override_path": "kubejs/data/create_ultimate_factory/recipe/compacting_coalblock.json",
     "inputs": [
       {
@@ -168287,7 +168342,7 @@
     "recipe_id": "create_ultimate_factory:compacting_tuff",
     "enabled": true,
     "recipe_type": "create:compacting",
-    "winning_source_path": "data/create_ultimate_factory/recipe/compacting_tuff.json",
+    "winning_source_path": "kubejs/data/create_ultimate_factory/recipe/compacting_tuff.json",
     "recommended_override_path": "kubejs/data/create_ultimate_factory/recipe/compacting_tuff.json",
     "inputs": [
       {
@@ -169013,7 +169068,7 @@
     "recipe_id": "create_ultimate_factory:splashing_magma_cream",
     "enabled": true,
     "recipe_type": "create:splashing",
-    "winning_source_path": "data/create_ultimate_factory/recipe/splashing_magma_cream.json",
+    "winning_source_path": "kubejs/data/create_ultimate_factory/recipe/splashing_magma_cream.json",
     "recommended_override_path": "kubejs/data/create_ultimate_factory/recipe/splashing_magma_cream.json",
     "inputs": [
       {
@@ -169248,7 +169303,7 @@
     "recipe_id": "create_winery:create/compacting_apples",
     "enabled": true,
     "recipe_type": "create:compacting",
-    "winning_source_path": "data/create_winery/recipe/create/compacting_apples.json",
+    "winning_source_path": "kubejs/data/create_winery/recipe/create/compacting_apples.json",
     "recommended_override_path": "kubejs/data/create_winery/recipe/create/compacting_apples.json",
     "inputs": [
       {
@@ -169271,7 +169326,7 @@
     "recipe_id": "create_winery:create/compacting_red_grapes",
     "enabled": true,
     "recipe_type": "create:compacting",
-    "winning_source_path": "data/create_winery/recipe/create/compacting_red_grapes.json",
+    "winning_source_path": "kubejs/data/create_winery/recipe/create/compacting_red_grapes.json",
     "recommended_override_path": "kubejs/data/create_winery/recipe/create/compacting_red_grapes.json",
     "inputs": [
       {
@@ -169294,7 +169349,7 @@
     "recipe_id": "create_winery:create/compacting_white_grapes",
     "enabled": true,
     "recipe_type": "create:compacting",
-    "winning_source_path": "data/create_winery/recipe/create/compacting_white_grapes.json",
+    "winning_source_path": "kubejs/data/create_winery/recipe/create/compacting_white_grapes.json",
     "recommended_override_path": "kubejs/data/create_winery/recipe/create/compacting_white_grapes.json",
     "inputs": [
       {
@@ -169317,7 +169372,7 @@
     "recipe_id": "create_winery:create/mixing_apple_must",
     "enabled": true,
     "recipe_type": "create:mixing",
-    "winning_source_path": "data/create_winery/recipe/create/mixing_apple_must.json",
+    "winning_source_path": "kubejs/data/create_winery/recipe/create/mixing_apple_must.json",
     "recommended_override_path": "kubejs/data/create_winery/recipe/create/mixing_apple_must.json",
     "inputs": [
       {
@@ -169345,7 +169400,7 @@
     "recipe_id": "create_winery:create/mixing_grape_pomace",
     "enabled": true,
     "recipe_type": "create:mixing",
-    "winning_source_path": "data/create_winery/recipe/create/mixing_grape_pomace.json",
+    "winning_source_path": "kubejs/data/create_winery/recipe/create/mixing_grape_pomace.json",
     "recommended_override_path": "kubejs/data/create_winery/recipe/create/mixing_grape_pomace.json",
     "inputs": [
       {
@@ -170406,28 +170461,38 @@
     "recipe_id": "createbigcannons:cannon_mount",
     "enabled": true,
     "recipe_type": "minecraft:crafting_shaped",
-    "winning_source_path": "data/createbigcannons/recipe/cannon_mount.json",
+    "winning_source_path": "kubejs/data/createbigcannons/recipe/cannon_mount.json",
     "recommended_override_path": "kubejs/data/createbigcannons/recipe/cannon_mount.json",
     "inputs": [
       {
         "kind": "item",
-        "id": "create:andesite_casing",
+        "id": "create:precision_mechanism",
+        "count": 2
+      },
+      {
+        "kind": "item",
+        "id": "createbigcannons:cast_iron_block",
+        "count": 2
+      },
+      {
+        "kind": "item",
+        "id": "createbigcannons:fixed_cannon_mount",
         "count": 1
       },
       {
         "kind": "item",
-        "id": "create:shaft",
-        "count": 4
-      },
-      {
-        "kind": "tag",
-        "id": "#c:plates/iron",
+        "id": "powergrid:contactor",
         "count": 2
       },
       {
-        "kind": "tag",
-        "id": "#createbigcannons:gunpowder",
-        "count": 2
+        "kind": "item",
+        "id": "powergrid:servo",
+        "count": 1
+      },
+      {
+        "kind": "item",
+        "id": "tfmg:heavy_plate",
+        "count": 1
       }
     ],
     "outputs": [
@@ -196776,27 +196841,22 @@
     "recipe_id": "createdeliveryrequired:p2p_terminal",
     "enabled": true,
     "recipe_type": "minecraft:crafting_shaped",
-    "winning_source_path": "data/createdeliveryrequired/recipe/p2p_terminal.json",
+    "winning_source_path": "kubejs/data/createdeliveryrequired/recipe/p2p_terminal.json",
     "recommended_override_path": "kubejs/data/createdeliveryrequired/recipe/p2p_terminal.json",
     "inputs": [
       {
         "kind": "item",
-        "id": "create:clipboard",
+        "id": "ae2:engineering_processor",
         "count": 1
       },
       {
         "kind": "item",
-        "id": "create:display_board",
-        "count": 1
-      },
-      {
-        "kind": "item",
-        "id": "create:electron_tube",
+        "id": "ae2:interface",
         "count": 2
       },
       {
         "kind": "item",
-        "id": "create:industrial_iron_block",
+        "id": "create:display_board",
         "count": 2
       },
       {
@@ -196807,6 +196867,11 @@
       {
         "kind": "item",
         "id": "minecraft:ender_pearl",
+        "count": 1
+      },
+      {
+        "kind": "item",
+        "id": "powergrid:integrated_circuit",
         "count": 1
       }
     ],
@@ -219298,8 +219363,8 @@
     "recommended_override_path": "kubejs/data/createoritechcompat/recipe/crushing/biomass.json",
     "inputs": [
       {
-        "kind": "tag",
-        "id": "#oritech:biomass",
+        "kind": "item",
+        "id": "oritech:biomass",
         "count": 1
       }
     ],
@@ -219423,13 +219488,13 @@
     "recommended_override_path": "kubejs/data/createoritechcompat/recipe/mixing/biosteel_ingot.json",
     "inputs": [
       {
-        "kind": "tag",
-        "id": "#c:ingots/iron",
+        "kind": "item",
+        "id": "oritech:raw_biopolymer",
         "count": 1
       },
       {
         "kind": "tag",
-        "id": "#oritech:raw_biopolymer",
+        "id": "#c:ingots/iron",
         "count": 1
       }
     ],
@@ -222218,7 +222283,7 @@
     "recipe_id": "createreautomated:netherite_drill_upgrade",
     "enabled": true,
     "recipe_type": "minecraft:smithing_transform",
-    "winning_source_path": "data/createreautomated/recipe/netherite_drill_upgrade.json",
+    "winning_source_path": "kubejs/data/createreautomated/recipe/netherite_drill_upgrade.json",
     "recommended_override_path": "kubejs/data/createreautomated/recipe/netherite_drill_upgrade.json",
     "inputs": [
       {
@@ -222229,6 +222294,11 @@
       {
         "kind": "item",
         "id": "minecraft:netherite_ingot",
+        "count": 1
+      },
+      {
+        "kind": "item",
+        "id": "minecraft:netherite_upgrade_smithing_template",
         "count": 1
       }
     ],
@@ -224042,14 +224112,34 @@
   {
     "recipe_id": "createthrusters:thruster_from_small_thruster",
     "enabled": true,
-    "recipe_type": "minecraft:crafting_shapeless",
-    "winning_source_path": "data/createthrusters/recipe/thruster_from_small_thruster.json",
+    "recipe_type": "minecraft:crafting_shaped",
+    "winning_source_path": "kubejs/data/createthrusters/recipe/thruster_from_small_thruster.json",
     "recommended_override_path": "kubejs/data/createthrusters/recipe/thruster_from_small_thruster.json",
     "inputs": [
       {
         "kind": "item",
-        "id": "createthrusters:small_thruster",
+        "id": "create:blaze_burner",
         "count": 1
+      },
+      {
+        "kind": "item",
+        "id": "create_new_age:advanced_motor",
+        "count": 2
+      },
+      {
+        "kind": "item",
+        "id": "createthrusters:fuel_oxidizer",
+        "count": 1
+      },
+      {
+        "kind": "item",
+        "id": "powergrid:integrated_circuit",
+        "count": 1
+      },
+      {
+        "kind": "item",
+        "id": "tfmg:heavy_plate",
+        "count": 4
       }
     ],
     "outputs": [
@@ -287202,6 +287292,11 @@
         "kind": "item",
         "id": "allthecompressed:stone_1x",
         "count": 8
+      },
+      {
+        "kind": "item",
+        "id": "minecraft:book",
+        "count": 1
       }
     ],
     "outputs": [
@@ -287846,7 +287941,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:acacia_coffin",
         "count": 1
       }
@@ -287874,7 +287969,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:bamboo_coffin",
         "count": 1
       }
@@ -287902,7 +287997,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:birch_coffin",
         "count": 1
       }
@@ -287948,7 +288043,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:blackstone_gravestone",
         "count": 1
       }
@@ -288040,7 +288135,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:bricks_gravestone",
         "count": 1
       }
@@ -288086,7 +288181,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:candle_holder",
         "count": 1
       }
@@ -288114,7 +288209,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:cherry_coffin",
         "count": 1
       }
@@ -288137,7 +288232,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:cobblestone_gravestone",
         "count": 1
       }
@@ -288211,7 +288306,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:crimson_coffin",
         "count": 1
       }
@@ -288257,7 +288352,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:dark_iron_bars",
         "count": 16
       }
@@ -288303,7 +288398,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:dark_iron_door",
         "count": 3
       }
@@ -288377,7 +288472,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:dark_iron_trapdoor",
         "count": 2
       }
@@ -288405,7 +288500,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:dark_oak_coffin",
         "count": 1
       }
@@ -288428,7 +288523,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:deepslate_gravestone",
         "count": 1
       }
@@ -288456,7 +288551,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:fire_brazier",
         "count": 1
       }
@@ -288622,7 +288717,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:jungle_coffin",
         "count": 1
       }
@@ -288880,7 +288975,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:mangrove_coffin",
         "count": 1
       }
@@ -288954,7 +289049,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:oak_coffin",
         "count": 1
       }
@@ -289010,7 +289105,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:black_urn",
         "count": 1
       }
@@ -289033,7 +289128,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:pedestal",
         "count": 1
       }
@@ -289199,7 +289294,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:sarcophagus",
         "count": 1
       }
@@ -289687,7 +289782,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:soul_fire_brazier",
         "count": 1
       }
@@ -289715,7 +289810,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:spruce_coffin",
         "count": 1
       }
@@ -289789,7 +289884,7 @@
     ],
     "outputs": [
       {
-        "kind": "item",
+        "kind": "resource",
         "id": "graveyard:warped_coffin",
         "count": 1
       }
@@ -433941,7 +434036,12 @@
       {
         "kind": "item",
         "id": "ae2:quantum_ring",
-        "count": 4
+        "count": 3
+      },
+      {
+        "kind": "item",
+        "id": "allthecompressed:antimatter_block_9x",
+        "count": 1
       },
       {
         "kind": "item",
@@ -441408,6 +441508,34 @@
       {
         "kind": "resource",
         "id": "oritech:packed_wheat",
+        "count": 1
+      }
+    ],
+    "scaling_class": "unscaled",
+    "scaling_replacements": ""
+  },
+  {
+    "recipe_id": "oritech:particle/antimatter",
+    "enabled": true,
+    "recipe_type": "oritech:particle_collision",
+    "winning_source_path": "kubejs/data/oritech/recipe/particle/antimatter.json",
+    "recommended_override_path": "kubejs/data/oritech/recipe/particle/antimatter.json",
+    "inputs": [
+      {
+        "kind": "item",
+        "id": "minecraft:nether_star",
+        "count": 1
+      },
+      {
+        "kind": "item",
+        "id": "oritech:overcharged_crystal",
+        "count": 1
+      }
+    ],
+    "outputs": [
+      {
+        "kind": "resource",
+        "id": "allthecompressed:antimatter_block",
         "count": 1
       }
     ],

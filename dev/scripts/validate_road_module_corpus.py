@@ -8,9 +8,9 @@ from pathlib import Path
 from convert_nbt_to_lostcities import load_structure
 from generate_wasteland_sites import STRUCTURE_BLOCK_REPLACEMENTS
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "roads" / "road-modules.json"
-REPORT = ROOT / "docs" / "road-module-validation.json"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "roads" / "road-modules.json"
+REPORT = ROOT / "dev/docs" / "road-module-validation.json"
 
 REQUIRED_TOPOLOGIES = {
     "straight", "bend", "t", "four_way", "roundabout", "dead_end",

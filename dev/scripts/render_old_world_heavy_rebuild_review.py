@@ -19,10 +19,10 @@ from PIL import Image, ImageDraw
 from render_structure_review import floor_slices, isometric, unpack_structure
 
 
-ROOT = Path(__file__).resolve().parents[1]
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-TARGETS_PATH = ROOT / "old_world_narrative" / "registry" / "structure_targets.json"
-OUTPUT_ROOT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
+ROOT = Path(__file__).resolve().parents[2]
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+TARGETS_PATH = ROOT / "dev/old_world_narrative" / "registry" / "structure_targets.json"
+OUTPUT_ROOT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
 AIR = {"minecraft:air", "minecraft:cave_air", "minecraft:void_air", "minecraft:structure_void"}
 
 CAMERAS = (

@@ -27,7 +27,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[1]
+REPO = Path(__file__).resolve().parents[2]
 STRUCT_ROOT = REPO / "kubejs" / "data" / "infinite_domain" / "worldgen" / "structure"
 POOL_ROOT = REPO / "kubejs" / "data" / "infinite_domain" / "worldgen" / "template_pool"
 NBT_ROOT = REPO / "kubejs" / "data" / "infinite_domain" / "structure"

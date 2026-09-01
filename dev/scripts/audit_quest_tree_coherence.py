@@ -18,22 +18,22 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CHAPTER_DIR = ROOT / "config/ftbquests/quests/chapters"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
 CHAPTER_GROUPS = ROOT / "config/ftbquests/quests/chapter_groups.snbt"
 DATA_SNBT = ROOT / "config/ftbquests/quests/data.snbt"
-REGISTRY_ITEMS = ROOT / "docs/registry-inventory/item-ids.txt"
-REGISTRY_ENTITIES = ROOT / "docs/registry-inventory/entity-ids.txt"
-MOD_JAR_INDEX = ROOT / "docs/registry-inventory/mod-jar-index.json"
-GRAPH_NODES = ROOT / "docs/progression-graph/graph-nodes.csv"
-RECIPE_OUTPUTS = ROOT / "docs/recipe-index/recipe-outputs.csv"
+REGISTRY_ITEMS = ROOT / "dev/docs/registry-inventory/item-ids.txt"
+REGISTRY_ENTITIES = ROOT / "dev/docs/registry-inventory/entity-ids.txt"
+MOD_JAR_INDEX = ROOT / "dev/docs/registry-inventory/mod-jar-index.json"
+GRAPH_NODES = ROOT / "dev/docs/progression-graph/graph-nodes.csv"
+RECIPE_OUTPUTS = ROOT / "dev/docs/recipe-index/recipe-outputs.csv"
 KUBEJS_STARTUP = ROOT / "kubejs/startup_scripts"
 KUBEJS_DIR = ROOT / "kubejs"
 REWARD_BAG_SCRIPT = ROOT / "kubejs/server_scripts/era_reward_bags.js"
 REWARD_BAG_REGISTRATION = ROOT / "kubejs/startup_scripts/main.js"
 
-OUT_JSON = ROOT / "docs/quest-tree-coherence-audit.json"
+OUT_JSON = ROOT / "dev/docs/quest-tree-coherence-audit.json"
 
 
 # --------------------------------------------------------------------------- #

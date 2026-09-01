@@ -13,7 +13,7 @@ from render_old_world_heavy_rebuild_review import render_review_set
 from render_structure_review import unpack_structure
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TARGET = "OWS-010"
 SIZE = (49, 16, 43)
 CAMERA_SET = "ows010_fixed_v1"
@@ -21,8 +21,8 @@ SOURCE_PATH = r1.SHIPPING_PATH
 FROZEN_SOURCE_BLOB = r1.FROZEN_BASELINE_BLOB
 TEMP_NAME = "_heavy_review_ows010_gate_a_massing_r2"
 TEMP_NBT = ROOT / "kubejs/data/infinite_domain/structure/wasteland" / f"{TEMP_NAME}.nbt"
-OUTPUT_DIR = ROOT / "old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r2"
-REVIEW_RECORD = ROOT / "old_world_narrative/reviews/heavy_rebuild/OWS-010_GATE_A_R1_REVIEW.md"
+OUTPUT_DIR = ROOT / "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-010/gate_a_massing/r2"
+REVIEW_RECORD = ROOT / "dev/old_world_narrative/reviews/heavy_rebuild/OWS-010_GATE_A_R1_REVIEW.md"
 R1_MODEL_SHA256 = "f0296bc3de982f3cde027e9f87221be3e07add11cd073377f0b7664aa61165c7"
 
 

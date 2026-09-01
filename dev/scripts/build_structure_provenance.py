@@ -6,9 +6,9 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parents[1]
-LIBRARY = ROOT / "structure_library"
-SITE_MANIFEST = ROOT / "docs" / "wasteland-site-manifest.json"
+ROOT = Path(__file__).resolve().parents[2]
+LIBRARY = ROOT / "dev/structure_library"
+SITE_MANIFEST = ROOT / "dev/docs" / "wasteland-site-manifest.json"
 CATALOG = LIBRARY / "catalog.json"
 OUTPUT = LIBRARY / "licensing" / "provenance.json"
 CORPUS = LIBRARY / "corpus-manifest.json"

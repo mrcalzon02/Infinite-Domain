@@ -1,0 +1,95 @@
+{
+  "totals": {
+    "loot_tables": 200,
+    "loot_table_items": 1202,
+    "structures_with_loot": 297,
+    "worldgen_structures": 313,
+    "structure_sets": 169,
+    "placed_structures": 470,
+    "template_pools": 304,
+    "quest_tasks": 11169,
+    "craftable_outputs": 10977
+  },
+  "counts_by_code": {
+    "LOOT-ORPHAN": 11
+  },
+  "findings": [
+    {
+      "code": "LOOT-ORPHAN",
+      "severity": "warning",
+      "message": "create_structures_overhaul:nether_forpost: authored loot table is referenced by no structure, block or table - it never rolls",
+      "table": "create_structures_overhaul:nether_forpost",
+      "path": "kubejs/data/create_structures_overhaul/loot_table/nether_forpost.json"
+    },
+    {
+      "code": "LOOT-ORPHAN",
+      "severity": "warning",
+      "message": "infinite_domain:chests/offworld/continuity_lunar_crash_evidence: authored loot table is referenced by no structure, block or table - it never rolls",
+      "table": "infinite_domain:chests/offworld/continuity_lunar_crash_evidence",
+      "path": "kubejs/data/infinite_domain/loot_table/chests/offworld/continuity_lunar_crash_evidence.json"
+    },
+    {
+      "code": "LOOT-ORPHAN",
+      "severity": "warning",
+      "message": "infinite_domain:chests/offworld/continuity_lunar_crash_salvage: authored loot table is referenced by no structure, block or table - it never rolls",
+      "table": "infinite_domain:chests/offworld/continuity_lunar_crash_salvage",
+      "path": "kubejs/data/infinite_domain/loot_table/chests/offworld/continuity_lunar_crash_salvage.json"
+    },
+    {
+      "code": "LOOT-ORPHAN",
+      "severity": "warning",
+      "message": "infinite_domain:chests/old_world/vcf/ows_001_culture_service_manifest: authored loot table is referenced by no structure, block or table - it never rolls",
+      "table": "infinite_domain:chests/old_world/vcf/ows_001_culture_service_manifest",
+      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_001_culture_service_manifest.json"
+    },
+    {
+      "code": "LOOT-ORPHAN",
+      "severity": "warning",
+      "message": "infinite_domain:chests/old_world/vcf/ows_002_emergency_grow_authorization: authored loot table is referenced by no structure, block or table - it never rolls",
+      "table": "infinite_domain:chests/old_world/vcf/ows_002_emergency_grow_authorization",
+      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_002_emergency_grow_authorization.json"
+    },
+    {
+      "code": "LOOT-ORPHAN",
+      "severity": "warning",
+      "message": "infinite_domain:chests/old_world/vcf/ows_003_vcf_culture_batch_record: authored loot table is referenced by no structure, block or table - it never rolls",
+      "table": "infinite_domain:chests/old_world/vcf/ows_003_vcf_culture_batch_record",
+      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_003_vcf_culture_batch_record.json"
+    },
+    {
+      "code": "LOOT-ORPHAN",
+      "severity": "warning",
+      "message": "infinite_domain:chests/old_world/vcf/ows_004_evercrop_cultivation_handbook: authored loot table is referenced by no structure, block or table - it never rolls",
+      "table": "infinite_domain:chests/old_world/vcf/ows_004_evercrop_cultivation_handbook",
+      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_004_evercrop_cultivation_handbook.json"
+    },
+    {
+      "code": "LOOT-ORPHAN",
+      "severity": "warning",
+      "message": "infinite_domain:chests/old_world/vcf/ows_005_vcf_packaging_quality_report: authored loot table is referenced by no structure, block or table - it never rolls",
+      "table": "infinite_domain:chests/old_world/vcf/ows_005_vcf_packaging_quality_report",
+      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_005_vcf_packaging_quality_report.json"
+    },
+    {
+      "code": "LOOT-ORPHAN",
+      "severity": "warning",
+      "message": "infinite_domain:chests/old_world/vcf/ows_006_pt9_symbiosis_report: authored loot table is referenced by no structure, block or table - it never rolls",
+      "table": "infinite_domain:chests/old_world/vcf/ows_006_pt9_symbiosis_report",
+      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_006_pt9_symbiosis_report.json"
+    },
+    {
+      "code": "LOOT-ORPHAN",
+      "severity": "warning",
+      "message": "infinite_domain:chests/old_world/vcf/ows_007_ep7_distribution_and_durability_record: authored loot table is referenced by no structure, block or table - it never rolls",
+      "table": "infinite_domain:chests/old_world/vcf/ows_007_ep7_distribution_and_durability_record",
+      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_007_ep7_distribution_and_durability_record.json"
+    },
+    {
+      "code": "LOOT-ORPHAN",
+      "severity": "warning",
+      "message": "infinite_domain:chests/old_world/vcf/ows_008_vcf_persistence_incident_file: authored loot table is referenced by no structure, block or table - it never rolls",
+      "table": "infinite_domain:chests/old_world/vcf/ows_008_vcf_persistence_incident_file",
+      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_008_vcf_persistence_incident_file.json"
+    }
+  ]
+}

@@ -5,10 +5,10 @@ from collections import Counter
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "reviews" / "creativelands_cc0" / "catalog.json"
-OUTPUT = ROOT / "structure_library" / "refinement" / "phase16-selection.json"
-MARKDOWN = ROOT / "structure_library" / "refinement" / "PHASE16_SELECTION.md"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "reviews" / "creativelands_cc0" / "catalog.json"
+OUTPUT = ROOT / "dev/structure_library" / "refinement" / "phase16-selection.json"
+MARKDOWN = ROOT / "dev/structure_library" / "refinement" / "PHASE16_SELECTION.md"
 
 
 def disposition(entry: dict) -> tuple[str, str, int]:

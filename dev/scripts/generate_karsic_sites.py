@@ -32,8 +32,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "dev/scripts"))
 
 import generate_wasteland_sites as base  # noqa: E402  (Template + NBT writer)
 import convert_nbt_to_lostcities as converter  # noqa: E402
@@ -45,8 +45,8 @@ from build_regional_programs import KARSIC_FAMILIES  # noqa: E402
 CULTURE = "karsic"
 OUT_MASTERS = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "karsic" / "masters"
 OUT_VARIANTS = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "karsic"
-REPORT = ROOT / "docs" / "karsic-generation-report.json"
-ASSIGNMENT = ROOT / "structure_library" / "regional" / f"{CULTURE}-assignment.json"
+REPORT = ROOT / "dev/docs" / "karsic-generation-report.json"
+ASSIGNMENT = ROOT / "dev/structure_library" / "regional" / f"{CULTURE}-assignment.json"
 
 
 def assert_converter_contract(grammar: dict[str, Any]) -> None:

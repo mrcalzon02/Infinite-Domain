@@ -16,17 +16,17 @@ from generate_old_world_narrative_structures import (
     SPECS,
 )
 
-ROOT = Path(__file__).resolve().parents[1]
-PROGRAM = ROOT / "old_world_narrative"
+ROOT = Path(__file__).resolve().parents[2]
+PROGRAM = ROOT / "dev/old_world_narrative"
 REGISTRY = PROGRAM / "registry"
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
 ITEM_TEXTURES = ROOT / "kubejs" / "assets" / "kubejs" / "textures" / "item"
 PREPARED_SITE_QUESTS = PROGRAM / "quests" / "prepared_site_surveys.snbt"
 PREPARED_SITE_LANG = PROGRAM / "quests" / "prepared_site_surveys_lang.snbt"
 SITE_QUEST_CATALOG = REGISTRY / "site_quest_catalog.json"
-WORLDGEN_ROLE_REGISTRY = ROOT / "docs" / "old-world" / "structure-worldgen-roles.json"
-WASTELAND_CORPUS_MANIFEST = ROOT / "structure_library" / "corpus-manifest.json"
-PHASE_STATE = ROOT / "docs" / "old-world" / "phase-state.json"
+WORLDGEN_ROLE_REGISTRY = ROOT / "dev/docs" / "old-world" / "structure-worldgen-roles.json"
+WASTELAND_CORPUS_MANIFEST = ROOT / "dev/structure_library" / "corpus-manifest.json"
+PHASE_STATE = ROOT / "dev/docs" / "old-world" / "phase-state.json"
 REVISION_MATRIX = PROGRAM / "source" / "04_STRUCTURE_REVISION_MATRIX.csv"
 CANON = "eec4d3149e5e5823b330d5b01127b8f6e592d1938ef4e491f719617e507bf182"
 DIMENSIONS = {

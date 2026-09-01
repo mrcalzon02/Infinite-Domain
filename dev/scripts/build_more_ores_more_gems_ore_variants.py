@@ -12,7 +12,7 @@ from PIL import Image
 import install_more_ores_more_gems_derived_textures as pipeline
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 MOD = ROOT / "mods" / "momg-1.1.9-release-neoforge-1.21.1.jar"
 MINECRAFT = Path(r"C:\Users\Admin\curseforge\minecraft\Install\versions\1.21.1\1.21.1.jar")
 PACK_BLOCKS = (
@@ -20,7 +20,7 @@ PACK_BLOCKS = (
     / "assets" / "minecraft" / "textures" / "block"
 )
 OUTPUT = ROOT / "ROOT_tools" / "more_ores_more_gems_authored_sources" / "authored_ore_variants"
-MAPPING = ROOT / "docs" / "more-ores-more-gems-authored-ore-variants.csv"
+MAPPING = ROOT / "dev/docs" / "more-ores-more-gems-authored-ore-variants.csv"
 
 STYLE_BY_FAMILY = {
     "corundum": "diamond",

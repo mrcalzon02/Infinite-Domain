@@ -10,7 +10,7 @@ from PIL import Image, ImageDraw
 from install_generated_item_texture import install
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CONFIG = ROOT / "kubejs/config/industrial_food.json"
 ASSETS = ROOT / "kubejs/assets/kubejs"
 
@@ -205,7 +205,7 @@ def main() -> None:
 
     # Restore approved full-resolution renders before building the review sheet so
     # the sheet reflects the textures that are actually deployed in-game.
-    approved_sources = ROOT / "docs/texture-audit/generated-sources"
+    approved_sources = ROOT / "dev/docs/texture-audit/generated-sources"
     approved_ids = {item["id"] for item in items}
     if approved_sources.exists():
         for source in approved_sources.glob("*.png"):
@@ -217,7 +217,7 @@ def main() -> None:
         ]
 
     # Nearest-neighbor review sheet: large enough to inspect silhouettes and alpha edges.
-    review_dir = ROOT / "docs/industrial-food"
+    review_dir = ROOT / "dev/docs/industrial-food"
     review_dir.mkdir(parents=True, exist_ok=True)
     columns, tile_w, tile_h, scale = 6, 112, 94, 2
     rows = (len(rendered_items) + columns - 1) // columns

@@ -8,7 +8,7 @@ from pathlib import Path
 from PIL import Image
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CONFIG = ROOT / "kubejs/config/industrial_food.json"
 TEXTURES = ROOT / "kubejs/assets/kubejs/textures/item"
 

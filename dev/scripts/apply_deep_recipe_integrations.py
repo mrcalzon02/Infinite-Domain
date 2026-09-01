@@ -12,10 +12,10 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-INDEX = ROOT / "docs" / "recipe-index" / "recipe-index.csv"
-MANIFEST = ROOT / "docs" / "compression-audit" / "generated-crafting-overrides.csv"
-ITEM_REGISTRY = ROOT / "docs" / "registry-inventory" / "item-ids.txt"
+ROOT = Path(__file__).resolve().parents[2]
+INDEX = ROOT / "dev/docs" / "recipe-index" / "recipe-index.csv"
+MANIFEST = ROOT / "dev/docs" / "compression-audit" / "generated-crafting-overrides.csv"
+ITEM_REGISTRY = ROOT / "dev/docs" / "registry-inventory" / "item-ids.txt"
 
 
 def shaped(output: str, pattern: list[str], key: dict[str, str], count: int = 1) -> dict:
@@ -213,7 +213,7 @@ def main() -> None:
             writer.writeheader()
             writer.writerows(kept)
 
-    report_dir = ROOT / "docs" / "recipe-integration-audit"
+    report_dir = ROOT / "dev/docs" / "recipe-integration-audit"
     report_dir.mkdir(parents=True, exist_ok=True)
     with (report_dir / "curated-gateway-overrides.csv").open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle)

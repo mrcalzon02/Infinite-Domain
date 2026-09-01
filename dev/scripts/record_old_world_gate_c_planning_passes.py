@@ -16,8 +16,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+ROOT = Path(__file__).resolve().parents[2]
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 
 PASS_FILES = {
     "historical_layering": ("PASS13_HISTORICAL_LAYERING", "**HISTORICAL LAYERING: COMPLETE FOR GATE-C IMPLEMENTATION.**"),

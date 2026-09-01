@@ -9,13 +9,13 @@ from pathlib import Path
 from render_structure_review import Reader, unpack_structure
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 SHIPPING = ROOT / "kubejs/data/infinite_domain/structure/wasteland/old_world/ows_009_atlas_roadside_repair_depot.nbt"
 LOOT = ROOT / "kubejs/data/infinite_domain/loot_table/chests/old_world/ows_009_atlas_roadside_repair_depot.json"
-TARGETS = ROOT / "old_world_narrative/registry/structure_targets.json"
-QUESTS = ROOT / "old_world_narrative/registry/site_quest_catalog.json"
+TARGETS = ROOT / "dev/old_world_narrative/registry/structure_targets.json"
+QUESTS = ROOT / "dev/old_world_narrative/registry/site_quest_catalog.json"
 DOCS = tuple(
-    ROOT / "old_world_narrative/reviews/heavy_rebuild" / f"OWS-009_PASS{number}_{name}.md"
+    ROOT / "dev/old_world_narrative/reviews/heavy_rebuild" / f"OWS-009_PASS{number}_{name}.md"
     for number, name in (
         (2, "FUNCTIONAL_DEFINITION"),
         (3, "PRECEDENT_RESEARCH"),

@@ -10,7 +10,7 @@ import generate_wasteland_sites as base
 import old_world_ows010_final as final
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TEMP_DIR = ROOT / "kubejs/data/infinite_domain/structure/wasteland"
 
 
@@ -29,7 +29,7 @@ def serialize_hash(t: base.Template, name: str) -> str:
 
 
 def main() -> None:
-    source_path = ROOT / "scripts/old_world_ows010_final.py"
+    source_path = ROOT / "dev/scripts/old_world_ows010_final.py"
     source = source_path.read_text(encoding="utf-8")
     tree = ast.parse(source)
     imports: list[str] = []

@@ -17,10 +17,10 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-SCRIPTS = ROOT / "scripts"
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-VISUAL_ROOT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
+ROOT = Path(__file__).resolve().parents[2]
+SCRIPTS = ROOT / "dev/scripts"
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+VISUAL_ROOT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual"
 
 
 def _run(*args: str) -> None:

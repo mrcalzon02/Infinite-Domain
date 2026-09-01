@@ -12,7 +12,7 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 LANG = ROOT / "config" / "ftbquests" / "quests" / "lang" / "en_us.snbt"
 ID_RE = re.compile(r"(?<![A-Za-z0-9_.-])([a-z0-9_.-]+):([a-z0-9_./-]*[a-z0-9_/-])")
 

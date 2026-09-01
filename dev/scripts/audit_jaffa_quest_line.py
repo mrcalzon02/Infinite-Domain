@@ -4,11 +4,11 @@ import re
 import zipfile
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/era_01_mechanical_reconstruction.snbt"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
-INDEX = ROOT / "docs/recipe-index/recipe-index.csv"
-OUT = ROOT / "docs/quest-progression/jaffa-line-audit.csv"
+INDEX = ROOT / "dev/docs/recipe-index/recipe-index.csv"
+OUT = ROOT / "dev/docs/quest-progression/jaffa-line-audit.csv"
 
 QUEST_IDS = [f"610110000000{n:04X}" for n in range(1, 9)]
 REQUIRED_RECIPES = [

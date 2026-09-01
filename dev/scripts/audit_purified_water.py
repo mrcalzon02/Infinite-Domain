@@ -7,12 +7,12 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 RECIPE = ROOT / "kubejs/data/wastelands/recipe/purified_water.json"
 SNOW_RECIPE = ROOT / "kubejs/data/wastelands/recipe/purified_water_from_snow.json"
 JAR = ROOT / "mods/wastelands-2.4.0-neoforge.1.jar"
 ITEM_CLASS = "org/takesome/necrosteam/content/PurifiedWaterItem.class"
-MANIFEST = ROOT / "docs/compression-audit/generated-crafting-overrides.csv"
+MANIFEST = ROOT / "dev/docs/compression-audit/generated-crafting-overrides.csv"
 
 
 recipe = json.loads(RECIPE.read_text(encoding="utf-8"))

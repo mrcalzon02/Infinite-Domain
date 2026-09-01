@@ -17,9 +17,9 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-REVIEW_ROOT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild"
+ROOT = Path(__file__).resolve().parents[2]
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+REVIEW_ROOT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild"
 VISUAL_ROOT = REVIEW_ROOT / "visual"
 INTACT_PASSES = (
     "structural_system",

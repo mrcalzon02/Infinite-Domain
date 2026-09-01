@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 
-root = Path(__file__).resolve().parents[1]
+root = Path(__file__).resolve().parents[2]
 recipe = json.loads((root / "kubejs/data/ae2/recipe/network/blocks/spatial_anchor.json").read_text(encoding="utf-8"))
 ingredients = {entry["item"] for entry in recipe["key"].values()}
 required = {

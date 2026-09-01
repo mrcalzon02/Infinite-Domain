@@ -3,10 +3,10 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "catalog.json"
-ARCHETYPES = ROOT / "structure_library" / "settlement-archetypes.json"
-REPORT = ROOT / "docs" / "settlement-archetype-validation.json"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+ARCHETYPES = ROOT / "dev/structure_library" / "settlement-archetypes.json"
+REPORT = ROOT / "dev/docs" / "settlement-archetype-validation.json"
 
 
 def load(path: Path):

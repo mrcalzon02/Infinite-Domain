@@ -10,21 +10,21 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/graveyard_gateway_containment.snbt"
 CHAPTER_DIR = CHAPTER.parent
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
-GENERATOR = ROOT / "scripts/generators/build_graveyard_gateway_containment.js"
-SIGNPOSTING = ROOT / "scripts/audit_mod_signposting.js"
-ITEMS = ROOT / "docs/registry-inventory/item-ids.txt"
-ENTITIES = ROOT / "docs/registry-inventory/entity-ids.txt"
-RECIPE_INDEX = ROOT / "docs/recipe-index/recipe-index.csv"
+GENERATOR = ROOT / "dev/scripts/generators/build_graveyard_gateway_containment.js"
+SIGNPOSTING = ROOT / "dev/scripts/audit_mod_signposting.js"
+ITEMS = ROOT / "dev/docs/registry-inventory/item-ids.txt"
+ENTITIES = ROOT / "dev/docs/registry-inventory/entity-ids.txt"
+RECIPE_INDEX = ROOT / "dev/docs/recipe-index/recipe-index.csv"
 GRAVEYARD_CONFIG = ROOT / "config/graveyard-common.toml"
 GATEWAY_CONFIG = ROOT / "config/gateway_of_doom.json"
 GATEWAY_LOCK = ROOT / "kubejs/server_scripts/gateway_of_doom_dimension_lock.js"
 SITE = ROOT / "kubejs/data/infinite_domain/worldgen/structure/wasteland/roadside_church_cemetery.json"
 SITE_SET = ROOT / "kubejs/data/infinite_domain/worldgen/structure_set/wasteland/wasteland_common.json"
-APPROVALS = ROOT / "structure_library/production-approvals.json"
+APPROVALS = ROOT / "dev/structure_library/production-approvals.json"
 
 ERA1 = "5CED58896AEFF1B9"
 ERA2 = "5210000000000001"

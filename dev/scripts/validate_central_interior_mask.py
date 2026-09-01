@@ -47,11 +47,11 @@ from typing import Any
 
 from validate_regional_culture_gradient import Graph, make_noise
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 PACK = ROOT / "datapacks" / "gradient_ocean_pack" / "data"
 DF_DIR = PACK / "custom_worldgen" / "worldgen" / "density_function"
 EROSION_OVERRIDE = PACK / "minecraft" / "worldgen" / "density_function" / "overworld" / "erosion.json"
-REPORT = ROOT / "docs" / "central-interior-mask-validation.json"
+REPORT = ROOT / "dev/docs" / "central-interior-mask-validation.json"
 
 NAMESPACE = "custom_worldgen"
 

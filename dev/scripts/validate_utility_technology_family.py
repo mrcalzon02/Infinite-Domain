@@ -6,9 +6,9 @@ from pathlib import Path
 
 import generate_wasteland_sites as g
 
-ROOT = Path(__file__).resolve().parents[1]
-REPORT = ROOT / "docs" / "utility-technology-family-validation.json"
-REGISTRY = set((ROOT / "docs" / "registry-inventory" / "block-ids.txt").read_text(encoding="utf-8").splitlines())
+ROOT = Path(__file__).resolve().parents[2]
+REPORT = ROOT / "dev/docs" / "utility-technology-family-validation.json"
+REGISTRY = set((ROOT / "dev/docs" / "registry-inventory" / "block-ids.txt").read_text(encoding="utf-8").splitlines())
 NAMES = (
     "industrial_facility", "city_electrical_substation", "city_water_treatment_plant",
     "district_heating_station", "municipal_incinerator", "ruined_fuel_depot",

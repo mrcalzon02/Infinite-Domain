@@ -8,9 +8,9 @@ from pathlib import Path
 from build_structure_qa_world import Reader
 
 
-ROOT = Path(__file__).resolve().parents[1]
-PROVENANCE = ROOT / "structure_library" / "licensing" / "creativelands-extracted-provenance.json"
-REPORT = ROOT / "structure_library" / "extracted" / "creativelands_cc0" / "validation-report.json"
+ROOT = Path(__file__).resolve().parents[2]
+PROVENANCE = ROOT / "dev/structure_library" / "licensing" / "creativelands-extracted-provenance.json"
+REPORT = ROOT / "dev/structure_library" / "extracted" / "creativelands_cc0" / "validation-report.json"
 RESOURCE_ID = re.compile(r"^[a-z0-9_.-]+:[a-z0-9_./-]+$")
 
 

@@ -10,7 +10,7 @@ def snbt(value: object) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/mutant_and_mekanite_threat_dossier.snbt"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
 BEGIN = "\t// BEGIN GENERATED MUTANT AND MEKANITE THREAT DOSSIER"

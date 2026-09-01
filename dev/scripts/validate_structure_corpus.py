@@ -9,10 +9,10 @@ from typing import Any
 from build_structure_qa_world import NbtList, Reader
 
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "catalog.json"
-APPROVALS = ROOT / "structure_library" / "production-approvals.json"
-REPORT = ROOT / "docs" / "structure-corpus-validation.json"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+APPROVALS = ROOT / "dev/structure_library" / "production-approvals.json"
+REPORT = ROOT / "dev/docs" / "structure-corpus-validation.json"
 RESOURCE_ID = re.compile(r"^[a-z0-9_.-]+:[a-z0-9_./-]+$")
 CATEGORIES = {"residential", "commercial", "civic", "industrial", "agricultural", "highway", "railway", "utility_infrastructure", "military", "miscellaneous"}
 ORIENTATIONS = {"north", "south", "east", "west"}

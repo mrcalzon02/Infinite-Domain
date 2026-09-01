@@ -13,19 +13,19 @@ from PIL import Image, ImageDraw
 from build_structure_qa_world import NbtList, Reader
 
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "catalog.json"
-OUTPUT = ROOT / "structure_library" / "reviews"
-INBUILT_MANIFEST = ROOT / "docs" / "wasteland-site-manifest.json"
-INBUILT_OUTPUT = ROOT / "structure_library" / "audit_renders"
-CREATIVELANDS_PROVENANCE = ROOT / "structure_library" / "licensing" / "creativelands-extracted-provenance.json"
-CREATIVELANDS_OUTPUT = ROOT / "structure_library" / "reviews" / "creativelands_cc0"
-ROAD_CATALOG = ROOT / "structure_library" / "roads" / "road-modules.json"
-ROAD_OUTPUT = ROOT / "structure_library" / "reviews" / "road_modules"
-MODULE_CATALOG = ROOT / "structure_library" / "modules" / "structure-kits.json"
-MODULE_OUTPUT = ROOT / "structure_library" / "reviews" / "structure_modules"
-OLD_WORLD_REGISTRY = ROOT / "old_world_narrative" / "registry" / "structure_targets.json"
-OLD_WORLD_OUTPUT = ROOT / "old_world_narrative" / "reviews"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+OUTPUT = ROOT / "dev/structure_library" / "reviews"
+INBUILT_MANIFEST = ROOT / "dev/docs" / "wasteland-site-manifest.json"
+INBUILT_OUTPUT = ROOT / "dev/structure_library" / "audit_renders"
+CREATIVELANDS_PROVENANCE = ROOT / "dev/structure_library" / "licensing" / "creativelands-extracted-provenance.json"
+CREATIVELANDS_OUTPUT = ROOT / "dev/structure_library" / "reviews" / "creativelands_cc0"
+ROAD_CATALOG = ROOT / "dev/structure_library" / "roads" / "road-modules.json"
+ROAD_OUTPUT = ROOT / "dev/structure_library" / "reviews" / "road_modules"
+MODULE_CATALOG = ROOT / "dev/structure_library" / "modules" / "structure-kits.json"
+MODULE_OUTPUT = ROOT / "dev/structure_library" / "reviews" / "structure_modules"
+OLD_WORLD_REGISTRY = ROOT / "dev/old_world_narrative" / "registry" / "structure_targets.json"
+OLD_WORLD_OUTPUT = ROOT / "dev/old_world_narrative" / "reviews"
 CUTAWAY_OVERRIDES = {
     "infinite_domain:gas_station_clean_master": 14,
     "infinite_domain:ruined_gas_station": 14,

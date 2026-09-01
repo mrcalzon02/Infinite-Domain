@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CHAPTERS = {
     "prologue": ROOT / "config/ftbquests/quests/chapters/another_lost_soul.snbt",
     "era0": ROOT / "config/ftbquests/quests/chapters/lets_get_started_shall_we.snbt",
@@ -14,7 +14,7 @@ CHAPTERS = {
 }
 CHAPTER_GROUPS = ROOT / "config/ftbquests/quests/chapter_groups.snbt"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
-OUT = ROOT / "docs/quest-progression/era0-pack-basics-audit.csv"
+OUT = ROOT / "dev/docs/quest-progression/era0-pack-basics-audit.csv"
 INTRO = "3AFBE38263D3351E"
 QUEST_IDS = [f"600210000000{number:04X}" for number in range(1, 10)]
 TASK_IDS = [f"600220000000{number:04X}" for number in range(1, 10)]

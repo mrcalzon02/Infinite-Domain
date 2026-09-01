@@ -4,12 +4,12 @@ import re
 import zipfile
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 ERA2 = ROOT / "config/ftbquests/quests/chapters/era_02_heavy_industry.snbt"
 ERA3 = ROOT / "config/ftbquests/quests/chapters/era_03_petrochemical_civilization.snbt"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
-INDEX = ROOT / "docs/recipe-index/recipe-index.csv"
-OUT = ROOT / "docs/quest-progression/reautomated-line-audit.csv"
+INDEX = ROOT / "dev/docs/recipe-index/recipe-index.csv"
+OUT = ROOT / "dev/docs/quest-progression/reautomated-line-audit.csv"
 
 QUEST_IDS = [f"630110000000{n:04X}" for n in range(1, 12)]
 REQUIRED_RECIPES = [

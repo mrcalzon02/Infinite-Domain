@@ -10,8 +10,8 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-PROGRAM = ROOT / "old_world_narrative"
+ROOT = Path(__file__).resolve().parents[2]
+PROGRAM = ROOT / "dev/old_world_narrative"
 SOURCE = PROGRAM / "source"
 REGISTRY = PROGRAM / "registry"
 QUESTS = ROOT / "config" / "ftbquests" / "quests"

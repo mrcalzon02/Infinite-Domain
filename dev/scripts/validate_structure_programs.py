@@ -60,8 +60,8 @@ from generate_wasteland_sites import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
-REPORT = ROOT / "docs" / "structure-program-validation.json"
+ROOT = Path(__file__).resolve().parents[2]
+REPORT = ROOT / "dev/docs" / "structure-program-validation.json"
 
 
 def block_name(template: Template, pos: tuple[int, int, int]) -> str | None:

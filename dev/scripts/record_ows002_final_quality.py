@@ -11,14 +11,14 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-GATE_D_REVIEW = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-002_GATE_D_R1_REVIEW.md"
-FINAL_REPORT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-002_FINAL_REBUILD_REPORT.md"
-SYNC_PATH = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-002" / "gate_d_final" / "r1" / "authoritative_sync.json"
-METRICS_PATH = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-002" / "gate_d_final" / "r1" / "visual_regression_metrics.json"
-STRUCTURE_RECORD = ROOT / "old_world_narrative" / "structures" / "ows-002-vcf-emergency-community-grow-hall.json"
-FAILURE_LOG = ROOT / "old_world_narrative" / "reviews" / "static-build-failure.log"
+ROOT = Path(__file__).resolve().parents[2]
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+GATE_D_REVIEW = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-002_GATE_D_R1_REVIEW.md"
+FINAL_REPORT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-002_FINAL_REBUILD_REPORT.md"
+SYNC_PATH = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-002" / "gate_d_final" / "r1" / "authoritative_sync.json"
+METRICS_PATH = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-002" / "gate_d_final" / "r1" / "visual_regression_metrics.json"
+STRUCTURE_RECORD = ROOT / "dev/old_world_narrative" / "structures" / "ows-002-vcf-emergency-community-grow-hall.json"
+FAILURE_LOG = ROOT / "dev/old_world_narrative" / "reviews" / "static-build-failure.log"
 EXPECTED_HASH = "e6dd44528061f617a4259e8cb123afaa88451a16dd81cdf876475383f8d21548"
 EXPECTED_BYTES = 907995
 EXPECTED_SCORE = 94

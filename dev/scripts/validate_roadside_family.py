@@ -7,8 +7,8 @@ from pathlib import Path
 import generate_wasteland_sites as g
 
 
-ROOT = Path(__file__).resolve().parents[1]
-REPORT = ROOT / "docs" / "roadside-family-validation.json"
+ROOT = Path(__file__).resolve().parents[2]
+REPORT = ROOT / "dev/docs" / "roadside-family-validation.json"
 
 
 PAIRS = {

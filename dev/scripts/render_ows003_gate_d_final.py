@@ -18,7 +18,7 @@ import old_world_ows003_final as final_builder
 from render_old_world_heavy_rebuild_review import OUTPUT_ROOT, ROOT, render_review_set
 from render_structure_review import unpack_structure
 
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 OUTPUT_DIR = OUTPUT_ROOT / "OWS-003" / "gate_d_final" / "r1"
 TARGET = "OWS-003"
 SPEC = core.BY_TARGET[TARGET]

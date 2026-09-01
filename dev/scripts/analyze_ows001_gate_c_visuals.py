@@ -15,9 +15,9 @@ from pathlib import Path
 
 from PIL import Image, ImageChops
 
-ROOT = Path(__file__).resolve().parents[1]
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-REVIEW_ROOT = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-001" / "gate_c_damage_states" / "r1"
+ROOT = Path(__file__).resolve().parents[2]
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+REVIEW_ROOT = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "visual" / "OWS-001" / "gate_c_damage_states" / "r1"
 REPORT_PATH = REVIEW_ROOT / "visual_metrics.json"
 BACKGROUND = (26, 28, 30)
 CAMERAS = ("front_left", "rear_left", "rear_right", "front_right", "interior_cutaway")

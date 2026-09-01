@@ -13,7 +13,7 @@ from zipfile import ZipFile
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 MOD = ROOT / "mods" / "momg-1.1.9-release-neoforge-1.21.1.jar"
 MINECRAFT = Path(
     r"C:\Users\Admin\curseforge\minecraft\Install\versions\1.21.1\1.21.1.jar"
@@ -32,10 +32,10 @@ GENERATED = SOURCES / "generated_materials"
 GENERATED_FAMILIES = SOURCES / "generated_gem_families"
 AUTHORED_ORE_FACES = SOURCES / "generic_gem_containment" / "recolored_masters"
 METAL_ORE_FACES = SOURCES / "generic_metal_ore_container" / "recolored_masters"
-SCOPE = ROOT / "docs" / "more-ores-more-gems-texture-scope.csv"
-HOST_ANALYSIS = ROOT / "docs" / "more-ores-more-gems-ore-host-analysis.csv"
-LEDGER = ROOT / "docs" / "more-ores-more-gems-derived-textures.csv"
-MANIFEST = ROOT / "docs" / "more-ores-more-gems-derived-textures.json"
+SCOPE = ROOT / "dev/docs" / "more-ores-more-gems-texture-scope.csv"
+HOST_ANALYSIS = ROOT / "dev/docs" / "more-ores-more-gems-ore-host-analysis.csv"
+LEDGER = ROOT / "dev/docs" / "more-ores-more-gems-derived-textures.csv"
+MANIFEST = ROOT / "dev/docs" / "more-ores-more-gems-derived-textures.json"
 REVIEW = ROOT / "ROOT_tools" / "more_ores_more_gems_review"
 SIZE = 128
 ORE_SIZE = 32

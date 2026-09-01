@@ -4,11 +4,11 @@ import csv
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-REVIEW = ROOT / "structure_library" / "review"
-CATALOG = ROOT / "structure_library" / "catalog.json"
-ROAD_CATALOG = ROOT / "structure_library" / "roads" / "road-modules.json"
-MODULE_CATALOG = ROOT / "structure_library" / "modules" / "structure-kits.json"
+ROOT = Path(__file__).resolve().parents[2]
+REVIEW = ROOT / "dev/structure_library" / "review"
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+ROAD_CATALOG = ROOT / "dev/structure_library" / "roads" / "road-modules.json"
+MODULE_CATALOG = ROOT / "dev/structure_library" / "modules" / "structure-kits.json"
 
 LEDGERS = {
     "building-production-review.csv": {

@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "config/ftbquests/quests/chapters/feeding_the_domain.snbt"
 
 CHAPTER_ID = "2034B9BBF53C750D"

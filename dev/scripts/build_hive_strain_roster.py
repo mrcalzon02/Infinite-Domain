@@ -20,13 +20,13 @@ import sys
 import zipfile
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-ENTITY_IDS = ROOT / "docs" / "registry-inventory" / "entity-ids.txt"
+ROOT = Path(__file__).resolve().parents[2]
+ENTITY_IDS = ROOT / "dev/docs" / "registry-inventory" / "entity-ids.txt"
 TOML_FILES = [
     ROOT / "config" / "spore-startup.toml",
     ROOT / "config" / "spore-common.toml",
 ]
-OUT = ROOT / "docs" / "hive-strain" / "roster-manifest.json"
+OUT = ROOT / "dev/docs" / "hive-strain" / "roster-manifest.json"
 TEXTURE_ROOT = "assets/spore/textures/entity/"
 
 # --------------------------------------------------------------------------- #

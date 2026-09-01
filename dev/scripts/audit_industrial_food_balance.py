@@ -8,10 +8,10 @@ from collections import defaultdict
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CONFIG = ROOT / "kubejs/config/industrial_food.json"
-REGISTRY = ROOT / "docs/registry-inventory/item-block-registry.json"
-OUT = ROOT / "docs/industrial-food"
+REGISTRY = ROOT / "dev/docs/registry-inventory/item-block-registry.json"
+OUT = ROOT / "dev/docs/industrial-food"
 
 EFFECT_LIMITS = {"juice": 90, "soda": 45, "energy_drink": 120, "coffee": 150, "tea": 180, "prepared_meal": 120, "canned_meal": 120}
 COST_RANK = {"trivial": 0, "low": 1, "moderate": 2, "substantial": 3, "high": 4, "very_high": 5}

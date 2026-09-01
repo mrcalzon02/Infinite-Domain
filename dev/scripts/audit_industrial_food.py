@@ -11,14 +11,14 @@ from pathlib import Path
 from PIL import Image
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CONFIG = ROOT / "kubejs/config/industrial_food.json"
 STARTUP = ROOT / "kubejs/startup_scripts/industrial_food_items.js"
 RECIPES = ROOT / "kubejs/server_scripts/industrial_food.js"
 ASSETS = ROOT / "kubejs/assets/kubejs"
 QUEST = ROOT / "config/ftbquests/quests/chapters/feeding_the_domain.snbt"
 QUEST_ROOT = ROOT / "config/ftbquests/quests/chapters"
-OUT = ROOT / "docs/industrial-food"
+OUT = ROOT / "dev/docs/industrial-food"
 
 
 def derived(data: dict) -> tuple[list[dict], list[dict]]:
@@ -155,7 +155,7 @@ def main() -> int:
         for dep in re.findall(r'"([A-Fa-f0-9]+)"', block):
             if dep not in all_quest_ids: failures.append(f"Missing quest dependency: {dep}")
 
-    inventory = set((ROOT / "docs/registry-inventory/item-ids.txt").read_text(encoding="utf-8").splitlines())
+    inventory = set((ROOT / "dev/docs/registry-inventory/item-ids.txt").read_text(encoding="utf-8").splitlines())
     compatible = [
         ("Fruit", "minecraft:apple", "Apple pulp, juice, concentrate, soda"),
         ("Fruit", "minecraft:sweet_berries", "Berry pulp, juice, concentrate, soda"),

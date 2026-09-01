@@ -15,12 +15,12 @@ import re
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-CANDIDATES = ROOT / "docs/domain-compendium/candidate-inventory.csv"
+ROOT = Path(__file__).resolve().parents[2]
+CANDIDATES = ROOT / "dev/docs/domain-compendium/candidate-inventory.csv"
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/domain_compendium.snbt"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
 GROUPS = ROOT / "config/ftbquests/quests/chapter_groups.snbt"
-REGISTRY = ROOT / "docs/registry-inventory"
+REGISTRY = ROOT / "dev/docs/registry-inventory"
 
 EXCLUDED_NAMESPACES = {"rechiseled", "rechiseledcreate"}
 GROUP_ID = "7C0DEC0FFEE00001"
@@ -163,7 +163,7 @@ _ATC_OK: set[str] | None = None
 def _atc_phantom(identifier: str) -> bool:
     global _ATC_OK
     if _ATC_OK is None:
-        path = ROOT / "docs/domain-compendium/allthecompressed-families.csv"
+        path = ROOT / "dev/docs/domain-compendium/allthecompressed-families.csv"
         _ATC_OK = set()
         if path.is_file():
             with path.open(encoding="utf-8", newline="") as handle:

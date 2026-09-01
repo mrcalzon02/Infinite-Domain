@@ -10,9 +10,9 @@ from PIL import Image
 from install_generated_item_texture import install
 
 
-ROOT = Path(__file__).resolve().parents[1]
-MASTERS = ROOT / "docs/texture-audit/family-masters"
-SOURCES = ROOT / "docs/texture-audit/generated-sources"
+ROOT = Path(__file__).resolve().parents[2]
+MASTERS = ROOT / "dev/docs/texture-audit/family-masters"
+SOURCES = ROOT / "dev/docs/texture-audit/generated-sources"
 
 # PIL HSV hue values. Materials stay fixed; only magenta identification fields move.
 ERA_HUES = {0: 24, 1: 18, 2: 5, 3: 39, 4: 33, 5: 134, 6: 76, 7: 156, 8: 196}

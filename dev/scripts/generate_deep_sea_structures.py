@@ -20,10 +20,10 @@ from typing import Any
 # the land corpus: the minimum-standard reference other deep-sea assets
 # should match, not a finished production approval.
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
-DOCS = ROOT / "docs"
-LIBRARY = ROOT / "structure_library"
+DOCS = ROOT / "dev/docs"
+LIBRARY = ROOT / "dev/structure_library"
 DATA_VERSION = 3955  # Minecraft 1.21.1
 
 TAG_END = 0

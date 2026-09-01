@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from pathlib import Path
 import generate_wasteland_sites as base
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs" / "data" / "infinite_domain"
 
 @dataclass(frozen=True)
@@ -693,7 +693,7 @@ def generate(spec):
     base.write_json(DATA / "worldgen" / "template_pool" / "old_world" / f"{spec.name}.json", {"fallback": "minecraft:empty", "elements": [{"weight": 1, "element": {"location": f"infinite_domain:wasteland/old_world/{spec.name}", "processors": "minecraft:empty", "projection": "rigid", "element_type": "minecraft:single_pool_element"}}]})
     base.write_json(DATA / "worldgen" / "structure" / "old_world" / f"{spec.name}.json", {"type": "minecraft:jigsaw", "biomes": "#infinite_domain:wasteland_site_biomes", "step": "surface_structures", "spawn_overrides": {}, "terrain_adaptation": "beard_box", "start_pool": f"infinite_domain:old_world/{spec.name}", "size": 1, "start_height": {"absolute": 0}, "max_distance_from_center": 80, "use_expansion_hack": False, "liquid_settings": "ignore_waterlogging", "project_start_to_heightmap": "WORLD_SURFACE_WG"})
     base.write_json(DATA / "loot_table" / "chests" / "old_world" / f"{spec.name}.json", loot_table(spec))
-    base.write_json(ROOT / "old_world_narrative" / "structures" / f"{spec.target.lower()}-{spec.name[8:].replace('_', '-')}.json", {"format_version": 1, "target_id": spec.target, "structure_id": spec.structure_id, "source_structure": spec.source_id, "collapse_phase": spec.phase, "acceptance_dimensions": spec.dimensions, "proof_item": spec.proof, "lore_record": spec.lore, "loot_table": spec.loot_id, "locator_command": f"/structure_map {spec.structure_id} 2", "statistics": statistics, "structural_lint": metrics, "static_render_review": "generated_and_inspected_not_runtime_approval", "runtime_validation": "deferred_by_user"})
+    base.write_json(ROOT / "dev/old_world_narrative" / "structures" / f"{spec.target.lower()}-{spec.name[8:].replace('_', '-')}.json", {"format_version": 1, "target_id": spec.target, "structure_id": spec.structure_id, "source_structure": spec.source_id, "collapse_phase": spec.phase, "acceptance_dimensions": spec.dimensions, "proof_item": spec.proof, "lore_record": spec.lore, "loot_table": spec.loot_id, "locator_command": f"/structure_map {spec.structure_id} 2", "statistics": statistics, "structural_lint": metrics, "static_render_review": "generated_and_inspected_not_runtime_approval", "runtime_validation": "deferred_by_user"})
 
 def main():
     for spec in SPECS: generate(spec)

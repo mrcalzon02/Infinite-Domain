@@ -5,13 +5,13 @@ from pathlib import Path
 
 import generate_wasteland_sites as g
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "catalog.json"
-ARCHETYPES = ROOT / "structure_library" / "settlement-archetypes.json"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+ARCHETYPES = ROOT / "dev/structure_library" / "settlement-archetypes.json"
 CITYSTYLE = ROOT / "kubejs" / "data" / "infinite_domain" / "lostcities" / "citystyles" / "wasteland.json"
 CITYSTYLE_DIR = CITYSTYLE.parent
 WORLDSTYLE = ROOT / "kubejs" / "data" / "lostcities" / "lostcities" / "worldstyles" / "standard.json"
-REPORT = ROOT / "docs" / "production-pool-compilation.json"
+REPORT = ROOT / "dev/docs" / "production-pool-compilation.json"
 
 REGION_TAGS = {
     "karsic": "#infinite_domain:karsic_region_biomes",

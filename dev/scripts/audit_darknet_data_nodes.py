@@ -8,7 +8,7 @@ import struct
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "kubejs/data/infinite_domain"
 KUBE_DATA = ROOT / "kubejs/data/kubejs"
 ASSETS = ROOT / "kubejs/assets/kubejs/textures"
@@ -179,15 +179,15 @@ for tag_path in [
         raise SystemExit(f"Darknet data mining tag is incomplete: {tag_path}")
 
 for required in [
-    ROOT / "docs/art-direction/darknet-content-reference.png",
-    ROOT / "docs/art-direction/darknet-data-node-production-atlas.png",
-    ROOT / "docs/art-direction/darknet-data-node-production-atlas.prompt.txt",
-    ROOT / "scripts/generate_darknet_data_node_textures.ps1",
+    ROOT / "dev/docs/art-direction/darknet-content-reference.png",
+    ROOT / "dev/docs/art-direction/darknet-data-node-production-atlas.png",
+    ROOT / "dev/docs/art-direction/darknet-data-node-production-atlas.prompt.txt",
+    ROOT / "dev/scripts/generate_darknet_data_node_textures.ps1",
 ]:
     if not required.is_file():
         raise SystemExit(f"Missing reproducible Darknet art source: {required}")
 
-documentation = " ".join((ROOT / "docs/DARKNET_DATA_NODES.md").read_text(encoding="utf-8").split())
+documentation = " ".join((ROOT / "dev/docs/DARKNET_DATA_NODES.md").read_text(encoding="utf-8").split())
 for required in [
     "Fragmented Data Node", "Corrupted Data Node", "Encrypted Data Node",
     "Root Access Node", "Darknet Bedrock", "Y=-64", "one attempt per 24 chunks",

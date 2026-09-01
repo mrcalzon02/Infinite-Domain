@@ -10,8 +10,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+ROOT = Path(__file__).resolve().parents[2]
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 MANIFEST_PATH = (
     ROOT
     / "old_world_narrative"
@@ -23,7 +23,7 @@ MANIFEST_PATH = (
     / "r2"
     / "gate_c_manifest.json"
 )
-REVIEW_PATH = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-002_GATE_C_R2_REVIEW.md"
+REVIEW_PATH = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-002_GATE_C_R2_REVIEW.md"
 
 
 def main() -> None:

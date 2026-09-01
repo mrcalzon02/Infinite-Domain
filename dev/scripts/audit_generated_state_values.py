@@ -9,11 +9,11 @@ from pathlib import Path
 from convert_nbt_to_lostcities import load_structure
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 STRUCTURES = ROOT / "kubejs" / "data" / "infinite_domain" / "structure" / "wasteland"
 VANILLA_JAR = ROOT.parent.parent / "Install" / "versions" / "1.21.1" / "1.21.1.jar"
-REPORT = ROOT / "docs" / "generated-structure-state-audit.json"
-BLOCK_REGISTRY = ROOT / "docs" / "registry-inventory" / "block-ids.txt"
+REPORT = ROOT / "dev/docs" / "generated-structure-state-audit.json"
+BLOCK_REGISTRY = ROOT / "dev/docs" / "registry-inventory" / "block-ids.txt"
 
 BOOL = {"true", "false"}
 HORIZONTAL = {"north", "east", "south", "west"}

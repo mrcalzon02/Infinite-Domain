@@ -13,8 +13,8 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "docs" / "recipe-index"
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "dev/docs" / "recipe-index"
 MC_JAR = Path(r"C:\Users\Admin\curseforge\minecraft\Install\versions\1.21.1\1.21.1.jar")
 RESOURCE = re.compile(r"^[a-z0-9_.-]+:[a-z0-9_./-]+$")
 JAR_RECIPE = re.compile(r"^data/([^/]+)/recipes?/(.+)\.json$")
@@ -122,19 +122,19 @@ def recipe_refs(data: dict, mode: str) -> Counter:
 
 def load_classifications() -> tuple[dict, dict, dict, dict, dict]:
     compression = {row["recipe_id"]: row for row in read_csv(
-        ROOT / "docs/compression-audit/generated-crafting-overrides.csv"
+        ROOT / "dev/docs/compression-audit/generated-crafting-overrides.csv"
     )}
     smelting = {row["recipe_id"]: row for row in read_csv(
-        ROOT / "docs/smelting-audit/dimension-tiered-ore-smelting.csv"
+        ROOT / "dev/docs/smelting-audit/dimension-tiered-ore-smelting.csv"
     )}
     sieve = {row["recipe_id"]: row for row in read_csv(
-        ROOT / "docs/exdeorum-audit/sieve-probability-overrides.csv"
+        ROOT / "dev/docs/exdeorum-audit/sieve-probability-overrides.csv"
     )}
     primitive = {row["recipe_id"]: row for row in read_csv(
-        ROOT / "docs/primitive-start-recipe-restoration.csv"
+        ROOT / "dev/docs/primitive-start-recipe-restoration.csv"
     )}
     repairs = {row["recipe_id"]: row for row in read_csv(
-        ROOT / "docs/recipe-audit/recipe-load-failures.csv"
+        ROOT / "dev/docs/recipe-audit/recipe-load-failures.csv"
     )}
     return compression, smelting, sieve, primitive, repairs
 

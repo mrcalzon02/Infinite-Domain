@@ -4,10 +4,10 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-CATALOG = ROOT / "structure_library" / "catalog.json"
-MANIFEST = ROOT / "docs" / "wasteland-site-manifest.json"
-REPORT = ROOT / "docs" / "structure-placement-contract-validation.json"
+ROOT = Path(__file__).resolve().parents[2]
+CATALOG = ROOT / "dev/structure_library" / "catalog.json"
+MANIFEST = ROOT / "dev/docs" / "wasteland-site-manifest.json"
+REPORT = ROOT / "dev/docs" / "structure-placement-contract-validation.json"
 SETS = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen" / "structure_set" / "wasteland"
 STRUCTURES = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen" / "structure" / "wasteland"
 POOLS = ROOT / "kubejs" / "data" / "infinite_domain" / "worldgen" / "template_pool" / "wasteland"

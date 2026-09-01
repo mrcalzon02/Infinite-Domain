@@ -1,0 +1,34 @@
+{
+  "type": "isekai_api:add",
+  "a": {
+    "type": "isekai_api:max",
+    "a": {
+      "type": "isekai_api:coordinate",
+      "axis": "z"
+    },
+    "b": {
+      "type": "isekai_api:negate",
+      "f": {
+        "type": "isekai_api:coordinate",
+        "axis": "z"
+      }
+    }
+  },
+  "b": {
+    "type": "isekai_api:negate",
+    "f": {
+      "type": "isekai_api:max",
+      "a": {
+        "type": "isekai_api:coordinate",
+        "axis": "x"
+      },
+      "b": {
+        "type": "isekai_api:negate",
+        "f": {
+          "type": "isekai_api:coordinate",
+          "axis": "x"
+        }
+      }
+    }
+  }
+}

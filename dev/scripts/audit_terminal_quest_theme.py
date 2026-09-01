@@ -6,7 +6,7 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 THEME = ROOT / "kubejs/assets/ftbquests/ftb_quests_theme.txt"
 BACKGROUND = ROOT / "kubejs/assets/infinite_domain/textures/gui/quests/terminal_background.png"
 PROLOGUE = ROOT / "config/ftbquests/quests/chapters/another_lost_soul.snbt"
@@ -87,7 +87,7 @@ for filename, semantic_tag in SEMANTIC_CHAPTERS.items():
         )
 
 for filename, ownership_token in GENERATOR_SUBTITLE_OWNERS.items():
-    generator = (ROOT / "scripts" / filename).read_text(encoding="utf-8")
+    generator = (ROOT / "dev/scripts" / filename).read_text(encoding="utf-8")
     if ownership_token not in generator:
         failures.append(f"chapter subtitle is not generator-owned: {filename}")
 
@@ -98,7 +98,7 @@ for chapter_file in chapter_files:
         failures.append(f"chapter would use animated quest-icon fallback: {chapter_file.name}")
 
 for filename, ownership_token in GENERATOR_CHAPTER_ICON_OWNERS.items():
-    generator = (ROOT / "scripts" / filename).read_text(encoding="utf-8")
+    generator = (ROOT / "dev/scripts" / filename).read_text(encoding="utf-8")
     if ownership_token not in generator:
         failures.append(f"fixed chapter icon is not generator-owned: {filename}")
 

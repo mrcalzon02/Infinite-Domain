@@ -5,10 +5,10 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/brewery_and_winery.snbt"
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
-REGISTRY = ROOT / "docs/registry-inventory/item-ids.txt"
+REGISTRY = ROOT / "dev/docs/registry-inventory/item-ids.txt"
 BREWERY = ROOT / "mods/brewery-1.1.2.jar"
 WINERY = ROOT / "mods/create_winery-2.0.2-neoforge-1.21.1.jar"
 

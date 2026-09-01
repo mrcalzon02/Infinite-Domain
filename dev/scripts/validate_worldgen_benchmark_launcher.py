@@ -25,8 +25,8 @@ REQUIRED_ARGUMENTS = (
     f"--fml.mcVersion {MINECRAFT_VERSION}",
 )
 JAR_REFERENCE = re.compile(r"libraries/[A-Za-z0-9_.+@/-]+\.jar")
-REPOSITORY = Path(__file__).resolve().parents[1]
-SERVER_MOD_POLICY = REPOSITORY / "scripts" / "worldgen_benchmark_server_mod_policy.json"
+REPOSITORY = Path(__file__).resolve().parents[2]
+SERVER_MOD_POLICY = REPOSITORY / "dev/scripts" / "worldgen_benchmark_server_mod_policy.json"
 
 
 def sha256(path: Path) -> str:

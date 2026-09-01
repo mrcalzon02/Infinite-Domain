@@ -57,10 +57,10 @@ for tier in range(1, 9):
         if data["key"]["P"]["item"] != f"kubejs:darknet_session_injector_tier_{tier - 1}":
             raise SystemExit(f"Wrong prior injector in progression recipe: {path}")
 
-root = Path(__file__).resolve().parents[1]
+root = Path(__file__).resolve().parents[2]
 core_recipe = json.loads((root / "kubejs/data/infinite_domain/recipe/darknet_temporal_core.json").read_text(encoding="utf-8"))
 json.loads((root / "kubejs/data/infinite_domain/advancement/darknet_time_extended.json").read_text(encoding="utf-8"))
-registered_items = set((root / "docs/registry-inventory/item-ids.txt").read_text(encoding="utf-8").splitlines())
+registered_items = set((root / "dev/docs/registry-inventory/item-ids.txt").read_text(encoding="utf-8").splitlines())
 external_ingredients = {entry["item"] for entry in core_recipe["key"].values()} | set(INJECTOR_UPGRADES) | {
     "cyberspace:graphene_coated_iron_ingot", "ae2:fluix_crystal", "ae2:logic_processor",
     "ae2:energy_cell",

@@ -38,8 +38,8 @@ SHIPPING_PATH = (
     / "old_world"
     / "ows_008_vcf_emergency_persistence_investigation_lab.nbt"
 )
-STATE_PATH = ROOT / "old_world_narrative" / "registry" / "heavy_rebuild_state.json"
-GATE_A_R2_REVIEW = ROOT / "old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-008_GATE_A_R2_REVIEW.md"
+STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
+GATE_A_R2_REVIEW = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-008_GATE_A_R2_REVIEW.md"
 
 
 def _double_iron_door_z(t: base.Template, x: int, y: int, z: int, facing: str) -> None:

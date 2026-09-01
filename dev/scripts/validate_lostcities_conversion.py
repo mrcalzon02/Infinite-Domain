@@ -17,7 +17,7 @@ from convert_nbt_to_lostcities import (
 )
 
 
-VALIDATION_REPORT = ROOT / "docs" / "lostcities-conversion-validation.json"
+VALIDATION_REPORT = ROOT / "dev/docs" / "lostcities-conversion-validation.json"
 
 
 def load_json(path: Path) -> Any:

@@ -7,8 +7,8 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / "structure_library" / "licensing" / "provenance.json"
+ROOT = Path(__file__).resolve().parents[2]
+MANIFEST = ROOT / "dev/structure_library" / "licensing" / "provenance.json"
 RESOURCE_ID = re.compile(r"^[a-z0-9_.-]+:[a-z0-9_./-]+$")
 REQUIRED = {
     "structure_id", "source_kind", "source_project", "source_author", "source_url",

@@ -12,15 +12,15 @@ import zipfile
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CHAPTER = ROOT / "config/ftbquests/quests/chapters/create_specialist_workshops.snbt"
 CHAPTER_DIR = CHAPTER.parent
 LANG = ROOT / "config/ftbquests/quests/lang/en_us.snbt"
-GENERATOR = ROOT / "scripts/generators/build_quest_expansion.js"
-SIGNPOSTING = ROOT / "scripts/audit_mod_signposting.js"
-ITEMS = ROOT / "docs/registry-inventory/item-ids.txt"
-RECIPE_INDEX = ROOT / "docs/recipe-index/recipe-index.csv"
-INTEGRATIONS = ROOT / "scripts/apply_deep_recipe_integrations.py"
+GENERATOR = ROOT / "dev/scripts/generators/build_quest_expansion.js"
+SIGNPOSTING = ROOT / "dev/scripts/audit_mod_signposting.js"
+ITEMS = ROOT / "dev/docs/registry-inventory/item-ids.txt"
+RECIPE_INDEX = ROOT / "dev/docs/recipe-index/recipe-index.csv"
+INTEGRATIONS = ROOT / "dev/scripts/apply_deep_recipe_integrations.py"
 SERVER_CONFIG = ROOT / "config/createdeliveryrequired-server.toml"
 CONTRACT_PRICES = ROOT / "config/createdeliveryrequired-contract-item-prices.toml"
 MARKET_PRICES = ROOT / "config/createdeliveryrequired-market-item-prices.toml"
