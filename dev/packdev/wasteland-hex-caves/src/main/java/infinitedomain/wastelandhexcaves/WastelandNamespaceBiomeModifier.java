@@ -1,7 +1,6 @@
 package infinitedomain.wastelandhexcaves;
 
 import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -18,10 +17,10 @@ public record WastelandNamespaceBiomeModifier(Holder<PlacedFeature> feature) imp
     );
 
     public static final MapCodec<WastelandNamespaceBiomeModifier> CODEC =
-            RecordCodecBuilder.mapCodec(instance -> instance.group(
-                    PlacedFeature.CODEC.fieldOf("feature")
-                            .forGetter(WastelandNamespaceBiomeModifier::feature)
-            ).apply(instance, WastelandNamespaceBiomeModifier::new));
+            PlacedFeature.CODEC.fieldOf("feature").xmap(
+                    WastelandNamespaceBiomeModifier::new,
+                    WastelandNamespaceBiomeModifier::feature
+            );
 
     @Override
     public void modify(
