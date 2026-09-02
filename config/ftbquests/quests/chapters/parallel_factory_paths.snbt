@@ -4,12 +4,14 @@
 	filename: "parallel_factory_paths"
 	group: "4E65FAAC62D57D4A"
 	id: "1C7E40C69A25D8F6"
+	name: "Parallel Factory Paths"
 	images: [ ]
 	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
 			id: "5D30000000000001"
+			name: "Parallel Factory Paths"
 			shape: "octagon"
 			tasks: [{
 				id: "6D30000000000001"
@@ -21,6 +23,7 @@
 		{
 			dependencies: ["5D30000000000001"]
 			id: "5D30000000000002"
+			name: "Create Workshop Foundations"
 			shape: "gear"
 			tasks: [
 				{
@@ -45,6 +48,7 @@
 		{
 			dependencies: ["5D30000000000002"]
 			id: "5D30000000000003"
+			name: "Geological Feedstock Recovery"
 			shape: "gear"
 			tasks: [
 				{
@@ -75,6 +79,7 @@
 				"5210000000000002"
 			]
 			id: "5D30000000000004"
+			name: "Create Mineral Processing"
 			rewards: [{
 				id: "6AFC432E9DF5E6A4"
 				item: {
@@ -116,6 +121,7 @@
 		{
 			dependencies: ["5D30000000000004"]
 			id: "5D30000000000005"
+			name: "Crushing and Organic Feedstocks"
 			shape: "gear"
 			tasks: [
 				{
@@ -146,6 +152,7 @@
 				"5E00000000000010"
 			]
 			id: "5D30000000000006"
+			name: "Nether Processing Materials"
 			shape: "diamond"
 			tasks: [
 				{
@@ -170,6 +177,7 @@
 				"5210000000000002"
 			]
 			id: "5D30000000000007"
+			name: "Coke Oven Foundations"
 			rewards: [{
 				id: "6A69A930A9DBFF90"
 				item: {
@@ -198,6 +206,7 @@
 		{
 			dependencies: ["5D30000000000007"]
 			id: "5D30000000000008"
+			name: "Treated Wood and Coke"
 			shape: "hexagon"
 			tasks: [
 				{
@@ -219,6 +228,7 @@
 		{
 			dependencies: ["5D3000000000000A"]
 			id: "5D30000000000009"
+			name: "Conveyors and Fluid Handling"
 			shape: "hexagon"
 			tasks: [
 				{
@@ -248,6 +258,7 @@
 				"5310000000000002"
 			]
 			id: "5D3000000000000A"
+			name: "Industrial Engineering Core"
 			rewards: [{
 				id: "6A822FAAE71183B5"
 				item: {
@@ -282,6 +293,7 @@
 		{
 			dependencies: ["5D3000000000000A"]
 			id: "5D3000000000000B"
+			name: "Industrial Engineering Doctrine"
 			shape: "rsquare"
 			tasks: [{
 				id: "6D3000000000001A"
@@ -296,6 +308,7 @@
 				"5410000000000002"
 			]
 			id: "5D3000000000000C"
+			name: "Low-Voltage Power Distribution"
 			shape: "hexagon"
 			tasks: [
 				{
@@ -328,6 +341,7 @@
 				"5310000000000002"
 			]
 			id: "5D3000000000000D"
+			name: "Fermenter and Squeezer Processing"
 			shape: "hexagon"
 			tasks: [
 				{
@@ -347,6 +361,7 @@
 		{
 			dependencies: ["5D3000000000000D"]
 			id: "5D3000000000000E"
+			name: "Bioindustrial Processing Doctrine"
 			shape: "rsquare"
 			tasks: [{
 				id: "6D30000000000021"
@@ -361,6 +376,7 @@
 				"5410000000000002"
 			]
 			id: "5D3000000000000F"
+			name: "Chemical Feedstock Integration"
 			shape: "rsquare"
 			tasks: [{
 				id: "6D30000000000022"
@@ -375,6 +391,7 @@
 				"5510000000000002"
 			]
 			id: "5D30000000000010"
+			name: "Garden Cloche Agriculture"
 			rewards: [{
 				id: "6A721866D054996F"
 				item: {
@@ -406,6 +423,7 @@
 				"5510000000000002"
 			]
 			id: "5D30000000000011"
+			name: "Chemical-Industrial Integration"
 			shape: "rsquare"
 			tasks: [{
 				id: "6D30000000000025"
@@ -420,6 +438,7 @@
 				"5510000000000002"
 			]
 			id: "5D30000000000012"
+			name: "Electrical-Mechanical Integration"
 			shape: "rsquare"
 			tasks: [{
 				id: "6D30000000000026"
@@ -434,6 +453,7 @@
 				"5610000000000002"
 			]
 			id: "5D30000000000013"
+			name: "High-Voltage Distribution"
 			rewards: [{
 				id: "6A9C62B833A18BC0"
 				item: {
@@ -469,6 +489,7 @@
 				"5D3000000000000D"
 			]
 			id: "5D30000000000014"
+			name: "Parallel Process Integration"
 			shape: "rsquare"
 			tasks: [{
 				id: "6D3000000000002A"
@@ -484,6 +505,7 @@
 				"5D30000000000013"
 			]
 			id: "5D30000000000015"
+			name: "Integrated Factory Commissioning"
 			shape: "octagon"
 			tasks: [{
 				id: "6D3000000000002B"
@@ -498,6 +520,7 @@
 				"5D30000000000015"
 			]
 			id: "5D30000000000016"
+			name: "Dual-Path Production Proof"
 			rewards: [{
 				count: 2
 				id: "7D30000000000001"
