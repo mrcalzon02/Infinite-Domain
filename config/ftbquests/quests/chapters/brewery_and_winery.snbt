@@ -4,7 +4,7 @@
 	filename: "brewery_and_winery"
 	group: "3F00D00000000001"
 	id: "6B00D00000000001"
-	name: "Brewery & Winery"
+	name: "Brewery and Winery"
 	icon: "brewery:grape_seed"
 	images: [ ]
 	order_index: 2
@@ -14,7 +14,7 @@
 			dependencies: ["4FC0C1C678C71891"]
 			icon: "brewery:grape_seed"
 			id: "6B01000000000001"
-			name: "Establish Brewing Crops"
+			name: "Three Fermentation Crops"
 			optional: true
 			tasks: [
 				{
@@ -40,7 +40,7 @@
 			dependencies: ["6B01000000000001"]
 			icon: "brewery:kilned_malt"
 			id: "6B01000000000002"
-			name: "Prepare Malt and Hops"
+			name: "Malt and Bittering"
 			optional: true
 			tasks: [
 				{
@@ -63,7 +63,7 @@
 			dependencies: ["6B01000000000002"]
 			icon: "brewery:brewers_yeast"
 			id: "6B01000000000003"
-			name: "Prepare Fermentation Inputs"
+			name: "Mash and Living Culture"
 			optional: true
 			rewards: [{
 				id: "6ADF087B30FE147D"
@@ -100,7 +100,7 @@
 			dependencies: ["6B01000000000003"]
 			icon: "brewery:beer_bucket"
 			id: "6B01000000000004"
-			name: "Brew Beer, Cider, and Wine"
+			name: "Brewery's Three Vats"
 			optional: true
 			tasks: [
 				{
@@ -126,7 +126,7 @@
 			dependencies: ["6B01000000000003"]
 			icon: "create_winery:red_grapes"
 			id: "6B01000000000005"
-			name: "Establish Winery Grapes"
+			name: "Create Winery's Two Grapes"
 			optional: true
 			tasks: [
 				{
@@ -149,7 +149,7 @@
 			dependencies: ["6B01000000000005"]
 			icon: "create_winery:red_grape_pomace"
 			id: "6B01000000000006"
-			name: "Press Grapes and Fruit"
+			name: "Press for Pomace and Must"
 			optional: true
 			rewards: [{
 				id: "6A04588DE2515DF7"
@@ -208,7 +208,7 @@
 			dependencies: ["6B01000000000007"]
 			icon: "create_winery:bordeaux"
 			id: "6B01000000000008"
-			name: "Bottle the Cellar Selection"
+			name: "A Representative Cellar Reserve"
 			optional: true
 			rewards: [{
 				count: 2
