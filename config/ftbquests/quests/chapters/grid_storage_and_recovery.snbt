@@ -12,6 +12,7 @@
 	quests: [
 		{
 			dependencies: ["4410000000000004"]
+			icon: "powergrid_batteries:small_battery"
 			id: "6C01000000000001"
 			optional: true
 			shape: "gear"
@@ -26,6 +27,7 @@
 		}
 		{
 			dependencies: ["6C01000000000001"]
+			icon: "powergrid_batteries:medium_battery"
 			id: "6C01000000000002"
 			optional: true
 			rewards: [{
@@ -48,6 +50,7 @@
 		}
 		{
 			dependencies: ["6C01000000000002"]
+			icon: "powergrid_batteries:high_voltage_battery"
 			id: "6C01000000000003"
 			optional: true
 			rewards: [
