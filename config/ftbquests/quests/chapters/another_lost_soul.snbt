@@ -137,6 +137,30 @@
 			y: 10.0d
 		}
 		{
+			dependencies: ["6002100000000006"]
+			id: "6002100000000007"
+			optional: true
+			shape: "gear"
+			tasks: [{
+				id: "6002200000000007"
+				type: "checkmark"
+			}]
+			x: 5.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["6002100000000007"]
+			id: "6002100000000008"
+			optional: true
+			shape: "heart"
+			tasks: [{
+				id: "6002200000000008"
+				type: "checkmark"
+			}]
+			x: 5.0d
+			y: 14.0d
+		}
+		{
 			dependencies: ["7D194089522507AB"]
 			id: "6F01000000000010"
 			optional: true
