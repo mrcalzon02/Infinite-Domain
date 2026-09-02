@@ -104,6 +104,30 @@
 		}
 		{
 			dependencies: ["6002100000000002"]
+			id: "6002100000000003"
+			optional: true
+			shape: "rsquare"
+			tasks: [{
+				id: "6002200000000003"
+				type: "checkmark"
+			}]
+			x: -11.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6002100000000003"]
+			id: "6002100000000004"
+			optional: true
+			shape: "rsquare"
+			tasks: [{
+				id: "6002200000000004"
+				type: "checkmark"
+			}]
+			x: -11.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["6002100000000002"]
 			id: "6002100000000009"
 			tasks: [{
 				id: "6002200000000009"
