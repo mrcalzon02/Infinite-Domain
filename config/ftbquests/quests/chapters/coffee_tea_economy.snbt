@@ -4,7 +4,7 @@
 	filename: "coffee_tea_economy"
 	group: "3F00D00000000001"
 	id: "1240CAEABAC9DC56"
-	name: "Coffee & Tea Economy"
+	name: "The Workday Beverage Economy"
 	icon: "kubejs:black_coffee_mug"
 	images: [ ]
 	order_index: 1
@@ -14,7 +14,7 @@
 			dependencies: ["4FC0C1C678C71891"]
 			icon: "kubejs:coffee_cherries"
 			id: "08F11D0000000001"
-			name: "Harvest Coffee Cherries"
+			name: "A Long Day Ahead"
 			optional: true
 			tasks: [{
 				count: 8L
@@ -29,7 +29,7 @@
 			dependencies: ["08F11D0000000001"]
 			icon: "kubejs:coffee_grounds"
 			id: "08F11D0000000003"
-			name: "Process Coffee Grounds"
+			name: "The Daily Grind"
 			optional: true
 			rewards: [{
 				id: "6ADF8387906CF932"
@@ -52,7 +52,7 @@
 			dependencies: ["08F11D0000000003"]
 			icon: "kubejs:black_coffee_mug"
 			id: "08F11D0000000002"
-			name: "Brew Black Coffee"
+			name: "Not Food, Still Breakfast"
 			optional: true
 			tasks: [{
 				id: "08F12D0000000002"
@@ -66,7 +66,7 @@
 			dependencies: ["08F11D0000000002"]
 			icon: "kubejs:green_tea_cup"
 			id: "08F11D0000000004"
-			name: "Brew Green Tea"
+			name: "Put the Kettle On"
 			optional: true
 			tasks: [{
 				id: "08F12D0000000004"
@@ -80,7 +80,7 @@
 			dependencies: ["08F11D0000000004"]
 			icon: "kubejs:espresso_mug"
 			id: "08F11D0000000005"
-			name: "Pull Espresso"
+			name: "Another Cup"
 			optional: true
 			tasks: [{
 				id: "08F12D0000000005"
@@ -94,7 +94,7 @@
 			dependencies: ["08F11D0000000005"]
 			icon: "kubejs:canned_coffee"
 			id: "08F11D0000000006"
-			name: "Can Coffee for Distribution"
+			name: "Take It With You"
 			optional: true
 			rewards: [{
 				id: "6AF530C41C40E134"
@@ -117,7 +117,7 @@
 			dependencies: ["08F11D0000000006"]
 			icon: "kubejs:coffee_case"
 			id: "08F11D0000000007"
-			name: "Pack Coffee Cases"
+			name: "Break Room Supplies"
 			optional: true
 			tasks: [{
 				id: "08F12D0000000007"
@@ -131,7 +131,7 @@
 			dependencies: ["08F11D0000000007"]
 			icon: "kubejs:tea_crate"
 			id: "08F11D0000000008"
-			name: "Pack Tea Crates"
+			name: "The Night Shift"
 			optional: true
 			tasks: [{
 				id: "08F12D0000000008"
@@ -145,7 +145,7 @@
 			dependencies: ["08F11D0000000008"]
 			icon: "kubejs:coffee_pallet"
 			id: "08F11D0000000009"
-			name: "Palletize Coffee Shipments"
+			name: "Industrial Beverage Service"
 			optional: true
 			rewards: [{
 				id: "6AA5E1C95F9F320F"
