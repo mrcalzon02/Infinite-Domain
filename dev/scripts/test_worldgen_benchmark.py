@@ -5,12 +5,21 @@ import re
 import tempfile
 from pathlib import Path
 
-from analyze_worldgen_benchmark import analyze, validate_matrix
+from analyze_worldgen_benchmark import PREFIX, analyze, validate_matrix
 
 
 def main() -> None:
     root = Path(__file__).resolve().parents[2]
-    validate_matrix(root / "dev/scripts" / "worldgen_benchmark_matrix.json")
+    matrix_path = root / "dev/scripts" / "worldgen_benchmark_matrix.json"
+    validate_matrix(matrix_path)
+    # Tile timing is only as fine as the poll that observes completion, and a
+    # tick spent generating chunks can itself run for seconds. At 20 ticks every
+    # recorded tile was accepted on its first poll, so no run ever measured
+    # generation. One tick is the finest bracket this design can offer.
+    matrix = json.loads(matrix_path.read_text(encoding="utf-8"))
+    assert matrix["defaults"]["pollIntervalTicks"] == 1, (
+        "a coarser poll interval silently turns tile timings back into upper bounds"
+    )
     launcher_source = (root / "dev/scripts" / "run_worldgen_benchmark.ps1").read_text(
         encoding="utf-8"
     )
@@ -90,7 +99,7 @@ def main() -> None:
             },
             {
                 "event": "tile_completed", "runId": "self-test-r01", "tile": "central_wasteland_smoke",
-                "chunks": 16, "elapsedMs": 2000, "chunksPerSecond": 8.0,
+                "chunks": 16, "elapsedMs": 2000, "chunksPerSecond": 8.0, "polls": 9,
             },
             {
                 "event": "benchmark_completed", "runId": "self-test-r01", "generationMs": 2000,
@@ -98,8 +107,18 @@ def main() -> None:
             },
         ]
         log = "\n".join(
-            f"[00:00:00] [Server thread/INFO] [KubeJS/]: [ID-WORLDGEN-BENCH] {json.dumps(marker)}"
-            for marker in markers
+            [
+                '[01Sep2026 11:33:56.090] [Server thread/INFO] [DedicatedServer/]: '
+                'Preparing level "Infinite Domain - Worldgen Benchmark"',
+                "[01Sep2026 11:34:16.090] [Server thread/INFO] [MinecraftServer/]: "
+                "Preparing start region for dimension minecraft:overworld",
+                "[01Sep2026 11:35:01.855] [Server thread/INFO] [ChunkProgressListener/]: "
+                "Time elapsed: 45765 ms",
+            ]
+            + [
+                f"[01Sep2026 11:35:02.000] [Server thread/INFO] [KubeJS/]: {PREFIX}{json.dumps(marker)}"
+                for marker in markers
+            ]
         )
         (temp / "latest.log").write_text(log, encoding="utf-8")
         result = analyze(temp / "latest.log", temp / "manifest.json")
@@ -109,6 +128,28 @@ def main() -> None:
         assert result["completedChunks"] == 16
         assert result["chunksPerSecond"] == 8.0
         assert result["tileP95Ms"] == 2000
+        assert result["measurementQuality"] == "measured"
+        assert result["saturatedTiles"] == 0
+        assert result["tiles"][0]["measurementSaturated"] is False
+        # Vanilla times these two phases itself, independently of the tick loop
+        # the controller rides on, so they survive a saturated tile.
+        assert result["serverPhases"]["levelPrepMs"] == 20_000
+        assert result["serverPhases"]["spawnPrepMs"] == 45_765
+
+        # A tile accepted on its first poll must never be reported as a rate.
+        saturated = json.loads(json.dumps(markers))
+        saturated[1]["polls"] = 1
+        (temp / "saturated.log").write_text(
+            "\n".join(
+                f"[01Sep2026 11:35:02.000] [Server thread/INFO] [KubeJS/]: {PREFIX}{json.dumps(marker)}"
+                for marker in saturated
+            ),
+            encoding="utf-8",
+        )
+        degraded = analyze(temp / "saturated.log", temp / "manifest.json")
+        assert degraded["measurementQuality"] == "unmeasured"
+        assert degraded["saturatedTiles"] == 1
+        assert degraded["tiles"][0]["measurementSaturated"] is True
     print("Worldgen benchmark self-test passed")
 
 

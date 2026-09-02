@@ -12,6 +12,25 @@ PREFIX = "[ID-WORLDGEN-BENCH] "
 ACCEPTANCE_MODS = ("lostcities", "dungeons_arise", "dungeons_arise_seven_seas")
 ARISE_NAMESPACES = ("dungeons_arise", "dungeons_arise_seven_seas")
 
+# A tile is only timed to the resolution of the poll that observes it finished.
+# The controller schedules that poll in server ticks, and a tick that is itself
+# generating chunks can run for seconds, so a tile accepted on its first poll was
+# never bracketed: its elapsedMs is an upper bound on generation, not a
+# measurement of it. Every run recorded before 2026-09-01 polled every 20 ticks
+# and reported polls == 1, which is how a 16-chunk smoke tile came to claim
+# 0.111 chunks/s. Runs at or below this bound are reported, never rated.
+MIN_POLLS_FOR_RATE = 2
+
+# Vanilla's own phase logging is independent of the KubeJS controller and of the
+# tick loop, so it survives the saturation above. Both phases are identical work
+# on every run of a given seed, which makes the raw durations comparable between
+# variants. The spawn area's chunk count is deliberately not inferred:
+# LoggerChunkProgressListener throttles its progress lines, so the log cannot
+# support a chunks-per-second figure, only a duration.
+LEVEL_PREP_START = 'Preparing level "'
+LEVEL_PREP_END = "Preparing start region for dimension"
+SPAWN_PREP_ELAPSED = "Time elapsed: "
+
 
 def percentile(values: list[float], quantile: float) -> float:
     if not values:
@@ -39,6 +58,58 @@ def read_markers(log_path: Path) -> list[dict[str, Any]]:
         event["_line"] = line_number
         markers.append(event)
     return markers
+
+
+def read_log_timestamp(line: str) -> float | None:
+    """Milliseconds within the day from a `[01Sep2026 11:33:56.090]` log stamp."""
+    if not line.startswith("["):
+        return None
+    closing = line.find("]")
+    if closing < 0:
+        return None
+    parts = line[1:closing].split(" ")
+    if len(parts) != 2 or ":" not in parts[1]:
+        return None
+    clock = parts[1].split(":")
+    if len(clock) != 3:
+        return None
+    try:
+        hours, minutes = int(clock[0]), int(clock[1])
+        seconds = float(clock[2])
+    except ValueError:
+        return None
+    return ((hours * 60 + minutes) * 60 + seconds) * 1000.0
+
+
+def summarize_server_phases(log_path: Path) -> dict[str, Any]:
+    """Durations vanilla measures itself, harvested from the same log."""
+    level_prep_start: float | None = None
+    level_prep_end: float | None = None
+    spawn_prep_ms: int | None = None
+    for line in log_path.read_text(encoding="utf-8", errors="replace").splitlines():
+        if level_prep_start is None and LEVEL_PREP_START in line:
+            level_prep_start = read_log_timestamp(line)
+        elif level_prep_end is None and LEVEL_PREP_END in line:
+            level_prep_end = read_log_timestamp(line)
+        elif spawn_prep_ms is None and SPAWN_PREP_ELAPSED in line:
+            tail = line.split(SPAWN_PREP_ELAPSED, 1)[1].split(" ", 1)[0]
+            if tail.isdigit():
+                spawn_prep_ms = int(tail)
+    level_prep_ms: int | None = None
+    if level_prep_start is not None and level_prep_end is not None:
+        delta = level_prep_end - level_prep_start
+        if delta < 0:
+            delta += 86_400_000.0
+        level_prep_ms = int(round(delta))
+    return {
+        "levelPrepMs": level_prep_ms,
+        "spawnPrepMs": spawn_prep_ms,
+        "note": (
+            "levelPrepMs covers datapack and registry load before any chunk generates; "
+            "spawnPrepMs is vanilla's own fixed spawn-area generation timing. Both are "
+            "durations only - the spawn area's chunk count is not recoverable from the log."
+        ),
+    }
 
 
 def summarize_acceptance(markers: list[dict[str, Any]], tiles: list[dict[str, Any]]) -> dict[str, Any]:
@@ -150,6 +221,21 @@ def analyze(log_path: Path, manifest_path: Path) -> dict[str, Any]:
 
     status = "failed" if failures else "complete" if len(completions) == 1 else "incomplete"
     elapsed_values = [float(tile["elapsedMs"]) for tile in tiles]
+
+    # Mark, per tile, whether its timing was actually bracketed. A tile whose
+    # completion was already true at its first poll was never observed running,
+    # so its elapsedMs bounds generation from above rather than measuring it.
+    saturated_tiles = 0
+    for tile in tiles:
+        polls = int(tile.get("polls", 0))
+        tile_saturated = polls < MIN_POLLS_FOR_RATE
+        tile["measurementSaturated"] = tile_saturated
+        if tile_saturated:
+            saturated_tiles += 1
+    measurement_quality = "unmeasured" if saturated_tiles == len(tiles) and tiles else (
+        "partial" if saturated_tiles else "measured"
+    )
+
     result: dict[str, Any] = {
         "schemaVersion": 2,
         "status": status,
@@ -170,6 +256,9 @@ def analyze(log_path: Path, manifest_path: Path) -> dict[str, Any]:
         "tileP95Ms": round(percentile(elapsed_values, 0.95), 3),
         "tileMaxMs": max(elapsed_values, default=0),
         "tiles": tiles,
+        "saturatedTiles": saturated_tiles,
+        "measurementQuality": measurement_quality,
+        "serverPhases": summarize_server_phases(log_path),
         "failure": failures[-1] if failures else None,
         "acceptance": summarize_acceptance(markers, tiles),
     }
@@ -227,29 +316,47 @@ def aggregate(root: Path, csv_path: Path, json_path: Path) -> dict[str, Any]:
     for (suite, seed, variant), group in sorted(grouped.items()):
         rates = [float(result["chunksPerSecond"]) for result in group]
         median_rate = statistics.median(rates)
+        # A group is only rated when every run in it was actually bracketed.
+        # Results written before the quality field existed are treated as
+        # unknown rather than measured, because they were all saturated.
+        qualities = {str(result.get("measurementQuality", "unknown")) for result in group}
+        quality = "measured" if qualities == {"measured"} else sorted(qualities)[0]
+        prep = [result.get("serverPhases", {}).get("levelPrepMs") for result in group]
+        spawn = [result.get("serverPhases", {}).get("spawnPrepMs") for result in group]
+        prep = [value for value in prep if value is not None]
+        spawn = [value for value in spawn if value is not None]
         row = {
             "suite": suite,
             "seed": seed,
             "variant": variant,
             "runs": len(group),
+            "measurementQuality": quality,
             "medianChunksPerSecond": round(median_rate, 6),
             "minChunksPerSecond": round(min(rates), 6),
             "maxChunksPerSecond": round(max(rates), 6),
+            "medianLevelPrepMs": round(statistics.median(prep)) if prep else None,
+            "medianSpawnPrepMs": round(statistics.median(spawn)) if spawn else None,
             "speedupVsBaseline": None,
         }
         rows.append(row)
-        if variant == "baseline":
+        if variant == "baseline" and quality == "measured":
             baseline_rates[(suite, seed)] = median_rate
 
     for row in rows:
+        # Never divide an unmeasured rate by anything, and never divide by an
+        # unmeasured baseline: a saturated tile's rate is an upper bound, so a
+        # ratio between two of them carries no information about either.
+        if row["measurementQuality"] != "measured":
+            continue
         baseline = baseline_rates.get((row["suite"], row["seed"]))
         if baseline and baseline > 0:
             row["speedupVsBaseline"] = round(row["medianChunksPerSecond"] / baseline, 4)
 
     csv_path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = [
-        "suite", "seed", "variant", "runs", "medianChunksPerSecond",
-        "minChunksPerSecond", "maxChunksPerSecond", "speedupVsBaseline",
+        "suite", "seed", "variant", "runs", "measurementQuality", "medianChunksPerSecond",
+        "minChunksPerSecond", "maxChunksPerSecond", "medianLevelPrepMs", "medianSpawnPrepMs",
+        "speedupVsBaseline",
     ]
     with csv_path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
@@ -284,7 +391,15 @@ def main() -> None:
     if args.command == "analyze":
         result = analyze(args.log, args.manifest)
         args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-        print(f"{result['runId']}: {result['status']}, {result['chunksPerSecond']:.3f} chunks/s")
+        rate = f"{result['chunksPerSecond']:.3f} chunks/s"
+        if result["measurementQuality"] != "measured":
+            rate = f"<= {rate} (upper bound; {result['saturatedTiles']} tile(s) accepted on first poll)"
+        phases = result["serverPhases"]
+        print(f"{result['runId']}: {result['status']}, {rate}")
+        print(
+            f"  levelPrepMs={phases['levelPrepMs']} spawnPrepMs={phases['spawnPrepMs']} "
+            f"measurementQuality={result['measurementQuality']}"
+        )
         if result["status"] != "complete":
             raise SystemExit(1)
     elif args.command == "aggregate":
