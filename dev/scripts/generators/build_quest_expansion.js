@@ -28,7 +28,7 @@ const items = (title, objectives, icon, desc, deps = []) => ({
   title,
   icon,
   task: { type: 'item', item: objectives[0][0], count: objectives[0][1] || 1 },
-  extraTasks: objectives.slice(1).map(([value, count]) => ({ type: 'item', item: value, count: count || 1 })),
+  extraTasks: objectives.slice(1).map(([value, count, taskId]) => ({ type: 'item', item: value, count: count || 1, ...(taskId ? { id: taskId } : {}) })),
   desc,
   deps
 })
@@ -50,7 +50,7 @@ const chapters = [
       item('Fluids Become Records', 'ae2:fluid_storage_cell_4k', 1, 'Move refinery fluids into explicit digital storage without treating a cell as an infinite tank.', [milestones.era3]),
       item('Maintain the Cells', 'ae2:cell_workbench', 1, 'Use a Cell Workbench to configure partitioning and upgrades deliberately.'),
       item('A Powered Network', 'ae2:energy_acceptor', 1, 'Connect external power to an ME network and verify that storage remains reachable through a controlled shutdown.', [milestones.era4]),
-      item('Terminal and Drive', 'ae2:terminal', 1, 'Install a terminal for access and a drive for protected cell storage.'),
+      items('Terminal and Drive', [['ae2:terminal', 1], ['ae2:drive', 1, '6A00000000000010']], 'ae2:terminal', 'Install a terminal for access and a drive for protected cell storage.'),
       item('Network Governance', 'ae2:controller', 1, 'Commission a controller only after documenting channel routes and critical devices.', [milestones.era5]),
       item('Patterns Are Promises', 'ae2:pattern_provider', 2, 'Encode and provide repeatable recipes whose inputs and byproducts have been audited.'),
       item('Civilization Autocrafts', 'ae2:crafting_terminal', 1, 'Bring controlled crafting into the network without hiding broken production chains.'),
@@ -198,7 +198,7 @@ function buildChapter(ch) {
     const deps = [...(i && q.chain !== false ? [questIds[i - 1]] : []), ...(q.deps || [])]
     const reward = (i + 1) % 3 === 0 ? `\n\t\t\trewards: [{ id: "${id(ch.rewardPrefix, i + 1)}", item: { count: 1, id: "numismatics:cog" }, type: "item" }]` : ''
     const tasks = [q.task, ...(q.extraTasks || [])]
-    const taskBlocks = tasks.map((task, taskIndex) => taskSnbt(task, taskIndex === 0 ? tid : id(ch.taskPrefix, 0x1000 + (i + 1) * 0x10 + taskIndex)))
+    const taskBlocks = tasks.map((task, taskIndex) => taskSnbt(task, task.id || (taskIndex === 0 ? tid : id(ch.taskPrefix, 0x1000 + (i + 1) * 0x10 + taskIndex))))
     return `\t\t{\n${deps.length ? `\t\t\tdependencies: [${deps.map(d => `"${d}"`).join(', ')}]\n` : ''}\t\t\ticon: "${q.icon}"\n\t\t\tid: "${qid}"\n\t\t\tshape: "${q.task.type === 'structure' || q.task.type === 'biome' || q.task.type === 'dimension' ? 'diamond' : 'gear'}"${reward}\n\t\t\ttasks: [${taskBlocks.join(' ')}]\n\t\t\tx: ${(q.x ?? (i % 2 ? 2 : -2)).toFixed(1)}d\n\t\t\ty: ${(q.y ?? (i * 2)).toFixed(1)}d\n\t\t}`
   })
   return `{\n\tdefault_hide_dependency_lines: false\n\tdefault_quest_shape: "circle"\n\tfilename: "${path.basename(ch.file, '.snbt')}"\n\tgroup: "${ch.group}"\n\tid: "${ch.chapterId}"\n\ticon: "${ch.icon}"\n\timages: [ ]\n\torder_index: ${ch.order}\n\tquest_links: [ ]\n\tquests: [\n${blocks.join('\n\n')}\n\t]\n}\n`
@@ -225,8 +225,16 @@ for (const ch of chapters) {
   ch.quests.forEach((q, i) => {
     const qid = id(ch.prefix, i + 1)
     if (!localizedIds.has(qid)) {
+      const itemTasks = [q.task, ...(q.extraTasks || [])].filter(task => task.type === 'item')
+      const objective = q.task.type === 'structure'
+        ? `Objective: enter ${q.task.structure}. Detection is automatic while standing inside a generated structure piece.`
+        : q.task.type === 'biome'
+          ? `Objective: visit ${q.task.biome}. Detection is automatic from the biome at the player's position.`
+          : q.task.type === 'dimension'
+            ? `Objective: visit ${q.task.dimension}.`
+            : `Objective: obtain ${itemTasks.map(task => `${task.count || 1} × ${task.item}`).join(' and ')}. Items are detected and not consumed.`
       lang += `\tquest.${qid}.title: ${JSON.stringify(q.title)}\n`
-      lang += `\tquest.${qid}.quest_desc: [${JSON.stringify(q.desc)} ${JSON.stringify(q.task.type === 'structure' ? `Objective: enter ${q.task.structure}. Detection is automatic while standing inside a generated structure piece.` : q.task.type === 'biome' ? `Objective: visit ${q.task.biome}. Detection is automatic from the biome at the player's position.` : q.task.type === 'dimension' ? `Objective: visit ${q.task.dimension}.` : `Objective: obtain ${q.task.count || 1} × ${q.task.item}. Items are detected and not consumed.`)}]\n`
+      lang += `\tquest.${qid}.quest_desc: [${JSON.stringify(q.desc)} ${JSON.stringify(objective)}]\n`
     }
   })
 }
