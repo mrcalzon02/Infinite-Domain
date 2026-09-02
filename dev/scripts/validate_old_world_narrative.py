@@ -210,9 +210,17 @@ def main() -> None:
 
     structure_set_dir = DATA / "worldgen" / "structure_set" / "old_world"
     structure_set_paths = sorted(structure_set_dir.glob("*.json"))
+    expected_set_files = {
+        "controlled_pt9_probe.json",
+        "old_world_city_sites.json",
+        "old_world_landmark_sites.json",
+        "old_world_mountain_sites.json",
+        "old_world_port_sites.json",
+        "old_world_rural_sites.json",
+    }
     require(
-        [path.name for path in structure_set_paths] == ["controlled_pt9_probe.json"],
-        "Old World natural worldgen must remain gated to the PT-9 controlled probe",
+        {path.name for path in structure_set_paths} == expected_set_files,
+        "Old World grouped natural-worldgen set inventory is stale",
     )
     structure_sets = {path.stem: read_json(path) for path in structure_set_paths}
     controlled_set = structure_sets["controlled_pt9_probe"]
@@ -220,21 +228,58 @@ def main() -> None:
         controlled_set.get("placement", {}).get("type") == "minecraft:random_spread",
         "Old World controlled placement must use ordinary datapack random-spread ownership",
     )
-    serialized_control = json.dumps(controlled_set, sort_keys=True).lower()
-    require(
-        not any(token in serialized_control for token in ("quest", "player", "team", "advancement", "scoreboard", "game_stage", "gamestage")),
-        "Old World controlled placement must not depend on quest or player progression state",
-    )
-    registered = {
+    for set_name, structure_set in structure_sets.items():
+        require(
+            structure_set.get("placement", {}).get("type") == "minecraft:random_spread",
+            f"Old World set {set_name} must use ordinary datapack random-spread ownership",
+        )
+        serialized = json.dumps(structure_set, sort_keys=True).lower()
+        require(
+            not any(token in serialized for token in ("quest", "player", "team", "advancement", "scoreboard", "game_stage", "gamestage")),
+            f"Old World set {set_name} must not depend on quest or player progression state",
+        )
+
+    registered_list = [
         entry["structure"]
         for value in structure_sets.values()
         for entry in value["structures"]
+    ]
+    registered = set(registered_list)
+    require(len(registered_list) == len(registered), "Old World structure sets contain a duplicate target")
+    independent_roles = {"INDEPENDENT_MOUNTAIN", "INDEPENDENT_LANDMARK", "COASTAL_TERMINAL"}
+    expected_worldgen_targets = {
+        target
+        for target, role in worldgen_roles.items()
+        if role["role"] in independent_roles or target in DESTINATION_QUESTS
     }
     expected_active = {
         next(spec.structure_id for spec in SPECS if spec.target == target)
-        for target in CONTROLLED_WORLDGEN_TARGETS
+        for target in expected_worldgen_targets
     }
-    require(registered == expected_active, "controlled worldgen set contains a staged or missing target")
+    require(len(expected_worldgen_targets) == 20, "Old World grouped worldgen must cover exactly 20 locatable/independent targets")
+    require(registered == expected_active, "Old World grouped worldgen contains a staged or missing target")
+    require(
+        {entry["structure"] for entry in controlled_set["structures"]}
+        == {next(spec.structure_id for spec in SPECS if spec.target == "OWS-006")},
+        "PT-9 controlled set must remain limited to OWS-006",
+    )
+
+    if args.scope_worldgen_only:
+        for spec in SPECS:
+            pool = read_json(DATA / "worldgen" / "template_pool" / "old_world" / f"{spec.name}.json")
+            worldgen = read_json(DATA / "worldgen" / "structure" / "old_world" / f"{spec.name}.json")
+            worldgen_role = worldgen_roles[spec.target]
+            require(worldgen_role["file"] == f"{spec.name}.json", f"{spec.target} worldgen-role filename is stale")
+            require(worldgen["start_pool"] == f"infinite_domain:old_world/{spec.name}", f"{spec.target} start pool is stale")
+            require(worldgen["biomes"] == worldgen_role["biomes_tag"], f"{spec.target} worldgen biome role is stale")
+            require(
+                pool["elements"][0]["element"]["location"] == f"infinite_domain:wasteland/old_world/{spec.name}",
+                f"{spec.target} template is stale",
+            )
+        print("Old World source/descendant scope: 84 / 64")
+        print("Old World grouped natural worldgen: 20 targets across 6 random-spread sets")
+        print("Old World placement ownership: datapack-only; no quest/player/team gate")
+        return
 
     renders = {
         entry["structure_id"]: entry
@@ -335,7 +380,10 @@ def main() -> None:
             expected_reward = "70E" + hashlib.sha256(DESTINATION_QUESTS[spec.target].encode()).hexdigest()[:13].upper()
             require(f'id: "{expected_reward}"' in chapter, f"{spec.target} live locator reward ID is not stable")
 
-        require((spec.structure_id in registered) is is_probe, f"{spec.target} structure-set gating is wrong")
+        require(
+            (spec.structure_id in registered) is (spec.target in expected_worldgen_targets),
+            f"{spec.target} grouped structure-set ownership is wrong",
+        )
 
         pool = read_json(DATA / "worldgen" / "template_pool" / "old_world" / f"{spec.name}.json")
         worldgen = read_json(DATA / "worldgen" / "structure" / "old_world" / f"{spec.name}.json")

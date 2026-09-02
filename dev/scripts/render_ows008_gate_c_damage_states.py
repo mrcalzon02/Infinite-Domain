@@ -36,7 +36,7 @@ SHIPPING_PATH = (
     "wasteland" / "old_world" /
     "ows_008_vcf_emergency_persistence_investigation_lab.nbt"
 )
-ACCEPTED_GATE_B_SHA256 = "642b1e986952140d997b2bbd66c4596d3c1f958b91397672ca47f6b9711500e8"
+ACCEPTED_GATE_B_SHA256 = "52a259170466c30e9d015b56b79a175962cabde352654f0f302e153a40201b86"
 PROOF_LOOT_TABLE = "infinite_domain:chests/old_world/ows_008_vcf_emergency_persistence_investigation_lab"
 PROOF_ITEM = "kubejs:vcf_persistence_incident_file"
 PROOF_LOOT_PATH = (
@@ -58,6 +58,14 @@ REQUIRED_DOCS = tuple(f"OWS-008_PASS{number}_{name}.md" for number, name in (
     (17, "QUEST_PROOF_ARCHITECTURE"),
     (18, "DAMAGE_AND_DECAY"),
 ))
+REQUIRED_MARKERS = {
+    "OWS-008_PASS13_HISTORICAL_LAYERING.md": "**HISTORICAL LAYERING: COMPLETE FOR GATE-C IMPLEMENTATION.**",
+    "OWS-008_PASS14_ENVIRONMENTAL_NARRATIVE.md": "**ENVIRONMENTAL NARRATIVE: COMPLETE FOR GATE-C IMPLEMENTATION.**",
+    "OWS-008_PASS15_ENCOUNTER_ARCHITECTURE.md": "**ENCOUNTER ARCHITECTURE: COMPLETE FOR GATE-C IMPLEMENTATION.**",
+    "OWS-008_PASS16_LOOT_ARCHITECTURE.md": "**LOOT ARCHITECTURE: COMPLETE FOR GATE-C IMPLEMENTATION.**",
+    "OWS-008_PASS17_QUEST_PROOF_ARCHITECTURE.md": "**QUEST-PROOF ARCHITECTURE: COMPLETE FOR GATE-C IMPLEMENTATION.**",
+    "OWS-008_PASS18_DAMAGE_AND_DECAY.md": "**DAMAGE AND DECAY: COMPLETE FOR GATE-C IMPLEMENTATION.**",
+}
 
 
 def _name(t: base.Template, pos: tuple[int, int, int]) -> str | None:
@@ -77,11 +85,17 @@ def _diff_positions(a: base.Template, b: base.Template) -> set[tuple[int, int, i
 def _assert_history_authorized() -> None:
     review_dir = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild"
     review = review_dir / "OWS-008_GATE_B_R2_REVIEW.md"
-    if not review.exists() or "OWS-008 GATE B r2: PASSED" not in review.read_text(encoding="utf-8"):
+    if not review.exists() or "OWS-008 GATE B R2: PASSED." not in review.read_text(encoding="utf-8"):
         raise AssertionError("Gate C refused: explicit OWS-008 Gate-B r2 PASSED review is missing")
     missing = [name for name in REQUIRED_DOCS if not (review_dir / name).exists()]
     if missing:
         raise AssertionError(f"Gate C refused: required Pass 13-18 records are missing: {missing}")
+    incomplete = [
+        name for name, marker in REQUIRED_MARKERS.items()
+        if marker not in (review_dir / name).read_text(encoding="utf-8")
+    ]
+    if incomplete:
+        raise AssertionError(f"Gate C refused: incomplete Pass 13-18 records: {incomplete}")
 
 
 def _assert_canonical_loot_contract() -> None:
@@ -227,8 +241,17 @@ def build_d3() -> base.Template:
 
     # Exactly one canonical proof/loot node occupies the secure upper incident
     # archive. It closes the route after the player has read the cell sequence.
-    if _name(t, PROOF_POS) not in AIR or _name(t, (12, 15, 29)) not in AIR:
-        raise AssertionError("OWS-008 secure archive proof position is not clear")
+    proof_head = (PROOF_POS[0], PROOF_POS[1] + 1, PROOF_POS[2])
+    proof_approach = (PROOF_POS[0], PROOF_POS[1], PROOF_POS[2] - 1)
+    if _name(t, PROOF_POS) not in AIR or _name(t, proof_approach) not in AIR:
+        raise AssertionError("OWS-008 secure archive proof position or approach is not clear")
+    # Gate-B r2 repaired the approach but retained one intact suspended-ceiling
+    # panel directly above the D3-only proof chest. Remove exactly that panel
+    # after the intact architecture checks so the canonical chest can open; D0
+    # and D1 remain exact/intact and the protected approach is unchanged.
+    if _name(t, proof_head) != "minecraft:light_gray_concrete":
+        raise AssertionError(f"OWS-008 proof-head panel drifted: {_name(t, proof_head)}")
+    t.clear(proof_head, proof_head)
     t.chest(*PROOF_POS, PROOF_LOOT_TABLE, facing="north")
 
     # Three bounded vanilla encounters trace dirty receipt -> persistence cell

@@ -86,9 +86,13 @@ target retains its mountain-only biome selector from the 64-site worldgen-role
 registry.
 
 A state audit also found that Gate-A r1 was recorded as passed even though its
-persisted review says `REVISION REQUIRED`; the ledger now points to the rendered
-r2 candidate and blocks Gate B until an explicit independent r2 review exists.
-No runtime-quality approval was inferred.
+persisted review says `REVISION REQUIRED`. The exact Gate-A r2 artifact is now
+independently passed. Passes 7–12 and the repaired Gate-B r2 intact candidate
+subsequently exposed and corrected 54 hidden shell-overlap obstructions across
+the declared public, treatment-cell and service aisles while preserving the
+authoritative shipping NBT byte-for-byte. The hash-bound Gate-B r2 fixed-camera
+review is passed; Pass 13 historical layering is now the next legal stage. No
+runtime-quality approval was inferred.
 
 The focused scope/worldgen gate passes. The legacy full serialized-block mode
 still reports seven pre-existing targets (`OWS-001`, `OWS-006`, `OWS-011`,
@@ -146,10 +150,10 @@ The reconciliation process must continue from the current authoritative `main`, 
 The Wasteland hex-grid implementation omission is closed with static geometry and
 runtime load/chunk-generation evidence; visual approval remains open. The Old
 World 84-source/64-descendant scope distinction is now explicit and guarded.
-The next repository implementation priority is the independent OWS-008 Gate-A
-r2 decision, followed by Gate-B r2 rendering and sequential production
-admission. The already-verified route repair does not bypass that visual gate.
-Do not populate runtime-quality approvals without retained in-world evidence.
+OWS-008 Gate A r2 and the repaired Gate B r2 intact model are now independently
+passed. The next repository implementation priority is Passes 13–18, followed
+by a Gate-C r2 damage-state set whose D0 exactly preserves the accepted intact
+model. Do not populate runtime-quality approvals without retained in-world evidence.
 
 ### Runtime evidence track
 
@@ -163,8 +167,9 @@ Retain the runtime and `result.json`. Use observed evidence to advance items 6, 
 
 ### Heavy Rebuild track
 
-Review the persisted OWS-008 Gate-A r2 fixed-camera set, then continue Gate B
-and production admission from the current active structure. The 84-entry
-Wasteland source corpus and 64-entry Old World narrative registry are separate
-validated scopes. Runtime-quality approvals must be backed by retained evidence
-rather than automatically populated.
+Continue OWS-008 with Passes 13–18 and render Gate C r2 only after those records
+are verified. Its D0 state must exactly preserve the accepted Gate-B r2 model;
+D1/D3 must add causal history and damage without resealing circulation or moving
+mandatory proof. The 84-entry Wasteland source corpus and 64-entry Old World
+narrative registry are separate validated scopes. Runtime-quality approvals must
+be backed by retained evidence rather than automatically populated.

@@ -30,10 +30,19 @@ PASS_FILES = {
 
 OPENABLE_GATE_C_STATES = {
     "blocked_by_gate_b_and_history_passes",
+    "blocked_by_passes_13_18",
     "pending",
     "ready_for_damage_implementation",
     "ready_to_render",
 }
+
+
+def _resolve_record(target: str, stem: str) -> tuple[str, Path]:
+    rel = f"dev/old_world_narrative/reviews/heavy_rebuild/{target}_{stem}.md"
+    path = ROOT / rel
+    if not path.is_file():
+        raise AssertionError(f"Missing {target} Gate-C planning record: {rel}")
+    return rel, path
 
 
 def main() -> None:
@@ -50,10 +59,7 @@ def main() -> None:
 
     records = state.setdefault("planning_records", {})
     for pass_key, (stem, marker) in PASS_FILES.items():
-        rel = f"old_world_narrative/reviews/heavy_rebuild/{target}_{stem}.md"
-        path = ROOT / rel
-        if not path.is_file():
-            raise AssertionError(f"Missing {target} Gate-C planning record: {rel}")
+        rel, path = _resolve_record(target, stem)
         text = path.read_text(encoding="utf-8")
         if marker not in text:
             raise AssertionError(f"{target} Gate-C planning record lacks marker {marker}: {rel}")

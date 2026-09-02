@@ -11,6 +11,7 @@ from pathlib import Path
 
 import generate_wasteland_sites as base
 import old_world_ows008_final as final_builder
+import render_ows008_gate_b_intact as intact_renderer
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -76,6 +77,8 @@ def main() -> None:
     built = final_builder.build_008()
     base.stabilize_door_pairs(built)
     final_builder._assert_final_contracts(built)
+    intact_review = intact_renderer.build_gate_b_intact()
+    intact_renderer._assert_intact_contracts(intact_review)
     built_bytes, built_raw = _serialized_bytes(built)
 
     legacy = copy.deepcopy(built)
@@ -119,6 +122,7 @@ def main() -> None:
     print(f"ruined_functional_props_verified={len(RUINED_FUNCTIONAL_PROPS)}")
     print("west_command_stair_treads_and_headroom=verified")
     print("lower_entry_to_upper_proof_approach=connected")
+    print("gate_b_r2_review_route=connected")
 
 
 if __name__ == "__main__":

@@ -40,6 +40,15 @@ SHIPPING_PATH = (
 )
 STATE_PATH = ROOT / "dev/old_world_narrative" / "registry" / "heavy_rebuild_state.json"
 GATE_A_R2_REVIEW = ROOT / "dev/old_world_narrative" / "reviews" / "heavy_rebuild" / "OWS-008_GATE_A_R2_REVIEW.md"
+PROTECTED_CIRCULATION_VOLUMES = (
+    ((25, 2, 5), (29, 3, 11)),
+    ((10, 2, 15), (45, 3, 16)),
+    ((11, 2, 29), (12, 3, 36)),
+    ((22, 2, 27), (22, 3, 35)),
+    ((33, 2, 25), (34, 3, 34)),
+    ((45, 2, 23), (46, 3, 32)),
+    ((18, 2, 43), (38, 3, 44)),
+)
 
 
 def _double_iron_door_z(t: base.Template, x: int, y: int, z: int, facing: str) -> None:
@@ -386,16 +395,34 @@ def build_gate_b_intact() -> base.Template:
     _pass10_interior_architecture(t)
     _pass11_operational_systems(t)
     _pass12_institutional_identity(t)
-    # The accepted intact design is unchanged; replay its west command stair
-    # after all partition/landing writes so the two flights are executable.
-    for x, y, z, rise, facing in final_builder.WEST_COMMAND_STAIR_FLIGHTS:
-        base.stair_flight(t, x, y, z, rise, facing, "minecraft:smooth_quartz_stairs")
+    # Resolve circulation last. Gate-A r2's stronger upper framing and the
+    # Pass-10 partitions otherwise reseal the accepted command/archive route.
+    final_builder.restore_upper_proof_route(t)
+    _restore_protected_circulation(t)
     return t
 
 
 def _name_at(t: base.Template, pos: tuple[int, int, int]) -> str | None:
     entry = t.blocks.get(pos)
     return None if entry is None else t.palette[entry[0]]["Name"]
+
+
+def _restore_protected_circulation(t: base.Template) -> None:
+    """Clear the accepted two-block-high intact routes after overlapping shells.
+
+    Gate A intentionally composes several intersecting treatment masses. Their
+    conceptual shell walls are allowed to overlap during massing review, but the
+    Gate-B interior pass must cut the declared public, gallery, cell and service
+    aisles through those overlaps. Controlled iron doors remain in place.
+    """
+    for low, high in PROTECTED_CIRCULATION_VOLUMES:
+        for x in range(low[0], high[0] + 1):
+            for y in range(low[1], high[1] + 1):
+                for z in range(low[2], high[2] + 1):
+                    pos = (x, y, z)
+                    name = _name_at(t, pos)
+                    if name not in {None, "minecraft:air"} and not (name or "").endswith("_door"):
+                        t.clear(pos, pos)
 
 
 def _assert_gate_a_source_freeze() -> None:
@@ -432,16 +459,19 @@ def _assert_intact_contracts(t: base.Template) -> None:
         raise AssertionError("OWS-008 Gate-B r2 exceeds the accepted envelope")
     final_builder._assert_upper_proof_route(t)
 
-    # Representative points freeze the nine independently accepted macro aspects.
+    # Representative points from the hash-pinned Gate-A r2 source freeze its
+    # accepted public threshold, command lantern, analysis monitor, upper
+    # connector, three treatment roofs, hero clerestory and supported exhaust.
     frozen = {
-        (27, 8, 1): "minecraft:white_concrete",
-        (10, 0, 2): "minecraft:smooth_stone",
-        (4, 17, 24): "minecraft:lime_concrete",
-        (10, 18, 31): "minecraft:lime_concrete",
-        (33, 20, 28): "minecraft:yellow_concrete",
-        (53, 9, 18): "minecraft:yellow_concrete",
-        (20, 12, 41): "minecraft:white_concrete",
-        (50, 18, 40): "minecraft:white_concrete",
+        (15, 8, 1): "minecraft:white_concrete",
+        (15, 13, 9): "minecraft:lime_concrete",
+        (10, 18, 24): "minecraft:white_concrete",
+        (17, 13, 20): "minecraft:light_gray_concrete",
+        (24, 13, 15): "minecraft:light_gray_concrete",
+        (37, 17, 17): "minecraft:light_gray_concrete",
+        (30, 16, 27): "minecraft:white_concrete",
+        (30, 20, 36): "minecraft:white_concrete",
+        (47, 21, 40): "immersiveengineering:sheetmetal_steel",
     }
     for pos, expected in frozen.items():
         actual = _name_at(t, pos)
@@ -463,16 +493,7 @@ def _assert_intact_contracts(t: base.Template) -> None:
                     raise AssertionError(f"Controlled X-wall door missing at {(x, y, z + dz)}")
 
     # Public, gallery, cell and service center aisles remain two blocks high.
-    protected = (
-        ((25, 2, 5), (29, 3, 11)),
-        ((10, 2, 15), (45, 3, 16)),
-        ((11, 2, 29), (12, 3, 36)),
-        ((22, 2, 27), (22, 3, 35)),
-        ((33, 2, 25), (34, 3, 34)),
-        ((45, 2, 23), (46, 3, 32)),
-        ((18, 2, 43), (38, 3, 44)),
-    )
-    for low, high in protected:
+    for low, high in PROTECTED_CIRCULATION_VOLUMES:
         for x in range(low[0], high[0] + 1):
             for y in range(low[1], high[1] + 1):
                 for z in range(low[2], high[2] + 1):

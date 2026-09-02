@@ -23,10 +23,11 @@ selector independently of whether that staged structure has been admitted to a
 structure set.
 
 Current heavy-rebuild slice: OWS-008, the VCF Emergency Persistence
-Investigation Laboratory. Its fixed-camera Gate-A r2 candidate is rendered and
-awaits an explicit independent decision before Gate B can advance. OWS-009
-remains the representative functional investigation for the opening
-`THEY WERE HERE FIRST` quest.
+Investigation Laboratory. Gate A r2 and the repaired Gate B r2 intact model are
+independently passed; Passes 7–12 are complete and historical layering is the
+next legal stage. Gate C remains blocked until Passes 13–18 are verified. OWS-009
+remains the representative functional investigation for the opening `THEY WERE
+HERE FIRST` quest.
 
 Build after importing the supplied package:
 

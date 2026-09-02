@@ -7,3 +7,9 @@ OWS-008 uses the existing canonical site table exactly once:
 That authoritative table guarantees `kubejs:vcf_persistence_incident_file` and adds restrained industrial components. Its one container therefore serves as both the secure incident-record loot node and the one canonical proof node. Duplicating it would duplicate guaranteed proof and is prohibited.
 
 The container belongs in the upper secure incident archive after the player has traversed or observed the treatment/verification sequence. Existing crates, coolers, tanks, depots and sample stations remain environmental equipment rather than improvised inventories. No replacement loot table or hard-coded random contents were created.
+
+The Gate-C contract checks that the registered table exists and contains exactly
+one guaranteed incident-file entry before any review model is rendered. D0 and
+D1 contain no canonical loot node; D3 contains exactly one.
+
+**LOOT ARCHITECTURE: COMPLETE FOR GATE-C IMPLEMENTATION.**

@@ -172,7 +172,7 @@
       "detail": "five humidity-gated Karsic rules and biome files precede the ungated temperate Wastelands fallback; Pelagos land remains plan-deferred",
       "evidence": {
         "invalid_biomes": [],
-        "fallback_index": 68
+        "fallback_index": 71
       }
     },
     {
@@ -218,7 +218,7 @@
       "id": "OG-12",
       "check": "structure spawning is datapack-owned and independent of quests, players, and teams",
       "passed": true,
-      "detail": "290 structures and 147 structure sets use standard worldgen placement with registered references; no scripted quest-placement bridge exists",
+      "detail": "290 structures and 152 structure sets use standard worldgen placement with registered references; no scripted quest-placement bridge exists",
       "evidence": {
         "gated_json": [],
         "invalid_placements": [],

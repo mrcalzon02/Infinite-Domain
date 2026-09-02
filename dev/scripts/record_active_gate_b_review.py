@@ -136,6 +136,12 @@ def main() -> None:
         )
 
     rel_review = str(review_path.relative_to(ROOT)).replace("\\", "/")
+    rel_manifest = str(manifest_path.relative_to(ROOT)).replace("\\", "/")
+    gate[f"r{revision}_artifact_manifest"] = rel_manifest
+    if manifest.get("review_model_nbt_sha256"):
+        gate[f"r{revision}_review_model_sha256"] = manifest["review_model_nbt_sha256"]
+    if manifest.get("review_builder_sha256"):
+        gate[f"r{revision}_review_builder_sha256"] = manifest["review_builder_sha256"]
     gate[f"r{revision}_review_record"] = rel_review
     gate[f"r{revision}_decision"] = "PASSED" if passed else "REVISION REQUIRED"
     state.setdefault("planning_records", {})[f"gate_b_r{revision}_review"] = rel_review
@@ -162,8 +168,28 @@ def main() -> None:
     for key in INTACT_PASSES:
         state["active_target_passes"][key] = f"complete_gate_b_r{revision}"
     state["active_target_passes"]["visual_gate_b_intact_state"] = f"passed_r{revision}"
-    if state["active_target_passes"].get("historical_layering") == "pending":
+    history_status = str(state["active_target_passes"].get("historical_layering", ""))
+    if history_status == "pending" or "blocked_by_gate_a" in history_status or "blocked_by_gate_b" in history_status:
         state["active_target_passes"]["historical_layering"] = "ready"
+    downstream_blocks = {
+        "environmental_narrative": "blocked_by_pass_13",
+        "encounter_architecture": "blocked_by_passes_13_14",
+        "loot_architecture": "blocked_by_passes_13_15",
+        "quest_proof": "blocked_by_passes_13_16",
+        "damage_and_decay": "blocked_by_passes_13_17",
+        "visual_gate_c_damage_states": "blocked_by_passes_13_18",
+        "micro_detail": f"blocked_by_gate_c_r{revision}",
+        "visual_gate_d_final_multi_angle": f"blocked_by_gate_c_r{revision}",
+    }
+    for key, replacement in downstream_blocks.items():
+        value = str(state["active_target_passes"].get(key, ""))
+        if "blocked_by_gate_a" in value or "blocked_by_gate_b" in value:
+            state["active_target_passes"][key] = replacement
+    gate_c = state["visual_review_gates"]["gate_c_damage_states"]
+    gate_c_status = str(gate_c.get("status", ""))
+    if "gate_a" in gate_c_status or "gate_b" in gate_c_status:
+        gate_c["status"] = "blocked_by_passes_13_18"
+        state["visual_review_gates"]["gate_c_damage_states"] = gate_c
     state["active_status"] = f"gate_b_r{revision}_passed_history_ready"
 
     STATE_PATH.write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8", newline="\n")

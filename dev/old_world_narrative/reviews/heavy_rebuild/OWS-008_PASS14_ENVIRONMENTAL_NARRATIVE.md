@@ -17,3 +17,11 @@
 - public frontage, clean command, distinct cell equipment and VCF wayfinding remain legible beneath the restrained ruin.
 
 The player can infer the central fact—surface sterilization did not reach contamination recurring inside shared construction joints—before opening the incident file.
+
+The evidence is deliberately readable in the fixed Gate-C cameras: the crisis
+bypass crosses the rear service roof, the four investigation collars remain
+aligned with their cell branches, and the one failed roof bay lands material in
+the dirty east service zone. No narrative dressing may obstruct the repaired
+command/archive route or the principal two-block-clear circulation contract.
+
+**ENVIRONMENTAL NARRATIVE: COMPLETE FOR GATE-C IMPLEMENTATION.**

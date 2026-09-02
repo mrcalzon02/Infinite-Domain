@@ -1,0 +1,42 @@
+{
+  "target": "OWS-008",
+  "gate": "gate_b_intact",
+  "revision": "intact-r2@8a59aedb",
+  "damage_state": "D0 intact / operational",
+  "source_commit": "8a59aedb677a33ed82e703511ef0b3c3e2004d97",
+  "source_path": "review-only:render_ows008_gate_b_intact.build_gate_b_intact()",
+  "dimensions": [
+    55,
+    22,
+    49
+  ],
+  "fixed_camera_set": "ows008_fixed_v1",
+  "visual_review_status": "rendered_pending_manual_review",
+  "visual_findings": [],
+  "significant_findings_corrected_or_justified": false,
+  "final_preview_synchronized_with_authoritative_nbt": false,
+  "cutaway_y": 14,
+  "views": {
+    "front_left": "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r2/front_left.png",
+    "rear_left": "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r2/rear_left.png",
+    "rear_right": "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r2/rear_right.png",
+    "front_right": "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r2/front_right.png",
+    "roof_top_oblique": "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r2/roof_top_oblique.png",
+    "interior_cutaway": "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r2/interior_cutaway.png",
+    "floor_slices": "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r2/floor_slices.png",
+    "contact_sheet": "dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_b_intact/r2/contact_sheet.png"
+  },
+  "review_model_nbt_sha256": "52a259170466c30e9d015b56b79a175962cabde352654f0f302e153a40201b86",
+  "review_builder_sha256": "34865efe30a01a54ef32d2226268ae9ca92bdea8a9c94c2802688bf371184a85",
+  "gate_a_model_decompressed_sha256": "22bca95829c4497cdf810b13be3d0e2c4a01c2df406b9cec8339f9c8d0773894",
+  "placed_positions": 17607,
+  "gate_a_frozen_aspects_asserted": 9,
+  "gate_b_obligations_implemented": 6,
+  "working_door_blocks_asserted": 100,
+  "west_command_stair_treads_asserted": 20,
+  "upper_proof_route_connected": true,
+  "proof_encounters_history_damage_present": false,
+  "authoritative_shipping_modified": false,
+  "shipping_nbt_git_blob_before": "40fbc76475bf677ee9aa34c8471b2672719c02f2",
+  "shipping_nbt_git_blob_after": "40fbc76475bf677ee9aa34c8471b2672719c02f2"
+}

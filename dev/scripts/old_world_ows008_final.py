@@ -77,6 +77,26 @@ def _double_iron_door_x(t: base.Template, x: int, y: int, z: int, facing: str) -
     base.door(t, x, y, z + 1, facing, "iron", "right")
 
 
+def restore_upper_proof_route(t: base.Template) -> None:
+    """Reapply the accepted west stair and its two-block-clear proof approach.
+
+    Gate-B planning layers legitimately write partitions and structural ribs after
+    the original circulation pass.  Keep this repair as the final intact-model
+    operation so those later systems cannot silently seal the command/archive
+    route again.  Existing controlled doors are retained; every other feet/head
+    obstruction on the accepted route is removed.
+    """
+    for x, y, z, rise, facing in WEST_COMMAND_STAIR_FLIGHTS:
+        base.stair_flight(t, x, y, z, rise, facing, "minecraft:smooth_quartz_stairs")
+
+    for feet in UPPER_PROOF_ROUTE:
+        head = (feet[0], feet[1] + 1, feet[2])
+        for pos in (feet, head):
+            name = _name(t, pos)
+            if name not in AIR and not (name or "").endswith("_door"):
+                t.clear(pos, pos)
+
+
 def _build_gate_a() -> base.Template:
     t = base.Template(SIZE)
 
@@ -223,11 +243,6 @@ def _apply_gate_b(t: base.Template) -> None:
     for z in (21, 29, 36): base.partition_z(t, z, 2, 3, 8, "minecraft:white_concrete", doorways=(6,))
     t.fill((3, 13, 18), (14, 13, 32), "minecraft:smooth_quartz")
     base.partition_x(t, 8, 14, 18, 32, "minecraft:white_concrete", doorway_z=25)
-    # Restore the accepted west command/archive stair after its partitions and
-    # landing slabs are resolved. Those later writes otherwise replace the
-    # z=21 lower treads and the top headroom of both flights.
-    for x, y, z, rise, facing in WEST_COMMAND_STAIR_FLIGHTS:
-        base.stair_flight(t, x, y, z, rise, facing, "minecraft:smooth_quartz_stairs")
     t.fill((49, 1, 11), (52, 1, 40), "tfmg:factory_floor")
     for z in (21, 29, 35): base.partition_z(t, z, 2, 49, 52, "minecraft:light_gray_concrete", doorways=(51,))
     for x1, x2, z1, z2, partition_z, datum in ((6, 16, 24, 39, 28, "minecraft:lime_concrete"), (17, 27, 22, 37, 26, "minecraft:white_concrete"), (28, 39, 20, 36, 24, "minecraft:yellow_concrete"), (40, 50, 18, 34, 22, "minecraft:cyan_concrete")):
@@ -296,6 +311,7 @@ def _apply_gate_b(t: base.Template) -> None:
         (42, 5, 45, "south", "DECON WASTE", "AUTHORIZED REMOVAL"), (46, 16, 40, "west", "ROOF PLANT", "MAINTENANCE ACCESS"),
     )
     for args in signs: base.wall_sign(t, *args)
+    restore_upper_proof_route(t)
 
 
 def build_d0() -> base.Template:
