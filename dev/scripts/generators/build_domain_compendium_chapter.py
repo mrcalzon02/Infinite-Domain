@@ -144,17 +144,14 @@ def assert_items_exist(included: dict[str, list[str]]) -> None:
         item_id
         for ids in included.values()
         for item_id in ids
-        if not oracle.exists(item_id)
+        if not oracle.has_item_form(item_id)
     )
     if broken:
-        shown = "
-".join(f"  {i} - {oracle.why_missing(i)}" for i in broken[:20])
-        more = f"
-  ... and {len(broken) - 20} more" if len(broken) > 20 else ""
+        shown = "\n".join(f"  {i} - {oracle.why_missing(i)}" for i in broken[:20])
+        more = f"\n  ... and {len(broken) - 20} more" if len(broken) > 20 else ""
         raise SystemExit(
             f"refusing to write {CHAPTER.name}: {len(broken)} task item(s) have no "
-            f"item form and would load as ftbquests:missing_item:
-{shown}{more}"
+            f"item form and would load as ftbquests:missing_item:\n{shown}{more}"
         )
 
 
@@ -188,6 +185,8 @@ def esc(value: str) -> str:
 def build() -> None:
     names = mod_names()
     included = load_included()
+    assert_items_exist(included)
+    ledger = IdLedger(LEDGER)
     # widest namespaces first, ties broken by name for a stable layout
     namespaces = sorted(included, key=lambda ns: (-len(included[ns]), ns))
 
@@ -244,7 +243,7 @@ def build() -> None:
         x = round(col * COL_SPACING, 2)
         for part, batch in enumerate(groups, start=1):
             section_counter += 1
-            qid = section_hex(section_counter)
+            qid = ledger.get("section", f"{namespace}#{part}")
             section_ids.append(qid)
             y = round(part * ROW_SPACING, 2)
             task_lines = []
@@ -253,7 +252,7 @@ def build() -> None:
                 total_tasks += 1
                 consume = "consume_items: true, " if CONSUME_ITEMS else ""
                 task_lines.append(
-                    f'\t\t\t\t{{ {consume}id: "{task_hex(task_counter)}", '
+                    f'\t\t\t\t{{ {consume}id: "{ledger.get("task", item_id)}", '
                     f'item: {{ count: 1, id: "{item_id}" }}, type: "item" }}'
                 )
             quests.append(
@@ -325,11 +324,16 @@ def build() -> None:
 
     _splice_lang("\n".join(lang) + "\n")
     _ensure_group()
+    ledger.save()
 
     print(
         f"domain_compendium: {len(namespaces)} sections, "
         f"{section_counter} section quests, {total_tasks:,} item tasks "
         f"(+ root + capstone). excluded namespaces: {sorted(EXCLUDED_NAMESPACES)}"
+    )
+    print(
+        f"quest-id-ledger: {len(ledger.ids):,} bindings, "
+        f"{ledger.issued} newly issued"
     )
 
 

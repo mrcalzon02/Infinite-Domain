@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const root = path.resolve(__dirname, '..', '..')
+const root = path.resolve(__dirname, '..', '..', '..')
 const chapterFile = path.join(root, 'config', 'ftbquests', 'quests', 'chapters', 'era_01_mechanical_reconstruction.snbt')
 const langFile = path.join(root, 'config', 'ftbquests', 'quests', 'lang', 'en_us.snbt')
 const mixerQuest = '79D293B19143E993'

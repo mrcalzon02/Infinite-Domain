@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const { commandForStructure, rewardIdForQuest } = require('./quest_explorer_map_standard')
 
-const root = path.resolve(__dirname, '..')
+const root = path.resolve(__dirname, '..', '..')
 const allowAutomaticIcons = process.argv.includes('--allow-automatic-icons')
 // These one-time prologue checkmarks intentionally deliver the starter kit or
 // small conversation rations. Rewarded self-certification remains forbidden

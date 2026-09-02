@@ -322,6 +322,21 @@ class ItemOracle:
             return any(pattern.match(name) for pattern in self.kubejs_patterns)
         return False
 
+    def has_item_form(self, item_id: str) -> bool:
+        """True only if a player can hold this id - stricter than exists().
+
+        exists() also trusts ids scraped out of mod jars, and a jar can mention a
+        block id (models, tags, lang) that was never registered as an item, so
+        block-registry-only ids such as jaffabricate:orange_leaves_one slip
+        through it. An item task naming one is uncompletable - FTB Quests
+        rewrites it to ftbquests:missing_item on load - so the block registry is
+        consulted explicitly here. Callers building item tasks want this;
+        exists() stays as-is for callers asking the looser "is this id known".
+        """
+        if item_id in self.blocks and item_id not in self.registry:
+            return False
+        return self.exists(item_id)
+
     def why_missing(self, item_id: str) -> str:
         namespace = item_id.partition(":")[0]
         if item_id in self.blocks:

@@ -6,7 +6,8 @@ param(
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
-$instance = Split-Path -Parent $PSScriptRoot
+# scripts live in dev/scripts/, so the instance root is two levels up
+$instance = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $neoForgeVersion = '21.1.248'
 $installerSha256 = '68eeab77059ba53df1812f1afa5bf530ab2566a3cdcd5f924aa6e71be42e410c'
 $cacheRoot = [IO.Path]::GetFullPath((Join-Path $instance 'benchmark_runs\.launcher-cache'))

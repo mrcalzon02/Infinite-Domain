@@ -16,7 +16,8 @@ param(
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
-$instance = Split-Path -Parent $PSScriptRoot
+# scripts live in dev/scripts/, so the instance root is two levels up
+$instance = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $matrixPath = Join-Path $PSScriptRoot 'worldgen_benchmark_matrix.json'
 $analyzer = Join-Path $PSScriptRoot 'analyze_worldgen_benchmark.py'
 $serverModPolicyPath = Join-Path $PSScriptRoot 'worldgen_benchmark_server_mod_policy.json'

@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const root = path.resolve(__dirname, '..', '..')
+const root = path.resolve(__dirname, '..', '..', '..')
 const chapterDir = path.join(root, 'config', 'ftbquests', 'quests', 'chapters')
 const langFile = path.join(root, 'config', 'ftbquests', 'quests', 'lang', 'en_us.snbt')
 const recipeRoot = path.join(root, 'kubejs', 'data', 'infinite_domain', 'recipe')

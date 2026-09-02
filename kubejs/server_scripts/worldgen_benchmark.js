@@ -60,17 +60,35 @@ function worldgenBenchmarkForceloadCommand(action, dimension, bounds) {
         bounds.maxBlockX + ' ' + bounds.maxBlockZ
 }
 
-function worldgenBenchmarkAllChunksLoaded(server, dimension, bounds) {
+// KubeJS adds its own kjs$getLevel(ResourceLocation) to MinecraftServer and its
+// remapper exposes that under the plain name, so `server.getLevel(key)` leaves Rhino
+// with two candidate overloads and it refuses to choose. Rhino's explicit-signature
+// form names the vanilla ResourceKey overload directly.
+function worldgenBenchmarkResolveLevel(server, dimension) {
+    // Declared at function scope; see worldgenBenchmarkModSnapshot for why.
+    let startRegistryKeys, startResourceKey, startResourceLocation
+    let startDimensionLocation, startDimensionKey
+    startRegistryKeys = Java.loadClass('net.minecraft.core.registries.Registries')
+    startResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
+    startResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
+    startDimensionLocation = startResourceLocation.parse(String(dimension))
+    startDimensionKey = startResourceKey.create(startRegistryKeys.DIMENSION, startDimensionLocation)
+    return server['getLevel(net.minecraft.resources.ResourceKey)'](startDimensionKey)
+}
+
+// KubeJS' runCommandSilent returns void, so a command can never report whether a
+// chunk is present; the previous command form silently accepted every tile on its
+// first poll. Ask the chunk source instead: hasChunk is true only once the chunk
+// is present at full status.
+function worldgenBenchmarkLoadedChunkCount(level, bounds) {
+    const loadedChunkSource = level.getChunkSource()
+    let loadedChunkTotal = 0
     for (let loadedChunkX = bounds.minChunkX; loadedChunkX <= bounds.maxChunkX; loadedChunkX++) {
         for (let loadedChunkZ = bounds.minChunkZ; loadedChunkZ <= bounds.maxChunkZ; loadedChunkZ++) {
-            const loadedBlockX = worldgenBenchmarkChunkBlock(loadedChunkX) + 8
-            const loadedBlockZ = worldgenBenchmarkChunkBlock(loadedChunkZ) + 8
-            const loadedCommand = 'execute in ' + dimension + ' positioned ' + loadedBlockX + ' 0 ' + loadedBlockZ +
-                ' if loaded ~ ~ ~ run function infinite_domain:worldgen_benchmark/probe'
-            if (server.runCommandSilent(loadedCommand) <= 0) return false
+            if (loadedChunkSource.hasChunk(loadedChunkX, loadedChunkZ)) loadedChunkTotal++
         }
     }
-    return true
+    return loadedChunkTotal
 }
 
 function worldgenBenchmarkModSnapshot(config) {
@@ -141,26 +159,23 @@ function worldgenBenchmarkRegistrySnapshot(server, config) {
     }
 }
 
-function worldgenBenchmarkStructureStarts(server, dimension, bounds) {
+function worldgenBenchmarkStructureStarts(server, level, bounds) {
     const counts = {}
     let validStarts = 0
-    // Declared at function scope; see worldgenBenchmarkModSnapshot for why.
-    let startRegistryKeys, startResourceKey, startResourceLocation
-    let startDimensionLocation, startDimensionKey, startLevel, startStructureRegistry
+    // Declared at function scope; see worldgenBenchmarkModSnapshot for why. `starts`
+    // is declared here too: a const inside a re-entered block keeps its first value
+    // in this engine, so a const there would report chunk one sixteen times over.
+    let startStructureRegistryKeys, startStructureRegistry, starts
     try {
-        startRegistryKeys = Java.loadClass('net.minecraft.core.registries.Registries')
-        startResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
-        startResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
-        startDimensionLocation = startResourceLocation.parse(String(dimension))
-        startDimensionKey = startResourceKey.create(startRegistryKeys.DIMENSION, startDimensionLocation)
-        startLevel = server.getLevel(startDimensionKey)
-        if (startLevel === null || startLevel === undefined) throw new Error('dimension unavailable: ' + dimension)
-        startStructureRegistry = server.registryAccess().registryOrThrow(startRegistryKeys.STRUCTURE)
+        startStructureRegistryKeys = Java.loadClass('net.minecraft.core.registries.Registries')
+        startStructureRegistry = server.registryAccess().registryOrThrow(startStructureRegistryKeys.STRUCTURE)
 
         for (let startChunkX = bounds.minChunkX; startChunkX <= bounds.maxChunkX; startChunkX++) {
             for (let startChunkZ = bounds.minChunkZ; startChunkZ <= bounds.maxChunkZ; startChunkZ++) {
-                const starts = startLevel.getChunk(startChunkX, startChunkZ).getAllStarts()
-                starts.forEach((start, structure) => {
+                starts = level.getChunk(startChunkX, startChunkZ).getAllStarts()
+                // getAllStarts() is Map<Structure, StructureStart> and Java's
+                // Map.forEach supplies (key, value): the structure, then its start.
+                starts.forEach((structure, start) => {
                     if (start === null || start === undefined || !start.isValid()) return
                     const startKey = startStructureRegistry.getKey(structure)
                     if (startKey === null || startKey === undefined) return
@@ -207,8 +222,22 @@ function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
         return
     }
 
+    var tileLevel = null
+    var tileLevelError = null
+    try {
+        tileLevel = worldgenBenchmarkResolveLevel(server, dimension)
+    } catch (error) {
+        tileLevelError = String(error)
+    }
+    if (tileLevel === null || tileLevel === undefined) {
+        worldgenBenchmarkFail(server, config, 'dimension_unavailable',
+            'Could not resolve the tile dimension for runtime acceptance probes.',
+            dimension + (tileLevelError === null ? '' : ' ' + tileLevelError))
+        return
+    }
+
     var startedAtMs = Date.now()
-    var addResult = server.runCommandSilent(worldgenBenchmarkForceloadCommand('add', dimension, bounds))
+    server.runCommandSilent(worldgenBenchmarkForceloadCommand('add', dimension, bounds))
     worldgenBenchmarkLog({
         event: 'tile_started',
         runId: String(config.runId),
@@ -219,8 +248,7 @@ function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
         minChunkX: bounds.minChunkX,
         minChunkZ: bounds.minChunkZ,
         maxChunkX: bounds.maxChunkX,
-        maxChunkZ: bounds.maxChunkZ,
-        forceloadResult: addResult
+        maxChunkZ: bounds.maxChunkZ
     })
 
     var timeoutMs = Number(config.tileTimeoutSeconds) * 1000
@@ -231,17 +259,19 @@ function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
         if (!WorldgenBenchmark.active) return
         polls++
         var elapsedMs = Date.now() - startedAtMs
+        var tileLoadedChunks = worldgenBenchmarkLoadedChunkCount(tileLevel, bounds)
         if (elapsedMs > timeoutMs) {
             server.runCommandSilent(worldgenBenchmarkForceloadCommand('remove', dimension, bounds))
-            worldgenBenchmarkFail(server, config, 'tile_timeout', 'Tile generation exceeded its timeout.', String(tile.name))
+            worldgenBenchmarkFail(server, config, 'tile_timeout', 'Tile generation exceeded its timeout.',
+                String(tile.name) + ' loaded ' + tileLoadedChunks + '/' + bounds.chunks)
             return
         }
-        if (!worldgenBenchmarkAllChunksLoaded(server, dimension, bounds)) {
+        if (tileLoadedChunks < bounds.chunks) {
             server.scheduleInTicks(pollIntervalTicks, poll)
             return
         }
 
-        var structureStarts = worldgenBenchmarkStructureStarts(server, dimension, bounds)
+        var structureStarts = worldgenBenchmarkStructureStarts(server, tileLevel, bounds)
         if (!structureStarts.ok) {
             worldgenBenchmarkLog({
                 event: 'acceptance_probe_error',
@@ -265,6 +295,7 @@ function worldgenBenchmarkRunTile(server, config, state, tileIndex) {
             elapsedMs: elapsedMs,
             chunksPerSecond: elapsedMs > 0 ? bounds.chunks * 1000.0 / elapsedMs : 0,
             polls: polls,
+            loadedChunks: tileLoadedChunks,
             validStructureStarts: Number(structureStarts.validStarts),
             structureStartsByNamespace: structureStarts.byNamespace
         })

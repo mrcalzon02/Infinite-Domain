@@ -64,7 +64,7 @@ function appendReward(block, reward) {
   return block.slice(0, close) + separator + reward + '\n\t\t\t' + block.slice(close)
 }
 
-function enforce(root = path.resolve(__dirname, '..')) {
+function enforce(root = path.resolve(__dirname, '..', '..')) {
   const chapterDir = path.join(root, 'config', 'ftbquests', 'quests', 'chapters')
   const files = fs.readdirSync(chapterDir).filter(file => file.endsWith('.snbt')).sort()
   const chapters = new Map()

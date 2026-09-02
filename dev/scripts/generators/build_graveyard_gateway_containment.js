@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const { commandForStructure, rewardIdForQuest } = require('../quest_explorer_map_standard')
 
-const root = path.resolve(__dirname, '..', '..')
+const root = path.resolve(__dirname, '..', '..', '..')
 const questRoot = path.join(root, 'config', 'ftbquests', 'quests')
 const chapterFile = path.join(questRoot, 'chapters', 'graveyard_gateway_containment.snbt')
 const langFile = path.join(questRoot, 'lang', 'en_us.snbt')
