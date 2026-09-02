@@ -4,6 +4,7 @@
 	filename: "sustenance_medicine_habitation"
 	group: "4E65FAAC62D57D4A"
 	id: "1B7E40C69A25D8F3"
+	name: "Sustenance, Medicine and Habitation"
 	images: [ ]
 	order_index: 0
 	quest_links: [ ]
@@ -11,6 +12,7 @@
 		{
 			dependencies: ["3AFBE38263D3351E"]
 			id: "5C00000000000001"
+			name: "Plains Survey"
 			shape: "diamond"
 			tasks: [{
 				biome: "minecraft:plains"
@@ -23,6 +25,7 @@
 		{
 			dependencies: ["5C00000000000001"]
 			id: "5C00000000000002"
+			name: "Seed Reserve"
 			shape: "gear"
 			tasks: [{
 				count: 64L
@@ -36,6 +39,7 @@
 		{
 			dependencies: ["5C00000000000002"]
 			id: "5C00000000000003"
+			name: "Rich Soil Cultivation"
 			rewards: [{
 				id: "7C00000000000003"
 				item: {
@@ -57,6 +61,7 @@
 		{
 			dependencies: ["5C00000000000003"]
 			id: "5C00000000000004"
+			name: "Swamp Survey"
 			rewards: [{
 				id: "6AB28E1DB302DE8D"
 				item: {
@@ -77,6 +82,7 @@
 		{
 			dependencies: ["5C00000000000004"]
 			id: "5C00000000000005"
+			name: "Cooking Pot"
 			shape: "gear"
 			tasks: [{
 				id: "6C00000000000005"
@@ -89,6 +95,7 @@
 		{
 			dependencies: ["5C00000000000005"]
 			id: "5C00000000000006"
+			name: "Soup Stockpile"
 			rewards: [{
 				id: "7C00000000000006"
 				item: {
@@ -110,6 +117,7 @@
 		{
 			dependencies: ["5C00000000000006"]
 			id: "5C00000000000007"
+			name: "Jungle Survey"
 			shape: "diamond"
 			tasks: [{
 				biome: "minecraft:jungle"
@@ -122,6 +130,7 @@
 		{
 			dependencies: ["5C00000000000007"]
 			id: "5C00000000000008"
+			name: "Grape Cultivation"
 			rewards: [{
 				id: "6A52995634E48B14"
 				item: {
@@ -143,6 +152,7 @@
 		{
 			dependencies: ["5C00000000000008"]
 			id: "5C00000000000009"
+			name: "Brewer's Yeast Reserve"
 			rewards: [{
 				id: "7C00000000000009"
 				item: {
@@ -164,6 +174,7 @@
 		{
 			dependencies: ["5C00000000000009"]
 			id: "5C0000000000000A"
+			name: "Wasteland Forest Survey"
 			shape: "diamond"
 			tasks: [{
 				biome: "wastelands:forest"
@@ -176,6 +187,7 @@
 		{
 			dependencies: ["5C0000000000000A"]
 			id: "5C0000000000000B"
+			name: "Rad-Away Reserve"
 			rewards: [{
 				id: "6A457D9A1357D256"
 				item: {
@@ -197,6 +209,7 @@
 		{
 			dependencies: ["5C0000000000000B"]
 			id: "5C0000000000000C"
+			name: "Habitation Bedding"
 			rewards: [{
 				id: "7C0000000000000C"
 				item: {
