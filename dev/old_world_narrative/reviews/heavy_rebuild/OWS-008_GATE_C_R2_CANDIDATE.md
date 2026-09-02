@@ -1,43 +1,74 @@
-# OWS-008 Gate C r2 — Repaired Damage-State Candidate Preparation
+# [SYSTEM REPORT] OWS-008 Gate C r2 — Damage-State Candidate Ready
 
 **Target:** OWS-008 — Emergency Investigation & Persistence Lab  
-**Procedure authority:** `docs/HEAVY_REBUILD_DOCTRINE.md`  
-**Planned artifact:** `old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_c_damage_states/r2/gate_c_manifest.json`  
-**Renderer:** `scripts/render_ows008_gate_c_damage_states.py`  
+**Procedure authority:** `docs/HEAVY_REBUILD_DOCTRINE.md` at recorded procedure revision `2b6fa9637771f059b65a4bd095c876036ff2f7cd`  
+**Planned artifact:** `dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-008/gate_c_damage_states/r2/gate_c_manifest.json`  
+**Renderer:** `dev/scripts/render_ows008_gate_c_damage_states.py`  
 **Fixed camera set:** `ows008_fixed_v1`  
-**Status:** **BLOCKED — explicit Gate-B r2 PASSED review required**
+**Status:** **READY TO RENDER / INDEPENDENT GATE-C REVIEW REQUIRED**
 
-## Prepared state chain
+## Authorization evidence
 
-The r2 renderer is configured to refuse execution until
-`OWS-008_GATE_B_R2_REVIEW.md` explicitly records `OWS-008 GATE B r2: PASSED`.
-Once authorized, it builds D0 from that exact repaired Gate-B model and reapplies
-the accepted r1 D1 investigation and D3 causal-ruin operations without moving or
-broadening them.
+Gate-B r2 is no longer a blocker. The authoritative review record at
+`dev/old_world_narrative/reviews/heavy_rebuild/OWS-008_GATE_B_R2_REVIEW.md`
+records **OWS-008 GATE B R2: PASSED** for review-model SHA-256
+`52a259170466c30e9d015b56b79a175962cabde352654f0f302e153a40201b86`.
 
-Prepared candidate hashes in the fixed review runtime are:
+Passes 13–18 are present and individually marked complete for Gate-C implementation:
 
-- D0: `642b1e986952140d997b2bbd66c4596d3c1f958b91397672ca47f6b9711500e8`;
-- D1: `1a2abce5b4c9bd30bb24c67073602b648ea70cc8ac1066a99c17b2522dfb650c`;
-- D3: `d451e9bcdd00a4937d02011da18a1a8cdf95bb541a1339f5b167486e6828e000`.
+- Pass 13 — historical layering;
+- Pass 14 — environmental narrative;
+- Pass 15 — encounter architecture;
+- Pass 16 — loot architecture;
+- Pass 17 — quest-proof architecture;
+- Pass 18 — damage and decay.
 
-Their decompressed SHA-256 values are respectively
-`d36bbc75d40e18dfb9c975dd1a1f97d69eff7ffd16bb4e3f2a7bfeba263d5c35`,
-`bf6d57ac01c04b79732cbaf7b4ed2c90f0571f68f781d132c281e6b6e309d5b6`
-and `d7009ddd9760953b9b875c53b7bc0cfb962eacc1adc544c1dc78c14fbb304a88`.
-D1/D0 and D3/D0 named-position deltas remain 326 and 696 because the eight-cell
-route repair is present identically in every state.
+The Gate-C renderer is already implemented as a review-only D0/D1/D3 chain. It
+refuses to write shared state or authoritative shipping NBT and carries explicit
+contracts for the accepted Gate-B source, the canonical proof table/item, the
+secure archive proof position, and the three bounded D3 encounter sources.
 
-## Frozen history to re-review
+## State chain to review
 
-The independent reviewer must verify the same fixed-camera D0/D1/D3 progression:
-professional diagnostic collars and bypasses; the rear joint/drain and Cell-D
-recurrence path; localized rear/east failures with landed debris; public/clean
-preservation; one upper archive proof node; three bounded encounters; and the
-restrained fungal/moisture footprint. The repaired stair and proof route must
-remain intact in every state.
+- **D0:** exact repaired Gate-B r2 intact operating model; no proof loot,
+  encounters, abandonment damage or recurrence dressing.
+- **D1:** competent professional escalation: cell-aligned inspection collars,
+  concealed-joint comparison stations, continuous filter watch and the overhead
+  diagnostic bypass. No proof node, spawners or abandonment damage.
+- **D3:** long-abandoned recurrence following the investigated penetration/drain
+  path; localized rear/east roof corrosion and water ingress; debris below the
+  failed bay; restrained fungal/moisture occupation; one canonical archive proof
+  node; three bounded encounter sources.
 
-Gate-C r1 approval does not approve these repaired bytes. Gate D r2 remains
-blocked until Gate C r2 is rendered and independently passed.
+D2 remains intentionally omitted because there is no separate blast, acute
+collapse, or materially distinct causal phase between investigation escalation
+and long abandonment.
 
-**OWS-008 GATE C r2: BLOCKED ON GATE B r2.**
+## Frozen preservation contract
+
+The Gate-C candidate must retain:
+
+1. the accepted 55 x 22 x 49 envelope and Gate-B massing hierarchy;
+2. public, staff, treatment-cell and rear-service circulation;
+3. all pressure thresholds and the repaired west command/archive stair;
+4. the upper secure-proof approach;
+5. recognizable Cells A–D, treatment machinery and rear service anatomy;
+6. VCF identity beneath emergency containment markings;
+7. physically causal damage with supported remaining structure and landed debris;
+8. exactly one canonical proof node in D3 and zero in D0/D1;
+9. exactly three bounded D3 encounter sources and zero in D0/D1;
+10. no mutation of authoritative shipping NBT during visual review.
+
+## Required execution and decision
+
+Run `dev/scripts/render_ows008_gate_c_damage_states.py` in the repository runtime,
+persist the fixed-camera D0/D1/D3 artifact bundle, inspect the actual contact
+sheet and individual views, then write an explicit independent review decision.
+Static contracts may reject an invalid candidate, but they must not auto-approve
+Gate C.
+
+A passed Gate C still does **not** establish runtime placement, Lost Cities
+coexistence, terrain seating, door/collision behavior, shipping-NBT equivalence,
+or production admission. Those remain later verified gates.
+
+**OWS-008 GATE C r2: READY TO RENDER / REVIEW NEEDED.**
