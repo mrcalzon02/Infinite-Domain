@@ -4,12 +4,14 @@
 	filename: "abyssal_recovery"
 	group: "4D9B7E21A6C850F3"
 	id: "7AB0550C00000001"
+	icon: "minecraft:heart_of_the_sea"
 	images: [ ]
 	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["5E00000000000006"]
+			icon: "minecraft:compass"
 			id: "5AB0550C00000001"
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_survey_wreck 2"
@@ -30,6 +32,7 @@
 		}
 		{
 			dependencies: ["5AB0550C00000001"]
+			icon: "minecraft:spyglass"
 			id: "5AB0550C00000002"
 			shape: "diamond"
 			tasks: [{
@@ -42,6 +45,7 @@
 		}
 		{
 			dependencies: ["5AB0550C00000002"]
+			icon: "minecraft:recovery_compass"
 			id: "5AB0550C00000003"
 			rewards: [{
 				id: "7EB0550C00000003"
@@ -69,6 +73,7 @@
 		}
 		{
 			dependencies: ["5E00000000000006"]
+			icon: "minecraft:compass"
 			id: "5AB0550C00000004"
 			rewards: [
 				{
@@ -99,6 +104,7 @@
 		}
 		{
 			dependencies: ["5AB0550C00000004"]
+			icon: "minecraft:spyglass"
 			id: "5AB0550C00000005"
 			shape: "diamond"
 			tasks: [{
@@ -111,6 +117,7 @@
 		}
 		{
 			dependencies: ["5AB0550C00000005"]
+			icon: "minecraft:recovery_compass"
 			id: "5AB0550C00000006"
 			rewards: [{
 				id: "7EB0550C00000006"
@@ -141,6 +148,7 @@
 				"5AB0550C00000003"
 				"5AB0550C00000006"
 			]
+			icon: "minecraft:cartography_table"
 			id: "5AB0550C00000007"
 			rewards: [{
 				count: 2
@@ -169,6 +177,7 @@
 		}
 		{
 			dependencies: ["5AB0550C00000007"]
+			icon: "minecraft:prismarine_shard"
 			id: "5AB0550C00000008"
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_abyssal_relay 2"
@@ -189,6 +198,7 @@
 		}
 		{
 			dependencies: ["5AB0550C00000008"]
+			icon: "minecraft:prismarine_crystals"
 			id: "5AB0550C00000009"
 			rewards: [
 				{
@@ -219,6 +229,7 @@
 		}
 		{
 			dependencies: ["5AB0550C00000009"]
+			icon: "minecraft:echo_shard"
 			id: "5AB0550C0000000A"
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/pelagos_hadal_probe_station 2"
@@ -246,6 +257,7 @@
 		}
 		{
 			dependencies: ["5AB0550C0000000A"]
+			icon: "minecraft:nautilus_shell"
 			id: "5AB0550C0000000B"
 			rewards: [{
 				count: 2
@@ -274,6 +286,7 @@
 		}
 		{
 			dependencies: ["5AB0550C00000007"]
+			icon: "minecraft:iron_ingot"
 			id: "5AB0550C0000000C"
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map infinite_domain:abyssal/karsic_abyssal_pipeline_station 2"
@@ -294,6 +307,7 @@
 		}
 		{
 			dependencies: ["5AB0550C0000000C"]
+			icon: "minecraft:redstone"
 			id: "5AB0550C0000000D"
 			rewards: [
 				{
@@ -317,13 +331,14 @@
 			tasks: [{
 				id: "6AB0550C00000012"
 				structure: "infinite_domain:abyssal/karsic_abyssal_pipeline_station"
-				type: "structure"
+					 type: "structure"
 			}]
 			x: 6.0d
 			y: 10.0d
 		}
 		{
 			dependencies: ["5AB0550C0000000D"]
+			icon: "minecraft:echo_shard"
 			id: "5AB0550C0000000E"
 			rewards: [
 				{
@@ -361,6 +376,7 @@
 		}
 		{
 			dependencies: ["5AB0550C0000000E"]
+			icon: "minecraft:sculk_sensor"
 			id: "5AB0550C0000000F"
 			rewards: [{
 				count: 2
@@ -392,6 +408,7 @@
 				"5AB0550C0000000B"
 				"5AB0550C0000000F"
 			]
+			icon: "minecraft:heart_of_the_sea"
 			id: "5AB0550C00000010"
 			rewards: [{
 				count: 4
