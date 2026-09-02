@@ -127,6 +127,16 @@ Two candidates are measured out, which matters because both would have implied t
 
 The remaining candidates inside the block are the biome, placed-feature and structure registry decode (the Isekai scan reports 577 placed features and 483 structure placements), the per-generator feature sort, and per-dimension construction across the ~15 dimensions the pack defines. Separating those needs a profiler; log-derived attribution has already been wrong twice here.
 
+### `optimizedHeightmap` is not a win, and how the session nearly said it was (2026-09-02)
+
+Run the variants **interleaved**, never in blocks. This machine drifts faster as a session goes on — six runs in time order gave `spawnPrepMs` 51.2, 45.1, 44.8, 39.9, 43.8, 41.3 s, about 20% end to end, which is far larger than the effect being looked for.
+
+Three baselines followed by three `optimized_heightmap` runs made the variant look 11.6% faster on `spawnPrepMs` and below the baseline minimum. It was drift. The tell was that `levelPrepMs` improved by a similar 9% in the same runs, and `optimizedHeightmap` is a Lost Cities chunk-generation setting that cannot affect dimension construction. When an unrelated metric moves with the one under test, suspect the machine.
+
+The drift-controlled comparison is a single adjacent pair: `optimized_heightmap` at 09:12 gave 43,751 ms, `baseline` at 09:21 gave 41,263 ms — the **baseline 5.7% faster than the variant**. Pooled ranges overlap completely (baseline 41.3–51.2 s, variant 39.9–43.8 s). There is no measurable benefit, so the setting stays `false` and the pack avoids Lost Cities' own warning that it "might not be 100% compatible with some other terrain generation mods" — which matters here, given custom noise settings, custom density functions and an `isekai_api` biome source.
+
+This is what interpretation rule 2 is for. Honour it: baseline, variant, baseline.
+
 ### The `avoidStructures` list is not a per-chunk cost
 
 `config/lostcities-server.toml` lists 74 structures to keep cities away from, and 44 of the 69 `infinite_domain` entries name structures that appear in no `structure_set` and therefore cannot generate at all. That looks like an obvious pruning target and is not one.
@@ -140,6 +150,20 @@ What *does* scale in this path is `avoidStructuresAdjacent`, which multiplies th
 Both are durations only. The spawn area's chunk count is deliberately not inferred: `LoggerChunkProgressListener` throttles its progress lines, so the log cannot support a chunks-per-second figure.
 
 Read them together. They measure unrelated work — data loading and chunk generation — so a change that inflates both by a similar proportion is machine contention, not a worldgen result. A run during concurrent analysis on this machine showed `levelPrepMs` 281.8 s with `spawnPrepMs` 70.1 s, both about 55% above baseline: nothing to do with the pack. Run benchmarks with the machine otherwise idle.
+
+## Run time and the hard cap
+
+A smoke run on this pack takes about **7 minutes** — roughly 2 for mod loading, 3 for dimension construction, 1 for generation, plus staging and shutdown. Budget accordingly: three repetitions is a little over 20 minutes, and the six-run comparison above took 45.
+
+Every run is bounded by `-RunTimeoutMinutes` (default 25). The server is started detached and waited on with that deadline; on expiry it is killed, the run throws, the batch stops, and the runtime is kept for diagnosis. Before this existed the only timeout was `tileTimeoutSeconds` inside the KubeJS controller, which protects a run that already reached chunk generation and does nothing for a JVM that wedges during mod loading or the three-minute construction block — that run would have held the batch indefinitely.
+
+Two notes for anyone editing that launch path. `Start-Process -PassThru` on Windows PowerShell 5.1 returns a process whose `ExitCode` stays `$null` even after `WaitForExit`, so `EnableRaisingEvents` must be set before the process exits or every run fails with `exited with code .`; and `Start-Process` cannot merge both streams into one file, so stderr lands in `server-console.err.log` and is appended to `server-console.log` afterwards.
+
+A run killed by the cap, or failed by a launcher bug, may still have produced a complete `latest.log`. Check for the `benchmark_completed` marker and re-run the analyzer against it before discarding the run:
+
+```powershell
+python .\dev\scripts\analyze_worldgen_benchmark.py analyze --log <run>\latest.log --manifest <run>\manifest.json --output <run>\result.json
+```
 
 ## Interpretation rules
 

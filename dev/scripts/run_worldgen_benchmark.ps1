@@ -473,6 +473,13 @@ white-list=true
         -RedirectStandardError $consoleErrorLog `
         -NoNewWindow -PassThru
 
+    # Windows PowerShell 5.1 returns a Process from Start-Process -PassThru whose
+    # ExitCode stays $null even after WaitForExit, because it does not enable
+    # process exit events. Setting this before the process exits makes the exit
+    # code readable; without it every run fails with "exited with code ." since
+    # $null -ne 0. Verified against a child returning a known non-zero code.
+    $serverProcess.EnableRaisingEvents = $true
+
     $runTimeoutMs = $RunTimeoutMinutes * 60 * 1000
     if (-not $serverProcess.WaitForExit($runTimeoutMs)) {
         try { Stop-Process -Id $serverProcess.Id -Force -ErrorAction Stop } catch {
