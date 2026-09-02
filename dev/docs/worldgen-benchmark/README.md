@@ -125,7 +125,17 @@ Two candidates are measured out, which matters because both would have implied t
 - **Not the Lost Cities asset registries.** They are by far the largest body of worldgen data the pack ships — 15,349 JSON files, 12,550 of them `parts`, about 69 MB. The `no_lostcities_assets` variant removes all of it, and both repetitions came in **above** the baseline band rather than below it: `levelPrepMs` 186.4 s and 192.0 s against a 177.1–183.6 s baseline, with `spawnPrepMs` mid-band at 45.1 s and 46.8 s. Removing the pack's largest body of custom worldgen data buys nothing. Do not infer otherwise from log ordering — with the assets gone, the Sable overworld line moves to within 16 ms of `Preparing level` and the silent block simply relocates after it, which looks like a win and is not one.
 - **Not dead or unreferenced data.** Every one of the 12,550 `parts` is reachable from a building, multibuilding or citystyle; the orphan count is zero. Three `structure_set` files do carry an empty `structures` list (`hive_world_district`, `deep_sea/akula_wreck_aft`, `deep_sea/akula_wreck_forward`), but a set with no structures is dropped from `possibleStructureSets` before generation, so they cost nothing at runtime and are left in place.
 
-The remaining candidates inside the block are the biome, placed-feature and structure registry decode (the Isekai scan reports 577 placed features and 483 structure placements), the per-generator feature sort, and per-dimension construction across the ~15 dimensions the pack defines. Separating those needs a profiler; log-derived attribution has already been wrong once here.
+The remaining candidates inside the block are the biome, placed-feature and structure registry decode (the Isekai scan reports 577 placed features and 483 structure placements), the per-generator feature sort, and per-dimension construction across the ~15 dimensions the pack defines. Separating those needs a profiler; log-derived attribution has already been wrong twice here.
+
+### The `avoidStructures` list is not a per-chunk cost
+
+`config/lostcities-server.toml` lists 74 structures to keep cities away from, and 44 of the 69 `infinite_domain` entries name structures that appear in no `structure_set` and therefore cannot generate at all. That looks like an obvious pruning target and is not one.
+
+Lost Cities holds the list as a `HashSet<ResourceLocation>` (`Config.cacheAvoidedStructures`) and `StructureAvoidance` walks the structures *actually referenced in a chunk* — the `Map.Entry<Structure, LongSet>` from `getChunkWithStructureReferences` — testing each against that set, behind a `ConcurrentMap<FootprintKey, FootprintDecision>` cache. Cost is therefore O(structures present), with an O(1) lookup each, and is **independent of how long the list is**. Adding or removing entries changes nothing measurable.
+
+Keep the inert 44. They are correct forward declarations: those structures not generating is a separate known defect, and pruning the list would silently drop protection that has to apply once that defect is fixed.
+
+What *does* scale in this path is `avoidStructuresAdjacent`, which multiplies the chunk-reference lookups by nine. The `no_adjacent_avoidance` variant measures that, but it is diagnostic only — turning it off lets cities overlap the Old World sites the list exists to protect.
 
 Both are durations only. The spawn area's chunk count is deliberately not inferred: `LoggerChunkProgressListener` throttles its progress lines, so the log cannot support a chunks-per-second figure.
 

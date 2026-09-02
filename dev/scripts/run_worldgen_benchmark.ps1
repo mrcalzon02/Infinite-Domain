@@ -9,6 +9,12 @@ param(
     [int]$Repetitions = 1,
     [ValidateRange(4, 32)]
     [int]$MaxHeapGiB = 8,
+    # Hard wall-clock cap per run. A smoke run on this pack takes about 7 minutes
+    # (roughly 2 for mod loading, 3 for dimension construction, 1 for generation),
+    # so 25 leaves generous headroom for the standard suite while still bounding a
+    # wedged JVM. Raise it for long suites rather than removing the gate.
+    [ValidateRange(2, 180)]
+    [int]$RunTimeoutMinutes = 25,
     [string]$BatchId = '',
     [string]$ServerLauncherRoot = '',
     [switch]$ValidateLauncher,
@@ -450,14 +456,39 @@ white-list=true
     )
     $argumentFile = '@' + $launcher.argumentRelative
 
-    Write-Host "Starting fixed-seed benchmark $runId ..."
+    Write-Host "Starting fixed-seed benchmark $runId (hard cap ${RunTimeoutMinutes}m) ..."
     $consoleLog = Join-Path $runRoot 'server-console.log'
-    Push-Location $runtime
-    try {
-        & $launcher.java @jvmArgs $argumentFile 'nogui' 2>&1 | Tee-Object -FilePath $consoleLog
-        $serverExitCode = $LASTEXITCODE
-    } finally {
-        Pop-Location
+    $consoleErrorLog = Join-Path $runRoot 'server-console.err.log'
+
+    # The server is launched detached and waited on with a deadline. It used to be
+    # invoked as `& java ... | Tee-Object`, which blocks with no timeout at all:
+    # the tileTimeoutSeconds gate lives inside the KubeJS controller, so it only
+    # protects a run that reached chunk generation. A JVM that wedges earlier -
+    # during mod loading or the ~3 minute dimension-construction block - was never
+    # bounded by anything and would hold the batch indefinitely.
+    $serverProcess = Start-Process -FilePath $launcher.java `
+        -ArgumentList (@($jvmArgs) + @($argumentFile, 'nogui')) `
+        -WorkingDirectory $runtime `
+        -RedirectStandardOutput $consoleLog `
+        -RedirectStandardError $consoleErrorLog `
+        -NoNewWindow -PassThru
+
+    $runTimeoutMs = $RunTimeoutMinutes * 60 * 1000
+    if (-not $serverProcess.WaitForExit($runTimeoutMs)) {
+        try { Stop-Process -Id $serverProcess.Id -Force -ErrorAction Stop } catch {
+            Write-Warning "Could not kill benchmark server PID $($serverProcess.Id): $_"
+        }
+        # Give the kill a moment so the exit code below is readable.
+        $serverProcess.WaitForExit(15000) | Out-Null
+        throw "Benchmark server for $runId exceeded the ${RunTimeoutMinutes}-minute hard cap and was killed. Inspect $consoleLog and $(Join-Path $runtime 'logs\latest.log'); runtime retained at $runtime"
+    }
+    $serverExitCode = $serverProcess.ExitCode
+
+    # Start-Process cannot merge the two streams into one file, so fold stderr
+    # back into the console log that the existing diagnosis flow reads.
+    if ((Test-Path -LiteralPath $consoleErrorLog) -and (Get-Item -LiteralPath $consoleErrorLog).Length -gt 0) {
+        Add-Content -LiteralPath $consoleLog -Value "--- stderr ---"
+        Get-Content -LiteralPath $consoleErrorLog | Add-Content -LiteralPath $consoleLog
     }
 
     $latestLog = Join-Path $runtime 'logs\latest.log'
