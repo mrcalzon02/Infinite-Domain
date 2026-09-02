@@ -4,13 +4,17 @@
 	filename: "spawn_exchange"
 	group: "6F2A9C4D8E1B7305"
 	id: "6CFF000000000001"
+	name: "Spawn Exchange"
+	icon: "numismatics:bevel"
 	images: [ ]
 	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["7D194089522507AB"]
+			icon: "minecraft:torch"
 			id: "6E01000000000001"
+			name: "Quartermaster — Lost Survivors"
 			optional: true
 			tasks: [{
 				id: "6E02000000000001"
@@ -21,7 +25,9 @@
 		}
 		{
 			dependencies: ["37553E8B6284E8E2"]
+			icon: "create:shaft"
 			id: "6E01000000000002"
+			name: "Mechanist — Mechanical Reconstruction"
 			optional: true
 			tasks: [{
 				id: "6E02000000000002"
@@ -32,7 +38,9 @@
 		}
 		{
 			dependencies: ["4FC0C1C678C71891"]
+			icon: "minecraft:iron_ingot"
 			id: "6E01000000000003"
+			name: "Foundry Broker — Heavy Industry"
 			optional: true
 			tasks: [{
 				id: "6E02000000000003"
@@ -43,7 +51,9 @@
 		}
 		{
 			dependencies: ["5210000000000002"]
+			icon: "minecraft:glass_bottle"
 			id: "6E01000000000004"
+			name: "Chemical Cooperative — Petrochemical Civilization"
 			optional: true
 			tasks: [{
 				id: "6E02000000000004"
@@ -54,7 +64,9 @@
 		}
 		{
 			dependencies: ["5310000000000002"]
+			icon: "minecraft:redstone"
 			id: "6E01000000000005"
+			name: "Grid Supply — The Electrical Grid"
 			optional: true
 			tasks: [{
 				id: "6E02000000000005"
@@ -65,7 +77,9 @@
 		}
 		{
 			dependencies: ["5410000000000002"]
+			icon: "minecraft:comparator"
 			id: "6E01000000000006"
+			name: "Systems Exchange — Automated Industry"
 			optional: true
 			tasks: [{
 				id: "6E02000000000006"
@@ -76,7 +90,9 @@
 		}
 		{
 			dependencies: ["5510000000000002"]
+			icon: "minecraft:golden_apple"
 			id: "6E01000000000007"
+			name: "Containment Office — High Energy Engineering"
 			optional: true
 			tasks: [{
 				id: "6E02000000000007"
@@ -87,7 +103,9 @@
 		}
 		{
 			dependencies: ["5610000000000002"]
+			icon: "minecraft:iron_chestplate"
 			id: "6E01000000000008"
+			name: "Expedition Exchange — Orbital Industry"
 			optional: true
 			tasks: [{
 				id: "6E02000000000008"
@@ -98,7 +116,9 @@
 		}
 		{
 			dependencies: ["5510000000000002"]
+			icon: "minecraft:repeater"
 			id: "6E01000000000009"
+			name: "Cybernetics Exchange - Automated Clinic"
 			optional: true
 			tasks: [{
 				id: "6E02000000000009"
