@@ -243,7 +243,7 @@ def _assert_contracts(t: base.Template) -> None:
         (4, 7, 7): "minecraft:orange_concrete",          # Cell 01 frame
         (15, 9, 7): "minecraft:orange_concrete",         # Cell 02 frame
         (26, 8, 7): "minecraft:orange_concrete",         # Cell 03 frame
-        (38, 4, 7): "create:framed_glass",               # customer bar
+        (37, 4, 7): "create:framed_glass",               # customer bar retained glazing
         (43, 4, 23): "minecraft:air",                    # parts receiving threshold
         (40, 8, 28): "create:framed_glass",              # records/proof adjacency
         (39, 4, 34): "minecraft:air",                    # distinct core-return threshold
