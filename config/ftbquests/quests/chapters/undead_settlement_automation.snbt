@@ -4,12 +4,14 @@
 	filename: "undead_settlement_automation"
 	group: "4E65FAAC62D57D4A"
 	id: "1C7E40C69A25D8F4"
+	icon: "zombievillage:soul_well"
 	images: [ ]
 	order_index: 2
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["5510000000000001"]
+			icon: "zombievillage:soul_well"
 			id: "5D10000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -22,6 +24,7 @@
 		}
 		{
 			dependencies: ["5D10000000000001"]
+			icon: "zombievillage:village_stone"
 			id: "5D10000000000002"
 			shape: "gear"
 			tasks: [{
@@ -34,6 +37,7 @@
 		}
 		{
 			dependencies: ["5D10000000000002"]
+			icon: "zvhouses:blueprint"
 			id: "5D10000000000003"
 			shape: "gear"
 			tasks: [{
@@ -47,6 +51,7 @@
 		}
 		{
 			dependencies: ["5D10000000000003"]
+			icon: "zvhouses:cottage_blueprint"
 			id: "5D10000000000004"
 			rewards: [{
 				id: "6ADF1C60E90308EE"
@@ -67,6 +72,7 @@
 		}
 		{
 			dependencies: ["5D10000000000004"]
+			icon: "zvhouses:farm_blueprint"
 			id: "5D10000000000005"
 			shape: "heart"
 			tasks: [
@@ -86,6 +92,7 @@
 		}
 		{
 			dependencies: ["5D10000000000005"]
+			icon: "zvhouses:blacksmith_blueprint"
 			id: "5D10000000000006"
 			shape: "gear"
 			tasks: [
@@ -105,6 +112,7 @@
 		}
 		{
 			dependencies: ["5D10000000000006"]
+			icon: "zvhouses:warehouse_ofp_blueprint"
 			id: "5D10000000000007"
 			rewards: [{
 				id: "6A6C3A00B4693F61"
@@ -133,6 +141,7 @@
 		}
 		{
 			dependencies: ["5D10000000000007"]
+			icon: "zombievillage:soul_interface"
 			id: "5D10000000000008"
 			rewards: [{
 				id: "7D10000000000001"
@@ -157,6 +166,7 @@
 				"5D10000000000008"
 				"5610000000000001"
 			]
+			icon: "zvhouses:stairs_ybr_blueprint"
 			id: "5D10000000000009"
 			shape: "gear"
 			tasks: [{
@@ -169,6 +179,7 @@
 		}
 		{
 			dependencies: ["5D10000000000009"]
+			icon: "zvhouses:large_dorm_d_ofp_blueprint"
 			id: "5D1000000000000A"
 			shape: "diamond"
 			tasks: [{
@@ -181,6 +192,7 @@
 		}
 		{
 			dependencies: ["5D1000000000000A"]
+			icon: "zvhouses:library_ofp_blueprint"
 			id: "5D1000000000000B"
 			rewards: [{
 				id: "6AAA0355802969C7"
@@ -201,6 +213,7 @@
 		}
 		{
 			dependencies: ["5D1000000000000B"]
+			icon: "zvhouses:barracks_ofp_blueprint"
 			id: "5D1000000000000C"
 			shape: "gear"
 			tasks: [{
@@ -213,6 +226,7 @@
 		}
 		{
 			dependencies: ["5D1000000000000C"]
+			icon: "zvhouses:townhall_d_ofp_blueprint"
 			id: "5D1000000000000D"
 			rewards: [{
 				id: "7D10000000000002"
@@ -236,6 +250,7 @@
 				"5D1000000000000D"
 				"5710000000000001"
 			]
+			icon: "zombievillage:soul_gate"
 			id: "5D1000000000000E"
 			shape: "octagon"
 			tasks: [{
@@ -248,6 +263,7 @@
 		}
 		{
 			dependencies: ["5D1000000000000E"]
+			icon: "zombievillage:soul_gate"
 			id: "5D1000000000000F"
 			rewards: [{
 				id: "6AA70A9820BAEF0C"
@@ -277,6 +293,7 @@
 		}
 		{
 			dependencies: ["5D1000000000000F"]
+			icon: "zvhouses:townhall_d_ofp_blueprint"
 			id: "5D10000000000010"
 			rewards: [{
 				id: "7D10000000000003"
