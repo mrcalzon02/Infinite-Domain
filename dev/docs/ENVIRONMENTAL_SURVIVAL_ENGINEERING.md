@@ -17,9 +17,20 @@ EnviroMine's `hot_coal_ore` / `deepslate_hot_coal_ore` features are the only sou
 Pack fix, deepslate layer only, modded Wasteland land biomes only:
 
 - `kubejs/data/infinite_domain/tags/worldgen/biome/has_enviromine_gas_pockets.json` — the 8 modded Wasteland land biomes (5 `wastelands:*`, 3 `the_wasteland_reworked:*`; `polluted_ocean`, `safe_zone`, and the abyssal/hadal seafloor biomes are deliberately excluded).
-- `kubejs/data/infinite_domain/neoforge/biome_modifier/enviromine_deepslate_gas_pockets.json` — `neoforge:add_features` adding the unmodified `enviromine:deepslate_hot_coal_ore` placed feature (vein size 3, replaces deepslate, Y -64..5, ~1/chunk) at `underground_ores`.
+- `kubejs/data/infinite_domain/tags/worldgen/biome/enviromine_deepslate_hot_coal_biomes.json` — the union `#minecraft:is_overworld` ∪ `#infinite_domain:has_enviromine_gas_pockets`.
+- `kubejs/data/enviromine/neoforge/biome_modifier/deepslate_hot_coal_ore_biome_modifier.json` — a pack **override** of the mod's own modifier, retargeted from `#minecraft:is_overworld` to that union. It adds the unmodified `enviromine:deepslate_hot_coal_ore` placed feature (vein size 3, replaces deepslate, Y -64..5, ~1/chunk) at `underground_ores`.
 
 The stone-layer `enviromine:hot_coal_ore` (Y 0..32) is intentionally not added: gas pockets are a deepslate-depth hazard here. To widen scope later, extend the tag or add a second `add_features` entry for `enviromine:hot_coal_ore`.
+
+### Why one overriding modifier and not a second additive one (2026-09-01)
+
+The original implementation used a separate `infinite_domain:enviromine_deepslate_gas_pockets` modifier alongside the mod's untouched `#is_overworld` one. That is the obvious shape and it is wrong here, for two compounding reasons. Both were found by the worldgen benchmark and are guarded by `dev/scripts/validate_biome_feature_order.py`.
+
+**Feature position is set by which modifier adds the feature.** Minecraft derives one global feature order per generation step from the per-biome lists: if any biome lists A before B, that fixes the edge A → B for every biome. A pack modifier is applied after the mod modifiers, so a feature it adds lands *after* everything the jars added. The eight gas-pocket biomes are not in `#is_overworld`, so they received the ore only from the pack modifier — placing it *after* `more_ores_more_gems:deepslate_indium_ore`, while the forty vanilla overworld biomes received it from the enviromine jar *before* indium. Those two edges contradict, `FeatureSorter` cannot satisfy them, and the vanilla indexer fails. Overriding the mod's own modifier instead keeps the feature at the enviromine registry position for every biome, so one consistent order exists.
+
+**Two modifiers adding one feature inject it twice.** From 2026-08-30 to 2026-09-01 both modifiers were present and their biome sets overlapped, because the union tag already contains `#has_enviromine_gas_pockets`. NeoForge does not deduplicate: those eight biomes listed the ore twice, at two positions with indium between the copies, which is a cycle inside a single biome — and generated the ore at double density.
+
+Neither failure is fatal, which is why both survived: Biolith catches the sorter failure and retries with a resilient indexer that drops cycle-forming edges. The only evidence was one WARN line inside a three-minute level-prep block. Adding a second `add_features` for `enviromine:hot_coal_ore` later must therefore extend the existing override, never add a parallel modifier.
 
 The optional specialization chapter adds twenty-three quests across the civilization ladder. Fourteen cover air safety and nine form an early radiation-protection branch:
 

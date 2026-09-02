@@ -88,8 +88,48 @@ The regions follow the authoritative coordinates already used by the gradient-oc
 - `no_custom_structures`: removes all Infinite Domain structure sets from the isolated datapack.
 - `no_gradient_ocean`: omits the external gradient-ocean datapack.
 - `no_lostcities`: omits the Lost Cities jar from the isolated mod directory.
+- `no_lostcities_assets`: removes the pack's whole `kubejs/data/infinite_domain/lostcities` tree.
+- `no_lostcities_parts`: removes only the `parts` subtree.
+
+The last two leave the Lost Cities jar loaded while taking away the assets its worldstyle and citystyles reference, so a run is only useful for the `serverPhases` timings taken before generation. Do not read city quality, structure counts or acceptance fields from them.
 
 These are diagnostic isolation variants, not proposed production settings. A faster result identifies where to investigate; it does not automatically authorize the corresponding gameplay change.
+
+## What the tile timer can and cannot measure (2026-09-01)
+
+A tile is timed between the forceload command and the poll that first observes every chunk present. The controller schedules that poll in server ticks, and a tick that is itself generating chunks can run for seconds, so the poll interval sets the resolution of the whole measurement.
+
+Until 2026-09-01 that interval was 20 ticks, and every recorded tile — five runs, five different pack revisions — reported `polls: 1`. A tile accepted on its first poll was never observed running: its `elapsedMs` is the time 20 ticks took, which bounds generation from above and does not measure it. That is how a 16-chunk smoke tile came to report 0.111 chunks/s in `summary.csv` while vanilla generated the spawn area of the same world in 46 seconds.
+
+The interval is now one tick, and the analyzer records the resolution it actually achieved:
+
+- `tiles[].measurementSaturated` — this tile was accepted on its first poll.
+- `saturatedTiles`, `measurementQuality` — `measured`, `partial`, or `unmeasured` for the run.
+- `aggregate` refuses to compute `speedupVsBaseline` unless both the variant and its baseline are `measured`, and `summary.csv` carries the quality column.
+
+A tile still has to be large enough to span several ticks. The smoke suite's 16 chunks is not, and never was: use it for plumbing only, exactly as this document already said, and read the two phase timings below instead.
+
+## Phase timings
+
+Vanilla times two phases itself, independently of the controller and of the tick loop, and the analyzer harvests both from `latest.log` into `result.json` under `serverPhases`:
+
+- `levelPrepMs` — `Preparing level` to `Preparing start region`. This is **dimension construction**, not the server resource reload: recipes, loot and tags finish earlier (`Loaded 18041 recipes` lands about nine seconds *before* `Preparing level`). What happens inside it is the worldgen dynamic-registry load — biomes, placed features, structures, structure sets, and modded registries such as Lost Cities' `parts` and `buildings` — followed by biome-source and chunk-generator construction and the per-generator feature sort, for every dimension the pack defines. Four baseline runs spanned 179.5–183.6 s, a 2.3% range, which makes it the lowest-noise number this harness produces.
+- `spawnPrepMs` — vanilla's own fixed spawn-area generation timing. Baselines spanned 44.0–46.5 s (5.7%).
+
+Roughly 94% of `levelPrepMs` is a single block with no log output at all — 166 s of 177 s in the 2026-09-01 reference run. Nothing inside it is attributable from logs, so narrowing it needs either a profiler on the isolated server or the differential variants below. The ~11 s tail after it is Biolith rejecting about ten dimensions it has no dimension type for, at ~1.4 s each.
+
+### What that block is not (2026-09-01)
+
+Two candidates are measured out, which matters because both would have implied the pack simply carries too much custom content:
+
+- **Not the Lost Cities asset registries.** They are by far the largest body of worldgen data the pack ships — 15,349 JSON files, 12,550 of them `parts`, about 69 MB. The `no_lostcities_assets` variant removes all of it, and both repetitions came in **above** the baseline band rather than below it: `levelPrepMs` 186.4 s and 192.0 s against a 177.1–183.6 s baseline, with `spawnPrepMs` mid-band at 45.1 s and 46.8 s. Removing the pack's largest body of custom worldgen data buys nothing. Do not infer otherwise from log ordering — with the assets gone, the Sable overworld line moves to within 16 ms of `Preparing level` and the silent block simply relocates after it, which looks like a win and is not one.
+- **Not dead or unreferenced data.** Every one of the 12,550 `parts` is reachable from a building, multibuilding or citystyle; the orphan count is zero. Three `structure_set` files do carry an empty `structures` list (`hive_world_district`, `deep_sea/akula_wreck_aft`, `deep_sea/akula_wreck_forward`), but a set with no structures is dropped from `possibleStructureSets` before generation, so they cost nothing at runtime and are left in place.
+
+The remaining candidates inside the block are the biome, placed-feature and structure registry decode (the Isekai scan reports 577 placed features and 483 structure placements), the per-generator feature sort, and per-dimension construction across the ~15 dimensions the pack defines. Separating those needs a profiler; log-derived attribution has already been wrong once here.
+
+Both are durations only. The spawn area's chunk count is deliberately not inferred: `LoggerChunkProgressListener` throttles its progress lines, so the log cannot support a chunks-per-second figure.
+
+Read them together. They measure unrelated work — data loading and chunk generation — so a change that inflates both by a similar proportion is machine contention, not a worldgen result. A run during concurrent analysis on this machine showed `levelPrepMs` 281.8 s with `spawnPrepMs` 70.1 s, both about 55% above baseline: nothing to do with the pack. Run benchmarks with the machine otherwise idle.
 
 ## Interpretation rules
 

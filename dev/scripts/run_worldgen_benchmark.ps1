@@ -1,7 +1,9 @@
 param(
-    [ValidateSet('baseline', 'optimized_heightmap', 'height_sample_6', 'no_adjacent_avoidance', 'no_abyssal_structures', 'no_custom_structures', 'no_gradient_ocean', 'no_lostcities')]
+    # Variant and Suite are validated against the matrix once it is loaded, not
+    # by a ValidateSet here: a literal list in this attribute is a second copy of
+    # the matrix's own keys, and it silently goes stale. Adding a variant to
+    # worldgen_benchmark_matrix.json is meant to be the whole change.
     [string]$Variant = 'baseline',
-    [ValidateSet('smoke', 'standard', 'terrain')]
     [string]$Suite = 'smoke',
     [ValidateRange(1, 20)]
     [int]$Repetitions = 1,
@@ -22,6 +24,15 @@ $matrixPath = Join-Path $PSScriptRoot 'worldgen_benchmark_matrix.json'
 $analyzer = Join-Path $PSScriptRoot 'analyze_worldgen_benchmark.py'
 $serverModPolicyPath = Join-Path $PSScriptRoot 'worldgen_benchmark_server_mod_policy.json'
 $matrix = Get-Content -LiteralPath $matrixPath -Raw | ConvertFrom-Json
+
+$knownVariants = @($matrix.variants.PSObject.Properties.Name)
+if ($knownVariants -notcontains $Variant) {
+    throw "Unknown variant '$Variant'. The matrix defines: $($knownVariants -join ', ')"
+}
+$knownSuites = @($matrix.suites.PSObject.Properties.Name)
+if ($knownSuites -notcontains $Suite) {
+    throw "Unknown suite '$Suite'. The matrix defines: $($knownSuites -join ', ')"
+}
 $serverModPolicy = Get-Content -LiteralPath $serverModPolicyPath -Raw | ConvertFrom-Json
 $neoForgeVersion = '21.1.248'
 $runsRoot = [IO.Path]::GetFullPath((Join-Path $instance 'benchmark_runs'))
@@ -184,15 +195,45 @@ function New-IsolatedModDirectory {
 function Get-ConfigurationEntries {
     param([string]$RuntimeRoot)
     $resolvedRuntimeRoot = [IO.Path]::GetFullPath($RuntimeRoot)
-    $roots = @(
+    $roots = [Collections.Generic.List[string]]::new()
+    foreach ($fixed in @(
         'config/lostcities',
         'config/lostcities-server.toml',
         'defaultconfigs/lostcities-server.toml',
-        'kubejs/data/infinite_domain/worldgen',
-        'kubejs/data/minecraft/worldgen',
         'kubejs/server_scripts/worldgen_benchmark.js',
         'datapacks'
+    )) { $roots.Add($fixed) | Out-Null }
+
+    # Worldgen-relevant pack data, for every namespace rather than a hardcoded
+    # two. The fingerprint exists so two runs cannot be compared unless they were
+    # generated from the same configuration, and it was previously narrow enough
+    # to miss changes that demonstrably alter terrain: on 2026-09-01 two runs
+    # whose biome modifiers differed - changing feature order and doubling an
+    # ore's density - recorded the identical fingerprint f9eb512d. Biome
+    # modifiers and biome tags decide which features reach which biome, and the
+    # Lost Cities asset registries decide what its cities are built from, so all
+    # three belong in the hash. A false "different" only blocks a comparison; a
+    # false "same" silently authorises an invalid one.
+    $namespaceSubpaths = @(
+        'worldgen',
+        'tags/worldgen',
+        'neoforge/biome_modifier',
+        'lostcities',
+        'dimension',
+        'dimension_type'
     )
+    $dataRoot = Resolve-RuntimePath $RuntimeRoot 'kubejs/data'
+    if (Test-Path -LiteralPath $dataRoot -PathType Container) {
+        foreach ($namespace in Get-ChildItem -LiteralPath $dataRoot -Directory) {
+            foreach ($subpath in $namespaceSubpaths) {
+                $candidate = Join-Path $namespace.FullName ($subpath -replace '/', '\')
+                if (Test-Path -LiteralPath $candidate) {
+                    $roots.Add("kubejs/data/$($namespace.Name)/$subpath") | Out-Null
+                }
+            }
+        }
+    }
+
     $files = [Collections.Generic.List[IO.FileInfo]]::new()
     foreach ($relative in $roots) {
         $target = Resolve-RuntimePath $RuntimeRoot $relative

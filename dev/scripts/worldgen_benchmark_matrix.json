@@ -60,6 +60,12 @@
     },
     "no_lostcities": {
       "omitMods": ["lostcities-*.jar"]
+    },
+    "no_lostcities_assets": {
+      "remove": ["kubejs/data/infinite_domain/lostcities"]
+    },
+    "no_lostcities_parts": {
+      "remove": ["kubejs/data/infinite_domain/lostcities/parts"]
     }
   }
 }
