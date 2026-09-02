@@ -4,6 +4,8 @@
 	filename: "early_livestock_exchange"
 	group: "6F2A9C4D8E1B7305"
 	id: "051D98EED36CF87B"
+	name: "Early Livestock Exchange"
+	icon: "minecraft:cow_spawn_egg"
 	images: [ ]
 	order_index: 0
 	quest_links: [ ]
@@ -11,7 +13,9 @@
 		{
 			can_repeat: true
 			dependencies: ["3AFBE38263D3351E"]
+			icon: "minecraft:sheep_spawn_egg"
 			id: "227CBFC089E818C2"
+			name: "Exchange for Sheep"
 			repeat_cooldown: 1
 			rewards: [{
 				auto: "enabled"
@@ -35,7 +39,9 @@
 		{
 			can_repeat: true
 			dependencies: ["3AFBE38263D3351E"]
+			icon: "minecraft:pig_spawn_egg"
 			id: "29B0744D12BCCA8C"
+			name: "Exchange for Pigs"
 			repeat_cooldown: 1
 			rewards: [{
 				auto: "enabled"
@@ -60,7 +66,9 @@
 		{
 			can_repeat: true
 			dependencies: ["3AFBE38263D3351E"]
+			icon: "minecraft:chicken_spawn_egg"
 			id: "0764B2D3F8A1CE95"
+			name: "Exchange for Chickens"
 			repeat_cooldown: 1
 			rewards: [{
 				auto: "enabled"
@@ -85,7 +93,9 @@
 		{
 			can_repeat: true
 			dependencies: ["3AFBE38263D3351E"]
+			icon: "minecraft:rabbit_spawn_egg"
 			id: "3A97E5062BD4F1C8"
+			name: "Exchange for Rabbits"
 			repeat_cooldown: 1
 			rewards: [{
 				auto: "enabled"
@@ -110,7 +120,9 @@
 		{
 			can_repeat: true
 			dependencies: ["3AFBE38263D3351E"]
+			icon: "minecraft:cow_spawn_egg"
 			id: "6DCA18395E0724FB"
+			name: "Exchange for Cattle"
 			repeat_cooldown: 1
 			rewards: [{
 				auto: "enabled"
@@ -134,7 +146,9 @@
 		{
 			can_repeat: true
 			dependencies: ["3AFBE38263D3351E"]
+			icon: "minecraft:goat_spawn_egg"
 			id: "5B0A949610E886A0"
+			name: "Exchange for Goats"
 			repeat_cooldown: 1
 			rewards: [{
 				auto: "enabled"
