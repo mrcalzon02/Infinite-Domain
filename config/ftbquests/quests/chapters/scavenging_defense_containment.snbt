@@ -393,6 +393,11 @@
 		{
 			dependencies: ["5D00000000000010"]
 			id: "5D00000000000011"
+			name: "Northern Survey: Ice Spikes"
+			description: [
+				"Enter the ice spikes and chart exposed-ice hazards, shelter points, and a reliable route back to the coast."
+				"Objective: visit Ice Spikes. The terminal detects the biome at your position automatically."
+			]
 			rewards: [{
 				id: "6A606503C0C103B4"
 				item: {
@@ -413,6 +418,11 @@
 		{
 			dependencies: ["5D00000000000011"]
 			id: "5D00000000000012"
+			name: "Northern Survey: Ancient Spruce"
+			description: [
+				"Enter old-growth spruce taiga and designate protected seed trees before logging begins."
+				"Objective: visit Old Growth Spruce Taiga. The terminal detects the biome at your position automatically."
+			]
 			rewards: [{
 				id: "7D00000000000012"
 				item: {
@@ -433,6 +443,11 @@
 		{
 			dependencies: ["5D00000000000012"]
 			id: "5D00000000000013"
+			name: "Northern Survey: Deep Cold Ocean"
+			description: [
+				"Enter deep cold ocean and chart a safe shipping corridor for later outer-ring expeditions."
+				"Objective: visit Deep Cold Ocean. The terminal detects the biome at your position automatically."
+			]
 			shape: "diamond"
 			tasks: [{
 				biome: "minecraft:deep_cold_ocean"
@@ -445,6 +460,11 @@
 		{
 			dependencies: ["5410000000000001"]
 			id: "5D00000000000014"
+			name: "Southern Survey: The Badlands"
+			description: [
+				"Cross the southern ocean and enter badlands. Record exposed mineral layers, heat, and water requirements."
+				"Objective: visit Badlands. The terminal detects the biome at your position automatically."
+			]
 			shape: "diamond"
 			tasks: [{
 				biome: "minecraft:badlands"
@@ -457,6 +477,11 @@
 		{
 			dependencies: ["5D00000000000014"]
 			id: "5D00000000000015"
+			name: "Southern Survey: Desert Corridor"
+			description: [
+				"Enter desert and establish a marked water-and-shelter route."
+				"Objective: visit Desert. The terminal detects the biome at your position automatically."
+			]
 			rewards: [{
 				id: "7D00000000000015"
 				item: {
@@ -477,6 +502,11 @@
 		{
 			dependencies: ["5D00000000000015"]
 			id: "5D00000000000016"
+			name: "Southern Survey: Savanna"
+			description: [
+				"Enter savanna and identify renewable wood, animals, and defensible habitation sites."
+				"Objective: visit Savanna. The terminal detects the biome at your position automatically."
+			]
 			rewards: [{
 				id: "6A43B67F8D749490"
 				item: {
@@ -497,6 +527,11 @@
 		{
 			dependencies: ["5D00000000000016"]
 			id: "5D00000000000017"
+			name: "Southern Survey: Jungle Interior"
+			description: [
+				"Enter the southern jungle and survey dense-canopy travel, renewable biomass, and disease-control requirements."
+				"Objective: visit Jungle. The terminal detects the biome at your position automatically."
+			]
 			shape: "diamond"
 			tasks: [{
 				biome: "minecraft:jungle"
@@ -509,6 +544,11 @@
 		{
 			dependencies: ["5D00000000000017"]
 			id: "5D00000000000018"
+			name: "Southern Survey: Mangrove Swamp"
+			description: [
+				"Enter mangrove swamp and mark stable ground, navigable channels, and defensible dry staging sites."
+				"Objective: visit Mangrove Swamp. The terminal detects the biome at your position automatically."
+			]
 			rewards: [{
 				id: "7D00000000000018"
 				item: {
