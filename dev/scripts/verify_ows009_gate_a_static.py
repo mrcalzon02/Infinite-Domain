@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import subprocess
+from collections import deque
 from pathlib import Path
 
 import render_ows009_gate_a_massing as gate
@@ -92,6 +93,55 @@ def _assert_cell_hierarchy(t: gate.base.Template) -> None:
             raise AssertionError(f"OWS-009 {label} threshold obstructed at {pos}")
 
 
+def _assert_circulation_graph(t: gate.base.Template) -> None:
+    """Prove the programmed interior is one usable two-block-high service graph.
+
+    Gate A is still a massing study, so this deliberately tests only spatial
+    reachability over supported floor. It prevents a visually plausible edit
+    from silently isolating a repair cell, customer room, parts room, core-return
+    room, or the technician spine behind an unbroken wall.
+    """
+    sx, _, sz = map(int, t.size)
+
+    def walkable(x: int, z: int) -> bool:
+        if not (0 <= x < sx and 0 <= z < sz):
+            return False
+        floor = gate._name(t, (x, 1, z))
+        head = gate._name(t, (x, 2, z))
+        upper = gate._name(t, (x, 3, z))
+        return floor not in gate.AIR and head in gate.AIR and upper in gate.AIR
+
+    anchors = {
+        "diagnostic cell": (9, 20),
+        "heavy-intervention cell": (20, 20),
+        "recommissioning cell": (30, 20),
+        "technician spine": (20, 29),
+        "customer/service bar": (39, 12),
+        "parts receive/issue": (40, 23),
+        "core-return/records": (40, 30),
+    }
+    unsupported = [label for label, pos in anchors.items() if not walkable(*pos)]
+    if unsupported:
+        raise AssertionError(f"OWS-009 circulation anchors are not walkable: {unsupported}")
+
+    start = anchors["technician spine"]
+    seen = {start}
+    queue = deque([start])
+    while queue:
+        x, z = queue.popleft()
+        for nxt in ((x - 1, z), (x + 1, z), (x, z - 1), (x, z + 1)):
+            if nxt not in seen and walkable(*nxt):
+                seen.add(nxt)
+                queue.append(nxt)
+
+    isolated = [label for label, pos in anchors.items() if pos not in seen]
+    if isolated:
+        raise AssertionError(
+            "OWS-009 operational circulation graph is disconnected; "
+            f"unreachable from technician spine: {isolated}"
+        )
+
+
 def main() -> None:
     _assert_prerequisites()
     _assert_shipping_source_frozen()
@@ -100,14 +150,16 @@ def main() -> None:
     gate._assert_contracts(model)
     _assert_template_bounds(model)
     _assert_cell_hierarchy(model)
+    _assert_circulation_graph(model)
 
     print(
         "OWS-009 Gate-A r2 deterministic preflight PASS: "
         "source provenance, 49x18x41 envelope, protected transition edges, "
         "east service lane, clear service/circulation fields, frozen Atlas "
-        "massing anchors, cell hierarchy, template bounds, and deferred-content "
-        "exclusion are internally consistent. Visual Gate-A review and all "
-        "runtime/Lost-Cities/rotation/shipping-NBT/gameplay/production gates remain pending."
+        "massing anchors, cell hierarchy, connected operational circulation, "
+        "template bounds, and deferred-content exclusion are internally consistent. "
+        "Visual Gate-A review and all runtime/Lost-Cities/rotation/shipping-NBT/"
+        "gameplay/production gates remain pending."
     )
 
 
