@@ -23,6 +23,7 @@ CHECKS = (
     "verify_ows009_gate_a_articulation.py",
     "verify_ows009_gate_a_load_paths.py",
     "verify_ows009_gate_a_foundation_grade.py",
+    "verify_ows009_gate_a_site_clearance.py",
 )
 
 
@@ -66,11 +67,11 @@ def main() -> None:
         "OWS-009 Gate-A r2 deterministic suite PASS: source provenance, template "
         "bounds, protected terrain edges, circulation, vehicle swept volumes, "
         "rotation/mirroring coordinate safety, architectural articulation, "
-        "structural load paths, and foundation/grade interfaces all passed their "
-        "repository-local preflights. This does NOT constitute Gate-A visual "
-        "acceptance, Minecraft runtime/new-world acceptance, Lost Cities "
-        "coexistence, shipping-NBT transform/placement acceptance, gameplay-hook "
-        "validation, or production admission."
+        "structural load paths, foundation/grade interfaces, and reserved exterior "
+        "site-clearance volumes all passed their repository-local preflights. This "
+        "does NOT constitute Gate-A visual acceptance, Minecraft runtime/new-world "
+        "acceptance, Lost Cities coexistence, shipping-NBT transform/placement "
+        "acceptance, gameplay-hook validation, or production admission."
     )
 
 
