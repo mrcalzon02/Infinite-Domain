@@ -4,12 +4,14 @@
 	filename: "feeding_the_domain"
 	group: "3F00D00000000001"
 	id: "2034B9BBF53C750D"
+	icon: "kubejs:field_ration"
 	images: [ ]
 	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["4FC0C1C678C71891"]
+			icon: "kubejs:dried_herbs"
 			id: "7B2B0CE2A9CEAD24"
 			optional: true
 			rewards: [{
@@ -28,6 +30,7 @@
 		}
 		{
 			dependencies: ["7B2B0CE2A9CEAD24"]
+			icon: "kubejs:ground_spice"
 			id: "7CF96E34F433B244"
 			optional: true
 			rewards: [{
@@ -46,6 +49,7 @@
 		}
 		{
 			dependencies: ["7CF96E34F433B244"]
+			icon: "kubejs:prepared_seasoning"
 			id: "60C6255859EF43EB"
 			optional: true
 			rewards: [
@@ -77,6 +81,7 @@
 				"60C6255859EF43EB"
 				"5210000000000002"
 			]
+			icon: "kubejs:apple_fruit_pulp"
 			id: "62B68B083A9340FD"
 			optional: true
 			rewards: [{
@@ -95,6 +100,7 @@
 		}
 		{
 			dependencies: ["62B68B083A9340FD"]
+			icon: "kubejs:apple_juice_concentrate"
 			id: "0025674D5053D8CD"
 			optional: true
 			rewards: [{
@@ -113,6 +119,7 @@
 		}
 		{
 			dependencies: ["0025674D5053D8CD"]
+			icon: "kubejs:bottled_apple_juice"
 			id: "5B113F3538B71374"
 			optional: true
 			rewards: [
@@ -144,6 +151,7 @@
 				"5B113F3538B71374"
 				"5310000000000002"
 			]
+			icon: "kubejs:concentrated_soup_base"
 			id: "3CE261E9EC4CF123"
 			optional: true
 			rewards: [{
@@ -162,6 +170,7 @@
 		}
 		{
 			dependencies: ["3CE261E9EC4CF123"]
+			icon: "kubejs:fermentation_culture"
 			id: "1BD60D82F5AB7FB3"
 			optional: true
 			rewards: [{
@@ -179,6 +188,7 @@
 		}
 		{
 			dependencies: ["1BD60D82F5AB7FB3"]
+			icon: "kubejs:prepared_meal"
 			id: "36DCF312DDFCF7DD"
 			optional: true
 			rewards: [
@@ -210,6 +220,7 @@
 				"36DCF312DDFCF7DD"
 				"5410000000000002"
 			]
+			icon: "kubejs:empty_beverage_can"
 			id: "6220EA917425C59A"
 			optional: true
 			rewards: [{
@@ -228,6 +239,7 @@
 		}
 		{
 			dependencies: ["6220EA917425C59A"]
+			icon: "kubejs:empty_food_can"
 			id: "5CAA77912D413E80"
 			optional: true
 			rewards: [{
@@ -246,6 +258,7 @@
 		}
 		{
 			dependencies: ["5CAA77912D413E80"]
+			icon: "kubejs:canned_stew"
 			id: "066534B9EED187AC"
 			optional: true
 			rewards: [
@@ -277,6 +290,7 @@
 				"066534B9EED187AC"
 				"5510000000000002"
 			]
+			icon: "kubejs:apple_soda_can"
 			id: "271FC2FC3F6540D6"
 			optional: true
 			rewards: [{
@@ -295,6 +309,7 @@
 		}
 		{
 			dependencies: ["271FC2FC3F6540D6"]
+			icon: "kubejs:berry_soda_six_pack"
 			id: "17E87207E385EF52"
 			optional: true
 			rewards: [{
@@ -313,6 +328,7 @@
 		}
 		{
 			dependencies: ["17E87207E385EF52"]
+			icon: "kubejs:orange_soda_case"
 			id: "52233AEAB76458BB"
 			optional: true
 			rewards: [
@@ -343,6 +359,7 @@
 				"52233AEAB76458BB"
 				"5610000000000002"
 			]
+			icon: "kubejs:electrolyte_blend"
 			id: "077D16DFAD15DC23"
 			optional: true
 			rewards: [{
@@ -361,6 +378,7 @@
 		}
 		{
 			dependencies: ["077D16DFAD15DC23"]
+			icon: "kubejs:stimulant_extract"
 			id: "2C3D3B6833E06D5A"
 			optional: true
 			rewards: [{
@@ -379,6 +397,7 @@
 		}
 		{
 			dependencies: ["2C3D3B6833E06D5A"]
+			icon: "kubejs:energy_drink_can"
 			id: "52F44BCFA17D8586"
 			optional: true
 			rewards: [
@@ -410,6 +429,7 @@
 				"52F44BCFA17D8586"
 				"5710000000000002"
 			]
+			icon: "kubejs:beverage_crate"
 			id: "04D44ABE4F6F2CB8"
 			optional: true
 			rewards: [{
@@ -427,6 +447,7 @@
 		}
 		{
 			dependencies: ["04D44ABE4F6F2CB8"]
+			icon: "kubejs:field_ration"
 			id: "67DA49934330E1EF"
 			optional: true
 			rewards: [{
@@ -445,6 +466,7 @@
 		}
 		{
 			dependencies: ["67DA49934330E1EF"]
+			icon: "kubejs:ration_case"
 			id: "4F9A7C40B90A12EA"
 			optional: true
 			rewards: [
@@ -466,7 +488,7 @@
 				count: 2L
 				id: "74FF20ED335201DB"
 				item: { count: 1, id: "kubejs:ration_case" }
-				type: "item"
+					type: "item"
 			}]
 			x: 4.0d
 			y: 30.0d
@@ -476,6 +498,7 @@
 				"4F9A7C40B90A12EA"
 				"5810000000000002"
 			]
+			icon: "kubejs:ration_pallet"
 			id: "6D81BAB21AF3A8A5"
 			optional: true
 			rewards: [{
@@ -493,6 +516,7 @@
 		}
 		{
 			dependencies: ["6D81BAB21AF3A8A5"]
+			icon: "kubejs:energy_case"
 			id: "50503724FC646207"
 			optional: true
 			rewards: [{
@@ -504,13 +528,14 @@
 				count: 4L
 				id: "0FBE351C40EE9B74"
 				item: { count: 1, id: "kubejs:energy_case" }
-				type: "item"
+					type: "item"
 			}]
 			x: 0.0d
 			y: 35.0d
 		}
 		{
 			dependencies: ["50503724FC646207"]
+			icon: "kubejs:beverage_pallet"
 			id: "6058218448311BFE"
 			optional: true
 			rewards: [
