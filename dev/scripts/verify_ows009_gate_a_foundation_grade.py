@@ -120,15 +120,29 @@ def _reachable_surface(
 
 
 def _assert_public_approach(t: gate.base.Template) -> None:
-    # Customer entrance (x38..41,z7) must remain reachable from the protected
-    # north transition band without crossing vehicle recovery geometry.
+    # The grade-level flood fill must reach the exterior landing immediately
+    # north of the customer entrance. The doorway itself intentionally steps
+    # onto the building's y=1 floor, so testing z7 with the y0 walkability
+    # predicate would be self-invalidating. Check that opening separately.
     starts = {(x, 1) for x in range(36, 44)}
     reachable = _reachable_surface(t, starts)
-    targets = {(x, 7) for x in range(38, 42)}
-    if not (reachable & targets):
+    landing = {(x, 6) for x in range(38, 42)}
+    if not (reachable & landing):
         raise AssertionError(
             "OWS-009 public entrance lost a grade-level pedestrian approach "
-            "from the north transition band"
+            "to its exterior landing from the north transition band"
+        )
+
+    blocked = []
+    for x in range(38, 42):
+        for y in range(2, 5):
+            pos = (x, y, 7)
+            if _name(t, pos) not in AIR:
+                blocked.append((pos, _name(t, pos)))
+    if blocked:
+        raise AssertionError(
+            "OWS-009 public entrance opening is obstructed above the y=1 floor: "
+            f"{blocked[:10]}"
         )
 
 
@@ -210,12 +224,13 @@ def main() -> None:
 
     print(
         "OWS-009 Gate-A r2 foundation/grade preflight PASS: the complete site "
-        "datum is present; y=1 construction is supported; customer and all three "
-        "vehicle approaches remain grade-connected; the four-wide east service "
-        "strip remains continuous; and protected north/east/rear terrain seams "
-        "remain free of hardscape overrun. Generated-world terrain adaptation, "
-        "Lost Cities coexistence, runtime placement, shipping-NBT, visual, "
-        "gameplay, and production gates remain pending."
+        "datum is present; y=1 construction is supported; the customer landing "
+        "and entrance opening plus all three vehicle approaches remain grade-"
+        "connected; the four-wide east service strip remains continuous; and "
+        "protected north/east/rear terrain seams remain free of hardscape overrun. "
+        "Generated-world terrain adaptation, Lost Cities coexistence, runtime "
+        "placement, shipping-NBT, visual, gameplay, and production gates remain "
+        "pending."
     )
 
 
