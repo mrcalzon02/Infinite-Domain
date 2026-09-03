@@ -4,12 +4,14 @@
 	filename: "cyberware_ascension"
 	group: "569AB980347C1123"
 	id: "381AB56C38F92B73"
+	icon: "cyber_ware_port:cyberware_workbench"
 	images: [ ]
 	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["5D00000000000009"]
+			icon: "cyber_ware_port:cyberware_workbench"
 			id: "5B00000000000001"
 			shape: "diamond"
 			tasks: [{
@@ -22,6 +24,7 @@
 		}
 		{
 			dependencies: ["5B00000000000001"]
+			icon: "cyber_ware_port:cyberware_workbench"
 			id: "5B00000000000002"
 			shape: "gear"
 			tasks: [{
@@ -34,6 +37,7 @@
 		}
 		{
 			dependencies: ["5B00000000000002"]
+			icon: "cyber_ware_port:scanner"
 			id: "5B00000000000003"
 			rewards: [{
 				id: "7B00000000000003"
@@ -54,6 +58,7 @@
 		}
 		{
 			dependencies: ["5B00000000000003"]
+			icon: "cyber_ware_port:neuropozyne"
 			id: "5B00000000000004"
 			shape: "gear"
 			tasks: [{
@@ -70,6 +75,7 @@
 				"5B00000000000004"
 				"5310000000000001"
 			]
+			icon: "createcybernetics:surgery_table"
 			id: "5B00000000000005"
 			shape: "gear"
 			tasks: [{
@@ -82,6 +88,7 @@
 		}
 		{
 			dependencies: ["5B00000000000005"]
+			icon: "cyber_ware_port:component_box"
 			id: "5B00000000000006"
 			rewards: [{
 				id: "7B00000000000006"
@@ -103,6 +110,7 @@
 		}
 		{
 			dependencies: ["5B00000000000006"]
+			icon: "createcybernetics:basecyberware_leftarm_ironplated"
 			id: "5B00000000000007"
 			shape: "gear"
 			tasks: [{
@@ -118,6 +126,7 @@
 				"5B00000000000007"
 				"5410000000000001"
 			]
+			icon: "createcybernetics:eyeupgrades_biomonitor"
 			id: "5B00000000000008"
 			shape: "gear"
 			tasks: [{
@@ -130,6 +139,7 @@
 		}
 		{
 			dependencies: ["5B00000000000008"]
+			icon: "createcybernetics:organsupgrades_liverfilter"
 			id: "5B00000000000009"
 			rewards: [{
 				id: "7B00000000000009"
@@ -153,6 +163,7 @@
 				"5B00000000000009"
 				"5510000000000001"
 			]
+			icon: "createcybernetics:organsupgrades_battery"
 			id: "5B0000000000000A"
 			shape: "gear"
 			tasks: [{
@@ -165,6 +176,7 @@
 		}
 		{
 			dependencies: ["5B0000000000000A"]
+			icon: "createcybernetics:engineering_table"
 			id: "5B0000000000000B"
 			shape: "gear"
 			tasks: [
@@ -187,6 +199,7 @@
 				"5B0000000000000B"
 				"5610000000000001"
 			]
+			icon: "createcybernetics:brainupgrades_neuralprocessor"
 			id: "5B0000000000000C"
 			rewards: [{
 				id: "7B0000000000000C"
@@ -207,6 +220,7 @@
 		}
 		{
 			dependencies: ["5B0000000000000C"]
+			icon: "createcybernetics:armupgrades_drillfist"
 			id: "5B0000000000000D"
 			shape: "gear"
 			tasks: [{
@@ -222,6 +236,7 @@
 				"5B0000000000000D"
 				"5710000000000001"
 			]
+			icon: "ae2lt:module_radiation_protection"
 			id: "5B0000000000000E"
 			shape: "gear"
 			tasks: [{
@@ -237,6 +252,7 @@
 				"5B0000000000000E"
 				"5810000000000001"
 			]
+			icon: "createcybernetics:netherite_qpu"
 			id: "5B0000000000000F"
 			rewards: [{
 				id: "7B0000000000000F"
@@ -257,6 +273,7 @@
 		}
 		{
 			dependencies: ["5B0000000000000F"]
+			icon: "cyberspace:virtual_machine_core"
 			id: "5B00000000000010"
 			shape: "gear"
 			tasks: [{
@@ -269,6 +286,7 @@
 		}
 		{
 			dependencies: ["5B00000000000010"]
+			icon: "cyberspace:virtual_machine_core"
 			id: "5B00000000000011"
 			shape: "diamond"
 			tasks: [{
@@ -281,6 +299,7 @@
 		}
 		{
 			dependencies: ["5B00000000000011"]
+			icon: "infinite_domain_cyberware:calibrated_cortex_mesh"
 			id: "5B00000000000012"
 			rewards: [{
 				id: "7B00000000000012"
@@ -301,6 +320,7 @@
 		}
 		{
 			dependencies: ["5B00000000000012"]
+			icon: "infinite_domain_cyberware:ghost_circuit_lattice"
 			id: "5B00000000000013"
 			shape: "gear"
 			tasks: [{
@@ -313,6 +333,7 @@
 		}
 		{
 			dependencies: ["5B00000000000013"]
+			icon: "infinite_domain_cyberware:datavore_control_core"
 			id: "5B00000000000014"
 			shape: "gear"
 			tasks: [{
