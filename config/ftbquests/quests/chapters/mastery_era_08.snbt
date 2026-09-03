@@ -4,12 +4,14 @@
 	filename: "mastery_era_08"
 	group: "7ADA55C0FFEE0001"
 	id: "7800000000000000"
+	icon: "kubejs:era8_mastery_emblem"
 	images: [ ]
 	order_index: 8
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["5810000000000002"]
+			icon: "kubejs:era8_mastery_emblem"
 			id: "6810000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -21,6 +23,7 @@
 		}
 		{
 			dependencies: ["6810000000000001"]
+			icon: "allthecompressed:cobblestone_5x"
 			id: "1840000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -36,6 +39,7 @@
 		}
 		{
 			dependencies: ["6810000000000001"]
+			icon: "tfmg:steel_block"
 			id: "2840000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -51,6 +55,7 @@
 		}
 		{
 			dependencies: ["6810000000000001"]
+			icon: "stellaris:desh_block"
 			id: "3840000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -66,6 +71,7 @@
 		}
 		{
 			dependencies: ["6810000000000001"]
+			icon: "ae2:engineering_processor"
 			id: "4840000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -86,6 +92,7 @@
 				"3840000000000001"
 				"4840000000000001"
 			]
+			icon: "kubejs:era8_mastery_emblem"
 			id: "6810000000000002"
 			rewards: [
 				{
