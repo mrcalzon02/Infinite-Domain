@@ -4,12 +4,14 @@
 	filename: "mastery_era_01"
 	group: "7ADA55C0FFEE0001"
 	id: "7100000000000000"
+	icon: "kubejs:era1_mastery_emblem"
 	images: [ ]
 	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["4FC0C1C678C71891"]
+			icon: "kubejs:era1_mastery_emblem"
 			id: "6110000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -21,6 +23,7 @@
 		}
 		{
 			dependencies: ["6110000000000001"]
+			icon: "minecraft:andesite"
 			id: "1140000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -36,6 +39,7 @@
 		}
 		{
 			dependencies: ["6110000000000001"]
+			icon: "create:andesite_alloy"
 			id: "2140000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -51,6 +55,7 @@
 		}
 		{
 			dependencies: ["6110000000000001"]
+			icon: "minecraft:wheat"
 			id: "3140000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -66,6 +71,7 @@
 		}
 		{
 			dependencies: ["6110000000000001"]
+			icon: "wastelands:scrap_pile"
 			id: "4140000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -86,6 +92,7 @@
 				"3140000000000001"
 				"4140000000000001"
 			]
+			icon: "kubejs:era1_mastery_emblem"
 			id: "6110000000000002"
 			rewards: [
 				{
