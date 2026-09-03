@@ -192,7 +192,7 @@ def _assert_atlas_identity_is_structural(t: gate.base.Template) -> None:
     # cross multiple depths/heights so a flat orange decal cannot satisfy them.
     anchors = {
         (12, 13, 6): "tfmg:steel_block",
-        (20, 14, 5): "minecraft:orange_concrete",
+        (16, 14, 5): "minecraft:orange_concrete",
         (20, 15, 4): "minecraft:polished_blackstone",
         (29, 13, 6): "tfmg:steel_block",
     }
