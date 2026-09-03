@@ -107,12 +107,19 @@
 				type: "item"
 			}]
 			shape: "gear"
-			tasks: [{
-				count: 4L
-				id: "6E00000000000006"
-				item: { count: 1, id: "create_submarine:ballast_tank" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					count: 4L
+					id: "6E00000000000006"
+					item: { count: 1, id: "create_submarine:ballast_tank" }
+					type: "item"
+				}
+				{
+					id: "6E00000000000023"
+					item: { count: 1, id: "create_submarine:submarine_propeller" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 10.0d
 		}
