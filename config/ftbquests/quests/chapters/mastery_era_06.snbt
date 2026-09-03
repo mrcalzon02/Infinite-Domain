@@ -4,12 +4,14 @@
 	filename: "mastery_era_06"
 	group: "7ADA55C0FFEE0001"
 	id: "7600000000000000"
+	icon: "kubejs:era6_mastery_emblem"
 	images: [ ]
 	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["5610000000000002"]
+			icon: "kubejs:era6_mastery_emblem"
 			id: "6610000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -21,6 +23,7 @@
 		}
 		{
 			dependencies: ["6610000000000001"]
+			icon: "createnuclear:uranium_powder"
 			id: "1640000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -36,6 +39,7 @@
 		}
 		{
 			dependencies: ["6610000000000001"]
+			icon: "createnuclear:enriched_yellowcake"
 			id: "2640000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -51,6 +55,7 @@
 		}
 		{
 			dependencies: ["6610000000000001"]
+			icon: "createnuclear:lead_ingot"
 			id: "3640000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -66,6 +71,7 @@
 		}
 		{
 			dependencies: ["6610000000000001"]
+			icon: "oritech:plutonium_dust"
 			id: "4640000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -86,6 +92,7 @@
 				"3640000000000001"
 				"4640000000000001"
 			]
+			icon: "kubejs:era6_mastery_emblem"
 			id: "6610000000000002"
 			rewards: [
 				{
