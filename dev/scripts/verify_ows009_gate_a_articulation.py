@@ -8,8 +8,6 @@ admission.
 """
 from __future__ import annotations
 
-from collections import defaultdict
-
 import render_ows009_gate_a_massing as gate
 
 
@@ -104,23 +102,43 @@ def _assert_vehicle_threshold_differentiation(t: gate.base.Template) -> None:
             )
 
 
-def _assert_side_facade_bay_depth(t: gate.base.Template) -> None:
-    # Projected steel modules on both long elevations break the donor-garage
-    # wall planes. Require all four bay stations on both sides to survive.
+def _assert_side_facade_articulation(t: gate.base.Template) -> None:
+    # West is the exposed long hall elevation: its four projected steel stations
+    # must survive as actual depth, rather than a material stripe on a flush wall.
     stations = (10, 17, 24, 31)
-    missing: list[str] = []
-    for z in stations:
-        if gate._name(t, (2, 4, z)) != "tfmg:steel_block":
-            missing.append(f"west@z{z}")
-        if gate._name(t, (36, 4, z)) != "tfmg:steel_block":
-            missing.append(f"east@z{z}")
-    if missing:
+    missing_west = [
+        z for z in stations if gate._name(t, (2, 4, z)) != "tfmg:steel_block"
+    ]
+    if missing_west:
         raise AssertionError(
-            "OWS-009 long-elevation projected bay rhythm regressed: " + ", ".join(missing)
+            f"OWS-009 west projected bay rhythm missing stations: {missing_west}"
         )
 
-    # The side elevations must also retain separated clerestory modules rather
-    # than a continuous ribbon window.
+    # The east elevation is intentionally occupied by the attached service annex;
+    # the earlier hall-side x36 projections are overwritten by that later shell.
+    # Validate the geometry that actually survives: three annex functions step up
+    # in height instead of presenting another one-datum side wall.
+    east_peaks = {
+        "customer/service": _column_peak(t, 36, 43, 7, 19),
+        "parts receive/issue": _column_peak(t, 36, 43, 20, 26),
+        "core-return/records": _column_peak(t, 36, 43, 28, 34),
+    }
+    if len(set(east_peaks.values())) != 3:
+        raise AssertionError(
+            "OWS-009 east annex vertical stepping collapsed: " f"{east_peaks}"
+        )
+    if not (
+        east_peaks["customer/service"]
+        < east_peaks["parts receive/issue"]
+        < east_peaks["core-return/records"]
+    ):
+        raise AssertionError(
+            "OWS-009 east annex must rise from public bar to parts to secure records; "
+            f"got {east_peaks}"
+        )
+
+    # The exposed hall sides also retain separated clerestory modules rather than
+    # continuous ribbon glazing. x35 is checked because x36 belongs to the annex.
     for x in (3, 35):
         first = any(
             gate._name(t, (x, y, z)) == "create:framed_glass"
@@ -178,7 +196,6 @@ def _assert_atlas_identity_is_structural(t: gate.base.Template) -> None:
         (20, 15, 4): "minecraft:polished_blackstone",
         (29, 13, 6): "tfmg:steel_block",
     }
-    depths = defaultdict(set)
     for pos, expected in anchors.items():
         actual = gate._name(t, pos)
         if actual != expected:
@@ -186,7 +203,6 @@ def _assert_atlas_identity_is_structural(t: gate.base.Template) -> None:
                 f"OWS-009 Atlas structural-identity anchor drift at {pos}: "
                 f"{actual} != {expected}"
             )
-        depths[expected].add(pos[2])
 
     occupied_z = {pos[2] for pos in anchors}
     occupied_y = {pos[1] for pos in anchors}
@@ -200,18 +216,19 @@ def main() -> None:
 
     _assert_three_cell_vertical_hierarchy(model)
     _assert_vehicle_threshold_differentiation(model)
-    _assert_side_facade_bay_depth(model)
+    _assert_side_facade_articulation(model)
     _assert_rear_facade_rhythm(model)
     _assert_atlas_identity_is_structural(model)
 
     print(
         "OWS-009 Gate-A r2 articulation preflight PASS: the three work cells retain "
         "distinct vertical hierarchy; vehicle thresholds remain differentiated; "
-        "Bay 03 retains its projecting recommissioning canopy; both long elevations "
-        "retain projected bay rhythm and separated clerestories; the rear elevation "
-        "retains projected frame/window modules; and Atlas identity remains a "
-        "multi-depth structural assembly. Independent fixed-camera visual review and "
-        "all runtime/Lost-Cities/shipping-NBT/gameplay/production gates remain pending."
+        "Bay 03 retains its projecting recommissioning canopy; the exposed west hall "
+        "elevation retains projected bay depth; the east service annex retains its "
+        "three-step functional massing; side clerestories and rear frame/window "
+        "modules remain separated; and Atlas identity remains a multi-depth structural "
+        "assembly. Independent fixed-camera visual review and all runtime/Lost-Cities/"
+        "shipping-NBT/gameplay/production gates remain pending."
     )
 
 
