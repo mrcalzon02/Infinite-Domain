@@ -62,11 +62,17 @@
 				type: "item"
 			}]
 			shape: "diamond"
-			tasks: [{
-				id: "6D10000000000004"
-				item: { count: 1, id: "zvhouses:cottage_blueprint" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "6D10000000000004"
+					item: { count: 1, id: "zvhouses:cottage_blueprint" }
+					type: "item"
+				}
+				{
+					id: "6D10000000000017"
+					type: "checkmark"
+				}
+			]
 			x: -6.0d
 			y: 6.0d
 		}
