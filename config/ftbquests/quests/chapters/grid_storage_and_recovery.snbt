@@ -16,7 +16,7 @@
 			id: "6C01000000000001"
 			optional: true
 			shape: "gear"
-			title: "Small Battery Reserve"
+			title: "Small Battery Instrument"
 			tasks: [{
 				id: "6C02000000000001"
 				item: { count: 1, id: "powergrid_batteries:small_battery" }
@@ -39,7 +39,7 @@
 				type: "item"
 			}]
 			shape: "gear"
-			title: "Medium Battery Bank"
+			title: "Medium Battery Provisioning"
 			tasks: [{
 				id: "6C02000000000002"
 				item: { count: 1, id: "powergrid_batteries:medium_battery" }
@@ -73,7 +73,7 @@
 				}
 			]
 			shape: "gear"
-			title: "High-Voltage Reserve"
+			title: "High-Voltage Storage Bank"
 			tasks: [{
 				id: "6C02000000000003"
 				item: { count: 1, id: "powergrid_batteries:high_voltage_battery" }
@@ -88,7 +88,7 @@
 			id: "6C01000000000004"
 			optional: true
 			shape: "rsquare"
-			title: "Switching and Protection"
+			title: "Switching and Metering Acceptance"
 			tasks: [
 				{
 					count: 4L
@@ -121,7 +121,7 @@
 			id: "6C01000000000005"
 			optional: true
 			shape: "rsquare"
-			title: "Substation Storage Commissioning"
+			title: "Substation Continuity Trial"
 			tasks: [
 				{
 					id: "6C02000000000008"

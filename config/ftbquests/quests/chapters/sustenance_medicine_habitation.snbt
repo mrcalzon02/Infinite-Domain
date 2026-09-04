@@ -4,6 +4,7 @@
 	filename: "sustenance_medicine_habitation"
 	group: "4E65FAAC62D57D4A"
 	id: "1B7E40C69A25D8F3"
+	icon: "farmersdelight:cooking_pot"
 	name: "Sustenance, Medicine and Habitation"
 	images: [ ]
 	order_index: 0
@@ -11,6 +12,7 @@
 	quests: [
 		{
 			dependencies: ["3AFBE38263D3351E"]
+			icon: "minecraft:grass_block"
 			id: "5C00000000000001"
 			name: "Plains Survey"
 			shape: "diamond"
@@ -24,6 +26,7 @@
 		}
 		{
 			dependencies: ["5C00000000000001"]
+			icon: "minecraft:wheat_seeds"
 			id: "5C00000000000002"
 			name: "Seed Reserve"
 			shape: "gear"
@@ -38,6 +41,7 @@
 		}
 		{
 			dependencies: ["5C00000000000002"]
+			icon: "farmersdelight:rich_soil"
 			id: "5C00000000000003"
 			name: "Rich Soil Cultivation"
 			rewards: [{
@@ -60,6 +64,7 @@
 		}
 		{
 			dependencies: ["5C00000000000003"]
+			icon: "minecraft:lily_pad"
 			id: "5C00000000000004"
 			name: "Swamp Survey"
 			rewards: [{
@@ -81,6 +86,7 @@
 		}
 		{
 			dependencies: ["5C00000000000004"]
+			icon: "farmersdelight:cooking_pot"
 			id: "5C00000000000005"
 			name: "Cooking Pot"
 			shape: "gear"
@@ -94,6 +100,7 @@
 		}
 		{
 			dependencies: ["5C00000000000005"]
+			icon: "farmersdelight:vegetable_soup"
 			id: "5C00000000000006"
 			name: "Soup Stockpile"
 			rewards: [{
@@ -116,6 +123,7 @@
 		}
 		{
 			dependencies: ["5C00000000000006"]
+			icon: "minecraft:jungle_sapling"
 			id: "5C00000000000007"
 			name: "Jungle Survey"
 			shape: "diamond"
@@ -129,6 +137,7 @@
 		}
 		{
 			dependencies: ["5C00000000000007"]
+			icon: "brewery:grape_seed"
 			id: "5C00000000000008"
 			name: "Grape Cultivation"
 			rewards: [{
@@ -151,6 +160,7 @@
 		}
 		{
 			dependencies: ["5C00000000000008"]
+			icon: "brewery:brewers_yeast"
 			id: "5C00000000000009"
 			name: "Brewer's Yeast Reserve"
 			rewards: [{
@@ -173,6 +183,7 @@
 		}
 		{
 			dependencies: ["5C00000000000009"]
+			icon: "minecraft:dead_bush"
 			id: "5C0000000000000A"
 			name: "Wasteland Forest Survey"
 			shape: "diamond"
@@ -186,6 +197,7 @@
 		}
 		{
 			dependencies: ["5C0000000000000A"]
+			icon: "wastelands:rad_away"
 			id: "5C0000000000000B"
 			name: "Rad-Away Reserve"
 			rewards: [{
@@ -208,6 +220,7 @@
 		}
 		{
 			dependencies: ["5C0000000000000B"]
+			icon: "minecraft:white_bed"
 			id: "5C0000000000000C"
 			name: "Habitation Bedding"
 			rewards: [{

@@ -4,12 +4,14 @@
 	filename: "mastery_era_00"
 	group: "7ADA55C0FFEE0001"
 	id: "7000000000000000"
+	icon: "kubejs:era0_mastery_emblem"
 	images: [ ]
 	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["37553E8B6284E8E2"]
+			icon: "kubejs:era0_mastery_emblem"
 			id: "6010000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -21,6 +23,7 @@
 		}
 		{
 			dependencies: ["6010000000000001"]
+			icon: "minecraft:stick"
 			id: "1040000000000001"
 			rewards: [{
 				id: "1060000000000001"
@@ -44,6 +47,7 @@
 		}
 		{
 			dependencies: ["6010000000000001"]
+			icon: "wastelands:scrap_metal"
 			id: "2040000000000001"
 			rewards: [{
 				id: "2060000000000001"
@@ -67,6 +71,7 @@
 		}
 		{
 			dependencies: ["6010000000000001"]
+			icon: "minecraft:coarse_dirt"
 			id: "3040000000000001"
 			rewards: [{
 				id: "3060000000000001"
@@ -90,6 +95,7 @@
 		}
 		{
 			dependencies: ["6010000000000001"]
+			icon: "minecraft:cobblestone"
 			id: "4040000000000001"
 			rewards: [{
 				id: "4060000000000001"
@@ -118,6 +124,7 @@
 				"3040000000000001"
 				"4040000000000001"
 			]
+			icon: "kubejs:era0_mastery_emblem"
 			id: "6010000000000002"
 			rewards: [
 				{

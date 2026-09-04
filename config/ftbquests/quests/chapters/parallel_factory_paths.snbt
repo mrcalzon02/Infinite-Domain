@@ -4,12 +4,14 @@
 	filename: "parallel_factory_paths"
 	group: "4E65FAAC62D57D4A"
 	id: "1C7E40C69A25D8F6"
+	icon: "immersiveengineering:hammer"
 	name: "Parallel Factory Paths"
 	images: [ ]
 	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
+			icon: "create:wrench"
 			id: "5D30000000000001"
 			name: "Parallel Factory Paths"
 			shape: "octagon"
@@ -22,6 +24,7 @@
 		}
 		{
 			dependencies: ["5D30000000000001"]
+			icon: "create:mechanical_press"
 			id: "5D30000000000002"
 			name: "Create Workshop Foundations"
 			shape: "gear"
@@ -47,6 +50,7 @@
 		}
 		{
 			dependencies: ["5D30000000000002"]
+			icon: "minecraft:tuff"
 			id: "5D30000000000003"
 			name: "Geological Feedstock Recovery"
 			shape: "gear"
@@ -78,6 +82,7 @@
 				"5D30000000000003"
 				"5210000000000002"
 			]
+			icon: "create:asurine"
 			id: "5D30000000000004"
 			name: "Create Mineral Processing"
 			rewards: [{
@@ -120,6 +125,7 @@
 		}
 		{
 			dependencies: ["5D30000000000004"]
+			icon: "create:crushing_wheel"
 			id: "5D30000000000005"
 			name: "Crushing and Organic Feedstocks"
 			shape: "gear"
@@ -151,6 +157,7 @@
 				"5D30000000000005"
 				"5E00000000000010"
 			]
+			icon: "create:powdered_obsidian"
 			id: "5D30000000000006"
 			name: "Nether Processing Materials"
 			shape: "diamond"
@@ -176,6 +183,7 @@
 				"5D30000000000001"
 				"5210000000000002"
 			]
+			icon: "immersiveengineering:cokebrick"
 			id: "5D30000000000007"
 			name: "Coke Oven Foundations"
 			rewards: [{
@@ -205,6 +213,7 @@
 		}
 		{
 			dependencies: ["5D30000000000007"]
+			icon: "immersiveengineering:treated_wood_horizontal"
 			id: "5D30000000000008"
 			name: "Treated Wood and Coke"
 			shape: "hexagon"
@@ -227,6 +236,7 @@
 		}
 		{
 			dependencies: ["5D3000000000000A"]
+			icon: "immersiveengineering:conveyor_basic"
 			id: "5D30000000000009"
 			name: "Conveyors and Fluid Handling"
 			shape: "hexagon"
@@ -257,6 +267,7 @@
 				"5D30000000000008"
 				"5310000000000002"
 			]
+			icon: "immersiveengineering:basic_engineering"
 			id: "5D3000000000000A"
 			name: "Industrial Engineering Core"
 			rewards: [{
@@ -292,6 +303,7 @@
 		}
 		{
 			dependencies: ["5D3000000000000A"]
+			icon: "immersiveengineering:hammer"
 			id: "5D3000000000000B"
 			name: "Industrial Engineering Doctrine"
 			shape: "rsquare"
@@ -307,6 +319,7 @@
 				"5D3000000000000A"
 				"5410000000000002"
 			]
+			icon: "immersiveengineering:wirecoil_copper"
 			id: "5D3000000000000C"
 			name: "Low-Voltage Power Distribution"
 			shape: "hexagon"
@@ -340,6 +353,7 @@
 				"5D30000000000009"
 				"5310000000000002"
 			]
+			icon: "immersiveengineering:fermenter"
 			id: "5D3000000000000D"
 			name: "Fermenter and Squeezer Processing"
 			shape: "hexagon"
@@ -360,6 +374,7 @@
 		}
 		{
 			dependencies: ["5D3000000000000D"]
+			icon: "immersiveengineering:squeezer"
 			id: "5D3000000000000E"
 			name: "Bioindustrial Processing Doctrine"
 			shape: "rsquare"
@@ -375,6 +390,7 @@
 				"5D3000000000000E"
 				"5410000000000002"
 			]
+			icon: "minecraft:slime_ball"
 			id: "5D3000000000000F"
 			name: "Chemical Feedstock Integration"
 			shape: "rsquare"
@@ -390,6 +406,7 @@
 				"5D3000000000000C"
 				"5510000000000002"
 			]
+			icon: "immersiveengineering:cloche"
 			id: "5D30000000000010"
 			name: "Garden Cloche Agriculture"
 			rewards: [{
@@ -422,6 +439,7 @@
 				"5D3000000000000F"
 				"5510000000000002"
 			]
+			icon: "immersiveengineering:fluid_pipe"
 			id: "5D30000000000011"
 			name: "Chemical-Industrial Integration"
 			shape: "rsquare"
@@ -437,6 +455,7 @@
 				"5D3000000000000B"
 				"5510000000000002"
 			]
+			icon: "immersiveengineering:voltmeter"
 			id: "5D30000000000012"
 			name: "Electrical-Mechanical Integration"
 			shape: "rsquare"
@@ -452,6 +471,7 @@
 				"5D30000000000012"
 				"5610000000000002"
 			]
+			icon: "immersiveengineering:wirecoil_steel"
 			id: "5D30000000000013"
 			name: "High-Voltage Distribution"
 			rewards: [{
@@ -488,6 +508,7 @@
 				"5D30000000000006"
 				"5D3000000000000D"
 			]
+			icon: "create:mechanical_mixer"
 			id: "5D30000000000014"
 			name: "Parallel Process Integration"
 			shape: "rsquare"
@@ -504,6 +525,7 @@
 				"5D30000000000011"
 				"5D30000000000013"
 			]
+			icon: "immersiveengineering:hammer"
 			id: "5D30000000000015"
 			name: "Integrated Factory Commissioning"
 			shape: "octagon"
@@ -519,6 +541,7 @@
 				"5D30000000000010"
 				"5D30000000000015"
 			]
+			icon: "immersiveengineering:voltmeter"
 			id: "5D30000000000016"
 			name: "Dual-Path Production Proof"
 			rewards: [{

@@ -2,10 +2,10 @@
 
 **Target:** OWS-009 — Atlas Roadside Automated Repair Depot  
 **Procedure authority:** `docs/HEAVY_REBUILD_DOCTRINE.md`  
-**Artifact:** `old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/review_manifest.json`  
-**Contact sheet:** `old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/contact_sheet.png`  
-**Authoritative synchronization:** `old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/authoritative_sync.json`  
-**Visual regression metrics:** `old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/visual_regression_metrics.json`  
+**Artifact:** `dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/review_manifest.json`  
+**Contact sheet:** `dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/contact_sheet.png`  
+**Authoritative synchronization:** `dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/authoritative_sync.json`  
+**Visual regression metrics:** `dev/old_world_narrative/reviews/heavy_rebuild/visual/OWS-009/gate_d_final/r1/visual_regression_metrics.json`  
 **Revision:** `gate-d-r1@74a229a6`  
 **Fixed camera set:** `ows009_fixed_v1`  
 **Status:** **REVIEW NEEDED — independent Gate-D inspection required**
