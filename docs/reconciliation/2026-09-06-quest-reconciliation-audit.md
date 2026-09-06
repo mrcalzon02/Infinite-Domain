@@ -129,6 +129,37 @@ The following are candidates for depth-of-field after the existing corpus clears
 
 Status: **CANDIDATE ONLY — expansion admission remains blocked on reconciliation.**
 
+## 8. Applied Energistics Recovery — source-level era ordering cleared
+
+Authoritative source: `config/ftbquests/quests/chapters/applied_energistics_recovery.snbt`.
+
+A fresh current-source pass confirms the AE2 progression inserts explicit civilization authorities at the intended capability boundaries rather than relying on reward possession:
+
+- storage-network entry waits on Era 3 authority `5310000000000001` before `ae2:chest` and the subsequent 1K storage-cell objective;
+- 4K fluid storage waits on Era 4 authority `5410000000000001`;
+- powered-network progression waits on Era 5 authority `5510000000000001` before the Energy Acceptor stage;
+- controller progression waits on Era 6 authority `5610000000000001`;
+- quantum-link progression waits on Era 7 authority `5710000000000001`;
+- the infinite-storage endpoint additionally waits on Era 8 authority `5810000000000002`.
+
+Every inspected quest in the chapter carries an explicit icon. The current source therefore does not reproduce the Rot dossier's possession-level AE2 bypass pattern.
+
+Status: **SOURCE-LEVEL ERA ORDERING CLEARED — localization/global-ID/runtime validation still subject to the whole-corpus gate.**
+
+## 9. Another Lost Soul — source-level presentation/reward pass cleared
+
+Authoritative source: `config/ftbquests/quests/chapters/another_lost_soul.snbt`.
+
+A fresh current-source inspection found explicit icons on the chapter and every implemented quest. Rewards remain low-impact survival/economy or terminal-guide items (`supplementaries:sack`, Wastelands food/water, apples, and the FTB Quests task-screen configurator) rather than civilization-era technology or forward-tier reward bags. The chapter's many checkmark tasks are concentrated in narrative/guide branches and do not presently expose a direct era-capability bypass in source.
+
+Status: **SOURCE-LEVEL ICON/REWARD PASS CLEARED — localization semantics, global IDs, and runtime behavior still subject to the whole-corpus gate.**
+
+## 10. Food-economy specialist chapters — audit in progress
+
+Fresh source reads of `coffee_tea_economy.snbt` and `brewery_and_winery.snbt` show complete explicit icon coverage and multiple Era-1 supply/cache rewards. Both chapters enter through shared dependency `4FC0C1C678C71891`. Those rewards are not being classified as valid or invalid until that shared authority is traced precisely through the current Era-1 graph; no downgrade or gate mutation should be made from naming alone.
+
+Status: **OPEN — authority trace required before reward-tier disposition.**
+
 ## Exact next action
 
-Repair the stale development-audit paths in the validator authorities, then obtain an executable current-main worktree through the first available authorized repository path and run both validators. Repair Parallel Factory, Rot, and every additional current-corpus finding produced by that clean validation pass before beginning procedural expansion.
+Repair the stale development-audit paths in the validator authorities, then obtain an executable current-main worktree through the first available authorized repository path and run both validators. In parallel, continue source-level chapter sweeps where authority can be established directly, beginning with the shared `4FC0C1C678C71891` food-economy dependency and then specialist Create branches. Repair Parallel Factory, Rot, and every additional current-corpus finding produced by that clean validation pass before beginning procedural expansion.
