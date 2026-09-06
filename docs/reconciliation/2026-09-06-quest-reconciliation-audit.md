@@ -154,12 +154,58 @@ A fresh current-source inspection found explicit icons on the chapter and every 
 
 Status: **SOURCE-LEVEL ICON/REWARD PASS CLEARED — localization semantics, global IDs, and runtime behavior still subject to the whole-corpus gate.**
 
-## 10. Food-economy specialist chapters — audit in progress
+## 10. Food-economy specialist chapters — era ordering cleared
 
-Fresh source reads of `coffee_tea_economy.snbt` and `brewery_and_winery.snbt` show complete explicit icon coverage and multiple Era-1 supply/cache rewards. Both chapters enter through shared dependency `4FC0C1C678C71891`. Those rewards are not being classified as valid or invalid until that shared authority is traced precisely through the current Era-1 graph; no downgrade or gate mutation should be made from naming alone.
+Authoritative sources: `config/ftbquests/quests/chapters/coffee_tea_economy.snbt`, `config/ftbquests/quests/chapters/brewery_and_winery.snbt`, `config/ftbquests/quests/chapters/era_01_mechanical_reconstruction.snbt`, and `config/ftbquests/quests/lang/en_us.snbt`.
 
-Status: **OPEN — authority trace required before reward-tier disposition.**
+The shared dependency `4FC0C1C678C71891` has now been traced to `The Mechanical Foundation`, the Era-1 capstone. It requires one completed professional charter, proves sustained mechanical/provision/recovery capability, and explicitly opens Era 2. Both food-economy chapters therefore begin only after the player has already completed Era-1 foundation authority.
+
+Coffee/Tea and Brewery/Winery each have explicit chapter and quest icons in current source. Their Era-1 supply bags and priority caches are retrospective optional side-branch rewards after the Era-1 capstone, not forward-tier capability leaks. Brewery localization explicitly states that the optional line begins after the Mechanical Foundation and never gates an era.
+
+Status: **SOURCE-LEVEL ERA/REWARD/ICON ORDERING CLEARED — global-ID/localization/runtime validation still subject to the whole-corpus gate.**
+
+## 11. Create Big Cannons Doctrine — source-level era ordering cleared
+
+Authoritative source: `config/ftbquests/quests/chapters/create_big_cannons_doctrine.snbt`.
+
+The artillery line begins behind Era 4 authority `5410000000000001`. It then progresses through foundry establishment, barrel machining, first cannon assembly, inspection, breech/loading/mounting, ammunition production, misfire procedure, and firing drill. Automation-heavy traverse/elevation and autocannon stages additionally wait on Era 5 authority `5510000000000001`.
+
+Current rewards in the inspected chapter are Numismatics compensation rather than era bags or granted artillery technology. The chapter and quests carry explicit icons and explicit titles. No source-level forward-era reward leak or ordering inversion was found in this pass.
+
+Status: **SOURCE-LEVEL ERA/REWARD/ICON ORDERING CLEARED — global-ID/localization/runtime validation still subject to the whole-corpus gate.**
+
+## 12. Powered Field Engineering — source-level era ordering cleared
+
+Authoritative source: `config/ftbquests/quests/chapters/powered_field_engineering.snbt`.
+
+The chapter begins behind Era 5 authority `5510000000000001` before commissioning powered Mining Gadgets, Building Gadgets, charging infrastructure, and their ordinary upgrade branches. Extended mining range/size and advanced cut-paste construction additionally wait on Era 6 authority `5610000000000001`.
+
+The visible full progression uses explicit names and icons. Rewards are Numismatics compensation rather than era bags or granted higher-tier hardware. The two main branches converge only after their advanced objectives, so no source-level capability-order inversion was found.
+
+Status: **SOURCE-LEVEL ERA/REWARD/ICON ORDERING CLEARED — global-ID/localization/runtime validation still subject to the whole-corpus gate.**
+
+## 13. Create Specialist Workshops — source-level authority and localization pass substantially cleared
+
+Authoritative sources: `config/ftbquests/quests/chapters/create_specialist_workshops.snbt` and `config/ftbquests/quests/lang/en_us.snbt`.
+
+The specialist chapter starts after `The Mechanical Foundation` (`4FC0C1C678C71891`). Visible branches then add civilization authority before their corresponding capability families: Era 2 `5210000000000001` for Cardan/linear-bearing and automated-walkway work; Era 3 `5310000000000001` for station-platform, compact-gearbox, and delivery-contractor work; and Era 5 `5510000000000001` for high-end P2P delivery and hypertube systems.
+
+Visible rewards are Numismatics compensation rather than technology grants or forward-tier era bags. Every visible quest carries an explicit icon. Although the chapter SNBT intentionally omits inline names, localization supplies the chapter title, quest titles, detailed objectives, and rationale. Localization also establishes that its manual acceptance checkmarks represent witnessed operating procedures and give no material reward, so their existence alone is not a progression bypass.
+
+The source response available in this environment truncates the late tail of this chapter, so this is not yet a full chapter admission claim.
+
+Status: **PARTIAL SOURCE-LEVEL CLEAR — visible era/reward/icon/name semantics are coherent; late-tail/global-ID/runtime validation remains open.**
+
+## 14. Environmental Survival Engineering — audit in progress
+
+Authoritative source: `config/ftbquests/quests/chapters/environmental_survival_engineering.snbt`.
+
+Current source shows explicit chapter/quest icons and a staged environmental-protection progression. Early gas-mask/filter work precedes higher-authority branches; hard-hat/PDA and improved mask work reference `5210000000000002`; ventilation pipe work references `5310000000000002`; ventilation intake references `5410000000000002`. The visible reward sequence includes an Era-2 supply bag after the `521...0002` boundary, an Era-3 supply bag downstream of the `541...0002` boundary, and an Era-0 cache on the early radiation branch.
+
+Those numbered authorities use the `...0002` family rather than the already-traced primary era-entry IDs, so they must be traced before classifying the rewards. A lower-numbered bag behind a later authority is not a forward-tier leak by itself. The available source response also truncates the later radiation/environment tail, so no mutation or full-clear claim is justified yet.
+
+Status: **OPEN — trace the `521/531/541...0002` authorities and finish the late-tail reward/dependency audit before disposition.**
 
 ## Exact next action
 
-Repair the stale development-audit paths in the validator authorities, then obtain an executable current-main worktree through the first available authorized repository path and run both validators. In parallel, continue source-level chapter sweeps where authority can be established directly, beginning with the shared `4FC0C1C678C71891` food-economy dependency and then specialist Create branches. Repair Parallel Factory, Rot, and every additional current-corpus finding produced by that clean validation pass before beginning procedural expansion.
+Continue the current-source chapter sweep by resolving Environmental Survival Engineering's `...0002` authority family and completing the late tail, then finish the remaining Create Specialist Workshops tail and proceed through the next undeveloped specialist chapters. In parallel, repair the stale development-audit paths in the validator authorities when a safe complete-file editing path is available; then obtain an executable current-main worktree through the first authorized functioning repository path and run both validators. Repair Parallel Factory, Rot, Air/Sea's remaining semantic/presentation defect, and every additional current-corpus finding produced by that clean validation pass before beginning procedural expansion.
