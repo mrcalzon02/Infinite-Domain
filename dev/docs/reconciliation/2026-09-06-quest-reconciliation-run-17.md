@@ -43,6 +43,28 @@ Presentation/localization remains open: the chapter has an explicit icon but no 
 
 Applied Energistics Recovery shares entry dependency `4FC0C1C678C71891`; its provenance remains part of the same global ordering trace.
 
+## Environmental Survival Engineering
+
+Source: `config/ftbquests/quests/chapters/environmental_survival_engineering.snbt`.
+
+The full source-level progression has now been inspected through its radiation/exposure tail. The environmental branch advances through basic and advanced gas protection, filters, ventilation, Sulfuric Valley/Nether exposure, and a combined protection proof. The radiation branch proceeds through rubber, radiation-resistance medication, RadAway, a Geiger counter, radiation-immunity medication, full hazmat equipment, lead plating, and a final radiation-safety doctrine acknowledgement.
+
+The significant protection escalation is era-aware: hard-hat/basic engineering protection and the full hazmat milestone both require Era-2 authority `5210000000000002`; ventilation intake also waits on the Era-4-side authority used by the chapter's existing environmental progression. Rewards remain retrospective or same-era caches/currency rather than forward technology. No forward-era reward leak, impossible item objective, or dependency inversion was found in the inspected source.
+
+Two manual checkmarks remain (`5D2000000000000F`, radiation-safety orientation, and `5D20000000000017`, final radiation-safety doctrine). They do not themselves grant technology and sit before/after concrete equipment objectives respectively, so they are not currently classified as progression bypasses. Their player-facing names/descriptions remain localization-review items because this chapter relies heavily on localized naming rather than inline quest `name` fields.
+
+Disposition: source-level progression/reward logic internally clean; localization/name coverage and final global ID/runtime validation remain pending.
+
+## Parallel Factory Paths — commissioning defect confirmed
+
+Source: `config/ftbquests/quests/chapters/parallel_factory_paths.snbt`.
+
+The branch contains sensible material and era gates across Create processing, Immersive Engineering coke/treated wood, industrial engineering, LV/HV distribution, fermenter/squeezer processing, garden cloche, and cross-path integration. However, the previously suspected commissioning weakness is now confirmed from complete source inspection: there is no Excavator objective and no Arc Furnace objective anywhere in the chapter.
+
+`5D30000000000015` — `Integrated Factory Commissioning` — depends on the parallel-process, chemical-industrial, and high-voltage branches but authenticates completion only with task `6D3000000000002B`, a manual `checkmark`. The following `Dual-Path Production Proof` verifies only possession of a Create Mechanical Press, an Immersive Engineering Voltmeter, and eight IE fluid pipes. Those are component-presence proofs, not evidence that either high-end Immersive Engineering multiblock has been assembled or operated.
+
+This is a substantive depth/correctness defect rather than an era-order leak: the tree reaches an 'integrated factory commissioned' state without demonstrating the Excavator or Arc Furnace capabilities that the intended factory path is supposed to represent. Do not invent item or advancement IDs to patch it. The repair should use authoritative multiblock/advancement/runtime evidence if available, or add project-owned advancements that fire only after successful assembly/operation of the relevant machines.
+
 ## Updated audit disposition
 
 Newly source-audited this run:
@@ -50,9 +72,13 @@ Newly source-audited this run:
 - Workday Beverage Economy — internally clean; external predecessor trace pending.
 - Brewery and Winery — internally clean; external predecessor trace pending.
 - Applied Energistics Recovery — progression/reward logic internally coherent; localization/default-shape normalization and external predecessor trace pending.
+- Environmental Survival Engineering — source-level progression/reward logic internally clean through radiation tail; localization and final runtime/global validation pending.
+- Parallel Factory Paths — commissioning defect confirmed: no Excavator or Arc Furnace proof; integrated commissioning remains a bare checkmark.
 
-The mandatory repair ledger from Run 16 otherwise remains active: Rot cross-tree rewards; Parallel Factory commissioning proof; Air/Sea Nether stronghold runtime proof and remaining weak manual authentication where stronger evidence exists; Mutant/Mekanite presentation normalization; Stellaris chapter icon; Darknet presentation/legend normalization; Old World authority/presentation trace; stale project-authority references; and final deterministic whole-corpus validation including Domain Compendium.
+The mandatory repair ledger otherwise remains active: Rot cross-tree rewards; Parallel Factory commissioning proof; Air/Sea Nether stronghold runtime proof and remaining weak manual authentication where stronger evidence exists; Mutant/Mekanite presentation normalization; Stellaris chapter icon; Darknet presentation/legend normalization; Old World authority/presentation trace; stale project-authority references; and final deterministic whole-corpus validation including Domain Compendium.
 
 ## Expansion candidates
 
 No expansion is admitted ahead of correctness closure. These newly audited economy chapters suggest a later depth candidate: operational food/beverage production acceptance should prove processing throughput, packaging, storage, and distribution rather than merely possession of representative finished items. AE2 similarly benefits from operational storage/autocrafting commissioning proofs once its era gates are fully closed.
+
+Environmental Survival Engineering suggests a later field-safety expansion: controlled exposure trials should prove correct PPE/ventilation/radiation mitigation under actual hazardous conditions rather than merely possessing the equipment. Parallel Factory should gain operational multiblock commissioning for Excavator and Arc Furnace, with successful assembly and at least one representative production cycle authenticated by real advancements or project-owned event hooks.
