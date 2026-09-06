@@ -70,7 +70,7 @@
 				id: "6ACEB19F83E00000"
 				item: {
 					count: 1
-					id: "kubejs:era4_supply_bag"
+					id: "kubejs:era0_priority_cache"
 				}
 				type: "item"
 			}]
@@ -145,7 +145,7 @@
 				id: "6A4F86F4039A1CD6"
 				item: {
 					count: 1
-					id: "kubejs:era4_supply_bag"
+					id: "kubejs:era3_supply_bag"
 				}
 				type: "item"
 			}]
@@ -556,7 +556,10 @@
 			y: 48.0d
 		}
 		{
-			dependencies: ["5E0000000000000C"]
+			dependencies: [
+				"5E0000000000000C"
+				"5410000000000001"
+			]
 			id: "5E00000000000020"
 			rewards: [
 				{
