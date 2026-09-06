@@ -91,7 +91,7 @@ const iconReviewRows = rows.flatMap(row => row.parsed
     checkmark: q.check ? 'true' : 'false'
   })))
 const csvEscape = value => `"${String(value).replaceAll('"', '""')}"`
-const reportDir = path.join(root, 'docs', 'custom-content-audit')
+const reportDir = path.join(root, 'dev', 'docs', 'custom-content-audit')
 fs.mkdirSync(reportDir, { recursive: true })
 fs.writeFileSync(
   path.join(reportDir, 'quest-icon-review.csv'),
