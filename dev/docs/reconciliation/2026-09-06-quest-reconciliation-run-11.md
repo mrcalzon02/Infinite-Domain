@@ -102,3 +102,21 @@ Status: **SOURCE-LEVEL NAME/ICON/TASK/REWARD ORDERING CLEARED FOR INSPECTED BRAN
 Since the original Run-11 ledger above, `dev/audit_ftbquests.js` output normalization has been completed and a fail-loud `dev/run_quest_tree_coherence.py` entrypoint has been added for the relocated `dev/docs` authorities. Those completed validator-support changes should no longer be counted as open quest repairs.
 
 The active quest-content defects remain Rot's six AE2/Create Cybernetics reward pairs, Parallel Factory commissioning semantics, Air/Sea's Nether-structure and infrastructure-authentication reconciliation, Mutant/Mekanite icon normalization, Stellaris chapter icon, Darknet icon/shape normalization, Old World presentation/authority completion, and the final deterministic whole-corpus pass including Domain Compendium.
+
+---
+
+## Continuation — Prologue / Another Lost Soul
+
+Source: `config/ftbquests/quests/chapters/another_lost_soul.snbt`
+
+The Prologue is now source/localization audited. The chapter has an explicit compass icon, and every quest in the current source has an explicit icon. Authoritative localization supplies the chapter title **Prologue - Another Lost Soul**, subtitle, root quest title/description, and the inspected late terminal-guide quest title/description. The apparent absence of inline `name` fields is therefore intentional localization use rather than a demonstrated missing-name defect.
+
+The root `7D194089522507AB` is intentionally ungated because it is the player-entry field manual. Its checkmark is explicitly localized as an acknowledgement/read step, and its rewards are only an emergency sack and canned food. The central onboarding chain remains checkmark-driven because it is instructional/interface guidance rather than proof of an industrial capability. Optional side briefings and the Task Screen field-installation guide likewise do not unlock era authority. The only inspected item-authenticated terminal objective is `6F01000000000026`, which requires an actual `ftbquests:screen_1` before issuing the configurator.
+
+No forward-era technology reward, era-authority inversion, missing quest icon, or confirmed missing localization was found in this chapter. Its numerous instructional checkmarks are semantically appropriate and should not be mechanically converted into item objectives without a separate design reason.
+
+Status: **SOURCE-LEVEL PROLOGUE NAME/ICON/TASK/REWARD ORDERING CLEARED; global duplicate-ID and runtime validation remains under the deterministic corpus gate.**
+
+### Expansion candidate retained
+
+The Prologue is a good candidate for a later optional, non-gating “field competency” branch: actual shelter establishment, first water purification, terminal placement/configuration, and first evidence recovery could be demonstrated through advancements or item/structure tasks after the instructional path. This should remain supplemental and must not turn the readable onboarding/tutorial into a hard execution barrier.
