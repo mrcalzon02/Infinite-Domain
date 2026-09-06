@@ -74,21 +74,48 @@ The investigation remains intentionally era-independent. The prior direct Precis
 
 Status: **ERA CAPABILITY LEAK REPAIR PRESENT; global validator rerun still required.**
 
-## 5. Whole-corpus validation gate
+## 5. Validator reorganization regression — revision required
 
-Before procedural quest expansion is admitted, current `main` must receive a fresh execution of the restored validators and every deterministic critical/warning finding must be dispositioned without weakening the validators.
+The deterministic coherence validator was restored after the repository's development-only reorganization, but its auxiliary-data paths were restored in their pre-reorganization form.
+
+Current `dev/audit_quest_tree_coherence.py` resolves these inputs under root-level `docs/`:
+
+- `docs/registry-inventory/item-ids.txt`
+- `docs/registry-inventory/entity-ids.txt`
+- `docs/registry-inventory/mod-jar-index.json`
+- `docs/progression-graph/graph-nodes.csv`
+- `docs/recipe-index/recipe-outputs.csv`
+
+Those root paths no longer exist. Commit `1b252ded681b64bf3c67fe07c50b073bf081b18b` (`chore: isolate development-only files under dev`) moved the authoritative datasets under:
+
+- `dev/docs/registry-inventory/`
+- `dev/docs/progression-graph/`
+- `dev/docs/recipe-index/`
+
+All required current inputs are present at those `dev/docs` locations. The coherence validator's loaders return empty sets when these files are missing, so running the restored script without correcting the paths can suppress registry/producibility checks and produce a misleadingly incomplete audit rather than a hard failure.
+
+`dev/audit_ftbquests.js` has a related output-path reorganization issue: it still writes its generated icon-review report to root `docs/custom-content-audit/`, despite development audit products having been isolated under `dev/docs/`.
+
+Required root repair: update the restored validators themselves to resolve development audit inputs and outputs from `dev/docs`, preserving their deterministic logic and failing explicitly when required oracle inputs are unavailable. Do not copy the moved oracle datasets back into root `docs` and do not add compatibility shims.
+
+Status: **REVISION REQUIRED — deterministic validator authority is not currently trustworthy until path reconciliation is completed.**
+
+## 6. Whole-corpus validation gate
+
+Before procedural quest expansion is admitted, current `main` must receive a fresh execution of the repaired validators and every deterministic critical/warning finding must be dispositioned without weakening the validators.
 
 Required sequence:
 
-1. materialize authoritative current `main` into an executable worktree;
-2. run `dev/audit_quest_tree_coherence.py`;
-3. run `dev/audit_ftbquests.js`;
-4. inspect generated reports and exact findings;
-5. repair authoritative quest/localization sources target-by-target;
-6. rerun until the relevant deterministic findings are clean;
-7. keep runtime-only claims deferred until a real pack runtime is exercised.
+1. repair the validator paths to the authoritative `dev/docs` oracle locations and make required-oracle absence fail loudly;
+2. materialize authoritative current `main` into an executable worktree;
+3. run `dev/audit_quest_tree_coherence.py`;
+4. run `dev/audit_ftbquests.js`;
+5. inspect generated reports and exact findings;
+6. repair authoritative quest/localization sources target-by-target;
+7. rerun until the relevant deterministic findings are clean;
+8. keep runtime-only claims deferred until a real pack runtime is exercised.
 
-## 6. Procedural expansion candidates — not yet admitted
+## 7. Procedural expansion candidates — not yet admitted
 
 The following are candidates for depth-of-field after the existing corpus clears reconciliation:
 
@@ -104,4 +131,4 @@ Status: **CANDIDATE ONLY — expansion admission remains blocked on reconciliati
 
 ## Exact next action
 
-Recover an executable current-main worktree through the first available authorized repository path, run both restored validators, then repair Parallel Factory and Rot against the resulting current-corpus findings before beginning procedural expansion.
+Repair the stale development-audit paths in the validator authorities, then obtain an executable current-main worktree through the first available authorized repository path and run both validators. Repair Parallel Factory, Rot, and every additional current-corpus finding produced by that clean validation pass before beginning procedural expansion.
