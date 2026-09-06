@@ -6,8 +6,8 @@ verifies every required static oracle before execution, and then invokes the
 existing audit logic without duplicating it.
 
 Use this entrypoint until audit_quest_tree_coherence.py is consolidated around
-these paths. Missing required inputs are fatal: a partial oracle must never be
-reported as a clean quest audit.
+these paths. Missing or empty required inputs are fatal: a partial oracle must
+never be reported as a clean quest audit.
 """
 
 from __future__ import annotations
@@ -55,11 +55,17 @@ def _relative(path: Path) -> str:
 
 def preflight() -> None:
     missing = [f"file:{_relative(path)}" for path in REQUIRED_FILES if not path.is_file()]
+    empty = [
+        f"file:{_relative(path)}"
+        for path in REQUIRED_FILES
+        if path.is_file() and path.stat().st_size == 0
+    ]
     missing.extend(f"dir:{_relative(path)}" for path in REQUIRED_DIRS if not path.is_dir())
-    if missing:
-        joined = "\n  - ".join(missing)
+    invalid = missing + [f"empty:{entry}" for entry in empty]
+    if invalid:
+        joined = "\n  - ".join(invalid)
         raise SystemExit(
-            "Quest coherence audit aborted: required authoritative inputs are missing.\n"
+            "Quest coherence audit aborted: required authoritative inputs are missing or empty.\n"
             "A partial oracle is not valid audit evidence.\n"
             f"  - {joined}"
         )
