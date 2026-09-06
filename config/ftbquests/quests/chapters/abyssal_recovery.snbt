@@ -10,7 +10,10 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["5E00000000000006"]
+			dependencies: [
+				"5E00000000000006"
+				"5410000000000001"
+			]
 			icon: "minecraft:compass"
 			id: "5AB0550C00000001"
 			rewards: [{
@@ -72,7 +75,10 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["5E00000000000006"]
+			dependencies: [
+				"5E00000000000006"
+				"5410000000000001"
+			]
 			icon: "minecraft:compass"
 			id: "5AB0550C00000004"
 			rewards: [
@@ -222,7 +228,7 @@
 			tasks: [{
 				id: "6AB0550C0000000C"
 				structure: "infinite_domain:abyssal/pelagos_abyssal_relay"
-				type: "structure"
+					type: "structure"
 			}]
 			x: -6.0d
 			y: 10.0d
@@ -331,7 +337,7 @@
 			tasks: [{
 				id: "6AB0550C00000012"
 				structure: "infinite_domain:abyssal/karsic_abyssal_pipeline_station"
-				type: "structure"
+					type: "structure"
 			}]
 			x: 6.0d
 			y: 10.0d
