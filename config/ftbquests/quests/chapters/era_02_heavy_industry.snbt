@@ -279,14 +279,6 @@
 		{
 			dependencies: ["2210000000000006"]
 			id: "2210000000000007"
-			rewards: [{
-				id: "2270000000000007"
-				item: {
-					count: 1
-					id: "createcybernetics:eyeupgrades_biomonitor"
-				}
-				type: "item"
-			}]
 			shape: "heart"
 			tasks: [{
 				count: 32L
@@ -608,29 +600,11 @@
 			dependency_requirement: "one_completed"
 			id: "5210000000000002"
 			min_required_dependencies: 1
-			rewards: [
-				{
-					id: "523000000000000A"
-					item: {
-						count: 1
-						id: "ae2:chest"
-					}
-					type: "item"
-				}
-				{
-					id: "523000000000000B"
-					item: {
-						count: 1
-						id: "ae2:item_storage_cell_1k"
-					}
-					type: "item"
-				}
-				{
-					id: "5230000000000014"
-					type: "xp"
-					xp: 500
-				}
-			]
+			rewards: [{
+				id: "5230000000000014"
+				type: "xp"
+				xp: 500
+			}]
 			shape: "octagon"
 			size: 1.5d
 			tasks: [{
