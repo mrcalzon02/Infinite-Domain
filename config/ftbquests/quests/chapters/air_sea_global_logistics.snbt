@@ -490,6 +490,13 @@
 				}
 				type: "item"
 			}]
+			shape: "gear"
+			tasks: [{
+				count: 4L
+				id: "6E0000000000001A"
+				item: { count: 1, id: "minecraft:dragon_breath" }
+				type: "item"
+			}]
 			x: 20.0d
 			y: 42.0d
 		}
@@ -610,6 +617,12 @@
 					count: 1
 					id: "kubejs:era4_priority_cache"
 				}
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6E00000000000022"
+				item: { count: 1, id: "deepnether:deep_nether_lighter" }
 				type: "item"
 			}]
 			x: 14.0d
