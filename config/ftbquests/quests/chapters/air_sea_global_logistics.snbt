@@ -463,7 +463,7 @@
 			dependencies: ["5E00000000000018"]
 			id: "5E00000000000019"
 			rewards: [{
-				command: "execute in minecraft:the_nether run structure_map minecraft:stronghold 2"
+				command: "execute in minecraft:the_nether run structure_map infinite_domain:nether/lyran_research 2"
 				feedback_message: "infinite_domain.reward.explorer_map"
 				id: "70EF8EB3314DCEE9"
 				permission_level: 2
@@ -488,13 +488,6 @@
 					count: 1
 					id: "kubejs:era4_supply_bag"
 				}
-				type: "item"
-			}]
-			shape: "gear"
-			tasks: [{
-				count: 4L
-				id: "6E0000000000001A"
-				item: { count: 1, id: "minecraft:dragon_breath" }
 				type: "item"
 			}]
 			x: 20.0d
@@ -619,12 +612,6 @@
 				}
 				type: "item"
 			}]
-			shape: "gear"
-			tasks: [{
-				id: "6E00000000000022"
-				item: { count: 1, id: "deepnether:deep_nether_lighter" }
-				type: "item"
-			}]
 			x: 14.0d
 			y: 26.0d
 		}
@@ -642,7 +629,7 @@
 			shape: "diamond"
 			tasks: [{
 				id: "6E0000000000001E"
-				structure: "minecraft:stronghold"
+				structure: "infinite_domain:nether/lyran_research"
 				type: "structure"
 			}]
 			x: 14.0d
