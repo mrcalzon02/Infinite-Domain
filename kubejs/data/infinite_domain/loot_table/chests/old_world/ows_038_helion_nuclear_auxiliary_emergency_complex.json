@@ -33,7 +33,9 @@
                 "It needs one sufficiently important auxiliary system to fail. Helion can replace components. For now. But maintenance inventory is being consumed faster than manufacturing replaces it.",
                 "The power system isn't collapsing because generators forgot how to generate. It's collapsing because civilization is made out of interfaces. And interfaces are everywhere."
               ],
-              "mode": "replace_all"
+              "mode": {
+                "type": "replace_all"
+              }
             }
           ]
         }
@@ -61,7 +63,9 @@
                 "This plant can generate enough power for a million homes while half those homes remain dark because there is no intact system between us and them.",
                 "That's the story of the whole damn world now. Plenty of capability. No system left to carry it."
               ],
-              "mode": "replace_all"
+              "mode": {
+                "type": "replace_all"
+              }
             }
           ]
         }
