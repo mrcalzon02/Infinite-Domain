@@ -1,34 +1,37 @@
-{"type":"minecraft:cache_2d","argument":
 {
-  "type": "isekai_api:clamp",
-  "min": 0.0,
-  "max": 1.0,
-  "f": {
-    "type": "isekai_api:add",
-    "a": {
-      "type": "isekai_api:constant",
-      "value": 0.5
-    },
-    "b": {
-      "type": "isekai_api:multiply",
-      "a": {
-        "type": "isekai_api:add",
-        "a": {
-          "type": "isekai_api:abs",
-          "f": { "type": "isekai_api:coordinate", "axis": "x" }
-        },
-        "b": {
-          "type": "isekai_api:negate",
-          "f": {
-            "type": "isekai_api:abs",
-            "f": { "type": "isekai_api:coordinate", "axis": "z" }
+  "type": "minecraft:cache_2d",
+  "argument": {
+    "type": "minecraft:clamp",
+    "input": {
+      "type": "minecraft:add",
+      "argument1": 0.5,
+      "argument2": {
+        "type": "minecraft:mul",
+        "argument1": {
+          "type": "minecraft:add",
+          "argument1": {
+            "type": "minecraft:abs",
+            "argument": {
+              "type": "isekai_api:coordinate",
+              "axis": "x"
+            }
+          },
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": {
+              "type": "minecraft:abs",
+              "argument": {
+                "type": "isekai_api:coordinate",
+                "axis": "z"
+              }
+            },
+            "argument2": -1.0
           }
-        }
-      },
-      "b": {
-        "type": "isekai_api:constant",
-        "value": 0.002
+        },
+        "argument2": 0.002
       }
-    }
+    },
+    "min": 0.0,
+    "max": 1.0
   }
-}}
+}

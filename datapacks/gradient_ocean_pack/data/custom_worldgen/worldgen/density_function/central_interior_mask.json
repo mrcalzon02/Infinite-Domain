@@ -1,34 +1,36 @@
 {
-  "type": "isekai_api:multiply",
-  "a": {
-    "type": "isekai_api:clamp",
-    "min": 0.0,
-    "max": 1.0,
-    "f": {
-      "type": "isekai_api:multiply",
-      "a": {
-        "type": "isekai_api:add",
-        "a": { "type": "isekai_api:constant", "value": 4750.0 },
-        "b": {
-          "type": "isekai_api:negate",
-          "f": {
+  "type": "minecraft:mul",
+  "argument1": {
+    "type": "minecraft:clamp",
+    "input": {
+      "type": "minecraft:mul",
+      "argument1": {
+        "type": "minecraft:add",
+        "argument1": 4750.0,
+        "argument2": {
+          "type": "minecraft:mul",
+          "argument1": {
             "type": "isekai_api:distance",
             "ref_x": 0.0,
             "ref_y": 0.0,
             "ref_z": 0.0,
             "mode": "xz"
-          }
+          },
+          "argument2": -1.0
         }
       },
-      "b": { "type": "isekai_api:constant", "value": 0.01 }
-    }
+      "argument2": 0.01
+    },
+    "min": 0.0,
+    "max": 1.0
   },
-  "b": {
-    "type": "isekai_api:add",
-    "a": { "type": "isekai_api:constant", "value": 1.0 },
-    "b": {
-      "type": "isekai_api:negate",
-      "f": "custom_worldgen:mountain_ring_mask"
+  "argument2": {
+    "type": "minecraft:add",
+    "argument1": 1.0,
+    "argument2": {
+      "type": "minecraft:mul",
+      "argument1": "custom_worldgen:mountain_ring_mask",
+      "argument2": -1.0
     }
   }
 }

@@ -5,12 +5,9 @@
     "t": "custom_worldgen:central_interior_mask",
     "a": "custom_worldgen:base_erosion",
     "b": {
-      "type": "isekai_api:max",
-      "a": "custom_worldgen:base_erosion",
-      "b": {
-        "type": "isekai_api:constant",
-        "value": -0.5
-      }
+      "type": "minecraft:max",
+      "argument1": "custom_worldgen:base_erosion",
+      "argument2": -0.5
     }
   }
 }

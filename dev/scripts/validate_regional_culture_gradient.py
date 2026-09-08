@@ -133,6 +133,27 @@ class Graph:
         if kind == "isekai_api:step":
             value = ev("value")
             return ev("high") if value >= float(node["threshold"]) else ev("low")
+        # Vanilla combinators. The pack's density functions were migrated off the
+        # isekai_api equivalents because those recompute minValue()/maxValue()
+        # over the whole subtree on every call (MultiplyDF branches into both
+        # bounds of both operands, so cost is ~4^depth); vanilla precomputes the
+        # bounds once at construction. The isekai forms above are kept so this
+        # validator still reads pre-migration data.
+        if kind == "minecraft:add":
+            return ev("argument1") + ev("argument2")
+        if kind == "minecraft:mul":
+            return ev("argument1") * ev("argument2")
+        if kind == "minecraft:min":
+            return min(ev("argument1"), ev("argument2"))
+        if kind == "minecraft:max":
+            return max(ev("argument1"), ev("argument2"))
+        if kind == "minecraft:clamp":
+            return min(max(ev("input"), float(node["min"])), float(node["max"]))
+        if kind == "minecraft:range_choice":
+            value = ev("input")
+            if float(node["min_inclusive"]) <= value < float(node["max_exclusive"]):
+                return ev("when_in_range")
+            return ev("when_out_of_range")
         if kind in ("minecraft:cache_2d", "minecraft:flat_cache", "minecraft:cache_once"):
             # Cache markers are semantically transparent to this point evaluator.
             # Runtime Minecraft replaces them with chunk-local memoizing wrappers.

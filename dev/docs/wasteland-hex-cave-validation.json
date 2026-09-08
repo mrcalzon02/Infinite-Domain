@@ -1,5 +1,21 @@
 {
-  "purpose": "Static and geometric proof for Infinite Domain's visible, fractally occluded Wasteland hex-grid cave system.",
+  "purpose": "Static and geometric proof for Infinite Domain's visible, fractally occluded Wasteland hex-grid cave system, covering both the canonical density codec and the hex-cave source module.",
+  "authority": [
+    "docs/WASTELAND_HEX_CAVE_SYSTEM.md"
+  ],
+  "sources": {
+    "density_functions": "datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen/density_function",
+    "noise_settings": "kubejs/data/wastelands/worldgen/noise_settings/wasteland.json",
+    "installed_codec_jar": "mods/infinite-domain-overworld-terrain-1.0.0.jar",
+    "source_module": "dev/packdev/wasteland-hex-caves"
+  },
+  "reference_seed": 123456789,
+  "reference_metrics": {
+    "raw_hex_percent": 28.4576416015625,
+    "visible_hex_percent": 22.47772216796875,
+    "occluded_hex_percent": 5.97991943359375,
+    "chamber_percent": 4.26025390625
+  },
   "checks": [
     {
       "id": "WHC-1",
@@ -152,8 +168,80 @@
       "evidence": {
         "gated_paths": []
       }
+    },
+    {
+      "id": "WHC-9",
+      "check": "the source module's carve is deterministic and coordinate-seeded",
+      "passed": true,
+      "detail": "world seed and block coordinates alone drive the warped hex boundary, occlusion thresholds, chamber test, and the block-safety guards",
+      "evidence": {
+        "source": "dev/packdev/wasteland-hex-caves/src/main/java/infinitedomain/wastelandhexcaves/HexCaveFeature.java",
+        "missing_contracts": []
+      }
+    },
+    {
+      "id": "WHC-10",
+      "check": "the source module is scoped to the Wasteland biome namespaces",
+      "passed": true,
+      "detail": "the modifier adds one placed feature at UNDERGROUND_DECORATION for the the_wasteland_reworked and wastelands namespaces only",
+      "evidence": {
+        "source": "dev/packdev/wasteland-hex-caves/src/main/java/infinitedomain/wastelandhexcaves/WastelandNamespaceBiomeModifier.java",
+        "missing_contracts": []
+      }
+    },
+    {
+      "id": "WHC-11",
+      "check": "the source module registers its feature and biome-modifier serializer",
+      "passed": true,
+      "detail": "the mod entry point registers the hex_caves feature and the wasteland_namespace biome-modifier codec",
+      "evidence": {
+        "source": "dev/packdev/wasteland-hex-caves/src/main/java/infinitedomain/wastelandhexcaves/WastelandHexCaves.java",
+        "missing_contracts": []
+      }
+    },
+    {
+      "id": "WHC-12",
+      "check": "the source module's datapack resources match its registration contract",
+      "passed": true,
+      "detail": "the configured feature, placed feature, and biome modifier resolve to the ids the mod registers",
+      "evidence": {
+        "problems": []
+      }
+    },
+    {
+      "id": "WHC-13",
+      "check": "the reference implementation reproduces the authored grid and occlusion budget",
+      "passed": true,
+      "detail": "seed 123456789 over a 512x512 domain at step 2: 28.5% raw grid, 22.5% surviving, 6.0% occluded, 4.3% chambers",
+      "evidence": {
+        "metrics": {
+          "raw_hex_percent": 28.4576416015625,
+          "visible_hex_percent": 22.47772216796875,
+          "occluded_hex_percent": 5.97991943359375,
+          "chamber_percent": 4.26025390625
+        },
+        "expected_ranges": {
+          "raw_hex_percent": [
+            28.3,
+            28.7
+          ],
+          "visible_hex_percent": [
+            22.3,
+            22.7
+          ],
+          "occluded_hex_percent": [
+            5.8,
+            6.2
+          ],
+          "chamber_percent": [
+            4.1,
+            4.5
+          ]
+        },
+        "problems": []
+      }
     }
   ],
   "passed": true,
-  "runtime_validation": "This gate proves codec packaging, graph reachability, exact geometry, land/spawn bounds, and multiplayer ownership. A fresh-world visual and performance pass remains required."
+  "runtime_validation": "This gate proves codec packaging, graph reachability, exact geometry, land/spawn bounds, source-module contracts, and multiplayer ownership. A fresh-world visual and performance pass remains required."
 }

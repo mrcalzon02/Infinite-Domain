@@ -1,22 +1,62 @@
 #!/usr/bin/env python3
-<<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
-<<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
-"""Static/reference validator for Infinite Domain's wasteland hex-cave source module."""
-=======
-"""Validate the canonical Wasteland hex-grid cave implementation."""
->>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
-=======
-"""Validate the canonical Wasteland hex-grid cave implementation."""
->>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
+"""Validate Infinite Domain's Wasteland hex-grid cave system, both halves of it.
+
+The pack ships two project-owned pieces of Wasteland hex-cave machinery, and this
+gate covers both:
+
+  * The canonical terrain-level system. The `infinite_domain_worldgen:hex_grid_cave`
+    density codec folds world X/Z into axial hex cells and is carved by the
+    `wastelands:wasteland` final-density router. Checks WHC-1..WHC-8 prove codec
+    packaging, graph reachability, exact geometry, land/ocean and spawn bounds,
+    the seeded plasma occlusion, and multiplayer-safe ownership.
+  * The hex-cave source module at `dev/packdev/wasteland-hex-caves`, a separate
+    NeoForge Feature (`infinite_domain_wasteland_hex_caves`) with its own
+    registration and datapack resources. Checks WHC-9..WHC-13 prove its source
+    contracts, its resource registration, and that a Python reference
+    implementation of its noise reproduces the authored grid/occlusion budget.
+
+Both halves are currently live and installed, so neither side is dropped here.
+The density-function graph is read as literal JSON against the vanilla node types
+(`minecraft:add`/`max`/`min`/`clamp`/`range_choice`, constants inlined as bare
+numbers); this gate compares structure rather than evaluating the graph, so it
+needs no combinator interpreter.
+
+Authority: docs/WASTELAND_HEX_CAVE_SYSTEM.md
+
+Usage:
+    python dev/scripts/validate_wasteland_hex_caves.py
+    python dev/scripts/validate_wasteland_hex_caves.py --json
+"""
 
 from __future__ import annotations
 
+import argparse
 import json
 import math
-<<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
-<<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
+import re
 import sys
+import zipfile
 from pathlib import Path
+from typing import Any
+
+ROOT = Path(__file__).resolve().parents[2]
+
+# --- canonical terrain-level system (WHC-1..WHC-8) ---------------------------
+PACK = ROOT / "datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen"
+DENSITY = PACK / "density_function"
+NOISE = PACK / "noise"
+SETTINGS = ROOT / "kubejs/data/wastelands/worldgen/noise_settings/wasteland.json"
+JAR = ROOT / "mods/infinite-domain-overworld-terrain-1.0.0.jar"
+REPORT = ROOT / "dev/docs/wasteland-hex-cave-validation.json"
+FORBIDDEN_GATE = re.compile(
+    r"quest|ftbquests|player|team|advancement|scoreboard|game_?stage|gamestage",
+    re.IGNORECASE,
+)
+
+# --- hex-cave source module (WHC-9..WHC-13) ----------------------------------
+MODULE = ROOT / "dev/packdev/wasteland-hex-caves"
+MODULE_SRC = MODULE / "src/main/java/infinitedomain/wastelandhexcaves"
+MODULE_RESOURCES = MODULE / "src/main/resources"
 
 MASK = (1 << 64) - 1
 SQRT_3 = 1.7320508075688772
@@ -40,6 +80,58 @@ EXPECTED_RANGES = {
     "occluded_hex_percent": (5.8, 6.2),
     "chamber_percent": (4.1, 4.5),
 }
+
+
+def load(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+# --- signed-distance sampling for the density codec's geometry ---------------
+
+
+def nearest_cell(x: float, z: float, radius: float) -> tuple[int, int]:
+    q = (2.0 / 3.0 * x) / radius
+    r = (-x / 3.0 + math.sqrt(3.0) / 3.0 * z) / radius
+    cube_x, cube_z = q, r
+    cube_y = -cube_x - cube_z
+    rx, ry, rz = round(cube_x), round(cube_y), round(cube_z)
+    dx, dy, dz = abs(rx - cube_x), abs(ry - cube_y), abs(rz - cube_z)
+    if dx > dy and dx > dz:
+        rx = -ry - rz
+    elif dy > dz:
+        ry = -rx - rz
+    else:
+        rz = -rx - ry
+    return rx, rz
+
+
+def signed_hex(x: float, z: float, radius: float) -> float:
+    normal_x = math.sqrt(3.0) * 0.5
+    return max(abs(x) * normal_x + abs(z) * 0.5, abs(z)) - radius * normal_x
+
+
+def sample(params: dict[str, Any], x: int, y: int, z: int) -> float:
+    if (
+        y < params["min_y"]
+        or y > params["max_y"]
+        or math.hypot(x, z) < params["origin_exclusion_radius"]
+    ):
+        return 1.0
+    radius = params["cell_radius"]
+    q, r = nearest_cell(x, z, radius)
+    cx = radius * 1.5 * q
+    cz = radius * math.sqrt(3.0) * (r + q * 0.5)
+    local_x, local_z = x - cx, z - cz
+    edge = -signed_hex(local_x, local_z, radius) - params["corridor_half_width"]
+    chamber = signed_hex(local_x, local_z, params["chamber_radius"])
+    horizontal = min(edge, chamber)
+    layer = round((y - params["layer_offset"]) / params["layer_spacing"])
+    center_y = params["layer_offset"] + layer * params["layer_spacing"]
+    vertical = abs(y - center_y) - params["layer_half_height"]
+    return max(-1.0, min(1.0, max(horizontal, vertical) / params["feather"]))
+
+
+# --- Python reference implementation of the source module's noise ------------
 
 
 def u64(value: int) -> int:
@@ -184,195 +276,17 @@ def reference_metrics() -> dict[str, float]:
     return {name: count / samples * 100.0 for name, count in zip(names, counts)}
 
 
-def require_text(text: str, needle: str, failures: list[str], label: str) -> None:
-    if needle not in text:
-        failures.append(f"{label}: missing required source contract {needle!r}")
-
-
-def validate_repository(root: Path) -> list[str]:
-    failures: list[str] = []
-    module = root / "dev" / "packdev" / "wasteland-hex-caves"
-    source = module / "src" / "main" / "java" / "infinitedomain" / "wastelandhexcaves"
-    resources = module / "src" / "main" / "resources"
-
-    feature_path = source / "HexCaveFeature.java"
-    modifier_path = source / "WastelandNamespaceBiomeModifier.java"
-    main_path = source / "WastelandHexCaves.java"
-
-    for path in (feature_path, modifier_path, main_path):
-        if not path.is_file():
-            failures.append(f"missing source file: {path.relative_to(root)}")
-
-    if failures:
-        return failures
-
-    feature = feature_path.read_text(encoding="utf-8")
-    modifier = modifier_path.read_text(encoding="utf-8")
-    main = main_path.read_text(encoding="utf-8")
-
-    for needle in (
-        "level.getSeed()",
-        "nearestHexBoundary",
-        "double localWidth = 2.48",
-        "macro > 0.43",
-        "plasma > 0.41 && macro > -0.15",
-        "macro < -0.20",
-        "plasma < 0.30",
-        "HEX_SIZE * 0.72",
-        "surfaceY - 10",
-        "BlockTags.BASE_STONE_OVERWORLD",
-        "BlockTags.DIRT",
-        "Blocks.GRAVEL",
-        "state.hasBlockEntity()",
-        "state.getFluidState().isEmpty()",
-    ):
-        require_text(feature, needle, failures, "HexCaveFeature.java")
-
-    for needle in (
-        '"the_wasteland_reworked"',
-        '"wastelands"',
-        "GenerationStep.Decoration.UNDERGROUND_DECORATION",
-        'PlacedFeature.CODEC.fieldOf("feature")',
-    ):
-        require_text(modifier, needle, failures, "WastelandNamespaceBiomeModifier.java")
-
-    for needle in (
-        'FEATURES.register("hex_caves"',
-        '"wasteland_namespace"',
-        "BIOME_MODIFIER_SERIALIZERS",
-    ):
-        require_text(main, needle, failures, "WastelandHexCaves.java")
-
-    json_contracts = {
-        resources / "data" / "infinite_domain_wasteland_hex_caves" / "worldgen" / "configured_feature" / "hex_caves.json": {
-            "type": "infinite_domain_wasteland_hex_caves:hex_caves",
-            "config": {},
-        },
-        resources / "data" / "infinite_domain_wasteland_hex_caves" / "worldgen" / "placed_feature" / "hex_caves.json": {
-            "feature": "infinite_domain_wasteland_hex_caves:hex_caves",
-            "placement": [],
-        },
-        resources / "data" / "infinite_domain_wasteland_hex_caves" / "neoforge" / "biome_modifier" / "add_hex_caves.json": {
-            "type": "infinite_domain_wasteland_hex_caves:wasteland_namespace",
-            "feature": "infinite_domain_wasteland_hex_caves:hex_caves",
-        },
-    }
-
-    for path, expected in json_contracts.items():
-        if not path.is_file():
-            failures.append(f"missing JSON resource: {path.relative_to(root)}")
-            continue
-        try:
-            observed = json.loads(path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError as exc:
-            failures.append(f"{path.relative_to(root)}: invalid JSON: {exc}")
-            continue
-        if observed != expected:
-            failures.append(
-                f"{path.relative_to(root)}: resource contract mismatch; expected {expected!r}, got {observed!r}"
-            )
-
-    metrics = reference_metrics()
-    for name, (minimum, maximum) in EXPECTED_RANGES.items():
-        value = metrics[name]
-        if not minimum <= value <= maximum:
-            failures.append(
-                f"{name}: {value:.3f}% outside expected range {minimum:.1f}-{maximum:.1f}%"
-            )
-
-    return failures
+def missing_contracts(text: str, needles: tuple[str, ...]) -> list[str]:
+    return [needle for needle in needles if needle not in text]
 
 
 def main() -> int:
-    root = Path(__file__).resolve().parents[2]
-    failures = validate_repository(root)
-    metrics = reference_metrics()
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument(
+        "--json", action="store_true", help="print the JSON report instead of PASS lines"
+    )
+    args = parser.parse_args()
 
-    print("Wasteland hex-cave static/reference validation")
-    print(f"seed={REFERENCE_SEED} domain=512x512 step={REFERENCE_STEP}")
-    print(f"raw literal hex grid: {metrics['raw_hex_percent']:.1f}%")
-    print(f"surviving visible grid: {metrics['visible_hex_percent']:.1f}%")
-    print(f"occluded/interrupted grid: {metrics['occluded_hex_percent']:.1f}%")
-    print(f"larger fractal chambers: {metrics['chamber_percent']:.1f}%")
-
-    if failures:
-        print("FAIL")
-        for failure in failures:
-            print(f"- {failure}")
-        return 1
-
-    print("PASS")
-    return 0
-=======
-=======
->>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
-import re
-import sys
-import zipfile
-from pathlib import Path
-from typing import Any
-
-
-ROOT = Path(__file__).resolve().parents[2]
-PACK = ROOT / "datapacks/gradient_ocean_pack/data/custom_worldgen/worldgen"
-DENSITY = PACK / "density_function"
-NOISE = PACK / "noise"
-SETTINGS = ROOT / "kubejs/data/wastelands/worldgen/noise_settings/wasteland.json"
-JAR = ROOT / "mods/infinite-domain-overworld-terrain-1.0.0.jar"
-REPORT = ROOT / "dev/docs/wasteland-hex-cave-validation.json"
-FORBIDDEN_GATE = re.compile(
-    r"quest|ftbquests|player|team|advancement|scoreboard|game_?stage|gamestage",
-    re.IGNORECASE,
-)
-
-
-def load(path: Path) -> Any:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def nearest_cell(x: float, z: float, radius: float) -> tuple[int, int]:
-    q = (2.0 / 3.0 * x) / radius
-    r = (-x / 3.0 + math.sqrt(3.0) / 3.0 * z) / radius
-    cube_x, cube_z = q, r
-    cube_y = -cube_x - cube_z
-    rx, ry, rz = round(cube_x), round(cube_y), round(cube_z)
-    dx, dy, dz = abs(rx - cube_x), abs(ry - cube_y), abs(rz - cube_z)
-    if dx > dy and dx > dz:
-        rx = -ry - rz
-    elif dy > dz:
-        ry = -rx - rz
-    else:
-        rz = -rx - ry
-    return rx, rz
-
-
-def signed_hex(x: float, z: float, radius: float) -> float:
-    normal_x = math.sqrt(3.0) * 0.5
-    return max(abs(x) * normal_x + abs(z) * 0.5, abs(z)) - radius * normal_x
-
-
-def sample(params: dict[str, Any], x: int, y: int, z: int) -> float:
-    if (
-        y < params["min_y"]
-        or y > params["max_y"]
-        or math.hypot(x, z) < params["origin_exclusion_radius"]
-    ):
-        return 1.0
-    radius = params["cell_radius"]
-    q, r = nearest_cell(x, z, radius)
-    cx = radius * 1.5 * q
-    cz = radius * math.sqrt(3.0) * (r + q * 0.5)
-    local_x, local_z = x - cx, z - cz
-    edge = -signed_hex(local_x, local_z, radius) - params["corridor_half_width"]
-    chamber = signed_hex(local_x, local_z, params["chamber_radius"])
-    horizontal = min(edge, chamber)
-    layer = round((y - params["layer_offset"]) / params["layer_spacing"])
-    center_y = params["layer_offset"] + layer * params["layer_spacing"]
-    vertical = abs(y - center_y) - params["layer_half_height"]
-    return max(-1.0, min(1.0, max(horizontal, vertical) / params["feather"]))
-
-
-def main() -> int:
     checks: list[dict[str, Any]] = []
     failures: list[dict[str, Any]] = []
 
@@ -564,24 +478,167 @@ def main() -> int:
         {"gated_paths": gated},
     )
 
+    # --- hex-cave source module ---------------------------------------------
+
+    source_contracts = (
+        (
+            "WHC-9",
+            "HexCaveFeature.java",
+            "the source module's carve is deterministic and coordinate-seeded",
+            "world seed and block coordinates alone drive the warped hex boundary, occlusion thresholds, chamber test, and the block-safety guards",
+            (
+                "level.getSeed()",
+                "nearestHexBoundary",
+                "double localWidth = 2.48",
+                "macro > 0.43",
+                "plasma > 0.41 && macro > -0.15",
+                "macro < -0.20",
+                "plasma < 0.30",
+                "HEX_SIZE * 0.72",
+                "surfaceY - 10",
+                "BlockTags.BASE_STONE_OVERWORLD",
+                "BlockTags.DIRT",
+                "Blocks.GRAVEL",
+                "state.hasBlockEntity()",
+                "state.getFluidState().isEmpty()",
+            ),
+        ),
+        (
+            "WHC-10",
+            "WastelandNamespaceBiomeModifier.java",
+            "the source module is scoped to the Wasteland biome namespaces",
+            "the modifier adds one placed feature at UNDERGROUND_DECORATION for the the_wasteland_reworked and wastelands namespaces only",
+            (
+                '"the_wasteland_reworked"',
+                '"wastelands"',
+                "GenerationStep.Decoration.UNDERGROUND_DECORATION",
+                'PlacedFeature.CODEC.fieldOf("feature")',
+            ),
+        ),
+        (
+            "WHC-11",
+            "WastelandHexCaves.java",
+            "the source module registers its feature and biome-modifier serializer",
+            "the mod entry point registers the hex_caves feature and the wasteland_namespace biome-modifier codec",
+            (
+                'FEATURES.register("hex_caves"',
+                '"wasteland_namespace"',
+                "BIOME_MODIFIER_SERIALIZERS",
+            ),
+        ),
+    )
+
+    for check_id, filename, name, detail, needles in source_contracts:
+        path = MODULE_SRC / filename
+        if not path.is_file():
+            record(
+                check_id,
+                name,
+                False,
+                detail,
+                {"missing_source_file": path.relative_to(ROOT).as_posix()},
+            )
+            continue
+        absent = missing_contracts(path.read_text(encoding="utf-8"), needles)
+        record(
+            check_id,
+            name,
+            not absent,
+            detail,
+            {"source": path.relative_to(ROOT).as_posix(), "missing_contracts": absent},
+        )
+
+    module_data = MODULE_RESOURCES / "data" / "infinite_domain_wasteland_hex_caves"
+    json_contracts = {
+        module_data / "worldgen" / "configured_feature" / "hex_caves.json": {
+            "type": "infinite_domain_wasteland_hex_caves:hex_caves",
+            "config": {},
+        },
+        module_data / "worldgen" / "placed_feature" / "hex_caves.json": {
+            "feature": "infinite_domain_wasteland_hex_caves:hex_caves",
+            "placement": [],
+        },
+        module_data / "neoforge" / "biome_modifier" / "add_hex_caves.json": {
+            "type": "infinite_domain_wasteland_hex_caves:wasteland_namespace",
+            "feature": "infinite_domain_wasteland_hex_caves:hex_caves",
+        },
+    }
+    resource_problems: list[str] = []
+    for path, expected in json_contracts.items():
+        relative = path.relative_to(ROOT).as_posix()
+        if not path.is_file():
+            resource_problems.append(f"missing JSON resource: {relative}")
+            continue
+        try:
+            observed = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            resource_problems.append(f"{relative}: invalid JSON: {exc}")
+            continue
+        if observed != expected:
+            resource_problems.append(
+                f"{relative}: resource contract mismatch; expected {expected!r}, got {observed!r}"
+            )
+    record(
+        "WHC-12",
+        "the source module's datapack resources match its registration contract",
+        not resource_problems,
+        "the configured feature, placed feature, and biome modifier resolve to the ids the mod registers",
+        {"problems": resource_problems},
+    )
+
+    metrics = reference_metrics()
+    range_problems = [
+        f"{name}: {metrics[name]:.3f}% outside expected range {minimum:.1f}-{maximum:.1f}%"
+        for name, (minimum, maximum) in EXPECTED_RANGES.items()
+        if not minimum <= metrics[name] <= maximum
+    ]
+    record(
+        "WHC-13",
+        "the reference implementation reproduces the authored grid and occlusion budget",
+        not range_problems,
+        f"seed {REFERENCE_SEED} over a 512x512 domain at step {REFERENCE_STEP}: "
+        f"{metrics['raw_hex_percent']:.1f}% raw grid, {metrics['visible_hex_percent']:.1f}% surviving, "
+        f"{metrics['occluded_hex_percent']:.1f}% occluded, {metrics['chamber_percent']:.1f}% chambers",
+        {"metrics": metrics, "expected_ranges": EXPECTED_RANGES, "problems": range_problems},
+    )
+
     report = {
-        "purpose": "Static and geometric proof for Infinite Domain's visible, fractally occluded Wasteland hex-grid cave system.",
+        "purpose": (
+            "Static and geometric proof for Infinite Domain's visible, fractally occluded "
+            "Wasteland hex-grid cave system, covering both the canonical density codec and "
+            "the hex-cave source module."
+        ),
+        "authority": ["docs/WASTELAND_HEX_CAVE_SYSTEM.md"],
+        "sources": {
+            "density_functions": DENSITY.relative_to(ROOT).as_posix(),
+            "noise_settings": SETTINGS.relative_to(ROOT).as_posix(),
+            "installed_codec_jar": JAR.relative_to(ROOT).as_posix(),
+            "source_module": MODULE.relative_to(ROOT).as_posix(),
+        },
+        "reference_seed": REFERENCE_SEED,
+        "reference_metrics": metrics,
         "checks": checks,
         "passed": not failures,
-        "runtime_validation": "This gate proves codec packaging, graph reachability, exact geometry, land/spawn bounds, and multiplayer ownership. A fresh-world visual and performance pass remains required.",
+        "runtime_validation": (
+            "This gate proves codec packaging, graph reachability, exact geometry, land/spawn "
+            "bounds, source-module contracts, and multiplayer ownership. A fresh-world visual "
+            "and performance pass remains required."
+        ),
     }
+    REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
-    for check in checks:
-        print(f"{'PASS' if check['passed'] else 'FAIL'}  {check['id']:<6} {check['check']}")
-        print(f"               {check['detail']}")
-    print()
-    print(f"{len(checks) - len(failures)}/{len(checks)} checks passed")
-    print(f"report: {REPORT.relative_to(ROOT).as_posix()}")
+
+    if args.json:
+        print(json.dumps(report, indent=2))
+    else:
+        for check in checks:
+            print(f"{'PASS' if check['passed'] else 'FAIL'}  {check['id']:<7} {check['check']}")
+            print(f"                {check['detail']}")
+        print()
+        print(f"{len(checks) - len(failures)}/{len(checks)} checks passed")
+        print(f"report: {REPORT.relative_to(ROOT).as_posix()}")
+
     return 1 if failures else 0
-<<<<<<< Updated upstream:dev/scripts/validate_wasteland_hex_caves.py
->>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
-=======
->>>>>>> Stashed changes:scripts/validate_wasteland_hex_caves.py
 
 
 if __name__ == "__main__":

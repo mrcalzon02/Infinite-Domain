@@ -1,9 +1,9 @@
 {
-  "type": "isekai_api:multiply",
-  "a": "custom_worldgen:hadal_edge_mask",
-  "b": {
-    "type": "isekai_api:max",
-    "a": "custom_worldgen:abyssal_coarse_fracture_pattern",
-    "b": "custom_worldgen:abyssal_fine_fracture_pattern"
+  "type": "minecraft:mul",
+  "argument1": "custom_worldgen:hadal_edge_mask",
+  "argument2": {
+    "type": "minecraft:max",
+    "argument1": "custom_worldgen:abyssal_coarse_fracture_pattern",
+    "argument2": "custom_worldgen:abyssal_fine_fracture_pattern"
   }
 }

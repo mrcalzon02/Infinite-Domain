@@ -1,21 +1,17 @@
-{"type":"minecraft:cache_2d","argument":
 {
-  "type": "isekai_api:lerp",
-  "t": "custom_worldgen:central_continent_mask",
-  "a": "custom_worldgen:abyssal_outer_continents",
-  "b": {
-    "type": "isekai_api:max",
-    "a": {
-      "type": "isekai_api:add",
-      "a": "custom_worldgen:large_continents",
-      "b": {
-        "type": "isekai_api:constant",
-        "value": 0.28
-      }
-    },
+  "type": "minecraft:cache_2d",
+  "argument": {
+    "type": "isekai_api:lerp",
+    "t": "custom_worldgen:central_continent_mask",
+    "a": "custom_worldgen:abyssal_outer_continents",
     "b": {
-      "type": "isekai_api:constant",
-      "value": 0.05
+      "type": "minecraft:max",
+      "argument1": {
+        "type": "minecraft:add",
+        "argument1": "custom_worldgen:large_continents",
+        "argument2": 0.28
+      },
+      "argument2": 0.05
     }
   }
-}}
+}

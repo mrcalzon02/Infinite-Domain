@@ -95,9 +95,9 @@
       "id": "RC-9",
       "check": "the change is confined to the central continent and its feather",
       "passed": true,
-      "detail": "city_humidity differs from its pre-change value at 291 sampled probes, none beyond r = 4800 (max changed r = 4799.0)",
+      "detail": "city_humidity differs from its pre-change value at 231 sampled probes, none beyond r = 4800 (max changed r = 4799.0)",
       "evidence": {
-        "changed_probe_count": 291,
+        "changed_probe_count": 231,
         "max_changed_radius": 4799.0
       }
     },
