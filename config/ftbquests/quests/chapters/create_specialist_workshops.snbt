@@ -4,276 +4,503 @@
 	filename: "create_specialist_workshops"
 	group: "4E65FAAC62D57D4A"
 	id: "6F50000000000001"
-	icon: "compactgearbox:sequential_gearbox"
 	images: [ ]
-	order_index: 8
+	order_index: 7
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["4FC0C1C678C71891"]
-			icon: "create:wrench"
 			id: "6F00000000000001"
 			optional: true
 			shape: "gear"
-			tasks: [{ item: { count: 1, id: "create:wrench" }, id: "7F00000000000001", type: "item" }]
+			tasks: [{
+				id: "7F00000000000001"
+				item: { count: 1, id: "create:wrench" }
+				type: "item"
+			}]
 			x: 0.0d
 			y: 0.0d
 		}
-
 		{
 			dependencies: ["6F00000000000001"]
-			icon: "create_chimneys:chimney_iron"
 			id: "6F00000000000002"
 			optional: true
 			shape: "gear"
-			tasks: [{ count: 8L, item: { count: 1, id: "create_chimneys:chimney_iron" }, id: "7F00000000000002", type: "item" }, { count: 8L, item: { count: 1, id: "create_chimneys:chimney_bricks" }, id: "7F00000000001021", type: "item" }]
+			tasks: [
+				{
+					count: 8L
+					id: "7F00000000000002"
+					item: { count: 1, id: "create_chimneys:chimney_iron" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "7F00000000001021"
+					item: { count: 1, id: "create_chimneys:chimney_bricks" }
+					type: "item"
+				}
+			]
 			x: -12.0d
 			y: 4.0d
 		}
-
 		{
 			dependencies: ["6F00000000000002"]
-			icon: "create_chimneys:chimney_iron"
 			id: "6F00000000000003"
 			optional: true
 			shape: "gear"
-			tasks: [{ id: "7F00000000000003", type: "checkmark" }]
+			tasks: [{
+				id: "7F00000000000003"
+				type: "checkmark"
+			}]
 			x: -12.0d
 			y: 6.0d
 		}
-
 		{
-			dependencies: ["6F00000000000001", "5210000000000001"]
-			icon: "sable_kardanwelle:cardan_connector"
+			dependencies: [
+				"6F00000000000001"
+				"5210000000000001"
+			]
 			id: "6F00000000000004"
 			optional: true
 			shape: "gear"
-			tasks: [{ count: 4L, item: { count: 1, id: "sable_kardanwelle:cardan_connector" }, id: "7F00000000000004", type: "item" }]
+			tasks: [{
+				count: 4L
+				id: "7F00000000000004"
+				item: { count: 1, id: "sable_kardanwelle:cardan_connector" }
+				type: "item"
+			}]
 			x: -8.0d
 			y: 10.0d
 		}
-
 		{
 			dependencies: ["6F00000000000004"]
-			icon: "linearbearing:linear_bearing"
 			id: "6F00000000000005"
 			optional: true
 			shape: "gear"
-			tasks: [{ count: 2L, item: { count: 1, id: "linearbearing:linear_bearing" }, id: "7F00000000000005", type: "item" }, { count: 8L, item: { count: 1, id: "linearbearing:linear_casing" }, id: "7F00000000001051", type: "item" }]
+			tasks: [
+				{
+					count: 2L
+					id: "7F00000000000005"
+					item: { count: 1, id: "linearbearing:linear_bearing" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "7F00000000001051"
+					item: { count: 1, id: "linearbearing:linear_casing" }
+					type: "item"
+				}
+			]
 			x: -8.0d
 			y: 12.0d
 		}
-
 		{
 			dependencies: ["6F00000000000005"]
-			icon: "linearbearing:magnetic_port"
 			id: "6F00000000000006"
 			optional: true
+			rewards: [{
+				id: "28582419150A7484"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
 			shape: "gear"
-			rewards: [{ id: "8F00000000000006", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
-			tasks: [{ count: 2L, item: { count: 1, id: "linearbearing:magnetic_port" }, id: "7F00000000000006", type: "item" }, { count: 2L, item: { count: 1, id: "linearbearing:torsional_anchor" }, id: "7F00000000001061", type: "item" }]
+			tasks: [
+				{
+					count: 2L
+					id: "7F00000000000006"
+					item: { count: 1, id: "linearbearing:magnetic_port" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7F00000000001061"
+					item: { count: 1, id: "linearbearing:torsional_anchor" }
+					type: "item"
+				}
+			]
 			x: -8.0d
 			y: 14.0d
 		}
-
 		{
 			dependencies: ["6F00000000000006"]
-			icon: "linearbearing:linear_bearing"
 			id: "6F00000000000007"
 			optional: true
 			shape: "gear"
-			tasks: [{ id: "7F00000000000007", type: "checkmark" }]
+			tasks: [{
+				id: "7F00000000000007"
+				type: "checkmark"
+			}]
 			x: -8.0d
 			y: 16.0d
 		}
-
 		{
-			dependencies: ["6F00000000000001", "5210000000000001"]
-			icon: "escalated:metal_walkway_steps"
+			dependencies: [
+				"6F00000000000001"
+				"5210000000000001"
+			]
 			id: "6F00000000000008"
 			optional: true
 			shape: "gear"
-			tasks: [{ count: 2L, item: { count: 1, id: "escalated:wooden_walkway_steps" }, id: "7F00000000000008", type: "item" }, { count: 2L, item: { count: 1, id: "escalated:metal_walkway_steps" }, id: "7F00000000001081", type: "item" }]
+			tasks: [
+				{
+					count: 2L
+					id: "7F00000000000008"
+					item: { count: 1, id: "escalated:wooden_walkway_steps" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7F00000000001081"
+					item: { count: 1, id: "escalated:metal_walkway_steps" }
+					type: "item"
+				}
+			]
 			x: -4.0d
 			y: 10.0d
 		}
-
 		{
 			dependencies: ["6F00000000000008"]
-			icon: "escalated:metal_walkway_steps"
 			id: "6F00000000000009"
 			optional: true
 			shape: "diamond"
-			tasks: [{ advancement: "escalated:walkway", id: "7F00000000000009", type: "advancement" }]
+			tasks: [{
+				advancement: "escalated:walkway"
+				criterion: ""
+				id: "7F00000000000009"
+				type: "advancement"
+			}]
 			x: -4.0d
 			y: 12.0d
 		}
-
 		{
 			dependencies: ["6F00000000000009"]
-			icon: "escalated:metal_walkway_steps"
 			id: "6F0000000000000A"
 			optional: true
 			shape: "diamond"
-			tasks: [{ advancement: "escalated:escalator_100", id: "7F0000000000000A", type: "advancement" }]
+			tasks: [{
+				advancement: "escalated:escalator_100"
+				criterion: ""
+				id: "7F0000000000000A"
+				type: "advancement"
+			}]
 			x: -4.0d
 			y: 14.0d
 		}
-
 		{
-			dependencies: ["6F00000000000001", "5310000000000001"]
-			icon: "bellsandwhistles:station_platform"
+			dependencies: [
+				"6F00000000000001"
+				"5310000000000001"
+			]
 			id: "6F0000000000000B"
 			optional: true
 			shape: "gear"
-			tasks: [{ count: 16L, item: { count: 1, id: "bellsandwhistles:station_platform" }, id: "7F0000000000000B", type: "item" }, { count: 4L, item: { count: 1, id: "bellsandwhistles:headlight" }, id: "7F000000000010B1", type: "item" }, { count: 8L, item: { count: 1, id: "bellsandwhistles:brass_grab_rails" }, id: "7F000000000010B2", type: "item" }]
+			tasks: [
+				{
+					count: 16L
+					id: "7F0000000000000B"
+					item: { count: 1, id: "bellsandwhistles:station_platform" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "7F000000000010B1"
+					item: { count: 1, id: "bellsandwhistles:headlight" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "7F000000000010B2"
+					item: { count: 1, id: "bellsandwhistles:brass_grab_rails" }
+					type: "item"
+				}
+			]
 			x: 0.0d
 			y: 20.0d
 		}
-
 		{
 			dependencies: ["6F0000000000000B"]
-			icon: "create_mtg:announcement_box"
 			id: "6F0000000000000C"
 			optional: true
+			rewards: [{
+				id: "61CCC174390DC08E"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
 			shape: "gear"
-			rewards: [{ id: "8F0000000000000C", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
-			tasks: [{ count: 2L, item: { count: 1, id: "create_mtg:announcement_box" }, id: "7F0000000000000C", type: "item" }, { count: 3L, item: { count: 1, id: "create_mtg:empty_train_signal" }, id: "7F000000000010C1", type: "item" }]
+			tasks: [
+				{
+					count: 2L
+					id: "7F0000000000000C"
+					item: { count: 1, id: "create_mtg:announcement_box" }
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "7F000000000010C1"
+					item: { count: 1, id: "create_mtg:empty_train_signal" }
+					type: "item"
+				}
+			]
 			x: 0.0d
 			y: 22.0d
 		}
-
 		{
 			dependencies: ["6F0000000000000C"]
-			icon: "create_mtg:announcement_box"
 			id: "6F0000000000000D"
 			optional: true
 			shape: "gear"
-			tasks: [{ id: "7F0000000000000D", type: "checkmark" }]
+			tasks: [{
+				id: "7F0000000000000D"
+				type: "checkmark"
+			}]
 			x: 0.0d
 			y: 24.0d
 		}
-
 		{
-			dependencies: ["6F00000000000001", "5310000000000001"]
-			icon: "compactgearbox:compact_gearbox"
+			dependencies: [
+				"6F00000000000001"
+				"5310000000000001"
+			]
 			id: "6F0000000000000E"
 			optional: true
 			shape: "gear"
-			tasks: [{ item: { count: 1, id: "compactgearbox:compact_gearbox" }, id: "7F0000000000000E", type: "item" }]
+			tasks: [{
+				id: "7F0000000000000E"
+				item: { count: 1, id: "compactgearbox:compact_gearbox" }
+				type: "item"
+			}]
 			x: 4.0d
 			y: 20.0d
 		}
-
 		{
 			dependencies: ["6F0000000000000E"]
-			icon: "compactgearbox:sequential_gearbox"
 			id: "6F0000000000000F"
 			optional: true
+			rewards: [{
+				id: "4A547E3AB684EA66"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
 			shape: "gear"
-			rewards: [{ id: "8F0000000000000F", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
-			tasks: [{ item: { count: 1, id: "compactgearbox:gearbox_controller" }, id: "7F0000000000000F", type: "item" }, { item: { count: 1, id: "compactgearbox:sequential_gearbox" }, id: "7F000000000010F1", type: "item" }]
+			tasks: [
+				{
+					id: "7F0000000000000F"
+					item: { count: 1, id: "compactgearbox:gearbox_controller" }
+					type: "item"
+				}
+				{
+					id: "7F000000000010F1"
+					item: { count: 1, id: "compactgearbox:sequential_gearbox" }
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: 22.0d
 		}
-
 		{
 			dependencies: ["6F0000000000000F"]
-			icon: "compactgearbox:sequential_gearbox"
 			id: "6F00000000000010"
 			optional: true
 			shape: "gear"
-			tasks: [{ id: "7F00000000000010", type: "checkmark" }]
+			tasks: [{
+				id: "7F00000000000010"
+				type: "checkmark"
+			}]
 			x: 4.0d
 			y: 24.0d
 		}
-
 		{
-			dependencies: ["6F00000000000001", "5E00000000000002", "5310000000000001"]
-			icon: "createdeliveryrequired:contractor"
+			dependencies: [
+				"6F00000000000001"
+				"5E00000000000002"
+				"5310000000000001"
+			]
 			id: "6F00000000000011"
 			optional: true
 			shape: "gear"
-			tasks: [{ item: { count: 1, id: "createdeliveryrequired:contractor" }, id: "7F00000000000011", type: "item" }, { count: 2L, item: { count: 1, id: "createdeliveryrequired:delivery_marker" }, id: "7F00000000001111", type: "item" }, { count: 2L, item: { count: 1, id: "create:clipboard" }, id: "7F00000000001112", type: "item" }]
+			tasks: [
+				{
+					id: "7F00000000000011"
+					item: { count: 1, id: "createdeliveryrequired:contractor" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7F00000000001111"
+					item: { count: 1, id: "createdeliveryrequired:delivery_marker" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7F00000000001112"
+					item: { count: 1, id: "create:clipboard" }
+					type: "item"
+				}
+			]
 			x: 8.0d
 			y: 20.0d
 		}
-
 		{
 			dependencies: ["6F00000000000011"]
-			icon: "createdeliveryrequired:contractor"
 			id: "6F00000000000012"
 			optional: true
 			shape: "gear"
-			tasks: [{ id: "7F00000000000012", type: "checkmark" }]
+			tasks: [{
+				id: "7F00000000000012"
+				type: "checkmark"
+			}]
 			x: 8.0d
 			y: 22.0d
 		}
-
 		{
 			dependencies: ["6F00000000000012"]
-			icon: "createdeliveryrequired:market"
 			id: "6F00000000000013"
 			optional: true
 			shape: "gear"
-			tasks: [{ item: { count: 1, id: "createdeliveryrequired:market" }, id: "7F00000000000013", type: "item" }, { item: { count: 1, id: "createdeliveryrequired:numismatics_monocle" }, id: "7F00000000001131", type: "item" }]
+			tasks: [
+				{
+					id: "7F00000000000013"
+					item: { count: 1, id: "createdeliveryrequired:market" }
+					type: "item"
+				}
+				{
+					id: "7F00000000001131"
+					item: { count: 1, id: "createdeliveryrequired:numismatics_monocle" }
+					type: "item"
+				}
+			]
 			x: 8.0d
 			y: 24.0d
 		}
-
 		{
-			dependencies: ["6F00000000000013", "5510000000000001"]
-			icon: "createdeliveryrequired:p2p_terminal"
+			dependencies: [
+				"6F00000000000013"
+				"5510000000000001"
+			]
 			id: "6F00000000000014"
 			optional: true
+			rewards: [{
+				id: "387002ECA586EC8B"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
 			shape: "gear"
-			rewards: [{ id: "8F00000000000014", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
-			tasks: [{ item: { count: 1, id: "createdeliveryrequired:p2p_terminal" }, id: "7F00000000000014", type: "item" }, { count: 2L, item: { count: 1, id: "createdeliveryrequired:p2p_link" }, id: "7F00000000001141", type: "item" }]
+			tasks: [
+				{
+					id: "7F00000000000014"
+					item: { count: 1, id: "createdeliveryrequired:p2p_terminal" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7F00000000001141"
+					item: { count: 1, id: "createdeliveryrequired:p2p_link" }
+					type: "item"
+				}
+			]
 			x: 8.0d
 			y: 30.0d
 		}
-
 		{
 			dependencies: ["6F00000000000014"]
-			icon: "createdeliveryrequired:p2p_terminal"
 			id: "6F00000000000015"
 			optional: true
 			shape: "gear"
-			tasks: [{ id: "7F00000000000015", type: "checkmark" }]
+			tasks: [{
+				id: "7F00000000000015"
+				type: "checkmark"
+			}]
 			x: 8.0d
 			y: 32.0d
 		}
-
 		{
-			dependencies: ["6F00000000000001", "5510000000000001"]
-			icon: "create_hypertube:hypertube_entrance"
+			dependencies: [
+				"6F00000000000001"
+				"5510000000000001"
+			]
 			id: "6F00000000000016"
 			optional: true
 			shape: "gear"
-			tasks: [{ count: 32L, item: { count: 1, id: "create_hypertube:hypertube" }, id: "7F00000000000016", type: "item" }, { count: 2L, item: { count: 1, id: "create_hypertube:hypertube_entrance" }, id: "7F00000000001161", type: "item" }, { count: 2L, item: { count: 1, id: "create_hypertube:hypertube_accelerator" }, id: "7F00000000001162", type: "item" }]
+			tasks: [
+				{
+					count: 32L
+					id: "7F00000000000016"
+					item: { count: 1, id: "create_hypertube:hypertube" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7F00000000001161"
+					item: { count: 1, id: "create_hypertube:hypertube_entrance" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7F00000000001162"
+					item: { count: 1, id: "create_hypertube:hypertube_accelerator" }
+					type: "item"
+				}
+			]
 			x: 12.0d
 			y: 30.0d
 		}
-
 		{
 			dependencies: ["6F00000000000016"]
-			icon: "create_hypertube:hypertube_junction"
 			id: "6F00000000000017"
 			optional: true
+			rewards: [{
+				id: "4BF8F13E6F64BD67"
+				item: {
+					count: 1
+					id: "numismatics:cog"
+				}
+				type: "item"
+			}]
 			shape: "gear"
-			rewards: [{ id: "8F00000000000017", item: { count: 1, id: "numismatics:cog" }, type: "item" }]
-			tasks: [{ count: 2L, item: { count: 1, id: "create_hypertube:hypertube_junction" }, id: "7F00000000000017", type: "item" }, { count: 2L, item: { count: 1, id: "create_hypertube:tube_scanner_attachment" }, id: "7F00000000001171", type: "item" }, { count: 2L, item: { count: 1, id: "create_hypertube:redstone_detector_tube_attachment" }, id: "7F00000000001172", type: "item" }]
+			tasks: [
+				{
+					count: 2L
+					id: "7F00000000000017"
+					item: { count: 1, id: "create_hypertube:hypertube_junction" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7F00000000001171"
+					item: { count: 1, id: "create_hypertube:tube_scanner_attachment" }
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7F00000000001172"
+					item: { count: 1, id: "create_hypertube:redstone_detector_tube_attachment" }
+					type: "item"
+				}
+			]
 			x: 12.0d
 			y: 32.0d
 		}
-
 		{
 			dependencies: ["6F00000000000017"]
-			icon: "create_hypertube:hypertube_junction"
 			id: "6F00000000000018"
 			optional: true
 			shape: "gear"
-			tasks: [{ id: "7F00000000000018", type: "checkmark" }]
+			tasks: [{
+				id: "7F00000000000018"
+				type: "checkmark"
+			}]
 			x: 12.0d
 			y: 34.0d
 		}

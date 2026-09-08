@@ -4,14 +4,12 @@
 	filename: "mastery_era_05"
 	group: "7ADA55C0FFEE0001"
 	id: "7500000000000000"
-	icon: "kubejs:era5_mastery_emblem"
 	images: [ ]
 	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["5510000000000002"]
-			icon: "kubejs:era5_mastery_emblem"
 			id: "6510000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -23,7 +21,6 @@
 		}
 		{
 			dependencies: ["6510000000000001"]
-			icon: "oritech:machine_core_1"
 			id: "1540000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -39,7 +36,6 @@
 		}
 		{
 			dependencies: ["6510000000000001"]
-			icon: "oritech:biosteel_ingot"
 			id: "2540000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -55,7 +51,6 @@
 		}
 		{
 			dependencies: ["6510000000000001"]
-			icon: "ae2:certus_quartz_crystal"
 			id: "3540000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -71,7 +66,6 @@
 		}
 		{
 			dependencies: ["6510000000000001"]
-			icon: "cyber_ware_port:component_titanium"
 			id: "4540000000000001"
 			shape: "rsquare"
 			size: 1.25d
@@ -92,7 +86,6 @@
 				"3540000000000001"
 				"4540000000000001"
 			]
-			icon: "kubejs:era5_mastery_emblem"
 			id: "6510000000000002"
 			rewards: [
 				{

@@ -4,19 +4,15 @@
 	filename: "grid_storage_and_recovery"
 	group: "4E65FAAC62D57D4A"
 	id: "6C00D00000000001"
-	icon: "powergrid_batteries:small_battery"
 	images: [ ]
 	order_index: 6
 	quest_links: [ ]
-	title: "Grid Storage and Recovery"
 	quests: [
 		{
 			dependencies: ["4410000000000004"]
-			icon: "powergrid_batteries:small_battery"
 			id: "6C01000000000001"
 			optional: true
 			shape: "gear"
-			title: "Small Battery Instrument"
 			tasks: [{
 				id: "6C02000000000001"
 				item: { count: 1, id: "powergrid_batteries:small_battery" }
@@ -27,7 +23,6 @@
 		}
 		{
 			dependencies: ["6C01000000000001"]
-			icon: "powergrid_batteries:medium_battery"
 			id: "6C01000000000002"
 			optional: true
 			rewards: [{
@@ -39,7 +34,6 @@
 				type: "item"
 			}]
 			shape: "gear"
-			title: "Medium Battery Provisioning"
 			tasks: [{
 				id: "6C02000000000002"
 				item: { count: 1, id: "powergrid_batteries:medium_battery" }
@@ -50,7 +44,6 @@
 		}
 		{
 			dependencies: ["6C01000000000002"]
-			icon: "powergrid_batteries:high_voltage_battery"
 			id: "6C01000000000003"
 			optional: true
 			rewards: [
@@ -73,7 +66,6 @@
 				}
 			]
 			shape: "gear"
-			title: "High-Voltage Storage Bank"
 			tasks: [{
 				id: "6C02000000000003"
 				item: { count: 1, id: "powergrid_batteries:high_voltage_battery" }
@@ -84,11 +76,9 @@
 		}
 		{
 			dependencies: ["6C01000000000003"]
-			icon: "powergrid:hv_switch"
 			id: "6C01000000000004"
 			optional: true
 			shape: "rsquare"
-			title: "Switching and Metering Acceptance"
 			tasks: [
 				{
 					count: 4L
@@ -117,11 +107,9 @@
 		}
 		{
 			dependencies: ["6C01000000000004"]
-			icon: "powergrid_batteries:substation_battery"
 			id: "6C01000000000005"
 			optional: true
 			shape: "rsquare"
-			title: "Substation Continuity Trial"
 			tasks: [
 				{
 					id: "6C02000000000008"
