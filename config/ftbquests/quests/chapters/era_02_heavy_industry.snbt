@@ -3,6 +3,7 @@
 	default_quest_shape: "circle"
 	filename: "era_02_heavy_industry"
 	group: "346E9B7B176D7846"
+	icon: { id: "tfmg:steel_ingot" }
 	id: "37550227CA365A64"
 	images: [ ]
 	order_index: 3
@@ -10,6 +11,7 @@
 	quests: [
 		{
 			dependencies: ["4FC0C1C678C71891"]
+			icon: { id: "tfmg:steel_ingot" }
 			id: "5210000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -21,6 +23,7 @@
 		}
 		{
 			dependencies: ["5210000000000001"]
+			icon: { id: "minecraft:iron_pickaxe" }
 			id: "6211000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -33,6 +36,7 @@
 		}
 		{
 			dependencies: ["6211000000000001"]
+			icon: { id: "tfmg:coal_coke" }
 			id: "1210000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -46,6 +50,7 @@
 		}
 		{
 			dependencies: ["1210000000000001"]
+			icon: { id: "tfmg:coke_oven" }
 			id: "1210000000000002"
 			rewards: [{
 				id: "1230000000000002"
@@ -66,6 +71,7 @@
 		}
 		{
 			dependencies: ["1210000000000002"]
+			icon: { id: "tfmg:blast_furnace_reinforcement" }
 			id: "1210000000000003"
 			shape: "hexagon"
 			tasks: [{
@@ -79,6 +85,7 @@
 		}
 		{
 			dependencies: ["1210000000000003"]
+			icon: { id: "tfmg:blast_stove" }
 			id: "1210000000000004"
 			rewards: [{
 				id: "1240000000000004"
@@ -99,6 +106,7 @@
 		}
 		{
 			dependencies: ["1210000000000004"]
+			icon: { id: "tfmg:steel_ingot" }
 			id: "1210000000000005"
 			rewards: [{
 				id: "1230000000000005"
@@ -120,6 +128,7 @@
 		}
 		{
 			dependencies: ["1210000000000005"]
+			icon: { id: "tfmg:heavy_plate" }
 			id: "1210000000000006"
 			shape: "hexagon"
 			tasks: [{
@@ -133,6 +142,7 @@
 		}
 		{
 			dependencies: ["1210000000000006"]
+			icon: { id: "tfmg:steel_block" }
 			id: "1210000000000007"
 			rewards: [{
 				count: 4
@@ -155,6 +165,7 @@
 		}
 		{
 			dependencies: ["1210000000000007"]
+			icon: { id: "kubejs:era2_mining_contribution" }
 			id: "1210000000000008"
 			rewards: [{
 				count: 2
@@ -176,6 +187,7 @@
 		}
 		{
 			dependencies: ["6211000000000001"]
+			icon: { id: "minecraft:wheat" }
 			id: "2210000000000001"
 			shape: "heart"
 			tasks: [{
@@ -189,6 +201,7 @@
 		}
 		{
 			dependencies: ["2210000000000001"]
+			icon: { id: "create:mechanical_harvester" }
 			id: "2210000000000002"
 			rewards: [{
 				id: "2230000000000002"
@@ -210,6 +223,7 @@
 		}
 		{
 			dependencies: ["2210000000000002"]
+			icon: { id: "minecraft:oak_log" }
 			id: "2210000000000003"
 			shape: "heart"
 			tasks: [{
@@ -223,6 +237,7 @@
 		}
 		{
 			dependencies: ["2210000000000003"]
+			icon: { id: "create:millstone" }
 			id: "2210000000000004"
 			rewards: [{
 				id: "2240000000000004"
@@ -244,6 +259,7 @@
 		}
 		{
 			dependencies: ["2210000000000004"]
+			icon: { id: "minecraft:bread" }
 			id: "2210000000000005"
 			rewards: [{
 				id: "2230000000000005"
@@ -265,6 +281,7 @@
 		}
 		{
 			dependencies: ["2210000000000005"]
+			icon: { id: "wastelands:purified_water" }
 			id: "2210000000000006"
 			shape: "heart"
 			tasks: [{
@@ -278,6 +295,7 @@
 		}
 		{
 			dependencies: ["2210000000000006"]
+			icon: { id: "minecraft:hay_block" }
 			id: "2210000000000007"
 			shape: "heart"
 			tasks: [{
@@ -291,6 +309,7 @@
 		}
 		{
 			dependencies: ["2210000000000007"]
+			icon: { id: "kubejs:era2_farming_contribution" }
 			id: "2210000000000008"
 			rewards: [{
 				count: 2
@@ -312,6 +331,7 @@
 		}
 		{
 			dependencies: ["6211000000000001"]
+			icon: { id: "createreautomated:node_fragment" }
 			id: "3210000000000001"
 			rewards: [{
 				command: "execute in minecraft:overworld run structure_map dungeons_arise:mining_complex 2"
@@ -333,6 +353,7 @@
 		}
 		{
 			dependencies: ["3210000000000001"]
+			icon: { id: "tfmg:steel_ingot" }
 			id: "3210000000000002"
 			shape: "diamond"
 			tasks: [{
@@ -345,6 +366,7 @@
 		}
 		{
 			dependencies: ["3210000000000002"]
+			icon: { id: "createreautomated:extractor" }
 			id: "3210000000000003"
 			shape: "diamond"
 			tasks: [{
@@ -357,6 +379,7 @@
 		}
 		{
 			dependencies: ["3210000000000003"]
+			icon: { id: "createreautomated:iron_drill" }
 			id: "3210000000000004"
 			rewards: [{
 				id: "3240000000000004"
@@ -377,6 +400,7 @@
 		}
 		{
 			dependencies: ["3210000000000004"]
+			icon: { id: "tfmg:nickel_ore" }
 			id: "3210000000000005"
 			rewards: [{
 				id: "3230000000000005"
@@ -398,6 +422,7 @@
 		}
 		{
 			dependencies: ["3210000000000005"]
+			icon: { id: "createreautomated:iron_bit" }
 			id: "3210000000000006"
 			shape: "diamond"
 			tasks: [{
@@ -411,6 +436,7 @@
 		}
 		{
 			dependencies: ["3210000000000006"]
+			icon: { id: "createreautomated:node_fragment" }
 			id: "3210000000000007"
 			rewards: [{
 				count: 4
@@ -433,6 +459,7 @@
 		}
 		{
 			dependencies: ["3210000000000007"]
+			icon: { id: "kubejs:era2_exploration_contribution" }
 			id: "3210000000000008"
 			rewards: [{
 				count: 2
@@ -454,6 +481,7 @@
 		}
 		{
 			dependencies: ["1210000000000002"]
+			icon: { id: "createmetallurgy:industrial_crucible" }
 			id: "4210000000000001"
 			shape: "gear"
 			tasks: [{
@@ -466,6 +494,7 @@
 		}
 		{
 			dependencies: ["1210000000000004"]
+			icon: { id: "createmetallurgy:graphite_ingot_mold" }
 			id: "4210000000000002"
 			shape: "gear"
 			tasks: [{
@@ -478,6 +507,7 @@
 		}
 		{
 			dependencies: ["1210000000000006"]
+			icon: { id: "createmetallurgy:foundry_mixer" }
 			id: "4210000000000003"
 			rewards: [{
 				id: "4230000000000003"
@@ -498,6 +528,7 @@
 		}
 		{
 			dependencies: ["2210000000000002"]
+			icon: { id: "create:mechanical_saw" }
 			id: "4210000000000004"
 			rewards: [{
 				id: "6AA151E1AD09E5C9"
@@ -518,6 +549,7 @@
 		}
 		{
 			dependencies: ["2210000000000004"]
+			icon: { id: "farmersdelight:stove" }
 			id: "4210000000000005"
 			shape: "gear"
 			tasks: [{
@@ -530,6 +562,7 @@
 		}
 		{
 			dependencies: ["2210000000000006"]
+			icon: { id: "tfmg:steel_ingot" }
 			id: "4210000000000006"
 			shape: "gear"
 			tasks: [{
@@ -541,6 +574,7 @@
 		}
 		{
 			dependencies: ["3210000000000002"]
+			icon: { id: "createmetallurgy:casting_table" }
 			id: "4210000000000007"
 			shape: "gear"
 			tasks: [{
@@ -553,6 +587,7 @@
 		}
 		{
 			dependencies: ["3210000000000004"]
+			icon: { id: "create:item_vault" }
 			id: "4210000000000008"
 			rewards: [{
 				id: "6AB9762751EA5AB0"
@@ -573,6 +608,7 @@
 		}
 		{
 			dependencies: ["3210000000000006"]
+			icon: { id: "createreautomated:zinc_bit" }
 			id: "4210000000000009"
 			rewards: [{
 				id: "4230000000000009"
@@ -598,6 +634,7 @@
 				"3210000000000008"
 			]
 			dependency_requirement: "one_completed"
+			icon: { id: "kubejs:industrial_foundation_core" }
 			id: "5210000000000002"
 			min_required_dependencies: 1
 			rewards: [{
@@ -617,6 +654,7 @@
 		}
 		{
 			dependencies: ["2210000000000003"]
+			icon: { id: "minecraft:oak_log" }
 			id: "7211000000000001"
 			optional: true
 			shape: "gear"
@@ -634,6 +672,7 @@
 				"7211000000000001"
 				"4210000000000001"
 			]
+			icon: { id: "kubejs:tannic_pulp" }
 			id: "7211000000000002"
 			optional: true
 			shape: "gear"
@@ -648,6 +687,7 @@
 		}
 		{
 			dependencies: ["7211000000000002"]
+			icon: { id: "kubejs:tannic_extract_bucket" }
 			id: "7211000000000003"
 			optional: true
 			rewards: [{
@@ -673,6 +713,7 @@
 				"1210000000000005"
 				"4210000000000001"
 			]
+			icon: { id: "kubejs:iron_mineral_dust" }
 			id: "7211000000000004"
 			optional: true
 			rewards: [{
@@ -698,6 +739,7 @@
 				"7211000000000003"
 				"7211000000000004"
 			]
+			icon: { id: "kubejs:conditioned_iron_mineral" }
 			id: "7211000000000005"
 			optional: true
 			rewards: [{
@@ -720,6 +762,7 @@
 		}
 		{
 			dependencies: ["7211000000000005"]
+			icon: { id: "minecraft:iron_nugget" }
 			id: "7211000000000006"
 			optional: true
 			rewards: [{

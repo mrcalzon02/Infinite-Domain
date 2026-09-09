@@ -3,6 +3,7 @@
 	default_quest_shape: "circle"
 	filename: "era_05_automated_industry"
 	group: "346E9B7B176D7846"
+	icon: { id: "oritech:machine_core_4" }
 	id: "37AF8051C9D264BE"
 	images: [ ]
 	order_index: 6
@@ -10,6 +11,7 @@
 	quests: [
 		{
 			dependencies: ["5410000000000002"]
+			icon: { id: "oritech:machine_core_4" }
 			id: "5510000000000001"
 			shape: "octagon"
 			tasks: [{
@@ -21,6 +23,7 @@
 		}
 		{
 			dependencies: ["5510000000000001"]
+			icon: { id: "more_ores_more_gems:titanium_pickaxe" }
 			id: "6511000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -33,6 +36,7 @@
 		}
 		{
 			dependencies: ["6511000000000001"]
+			icon: { id: "oritech:pulverizer_block" }
 			id: "1510000000000001"
 			shape: "hexagon"
 			tasks: [{
@@ -45,6 +49,7 @@
 		}
 		{
 			dependencies: ["1510000000000001"]
+			icon: { id: "oritech:machine_core_1" }
 			id: "1510000000000002"
 			rewards: [{
 				id: "1530000000000002"
@@ -66,6 +71,7 @@
 		}
 		{
 			dependencies: ["1510000000000002"]
+			icon: { id: "oritech:centrifuge_block" }
 			id: "1510000000000003"
 			shape: "hexagon"
 			tasks: [{
@@ -78,6 +84,7 @@
 		}
 		{
 			dependencies: ["1510000000000003"]
+			icon: { id: "oritech:assembler_block" }
 			id: "1510000000000004"
 			rewards: [{
 				id: "1540000000000004"
@@ -98,6 +105,7 @@
 		}
 		{
 			dependencies: ["1510000000000004"]
+			icon: { id: "oritech:machine_core_3" }
 			id: "1510000000000005"
 			rewards: [{
 				id: "1530000000000005"
@@ -119,6 +127,7 @@
 		}
 		{
 			dependencies: ["1510000000000005"]
+			icon: { id: "oritech:laser_arm_block" }
 			id: "1510000000000006"
 			shape: "hexagon"
 			tasks: [{
@@ -132,6 +141,7 @@
 		}
 		{
 			dependencies: ["1510000000000006"]
+			icon: { id: "oritech:machine_core_4" }
 			id: "1510000000000007"
 			rewards: [{
 				count: 2
@@ -154,6 +164,7 @@
 		}
 		{
 			dependencies: ["1510000000000007"]
+			icon: { id: "kubejs:era5_mining_contribution" }
 			id: "1510000000000008"
 			rewards: [{
 				count: 2
@@ -175,6 +186,7 @@
 		}
 		{
 			dependencies: ["6511000000000001"]
+			icon: { id: "create:mechanical_harvester" }
 			id: "2510000000000001"
 			shape: "heart"
 			tasks: [{
@@ -188,6 +200,7 @@
 		}
 		{
 			dependencies: ["2510000000000001"]
+			icon: { id: "create:mechanical_plough" }
 			id: "2510000000000002"
 			rewards: [{
 				id: "2530000000000002"
@@ -209,6 +222,7 @@
 		}
 		{
 			dependencies: ["2510000000000002"]
+			icon: { id: "oritech:bio_generator_block" }
 			id: "2510000000000003"
 			shape: "heart"
 			tasks: [{
@@ -222,6 +236,7 @@
 		}
 		{
 			dependencies: ["2510000000000003"]
+			icon: { id: "farmersdelight:wheat_dough" }
 			id: "2510000000000004"
 			rewards: [{
 				count: 8
@@ -244,6 +259,7 @@
 		}
 		{
 			dependencies: ["2510000000000004"]
+			icon: { id: "minecraft:cooked_beef" }
 			id: "2510000000000005"
 			shape: "heart"
 			tasks: [{
@@ -257,6 +273,7 @@
 		}
 		{
 			dependencies: ["2510000000000005"]
+			icon: { id: "sophisticatedstorage:stack_upgrade_tier_2" }
 			id: "2510000000000006"
 			shape: "heart"
 			tasks: [{
@@ -270,6 +287,7 @@
 		}
 		{
 			dependencies: ["2510000000000006"]
+			icon: { id: "minecraft:bread" }
 			id: "2510000000000007"
 			rewards: [{
 				id: "2570000000000007"
@@ -291,6 +309,7 @@
 		}
 		{
 			dependencies: ["2510000000000007"]
+			icon: { id: "kubejs:era5_farming_contribution" }
 			id: "2510000000000008"
 			rewards: [{
 				count: 2
@@ -312,6 +331,7 @@
 		}
 		{
 			dependencies: ["6511000000000001"]
+			icon: { id: "ae2:certus_quartz_crystal" }
 			id: "3510000000000001"
 			shape: "diamond"
 			tasks: [{
@@ -325,6 +345,7 @@
 		}
 		{
 			dependencies: ["3510000000000001"]
+			icon: { id: "ae2:inscriber" }
 			id: "3510000000000002"
 			rewards: [{
 				id: "3530000000000002"
@@ -345,6 +366,7 @@
 		}
 		{
 			dependencies: ["3510000000000002"]
+			icon: { id: "ae2:engineering_processor_press" }
 			id: "3510000000000003"
 			shape: "diamond"
 			tasks: [{
@@ -357,6 +379,7 @@
 		}
 		{
 			dependencies: ["3510000000000003"]
+			icon: { id: "ae2:logic_processor" }
 			id: "3510000000000004"
 			rewards: [{
 				id: "3540000000000004"
@@ -378,6 +401,7 @@
 		}
 		{
 			dependencies: ["3510000000000004"]
+			icon: { id: "ae2:item_storage_cell_1k" }
 			id: "3510000000000005"
 			rewards: [{
 				id: "3530000000000005"
@@ -399,6 +423,7 @@
 		}
 		{
 			dependencies: ["3510000000000005"]
+			icon: { id: "createcybernetics:surgery_table" }
 			id: "3510000000000006"
 			shape: "diamond"
 			tasks: [{
@@ -411,6 +436,7 @@
 		}
 		{
 			dependencies: ["3510000000000006"]
+			icon: { id: "ae2:engineering_processor" }
 			id: "3510000000000007"
 			rewards: [{
 				id: "3570000000000007"
@@ -432,6 +458,7 @@
 		}
 		{
 			dependencies: ["3510000000000007"]
+			icon: { id: "kubejs:era5_exploration_contribution" }
 			id: "3510000000000008"
 			rewards: [{
 				count: 2
@@ -453,6 +480,7 @@
 		}
 		{
 			dependencies: ["1510000000000002"]
+			icon: { id: "oritech:machine_efficiency_addon" }
 			id: "4510000000000001"
 			shape: "gear"
 			tasks: [{
@@ -465,6 +493,7 @@
 		}
 		{
 			dependencies: ["1510000000000004"]
+			icon: { id: "oritech:large_storage_block" }
 			id: "4510000000000002"
 			shape: "gear"
 			tasks: [{
@@ -477,6 +506,7 @@
 		}
 		{
 			dependencies: ["1510000000000006"]
+			icon: { id: "oritech:machine_core_5" }
 			id: "4510000000000003"
 			rewards: [{
 				id: "4530000000000003"
@@ -497,6 +527,7 @@
 		}
 		{
 			dependencies: ["2510000000000002"]
+			icon: { id: "ae2:molecular_assembler" }
 			id: "4510000000000004"
 			rewards: [{
 				id: "6A1566BC34623990"
@@ -517,6 +548,7 @@
 		}
 		{
 			dependencies: ["2510000000000004"]
+			icon: { id: "ae2:pattern_provider" }
 			id: "4510000000000005"
 			shape: "gear"
 			tasks: [{
@@ -529,6 +561,7 @@
 		}
 		{
 			dependencies: ["2510000000000006"]
+			icon: { id: "ae2:crafting_terminal" }
 			id: "4510000000000006"
 			rewards: [{
 				id: "4530000000000006"
@@ -549,6 +582,7 @@
 		}
 		{
 			dependencies: ["3510000000000002"]
+			icon: { id: "cyber_ware_port:scanner" }
 			id: "4510000000000007"
 			shape: "gear"
 			tasks: [{
@@ -561,6 +595,7 @@
 		}
 		{
 			dependencies: ["3510000000000004"]
+			icon: { id: "cyber_ware_port:component_titanium" }
 			id: "4510000000000008"
 			rewards: [{
 				id: "6AE7351C4BB27882"
@@ -581,6 +616,7 @@
 		}
 		{
 			dependencies: ["3510000000000006"]
+			icon: { id: "createcybernetics:basecyberware_cybereyes" }
 			id: "4510000000000009"
 			rewards: [{
 				id: "4530000000000009"
@@ -606,6 +642,7 @@
 				"3510000000000008"
 			]
 			dependency_requirement: "one_completed"
+			icon: { id: "kubejs:automation_foundation_core" }
 			id: "5510000000000002"
 			min_required_dependencies: 1
 			rewards: [
@@ -659,6 +696,7 @@
 		}
 		{
 			dependencies: ["2510000000000004"]
+			icon: { id: "minecraft:potato" }
 			id: "7511000000000001"
 			optional: true
 			shape: "gear"
@@ -676,6 +714,7 @@
 				"7511000000000001"
 				"1510000000000003"
 			]
+			icon: { id: "kubejs:starch_pulp" }
 			id: "7511000000000002"
 			optional: true
 			shape: "gear"
@@ -690,6 +729,7 @@
 		}
 		{
 			dependencies: ["7511000000000002"]
+			icon: { id: "kubejs:flocculating_solution_bucket" }
 			id: "7511000000000003"
 			optional: true
 			rewards: [{
@@ -716,6 +756,7 @@
 				"1510000000000003"
 				"7411000000000006"
 			]
+			icon: { id: "kubejs:precipitated_titanium_concentrate" }
 			id: "7511000000000004"
 			optional: true
 			rewards: [{
@@ -741,6 +782,7 @@
 				"7511000000000003"
 				"7511000000000004"
 			]
+			icon: { id: "kubejs:high_grade_titanium_concentrate" }
 			id: "7511000000000005"
 			optional: true
 			rewards: [{
@@ -763,6 +805,7 @@
 		}
 		{
 			dependencies: ["7511000000000005"]
+			icon: { id: "more_ores_more_gems:titanium_nugget" }
 			id: "7511000000000006"
 			optional: true
 			rewards: [{
