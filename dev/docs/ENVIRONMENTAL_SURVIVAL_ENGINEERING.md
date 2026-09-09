@@ -32,6 +32,43 @@ The original implementation used a separate `infinite_domain:enviromine_deepslat
 
 Neither failure is fatal, which is why both survived: Biolith catches the sorter failure and retries with a resilient indexer that drops cycle-forming edges. The only evidence was one WARN line inside a three-minute level-prep block. Adding a second `add_features` for `enviromine:hot_coal_ore` later must therefore extend the existing override, never add a parallel modifier.
 
+## The gas-mask and vent tags are intact — a legacy tag path is not by itself a bug (2026-09-09)
+
+Investigated and dismissed. EnviroMine Lite ships eight of its own tags at the pre-1.21 plural paths (`data/enviromine/tags/items/` and `tags/blocks/`), which is the same signature that broke `deepnether:portal_igniter` and the six `lostcities:*` block tags — see `OVERWORLD_BIOME_MODIFIER_ATTACHMENT.md` and `NETHER_PROGRESSION_GATE.md` for that pattern. Here it is a false alarm, and the reason is worth recording because the audit script asserted the opposite.
+
+**The jar ships both paths.** For every one of the eight, `enviromine_lite-1.21.1-1.1.3.1.jar` also contains the file at the correct singular path with identical values — `tags/item/gas_masks.json` alongside `tags/items/gas_masks.json`, and so on. The mod migrated to 1.21 correctly and left the old copies behind. Nothing scans `tags/items` any more, so the stale files are inert, and the tags resolve fully populated. Confirmed against the jar's own zip index, not an extraction:
+
+| tag | read by | resolves to |
+| --- | --- | --- |
+| `enviromine:gas_masks` | 5 classes (`EnviromineUpdateProcedure`, `ToxicAirDrainProcedure`, `InsanityDrainProcedure`, both overlay procedures) | the three mask helmets |
+| `enviromine:gas_mask_basic` | 4 classes | `gas_mask_basic_helmet` |
+| `enviromine:gas_mask_advanced` | 8 classes | `gas_mask_advanced_helmet` |
+| `enviromine:gas_mask` | 15 classes | `gas_mask_helmet` |
+| `enviromine:valid_vent_components` | 4 classes (`VentEffectProcedure`, `VentPipeHUpdateProcedure`, `VentPipeOUpdateProcedure`) | the five vent blocks |
+| `enviromine:gas_coal` | `GasDetectionUnitScanProcedure` | the four coal ores |
+| `enviromine:vent_pipe` (item) | **nothing** | — |
+| `enviromine:vent_pipes` (block) | **nothing** | — |
+
+`javap` on each class confirms the reads are live `ItemTags.create` / `BlockTags.create` calls on those exact identifiers. The last two are dead in 1.1.3.1: no class references either, so they would not be worth porting even if they were broken.
+
+The mod's three vestigial vanilla-tag files (`minecraft:dirt`, `minecraft:logs`, `minecraft:head_armor` at plural paths) are all `"values": []`. `minecraft:head_armor` is the clearest evidence of a deliberate migration: the plural file was emptied and the singular one carries the four helmets.
+
+**Nothing was ported.** Adding pack-side copies would have put eight dead files in `kubejs/data/` that shadow correct upstream data and quietly diverge if the mod updates.
+
+### The pack's mask is EnviroMine's own, not `createbigcannons:gas_mask`
+
+Four unrelated items in this pack are called some variant of "gas mask": `enviromine:gas_mask_{basic,,advanced}_helmet`, `spore:gas_mask`, `the_wasteland_reworked:gas_mask_helmet`, and `createbigcannons:gas_mask`. Only EnviroMine's three participate in the air model, and they are already in the tag. There is no item with the identifier `enviromine:gas_mask` — that string is a *tag* name whose single value is the item `enviromine:gas_mask_helmet`. The name collision is the whole trap.
+
+`createbigcannons:gas_mask` must **not** be added to `enviromine:gas_masks`. It belongs to Create: Big Cannons' own `createbigcannons:gas_masks` tag (correctly at the singular path) and protects against that mod's propellant smoke. More decisively, `ToxicAirDrainProcedure` reads a `filter` double out of the worn helmet's `minecraft:custom_data` and writes it back; `AirFilterApplyProcedure` is what seeds that component (1000.0, and 500.0 for the low tier). A CBC mask has no such component, so `getDouble("filter")` returns 0.0 — it would register as a permanently empty mask, granting no protection while suppressing nothing, and on the Basic branch an empty mask is destroyed. It would be strictly worse than not wearing it.
+
+This is consistent with the rest of the pack: `kubejs/data/enviromine/recipe/` overrides the recipes for all three EnviroMine masks and all four Air Filter variants, the quest ladder below teaches Basic → filter → full → Advanced, and `infinite_domain_space`'s emergency helmet is built from `enviromine:gas_mask_advanced_helmet`. The intended mask was always EnviroMine's own.
+
+### `audit_legacy_tag_paths.py` was over-reporting
+
+The script only checked whether the *pack* supplied a file at the singular path. It never checked whether the **same jar** already did, so every correctly-migrated mod that left its old files behind was reported as broken. Of the 123 legacy-path files in the pack it called 110 unfixed; the true figure is 32 broken plus 1 suspect. It now classifies each file as `harmless/same-jar`, `harmless/empty`, `ported`, `SUSPECT`, or `BROKEN`, and treats a pack file as a fix only when its values actually cover the jar's — so a shared tag like `minecraft:mineable/pickaxe`, where the pack's file exists for unrelated reasons, is no longer counted as repaired. `--all` lists the harmless entries. All fourteen enviromine rows now land in the two harmless buckets.
+
+**Still owed: in-game verification.** Wear a filtered mask below Y=63 and confirm that toxic-air protection engages and the filter actually drains. The static evidence above proves the tags are populated and read; it does not prove the mechanic fires.
+
 The optional specialization chapter adds twenty-three quests across the civilization ladder. Fourteen cover air safety and nine form an early radiation-protection branch:
 
 1. Era 0: rule onboarding and the Basic Gas Mask.

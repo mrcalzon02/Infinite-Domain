@@ -1,19 +1,92 @@
 {
   "totals": {
-    "loot_tables": 200,
-    "loot_table_items": 1202,
+    "loot_tables": 192,
+    "loot_table_items": 1194,
     "structures_with_loot": 297,
     "worldgen_structures": 313,
-    "structure_sets": 169,
-    "placed_structures": 470,
+    "structure_sets": 164,
+    "placed_structures": 451,
     "template_pools": 304,
-    "quest_tasks": 11061,
+    "quest_tasks": 11065,
     "craftable_outputs": 10977
   },
   "counts_by_code": {
-    "LOOT-ORPHAN": 11
+    "LOOT-ORPHAN": 3,
+    "QUEST-STRUCT-UNPLACED": 9
   },
   "findings": [
+    {
+      "code": "QUEST-STRUCT-UNPLACED",
+      "severity": "critical",
+      "message": "old_world_investigation/4F57000000000002: structure 'infinite_domain:old_world/ows_009_atlas_roadside_repair_depot' is defined but belongs to no structure set, so it never generates",
+      "chapter": "old_world_investigation",
+      "quest": "4F57000000000002",
+      "structure": "infinite_domain:old_world/ows_009_atlas_roadside_repair_depot"
+    },
+    {
+      "code": "QUEST-STRUCT-UNPLACED",
+      "severity": "critical",
+      "message": "old_world_investigation/4F57000000000004: structure 'infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall' is defined but belongs to no structure set, so it never generates",
+      "chapter": "old_world_investigation",
+      "quest": "4F57000000000004",
+      "structure": "infinite_domain:old_world/ows_010_atlas_conveyor_transfer_hall"
+    },
+    {
+      "code": "QUEST-STRUCT-UNPLACED",
+      "severity": "critical",
+      "message": "old_world_investigation/4F57000000000011: structure 'infinite_domain:old_world/ows_001_vcf_neighborhood_culture_service_depot' is defined but belongs to no structure set, so it never generates",
+      "chapter": "old_world_investigation",
+      "quest": "4F57000000000011",
+      "structure": "infinite_domain:old_world/ows_001_vcf_neighborhood_culture_service_depot"
+    },
+    {
+      "code": "QUEST-STRUCT-UNPLACED",
+      "severity": "critical",
+      "message": "old_world_investigation/4F57000000000013: structure 'infinite_domain:old_world/ows_002_vcf_emergency_community_grow_hall' is defined but belongs to no structure set, so it never generates",
+      "chapter": "old_world_investigation",
+      "quest": "4F57000000000013",
+      "structure": "infinite_domain:old_world/ows_002_vcf_emergency_community_grow_hall"
+    },
+    {
+      "code": "QUEST-STRUCT-UNPLACED",
+      "severity": "critical",
+      "message": "old_world_investigation/4F57000000000015: structure 'infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery' is defined but belongs to no structure set, so it never generates",
+      "chapter": "old_world_investigation",
+      "quest": "4F57000000000015",
+      "structure": "infinite_domain:old_world/ows_003_vcf_cold_chain_culture_nursery"
+    },
+    {
+      "code": "QUEST-STRUCT-UNPLACED",
+      "severity": "critical",
+      "message": "old_world_investigation/4F57000000000021: structure 'infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station' is defined but belongs to no structure set, so it never generates",
+      "chapter": "old_world_investigation",
+      "quest": "4F57000000000021",
+      "structure": "infinite_domain:old_world/ows_015_polycore_utility_seal_failure_station"
+    },
+    {
+      "code": "QUEST-STRUCT-UNPLACED",
+      "severity": "critical",
+      "message": "old_world_investigation/4F57000000000023: structure 'infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array' is defined but belongs to no structure set, so it never generates",
+      "chapter": "old_world_investigation",
+      "quest": "4F57000000000023",
+      "structure": "infinite_domain:old_world/ows_016_polycore_elastomer_exposure_array"
+    },
+    {
+      "code": "QUEST-STRUCT-UNPLACED",
+      "severity": "critical",
+      "message": "old_world_investigation/4F57000000000030: structure 'infinite_domain:old_world/ows_004_vcf_mycological_vertical_farm_tower' is defined but belongs to no structure set, so it never generates",
+      "chapter": "old_world_investigation",
+      "quest": "4F57000000000030",
+      "structure": "infinite_domain:old_world/ows_004_vcf_mycological_vertical_farm_tower"
+    },
+    {
+      "code": "QUEST-STRUCT-UNPLACED",
+      "severity": "critical",
+      "message": "old_world_investigation/4F57000000000040: structure 'infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant' is defined but belongs to no structure set, so it never generates",
+      "chapter": "old_world_investigation",
+      "quest": "4F57000000000040",
+      "structure": "infinite_domain:old_world/ows_012_atlas_bulk_crushing_preparation_plant"
+    },
     {
       "code": "LOOT-ORPHAN",
       "severity": "warning",
@@ -34,62 +107,6 @@
       "message": "infinite_domain:chests/offworld/continuity_lunar_crash_salvage: authored loot table is referenced by no structure, block or table - it never rolls",
       "table": "infinite_domain:chests/offworld/continuity_lunar_crash_salvage",
       "path": "kubejs/data/infinite_domain/loot_table/chests/offworld/continuity_lunar_crash_salvage.json"
-    },
-    {
-      "code": "LOOT-ORPHAN",
-      "severity": "warning",
-      "message": "infinite_domain:chests/old_world/vcf/ows_001_culture_service_manifest: authored loot table is referenced by no structure, block or table - it never rolls",
-      "table": "infinite_domain:chests/old_world/vcf/ows_001_culture_service_manifest",
-      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_001_culture_service_manifest.json"
-    },
-    {
-      "code": "LOOT-ORPHAN",
-      "severity": "warning",
-      "message": "infinite_domain:chests/old_world/vcf/ows_002_emergency_grow_authorization: authored loot table is referenced by no structure, block or table - it never rolls",
-      "table": "infinite_domain:chests/old_world/vcf/ows_002_emergency_grow_authorization",
-      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_002_emergency_grow_authorization.json"
-    },
-    {
-      "code": "LOOT-ORPHAN",
-      "severity": "warning",
-      "message": "infinite_domain:chests/old_world/vcf/ows_003_vcf_culture_batch_record: authored loot table is referenced by no structure, block or table - it never rolls",
-      "table": "infinite_domain:chests/old_world/vcf/ows_003_vcf_culture_batch_record",
-      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_003_vcf_culture_batch_record.json"
-    },
-    {
-      "code": "LOOT-ORPHAN",
-      "severity": "warning",
-      "message": "infinite_domain:chests/old_world/vcf/ows_004_evercrop_cultivation_handbook: authored loot table is referenced by no structure, block or table - it never rolls",
-      "table": "infinite_domain:chests/old_world/vcf/ows_004_evercrop_cultivation_handbook",
-      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_004_evercrop_cultivation_handbook.json"
-    },
-    {
-      "code": "LOOT-ORPHAN",
-      "severity": "warning",
-      "message": "infinite_domain:chests/old_world/vcf/ows_005_vcf_packaging_quality_report: authored loot table is referenced by no structure, block or table - it never rolls",
-      "table": "infinite_domain:chests/old_world/vcf/ows_005_vcf_packaging_quality_report",
-      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_005_vcf_packaging_quality_report.json"
-    },
-    {
-      "code": "LOOT-ORPHAN",
-      "severity": "warning",
-      "message": "infinite_domain:chests/old_world/vcf/ows_006_pt9_symbiosis_report: authored loot table is referenced by no structure, block or table - it never rolls",
-      "table": "infinite_domain:chests/old_world/vcf/ows_006_pt9_symbiosis_report",
-      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_006_pt9_symbiosis_report.json"
-    },
-    {
-      "code": "LOOT-ORPHAN",
-      "severity": "warning",
-      "message": "infinite_domain:chests/old_world/vcf/ows_007_ep7_distribution_and_durability_record: authored loot table is referenced by no structure, block or table - it never rolls",
-      "table": "infinite_domain:chests/old_world/vcf/ows_007_ep7_distribution_and_durability_record",
-      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_007_ep7_distribution_and_durability_record.json"
-    },
-    {
-      "code": "LOOT-ORPHAN",
-      "severity": "warning",
-      "message": "infinite_domain:chests/old_world/vcf/ows_008_vcf_persistence_incident_file: authored loot table is referenced by no structure, block or table - it never rolls",
-      "table": "infinite_domain:chests/old_world/vcf/ows_008_vcf_persistence_incident_file",
-      "path": "kubejs/data/infinite_domain/loot_table/chests/old_world/vcf/ows_008_vcf_persistence_incident_file.json"
     }
   ]
 }

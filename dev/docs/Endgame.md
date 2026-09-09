@@ -1979,6 +1979,35 @@ journal:
       the validator docstring and module-schema.md section 7 coverage note; closed the
       "only one branch pool" spike deviation. No generated artifact changed - this is
       validation-only.
+  - at: 2026-09-09T13:35:00-08:00
+    actor: endgame-coordinator
+    event: travel_marker_defect_fixed
+    detail: >-
+      Owner report: the Cinderstack travel markers did nothing. Root cause read out of
+      the shipped KubeJS 2101.7.2 bytecode - KubeEvent.cancel() resolves to
+      EventResult$Type.INTERRUPT_FALSE.exit(...) followed by athrow, so event.cancel()
+      unwinds the callback. hive_world_expedition.js called it as the FIRST statement of
+      the Portal Core handler, making the geometry check, energizePortal, descend, and
+      ascend unreachable: both markers cancelled the interaction and did nothing else,
+      with no error logged. Moved cancel() to the last statement on every path. Four
+      further defects in the same flow: captureOrigin read player.yaw/player.pitch,
+      which KubeJS 7 does not expose (no yaw/pitch binding on EntityKJS,
+      LivingEntityKJS or PlayerKJS), so every return recorded 0/0 and snapped the
+      camera due south - now getYRot()/getXRot(); ascend() could pass "undefined" into
+      /tp and strand a player, now coordinate-validated with a guaranteed Overworld
+      fallback; portalGeometry returned false rather than null from its interior check;
+      and build_arrival hung a 145-block ladder column on facing=south at z15, whose
+      support face at z14 the shaft carve had just removed, so the "climbable"
+      circulation shaft would drop its ladders on the first block update - now a
+      rebuilt backing column at z15 with facing=north ladders at z14. Added smoke
+      assertion 11 (no statement may follow event.cancel() in its block) and
+      negative-tested it against the pre-fix file at 5c6fde84, where it reproduces the
+      defect at line 206. Validators: smoke PASS, modules PASS (37 modules, 21 pools),
+      routing 9/9 PASS. NOT verified in-client - the round trip, the death and
+      disconnect paths, and the rebuilt ladder column still need the owner runtime run.
+      The same dead-code-after-cancel bug also exists, unfixed and out of scope, in
+      cyberware_system_conversion.js:14+21, darknet_anchor.js:42+49 and
+      gateway_of_doom_dimension_lock.js:46, where it costs only the rejection message.
 ```
 
 <!-- ENDGAME_STATE_END -->

@@ -1,10 +1,13 @@
 {
-  "templates_scanned": 382,
-  "modded_block_types": 174,
+  "templates_scanned": 696,
+  "modded_block_types": 241,
   "categories_scanned": [
     "abyssal",
     "alien",
     "deep_sea",
+    "hive_world",
+    "karsic",
+    "minor",
     "offworld",
     "spawn_hospital_lobby.nbt",
     "wasteland"
@@ -75,13 +78,6 @@
       ]
     },
     {
-      "block": "create:shaft",
-      "state": "create:shaft",
-      "missing": [
-        "axis"
-      ]
-    },
-    {
       "block": "create:steam_engine",
       "state": "create:steam_engine",
       "missing": [
@@ -104,10 +100,115 @@
       ]
     },
     {
+      "block": "immersiveengineering:cagelamp",
+      "state": "immersiveengineering:cagelamp",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "stellaris:coal_generator",
+      "state": "stellaris:coal_generator",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "stellaris:diesel_generator",
+      "state": "stellaris:diesel_generator",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "stellaris:iron_pillar",
+      "state": "stellaris:iron_pillar",
+      "missing": [
+        "axis"
+      ]
+    },
+    {
+      "block": "stellaris:mars_pillar",
+      "state": "stellaris:mars_pillar",
+      "missing": [
+        "axis"
+      ]
+    },
+    {
+      "block": "stellaris:mercury_stone_pillar",
+      "state": "stellaris:mercury_stone_pillar",
+      "missing": [
+        "axis"
+      ]
+    },
+    {
       "block": "stellaris:moon_stone_pillar",
       "state": "stellaris:moon_stone_pillar",
       "missing": [
         "axis"
+      ]
+    },
+    {
+      "block": "stellaris:oxygen_distributor",
+      "state": "stellaris:oxygen_distributor",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "stellaris:rocket_station",
+      "state": "stellaris:rocket_station",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "stellaris:solar_panel",
+      "state": "stellaris:solar_panel",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "stellaris:steel_pillar",
+      "state": "stellaris:steel_pillar",
+      "missing": [
+        "axis"
+      ]
+    },
+    {
+      "block": "stellaris:t1_tank",
+      "state": "stellaris:t1_tank",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "stellaris:t2_bank",
+      "state": "stellaris:t2_bank",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "stellaris:t2_tank",
+      "state": "stellaris:t2_tank",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "stellaris:t3_bank",
+      "state": "stellaris:t3_bank",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "stellaris:t3_tank",
+      "state": "stellaris:t3_tank",
+      "missing": [
+        "facing"
       ]
     },
     {
@@ -118,8 +219,43 @@
       ]
     },
     {
+      "block": "stellaris:water_separator",
+      "state": "stellaris:water_separator",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
       "block": "supplementaries:item_shelf",
       "state": "supplementaries:item_shelf",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "supplementaries:notice_board",
+      "state": "supplementaries:notice_board",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "tfmg:cable_tube",
+      "state": "tfmg:cable_tube",
+      "missing": [
+        "axis"
+      ]
+    },
+    {
+      "block": "tfmg:circular_light",
+      "state": "tfmg:circular_light",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "tfmg:yellow_caution_block",
+      "state": "tfmg:yellow_caution_block",
       "missing": [
         "facing"
       ]
@@ -146,6 +282,13 @@
       ]
     },
     {
+      "block": "the_wasteland_reworked:pipe_block",
+      "state": "the_wasteland_reworked:pipe_block",
+      "missing": [
+        "axis"
+      ]
+    },
+    {
       "block": "the_wasteland_reworked:radiation_hazard_sign",
       "state": "the_wasteland_reworked:radiation_hazard_sign",
       "missing": [
@@ -155,6 +298,13 @@
     {
       "block": "the_wasteland_reworked:radio",
       "state": "the_wasteland_reworked:radio",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "the_wasteland_reworked:road_sign",
+      "state": "the_wasteland_reworked:road_sign",
       "missing": [
         "facing"
       ]
@@ -179,6 +329,27 @@
       "missing": [
         "facing"
       ]
+    },
+    {
+      "block": "zvhouses:spruce_bench",
+      "state": "zvhouses:spruce_bench",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "zvhouses:spruce_chair",
+      "state": "zvhouses:spruce_chair",
+      "missing": [
+        "facing"
+      ]
+    },
+    {
+      "block": "zvhouses:spruce_counter",
+      "state": "zvhouses:spruce_counter",
+      "missing": [
+        "facing"
+      ]
     }
   ],
   "connective_block_types": [
@@ -187,7 +358,12 @@
     "spore:wall_growths_big",
     "spore:wall_growths_fleshy",
     "spore:wall_remains",
-    "tfmg:steel_pipe"
+    "stellaris:pipe_t1",
+    "stellaris:pipe_t2",
+    "tfmg:concrete_encased_industrial_pipe",
+    "tfmg:industrial_pipe",
+    "tfmg:steel_pipe",
+    "the_wasteland_reworked:pipe_block"
   ],
   "functional_block_violations": [
     {
@@ -226,7 +402,7 @@
     },
     {
       "block": "create:depot",
-      "placements": 243,
+      "placements": 221,
       "structures": [
         "wasteland/abandoned_create_factory",
         "wasteland/decayed_logging_camp",
@@ -253,7 +429,7 @@
     },
     {
       "block": "create:encased_fan",
-      "placements": 58,
+      "placements": 52,
       "structures": [
         "wasteland/masters/create_factory_clean_master",
         "wasteland/modules/industrial_process_line",
@@ -262,7 +438,6 @@
         "wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
         "wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
         "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
         "wasteland/old_world/ows_012_atlas_bulk_crushing_preparation_plant",
         "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
         "wasteland/old_world/ows_063_asterion_spacecraft_assembly_facility"
@@ -318,8 +493,9 @@
     },
     {
       "block": "create:mechanical_drill",
-      "placements": 6,
+      "placements": 9,
       "structures": [
+        "wasteland/abandoned_quarry_clean_master",
         "wasteland/masters/abandoned_quarry_clean_master",
         "wasteland/old_world/ows_012_atlas_bulk_crushing_preparation_plant"
       ],
@@ -345,12 +521,13 @@
     },
     {
       "block": "create:mechanical_press",
-      "placements": 98,
+      "placements": 100,
       "structures": [
         "wasteland/abandoned_create_factory",
         "wasteland/abandoned_orchard_cannery",
         "wasteland/abandoned_orchard_cannery_clean_master",
         "wasteland/crashed_cargo_airship",
+        "wasteland/crashed_cargo_airship_clean_master",
         "wasteland/decayed_logging_camp",
         "wasteland/industrial_facility",
         "wasteland/masters/abandoned_orchard_cannery_clean_master",
@@ -381,7 +558,7 @@
     },
     {
       "block": "create:mechanical_pump",
-      "placements": 88,
+      "placements": 77,
       "structures": [
         "wasteland/city_water_treatment_plant",
         "wasteland/district_heating_station",
@@ -395,7 +572,6 @@
         "wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
         "wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
         "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
         "wasteland/old_world/ows_015_polycore_utility_seal_failure_station",
         "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
         "wasteland/old_world/ows_036_helion_coolant_pump_service_station",
@@ -426,9 +602,9 @@
     },
     {
       "block": "create:shaft",
-      "placements": 15,
+      "placements": 1,
       "structures": [
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot"
+        "wasteland/modules/industrial_process_line"
       ],
       "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
     },
@@ -516,14 +692,13 @@
     },
     {
       "block": "immersiveengineering:capacitor_mv",
-      "placements": 3382,
+      "placements": 3315,
       "structures": [
         "wasteland/city_electrical_substation",
         "wasteland/district_heating_station",
         "wasteland/masters/city_electrical_substation_clean_master",
         "wasteland/masters/district_heating_station_clean_master",
         "wasteland/masters/shattered_wind_farm_clean_master",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
         "wasteland/old_world/ows_034_helion_neighborhood_electrical_substation",
         "wasteland/old_world/ows_035_helion_grid_storage_compound",
         "wasteland/old_world/ows_036_helion_coolant_pump_service_station",
@@ -547,6 +722,149 @@
       "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
     },
     {
+      "block": "kubejs:ruined_blast_furnace",
+      "placements": 18,
+      "structures": [
+        "wasteland/old_world/ows_011_atlas_municipal_machine_service_shop",
+        "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
+        "wasteland/old_world/ows_036_helion_coolant_pump_service_station",
+        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
+        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
+        "wasteland/old_world/ows_051_continuity_science_atmospheric_monitoring_station_19k",
+        "wasteland/old_world/ows_063_asterion_spacecraft_assembly_facility"
+      ],
+      "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
+    },
+    {
+      "block": "kubejs:ruined_furnace",
+      "placements": 10,
+      "structures": [
+        "wasteland/decayed_logging_camp",
+        "wasteland/masters/decayed_logging_camp_clean_master",
+        "wasteland/modules/market_trade_lodge",
+        "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
+        "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
+        "wasteland/old_world/ows_032_aevum_apl3_research_campus",
+        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
+        "wasteland/old_world/ows_047_joint_research_deep_containment_laboratory",
+        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
+        "wasteland/old_world/ows_050_meridian_firebreak_crater_command_site"
+      ],
+      "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
+    },
+    {
+      "block": "stellaris:cable",
+      "placements": 34,
+      "structures": [
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_venus_descent_wreck"
+      ],
+      "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
+    },
+    {
+      "block": "stellaris:cable_t2",
+      "placements": 1130,
+      "structures": [
+        "minor/jupiter_stationkeeping_assembly",
+        "minor/jupiter_tank_cluster",
+        "minor/mars_buried_rover_beacon",
+        "minor/mars_catalyst_canister_scatter",
+        "minor/mars_frozen_brine_pump",
+        "minor/mercury_broken_drill_head",
+        "minor/mercury_heat_exchanger_remnant",
+        "minor/mercury_radiation_control_station",
+        "minor/mercury_scorched_survey_rig",
+        "minor/moon_abandoned_regolith_drill",
+        "minor/venus_ruptured_sorbent_hopper",
+        "minor/venus_sorbent_service_station",
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
+    },
+    {
+      "block": "stellaris:coal_generator",
+      "placements": 98,
+      "structures": [
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
+    },
+    {
+      "block": "stellaris:diesel_generator",
+      "placements": 1,
+      "structures": [
+        "offworld/continuity_lunar_crash_station"
+      ],
+      "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
+    },
+    {
       "block": "stellaris:radioactive_generator",
       "placements": 1,
       "structures": [
@@ -556,28 +874,149 @@
     },
     {
       "block": "stellaris:t1_tank",
-      "placements": 2,
+      "placements": 11,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "minor/jupiter_scoop_fragment",
+        "minor/mars_geopolymer_shelter",
+        "minor/mars_oxidizer_spill",
+        "minor/mercury_abandoned_surveyors",
+        "minor/mercury_emergency_shade_shelter",
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mercury_outpost"
       ],
       "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
     },
     {
       "block": "stellaris:t2_tank",
-      "placements": 2,
+      "placements": 81,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "minor/jupiter_tank_cluster",
+        "minor/mars_catalyst_canister_scatter",
+        "minor/venus_ruptured_sorbent_hopper",
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
+    },
+    {
+      "block": "stellaris:t3_tank",
+      "placements": 107,
+      "structures": [
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
+    },
+    {
+      "block": "tfmg:cable_tube",
+      "placements": 1,
+      "structures": [
+        "karsic/kar_084_transformer_kiosk"
+      ],
+      "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
+    },
+    {
+      "block": "the_wasteland_reworked:bunker_fan",
+      "placements": 10,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master"
       ],
       "reason": "live-functional/machine block used as structure set dressing with no approved exception on file"
     },
     {
       "block": "minecraft:blast_furnace",
-      "placements": 79,
+      "placements": 157,
       "structures": [
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry",
         "wasteland/abandoned_create_factory",
         "wasteland/battle_tank_clean_master",
         "wasteland/bunker_network",
         "wasteland/crashed_cargo_airship",
+        "wasteland/crashed_cargo_airship_clean_master",
         "wasteland/district_heating_station",
         "wasteland/masters/battle_tank_clean_master",
         "wasteland/masters/bunker_network_clean_master",
@@ -591,13 +1030,6 @@
         "wasteland/masters/split_level_house_clean_master",
         "wasteland/masters/wasteland_fire_lookout_clean_master",
         "wasteland/municipal_incinerator",
-        "wasteland/old_world/ows_011_atlas_municipal_machine_service_shop",
-        "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
-        "wasteland/old_world/ows_036_helion_coolant_pump_service_station",
-        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
-        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
-        "wasteland/old_world/ows_051_continuity_science_atmospheric_monitoring_station_19k",
-        "wasteland/old_world/ows_063_asterion_spacecraft_assembly_facility",
         "wasteland/ruined_fire_station",
         "wasteland/ruined_police_precinct",
         "wasteland/split_level_house",
@@ -607,7 +1039,7 @@
     },
     {
       "block": "minecraft:brewing_stand",
-      "placements": 173,
+      "placements": 75,
       "structures": [
         "spawn_hospital_lobby",
         "wasteland/bunker_network",
@@ -630,29 +1062,9 @@
         "wasteland/masters/survivor_cache_clean_master",
         "wasteland/masters/trade_outpost_clean_master",
         "wasteland/masters/wasteland_weigh_station_clean_master",
-        "wasteland/modules/market_stall_medicine",
         "wasteland/mountain_biohazard_lab",
         "wasteland/mountain_military_complex",
         "wasteland/nuclear_research_annex",
-        "wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
-        "wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
-        "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
-        "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
-        "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
-        "wasteland/old_world/ows_028_aevum_neighborhood_regenerative_clinic",
-        "wasteland/old_world/ows_029_aevum_longevity_treatment_center",
-        "wasteland/old_world/ows_030_aevum_apl_hospital_recovery_ward",
-        "wasteland/old_world/ows_032_aevum_apl3_research_campus",
-        "wasteland/old_world/ows_033_aevum_evacuation_dependency_ward",
-        "wasteland/old_world/ows_038_helion_nuclear_auxiliary_emergency_complex",
-        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
-        "wasteland/old_world/ows_047_joint_research_deep_containment_laboratory",
-        "wasteland/old_world/ows_048_meridian_military_containment_base",
-        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
-        "wasteland/old_world/ows_050_meridian_firebreak_crater_command_site",
-        "wasteland/old_world/ows_052_continuity_field_office",
-        "wasteland/old_world/ows_054_civilian_neighborhood_shelter",
         "wasteland/ruined_cyberware_clinic",
         "wasteland/ruined_hospital",
         "wasteland/ruined_mixed_use_block",
@@ -664,32 +1076,22 @@
     },
     {
       "block": "minecraft:furnace",
-      "placements": 38,
+      "placements": 28,
       "structures": [
         "spawn_hospital_lobby",
         "wasteland/bunker_network",
         "wasteland/cratered_downtown_intersection",
         "wasteland/decayed_farm",
-        "wasteland/decayed_logging_camp",
         "wasteland/masters/bunker_network_clean_master",
         "wasteland/masters/cratered_downtown_intersection_clean_master",
         "wasteland/masters/decayed_farm_clean_master",
-        "wasteland/masters/decayed_logging_camp_clean_master",
         "wasteland/masters/mountain_biohazard_lab_clean_master",
         "wasteland/masters/ruined_mixed_use_block_clean_master",
         "wasteland/masters/sunken_city_front_clean_master",
         "wasteland/masters/survivor_cache_clean_master",
         "wasteland/masters/trade_outpost_clean_master",
         "wasteland/masters/trailer_park_clean_master",
-        "wasteland/modules/market_trade_lodge",
         "wasteland/mountain_biohazard_lab",
-        "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
-        "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
-        "wasteland/old_world/ows_032_aevum_apl3_research_campus",
-        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
-        "wasteland/old_world/ows_047_joint_research_deep_containment_laboratory",
-        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
-        "wasteland/old_world/ows_050_meridian_firebreak_crater_command_site",
         "wasteland/ruined_mixed_use_block",
         "wasteland/sunken_city_front",
         "wasteland/survivor_cache",
@@ -700,7 +1102,7 @@
     },
     {
       "block": "minecraft:smoker",
-      "placements": 347,
+      "placements": 285,
       "structures": [
         "wasteland/abandoned_bungalow",
         "wasteland/abandoned_create_factory",
@@ -713,7 +1115,6 @@
         "wasteland/corporate_warehouse",
         "wasteland/cratered_downtown_intersection",
         "wasteland/decayed_farm",
-        "wasteland/decayed_logging_camp",
         "wasteland/decayed_ranch",
         "wasteland/dilapidated_grocery",
         "wasteland/emergency_relief_shelter",
@@ -730,7 +1131,6 @@
         "wasteland/masters/cratered_downtown_intersection_clean_master",
         "wasteland/masters/create_factory_clean_master",
         "wasteland/masters/decayed_farm_clean_master",
-        "wasteland/masters/decayed_logging_camp_clean_master",
         "wasteland/masters/decayed_ranch_clean_master",
         "wasteland/masters/emergency_relief_shelter_clean_master",
         "wasteland/masters/fire_station_clean_master",
@@ -755,37 +1155,8 @@
         "wasteland/masters/toppled_skyscraper_clean_master",
         "wasteland/masters/trade_outpost_clean_master",
         "wasteland/masters/wasteland_fire_lookout_clean_master",
-        "wasteland/modules/industrial_dispatch_annex",
-        "wasteland/modules/industrial_office_annex",
-        "wasteland/modules/market_stall_provisions",
         "wasteland/mountain_biohazard_lab",
         "wasteland/mountain_military_complex",
-        "wasteland/old_world/ows_010_atlas_conveyor_transfer_hall",
-        "wasteland/old_world/ows_011_atlas_municipal_machine_service_shop",
-        "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
-        "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
-        "wasteland/old_world/ows_019_polycore_emergency_material_substitution_center",
-        "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
-        "wasteland/old_world/ows_021_pleroma_roadside_freight_depot",
-        "wasteland/old_world/ows_022_pleroma_urban_distribution_warehouse",
-        "wasteland/old_world/ows_023_pleroma_refrigerated_cold_storage_hub",
-        "wasteland/old_world/ows_026_pleroma_quarantine_cargo_warehouse",
-        "wasteland/old_world/ows_029_aevum_longevity_treatment_center",
-        "wasteland/old_world/ows_032_aevum_apl3_research_campus",
-        "wasteland/old_world/ows_042_blackglass_regional_data_center",
-        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
-        "wasteland/old_world/ows_047_joint_research_deep_containment_laboratory",
-        "wasteland/old_world/ows_048_meridian_military_containment_base",
-        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
-        "wasteland/old_world/ows_050_meridian_firebreak_crater_command_site",
-        "wasteland/old_world/ows_051_continuity_science_atmospheric_monitoring_station_19k",
-        "wasteland/old_world/ows_054_civilian_neighborhood_shelter",
-        "wasteland/old_world/ows_055_municipal_transit_closure_station",
-        "wasteland/old_world/ows_057_civilian_apartment_evacuation_block",
-        "wasteland/old_world/ows_058_municipal_library_refuge_center",
-        "wasteland/old_world/ows_059_municipal_school_distribution_relief_point",
-        "wasteland/old_world/ows_060_asterion_launch_support_warehouse",
-        "wasteland/old_world/ows_063_asterion_spacecraft_assembly_facility",
         "wasteland/ruined_bus_terminal",
         "wasteland/ruined_city_school",
         "wasteland/ruined_fire_station",
@@ -862,13 +1233,12 @@
     },
     {
       "block": "ae2:drive",
-      "placements": 5430,
+      "placements": 5407,
       "structures": [
         "wasteland/ae2_records_archive",
         "wasteland/masters/ae2_records_archive_clean_master",
         "wasteland/masters/ruined_cyberware_clinic_clean_master",
         "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
         "wasteland/old_world/ows_014_atlas_industrial_controls_integration_center",
         "wasteland/old_world/ows_028_aevum_neighborhood_regenerative_clinic",
         "wasteland/old_world/ows_037_helion_regional_power_operations_center",
@@ -926,12 +1296,11 @@
     },
     {
       "block": "ae2:terminal",
-      "placements": 35,
+      "placements": 26,
       "structures": [
         "wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
         "wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
-        "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot"
+        "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab"
       ],
       "states": [
         "ae2:terminal"
@@ -943,7 +1312,7 @@
     },
     {
       "block": "create:andesite_casing",
-      "placements": 1903,
+      "placements": 1934,
       "structures": [
         "wasteland/abandoned_create_factory",
         "wasteland/masters/create_factory_clean_master",
@@ -997,7 +1366,7 @@
     },
     {
       "block": "create:brass_casing",
-      "placements": 243,
+      "placements": 242,
       "structures": [
         "wasteland/abandoned_create_factory",
         "wasteland/masters/create_factory_clean_master",
@@ -1123,7 +1492,7 @@
     },
     {
       "block": "create:depot",
-      "placements": 243,
+      "placements": 221,
       "structures": [
         "wasteland/abandoned_create_factory",
         "wasteland/decayed_logging_camp",
@@ -1156,7 +1525,7 @@
     },
     {
       "block": "create:encased_fan",
-      "placements": 58,
+      "placements": 52,
       "structures": [
         "wasteland/masters/create_factory_clean_master",
         "wasteland/modules/industrial_process_line",
@@ -1165,7 +1534,6 @@
         "wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
         "wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
         "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
         "wasteland/old_world/ows_012_atlas_bulk_crushing_preparation_plant",
         "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
         "wasteland/old_world/ows_063_asterion_spacecraft_assembly_facility"
@@ -1191,7 +1559,7 @@
     },
     {
       "block": "create:fluid_pipe",
-      "placements": 3492,
+      "placements": 3246,
       "structures": [
         "wasteland/old_world/ows_001_vcf_neighborhood_culture_service_depot",
         "wasteland/old_world/ows_002_vcf_emergency_community_grow_hall",
@@ -1201,7 +1569,6 @@
         "wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
         "wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
         "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
         "wasteland/old_world/ows_015_polycore_utility_seal_failure_station",
         "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
         "wasteland/old_world/ows_036_helion_coolant_pump_service_station",
@@ -1284,8 +1651,12 @@
     },
     {
       "block": "create:framed_glass",
-      "placements": 88059,
+      "placements": 88520,
       "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
         "offworld/continuity_far_side_redoubt",
         "wasteland/abandoned_bungalow",
         "wasteland/abandoned_create_factory",
@@ -1295,6 +1666,7 @@
         "wasteland/abandoned_orchard_cannery",
         "wasteland/abandoned_orchard_cannery_clean_master",
         "wasteland/abandoned_quarry",
+        "wasteland/abandoned_quarry_clean_master",
         "wasteland/abandoned_truck_stop",
         "wasteland/ae2_records_archive",
         "wasteland/blown_apartment_complex",
@@ -1309,7 +1681,9 @@
         "wasteland/collapsed_airship_terminal",
         "wasteland/collapsed_airship_terminal_clean_master",
         "wasteland/collapsed_mine_entrance",
+        "wasteland/collapsed_mine_entrance_clean_master",
         "wasteland/collapsed_subway_station",
+        "wasteland/collapsed_subway_station_clean_master",
         "wasteland/corporate_warehouse",
         "wasteland/cratered_downtown_intersection",
         "wasteland/decayed_farm",
@@ -1544,8 +1918,9 @@
     },
     {
       "block": "create:mechanical_drill",
-      "placements": 6,
+      "placements": 9,
       "structures": [
+        "wasteland/abandoned_quarry_clean_master",
         "wasteland/masters/abandoned_quarry_clean_master",
         "wasteland/old_world/ows_012_atlas_bulk_crushing_preparation_plant"
       ],
@@ -1586,12 +1961,13 @@
     },
     {
       "block": "create:mechanical_press",
-      "placements": 98,
+      "placements": 100,
       "structures": [
         "wasteland/abandoned_create_factory",
         "wasteland/abandoned_orchard_cannery",
         "wasteland/abandoned_orchard_cannery_clean_master",
         "wasteland/crashed_cargo_airship",
+        "wasteland/crashed_cargo_airship_clean_master",
         "wasteland/decayed_logging_camp",
         "wasteland/industrial_facility",
         "wasteland/masters/abandoned_orchard_cannery_clean_master",
@@ -1621,8 +1997,7 @@
       "states": [
         "create:mechanical_press",
         "create:mechanical_press[facing=east]",
-        "create:mechanical_press[facing=north]",
-        "create:mechanical_press[facing=west]"
+        "create:mechanical_press[facing=north]"
       ],
       "selector_properties": [
         "facing"
@@ -1640,7 +2015,7 @@
     },
     {
       "block": "create:mechanical_pump",
-      "placements": 88,
+      "placements": 77,
       "structures": [
         "wasteland/city_water_treatment_plant",
         "wasteland/district_heating_station",
@@ -1654,7 +2029,6 @@
         "wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
         "wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
         "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
         "wasteland/old_world/ows_015_polycore_utility_seal_failure_station",
         "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
         "wasteland/old_world/ows_036_helion_coolant_pump_service_station",
@@ -1669,7 +2043,6 @@
         "create:mechanical_pump[facing=east]",
         "create:mechanical_pump[facing=north]",
         "create:mechanical_pump[facing=south]",
-        "create:mechanical_pump[facing=up]",
         "create:mechanical_pump[facing=west]"
       ],
       "selector_properties": [
@@ -1751,11 +2124,12 @@
     },
     {
       "block": "create:red_nixie_tube",
-      "placements": 117,
+      "placements": 131,
       "structures": [
         "wasteland/abandoned_create_factory",
         "wasteland/bombed_data_center",
         "wasteland/collapsed_subway_station",
+        "wasteland/collapsed_subway_station_clean_master",
         "wasteland/masters/bombed_data_center_clean_master",
         "wasteland/masters/collapsed_subway_station_clean_master",
         "wasteland/masters/create_factory_clean_master",
@@ -1789,26 +2163,19 @@
     },
     {
       "block": "create:shaft",
-      "placements": 15,
+      "placements": 1,
       "structures": [
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot"
+        "wasteland/modules/industrial_process_line"
       ],
       "states": [
-        "create:shaft"
+        "create:shaft[axis=y]"
       ],
       "selector_properties": [
         "axis"
       ],
       "functional_or_machine": true,
       "connective_material": false,
-      "implicit_directional_states": [
-        {
-          "state": "create:shaft",
-          "missing": [
-            "axis"
-          ]
-        }
-      ]
+      "implicit_directional_states": []
     },
     {
       "block": "create:steam_engine",
@@ -2388,6 +2755,37 @@
       "implicit_directional_states": []
     },
     {
+      "block": "immersiveengineering:cagelamp",
+      "placements": 12,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_078_relay_mast_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master"
+      ],
+      "states": [
+        "immersiveengineering:cagelamp"
+      ],
+      "selector_properties": [
+        "active",
+        "facing"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "immersiveengineering:cagelamp",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
       "block": "immersiveengineering:capacitor_hv",
       "placements": 5927,
       "structures": [
@@ -2422,14 +2820,13 @@
     },
     {
       "block": "immersiveengineering:capacitor_mv",
-      "placements": 3382,
+      "placements": 3315,
       "structures": [
         "wasteland/city_electrical_substation",
         "wasteland/district_heating_station",
         "wasteland/masters/city_electrical_substation_clean_master",
         "wasteland/masters/district_heating_station_clean_master",
         "wasteland/masters/shattered_wind_farm_clean_master",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
         "wasteland/old_world/ows_034_helion_neighborhood_electrical_substation",
         "wasteland/old_world/ows_035_helion_grid_storage_compound",
         "wasteland/old_world/ows_036_helion_coolant_pump_service_station",
@@ -2462,9 +2859,35 @@
       "implicit_directional_states": []
     },
     {
-      "block": "immersiveengineering:concrete_brick",
-      "placements": 3680,
+      "block": "immersiveengineering:concrete",
+      "placements": 49874,
       "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master",
+        "wasteland/masters/mountain_pass_terminator_clean_master"
+      ],
+      "states": [
+        "immersiveengineering:concrete"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:concrete_brick",
+      "placements": 96431,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master",
         "wasteland/abandoned_create_factory",
         "wasteland/bunker_network",
         "wasteland/masters/bunker_network_clean_master",
@@ -2485,16 +2908,19 @@
     },
     {
       "block": "immersiveengineering:concrete_brick_cracked",
-      "placements": 7173,
+      "placements": 7243,
       "structures": [
+        "karsic/kar_081_steel_water_tower",
         "wasteland/abandoned_create_factory",
         "wasteland/bunker_network",
         "wasteland/cratered_downtown_intersection",
         "wasteland/hydroelectric_refuge_dam",
         "wasteland/masters/hydroelectric_refuge_dam_clean_master",
+        "wasteland/masters/mountain_pass_terminator_clean_master",
         "wasteland/masters/warm_industrial_mountain_port_clean_master",
         "wasteland/modules/harbor_loading_pier_warm",
         "wasteland/modules/port_customs_warehouse",
+        "wasteland/mountain_pass_terminator",
         "wasteland/old_world/ows_024_pleroma_intermodal_container_yard",
         "wasteland/old_world/ows_027_pleroma_meridian_port_logistics_terminal",
         "wasteland/pancaked_parking_structure",
@@ -2531,8 +2957,27 @@
       "implicit_directional_states": []
     },
     {
+      "block": "immersiveengineering:concrete_pillar",
+      "placements": 190,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_083_district_heating_main",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_083_district_heating_main_clean_master"
+      ],
+      "states": [
+        "immersiveengineering:concrete_pillar"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
       "block": "immersiveengineering:concrete_reinforced",
-      "placements": 162931,
+      "placements": 171073,
       "structures": [
         "wasteland/bombed_data_center",
         "wasteland/bunker_network",
@@ -2540,6 +2985,7 @@
         "wasteland/city_water_treatment_plant",
         "wasteland/cold_industrial_mountain_port",
         "wasteland/collapsed_subway_station",
+        "wasteland/collapsed_subway_station_clean_master",
         "wasteland/cratered_downtown_intersection",
         "wasteland/elevated_rail_collapse",
         "wasteland/gas_station_clean_master",
@@ -2556,6 +3002,7 @@
         "wasteland/masters/hydroelectric_refuge_dam_clean_master",
         "wasteland/masters/mountain_biohazard_lab_clean_master",
         "wasteland/masters/mountain_military_complex_clean_master",
+        "wasteland/masters/mountain_pass_terminator_clean_master",
         "wasteland/masters/pancaked_parking_structure_clean_master",
         "wasteland/masters/radio_mast_clean_master",
         "wasteland/masters/scrapyard_clean_master",
@@ -2571,6 +3018,7 @@
         "wasteland/modules/mountain_transport_tunnel_warm",
         "wasteland/mountain_biohazard_lab",
         "wasteland/mountain_military_complex",
+        "wasteland/mountain_pass_terminator",
         "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
         "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
         "wasteland/old_world/ows_024_pleroma_intermodal_container_yard",
@@ -2609,6 +3057,65 @@
       "implicit_directional_states": []
     },
     {
+      "block": "immersiveengineering:concrete_sheet",
+      "placements": 12014,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_078_relay_mast_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master"
+      ],
+      "states": [
+        "immersiveengineering:concrete_sheet"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:concrete_sprayed",
+      "placements": 342,
+      "structures": [
+        "karsic/kar_084_transformer_kiosk",
+        "karsic/masters/kar_084_transformer_kiosk_clean_master"
+      ],
+      "states": [
+        "immersiveengineering:concrete_sprayed"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:concrete_tile",
+      "placements": 47454,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_078_relay_mast_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master"
+      ],
+      "states": [
+        "immersiveengineering:concrete_tile"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
       "block": "immersiveengineering:connector_lv",
       "placements": 13,
       "structures": [
@@ -2629,7 +3136,7 @@
     },
     {
       "block": "immersiveengineering:crate",
-      "placements": 14897,
+      "placements": 14844,
       "structures": [
         "wasteland/bombed_data_center",
         "wasteland/bunker_network",
@@ -2668,7 +3175,6 @@
         "wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
         "wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
         "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
         "wasteland/old_world/ows_011_atlas_municipal_machine_service_shop",
         "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
         "wasteland/old_world/ows_015_polycore_utility_seal_failure_station",
@@ -2755,7 +3261,7 @@
     },
     {
       "block": "immersiveengineering:metal_barrel",
-      "placements": 38,
+      "placements": 42,
       "structures": [
         "wasteland/bunker_network",
         "wasteland/decayed_farm",
@@ -2772,6 +3278,7 @@
         "wasteland/mountain_biohazard_lab",
         "wasteland/mountain_military_complex",
         "wasteland/old_world/ows_002_vcf_emergency_community_grow_hall",
+        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
         "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
         "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
         "wasteland/old_world/ows_032_aevum_apl3_research_campus",
@@ -2813,8 +3320,10 @@
     },
     {
       "block": "immersiveengineering:sheetmetal_steel",
-      "placements": 76643,
+      "placements": 82770,
       "structures": [
+        "karsic/kar_081_steel_water_tower",
+        "karsic/masters/kar_081_steel_water_tower_clean_master",
         "wasteland/abandoned_bungalow",
         "wasteland/abandoned_create_factory",
         "wasteland/abandoned_motel",
@@ -2832,6 +3341,7 @@
         "wasteland/collapsed_airship_terminal_clean_master",
         "wasteland/corporate_warehouse",
         "wasteland/crashed_cargo_airship",
+        "wasteland/crashed_cargo_airship_clean_master",
         "wasteland/cratered_downtown_intersection",
         "wasteland/decayed_farm",
         "wasteland/delivery_van",
@@ -2979,6 +3489,50 @@
       "implicit_directional_states": []
     },
     {
+      "block": "immersiveengineering:slab_concrete",
+      "placements": 1134,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master"
+      ],
+      "states": [
+        "immersiveengineering:slab_concrete",
+        "immersiveengineering:slab_concrete[type=bottom,waterlogged=false]"
+      ],
+      "selector_properties": [
+        "type"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:stairs_concrete",
+      "placements": 736,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master"
+      ],
+      "states": [
+        "immersiveengineering:stairs_concrete[facing=east,half=bottom,shape=straight,waterlogged=false]",
+        "immersiveengineering:stairs_concrete[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      ],
+      "selector_properties": [
+        "facing",
+        "half",
+        "shape"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
       "block": "immersiveengineering:stairs_steel_scaffolding_wooden_top",
       "placements": 8,
       "structures": [
@@ -2992,6 +3546,49 @@
         "half",
         "shape"
       ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:steel_catwalk",
+      "placements": 191,
+      "structures": [
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/masters/kar_078_relay_mast_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master"
+      ],
+      "states": [
+        "immersiveengineering:steel_catwalk"
+      ],
+      "selector_properties": [
+        "east",
+        "north",
+        "south",
+        "west"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "immersiveengineering:steel_post",
+      "placements": 94,
+      "structures": [
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/kar_084_transformer_kiosk",
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_078_relay_mast_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master",
+        "karsic/masters/kar_084_transformer_kiosk_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master"
+      ],
+      "states": [
+        "immersiveengineering:steel_post"
+      ],
+      "selector_properties": [],
       "functional_or_machine": false,
       "connective_material": false,
       "implicit_directional_states": []
@@ -3036,11 +3633,12 @@
     },
     {
       "block": "jaffabricate:pallet_full",
-      "placements": 6274,
+      "placements": 7054,
       "structures": [
         "wasteland/abandoned_create_factory",
         "wasteland/corporate_warehouse",
         "wasteland/crashed_cargo_airship",
+        "wasteland/crashed_cargo_airship_clean_master",
         "wasteland/freight_depot",
         "wasteland/gas_station_clean_master",
         "wasteland/industrial_facility",
@@ -3076,6 +3674,386 @@
       ],
       "states": [
         "jaffabricate:pallet_full"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_anvil",
+      "placements": 7,
+      "structures": [
+        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
+        "wasteland/old_world/ows_011_atlas_municipal_machine_service_shop"
+      ],
+      "states": [
+        "kubejs:ruined_anvil"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_blast_furnace",
+      "placements": 18,
+      "structures": [
+        "wasteland/old_world/ows_011_atlas_municipal_machine_service_shop",
+        "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
+        "wasteland/old_world/ows_036_helion_coolant_pump_service_station",
+        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
+        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
+        "wasteland/old_world/ows_051_continuity_science_atmospheric_monitoring_station_19k",
+        "wasteland/old_world/ows_063_asterion_spacecraft_assembly_facility"
+      ],
+      "states": [
+        "kubejs:ruined_blast_furnace[facing=north]",
+        "kubejs:ruined_blast_furnace[facing=south]",
+        "kubejs:ruined_blast_furnace[facing=west]"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_brewing_stand",
+      "placements": 95,
+      "structures": [
+        "wasteland/modules/market_stall_medicine",
+        "wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
+        "wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
+        "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
+        "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
+        "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
+        "wasteland/old_world/ows_028_aevum_neighborhood_regenerative_clinic",
+        "wasteland/old_world/ows_029_aevum_longevity_treatment_center",
+        "wasteland/old_world/ows_030_aevum_apl_hospital_recovery_ward",
+        "wasteland/old_world/ows_032_aevum_apl3_research_campus",
+        "wasteland/old_world/ows_033_aevum_evacuation_dependency_ward",
+        "wasteland/old_world/ows_038_helion_nuclear_auxiliary_emergency_complex",
+        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
+        "wasteland/old_world/ows_047_joint_research_deep_containment_laboratory",
+        "wasteland/old_world/ows_048_meridian_military_containment_base",
+        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
+        "wasteland/old_world/ows_050_meridian_firebreak_crater_command_site",
+        "wasteland/old_world/ows_052_continuity_field_office",
+        "wasteland/old_world/ows_054_civilian_neighborhood_shelter"
+      ],
+      "states": [
+        "kubejs:ruined_brewing_stand"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_campfire",
+      "placements": 6,
+      "structures": [
+        "wasteland/modules/industrial_powerhouse",
+        "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
+        "wasteland/old_world/ows_063_asterion_spacecraft_assembly_facility"
+      ],
+      "states": [
+        "kubejs:ruined_campfire[facing=north]"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_cartography_table",
+      "placements": 18,
+      "structures": [
+        "wasteland/decayed_logging_camp",
+        "wasteland/masters/decayed_logging_camp_clean_master",
+        "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
+        "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
+        "wasteland/old_world/ows_030_aevum_apl_hospital_recovery_ward",
+        "wasteland/old_world/ows_032_aevum_apl3_research_campus",
+        "wasteland/old_world/ows_033_aevum_evacuation_dependency_ward",
+        "wasteland/old_world/ows_042_blackglass_regional_data_center",
+        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
+        "wasteland/old_world/ows_047_joint_research_deep_containment_laboratory",
+        "wasteland/old_world/ows_048_meridian_military_containment_base",
+        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker"
+      ],
+      "states": [
+        "kubejs:ruined_cartography_table"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_cauldron",
+      "placements": 242,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "wasteland/decayed_logging_camp",
+        "wasteland/masters/decayed_logging_camp_clean_master",
+        "wasteland/modules/industrial_dispatch_annex",
+        "wasteland/modules/industrial_office_annex",
+        "wasteland/old_world/ows_001_vcf_neighborhood_culture_service_depot",
+        "wasteland/old_world/ows_002_vcf_emergency_community_grow_hall",
+        "wasteland/old_world/ows_004_vcf_mycological_vertical_farm_tower",
+        "wasteland/old_world/ows_005_vcf_harvest_packaging_annex",
+        "wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
+        "wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
+        "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
+        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
+        "wasteland/old_world/ows_010_atlas_conveyor_transfer_hall",
+        "wasteland/old_world/ows_011_atlas_municipal_machine_service_shop",
+        "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
+        "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
+        "wasteland/old_world/ows_019_polycore_emergency_material_substitution_center",
+        "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
+        "wasteland/old_world/ows_021_pleroma_roadside_freight_depot",
+        "wasteland/old_world/ows_022_pleroma_urban_distribution_warehouse",
+        "wasteland/old_world/ows_023_pleroma_refrigerated_cold_storage_hub",
+        "wasteland/old_world/ows_025_pleroma_automated_market_fulfillment_center",
+        "wasteland/old_world/ows_026_pleroma_quarantine_cargo_warehouse",
+        "wasteland/old_world/ows_029_aevum_longevity_treatment_center",
+        "wasteland/old_world/ows_030_aevum_apl_hospital_recovery_ward",
+        "wasteland/old_world/ows_031_aevum_biologic_pharmacy_cold_store",
+        "wasteland/old_world/ows_032_aevum_apl3_research_campus",
+        "wasteland/old_world/ows_033_aevum_evacuation_dependency_ward",
+        "wasteland/old_world/ows_042_blackglass_regional_data_center",
+        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
+        "wasteland/old_world/ows_046_emergency_authority_regional_decontamination_interchange",
+        "wasteland/old_world/ows_047_joint_research_deep_containment_laboratory",
+        "wasteland/old_world/ows_048_meridian_military_containment_base",
+        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
+        "wasteland/old_world/ows_050_meridian_firebreak_crater_command_site",
+        "wasteland/old_world/ows_051_continuity_science_atmospheric_monitoring_station_19k",
+        "wasteland/old_world/ows_054_civilian_neighborhood_shelter",
+        "wasteland/old_world/ows_055_municipal_transit_closure_station",
+        "wasteland/old_world/ows_057_civilian_apartment_evacuation_block",
+        "wasteland/old_world/ows_058_municipal_library_refuge_center",
+        "wasteland/old_world/ows_059_municipal_school_distribution_relief_point",
+        "wasteland/old_world/ows_060_asterion_launch_support_warehouse",
+        "wasteland/old_world/ows_063_asterion_spacecraft_assembly_facility"
+      ],
+      "states": [
+        "kubejs:ruined_cauldron"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_composter",
+      "placements": 2,
+      "structures": [
+        "wasteland/modules/market_trade_lodge",
+        "wasteland/old_world/ows_002_vcf_emergency_community_grow_hall"
+      ],
+      "states": [
+        "kubejs:ruined_composter"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_crafting_table",
+      "placements": 12,
+      "structures": [
+        "hive_world/habitation_cell",
+        "wasteland/modules/industrial_office_annex",
+        "wasteland/modules/market_trade_lodge",
+        "wasteland/old_world/ows_010_atlas_conveyor_transfer_hall",
+        "wasteland/old_world/ows_011_atlas_municipal_machine_service_shop",
+        "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
+        "wasteland/old_world/ows_022_pleroma_urban_distribution_warehouse",
+        "wasteland/old_world/ows_025_pleroma_automated_market_fulfillment_center",
+        "wasteland/old_world/ows_042_blackglass_regional_data_center",
+        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
+        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
+        "wasteland/old_world/ows_063_asterion_spacecraft_assembly_facility"
+      ],
+      "states": [
+        "kubejs:ruined_crafting_table"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_furnace",
+      "placements": 10,
+      "structures": [
+        "wasteland/decayed_logging_camp",
+        "wasteland/masters/decayed_logging_camp_clean_master",
+        "wasteland/modules/market_trade_lodge",
+        "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
+        "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
+        "wasteland/old_world/ows_032_aevum_apl3_research_campus",
+        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
+        "wasteland/old_world/ows_047_joint_research_deep_containment_laboratory",
+        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
+        "wasteland/old_world/ows_050_meridian_firebreak_crater_command_site"
+      ],
+      "states": [
+        "kubejs:ruined_furnace[facing=east]",
+        "kubejs:ruined_furnace[facing=north]",
+        "kubejs:ruined_furnace[facing=south]",
+        "kubejs:ruined_furnace[facing=west]"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_grindstone",
+      "placements": 5,
+      "structures": [
+        "wasteland/decayed_logging_camp",
+        "wasteland/masters/decayed_logging_camp_clean_master",
+        "wasteland/modules/market_stall_repair",
+        "wasteland/old_world/ows_048_meridian_military_containment_base",
+        "wasteland/old_world/ows_050_meridian_firebreak_crater_command_site"
+      ],
+      "states": [
+        "kubejs:ruined_grindstone[face=floor,facing=east]",
+        "kubejs:ruined_grindstone[face=floor,facing=south]"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_lectern",
+      "placements": 18,
+      "structures": [
+        "wasteland/decayed_logging_camp",
+        "wasteland/masters/decayed_logging_camp_clean_master",
+        "wasteland/modules/market_trade_lodge",
+        "wasteland/old_world/ows_001_vcf_neighborhood_culture_service_depot",
+        "wasteland/old_world/ows_002_vcf_emergency_community_grow_hall",
+        "wasteland/old_world/ows_003_vcf_cold_chain_culture_nursery",
+        "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
+        "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
+        "wasteland/old_world/ows_032_aevum_apl3_research_campus",
+        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
+        "wasteland/old_world/ows_047_joint_research_deep_containment_laboratory",
+        "wasteland/old_world/ows_048_meridian_military_containment_base",
+        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker"
+      ],
+      "states": [
+        "kubejs:ruined_lectern",
+        "kubejs:ruined_lectern[facing=north]",
+        "kubejs:ruined_lectern[facing=south]",
+        "kubejs:ruined_lectern[facing=west]"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_loom",
+      "placements": 3,
+      "structures": [
+        "wasteland/modules/market_stall_livestock",
+        "wasteland/old_world/ows_030_aevum_apl_hospital_recovery_ward",
+        "wasteland/old_world/ows_033_aevum_evacuation_dependency_ward"
+      ],
+      "states": [
+        "kubejs:ruined_loom",
+        "kubejs:ruined_loom[facing=west]"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_smithing_table",
+      "placements": 6,
+      "structures": [
+        "wasteland/decayed_logging_camp",
+        "wasteland/masters/decayed_logging_camp_clean_master",
+        "wasteland/modules/market_trade_lodge",
+        "wasteland/old_world/ows_048_meridian_military_containment_base",
+        "wasteland/old_world/ows_050_meridian_firebreak_crater_command_site"
+      ],
+      "states": [
+        "kubejs:ruined_smithing_table"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_smoker",
+      "placements": 62,
+      "structures": [
+        "wasteland/decayed_logging_camp",
+        "wasteland/masters/decayed_logging_camp_clean_master",
+        "wasteland/modules/industrial_dispatch_annex",
+        "wasteland/modules/industrial_office_annex",
+        "wasteland/modules/market_stall_provisions",
+        "wasteland/old_world/ows_010_atlas_conveyor_transfer_hall",
+        "wasteland/old_world/ows_011_atlas_municipal_machine_service_shop",
+        "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
+        "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
+        "wasteland/old_world/ows_019_polycore_emergency_material_substitution_center",
+        "wasteland/old_world/ows_020_polycore_deep_barrier_research_facility",
+        "wasteland/old_world/ows_021_pleroma_roadside_freight_depot",
+        "wasteland/old_world/ows_022_pleroma_urban_distribution_warehouse",
+        "wasteland/old_world/ows_023_pleroma_refrigerated_cold_storage_hub",
+        "wasteland/old_world/ows_026_pleroma_quarantine_cargo_warehouse",
+        "wasteland/old_world/ows_029_aevum_longevity_treatment_center",
+        "wasteland/old_world/ows_032_aevum_apl3_research_campus",
+        "wasteland/old_world/ows_042_blackglass_regional_data_center",
+        "wasteland/old_world/ows_043_blackglass_government_continuity_archive_node",
+        "wasteland/old_world/ows_047_joint_research_deep_containment_laboratory",
+        "wasteland/old_world/ows_048_meridian_military_containment_base",
+        "wasteland/old_world/ows_049_meridian_firebreak_observation_bunker",
+        "wasteland/old_world/ows_050_meridian_firebreak_crater_command_site",
+        "wasteland/old_world/ows_051_continuity_science_atmospheric_monitoring_station_19k",
+        "wasteland/old_world/ows_054_civilian_neighborhood_shelter",
+        "wasteland/old_world/ows_055_municipal_transit_closure_station",
+        "wasteland/old_world/ows_057_civilian_apartment_evacuation_block",
+        "wasteland/old_world/ows_058_municipal_library_refuge_center",
+        "wasteland/old_world/ows_059_municipal_school_distribution_relief_point",
+        "wasteland/old_world/ows_060_asterion_launch_support_warehouse",
+        "wasteland/old_world/ows_063_asterion_spacecraft_assembly_facility"
+      ],
+      "states": [
+        "kubejs:ruined_smoker[facing=east]",
+        "kubejs:ruined_smoker[facing=north]",
+        "kubejs:ruined_smoker[facing=south]"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "kubejs:ruined_stonecutter",
+      "placements": 2,
+      "structures": [
+        "wasteland/decayed_logging_camp",
+        "wasteland/masters/decayed_logging_camp_clean_master"
+      ],
+      "states": [
+        "kubejs:ruined_stonecutter[facing=north]"
       ],
       "selector_properties": [],
       "functional_or_machine": false,
@@ -3154,6 +4132,69 @@
       ],
       "states": [
         "quark:apple_crate"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "quark:dirty_glass_pane",
+      "placements": 10,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_085_bus_shelter_and_stop"
+      ],
+      "states": [
+        "quark:dirty_glass_pane"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "quark:gray_framed_glass",
+      "placements": 3668,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master"
+      ],
+      "states": [
+        "quark:gray_framed_glass"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "quark:gray_shingles",
+      "placements": 162,
+      "structures": [
+        "karsic/kar_084_transformer_kiosk",
+        "karsic/masters/kar_084_transformer_kiosk_clean_master"
+      ],
+      "states": [
+        "quark:gray_shingles"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "quark:white_framed_glass",
+      "placements": 68,
+      "structures": [
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master"
+      ],
+      "states": [
+        "quark:white_framed_glass"
       ],
       "selector_properties": [],
       "functional_or_machine": false,
@@ -3712,10 +4753,35 @@
     },
     {
       "block": "stellaris:antenna",
-      "placements": 6,
+      "placements": 32,
       "structures": [
         "alien/martian_signal_cairn",
-        "offworld/continuity_far_side_redoubt"
+        "minor/jupiter_stationkeeping_assembly",
+        "minor/jupiter_wreck_01",
+        "minor/jupiter_wreck_02",
+        "minor/mars_buried_rover_beacon",
+        "minor/mars_frozen_brine_pump",
+        "minor/mars_wreck_01",
+        "minor/mars_wreck_02",
+        "minor/mars_wreck_03",
+        "minor/mercury_broken_drill_head",
+        "minor/mercury_heat_exchanger_remnant",
+        "minor/mercury_radiation_control_station",
+        "minor/mercury_scorched_survey_rig",
+        "minor/mercury_wreck_01",
+        "minor/mercury_wreck_02",
+        "minor/moon_abandoned_regolith_drill",
+        "minor/moon_wreck_01",
+        "minor/moon_wreck_02",
+        "minor/moon_wreck_03",
+        "minor/venus_sorbent_service_station",
+        "minor/venus_wreck_01",
+        "minor/venus_wreck_02",
+        "minor/venus_wreck_03",
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_venus_descent_wreck",
+        "offworld/continuity_venus_sorbent_tower"
       ],
       "states": [
         "stellaris:antenna"
@@ -3724,6 +4790,153 @@
       "functional_or_machine": false,
       "connective_material": false,
       "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:cable",
+      "placements": 34,
+      "structures": [
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_venus_descent_wreck"
+      ],
+      "states": [
+        "stellaris:cable"
+      ],
+      "selector_properties": [
+        "down",
+        "east",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:cable_t2",
+      "placements": 1130,
+      "structures": [
+        "minor/jupiter_stationkeeping_assembly",
+        "minor/jupiter_tank_cluster",
+        "minor/mars_buried_rover_beacon",
+        "minor/mars_catalyst_canister_scatter",
+        "minor/mars_frozen_brine_pump",
+        "minor/mercury_broken_drill_head",
+        "minor/mercury_heat_exchanger_remnant",
+        "minor/mercury_radiation_control_station",
+        "minor/mercury_scorched_survey_rig",
+        "minor/moon_abandoned_regolith_drill",
+        "minor/venus_ruptured_sorbent_hopper",
+        "minor/venus_sorbent_service_station",
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "states": [
+        "stellaris:cable_t2"
+      ],
+      "selector_properties": [
+        "down",
+        "east",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:coal_generator",
+      "placements": 98,
+      "structures": [
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "states": [
+        "stellaris:coal_generator",
+        "stellaris:coal_generator[facing=west,lit=true]"
+      ],
+      "selector_properties": [
+        "facing",
+        "lit"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:coal_generator",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
     },
     {
       "block": "stellaris:coal_lantern",
@@ -3743,12 +4956,144 @@
     },
     {
       "block": "stellaris:cracked_mars_stone_bricks",
-      "placements": 344,
+      "placements": 10656,
       "structures": [
-        "alien/burrower_nest"
+        "alien/burrower_nest",
+        "alien/mars_burrower_cathedral",
+        "alien/mars_deep_signal_vault",
+        "alien/mars_five_ray_ridge_array",
+        "alien/mars_red_basin_ossuary",
+        "alien/mars_salt_mirror_processional_field",
+        "minor/mars_buried_rover_beacon",
+        "minor/mars_catalyst_canister_scatter",
+        "minor/mars_frozen_brine_pump",
+        "minor/mars_geopolymer_shelter",
+        "minor/mars_oxidizer_spill",
+        "minor/mars_rover_wreck",
+        "minor/mars_ruptured_brine_pipeline",
+        "minor/mars_waypoint_01",
+        "minor/mars_waypoint_02",
+        "minor/mars_waypoint_03",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard"
       ],
       "states": [
         "stellaris:cracked_mars_stone_bricks"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:cracked_mercury_stone_bricks",
+      "placements": 11572,
+      "structures": [
+        "alien/mercury_eclipse_reservoir",
+        "alien/mercury_five_ray_sun_track",
+        "alien/mercury_heliostat_court",
+        "alien/mercury_perihelion_needle",
+        "alien/mercury_radiant_ossuary",
+        "alien/mercury_shadow_crater_vault",
+        "alien/mercury_subsurface_thermal_maze",
+        "alien/mercury_terminator_gate",
+        "minor/mercury_abandoned_surveyors",
+        "minor/mercury_broken_drill_head",
+        "minor/mercury_collapsed_solar_frame",
+        "minor/mercury_damaged_radiator_fins",
+        "minor/mercury_damaged_shielding_assembly",
+        "minor/mercury_emergency_shade_shelter",
+        "minor/mercury_heat_exchanger_remnant",
+        "minor/mercury_radiation_control_station",
+        "minor/mercury_scorched_survey_rig",
+        "minor/mercury_severed_thermal_line",
+        "minor/mercury_waypoint_01",
+        "minor/mercury_waypoint_02",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut"
+      ],
+      "states": [
+        "stellaris:cracked_mercury_stone_bricks"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:cracked_moon_stone_bricks",
+      "placements": 9117,
+      "structures": [
+        "alien/moon_buried_five_ray_vault",
+        "alien/moon_crater_crown_observatory",
+        "alien/moon_eclipse_gate",
+        "alien/moon_meridian_causeway",
+        "alien/moon_regolith_needle_field",
+        "alien/moon_selenic_ossuary",
+        "minor/moon_abandoned_regolith_drill",
+        "minor/moon_broken_oxygen_cart",
+        "minor/moon_debris_01",
+        "minor/moon_debris_02",
+        "minor/moon_debris_03",
+        "minor/moon_shattered_helium_collector",
+        "minor/moon_waypoint_01",
+        "minor/moon_waypoint_02",
+        "minor/moon_waypoint_03",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant"
+      ],
+      "states": [
+        "stellaris:cracked_moon_stone_bricks"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:cracked_venus_stone_bricks",
+      "placements": 9882,
+      "structures": [
+        "alien/venus_atmospheric_compression_basilica",
+        "alien/venus_broken_sky_arch",
+        "alien/venus_corrosion_garden",
+        "alien/venus_five_ray_vent_crown",
+        "alien/venus_inverted_pressure_well",
+        "alien/venus_pressure_ossuary",
+        "alien/venus_sealed_thermal_labyrinth",
+        "minor/venus_corroded_pipe_knot",
+        "minor/venus_crushed_valve_gallery",
+        "minor/venus_heat_shield_fan",
+        "minor/venus_ruptured_sorbent_hopper",
+        "minor/venus_sorbent_service_station",
+        "minor/venus_split_pressure_pod",
+        "minor/venus_waypoint_01",
+        "minor/venus_waypoint_02",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "states": [
+        "stellaris:cracked_venus_stone_bricks"
       ],
       "selector_properties": [],
       "functional_or_machine": false,
@@ -3772,10 +5117,35 @@
       "implicit_directional_states": []
     },
     {
-      "block": "stellaris:earth_globe",
+      "block": "stellaris:diesel_generator",
       "placements": 1,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "offworld/continuity_lunar_crash_station"
+      ],
+      "states": [
+        "stellaris:diesel_generator"
+      ],
+      "selector_properties": [
+        "facing",
+        "lit"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:diesel_generator",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "stellaris:earth_globe",
+      "placements": 2,
+      "structures": [
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_lunar_crash_station"
       ],
       "states": [
         "stellaris:earth_globe"
@@ -3805,9 +5175,24 @@
     },
     {
       "block": "stellaris:heavy_metal_plate",
-      "placements": 383,
+      "placements": 4029,
       "structures": [
-        "alien/venusian_pressure_shrine"
+        "alien/venusian_pressure_shrine",
+        "minor/moon_debris_01",
+        "minor/moon_debris_02",
+        "minor/moon_debris_03",
+        "minor/moon_wreck_02",
+        "minor/moon_wreck_03",
+        "minor/venus_wreck_01",
+        "minor/venus_wreck_02",
+        "minor/venus_wreck_03",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_venus_descent_wreck"
       ],
       "states": [
         "stellaris:heavy_metal_plate"
@@ -3818,10 +5203,79 @@
       "implicit_directional_states": []
     },
     {
-      "block": "stellaris:mars_cobblestone",
-      "placements": 1365,
+      "block": "stellaris:iron_pillar",
+      "placements": 31,
       "structures": [
-        "alien/burrower_nest"
+        "offworld/continuity_mercury_outpost"
+      ],
+      "states": [
+        "stellaris:iron_pillar"
+      ],
+      "selector_properties": [
+        "axis"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:iron_pillar",
+          "missing": [
+            "axis"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "stellaris:iron_plating_block",
+      "placements": 542,
+      "structures": [
+        "minor/mercury_wreck_02",
+        "minor/moon_debris_01",
+        "minor/moon_debris_02",
+        "minor/moon_debris_03",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_venus_descent_wreck"
+      ],
+      "states": [
+        "stellaris:iron_plating_block"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:mars_cobblestone",
+      "placements": 14735,
+      "structures": [
+        "alien/burrower_nest",
+        "alien/mars_burrower_cathedral",
+        "alien/mars_deep_signal_vault",
+        "alien/mars_five_ray_ridge_array",
+        "alien/mars_red_basin_ossuary",
+        "alien/mars_salt_mirror_processional_field",
+        "minor/mars_buried_rover_beacon",
+        "minor/mars_cache_01",
+        "minor/mars_cache_02",
+        "minor/mars_catalyst_canister_scatter",
+        "minor/mars_frozen_brine_pump",
+        "minor/mars_geopolymer_shelter",
+        "minor/mars_oxidizer_spill",
+        "minor/mars_ruptured_brine_pipeline",
+        "minor/mars_waypoint_01",
+        "minor/mars_waypoint_02",
+        "minor/mars_waypoint_03",
+        "minor/mars_wreck_01",
+        "minor/mars_wreck_02",
+        "minor/mars_wreck_03",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard"
       ],
       "states": [
         "stellaris:mars_cobblestone"
@@ -3833,11 +5287,18 @@
     },
     {
       "block": "stellaris:mars_pillar",
-      "placements": 20,
+      "placements": 3796,
       "structures": [
-        "alien/martian_signal_cairn"
+        "alien/mars_burrower_cathedral",
+        "alien/mars_five_ray_ridge_array",
+        "alien/mars_salt_mirror_processional_field",
+        "alien/martian_signal_cairn",
+        "minor/mars_waypoint_01",
+        "minor/mars_waypoint_02",
+        "minor/mars_waypoint_03"
       ],
       "states": [
+        "stellaris:mars_pillar",
         "stellaris:mars_pillar[axis=y]"
       ],
       "selector_properties": [
@@ -3845,13 +5306,71 @@
       ],
       "functional_or_machine": false,
       "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:mars_pillar",
+          "missing": [
+            "axis"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "stellaris:mars_stone",
+      "placements": 7792,
+      "structures": [
+        "alien/mars_burrower_cathedral",
+        "alien/mars_deep_signal_vault",
+        "alien/mars_five_ray_ridge_array",
+        "alien/mars_red_basin_ossuary",
+        "alien/mars_salt_mirror_processional_field",
+        "minor/mars_buried_rover_beacon",
+        "minor/mars_catalyst_canister_scatter",
+        "minor/mars_frozen_brine_pump",
+        "minor/mars_geopolymer_shelter",
+        "minor/mars_oxidizer_spill",
+        "minor/mars_rover_wreck",
+        "minor/mars_ruptured_brine_pipeline",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard"
+      ],
+      "states": [
+        "stellaris:mars_stone"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
       "implicit_directional_states": []
     },
     {
       "block": "stellaris:mars_stone_bricks",
-      "placements": 517,
+      "placements": 13014,
       "structures": [
-        "alien/martian_signal_cairn"
+        "alien/mars_burrower_cathedral",
+        "alien/mars_deep_signal_vault",
+        "alien/mars_red_basin_ossuary",
+        "alien/martian_signal_cairn",
+        "minor/mars_cache_01",
+        "minor/mars_cache_02",
+        "minor/mars_geopolymer_shelter",
+        "minor/mars_oxidizer_spill",
+        "minor/mars_waypoint_01",
+        "minor/mars_waypoint_02",
+        "minor/mars_waypoint_03",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard"
       ],
       "states": [
         "stellaris:mars_stone_bricks"
@@ -3862,10 +5381,180 @@
       "implicit_directional_states": []
     },
     {
-      "block": "stellaris:moon_cobblestone",
-      "placements": 798,
+      "block": "stellaris:mercury_cobblestone",
+      "placements": 13170,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "alien/mercury_eclipse_reservoir",
+        "alien/mercury_five_ray_sun_track",
+        "alien/mercury_heliostat_court",
+        "alien/mercury_perihelion_needle",
+        "alien/mercury_radiant_ossuary",
+        "alien/mercury_shadow_crater_vault",
+        "alien/mercury_subsurface_thermal_maze",
+        "alien/mercury_terminator_gate",
+        "minor/mercury_abandoned_surveyors",
+        "minor/mercury_broken_drill_head",
+        "minor/mercury_cable_marker_line",
+        "minor/mercury_collapsed_solar_frame",
+        "minor/mercury_damaged_radiator_fins",
+        "minor/mercury_damaged_shielding_assembly",
+        "minor/mercury_emergency_shade_shelter",
+        "minor/mercury_heat_exchanger_remnant",
+        "minor/mercury_radiation_control_station",
+        "minor/mercury_scorched_survey_rig",
+        "minor/mercury_severed_thermal_line",
+        "minor/mercury_waypoint_01",
+        "minor/mercury_waypoint_02",
+        "minor/mercury_wreck_01",
+        "minor/mercury_wreck_02",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut"
+      ],
+      "states": [
+        "stellaris:mercury_cobblestone"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:mercury_stone",
+      "placements": 8227,
+      "structures": [
+        "alien/mercury_eclipse_reservoir",
+        "alien/mercury_five_ray_sun_track",
+        "alien/mercury_heliostat_court",
+        "alien/mercury_perihelion_needle",
+        "alien/mercury_radiant_ossuary",
+        "alien/mercury_shadow_crater_vault",
+        "alien/mercury_subsurface_thermal_maze",
+        "alien/mercury_terminator_gate",
+        "minor/mercury_abandoned_surveyors",
+        "minor/mercury_broken_drill_head",
+        "minor/mercury_cable_marker_line",
+        "minor/mercury_collapsed_solar_frame",
+        "minor/mercury_damaged_radiator_fins",
+        "minor/mercury_damaged_shielding_assembly",
+        "minor/mercury_emergency_shade_shelter",
+        "minor/mercury_heat_exchanger_remnant",
+        "minor/mercury_radiation_control_station",
+        "minor/mercury_scorched_survey_rig",
+        "minor/mercury_severed_thermal_line",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut"
+      ],
+      "states": [
+        "stellaris:mercury_stone"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:mercury_stone_bricks",
+      "placements": 11781,
+      "structures": [
+        "alien/mercury_eclipse_reservoir",
+        "alien/mercury_five_ray_sun_track",
+        "alien/mercury_perihelion_needle",
+        "alien/mercury_radiant_ossuary",
+        "alien/mercury_shadow_crater_vault",
+        "alien/mercury_subsurface_thermal_maze",
+        "alien/mercury_terminator_gate",
+        "minor/mercury_abandoned_surveyors",
+        "minor/mercury_emergency_shade_shelter",
+        "minor/mercury_waypoint_01",
+        "minor/mercury_waypoint_02",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut"
+      ],
+      "states": [
+        "stellaris:mercury_stone_bricks"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:mercury_stone_pillar",
+      "placements": 2456,
+      "structures": [
+        "alien/mercury_eclipse_reservoir",
+        "alien/mercury_five_ray_sun_track",
+        "alien/mercury_heliostat_court",
+        "alien/mercury_perihelion_needle",
+        "alien/mercury_terminator_gate",
+        "minor/mercury_waypoint_01",
+        "minor/mercury_waypoint_02",
+        "offworld/continuity_mercury_outpost"
+      ],
+      "states": [
+        "stellaris:mercury_stone_pillar"
+      ],
+      "selector_properties": [
+        "axis"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:mercury_stone_pillar",
+          "missing": [
+            "axis"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "stellaris:moon_cobblestone",
+      "placements": 12740,
+      "structures": [
+        "alien/moon_buried_five_ray_vault",
+        "alien/moon_crater_crown_observatory",
+        "alien/moon_eclipse_gate",
+        "alien/moon_meridian_causeway",
+        "alien/moon_regolith_needle_field",
+        "alien/moon_selenic_ossuary",
+        "minor/moon_abandoned_regolith_drill",
+        "minor/moon_broken_oxygen_cart",
+        "minor/moon_cache_01",
+        "minor/moon_cache_02",
+        "minor/moon_cache_03",
+        "minor/moon_debris_01",
+        "minor/moon_debris_02",
+        "minor/moon_debris_03",
+        "minor/moon_shattered_helium_collector",
+        "minor/moon_waypoint_01",
+        "minor/moon_waypoint_02",
+        "minor/moon_waypoint_03",
+        "minor/moon_wreck_01",
+        "minor/moon_wreck_02",
+        "minor/moon_wreck_03",
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant"
       ],
       "states": [
         "stellaris:moon_cobblestone"
@@ -3919,9 +5608,24 @@
     },
     {
       "block": "stellaris:moon_stone",
-      "placements": 260,
+      "placements": 6546,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "alien/moon_buried_five_ray_vault",
+        "alien/moon_crater_crown_observatory",
+        "alien/moon_eclipse_gate",
+        "alien/moon_meridian_causeway",
+        "alien/moon_regolith_needle_field",
+        "alien/moon_selenic_ossuary",
+        "minor/moon_abandoned_regolith_drill",
+        "minor/moon_shattered_helium_collector",
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant"
       ],
       "states": [
         "stellaris:moon_stone"
@@ -3933,10 +5637,27 @@
     },
     {
       "block": "stellaris:moon_stone_bricks",
-      "placements": 649,
+      "placements": 9537,
       "structures": [
+        "alien/moon_buried_five_ray_vault",
+        "alien/moon_crater_crown_observatory",
+        "alien/moon_eclipse_gate",
         "alien/moon_meridian_monolith",
-        "offworld/continuity_far_side_redoubt"
+        "alien/moon_selenic_ossuary",
+        "minor/moon_cache_01",
+        "minor/moon_cache_02",
+        "minor/moon_cache_03",
+        "minor/moon_waypoint_01",
+        "minor/moon_waypoint_02",
+        "minor/moon_waypoint_03",
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant"
       ],
       "states": [
         "stellaris:moon_stone_bricks"
@@ -3948,9 +5669,16 @@
     },
     {
       "block": "stellaris:moon_stone_pillar",
-      "placements": 23,
+      "placements": 2014,
       "structures": [
+        "alien/moon_crater_crown_observatory",
+        "alien/moon_eclipse_gate",
+        "alien/moon_meridian_causeway",
         "alien/moon_meridian_monolith",
+        "alien/moon_regolith_needle_field",
+        "minor/moon_waypoint_01",
+        "minor/moon_waypoint_02",
+        "minor/moon_waypoint_03",
         "offworld/continuity_far_side_redoubt"
       ],
       "states": [
@@ -3991,11 +5719,46 @@
     },
     {
       "block": "stellaris:oxygen_distributor",
-      "placements": 1,
+      "placements": 62,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
       ],
       "states": [
+        "stellaris:oxygen_distributor",
         "stellaris:oxygen_distributor[facing=south]"
       ],
       "selector_properties": [
@@ -4003,13 +5766,119 @@
       ],
       "functional_or_machine": false,
       "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:oxygen_distributor",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "stellaris:pipe_t1",
+      "placements": 1,
+      "structures": [
+        "offworld/continuity_venus_descent_wreck"
+      ],
+      "states": [
+        "stellaris:pipe_t1"
+      ],
+      "selector_properties": [
+        "down",
+        "east",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "functional_or_machine": false,
+      "connective_material": true,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:pipe_t2",
+      "placements": 1539,
+      "structures": [
+        "minor/mars_ruptured_brine_pipeline",
+        "minor/mercury_severed_thermal_line",
+        "minor/venus_corroded_pipe_knot",
+        "minor/venus_crushed_valve_gallery",
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "states": [
+        "stellaris:pipe_t2"
+      ],
+      "selector_properties": [
+        "down",
+        "east",
+        "north",
+        "south",
+        "up",
+        "west"
+      ],
+      "functional_or_machine": false,
+      "connective_material": true,
       "implicit_directional_states": []
     },
     {
       "block": "stellaris:polished_mars_stone",
-      "placements": 149,
+      "placements": 15590,
       "structures": [
-        "alien/martian_signal_cairn"
+        "alien/mars_burrower_cathedral",
+        "alien/mars_deep_signal_vault",
+        "alien/mars_five_ray_ridge_array",
+        "alien/mars_red_basin_ossuary",
+        "alien/mars_salt_mirror_processional_field",
+        "alien/martian_signal_cairn",
+        "minor/mars_buried_rover_beacon",
+        "minor/mars_catalyst_canister_scatter",
+        "minor/mars_frozen_brine_pump",
+        "minor/mars_geopolymer_shelter",
+        "minor/mars_oxidizer_spill",
+        "minor/mars_rover_wreck",
+        "minor/mars_ruptured_brine_pipeline",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard"
       ],
       "states": [
         "stellaris:polished_mars_stone"
@@ -4020,11 +5889,62 @@
       "implicit_directional_states": []
     },
     {
-      "block": "stellaris:polished_moon_stone",
-      "placements": 782,
+      "block": "stellaris:polished_mercury_stone",
+      "placements": 15438,
       "structures": [
+        "alien/mercury_eclipse_reservoir",
+        "alien/mercury_five_ray_sun_track",
+        "alien/mercury_heliostat_court",
+        "alien/mercury_perihelion_needle",
+        "alien/mercury_radiant_ossuary",
+        "alien/mercury_shadow_crater_vault",
+        "alien/mercury_subsurface_thermal_maze",
+        "alien/mercury_terminator_gate",
+        "minor/mercury_broken_drill_head",
+        "minor/mercury_cable_marker_line",
+        "minor/mercury_collapsed_solar_frame",
+        "minor/mercury_damaged_radiator_fins",
+        "minor/mercury_damaged_shielding_assembly",
+        "minor/mercury_emergency_shade_shelter",
+        "minor/mercury_heat_exchanger_remnant",
+        "minor/mercury_radiation_control_station",
+        "minor/mercury_scorched_survey_rig",
+        "minor/mercury_severed_thermal_line",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut"
+      ],
+      "states": [
+        "stellaris:polished_mercury_stone"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:polished_moon_stone",
+      "placements": 14312,
+      "structures": [
+        "alien/moon_buried_five_ray_vault",
+        "alien/moon_crater_crown_observatory",
+        "alien/moon_eclipse_gate",
+        "alien/moon_meridian_causeway",
         "alien/moon_meridian_monolith",
-        "offworld/continuity_far_side_redoubt"
+        "alien/moon_regolith_needle_field",
+        "alien/moon_selenic_ossuary",
+        "minor/moon_broken_oxygen_cart",
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant"
       ],
       "states": [
         "stellaris:polished_moon_stone"
@@ -4036,9 +5956,28 @@
     },
     {
       "block": "stellaris:polished_venus_stone",
-      "placements": 317,
+      "placements": 15144,
       "structures": [
-        "alien/venusian_pressure_shrine"
+        "alien/venus_atmospheric_compression_basilica",
+        "alien/venus_broken_sky_arch",
+        "alien/venus_corrosion_garden",
+        "alien/venus_five_ray_vent_crown",
+        "alien/venus_inverted_pressure_well",
+        "alien/venus_pressure_ossuary",
+        "alien/venus_sealed_thermal_labyrinth",
+        "alien/venusian_pressure_shrine",
+        "minor/venus_collapsed_pressure_pod",
+        "minor/venus_corroded_pipe_knot",
+        "minor/venus_crushed_valve_gallery",
+        "minor/venus_heat_shield_fan",
+        "minor/venus_ruptured_sorbent_hopper",
+        "minor/venus_sorbent_service_station",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
       ],
       "states": [
         "stellaris:polished_venus_stone"
@@ -4067,9 +6006,12 @@
     },
     {
       "block": "stellaris:rocket_launch_pad",
-      "placements": 1,
+      "placements": 4,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_venus_return_launch_complex"
       ],
       "states": [
         "stellaris:rocket_launch_pad"
@@ -4083,11 +6025,13 @@
     },
     {
       "block": "stellaris:rocket_station",
-      "placements": 1,
+      "placements": 2,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_mercury_mass_driver_escape_yard"
       ],
       "states": [
+        "stellaris:rocket_station",
         "stellaris:rocket_station[facing=south]"
       ],
       "selector_properties": [
@@ -4095,15 +6039,35 @@
       ],
       "functional_or_machine": false,
       "connective_material": false,
-      "implicit_directional_states": []
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:rocket_station",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
     },
     {
       "block": "stellaris:solar_panel",
-      "placements": 18,
+      "placements": 2894,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "minor/jupiter_radiator_sail",
+        "minor/mercury_collapsed_solar_frame",
+        "minor/mercury_damaged_radiator_fins",
+        "minor/mercury_damaged_shielding_assembly",
+        "minor/moon_shattered_helium_collector",
+        "minor/venus_heat_shield_fan",
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_moon_helium3_harvest_field"
       ],
       "states": [
+        "stellaris:solar_panel",
         "stellaris:solar_panel[facing=up]"
       ],
       "selector_properties": [
@@ -4111,13 +6075,170 @@
       ],
       "functional_or_machine": false,
       "connective_material": false,
-      "implicit_directional_states": []
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:solar_panel",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "stellaris:steel_pillar",
+      "placements": 10566,
+      "structures": [
+        "minor/jupiter_alien_shards",
+        "minor/jupiter_antenna_truss",
+        "minor/jupiter_cargo_pod",
+        "minor/jupiter_dead_aerostat",
+        "minor/jupiter_lifeboat",
+        "minor/jupiter_maintenance_frame",
+        "minor/jupiter_radiator_sail",
+        "minor/jupiter_scoop_fragment",
+        "minor/jupiter_severed_transfer_module",
+        "minor/jupiter_stationkeeping_assembly",
+        "minor/jupiter_tank_cluster",
+        "minor/mars_buried_rover_beacon",
+        "minor/mars_frozen_brine_pump",
+        "minor/mercury_broken_drill_head",
+        "minor/mercury_cable_marker_line",
+        "minor/mercury_collapsed_solar_frame",
+        "minor/mercury_damaged_radiator_fins",
+        "minor/mercury_damaged_shielding_assembly",
+        "minor/mercury_heat_exchanger_remnant",
+        "minor/mercury_radiation_control_station",
+        "minor/mercury_scorched_survey_rig",
+        "minor/moon_abandoned_regolith_drill",
+        "minor/moon_shattered_helium_collector",
+        "minor/venus_heat_shield_fan",
+        "minor/venus_sorbent_service_station",
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "states": [
+        "stellaris:steel_pillar"
+      ],
+      "selector_properties": [
+        "axis"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:steel_pillar",
+          "missing": [
+            "axis"
+          ]
+        }
+      ]
     },
     {
       "block": "stellaris:steel_plating_block",
-      "placements": 469,
+      "placements": 38005,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "minor/jupiter_antenna_truss",
+        "minor/jupiter_cargo_pod",
+        "minor/jupiter_dead_aerostat",
+        "minor/jupiter_lifeboat",
+        "minor/jupiter_maintenance_frame",
+        "minor/jupiter_severed_transfer_module",
+        "minor/jupiter_stationkeeping_assembly",
+        "minor/jupiter_tank_cluster",
+        "minor/jupiter_wreck_01",
+        "minor/jupiter_wreck_02",
+        "minor/mars_buried_rover_beacon",
+        "minor/mars_catalyst_canister_scatter",
+        "minor/mars_frozen_brine_pump",
+        "minor/mars_rover_wreck",
+        "minor/mars_ruptured_brine_pipeline",
+        "minor/mars_wreck_01",
+        "minor/mars_wreck_02",
+        "minor/mars_wreck_03",
+        "minor/mercury_broken_drill_head",
+        "minor/mercury_cable_marker_line",
+        "minor/mercury_heat_exchanger_remnant",
+        "minor/mercury_radiation_control_station",
+        "minor/mercury_scorched_survey_rig",
+        "minor/mercury_severed_thermal_line",
+        "minor/mercury_wreck_01",
+        "minor/moon_abandoned_regolith_drill",
+        "minor/moon_broken_oxygen_cart",
+        "minor/moon_debris_01",
+        "minor/moon_debris_03",
+        "minor/moon_wreck_01",
+        "minor/venus_collapsed_pressure_pod",
+        "minor/venus_corroded_pipe_knot",
+        "minor/venus_crushed_valve_gallery",
+        "minor/venus_ruptured_sorbent_hopper",
+        "minor/venus_sorbent_service_station",
+        "minor/venus_split_pressure_pod",
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_outpost",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_descent_wreck",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
       ],
       "states": [
         "stellaris:steel_plating_block"
@@ -4146,11 +6267,20 @@
     },
     {
       "block": "stellaris:t1_tank",
-      "placements": 2,
+      "placements": 11,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "minor/jupiter_scoop_fragment",
+        "minor/mars_geopolymer_shelter",
+        "minor/mars_oxidizer_spill",
+        "minor/mercury_abandoned_surveyors",
+        "minor/mercury_emergency_shade_shelter",
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mercury_outpost"
       ],
       "states": [
+        "stellaris:t1_tank",
+        "stellaris:t1_tank[facing=north,stage=0]",
         "stellaris:t1_tank[facing=north,stage=9]"
       ],
       "selector_properties": [
@@ -4159,15 +6289,24 @@
       ],
       "functional_or_machine": true,
       "connective_material": false,
-      "implicit_directional_states": []
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:t1_tank",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
     },
     {
       "block": "stellaris:t2_bank",
-      "placements": 2,
+      "placements": 3,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_lunar_crash_station"
       ],
       "states": [
+        "stellaris:t2_bank",
         "stellaris:t2_bank[facing=south,stage=9]"
       ],
       "selector_properties": [
@@ -4176,15 +6315,60 @@
       ],
       "functional_or_machine": false,
       "connective_material": false,
-      "implicit_directional_states": []
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:t2_bank",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
     },
     {
       "block": "stellaris:t2_tank",
-      "placements": 2,
+      "placements": 81,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "minor/jupiter_tank_cluster",
+        "minor/mars_catalyst_canister_scatter",
+        "minor/venus_ruptured_sorbent_hopper",
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
       ],
       "states": [
+        "stellaris:t2_tank",
         "stellaris:t2_tank[facing=south,stage=9]"
       ],
       "selector_properties": [
@@ -4193,15 +6377,57 @@
       ],
       "functional_or_machine": true,
       "connective_material": false,
-      "implicit_directional_states": []
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:t2_tank",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
     },
     {
       "block": "stellaris:t3_bank",
-      "placements": 3,
+      "placements": 37,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
       ],
       "states": [
+        "stellaris:t3_bank",
         "stellaris:t3_bank[facing=north,stage=9]"
       ],
       "selector_properties": [
@@ -4210,7 +6436,52 @@
       ],
       "functional_or_machine": false,
       "connective_material": false,
-      "implicit_directional_states": []
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:t3_bank",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "stellaris:t3_tank",
+      "placements": 107,
+      "structures": [
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "states": [
+        "stellaris:t3_tank"
+      ],
+      "selector_properties": [
+        "facing",
+        "stage"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:t3_tank",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
     },
     {
       "block": "stellaris:vacuumator",
@@ -4229,10 +6500,57 @@
       "implicit_directional_states": []
     },
     {
-      "block": "stellaris:venus_pillar",
-      "placements": 60,
+      "block": "stellaris:venus_cobblestone",
+      "placements": 10552,
       "structures": [
-        "alien/venusian_pressure_shrine"
+        "alien/venus_atmospheric_compression_basilica",
+        "alien/venus_broken_sky_arch",
+        "alien/venus_corrosion_garden",
+        "alien/venus_five_ray_vent_crown",
+        "alien/venus_inverted_pressure_well",
+        "alien/venus_pressure_ossuary",
+        "alien/venus_sealed_thermal_labyrinth",
+        "minor/venus_cache_01",
+        "minor/venus_cache_02",
+        "minor/venus_cache_03",
+        "minor/venus_collapsed_pressure_pod",
+        "minor/venus_corroded_pipe_knot",
+        "minor/venus_crushed_valve_gallery",
+        "minor/venus_heat_shield_fan",
+        "minor/venus_ruptured_sorbent_hopper",
+        "minor/venus_split_pressure_pod",
+        "minor/venus_waypoint_01",
+        "minor/venus_waypoint_02",
+        "minor/venus_wreck_01",
+        "minor/venus_wreck_02",
+        "minor/venus_wreck_03",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "states": [
+        "stellaris:venus_cobblestone"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:venus_pillar",
+      "placements": 1871,
+      "structures": [
+        "alien/venus_atmospheric_compression_basilica",
+        "alien/venus_broken_sky_arch",
+        "alien/venus_corrosion_garden",
+        "alien/venus_five_ray_vent_crown",
+        "alien/venus_inverted_pressure_well",
+        "alien/venusian_pressure_shrine",
+        "minor/venus_waypoint_01",
+        "minor/venus_waypoint_02"
       ],
       "states": [
         "stellaris:venus_pillar"
@@ -4252,6 +6570,20 @@
       ]
     },
     {
+      "block": "stellaris:venus_sand",
+      "placements": 93,
+      "structures": [
+        "offworld/continuity_venus_descent_wreck"
+      ],
+      "states": [
+        "stellaris:venus_sand"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
       "block": "stellaris:venus_sandstone_bricks",
       "placements": 860,
       "structures": [
@@ -4266,10 +6598,60 @@
       "implicit_directional_states": []
     },
     {
-      "block": "stellaris:venus_stone_bricks",
-      "placements": 78,
+      "block": "stellaris:venus_stone",
+      "placements": 7639,
       "structures": [
-        "alien/venusian_pressure_shrine"
+        "alien/venus_atmospheric_compression_basilica",
+        "alien/venus_broken_sky_arch",
+        "alien/venus_corrosion_garden",
+        "alien/venus_five_ray_vent_crown",
+        "alien/venus_inverted_pressure_well",
+        "alien/venus_pressure_ossuary",
+        "alien/venus_sealed_thermal_labyrinth",
+        "minor/venus_collapsed_pressure_pod",
+        "minor/venus_corroded_pipe_knot",
+        "minor/venus_crushed_valve_gallery",
+        "minor/venus_heat_shield_fan",
+        "minor/venus_ruptured_sorbent_hopper",
+        "minor/venus_sorbent_service_station",
+        "minor/venus_split_pressure_pod",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
+      ],
+      "states": [
+        "stellaris:venus_stone"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "stellaris:venus_stone_bricks",
+      "placements": 13642,
+      "structures": [
+        "alien/venus_atmospheric_compression_basilica",
+        "alien/venus_broken_sky_arch",
+        "alien/venus_five_ray_vent_crown",
+        "alien/venus_inverted_pressure_well",
+        "alien/venus_pressure_ossuary",
+        "alien/venus_sealed_thermal_labyrinth",
+        "alien/venusian_pressure_shrine",
+        "minor/venus_cache_01",
+        "minor/venus_cache_02",
+        "minor/venus_cache_03",
+        "minor/venus_waypoint_01",
+        "minor/venus_waypoint_02",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
       ],
       "states": [
         "stellaris:venus_stone_bricks"
@@ -4281,11 +6663,46 @@
     },
     {
       "block": "stellaris:water_separator",
-      "placements": 1,
+      "placements": 66,
       "structures": [
-        "offworld/continuity_far_side_redoubt"
+        "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_jupiter_aerostat_habitat",
+        "offworld/continuity_jupiter_atmospheric_scoop_platform",
+        "offworld/continuity_jupiter_atmospheric_transfer_dock",
+        "offworld/continuity_jupiter_cryogenic_tank_barge",
+        "offworld/continuity_jupiter_hydrogen_fractionation_rig",
+        "offworld/continuity_jupiter_refinery_wreck_cluster",
+        "offworld/continuity_jupiter_storm_power_collector",
+        "offworld/continuity_lunar_crash_station",
+        "offworld/continuity_mars_brine_recovery_station",
+        "offworld/continuity_mars_hematite_strip_mine",
+        "offworld/continuity_mars_methalox_complex",
+        "offworld/continuity_mars_nickel_cobalt_refinery",
+        "offworld/continuity_mars_perchlorate_oxygen_works",
+        "offworld/continuity_mars_settlement_twelve",
+        "offworld/continuity_mars_sulfate_geopolymer_works",
+        "offworld/continuity_mars_transfer_landing_yard",
+        "offworld/continuity_mercury_cryogenic_depot",
+        "offworld/continuity_mercury_geothermal_tap_station",
+        "offworld/continuity_mercury_mass_driver_escape_yard",
+        "offworld/continuity_mercury_radiator_farm",
+        "offworld/continuity_mercury_solar_concentrator_smelter",
+        "offworld/continuity_mercury_uranium_prospecting_cut",
+        "offworld/continuity_moon_ceramic_foundry",
+        "offworld/continuity_moon_helium3_harvest_field",
+        "offworld/continuity_moon_ilmenite_reduction_works",
+        "offworld/continuity_moon_kreep_prospecting_complex",
+        "offworld/continuity_moon_mass_driver_terminal",
+        "offworld/continuity_moon_mineral_oxygen_plant",
+        "offworld/continuity_venus_crushed_habitat_stack",
+        "offworld/continuity_venus_return_launch_complex",
+        "offworld/continuity_venus_sorbent_tower",
+        "offworld/continuity_venus_sulfur_capture_refinery",
+        "offworld/continuity_venus_superalloy_pressure_works",
+        "offworld/continuity_venus_vanadium_tungsten_foundry"
       ],
       "states": [
+        "stellaris:water_separator",
         "stellaris:water_separator[facing=south,lit=true]"
       ],
       "selector_properties": [
@@ -4294,12 +6711,23 @@
       ],
       "functional_or_machine": false,
       "connective_material": false,
-      "implicit_directional_states": []
+      "implicit_directional_states": [
+        {
+          "state": "stellaris:water_separator",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
     },
     {
       "block": "supplementaries:item_shelf",
-      "placements": 319,
+      "placements": 666,
       "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
         "offworld/continuity_far_side_redoubt",
         "wasteland/abandoned_bungalow",
         "wasteland/abandoned_create_factory",
@@ -4335,6 +6763,7 @@
         "wasteland/masters/wasteland_fire_lookout_clean_master",
         "wasteland/modules/industrial_dispatch_annex",
         "wasteland/modules/industrial_office_annex",
+        "wasteland/modules/port_customs_warehouse",
         "wasteland/old_world/ows_010_atlas_conveyor_transfer_hall",
         "wasteland/old_world/ows_011_atlas_municipal_machine_service_shop",
         "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
@@ -4382,9 +6811,50 @@
       ]
     },
     {
-      "block": "tfmg:asphalt",
-      "placements": 445680,
+      "block": "supplementaries:notice_board",
+      "placements": 5,
       "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master"
+      ],
+      "states": [
+        "supplementaries:notice_board"
+      ],
+      "selector_properties": [
+        "facing",
+        "has_book"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "supplementaries:notice_board",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "tfmg:asphalt",
+      "placements": 451751,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/kar_083_district_heating_main",
+        "karsic/kar_084_transformer_kiosk",
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_078_relay_mast_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master",
+        "karsic/masters/kar_083_district_heating_main_clean_master",
+        "karsic/masters/kar_084_transformer_kiosk_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master",
         "wasteland/abandoned_bungalow",
         "wasteland/abandoned_create_factory",
         "wasteland/abandoned_culdesac",
@@ -4393,6 +6863,7 @@
         "wasteland/abandoned_orchard_cannery",
         "wasteland/abandoned_orchard_cannery_clean_master",
         "wasteland/abandoned_quarry",
+        "wasteland/abandoned_quarry_clean_master",
         "wasteland/abandoned_truck_stop",
         "wasteland/ae2_records_archive",
         "wasteland/battle_tank",
@@ -4409,8 +6880,10 @@
         "wasteland/collapsed_airship_terminal",
         "wasteland/collapsed_airship_terminal_clean_master",
         "wasteland/collapsed_mine_entrance",
+        "wasteland/collapsed_mine_entrance_clean_master",
         "wasteland/corporate_warehouse",
         "wasteland/crashed_cargo_airship",
+        "wasteland/crashed_cargo_airship_clean_master",
         "wasteland/cratered_downtown_intersection",
         "wasteland/decayed_farm",
         "wasteland/decayed_ranch",
@@ -4469,6 +6942,7 @@
         "wasteland/masters/motel_clean_master",
         "wasteland/masters/mountain_biohazard_lab_clean_master",
         "wasteland/masters/mountain_military_complex_clean_master",
+        "wasteland/masters/mountain_pass_terminator_clean_master",
         "wasteland/masters/municipal_incinerator_clean_master",
         "wasteland/masters/nuclear_research_annex_clean_master",
         "wasteland/masters/pancaked_parking_structure_clean_master",
@@ -4529,6 +7003,7 @@
         "wasteland/modules/mountain_transport_tunnel_warm",
         "wasteland/mountain_biohazard_lab",
         "wasteland/mountain_military_complex",
+        "wasteland/mountain_pass_terminator",
         "wasteland/municipal_incinerator",
         "wasteland/nuclear_research_annex",
         "wasteland/old_world/ows_001_vcf_neighborhood_culture_service_depot",
@@ -4648,8 +7123,32 @@
       "implicit_directional_states": []
     },
     {
+      "block": "tfmg:cable_tube",
+      "placements": 1,
+      "structures": [
+        "karsic/kar_084_transformer_kiosk"
+      ],
+      "states": [
+        "tfmg:cable_tube"
+      ],
+      "selector_properties": [
+        "axis",
+        "concretelogged"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "tfmg:cable_tube",
+          "missing": [
+            "axis"
+          ]
+        }
+      ]
+    },
+    {
       "block": "tfmg:cinder_block",
-      "placements": 72043,
+      "placements": 72570,
       "structures": [
         "wasteland/abandoned_create_factory",
         "wasteland/abandoned_orchard_cannery",
@@ -4665,6 +7164,7 @@
         "wasteland/collapsed_airship_terminal",
         "wasteland/collapsed_airship_terminal_clean_master",
         "wasteland/collapsed_subway_station",
+        "wasteland/collapsed_subway_station_clean_master",
         "wasteland/corporate_warehouse",
         "wasteland/cratered_downtown_intersection",
         "wasteland/dilapidated_grocery",
@@ -4807,14 +7307,68 @@
       "implicit_directional_states": []
     },
     {
-      "block": "tfmg:factory_floor",
-      "placements": 156793,
+      "block": "tfmg:circular_light",
+      "placements": 10,
       "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master"
+      ],
+      "states": [
+        "tfmg:circular_light"
+      ],
+      "selector_properties": [
+        "facing",
+        "level",
+        "waterlogged"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "tfmg:circular_light",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "tfmg:concrete_encased_industrial_pipe",
+      "placements": 540,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_083_district_heating_main",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_083_district_heating_main_clean_master"
+      ],
+      "states": [
+        "tfmg:concrete_encased_industrial_pipe"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": true,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "tfmg:factory_floor",
+      "placements": 182822,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
         "wasteland/abandoned_create_factory",
         "wasteland/abandoned_oil_field",
         "wasteland/abandoned_orchard_cannery",
         "wasteland/abandoned_orchard_cannery_clean_master",
         "wasteland/abandoned_quarry",
+        "wasteland/abandoned_quarry_clean_master",
         "wasteland/abandoned_truck_stop",
         "wasteland/ae2_records_archive",
         "wasteland/bombed_data_center",
@@ -4826,6 +7380,7 @@
         "wasteland/collapsed_airship_terminal",
         "wasteland/collapsed_airship_terminal_clean_master",
         "wasteland/collapsed_mine_entrance",
+        "wasteland/collapsed_mine_entrance_clean_master",
         "wasteland/corporate_warehouse",
         "wasteland/cratered_downtown_intersection",
         "wasteland/dilapidated_grocery",
@@ -5006,6 +7561,64 @@
       "implicit_directional_states": []
     },
     {
+      "block": "tfmg:gas_lamp",
+      "placements": 38,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master"
+      ],
+      "states": [
+        "tfmg:gas_lamp"
+      ],
+      "selector_properties": [
+        "lit"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "tfmg:gray_rebar_concrete",
+      "placements": 6595,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_078_relay_mast_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master"
+      ],
+      "states": [
+        "tfmg:gray_rebar_concrete"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
+      "block": "tfmg:industrial_pipe",
+      "placements": 21,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_083_district_heating_main"
+      ],
+      "states": [
+        "tfmg:industrial_pipe"
+      ],
+      "selector_properties": [],
+      "functional_or_machine": false,
+      "connective_material": true,
+      "implicit_directional_states": []
+    },
+    {
       "block": "tfmg:plastic_block",
       "placements": 358,
       "structures": [
@@ -5025,8 +7638,14 @@
     },
     {
       "block": "tfmg:steel_block",
-      "placements": 23004,
+      "placements": 23570,
       "structures": [
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/kar_083_district_heating_main",
+        "karsic/masters/kar_078_relay_mast_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master",
+        "karsic/masters/kar_083_district_heating_main_clean_master",
         "wasteland/abandoned_create_factory",
         "wasteland/abandoned_oil_field",
         "wasteland/bombed_data_center",
@@ -5034,6 +7653,7 @@
         "wasteland/cold_industrial_mountain_port",
         "wasteland/corporate_warehouse",
         "wasteland/crashed_cargo_airship",
+        "wasteland/crashed_cargo_airship_clean_master",
         "wasteland/cratered_downtown_intersection",
         "wasteland/district_heating_station",
         "wasteland/freight_depot",
@@ -5072,7 +7692,6 @@
         "wasteland/old_world/ows_006_vcf_pt9_symbiosis_pilot_laboratory",
         "wasteland/old_world/ows_007_vcf_ep7_agricultural_development_laboratory",
         "wasteland/old_world/ows_008_vcf_emergency_persistence_investigation_lab",
-        "wasteland/old_world/ows_009_atlas_roadside_repair_depot",
         "wasteland/old_world/ows_010_atlas_conveyor_transfer_hall",
         "wasteland/old_world/ows_013_atlas_automated_assembly_hall",
         "wasteland/old_world/ows_016_polycore_elastomer_exposure_array",
@@ -5132,6 +7751,38 @@
       "implicit_directional_states": []
     },
     {
+      "block": "tfmg:yellow_caution_block",
+      "placements": 19,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/kar_083_district_heating_main",
+        "karsic/kar_084_transformer_kiosk",
+        "karsic/masters/kar_078_relay_mast_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master",
+        "karsic/masters/kar_083_district_heating_main_clean_master",
+        "karsic/masters/kar_084_transformer_kiosk_clean_master"
+      ],
+      "states": [
+        "tfmg:yellow_caution_block"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "tfmg:yellow_caution_block",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
       "block": "the_wasteland_reworked:aluminium_grate",
       "placements": 44,
       "structures": [
@@ -5149,8 +7800,14 @@
     },
     {
       "block": "the_wasteland_reworked:barricade",
-      "placements": 43,
+      "placements": 53,
       "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_083_district_heating_main",
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_083_district_heating_main_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master",
         "spawn_hospital_lobby",
         "wasteland/masters/military_checkpoint_clean_master",
         "wasteland/military_checkpoint",
@@ -5175,6 +7832,27 @@
           ]
         }
       ]
+    },
+    {
+      "block": "the_wasteland_reworked:bunker_fan",
+      "placements": 10,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master"
+      ],
+      "states": [
+        "the_wasteland_reworked:bunker_fan"
+      ],
+      "selector_properties": [
+        "is_safe"
+      ],
+      "functional_or_machine": true,
+      "connective_material": false,
+      "implicit_directional_states": []
     },
     {
       "block": "the_wasteland_reworked:cardboard_box",
@@ -5254,10 +7932,11 @@
     },
     {
       "block": "the_wasteland_reworked:decayed_planks",
-      "placements": 8766,
+      "placements": 8778,
       "structures": [
         "wasteland/abandoned_bungalow",
         "wasteland/abandoned_culdesac",
+        "wasteland/decayed_logging_camp",
         "wasteland/decayed_ranch",
         "wasteland/masters/abandoned_culdesac_clean_master",
         "wasteland/masters/bungalow_clean_master",
@@ -5346,6 +8025,40 @@
       "implicit_directional_states": []
     },
     {
+      "block": "the_wasteland_reworked:industrial_door",
+      "placements": 358,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_078_relay_mast_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master",
+        "karsic/masters/kar_084_transformer_kiosk_clean_master"
+      ],
+      "states": [
+        "the_wasteland_reworked:industrial_door[facing=east,half=lower,hinge=left,open=false,powered=false]",
+        "the_wasteland_reworked:industrial_door[facing=east,half=upper,hinge=left,open=false,powered=false]",
+        "the_wasteland_reworked:industrial_door[facing=north,half=lower,hinge=left,open=false,powered=false]",
+        "the_wasteland_reworked:industrial_door[facing=north,half=upper,hinge=left,open=false,powered=false]",
+        "the_wasteland_reworked:industrial_door[facing=south,half=lower,hinge=left,open=false,powered=false]",
+        "the_wasteland_reworked:industrial_door[facing=south,half=lower,hinge=right,open=false,powered=false]",
+        "the_wasteland_reworked:industrial_door[facing=south,half=upper,hinge=left,open=false,powered=false]",
+        "the_wasteland_reworked:industrial_door[facing=south,half=upper,hinge=right,open=false,powered=false]"
+      ],
+      "selector_properties": [
+        "facing",
+        "half",
+        "hinge",
+        "open"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
       "block": "the_wasteland_reworked:lead_plating",
       "placements": 366,
       "structures": [
@@ -5360,6 +8073,36 @@
       "functional_or_machine": false,
       "connective_material": false,
       "implicit_directional_states": []
+    },
+    {
+      "block": "the_wasteland_reworked:pipe_block",
+      "placements": 926,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_081_steel_water_tower",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_078_relay_mast_clean_master",
+        "karsic/masters/kar_081_steel_water_tower_clean_master"
+      ],
+      "states": [
+        "the_wasteland_reworked:pipe_block"
+      ],
+      "selector_properties": [
+        "axis"
+      ],
+      "functional_or_machine": false,
+      "connective_material": true,
+      "implicit_directional_states": [
+        {
+          "state": "the_wasteland_reworked:pipe_block",
+          "missing": [
+            "axis"
+          ]
+        }
+      ]
     },
     {
       "block": "the_wasteland_reworked:radiation_hazard_sign",
@@ -5394,9 +8137,10 @@
     },
     {
       "block": "the_wasteland_reworked:radio",
-      "placements": 342,
+      "placements": 346,
       "structures": [
         "offworld/continuity_far_side_redoubt",
+        "offworld/continuity_lunar_crash_station",
         "spawn_hospital_lobby",
         "wasteland/abandoned_bungalow",
         "wasteland/abandoned_create_factory",
@@ -5406,6 +8150,7 @@
         "wasteland/abandoned_orchard_cannery",
         "wasteland/abandoned_orchard_cannery_clean_master",
         "wasteland/abandoned_quarry",
+        "wasteland/abandoned_quarry_clean_master",
         "wasteland/ae2_records_archive",
         "wasteland/battle_tank",
         "wasteland/battle_tank_clean_master",
@@ -5416,7 +8161,9 @@
         "wasteland/collapsed_airship_terminal",
         "wasteland/collapsed_airship_terminal_clean_master",
         "wasteland/collapsed_mine_entrance",
+        "wasteland/collapsed_mine_entrance_clean_master",
         "wasteland/corporate_warehouse",
+        "wasteland/crashed_cargo_airship_clean_master",
         "wasteland/cratered_downtown_intersection",
         "wasteland/decayed_logging_camp",
         "wasteland/decayed_ranch",
@@ -5600,8 +8347,37 @@
       ]
     },
     {
+      "block": "the_wasteland_reworked:road_sign",
+      "placements": 7,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master"
+      ],
+      "states": [
+        "the_wasteland_reworked:road_sign"
+      ],
+      "selector_properties": [
+        "facing",
+        "sign"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "the_wasteland_reworked:road_sign",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
       "block": "the_wasteland_reworked:rusted_barrel",
-      "placements": 34,
+      "placements": 35,
       "structures": [
         "deep_sea/akula_wreck_aft",
         "deep_sea/akula_wreck_aft_damaged",
@@ -5617,6 +8393,7 @@
         "wasteland/masters/scrapyard_clean_master",
         "wasteland/military_checkpoint",
         "wasteland/mountain_military_complex",
+        "wasteland/mountain_pass_terminator",
         "wasteland/old_world/ows_048_meridian_military_containment_base",
         "wasteland/ruined_gas_station",
         "wasteland/scrapyard"
@@ -5714,8 +8491,11 @@
     },
     {
       "block": "wastelands:scrap_pile",
-      "placements": 825,
+      "placements": 828,
       "structures": [
+        "karsic/kar_078_relay_mast",
+        "karsic/kar_083_district_heating_main",
+        "karsic/kar_084_transformer_kiosk",
         "wasteland/abandoned_create_factory",
         "wasteland/abandoned_culdesac",
         "wasteland/abandoned_motel",
@@ -5754,9 +8534,92 @@
       "implicit_directional_states": []
     },
     {
-      "block": "zvhouses:spruce_countertop",
-      "placements": 1041,
+      "block": "zvhouses:spruce_bench",
+      "placements": 34,
       "structures": [
+        "karsic/kar_067_series_panel_block",
+        "karsic/kar_085_bus_shelter_and_stop",
+        "karsic/masters/kar_067_series_panel_block_clean_master",
+        "karsic/masters/kar_085_bus_shelter_and_stop_clean_master"
+      ],
+      "states": [
+        "zvhouses:spruce_bench"
+      ],
+      "selector_properties": [
+        "facing",
+        "leg_left",
+        "leg_right",
+        "tier"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "zvhouses:spruce_bench",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "zvhouses:spruce_chair",
+      "placements": 258,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master"
+      ],
+      "states": [
+        "zvhouses:spruce_chair"
+      ],
+      "selector_properties": [
+        "facing"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "zvhouses:spruce_chair",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "zvhouses:spruce_counter",
+      "placements": 20,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master"
+      ],
+      "states": [
+        "zvhouses:spruce_counter"
+      ],
+      "selector_properties": [
+        "facing",
+        "type",
+        "waterlogged"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": [
+        {
+          "state": "zvhouses:spruce_counter",
+          "missing": [
+            "facing"
+          ]
+        }
+      ]
+    },
+    {
+      "block": "zvhouses:spruce_countertop",
+      "placements": 1060,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
         "wasteland/abandoned_truck_stop",
         "wasteland/corporate_warehouse",
         "wasteland/cratered_downtown_intersection",
@@ -5814,8 +8677,27 @@
       "implicit_directional_states": []
     },
     {
+      "block": "zvhouses:spruce_table",
+      "placements": 258,
+      "structures": [
+        "karsic/kar_024_panel_block_service_premises",
+        "karsic/kar_067_series_panel_block",
+        "karsic/masters/kar_024_panel_block_service_premises_clean_master",
+        "karsic/masters/kar_067_series_panel_block_clean_master"
+      ],
+      "states": [
+        "zvhouses:spruce_table"
+      ],
+      "selector_properties": [
+        "has_leg"
+      ],
+      "functional_or_machine": false,
+      "connective_material": false,
+      "implicit_directional_states": []
+    },
+    {
       "block": "zvhouses:stone_brick_countertop",
-      "placements": 2730,
+      "placements": 2784,
       "structures": [
         "wasteland/abandoned_create_factory",
         "wasteland/bombed_hotel",
@@ -5824,6 +8706,7 @@
         "wasteland/collapsed_airship_terminal",
         "wasteland/collapsed_airship_terminal_clean_master",
         "wasteland/collapsed_subway_station",
+        "wasteland/collapsed_subway_station_clean_master",
         "wasteland/corporate_warehouse",
         "wasteland/cratered_downtown_intersection",
         "wasteland/dilapidated_grocery",
@@ -5854,6 +8737,7 @@
         "wasteland/modules/industrial_office_annex",
         "wasteland/modules/industrial_process_line",
         "wasteland/modules/industrial_truck_dock_bank",
+        "wasteland/modules/port_customs_warehouse",
         "wasteland/old_world/ows_001_vcf_neighborhood_culture_service_depot",
         "wasteland/old_world/ows_002_vcf_emergency_community_grow_hall",
         "wasteland/old_world/ows_003_vcf_cold_chain_culture_nursery",

@@ -14,6 +14,7 @@
     const HIVE = 'infinite_domain:hive_world'
     const ARRIVAL = { x: 8, y: 64, z: 8, yaw: 0, pitch: 0 }
     const ARRIVAL_FN = 'infinite_domain:hive_world/build_arrival'
+    const DESCENT_ITEM = 'kubejs:cinderstack_marker'
     const RETURN_ITEM = 'kubejs:cinderstack_return_marker'
     const FALLBACK_DIM = 'minecraft:overworld'
     const CORE = 'kubejs:cinderstack_portal_core'
@@ -86,7 +87,7 @@
         }
         for (let up = 1; up < top; up++) {
             for (let across = left + 1; across < right; across++) {
-                if (!isPortalInterior(blockAt(level, core, across, up, xPlane))) return false
+                if (!isPortalInterior(blockAt(level, core, across, up, xPlane))) return null
             }
         }
         return { xPlane: xPlane, left: left, right: right, height: height }
@@ -112,8 +113,11 @@
         d[PD.ox] = player.x
         d[PD.oy] = player.y
         d[PD.oz] = player.z
-        d[PD.oyaw] = player.yaw || 0
-        d[PD.opitch] = player.pitch || 0
+        // KubeJS 7 exposes no 'yaw'/'pitch' alias - those read undefined and used to
+        // record 0/0, snapping the camera due south on every return. Use the vanilla
+        // rotation accessors instead.
+        d[PD.oyaw] = player.getYRot()
+        d[PD.opitch] = player.getXRot()
     }
 
     function clearExpedition(player) {
@@ -164,6 +168,13 @@
 
     // ---- return -----------------------------------------------------------
 
+    // An unreadable origin coordinate must never reach a /tp argument: 'tp Steve
+    // undefined undefined undefined' fails silently and would strand the player.
+    function coord(value, fallback) {
+        const n = Number(value)
+        return isFinite(n) ? n : fallback
+    }
+
     function ascend(player) {
         const d = player.persistentData
         if (!d[PD.active]) {
@@ -173,22 +184,26 @@
         const name = player.username
         const s = player.server
         const dim = d[PD.odim] || FALLBACK_DIM
-        const x = d[PD.ox]
-        const y = d[PD.oy]
-        const z = d[PD.oz]
-        const yaw = d[PD.oyaw] || 0
-        const pitch = d[PD.opitch] || 0
+        const x = coord(d[PD.ox], null)
+        const y = coord(d[PD.oy], null)
+        const z = coord(d[PD.oz], null)
+        const yaw = coord(d[PD.oyaw], 0)
+        const pitch = coord(d[PD.opitch], 0)
 
-        s.runCommandSilent('execute as ' + name + ' in ' + dim + ' run tp ' + name +
-            ' ' + x + ' ' + y + ' ' + z + ' ' + yaw + ' ' + pitch)
+        if (x !== null && y !== null && z !== null) {
+            s.runCommandSilent('execute as ' + name + ' in ' + dim + ' run tp ' + name +
+                ' ' + x + ' ' + y + ' ' + z + ' ' + yaw + ' ' + pitch)
 
-        if (dimId(player) === dim) {
-            clearExpedition(player)
-            charles(player, 'Returned to your recorded departure point.')
-            return
+            if (dimId(player) === dim) {
+                clearExpedition(player)
+                charles(player, 'Returned to your recorded departure point.')
+                return
+            }
         }
-        // origin dimension refused (removed, renamed, unloaded) - guaranteed safe fallback
-        s.runCommandSilent('execute as ' + name + ' in ' + FALLBACK_DIM + ' run tp ' + name + ' ' + Math.round(x) + ' 320 ' + Math.round(z))
+        // Origin refused (dimension removed, renamed, unloaded) or the record was
+        // unreadable - guaranteed safe fallback, never a stranded player.
+        s.runCommandSilent('execute as ' + name + ' in ' + FALLBACK_DIM + ' run tp ' + name +
+            ' ' + Math.round(x === null ? 0 : x) + ' 320 ' + Math.round(z === null ? 0 : z))
         s.runCommandSilent('effect give ' + name + ' minecraft:slow_falling 15 0 true')
         s.runCommandSilent('effect give ' + name + ' minecraft:resistance 15 4 true')
         clearExpedition(player)
@@ -197,20 +212,38 @@
 
     // ---- triggers -------------------------------------------------------
 
+    // KubeJS 7 note: event.cancel() throws EventExit and unwinds the callback, so it
+    // must be the LAST statement on every path. Calling it first silently discarded
+    // the whole travel body and made both markers inert.
     BlockEvents.rightClicked(CORE, event => {
         const player = event.player
         if (!player || event.level.isClientSide()) return
         const held = event.item ? event.item.id : ''
-        if (held !== 'kubejs:cinderstack_marker' && held !== RETURN_ITEM) return
-        event.cancel()
+        if (held !== DESCENT_ITEM && held !== RETURN_ITEM) return
+
         const portal = findPortal(event.level, event.block)
-        if (!portal) {
+        if (portal) {
+            energizePortal(player, event.block, portal)
+            if (held === RETURN_ITEM) ascend(player)
+            else descend(player)
+        } else {
             charles(player, 'Incomplete portal: build a vertical Nether-sized frame (4 x 5 through 23 x 23), place Actuators at all four corners, and put the Portal Core on the lower edge.')
-            return
         }
-        energizePortal(player, event.block, portal)
-        if (held === RETURN_ITEM) ascend(player)
-        else descend(player)
+        event.cancel()
+    })
+
+    // Using a marker anywhere but on a Portal Core is the most common way to conclude
+    // it is broken; say what it wants instead of failing silently.
+    ItemEvents.rightClicked(DESCENT_ITEM, event => {
+        if (event.player && !event.level.isClientSide()) {
+            charles(event.player, 'This marker only answers to a Portal Core. Build the frame, actuate its four corners, then use the marker on the Core in its lower edge.')
+        }
+    })
+
+    ItemEvents.rightClicked(RETURN_ITEM, event => {
+        if (event.player && !event.level.isClientSide()) {
+            charles(event.player, 'Use this on the Portal Core of the arrival deck to return to your departure point.')
+        }
     })
 
     // ---- recovery ------------------------------------------------------

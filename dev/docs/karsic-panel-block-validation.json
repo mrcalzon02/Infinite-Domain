@@ -1,6 +1,6 @@
 {
   "purpose": "End-to-end structural-designer and active regional-citystyle gate for the Karsic flagship panel slab.",
-  "passed": true,
+  "passed": false,
   "checks": [
     {
       "id": "KP-1",
@@ -326,9 +326,18 @@
     {
       "id": "KP-9",
       "check": "fixed-camera evidence shows the exterior, service basement and real storey bands",
-      "passed": true,
+      "passed": false,
       "detail": "the reviewer uses authored planes instead of mistaking stair landings for dwelling floors",
-      "evidence": []
+      "evidence": [
+        "infinite_domain:kar_067_series_panel_block: missing render structure_library/reviews/kar_067_series_panel_block/exterior_a.png",
+        "infinite_domain:kar_067_series_panel_block: missing render structure_library/reviews/kar_067_series_panel_block/exterior_b.png",
+        "infinite_domain:kar_067_series_panel_block: missing render structure_library/reviews/kar_067_series_panel_block/roof_off_cutaway.png",
+        "infinite_domain:kar_067_series_panel_block: missing render structure_library/reviews/kar_067_series_panel_block/floor_slices.png",
+        "infinite_domain:kar_067_series_panel_block_clean_master: missing render structure_library/reviews/kar_067_series_panel_block_clean_master/exterior_a.png",
+        "infinite_domain:kar_067_series_panel_block_clean_master: missing render structure_library/reviews/kar_067_series_panel_block_clean_master/exterior_b.png",
+        "infinite_domain:kar_067_series_panel_block_clean_master: missing render structure_library/reviews/kar_067_series_panel_block_clean_master/roof_off_cutaway.png",
+        "infinite_domain:kar_067_series_panel_block_clean_master: missing render structure_library/reviews/kar_067_series_panel_block_clean_master/floor_slices.png"
+      ]
     },
     {
       "id": "KP-10",

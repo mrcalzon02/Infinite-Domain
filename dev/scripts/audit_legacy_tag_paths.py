@@ -20,9 +20,27 @@ Both are fixed by supplying the same tag at the singular path from
 `kubejs/data/...`, additively (`"replace": false`), which stays harmless if the
 mod is ever fixed upstream.
 
-    python dev/scripts/audit_legacy_tag_paths.py
+**A legacy path is not by itself a bug.** Most mods that migrated to 1.21 wrote
+the new singular file and left the old plural one behind, so the same jar ships
+both and the tag loads fine; the stale copy is inert because nothing scans
+`tags/items` any more. Others left behind a plural file with no values at all.
+Porting those would add dead files to the pack, so this script separates the
+harmless cases from the ones that actually load empty:
 
-Exits 0 when every legacy tag found already has a pack-side override, 1 otherwise.
+    harmless/same-jar   the jar also ships the singular path with the same values
+    harmless/empty      the legacy file has no `values` and no `remove`
+    ported              a pack file at the singular path covers the jar's values
+    SUSPECT             jar ships both paths but the values differ
+    BROKEN              nothing supplies the tag at the singular path
+
+A pack file merely *existing* at the singular path is not a fix either: for a
+shared tag like `minecraft:mineable/pickaxe` the pack's own file is there for
+unrelated reasons and does not contain the mod's entries, so that still counts
+as BROKEN (reported as a partial port).
+
+    python dev/scripts/audit_legacy_tag_paths.py [--all]
+
+Exits 0 when nothing is BROKEN or SUSPECT, 1 otherwise.
 """
 from __future__ import annotations
 
@@ -64,8 +82,63 @@ def pack_format(jar: zipfile.ZipFile) -> int | None:
         return None
 
 
+def load(raw: bytes) -> dict:
+    try:
+        body = json.loads(raw.decode("utf-8-sig"))
+        return body if isinstance(body, dict) else {}
+    except Exception:
+        return {}
+
+
+def entries(body: dict, key: str = "values") -> set[str]:
+    """Normalised tag entries. Values may be plain ids or {"id": ..} objects."""
+    out = set()
+    for v in body.get(key) or []:
+        if isinstance(v, str):
+            out.add(v)
+        elif isinstance(v, dict) and isinstance(v.get("id"), str):
+            out.add(v["id"])
+    return out
+
+
+def classify(jar: zipfile.ZipFile, names: set[str], ns: str, singular: str,
+             path: str, values: set[str], removes: set[str]) -> tuple[str, set[str], bool]:
+    """Return (state, missing entries, whether a pack file was present but partial)."""
+    if not values and not removes:
+        return "harmless/empty", set(), False
+
+    sibling = "data/%s/tags/%s/%s.json" % (ns, singular, path)
+    if sibling in names:
+        sib = entries(load(jar.read(sibling)))
+        if values <= sib:
+            return "harmless/same-jar", set(), False
+        return "SUSPECT", values - sib, False
+
+    override = os.path.join(PACK_DATA, ns, "tags", singular, *path.split("/")) + ".json"
+    if os.path.exists(override):
+        with open(override, "rb") as fh:
+            packed = entries(load(fh.read()))
+        if values <= packed:
+            return "ported", set(), False
+        return "BROKEN", values - packed, True
+
+    return "BROKEN", values, False
+
+
+ORDER = ["BROKEN", "SUSPECT", "ported", "harmless/same-jar", "harmless/empty"]
+
+BLURB = {
+    "BROKEN": "nothing supplies this tag at the singular path -- it loads EMPTY",
+    "SUSPECT": "jar ships both paths, but the legacy file has values the singular one lacks",
+    "ported": "a pack file at the singular path covers the jar's values",
+    "harmless/same-jar": "same jar also ships the singular path, covering these values",
+    "harmless/empty": "the legacy file has no values and no removes -- inert",
+}
+
+
 def main() -> int:
-    legacy: list[tuple[str, str, str, str, str, int | None]] = []
+    show_all = "--all" in sys.argv[1:]
+    found: list[dict] = []
 
     for name in sorted(os.listdir(MODS)):
         if not name.endswith(".jar"):
@@ -75,50 +148,66 @@ def main() -> int:
         except Exception:
             continue
         pf = pack_format(jar)
-        for entry in jar.namelist():
+        names = set(jar.namelist())
+        for entry in sorted(names):
             m = TAG_PATH.match(entry)
             if not m:
                 continue
             ns, kind, path = m.group(1), m.group(2), m.group(3)
             if kind not in RENAMED:
                 continue
-            legacy.append((name, ns, kind, RENAMED[kind], path, pf))
+            singular = RENAMED[kind]
+            legacy = load(jar.read(entry))
+            state, missing, partial = classify(
+                jar, names, ns, singular, path,
+                entries(legacy), entries(legacy, "remove"))
+            found.append({
+                "jar": name, "pf": pf, "ns": ns, "path": path, "kind": kind,
+                "singular": singular, "state": state, "missing": missing,
+                "partial": partial,
+            })
 
-    unfixed = []
-    fixed = []
-    for jarname, ns, kind, singular, path, pf in legacy:
-        override = os.path.join(PACK_DATA, ns, "tags", singular, *path.split("/"))
-        override += ".json"
-        (fixed if os.path.exists(override) else unfixed).append(
-            (jarname, ns, kind, singular, path, pf))
+    by_state: dict[str, list[dict]] = {s: [] for s in ORDER}
+    for rec in found:
+        by_state[rec["state"]].append(rec)
 
-    print("legacy-path tag files found: %d (%d have a pack file at the singular path, %d do not)"
-          % (len(legacy), len(fixed), len(unfixed)))
+    print("legacy-path tag files found: %d" % len(found))
+    for state in ORDER:
+        print("  %5d  %-18s %s" % (len(by_state[state]), state, BLURB[state]))
 
-    if fixed:
-        # NOTE: this only means a file exists at the singular path. For a shared
-        # tag like minecraft:mineable/pickaxe the pack's own file will not contain
-        # the mod's entries, so those remain effectively lost -- only a
-        # deliberately ported tag (matching values) is actually repaired.
-        print("\na pack file exists at the singular path (ported, or merely coincident):")
-        for jarname, ns, kind, singular, path, _pf in sorted(fixed):
-            print("  %-24s %s:%s  (tags/%s -> tags/%s)" % (jarname[:24], ns, path, kind, singular))
-
-    if unfixed:
-        print("\nNOT fixed -- these tags load empty at runtime:")
+    for state in ORDER:
+        rows = by_state[state]
+        if not rows:
+            continue
+        if state not in ("BROKEN", "SUSPECT") and not show_all:
+            continue
+        print("\n%s -- %s" % (state, BLURB[state]))
         by_jar: dict[str, list[str]] = {}
-        for jarname, ns, kind, singular, path, pf in sorted(unfixed):
-            by_jar.setdefault("%s (pack_format=%s)" % (jarname, pf), []).append(
-                "%s:%s  tags/%s -> tags/%s" % (ns, path, kind, singular))
+        for rec in sorted(rows, key=lambda r: (r["jar"], r["ns"], r["path"])):
+            line = "%s:%s  tags/%s -> tags/%s" % (
+                rec["ns"], rec["path"], rec["kind"], rec["singular"])
+            if rec["partial"]:
+                line += "  [pack file exists but does not cover it]"
+            if rec["missing"] and state in ("BROKEN", "SUSPECT"):
+                shown = sorted(rec["missing"])
+                line += "\n          missing: %s" % ", ".join(shown[:6])
+                if len(shown) > 6:
+                    line += ", ... (%d more)" % (len(shown) - 6)
+            by_jar.setdefault("%s (pack_format=%s)" % (rec["jar"], rec["pf"]), []).append(line)
         for jar in sorted(by_jar):
             print("  %s" % jar)
             for line in by_jar[jar]:
                 print("      %s" % line)
+
+    bad = len(by_state["BROKEN"]) + len(by_state["SUSPECT"])
+    if bad:
         print("\nA tag only matters if the mod's code actually reads it (grep the jar for the")
         print("tag name near ItemTags.create / BlockTags.create). Where it does, add")
         print("kubejs/data/<ns>/tags/<singular>/<path>.json with \"replace\": false.")
+    if not show_all:
+        print("\n(--all also lists the harmless and already-ported entries.)")
 
-    return 1 if unfixed else 0
+    return 1 if bad else 0
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 {
   "pipeline_status": "active",
   "completion_marker_allowed": false,
-  "production_approvals": 29,
+  "production_approvals": 36,
   "achieved_gates": [
     1,
     2,
@@ -29,7 +29,7 @@
       "title": "Corpus and provenance system",
       "status": "achieved",
       "evidence": [
-        "168 catalog records dimension-validated",
+        "184 catalog records dimension-validated",
         "246 provenance records validated with source and converted hashes"
       ]
     },
@@ -48,7 +48,7 @@
       "title": "Conversion and normalization",
       "status": "achieved_static",
       "evidence": [
-        "170 lossless NBT-to-Lost-Cities round trips",
+        "184 lossless NBT-to-Lost-Cities round trips",
         "11,924 converted Lost Cities parts are quarantined"
       ],
       "remaining": "Runtime Lost Cities codec load remains an in-game check."
@@ -78,7 +78,7 @@
       "title": "Road connector conversion",
       "status": "partial_static_contract",
       "evidence": [
-        "Four-way entrance and lot transforms pass for 84 structures",
+        "Four-way entrance and lot transforms pass for 85 structures",
         "Seven road-connection classes are cataloged and used by zoning",
         "84 NBT modules cover 12 topology families and seven coherent condition states",
         "All road edge bands, elevation contracts and traversable connector graphs pass static validation",
@@ -103,8 +103,8 @@
       "title": "Multiple settlement archetypes",
       "status": "wired_pending_lint_regeneration",
       "evidence": [
-        "7 archetypes statically validated",
-        "All 73 non-scattered candidates are zoned",
+        "8 archetypes statically validated",
+        "All 75 non-scattered candidates are zoned",
         "Approval compiler emits archetype-specific Lost Cities citystyles"
       ],
       "remaining": "An archetype activates once its first assets pass the automated production approval checks (lint 1-3 + family/corpus/conversion validators) \u2014 no runtime/human admission step."
@@ -139,7 +139,7 @@
         "One-button four-way cycles cover all 84 structures, 12 clean road topologies and 21 reusable modules",
         "Resumable pass/fail ledgers cover 189 review assets; these ledgers are historical and no longer gate approval",
         "Static QA-world integrity passes",
-        "Accepted production corpus currently contains 29 structures"
+        "Accepted production corpus currently contains 36 structures"
       ],
       "remaining": "Candidates enter the accepted production corpus automatically once structure_geometry_lint.py checks 1-3 and the family validators pass \u2014 no walkthrough review is required."
     },
@@ -149,7 +149,7 @@
       "status": "achieved",
       "evidence": [
         "85 structures checked against evidence-backed approval manifest",
-        "29 approvals; unapproved worldgen and Lost Cities selectors remain quarantined",
+        "36 approvals; unapproved worldgen and Lost Cities selectors remain quarantined",
         "Clean masters cannot enter production selectors"
       ]
     },

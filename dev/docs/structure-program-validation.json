@@ -1,6 +1,6 @@
 {
   "purpose": "Building-program and circulation validation for heavily rebuilt clean masters.",
-  "valid": true,
+  "valid": false,
   "structures": {
     "infinite_domain:motel_clean_master": {
       "structure_id": "infinite_domain:motel_clean_master",
@@ -630,14 +630,7 @@
         "missing": []
       },
       "vertical_access": {
-        "service_stair_rises_present": [
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ]
+        "service_stair_rises_present": []
       },
       "abandoned_survivor_ground_routes": {
         "targets": 29,
@@ -650,8 +643,10 @@
         "missing": []
       },
       "hostile_spawners": 4,
-      "valid": true,
-      "issues": [],
+      "valid": false,
+      "issues": [
+        "service stair does not span all six required rises: []"
+      ],
       "note": "Program validation checks dispatch, crew accommodation, the complete timber-production sequence, garage support, outside handling yards, catwalk access and declared routes through the abandoned derivative. It does not replace in-game inspection."
     },
     "infinite_domain:bombed_data_center_clean_master": {
@@ -2379,7 +2374,7 @@
       },
       "clinical_fixture_counts": {
         "bed_blocks": 108,
-        "brewing_stands": 10,
+        "brewing_stands": 0,
         "courtyard_water_blocks": 49,
         "courtyard_landscape_blocks": 159
       },
@@ -2406,8 +2401,10 @@
         }
       },
       "hostile_spawners": 5,
-      "valid": true,
-      "issues": [],
+      "valid": false,
+      "issues": [
+        "hospital has insufficient clinical/pharmacy fixtures: 0 brewing stands"
+      ],
       "note": "Program validation checks ambulance/public intake, ground clinical departments, three upper clinical floors, ward corridors, both stairs, courtyard/service connections, clinical fixture density and routes surviving the northeast collapse. Rendered and in-game hospital workflow review remain required."
     },
     "infinite_domain:ruined_police_precinct_clean_master": {

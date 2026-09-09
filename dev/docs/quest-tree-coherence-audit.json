@@ -3,14 +3,14 @@
   "progression_mode": "linear",
   "totals": {
     "chapters": 45,
-    "quests": 1267,
-    "dependencies": 1743,
-    "tasks": 11061,
-    "rewards": 625
+    "quests": 1268,
+    "dependencies": 1747,
+    "tasks": 11065,
+    "rewards": 618
   },
   "task_type_histogram": {
-    "item": 10786,
-    "checkmark": 108,
+    "item": 10788,
+    "checkmark": 110,
     "kill": 69,
     "structure": 51,
     "biome": 34,
@@ -18,18 +18,18 @@
     "advancement": 5
   },
   "reward_type_histogram": {
-    "item": 531,
+    "item": 524,
     "command": 48,
     "xp": 44,
     "custom": 2
   },
   "shape_histogram": {
-    "gear": 420,
-    "rsquare": 359,
-    "diamond": 161,
+    "gear": 419,
+    "rsquare": 361,
+    "diamond": 160,
     "circle": 102,
     "hexagon": 89,
-    "heart": 76,
+    "heart": 77,
     "octagon": 60
   },
   "cross_chapter_dependencies": [
@@ -52,12 +52,39 @@
       "direction": "same"
     },
     {
+      "from_quest": "5410000000000001",
+      "from_file": "era_04_the_electrical_grid",
+      "from_title": "Era 4: The Electrical Grid",
+      "to_quest": "5AB0550C00000001",
+      "to_file": "abyssal_recovery",
+      "to_title": "Western Continental Slope",
+      "direction": "same"
+    },
+    {
+      "from_quest": "5410000000000001",
+      "from_file": "era_04_the_electrical_grid",
+      "from_title": "Era 4: The Electrical Grid",
+      "to_quest": "5AB0550C00000004",
+      "to_file": "abyssal_recovery",
+      "to_title": "Eastern Continental Slope",
+      "direction": "same"
+    },
+    {
       "from_quest": "5310000000000001",
       "from_file": "era_03_petrochemical_civilization",
       "from_title": "Era 3: Petrochemical Civilization",
       "to_quest": "5E00000000000007",
       "to_file": "air_sea_global_logistics",
       "to_title": "Physics Assembly",
+      "direction": "same"
+    },
+    {
+      "from_quest": "5410000000000001",
+      "from_file": "era_04_the_electrical_grid",
+      "from_title": "Era 4: The Electrical Grid",
+      "to_quest": "5E00000000000020",
+      "to_file": "air_sea_global_logistics",
+      "to_title": "A Needle for the Buried City",
       "direction": "same"
     },
     {
@@ -156,7 +183,7 @@
       "from_title": "Era 4: The Electrical Grid",
       "to_quest": "6F10000000000001",
       "to_file": "create_big_cannons_doctrine",
-      "to_title": "A Foundry for Ordnance",
+      "to_title": "Establish the Cannon Foundry",
       "direction": "same"
     },
     {
@@ -165,7 +192,7 @@
       "from_title": "Era 5: Automated Industry",
       "to_quest": "6F1000000000000C",
       "to_file": "create_big_cannons_doctrine",
-      "to_title": "Powered Traverse",
+      "to_title": "Automate Traverse and Elevation",
       "direction": "same"
     },
     {
@@ -174,7 +201,7 @@
       "from_title": "Era 5: Automated Industry",
       "to_quest": "6F1000000000000E",
       "to_file": "create_big_cannons_doctrine",
-      "to_title": "Settlement Autocannon",
+      "to_title": "Commission the Autocannon Line",
       "direction": "same"
     },
     {
@@ -1397,12 +1424,8 @@
           "items": []
         },
         "7": {
-          "types": [
-            "item"
-          ],
-          "items": [
-            "createcybernetics:eyeupgrades_biomonitor"
-          ]
+          "types": [],
+          "items": []
         },
         "8": {
           "types": [
@@ -2488,18 +2511,6 @@
     ],
     "era2": [
       {
-        "type": "item",
-        "item": "ae2:chest",
-        "xp": null,
-        "command": ""
-      },
-      {
-        "type": "item",
-        "item": "ae2:item_storage_cell_1k",
-        "xp": null,
-        "command": ""
-      },
-      {
         "type": "xp",
         "item": null,
         "xp": 500,
@@ -2759,7 +2770,29 @@
         "item"
       ],
       "has_material_reward": true,
-      "dependents": 3
+      "dependents": 4
+    },
+    {
+      "quest": "6002100000000003",
+      "file": "another_lost_soul",
+      "era": null,
+      "title": "Claim the First Homestead",
+      "shape": "rsquare",
+      "optional": true,
+      "reward_types": [],
+      "has_material_reward": false,
+      "dependents": 1
+    },
+    {
+      "quest": "6002100000000004",
+      "file": "another_lost_soul",
+      "era": null,
+      "title": "Protection Is Not Chunk Loading",
+      "shape": "rsquare",
+      "optional": true,
+      "reward_types": [],
+      "has_material_reward": false,
+      "dependents": 0
     },
     {
       "quest": "6002100000000005",
@@ -2778,6 +2811,28 @@
       "era": null,
       "title": "Spawn Hub: Rules, Quests, and Public Space",
       "shape": "gear",
+      "optional": true,
+      "reward_types": [],
+      "has_material_reward": false,
+      "dependents": 1
+    },
+    {
+      "quest": "6002100000000007",
+      "file": "another_lost_soul",
+      "era": null,
+      "title": "Spawn Hub: Meet the Quartermaster",
+      "shape": "gear",
+      "optional": true,
+      "reward_types": [],
+      "has_material_reward": false,
+      "dependents": 1
+    },
+    {
+      "quest": "6002100000000008",
+      "file": "another_lost_soul",
+      "era": null,
+      "title": "Spawn Hub: Rebuild the Herds",
+      "shape": "heart",
       "optional": true,
       "reward_types": [],
       "has_material_reward": false,
@@ -2966,7 +3021,7 @@
       "quest": "6F10000000000004",
       "file": "create_big_cannons_doctrine",
       "era": null,
-      "title": "Cold-Bore Acceptance",
+      "title": "Inspect the Gun Assembly",
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -2977,7 +3032,7 @@
       "quest": "6F1000000000000A",
       "file": "create_big_cannons_doctrine",
       "era": null,
-      "title": "Magazine Isolation Drill",
+      "title": "Establish Misfire Procedure",
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -2988,7 +3043,7 @@
       "quest": "6F1000000000000B",
       "file": "create_big_cannons_doctrine",
       "era": null,
-      "title": "One-Charge Proof Range",
+      "title": "Prove the Firing Drill",
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -2999,7 +3054,7 @@
       "quest": "6F1000000000000F",
       "file": "create_big_cannons_doctrine",
       "era": null,
-      "title": "Emplacement Readiness Drill",
+      "title": "Artillery Battery Commissioned",
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -3237,13 +3292,13 @@
       "optional": false,
       "reward_types": [],
       "has_material_reward": false,
-      "dependents": 7
+      "dependents": 10
     },
     {
-      "quest": "6002100000000004",
+      "quest": "72F9F10C569BD362",
       "file": "era_04_the_electrical_grid",
       "era": 4,
-      "title": "Protection Is Not Chunk Loading",
+      "title": null,
       "shape": "gear",
       "optional": true,
       "reward_types": [],
@@ -3481,40 +3536,7 @@
       "optional": false,
       "reward_types": [],
       "has_material_reward": false,
-      "dependents": 15
-    },
-    {
-      "quest": "6002100000000003",
-      "file": "lets_get_started_shall_we",
-      "era": 0,
-      "title": "Claim the First Homestead",
-      "shape": "diamond",
-      "optional": true,
-      "reward_types": [],
-      "has_material_reward": false,
-      "dependents": 0
-    },
-    {
-      "quest": "6002100000000007",
-      "file": "lets_get_started_shall_we",
-      "era": 0,
-      "title": "Spawn Hub: Meet the Quartermaster",
-      "shape": "gear",
-      "optional": true,
-      "reward_types": [],
-      "has_material_reward": false,
-      "dependents": 0
-    },
-    {
-      "quest": "6002100000000008",
-      "file": "lets_get_started_shall_we",
-      "era": 0,
-      "title": "Spawn Hub: Rebuild the Herds",
-      "shape": "gear",
-      "optional": true,
-      "reward_types": [],
-      "has_material_reward": false,
-      "dependents": 0
+      "dependents": 12
     },
     {
       "quest": "6010000000000001",
@@ -4115,7 +4137,9 @@
       "id": "7AB0550C00000001",
       "group": "4D9B7E21A6C850F3",
       "order_index": 1,
-      "icon": null,
+      "icon": {
+        "id": "minecraft:heart_of_the_sea"
+      },
       "quest_count": 16,
       "era": null,
       "shapes": {
@@ -4131,8 +4155,7 @@
       "reward_quests": 14,
       "roots": [],
       "findings": {
-        "warning": 4,
-        "info": 1
+        "warning": 4
       }
     },
     {
@@ -4140,7 +4163,9 @@
       "id": "74C2D8A15E903BF6",
       "group": "4D9B7E21A6C850F3",
       "order_index": 0,
-      "icon": null,
+      "icon": {
+        "id": "aeronautics:aviators_goggles"
+      },
       "quest_count": 33,
       "era": null,
       "shapes": {
@@ -4148,7 +4173,7 @@
         "diamond": 19
       },
       "task_types": {
-        "item": 14,
+        "item": 15,
         "biome": 8,
         "structure": 7,
         "dimension": 4
@@ -4159,7 +4184,7 @@
         "5E00000000000001"
       ],
       "findings": {
-        "info": 4
+        "info": 3
       }
     },
     {
@@ -4167,26 +4192,29 @@
       "id": "2127F3E4D2A0546E",
       "group": "346E9B7B176D7846",
       "order_index": 0,
-      "icon": null,
-      "quest_count": 20,
+      "icon": {
+        "id": "minecraft:written_book"
+      },
+      "quest_count": 24,
       "era": null,
       "shapes": {
         "octagon": 2,
         "circle": 10,
-        "gear": 5,
-        "rsquare": 3
+        "rsquare": 5,
+        "gear": 6,
+        "heart": 1
       },
       "task_types": {
-        "checkmark": 19,
+        "checkmark": 23,
         "item": 1
       },
-      "checkmark_quests": 19,
+      "checkmark_quests": 23,
       "reward_quests": 10,
       "roots": [
         "7D194089522507AB"
       ],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -4194,7 +4222,9 @@
       "id": "68E1A7C4D9302B5F",
       "group": "569AB980347C1123",
       "order_index": 0,
-      "icon": null,
+      "icon": {
+        "id": "ae2:controller"
+      },
       "quest_count": 15,
       "era": null,
       "shapes": {
@@ -4202,14 +4232,14 @@
         "diamond": 1
       },
       "task_types": {
-        "item": 14,
+        "item": 15,
         "structure": 1
       },
       "checkmark_quests": 0,
       "reward_quests": 6,
       "roots": [],
       "findings": {
-        "info": 3
+        "info": 2
       }
     },
     {
@@ -4217,7 +4247,9 @@
       "id": "6B00D00000000001",
       "group": "3F00D00000000001",
       "order_index": 2,
-      "icon": null,
+      "icon": {
+        "id": "create_winery:bordeaux"
+      },
       "quest_count": 8,
       "era": null,
       "shapes": {
@@ -4230,7 +4262,7 @@
       "reward_quests": 4,
       "roots": [],
       "findings": {
-        "info": 6
+        "info": 5
       }
     },
     {
@@ -4238,7 +4270,9 @@
       "id": "1240CAEABAC9DC56",
       "group": "3F00D00000000001",
       "order_index": 1,
-      "icon": null,
+      "icon": {
+        "id": "kubejs:black_tea_cup"
+      },
       "quest_count": 9,
       "era": null,
       "shapes": {
@@ -4251,15 +4285,17 @@
       "reward_quests": 3,
       "roots": [],
       "findings": {
-        "info": 9
+        "info": 8
       }
     },
     {
       "file": "create_big_cannons_doctrine",
       "id": "6F50000000000002",
       "group": "4E65FAAC62D57D4A",
-      "order_index": 9,
-      "icon": "createbigcannons:cannon_mount",
+      "order_index": 8,
+      "icon": {
+        "id": "createbigcannons:bronze_cannon_barrel"
+      },
       "quest_count": 15,
       "era": null,
       "shapes": {
@@ -4274,15 +4310,17 @@
       "roots": [],
       "findings": {
         "warning": 4,
-        "info": 6
+        "info": 7
       }
     },
     {
       "file": "create_specialist_workshops",
       "id": "6F50000000000001",
       "group": "4E65FAAC62D57D4A",
-      "order_index": 8,
-      "icon": "compactgearbox:sequential_gearbox",
+      "order_index": 7,
+      "icon": {
+        "id": "create:mechanical_saw"
+      },
       "quest_count": 24,
       "era": null,
       "shapes": {
@@ -4306,7 +4344,9 @@
       "id": "381AB56C38F92B73",
       "group": "569AB980347C1123",
       "order_index": 1,
-      "icon": null,
+      "icon": {
+        "id": "createcybernetics:basecyberware_cybereyes"
+      },
       "quest_count": 20,
       "era": null,
       "shapes": {
@@ -4321,16 +4361,16 @@
       "checkmark_quests": 0,
       "reward_quests": 6,
       "roots": [],
-      "findings": {
-        "info": 1
-      }
+      "findings": {}
     },
     {
       "file": "darknet_draconic_convergence",
       "id": "381AB56C38F92B74",
       "group": "569AB980347C1123",
       "order_index": 2,
-      "icon": null,
+      "icon": {
+        "id": "cyberspace:darknet_block"
+      },
       "quest_count": 33,
       "era": null,
       "shapes": {
@@ -4351,7 +4391,7 @@
       "reward_quests": 30,
       "roots": [],
       "findings": {
-        "info": 22
+        "info": 21
       }
     },
     {
@@ -4359,7 +4399,9 @@
       "id": "7C0DE0C000000000",
       "group": "7C0DEC0FFEE00001",
       "order_index": 0,
-      "icon": "minecraft:chiseled_bookshelf",
+      "icon": {
+        "id": "minecraft:knowledge_book"
+      },
       "quest_count": 303,
       "era": null,
       "shapes": {
@@ -4384,7 +4426,9 @@
       "id": "051D98EED36CF87B",
       "group": "6F2A9C4D8E1B7305",
       "order_index": 0,
-      "icon": null,
+      "icon": {
+        "id": "minecraft:hay_block"
+      },
       "quest_count": 6,
       "era": null,
       "shapes": {
@@ -4397,7 +4441,7 @@
       "reward_quests": 6,
       "roots": [],
       "findings": {
-        "info": 8
+        "info": 7
       }
     },
     {
@@ -4405,7 +4449,9 @@
       "id": "1C7E40C69A25D8F5",
       "group": "4E65FAAC62D57D4A",
       "order_index": 3,
-      "icon": null,
+      "icon": {
+        "id": "createbigcannons:gas_mask"
+      },
       "quest_count": 23,
       "era": null,
       "shapes": {
@@ -4425,7 +4471,7 @@
       "reward_quests": 11,
       "roots": [],
       "findings": {
-        "info": 3,
+        "info": 2,
         "warning": 3
       }
     },
@@ -4434,7 +4480,9 @@
       "id": "5A1C0E7D93B246F8",
       "group": "346E9B7B176D7846",
       "order_index": 2,
-      "icon": null,
+      "icon": {
+        "id": "create:andesite_alloy"
+      },
       "quest_count": 67,
       "era": 1,
       "shapes": {
@@ -4453,7 +4501,7 @@
       "reward_quests": 30,
       "roots": [],
       "findings": {
-        "info": 13
+        "info": 12
       }
     },
     {
@@ -4461,7 +4509,9 @@
       "id": "37550227CA365A64",
       "group": "346E9B7B176D7846",
       "order_index": 3,
-      "icon": null,
+      "icon": {
+        "id": "tfmg:steel_ingot"
+      },
       "quest_count": 42,
       "era": 2,
       "shapes": {
@@ -4477,10 +4527,10 @@
         "structure": 1
       },
       "checkmark_quests": 2,
-      "reward_quests": 24,
+      "reward_quests": 23,
       "roots": [],
       "findings": {
-        "info": 9,
+        "info": 8,
         "warning": 1
       }
     },
@@ -4489,7 +4539,9 @@
       "id": "0C8D53A7E1264BF9",
       "group": "346E9B7B176D7846",
       "order_index": 4,
-      "icon": null,
+      "icon": {
+        "id": "petrochem:distillation_controller"
+      },
       "quest_count": 53,
       "era": 3,
       "shapes": {
@@ -4507,7 +4559,7 @@
       "reward_quests": 30,
       "roots": [],
       "findings": {
-        "info": 20,
+        "info": 19,
         "warning": 3
       }
     },
@@ -4516,7 +4568,9 @@
       "id": "2EE181FAE3A636DA",
       "group": "346E9B7B176D7846",
       "order_index": 5,
-      "icon": null,
+      "icon": {
+        "id": "powergrid:integrated_circuit"
+      },
       "quest_count": 43,
       "era": 4,
       "shapes": {
@@ -4535,8 +4589,8 @@
       "reward_quests": 23,
       "roots": [],
       "findings": {
-        "info": 9,
-        "warning": 3
+        "info": 8,
+        "warning": 4
       }
     },
     {
@@ -4544,7 +4598,9 @@
       "id": "37AF8051C9D264BE",
       "group": "346E9B7B176D7846",
       "order_index": 6,
-      "icon": null,
+      "icon": {
+        "id": "oritech:machine_core_4"
+      },
       "quest_count": 42,
       "era": 5,
       "shapes": {
@@ -4562,7 +4618,7 @@
       "reward_quests": 24,
       "roots": [],
       "findings": {
-        "info": 10
+        "info": 9
       }
     },
     {
@@ -4570,7 +4626,9 @@
       "id": "0FD581D87A58E08D",
       "group": "346E9B7B176D7846",
       "order_index": 7,
-      "icon": null,
+      "icon": {
+        "id": "create_new_age:reactor_rod"
+      },
       "quest_count": 42,
       "era": 6,
       "shapes": {
@@ -4589,7 +4647,7 @@
       "reward_quests": 23,
       "roots": [],
       "findings": {
-        "info": 11,
+        "info": 10,
         "warning": 1
       }
     },
@@ -4598,7 +4656,9 @@
       "id": "79D40B1DF769CB1A",
       "group": "346E9B7B176D7846",
       "order_index": 8,
-      "icon": null,
+      "icon": {
+        "id": "stellaris:rocket"
+      },
       "quest_count": 41,
       "era": 7,
       "shapes": {
@@ -4618,7 +4678,7 @@
       "reward_quests": 22,
       "roots": [],
       "findings": {
-        "info": 9,
+        "info": 8,
         "warning": 3
       }
     },
@@ -4627,7 +4687,9 @@
       "id": "3A128F94DD7C5061",
       "group": "346E9B7B176D7846",
       "order_index": 9,
-      "icon": null,
+      "icon": {
+        "id": "kubejs:infinite_domain_core"
+      },
       "quest_count": 41,
       "era": 8,
       "shapes": {
@@ -4646,7 +4708,7 @@
       "reward_quests": 23,
       "roots": [],
       "findings": {
-        "info": 15,
+        "info": 14,
         "warning": 6
       }
     },
@@ -4655,7 +4717,9 @@
       "id": "2034B9BBF53C750D",
       "group": "3F00D00000000001",
       "order_index": 0,
-      "icon": null,
+      "icon": {
+        "id": "minecraft:bread"
+      },
       "quest_count": 24,
       "era": null,
       "shapes": {
@@ -4668,15 +4732,17 @@
       "reward_quests": 24,
       "roots": [],
       "findings": {
-        "info": 9
+        "info": 8
       }
     },
     {
       "file": "graveyard_gateway_containment",
       "id": "6F50000000000003",
       "group": "4E65FAAC62D57D4A",
-      "order_index": 10,
-      "icon": "gateway_of_doom:portal_ward_3",
+      "order_index": 9,
+      "icon": {
+        "id": "graveyard:blackstone_gravestone"
+      },
       "quest_count": 15,
       "era": null,
       "shapes": {
@@ -4704,7 +4770,9 @@
       "id": "6C00D00000000001",
       "group": "4E65FAAC62D57D4A",
       "order_index": 6,
-      "icon": "powergrid_batteries:small_battery",
+      "icon": {
+        "id": "create:item_vault"
+      },
       "quest_count": 5,
       "era": null,
       "shapes": {
@@ -4725,27 +4793,29 @@
       "id": "1060266057D3D466",
       "group": "346E9B7B176D7846",
       "order_index": 1,
-      "icon": null,
-      "quest_count": 35,
+      "icon": {
+        "id": "minecraft:campfire"
+      },
+      "quest_count": 32,
       "era": 0,
       "shapes": {
         "octagon": 2,
         "circle": 1,
         "heart": 8,
         "hexagon": 9,
-        "diamond": 9,
-        "gear": 6
+        "diamond": 8,
+        "gear": 4
       },
       "task_types": {
-        "checkmark": 5,
+        "checkmark": 2,
         "kill": 1,
         "item": 34
       },
-      "checkmark_quests": 5,
+      "checkmark_quests": 2,
       "reward_quests": 17,
       "roots": [],
       "findings": {
-        "info": 8
+        "info": 7
       }
     },
     {
@@ -4753,7 +4823,9 @@
       "id": "7000000000000000",
       "group": "7ADA55C0FFEE0001",
       "order_index": 0,
-      "icon": null,
+      "icon": {
+        "id": "minecraft:crafting_table"
+      },
       "quest_count": 6,
       "era": null,
       "shapes": {
@@ -4765,10 +4837,10 @@
         "item": 4
       },
       "checkmark_quests": 1,
-      "reward_quests": 5,
+      "reward_quests": 1,
       "roots": [],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -4776,7 +4848,9 @@
       "id": "7100000000000000",
       "group": "7ADA55C0FFEE0001",
       "order_index": 1,
-      "icon": null,
+      "icon": {
+        "id": "create:cogwheel"
+      },
       "quest_count": 6,
       "era": null,
       "shapes": {
@@ -4791,7 +4865,7 @@
       "reward_quests": 1,
       "roots": [],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -4799,7 +4873,9 @@
       "id": "7200000000000000",
       "group": "7ADA55C0FFEE0001",
       "order_index": 2,
-      "icon": null,
+      "icon": {
+        "id": "tfmg:steel_block"
+      },
       "quest_count": 6,
       "era": null,
       "shapes": {
@@ -4814,7 +4890,7 @@
       "reward_quests": 1,
       "roots": [],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -4822,7 +4898,9 @@
       "id": "7300000000000000",
       "group": "7ADA55C0FFEE0001",
       "order_index": 3,
-      "icon": null,
+      "icon": {
+        "id": "tfmg:plastic_block"
+      },
       "quest_count": 6,
       "era": null,
       "shapes": {
@@ -4837,7 +4915,7 @@
       "reward_quests": 1,
       "roots": [],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -4845,7 +4923,9 @@
       "id": "7400000000000000",
       "group": "7ADA55C0FFEE0001",
       "order_index": 4,
-      "icon": null,
+      "icon": {
+        "id": "minecraft:redstone_lamp"
+      },
       "quest_count": 6,
       "era": null,
       "shapes": {
@@ -4860,7 +4940,7 @@
       "reward_quests": 1,
       "roots": [],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -4868,7 +4948,9 @@
       "id": "7500000000000000",
       "group": "7ADA55C0FFEE0001",
       "order_index": 5,
-      "icon": null,
+      "icon": {
+        "id": "create:brass_casing"
+      },
       "quest_count": 6,
       "era": null,
       "shapes": {
@@ -4883,7 +4965,7 @@
       "reward_quests": 1,
       "roots": [],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -4891,7 +4973,9 @@
       "id": "7600000000000000",
       "group": "7ADA55C0FFEE0001",
       "order_index": 6,
-      "icon": null,
+      "icon": {
+        "id": "createnuclear:reactor_controller"
+      },
       "quest_count": 6,
       "era": null,
       "shapes": {
@@ -4906,7 +4990,7 @@
       "reward_quests": 1,
       "roots": [],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -4914,7 +4998,9 @@
       "id": "7700000000000000",
       "group": "7ADA55C0FFEE0001",
       "order_index": 7,
-      "icon": null,
+      "icon": {
+        "id": "stellaris:rocket_engine"
+      },
       "quest_count": 6,
       "era": null,
       "shapes": {
@@ -4929,7 +5015,7 @@
       "reward_quests": 1,
       "roots": [],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -4937,7 +5023,9 @@
       "id": "7800000000000000",
       "group": "7ADA55C0FFEE0001",
       "order_index": 8,
-      "icon": null,
+      "icon": {
+        "id": "minecraft:beacon"
+      },
       "quest_count": 6,
       "era": null,
       "shapes": {
@@ -4952,7 +5040,7 @@
       "reward_quests": 1,
       "roots": [],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -4960,7 +5048,9 @@
       "id": "5F0A5E0000000003",
       "group": "5F0A5E0000000001",
       "order_index": 1,
-      "icon": null,
+      "icon": {
+        "id": "mutantmonsters:chemical_x"
+      },
       "quest_count": 26,
       "era": null,
       "shapes": {
@@ -4977,7 +5067,7 @@
         "5F20000000000001"
       ],
       "findings": {
-        "info": 3
+        "info": 2
       }
     },
     {
@@ -4985,7 +5075,9 @@
       "id": "4F574E0000000002",
       "group": "4F574E0000000001",
       "order_index": 0,
-      "icon": null,
+      "icon": {
+        "id": "ancientcompass:ancient_compass"
+      },
       "quest_count": 24,
       "era": null,
       "shapes": {
@@ -5004,7 +5096,7 @@
         "4F57000000000000"
       ],
       "findings": {
-        "info": 6,
+        "info": 5,
         "warning": 11
       }
     },
@@ -5013,7 +5105,9 @@
       "id": "1C7E40C69A25D8F6",
       "group": "4E65FAAC62D57D4A",
       "order_index": 4,
-      "icon": null,
+      "icon": {
+        "id": "create:mechanical_crafter"
+      },
       "quest_count": 22,
       "era": null,
       "shapes": {
@@ -5033,7 +5127,7 @@
         "5D30000000000001"
       ],
       "findings": {
-        "info": 8,
+        "info": 7,
         "warning": 7
       }
     },
@@ -5041,8 +5135,10 @@
       "file": "powered_field_engineering",
       "id": "6F50000000000005",
       "group": "4E65FAAC62D57D4A",
-      "order_index": 12,
-      "icon": "mininggadgets:mininggadget",
+      "order_index": 11,
+      "icon": {
+        "id": "create:portable_storage_interface"
+      },
       "quest_count": 15,
       "era": null,
       "shapes": {
@@ -5065,7 +5161,9 @@
       "id": "2DFAD86142B7D28D",
       "group": "4E65FAAC62D57D4A",
       "order_index": 1,
-      "icon": null,
+      "icon": {
+        "id": "minecraft:shield"
+      },
       "quest_count": 25,
       "era": null,
       "shapes": {
@@ -5082,16 +5180,16 @@
       "roots": [
         "5D00000000000001"
       ],
-      "findings": {
-        "info": 1
-      }
+      "findings": {}
     },
     {
       "file": "spawn_exchange",
       "id": "6CFF000000000001",
       "group": "6F2A9C4D8E1B7305",
       "order_index": 1,
-      "icon": null,
+      "icon": {
+        "id": "numismatics:spur"
+      },
       "quest_count": 9,
       "era": null,
       "shapes": {
@@ -5104,7 +5202,7 @@
       "reward_quests": 0,
       "roots": [],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -5112,7 +5210,9 @@
       "id": "7C50000000000001",
       "group": "4E65FAAC62D57D4A",
       "order_index": 5,
-      "icon": null,
+      "icon": {
+        "id": "infinite_domain_space:emergency_helmet"
+      },
       "quest_count": 37,
       "era": null,
       "shapes": {
@@ -5125,7 +5225,7 @@
       "reward_quests": 0,
       "roots": [],
       "findings": {
-        "info": 3,
+        "info": 2,
         "warning": 4
       }
     },
@@ -5133,8 +5233,10 @@
       "file": "supplementaries_civic_utility",
       "id": "6F50000000000004",
       "group": "4E65FAAC62D57D4A",
-      "order_index": 11,
-      "icon": "supplementaries:relayer",
+      "order_index": 10,
+      "icon": {
+        "id": "supplementaries:notice_board"
+      },
       "quest_count": 14,
       "era": null,
       "shapes": {
@@ -5157,7 +5259,9 @@
       "id": "1B7E40C69A25D8F3",
       "group": "4E65FAAC62D57D4A",
       "order_index": 0,
-      "icon": null,
+      "icon": {
+        "id": "minecraft:golden_apple"
+      },
       "quest_count": 12,
       "era": null,
       "shapes": {
@@ -5172,7 +5276,7 @@
       "reward_quests": 7,
       "roots": [],
       "findings": {
-        "info": 2
+        "info": 1
       }
     },
     {
@@ -5180,7 +5284,9 @@
       "id": "5F0A5E0000000002",
       "group": "5F0A5E0000000001",
       "order_index": 0,
-      "icon": null,
+      "icon": {
+        "id": "spore:acid_vial"
+      },
       "quest_count": 38,
       "era": null,
       "shapes": {
@@ -5198,7 +5304,7 @@
       ],
       "findings": {
         "warning": 3,
-        "info": 12
+        "info": 11
       }
     },
     {
@@ -5206,7 +5312,9 @@
       "id": "1C7E40C69A25D8F4",
       "group": "4E65FAAC62D57D4A",
       "order_index": 2,
-      "icon": null,
+      "icon": {
+        "id": "minecraft:zombie_head"
+      },
       "quest_count": 16,
       "era": null,
       "shapes": {
@@ -5217,63 +5325,61 @@
         "rsquare": 3
       },
       "task_types": {
-        "item": 22
+        "item": 22,
+        "checkmark": 1
       },
       "checkmark_quests": 0,
       "reward_quests": 7,
       "roots": [],
-      "findings": {
-        "info": 1
-      }
+      "findings": {}
     }
   ],
   "finding_counts": {
     "by_severity": {
-      "warning": 72,
-      "info": 778
+      "warning": 73,
+      "info": 741
     },
     "by_category": {
       "info/acquisition-unverified": 602,
       "warning/checkmark-outside-prologue": 48,
       "info/recipe-coverage-gap": 39,
-      "info/chapter-icon-missing": 38,
       "info/project-item-unverified": 34,
       "info/checkmark-outside-prologue": 22,
+      "warning/gate-item-structure-loot": 22,
       "info/backward-dependency-line": 21,
-      "warning/gate-item-structure-loot": 19,
-      "info/weak-authentication": 14,
+      "info/weak-authentication": 15,
       "info/non-legend-shape": 7,
-      "warning/third-party-loot-gate": 3,
       "warning/era-regression-dependency": 2,
-      "info/unresolved-entity-task": 1
+      "info/unresolved-entity-task": 1,
+      "warning/missing-title": 1
     }
   },
   "findings": [
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "create_big_cannons_doctrine: 6F10000000000004 'Cold-Bore Acceptance' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=1)",
+      "message": "create_big_cannons_doctrine: 6F10000000000004 'Inspect the Gun Assembly' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=1)",
       "quest": "6F10000000000004",
       "note": "self-certified checkmark outside prologue"
     },
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "create_big_cannons_doctrine: 6F1000000000000A 'Magazine Isolation Drill' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=1)",
+      "message": "create_big_cannons_doctrine: 6F1000000000000A 'Establish Misfire Procedure' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=1)",
       "quest": "6F1000000000000A",
       "note": "self-certified checkmark outside prologue"
     },
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "create_big_cannons_doctrine: 6F1000000000000B 'One-Charge Proof Range' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=3)",
+      "message": "create_big_cannons_doctrine: 6F1000000000000B 'Prove the Firing Drill' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=3)",
       "quest": "6F1000000000000B",
       "note": "self-certified checkmark outside prologue"
     },
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "create_big_cannons_doctrine: 6F1000000000000F 'Emplacement Readiness Drill' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
+      "message": "create_big_cannons_doctrine: 6F1000000000000F 'Artillery Battery Commissioned' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
       "quest": "6F1000000000000F",
       "note": "self-certified checkmark outside prologue"
     },
@@ -5378,8 +5484,8 @@
     {
       "severity": "warning",
       "category": "checkmark-outside-prologue",
-      "message": "era_04_the_electrical_grid: 6002100000000004 'Protection Is Not Chunk Loading' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
-      "quest": "6002100000000004",
+      "message": "era_04_the_electrical_grid: 72F9F10C569BD362 'None' (self-certified checkmark outside prologue; shape=gear, optional=True, dependents=0)",
+      "quest": "72F9F10C569BD362",
       "note": "self-certified checkmark outside prologue"
     },
     {
@@ -5649,7 +5755,7 @@
     {
       "severity": "warning",
       "category": "gate-item-structure-loot",
-      "message": "old_world_investigation: 4F57000000000012 'Food for a Billion \u2014 First Evidence' gates 1 quest(s) on kubejs:vcf_culture_service_manifest; craftless but a guaranteed drop in kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\ows_001_vcf_neighborhood_culture_service_depot.json; kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\vcf\\ows_001_culture_service_manifest.json (verify explorer-map handoff and single-chest exhaustion risk)",
+      "message": "old_world_investigation: 4F57000000000012 'Food for a Billion \u2014 First Evidence' gates 1 quest(s) on kubejs:vcf_culture_service_manifest; craftless but a guaranteed drop in kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\ows_001_vcf_neighborhood_culture_service_depot.json (verify explorer-map handoff and single-chest exhaustion risk)",
       "quest": "4F57000000000012",
       "item": "kubejs:vcf_culture_service_manifest"
     },
@@ -5663,14 +5769,14 @@
     {
       "severity": "warning",
       "category": "gate-item-structure-loot",
-      "message": "old_world_investigation: 4F57000000000014 'Authorized Emergency Abundance' gates 1 quest(s) on kubejs:emergency_grow_authorization; craftless but a guaranteed drop in kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\ows_002_vcf_emergency_community_grow_hall.json; kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\vcf\\ows_002_emergency_grow_authorization.json (verify explorer-map handoff and single-chest exhaustion risk)",
+      "message": "old_world_investigation: 4F57000000000014 'Authorized Emergency Abundance' gates 1 quest(s) on kubejs:emergency_grow_authorization; craftless but a guaranteed drop in kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\ows_002_vcf_emergency_community_grow_hall.json (verify explorer-map handoff and single-chest exhaustion risk)",
       "quest": "4F57000000000014",
       "item": "kubejs:emergency_grow_authorization"
     },
     {
       "severity": "warning",
       "category": "gate-item-structure-loot",
-      "message": "old_world_investigation: 4F57000000000016 'The Crop Was Already Everywhere' gates 1 quest(s) on kubejs:vcf_culture_batch_record; craftless but a guaranteed drop in kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\ows_003_vcf_cold_chain_culture_nursery.json; kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\vcf\\ows_003_vcf_culture_batch_record.json (verify explorer-map handoff and single-chest exhaustion risk)",
+      "message": "old_world_investigation: 4F57000000000016 'The Crop Was Already Everywhere' gates 1 quest(s) on kubejs:vcf_culture_batch_record; craftless but a guaranteed drop in kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\ows_003_vcf_cold_chain_culture_nursery.json (verify explorer-map handoff and single-chest exhaustion risk)",
       "quest": "4F57000000000016",
       "item": "kubejs:vcf_culture_batch_record"
     },
@@ -5698,7 +5804,7 @@
     {
       "severity": "warning",
       "category": "gate-item-structure-loot",
-      "message": "old_world_investigation: 4F57000000000031 'FOOD FOR A BILLION' gates 1 quest(s) on kubejs:evercrop_cultivation_handbook; craftless but a guaranteed drop in kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\ows_004_vcf_mycological_vertical_farm_tower.json; kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\vcf\\ows_004_evercrop_cultivation_handbook.json (verify explorer-map handoff and single-chest exhaustion risk)",
+      "message": "old_world_investigation: 4F57000000000031 'FOOD FOR A BILLION' gates 1 quest(s) on kubejs:evercrop_cultivation_handbook; craftless but a guaranteed drop in kubejs\\data\\infinite_domain\\loot_table\\chests\\old_world\\ows_004_vcf_mycological_vertical_farm_tower.json (verify explorer-map handoff and single-chest exhaustion risk)",
       "quest": "4F57000000000031",
       "item": "kubejs:evercrop_cultivation_handbook"
     },
@@ -5732,24 +5838,30 @@
     },
     {
       "severity": "warning",
-      "category": "third-party-loot-gate",
-      "message": "the_rot_spore_threat_dossier: 5F10000000000008 'The Rot Has Inventory' gates 1 quest(s) on spore:mutated_fiber; the only repo-visible source is a weighted table (kubejs\\data\\spore\\loot_table\\chests\\organ_chest.json) \u2014 verify native mob/loot drops in the installed spore jar",
+      "category": "gate-item-structure-loot",
+      "message": "the_rot_spore_threat_dossier: 5F10000000000008 'The Rot Has Inventory' gates 1 quest(s) on spore:mutated_fiber; craftless but a guaranteed drop in kubejs\\data\\spore\\loot_table\\chests\\organ_chest.json (verify explorer-map handoff and single-chest exhaustion risk)",
       "quest": "5F10000000000008",
       "item": "spore:mutated_fiber"
     },
     {
       "severity": "warning",
-      "category": "third-party-loot-gate",
-      "message": "the_rot_spore_threat_dossier: 5F10000000000010 'Specialized Anatomy' gates 1 quest(s) on spore:alveolic_sack; the only repo-visible source is a weighted table (kubejs\\data\\spore\\loot_table\\chests\\organ_chest.json) \u2014 verify native mob/loot drops in the installed spore jar",
+      "category": "gate-item-structure-loot",
+      "message": "the_rot_spore_threat_dossier: 5F10000000000010 'Specialized Anatomy' gates 1 quest(s) on spore:alveolic_sack; craftless but a guaranteed drop in kubejs\\data\\spore\\loot_table\\chests\\organ_chest.json (verify explorer-map handoff and single-chest exhaustion risk)",
       "quest": "5F10000000000010",
       "item": "spore:alveolic_sack"
     },
     {
       "severity": "warning",
-      "category": "third-party-loot-gate",
-      "message": "the_rot_spore_threat_dossier: 5F1000000000001C 'Organoid Anatomy' gates 1 quest(s) on spore:cerebrum; the only repo-visible source is a weighted table (kubejs\\data\\spore\\loot_table\\chests\\organ_chest.json) \u2014 verify native mob/loot drops in the installed spore jar",
+      "category": "gate-item-structure-loot",
+      "message": "the_rot_spore_threat_dossier: 5F1000000000001C 'Organoid Anatomy' gates 1 quest(s) on spore:cerebrum; craftless but a guaranteed drop in kubejs\\data\\spore\\loot_table\\chests\\organ_chest.json (verify explorer-map handoff and single-chest exhaustion risk)",
       "quest": "5F1000000000001C",
       "item": "spore:cerebrum"
+    },
+    {
+      "severity": "warning",
+      "category": "missing-title",
+      "message": "era_04_the_electrical_grid: 72F9F10C569BD362 has no localized title",
+      "quest": "72F9F10C569BD362"
     },
     {
       "severity": "info",
@@ -10093,234 +10205,6 @@
     },
     {
       "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "abyssal_recovery has no chapter icon",
-      "file": "abyssal_recovery"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "air_sea_global_logistics has no chapter icon",
-      "file": "air_sea_global_logistics"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "another_lost_soul has no chapter icon",
-      "file": "another_lost_soul"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "applied_energistics_recovery has no chapter icon",
-      "file": "applied_energistics_recovery"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "brewery_and_winery has no chapter icon",
-      "file": "brewery_and_winery"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "coffee_tea_economy has no chapter icon",
-      "file": "coffee_tea_economy"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "cyberware_ascension has no chapter icon",
-      "file": "cyberware_ascension"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "darknet_draconic_convergence has no chapter icon",
-      "file": "darknet_draconic_convergence"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "early_livestock_exchange has no chapter icon",
-      "file": "early_livestock_exchange"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "environmental_survival_engineering has no chapter icon",
-      "file": "environmental_survival_engineering"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "era_01_mechanical_reconstruction has no chapter icon",
-      "file": "era_01_mechanical_reconstruction"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "era_02_heavy_industry has no chapter icon",
-      "file": "era_02_heavy_industry"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "era_03_petrochemical_civilization has no chapter icon",
-      "file": "era_03_petrochemical_civilization"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "era_04_the_electrical_grid has no chapter icon",
-      "file": "era_04_the_electrical_grid"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "era_05_automated_industry has no chapter icon",
-      "file": "era_05_automated_industry"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "era_06_high_energy_and_nuclear_engineering has no chapter icon",
-      "file": "era_06_high_energy_and_nuclear_engineering"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "era_07_orbital_industry has no chapter icon",
-      "file": "era_07_orbital_industry"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "era_08_infinite_domain has no chapter icon",
-      "file": "era_08_infinite_domain"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "feeding_the_domain has no chapter icon",
-      "file": "feeding_the_domain"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "lets_get_started_shall_we has no chapter icon",
-      "file": "lets_get_started_shall_we"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "mastery_era_00 has no chapter icon",
-      "file": "mastery_era_00"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "mastery_era_01 has no chapter icon",
-      "file": "mastery_era_01"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "mastery_era_02 has no chapter icon",
-      "file": "mastery_era_02"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "mastery_era_03 has no chapter icon",
-      "file": "mastery_era_03"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "mastery_era_04 has no chapter icon",
-      "file": "mastery_era_04"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "mastery_era_05 has no chapter icon",
-      "file": "mastery_era_05"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "mastery_era_06 has no chapter icon",
-      "file": "mastery_era_06"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "mastery_era_07 has no chapter icon",
-      "file": "mastery_era_07"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "mastery_era_08 has no chapter icon",
-      "file": "mastery_era_08"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "mutant_and_mekanite_threat_dossier has no chapter icon",
-      "file": "mutant_and_mekanite_threat_dossier"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "old_world_investigation has no chapter icon",
-      "file": "old_world_investigation"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "parallel_factory_paths has no chapter icon",
-      "file": "parallel_factory_paths"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "scavenging_defense_containment has no chapter icon",
-      "file": "scavenging_defense_containment"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "spawn_exchange has no chapter icon",
-      "file": "spawn_exchange"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "stellaris_space_industrialization has no chapter icon",
-      "file": "stellaris_space_industrialization"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "sustenance_medicine_habitation has no chapter icon",
-      "file": "sustenance_medicine_habitation"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "the_rot_spore_threat_dossier has no chapter icon",
-      "file": "the_rot_spore_threat_dossier"
-    },
-    {
-      "severity": "info",
-      "category": "chapter-icon-missing",
-      "message": "undead_settlement_automation has no chapter icon",
-      "file": "undead_settlement_automation"
-    },
-    {
-      "severity": "info",
       "category": "checkmark-outside-prologue",
       "message": "domain_compendium: 7C0DE0C000000001 'Open the Compendium' (chapter orientation gate; shape=octagon, optional=True, dependents=301)",
       "quest": "7C0DE0C000000001",
@@ -10364,7 +10248,7 @@
     {
       "severity": "info",
       "category": "checkmark-outside-prologue",
-      "message": "era_04_the_electrical_grid: 5410000000000001 'Era 4: The Electrical Grid' (chapter orientation gate; shape=octagon, optional=False, dependents=7)",
+      "message": "era_04_the_electrical_grid: 5410000000000001 'Era 4: The Electrical Grid' (chapter orientation gate; shape=octagon, optional=False, dependents=10)",
       "quest": "5410000000000001",
       "note": "chapter orientation gate"
     },
@@ -10476,7 +10360,7 @@
     {
       "severity": "info",
       "category": "non-legend-shape",
-      "message": "another_lost_soul: 10/20 quests use a non-legend shape ('octagon' etc.) \u2014 the six-shape legend (hexagon/heart/diamond/gear/rsquare/octagon) is not applied here",
+      "message": "another_lost_soul: 10/24 quests use a non-legend shape ('octagon' etc.) \u2014 the six-shape legend (hexagon/heart/diamond/gear/rsquare/octagon) is not applied here",
       "file": "another_lost_soul"
     },
     {
@@ -10494,7 +10378,7 @@
     {
       "severity": "info",
       "category": "non-legend-shape",
-      "message": "lets_get_started_shall_we: 1/35 quests use a non-legend shape ('octagon' etc.) \u2014 the six-shape legend (hexagon/heart/diamond/gear/rsquare/octagon) is not applied here",
+      "message": "lets_get_started_shall_we: 1/32 quests use a non-legend shape ('octagon' etc.) \u2014 the six-shape legend (hexagon/heart/diamond/gear/rsquare/octagon) is not applied here",
       "file": "lets_get_started_shall_we"
     },
     {
@@ -11048,6 +10932,12 @@
     {
       "severity": "info",
       "category": "weak-authentication",
+      "message": "create_big_cannons_doctrine: 6F1000000000000F 'Artillery Battery Commissioned' implies an operation but is proven by a checkmark",
+      "quest": "6F1000000000000F"
+    },
+    {
+      "severity": "info",
+      "category": "weak-authentication",
       "message": "environmental_survival_engineering: 5D2000000000000B 'Commission the Mine Gallery' implies an operation but is proven by a checkmark",
       "quest": "5D2000000000000B"
     },
@@ -11128,7 +11018,8 @@
       "optional": false,
       "title": "Western Continental Slope",
       "dependencies": [
-        "5E00000000000006"
+        "5E00000000000006",
+        "5410000000000001"
       ],
       "dependents": [
         "5AB0550C00000002"
@@ -11240,7 +11131,8 @@
       "optional": false,
       "title": "Eastern Continental Slope",
       "dependencies": [
-        "5E00000000000006"
+        "5E00000000000006",
+        "5410000000000001"
       ],
       "dependents": [
         "5AB0550C00000005"
@@ -11927,7 +11819,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era4_supply_bag",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -11986,6 +11878,15 @@
           "type": "item",
           "item": "create_submarine:ballast_tank",
           "count": 4,
+          "entity": null,
+          "structure": null,
+          "biome": null,
+          "dimension": null
+        },
+        {
+          "type": "item",
+          "item": "create_submarine:submarine_propeller",
+          "count": null,
           "entity": null,
           "structure": null,
           "biome": null,
@@ -12062,7 +11963,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era4_supply_bag",
+          "item": "kubejs:era3_supply_bag",
           "count": 1,
           "xp": null,
           "command": null
@@ -12660,7 +12561,7 @@
           "item": null,
           "count": null,
           "xp": null,
-          "command": "execute in minecraft:the_nether run structure_map minecraft:stronghold 2"
+          "command": "execute in minecraft:the_nether run structure_map infinite_domain:nether/lyran_research 2"
         }
       ]
     },
@@ -12812,7 +12713,8 @@
       "optional": false,
       "title": "A Needle for the Buried City",
       "dependencies": [
-        "5E0000000000000C"
+        "5E0000000000000C",
+        "5410000000000001"
       ],
       "dependents": [
         "5E00000000000021"
@@ -12943,7 +12845,7 @@
           "item": null,
           "count": null,
           "entity": null,
-          "structure": "minecraft:stronghold",
+          "structure": "infinite_domain:nether/lyran_research",
           "biome": null,
           "dimension": null
         }
@@ -13117,6 +13019,7 @@
         "6002100000000001"
       ],
       "dependents": [
+        "6002100000000003",
         "6002100000000009",
         "6002100000000005",
         "6F01000000000020"
@@ -13143,6 +13046,62 @@
           "command": null
         }
       ]
+    },
+    "6002100000000003": {
+      "file": "another_lost_soul",
+      "era": null,
+      "shape": "rsquare",
+      "x": -11.0,
+      "y": 8.0,
+      "optional": true,
+      "title": "Claim the First Homestead",
+      "dependencies": [
+        "6002100000000002"
+      ],
+      "dependents": [
+        "6002100000000004"
+      ],
+      "dependency_requirement": null,
+      "min_required_dependencies": null,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "item": null,
+          "count": null,
+          "entity": null,
+          "structure": null,
+          "biome": null,
+          "dimension": null
+        }
+      ],
+      "rewards": []
+    },
+    "6002100000000004": {
+      "file": "another_lost_soul",
+      "era": null,
+      "shape": "rsquare",
+      "x": -11.0,
+      "y": 10.0,
+      "optional": true,
+      "title": "Protection Is Not Chunk Loading",
+      "dependencies": [
+        "6002100000000003"
+      ],
+      "dependents": [],
+      "dependency_requirement": null,
+      "min_required_dependencies": null,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "item": null,
+          "count": null,
+          "entity": null,
+          "structure": null,
+          "biome": null,
+          "dimension": null
+        }
+      ],
+      "rewards": []
     },
     "6002100000000009": {
       "file": "another_lost_soul",
@@ -13212,6 +13171,64 @@
       "title": "Spawn Hub: Rules, Quests, and Public Space",
       "dependencies": [
         "6002100000000005"
+      ],
+      "dependents": [
+        "6002100000000007"
+      ],
+      "dependency_requirement": null,
+      "min_required_dependencies": null,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "item": null,
+          "count": null,
+          "entity": null,
+          "structure": null,
+          "biome": null,
+          "dimension": null
+        }
+      ],
+      "rewards": []
+    },
+    "6002100000000007": {
+      "file": "another_lost_soul",
+      "era": null,
+      "shape": "gear",
+      "x": 5.0,
+      "y": 12.0,
+      "optional": true,
+      "title": "Spawn Hub: Meet the Quartermaster",
+      "dependencies": [
+        "6002100000000006"
+      ],
+      "dependents": [
+        "6002100000000008"
+      ],
+      "dependency_requirement": null,
+      "min_required_dependencies": null,
+      "tasks": [
+        {
+          "type": "checkmark",
+          "item": null,
+          "count": null,
+          "entity": null,
+          "structure": null,
+          "biome": null,
+          "dimension": null
+        }
+      ],
+      "rewards": []
+    },
+    "6002100000000008": {
+      "file": "another_lost_soul",
+      "era": null,
+      "shape": "heart",
+      "x": 5.0,
+      "y": 14.0,
+      "optional": true,
+      "title": "Spawn Hub: Rebuild the Herds",
+      "dependencies": [
+        "6002100000000007"
       ],
       "dependents": [],
       "dependency_requirement": null,
@@ -13946,6 +13963,15 @@
           "structure": null,
           "biome": null,
           "dimension": null
+        },
+        {
+          "type": "item",
+          "item": "ae2:drive",
+          "count": null,
+          "entity": null,
+          "structure": null,
+          "biome": null,
+          "dimension": null
         }
       ],
       "rewards": []
@@ -14493,7 +14519,7 @@
         "4FC0C1C678C71891"
       ],
       "dependents": [
-        "08F11D0000000002"
+        "08F11D0000000003"
       ],
       "dependency_requirement": null,
       "min_required_dependencies": null,
@@ -14510,48 +14536,19 @@
       ],
       "rewards": []
     },
-    "08F11D0000000002": {
+    "08F11D0000000003": {
       "file": "coffee_tea_economy",
       "era": null,
       "shape": "gear",
       "x": 3.0,
       "y": 0.0,
       "optional": true,
-      "title": "Not Food, Still Breakfast",
+      "title": "The Daily Grind",
       "dependencies": [
         "08F11D0000000001"
       ],
       "dependents": [
-        "08F11D0000000003"
-      ],
-      "dependency_requirement": null,
-      "min_required_dependencies": null,
-      "tasks": [
-        {
-          "type": "item",
-          "item": "kubejs:black_coffee_mug",
-          "count": null,
-          "entity": null,
-          "structure": null,
-          "biome": null,
-          "dimension": null
-        }
-      ],
-      "rewards": []
-    },
-    "08F11D0000000003": {
-      "file": "coffee_tea_economy",
-      "era": null,
-      "shape": "gear",
-      "x": 6.0,
-      "y": 0.0,
-      "optional": true,
-      "title": "The Daily Grind",
-      "dependencies": [
         "08F11D0000000002"
-      ],
-      "dependents": [
-        "08F11D0000000004"
       ],
       "dependency_requirement": null,
       "min_required_dependencies": null,
@@ -14576,6 +14573,35 @@
         }
       ]
     },
+    "08F11D0000000002": {
+      "file": "coffee_tea_economy",
+      "era": null,
+      "shape": "gear",
+      "x": 6.0,
+      "y": 0.0,
+      "optional": true,
+      "title": "Not Food, Still Breakfast",
+      "dependencies": [
+        "08F11D0000000003"
+      ],
+      "dependents": [
+        "08F11D0000000004"
+      ],
+      "dependency_requirement": null,
+      "min_required_dependencies": null,
+      "tasks": [
+        {
+          "type": "item",
+          "item": "kubejs:black_coffee_mug",
+          "count": null,
+          "entity": null,
+          "structure": null,
+          "biome": null,
+          "dimension": null
+        }
+      ],
+      "rewards": []
+    },
     "08F11D0000000004": {
       "file": "coffee_tea_economy",
       "era": null,
@@ -14585,7 +14611,7 @@
       "optional": true,
       "title": "Put the Kettle On",
       "dependencies": [
-        "08F11D0000000003"
+        "08F11D0000000002"
       ],
       "dependents": [
         "08F11D0000000005"
@@ -14771,7 +14797,7 @@
       "x": 0.0,
       "y": 0.0,
       "optional": true,
-      "title": "A Foundry for Ordnance",
+      "title": "Establish the Cannon Foundry",
       "dependencies": [
         "5410000000000001"
       ],
@@ -14827,7 +14853,7 @@
       "x": 0.0,
       "y": 2.0,
       "optional": true,
-      "title": "Cast, Bore and Join",
+      "title": "Machine the Barrel Works",
       "dependencies": [
         "6F10000000000001"
       ],
@@ -14865,7 +14891,7 @@
       "x": 0.0,
       "y": 4.0,
       "optional": true,
-      "title": "Cast-Iron Pressure Train",
+      "title": "Cast the First Cannon",
       "dependencies": [
         "6F10000000000002"
       ],
@@ -14929,7 +14955,7 @@
       "x": 0.0,
       "y": 6.0,
       "optional": true,
-      "title": "Cold-Bore Acceptance",
+      "title": "Inspect the Gun Assembly",
       "dependencies": [
         "6F10000000000003"
       ],
@@ -14958,7 +14984,7 @@
       "x": 0.0,
       "y": 8.0,
       "optional": true,
-      "title": "A Breech That Closes",
+      "title": "Fit the Breechblock",
       "dependencies": [
         "6F10000000000004"
       ],
@@ -14988,7 +15014,7 @@
       "x": -4.0,
       "y": 10.0,
       "optional": true,
-      "title": "Loading Without Hands in the Bore",
+      "title": "Build the Loading Train",
       "dependencies": [
         "6F10000000000005"
       ],
@@ -15035,7 +15061,7 @@
       "x": 4.0,
       "y": 10.0,
       "optional": true,
-      "title": "The Fixed Redoubt",
+      "title": "Mount the Artillery",
       "dependencies": [
         "6F10000000000005"
       ],
@@ -15081,7 +15107,7 @@
       "x": -4.0,
       "y": 12.0,
       "optional": true,
-      "title": "Inert Drill Ammunition",
+      "title": "Produce Solid Shot",
       "dependencies": [
         "6F10000000000006",
         "6F10000000000007"
@@ -15111,7 +15137,7 @@
       "x": -4.0,
       "y": 14.0,
       "optional": true,
-      "title": "Measured Propellant Lots",
+      "title": "Standardize Powder Charges",
       "dependencies": [
         "6F10000000000008"
       ],
@@ -15140,7 +15166,7 @@
       "x": -4.0,
       "y": 16.0,
       "optional": true,
-      "title": "Magazine Isolation Drill",
+      "title": "Establish Misfire Procedure",
       "dependencies": [
         "6F10000000000009"
       ],
@@ -15169,7 +15195,7 @@
       "x": 0.0,
       "y": 18.0,
       "optional": true,
-      "title": "One-Charge Proof Range",
+      "title": "Prove the Firing Drill",
       "dependencies": [
         "6F1000000000000A"
       ],
@@ -15200,7 +15226,7 @@
       "x": 4.0,
       "y": 20.0,
       "optional": true,
-      "title": "Powered Traverse",
+      "title": "Automate Traverse and Elevation",
       "dependencies": [
         "6F1000000000000B",
         "5510000000000001"
@@ -15247,7 +15273,7 @@
       "x": 0.0,
       "y": 20.0,
       "optional": true,
-      "title": "Marking and Timing",
+      "title": "Develop Fuzed Ammunition",
       "dependencies": [
         "6F1000000000000B"
       ],
@@ -15285,7 +15311,7 @@
       "x": -4.0,
       "y": 20.0,
       "optional": true,
-      "title": "Settlement Autocannon",
+      "title": "Commission the Autocannon Line",
       "dependencies": [
         "6F1000000000000B",
         "5510000000000001"
@@ -15359,7 +15385,7 @@
       "x": 0.0,
       "y": 24.0,
       "optional": true,
-      "title": "Emplacement Readiness Drill",
+      "title": "Artillery Battery Commissioned",
       "dependencies": [
         "6F1000000000000C",
         "6F1000000000000D",
@@ -114481,7 +114507,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_supply_bag",
+          "item": "kubejs:era2_supply_bag",
           "count": 1,
           "xp": null,
           "command": null
@@ -114854,7 +114880,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_supply_bag",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -114986,7 +115012,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_supply_bag",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -115051,7 +115077,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_priority_cache",
+          "item": "kubejs:era2_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -118054,15 +118080,7 @@
           "dimension": null
         }
       ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": "createcybernetics:eyeupgrades_biomonitor",
-          "count": 1,
-          "xp": null,
-          "command": null
-        }
-      ]
+      "rewards": []
     },
     "2210000000000008": {
       "file": "era_02_heavy_industry",
@@ -118693,20 +118711,6 @@
         }
       ],
       "rewards": [
-        {
-          "type": "item",
-          "item": "ae2:chest",
-          "count": 1,
-          "xp": null,
-          "command": null
-        },
-        {
-          "type": "item",
-          "item": "ae2:item_storage_cell_1k",
-          "count": 1,
-          "xp": null,
-          "command": null
-        },
         {
           "type": "xp",
           "item": null,
@@ -120792,6 +120796,9 @@
         "5310000000000002"
       ],
       "dependents": [
+        "5AB0550C00000001",
+        "5AB0550C00000004",
+        "5E00000000000020",
         "5A00000000000007",
         "6F10000000000001",
         "5B00000000000008",
@@ -121785,7 +121792,7 @@
         "2410000000000002"
       ],
       "dependents": [
-        "6002100000000004",
+        "72F9F10C569BD362",
         "6C01000000000001"
       ],
       "dependency_requirement": null,
@@ -122237,14 +122244,14 @@
         }
       ]
     },
-    "6002100000000004": {
+    "72F9F10C569BD362": {
       "file": "era_04_the_electrical_grid",
       "era": 4,
       "shape": "gear",
       "x": 18.0,
       "y": 8.0,
       "optional": true,
-      "title": "Protection Is Not Chunk Loading",
+      "title": null,
       "dependencies": [
         "4410000000000004"
       ],
@@ -128062,7 +128069,7 @@
         },
         {
           "type": "item",
-          "item": "kubejs:era2_supply_bag",
+          "item": "kubejs:era1_supply_bag",
           "count": 1,
           "xp": null,
           "command": null
@@ -129713,9 +129720,6 @@
         "0FFBED0140C896F0",
         "4D3BDA6807AB73A9",
         "1CE40D15564FEADC",
-        "6002100000000003",
-        "6002100000000007",
-        "6002100000000008",
         "5C00000000000001"
       ],
       "dependency_requirement": null,
@@ -130828,87 +130832,6 @@
         }
       ]
     },
-    "6002100000000003": {
-      "file": "lets_get_started_shall_we",
-      "era": 0,
-      "shape": "diamond",
-      "x": -10.0,
-      "y": 4.0,
-      "optional": true,
-      "title": "Claim the First Homestead",
-      "dependencies": [
-        "3AFBE38263D3351E"
-      ],
-      "dependents": [],
-      "dependency_requirement": null,
-      "min_required_dependencies": null,
-      "tasks": [
-        {
-          "type": "checkmark",
-          "item": null,
-          "count": null,
-          "entity": null,
-          "structure": null,
-          "biome": null,
-          "dimension": null
-        }
-      ],
-      "rewards": []
-    },
-    "6002100000000007": {
-      "file": "lets_get_started_shall_we",
-      "era": 0,
-      "shape": "gear",
-      "x": 10.0,
-      "y": 4.0,
-      "optional": true,
-      "title": "Spawn Hub: Meet the Quartermaster",
-      "dependencies": [
-        "3AFBE38263D3351E"
-      ],
-      "dependents": [],
-      "dependency_requirement": null,
-      "min_required_dependencies": null,
-      "tasks": [
-        {
-          "type": "checkmark",
-          "item": null,
-          "count": null,
-          "entity": null,
-          "structure": null,
-          "biome": null,
-          "dimension": null
-        }
-      ],
-      "rewards": []
-    },
-    "6002100000000008": {
-      "file": "lets_get_started_shall_we",
-      "era": 0,
-      "shape": "gear",
-      "x": 10.0,
-      "y": 6.0,
-      "optional": true,
-      "title": "Spawn Hub: Rebuild the Herds",
-      "dependencies": [
-        "3AFBE38263D3351E"
-      ],
-      "dependents": [],
-      "dependency_requirement": null,
-      "min_required_dependencies": null,
-      "tasks": [
-        {
-          "type": "checkmark",
-          "item": null,
-          "count": null,
-          "entity": null,
-          "structure": null,
-          "biome": null,
-          "dimension": null
-        }
-      ],
-      "rewards": []
-    },
     "6010000000000001": {
       "file": "mastery_era_00",
       "era": null,
@@ -130968,15 +130891,7 @@
           "dimension": null
         }
       ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": "buildinggadgets2:gadget_building",
-          "count": 1,
-          "xp": null,
-          "command": null
-        }
-      ]
+      "rewards": []
     },
     "2040000000000001": {
       "file": "mastery_era_00",
@@ -131005,15 +130920,7 @@
           "dimension": null
         }
       ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": "charginggadgets:charging_station",
-          "count": 1,
-          "xp": null,
-          "command": null
-        }
-      ]
+      "rewards": []
     },
     "3040000000000001": {
       "file": "mastery_era_00",
@@ -131042,15 +130949,7 @@
           "dimension": null
         }
       ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": "mininggadgets:mininggadget",
-          "count": 1,
-          "xp": null,
-          "command": null
-        }
-      ]
+      "rewards": []
     },
     "4040000000000001": {
       "file": "mastery_era_00",
@@ -131079,15 +130978,7 @@
           "dimension": null
         }
       ],
-      "rewards": [
-        {
-          "type": "item",
-          "item": "buildinggadgets2:gadget_copy_paste",
-          "count": 1,
-          "xp": null,
-          "command": null
-        }
-      ]
+      "rewards": []
     },
     "6010000000000002": {
       "file": "mastery_era_00",
@@ -134068,7 +133959,7 @@
         },
         {
           "type": "item",
-          "item": "create:precision_mechanism",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -134105,7 +133996,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_supply_bag",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -134299,7 +134190,7 @@
         },
         {
           "type": "item",
-          "item": "kubejs:era3_supply_bag",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -134477,7 +134368,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_supply_bag",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -134691,7 +134582,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_supply_bag",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -134755,7 +134646,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_priority_cache",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -134969,7 +134860,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_supply_bag",
+          "item": "kubejs:era2_supply_bag",
           "count": 1,
           "xp": null,
           "command": null
@@ -135102,7 +134993,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_supply_bag",
+          "item": "kubejs:era2_supply_bag",
           "count": 1,
           "xp": null,
           "command": null
@@ -135477,7 +135368,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_supply_bag",
+          "item": "kubejs:era5_supply_bag",
           "count": 1,
           "xp": null,
           "command": null
@@ -135593,7 +135484,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era3_priority_cache",
+          "item": "kubejs:era6_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -136445,7 +136336,7 @@
         },
         {
           "type": "item",
-          "item": "kubejs:era2_supply_bag",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -136608,7 +136499,7 @@
         },
         {
           "type": "item",
-          "item": "kubejs:era2_supply_bag",
+          "item": "kubejs:era1_supply_bag",
           "count": 1,
           "xp": null,
           "command": null
@@ -139204,7 +139095,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era2_supply_bag",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -139336,7 +139227,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era2_supply_bag",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -139439,7 +139330,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era2_priority_cache",
+          "item": "kubejs:era0_priority_cache",
           "count": 1,
           "xp": null,
           "command": null
@@ -141205,12 +141096,21 @@
           "structure": null,
           "biome": null,
           "dimension": null
+        },
+        {
+          "type": "checkmark",
+          "item": null,
+          "count": null,
+          "entity": null,
+          "structure": null,
+          "biome": null,
+          "dimension": null
         }
       ],
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era6_supply_bag",
+          "item": "kubejs:era5_supply_bag",
           "count": 1,
           "xp": null,
           "command": null
@@ -141332,7 +141232,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era6_supply_bag",
+          "item": "kubejs:era5_supply_bag",
           "count": 1,
           "xp": null,
           "command": null
@@ -141607,7 +141507,7 @@
       "rewards": [
         {
           "type": "item",
-          "item": "kubejs:era6_priority_cache",
+          "item": "kubejs:era7_priority_cache",
           "count": 1,
           "xp": null,
           "command": null

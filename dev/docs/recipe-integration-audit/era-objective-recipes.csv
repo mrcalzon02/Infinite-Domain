@@ -148,7 +148,7 @@ era,objective_item,recipe_id,meaningful_foreign_namespaces,integration_depth,tar
 2,tfmg:steel_ingot,tfmg:casting/steel,,0,1,SHALLOW,STATIC_JSON_RECIPE,data/tfmg/recipe/casting/steel.json
 2,wastelands:purified_water,infinite_domain:sieve/hazardous_salvage/scrap_pile/diamond/purified_water,,0,1,SHALLOW,STATIC_JSON_RECIPE,kubejs/data/infinite_domain/recipe/sieve/hazardous_salvage/scrap_pile/diamond/purified_water.json
 3,createdieselgenerators:biodiesel_bucket,,,0,1,NO_STATIC_JSON_RECIPE,FLUID_CONTAINER,
-3,createdieselgenerators:diesel_bucket,,,0,1,NO_STATIC_JSON_RECIPE,FLUID_CONTAINER,
+3,createdieselgenerators:diesel_bucket,,,0,1,NO_STATIC_JSON_RECIPE,QUEST_REWARD,
 3,createdieselgenerators:diesel_engine,createdieselgenerators:crafting/diesel_engine,create,1,1,DEPTH_OK,STATIC_JSON_RECIPE,data/createdieselgenerators/recipe/crafting/diesel_engine.json
 3,createdieselgenerators:engine_turbocharger,createdieselgenerators:crafting/engine_turbocharger,bno;create,2,1,DEPTH_OK,STATIC_JSON_RECIPE,kubejs/data/createdieselgenerators/recipe/crafting/engine_turbocharger.json
 3,createdieselgenerators:plant_oil_bucket,,,0,1,NO_STATIC_JSON_RECIPE,FLUID_CONTAINER,
@@ -160,7 +160,7 @@ era,objective_item,recipe_id,meaningful_foreign_namespaces,integration_depth,tar
 3,createreautomated:infinite_iron_node,createreautomated:mechanical_crafting/infinite_iron_node,,0,1,SHALLOW,STATIC_JSON_RECIPE,data/createreautomated/recipe/mechanical_crafting/infinite_iron_node.json
 3,createreautomated:iron_bit,createreautomated:advanced_extracting/iron_bits,,0,1,SHALLOW,STATIC_JSON_RECIPE,data/createreautomated/recipe/advanced_extracting/iron_bits.json
 3,createreautomated:iron_node,,,0,1,NO_STATIC_JSON_RECIPE,NATURAL_RESOURCE_OR_DROP,
-3,createreautomated:netherite_drill,createreautomated:netherite_drill_upgrade,,0,1,SHALLOW,STATIC_JSON_RECIPE,data/createreautomated/recipe/netherite_drill_upgrade.json
+3,createreautomated:netherite_drill,createreautomated:netherite_drill_upgrade,,0,1,SHALLOW,STATIC_JSON_RECIPE,kubejs/data/createreautomated/recipe/netherite_drill_upgrade.json
 3,createreautomated:quartz_bit,createreautomated:advanced_extracting/quartz_bits,,0,1,SHALLOW,STATIC_JSON_RECIPE,data/createreautomated/recipe/advanced_extracting/quartz_bits.json
 3,createreautomated:stabilizer,createreautomated:stabilizer,,0,1,SHALLOW,STATIC_JSON_RECIPE,data/createreautomated/recipe/stabilizer.json
 3,createreautomated:unbaked_diamond,createreautomated:sequenced_assembly/unbaked_diamond_from_bits,,0,1,SHALLOW,STATIC_JSON_RECIPE,data/createreautomated/recipe/sequenced_assembly/unbaked_diamond_from_bits.json
@@ -178,10 +178,8 @@ era,objective_item,recipe_id,meaningful_foreign_namespaces,integration_depth,tar
 3,minecraft:diamond,create:crushing/deepslate_diamond_ore,,0,1,SHALLOW,STATIC_JSON_RECIPE,data/create/recipe/crushing/deepslate_diamond_ore.json
 3,minecraft:diamond_pickaxe,minecraft:diamond_pickaxe,quark,1,1,DEPTH_OK,STATIC_JSON_RECIPE,kubejs/data/minecraft/recipe/diamond_pickaxe.json
 3,minecraft:map,minecraft:map,kubejs,1,1,DEPTH_OK,STATIC_JSON_RECIPE,kubejs/data/minecraft/recipe/map.json
-3,minecraft:slime_ball,create_ultimate_factory:splashing_magma_cream,,0,1,SHALLOW,STATIC_JSON_RECIPE,data/create_ultimate_factory/recipe/splashing_magma_cream.json
+3,minecraft:slime_ball,create_ultimate_factory:splashing_magma_cream,,0,1,SHALLOW,STATIC_JSON_RECIPE,kubejs/data/create_ultimate_factory/recipe/splashing_magma_cream.json
 3,minecraft:sugar,create:milling/sugar_cane,,0,1,SHALLOW,STATIC_JSON_RECIPE,data/create/recipe/milling/sugar_cane.json
-3,numismatics:cog,,,0,1,NO_STATIC_JSON_RECIPE,QUEST_REWARD,
-3,numismatics:crown,,,0,1,NO_STATIC_JSON_RECIPE,QUEST_REWARD,
 3,petrochem:desalted_oil_bucket,,,0,1,NO_STATIC_JSON_RECIPE,FLUID_CONTAINER,
 3,petrochem:diesel_bucket,,,0,1,NO_STATIC_JSON_RECIPE,FLUID_CONTAINER,
 3,petrochem:distillation_controller,petrochem:crafting/null/distillation_controller,create;tfmg,2,1,DEPTH_OK,STATIC_JSON_RECIPE,kubejs/data/petrochem/recipe/crafting/null/distillation_controller.json
@@ -265,6 +263,7 @@ era,objective_item,recipe_id,meaningful_foreign_namespaces,integration_depth,tar
 5,kubejs:precipitated_titanium_concentrate,,,0,2,NO_STATIC_JSON_RECIPE,KUBEJS_GENERATED_MINERAL_PROCESSING,
 5,kubejs:starch_pulp,,,0,2,NO_STATIC_JSON_RECIPE,KUBEJS_DYNAMIC_OR_SCRIPTED,
 5,minecraft:bread,minecraft:bread,,0,2,SHALLOW,STATIC_JSON_RECIPE,data/minecraft/recipe/bread.json
+5,minecraft:cooked_beef,minecraft:cooked_beef,,0,2,SHALLOW,STATIC_JSON_RECIPE,data/minecraft/recipe/cooked_beef.json
 5,minecraft:potato,exdeorum:sieve/dirt/diamond/potato,,0,2,SHALLOW,STATIC_JSON_RECIPE,kubejs/data/exdeorum/recipe/sieve/dirt/diamond/potato.json
 5,more_ores_more_gems:titanium_nugget,more_ores_more_gems:make_nine_titanium_nugget,,0,2,SHALLOW,STATIC_JSON_RECIPE,data/more_ores_more_gems/recipe/make_nine_titanium_nugget.json
 5,more_ores_more_gems:titanium_pickaxe,more_ores_more_gems:titanium_pickaxe_recipe,,0,2,SHALLOW,STATIC_JSON_RECIPE,kubejs/data/more_ores_more_gems/recipe/titanium_pickaxe_recipe.json
@@ -311,6 +310,7 @@ era,objective_item,recipe_id,meaningful_foreign_namespaces,integration_depth,tar
 6,minecraft:golden_carrot,exdeorum:sieve/dirt/golden/golden_carrot,,0,3,SHALLOW,STATIC_JSON_RECIPE,kubejs/data/exdeorum/recipe/sieve/dirt/golden/golden_carrot.json
 6,minecraft:kelp,exdeorum:sieve/sand/golden/kelp,,0,3,SHALLOW,STATIC_JSON_RECIPE,kubejs/data/exdeorum/recipe/sieve/sand/golden/kelp.json
 6,minecraft:recovery_compass,minecraft:recovery_compass,,0,3,SHALLOW,STATIC_JSON_RECIPE,data/minecraft/recipe/recovery_compass.json
+6,minecraft:wheat,immersiveengineering:cloche/wheat,,0,3,SHALLOW,STATIC_JSON_RECIPE,data/immersiveengineering/recipe/cloche/wheat.json
 6,more_ores_more_gems:tungsten_nugget,more_ores_more_gems:make_nine_tungsten_nugget,,0,3,SHALLOW,STATIC_JSON_RECIPE,data/more_ores_more_gems/recipe/make_nine_tungsten_nugget.json
 6,more_ores_more_gems:uranium_pickaxe,more_ores_more_gems:uranium_pickaxe_recipe,,0,3,SHALLOW,STATIC_JSON_RECIPE,kubejs/data/more_ores_more_gems/recipe/uranium_pickaxe_recipe.json
 6,oritech:advanced_battery,oritech:centrifuge/fluid/advbatteryacid,,0,3,SHALLOW,STATIC_JSON_RECIPE,data/oritech/recipe/centrifuge/fluid/advbatteryacid.json

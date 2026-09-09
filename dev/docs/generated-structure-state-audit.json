@@ -1,8 +1,8 @@
 {
-  "templates_scanned": 273,
-  "property_bearing_block_types": 74,
-  "strict_property_values_checked": 440,
-  "explicit_domain_values_checked": 252,
+  "templates_scanned": 353,
+  "property_bearing_block_types": 88,
+  "strict_property_values_checked": 471,
+  "explicit_domain_values_checked": 258,
   "invalid": [],
   "non_exhaustive_selector_uses": [
     {
@@ -42,6 +42,101 @@
     }
   ],
   "unrepresented_property_uses": [
+    {
+      "block": "kubejs:ruined_blast_furnace",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "kubejs:ruined_blast_furnace",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "kubejs:ruined_blast_furnace",
+      "property": "facing",
+      "value": "west"
+    },
+    {
+      "block": "kubejs:ruined_campfire",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "kubejs:ruined_furnace",
+      "property": "facing",
+      "value": "east"
+    },
+    {
+      "block": "kubejs:ruined_furnace",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "kubejs:ruined_furnace",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "kubejs:ruined_furnace",
+      "property": "facing",
+      "value": "west"
+    },
+    {
+      "block": "kubejs:ruined_grindstone",
+      "property": "face",
+      "value": "floor"
+    },
+    {
+      "block": "kubejs:ruined_grindstone",
+      "property": "facing",
+      "value": "east"
+    },
+    {
+      "block": "kubejs:ruined_grindstone",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "kubejs:ruined_lectern",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "kubejs:ruined_lectern",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "kubejs:ruined_lectern",
+      "property": "facing",
+      "value": "west"
+    },
+    {
+      "block": "kubejs:ruined_loom",
+      "property": "facing",
+      "value": "west"
+    },
+    {
+      "block": "kubejs:ruined_smoker",
+      "property": "facing",
+      "value": "east"
+    },
+    {
+      "block": "kubejs:ruined_smoker",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "kubejs:ruined_smoker",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "kubejs:ruined_stonecutter",
+      "property": "facing",
+      "value": "north"
+    },
     {
       "block": "minecraft:bell",
       "property": "powered",
@@ -333,6 +428,31 @@
       "value": "false"
     },
     {
+      "block": "minecraft:oak_wall_sign",
+      "property": "facing",
+      "value": "east"
+    },
+    {
+      "block": "minecraft:oak_wall_sign",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "minecraft:oak_wall_sign",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:oak_wall_sign",
+      "property": "facing",
+      "value": "west"
+    },
+    {
+      "block": "minecraft:oak_wall_sign",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
       "block": "minecraft:orange_bed",
       "property": "facing",
       "value": "south"
@@ -448,6 +568,11 @@
       "value": "false"
     },
     {
+      "block": "minecraft:smooth_quartz_stairs",
+      "property": "waterlogged",
+      "value": "false"
+    },
+    {
       "block": "minecraft:smooth_stone_slab",
       "property": "waterlogged",
       "value": "false"
@@ -553,7 +678,154 @@
       "value": "head"
     }
   ],
-  "property_bearing_blocks_without_definition": [],
-  "unresolved_property_uses": [],
-  "unknown_block_ids": []
+  "property_bearing_blocks_without_definition": [
+    "kubejs:ruined_blast_furnace",
+    "kubejs:ruined_campfire",
+    "kubejs:ruined_furnace",
+    "kubejs:ruined_grindstone",
+    "kubejs:ruined_lectern",
+    "kubejs:ruined_loom",
+    "kubejs:ruined_smoker",
+    "kubejs:ruined_stonecutter"
+  ],
+  "unresolved_property_uses": [
+    {
+      "block": "kubejs:ruined_blast_furnace",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "kubejs:ruined_blast_furnace",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "kubejs:ruined_blast_furnace",
+      "property": "facing",
+      "value": "west"
+    },
+    {
+      "block": "kubejs:ruined_campfire",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "kubejs:ruined_furnace",
+      "property": "facing",
+      "value": "east"
+    },
+    {
+      "block": "kubejs:ruined_furnace",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "kubejs:ruined_furnace",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "kubejs:ruined_furnace",
+      "property": "facing",
+      "value": "west"
+    },
+    {
+      "block": "kubejs:ruined_grindstone",
+      "property": "face",
+      "value": "floor"
+    },
+    {
+      "block": "kubejs:ruined_grindstone",
+      "property": "facing",
+      "value": "east"
+    },
+    {
+      "block": "kubejs:ruined_grindstone",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "kubejs:ruined_lectern",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "kubejs:ruined_lectern",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "kubejs:ruined_lectern",
+      "property": "facing",
+      "value": "west"
+    },
+    {
+      "block": "kubejs:ruined_loom",
+      "property": "facing",
+      "value": "west"
+    },
+    {
+      "block": "kubejs:ruined_smoker",
+      "property": "facing",
+      "value": "east"
+    },
+    {
+      "block": "kubejs:ruined_smoker",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "kubejs:ruined_smoker",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "kubejs:ruined_stonecutter",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "minecraft:oak_wall_sign",
+      "property": "facing",
+      "value": "east"
+    },
+    {
+      "block": "minecraft:oak_wall_sign",
+      "property": "facing",
+      "value": "north"
+    },
+    {
+      "block": "minecraft:oak_wall_sign",
+      "property": "facing",
+      "value": "south"
+    },
+    {
+      "block": "minecraft:oak_wall_sign",
+      "property": "facing",
+      "value": "west"
+    },
+    {
+      "block": "minecraft:oak_wall_sign",
+      "property": "waterlogged",
+      "value": "false"
+    }
+  ],
+  "unknown_block_ids": [
+    "ae2:terminal",
+    "kubejs:ruined_anvil",
+    "kubejs:ruined_blast_furnace",
+    "kubejs:ruined_brewing_stand",
+    "kubejs:ruined_campfire",
+    "kubejs:ruined_cartography_table",
+    "kubejs:ruined_cauldron",
+    "kubejs:ruined_composter",
+    "kubejs:ruined_crafting_table",
+    "kubejs:ruined_furnace",
+    "kubejs:ruined_grindstone",
+    "kubejs:ruined_lectern",
+    "kubejs:ruined_loom",
+    "kubejs:ruined_smithing_table",
+    "kubejs:ruined_smoker",
+    "kubejs:ruined_stonecutter"
+  ]
 }

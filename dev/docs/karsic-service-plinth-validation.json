@@ -1,6 +1,6 @@
 {
   "purpose": "End-to-end structural, review, conversion, and multiplayer-safe activation gate for the Karsic mixed-use service plinth.",
-  "passed": true,
+  "passed": false,
   "checks": [
     {
       "id": "KS-1",
@@ -283,9 +283,18 @@
     {
       "id": "KS-9",
       "check": "persisted review shows both fa\u00e7ades, the retail plan, cellar, and real dwelling bands",
-      "passed": true,
+      "passed": false,
       "detail": "authored Y planes replace false stair-landing slices and both clean/damaged camera sets are approved",
-      "evidence": []
+      "evidence": [
+        "infinite_domain:kar_024_panel_block_service_premises: missing render structure_library/reviews/kar_024_panel_block_service_premises/exterior_a.png",
+        "infinite_domain:kar_024_panel_block_service_premises: missing render structure_library/reviews/kar_024_panel_block_service_premises/exterior_b.png",
+        "infinite_domain:kar_024_panel_block_service_premises: missing render structure_library/reviews/kar_024_panel_block_service_premises/roof_off_cutaway.png",
+        "infinite_domain:kar_024_panel_block_service_premises: missing render structure_library/reviews/kar_024_panel_block_service_premises/floor_slices.png",
+        "infinite_domain:kar_024_panel_block_service_premises_clean_master: missing render structure_library/reviews/kar_024_panel_block_service_premises_clean_master/exterior_a.png",
+        "infinite_domain:kar_024_panel_block_service_premises_clean_master: missing render structure_library/reviews/kar_024_panel_block_service_premises_clean_master/exterior_b.png",
+        "infinite_domain:kar_024_panel_block_service_premises_clean_master: missing render structure_library/reviews/kar_024_panel_block_service_premises_clean_master/roof_off_cutaway.png",
+        "infinite_domain:kar_024_panel_block_service_premises_clean_master: missing render structure_library/reviews/kar_024_panel_block_service_premises_clean_master/floor_slices.png"
+      ]
     },
     {
       "id": "KS-10",

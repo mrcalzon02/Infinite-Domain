@@ -322,6 +322,46 @@ if district_files:
 else:
     fail("[10] no Hive World district structures are present")
 
+# ---- 11. event.cancel() must be the last statement in its block --
+# KubeJS 7's KubeEvent.cancel() throws EventExit: it unwinds the callback, so every
+# statement after it is dead code. Calling it first made both Cinderstack travel
+# markers inert - the geometry check, the field, and the transfer never ran.
+def dead_code_after_cancel(source):
+    """Yield (line_no, snippet) for statements that follow event.cancel() in its block."""
+    # Blank the line comments first (line count preserved) so prose about cancel() is
+    # not mistaken for a call, and so a trailing comment never reads as a statement.
+    source = "\n".join(re.sub(r"//.*$", "", ln) for ln in source.splitlines())
+    for m in re.finditer(r"\bevent\.cancel\s*\(\s*\)", source):
+        i, depth = m.end(), 0
+        while i < len(source):
+            ch = source[i]
+            if ch in "\"'":
+                quote, i = ch, i + 1
+                while i < len(source) and source[i] != quote:
+                    i += 2 if source[i] == "\\" else 1
+            elif ch in "{([":
+                depth += 1
+            elif ch in ")]":
+                depth -= 1
+            elif ch == "}":
+                if depth == 0:
+                    break          # end of the block holding cancel(); nothing skipped
+                depth -= 1
+            elif not ch.isspace() and ch != ";":
+                line = source.count("\n", 0, i) + 1
+                end = source.find("\n", i)
+                yield line, source[i:end if end > 0 else len(source)].strip()
+                break
+            i += 1
+
+
+for js in (expedition_js, atmosphere_js):
+    if not js.is_file():
+        continue
+    for line, snippet in dead_code_after_cancel(js.read_text(encoding="utf-8")):
+        fail(f"[11] {js.name}:{line} is unreachable - event.cancel() already exited "
+             f"the callback: {snippet!r}")
+
 # ---- report --------------------------------------------------------------
 print("Hive World smoke validator")
 for n in notes:

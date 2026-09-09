@@ -5,9 +5,11 @@
     "pass",
     "pending"
   ],
-  "static_ledger_contracts_passed": true,
+  "static_ledger_contracts_passed": false,
   "automatic_approval_mutation": false,
-  "failures": [],
+  "failures": [
+    "building-production-review.csv: rows do not exactly match current catalog order"
+  ],
   "ledgers": {
     "building-production-review.csv": {
       "assets": 84,

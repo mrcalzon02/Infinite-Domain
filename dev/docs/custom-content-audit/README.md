@@ -5,10 +5,10 @@ It inventories authored overlays as well as native Infinite Domain namespaces.
 
 ## Scope totals
 
-- Datapack files: 22295
+- Datapack files: 22298
 - Asset files: 795
-- Active KubeJS and maintenance scripts: 450
-- Installed Infinite Domain companion mods: 9
+- Active KubeJS and maintenance scripts: 118
+- Installed Infinite Domain companion mods: 10
 - Baseline path/JSON/manifest findings: 0
 
 ## Datapack namespaces
@@ -54,6 +54,7 @@ It inventories authored overlays as well as native Infinite Domain namespaces.
 | `cyber_ware_port` | 12 | recipe (12) |
 | `cyberchems` | 1 | tags (1) |
 | `cyberspace` | 10 | recipe (7), dimension (1), dimension_type (1), loot_table (1) |
+| `deepnether` | 1 | tags (1) |
 | `dungeons_arise` | 1 | worldgen (1) |
 | `dungeons_arise_seven_seas` | 5 | worldgen (5) |
 | `enviromine` | 13 | recipe (12), neoforge (1) |
@@ -68,13 +69,13 @@ It inventories authored overlays as well as native Infinite Domain namespaces.
 | `graveyard` | 24 | recipe (24) |
 | `iceandfire` | 124 | recipe (121), tags (3) |
 | `immersiveengineering` | 114 | recipe (114) |
-| `infinite_domain` | 17512 | lostcities (15347), worldgen (855), structure (696), recipe (321), loot_table (128) |
+| `infinite_domain` | 17508 | lostcities (15349), worldgen (856), structure (696), recipe (321), loot_table (120) |
 | `infinite_domain_radiation` | 3 | tags (3) |
 | `infinite_domain_space` | 36 | recipe (36) |
 | `jaffabricate` | 4 | recipe (3), tags (1) |
 | `kubejs` | 22 | loot_table (22) |
 | `linearbearing` | 5 | recipe (5) |
-| `lostcities` | 1 | lostcities (1) |
+| `lostcities` | 7 | tags (6), lostcities (1) |
 | `mekanite_mobs` | 14 | recipe (14) |
 | `minecraft` | 400 | recipe (371), tags (14), loot_table (13), worldgen (2) |
 | `mininggadgets` | 26 | recipe (26) |
@@ -121,6 +122,7 @@ It inventories authored overlays as well as native Infinite Domain namespaces.
 | `infinite-domain-overworld-terrain-1.0.0.jar` | `infinite_domain_worldgen` | 12 | 6 | 0 | 0 |
 | `infinite-domain-stellaris-industry-1.0.0.jar` | `infinite_domain_space` | 95 | 8 | 38 | 36 |
 | `infinite-domain-unified-radiation-1.0.0.jar` | `infinite_domain_radiation` | 37 | 2 | 19 | 0 |
+| `infinite-domain-wasteland-hex-caves-1.0.0.jar` | `infinite_domain_wasteland_hex_caves` | 11 | 6 | 3 | 0 |
 
 ## Baseline findings
 

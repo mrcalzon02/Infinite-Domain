@@ -20,7 +20,11 @@ fill 0 73 0 16 73 16 minecraft:polished_blackstone
 
 # --- climbable circulation shaft (x6..10, z12..15) down to the sump, up to the works
 fill 6 -28 12 10 118 15 minecraft:air replace
-fill 8 -27 15 8 117 15 minecraft:ladder[facing=south]
+# Ladders need a sturdy face behind them, and the carve above removes it. Rebuild a
+# full-height backing column at z15, then hang the ladders on it from z14:
+# facing=north attaches to the block at z+1, so the column is the support.
+fill 8 -28 15 8 118 15 minecraft:polished_blackstone
+fill 8 -27 14 8 117 14 minecraft:ladder[facing=north]
 # shaft lighting
 setblock 6 -20 15 minecraft:sea_lantern
 setblock 10 0 15 minecraft:sea_lantern

@@ -1,8 +1,17 @@
 {
   "family": "habitation_and_community",
   "asset_pairs": 12,
-  "all_passed": true,
-  "failures": [],
+  "all_passed": false,
+  "failures": [
+    "split_level_house: missing purpose fixtures: ['minecraft:blast_furnace', 'minecraft:smoker']",
+    "abandoned_culdesac: missing purpose fixtures: ['minecraft:smoker']",
+    "emergency_relief_shelter: missing purpose fixtures: ['minecraft:brewing_stand']",
+    "tenement_courtyard: missing purpose fixtures: ['minecraft:cauldron', 'minecraft:smoker']",
+    "ruined_rowhouse_block: missing purpose fixtures: ['minecraft:water_cauldron']",
+    "ruined_community_center: missing purpose fixtures: ['minecraft:crafting_table']",
+    "roadside_church_cemetery: missing purpose fixtures: ['minecraft:lectern']",
+    "ruined_ranger_station: missing purpose fixtures: ['minecraft:blast_furnace']"
+  ],
   "structures": {
     "split_level_house": {
       "size": [
@@ -28,8 +37,10 @@
         "dense_floor_levels": 10,
         "footprint_variants": 14
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing purpose fixtures: ['minecraft:blast_furnace', 'minecraft:smoker']"
+      ]
     },
     "abandoned_culdesac": {
       "size": [
@@ -55,8 +66,10 @@
         "dense_floor_levels": 6,
         "footprint_variants": 14
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing purpose fixtures: ['minecraft:smoker']"
+      ]
     },
     "emergency_relief_shelter": {
       "size": [
@@ -82,8 +95,10 @@
         "dense_floor_levels": 11,
         "footprint_variants": 12
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing purpose fixtures: ['minecraft:brewing_stand']"
+      ]
     },
     "tenement_courtyard": {
       "size": [
@@ -109,8 +124,10 @@
         "dense_floor_levels": 15,
         "footprint_variants": 19
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing purpose fixtures: ['minecraft:cauldron', 'minecraft:smoker']"
+      ]
     },
     "ruined_rowhouse_block": {
       "size": [
@@ -136,8 +153,10 @@
         "dense_floor_levels": 24,
         "footprint_variants": 18
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing purpose fixtures: ['minecraft:water_cauldron']"
+      ]
     },
     "shattered_luxury_condo": {
       "size": [
@@ -217,8 +236,10 @@
         "dense_floor_levels": 10,
         "footprint_variants": 16
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing purpose fixtures: ['minecraft:crafting_table']"
+      ]
     },
     "decayed_ranch": {
       "size": [
@@ -271,8 +292,10 @@
         "dense_floor_levels": 10,
         "footprint_variants": 27
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing purpose fixtures: ['minecraft:lectern']"
+      ]
     },
     "ruined_ranger_station": {
       "size": [
@@ -298,8 +321,10 @@
         "dense_floor_levels": 9,
         "footprint_variants": 14
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing purpose fixtures: ['minecraft:blast_furnace']"
+      ]
     },
     "wasteland_fire_lookout": {
       "size": [

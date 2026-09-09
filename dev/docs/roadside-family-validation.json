@@ -1,8 +1,14 @@
 {
   "family": "roadside_mobility_security",
   "asset_pairs": 11,
-  "all_passed": true,
-  "failures": [],
+  "all_passed": false,
+  "failures": [
+    "battle_tank: missing identity fixtures: ['minecraft:blast_furnace']",
+    "service_garage: missing identity fixtures: ['minecraft:anvil']",
+    "ruined_roadside_diner: missing identity fixtures: ['minecraft:smoker']",
+    "abandoned_truck_stop: missing identity fixtures: ['minecraft:water_cauldron']",
+    "wasteland_weigh_station: missing identity fixtures: ['minecraft:brewing_stand']"
+  ],
   "structures": {
     "radio_mast": {
       "size": [
@@ -127,8 +133,10 @@
         "dense_floor_levels": 8,
         "footprint_variants": 9
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing identity fixtures: ['minecraft:blast_furnace']"
+      ]
     },
     "service_garage": {
       "size": [
@@ -159,8 +167,10 @@
         "dense_floor_levels": 6,
         "footprint_variants": 13
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing identity fixtures: ['minecraft:anvil']"
+      ]
     },
     "scrapyard": {
       "size": [
@@ -255,8 +265,10 @@
         "dense_floor_levels": 9,
         "footprint_variants": 11
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing identity fixtures: ['minecraft:smoker']"
+      ]
     },
     "abandoned_truck_stop": {
       "size": [
@@ -287,8 +299,10 @@
         "dense_floor_levels": 7,
         "footprint_variants": 15
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing identity fixtures: ['minecraft:water_cauldron']"
+      ]
     },
     "wasteland_weigh_station": {
       "size": [
@@ -319,8 +333,10 @@
         "dense_floor_levels": 6,
         "footprint_variants": 11
       },
-      "passed": true,
-      "issues": []
+      "passed": false,
+      "issues": [
+        "missing identity fixtures: ['minecraft:brewing_stand']"
+      ]
     },
     "destroyed_refugee_convoy": {
       "size": [
