@@ -11,17 +11,17 @@ ServerEvents.recipes(event => {
 
 retiredPortClinic.forEach(id => {
     BlockEvents.placed(id, event => {
-        event.cancel()
         if (event.player) {
             event.player.tell(Text.red('Legacy CyberWare Port surgery hardware is retired. Use the Create Cybernetics clinic; this block can be recovered through its Engineering Table recipe.'))
         }
+        event.cancel()
     })
 
     BlockEvents.rightClicked(id, event => {
-        event.cancel()
         if (event.player) {
             event.player.tell(Text.gold('This legacy surgery system is offline. Convert it into a Create Cybernetics Robosurgeon at the Engineering Table.'))
         }
+        event.cancel()
     })
 })
 

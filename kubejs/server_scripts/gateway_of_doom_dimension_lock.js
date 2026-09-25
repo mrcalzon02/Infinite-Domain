@@ -43,10 +43,10 @@ GatewayDevilEyes.forEach(eyeId => {
         const dimension = event.level.dimension().location().toString()
         if (dimension === 'cyberspace:cyberspace_dimension') return
 
-        event.cancel()
         const response = GatewayDeniedMessages[Math.floor(Math.random() * GatewayDeniedMessages.length)]
         const place = gatewayDimensionName(dimension)
         event.player.tell(response(place))
         showGatewayRejection(event, place)
+        event.cancel()
     })
 })

@@ -39,15 +39,15 @@ BlockEvents.placed('ae2:spatial_anchor', event => {
 
     const dimension = event.level.dimension().location().toString()
     if (dimension !== DarknetAnchorDimension) {
-        event.cancel()
         player.tell('\u00a7cThe Darknet Anchor is only placeable in the Darknet. \u00a77Chunk-loading the Overworld was not the assignment. - Charles')
+        event.cancel()
         return
     }
 
     const data = player.persistentData
     if (data[DarknetAnchorData.bound]) {
-        event.cancel()
         player.tell('\u00a7cYou may bind only one Darknet Anchor. \u00a77Maintaining one impossible connection is quite enough for you. - Charles')
+        event.cancel()
         return
     }
 
