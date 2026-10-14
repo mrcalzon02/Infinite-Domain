@@ -1,0 +1,77 @@
+[
+  {
+    "log": "logs\\latest.log",
+    "error_lines": 153,
+    "categories": {
+      "client_resource": 41,
+      "other": 67,
+      "loot_table_parse": 28,
+      "tag_load": 7,
+      "kubejs_runtime": 4,
+      "recipe_load_or_scan": 3,
+      "advancement_load": 1,
+      "sable_dimension_data": 2
+    },
+    "benchmark_completed": false,
+    "kubejs_load_summaries": [
+      "[08Sep2026 14:14:15.231] [modloading-worker-0/INFO] [KubeJS Startup/]: Loaded 14/14 KubeJS startup scripts in 1.898 s with 0 errors and 0 warnings",
+      "[08Sep2026 14:14:15.413] [modloading-worker-0/INFO] [KubeJS Client/]: Loaded 7/7 KubeJS client scripts in 0.179 s with 0 errors and 0 warnings",
+      "[08Sep2026 14:15:25.932] [Render thread/INFO] [KubeJS Server/]: Loaded 24/24 KubeJS server scripts in 0.326 s with 0 errors and 0 warnings",
+      "[08Sep2026 14:15:56.614] [Render thread/INFO] [KubeJS Server/]: Loaded 24/24 KubeJS server scripts in 0.052 s with 0 errors and 0 warnings",
+      "[08Sep2026 15:17:38.921] [Render thread/INFO] [KubeJS Server/]: Loaded 24/24 KubeJS server scripts in 0.1 s with 0 errors and 0 warnings"
+    ],
+    "generation_markers": [],
+    "limitations": "Error-line counts include repeated failures; successful generation is not an error-free verdict."
+  },
+  {
+    "log": "benchmark_runs\\20260909-132324_baseline_smoke\\20260909-132324_baseline_smoke-r01\\latest.log",
+    "error_lines": 52,
+    "categories": {
+      "entity_attributes": 1,
+      "other": 1,
+      "loot_table_parse": 28,
+      "tag_load": 6,
+      "kubejs_runtime": 2,
+      "recipe_load_or_scan": 4,
+      "advancement_load": 1,
+      "sable_dimension_data": 2,
+      "chunk_block_entity": 7
+    },
+    "benchmark_completed": true,
+    "kubejs_load_summaries": [
+      "[09Sep2026 13:24:47.333] [modloading-worker-0/INFO] [KubeJS Startup/]: Loaded 14/14 KubeJS startup scripts in 2.127 s with 0 errors and 0 warnings",
+      "[09Sep2026 13:25:27.239] [main/INFO] [KubeJS Server/]: Loaded 25/25 KubeJS server scripts in 0.366 s with 0 errors and 0 warnings"
+    ],
+    "generation_markers": [
+      "[09Sep2026 13:26:33.336] [Server thread/INFO] [KubeJS Server/]: [ID-WORLDGEN-BENCH] {\"event\":\"tile_completed\",\"runId\":\"20260909-132324_baseline_smoke-r01\",\"tile\":\"central_wasteland_smoke\",\"tileIndex\":0.0,\"dimension\":\"minecraft:overworld\",\"chunks\":16.0,\"elapsedMs\":7283.0,\"chunksPerSecond\":2.196896883152547,\"polls\":1.0,\"loadedChunks\":16.0,\"validStructureStarts\":0.0,\"structureStartsByNamespace\":{}}"
+    ],
+    "limitations": "Error-line counts include repeated failures; successful generation is not an error-free verdict."
+  },
+  {
+    "log": "benchmark_runs\\20261013-dimension-audit-retry\\20261013-dimension-audit-retry-r01\\latest.log",
+    "error_lines": 50,
+    "categories": {
+      "entity_attributes": 1,
+      "other": 1,
+      "loot_table_parse": 28,
+      "tag_load": 6,
+      "kubejs_runtime": 2,
+      "advancement_load": 1,
+      "sable_dimension_data": 2,
+      "recipe_load_or_scan": 2,
+      "chunk_block_entity": 7
+    },
+    "benchmark_completed": true,
+    "kubejs_load_summaries": [
+      "[13Oct2026 15:41:53.933] [modloading-worker-0/INFO] [KubeJS Startup/]: Loaded 14/14 KubeJS startup scripts in 2.005 s with 0 errors and 0 warnings",
+      "[13Oct2026 15:42:47.686] [main/INFO] [KubeJS Server/]: Loaded 24/24 KubeJS server scripts in 0.324 s with 0 errors and 0 warnings"
+    ],
+    "generation_markers": [
+      "[13Oct2026 15:43:46.107] [Server thread/INFO] [KubeJS Server/]: [ID-WORLDGEN-BENCH] {\"event\":\"tile_completed\",\"runId\":\"20261013-dimension-audit-retry-r01\",\"tile\":\"overworld_boot_control\",\"tileIndex\":0.0,\"dimension\":\"minecraft:overworld\",\"chunks\":16.0,\"elapsedMs\":6213.0,\"chunksPerSecond\":2.575245453082247,\"polls\":1.0,\"loadedChunks\":16.0,\"validStructureStarts\":0.0,\"structureStartsByNamespace\":{}}",
+      "[13Oct2026 15:43:52.170] [Server thread/INFO] [KubeJS Server/]: [ID-WORLDGEN-BENCH] {\"event\":\"tile_completed\",\"runId\":\"20261013-dimension-audit-retry-r01\",\"tile\":\"nether_generation\",\"tileIndex\":1.0,\"dimension\":\"minecraft:the_nether\",\"chunks\":16.0,\"elapsedMs\":1149.0,\"chunksPerSecond\":13.92515230635335,\"polls\":1.0,\"loadedChunks\":16.0,\"validStructureStarts\":0.0,\"structureStartsByNamespace\":{}}",
+      "[13Oct2026 15:43:58.627] [Server thread/INFO] [KubeJS Server/]: [ID-WORLDGEN-BENCH] {\"event\":\"tile_completed\",\"runId\":\"20261013-dimension-audit-retry-r01\",\"tile\":\"hive_arrival_generation\",\"tileIndex\":2.0,\"dimension\":\"infinite_domain:hive_world\",\"chunks\":16.0,\"elapsedMs\":2556.0,\"chunksPerSecond\":6.259780907668231,\"polls\":1.0,\"loadedChunks\":16.0,\"validStructureStarts\":0.0,\"structureStartsByNamespace\":{}}",
+      "[13Oct2026 15:44:04.112] [Server thread/INFO] [KubeJS Server/]: [ID-WORLDGEN-BENCH] {\"event\":\"tile_completed\",\"runId\":\"20261013-dimension-audit-retry-r01\",\"tile\":\"hive_remote_generation\",\"tileIndex\":3.0,\"dimension\":\"infinite_domain:hive_world\",\"chunks\":16.0,\"elapsedMs\":2993.0,\"chunksPerSecond\":5.345806882726362,\"polls\":1.0,\"loadedChunks\":16.0,\"validStructureStarts\":0.0,\"structureStartsByNamespace\":{}}"
+    ],
+    "limitations": "Error-line counts include repeated failures; successful generation is not an error-free verdict."
+  }
+]

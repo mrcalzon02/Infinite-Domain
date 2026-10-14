@@ -34,7 +34,7 @@
     }
 
     function dimId(entity) {
-        return entity.level.dimension.location().toString()
+        return String(entity.level.dimension)
     }
 
     function charles(player, message) {

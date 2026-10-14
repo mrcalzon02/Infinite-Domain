@@ -87,6 +87,9 @@ def _book_cover(entry: dict) -> tuple[str, str]:
         raise ValueError("audio diary written_book is missing set_book_cover metadata")
     if not pages or not pages.get("pages"):
         raise ValueError(f'audio diary "{cover.get("title", "<unknown>")}" has no written pages')
+    if pages.get("mode") != "replace_all":
+        raise ValueError(f'audio diary "{cover.get("title", "<unknown>")}" must use '
+                         'the Minecraft 1.21 string page mode "replace_all"')
     return cover["title"], cover["author"]
 
 

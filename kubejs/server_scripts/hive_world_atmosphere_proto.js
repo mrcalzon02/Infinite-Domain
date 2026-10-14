@@ -29,7 +29,7 @@
     const SCAN_R = 6
 
     function inHive(entity) {
-        return entity.level.dimension.location().toString() === DIM
+        return String(entity.level.dimension) === DIM
     }
 
     function barId(player) {

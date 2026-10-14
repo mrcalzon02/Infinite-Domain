@@ -52,7 +52,7 @@ for (const file of files) {
   const text = fs.readFileSync(path.join(chapterDir, file), 'utf8').replace(/\r\n/g, '\n').replace(/\r/g, '\n')
   const chapterId = text.match(/^\tid:\s*"([0-9A-F]{16})"/m)?.[1]
   const groupId = text.match(/^\tgroup:\s*"([0-9A-F]{16})"/m)?.[1]
-  const chapterIcon = text.match(/^\ticon:\s*"([^"]+)"/m)?.[1]
+  const chapterIcon = text.match(/^\ticon:\s*\{\s*id:\s*"([^"]+)"/m)?.[1]
   for (const match of text.matchAll(/\bid:\s*"([0-9A-F]{16})"/g)) {
     if (allObjectIds.has(match[1])) duplicateObjectIds.push([match[1], allObjectIds.get(match[1]), file])
     else allObjectIds.set(match[1], file)

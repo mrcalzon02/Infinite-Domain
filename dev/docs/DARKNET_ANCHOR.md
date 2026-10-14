@@ -24,3 +24,24 @@ a severed tether and recalls the owner.
 
 Keep the ME network compact: a Spatial Anchor loads every chunk containing part
 of its network, and its native AE/t cost increases as that chunk count grows.
+
+## Repair verification — 2026-10-13
+
+The break handler now checks the event dimension before matching coordinates.
+Previously, breaking an AE2 Spatial Anchor at the same coordinates outside the
+Darknet could clear a player's Darknet binding and trigger recall. Only a break
+in the Darknet can now sever the registered tether.
+
+Run `node dev/scripts/test_darknet_anchor_runtime.js` for eleven behavioral
+scenarios against the live script: valid/rejected placement, duplicate binding,
+breaks in another dimension or at another position, owner recall, powered timer
+maintenance without reviving expired sessions, power-loss grace, missing/unloaded
+anchors, login grace, and death in the Darknet. These use mocked KubeJS and Java
+objects; they do not confirm event delivery or AE2 chunk tickets in Minecraft.
+The existing anchor, rejection-feedback, and Gateway configuration audits also
+pass. Live client verification remains pending.
+
+The broader quest audit still reports existing failures involving icons,
+third-person Charles wording, and the Lyran Research explorer-map handoff.
+Those failures are outside this tether repair. The cyberware mastery audit
+passes.

@@ -3,6 +3,7 @@ const DIMENSION_OVERRIDES = Object.freeze({
   'minecraft:bastion_remnant': 'minecraft:the_nether',
   // Infinite Domain deliberately relocates the stronghold to the Nether.
   'minecraft:stronghold': 'minecraft:the_nether',
+  'infinite_domain:nether/lyran_research': 'minecraft:the_nether',
   'minecraft:end_city': 'minecraft:the_end',
   'stellaris:moon_first_landing': 'stellaris:moon',
   'stellaris:moon_space_base': 'stellaris:moon',

@@ -10,6 +10,12 @@
     "maxHeapGiB": 8
   },
   "suites": {
+    "dimension_audit": [
+      {"name": "overworld_boot_control", "dimension": "minecraft:overworld", "minChunkX": 64, "minChunkZ": 64, "widthChunks": 4, "depthChunks": 4},
+      {"name": "nether_generation", "dimension": "minecraft:the_nether", "minChunkX": 64, "minChunkZ": 64, "widthChunks": 4, "depthChunks": 4},
+      {"name": "hive_arrival_generation", "dimension": "infinite_domain:hive_world", "minChunkX": -2, "minChunkZ": -2, "widthChunks": 4, "depthChunks": 4},
+      {"name": "hive_remote_generation", "dimension": "infinite_domain:hive_world", "minChunkX": 64, "minChunkZ": 64, "widthChunks": 4, "depthChunks": 4}
+    ],
     "smoke": [
       {"name": "central_wasteland_smoke", "dimension": "minecraft:overworld", "minChunkX": 64, "minChunkZ": 64, "widthChunks": 4, "depthChunks": 4}
     ],

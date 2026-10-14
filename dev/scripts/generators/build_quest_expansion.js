@@ -153,7 +153,7 @@ const chapters = [
       structure('A Destination Beyond Earth', 'stellaris:moon_space_base', 'stellaris:space_suit_helmet', 'Enter a Moon space base and establish it as a surveyed logistics destination.'),
       {...dimension('Through the Other Wasteland', 'the_wasteland_reworked:the_wasteland', 'the_wasteland_reworked:the_wasteland', 'Enter the alternate Wasteland dimension as a late-era expedition. Establish a protected arrival point, record the return method, and compare its resources and hazards with the primary world.', ['5E0000000000000C']), chain: false, x: 8, y: 22},
       {...dimension('The Nether Freight Frontier', 'minecraft:the_nether', 'minecraft:netherrack', 'Ignite the reinforced-deepslate Ancient City portal with the recovered Echo Stone, enter the lava-ocean Nether, and establish a protected arrival point.', ['5E00000000000022']), chain: false, x: 14, y: 28},
-      {...dimension('The End of the Route', 'minecraft:the_end', 'minecraft:end_stone', 'Reach the End only after finding the relocated stronghold in the Nether. Secure the arrival platform and prove the return route.', ['5E0000000000001E']), chain: false, x: 20, y: 40},
+      {...dimension('The End of the Route', 'minecraft:the_end', 'minecraft:end_stone', 'Reach the End through the Gate in Lyran Research in the Nether. Secure the arrival platform and prove the return route.', ['5E0000000000001E']), chain: false, x: 20, y: 40},
 
       {...biome('Poisoned Coastline', 'the_wasteland_reworked:polluted_ocean', 'the_wasteland_reworked:rusted_barrel', 'Survey the alternate Wasteland polluted ocean and mark a landing site that keeps contaminated water outside the expedition supply chain.', ['5E0000000000000F']), chain: false, x: 8, y: 24},
       {...biome('The Irradiated Interior', 'the_wasteland_reworked:radioactive_wasteland', 'the_wasteland_reworked:geiger_counter', 'Enter the radioactive interior with active monitoring and record safe exposure limits, shelter intervals, and an evacuation bearing.'), x: 8, y: 26},
@@ -173,7 +173,7 @@ const chapters = [
       {...item('A Needle for the Buried City', 'ancientcompass:ancient_compass', 1, 'Build the pre-Nether Ancient Compass and use it to locate the southern Ancient City route.', ['5E0000000000000C']), id: '5E00000000000020', chain: false, x: 14, y: 22},
       {...structure('The Buried Gate', 'minecraft:ancient_city', 'minecraft:sculk_catalyst', 'Enter the Ancient City containing the reinforced-deepslate gateway.', ['5E00000000000020']), id: '5E00000000000021', chain: false, x: 14, y: 24},
       {...item('Echo-Key Authorization', 'deepnether:deep_nether_lighter', 1, 'Recover four Echo Shards and craft the Echo Stone igniter used by the Ancient City gateway.', ['5E00000000000021']), id: '5E00000000000022', chain: false, x: 14, y: 26},
-      {...structure('Stronghold Beneath the Lava Sky', 'minecraft:stronghold', 'minecraft:ender_eye', 'Find the relocated stronghold in the Nether before End progression can begin.', ['5E00000000000019']), id: '5E0000000000001E', chain: false, x: 14, y: 38}
+      {...structure('Lyran Research: The Gate', 'infinite_domain:nether/lyran_research', 'minecraft:ender_eye', 'Follow the Bastion survey map to Lyran Research, the infernal continuity facility. Find the Gate and bring Eyes of Ender to complete its frame before beginning End progression.', ['5E00000000000019']), id: '5E0000000000001E', chain: false, x: 14, y: 38}
     ]
   }
 ]
@@ -301,6 +301,6 @@ for (const [name, distance] of Object.entries(centralSporeBands)) {
   fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n')
 }
 
-const mapHandoffs = require('./enforce_explorer_map_handoffs').enforce(root)
+const mapHandoffs = require('../enforce_explorer_map_handoffs').enforce(root)
 
 console.log(`Built ${chapters.length} chapters with ${chapters.reduce((n, c) => n + c.quests.length, 0)} quests, upgraded ${replacements.length} exploration tasks, and enforced ${mapHandoffs.handoffs} explorer-map handoffs.`)

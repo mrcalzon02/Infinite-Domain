@@ -84,6 +84,7 @@ BlockEvents.blockEntityTick('ae2:spatial_anchor', event => {
 })
 
 BlockEvents.broken('ae2:spatial_anchor', event => {
+    if (event.level.dimension().location().toString() !== DarknetAnchorDimension) return
     event.server.players.forEach(player => {
         if (playerDarknetAnchorMatches(player, event.block)) clearPlayerDarknetAnchor(player, true)
     })

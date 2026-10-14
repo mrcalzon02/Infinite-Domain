@@ -226,6 +226,9 @@ for js in (expedition_js, atmosphere_js):
     if not js.is_file():
         continue
     source = js.read_text(encoding="utf-8")
+    if re.search(r"\.dimension\s*\.\s*location\s*\(", source):
+        fail(f'[8] {js.name} treats the KubeJS dimension ID as a ResourceKey; '
+             'use String(entity.level.dimension)')
     body = "\n".join(
         ln for ln in source.splitlines()
         if not ln.lstrip().startswith("//")
