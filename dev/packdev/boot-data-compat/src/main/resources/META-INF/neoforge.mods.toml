@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "infinite_domain_boot_data_compat"
+version = "1.0.0"
+displayName = "Infinite Domain: Boot Data Compatibility"
+authors = "Infinite Domain"
+description = '''Repairs the installed Tracks and Primitive Start tag JSON while preserving all other resource contributions.'''
+
+[[mixins]]
+config = "infinite_domain_boot_data_compat.mixins.json"
+
+[[dependencies.infinite_domain_boot_data_compat]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.infinite_domain_boot_data_compat]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "BOTH"

@@ -1,0 +1,710 @@
+{
+  "structure_files_considered": 696,
+  "templates_parsed": 94,
+  "spawner_payloads": 176,
+  "templates_with_spawners": [
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\deep_sea\\akula_wreck_aft.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:drowned": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\deep_sea\\akula_wreck_forward.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:drowned": 1,
+        "minecraft:guardian": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\deep_sea\\coastal_patrol_wreck.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:guardian": 1,
+        "minecraft:drowned": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\abandoned_bungalow.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\abandoned_create_factory.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\abandoned_culdesac.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\abandoned_motel.nbt",
+      "spawners": 1,
+      "entities": {
+        "the_wasteland_reworked:ghoul": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\abandoned_oil_field.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\abandoned_orchard_cannery.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\abandoned_quarry.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\abandoned_truck_stop.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ae2_records_archive.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\battle_tank.nbt",
+      "spawners": 1,
+      "entities": {
+        "mutantmonsters:mutant_zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\blown_apartment_complex.nbt",
+      "spawners": 4,
+      "entities": {
+        "minecraft:zombie": 2,
+        "the_wasteland_reworked:ghoul": 2
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\bombed_data_center.nbt",
+      "spawners": 5,
+      "entities": {
+        "the_wasteland_reworked:irradiated": 2,
+        "minecraft:pillager": 2,
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\bombed_hotel.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:pillager": 1,
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\broken_solar_field.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\bunker_network.nbt",
+      "spawners": 6,
+      "entities": {
+        "minecraft:pillager": 6
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\buried_bank_vault.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\city_electrical_substation.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\city_water_treatment_plant.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\cold_industrial_mountain_port.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\collapsed_airship_terminal.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\collapsed_mine_entrance.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\collapsed_subway_station.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\corporate_warehouse.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\crashed_cargo_airship.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\cratered_downtown_intersection.nbt",
+      "spawners": 4,
+      "entities": {
+        "minecraft:zombie": 2,
+        "the_wasteland_reworked:ghoul": 2
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\decayed_farm.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:zombie": 1,
+        "minecraft:husk": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\decayed_logging_camp.nbt",
+      "spawners": 4,
+      "entities": {
+        "the_wasteland_reworked:ghoul": 2,
+        "minecraft:zombie": 2
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\decayed_ranch.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\delivery_van.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\destroyed_refugee_convoy.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:zombie": 1,
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\dilapidated_grocery.nbt",
+      "spawners": 1,
+      "entities": {
+        "the_wasteland_reworked:ghoul": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\district_heating_station.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\elevated_rail_collapse.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\emergency_relief_shelter.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:pillager": 2
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\excavator_pit.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\freight_depot.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\hydroelectric_refuge_dam.nbt",
+      "spawners": 4,
+      "entities": {
+        "the_wasteland_reworked:irradiated": 2,
+        "minecraft:zombie": 2
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\industrial_facility.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\military_checkpoint.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\mountain_biohazard_lab.nbt",
+      "spawners": 5,
+      "entities": {
+        "minecraft:pillager": 2,
+        "the_wasteland_reworked:irradiated": 2,
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\mountain_military_complex.nbt",
+      "spawners": 6,
+      "entities": {
+        "minecraft:pillager": 6
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\mountain_pass_terminator.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\municipal_incinerator.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\nuclear_research_annex.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\old_world\\ows_002_vcf_emergency_community_grow_hall.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:spider": 1,
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\old_world\\ows_003_vcf_cold_chain_culture_nursery.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:zombie": 1,
+        "minecraft:spider": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\old_world\\ows_004_vcf_mycological_vertical_farm_tower.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:spider": 1,
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\old_world\\ows_005_vcf_harvest_packaging_annex.nbt",
+      "spawners": 3,
+      "entities": {
+        "minecraft:skeleton": 1,
+        "minecraft:spider": 1,
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\old_world\\ows_006_vcf_pt9_symbiosis_pilot_laboratory.nbt",
+      "spawners": 3,
+      "entities": {
+        "minecraft:spider": 1,
+        "minecraft:zombie": 1,
+        "minecraft:skeleton": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\old_world\\ows_007_vcf_ep7_agricultural_development_laboratory.nbt",
+      "spawners": 3,
+      "entities": {
+        "minecraft:skeleton": 1,
+        "minecraft:spider": 1,
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\old_world\\ows_008_vcf_emergency_persistence_investigation_lab.nbt",
+      "spawners": 3,
+      "entities": {
+        "minecraft:zombie": 1,
+        "minecraft:cave_spider": 1,
+        "minecraft:spider": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\old_world\\ows_025_pleroma_automated_market_fulfillment_center.nbt",
+      "spawners": 1,
+      "entities": {
+        "the_wasteland_reworked:ghoul": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\pancaked_parking_structure.nbt",
+      "spawners": 4,
+      "entities": {
+        "minecraft:zombie": 2,
+        "the_wasteland_reworked:ghoul": 2
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\radio_mast.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\remote_sawmill.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\roadside_church_cemetery.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:zombie": 1,
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_bus_terminal.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_city_school.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:zombie": 1,
+        "the_wasteland_reworked:ghoul": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_community_center.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_courthouse.nbt",
+      "spawners": 5,
+      "entities": {
+        "minecraft:zombie": 2,
+        "the_wasteland_reworked:ghoul": 1,
+        "minecraft:pillager": 2
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_cyberware_clinic.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_department_store.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:zombie": 1,
+        "the_wasteland_reworked:ghoul": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_fire_station.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_fuel_depot.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_gas_station.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_grain_elevator.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_hospital.nbt",
+      "spawners": 5,
+      "entities": {
+        "minecraft:zombie": 2,
+        "the_wasteland_reworked:ghoul": 2,
+        "mutantmonsters:mutant_zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_mixed_use_block.nbt",
+      "spawners": 4,
+      "entities": {
+        "minecraft:zombie": 2,
+        "the_wasteland_reworked:ghoul": 2
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_office_tower.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:pillager": 1,
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_police_precinct.nbt",
+      "spawners": 5,
+      "entities": {
+        "minecraft:zombie": 1,
+        "minecraft:pillager": 2,
+        "mutantmonsters:mutant_zombie": 1,
+        "the_wasteland_reworked:ghoul": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_ranger_station.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_roadside_diner.nbt",
+      "spawners": 1,
+      "entities": {
+        "the_wasteland_reworked:ghoul": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_rowhouse_block.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:zombie": 1,
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\ruined_shopping_mall.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:zombie": 1,
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\scrapyard.nbt",
+      "spawners": 1,
+      "entities": {
+        "the_wasteland_reworked:irradiated": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\service_garage.nbt",
+      "spawners": 1,
+      "entities": {
+        "the_wasteland_reworked:ghoul": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\shattered_greenhouse_nursery.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\shattered_luxury_condo.nbt",
+      "spawners": 2,
+      "entities": {
+        "minecraft:zombie": 1,
+        "the_wasteland_reworked:ghoul": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\shattered_wind_farm.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\split_level_house.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\sunken_city_front.nbt",
+      "spawners": 4,
+      "entities": {
+        "minecraft:zombie": 2,
+        "the_wasteland_reworked:ghoul": 2
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\sunken_highway_interchange.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\survivor_cache.nbt",
+      "spawners": 4,
+      "entities": {
+        "minecraft:pillager": 4
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\tenement_courtyard.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:zombie": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\toppled_skyscraper.nbt",
+      "spawners": 3,
+      "entities": {
+        "minecraft:zombie": 1,
+        "the_wasteland_reworked:ghoul": 2
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\trailer_park.nbt",
+      "spawners": 3,
+      "entities": {
+        "the_wasteland_reworked:ghoul": 1,
+        "minecraft:zombie": 2
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\warm_industrial_mountain_port.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\wasteland_fire_lookout.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\wasteland_water_tower.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\wasteland_weigh_station.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    },
+    {
+      "file": "kubejs\\data\\infinite_domain\\structure\\wasteland\\wilderness_substation.nbt",
+      "spawners": 1,
+      "entities": {
+        "minecraft:pillager": 1
+      }
+    }
+  ],
+  "failures": [],
+  "scope": "Project kubejs/data/*/structure NBT only; excludes mod templates, Lost Cities palettes, runtime block changes and old saved chunks."
+}

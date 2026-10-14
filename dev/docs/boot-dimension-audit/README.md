@@ -1,5 +1,10 @@
 # Boot and dimension generation audit — 2026-10-13
 
+**Revision 2 update — 2026-10-14:** tag-loading compatibility and the Nether
+Ancient Debris trace mapping are repaired. A new 64/64-chunk run reports 14
+error lines, zero tag/loot/KubeJS errors, and no missing Ancient Debris mapping
+warning. See `revision-2/README.md` and its inventories for the current closeout.
+
 **Revision 1 update:** the repair rerun reduced error lines from 50 to 18,
 eliminated all 28 loot-table failures and the four cascading leaf-tag failures,
 and completed 64/64 chunks again. See `revision-1/README.md` for the closeout and
