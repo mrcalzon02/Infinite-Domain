@@ -24,6 +24,8 @@ def main():
     dependencies = [libraries / p for p in relative]
     dependencies += list(libraries.glob('net/neoforged/neoforgespi/*/*.jar'))
     dependencies += list(libraries.glob('org/apache/maven/maven-artifact/*/*.jar'))
+    dependencies += list(libraries.glob('com/google/code/gson/gson/*/*.jar'))
+    dependencies += list(libraries.glob('org/slf4j/slf4j-api/*/*.jar'))
     assert all(p.is_file() for p in dependencies), 'Missing compiler dependency'
     build = PROJECT / 'build'
     classes = build / 'classes'

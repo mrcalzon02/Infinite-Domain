@@ -36,6 +36,13 @@ speed to 0.2 plus 0.1 times size, and attack damage to size. It does not registe
 a fallback for future Jaffabricate releases or entities already present in the
 default supplier table. Review the compatibility hook when updating the mod.
 
+The dimension loader hook quarantines only Linear Bearing's exact known legacy
+block payload when both upstream resource owners and the identical counterpart
+match. It logs the correction and preserves changed payloads and user overrides.
+This does not migrate the old block-physics schema or assign a dimension binding.
+Run `python dev/scripts/audit_sable_duplicate_compat.py` for the installed-jar
+guard tests and retained revision-4 evidence.
+
 `boot_compat_acceptance.js` exercises real entity construction and size-two
 attributes only when the isolated `dimension_audit` plan is enabled. It does
 not spawn a mob into normal worlds. Its acceptance marker must be present and

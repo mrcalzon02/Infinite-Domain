@@ -1,5 +1,10 @@
 # Boot and dimension generation audit — 2026-10-13
 
+**Revision 4 update — 2026-10-14:** the exact misfiled Linear Bearing physics
+payload is quarantined from the dimension loader. The fresh run passed 64/64
+chunks with 10 remaining ERROR entries. See [current closeout](revision-4/README.md)
+for inventories, validation and unresolved mechanics.
+
 **Revision 3 update — 2026-10-14:** Arise's advancement graph and legacy icons,
 and Jaffabricate's missing Jelly Slime attributes, are repaired. The accepted
 fresh run completed 64/64 chunks and a real entity-construction check, with 12
@@ -126,6 +131,15 @@ quality, real player travel/return, and the arrival-building behavior on a cold
 destination need runtime inspection. The arrival script currently requests a
 chunk ticket and immediately runs its build function; the headless generation
 test does not validate that cold-entry ordering.
+
+## Revision 4 closeout (2026-10-14)
+
+The [revision-4 closeout](revision-4/README.md) records a fresh 64/64-chunk run
+and a reduction from 12 to 10 ERROR entries. Exact duplicate legacy Linear
+Bearing block data is now quarantined from Sable's dimension loader, with eight
+guard tests and a visible live acceptance marker. Legacy block-physics migration
+remains unresolved; actual player travel and natural landmarks still require
+the acceptance checks below.
 
 ## Next acceptance checks
 

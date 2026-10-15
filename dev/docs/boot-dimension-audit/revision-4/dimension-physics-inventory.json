@@ -1,0 +1,603 @@
+{
+  "resources": [
+    {
+      "jar": "aeroportals-1.21.1-1.2.4.jar",
+      "resource": "data/aeroportals/dimension_physics/ae2_spatial_storage.json",
+      "sha256": "4d6d68041caafba4def420320c4152c5a0a0b73ae11d373085fbd461439f5762",
+      "dimension": "ae2:spatial_storage",
+      "block": null,
+      "duplicates_block_physics": false,
+      "block_physics_resource": null
+    },
+    {
+      "jar": "linearbearing-1.2.6.jar",
+      "resource": "data/linearbearing/dimension_physics/mechanical_linear_moving.json",
+      "sha256": "0a8bf9c5373f4eaa4de91f98dd2c833ac0db4f38446ec8960cf9732883567346",
+      "dimension": null,
+      "block": "linearbearing:mechanical_linear_moving",
+      "duplicates_block_physics": true,
+      "block_physics_resource": "data/linearbearing/block_physics/mechanical_linear_moving.json"
+    }
+  ],
+  "missing_dimension_bindings": [
+    {
+      "jar": "linearbearing-1.2.6.jar",
+      "resource": "data/linearbearing/dimension_physics/mechanical_linear_moving.json",
+      "sha256": "0a8bf9c5373f4eaa4de91f98dd2c833ac0db4f38446ec8960cf9732883567346",
+      "dimension": null,
+      "block": "linearbearing:mechanical_linear_moving",
+      "duplicates_block_physics": true,
+      "block_physics_resource": "data/linearbearing/block_physics/mechanical_linear_moving.json"
+    }
+  ],
+  "legacy_block_physics_resources": [
+    {
+      "jar": "linearbearing-1.2.6.jar",
+      "resource": "data/linearbearing/block_physics/mechanical_linear_moving.json",
+      "sha256": "0a8bf9c5373f4eaa4de91f98dd2c833ac0db4f38446ec8960cf9732883567346",
+      "fields": [
+        "block",
+        "physics_properties"
+      ],
+      "selector": null,
+      "legacy_block": "linearbearing:mechanical_linear_moving",
+      "legacy_block_present_in_retained_registry": false
+    }
+  ],
+  "current_physics_block_properties_resources": [
+    {
+      "jar": "create_submarine-2.2.4.jar",
+      "resource": "data/create_submarine/physics_block_properties/floater.json",
+      "sha256": "6ae10725c9a874f2f31ab0f48468cb8338a5865ade9aea8f420ecb101c09988a",
+      "fields": [
+        "priority",
+        "properties",
+        "selector"
+      ],
+      "selector": "create_submarine:floater",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "create_submarine-2.2.4.jar",
+      "resource": "data/create_submarine/physics_block_properties/underwater_mine.json",
+      "sha256": "2e357bb8cd14c50999c08c72d18e846110e0c10a9b3f85eb3664ba0fe8d5caeb",
+      "fields": [
+        "priority",
+        "properties",
+        "selector"
+      ],
+      "selector": "create_submarine:underwater_mine",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/advanced_contraption_controller.json",
+      "sha256": "9606372af924ad88ad34462ec4cfcf0cbf388588301d665233bdbc9fec0ab75a",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:advanced_contraption_controller",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/aileron_bearing.json",
+      "sha256": "5912b0d6523256e1a7b5914c2dd2ef0a7a3366c63e17f0e3c58ecd37118ecb83",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:aileron_bearing",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/alternator.json",
+      "sha256": "4a783d1344514b236a981f61c8316a937d03c6d08c372c73b309e13d563cc0a4",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:alternator",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/analogue_contraption_controller.json",
+      "sha256": "5f6dc6a993b2db2d245b6ebb67a109e6a185bda24d1c260f8b9feac8ad14e4bb",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:analogue_contraption_controller",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/analogue_joystick.json",
+      "sha256": "4ba8d7c37c00cfdaea35bb4b3bf259eeee05cef19f583adf6d4d5c6099cdfaed",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:analogue_joystick",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/andesite_cable.json",
+      "sha256": "47cc2ce37f032f265bab0fae6794bc9fa04afcf70215040ad8c7b00b68a23471",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:andesite_cable",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/bi_directional_gearshift.json",
+      "sha256": "75395b12c85fede2e306f443966c4998e2f90245d52671fa5d4a71c42dd07050",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:bi_directional_gearshift",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/bidirectional_gearbox.json",
+      "sha256": "e461a5a463523510082d3b560ab4877a50e4db9c143970c95e4192c66d42c903",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:bidirectional_gearbox",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/claw.json",
+      "sha256": "e003fd3788f31b1f0d50639a9798c0ae0e08b0f1beb9ce4ba3f2b985dfce4201",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:claw",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/entity_launcher_anchor.json",
+      "sha256": "566375c74faceb706d3227478fd6e621a6a9ec7352439a3b8189999d5f415bd0",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:entity_launcher_anchor",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/fuel_oxidizer.json",
+      "sha256": "8879ace9a84ab868203b378343689572fa8174416002816b46897b0851a81d70",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:fuel_oxidizer",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/gyroscope_link.json",
+      "sha256": "2da1bc6ac321361912d8905fe194d8ab670d147c2394a612ed3f1e16d06bce5e",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:gyroscope_link",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/industrial_motor.json",
+      "sha256": "8cc4d8a7c9db0dbd6bae75cd8e639cdaf6176e13d5c3d14f83af23d59104e11f",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:industrial_motor",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/physics_gantry_belt_wheel.json",
+      "sha256": "28e28442ecd1e86e46de935991b1c91b12044afad2d9a7a8fdd3f879ccf4baa2",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:physics_gantry_belt_wheel",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/physics_gantry_carriage.json",
+      "sha256": "bb6744f53dfffaba3da67660f13c1cb224ca84af654c8288ce39dfac19017d81",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:physics_gantry_carriage",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/physics_gantry_shaft.json",
+      "sha256": "f26a1e216146851f10ceef6403e43ffa77ce313db916c08ae86028770e88bb99",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:physics_gantry_shaft",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/powered_zipline.json",
+      "sha256": "a167d1d5e2465ee6f1cba65c43d34eee6bf54a2fe7c5f6b1abda435183abe517",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:powered_zipline",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/scissor_piston.json",
+      "sha256": "e94986e4bb97962815214152ca36adc97aa2e40c48cdcecd2e9e3744b95a9e9d",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:scissor_piston",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/scissor_piston_arm.json",
+      "sha256": "c1c0677810bd6612b9e042b7074fb6ca018a6fddbd839e521a564b204185c20a",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:scissor_piston_arm",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/scissor_piston_link.json",
+      "sha256": "648cba54bc5e1ae711d456fe009ed8b24605fb7620a8c71803ef7fc0c5e0a597",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:scissor_piston_link",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/thruster.json",
+      "sha256": "2fdef3c6fcd341f62f57990b059bac01670b5bb169b36605d24228f12f720599",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:thruster",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/thruster_bearing.json",
+      "sha256": "d3a1dabf53f571156559cd66732f162407af70d73dd8df9acfb748452a6857c6",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:thruster_bearing",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/variable_transmission.json",
+      "sha256": "c293634508646ef697b49544143df1cb1e49377f49904e8f5ad7d0006407622a",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:variable_transmission",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "createthrusters-bundled-V1.1.3.jar",
+      "resource": "data/createthrusters/physics_block_properties/vector_bearing.json",
+      "sha256": "7e58acae03171f4db09da4254a5ae8d3f3adcb1cb33d1e2f4fad7982dc366201",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "createthrusters:vector_bearing",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/bedrock_absurdity.json",
+      "sha256": "85e1c031fb25598f5fb944a198c49e471cecae2e47a32f27ffd18a9896bcb34f",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "minecraft:bedrock",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/bouncy.json",
+      "sha256": "ceee2c7d33c672e42f05fd3242d160451c26d6f398c140317cda0d29be3f1cb5",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:bouncy",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/end_stone_brick_slab.json",
+      "sha256": "924a9e8a0b4baa6bbdff10f2a85b49db6cc0480ad374018ee829f467a4b59986",
+      "fields": [
+        "overrides",
+        "properties",
+        "selector"
+      ],
+      "selector": "minecraft:end_stone_brick_slab",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/end_stones.json",
+      "sha256": "bcaad63e782b3f316e27ebbdeec916d54c5dca6a1a9cd3a20f66f2eb8b74aa12",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:end_stones",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/flywheel.json",
+      "sha256": "8812aed4f680fd6c7b1b9179c0bd4907ec55a6328292d843bb035067a4686973",
+      "fields": [
+        "overrides",
+        "properties",
+        "selector"
+      ],
+      "selector": "create:flywheel",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/fragile.json",
+      "sha256": "349695357bc5f094101ac630d26ddfa991383d40487a8f756393dac70a16ea48",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:fragile",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/grindstone.json",
+      "sha256": "611019ab910dc1ff8532d24537966886f67b51ce1282bcf0378619d559eaa4b7",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "minecraft:grindstone",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/half_volume.json",
+      "sha256": "8ffc7278624bd6ecb231fcd8e91b5e0a53a3b0cb00a7c978002eb9e74e6ff6fb",
+      "fields": [
+        "overrides",
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:half_volume",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/heavy.json",
+      "sha256": "cd5327c4f36219d982734490379da5ff19dde84e31c99a24d9ee12fd12fcdde6",
+      "fields": [
+        "overrides",
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:heavy",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/light.json",
+      "sha256": "29ad18c430b77d891c852164f80a4941d6fe36263fde26a349032bf8dfbca7a1",
+      "fields": [
+        "overrides",
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:light",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/mud.json",
+      "sha256": "f7b853eca363b41c7c913143890a25ce8259c2bf01a2f581adc19b22b4adb3b9",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "minecraft:mud",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/normal.json",
+      "sha256": "684f398293e9d4860d8558246b75cda4c865c1458486da9456b5dd3e1c7d0d8e",
+      "fields": [
+        "overrides",
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:normal",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/piston.json",
+      "sha256": "2f67e87db2e2c7c3c7ded3888b35560fe4167698369d0130e0b9540899f5ba86",
+      "fields": [
+        "overrides",
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:pistons",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/quarter_volume.json",
+      "sha256": "15098a193d477a5b74248716230bbb48f9ff3580444cea60acb2794274dc6f39",
+      "fields": [
+        "overrides",
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:quarter_volume",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/slippery.json",
+      "sha256": "aabe9f5caabec12b04b9904bd22ca5e3ba1787cbbd900327103fc9665d1a2c7f",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:slippery",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/sticky.json",
+      "sha256": "3cf4ae2e9e025afbc6e6c50fe5cab36c17fb1b5e337791356bc9480ce0a8cb34",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:frictive",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/super_heavy.json",
+      "sha256": "32bf9bb01f02bf035d06c1f56e24d19f92d2cda625ec917175fe12059de15d30",
+      "fields": [
+        "overrides",
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:super_heavy",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/super_light.json",
+      "sha256": "fc9ec0ed505694c53d658d3336a4a9bb4abe3c18a284f7cb1b432236f06a804b",
+      "fields": [
+        "overrides",
+        "priority",
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:super_light",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    },
+    {
+      "jar": "sable-neoforge-1.21.1-2.0.5.jar",
+      "resource": "data/sable/physics_block_properties/weightless.json",
+      "sha256": "d6d709c62df60245feb13e4aa456a0d4806787a9a6859e95482e8ba4bd93269d",
+      "fields": [
+        "properties",
+        "selector"
+      ],
+      "selector": "#sable:weightless",
+      "legacy_block": null,
+      "legacy_block_present_in_retained_registry": null
+    }
+  ],
+  "scope": "Top-level installed mod dimension_physics JSON; no inference of intended dimension and no runtime mutation."
+}
