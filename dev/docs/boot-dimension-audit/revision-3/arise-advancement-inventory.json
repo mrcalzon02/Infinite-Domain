@@ -1,0 +1,295 @@
+{
+  "source_jar": "DungeonsArise-1.21.1-2.1.68-release.jar",
+  "source_sha256": "7eee1eca7e3b2c6c1bede055934f391ae2e8349ffe33e106f451176d2cfcf0e4",
+  "advancements": [
+    {
+      "resource": "data/dungeons_arise/advancement/find_abandoned_temple.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:cracked_stone_bricks",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_aviary.json",
+      "source_parent": "dungeons_arise:find_heavenly_challenger",
+      "effective_parent": "dungeons_arise:find_heavenly_challenger",
+      "icon": "minecraft:phantom_membrane",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_bandit_towers.json",
+      "source_parent": "dungeons_arise:find_bandit_village",
+      "effective_parent": "dungeons_arise:find_bandit_village",
+      "icon": "minecraft:lantern",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_bandit_village.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:dead_bush",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_bathhouse.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:blast_furnace",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_ceryneian_hind.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:bone",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_coliseum.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:shield",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_fishing_hut.json",
+      "source_parent": "dungeons_arise:find_small_prairie_house",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:fishing_rod",
+      "repairs": [
+        "Reconnect orphan to existing Arise root"
+      ]
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_foundry.json",
+      "source_parent": "dungeons_arise:find_scorched_mines",
+      "effective_parent": "dungeons_arise:find_scorched_mines",
+      "icon": "minecraft:netherite_ingot",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_giant_mushroom.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:red_mushroom_block",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_greenwood_pub.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:barrel",
+      "repairs": [
+        "Use Minecraft 1.21 item-stack icon field"
+      ]
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_heavenly_challenger.json",
+      "source_parent": "dungeons_arise:find_heavenly_conqueror",
+      "effective_parent": "dungeons_arise:find_heavenly_conqueror",
+      "icon": "minecraft:netherite_chestplate",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_heavenly_conqueror.json",
+      "source_parent": "dungeons_arise:find_heavenly_rider",
+      "effective_parent": "dungeons_arise:find_heavenly_rider",
+      "icon": "minecraft:golden_chestplate",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_heavenly_rider.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:saddle",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_illager_campsite.json",
+      "source_parent": "dungeons_arise:find_merchant_campsite",
+      "effective_parent": "dungeons_arise:find_merchant_campsite",
+      "icon": "minecraft:crossbow",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_illager_corsair_or_illager_galley.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:tropical_fish",
+      "repairs": [
+        "Use Minecraft 1.21 item-stack icon field"
+      ]
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_illager_fort.json",
+      "source_parent": "dungeons_arise:find_illager_campsite",
+      "effective_parent": "dungeons_arise:find_illager_campsite",
+      "icon": "minecraft:snowball",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_illager_windmill.json",
+      "source_parent": "dungeons_arise:find_merchant_campsite",
+      "effective_parent": "dungeons_arise:find_merchant_campsite",
+      "icon": "minecraft:iron_hoe",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_infested_temple.json",
+      "source_parent": "dungeons_arise:find_abandoned_temple",
+      "effective_parent": "dungeons_arise:find_abandoned_temple",
+      "icon": "minecraft:fermented_spider_eye",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_infested_temple_map.json",
+      "source_parent": "dungeons_arise:find_monastery",
+      "effective_parent": "dungeons_arise:find_monastery",
+      "icon": "minecraft:filled_map",
+      "repairs": [
+        "Use Minecraft 1.21 item-stack icon field"
+      ]
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_keep_kayra.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:lily_pad",
+      "repairs": [
+        "Use Minecraft 1.21 item-stack icon field"
+      ]
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_kisegi_sanctuary.json",
+      "source_parent": "dungeons_arise:find_abandoned_temple",
+      "effective_parent": "dungeons_arise:find_abandoned_temple",
+      "icon": "minecraft:red_candle",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_lighthouse.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:redstone_lamp",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_mechanical_nest.json",
+      "source_parent": "dungeons_arise:find_small_blimp",
+      "effective_parent": "dungeons_arise:find_small_blimp",
+      "icon": "minecraft:observer",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_merchant_campsite.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:emerald",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_mining_complex.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:hopper_minecart",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_monastery.json",
+      "source_parent": "dungeons_arise:find_abandoned_temple",
+      "effective_parent": "dungeons_arise:find_abandoned_temple",
+      "icon": "minecraft:feather",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_mushroom_house.json",
+      "source_parent": "dungeons_arise:find_giant_mushroom",
+      "effective_parent": "dungeons_arise:find_giant_mushroom",
+      "icon": "minecraft:warped_fungus",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_mushroom_mines.json",
+      "source_parent": "dungeons_arise:find_giant_mushroom",
+      "effective_parent": "dungeons_arise:find_giant_mushroom",
+      "icon": "minecraft:iron_pickaxe",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_mushroom_village.json",
+      "source_parent": "dungeons_arise:find_mushroom_house",
+      "effective_parent": "dungeons_arise:find_mushroom_house",
+      "icon": "minecraft:crimson_fence",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_plague_asylum.json",
+      "source_parent": "dungeons_arise:find_greenwood_pub",
+      "effective_parent": "dungeons_arise:find_greenwood_pub",
+      "icon": "minecraft:splash_potion",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_scorched_mines.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:blaze_powder",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_shiraz_palace.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:totem_of_undying",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_small_blimp.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:comparator",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_thornborn_towers.json",
+      "source_parent": "dungeons_arise:find_small_prairie_house",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:rose_bush",
+      "repairs": [
+        "Reconnect orphan to existing Arise root",
+        "Use Minecraft 1.21 item-stack icon field"
+      ]
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_typhon.json",
+      "source_parent": "dungeons_arise:find_ceryneian_hind",
+      "effective_parent": "dungeons_arise:find_ceryneian_hind",
+      "icon": "minecraft:fire_coral",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_undead_pirate_ship.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:gunpowder",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/find_wishing_well.json",
+      "source_parent": "dungeons_arise:wda_root",
+      "effective_parent": "dungeons_arise:wda_root",
+      "icon": "minecraft:melon_slice",
+      "repairs": []
+    },
+    {
+      "resource": "data/dungeons_arise/advancement/wda_root.json",
+      "source_parent": null,
+      "effective_parent": null,
+      "icon": "minecraft:golden_sword",
+      "repairs": []
+    }
+  ],
+  "orphan_repairs": 2,
+  "icon_repairs": 5,
+  "scope": "Installed Arise jar; generated overlays checked against source-derived expected content."
+}

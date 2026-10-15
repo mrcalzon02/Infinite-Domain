@@ -1,0 +1,61 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:tropical_fish"
+    },
+    "title": {
+      "translate": "advancement.dungeons_arise.find_illager_corsair_or_illager_galley.title",
+      "fallback": "You Are A Pirate!",
+      "color": "dark_aqua"
+    },
+    "description": {
+      "translate": "advancement.dungeons_arise.find_illager_corsair_or_illager_galley.desc",
+      "fallback": "Find an Illager Corsair or an Illager Galley"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "dungeons_arise:wda_root",
+  "criteria": {
+    "location0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "dungeons_arise:illager_corsair"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "location1": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "dungeons_arise:illager_galley"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "location0",
+      "location1"
+    ]
+  ]
+}

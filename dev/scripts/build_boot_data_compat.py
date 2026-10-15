@@ -22,6 +22,8 @@ def main():
         'net/neoforged/mergetool/2.0.7/mergetool-2.0.7-api.jar',
     ]
     dependencies = [libraries / p for p in relative]
+    dependencies += list(libraries.glob('net/neoforged/neoforgespi/*/*.jar'))
+    dependencies += list(libraries.glob('org/apache/maven/maven-artifact/*/*.jar'))
     assert all(p.is_file() for p in dependencies), 'Missing compiler dependency'
     build = PROJECT / 'build'
     classes = build / 'classes'

@@ -1,5 +1,6 @@
 """Inventory all contributors to repaired tags and test the shipped transformer."""
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import subprocess
@@ -16,6 +17,9 @@ TAGS = [
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--out', type=Path, default=ROOT / 'dev/docs/boot-dimension-audit/revision-2')
+    args = parser.parse_args()
     installed = ROOT / 'mods/infinite-domain-boot-data-compat-1.0.0.jar'
     tests = PROJECT / 'build/test-classes'
     tests.mkdir(parents=True, exist_ok=True)
@@ -72,7 +76,7 @@ def main():
     assert trace == {'values': {'createreautomated:ancient_debris_node': {'trace_block': 'minecraft:ancient_debris'}}}
     blocks = set((ROOT / 'dev/docs/registry-inventory/block-ids.txt').read_text().splitlines())
     assert {'createreautomated:ancient_debris_node', 'minecraft:ancient_debris', 'tracks:track_mount'} <= blocks
-    out = ROOT / 'dev/docs/boot-dimension-audit/revision-2'
+    out = args.out
     out.mkdir(parents=True, exist_ok=True)
     (out / 'tag-resource-inventory.json').write_text(json.dumps({
         'compat_jar_sha256': hashlib.sha256(installed.read_bytes()).hexdigest(),

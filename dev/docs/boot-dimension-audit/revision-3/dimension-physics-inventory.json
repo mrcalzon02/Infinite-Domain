@@ -1,0 +1,34 @@
+{
+  "resources": [
+    {
+      "jar": "aeroportals-1.21.1-1.2.4.jar",
+      "resource": "data/aeroportals/dimension_physics/ae2_spatial_storage.json",
+      "sha256": "4d6d68041caafba4def420320c4152c5a0a0b73ae11d373085fbd461439f5762",
+      "dimension": "ae2:spatial_storage",
+      "block": null,
+      "duplicates_block_physics": false,
+      "block_physics_resource": null
+    },
+    {
+      "jar": "linearbearing-1.2.6.jar",
+      "resource": "data/linearbearing/dimension_physics/mechanical_linear_moving.json",
+      "sha256": "0a8bf9c5373f4eaa4de91f98dd2c833ac0db4f38446ec8960cf9732883567346",
+      "dimension": null,
+      "block": "linearbearing:mechanical_linear_moving",
+      "duplicates_block_physics": true,
+      "block_physics_resource": "data/linearbearing/block_physics/mechanical_linear_moving.json"
+    }
+  ],
+  "missing_dimension_bindings": [
+    {
+      "jar": "linearbearing-1.2.6.jar",
+      "resource": "data/linearbearing/dimension_physics/mechanical_linear_moving.json",
+      "sha256": "0a8bf9c5373f4eaa4de91f98dd2c833ac0db4f38446ec8960cf9732883567346",
+      "dimension": null,
+      "block": "linearbearing:mechanical_linear_moving",
+      "duplicates_block_physics": true,
+      "block_physics_resource": "data/linearbearing/block_physics/mechanical_linear_moving.json"
+    }
+  ],
+  "scope": "Top-level installed mod dimension_physics JSON; no inference of intended dimension and no runtime mutation."
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "log": "benchmark_runs\\20261014-dimension-repair-r3\\20261014-dimension-repair-r3-r01\\latest.log",
+    "error_lines": 13,
+    "categories": {
+      "other": 1,
+      "sable_dimension_data": 2,
+      "kubejs_runtime": 1,
+      "recipe_load_or_scan": 2,
+      "chunk_block_entity": 7
+    },
+    "warning_lines": 507,
+    "windows_invalid_path_exceptions": 5,
+    "benchmark_completed": true,
+    "kubejs_load_summaries": [
+      "[14Oct2026 17:54:25.020] [modloading-worker-0/INFO] [KubeJS Startup/]: Loaded 14/14 KubeJS startup scripts in 4.347 s with 0 errors and 0 warnings",
+      "[14Oct2026 17:56:07.001] [main/INFO] [KubeJS Server/]: Loaded 25/25 KubeJS server scripts in 0.708 s with 0 errors and 0 warnings"
+    ],
+    "generation_markers": [
+      "[14Oct2026 17:58:02.442] [Server thread/INFO] [KubeJS Server/]: [ID-WORLDGEN-BENCH] {\"event\":\"tile_completed\",\"runId\":\"20261014-dimension-repair-r3-r01\",\"tile\":\"overworld_boot_control\",\"tileIndex\":0.0,\"dimension\":\"minecraft:overworld\",\"chunks\":16.0,\"elapsedMs\":24585.0,\"chunksPerSecond\":0.6508033353670938,\"polls\":1.0,\"loadedChunks\":16.0,\"validStructureStarts\":0.0,\"structureStartsByNamespace\":{}}",
+      "[14Oct2026 17:58:14.042] [Server thread/INFO] [KubeJS Server/]: [ID-WORLDGEN-BENCH] {\"event\":\"tile_completed\",\"runId\":\"20261014-dimension-repair-r3-r01\",\"tile\":\"nether_generation\",\"tileIndex\":1.0,\"dimension\":\"minecraft:the_nether\",\"chunks\":16.0,\"elapsedMs\":6691.0,\"chunksPerSecond\":2.3912718577193246,\"polls\":1.0,\"loadedChunks\":16.0,\"validStructureStarts\":0.0,\"structureStartsByNamespace\":{}}",
+      "[14Oct2026 17:58:31.061] [Server thread/INFO] [KubeJS Server/]: [ID-WORLDGEN-BENCH] {\"event\":\"tile_completed\",\"runId\":\"20261014-dimension-repair-r3-r01\",\"tile\":\"hive_arrival_generation\",\"tileIndex\":2.0,\"dimension\":\"infinite_domain:hive_world\",\"chunks\":16.0,\"elapsedMs\":16209.0,\"chunksPerSecond\":0.9871059288049849,\"polls\":1.0,\"loadedChunks\":16.0,\"validStructureStarts\":0.0,\"structureStartsByNamespace\":{}}",
+      "[14Oct2026 17:58:40.620] [Server thread/INFO] [KubeJS Server/]: [ID-WORLDGEN-BENCH] {\"event\":\"tile_completed\",\"runId\":\"20261014-dimension-repair-r3-r01\",\"tile\":\"hive_remote_generation\",\"tileIndex\":3.0,\"dimension\":\"infinite_domain:hive_world\",\"chunks\":16.0,\"elapsedMs\":8478.0,\"chunksPerSecond\":1.8872375560273649,\"polls\":1.0,\"loadedChunks\":16.0,\"validStructureStarts\":0.0,\"structureStartsByNamespace\":{}}"
+    ],
+    "limitations": "Error-line counts include repeated failures; successful generation is not an error-free verdict."
+  }
+]

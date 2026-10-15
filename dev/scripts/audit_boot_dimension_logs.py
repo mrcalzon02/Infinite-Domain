@@ -51,6 +51,8 @@ def main():
             current.append(row)
         summaries.append({'log': str(log), 'error_lines': len(current),
                           'categories': dict(Counter(r['category'] for r in current)),
+                          'warning_lines': sum(bool(re.search(r'/WARN\]', line)) for line in lines),
+                          'windows_invalid_path_exceptions': sum('java.nio.file.InvalidPathException:' in line for line in lines),
                           'benchmark_completed': any('"event":"benchmark_completed"' in line.replace(' ', '') for line in lines),
                           'kubejs_load_summaries': [line for line in lines if re.search(r'Loaded \d+/\d+ KubeJS', line)],
                           'generation_markers': [line for line in lines if '"event":"tile_completed"' in line.replace(' ', '')],

@@ -1,5 +1,10 @@
 # Boot and dimension generation audit — 2026-10-13
 
+**Revision 3 update — 2026-10-14:** Arise's advancement graph and legacy icons,
+and Jaffabricate's missing Jelly Slime attributes, are repaired. The accepted
+fresh run completed 64/64 chunks and a real entity-construction check, with 12
+remaining error lines. See `revision-3/README.md` for current evidence and limits.
+
 **Revision 2 update — 2026-10-14:** tag-loading compatibility and the Nether
 Ancient Debris trace mapping are repaired. A new 64/64-chunk run reports 14
 error lines, zero tag/loot/KubeJS errors, and no missing Ancient Debris mapping

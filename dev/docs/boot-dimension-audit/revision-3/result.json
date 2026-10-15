@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "status": "complete",
+  "runId": "20261014-dimension-repair-r3b-r01",
+  "batchId": "20261014-dimension-repair-r3b",
+  "repetition": 1,
+  "variant": "baseline",
+  "suite": "dimension_audit",
+  "seed": "-7046029254386353131",
+  "reportedSeed": "-7046029254386353000",
+  "seedValidation": "rhino_double_equivalent",
+  "worldName": "Infinite Domain - Worldgen Benchmark",
+  "configurationFingerprint": "f8f41e7a026c289a8e39da4139d1207f99406a90a1b23a6f5e848e6a90b71a35",
+  "plannedChunks": 64,
+  "completedChunks": 64,
+  "tileCount": 4,
+  "tileP50Ms": 3394.0,
+  "tileP95Ms": 6672.4,
+  "tileMaxMs": 7231.0,
+  "tiles": [
+    {
+      "event": "tile_completed",
+      "runId": "20261014-dimension-repair-r3b-r01",
+      "tile": "overworld_boot_control",
+      "tileIndex": 0.0,
+      "dimension": "minecraft:overworld",
+      "chunks": 16.0,
+      "elapsedMs": 7231.0,
+      "chunksPerSecond": 2.212695339510441,
+      "polls": 1.0,
+      "loadedChunks": 16.0,
+      "validStructureStarts": 0.0,
+      "structureStartsByNamespace": {},
+      "_line": 2213,
+      "measurementSaturated": true
+    },
+    {
+      "event": "tile_completed",
+      "runId": "20261014-dimension-repair-r3b-r01",
+      "tile": "nether_generation",
+      "tileIndex": 1.0,
+      "dimension": "minecraft:the_nether",
+      "chunks": 16.0,
+      "elapsedMs": 1373.0,
+      "chunksPerSecond": 11.653313911143481,
+      "polls": 1.0,
+      "loadedChunks": 16.0,
+      "validStructureStarts": 0.0,
+      "structureStartsByNamespace": {},
+      "_line": 2366,
+      "measurementSaturated": true
+    },
+    {
+      "event": "tile_completed",
+      "runId": "20261014-dimension-repair-r3b-r01",
+      "tile": "hive_arrival_generation",
+      "tileIndex": 2.0,
+      "dimension": "infinite_domain:hive_world",
+      "chunks": 16.0,
+      "elapsedMs": 3507.0,
+      "chunksPerSecond": 4.562303963501568,
+      "polls": 1.0,
+      "loadedChunks": 16.0,
+      "validStructureStarts": 0.0,
+      "structureStartsByNamespace": {},
+      "_line": 2368,
+      "measurementSaturated": true
+    },
+    {
+      "event": "tile_completed",
+      "runId": "20261014-dimension-repair-r3b-r01",
+      "tile": "hive_remote_generation",
+      "tileIndex": 3.0,
+      "dimension": "infinite_domain:hive_world",
+      "chunks": 16.0,
+      "elapsedMs": 3281.0,
+      "chunksPerSecond": 4.87656202377324,
+      "polls": 1.0,
+      "loadedChunks": 16.0,
+      "validStructureStarts": 0.0,
+      "structureStartsByNamespace": {},
+      "_line": 2371,
+      "measurementSaturated": true
+    }
+  ],
+  "saturatedTiles": 4,
+  "measurementQuality": "unmeasured",
+  "serverPhases": {
+    "levelPrepMs": 13079,
+    "spawnPrepMs": 5172,
+    "note": "levelPrepMs covers datapack and registry load before any chunk generates; spawnPrepMs is vanilla's own fixed spawn-area generation timing. Both are durations only - the spawn area's chunk count is not recoverable from the log."
+  },
+  "failure": null,
+  "acceptance": {
+    "probeErrors": [],
+    "loadedMods": {
+      "lostcities": true,
+      "dungeons_arise": true,
+      "dungeons_arise_seven_seas": true
+    },
+    "totalValidStructureStarts": 0,
+    "structureStartsByNamespace": {},
+    "arise": {
+      "dungeons_arise": {
+        "modLoaded": true,
+        "structureCount": 40,
+        "structureSetCount": 2,
+        "observedNaturalStarts": 0,
+        "runtimeRegistryReady": true,
+        "naturalGenerationObserved": false,
+        "structureSample": [
+          "dungeons_arise:abandoned_temple",
+          "dungeons_arise:aviary",
+          "dungeons_arise:bandit_towers",
+          "dungeons_arise:bandit_village",
+          "dungeons_arise:bathhouse",
+          "dungeons_arise:ceryneian_hind",
+          "dungeons_arise:coliseum",
+          "dungeons_arise:fishing_hut",
+          "dungeons_arise:foundry",
+          "dungeons_arise:giant_mushroom",
+          "dungeons_arise:greenwood_pub",
+          "dungeons_arise:heavenly_challenger"
+        ],
+        "structureSetSample": [
+          "dungeons_arise:major_structures",
+          "dungeons_arise:minor_structures"
+        ]
+      },
+      "dungeons_arise_seven_seas": {
+        "modLoaded": true,
+        "structureCount": 5,
+        "structureSetCount": 1,
+        "observedNaturalStarts": 0,
+        "runtimeRegistryReady": true,
+        "naturalGenerationObserved": false,
+        "structureSample": [
+          "dungeons_arise_seven_seas:corsair_corvette",
+          "dungeons_arise_seven_seas:pirate_junk",
+          "dungeons_arise_seven_seas:small_yacht",
+          "dungeons_arise_seven_seas:unicorn_galleon",
+          "dungeons_arise_seven_seas:victory_frigate"
+        ],
+        "structureSetSample": [
+          "dungeons_arise_seven_seas:minor_structures"
+        ]
+      }
+    },
+    "lostCities": {
+      "modLoaded": true,
+      "freshWorldGenerated": true,
+      "runtimeLoadAccepted": true,
+      "visualDistributionAccepted": false,
+      "note": "Headless evidence proves the mod loaded during fresh fixed-seed generation. It does not by itself approve Lost Cities skyline, rotation, terrain seating, or visual distribution."
+    }
+  },
+  "generationMs": 15392,
+  "wallClockMs": 41470,
+  "chunksPerSecond": 4.158004
+}
