@@ -34,3 +34,24 @@ all tiles finished on the first poll; this run establishes no throughput gain.
 Evidence: `log-summary.json`, `errors.csv`, `result.json`,
 `live-acceptance.json`, `duplicate-guard-tests.json`,
 `dimension-physics-inventory.json` and `tag-resource-inventory.json`.
+
+## Spawner provenance follow-up — 2026-10-28 (source-only)
+
+[`spawner-runtime-provenance.json`](spawner-runtime-provenance.json) retains all seven
+`minecraft:mob_spawner` block-entity-at-air positions from the r4 error CSV,
+clustered into three **spatial** groups (2, 1 and 4 errors). These are not
+identified structure IDs. The earlier authored-template scan found 176 spawner
+payloads in 94 parsed templates with zero palette/NBT mismatches; it does **not**
+exclude runtime replacement, clipping, Lost Cities palette handling, stale
+chunks or an upstream structure. Four sampled benchmark tiles reported zero
+valid natural structure starts, which does not attribute errors occurring
+around world preparation. The seven runtime errors remain **unrepaired**.
+
+The new first-party `dev/scripts/audit_spawner_runtime_provenance.py` can
+regenerate the report from the retained CSV, r2 source inventory and r4 result;
+`python -m unittest discover -s dev/scripts -p 'test_audit_spawner_runtime_provenance.py'`
+checks error extraction, grouping, and fail-closed attribution. This is a
+source-only diagnostic, **not** a fresh Minecraft server run or proof of a
+specific offending generator. Next capture exact block state and block-entity
+NBT, structure/feature placement owner and transformed/chunk-clipped source
+coordinates in a fresh isolated world before attempting an owned-source fix.
