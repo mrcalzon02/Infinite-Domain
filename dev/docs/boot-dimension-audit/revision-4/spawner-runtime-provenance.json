@@ -1,0 +1,195 @@
+{
+  "source": "retained boot-dimension revision-4 errors.csv and result.json; revision-2 source-template inventory",
+  "runtime_spawner_at_air_errors": 7,
+  "positions": [
+    {
+      "log_line": 2066,
+      "position": {
+        "x": 1047,
+        "y": 95,
+        "z": 1061
+      }
+    },
+    {
+      "log_line": 2138,
+      "position": {
+        "x": 1045,
+        "y": 95,
+        "z": 1066
+      }
+    },
+    {
+      "log_line": 2213,
+      "position": {
+        "x": 998,
+        "y": 107,
+        "z": 1062
+      }
+    },
+    {
+      "log_line": 2243,
+      "position": {
+        "x": 1052,
+        "y": 96,
+        "z": 1005
+      }
+    },
+    {
+      "log_line": 2273,
+      "position": {
+        "x": 1048,
+        "y": 96,
+        "z": 1005
+      }
+    },
+    {
+      "log_line": 2303,
+      "position": {
+        "x": 1052,
+        "y": 102,
+        "z": 1005
+      }
+    },
+    {
+      "log_line": 2333,
+      "position": {
+        "x": 1048,
+        "y": 102,
+        "z": 1005
+      }
+    }
+  ],
+  "proximity_groups_not_structure_ids": [
+    {
+      "positions": [
+        {
+          "x": 1047,
+          "y": 95,
+          "z": 1061
+        },
+        {
+          "x": 1045,
+          "y": 95,
+          "z": 1066
+        }
+      ],
+      "log_lines": [
+        2066,
+        2138
+      ],
+      "bounds": {
+        "x": [
+          1045,
+          1047
+        ],
+        "y": [
+          95,
+          95
+        ],
+        "z": [
+          1061,
+          1066
+        ]
+      },
+      "chunks": [
+        [
+          65,
+          66
+        ]
+      ]
+    },
+    {
+      "positions": [
+        {
+          "x": 998,
+          "y": 107,
+          "z": 1062
+        }
+      ],
+      "log_lines": [
+        2213
+      ],
+      "bounds": {
+        "x": [
+          998,
+          998
+        ],
+        "y": [
+          107,
+          107
+        ],
+        "z": [
+          1062,
+          1062
+        ]
+      },
+      "chunks": [
+        [
+          62,
+          66
+        ]
+      ]
+    },
+    {
+      "positions": [
+        {
+          "x": 1052,
+          "y": 96,
+          "z": 1005
+        },
+        {
+          "x": 1048,
+          "y": 96,
+          "z": 1005
+        },
+        {
+          "x": 1052,
+          "y": 102,
+          "z": 1005
+        },
+        {
+          "x": 1048,
+          "y": 102,
+          "z": 1005
+        }
+      ],
+      "log_lines": [
+        2243,
+        2273,
+        2303,
+        2333
+      ],
+      "bounds": {
+        "x": [
+          1048,
+          1052
+        ],
+        "y": [
+          96,
+          102
+        ],
+        "z": [
+          1005,
+          1005
+        ]
+      },
+      "chunks": [
+        [
+          65,
+          62
+        ]
+      ]
+    }
+  ],
+  "historical_first_party_template_spawner_payloads": 176,
+  "historical_first_party_template_mismatches": 0,
+  "sampled_valid_natural_structure_starts": 0,
+  "attribution": "unresolved",
+  "historical_source_inventory_has_findings": false,
+  "next_evidence": [
+    "capture fresh-world block state and block-entity NBT at each exact position before reload",
+    "record the structure/piece or feature ID and data-pack owner during placement",
+    "re-run the authored NBT scanner against current sources and test transformed/chunk-clipped placements"
+  ],
+  "limitations": "Spatial proximity is not a structure identifier. A clean authored-template scan does not rule out upstream structures, Lost Cities palettes, later block replacement, chunk clipping, or stale saved NBT. Zero starts in the four sampled benchmark tiles does not identify the generator responsible for errors logged during world preparation. This report does not demonstrate an error-free server or repair the seven failures."
+}
