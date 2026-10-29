@@ -55,3 +55,50 @@ source-only diagnostic, **not** a fresh Minecraft server run or proof of a
 specific offending generator. Next capture exact block state and block-entity
 NBT, structure/feature placement owner and transformed/chunk-clipped source
 coordinates in a fresh isolated world before attempting an owned-source fix.
+
+## Placement-event evidence contract — 2026-10-28 (source-only)
+
+The first-party [placement-event validator](../../../scripts/audit_spawner_placement_events.py)
+accepts JSON Lines from a **future verified runtime placement hook**, validates
+source-local positions against the declared template zero-pivot rotation and
+mirror, computes negative-coordinate chunk indices by floor division, and
+correlates **exact coordinates only within the same benchmark run ID**.
+It refuses missing source owner, structure ID, piece ID, expected spawner
+state/NBT, observed state/NBT field, and inconsistent transformed coordinates.
+Even a same-run exact-coordinate match is labelled **candidate evidence, not
+proven generator attribution**; the r4 errors remain seven unresolved failures.
+
+The required JSONL fields are `schema_version: 1`, `run_id`, `dimension`,
+`hook_id`, `placement_owner`, `structure_id`, `piece_id`,
+`placement_origin: {x,y,z}`, `template_local_position: {x,y,z}`,
+`world_position: {x,y,z}`, `rotation` (none/clockwise_90/180/
+counterclockwise_90), `mirror` (none/front_back/left_right),
+`expected_block_state: minecraft:spawner`,
+`spawner_nbt: {id: minecraft:mob_spawner, ...}`,
+`observed_block_state`, and `observed_block_entity_nbt` (compound or null).
+Capture must occur during actual placement, before chunk serialization, with
+the **actual source structure/piece identity**; no field may be filled by
+guessing from the seven error coordinates.
+
+Run source-only checks with:
+```sh
+python -m unittest discover -s dev/scripts -p 'test_audit_spawner_placement_events.py'
+python dev/scripts/audit_spawner_placement_events.py
+# Only when a genuine, same-run first-party hook has emitted events:
+python dev/scripts/audit_spawner_placement_events.py --events /path/to/placement-events.jsonl --out /path/to/comparison.json
+```
+
+**Exact runtime blocker:** The owned QA gallery
+`dev/scripts/build_structure_qa_world.py` issues explicit
+`place template` commands for its deliberate test structures, but it is
+**not an interception point for upstream natural worldgen**. The current
+`kubejs/server_scripts/worldgen_benchmark.js` observes completed chunks and
+registry starts, not the individual upstream template/feature placement that
+created each block entity. Neither first-party path currently captures a
+structure/piece/feature ID and actual block state/NBT at the moment the seven
+r4 spawners were placed. Adding an audited, isolated **first-party runtime
+placement hook** (not modifying third-party JARs), then rerunning a fresh
+isolated world with a matching run ID, is required before attribution or repair.
+The validator is preparation for that hook, **not a live hook, fresh-world
+run, placement fix, or passing runtime acceptance**. Existing recipe, advisory
+and Windows path errors remain separate.
