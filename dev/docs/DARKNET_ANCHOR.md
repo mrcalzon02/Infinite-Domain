@@ -45,3 +45,19 @@ The broader quest audit still reports existing failures involving icons,
 third-person Charles wording, and the Lyran Research explorer-map handoff.
 Those failures are outside this tether repair. The cyberware mastery audit
 passes.
+
+## KubeJS 2101 dimension-access repair — 2026-11-19
+
+Darknet Anchor placement, break, block-entity tick, player tick, death, and
+recall checks now use the live KubeJS `Level.dimension` property instead of the
+invalid `dimension().location()` call. The existing eleven-scenario handler
+harness now mocks a **non-callable** dimension property, preventing a false pass
+against an API that does not exist. Session Injector handlers use the same
+property access, cancel invalid/inactive use only after showing feedback, and
+show short three-second warnings instead of seventy-five-second overlays.
+
+Run `node dev/scripts/test_darknet_anchor_runtime.js` and
+`node dev/scripts/test_darknet_session_injector.cjs` for local simulated
+handler checks. These are not proof of live KubeJS/AE2/Cyberspace event delivery,
+ME-network tickets, or player recall. A full NeoForge 1.21.1 client/server
+smoke test remains required before labeling those flows runtime-verified.

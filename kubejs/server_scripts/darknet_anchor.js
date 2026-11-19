@@ -4,6 +4,7 @@ const DarknetAnchorVariables = Java.loadClass('cyberspace.network.CyberspaceModV
 const SpatialAnchorBlockEntity = Java.loadClass('appeng.blockentity.spatial.SpatialAnchorBlockEntity')
 const DarknetAnchorBlockPos = Java.loadClass('net.minecraft.core.BlockPos')
 
+// KubeJS 2101 exposes Level.dimension as a property, not dimension().
 const DarknetAnchorDimension = 'cyberspace:darknet_dimension'
 const DarknetAnchorData = {
     bound: 'infinite_domain_darknet_anchor_bound',
@@ -25,7 +26,7 @@ function clearPlayerDarknetAnchor(player, recall) {
     const data = player.persistentData
     data[DarknetAnchorData.bound] = false
     data[DarknetAnchorData.grace] = 0
-    if (recall && player.level.dimension().location().toString() === DarknetAnchorDimension) {
+    if (recall && String(player.level.dimension) === DarknetAnchorDimension) {
         const variables = player.getData(DarknetAnchorVariables.PLAYER_VARIABLES)
         variables.DarknetTimer = 0
         variables.markSyncDirty()
@@ -37,7 +38,7 @@ BlockEvents.placed('ae2:spatial_anchor', event => {
     const player = event.player
     if (!player) return
 
-    const dimension = event.level.dimension().location().toString()
+    const dimension = String(event.level.dimension)
     if (dimension !== DarknetAnchorDimension) {
         player.tell('\u00a7cThe Darknet Anchor is only placeable in the Darknet. \u00a77Chunk-loading the Overworld was not the assignment. - Charles')
         event.cancel()
@@ -61,7 +62,7 @@ BlockEvents.placed('ae2:spatial_anchor', event => {
 
 BlockEvents.blockEntityTick('ae2:spatial_anchor', event => {
     if (event.tick % 20 !== 0) return
-    if (event.level.dimension().location().toString() !== DarknetAnchorDimension) return
+    if (String(event.level.dimension) !== DarknetAnchorDimension) return
 
     const blockEntity = event.block.entity
     const online = blockEntity instanceof SpatialAnchorBlockEntity && blockEntity.isActive()
@@ -73,7 +74,7 @@ BlockEvents.blockEntityTick('ae2:spatial_anchor', event => {
             return
         }
         player.persistentData[DarknetAnchorData.grace] = 0
-        if (player.level.dimension().location().toString() !== DarknetAnchorDimension) return
+        if (String(player.level.dimension) !== DarknetAnchorDimension) return
 
         const variables = player.getData(DarknetAnchorVariables.PLAYER_VARIABLES)
         if (variables.DarknetInternalTimer > 0 && variables.DarknetTimer > 0 && variables.DarknetTimer < 20) {
@@ -84,7 +85,7 @@ BlockEvents.blockEntityTick('ae2:spatial_anchor', event => {
 })
 
 BlockEvents.broken('ae2:spatial_anchor', event => {
-    if (event.level.dimension().location().toString() !== DarknetAnchorDimension) return
+    if (String(event.level.dimension) !== DarknetAnchorDimension) return
     event.server.players.forEach(player => {
         if (playerDarknetAnchorMatches(player, event.block)) clearPlayerDarknetAnchor(player, true)
     })
@@ -104,7 +105,7 @@ PlayerEvents.tick(event => {
     if (player.age % 20 !== 0) return
     const data = player.persistentData
     if (!data[DarknetAnchorData.bound]) return
-    if (player.level.dimension().location().toString() !== DarknetAnchorDimension) return
+    if (String(player.level.dimension) !== DarknetAnchorDimension) return
     if (player.age < data[DarknetAnchorData.grace]) return
 
     const pos = new DarknetAnchorBlockPos(data[DarknetAnchorData.x], data[DarknetAnchorData.y], data[DarknetAnchorData.z])
@@ -119,7 +120,7 @@ EntityEvents.death('minecraft:player', event => {
     const data = player.persistentData
     if (!data[DarknetAnchorData.bound]) return
 
-    if (player.level.dimension().location().toString() === DarknetAnchorDimension) {
+    if (String(player.level.dimension) === DarknetAnchorDimension) {
         const block = player.level.getBlock(data[DarknetAnchorData.x], data[DarknetAnchorData.y], data[DarknetAnchorData.z])
         if (block.id === 'ae2:spatial_anchor') block.set('minecraft:air')
     }

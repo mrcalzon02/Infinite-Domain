@@ -43,7 +43,8 @@ function randomInjectorEntry(messages) {
 
 function showInjectorRejection(event, title, subtitle) {
     const playerName = event.player.getGameProfile().getName()
-    event.server.runCommandSilent('title ' + playerName + ' times 10 1500 20')
+    // Keep invalid-use feedback readable without obstructing play for 75 seconds.
+    event.server.runCommandSilent('title ' + playerName + ' times 5 45 10')
     event.server.runCommandSilent('title ' + playerName + ' title {"text":"' + title + '","color":"red","bold":true}')
     event.server.runCommandSilent('title ' + playerName + ' subtitle {"text":"' + subtitle + ' - Charles","color":"gray"}')
 }
@@ -51,13 +52,15 @@ function showInjectorRejection(event, title, subtitle) {
 DarknetInjectorSeconds.forEach((seconds, index) => {
 ItemEvents.rightClicked('kubejs:darknet_session_injector_tier_' + (index + 1), event => {
     const player = event.player
-    const dimension = event.level.dimension().location().toString()
+    // KubeJS 2101 exposes Level.dimension as a property, not dimension().
+    const dimension = String(event.level.dimension)
 
     if (dimension !== 'cyberspace:darknet_dimension') {
         const response = randomInjectorEntry(DarknetInjectorWrongDimensionMessages)
         const place = injectorDimensionName(dimension)
         player.tell(response(place))
         showInjectorRejection(event, 'Darknet injectors only', 'You are currently in ' + place + '. Enter the Darknet first.')
+        event.cancel()
         return
     }
 
@@ -65,6 +68,7 @@ ItemEvents.rightClicked('kubejs:darknet_session_injector_tier_' + (index + 1), e
     if (variables.DarknetInternalTimer <= 0 || variables.DarknetTimer <= 0) {
         player.tell(randomInjectorEntry(DarknetInjectorInactiveSessionMessages))
         showInjectorRejection(event, 'No active Darknet session', 'Reconnect through the Terminal before injecting.')
+        event.cancel()
         return
     }
 

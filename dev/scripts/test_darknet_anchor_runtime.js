@@ -35,7 +35,8 @@ function fixture() {
     const block = { x: 12, y: 64, z: 24, id: 'ae2:spatial_anchor', entity: new Anchor(true),
         set(id) { this.id = id } }
     const level = dimension => ({
-        dimension: () => ({ location: () => ({ toString: () => dimension }) }),
+        // Non-callable dimension property: models the KubeJS 2101 Level API.
+        dimension: { toString: () => dimension },
         hasChunkAt: () => true, getBlock: () => block
     })
     const variables = { DarknetTimer: 5, DarknetInternalTimer: 1, syncs: 0,
