@@ -33,14 +33,18 @@ const GatewayDeniedMessages = [
 
 function showGatewayRejection(event, place) {
     const playerName = event.player.getGameProfile().getName()
-    event.server.runCommandSilent('title ' + playerName + ' times 10 1500 20')
+    // Title durations are in ticks: 5 fade-in + 45 stay + 10 fade-out = 3 seconds.
+    // The former 1500-tick hold obscured the screen for 75 seconds per rejection.
+    event.server.runCommandSilent('title ' + playerName + ' times 5 45 10')
     event.server.runCommandSilent('title ' + playerName + ' title {"text":"Only usable in Cyberspace","color":"red","bold":true}')
     event.server.runCommandSilent('title ' + playerName + ' subtitle {"text":"You are currently in ' + place + '. - Charles","color":"gray"}')
 }
 
 GatewayDevilEyes.forEach(eyeId => {
     ItemEvents.rightClicked(eyeId, event => {
-        const dimension = event.level.dimension().location().toString()
+        // KubeJS 2101 exposes Level.dimension as a ResourceLocation property.
+        // Calling dimension() throws and skips the rejection/cancellation handler.
+        const dimension = String(event.level.dimension)
         if (dimension === 'cyberspace:cyberspace_dimension') return
 
         const response = GatewayDeniedMessages[Math.floor(Math.random() * GatewayDeniedMessages.length)]
