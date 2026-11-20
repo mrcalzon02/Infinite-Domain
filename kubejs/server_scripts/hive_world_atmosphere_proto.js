@@ -27,6 +27,19 @@
     const RECOVER_PER_SEC = 9
     const WEAR_PER_CARTRIDGE = 26
     const SCAN_R = 6
+    // Precompute the same radius-six circle once at script load. Center-first
+    // traversal detects close clean-air lodestones with minimal block reads.
+    const SCAN_COLUMNS = []
+    for (let dx = -SCAN_R; dx <= SCAN_R; dx++) {
+        for (let dz = -SCAN_R; dz <= SCAN_R; dz++) {
+            const distance = dx * dx + dz * dz
+            if (distance <= SCAN_R * SCAN_R) SCAN_COLUMNS.push([dx, dz, distance])
+        }
+    }
+    SCAN_COLUMNS.sort((a, b) => a[2] - b[2])
+
+    // Presentation state is transient, not saved to the player's world NBT.
+    const barView = Object.create(null)
 
     function inHive(entity) {
         return String(entity.level.dimension) === DIM
@@ -63,19 +76,17 @@
         const by = Math.floor(player.y)
         const bz = Math.floor(player.z)
         const lvl = player.level
-        let waystation = false
         let fume = false
-        for (let dx = -SCAN_R; dx <= SCAN_R; dx++) {
-            for (let dz = -SCAN_R; dz <= SCAN_R; dz++) {
-                if (dx * dx + dz * dz > SCAN_R * SCAN_R) continue
-                for (let dy = -3; dy <= 3; dy++) {
-                    const id = lvl.getBlock(bx + dx, by + dy, bz + dz).id
-                    if (id === 'minecraft:lodestone') waystation = true
-                    else if (id === ACID) fume = true
-                }
+        for (const column of SCAN_COLUMNS) {
+            for (let dy = -3; dy <= 3; dy++) {
+                const id = lvl.getBlock(bx + column[0], by + dy, bz + column[1]).id
+                // A lodestone takes precedence over nearby acid. Once found,
+                // no other block can change this tick's recovery decision.
+                if (id === 'minecraft:lodestone') return { waystation: true, fume: fume }
+                if (id === ACID) fume = true
             }
         }
-        return { waystation: waystation, fume: fume }
+        return { waystation: false, fume: fume }
     }
 
     function ensureBar(player) {
@@ -86,21 +97,42 @@
         s.runCommandSilent('bossbar set ' + id + ' max 100')
         s.runCommandSilent('bossbar set ' + id + ' players ' + name)
         player.persistentData[PD.bar] = true
+        delete barView[player.username]
     }
 
     function hideBar(player) {
+        if (!player.persistentData[PD.bar]) return
         player.server.runCommandSilent('bossbar set ' + barId(player) + ' players')
+        player.persistentData[PD.bar] = false
+        delete barView[player.username]
     }
 
     function updateBar(player, exposure, protectedNow) {
         const id = barId(player)
-        const s = player.server
+        const rounded = Math.round(exposure)
         const colour = exposure >= HURT_AT ? 'red' : exposure >= WARN_AT ? 'yellow' : 'green'
-        s.runCommandSilent('bossbar set ' + id + ' value ' + Math.round(exposure))
-        s.runCommandSilent('bossbar set ' + id + ' color ' + colour)
-        s.runCommandSilent('bossbar set ' + id + ' name {"text":"' +
-            (protectedNow ? 'Filtered air ' : 'Atmosphere ') + Math.round(exposure) + '%"}')
-        s.runCommandSilent('bossbar set ' + id + ' visible ' + (exposure > 0 ? 'true' : 'false'))
+        const title = (protectedNow ? 'Filtered air ' : 'Atmosphere ') + rounded + '%'
+        const visible = exposure > 0
+        const previous = barView[player.username]
+        const s = player.server
+
+        // Zero exposure hides the HUD without detaching its owner: previously
+        // a subsequent exposure increase made the bar visible to nobody.
+        if (!previous || previous.value !== rounded) {
+            s.runCommandSilent('bossbar set ' + id + ' value ' + rounded)
+        }
+        if (!previous || previous.colour !== colour) {
+            s.runCommandSilent('bossbar set ' + id + ' color ' + colour)
+        }
+        if (!previous || previous.title !== title) {
+            s.runCommandSilent('bossbar set ' + id + ' name ' + JSON.stringify({ text: title }))
+        }
+        if (!previous || previous.visible !== visible) {
+            s.runCommandSilent('bossbar set ' + id + ' visible ' + visible)
+        }
+        barView[player.username] = {
+            value: rounded, colour: colour, title: title, visible: visible
+        }
     }
 
     PlayerEvents.tick(event => {
@@ -110,7 +142,8 @@
 
         const d = player.persistentData
         if (player.isCreative() || player.isSpectator()) {
-            if (d[PD.exp]) { d[PD.exp] = 0; hideBar(player) }
+            d[PD.exp] = 0
+            if (d[PD.bar]) hideBar(player)
             return
         }
         if (!d[PD.bar]) ensureBar(player)
@@ -123,7 +156,6 @@
             d[PD.exp] = exposure
             d[PD.warned] = false
             updateBar(player, exposure, true)
-            if (exposure === 0) hideBar(player)
             return
         }
 
@@ -186,7 +218,7 @@
             d[PD.exp] = Math.max(0, d[PD.exp] - 25)
             if (d[PD.exp] === 0) { d[PD.wear] = 0; d[PD.warned] = false }
         }
-        if (d[PD.bar]) { hideBar(player); d[PD.bar] = false }
+        if (d[PD.bar]) hideBar(player)
     })
 
     EntityEvents.death('minecraft:player', event => {
@@ -195,13 +227,16 @@
         d[PD.exp] = 0
         d[PD.wear] = 0
         d[PD.warned] = false
-        if (d[PD.bar]) { hideBar(player); d[PD.bar] = false }
+        if (d[PD.bar]) hideBar(player)
     })
 
     PlayerEvents.loggedIn(event => {
         const player = event.player
+        // Clean up an old assignment after reconnect, then reattach on first
+        // in-dimension atmosphere tick. Avoid a command for a missing bar.
+        if (player.persistentData[PD.bar]) hideBar(player)
         player.persistentData[PD.bar] = false
-        if (!inHive(player)) hideBar(player)
+        delete barView[player.username]
     })
 
     ServerEvents.recipes(event => {

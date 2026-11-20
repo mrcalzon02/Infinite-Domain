@@ -117,8 +117,15 @@ exposure_gain_per_second =
 
 ## 8. Budget note (C0081)
 
-- The atmosphere tick is `O(players in the Hive)`, runs every 20 ticks, and does one
-  `~1180`-block scan per player per second (waystation + fume). Acceptable for the
-  spike; the companion module replaces the scan with tracked shelter volumes.
-- Bossbar updates are ~5 silent commands per player per second — trim at C0081 if the
-  server profile flags it.
+- The atmosphere tick remains `O(players in the Hive)` and runs **every 20 ticks**
+  with unchanged exposure/PPE/damage cadence. The radius-six, vertical ±3 scan
+  includes exactly **113 × 7 = 791** blocks in its worst case. A precomputed
+  center-first stencil stops immediately when it finds a lodestone (clean air
+  overrides fumes); otherwise it still searches the original complete volume
+  for fumes on every tick. There is no position-cache staleness or deferred hazard
+  detection. The companion module still eventually owns shelter volumes.
+- Per-player HUD commands are diffed against transient presentation state: only
+  changed value, colour, text and visibility are resent. At zero exposure the
+  HUD is hidden without detaching its player; it returns when exposure rises.
+  Dimension exit, death, creative/spectator transitions and reconnect explicitly
+  clear assignments. Runtime NeoForge verification remains outstanding.
