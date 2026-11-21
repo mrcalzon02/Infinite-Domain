@@ -301,4 +301,79 @@ check('last filter and damaged mask break once; reload exposes player until clea
     assert.equal(restored.messages.length, 0)
 })
 
+
+check('threshold 40 is yellow-only, and 65 is red with first warning and weakness', () => {
+    const f = fixture()
+    f.player.persistentData.id_cinderstack_exposure = 37
+    f.tick(20)
+    assert.ok(Math.abs(f.player.persistentData.id_cinderstack_exposure - 39.6) < 0.00001)
+    assert.ok(f.commands.includes('bossbar set ' + BAR + ' color green'))
+    assert.equal(f.commands.filter(c => c.startsWith('effect give ')).length, 0)
+    f.tick(40)
+    assert.ok(Math.abs(f.player.persistentData.id_cinderstack_exposure - 42.2) < 0.00001)
+    assert.ok(f.commands.includes('bossbar set ' + BAR + ' color yellow'))
+    assert.equal(f.messages.length, 0)
+    assert.equal(f.commands.filter(c => c.startsWith('effect give ')).length, 0)
+    f.player.persistentData.id_cinderstack_exposure = 63
+    f.tick(60)
+    assert.ok(f.commands.includes('bossbar set ' + BAR + ' color red'))
+    assert.ok(f.commands.includes('effect give Tester minecraft:weakness 4 0 true'))
+    assert.ok(f.commands.includes('effect give Tester minecraft:nausea 4 0 true'))
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+    assert.equal(f.player.persistentData.id_cinderstack_air_warned, true)
+    f.tick(80)
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+})
+
+check('first critical exposure at 90 triggers two-damage effects and the missed 65 warning', () => {
+    const f = fixture()
+    // Simulate a checkpoint written in critical air before the warning flag was set.
+    f.player.persistentData.id_cinderstack_exposure = 89
+    f.player.persistentData.id_cinderstack_air_warned = false
+    f.login()
+    f.tick(20)
+    assert.ok(Math.abs(f.player.persistentData.id_cinderstack_exposure - 91.6) < 0.00001)
+    assert.ok(f.commands.includes('effect give Tester minecraft:darkness 4 0 true'))
+    assert.ok(f.commands.includes('effect give Tester minecraft:slowness 4 1 true'))
+    assert.ok(f.commands.includes('damage Tester 2 minecraft:magic'))
+    assert.ok(!f.commands.some(c => c.includes('minecraft:weakness')))
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+    assert.equal(f.player.persistentData.id_cinderstack_air_warned, true)
+    f.tick(40)
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+})
+
+check('100 caps exposure and increases critical damage to four', () => {
+    const f = fixture()
+    f.player.persistentData.id_cinderstack_exposure = 99
+    f.tick(20)
+    f.tick(40)
+    assert.equal(f.player.persistentData.id_cinderstack_exposure, 100)
+    assert.equal(f.commands.filter(c => c === 'damage Tester 4 minecraft:magic').length, 2)
+    assert.equal(f.commands.filter(c => c === 'damage Tester 2 minecraft:magic').length, 0)
+})
+
+check('warning flag persists through checkpoint/login, then resets at a true waystation', () => {
+    const f = fixture()
+    f.player.persistentData.id_cinderstack_exposure = 64
+    f.tick(20)
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+    const checkpoint = JSON.parse(JSON.stringify(f.player.persistentData))
+    const restored = fixture()
+    restored.player.persistentData = checkpoint
+    restored.login()
+    restored.tick(20)
+    assert.equal(restored.messages.length, 0)
+    assert.equal(restored.player.persistentData.id_cinderstack_air_warned, true)
+    restored.setBlock(0, 64, 0, 'minecraft:lodestone')
+    restored.tick(40)
+    assert.equal(restored.player.persistentData.id_cinderstack_air_warned, false)
+    assert.ok(Math.abs(restored.player.persistentData.id_cinderstack_exposure - 60.2) < 0.00001)
+    restored.setBlock(0, 64, 0, AIR)
+    restored.tick(60)
+    restored.tick(80)
+    assert.equal(restored.messages.filter(m => m.includes('air is not survivable')).length, 1)
+    assert.equal(restored.player.persistentData.id_cinderstack_air_warned, true)
+})
+
 console.log('Cinderstack atmosphere: ' + passed + ' handler scenarios passed.')

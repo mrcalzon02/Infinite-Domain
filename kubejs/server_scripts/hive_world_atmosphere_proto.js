@@ -191,6 +191,13 @@
             }
         }
 
+        // Warn on first hazardous exposure even when a restored checkpoint begins
+        // above the critical threshold (which bypasses the weaker ailment branch).
+        if (exposure >= HURT_AT && !d[PD.warned]) {
+            d[PD.warned] = true
+            player.tell('§8[Charles] §7The air is not survivable unfiltered for long. Reach a waystation - a lodestone marks clean air - or seal a fresh cartridge.')
+        }
+
         const name = player.username
         if (exposure >= CRIT_AT) {
             player.server.runCommandSilent('effect give ' + name + ' minecraft:nausea 4 0 true')
@@ -200,10 +207,6 @@
         } else if (exposure >= HURT_AT) {
             player.server.runCommandSilent('effect give ' + name + ' minecraft:nausea 4 0 true')
             player.server.runCommandSilent('effect give ' + name + ' minecraft:weakness 4 0 true')
-            if (!d[PD.warned]) {
-                d[PD.warned] = true
-                player.tell('§8[Charles] §7The air is not survivable unfiltered for long. Reach a waystation - a lodestone marks clean air - or seal a fresh cartridge.')
-            }
         }
         updateBar(player, exposure, hasFilter)
     })
