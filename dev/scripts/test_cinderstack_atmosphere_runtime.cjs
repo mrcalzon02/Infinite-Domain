@@ -481,4 +481,96 @@ check('death resets exposure wear warning and HUD without offworld residue or ph
     assert.equal(d.id_cinderstack_bar_ready, false)
 })
 
+
+check('creative exemption clears spent-wear carryover before resumed PPE use', () => {
+    const f = fixture()
+    const d = f.player.persistentData
+    d.id_cinderstack_exposure = 80
+    d.id_cinderstack_filter_wear = 25.8
+    d.id_cinderstack_air_warned = true
+    f.tick(20) // original hazardous survival tick establishes attached HUD
+    const mask = { id: 'kubejs:cinderstack_mask', count: 1,
+        damageValue: 7, maxDamage: 512, isEmpty() { return this.count <= 0 } }
+    const filter = { id: 'kubejs:cinderstack_filter', count: 2,
+        isEmpty() { return this.count <= 0 } }
+    f.slots[0] = mask
+    f.slots[1] = filter
+    const reads = f.state.reads
+    f.state.creative = true
+    f.tick(40)
+    assert.equal(d.id_cinderstack_exposure, 0)
+    assert.equal(d.id_cinderstack_filter_wear, 0)
+    assert.equal(d.id_cinderstack_air_warned, false)
+    assert.equal(d.id_cinderstack_bar_ready, false)
+    assert.equal(playerRemoved(f), 1)
+    assert.equal(f.state.reads, reads)
+    assert.equal(mask.damageValue, 7)
+    assert.equal(filter.count, 2)
+    f.state.creative = false
+    f.tick(60)
+    assert.equal(playerAssigned(f), 2)
+    assert.equal(filter.count, 2)
+    assert.equal(mask.damageValue, 8)
+    assert.ok(d.id_cinderstack_filter_wear > 0 && d.id_cinderstack_filter_wear < 1)
+    assert.equal(d.id_cinderstack_air_warned, false)
+    assert.equal(f.messages.filter(m => m.includes('Filter cartridge spent')).length, 0)
+})
+
+check('spectator exemption clears old warning and rewarns on genuinely new danger', () => {
+    const f = fixture()
+    const d = f.player.persistentData
+    d.id_cinderstack_exposure = 94
+    d.id_cinderstack_filter_wear = 12
+    d.id_cinderstack_air_warned = true
+    f.tick(20)
+    const effects = f.commands.filter(c => c.startsWith('effect give ') || c.startsWith('damage ')).length
+    const reads = f.state.reads
+    f.state.spectator = true
+    f.tick(40)
+    f.tick(60)
+    assert.equal(d.id_cinderstack_exposure, 0)
+    assert.equal(d.id_cinderstack_filter_wear, 0)
+    assert.equal(d.id_cinderstack_air_warned, false)
+    assert.equal(playerRemoved(f), 1)
+    assert.equal(f.state.reads, reads)
+    assert.equal(f.commands.filter(c => c.startsWith('effect give ') || c.startsWith('damage ')).length, effects)
+    f.state.spectator = false
+    f.tick(80)
+    assert.equal(playerAssigned(f), 2)
+    assert.equal(f.messages.length, 0)
+    d.id_cinderstack_exposure = 63
+    f.tick(100)
+    assert.equal(d.id_cinderstack_air_warned, true)
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+    f.tick(120)
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+})
+
+check('creative spectator relog sequence has no stale HUD, warning or PPE cost', () => {
+    const f = fixture()
+    f.tick(20)
+    const d = f.player.persistentData
+    d.id_cinderstack_filter_wear = 20
+    d.id_cinderstack_air_warned = true
+    f.state.creative = true
+    f.tick(40)
+    f.state.creative = false
+    f.state.spectator = true
+    f.tick(60)
+    f.login()
+    f.tick(80)
+    assert.equal(playerRemoved(f), 1)
+    assert.equal(d.id_cinderstack_bar_ready, false)
+    assert.equal(d.id_cinderstack_filter_wear, 0)
+    assert.equal(d.id_cinderstack_air_warned, false)
+    assert.equal(d.id_cinderstack_exposure, 0)
+    assert.equal(f.messages.length, 0)
+    f.state.spectator = false
+    f.tick(100)
+    assert.equal(playerAssigned(f), 2)
+    assert.equal(d.id_cinderstack_filter_wear, 0)
+    assert.equal(d.id_cinderstack_air_warned, false)
+    assert.equal(f.commands.filter(c => c.startsWith('damage ')).length, 0)
+})
+
 console.log('Cinderstack atmosphere: ' + passed + ' handler scenarios passed.')

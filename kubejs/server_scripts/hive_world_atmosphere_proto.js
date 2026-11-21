@@ -142,7 +142,11 @@
 
         const d = player.persistentData
         if (player.isCreative() || player.isSpectator()) {
+            // Exemption is a fresh atmosphere lifecycle, not a pause of PPE
+            // cartridge progress or the one-time hazard warning.
             d[PD.exp] = 0
+            d[PD.wear] = 0
+            d[PD.warned] = false
             if (d[PD.bar]) hideBar(player)
             return
         }
