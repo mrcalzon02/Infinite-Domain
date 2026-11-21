@@ -239,4 +239,66 @@ check('filter and mask costs continue once each atmosphere second', () => {
     assert.equal(filter.count, 2)
 })
 
+
+
+check('last cartridge is consumed once and the intact mask falls back to its weaker seal', () => {
+    const f = fixture()
+    const mask = { id: 'kubejs:cinderstack_mask', count: 1,
+        damageValue: 509, maxDamage: 512, isEmpty() { return this.count <= 0 } }
+    const filter = { id: 'kubejs:cinderstack_filter', count: 1,
+        isEmpty() { return this.count <= 0 } }
+    f.slots[0] = mask
+    f.slots[1] = filter
+    f.player.persistentData.id_cinderstack_filter_wear = 25.5
+    f.tick(20)
+    assert.equal(filter.count, 0)
+    assert.equal(mask.damageValue, 510)
+    assert.ok(Math.abs(f.player.persistentData.id_cinderstack_exposure - 0.416) < 0.00001)
+    assert.equal(f.messages.filter(m => m.includes('last one')).length, 1)
+    const wear = f.player.persistentData.id_cinderstack_filter_wear
+    f.tick(40)
+    assert.equal(filter.count, 0)
+    assert.equal(mask.damageValue, 510) // no filter means no mask durability drain
+    assert.equal(f.player.persistentData.id_cinderstack_filter_wear, wear)
+    assert.ok(Math.abs(f.player.persistentData.id_cinderstack_exposure - 2.106) < 0.00001)
+    assert.equal(f.messages.filter(m => m.includes('last one')).length, 1)
+    assert.ok(f.commands.some(c => c.includes('Atmosphere 2%')))
+})
+
+check('last filter and damaged mask break once; reload exposes player until clean-air shelter', () => {
+    const f = fixture()
+    const mask = { id: 'kubejs:cinderstack_mask', count: 1,
+        damageValue: 511, maxDamage: 512, isEmpty() { return this.count <= 0 } }
+    const filter = { id: 'kubejs:cinderstack_filter', count: 1,
+        isEmpty() { return this.count <= 0 } }
+    f.slots[0] = mask
+    f.slots[1] = filter
+    f.player.persistentData.id_cinderstack_exposure = 64
+    f.player.persistentData.id_cinderstack_filter_wear = 25.5
+    f.tick(20)
+    assert.equal(filter.count, 0)
+    assert.equal(mask.count, 0)
+    assert.ok(Math.abs(f.player.persistentData.id_cinderstack_exposure - 64.416) < 0.00001)
+    assert.equal(f.commands.filter(c => c.startsWith('playsound minecraft:entity.item.break')).length, 1)
+    f.tick(40) // neither spent item is eligible for further protection or consumption
+    assert.equal(filter.count, 0)
+    assert.equal(mask.count, 0)
+    assert.ok(Math.abs(f.player.persistentData.id_cinderstack_exposure - 67.016) < 0.00001)
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+    const checkpoint = JSON.parse(JSON.stringify(f.player.persistentData))
+    const restored = fixture()
+    restored.player.persistentData = checkpoint
+    restored.login()
+    restored.tick(60)
+    assert.ok(Math.abs(restored.player.persistentData.id_cinderstack_exposure - 69.616) < 0.00001)
+    assert.equal(restored.messages.filter(m => m.includes('air is not survivable')).length, 0)
+    assert.equal(restored.player.persistentData.id_cinderstack_filter_wear, checkpoint.id_cinderstack_filter_wear)
+    restored.setBlock(0, 64, 0, 'minecraft:lodestone')
+    for (let age = 80; age <= 240; age += 20) restored.tick(age)
+    assert.equal(restored.player.persistentData.id_cinderstack_exposure, 0)
+    assert.equal(restored.player.persistentData.id_cinderstack_air_warned, false)
+    assert.equal(restored.player.persistentData.id_cinderstack_filter_wear, checkpoint.id_cinderstack_filter_wear)
+    assert.equal(restored.messages.length, 0)
+})
+
 console.log('Cinderstack atmosphere: ' + passed + ' handler scenarios passed.')
