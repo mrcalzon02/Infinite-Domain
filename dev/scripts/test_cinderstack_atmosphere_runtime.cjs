@@ -376,4 +376,109 @@ check('warning flag persists through checkpoint/login, then resets at a true way
     assert.equal(restored.player.persistentData.id_cinderstack_air_warned, true)
 })
 
+
+check('outside dimension decays 25 every 40 ticks, hides owner once, clears wear and warning only at zero', () => {
+    const f = fixture()
+    const mask = { id: 'kubejs:cinderstack_mask', count: 1,
+        damageValue: 14, maxDamage: 512, isEmpty() { return this.count <= 0 } }
+    const filter = { id: 'kubejs:cinderstack_filter', count: 2,
+        isEmpty() { return this.count <= 0 } }
+    f.slots[0] = mask
+    f.slots[1] = filter
+    const d = f.player.persistentData
+    d.id_cinderstack_exposure = 80
+    d.id_cinderstack_filter_wear = 7
+    d.id_cinderstack_air_warned = true
+    f.tick(20)
+    const wear = d.id_cinderstack_filter_wear
+    const damage = mask.damageValue
+    const count = filter.count
+    const scans = f.state.reads
+    f.state.dimension = 'minecraft:overworld'
+    f.tick(21)
+    f.tick(39)
+    assert.ok(Math.abs(d.id_cinderstack_exposure - 80.416) < 0.00001)
+    f.tick(40)
+    assert.ok(Math.abs(d.id_cinderstack_exposure - 55.416) < 0.00001)
+    assert.equal(d.id_cinderstack_filter_wear, wear)
+    assert.equal(d.id_cinderstack_air_warned, true)
+    assert.equal(playerRemoved(f), 1)
+    f.tick(80)
+    f.tick(120)
+    assert.ok(Math.abs(d.id_cinderstack_exposure - 5.416) < 0.00001)
+    assert.equal(d.id_cinderstack_filter_wear, wear)
+    f.tick(160)
+    assert.equal(d.id_cinderstack_exposure, 0)
+    assert.equal(d.id_cinderstack_filter_wear, 0)
+    assert.equal(d.id_cinderstack_air_warned, false)
+    f.tick(200)
+    assert.equal(playerRemoved(f), 1)
+    assert.equal(f.state.reads, scans)
+    assert.equal(mask.damageValue, damage)
+    assert.equal(filter.count, count)
+    assert.equal(f.messages.filter(m => m.includes('Filter cartridge spent')).length, 0)
+})
+
+check('checkpoint outside and relog preserve residual exposure without phantom warnings or PPE spend', () => {
+    const f = fixture()
+    const d = f.player.persistentData
+    d.id_cinderstack_exposure = 70
+    d.id_cinderstack_air_warned = true
+    d.id_cinderstack_filter_wear = 10
+    f.tick(20)
+    f.state.dimension = 'minecraft:overworld'
+    f.tick(40)
+    assert.ok(Math.abs(d.id_cinderstack_exposure - 47.6) < 0.00001)
+    const checkpoint = JSON.parse(JSON.stringify(d))
+    const restored = fixture()
+    restored.state.dimension = 'minecraft:overworld'
+    restored.player.persistentData = checkpoint
+    restored.login()
+    restored.tick(60)
+    assert.equal(restored.player.persistentData.id_cinderstack_exposure, checkpoint.id_cinderstack_exposure)
+    assert.equal(restored.player.persistentData.id_cinderstack_filter_wear, checkpoint.id_cinderstack_filter_wear)
+    assert.equal(restored.messages.length, 0)
+    assert.equal(HUD(restored).length, 0)
+    restored.state.dimension = HIVE
+    restored.tick(80)
+    assert.ok(Math.abs(restored.player.persistentData.id_cinderstack_exposure - 50.2) < 0.00001)
+    assert.equal(playerAssigned(restored), 1)
+    assert.equal(restored.messages.length, 0)
+    assert.equal(restored.player.persistentData.id_cinderstack_air_warned, true)
+    assert.equal(restored.player.persistentData.id_cinderstack_filter_wear, checkpoint.id_cinderstack_filter_wear)
+})
+
+check('death resets exposure wear warning and HUD without offworld residue or phantom filter use', () => {
+    const f = fixture()
+    const mask = { id: 'kubejs:cinderstack_mask', count: 1,
+        damageValue: 5, maxDamage: 512, isEmpty() { return this.count <= 0 } }
+    const filter = { id: 'kubejs:cinderstack_filter', count: 1,
+        isEmpty() { return this.count <= 0 } }
+    f.slots[0] = mask
+    f.slots[1] = filter
+    const d = f.player.persistentData
+    d.id_cinderstack_exposure = 90
+    d.id_cinderstack_filter_wear = 12
+    d.id_cinderstack_air_warned = true
+    f.tick(20)
+    assert.equal(d.id_cinderstack_bar_ready, true)
+    const maskDamage = mask.damageValue
+    const filterCount = filter.count
+    f.die()
+    assert.equal(d.id_cinderstack_exposure, 0)
+    assert.equal(d.id_cinderstack_filter_wear, 0)
+    assert.equal(d.id_cinderstack_air_warned, false)
+    assert.equal(d.id_cinderstack_bar_ready, false)
+    assert.equal(playerRemoved(f), 1)
+    f.state.dimension = 'minecraft:overworld'
+    f.tick(40)
+    f.login()
+    assert.equal(playerRemoved(f), 1)
+    assert.equal(d.id_cinderstack_exposure, 0)
+    assert.equal(mask.damageValue, maskDamage)
+    assert.equal(filter.count, filterCount)
+    assert.equal(f.messages.length, 0)
+    assert.equal(d.id_cinderstack_bar_ready, false)
+})
+
 console.log('Cinderstack atmosphere: ' + passed + ' handler scenarios passed.')
