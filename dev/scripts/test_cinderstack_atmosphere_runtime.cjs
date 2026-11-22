@@ -573,4 +573,90 @@ check('creative spectator relog sequence has no stale HUD, warning or PPE cost',
     assert.equal(f.commands.filter(c => c.startsWith('damage ')).length, 0)
 })
 
+
+check('acid and edge lodestone shelter recover without PPE cost, then outside fume resumes cartridge and warning', () => {
+    const f = fixture()
+    const d = f.player.persistentData
+    const mask = { id: 'kubejs:cinderstack_mask', count: 1,
+        damageValue: 8, maxDamage: 512, isEmpty() { return this.count <= 0 } }
+    const filter = { id: 'kubejs:cinderstack_filter', count: 2,
+        isEmpty() { return this.count <= 0 } }
+    f.slots[0] = mask
+    f.slots[1] = filter
+    d.id_cinderstack_exposure = 80
+    d.id_cinderstack_filter_wear = 25.8
+    d.id_cinderstack_air_warned = true
+    f.setBlock(0, 64, 0, 'the_wasteland_reworked:acid')
+    f.setBlock(6, 67, 0, 'minecraft:lodestone') // exactly horizontal 6 / vertical +3
+
+    f.tick(20)
+    assert.equal(d.id_cinderstack_exposure, 71) // shelter overrides even center acid
+    assert.equal(d.id_cinderstack_filter_wear, 25.8)
+    assert.equal(d.id_cinderstack_air_warned, false)
+    assert.equal(mask.damageValue, 8)
+    assert.equal(filter.count, 2)
+    assert.equal(f.messages.length, 0)
+    assert.ok(f.state.reads <= 791)
+
+    // The lodestone is now seven blocks away: only fumes remain in the new scan.
+    f.player.x = 13.5
+    f.setBlock(13, 64, 0, 'the_wasteland_reworked:acid')
+    const before = f.state.reads
+    f.tick(40)
+    assert.equal(f.state.reads - before, 791)
+    assert.ok(Math.abs(d.id_cinderstack_exposure - 71.624) < 0.000001)
+    assert.ok(Math.abs(d.id_cinderstack_filter_wear - 0.814) < 0.000001)
+    assert.equal(filter.count, 1) // first resumed tick spends exactly one cartridge
+    assert.equal(mask.damageValue, 9)
+    assert.equal(d.id_cinderstack_air_warned, true)
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+    assert.equal(f.messages.filter(m => m.includes('Filter cartridge spent')).length, 1)
+    f.tick(60)
+    assert.equal(filter.count, 1)
+    assert.equal(mask.damageValue, 10)
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+})
+
+check('six-block lodestone boundary is inclusive but seventh block cannot suppress nearby fumes', () => {
+    const f = fixture()
+    const d = f.player.persistentData
+    d.id_cinderstack_exposure = 20
+    f.setBlock(6, 67, 0, 'minecraft:lodestone')
+    f.setBlock(0, 64, 0, 'the_wasteland_reworked:acid')
+    f.tick(20)
+    assert.equal(d.id_cinderstack_exposure, 11)
+    f.player.x = -0.5 // floor -1: lodestone horizontal distance = 7
+    const before = f.state.reads
+    f.tick(40)
+    assert.equal(f.state.reads - before, 791)
+    assert.ok(Math.abs(d.id_cinderstack_exposure - 14.9) < 0.000001)
+    f.player.x = 0.5
+    f.tick(60)
+    assert.ok(Math.abs(d.id_cinderstack_exposure - 5.9) < 0.000001)
+})
+
+check('diagonal circle and vertical three-block boundaries exclude over-radius shelters', () => {
+    const f = fixture()
+    const d = f.player.persistentData
+    d.id_cinderstack_exposure = 30
+    f.setBlock(0, 64, 0, 'the_wasteland_reworked:acid')
+    f.setBlock(4, 67, 4, 'minecraft:lodestone') // 4²+4²=32; dy=+3
+    f.tick(20)
+    assert.equal(d.id_cinderstack_exposure, 21)
+    f.setBlock(4, 67, 4, AIR)
+    f.setBlock(5, 67, 4, 'minecraft:lodestone') // 5²+4²=41, outside circle
+    const before = f.state.reads
+    f.tick(40)
+    assert.equal(f.state.reads - before, 791)
+    assert.ok(Math.abs(d.id_cinderstack_exposure - 24.9) < 0.000001)
+    f.setBlock(5, 67, 4, AIR)
+    f.setBlock(0, 68, 0, 'minecraft:lodestone') // dy +4 outside vertical range
+    f.tick(60)
+    assert.ok(Math.abs(d.id_cinderstack_exposure - 28.8) < 0.000001)
+    f.setBlock(0, 68, 0, AIR)
+    f.setBlock(0, 61, 0, 'minecraft:lodestone') // dy -3 inside range
+    f.tick(80)
+    assert.ok(Math.abs(d.id_cinderstack_exposure - 19.8) < 0.000001)
+})
+
 console.log('Cinderstack atmosphere: ' + passed + ' handler scenarios passed.')
