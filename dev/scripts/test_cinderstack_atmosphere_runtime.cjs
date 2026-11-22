@@ -659,4 +659,102 @@ check('diagonal circle and vertical three-block boundaries exclude over-radius s
     assert.ok(Math.abs(d.id_cinderstack_exposure - 19.8) < 0.000001)
 })
 
+
+check('continuous exposure climbs 39 40 65 90 100 with exact HUD severity and one warning', () => {
+    const f = fixture()
+    const d = f.player.persistentData
+    const stages = [
+        { start: 36.4, value: 39, color: 'green', warnings: 0 },
+        { start: 37.4, value: 40, color: 'yellow', warnings: 0 },
+        { start: 62.4, value: 65, color: 'red', warnings: 1 },
+        { start: 87.4, value: 90, color: 'red', warnings: 1 },
+        { start: 99, value: 100, color: 'red', warnings: 1 },
+    ]
+    let priorColor = null
+    for (let i = 0; i < stages.length; i++) {
+        const s = stages[i]
+        d.id_cinderstack_exposure = s.start
+        const previous = HUD(f).length
+        f.tick(20 * (i + 1))
+        assert.equal(d.id_cinderstack_exposure, s.value)
+        const changes = HUD(f).slice(previous)
+        assert.ok(changes.includes('bossbar set ' + BAR + ' value ' + s.value))
+        assert.ok(changes.includes('bossbar set ' + BAR + ' name ' +
+            JSON.stringify({ text: 'Atmosphere ' + s.value + '%' })))
+        assert.equal(changes.filter(c => c.includes(' color ')).length,
+            priorColor === s.color ? 0 : 1)
+        if (priorColor !== s.color) {
+            assert.ok(changes.includes('bossbar set ' + BAR + ' color ' + s.color))
+        }
+        assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length,
+            s.warnings)
+        priorColor = s.color
+    }
+    assert.equal(f.commands.filter(c => c === 'damage Tester 2 minecraft:magic').length, 1)
+    assert.equal(f.commands.filter(c => c === 'damage Tester 4 minecraft:magic').length, 1)
+    const atCap = HUD(f).length
+    f.tick(101) // skipped: only 20-tick atmosphere cadence
+    f.tick(120) // still capped: gameplay effects recur but HUD is unchanged
+    assert.equal(HUD(f).length, atCap)
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+})
+
+check('same rounded exposure changes only the HUD title when PPE becomes active or inactive', () => {
+    const f = fixture()
+    const d = f.player.persistentData
+    d.id_cinderstack_exposure = 62.4
+    f.tick(20)
+    assert.equal(d.id_cinderstack_exposure, 65)
+    f.slots[0] = { id: 'kubejs:cinderstack_mask', count: 1,
+        damageValue: 0, maxDamage: 512, isEmpty() { return this.count <= 0 } }
+    f.slots[1] = { id: 'kubejs:cinderstack_filter', count: 2,
+        isEmpty() { return this.count <= 0 } }
+    d.id_cinderstack_exposure = 64.584
+    const beforeFiltering = HUD(f).length
+    f.tick(40)
+    assert.equal(Math.round(d.id_cinderstack_exposure), 65)
+    assert.equal(HUD(f).length - beforeFiltering, 1)
+    assert.equal(HUD(f).at(-1), 'bossbar set ' + BAR + ' name ' +
+        JSON.stringify({ text: 'Filtered air 65%' }))
+    f.slots.length = 0
+    d.id_cinderstack_exposure = 62.4
+    const beforeUnfiltered = HUD(f).length
+    f.tick(60)
+    assert.equal(Math.round(d.id_cinderstack_exposure), 65)
+    assert.equal(HUD(f).length - beforeUnfiltered, 1)
+    assert.equal(HUD(f).at(-1), 'bossbar set ' + BAR + ' name ' +
+        JSON.stringify({ text: 'Atmosphere 65%' }))
+    assert.equal(f.messages.filter(m => m.includes('air is not survivable')).length, 1)
+})
+
+check('recovery to zero hides once, offworld exit detaches and relog safely reattaches', () => {
+    const f = fixture()
+    const d = f.player.persistentData
+    d.id_cinderstack_exposure = 100
+    d.id_cinderstack_air_warned = true
+    f.tick(20)
+    f.setBlock(0, 64, 0, 'minecraft:lodestone')
+    for (let age = 40; age <= 280; age += 20) f.tick(age)
+    assert.equal(d.id_cinderstack_exposure, 0)
+    assert.equal(d.id_cinderstack_air_warned, false)
+    assert.equal(f.commands.filter(c => c === 'bossbar set ' + BAR + ' visible false').length, 1)
+    assert.equal(playerAssigned(f), 1)
+    assert.equal(playerRemoved(f), 0)
+    const atZero = HUD(f).length
+    f.tick(300)
+    assert.equal(HUD(f).length, atZero)
+    f.state.dimension = 'minecraft:overworld'
+    f.tick(320)
+    assert.equal(playerRemoved(f), 1)
+    f.login()
+    f.tick(360)
+    assert.equal(playerRemoved(f), 1)
+    f.state.dimension = HIVE
+    f.setBlock(0, 64, 0, AIR)
+    f.tick(380)
+    assert.equal(playerAssigned(f), 2)
+    assert.equal(f.commands.filter(c => c === 'bossbar set ' + BAR + ' visible true').length, 2)
+    assert.equal(d.id_cinderstack_exposure, 2.6)
+})
+
 console.log('Cinderstack atmosphere: ' + passed + ' handler scenarios passed.')
