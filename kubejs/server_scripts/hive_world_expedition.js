@@ -201,9 +201,19 @@
             }
         }
         // Origin refused (dimension removed, renamed, unloaded) or the record was
-        // unreadable - guaranteed safe fallback, never a stranded player.
+        // unreadable. A fallback command can also fail; keep the original record
+        // and return item until a landing at the fallback location is observed.
+        const fallbackX = Math.round(x === null ? 0 : x)
+        const fallbackZ = Math.round(z === null ? 0 : z)
         s.runCommandSilent('execute as ' + name + ' in ' + FALLBACK_DIM + ' run tp ' + name +
-            ' ' + Math.round(x === null ? 0 : x) + ' 320 ' + Math.round(z === null ? 0 : z))
+            ' ' + fallbackX + ' 320 ' + fallbackZ)
+        if (dimId(player) !== FALLBACK_DIM ||
+            Math.abs(player.x - fallbackX) > 0.01 ||
+            Math.abs(player.y - 320) > 0.01 ||
+            Math.abs(player.z - fallbackZ) > 0.01) {
+            charles(player, 'Return transfer failed. Your departure point is still recorded; use the return marker on the Portal Core to retry.')
+            return
+        }
         s.runCommandSilent('effect give ' + name + ' minecraft:slow_falling 15 0 true')
         s.runCommandSilent('effect give ' + name + ' minecraft:resistance 15 4 true')
         clearExpedition(player)
