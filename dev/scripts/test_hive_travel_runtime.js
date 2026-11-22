@@ -209,3 +209,6 @@ assert.equal(f.gifts.length, 0)
 assert.ok(f.messages.some(m => m.includes('interrupted')))
 
 console.log('Hive runtime passed: string dimension IDs, login, valid entry, atmosphere tick, exact return/rotation, incomplete frame, failed entry, reconnect, death, and feedback before EventExit.')
+
+// Include two-player isolation in the existing runtime test entrypoint.
+require('./test_hive_travel_multiplayer.js')
