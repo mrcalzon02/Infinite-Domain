@@ -758,3 +758,6 @@ check('recovery to zero hides once, offworld exit detaches and relog safely reat
 })
 
 console.log('Cinderstack atmosphere: ' + passed + ' handler scenarios passed.')
+
+// Multi-user HUD, warning, survival-mode and lifecycle isolation.
+require('./test_cinderstack_atmosphere_multiplayer.cjs')
